@@ -1,0 +1,36 @@
+.md-header-nav__button.md-logo{
+    padding: 0;
+    margin: .3rem;
+}
+.md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
+    width: 5.4rem;
+    height: 1.8rem;
+}
+.md-nav--primary .md-nav__title[for="__drawer"] .md-nav__button{
+    left: 2.7rem;
+}
+
+.md-nav--primary .md-nav__title {
+    height: 3.4rem;
+    padding: 0;
+}
+.md-nav__title .md-nav__button.md-logo img, 
+.md-nav__title .md-nav__button.md-logo svg {
+    width: 5.4rem;
+    height: 1.8rem;
+}
+@media screen and (max-width: 76.1875em){
+    .md-nav--primary .md-nav__title .md-nav__icon {
+        top: 0.9rem;
+    }
+}
+@media screen and (max-width: 76.1875em){ 
+    .md-nav--primary .md-nav__title {
+        padding:10px 50px;
+    }
+}
+@media screen and (min-width: 76.25em){ 
+    .md-tabs--active ~ .md-main .md-nav--primary .md-nav__title {
+        height: 2rem;
+    }
+}

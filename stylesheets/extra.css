@@ -1,3 +1,4 @@
+
 .md-header-nav__button.md-logo{
     padding: 0;
     margin: 0.2rem;
@@ -6,21 +7,8 @@
     width: 2rem;
     height: 2rem;
 }
-.md-nav--primary .md-nav__title[for="__drawer"] .md-nav__button{
-    left: 2.7rem;
-}
 
-.md-nav--primary .md-nav__title {
-    height: 2rem;
-    padding: 0;
-}
-.md-nav__title .md-nav__button.md-logo img, 
-.md-nav__title .md-nav__button.md-logo svg {
-    width: 5.4rem;
-    height: 1.8rem;
-}
-
-#welcome-to-dcc-ex.title{
+.md-typeset .title{
     background: url(../images/home_welcm.png);
     background-repeat: no-repeat;
     font-weight: 400;
@@ -34,7 +22,7 @@
     background-position: 0 0;
     font-size: 2.12rem;
 }
-.md-typeset p.descript{
+.md-typeset .descript{
     background: url(../images/home_welcm.png);
     background-position: 0px -140px;
     background-repeat: no-repeat;
@@ -51,21 +39,10 @@
 }
 
 @media screen and (max-width: 76.1875em){
-    .md-nav--primary .md-nav__title .md-nav__icon {
-        top: 0.9rem;
-    }
-    .md-nav--primary .md-nav__title {
-        padding:10px 50px;
-    }
-    #welcome-to-the-dcc-ex.title{
+    .md-typeset .title{
         font-size: 1.2rem;
     }
-    .md-typeset p.descript{
+    .md-typeset .descript{
         font-size: 0.66rem;
-    }
-}
-@media screen and (min-width: 76.25em){ 
-    .md-tabs--active ~ .md-main .md-nav--primary .md-nav__title {
-        height: 2rem;
     }
 }

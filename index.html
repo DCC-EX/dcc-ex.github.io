@@ -233,12 +233,27 @@
 
       
         
+      
+        
   
   
     <li class="md-tabs__item">
       
         <a href="download/dccex-downloads/" class="md-tabs__link">
           Downloads
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="about/about-us/" class="md-tabs__link">
+          About Us
         </a>
       
     </li>
@@ -341,8 +356,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#whats-new-since-dcc-classic" class="md-nav__link">
-    What's new since DCC++ Classic?
+  <a href="#whats-new-in-dcc-ex" class="md-nav__link">
+    What's new in DCC++ EX?
   </a>
   
 </li>
@@ -743,18 +758,30 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="notes/rewrite/" title="What's New Details" class="md-nav__link">
+      What's New Details
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Downloads
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Downloads" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -783,6 +810,48 @@
   <li class="md-nav__item">
     <a href="download/dccex-materials-downloads/" title="Materials" class="md-nav__link">
       Materials
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      About Us
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="About Us" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        About Us
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="about/about-us/" title="" class="md-nav__link">
+       
     </a>
   </li>
 
@@ -838,8 +907,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#whats-new-since-dcc-classic" class="md-nav__link">
-    What's new since DCC++ Classic?
+  <a href="#whats-new-in-dcc-ex" class="md-nav__link">
+    What's new in DCC++ EX?
   </a>
   
 </li>
@@ -894,8 +963,9 @@ of DCC-equipped model railroads.</p>
 <li>Main Track: Write configuration variable bytes and set/clear specific configuration variable (CV) bits</li>
 <li>Programming Track: Same as the main track with the addition of reading configuration variable bytes</li>
 </ul>
-<h2 id="whats-new-since-dcc-classic">What's new since DCC++ Classic?</h2>
+<h2 id="whats-new-in-dcc-ex">What's new in DCC++ EX?</h2>
 <ul>
+<li>Complete support for all the old commands and front ends like JMRI</li>
 <li>Direct support for all the most popular motor control boards</li>
 <li>I2C Display support</li>
 <li>Improved short circuit detection and automatic reset from an overload</li>
@@ -904,9 +974,12 @@ of DCC-equipped model railroads.</p>
 <li>New Communication Manager to handle input and output to multiple sources simultaneously (JMRI, Cab controllers, etc.)</li>
 <li>Arduino Network Shield and ESP8266 WiFi support</li>
 <li>Railcom Cutout (Beta)</li>
-<li>The code is now simpler, modular, faster and provides an API Library for developers and easy expansion</li>
+<li>Simpler, modular, faster code with an API Library for developers for easy expansion</li>
 <li>No more jumpers or soldering! (Beta)</li>
+<li>New features and functionsn in JMRI (coming)</li>
+<li>Automation (Alpha)</li>
 </ul>
+<p>NOTE: The Next release will be a major rewrite to the code. We started from scratch and are rebuilding from the ground up! For what that means to you, click <a href="../notes/rewrite.md">HERE</a>.</p>
 <h2 id="the-system-consists-of-multiple-parts">The system consists of multiple parts:</h2>
 <ul>
 <li><strong>Base Station</strong> - An Arduino, motorboard and the DCC-EX uploadable firmware</li>

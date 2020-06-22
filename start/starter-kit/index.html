@@ -854,25 +854,38 @@
 <h3 id="equipment-list">Equipment List:</h3>
 <h4 id="hardware">Hardware</h4>
 <ul>
-<li>A compatible Arduino Board</li>
+<li>A compatible Arduino Board<ul>
 <li>Arduino UNO R3 (clones work too)</li>
 <li>Arduino Mega (clones work too)</li>
 <li>Arduino Nano</li>
-<li>A compatible motor driver shield</li>
+</ul>
+</li>
+<li>A compatible motor driver shield<ul>
 <li>Arduino Motor Driver Shield Rev 3 (clones work too)</li>
 <li>Pololu MC33926 Dual Motor Driver Shield (https://www.pololu.com/product/2503)</li>
 <li>Other boards listed in the hardware section</li>
+</ul>
+</li>
 <li>DC Power Supply (see <a href="../../hardware/power-supplies/">Power Supplies</a>) </li>
-<li>USB A to B Cable (aka USB Printer Cable)</li>
+<li>USB A to B Cable (aka USB Printer Cable) to connect your Pi or computer to the Arduino</li>
+<li>A MicroSD Card (for the Raspberry Pi if you choose to use one)</li>
 <li>Computer to act as a controller to the Arduino Base Station *</li>
 </ul>
+<p>We recommend:</p>
+<p><a href="https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/ref=asc_df_B01H4ZLZLQ/?tag=hyprod-20&amp;linkCode=df0&amp;hvadid=309743296044&amp;hvpos=&amp;hvnetw=g&amp;hvrand=2075336217815630856&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9009681&amp;hvtargid=pla-490931309987&amp;psc=1">Elegoo Mega 2560</a></p>
+<p><a href="https://www.aliexpress.com/item/32832049214.html?src=google&amp;src=google&amp;albch=shopping&amp;acnt=494-037-6276&amp;isdl=y&amp;slnk=&amp;plac=&amp;mtctp=&amp;albbt=Google_7_shopping&amp;aff_platform=google&amp;aff_short_key=UneMJZVf&amp;&amp;albagn=888888&amp;albcp=1582410664&amp;albag=59754279756&amp;trgt=743612850874&amp;crea=en32832049214&amp;netw=u&amp;device=c&amp;albpg=743612850874&amp;albpd=en32832049214&amp;gclid=CjwKCAjwrcH3BRApEiwAxjdPTQJGRS7xnxV6FvOM14ZyRdKZHZiOUmS5oI74ytkxk5biSFBRGnazaxoCXaEQAvD_BwE&amp;gclsrc=aw.ds">Deek-Robot Motor Shield</a></p>
+<p><a href="https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/ref=redir_mobile_desktop?ie=UTF8&amp;aaxitk=0jN3RieNiW-Jxn0JuJS6dQ&amp;hsa_cr_id=2529139070101&amp;ref_=sbx_be_s_sparkle_mcd_asin_0">12V 5Amp Power Supply</a></p>
+<p><a href="https://www.google.com/search?q=raspberry+pi+4&amp;rlz=1C1CHVZ_enUS586US586&amp;sxsrf=ALeKk00RT_osXNqIbJ_Xut4J5jqmo4mWjw:1592847200887&amp;source=lnms&amp;tbm=shop&amp;sa=X&amp;ved=2ahUKEwjNidyc-pXqAhXPct8KHdPXA9kQ_AUoAXoECAwQAw&amp;biw=1230&amp;bih=617#spd=3143731532782929925">Raspberry Pi 4B</a></p>
+<p>NOTE: You may use your own computer instead of the Raspberry Pi. However, the image software below saves you installing software on your computer and does a lot more. See: "My Computer vs. Raspberry Pi"</p>
+<p>You can check Amazon, Ebay, AliExpress, Banggood, Adafruit and others for all the above</p>
 <h4 id="software">Software</h4>
 <ul>
-<li>DCC++ EX repository</li>
-<li>JMRI</li>
-<li>Arduino IDE to upload DCC++ to the Arduino</li>
+<li><a href="https://github.com/DCC-EX/BaseStation-Installer/releases/tag/v2.0">DCC++ EX Installer</a></li>
+<li><a href="https://mstevetodd.com/rpi">Steve Todd's Raspberry Pi Image</a></li>
+<li><a href="https://www.jmri.org/">JMRI (If you want to use your own computer)</a></li>
+<li><a href="https://www.arduino.cc/">Arduino Software IDE to edit and upload changes (Optional)</a></li>
 </ul>
-<p>* You can use a MAC or a Raspberry Pi (Which we recommend) that is covered in another Guide</p>
+<p>* As mentioned above you can also use your existing computer (PC or MAC) instead of a Pi. You need a computer or Pi to run JMRI and connect to the Arduino to run your trains. A laptop or similar is needed in any case because you are going to need one to download the installer and the Raspebrry Pi image. You will then use it to run the installer to  ccopy the program into the Arduino and copy the Raspberry Pi image you download to the MicroSD Card. NOTE: Optionally, you may just use the computer to download and burn the SDCard and then use the Pi to install the firmware onto the Arduino using our Installer.</p>
 <p>Next Page: <a href="../assembly/">Assembly</a></p>
                 
               

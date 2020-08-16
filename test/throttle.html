@@ -1,0 +1,625 @@
+<html HTML>
+
+    <head>
+
+        <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>  
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>                                 
+        <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+        <script src="throttle.js"></script>  
+
+        <style>
+            .column-1{
+                float: left;
+                width: 10%;
+                padding: 5px 15px;
+            }
+            .column-2p5 {
+                float: left;
+                width: 25%;
+                padding: 5px 15px;
+            }
+            .column-2 {
+                float: left;
+                width: 20%;
+                padding: 5px 15px;
+            }
+            .column-3 {
+                float: left;
+                width: 30%;
+                padding: 5px 15px;
+            }
+
+            .column-4 {
+                float: left;
+                width: 40%;
+                padding: 5px 15px;
+            }
+            .column-5 {
+                float: left;
+                width: 50%;
+                padding: 5px 15px;
+            }
+            .column-6{
+                float: left;
+                width: 60%;
+                padding: 5px 15px;
+            }
+            .column-7 {
+                float: left;
+                width: 70%;
+                padding: 5px 15px;
+            }
+
+
+            /* Clear floats */
+            .row:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            .rendered-form {
+                background: #efefef;
+                max-width: 800px;
+                border-radius: 4px;
+                box-shadow: 0px 0px 10px 0px #666666;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0 auto;
+                padding-top: 15px;
+                position: relative;
+                padding-bottom: 1px;
+                border: 1px solid #fbfbfb;
+            }
+            .rendered-form div {
+                box-sizing: border-box;
+            }
+            .rendered-form h4 {
+                margin: 0;
+            }
+            input.form-control, select.form-control, textarea.form-control {
+                width: 100%;
+                padding: 5px 8px;
+                border: 1px solid #bbbbbb;
+                border-radius: 4px;
+                background: #ffffff;
+            }
+            input.form-control:focus, 
+            select.form-control:focus, 
+            textarea.form-control:focus,
+            input.form-control:active, 
+            select.form-control:active, 
+            textarea.form-control:active{
+                border: 1px solid #00A3B9;
+                outline-color: #00A3B9;
+            }
+            label.formbuilder-text-label,
+            label.formbuilder-select-label,
+            label.formbuilder-textarea-label,
+            label.formbuilder-file-label {
+                font-size: 13px;
+                padding: 4px 0;
+                display: inline-block;
+                font-weight:400;
+                color: #00353D;
+            }
+            .server-button{
+                padding-top: 29px;
+                text-align: right;
+            }
+            .formbuilder-button{
+                text-align: left;
+                padding: 29px 0;
+            } 
+            .formbuilder-button .btn, .server-button .btn{
+                background: #00A3B9;
+                padding: 4px 12px;
+                width: 100%;
+                max-width: 200px;
+                color: #ffffff;
+                border: 1px solid #007a8a;  
+                box-shadow: 0px 0px 1px #9e9e9e;
+                border-radius: 4px;
+                letter-spacing:0.5;
+                text-align: center;
+            }
+            .formbuilder-button.field-button-fn{
+                text-align: center;
+                padding: 10px 0;
+            }
+            .formbuilder-button.field-button-fn .btn{
+                background: #00A3B9;
+                padding: 4px 12px;
+                width: 80%;
+                margin: 5%;
+                color: #ffffff;
+                border: 1px solid #007a8a;
+                box-shadow: 0px 0px 1px #9e9e9e;
+                border-radius: 4px;
+                letter-spacing:0.5;
+                outline: none;
+            }
+            .formbuilder-button.field-button-fn button[aria-pressed="true"].btn{
+                background: #006e7c;
+            }
+            .btn-hide{
+                position: absolute;
+                right: 5px;
+                bottom: 24px;
+                padding: 3px 8px;
+                font-size: 13px;
+                padding-right: 10px;
+                border: 1px solid #9a9a9a;
+                outline: none;
+            }
+            .arrow {
+                border: solid black;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+                margin-left: 4px;
+                vertical-align: middle;
+            }
+
+            .up {
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+            }
+
+            .down {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                top: -3px;
+                position: relative;
+            }
+
+    .formbuilder-required {
+        color: #da0000;
+    }
+    .rs-control .rs-range-color {
+        background-color: #009fd8;
+    }
+    .rs-control .rs-path-color {
+        background-color: #919191;
+    }
+    .rs-control .rs-handle {
+        background-color: #575555;
+    }
+    .rs-control .rs-bg-color {
+        background-color: #efefef;
+    }
+    .rs-tooltip.rs-tooltip-text.rs-edit{
+        top: auto;
+        bottom: 12px;
+        font-size: 48px;
+        color: #777;
+        width: 112px;
+        text-align: center;
+    }
+    .throttlewrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 360px;
+    }
+    .functionKeys{
+        padding-right: 30px;
+    }
+    .dir-toggle{
+        height: 211px;
+        background-color: #919191;
+        width: 40px;
+        margin: 54px auto;
+        border-radius: 100px;
+        -moz-box-shadow:    inset 0 0 5px #000000;
+        -webkit-box-shadow: inset 0 0 5px #000000;
+        box-shadow:   inset 0 0 5px #000000;
+    }
+    .dir-btn{
+        background: transparent;
+        padding: 10px;
+        width: 40px;
+        height: 70px;
+        border: none;
+        border-radius: 80px;
+        cursor: pointer;
+    }
+    .dir-btn:active{
+        outline: none;
+    }
+    .dir-btn.stop.selected{
+        background: #da0000;
+        -moz-box-shadow: 0px 0px 3px 0px #333;
+        -webkit-box-shadow: 0px 0px 3px 0px #333;
+        box-shadow: 0px 0px 3px 0px #333;
+    }
+    .dir-btn.forward.selected, .dir-btn.backward.selected{
+        background: #00ac4d;
+        -moz-box-shadow: 0px 0px 3px 0px #333;
+        -webkit-box-shadow: 0px 0px 3px 0px #333;
+        box-shadow: 0px 0px 3px 0px rgb(104, 102, 102);
+    }
+    .dir-btn span.stop{
+        display: inline-block;
+        height: 16px;
+        width:16px;
+        /*background: #da0000;*/
+        background: white;
+    }
+    .dir-btn span.arrow-up{
+        top: -14px;
+        height: 0px;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 13px solid white;
+        /*border-bottom: 22px solid #00ac4d;*/
+        position: relative;
+    }
+    .dir-btn span.arrow-down{
+        top: 14px;
+        height: 0px;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 13px solid white;
+        /*border-top: 22px solid #00ac4d;*/
+        position: relative;
+    }
+    .btn-speed{
+        border-width: 0;
+        outline: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 27px;
+        min-width: 44px;
+        min-height: 44px;
+        background-color: #a8a8a8;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .btn-speed:hover{
+        background: #00A3B9;
+        color: #FFFFFF;
+    }
+    .flexx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 340px;
+    }
+    .log-msg{
+        height: 80px;
+        padding: 12px;
+        background-color: #fff2e1;
+        color: darkblue;
+        margin: 15px;
+        border-radius: 5px;
+        border: 1px solid #eac9a5;
+        box-shadow: inset 0px 0px 7px #f3d9bc;
+        font-size: 9px;
+        overflow: auto;
+    }
+
+.pow-status{
+    display: inline-block;
+    padding: 15px 5px;
+    vertical-align: middle;
+}
+.power-slider{
+    padding: 0 7px;
+    font-size: 13px;
+} 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 59px;
+  height: 29px;
+  vertical-align: middle;
+  
+}
+
+.switch input { 
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+  box-shadow: 1px 1px rgba(255,255,255,0.8);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 4px;
+  bottom: 3px;
+  background-color: rgb(253, 253, 253);
+  border: 1px solid rgb(220, 220, 220);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #e2e2e2;
+}
+
+input:checked + .slider {
+  background-color: #ff0000;
+  box-shadow: 1px 1px rgba(255,255,255,0.8);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 1px 1px rgba(255,255,255,0.8);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(28px);
+  -ms-transform: translateX(28px);
+  transform: translateX(28px);
+}
+
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column-5, .column-4, .column-6, .column-2p5 {
+            width: 100%;
+        }
+        .field-button-fn.column-2p5{
+            width: 25%;
+        }
+        .formbuilder-button{
+            padding: 15px 0;
+            text-align: center;
+        }
+    }
+    </style>    
+
+    </head>
+
+    <body>
+        <div id="rendered-form">
+            <div class="rendered-form">
+                <div Class="details-panel">
+                    <!--div class="row">
+                        <div class="formbuilder-text form-group server-url-wrap column-4">
+                            <label for="server-url" class="formbuilder-text-label">
+                                Server<span class="formbuilder-required">*</span>
+                            </label>
+                            <input type="url" placeholder="Enter Server URL" class="form-control" 
+                            name="server-url" access="false" maxlength="300" id="server-url" required="required" aria-required="true">
+                        </div>
+                        <div class="formbuilder-text form-group column-2">
+                            <label for="server-port" class="formbuilder-text-label">
+                                Port<span class="formbuilder-required">*</span>
+                            </label>
+                            <input type="number" placeholder="Enter Port" class="form-control" name="server-port" access="false" maxlength="300" id="server-port">
+                        </div>
+                        <div class="server-button form-group field-button-submit column-2">
+                            <button type="button" class="btn-default btn" aria-state="connected" name="button-connect" access="false" id="button-connect">
+                                Connect
+                            </button>
+                        </div>
+                        <div class="server-button form-group field-button-submit column-2">
+                            <button type="button" class="btn-default btn" name="button-disconnect" access="false" id="button-disconnect">
+                                Disonnect
+                            </button>
+                        </div>
+                    </div>
+                    <hr-->
+                    <div class="row"> <!-- style="margin: 0 auto; text-align: center;"-->
+                        <div class="formbuilder-text form-group field-ex-email column-2">
+                            <label for="ex-locoid" class="formbuilder-text-label">
+                                Locomitive ID <span class="formbuilder-required">*</span>
+                            </label>
+                            <input type="number" placeholder="CV-01" class="form-control" name="ex-locoid" access="false" maxlength="30" id="ex-locoid" required="required" aria-required="true">
+                        </div>
+                        
+                        <div class="formbuilder-button form-group field-button-submit column-1">
+                            <button type="button" class="btn-default btn" name="getloco" access="false" data-acquired="false"  id="button-getloco">
+                                Acquire
+                            </button>
+                        </div>
+                        <div class="formbuilder-button form-group field-button-submit column-3"></div>
+                        <div class="server-button form-group field-button-submit column-4">
+                            <button type="button" class="btn-default btn" aria-state="connected" name="button-connect" access="false" id="button-connect">
+                                Connect DCC++ EX
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>              
+
+                <div class="row">
+                    <div style="position: relative;">
+                         <div class="row">
+                            <div class="column-2"></div>
+                            <div class="column-6" id="loco-info" style="text-align: center;">
+                                WELCOME
+                            </div>  
+                            <div class="column-2"></div>                             
+                         </div>          
+                        <button type="button" class="btn-default btn btn-hide" name="button-hide" access="false" id="button-hide">
+                            Hide <span class="arrow up"></span>
+                        </button> 
+                    </div>
+                    <div class=" column-6">
+                        <div class="row">
+                            <div class=" column-1">
+                                <div class="flexx">
+                                <button type="button" class="btn-default btn btn btn-speed btn-left" name="button-left" access="false" id="button-left">
+                                    <span class="left" style="line-height: 12px;">&nbsp;-&nbsp;</span>
+                                </button>
+                                </div> 
+                            </div>                           
+                            <div class=" column-6">
+                                <div class="Throttlewrap">
+                                    <div id="throttle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" column-1">
+                                <div class="flexx">
+                                <button type="button" class="btn-default btn btn-speed btn-right" name="button-right" access="false" id="button-right">
+                                    <span class="right">&nbsp;+&nbsp;</span>
+                                </button> 
+                                </div>
+                            </div>
+                            
+                            <div class=" column-2">
+                                <div class="dir-toggle">
+                                    <button class="dir-btn forward selected" id="dir-f" aria-label="forward" > <span class="arrow-up"></span></button>
+                                    <button class="dir-btn stop" id="dir-S" aria-label="stop"> <span class="stop"></span></button>
+                                    <button class="dir-btn backward" id="dir-b" aria-label="backward"> <span class="arrow-down"></span></button>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="functionKeys column-4">
+                        <br> 
+                        <div class="row">
+                            <div class="power-slider">
+                            <label class="switch">
+                                <input type="checkbox" id="power-switch">
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="pow-status">
+                                Power <span id="power-status">Off</span>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f0" id="f0">
+                                    F0
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f1" id="f1">
+                                    F1
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f2" id="f2">
+                                    F2
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f3" id="f3">
+                                    F3
+                                </button>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f4" access="false" id="f4">
+                                    F4
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f5" access="false" id="f5">
+                                    F5
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f6" access="false" id="f6">
+                                    F6
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f7" access="false" id="f7">
+                                    F7
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f8" access="false" id="f8">
+                                    F8
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f9" access="false" id="f9">
+                                    F9
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f10" access="false" id="f10">
+                                    F10
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f11" access="false" id="f11">
+                                    F11
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f12" access="false" id="f12">
+                                    F12
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f13" access="false" id="f13">
+                                    F13
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f14" access="false" id="f14">
+                                    F14
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f15" access="false" id="f15">
+                                    F15
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f16" access="false" id="f16">
+                                    F16
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f17" access="false" id="f17">
+                                    F17
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f18" access="false" id="f18">
+                                    F18
+                                </button>
+                            </div>
+                            <div class="formbuilder-button form-group field-button-fn column-2p5">
+                                <button type="button" class="btn-default btn fn-btn" data-type="toggle" aria-pressed="false" name="f19" access="false" id="f19">
+                                    F19
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            
+                <div class="log-msg" id="log-box">
+                </div> 
+            </div>
+        </div>
+    </body>
+
+</html>
+
+
+

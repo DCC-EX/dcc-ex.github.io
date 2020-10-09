@@ -669,8 +669,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-need-to-use-and-develop-this-application" class="md-nav__link">
-    What you’ll need to use and develop this application
+  <a href="#what-youll-need-to-use-this-application" class="md-nav__link">
+    What you’ll need to use this application
   </a>
   
 </li>
@@ -1092,8 +1092,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-need-to-use-and-develop-this-application" class="md-nav__link">
-    What you’ll need to use and develop this application
+  <a href="#what-youll-need-to-use-this-application" class="md-nav__link">
+    What you’ll need to use this application
   </a>
   
 </li>
@@ -1161,7 +1161,7 @@
                 
                 
                 <h1 id="dcc-ex-web-throttle">DCC++ EX Web Throttle</h1>
-<p>This is a prototype for a new DCC++ EX Throttle/Controllercthat can connect to the DCC++ EX Commmand Station directly through the USB port of a computer.</p>
+<p>This is  a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Commmand Station directly through the USB port of a computer.</p>
 <h2 id="what-you-need-to-setup-the-project">What you need to setup the project</h2>
 <ul>
 <li>Chromium-Based Browser version 80 or above
@@ -1173,15 +1173,14 @@
 </code></pre></div>
 
 
-<p>Then set the <strong>#enable-experimental-web-platform-features</strong> flag by looking on the page for "Experimental Web Platform Features" and click on the "enable" button. (NOTE: Substitute the name of your browser above if you don't use Chrome)</p>
-<h2 id="what-youll-need-to-use-and-develop-this-application">What you’ll need to use and develop this application</h2>
-<p>You don't need anything to test it out and to run in simulator mode, to run trains you will need:</p>
+<p>Then set the <strong>#enable-experimental-web-platform-features</strong> flag by looking on the page for "Experimental Web Platform Features" and click on the "enable" button.</p>
+<p><strong>Note</strong>: Substitute the name of your browser above if you don't use Chrome</p>
+<h2 id="what-youll-need-to-use-this-application">What you’ll need to use this application</h2>
+<p>You don't need anything to test it out and to run in emulator mode, to run trains you will need:</p>
 <ul>
 <li>An Arduino Mega or Uno Microcontroller</li>
 <li>An Arduino Motor Control Shield</li>
 <li>Chromium based browser version 80 or later</li>
-<li>Some knowledge of HTML and JavaScript (developers only)</li>
-<li>Understanding of how to use the Chrome DevTools (developers only)</li>
 </ul>
 <h2 id="getting-started">Getting started</h2>
 <p>NOTE: If you don't have your hardware yet or just want to play with the throttle
@@ -1189,18 +1188,20 @@
       section.</p>
 <p>To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the serial connector on the Arduino. Click on the "index.html" or "exwebthrotle.html" file to load the webpage.</p>
 <h2 id="operation">Operation</h2>
-<p>To use the program, you can either click on the "serial" dropodown button and select "simulator" to run in simulator mode or after making sure your hardware is properly connected, make sure "serial" is selected and click on the "Connect DCC++ EX" button. </p>
-<p>If the program finds a compatible device, it will popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the "connect" button.</p>
+<p>To use the program, you can either click on the "Serial" dropodown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, make sure "Serial" is selected and click on the "Connect DCC++ EX" button. </p>
+<p>If the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the "Connect DCC++ EX" button.</p>
 <p>You should then be connected to the Command Station (CS) and should see the response from the CS on the web page under the buttons. Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging.</p>
-<p>Once you are connected, you can enter the <code>&lt;s&gt;</code> command in the "direct command" textbox to get status information from your Command Station, just enter "s" (without the quotes) and press the SEND button. You can send any DCC++ API command in this way. You should see <iDCC++...> returned in the log window with your version, type of arduino, type of motor shield, and some other information.</p>
-<p>Now you are ready to run trains! Place your loco on the track and click the power slider button to turn on power to your track. You should see lights on an Arduino Motor Board light and an indication that your loco has power.</p>
-<p>Next go to the "locomotive ID" textbox and enter the address of your loco and press the ACQUIRE button. You should now have full control over your loco.</p>
+<p>Once you are connected, you can enter the <code>&lt;s&gt;</code> command in the "direct command" textbox to get status information from your Command Station. To do this just enter <code>s</code> (without the quotes) and press the SEND button. You can send any DCC++ API command in this way. You should see <iDCC++...> returned in the log window with your version, type of arduino, type of motor shield, and some other information.</p>
+<p>Now you are ready to run trains! Place your loco on the track and click the power slider button to turn on power to your track. You should see lights on your Arduino Motor Shield and an indication that your loco has power.</p>
+<p>Next go to the "Locomotive ID" textbox and enter the address of your loco and press the "Acquire" button. You should now have full control over your loco.</p>
 <p>All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the CS and its responses will display in the log window if it is open</p>
 <p>In the throttle control area to the left of the function buttons are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.</p>
 <p>The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons.</p>
 <p>The options button lets you save labels to go on your function buttons for each of your locos. We will be updating this document soon to give you more information on this and other new features.</p>
+<p><strong>Note:</strong> The emulator doesn't fully replicate the Command station yet. This means that althought the software works, not all the responses will be shown in
+the debug console. We are currently working on this, so it is something that will be fixed.</p>
 <h2 id="try-it-now">Try it now</h2>
-<p>Just click this button and it will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in simulator mode where you don't have to have any hardware. Please read the instructions above for what is required to run exWebThrottle in your browser.</p>
+<p>Just click this button and it will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the instructions above for what is required to run exWebThrottle in your browser.</p>
 <p><a class="downloadBtn" href="../../exwebthrottle/" title="Run exWebThrottle Now">Run exWebThrottle Now</a></p>
 <h2 id="download">Download</h2>
 <p>Just download this zip file and extract it to any folder you have run permission on. Then run the exwebthrottle.html file.</p>
@@ -1215,6 +1216,7 @@
 under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.</p>
+<p><a href="https://dcc-ex.com">DCC-EX</a></p>
 <script src="../../javascripts/platform.js"></script>
                 
               

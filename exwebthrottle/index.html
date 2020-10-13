@@ -1,247 +1,1160 @@
-<html HTML>
-<!--
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-	
-	Authors: Mani Kumar
-             Fred Decker
-             Matt (matt-hu)
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-	This file is part of the DCC++ EX Project for model railroading and more.
-	For more information, visit use at dcc-ex.com
--->
-    <head>
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <link href="css/layout.css"  rel="stylesheet">
-        <link href="css/roundslider.min.css" rel="stylesheet" />
-        <link href="css/throttle.css"  rel="stylesheet">
-        <script  type="text/javascript" src="js/jquery-3.2.1.min.js"></script>  
-        <script  type="text/javascript" src="js/jquery-ui.min.js"></script>                       
-        <script  type="text/javascript" src="js/roundslider.min.js"></script>
-        <script  type="text/javascript" src="js/fnMaster.js"></script> 
-        <script  type="text/javascript" src="js/commandController.js"></script>
-        <script  type="text/javascript" src="js/storageController.js"></script> 
-        <script  type="text/javascript" src="js/exwebthrottle.js"></script> 
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../images/new-logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
+    
+    
+      
+        <title>DCC++ EX Web Throttle - DCC++ EX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6e35a1a6.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
         
-<!--
-    NOTE: You can replace the above links with these if you like if you will always run when
-          connected to the internet. Using the links above, they must be installed on your machine.
-          This program will search for them online and import them if you use this method instead.
-        <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>  
-        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>                                 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
-        <script type="text/javascript" src="js/exwebthrottle.js"></script>  		  
--->
+        <a href="#dcc-ex-web-throttle" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="DCC++ EX" class="md-header-nav__button md-logo" aria-label="DCC++ EX">
+      
+  <img src="../images/new-logo.png" alt="logo">
 
-        <title>DCC++ EX Web Throttle</title>
-        <meta name="description" content="Chromium browser based web throttle for a DCC++ EX Command Station to control model trains">
-    </head>
-
-    <body>
-        <div id="rendered-form">
-            <div class="rendered-form">
-                <div Class="details-panel">
-                    <div class="row">
-                        <div class="column-4">
-                             <div class="row">
-                                <div class="loco-cv-text column-4">
-                                    <label for="ex-locoid" class="formbuilder-text-label">
-                                        Locomotive ID <span class="formbuilder-required">*</span>
-                                    </label>
-                                    <input type="number" placeholder="Enter loco ID" class="form-control" name="ex-locoid" access="false" maxlength="30" id="ex-locoid" required="required" aria-required="true">
-                                </div>
-
-                                <div class="acquire-wrap formbuilder-button column-3">
-                                    <button type="button" class="btn-default btn button-acquire" name="getloco" access="false" data-acquired="false"  id="button-getloco">
-                                        Acquire
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column-2 throttle-heading">
-                            DCC++ EX Web Throttle
-                            <p>Version 1.1.0</p>
-                        </div>
-                        <div class="server-button column-4">
-                            <select id="select-method" class="select-control" name="selectMethod" title="Change the connection method">
-                                <option value="serial">Serial</option>
-                                <option value="emulator">Emulator</option>
-                            </select>
-                            <button type="button" class="btn-default btn" aria-state="connected" name="button-connect" access="false" id="button-connect">
-                                Connect DCC++ EX
-                            </button>
-                            <button class="btn-grey" id="fs-toggle" state="ws">&#10530;</button>
-                        </div>
-                    </div>
-                    <hr>
-                </div>    
-                <div class="row">                 
-                    <div class="console-slider column-3">
-                        <label class="debug switch">
-                            <input type="checkbox" id="throttle-type">
-                            <span class="slider round debug-slider"></span>
-                        </label>
-                        <span class="debug-status">
-                            Use Vertical Slider
-                        </span>
-                    </div>    
-                    <div class="column-4" id="loco-info" style="text-align: center;">
-
-                    </div>  
-                    <div class="column-3" style="position: relative;">                                    
-                        <button type="button" class="btn-default btn btn-hide" name="button-hide" access="false" id="button-hide">
-                            Hide <span class="arrow up"></span>
-                        </button> 
-                    </div>
-                </div> 
- 
-                <div class="row">
-                    <div class="column-5 mobile-100 throttle-container">
-                        <div class="row mobile-100  width100 flexx">
-                            <div class="column-7 flexx">
-                                <div class="flexx btns">
-                                <button type="button" class="btn-default btn btn btn-speed btn-left" name="button-left" access="false" id="button-left">
-                                    <span class="left" style="line-height: 12px;">&nbsp;-&nbsp;</span>
-                                </button>
-                                </div> 
-                            <!-- </div>                            -->
-                            <!-- <div class=" column-6"> -->
-                                <div class="Throttlewrap">
-                                    <div id="vertical-throttle" class="vertical-throttle">                              
-                                        <div id="v-throttle">                                           
-                                        </div>
-                                        <div id="speed-indicator" class="progress-numb">
-                                            0
-                                        </div>
-                                    </div>
-                                    <div id="throttle">
-                                    </div>
-                                </div>
-                            <!-- </div> -->
-                            <!-- <div class=" column-1"> -->
-                                <div class="flexx btns">
-                                <button type="button" class="btn-default btn btn-speed btn-right" name="button-right" access="false" id="button-right">
-                                    <span class="right">&nbsp;+&nbsp;</span>
-                                </button> 
-                                </div>
-                            </div>
-                            
-                            <div class=" column-2">
-                                <div class="dir-toggle">
-                                    <button class="dir-btn forward selected" id="dir-f" aria-label="forward" > <span class="arrow-up"></span></button>
-                                    <button class="dir-btn stop" id="dir-S" aria-label="stop"> <span class="stop"></span></button>
-                                    <button class="dir-btn backward" id="dir-b" aria-label="backward"> <span class="arrow-down"></span></button>        
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="functionKeys column-5 mobile-100">
-                        <div class="row mobile-100">
-                            <div class="power-slider column-4 formbuilder-button ">
-                                <label class="switch">
-                                    <input type="checkbox" id="power-switch">
-                                    <span class="slider round"></span>
-                                </label>
-                                <span class="pow-status">
-                                    Power <span id="power-status">Off</span>
-                                </span>
-                            </div> 
-                            <div class="note-msg column-6">
-                                <select id="select-map" class="btn select-map select-control" name="selectMap" title="Load a Saved Map">
-                                </select>                                   
-                                <div class="dropdown">
-                                    <button class="dropbtn">Options <span style="font-size:8px;vertical-align: middle;">&#9660;</span></button>
-                                    <div class="dropdown-content">
-                                    <a href="#" id="new-map">+ &nbsp;New map</a>
-                                    <a href="#" id="edit-map"> &#9998; &nbsp;Edit map</a>
-                                    <a href="#" id="download-map">&#8595; &nbsp;Download map</a>
-                                    <a href="#" id="restore-map"> &#10515;&nbsp; Import map</a>
-                                    <input id="map-upload" type="file" hidden/>
-                                    <a href="#" id="delete-map">&#128465; &nbsp;Delete map</a>
-                                    <div class="hr"></div>
-                                    <a href="#" id="backup-map"> &#10514;&nbsp; Export App data</a>
-                                    <a href="#" id="restore-app"> &#10515;&nbsp; Import App data</a>
-                                    <input id="appdata-upload" type="file" hidden/>
-                                    <div class="hr"></div>
-                                    <a href="#" id="wipe-map"> &#10539;&nbsp; Wipe App data</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row" id="fn-wrapper">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="console-slider column-4">
-                        <label class="debug switch">
-                            <input type="checkbox" id="console-toggle" checked>
-                            <span class="slider round debug-slider"></span>
-                        </label>
-                        <span class="debug-status">
-                            Debug Console
-                        </span>
-                    </div>        
-                </div>
-                <div id="debug-console" hidden="true">
-                    <hr>
-                    <div class="row mobile-margin-top20">
-                        <div class="formbuilder-text field-ex-email column-7">
-                            <input placeholder="Direct Command (without &lt; &gt;)" class="form-control" name="cmd-direct" access="false" id="cmd-direct">
-                        </div>
-                
-                        <div class="formbuilder-button  column-1" style="padding: 5px 5px;">
-                            <button type="button" class="btn-default btn" name="sendCmd" access="false" data-acquired="false"  id="button-sendCmd">
-                                Send
-                            </button>
-                        </div>
-                        <div class="formbuilder-button  column-2" style="padding: 5px 20px;">
-                            <button type="button" class="btn-default btn" name="clearLog" access="false" data-acquired="false"  id="button-clearLog">
-                                Clear Log
-                            </button>
-                        </div>
-                    </div>       
-                    <div class="log-msg" id="log-box">
-                    </div> 
-                </div>
-            </div>
-        </div>
-
-        <div id="fnModal" class="fn-modal">
-
-            <!-- Modal content -->
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            DCC++ EX
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
             
-            <div class="fn-modal-header row">
-             <h4 class="fn-heading" > New Map </h4>    
-             <span class="close" id="close-model">&times;</span>
-            </div>
-            <div class="fn-modal-content">
-                Content
-            </div>
-            <div class="fn-modal-footer row">
-                <button type="button" mode="new" class="btn-default btn save-fn" name="save-fn"  id="save-fn-map">
-                    Save Map
-                </button>
-            </div>
-          
+              DCC++ EX Web Throttle
+            
+          </span>
         </div>
-    </body>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/DCC-EX/website/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DCC-EX/website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
 
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../start/levels/" class="md-tabs__link">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../start/dccpp-jmri/" class="md-tabs__link">
+          Advanced Setup
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../hardware/microcontrollers/" class="md-tabs__link">
+          Hardware
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../throttles/ex-webthrottle/" class="md-tabs__link">
+          Throttles
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../api/command-station-api/" class="md-tabs__link">
+          API
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../develop/base-station-dev/" class="md-tabs__link">
+          Develop
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tinker/tinkering/" class="md-tabs__link">
+          Tinker
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../support/get-support/" class="md-tabs__link">
+          Support
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../resources/resources/" class="md-tabs__link">
+          Resources
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../download/dccex-downloads/" class="md-tabs__link">
+          Downloads
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../about/about-us/" class="md-tabs__link">
+          About
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DCC++ EX" class="md-nav__button md-logo" aria-label="DCC++ EX">
+      
+  <img src="../images/new-logo.png" alt="logo">
+
+    </a>
+    DCC++ EX
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/DCC-EX/website/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DCC-EX/website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/levels/" title="Choose your Path" class="md-nav__link">
+      Choose your Path
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/diy-starter-kit/" title="Starter Kit" class="md-nav__link">
+      Starter Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/assembly/" title="Hardware & Assembly" class="md-nav__link">
+      Hardware & Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/installer-setup/" title="Installer Setup" class="md-nav__link">
+      Installer Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/basic-setup/" title="Basic Setup" class="md-nav__link">
+      Basic Setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced Setup
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Advanced Setup" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Advanced Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/dccpp-jmri/" title="JMRI Setup" class="md-nav__link">
+      JMRI Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/rail-networking/" title="Rail Networking" class="md-nav__link">
+      Rail Networking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/automation/" title="Automation" class="md-nav__link">
+      Automation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/wifi-setup/" title="WIFI setup" class="md-nav__link">
+      WIFI setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Hardware
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Hardware" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Hardware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/microcontrollers/" title="Microcontrollers" class="md-nav__link">
+      Microcontrollers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/motor-boards/" title="Motor Boards" class="md-nav__link">
+      Motor Boards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/i2c-displays/" title="I2C Displays" class="md-nav__link">
+      I2C Displays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/power-supplies/" title="Power Supplies" class="md-nav__link">
+      Power Supplies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Throttles
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Throttles" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Throttles
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../throttles/ex-webthrottle/" title="exWebThrottle" class="md-nav__link">
+      exWebThrottle
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/command-station-api/" title="Command Station" class="md-nav__link">
+      Command Station
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Develop
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Develop" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Develop
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../develop/base-station-dev/" title="Base Station" class="md-nav__link">
+      Base Station
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Tinker
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Tinker" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Tinker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tinker/tinkering/" title="Tinker with DCC EX" class="md-nav__link">
+      Tinker with DCC EX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Support
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Support" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Support
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../support/get-support/" title="How To Get Support" class="md-nav__link">
+      How To Get Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../support/create-ticket-form/" title="Create Support Ticket" class="md-nav__link">
+      Create Support Ticket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Resources
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Resources" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Resources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../resources/resources/" title="Resources" class="md-nav__link">
+      Resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Downloads
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Downloads" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Downloads
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../download/dccex-downloads/" title="DCC++ Basestation" class="md-nav__link">
+      DCC++ Basestation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../download/dccex-materials-downloads/" title="Materials" class="md-nav__link">
+      Materials
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="About" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/about-us/" title="Team" class="md-nav__link">
+      Team
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../notes/rewrite/" title="What's New" class="md-nav__link">
+      What's New
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-need-to-setup-the-project" class="md-nav__link">
+    What you need to setup the project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-need-to-use-this-application" class="md-nav__link">
+    What you’ll need to use this application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    Operation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-emulator" class="md-nav__link">
+    Using the Emulator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/DCC-EX/website/edit/master/docs/exwebthrottle/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="dcc-ex-web-throttle">DCC++ EX Web Throttle</h1>
+<p>This is a new DCC++ EX Throttle/Controller
+that can connect to the DCC++ EX Commmand Station directly 
+through the USB port of a computer.</p>
+<h2 id="what-you-need-to-setup-the-project">What you need to setup the project</h2>
+<ul>
+<li>Chromium-Based Browser version 80 or above
+  (Chrome, Opera, Edge)</li>
+<li>You must enable the experimental Web Serial API</li>
+</ul>
+<p>To enable the Web Serial API, in your browser URL bar type:</p>
+<div class="codehilite"><pre><span></span><code><span class="c">chrome://flags</span>
+</code></pre></div>
+
+
+<p>Then set the <strong>#enable-experimental-web-platform-features</strong> flag
+by looking on the page for "Experimental Web Platform Features"
+and click on the "enable" button.</p>
+<p><strong>Note:</strong> Substitute the name of your browser above if you don't use Chrome</p>
+<h2 id="what-youll-need-to-use-this-application">What you’ll need to use this application</h2>
+<ul>
+<li>An Arduino Mega or Uno Microcontroller</li>
+<li>An Arduino Motor Control Shield</li>
+<li>Chrome version 80 or later</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>To get started, connect your Command Station to a computer with a USB port
+and a compatible browser installed. Use a USB A to B cable from your computer
+to the serial connector on the Arduino. Click on the index.html file to load the 
+webpage. </p>
+<h2 id="operation">Operation</h2>
+<p>To use the program, click on the "connect" button. Once you click this, a popup will 
+show up offering the different devices available, you are looking for a line such as 
+"Arduino Mega 2560 (COM3)". Your COM port may vary and if you are using Linux, it will be something like /dev/USB0. 
+Click on your board and then click the "connect" button. If nothing is shown, check the Command Station is correctly connected to your PC.</p>
+<p>This will then connect to the Command Station and should see the response
+from the command station on the web page in the Debug Console (if enabled). You can open
+the DevTools window to see more logging.</p>
+<p>Once you are connected, enter the DCC address of the cab (decoder) you want to control, then press the aquire button. You can now use the slider,
+direction buttons and cab function buttons to control your train! If at any point you want to change cab, just press the release button then type in
+a new address.</p>
+<p>You can experiment with different button mappings, as these saved, even when you close the window. These can also be downloaded and imported, along 
+with the rest of the app data.</p>
+<h2 id="using-the-emulator">Using the Emulator</h2>
+<p>If you don't have an Arduino, or it isn't currently plugged into your PC, you can use the emulator.
+This replicates the Command Station, meaning you can try the software out. 
+To use it, simply change the dropdown menu next to the "Connect DCC++ EX" button to<code>Emulator</code> then press the connect button. That's it, you are ready to
+use the emulator!  </p>
+<p><strong>Note:</strong> The emulator doesn't fully replicate the Command station yet. This means that although the software works, not all the responses will be shown in
+the debug console. We are currently working on this, so it is something that will be fixed.</p>
+<h2 id="license">License</h2>
+<p>Copyright 2020 DCC-EX</p>
+<p>Licensed under the GNU open source license.</p>
+<p>Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.</p>
+<p><a href="https://dcc-ex.com">DCC-EX</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["tabs", "instant"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.7a2ea5ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
 </html>
-
-
-

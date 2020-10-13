@@ -1,7 +1,7 @@
 /*  
-  This program is free software: you can redistribute it and/or modify
+    This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
+    the Free Software Foundation, either version 3 of the License, or$("#log-box").append("<br>"+data+"<br>");
     (at your option) any later version.
 
     This program is distributed in the hope that it will be useful,
@@ -23,7 +23,7 @@ window.speed=0;
 window.direction=1;
 window.server="";
 window.port=4444;
-window.speedStep = 2;
+window.speedStep = 1;
 window.functions = {
     "f0": 0,
     "f1": 0,
@@ -104,7 +104,32 @@ function getDirection(dir){
     return window.direction;
 }
 
+function setThrottleScreenUI() {
+  loadmaps();
+  loadButtons({ mname: "default", fnData: fnMasterData });
 
+  // Set saved throttle or use circular throttle as default
+
+  if (getPreference("vThrottle") == null) {
+    setPreference("vThrottle", false);
+  }
+  if (getPreference("vThrottle")) {
+    $("#vertical-throttle").show();
+    $("#throttle").hide();
+    $("#throttle-type").attr("checked", "checked");
+  } else {
+    $("#vertical-throttle").hide();
+    $("#throttle").show();
+  }
+
+  // Show and hide debug console based on prrference set in earlier session
+  if (getPreference("dbugConsole") == null) {
+    setPreference("dbugConsole", true);
+  }
+  getPreference("dbugConsole")
+    ? $("#debug-console").show()
+    : $("#debug-console").hide();
+}
 
 // This function will generate commands for each type of function
 function generateFnCommand(clickedBtn){
@@ -195,9 +220,36 @@ function generateFnCommand(clickedBtn){
 $(document).ready(function(){
 
     var mode = 0;
-    // Load function map and buttons
-    loadmaps();
-    loadButtons({ mname: "default" , fnData: fnMasterData});
+
+    // Load function map, buttons throttle etc
+    setThrottleScreenUI()
+
+    $("#v-throttle").slider({
+      orientation: "vertical",
+      min: 0,
+      max: 126,
+      disabled: true,
+      range: "max",
+      slide: function (event, ui) {
+          $("#speed-indicator").html(ui.value);
+            setSpeed(ui.value);
+            writeToStream("t 01 "+getCV()+" "+getSpeed()+" "+getDirection());
+            console.log("t 01 "+getCV()+" "+getSpeed()+" "+getDirection());
+            $("#throttle").roundSlider("setValue", ui.value);
+      },
+    });
+    $("#throttle-type").on("click", function () {
+        pb = $(this).is(":checked");   
+        if (pb == true){
+            $("#vertical-throttle").show();
+            $("#throttle").hide();
+            setPreference("vThrottle", true);
+        } else {
+            $("#vertical-throttle").hide();
+            $("#throttle").show();
+            setPreference("vThrottle", false);
+        }
+    });
 
     // Connect command station
     $("#button-connect").on('click',function(){
@@ -222,6 +274,7 @@ $(document).ready(function(){
                 acButton.data("acquired", true);
                 acButton.html("Release");
                 $("#throttle").roundSlider("enable");
+                $("#v-throttle").slider("enable");
 
             }else{
 
@@ -233,6 +286,8 @@ $(document).ready(function(){
                 acButton.data("acquired", false);
                 acButton.html("Acquire");
                 $("#throttle").roundSlider("disable");
+                $("#v-throttle").slider("disable");
+                $("#v-throttle").slider("option", "value", 0);
             }
         }
     });   
@@ -260,9 +315,10 @@ $(document).ready(function(){
         startAngle: 315,
         lineCap: "round",
         sliderType: "min-range",
-        showTooltip: false,
+        showTooltip: true,
+        editableTooltip: false,
         handleSize: "+18",
-        max: "128",
+        max: "126",
         disabled: true,
         create: function(){
             //console.log("This will trigger just before creation of throttle slider UI");
@@ -279,6 +335,8 @@ $(document).ready(function(){
         update: function(slider){  // can change this to "drage" and write the stream in "change:" instead
             setSpeed(slider.value);
             writeToStream("t 01 "+getCV()+" "+getSpeed()+" "+getDirection());
+            $("#v-throttle").slider("option", "value", slider.value);
+            $("#speed-indicator").html(slider.value);
             console.log("t 01 "+getCV()+" "+getSpeed()+" "+getDirection());
            // console.log("This event is the combination of 'drag' and 'change' events.");
         },
@@ -304,6 +362,9 @@ $(document).ready(function(){
                 setDirection(1);
                 $("#throttle").roundSlider("enable");
                 $("#throttle").roundSlider("setValue", getSpeed());
+                $("#v-throttle").slider("enable");
+                $("#v-throttle").slider("option", "value", getSpeed());
+                $("#speed-indicator").html(getSpeed());
                 writeToStream("t 01 "+getCV()+" "+getSpeed()+" 1");
                 break;
             }
@@ -312,6 +373,9 @@ $(document).ready(function(){
                 setDirection(0);
                 $("#throttle").roundSlider("enable");
                 $("#throttle").roundSlider("setValue", getSpeed());
+                $("#v-throttle").slider("enable");
+                $("#v-throttle").slider("option", "value", getSpeed());
+                $("#speed-indicator").html(getSpeed());
                 writeToStream("t 01 "+getCV()+" "+getSpeed()+" 0");
                 break;
             }
@@ -323,6 +387,9 @@ $(document).ready(function(){
                 writeToStream("t 01 "+getCV()+" -1 "+dir);
                 $("#throttle").roundSlider("disable");
                 $("#throttle").roundSlider("setValue", 0);
+                $("#v-throttle").slider("option", "value", 0);
+                $("#speed-indicator").html(0);
+                $("#v-throttle").slider("disable");
                 break;
             }
         }
@@ -350,6 +417,8 @@ $(document).ready(function(){
             if((sp <= 125) && (getDirection() != -1) && (getCV() != 0)){
                 setSpeed(sp+speedStep);                       
                 $("#throttle").roundSlider("setValue", getSpeed());
+                 $("#v-throttle").slider("option", "value", getSpeed());
+                 $("#speed-indicator").html(getSpeed());
                 writeToStream("t 01 "+getCV()+" "+getSpeed()+" "+getDirection());
                 sp=0;
             }
@@ -362,6 +431,8 @@ $(document).ready(function(){
         if((sp <= 125) && (getDirection() != -1) && (getCV() != 0)){
             setSpeed(sp+speedStep);
             $("#throttle").roundSlider("setValue", getSpeed());
+            $("#v-throttle").slider("option", "value", getSpeed());
+            $("#speed-indicator").html(getSpeed());
             writeToStream("t 01 "+getCV()+" "+getSpeed()+" "+getDirection());
             sp=0;
         }
@@ -374,9 +445,11 @@ $(document).ready(function(){
         event.stopImmediatePropagation();
         tId = setInterval(function(){
             var sp = getSpeed(sp);
-            if((sp >= 0) && (getDirection() != -1) && (getCV() != 0)){
+            if((sp >= 1) && (getDirection() != -1) && (getCV() != 0)){
                 setSpeed(sp-speedStep);
                 $("#throttle").roundSlider("setValue", getSpeed());
+                $("#v-throttle").slider("option", "value", getSpeed());
+                $("#speed-indicator").html(getSpeed());
                 writeToStream("t 01 "+getCV()+" "+getSpeed()+" "+getDirection());
                 sp=0;
             }
@@ -386,9 +459,11 @@ $(document).ready(function(){
     }).on('click',function(){
         event.stopImmediatePropagation();
         var sp = getSpeed(sp);
-        if((sp >= 0)&& (getDirection() != -1) && (getCV() != 0)){
+        if((sp >= 1)&& (getDirection() != -1) && (getCV() != 0)){
             setSpeed(sp-speedStep);
             $("#throttle").roundSlider("setValue", getSpeed());
+            $("#v-throttle").slider("option", "value", getSpeed());
+            $("#speed-indicator").html(getSpeed());
             writeToStream("t 01 "+getCV()+" "+getSpeed()+" "+getDirection());
             sp=0;
         }
@@ -441,8 +516,10 @@ $(document).ready(function(){
         
         if (pb == true){
             $("#debug-console").show();
+            setPreference("dbugConsole", true);
         } else {
             $("#debug-console").hide();
+            setPreference("dbugConsole", false);
         }
     });
 
@@ -450,6 +527,11 @@ $(document).ready(function(){
     $("#button-sendCmd").on('click', function(){
         cmd = $("#cmd-direct").val();
         writeToStream(cmd);
+    });
+
+    // Clear the console log window
+    $("#button-clearLog").on('click', function(){
+       $("#log-box").html("");
     });
 
     // Function to toggle fullScreen viceversa

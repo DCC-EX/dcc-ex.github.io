@@ -475,8 +475,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-download-and-install-the-dcc-ex-software-for-your-command-station" class="md-nav__link">
-    6. Download and install the DCC++ EX Software for your Command Station
+  <a href="#6-install-the-optional-wifi-board" class="md-nav__link">
+    6. Install the optional WiFi board
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-download-and-install-the-dcc-ex-software-for-your-command-station" class="md-nav__link">
+    7. Download and install the DCC++ EX Software for your Command Station
   </a>
   
 </li>
@@ -1113,8 +1120,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-download-and-install-the-dcc-ex-software-for-your-command-station" class="md-nav__link">
-    6. Download and install the DCC++ EX Software for your Command Station
+  <a href="#6-install-the-optional-wifi-board" class="md-nav__link">
+    6. Install the optional WiFi board
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-download-and-install-the-dcc-ex-software-for-your-command-station" class="md-nav__link">
+    7. Download and install the DCC++ EX Software for your Command Station
   </a>
   
 </li>
@@ -1214,21 +1228,24 @@ figure 1 - basic setup</p>
 <p><img align="center" alt="Main and Prog Out to track" src="../../images/motor_power2b.jpg" />
 <br>figure 10 - Out to Main and Program tracks</p>
 <h2 id="5-connect-the-power-supply-to-the-arduino-but-dont-plug-it-in-yet">5. Connect the power supply to the arduino (but )don't plug it in yet!)</h2>
-<p>Connect the 2.5mm barrel connect from your separate 7-9V DC powersupply to the barrel connector on the Arduino</p>
+<p>Connect the 2.5mm barrel connect from your separate 7-9V DC powersupply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the "Vin" and "Gnd" pins on the Arduino.</p>
 <p><pic coming soon></p>
-<h2 id="6-download-and-install-the-dcc-ex-software-for-your-command-station">6. Download and install the DCC++ EX Software for your Command Station</h2>
+<h2 id="6-install-the-optional-wifi-board">6. Install the optional WiFi board</h2>
+<p>You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If you are adding this board, click below, otherwise skip to setp 7.</p>
+<p><Add link to Wifi Board Install></p>
+<h2 id="7-download-and-install-the-dcc-ex-software-for-your-command-station">7. Download and install the DCC++ EX Software for your Command Station</h2>
 <p>Keep your USB cable handy because we are going to need it in the next step. Click on one of the links below to see how to install the software. </p>
 <p>If you are a "Conductor" (Click to see <a href="../levels/">user levels / path choice</a>), we recommend using our installer. It is the simplest and quickest way to get started since it walks you through a simple process by letting you select any options from simple dropdowns and then installs everything you need. </p>
-<p>If you are a "Tinkerer" or "Engineer", you may prefer using the Arduino IDE. Many of you may have already used the Arduino IDE and be familiar with it. The Arduino IDE is a very simple "Integrated Development Environment" that lets you open the DCC-EX project files, edit your config file or even your main program file, upload it to the Arduino, and then monitor or interact with the Command Station for testing.</p>
+<p>If you are a "Tinkerer" or "Engineer", you may prefer using the Arduino IDE. Many of you may have already used the Arduino IDE and are familiar with it. The Arduino IDE is a very simple "Integrated Development Environment" that lets you open the DCC-EX project files, edit your config file or even your main program file, upload it to the Arduino, and then monitor or interact with the Command Station for testing.</p>
 <p><Use the automated installer></p>
 <p><Use the Arduino IDE></p>
 <h2 id="technical-notes">TECHNICAL NOTES</h2>
 <p><strong>Wire Gauge</strong> - The Arduino Motor controller can only provide about 1.5 Amps of power (despite being rated for 2), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire.</p>
 <p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20? Can't you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14 (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.</p>
+<p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply into the shield.</p>
 <p>Install using the Automated Installer</p>
 <p>Install manually using the Arduino IDE</p>
 <p><a href="../../hardware/power-supplies/">Power Supplies</a></p>
-<p><adding wifi next also?></p>
 <p>Next Page: <a href="../basic-setup/">Basic Install/Setup</a></p>
                 
               

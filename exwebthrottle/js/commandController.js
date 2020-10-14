@@ -130,7 +130,7 @@ class LineBreakTransformer {
 
 class ChunkTransformer {
     transform(chunk, controller) {
-        displayLog(chunk.toString());
+        // displayLog(chunk.toString());
         console.log('dumping the raw chunk', chunk);
         controller.enqueue(chunk);
 	}

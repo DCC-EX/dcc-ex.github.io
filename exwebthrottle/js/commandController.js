@@ -47,8 +47,7 @@ async function connectServer() {
             let decoder = new TextDecoderStream();
             inputDone = port.readable.pipeTo(decoder.writable);
             inputStream = decoder.readable
-            //  .pipeThrough(new TransformStream(new LineBreakTransformer())); // added this line to pump through transformer
-            .pipeThrough(new TransformStream(new JSONTransformer()));
+            .pipeThrough(new TransformStream(new ChunkTransformer()));
 
             // get a reader and start the non-blocking asynchronous read loop to read data from the stream.
             reader = inputStream.getReader();
@@ -88,7 +87,7 @@ async function readLoop() {
 }
 
 function writeToStream(...lines) {
-    // Stops data being written to nonexistent port if using emulator
+    // Stops data being written to non-existent port if using emulator
     if (port) {
         const writer = outputStream.getWriter();
         lines.forEach((line) => {
@@ -129,21 +128,13 @@ class LineBreakTransformer {
         }
 }
 
-// Optional transformer for use with the web serial API
-// to parse a JSON file into its component commands
-class JSONTransformer {
+class ChunkTransformer {
     transform(chunk, controller) {
-        // Attempt to parse JSON content
-        try {
-        controller.enqueue(JSON.parse(chunk));
-        } catch (e) {
         displayLog(chunk.toString());
-        console.log('No JSON, dumping the raw chunk', chunk);
+        console.log('dumping the raw chunk', chunk);
         controller.enqueue(chunk);
-        }
-
-    }
-} 
+	}
+}
 
 async function disconnectServer() {
     if ($("#power-switch").is(':checked')) {
@@ -205,10 +196,10 @@ async function toggleServer(btn) {
 
 // Display log of events
 function displayLog(data){
-
-    $("#log-box").append("<br>"+data+"<br>");
-    $("#log-box").animate({scrollTop: $("#log-box").prop("scrollHeight"), duration: 1});
-
+	$("#log-box").append(document.createTextNode(data));
+	$("#log-box").append("<br>");
+	$("#log-box").animate({scrollTop: $("#log-box").prop("scrollHeight")}, 10);
+	
 }
 
 // Function to generate commands for functions F0 to F4

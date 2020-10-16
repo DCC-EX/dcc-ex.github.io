@@ -508,6 +508,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../wifi-setup/" title="Adding WiFi" class="md-nav__link">
+      Adding WiFi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../installer-setup/" title="Installer Setup" class="md-nav__link">
       Installer Setup
     </a>
@@ -598,8 +610,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../wifi-setup/" title="WIFI setup" class="md-nav__link">
-      WIFI setup
+    <a href="../wifi-config/" title="WIFI Configuration" class="md-nav__link">
+      WIFI Configuration
     </a>
   </li>
 
@@ -1241,12 +1253,21 @@ figure 1 - basic setup</p>
 <p><Use the Arduino IDE></p>
 <h2 id="technical-notes">TECHNICAL NOTES</h2>
 <p><strong>Wire Gauge</strong> - The Arduino Motor controller can only provide about 1.5 Amps of power (despite being rated for 2), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire.</p>
-<p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20? Can't you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14 (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.</p>
+<p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20? Can't you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14 (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies. Click here for more information about <a href="../../hardware/power-supplies/">Power Supplies</a></p>
 <p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply into the shield.</p>
-<p>Install using the Automated Installer</p>
-<p>Install manually using the Arduino IDE</p>
-<p><a href="../../hardware/power-supplies/">Power Supplies</a></p>
-<p>Next Page: <a href="../basic-setup/">Basic Install/Setup</a></p>
+<p><strong>Next Page</strong></p>
+<ul>
+<li>If you are adding a WiFi Shield:</li>
+</ul>
+<p><a href="../wifi-setup/">Adding a WiFi Shield</a></p>
+<ul>
+<li>If you are ready to install the software using the DCC-EX Installer</li>
+</ul>
+<p><a href="../installer-setup/">Install using the Automated Installer</a></p>
+<ul>
+<li>If you are installing using the Arduino IDE</li>
+</ul>
+<p><a href="../basic-setup/">Install using the Arduino IDE</a></p>
                 
               
               
@@ -1280,13 +1301,13 @@ figure 1 - basic setup</p>
           </a>
         
         
-          <a href="../installer-setup/" title="Installer Setup" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../wifi-setup/" title="Adding WiFi" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installer Setup
+                Adding WiFi
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

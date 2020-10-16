@@ -47,7 +47,8 @@ async function connectServer() {
             let decoder = new TextDecoderStream();
             inputDone = port.readable.pipeTo(decoder.writable);
             inputStream = decoder.readable
-            .pipeThrough(new TransformStream(new ChunkTransformer()));
+            //.pipeThrough(new TransformStream(new LineBreakTransformer()));
+			.pipeThrough(new TransformStream(new ChunkTransformer()));
 
             // get a reader and start the non-blocking asynchronous read loop to read data from the stream.
             reader = inputStream.getReader();
@@ -131,7 +132,7 @@ class LineBreakTransformer {
 class ChunkTransformer {
     transform(chunk, controller) {
         // displayLog(chunk.toString());
-        console.log('dumping the raw chunk', chunk);
+        console.log('ChunkTransformer: ', chunk);
         controller.enqueue(chunk);
 	}
 }

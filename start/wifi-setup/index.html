@@ -473,11 +473,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#makerfabs-es-8266-wifi-shield-recommended" class="md-nav__link">
-    Makerfabs ES-8266 WiFi Shield (recommended)
+  <a href="#makerfabs-esp-8266-wifi-shield-recommended" class="md-nav__link">
+    Makerfabs ESP-8266 WiFi Shield (recommended)
   </a>
   
-    <nav class="md-nav" aria-label="Makerfabs ES-8266 WiFi Shield (recommended)">
+    <nav class="md-nav" aria-label="Makerfabs ESP-8266 WiFi Shield (recommended)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1192,11 +1192,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#makerfabs-es-8266-wifi-shield-recommended" class="md-nav__link">
-    Makerfabs ES-8266 WiFi Shield (recommended)
+  <a href="#makerfabs-esp-8266-wifi-shield-recommended" class="md-nav__link">
+    Makerfabs ESP-8266 WiFi Shield (recommended)
   </a>
   
-    <nav class="md-nav" aria-label="Makerfabs ES-8266 WiFi Shield (recommended)">
+    <nav class="md-nav" aria-label="Makerfabs ESP-8266 WiFi Shield (recommended)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1321,11 +1321,11 @@
                 
                 
                 <h1 id="wifi-setup">WiFi Setup</h1>
-<p>There are many ways to add Wifi to your CS. We will cover three methods here. You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the links on our <a href="../../support/get-support/">Support Page</a> if you have a question.</p>
+<p>There are many ways to add Wifi to your CS. We will cover three methods here. Any level from Conductor to Engineer should be comfortable here, however you will need to know a little bit about networking. If you can get your phone and your Roku to connect to your network, you can do this. You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the links on our <a href="../../support/get-support/">Support Page</a> if you have a question. </p>
 <h2 id="why-use-wifi">Why Use WiFi?</h2>
 <p>The biggest reason many people want to add WiFi is to go wireless! With the base CS consisting of an Arduino Mega and an Arduino Motor Shield, you must use a serial cable to connect to a computer to run JMRI, our exWebThrottle, or other another Controller. The controller is what sends commands to the CS to run your trains and control your accessories.</p>
 <p>An astute observer may note that you can go wireless when using software like JMRI. That's true! But you need another computer to do it. With DCC++ EX WiFi, you can connect directly to your CS from any WiThrottle capable throttle, such as the Engine Driver phone app.</p>
-<p>Previously, to connect a wireless throttle like Engine Driver to the CS, you needed another computer running JMRI with that computer connected to the CS via a serial cable. JMRI exposes a "WiThtottle Server" on the Wifi capable computer it runs on. You would then connect Engine Driver wirelessly to that computer and the computer and JMRI acts as middleware to connect to the CS. And this is a great solution. Plenty of people want to take advantage of all the functionality inside JMRI that can run your entire layout. But many of you tell us that you just want to run trains. So whether you are at a show or just have a layout at home where a throttle (aka CAB) will do everything you need, you can connect directly to the CS without any other hardware or software.</p>
+<p>Previously, to connect a wireless throttle like Engine Driver to the CS, you needed another computer running JMRI (The Java Model Railroad Interface Program) with that computer connected to the CS via a serial cable. JMRI exposes a "WiThrottle Server" on the Wifi capable computer it runs on. You would then connect Engine Driver wirelessly to that computer and the computer and JMRI act as middleware to connect to the CS. And this is a great solution. Plenty of people want to take advantage of all the functionality inside JMRI that can run your entire layout. But many of you tell us that you just want to run trains. So whether you are at a show or just have a layout at home where a throttle (aka CAB) will do everything you need, you can connect directly to the CS without any other hardware or software.</p>
 <h2 id="compatible-boards">Compatible Boards</h2>
 <p>Most boards based on the ESP-8266 should work with DCC++ EX. However, with all the variations and software versions out there, we've compiled this list of known tested, working hardware. We will add more over time.</p>
 <ul>
@@ -1333,13 +1333,17 @@
 <li>Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s)</li>
 <li>ESP-01 or ESP-01s Board (This is not a shield. You will need to jumper 5 wires)</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the boards mentioned here operate on the 2.4GHz band. And a fun fact is that the DCC signal averages around 8kHz. That means it cycles from positive to negative 8,000 times a second. 2.4GHz is in the microwave band (which is why a leaky microwave oven can wreak havoc on your network) which switches back and forth 2.4 BILLION times per second!</p>
+</div>
 <h2 id="what-you-will-need">What you will need</h2>
 <ul>
 <li>A Command Station (CS) made from a Mega and an Arduino Motor Shield</li>
 <li>One of the above boards</li>
 <li>Two (2) Male to Female Jumpers (plus 3 more if you are using an ESP-01 or 01s)</li>
 </ul>
-<h2 id="makerfabs-es-8266-wifi-shield-recommended">Makerfabs ES-8266 WiFi Shield (recommended)</h2>
+<h2 id="makerfabs-esp-8266-wifi-shield-recommended">Makerfabs ESP-8266 WiFi Shield (recommended)</h2>
 <p>We like this board at DCC++ EX labs. It is simple, inexpensive, easy to use, and it works.</p>
 <p><img align="center" alt="Figure 1 - Makerfabs ESP-8266 WiFi Shield" src="../../images/wifi_jumpers1.jpg" />
 <br>
@@ -1351,7 +1355,7 @@ Figure 1 - Makerfabs ESP-8266 WiFi Shield</p>
 <br>
 Figure 2 - Remove the plastic jumpers</p>
 <h3 id="align-the-boards">Align the boards</h3>
-<p>Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Tx, Rx, 2, 3, 4, 6, 6, 7 pins on the Motor Shield line up with the 0 through 7 pins on the Makerfabs WiFi Board. Start to get this row parctially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.</p>
+<p>Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Tx, Rx, 2, 3, 4, 6, 6, 7 pins on the Motor Shield line up with the 0 through 7 pins on the Makerfabs WiFi Board. Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.</p>
 <p><img align="center" alt="Figure 3 - Get the left side pins aligned" src="../../images/wifi_seat1.jpg" />
 <br>
 Figure 3 - Get the left side pins aligned</p>
@@ -1365,7 +1369,7 @@ Figure 4 - Get the right side pins aligned
 <br>
 Figure 5 - Fully Seated Boards</p>
 <h3 id="install-the-jumper-wires">Install the jumper wires</h3>
-<p>We now need to connect The Transmit (Tx) and Receive (Rx) pins on the ESP-8266 to the Rx and Tx pins for Serial1 on the Mega. The mega has one serial port connected to the USP port and then 3 extra ones we can access from pins on the board. You can think of Tx as "talking" and Rx as "listening". That will help you remember that if one thing is talking, the other has to use its ears to listen. So we must connect the Tx of the WiFi board to Rx1 on the Mega and the Rx pin on the WiFi Board to Tx1 on the Mega.</p>
+<p>We now need to connect The Transmit (Tx) and Receive (Rx) pins on the ESP-8266 to the Rx and Tx pins for Serial1 on the Mega. The mega has one serial port connected to the USB port and then 3 extra ones we can access from pins on the board. You can think of Tx as "talking" and Rx as "listening". That will help you remember that if one thing is talking, the other has to use its ears to listen. So we must connect the Tx of the WiFi board to Rx1 on the Mega and the Rx pin on the WiFi Board to Tx1 on the Mega.</p>
 <p>There are three rows of pins on the Makerfabs WiFi shield. The middle pins each connect to one of the first 8 pins on the header. Pin 0 goes to header pin 0, pin 1 goes to header pin 2, and so on. We aren't going to need those. With the plastic jumpers removed, nothing will be connected to any of those pins on the WiFi Board and therefore not connected down to the Mega through the Motor Shield.</p>
 <p>ALL of the pins in the row marked Tx (the row closest to the header) are connected to the Tx pin of the ESP-8266. ALL of the pins in the row marked Rx (the row closes to the middle of the board) are connected to the Rx pin on the ESP-8266</p>
 <p>Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board and connect the other end to the Rx1 pin on the mega (pin 19)</p>
@@ -1378,7 +1382,7 @@ Figure 6 - Install the jumper wires</p>
 <p>The screen printing on the board may make it hard to see which pins are 18 and 19, they may not be aligned exactly. Count the pins if you need to to make sure that you are using the correct ones.</p>
 </div>
 <h3 id="install-the-software">Install the software</h3>
-<p>If you already have the CS sofware running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and what port it is connected to. See the detailed instructions here <add wifi connect link></p>
+<p>If you already have the CS sofware running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and what port it is connected to. See the detailed instructions here <a href="../wifi-config/">WiFi Configuration</a></p>
 <p>If you are setting up your Command Station for the first time, or are making changes click on the basic setup link below to install your software onto the CS.</p>
 <p><a href="#installing-the-software">Next Step: Installing the sofware</a></p>
 <h2 id="duinopeak-esp-8266-wifi-expansion-board">Duinopeak ESP-8266 WiFi Expansion Board</h2>
@@ -1423,6 +1427,10 @@ Figure 9 - Wiring and ESP-01s to a Mega</p>
 
 
 <p>In order to connect both Vcc and CH_PD to the 3.3V output of the arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V</p>
+<div class="admonition note about current requirements">
+<p class="admonition-title">Note</p>
+<p>While we at DCC-EX Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply or find another way to provide clean, regulated 3.3V to the ESP</p>
+</div>
 <p><img alt="ESP-01s Adapters" src="../../images/esp-01_adapter.jpg" />
 <br>
 Figure 10 - ESP-01 Breakout Boards</p>
@@ -1433,6 +1441,7 @@ Figure 10 - ESP-01 Breakout Boards</p>
 <h3 id="install-the-software_2">Install the Software</h3>
 <p>If you already have the CS sofware running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and what port it is connected to. See the detailed instructions here <add wifi connect link></p>
 <p>If you are setting up your Command Station for the first time, or are making changes click on one of the install links below to install your software onto the CS.</p>
+<p>If you want more information about Wifi or to change your <a href="../wifi-config/">Wifi Configuration</a> click this hyperlink.</p>
 <h2 id="installing-the-software">Installing the software</h2>
 <p><strong>Next Page</strong></p>
 <ul>

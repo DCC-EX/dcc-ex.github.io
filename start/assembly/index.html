@@ -226,7 +226,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../develop/base-station-dev/" class="md-tabs__link">
+        <a href="../../develop/command-station-dev/" class="md-tabs__link">
           Develop
         </a>
       
@@ -814,8 +814,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../develop/base-station-dev/" title="Base Station" class="md-nav__link">
-      Base Station
+    <a href="../../develop/command-station-dev/" title="Command Station" class="md-nav__link">
+      Command Station
     </a>
   </li>
 
@@ -1179,14 +1179,14 @@
 <li>An Arduino Motor Shield or compatible</li>
 <li>A USB-A Male to USB-B Male cable, aka USB Printer cable (or Micro USB for some Arduino Mega clones)</li>
 <li>18 to 16 AWG twisted pair hookup wire to connect the CS (Motor Controller outputs) to your tracks</li>
-<li>A 7-9V DC Power supply with a 2.5mm barrel connector for the Mega</li>
+<li>A 7-9V DC Power supply with a 2.5mm barrel connector for the Mega (see <a href="../../hardware/power-supplies/">Power Supplies</a>) for other options. You may be able to eliminate this second power supply)</li>
 <li>A 12V-15V power supply for the Motor Shield (See fig <link> for proper voltage)</li>
 <li>A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (if you don't want to strip wires on your power supply)</li>
 </ul>
 <p>Refer to the <a href="../diy-starter-kit/">Starter Kit</a> for more infomation about this list of what you will need.</p>
 <p><img align="center" alt="Command Station Setup" src="../../images/basic_setup.jpg" />
 figure 1 - basic setup</p>
-<p>* For an Uno, Nano or other microcontroller, or if you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see <strong><em> link coming soon </em></strong></p>
+<p>* For an Uno, Nano or other microcontroller, please see <a href="../../hardware/microcontrollers/">Using a different microcontroller</a>. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see <a href="../../hardware/motor-boards/">Motor Controllers</a></p>
 <p>For a video on how to do this, click here <strong><em> link coming soon </em></strong></p>
 <h2 id="1-before-you-begin-cut-the-vin-trace-on-the-motor-controller">1. BEFORE YOU BEGIN, Cut the Vin trace on the motor controller</h2>
 <p>We recommend you use two separate power supplies (or one power supply that can deliver two different voltages) one for the Arduino Mega and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.<br></p>
@@ -1216,7 +1216,7 @@ figure 1 - basic setup</p>
 <p>a. Did you remember to cut the trace on the motor shield? If not, see above. Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.</p>
 <p><img align="center" alt="bent pins" src="../../images/bent_pins.png" />
 <br>figure 4 - Bent pins</p>
-<p>b. Line up the pins on the side of the board closest to the USB with the header connector on the Mega first. You want to line up pins 0-7 on the Mega with the same pins on the motor board. See the picture below and notice the small gap between the two sets of pins to match the two pin header sockets.</p>
+<p>b. Line up the pins on the side of the board closest to the USB with the header connector on the Mega first. You want to line up pins 0-7 on the Mega with the same pins on the motor board. On the other side, IOREF, RESET, 3V3, etc. and A0-A5 need to line up on both boards. See the picture below and notice the small gap between the two sets of pins to match the two pin header sockets.</p>
 <p><img align="center" alt="Line up the pins" src="../../images/seat1.jpg" />
 <br>figure 5 - Line up left side first</p>
 <p>c. Just align them and start to push them in but don't push them all the way. Use your fingers to try to push the pins to get them to all to into the holes.</p>
@@ -1234,7 +1234,7 @@ figure 1 - basic setup</p>
 <p>Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.</p>
 <h2 id="3-connect-your-power-supply-to-the-motor-shield-but-dont-plug-it-in-yet">3. Connect your power supply to the motor shield (But don't plug it in yet!)</h2>
 <p><strong>WARNING</strong>: Make sure you have cut the trace on the motor control board. If not, see above first. Once you know the trace is cut, connect power to the motor board</p>
-<p>Make sure you have a power supply with the correct voltage and current rating. <see selecting your power supply></p>
+<p>Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, pleas see <a href="../../hardware/power-supplies/">Power Supplies</a>)</p>
 <p>If you are using a "bench" or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the motor shield and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the motor shield</p>
 <p><img align="center" alt="Power in to the Motor Shield" src="../../images/motor_power2b.jpg" />
 <br>figure 10 - Power in to the Motor Shield</p>
@@ -1248,9 +1248,13 @@ figure 1 - basic setup</p>
 <br>figure 12 - Out to Main and Program tracks</p>
 <h2 id="5-connect-the-power-supply-to-the-arduino-but-dont-plug-it-in-yet">5. Connect the power supply to the Arduino (but )don't plug it in yet!)</h2>
 <p>Connect the 2.5mm barrel connector from your separate 7-9V DC powersupply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the "Vin" and "Gnd" pins on the Arduino.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run exWebThrottle or JMRI. There is also a way to use a 5V power supply. Please read <a href="../../hardware/power-supplies/">Power Supplies</a>) to help you find what will work best for you).</p>
 <p><pic coming soon></p>
 <h2 id="6-install-the-optional-wifi-board">6. Install the optional WiFi board</h2>
-<p>You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. BBut if you are installing a ESP8266 Shield or bare ESP8266 to connect wirelessly, click below, otherwise skip to setp 7.</p>
+<p>You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing a ESP8266 Shield or bare ESP8266 to connect wirelessly, Click the link below.</p>
 <p><a href="../wifi-setup/">Wifi Setup</a></p>
 <h2 id="7-download-and-install-the-dcc-ex-software-for-your-command-station">7. Download and install the DCC++ EX Software for your Command Station</h2>
 <p>Keep your USB cable handy because we are going to need it in the next step. Click on one of the links below to see how to install the software. </p>

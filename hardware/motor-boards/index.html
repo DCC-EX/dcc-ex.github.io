@@ -226,7 +226,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../develop/base-station-dev/" class="md-tabs__link">
+        <a href="../../develop/command-station-dev/" class="md-tabs__link">
           Develop
         </a>
       
@@ -615,8 +615,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-an-arduino-or-deek-robot-motor-shield" class="md-nav__link">
-    Connecting an Arduino or Deek-Robot Motor Shield
+  <a href="#but-i-saw-this-board-will-it-work" class="md-nav__link">
+    But I saw this board, will it work?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-little-or-now-modification-conductor-friendly" class="md-nav__link">
+    Work with little or now modification (Conductor friendly)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-a-little-tinkering-tinkerer-path" class="md-nav__link">
+    Need a little tinkering (Tinkerer path)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-more-modification-engineer-path" class="md-nav__link">
+    Need more modification (Engineer path)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-your-motor-shield" class="md-nav__link">
+    Connecting your motor shield
   </a>
   
 </li>
@@ -772,8 +800,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../develop/base-station-dev/" title="Base Station" class="md-nav__link">
-      Base Station
+    <a href="../../develop/command-station-dev/" title="Command Station" class="md-nav__link">
+      Command Station
     </a>
   </li>
 
@@ -1062,8 +1090,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-an-arduino-or-deek-robot-motor-shield" class="md-nav__link">
-    Connecting an Arduino or Deek-Robot Motor Shield
+  <a href="#but-i-saw-this-board-will-it-work" class="md-nav__link">
+    But I saw this board, will it work?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-little-or-now-modification-conductor-friendly" class="md-nav__link">
+    Work with little or now modification (Conductor friendly)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-a-little-tinkering-tinkerer-path" class="md-nav__link">
+    Need a little tinkering (Tinkerer path)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-more-modification-engineer-path" class="md-nav__link">
+    Need more modification (Engineer path)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-your-motor-shield" class="md-nav__link">
+    Connecting your motor shield
   </a>
   
 </li>
@@ -1089,8 +1145,11 @@
                 
                 
                 <h1 id="motor-boards">Motor boards</h1>
-<p>There are many motor boards available to use with DCC++ EX. Also called "Dual-H Bridges" and "Motor Shields", some require a little work, but others are mostly plug and play.</p>
-<p>NOTE: We recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot ($15 US).</p>
+<p>There are many motor boards available to use with DCC++ EX. Also called "Dual-H Bridges" and "Motor Shields". Some require a little work, but others are mostly plug and play.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot ($15 US).</p>
+</div>
 <p><img alt="Deek Robot Motor Shield" src="../../images/deek_robot1_sm.jpg" /></p>
 <h2 id="boards-currently-supported">Boards currently supported</h2>
 <ul>
@@ -1099,12 +1158,35 @@
 <li>LMD18200 Motor Driver Module</li>
 <li>Pololu MC33926 Motor Shield</li>
 <li>LMD18200 Based Motor Boards</li>
+<li>BTS7960 Based Motor Boards</li>
 </ul>
 <p>There are other boards, some requiring modification, which are covered in the advanced section.</p>
-<h2 id="connecting-an-arduino-or-deek-robot-motor-shield">Connecting an Arduino or Deek-Robot Motor Shield</h2>
-<p><img alt="Uno Jumper" src="../../images/Motor_Shield_Pin_Map_Uno_200px.jpg" /></p>
-<p><a href="../../assets/motor-shield-pin-mappings.pdf">Jumper Diagrams</a> </p>
-<p>The link above will open a PDF document that provides detail information on how to connect the most popular motor controllers to an Arduino.</p>
+<h2 id="but-i-saw-this-board-will-it-work">But I saw this board, will it work?</h2>
+<p>This is a checklist for what your motor controller needs to work with DCC++ EX:</p>
+<ul>
+<li>A dual H-Bridge (one for MAIN and one for PROG)</li>
+<li>Handle enough current for the layout (most boards support 2 Amps, enough for 3-5 locos)</li>
+<li>Have working current sense (many do not)</li>
+<li>Be able to allow our fast switching speeds (some do not)</li>
+<li>Plug on shield to eliminate wiring (optional feature)</li>
+</ul>
+<h2 id="work-with-little-or-now-modification-conductor-friendly">Work with little or now modification (Conductor friendly)</h2>
+<ul>
+<li>Arduino Motor Shield R3</li>
+<li>Deek-Robot Motor Shield</li>
+</ul>
+<h2 id="need-a-little-tinkering-tinkerer-path">Need a little tinkering (Tinkerer path)</h2>
+<p>The following are not shields, they are discrete boards. You will need to connect them with wires.</p>
+<ul>
+<li>LMD18200</li>
+<li>BTS70960</li>
+</ul>
+<h2 id="need-more-modification-engineer-path">Need more modification (Engineer path)</h2>
+<ul>
+<li>"Beeper Board" - You have to lift two traces and solder 2 resistors and use 2 jumpers.</li>
+</ul>
+<h2 id="connecting-your-motor-shield">Connecting your motor shield</h2>
+<p><strong><em>* coming soon </em></strong>*</p>
                 
               
               

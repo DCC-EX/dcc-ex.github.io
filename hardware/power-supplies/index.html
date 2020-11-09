@@ -226,7 +226,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../develop/base-station-dev/" class="md-tabs__link">
+        <a href="../../develop/command-station-dev/" class="md-tabs__link">
           Develop
         </a>
       
@@ -632,6 +632,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#do-i-need-two-power-supplies" class="md-nav__link">
+    Do I need two power supplies?
+  </a>
+  
+    <nav class="md-nav" aria-label="Do I need two power supplies?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-ways-to-power-the-arduino" class="md-nav__link">
+    Three ways to power the Arduino
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#voltage" class="md-nav__link">
     Voltage
   </a>
@@ -779,8 +799,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../develop/base-station-dev/" title="Base Station" class="md-nav__link">
-      Base Station
+    <a href="../../develop/command-station-dev/" title="Command Station" class="md-nav__link">
+      Command Station
     </a>
   </li>
 
@@ -1062,6 +1082,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#do-i-need-two-power-supplies" class="md-nav__link">
+    Do I need two power supplies?
+  </a>
+  
+    <nav class="md-nav" aria-label="Do I need two power supplies?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-ways-to-power-the-arduino" class="md-nav__link">
+    Three ways to power the Arduino
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#voltage" class="md-nav__link">
     Voltage
   </a>
@@ -1103,9 +1143,16 @@
                 
                 
                 <h1 id="power-supplies">Power Supplies</h1>
-<p>The power supply is one of the most important parts of your setup. You need to select a clean, filtered power supply that can supply at least the amount of current required by your motor drivers. </p>
+<p>The power supply is one of the most important parts of your setup. You need to select a clean, filtered power supply that can supply at least the amount of current required by your motor controllers. </p>
+<h2 id="do-i-need-two-power-supplies">Do I need two power supplies?</h2>
+<p>Both your microcontroler (the Arduino) and the motor controller need power. While we recommend a 9 Volt, 1 Amp, DC power supply for the microcontroler, there are other ways to power it. The voltage to the motor controller does not change, you need the correct voltage and amperage for your guage and layout.</p>
+<h4 id="three-ways-to-power-the-arduino">Three ways to power the Arduino</h4>
+<p>Barrel Connector - This is where we can connect our 9V supply. This requires two power supplies, one for the Arduino and a separate one for the motor controller. The power goes through a voltage regulator on the Arduino and converts the 9V to the 5V the board can use.</p>
+<p>Vcc pin - </p>
+<p>USB Connector - If you always will have a computer connected to your Command Station (for example when using JMRI), the 5V from your computer can power it. You won't need another power supply. Most USB ports can only supply 500 milliamps, so be careful about adding anything that will draw current from the CS. A motor shield, a wifi shield and a fan that draws 50mA should be fine. Even if you don't have a laptop, you can use a 5V, 1A USB power supply like a phone charger and connect it to the USB port.</p>
+<p>5V pin - You can connect a good quality 5V power supply directly to the 5V pin and ground. This bypasses the voltage regulator on the board which means you can use more current. We recommend a 5V, 1A power supply. Since there are many dual-voltage power supplies on the market, you can use one power supply with two outputs.</p>
 <h2 id="voltage">Voltage</h2>
-<p>N and Z scale layouts should run at at about 12V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this <a href="https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/">Trainboard Thread</a> Another good link (along with just about anything written by Mark Gurries, is here: <a href="https://sites.google.com/site/markgurries/home/technical-discussions/boosters/choosing-the-right-booster">Mark Gurries - Choosing the Right Booster</a></p>
+<p>N and Z scale layouts should run at at about 12V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this <a href="https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/">Trainboard Thread</a> Another good link (along with just about anything written by Mark Gurries, is here: <a href="https://sites.google.com/site/markgurries/home/technical-discussions/boosters/choosing-the-right-booster">Mark Gurries - Choosing the Right Booster</a></p>
 <p>Most larger scales will run higher voltages. For reference, the Digitrax systems put the rails at around 14V. Do some homework to determine what voltage is best for your system.</p>
 <h2 id="amperage">Amperage</h2>
 <p>You'll need to be able to supply 3A per channel to the tracks on which you intend to run trains, assuming you're using the Arduino motor shield or Pololu motor shield. For larger motor driver shields, you'll want a larger power supply.</p>

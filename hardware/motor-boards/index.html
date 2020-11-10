@@ -265,8 +265,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../resources/resources/" class="md-tabs__link">
-          Resources
+        <a href="../../reference/command-reference/" class="md-tabs__link">
+          Reference
         </a>
       
     </li>
@@ -622,8 +622,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#work-with-little-or-now-modification-conductor-friendly" class="md-nav__link">
-    Work with little or now modification (Conductor friendly)
+  <a href="#work-with-little-or-no-modification-conductor-friendly" class="md-nav__link">
+    Work with little or no modification (Conductor friendly)
   </a>
   
 </li>
@@ -643,8 +643,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-your-motor-shield" class="md-nav__link">
-    Connecting your motor shield
+  <a href="#boards-that-are-not-compatible-for-use-with-dcc" class="md-nav__link">
+    Boards that are NOT compatible for use with DCC
   </a>
   
 </li>
@@ -917,17 +917,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
     <label class="md-nav__link" for="nav-10">
-      Resources
+      Reference
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Resources" data-md-level="1">
+    <nav class="md-nav" aria-label="Reference" data-md-level="1">
       <label class="md-nav__title" for="nav-10">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Resources
+        Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -938,7 +938,43 @@
 
 
   <li class="md-nav__item">
-    <a href="../../resources/resources/" title="Resources" class="md-nav__link">
+    <a href="../../reference/command-reference/" title="Command Reference" class="md-nav__link">
+      Command Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reference/diagnostic-d-command/" title="Diagnostics D Command" class="md-nav__link">
+      Diagnostics D Command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reference/diagnostic-d-ack-command/" title="Diagnostics D ACK Command" class="md-nav__link">
+      Diagnostics D ACK Command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reference/resources/" title="Resources" class="md-nav__link">
       Resources
     </a>
   </li>
@@ -1097,8 +1133,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#work-with-little-or-now-modification-conductor-friendly" class="md-nav__link">
-    Work with little or now modification (Conductor friendly)
+  <a href="#work-with-little-or-no-modification-conductor-friendly" class="md-nav__link">
+    Work with little or no modification (Conductor friendly)
   </a>
   
 </li>
@@ -1118,8 +1154,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-your-motor-shield" class="md-nav__link">
-    Connecting your motor shield
+  <a href="#boards-that-are-not-compatible-for-use-with-dcc" class="md-nav__link">
+    Boards that are NOT compatible for use with DCC
   </a>
   
 </li>
@@ -1155,6 +1191,7 @@
 <ul>
 <li>Arduino Motor Shield R3</li>
 <li>Deek-Robot Motor Shield</li>
+<li>DIY More L298HN Motor Shield</li>
 <li>LMD18200 Motor Driver Module</li>
 <li>Pololu MC33926 Motor Shield</li>
 <li>LMD18200 Based Motor Boards</li>
@@ -1170,7 +1207,7 @@
 <li>Be able to allow our fast switching speeds (some do not)</li>
 <li>Plug on shield to eliminate wiring (optional feature)</li>
 </ul>
-<h2 id="work-with-little-or-now-modification-conductor-friendly">Work with little or now modification (Conductor friendly)</h2>
+<h2 id="work-with-little-or-no-modification-conductor-friendly">Work with little or no modification (Conductor friendly)</h2>
 <ul>
 <li>Arduino Motor Shield R3</li>
 <li>Deek-Robot Motor Shield</li>
@@ -1179,14 +1216,20 @@
 <p>The following are not shields, they are discrete boards. You will need to connect them with wires.</p>
 <ul>
 <li>LMD18200</li>
-<li>BTS70960</li>
+<li>BTS70960 - The "IBT_2" board. This board also has separate direction pins, so after selecting the correct motor board type in the config.h, it will use one more of the Arduino's pins.</li>
+<li>L6201P/6203</li>
 </ul>
 <h2 id="need-more-modification-engineer-path">Need more modification (Engineer path)</h2>
 <ul>
 <li>"Beeper Board" - You have to lift two traces and solder 2 resistors and use 2 jumpers.</li>
+<li>Velleman KA03 (kit) VMA03 (soldered) - Must cut traces and solder resistors to get current sensing. Pin assignments must be added to a new motorboard entry in the config.h file.</li>
+<li>Pololu MC33926 - While we have a motor board type for this board, the current sense is not acceptable. We recommend using an external current sense board like the MAX471</li>
 </ul>
-<h2 id="connecting-your-motor-shield">Connecting your motor shield</h2>
-<p><strong><em>* coming soon </em></strong>*</p>
+<h2 id="boards-that-are-not-compatible-for-use-with-dcc">Boards that are NOT compatible for use with DCC</h2>
+<ul>
+<li>VNH2SP30 - Sparkfun Monster Moto and other boards from China based on this chip. It can't switch fast enough to generate a reliable DCC signal</li>
+<li>IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.</li>
+</ul>
                 
               
               

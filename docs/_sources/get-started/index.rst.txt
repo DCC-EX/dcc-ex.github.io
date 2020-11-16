@@ -18,8 +18,8 @@ What you need
 
 **Optional hardware**:
 
-- ESP8266 WiFi shield (`esp shield info <../reference/hardware/esp-shield.html>`_)
-- Ethernet shield (`ethernet info <../reference/hardware/ethernet-shield.html>`_)
+- ESP8266 WiFi shield (`esp shield info <../reference/hardware/wifi-boards.html>`_)
+- Ethernet shield (`ethernet info <../reference/hardware/ethernet-boards.html>`_)
 
 **Software**:
 

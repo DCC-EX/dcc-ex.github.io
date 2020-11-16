@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>I2C Displays &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/roundslider.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/throttle.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/js/commandController.js"></script>
+        <script src="../../_static/js/exwebthrottle.js"></script>
+        <script src="../../_static/js/fnMaster.js"></script>
+        <script src="../../_static/js/jquery-3.2.1.min.js"></script>
+        <script src="../../_static/js/jquery-ui.min.js"></script>
+        <script src="../../_static/js/roundslider.min.js"></script>
+        <script src="../../_static/js/storageController.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Power Supplies" href="power-supplies.html" />
+    <link rel="prev" title="Ethernet Boards" href="ethernet-boards.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="microcontrollers.html">Microcontrollers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motor-boards.html">Motor boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">I2C Displays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Reference</a> &raquo;</li>
+        
+      <li>I2C Displays</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/reference/hardware/i2c-displays.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="i2c-displays">
+<h1>I2C Displays<a class="headerlink" href="#i2c-displays" title="Permalink to this headline">¶</a></h1>
+<p>DCC++ EX is designed to accommodate a display. You don’t need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.</p>
+<img alt="Example: 4 line I2C Display" src="../../_images/I2C_LCD_Display_wired.jpg" />
+<p>We currently support:</p>
+<ul class="simple">
+<li><p>16 column by 2 row (16x2) and 20 column by 4 row (20x4) LCD displays</p></li>
+<li><p>.96” and 1.3” OLED displays.</p></li>
+</ul>
+<p>The LCD displays require a “backpack” that converts the raw display to I2C. I2C allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn’t have enough pins, especially on an Uno, to use a display.</p>
+<p>Examples of compatible displays</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!</p>
+</div>
+<div class="section" id="connecting-an-lcd-display">
+<h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this headline">¶</a></h2>
+<p>Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
+<img alt="20 x 4 LCD" src="../../_images/lcd_20x4_backpack.jpg" />
+<p><strong>Figure 1</strong> - 20 x 4 LCD with backpack</p>
+<p>And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:</p>
+<img alt="16 x 2 LCD" src="reference\hardware\../../_static/images/display/lcd_16x2_backpack.jpg]" />
+<p><strong>Figure 2</strong> - 16 x 2 LCD with backpack</p>
+<div class="section" id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
+<h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this headline">¶</a></h3>
+<p>And here is a picture of the board after soldering or if you purchase a board already solderd (or “welded” as some of the Chinese sites call it)</p>
+<img alt="Backpack Soldered to LCD" src="../../_images/lcd_soldered.jpg" />
+<p><strong>Figure 3</strong> - LCD with backpack soldered to the back</p>
+</div>
+<div class="section" id="connecting-the-jumper-wires">
+<h3>Connecting the Jumper Wires<a class="headerlink" href="#connecting-the-jumper-wires" title="Permalink to this headline">¶</a></h3>
+<p>To connect the Display to the CS, you will need 4 male to female jumper wires:</p>
+<ol class="arabic simple">
+<li><p>Connect a wire from +5V on the Motor Shield or WiFi Board to Vcc on the backpack</p></li>
+<li><p>Connect a wire from Gnd on the CS to Gnd on the backpack</p></li>
+<li><p>Connect SCL on the Arduino (pin x on the Mega, pin x on the Uno) to SCL on the backpack</p></li>
+<li><p>Connect SDA on the Arduino (pin x on the Mega, pin x on the Uno) to SDA on the backpack</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="installing-the-software-lcd">
+<h2>Installing the Software (LCD)<a class="headerlink" href="#installing-the-software-lcd" title="Permalink to this headline">¶</a></h2>
+<p>There are two steps to install the software:</p>
+<ul class="simple">
+<li><p>Install the LiquidCrystal I2C library</p></li>
+<li><p>Edit the config.h file and upload the sketch to your CS</p></li>
+</ul>
+<div class="section" id="install-the-library">
+<h3>Install the library<a class="headerlink" href="#install-the-library" title="Permalink to this headline">¶</a></h3>
+<p>To install the library, open the Arduino IDE and do the following:</p>
+<ol class="arabic simple">
+<li><p>Select Tools -&gt; Manage libraries</p></li>
+<li><p>Wait for the download to finish updating the list of libraries</p></li>
+<li><p>In the “Filter your search…” box, type “liquidcrystal_i2c”</p></li>
+<li><p>Scroll down the search results until you find the <code class="docutils literal notranslate"><span class="pre">&quot;LiquidCrystal_I2C</span> <span class="pre">by</span> <span class="pre">Frank</span> <span class="pre">Brabander&quot;</span></code> entry. Click on that library to select it</p></li>
+<li><p>Click “Install”</p></li>
+<li><p>Wait for the installation to finish.</p></li>
+<li><p>Click “Close”</p></li>
+</ol>
+<p>Once the library is installed on your computer, you don’t have to install it again.</p>
+</div>
+<div class="section" id="upload-the-sketch-to-your-cs">
+<h3>Upload the sketch to your CS<a class="headerlink" href="#upload-the-sketch-to-your-cs" title="Permalink to this headline">¶</a></h3>
+<p>To upload the new sketch on your Command Station</p>
+<ol class="arabic simple">
+<li><p>Open the Arduino IDE</p></li>
+<li><p>Open the CommandStation-EX project</p></li>
+<li><p>Open the config.h file (If you haven’t renambed config.example.h to config.h do this now)</p></li>
+<li><p>Find the line that says: <code class="docutils literal notranslate"><span class="pre">//</span> <span class="pre">define</span> <span class="pre">LCD_DRIVER</span> <span class="pre">for</span> <span class="pre">I2C</span> <span class="pre">LCD</span> <span class="pre">address</span> <span class="pre">0x3f,16</span> <span class="pre">cols,</span> <span class="pre">2</span> <span class="pre">rows</span>
+<span class="pre">#define</span> <span class="pre">LCD_DRIVER</span>&#160; <span class="pre">0x3F,16,2</span></code></p></li>
+<li><p>make sure to uncomment this line if it has 2 slashes in front of it by removing them.</p></li>
+<li><p>Find the 4 characters that start with <code class="docutils literal notranslate"><span class="pre">0x</span></code> and add the address for your I2C backpack after it. We default to 3F, but your display may be 27. The text would read <code class="docutils literal notranslate"><span class="pre">0x27</span></code> if that was the case.</p></li>
+<li><p>In the next field, enter the number of columns in your dispay. The default is 16. If you have a 20 row display, enter that instead.</p></li>
+<li><p>In the last field, enter the number of rows in your display. We default to a 2 line display. If you have a 4 line display, change this to 4.</p></li>
+<li><p>Save the file</p></li>
+<li><p>Make sure to connect the Arduino to your computer with the USB cable and click the upload button to compile and upload the updated Command Station sketch.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="connecting-an-oled-display">
+<h2>Connecting an OLED display<a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this headline">¶</a></h2>
+<p>OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won’t work with an UNO. You will require a Mega. Here are some examples of OLED displays:</p>
+<img alt="Adafruit .96&quot; OLED" src="../../_images/adafruit_96in_oled_sm.jpg" />
+<p><strong>Figure 4</strong> - Adafruit .96” OLED Display</p>
+<img alt="Makerfocus OLED Display" src="../../_images/makerfocus_oled_sm.jpg" />
+<p><strong>Figure 5</strong> - Makerfocus 128x32 .91” OLED Display</p>
+<div class="section" id="soldering-wires-to-the-display">
+<h3>Soldering Wires to the Display<a class="headerlink" href="#soldering-wires-to-the-display" title="Permalink to this headline">¶</a></h3>
+<p>For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.</p>
+</div>
+<div class="section" id="connecting-jumper-wires-to-the-cs">
+<h3>Connecting Jumper Wires to the CS<a class="headerlink" href="#connecting-jumper-wires-to-the-cs" title="Permalink to this headline">¶</a></h3>
+<p>** Not Finished. Coming soon! **</p>
+</div>
+</div>
+<div class="section" id="installing-the-software-oled">
+<h2>Installing the Software (OLED)<a class="headerlink" href="#installing-the-software-oled" title="Permalink to this headline">¶</a></h2>
+<p>** Not Finished. Coming soon! **</p>
+</div>
+<div class="section" id="changing-the-i2c-address">
+<h2>Changing the I2C Address<a class="headerlink" href="#changing-the-i2c-address" title="Permalink to this headline">¶</a></h2>
+<p>If you have other I2C devices, like an I2C bus to control turnouts or other accessories, you may need to change the address of your I2C display to avoid a conflict. The display should have instructions available for how to do this.</p>
+<p>** Not Finished. Coming soon! **</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="power-supplies.html" class="btn btn-neutral float-right" title="Power Supplies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ethernet-boards.html" class="btn btn-neutral float-left" title="Ethernet Boards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

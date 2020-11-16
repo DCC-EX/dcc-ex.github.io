@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assembly &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/roundslider.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/throttle.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/js/commandController.js"></script>
+        <script src="../_static/js/exwebthrottle.js"></script>
+        <script src="../_static/js/fnMaster.js"></script>
+        <script src="../_static/js/jquery-3.2.1.min.js"></script>
+        <script src="../_static/js/jquery-ui.min.js"></script>
+        <script src="../_static/js/roundslider.min.js"></script>
+        <script src="../_static/js/storageController.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="WiFi Setup" href="wifi-setup.html" />
+    <link rel="prev" title="Get Started" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Get Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi-setup.html">WiFi Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installer.html">Installer Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arduino-ide.html">Arduino IDE Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Get Started</a> &raquo;</li>
+        
+      <li>Assembly</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/get-started/assembly.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="assembly">
+<h1>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">¶</a></h1>
+<p>Let’s start with the basics and add as you see fit. For this install, you’ll need the items lited on the <a class="reference external" href="index.html">Get Started</a> page, plus:</p>
+<ul class="simple">
+<li><p>18 to 16 AWG twisted pair hookup wire to connect your tracks</p></li>
+<li><p>A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional)</p></li>
+</ul>
+<img alt="Command Station Setup" src="../_images/basic_setup.jpg" />
+<p><strong>Figure 1</strong> - basic setup</p>
+<ul class="simple">
+<li><p>For an Uno, Nano or other microcontroller, please see <a class="reference external" href="../reference/hardware/microcontrollers.md">Using a different microcontroller</a>. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see <a class="reference external" href="../reference/hardware/motor-boards.md">Motor Controllers</a></p></li>
+</ul>
+<p>For a video on how to do this, click here <strong>link coming soon</strong></p>
+<div class="section" id="before-you-begin-cut-the-vin-trace-on-the-motor-controller">
+<h2>1. BEFORE YOU BEGIN, Cut the Vin trace on the motor controller<a class="headerlink" href="#before-you-begin-cut-the-vin-trace-on-the-motor-controller" title="Permalink to this headline">¶</a></h2>
+<p>We recommend you use two separate power supplies (or one power supply that can deliver two different voltages) one for the Arduino Mega and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, the motor controller connects its power supply via the pins, to the Arduino. This can supply too much voltage to the Arduino. If you do not cut this trace, you could damage the Arduino if you apply more than 12V to the motor shield. In the same way, if you don’t cut this trace and use the 2 power supplies as recommended, they would be connected to each other. This would not be good.</p>
+</div>
+<img alt="Cut Vin trace on arduino motor shield" src="../_images/motor_shield_vin2.jpg" />
+<p><strong>Figure 2</strong> - Cutting the Vin trace</p>
+<p>If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.</p>
+</div>
+<div class="section" id="you-need-to-connect-the-motor-shield-on-top-of-the-arduino">
+<h2>2. You need to connect the motor shield on top of the Arduino.<a class="headerlink" href="#you-need-to-connect-the-motor-shield-on-top-of-the-arduino" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is very easy to misalign the pins and then either have trouble diagnosing problems or damage the board!</p>
+</div>
+<p>Here are some tips:</p>
+<ul class="simple">
+<li><p>There are power connectors on both boards. They must point in the same direction</p></li>
+<li><p>There are outdented “tabs” on the opposite end of the board. They must point in the same direction.</p></li>
+<li><p>The pin numbers on both boards must align (pin 1 goes to pin 1, gnd goes to gnd, etc)</p></li>
+<li><p>With the power connectors to your right, align the pins facing you first (pins 0-12, aref, gnd, etc.)</p></li>
+<li><p>Look at the pins on the motorboard and make sure they are all straight and line up in a neat row</p></li>
+</ul>
+<p>Place both boards on the table with the power connector end facing in the same direction</p>
+<img alt="Align Mega and Motor Shield" src="../_images/mega_and_motor_shield.png" />
+<p><strong>Figure 3</strong> - Properly orient the boards</p>
+<ol class="loweralpha simple">
+<li><p>Did you remember to cut the trace on the motor shield? If not, see above. Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.</p></li>
+</ol>
+<img alt="bent pins" src="../_images/bent_pins.png" />
+<p><strong>Figure 4</strong> - Bent pins</p>
+<ol class="loweralpha simple" start="2">
+<li><p>Line up the pins on the side of the board closest to the USB with the header connector on the Mega first. You want to line up pins 0-7 on the Mega with the same pins on the motor board. On the other side, IOREF, RESET, 3V3, etc. and A0-A5 need to line up on both boards. See the picture below and notice the small gap between the two sets of pins to match the two pin header sockets.</p></li>
+</ol>
+<img alt="Line up the pins" src="../_images/seat1.jpg" />
+<p><strong>Figure 5</strong> - Line up left side first</p>
+<ol class="loweralpha simple" start="3">
+<li><p>Just align them and start to push them in but don’t push them all the way. Use your fingers to try to push the pins to get them to all to into the holes.</p></li>
+</ol>
+<img alt="Push the pins partway in" src="../_images/seat2.jpg" />
+<p><strong>Figure 6</strong> - Get all the pins started</p>
+<ol class="loweralpha simple" start="4">
+<li><p>Do the same on the other side. Get all the pins aligned and start to press gently to get them into the holes. Notice on this side, you have more holes than you do pins. This is normal.</p></li>
+</ol>
+<img alt="Line up the other side" src="../_images/seat_reverse1.jpg" />
+<p><strong>Figure 7</strong> - Start the other side</p>
+<ol class="loweralpha simple" start="5">
+<li><p>Now, being careful to not bend any pins gently press, using a rocking motion if you need to, in order to get the motor board to seat firmly onto the Mega. Press gently until you feel you can’t put the pins in any further. Don’t force anything.</p></li>
+</ol>
+<img alt="Press together" src="../_images/seat_press.jpg" />
+<p><strong>Figure 8</strong> - Gently press the boards together</p>
+<ol class="loweralpha simple" start="6">
+<li><p>The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimeters of the pins between the bottom of the motor board and the top of the headers. Figure 9 shows the boards as they look properly seated.</p></li>
+</ol>
+<img alt="Fully seated" src="../_images/seated.jpg" />
+<p><strong>Figure 9</strong> - The boards when fully seated</p>
+<p>Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.</p>
+</div>
+<div class="section" id="connect-your-power-supply-to-the-motor-shield-but-don-t-plug-it-in-yet">
+<h2>3. Connect your power supply to the motor shield (But don’t plug it in yet!)<a class="headerlink" href="#connect-your-power-supply-to-the-motor-shield-but-don-t-plug-it-in-yet" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure you have cut the trace on the motor control board. If not, see above first. Once you know the trace is cut, connect power to the motor board</p>
+</div>
+<p>Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, please see <a class="reference external" href="../reference/hardware/power-supplies.html">compatible Power Supplies</a></p>
+<p>If you are using a “bench” or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the motor shield and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the motor shield</p>
+<img alt="Power in to the Motor Shield" src="../_images/motor_power2b.jpg" />
+<p><strong>Figure 10</strong> - Power in to the Motor Shield</p>
+<p>If you are using a laptop style “brick” power supply or an adapter that plugs into the wall (aka wall wart), use the barrel connector to screw terminal adapter to connect your power supply to the Vin and ground pins on the motor shield. Be careful to use the correct polarity. Make sure the positive terminal on the screw terminal adapter connects to the positive (+) on the motor shield and the negative terminal (- or gnd) connects to the negative terminal.</p>
+<img alt="Screw Terminal Adapter Power In" src="../_images/motor_power3.jpg" />
+<p><strong>Figure 11</strong> - Screw Terminal Adapter to Motor Shield</p>
+<p>If you don’t have a screw terminal adapter, you can cut the end off your power supply and strip the wires. The outer wire braid is usually the negative connection and the center wire is the positive connection. Check the wiring image on the power supply itself.</p>
+</div>
+<div class="section" id="connect-the-power-wires-to-the-tracks">
+<h2>4. Connect the power wires to the tracks<a class="headerlink" href="#connect-the-power-wires-to-the-tracks" title="Permalink to this headline">¶</a></h2>
+<p>There are two sets of output connectors on the motor shield, “A” and “B”. A is the main or operations (also called “Ops”) track while B is the programming or service track. Connect twisted pair wire of the proper gauge to each track. Polarity it non important here, but if you will be using a siding track instead of a separate, unused piece of track, make sure that the positive and negative for both tracks match. In other words, if you view one side of your main track as having a “left” side and a “right” side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be “in phase” with each other. Here is the diagram from above repeated again for reference.</p>
+<img alt="Main and Prog Out to track" src="../_images/motor_power2b.jpg" />
+<p><strong>Figure 12</strong> - Out to Main and Program tracks</p>
+</div>
+<div class="section" id="connect-the-power-supply-to-the-arduino-but-don-t-plug-it-in-yet">
+<h2>5. Connect the power supply to the Arduino (but don’t plug it in yet!)<a class="headerlink" href="#connect-the-power-supply-to-the-arduino-but-don-t-plug-it-in-yet" title="Permalink to this headline">¶</a></h2>
+<p>Connect the 2.5mm barrel connector from your separate 7-9V DC powersupply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the “Vin” and “Gnd” pins on the Arduino.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run exWebThrottle or JMRI. There is also a way to use a 5V power supply. Please read <a class="reference external" href="../reference/hardware/power-supplies.html">Power Supplies</a> to help you find what will work best for you).</p>
+</div>
+</div>
+<div class="section" id="install-the-optional-wifi-board">
+<h2>6. Install the optional WiFi board<a class="headerlink" href="#install-the-optional-wifi-board" title="Permalink to this headline">¶</a></h2>
+<p>You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing a ESP8266 Shield or bare ESP8266 to connect wirelessly, Click the link below.</p>
+<p><a class="reference external" href="./wifi-setup.html">Wifi Setup</a></p>
+</div>
+<div class="section" id="load-firmware-on-your-command-station">
+<h2>7. Load firmware on your Command Station<a class="headerlink" href="#load-firmware-on-your-command-station" title="Permalink to this headline">¶</a></h2>
+<p>Keep your USB cable handy because we are going to need it in this step.</p>
+<p>Go to the <a class="reference external" href="../download/commandstation.html">Command Station downloads</a> page. Most users will want to use the installer.</p>
+</div>
+<div class="section" id="technical-notes">
+<h2>TECHNICAL NOTES<a class="headerlink" href="#technical-notes" title="Permalink to this headline">¶</a></h2>
+<p><strong>Wire Gauge</strong> - The Arduino Motor controller can only provide about 1.5 Amps of power (despite being rated for 2), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
+<p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20? Can’t you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14 (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.</p>
+<p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wifi-setup.html" class="btn btn-neutral float-right" title="WiFi Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Get Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

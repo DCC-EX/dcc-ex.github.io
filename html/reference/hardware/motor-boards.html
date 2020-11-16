@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Motor boards &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/roundslider.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/throttle.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/js/commandController.js"></script>
+        <script src="../../_static/js/exwebthrottle.js"></script>
+        <script src="../../_static/js/fnMaster.js"></script>
+        <script src="../../_static/js/jquery-3.2.1.min.js"></script>
+        <script src="../../_static/js/jquery-ui.min.js"></script>
+        <script src="../../_static/js/roundslider.min.js"></script>
+        <script src="../../_static/js/storageController.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="WiFi Boards" href="wifi-boards.html" />
+    <link rel="prev" title="Microcontrollers" href="microcontrollers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="microcontrollers.html">Microcontrollers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Motor boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Reference</a> &raquo;</li>
+        
+      <li>Motor boards</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/reference/hardware/motor-boards.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="motor-boards">
+<h1>Motor boards<a class="headerlink" href="#motor-boards" title="Permalink to this headline">¶</a></h1>
+<p>There are many motor boards available to use with DCC++ EX. Also called “Dual-H Bridges” and “Motor Shields”. Some require a little work, but others are mostly plug and play.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot ($15 US).</p>
+</div>
+<img alt="Deek Robot Motor Shield" src="../../_images/deek_robot1_sm.jpg" />
+<div class="section" id="boards-currently-supported">
+<h2>Boards currently supported<a class="headerlink" href="#boards-currently-supported" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Arduino Motor Shield R3</p></li>
+<li><p>Deek-Robot Motor Shield</p></li>
+<li><p>DIY More L298HN Motor Shield</p></li>
+<li><p>LMD18200 Motor Driver Module</p></li>
+<li><p>Pololu MC33926 Motor Shield</p></li>
+<li><p>LMD18200 Based Motor Boards</p></li>
+<li><p>BTS7960 Based Motor Boards</p></li>
+</ul>
+<p>There are other boards, some requiring modification, which are covered in the advanced section.</p>
+</div>
+<div class="section" id="but-i-saw-this-board-will-it-work">
+<h2>But I saw this board, will it work?<a class="headerlink" href="#but-i-saw-this-board-will-it-work" title="Permalink to this headline">¶</a></h2>
+<p>This is a checklist for what your motor controller needs to work with DCC++ EX:</p>
+<ul class="simple">
+<li><p>A dual H-Bridge (one for MAIN and one for PROG)</p></li>
+<li><p>Handle enough current for the layout (most boards support at least 2 Amps, enough for 3-5 locos)</p></li>
+<li><p>Have working (and accurate) current sensing (many do not)</p></li>
+<li><p>Works at fast switching speeds (some do not)</p></li>
+<li><p>Shield form factor to eliminate wiring (optional)</p></li>
+</ul>
+</div>
+<div class="section" id="these-boards-require-little-or-no-modification">
+<h2>These boards require little or no modification<a class="headerlink" href="#these-boards-require-little-or-no-modification" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Arduino Motor Shield R3</p></li>
+<li><p>Deek-Robot Motor Shield</p></li>
+<li><p>DIY More L298HN Motor Shield</p></li>
+</ul>
+<div class="section" id="arduino-motor-shield">
+<h3>Arduino Motor Shield<a class="headerlink" href="#arduino-motor-shield" title="Permalink to this headline">¶</a></h3>
+<img alt="Arduino Motor Shield R3" src="../../_images/arduino_motorshield2.jpg" />
+</div>
+<div class="section" id="deek-robot-motor-shield">
+<h3>Deek-Robot Motor Shield<a class="headerlink" href="#deek-robot-motor-shield" title="Permalink to this headline">¶</a></h3>
+<img alt="Deek Robot Motor Shield" src="../../_images/deek_robot1_sm1.jpg" />
+</div>
+<div class="section" id="diy-more-l298nh-motor-shield">
+<h3>DIY More L298NH Motor Shield<a class="headerlink" href="#diy-more-l298nh-motor-shield" title="Permalink to this headline">¶</a></h3>
+<img alt="DIY More Motor Shield" src="../../_images/diy_more_motor.jpg" />
+</div>
+</div>
+<div class="section" id="need-a-little-tinkering">
+<h2>Need a little tinkering<a class="headerlink" href="#need-a-little-tinkering" title="Permalink to this headline">¶</a></h2>
+<p>The following are not shields, they are discrete boards. You will need to connect them with wires.</p>
+<ul class="simple">
+<li><p>L298 Motor Driver - Almost identical to the Arduino Motor Shield except it needs to be wired</p></li>
+<li><p>LMD18200</p></li>
+<li><p>BTS70960 - The “IBT_2” board. This board also has separate direction pins, so after selecting the correct motor board type in the config.h, it will use one more of the Arduino’s pins.</p></li>
+<li><p>L6201P/6203</p></li>
+</ul>
+<div class="section" id="l298-motor-driver-dual">
+<h3>L298 Motor Driver (dual)<a class="headerlink" href="#l298-motor-driver-dual" title="Permalink to this headline">¶</a></h3>
+<p>This is an alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip only in a different form factor and with better cooling. You would need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471</p>
+<img alt="L298 Motor Driver" src="../../_images/l298_board.jpg" />
+</div>
+<div class="section" id="bts7960-ibt-2-board-single">
+<h3>BTS7960 IBT_2 Board (single)<a class="headerlink" href="#bts7960-ibt-2-board-single" title="Permalink to this headline">¶</a></h3>
+<p>You will either need 2 of these or one of these and another board to run your programming track. These boards can provide high current. Indeed, we have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards aren’t enough for your track, this is one of the best options.</p>
+<img alt="IBT_2 Board" src="../../_images/ibt_2_bts7960.jpg" />
+</div>
+</div>
+<div class="section" id="need-lots-of-modification">
+<h2>Need lots of modification<a class="headerlink" href="#need-lots-of-modification" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Keyes/Fundumoto</strong> (aka “Beeper Board”) - You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board..</p></li>
+<li><p><strong>Velleman KA03 (kit) VMA03 (soldered)</strong> - Must cut traces and solder resistors to get current sensing on the soldered board. Much easier to simply not solder the pins on the kit version. Pin assignments must be added to a new motorboard entry in the config.h file.</p></li>
+<li><p><strong>Pololu MC33926</strong> - Comes soldered or in a kit where you just have to solder the headers and connector. While we have a motor board type for this board, the current sense is not acceptable. We recommend using an external current sense board like the MAX471. Many people still use this board.</p></li>
+</ul>
+<div class="section" id="keyes-fundumoto-beeper-board">
+<h3>Keyes/Fundumoto (“Beeper Board”)<a class="headerlink" href="#keyes-fundumoto-beeper-board" title="Permalink to this headline">¶</a></h3>
+<img alt="Keyes/Fundumoto Motor Shield" src="../../_images/keyes_fundumoto.jpg" />
+</div>
+<div class="section" id="velleman-ka03-kit-vma03-soldered">
+<h3>Velleman KA03 (kit) VMA03 (soldered)<a class="headerlink" href="#velleman-ka03-kit-vma03-soldered" title="Permalink to this headline">¶</a></h3>
+<img alt="Velleman KA03" src="../../_images/velleman_motor.jpg" />
+</div>
+<div class="section" id="pololu-mc33926">
+<h3>Pololu MC33926<a class="headerlink" href="#pololu-mc33926" title="Permalink to this headline">¶</a></h3>
+<img alt="Pololu MC33926" src="../../_images/pololu.png" />
+</div>
+</div>
+<div class="section" id="not-compatible-for-use-with-commandstation-ex">
+<h2>NOT compatible for use with CommandStation-EX<a class="headerlink" href="#not-compatible-for-use-with-commandstation-ex" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>VNH2SP30 - Sparkfun Monster Moto and other boards from China based on this chip. It can’t switch fast enough to generate a reliable DCC signal</p></li>
+<li><p>IFX9202ED - Infineon Dual H-Bridge. Can’t switch fast enough.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wifi-boards.html" class="btn btn-neutral float-right" title="WiFi Boards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="microcontrollers.html" class="btn btn-neutral float-left" title="Microcontrollers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

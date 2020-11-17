@@ -8,9 +8,9 @@ What you need
 
 **Hardware**:
 
-- Supported Arduino board (`microcontroller info <../reference/hardware/microcontrollers.html>`_)
-- Supported motor shield (`motor board info <../reference/hardware/motor-boards.html>`_)
-- Compatible power supply (`power supply info <../reference/hardware/power-supplies.html>`_)
+- Supported `Arduino board <../reference/hardware/microcontroller-boards.html>`_
+- Supported `motor shield <../reference/hardware/motor-boards.html>`_
+- Compatible `power supply <../reference/hardware/power-supplies.html>`_
 - USB cable
 - Computer running Windows, Linux, or macOS (or a Raspberry Pi)
 - Piece of track to run trains or program on
@@ -18,8 +18,8 @@ What you need
 
 **Optional hardware**:
 
-- ESP8266 WiFi shield (`esp shield info <../reference/hardware/wifi-boards.html>`_)
-- Ethernet shield (`ethernet info <../reference/hardware/ethernet-boards.html>`_)
+- Supported `ESP8266 WiFi shield <../reference/hardware/wifi-boards.html>`_
+- Supported `Ethernet shield <../reference/hardware/ethernet-boards.html>`_
 
 **Software**:
 

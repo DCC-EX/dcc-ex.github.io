@@ -181,15 +181,14 @@
 </div>
 <div class="section" id="dcc-ex-is-all-new">
 <h2>DCC++ EX is all new!<a class="headerlink" href="#dcc-ex-is-all-new" title="Permalink to this headline">¶</a></h2>
-<p>While we made minor changes to the original DCC++ “Classic”, all new development is going forward with DCC++ EX. At first, we expanded features, added functionality and fixed bugs by working from the existing code base. The first release of DCC++ will be familiar to any of you who played with the code. However, we want to stress that the next release, the one that is in Beta testing now, is a complete re-write from the ground up.</p>
+<p>While we made minor changes to the original DCC++ “BaseStation-Classic”, all new development is going forward with DCC++ EX. At first, we expanded features, added functionality and fixed bugs by working from the existing code base. The first release of DCC++ will be familiar to any of you who played with the code. However, we want to stress that the next release, the one that is in Beta testing now, is a complete re-write from the ground up.</p>
 </div>
 <div class="section" id="what-s-different">
 <h2>What’s different?<a class="headerlink" href="#what-s-different" title="Permalink to this headline">¶</a></h2>
 <p>We started with the DCC Signal Generation code, what we call the “Waveform Generator”. We got together as a team and looked at how we could make it better. It soon became clear that rather than make piecemeal changes, the entire concept of how the signal could be generated and how to use timers and interrupts would need to be re-imagined.</p>
 <p>Next we focused on packet generation. We looked at the complexities of reading and maintaining code that was using binary math, multiple “registers” to hold train data, and doing bit shifting everywhere to build bytes and stuff them into data packets. The new method gets rid of the old registers and simplifies the whole structure for building packets. Things like start and stop bits and preamble bits are static pieces of information. Do being able to just insert them where they need to go saves time and processor bandwidth.</p>
 <p>We created an internal API for how modules communicated with each other. So the code is more modular and each unit is dedicated to its specific task.</p>
-<p>We completely re-wrote current sense and ACK detect routines.</p>
-<p>We created an automation scripting language called TPL (Train Programming Language)</p>
+<p>We completely re-wrote current sense and ACK detect routines to better protect your trains and make programming more accurate.</p>
 <p>We added many functions like individual track power control, user add-on functions, a much simpler Function (F0-28) command, better turnout handling and more.</p>
 </div>
 <div class="section" id="why-did-we-do-this">
@@ -200,12 +199,12 @@
 <p>The 3 most requested features were: 1. More reliable CV read and writes, 2. Railcom cut-out, 3. Automation. We haven’t limited ourselves to just these features, but we put a lot of time into redesigning things to accomodate them.</p>
 <p>The current detection routines are completely different. One key difference is all current readings are in milliAmps instead of meaningless pin readings. So if you want to set your overload protection to kick in at 3 Amps, you just enter 3000 for 3000 milliAmps instead of looking up a value from a table.</p>
 <p>We are still testing all the motorboard and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason CV reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an “ACK” (acknowledgement from the train that it received a command). So we now check immedately after we send a command instead of waiting for a dozen or more packets. This means we don’t miss an ACK while this is happening and we jump out of sending uneccessary packes as soon as we get one. You will appreciate how much faster we can read CVs now!</p>
-<p>We not only have created a rail-com cutout within the Command Station, but are looking at actually reading the Railcom data and reporting it. We may require the use of a Mega instead of an Uno for this feature.</p>
+<p>We not only have created a RailCom cutout within the Command Station, but are developing a wat of reading the RailCom data and reporting it.</p>
 <p>TPL brings new capability to the world of automation. You don’t have to be a programmer to write a script that tells a train to start moving forward at a set speed until some action (like reaching a sensor) occurs. We will be providing a document and tutorial on TPL once Beta testing is complete. This will be an open-ended project since who knows what people will come up with they want to automate. It will be easy to extend the commands to handle whatever your imagination can dream of.</p>
 </div>
 <div class="section" id="the-bottom-line">
 <h2>The bottom line<a class="headerlink" href="#the-bottom-line" title="Permalink to this headline">¶</a></h2>
-<p>So while maintaining proper deference to Gregg Bermann’s original concept of an inexpensive Command Station based on the Arduino platform, we don’t want to do a disservice to DCC++ EX or develpers like Chris Harlow (UkBloke) and David Cutting (David Cutting) who brought a new vision to the project and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcments.</p>
+<p>So while maintaining proper deference to Gregg Bermann’s original concept of an inexpensive Command Station based on the Arduino platform, we don’t want to do a disservice to DCC++ EX or develpers like Chris Harlow (UkBloke) and Dave Cutting who brought a new vision to the project and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcments.</p>
 </div>
 <div class="section" id="thanks">
 <h2>Thanks<a class="headerlink" href="#thanks" title="Permalink to this headline">¶</a></h2>

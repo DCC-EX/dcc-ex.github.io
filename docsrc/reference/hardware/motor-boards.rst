@@ -3,7 +3,7 @@ Motor boards
 
 CommandStation-EX is compatible with a wide variety of motor boards, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use.
 
-**TL;DR**: We recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot.
+**TL;DR**: We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot.
 
 .. image:: ../../_static/images/deek_robot1_sm.jpg
    :alt: Deek Robot Motor Shield
@@ -11,16 +11,28 @@ CommandStation-EX is compatible with a wide variety of motor boards, also known 
 Boards currently supported
 --------------------------
 
-* Easy to use boards
-   * :ref:`Arduino Motor Shield`
-   * :ref:`Deek-Robot Motor Shield`
-   * :ref:`DIY More L298NH Motor Shield`
-* Intermediate boards
-   * :ref:`L298 Motor Driver (dual)`
-   * :ref:`BTS7960 IBT_2 Board (single)`
-   * :ref:`Pololu MC33926`
-* Others listed below
+*  **Easy to use boards**
 
+   * :ref:`Arduino Motor Shield` - 2A **[RECOMMENDED]**
+   * :ref:`Deek-Robot Motor Shield` - 2A
+   * :ref:`DIY More L298NH Motor Shield` - 2A
+   * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most programming
+
+*  **Intermediate boards** - require wiring
+
+   * :ref:`L298 Motor Driver (dual)` - 2A
+
+*  **Hard to Use Boards** - these boards require you to add your own config to the config.h file, and may not have good current sensing.
+  
+   * :ref:`BTS7960 IBT_2 Board (single)` - 43A - **may be too powerful**
+   * :ref:`Keyes/Fundumoto ("Beeper Board")` - 2A
+   * :ref:`Velleman KA03 (kit) VMA03 (soldered)` - 2A
+
+*  **Non-compatible boards**
+
+   * VNH2SP30 - Sparkfun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
+   * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
+   
 Other boards, while not fully supported and tested, can be used. Look for the following criteria:
 
 * We recommend a dual h-bridge board or two discrete h-bridge boards. They can be different sizes, one bigger for main track and one smaller for programming track operations.
@@ -63,15 +75,6 @@ This is an alternative to the Arduino and Deek-Robot shields. It uses the same L
 .. image:: ../../_static/images/motorboards/l298_board.jpg
    :alt: L298 Motor Driver
 
-BTS7960 IBT_2 Board (single)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You will either need 2 of these or one of these and another board to run your programming track. These boards can provide high current. Indeed, we have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards aren't enough for your track, this is one of the best options.
-
-
-.. image:: ../../_static/images/motorboards/ibt_2_bts7960.jpg
-   :alt: IBT_2 Board
-
 Pololu MC33926
 ^^^^^^^^^^^^^^
 
@@ -79,6 +82,17 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 
 .. image:: ../../_static/images/motorboards/pololu.png
    :alt: Pololu MC33926
+
+BTS7960 IBT_2 Board (single)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. warning:: This board can supply a LOT of current. The maximum reccommended current is 5A for N scale, 10A for HO and above. This board can supply a whopping 43A, enough to cause a LOT of damage. To use this board, make sure you have a fuse or circuit breaker connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. 
+
+You will either need 2 of these or one of these and another board to run your programming track. These boards can provide high current. Indeed, we have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards aren't enough for your track, this is one of the best options.
+
+
+.. image:: ../../_static/images/motorboards/ibt_2_bts7960.jpg
+   :alt: IBT_2 Board
 
 Keyes/Fundumoto ("Beeper Board")
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -96,10 +110,3 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 
 .. image:: ../../_static/images/motorboards/velleman_motor.jpg
    :alt: Velleman KA03
-
-
-NOT compatible for use with CommandStation-EX
--------------------------------------------------------------
-
-* VNH2SP30 - Sparkfun Monster Moto and other boards from China based on this chip. It can't switch fast enough to generate a reliable DCC signal
-* IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Ethernet Boards &mdash; DCC++ EX  documentation</title>
+  <title>Microcontroller Boards &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -45,9 +45,7 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="I2C Displays" href="i2c-displays.html" />
-    <link rel="prev" title="WiFi Boards" href="wifi-boards.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,21 +93,11 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="motor-boards.html">Motor boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Ethernet Boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Support</a></li>
@@ -160,15 +148,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../index.html">Reference</a> &raquo;</li>
-        
-      <li>Ethernet Boards</li>
+      <li>Microcontroller Boards</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/reference/hardware/ethernet-boards.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/reference/hardware/microcontroller-boards.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -181,9 +167,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ethernet-boards">
-<h1>Ethernet Boards<a class="headerlink" href="#ethernet-boards" title="Permalink to this headline">¶</a></h1>
-<p><em>Coming soon</em></p>
+  <div class="section" id="microcontroller-boards">
+<h1>Microcontroller Boards<a class="headerlink" href="#microcontroller-boards" title="Permalink to this headline">¶</a></h1>
+<p>CommandStation-EX currently is designed exclusively for Arduino microcontollers. Out of the box, it is compatible with the following boards:</p>
+<ul class="simple">
+<li><p>Arduino Mega <strong>[RECOMMENDED]</strong></p></li>
+<li><p>Arduino Uno</p></li>
+<li><p>Arduino Nano</p></li>
+</ul>
+<div class="section" id="why-do-you-recommend-the-mega">
+<h2>Why do you recommend the Mega?<a class="headerlink" href="#why-do-you-recommend-the-mega" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>When compiled, our code just barely squeezes onto an Arduino Uno. <strong>A mega allows you to add more features</strong> like networking and displays because it has more memory.</p></li>
+<li><p>The Mega has many more GPIOs (General Purpose Input/Outputs) available to you for constructing control panels and controlling turnouts or signals.</p></li>
+<li><p>The mega is only modestly more expensive than an Uno, with clones available for less than $10 USD.</p></li>
+</ul>
+<img alt="Arduino Mega Microcontroller" src="../../_images/mega.jpg" />
+</div>
+<div class="section" id="what-about-the-nano">
+<h2>What about the Nano?<a class="headerlink" href="#what-about-the-nano" title="Permalink to this headline">¶</a></h2>
+<p>The Arduino nano shares the same processor with the Arduino Uno, so we support it. The nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. Other than that difference, it is in every way as capable as an Arduino Uno.</p>
+</div>
+<div class="section" id="will-you-support-other-microcontrollers-in-the-future">
+<h2>Will you support other microcontrollers in the future?<a class="headerlink" href="#will-you-support-other-microcontrollers-in-the-future" title="Permalink to this headline">¶</a></h2>
+<p>Yes, that is on our roadmap.</p>
+</div>
 </div>
 
 
@@ -191,15 +199,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="i2c-displays.html" class="btn btn-neutral float-right" title="I2C Displays" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="wifi-boards.html" class="btn btn-neutral float-left" title="WiFi Boards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

@@ -10,7 +10,7 @@ Hardware
 .. toctree::
     :maxdepth: 1
 
-    hardware/microcontrollers
+    hardware/microcontroller-boards
     hardware/motor-boards
     hardware/wifi-boards
     hardware/ethernet-boards

@@ -12,4 +12,4 @@ We will assume that you have an appropriate text editor and Git installed on you
 4. Open VSC and edit the files in the ```dcc-ex.github.io/docsrc``` folder. Save, then Preview your changes by running ```make github``` from the root of the ```dcc-ex.github.io``` folder. *This must be done from cmd.exe in windows, not powershell* Then go to ```dcc
 5. Use ```git add``` and ```git commit -m "MY CHANGE DESCRIPTION"``` often to save changes. If you're using GitHub desktop these are combined in the commit button.
 6. Push it to GitHub: ```git push origin {your-name}-changes```
-8. Go to GitHub and issue a pull request for your _<your-name>-changes_ branch to be pulled into the sphinx branch. Once it's merged in by one of the admins, your changes will go live!
+8. Go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it's merged in by one of the admins, your changes will go live!

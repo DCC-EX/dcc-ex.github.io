@@ -69,6 +69,11 @@ html_additional_pages = {
     'exwebthrottle': 'exwebthrottle/index.html',
 }
 
+html_js_files = [
+    'js/platform.js',
+    'js/extra.js'
+]
+
 # add the extra js and css files needed for exwebthrottle
 def setup(app):
     app.add_css_file('css/layout.css')

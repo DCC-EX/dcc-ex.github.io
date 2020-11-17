@@ -3,17 +3,19 @@ Command Station Downloads
 
 Welcome to the Command Station download page. You have several choices: 
 
-* **[RECOMMENDED]** If you aren't a tinkerer, or you just want an installer to do the work for you, go to the :ref:`Automated DCC++ Installer` section. 
+* **[RECOMMENDED]** If you aren't a tinkerer, or you just want an easy installer to do the work for you, go to the :ref:`exInstaller` section. 
 * If you would like to downlad a zip file and install the firmware using the Arduino IDE, go to the :ref:`Latest DCC++ EX Release` section. 
 * If you are a developer and want to clone the repository onto your computer, go to the :ref:`CommandStation-EX Repository` section.
 * If you're looking for BaseStation-Classic, go to the :ref:`Getting BaseStation-Classic` section.
 
-Automated DCC++ Installer
+exInstaller
 -------------------------
 
-.. note:: After installing the software for your operating system, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board.
+.. note:: After installing the software for your operating system, you will have the opportunity to select either exInstaller or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board.
 
-`Automated installer <https://github.com/DCC-EX/BaseStation-Installer/releases>`_
+.. raw:: html 
+
+   <p><a class="reference external" onclick="getLink()"><span class="problematic">Automated Installer</span></a></p>
 
 Latest DCC++ EX Release
 -----------------------

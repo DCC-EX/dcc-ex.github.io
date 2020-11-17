@@ -10,7 +10,7 @@ First, we want to stress that we didn't break anything! Whether you are using JM
 DCC++ EX is all new!
 --------------------
 
-While we made minor changes to the original DCC++ "Classic", all new development is going forward with DCC++ EX. At first, we expanded features, added functionality and fixed bugs by working from the existing code base. The first release of DCC++ will be familiar to any of you who played with the code. However, we want to stress that the next release, the one that is in Beta testing now, is a complete re-write from the ground up.
+While we made minor changes to the original DCC++ "BaseStation-Classic", all new development is going forward with DCC++ EX. At first, we expanded features, added functionality and fixed bugs by working from the existing code base. The first release of DCC++ will be familiar to any of you who played with the code. However, we want to stress that the next release, the one that is in Beta testing now, is a complete re-write from the ground up.
 
 What's different?
 -----------------
@@ -21,9 +21,7 @@ Next we focused on packet generation. We looked at the complexities of reading a
 
 We created an internal API for how modules communicated with each other. So the code is more modular and each unit is dedicated to its specific task.
 
-We completely re-wrote current sense and ACK detect routines.
-
-We created an automation scripting language called TPL (Train Programming Language)
+We completely re-wrote current sense and ACK detect routines to better protect your trains and make programming more accurate.
 
 We added many functions like individual track power control, user add-on functions, a much simpler Function (F0-28) command, better turnout handling and more.
 
@@ -42,14 +40,14 @@ The current detection routines are completely different. One key difference is a
 
 We are still testing all the motorboard and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason CV reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an "ACK" (acknowledgement from the train that it received a command). So we now check immedately after we send a command instead of waiting for a dozen or more packets. This means we don't miss an ACK while this is happening and we jump out of sending uneccessary packes as soon as we get one. You will appreciate how much faster we can read CVs now!
 
-We not only have created a rail-com cutout within the Command Station, but are looking at actually reading the Railcom data and reporting it. We may require the use of a Mega instead of an Uno for this feature.
+We not only have created a RailCom cutout within the Command Station, but are developing a wat of reading the RailCom data and reporting it.
 
 TPL brings new capability to the world of automation. You don't have to be a programmer to write a script that tells a train to start moving forward at a set speed until some action (like reaching a sensor) occurs. We will be providing a document and tutorial on TPL once Beta testing is complete. This will be an open-ended project since who knows what people will come up with they want to automate. It will be easy to extend the commands to handle whatever your imagination can dream of.
 
 The bottom line
 ---------------
 
-So while maintaining proper deference to Gregg Bermann's original concept of an inexpensive Command Station based on the Arduino platform, we don't want to do a disservice to DCC++ EX or develpers like Chris Harlow (UkBloke) and David Cutting (David Cutting) who brought a new vision to the project and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcments.
+So while maintaining proper deference to Gregg Bermann's original concept of an inexpensive Command Station based on the Arduino platform, we don't want to do a disservice to DCC++ EX or develpers like Chris Harlow (UkBloke) and Dave Cutting who brought a new vision to the project and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcments.
 
 Thanks
 ------

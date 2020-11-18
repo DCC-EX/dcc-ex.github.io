@@ -15,4 +15,7 @@
         width: 100%;
         margin: auto; /* OR TRY margin: 0*/
     }
+   .wy-nav-side {
+       left: -300px;
+   }
 }

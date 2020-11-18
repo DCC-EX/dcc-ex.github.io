@@ -19,3 +19,7 @@
        left: -300px;
    }
 }
+
+.wy-side-nav-search>a img.logo {
+    width: 60%;
+}

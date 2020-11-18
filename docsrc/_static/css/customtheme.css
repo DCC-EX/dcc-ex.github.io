@@ -1,0 +1,18 @@
+@import './theme.css';
+
+.wy-grid-for-nav {
+    width: 70%;
+    margin: 0 15%;
+}
+.wy-nav-side {
+    left: 15%;
+}
+.wy-nav-content {
+    max-width: 100%;
+}
+@media screen and (max-width:768px) {
+    .wy-grid-for-nav {
+        width: 100%;
+        margin: auto; /* OR TRY margin: 0*/
+    }
+}

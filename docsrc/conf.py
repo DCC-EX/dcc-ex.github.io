@@ -49,6 +49,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = "sphinx_rtd_theme"
 
+html_style = 'css/customtheme.css'
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
@@ -69,20 +71,20 @@ html_additional_pages = {
     'exwebthrottle': 'exwebthrottle/index.html',
 }
 
+html_css_files = [
+    'css/layout.css',
+    'css/roundslider.min.css',
+    'css/throttle.css'
+]
+
 html_js_files = [
     'js/platform.js',
     'js/extra.js'
+    'js/commandController.js',
+    'js/exwebthrottle.js',
+    'js/fnMaster.js',
+    'js/jquery-3.2.1.min.js',
+    'js/jquery-ui.min.js',
+    'js/roundslider.min.js',
+    'js/storageController.js'
 ]
-
-# add the extra js and css files needed for exwebthrottle
-def setup(app):
-    app.add_css_file('css/layout.css')
-    app.add_css_file('css/roundslider.min.css')
-    app.add_css_file('css/throttle.css')
-    app.add_js_file('js/commandController.js')
-    app.add_js_file('js/exwebthrottle.js')
-    app.add_js_file('js/fnMaster.js')
-    app.add_js_file('js/jquery-3.2.1.min.js')
-    app.add_js_file('js/jquery-ui.min.js')
-    app.add_js_file('js/roundslider.min.js')
-    app.add_js_file('js/storageController.js')

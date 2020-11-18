@@ -23,3 +23,21 @@
 .wy-side-nav-search>a img.logo {
     width: 60%;
 }
+
+.rst-content img {
+    width: 70%;
+    height: auto;
+    margin: 5% 15%;
+}
+
+.rst-content table.docutils{
+    width: 80%;
+    margin: 0 10%;
+}
+
+@media screen and (max-width:1400px) {
+    .rst-content table.docutils {
+        width: 100%;
+        margin: 0;
+    }
+}

@@ -79,7 +79,7 @@ html_css_files = [
 
 html_js_files = [
     'js/platform.js',
-    'js/extra.js'
+    'js/extra.js',
     'js/commandController.js',
     'js/exwebthrottle.js',
     'js/fnMaster.js',

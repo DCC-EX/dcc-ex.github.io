@@ -49,7 +49,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Diagnostics &lt;D ACK&gt; Command" href="diagnostic-d-ack-command.html" />
-    <link rel="prev" title="Power Supplies" href="../hardware/power-supplies.html" /> 
+    <link rel="prev" title="Shopping List" href="../hardware/shopping-list.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -108,6 +108,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../hardware/ethernet-boards.html">Ethernet Boards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">DCC++ EX Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
@@ -188,7 +189,7 @@
 <h1>DCC++ EX Command Reference<a class="headerlink" href="#dcc-ex-command-reference" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
 <ul class="simple">
-<li><p>exWebThrottle - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web <a class="reference external" href="../exwebthrottle.html">here</a> , or download and run from your computer <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">here</a></p></li>
+<li><p>exWebThrottle - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web <a class="reference external" href="../exwebthrottle.html">WebThrottle-EX Live</a> , or download and run from your computer <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">WebThrottle-EX download</a></p></li>
 <li><p>Engine Driver - Cellphone App WiFi Throttle</p></li>
 <li><p><a class="reference external" href="http://www.jmri.org/">JMRI (Java Model Railroad Interface)</a></p></li>
 <li><p>A serial console, like the Arduino Serial Monitor or PuTTY</p></li>
@@ -252,24 +253,24 @@
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Upper Case D: Please See <cite>Diagnostics-``&lt;D&gt;`</cite>-Command Page &lt;<a class="reference external" href="https://github.com/DccPlusPlus/BaseStation/wiki/Diagnostics---D---Command">https://github.com/DccPlusPlus/BaseStation/wiki/Diagnostics—D—Command</a>&gt;`_</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Upper Case D: Please See <cite>Diagnostics `</cite>/&lt;D/&gt; Command Page &lt;./diagnostic-d-command.html&gt;`_</p></li>
 <li><p>There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).</p></li>
 </ul>
 </div>
 <div class="section" id="track-power-commands">
 <h2>Track Power Commands<a class="headerlink" href="#track-power-commands" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1&gt;</span></code>** - Turns power to both tracks on or off</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1&gt;</span></code> - Turns power to both tracks on or off</p>
 <p>examples:</p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code>** - Turn power to all tracks on
-<code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code>** - Turn power to all tracks off</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> - Turn power to all tracks on
+<code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> - Turn power to all tracks off</p>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code>** - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
 <p>Examples:</p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code>** - Turns on power just to the MAIN track
-<code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code>** - Turns off power just to the PROG track
-<code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code>** - Joins both tracks together to be both MAIN</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code> - Turns on power just to the MAIN track
+<code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> - Turns off power just to the PROG track
+<code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> - Joins both tracks together to be both MAIN</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -282,25 +283,28 @@
 </div>
 <div class="section" id="engine-decoder-cab-operation-commands">
 <h2>Engine Decoder (CAB) Operation Commands<a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="throttle">
-<h3>Throttle<a class="headerlink" href="#throttle" title="Permalink to this headline">¶</a></h3>
-<p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">REGISTER</span> <span class="pre">CAB</span> <span class="pre">SPEED</span> <span class="pre">DIRECTION&gt;</span></code><a href="#id2"><span class="problematic" id="id3">**</span></a>.</p>
-<p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">1</span> <span class="pre">03</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code>** is:
-<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = Start delimiter of a DCC++ EX command. (A space after <strong>&lt;</strong> is not required but acceptable)
-<code class="docutils literal notranslate"><span class="pre">t</span></code>** = (lower case t) This command is for a Decoder installed in a engine or simply a “cab”.
-<code class="docutils literal notranslate"><span class="pre">1</span></code>** = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
-<code class="docutils literal notranslate"><span class="pre">03</span></code>** = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
-<code class="docutils literal notranslate"><span class="pre">20</span></code>** = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
-<code class="docutils literal notranslate"><span class="pre">1</span></code>** = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
-<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>** = I am the end of this command</p>
-<p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">1</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code>** if the command was successful, meaning :
-<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = Begin DCC++ EX command
-<code class="docutils literal notranslate"><span class="pre">T</span></code>** = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
-<code class="docutils literal notranslate"><span class="pre">1</span></code>** = register 1 was changed
-<code class="docutils literal notranslate"><span class="pre">20</span></code>** = set to speed 20
-<code class="docutils literal notranslate"><span class="pre">1</span></code>** = forward direction
-<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = End DCC++ EX command</p>
 </div>
+<div class="section" id="throttle-command">
+<h2>Throttle Command<a class="headerlink" href="#throttle-command" title="Permalink to this headline">¶</a></h2>
+<p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">REGISTER</span> <span class="pre">CAB</span> <span class="pre">SPEED</span> <span class="pre">DIRECTION&gt;</span></code>.</p>
+<p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">1</span> <span class="pre">03</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code> is:
+<code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Start delimiter of a DCC++ EX command. (A space after <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> is not required but acceptable)
+<code class="docutils literal notranslate"><span class="pre">t</span></code> = (lower case t) This command is for a Decoder installed in a engine or simply a “cab”.
+<code class="docutils literal notranslate"><span class="pre">1</span></code> = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
+<code class="docutils literal notranslate"><span class="pre">03</span></code> = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
+<code class="docutils literal notranslate"><span class="pre">20</span></code> = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
+<code class="docutils literal notranslate"><span class="pre">1</span></code> = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
+<code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = I am the end of this command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">1</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code> if the command was successful, meaning :
+<code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command
+<code class="docutils literal notranslate"><span class="pre">T</span></code> = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
+<code class="docutils literal notranslate"><span class="pre">1</span></code> = register 1 was changed
+<code class="docutils literal notranslate"><span class="pre">20</span></code> = set to speed 20
+<code class="docutils literal notranslate"><span class="pre">1</span></code> = forward direction
+<code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = End DCC++ EX command</p>
 <div class="section" id="cab-functions">
 <h3>CAB FUNCTIONS<a class="headerlink" href="#cab-functions" title="Permalink to this headline">¶</a></h3>
 <p>There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC++ EX method. Both methods are described here though new applications are encouraged to use the newer <code class="docutils literal notranslate"><span class="pre">&lt;F&gt;</span></code> command (capital F vs. small f).</p>
@@ -313,16 +317,16 @@
 <li><p>Using the new F command, the command station knows about the previous
 settings in the same group and will not, for example, unset F2 because you change F1. If however, you have never set F2, then changing F1 WILL unset F2.</p></li>
 </ul>
-<p><strong>CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">1|0&gt;</span></code>**</p>
+<p><strong>CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">1|0&gt;</span></code></p>
 <div class="section" id="to-set-functions-f0-f28-on-1-or-off-0-f-cab-func-0-1">
-<h4>To set functions <strong>F0-F28</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">0|1&gt;</span></code>**<a class="headerlink" href="#to-set-functions-f0-f28-on-1-or-off-0-f-cab-func-0-1" title="Permalink to this headline">¶</a></h4>
+<h4>To set functions <strong>F0-F28</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">0|1&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f28-on-1-or-off-0-f-cab-func-0-1" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code>** = (upper case F) This command is for a CAB function ie: Lights, horn, bell</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code>:  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">FUNC</span></code>: the CAB function number (0-28) whose function is defined by your decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">0|1</span></code>: a value of 0 to set the function OFF and 1 to set the function ON</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>** = End DCC++ EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> = (upper case F) This command is for a CAB function ie: Lights, horn, bell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code>  : the short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FUNC</span></code> : the CAB function number (0-28) whose function is defined by your decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0|1</span></code> : a value of 0 to set the function OFF and 1 to set the function ON</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC++ EX command</p></li>
 </ul>
 <dl class="simple">
 <dt>Examples:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">3</span> <span class="pre">0</span> <span class="pre">1&gt;</span></code> Turns the headlight ON for CAB (loco address) 3
@@ -330,15 +334,15 @@ settings in the same group and will not, for example, unset F2 because you chang
 <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">1330</span> <span class="pre">1</span> <span class="pre">1&gt;</span></code> Turns the horn ON for CAB 1330</p>
 </dd>
 </dl>
-<p><strong>The Legacy CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">CAB</span> <span class="pre">BYTE1</span> <span class="pre">[BYTE2]&gt;</span></code>**</p>
+<p><strong>The Legacy CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">CAB</span> <span class="pre">BYTE1</span> <span class="pre">[BYTE2]&gt;</span></code></p>
 </div>
 <div class="section" id="to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F0-F4</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">CAB</span> <span class="pre">BYTE1</span> <span class="pre">[BYTE2]&gt;</span></code>**<a class="headerlink" href="#to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this headline">¶</a></h4>
+<h4>To set functions <strong>F0-F4</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">CAB</span> <span class="pre">BYTE1</span> <span class="pre">[BYTE2]&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB function ie: Lights, horn, bell</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code>:  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1</span></code>:  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1</span></code> :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16</p>
 <ul class="simple">
 <li><p>ADD the ones you want <strong>ON</strong> together</p></li>
 <li><p>Add 1 for F1 ON</p></li>
@@ -349,7 +353,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 <li><p>128 Alone Turns OFF <strong>F0-F4</strong></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2</span></code>:  omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2</span></code> :  omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC++ EX command
 ..</p>
 <blockquote>
@@ -366,18 +370,18 @@ If light is on (144), Then you turn on bell with light (145), Bell back off but 
 </li>
 </ul>
 <p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">3265</span> <span class="pre">144&gt;</span></code>
-<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = Begin DCC++ EX command
-<code class="docutils literal notranslate"><span class="pre">f</span></code>** = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell
-<code class="docutils literal notranslate"><span class="pre">3265</span></code>** = CAB: the short (1-127) or long (128-10293) address of the engine decoder
-<code class="docutils literal notranslate"><span class="pre">144</span></code>** = Turn on headlight
-<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>** = End DCC++ EX command</p>
+<code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command
+<code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell
+<code class="docutils literal notranslate"><span class="pre">3265</span></code> = CAB: the short (1-127) or long (128-10293) address of the engine decoder
+<code class="docutils literal notranslate"><span class="pre">144</span></code> = Turn on headlight
+<code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC++ EX command</p>
 </div>
 <div class="section" id="to-set-functions-f5-f8-on-1-or-off-0-f-cab-byte1-byte2">
 <h4>To set functions <strong>F5-F8</strong> on=(1) or off=(0): <strong>&lt;f CAB BYTE1 [BYTE2]&gt;</strong><a class="headerlink" href="#to-set-functions-f5-f8-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1</span></code>:  176 + F5*1 + F6*2 + F7*4 + F8*8</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1</span></code> :  176 + F5*1 + F6*2 + F7*4 + F8*8</p>
 <ul>
 <li><p>ADD 176 + the ones you want <strong>ON</strong> together</p></li>
 <li><p>Add 1 for F5 ON</p></li>
@@ -387,7 +391,7 @@ If light is on (144), Then you turn on bell with light (145), Bell back off but 
 <li><p>176 Alone Turns OFF <strong>F5-F8</strong></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2</span></code>:  omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2</span></code> :  omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC++ EX command</p></li>
 </ul>
 </div>
@@ -489,31 +493,31 @@ If light is on (144), Then you turn on bell with light (145), Bell back off but 
 <h4>Defining (Setting up) a Turnout<a class="headerlink" href="#defining-setting-up-a-turnout" title="Permalink to this headline">¶</a></h4>
 <p>To have the DCC++ EX CommandStation store and retain the direction of DCC-connected turnouts, as well as automatically invoke the required <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> command as needed, first define/edit/delete such turnouts using the following variations of the “T” command:</p>
 <ul class="simple">
-<li><p>Command to define a Turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code>:</p>
+<li><p>Command to define a Turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code> :</p>
 <ul>
 <li><p>Creates a new turnout ID, with specified ADDRESS and SUBADDRESS if turnout ID already exists, it is updated (over written) with the new specified ADDRESS and SUBADDRESS</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
 </ul>
 </li>
-<li><p>Command to Delete a turnout <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID&gt;</span></code>:</p>
+<li><p>Command to Delete a turnout <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID&gt;</span></code> :</p>
 <ul>
 <li><p>Deletes the definition of a turnout with this ID</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. ID does not exist)</p></li>
 </ul>
 </li>
-<li><p>Command to List all defined turnouts: <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code>:</p>
+<li><p>Command to List all defined turnouts: <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> :</p>
 <ul>
 <li><p>Lists all defined turnouts.</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">THROW&gt;</span></code> for each defined turnout or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no turnouts have beed defined or saved.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code>: The numeric ID (0-32767) of the turnout to control.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the turnout to control.</p>
 <ul>
 <li><p>(You pick the ID &amp; They ares shared between Turnouts, Sensors and Outputs)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code>:  the primary address of the decoder controlling this turnout (0-511)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code>: the subaddress of the decoder controlling this turnout (0-3)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> :  the primary address of the decoder controlling this turnout (0-511)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code> : the subaddress of the decoder controlling this turnout (0-3)</p></li>
 </ul>
 <p>Once all turnouts have been properly defined, Use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the turnout definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> command if you want those new definitions updated in the EEPROM.
@@ -525,19 +529,19 @@ You would send the following command to the DCC++ EX CommandStation
 <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">10</span> <span class="pre">123</span> <span class="pre">3&gt;</span></code></p>
 <ul class="simple">
 <li><p>This Command means:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>: Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code>: (Upper case T) Define a Turnout</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code>: ID number I am setting to use this turnout</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">123</span></code>: The accessory decoders address</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code>: The turnout is wired to output 3</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>: End DCC++ EX command
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : Begin DCC++ EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> : (Upper case T) Define a Turnout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> : ID number I am setting to use this turnout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">123</span></code> : The accessory decoders address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> : The turnout is wired to output 3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> : End DCC++ EX command
 RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code>  Meaning Command Successful
 Next you would send the following command to the DCC++ EX CommandStation
 <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code></p></li>
 <li><p>This Command means:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>: Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">E</span></code>: (Upper case E) Store (save) this definition to EEPROM</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>: End DCC++ EX command
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : Begin DCC++ EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">E</span></code> : (Upper case E) Store (save) this definition to EEPROM</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> : End DCC++ EX command
 RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code>  Meaning Command Successful</p></li>
 </ul>
 </div></blockquote>
@@ -547,8 +551,8 @@ RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;<
 <ul>
 <li><p>Sets turnout ID to either the “thrown”(turned) or “unthrown”(straight) position</p></li>
 <li><p>The Turnout format is <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">THROW&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code>: The numeric ID (0-32767) That you gave the turnout to control when you defined it.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">THROW</span></code>: 0 (unthrown) or 1 (thrown)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) That you gave the turnout to control when you defined it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">THROW</span></code> : 0 (unthrown) or 1 (thrown)</p></li>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">THROW&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if turnout ID does not exist</p>
 <blockquote>
 <div><p>Example Continued from above:
@@ -556,11 +560,11 @@ To throw turnout 10 so an engine can go to the warehouse siding you would send t
 <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">10</span> <span class="pre">1&gt;</span></code></p>
 <ul>
 <li><p>This Command means:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>: Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code>: (Upper case T) Throw a turnout.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code>: ID number of the defined turnout I want to control.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code>: Set turnout to Thrown (turned, on) position.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>: End DCC++ EX command
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : Begin DCC++ EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> : (Upper case T) Throw a turnout.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> : ID number of the defined turnout I want to control.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> : Set turnout to Thrown (turned, on) position.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> : End DCC++ EX command
 DCC++ EX should return <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">10</span> <span class="pre">1&gt;</span></code>  Meaning Command Throw turnout 10 was Successful</p>
 <p>NOTE: The <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> command by itself with no parameters will list all turnouts and their directions</p>
 </li>
@@ -577,26 +581,26 @@ DCC++ EX should return <code class="docutils literal notranslate"><span class="p
 <p>The Sensor code utilizes exponential smoothing to “de-bounce” spikes generated by mechanical switches and transistors. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors.</p>
 <p>To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> command:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">PULLUP&gt;</span></code>: Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">PULLUP&gt;</span></code> : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).</p>
 <ul>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">ID&gt;</span></code>: Deletes definition of sensor ID</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">ID&gt;</span></code> : Deletes definition of sensor ID</p>
 <ul>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. ID does not exist)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code>: Lists all defined sensors</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> : Lists all defined sensors</p>
 <ul>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">PULLUP&gt;</span></code> for each defined sensor or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no sensors defined</p></li>
 </ul>
 </li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">ID</span></code>: The numeric ID (0-32767) of the sensor
+<p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the sensor
 (You pick the ID &amp; They ares shared between Turnouts, Sensors and Outputs)
-<code class="docutils literal notranslate"><span class="pre">PIN</span></code>: The Arduino pin number the sensor is connected to on the Arduino board.
-<code class="docutils literal notranslate"><span class="pre">PULLUP</span></code>: 1 = Use internal pull-up resistor for PIN, 0 = don’t use internal pull-up resistor for PIN</p>
+<code class="docutils literal notranslate"><span class="pre">PIN</span></code> : The Arduino pin number the sensor is connected to on the Arduino board.
+<code class="docutils literal notranslate"><span class="pre">PULLUP</span></code> : 1 = Use internal pull-up resistor for PIN, 0 = don’t use internal pull-up resistor for PIN</p>
 <p>Once all sensors have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command if you want those new definitions updated in the EEPROM.
 You can also clear <strong>everything (turnouts, sensors, and outputs)</strong> stored in the EEPROM by invoking the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> (lower case e) command.
@@ -615,29 +619,29 @@ You can also clear <strong>everything (turnouts, sensors, and outputs)</strong> 
 The default is to set each defined pin to active or inactive according to its restored state. However, the default behavior can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.</p>
 <p>To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> command:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">IFLAG&gt;</span></code>: Creates a new output ID, with specified PIN and IFLAG values.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">IFLAG&gt;</span></code> : Creates a new output ID, with specified PIN and IFLAG values.</p>
 <ul>
 <li><p>if output ID already exists, it is updated with specificed PIN and IFLAG.</p></li>
 <li><p>Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specifcied (see below).</p></li>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory).</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID&gt;</span></code>: Deletes definition of output ID</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID&gt;</span></code> : Deletes definition of output ID</p>
 <ul>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. ID does not exist)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code>: Lists all defined output pins</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> : Lists all defined output pins</p>
 <ul>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">IFLAG</span> <span class="pre">STATE&gt;</span></code> for each defined output pin or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no output pins defined.</p></li>
 </ul>
 </li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">ID</span></code>: The numeric ID (0-32767) of the output
+<p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the output
 (You pick the ID &amp; They ares shared between Turnouts, Sensors and Outputs)
-<code class="docutils literal notranslate"><span class="pre">PIN</span></code>: The Arduino pin number to use for the output.
-<code class="docutils literal notranslate"><span class="pre">STATE</span></code>: The state of the output (0=INACTIVE / 1=ACTIVE)
-<code class="docutils literal notranslate"><span class="pre">IFLAG</span></code>: Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:</p>
+<code class="docutils literal notranslate"><span class="pre">PIN</span></code> : The Arduino pin number to use for the output.
+<code class="docutils literal notranslate"><span class="pre">STATE</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)
+<code class="docutils literal notranslate"><span class="pre">IFLAG</span></code> : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">forward</span> <span class="n">operation</span> <span class="p">(</span><span class="n">ACTIVE</span><span class="o">=</span><span class="n">HIGH</span> <span class="o">/</span> <span class="n">INACTIVE</span><span class="o">=</span><span class="n">LOW</span><span class="p">)</span>
               <span class="mi">1</span> <span class="o">=</span> <span class="n">inverted</span> <span class="n">operation</span> <span class="p">(</span><span class="n">ACTIVE</span><span class="o">=</span><span class="n">LOW</span> <span class="o">/</span> <span class="n">INACTIVE</span><span class="o">=</span><span class="n">HIGH</span><span class="p">)</span>
 
@@ -656,11 +660,11 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <strong>(There is no Un-Delete)</strong></p>
 <p>To change the state of outputs that have been defined use:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID</span> <span class="pre">STATE&gt;</span></code>: Sets output ID to either ACTIVE or INACTIVE state</p></li>
-<li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">ID</span> <span class="pre">STATE&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if output ID does not exist</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID</span> <span class="pre">STATE&gt;</span></code> : Sets output ID to either ACTIVE or INACTIVE state</p></li>
+<li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">ID</span> <span class="pre">STATE&gt;</span></code> , or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if output ID does not exist</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code>: The numeric ID (0-32767) of the defined output to control</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">STATE</span></code>: The state of the output (0=INACTIVE / 1=ACTIVE)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the defined output to control</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p></li>
 </ul>
 </li>
 </ul>
@@ -676,9 +680,9 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <p>Writes, without any verification, a Configuration Variable BYTE to the decoder of an engine on the main operations track.</p>
 <ul class="simple">
 <li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">CAB</span> <span class="pre">CV</span> <span class="pre">VALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code>: The short (1-127) or long (128-10293) address of the engine decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code>: The number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code>: The value to be written to the Configuration Variable memory location (0-255)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> : The short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value to be written to the Configuration Variable memory location (0-255)</p></li>
 <li><p>RETURNS: NONE</p></li>
 </ul>
 </div>
@@ -687,10 +691,10 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <p>Writes, without any verification, a single bit within a Configuration Variable BIT to the decoder of an engine on the main operations track.</p>
 <ul class="simple">
 <li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">CAB</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">VALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code>:  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code>: the number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code>: the bit number of the Configurarion Variable regsiter to write (0-7)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code>: the value of the bit to be written (0-1)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : the number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : the bit number of the Configurarion Variable regsiter to write (0-7)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : the value of the bit to be written (0-1)</p>
 <ul>
 <li><p>RETURNS: NONE</p></li>
 </ul>
@@ -705,10 +709,10 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <p>Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track</p>
 <ul class="simple">
 <li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">CV</span> <span class="pre">VALUE</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code>: The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code>: The value to be written to the Configuration Variable memory location (0-255).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code>: An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code>: a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value to be written to the Configuration Variable memory location (0-255).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code> : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CALLBACKNUM|CALLBACKSUB|CV</span> <span class="pre">Value&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span> <span class="pre">VALUE:</span></code> Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.</p></li>
@@ -721,11 +725,11 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <p>Writes, and then verifies, a Configuration Variable BIT to the decoder of an engine on the programming track</p>
 <ul class="simple">
 <li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">VALUE</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code>: The number of the Configuration Variable memory location in the decoder to write to (1-1024).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code>: The bit number of the Configuration Variable memory location to write (0-7).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code>: The value of the bit to be written (0-1).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code>: An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code>: A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : The bit number of the Configuration Variable memory location to write (0-7).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value of the bit to be written (0-1).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code> : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CALLBACKNUM|CALLBACKSUB|CV</span> <span class="pre">BIT</span> <span class="pre">VALUE&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span> <span class="pre">VALUE</span></code> is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.</p></li>
@@ -737,10 +741,10 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <h4>READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#read-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
 <p>Reads a Configuration Variable from the decoder of an engine on the programming track.</p>
 <ul class="simple">
-<li><p>Read CV BYTE Format is:<code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">CV</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code>: The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code>: An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code>: A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.</p>
+<li><p>Read CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">CV</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code> : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CALLBACKNUM|CALLBACKSUB|CV</span> <span class="pre">VALUE&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span> <span class="pre">VALUE</span></code> is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.</p></li>
@@ -752,9 +756,9 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <h4>VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
 <p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read byte command (see above) and return the value read.</p>
 <ul class="simple">
-<li><p>Verify CV BYTE Format is:<code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">CV</span> <span class="pre">BYTEVALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code>: The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTEVALUE</span></code>: The value of they byte expected to be in the CV</p></li>
+<li><p>Verify CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">CV</span> <span class="pre">BYTEVALUE&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BYTEVALUE</span></code> : The value of they byte expected to be in the CV</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">CV</span> <span class="pre">BYTEVALUE&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">BYTEVALUE:</span></code> reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation</p></li>
 </ul>
@@ -763,10 +767,10 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <h4>VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-bit-from-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
 <p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read bit command (see above) and return the value read.</p>
 <ul class="simple">
-<li><p>Verify CV BIT Format is:<code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">BITVALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code>: The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code>: The bit position of the bit in the CV byte being validated (0-7)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BITVALUE</span></code>: 0 or 1 indicating the expected value</p></li>
+<li><p>Verify CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">BITVALUE&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : The bit position of the bit in the CV byte being validated (0-7)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BITVALUE</span></code> : 0 or 1 indicating the expected value</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">BITVALUE&gt;</span></code> A return value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">BIT:</span></code> Reports the bit in the CV byte that was verified</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">BITVALUE:</span></code> reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation.</p></li>
@@ -824,7 +828,7 @@ returns: NONE
         <a href="diagnostic-d-ack-command.html" class="btn btn-neutral float-right" title="Diagnostics &lt;D ACK&gt; Command" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../hardware/power-supplies.html" class="btn btn-neutral float-left" title="Power Supplies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../hardware/shopping-list.html" class="btn btn-neutral float-left" title="Shopping List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

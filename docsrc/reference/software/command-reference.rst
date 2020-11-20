@@ -3,7 +3,7 @@ DCC++ EX Command Reference
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* exWebThrottle - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web `here <../exwebthrottle.html>`_ , or download and run from your computer `here <https://github.com/DCC-EX/exWebThrottle>`_
+* exWebThrottle - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web `WebThrottle-EX Live <../exwebthrottle.html>`_ , or download and run from your computer `WebThrottle-EX download <https://github.com/DCC-EX/exWebThrottle>`_
 
 * Engine Driver - Cellphone App WiFi Throttle  
 
@@ -97,7 +97,7 @@ SINGLE LETTER COMMANDS
     **(NOTE:There is NO Un-Delete)**
 
 * 
-  ``<D>`` Upper Case D: Please See `Diagnostics-\ ``<D>``\ -Command Page <https://github.com/DccPlusPlus/BaseStation/wiki/Diagnostics---D---Command>`_
+  ``<D>`` Upper Case D: Please See `Diagnostics ``/<D/> Command Page <./diagnostic-d-command.html>`_
 
 * 
   There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).
@@ -105,20 +105,20 @@ SINGLE LETTER COMMANDS
 Track Power Commands
 ^^^^^^^^^^^^^^^^^^^^
 
-``<0|1>``\ ** - Turns power to both tracks on or off
+``<0|1>`` - Turns power to both tracks on or off
 
 examples:
 
-  ``<1>``\ ** - Turn power to all tracks on
-  ``<0>``\ ** - Turn power to all tracks off
+  ``<1>`` - Turn power to all tracks on
+  ``<0>`` - Turn power to all tracks off
 
 ``<0|1 MAIN|PROG|JOIN>``\ ** - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
 
 Examples:
 
-  ``<1 MAIN>``\ ** - Turns on power just to the MAIN track
-  ``<0 PROG>``\ ** - Turns off power just to the PROG track
-  ``<1 JOIN>``\ ** - Joins both tracks together to be both MAIN
+  ``<1 MAIN>`` - Turns on power just to the MAIN track
+  ``<0 PROG>`` - Turns off power just to the PROG track
+  ``<1 JOIN>`` - Joins both tracks together to be both MAIN
 
 .. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.
 
@@ -127,27 +127,30 @@ Examples:
 Engine Decoder (CAB) Operation Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Throttle
-~~~~~~~~
 
-**The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``\ **.  
+Throttle Command
+^^^^^^^^^^^^^^^^^
 
-Breakdown for this example ``<t 1 03 20 1>``\ ** is:
-``<``\ ** = Start delimiter of a DCC++ EX command. (A space after **<** is not required but acceptable)
-``t``\ ** = (lower case t) This command is for a Decoder installed in a engine or simply a "cab".
-``1``\ ** = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
-``03``\ ** = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
-``20``\ ** = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
-``1``\ ** = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
-``>``\ ** = I am the end of this command  
+**The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``.  
 
-RETURNS: ``<T 1 20 1>``\ ** if the command was successful, meaning :
-``<``\ ** = Begin DCC++ EX command
-``T``\ ** = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
-``1``\ ** = register 1 was changed
-``20``\ ** = set to speed 20
-``1``\ ** = forward direction
-``<``\ ** = End DCC++ EX command
+Breakdown for this example ``<t 1 03 20 1>`` is:
+``<`` = Start delimiter of a DCC++ EX command. (A space after ``<`` is not required but acceptable)
+``t`` = (lower case t) This command is for a Decoder installed in a engine or simply a "cab".
+``1`` = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
+``03`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
+``20`` = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
+``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
+``>`` = I am the end of this command  
+
+.. code-block::
+
+RETURNS: ``<T 1 20 1>`` if the command was successful, meaning :
+``<`` = Begin DCC++ EX command
+``T`` = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
+``1`` = register 1 was changed
+``20`` = set to speed 20
+``1`` = forward direction
+``<`` = End DCC++ EX command
 
 CAB FUNCTIONS
 ~~~~~~~~~~~~~
@@ -163,34 +166,34 @@ There are two formats for setting CAB functions, the DCC++ Classic legacy method
 * Using the new F command, the command station knows about the previous
   settings in the same group and will not, for example, unset F2 because you change F1. If however, you have never set F2, then changing F1 WILL unset F2.     
 
-**CAB Functions format** is ``<F CAB FUNC 1|0>``\ **
+**CAB Functions format** is ``<F CAB FUNC 1|0>``
 
-To set functions **F0-F28** on=(1) or off=(0): ``<F CAB FUNC 0|1>``\ **
+To set functions **F0-F28** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-* ``<``\ ** = Begin DCC++ EX command
-* ``F``\ ** = (upper case F) This command is for a CAB function ie: Lights, horn, bell  
-* ``CAB``\ :  the short (1-127) or long (128-10293) address of the engine decoder
-* ``FUNC``\ : the CAB function number (0-28) whose function is defined by your decoder
-* ``0|1``\ : a value of 0 to set the function OFF and 1 to set the function ON
-* ``>``\ ** = End DCC++ EX command
+* ``<`` = Begin DCC++ EX command
+* ``F`` = (upper case F) This command is for a CAB function ie: Lights, horn, bell  
+* ``CAB``  : the short (1-127) or long (128-10293) address of the engine decoder
+* ``FUNC`` : the CAB function number (0-28) whose function is defined by your decoder
+* ``0|1`` : a value of 0 to set the function OFF and 1 to set the function ON
+* ``>`` = End DCC++ EX command
 
 Examples:
   ``<F 3 0 1>`` Turns the headlight ON for CAB (loco address) 3
   ``<F 126 0 0>`` Turns the headlight OFF for CAB 126
   ``<F 1330 1 1>`` Turns the horn ON for CAB 1330
 
-**The Legacy CAB Functions format** is ``<f CAB BYTE1 [BYTE2]>``\ **
+**The Legacy CAB Functions format** is ``<f CAB BYTE1 [BYTE2]>``
 
-To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``\ **
+To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 * ``<`` = Begin DCC++ EX command
 * ``f`` = (lower case f) This command is for a CAB function ie: Lights, horn, bell  
-* ``CAB``\ :  the short (1-127) or long (128-10293) address of the engine decoder
-* ``BYTE1``\ :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16
+* ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder
+* ``BYTE1`` :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16
 
   * ADD the ones you want **ON** together
   * Add 1 for F1 ON
@@ -200,7 +203,7 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``\ **
   * Add 16 for F0 ON
   * 128 Alone Turns OFF **F0-F4**
 
-* ``BYTE2``\ :  omitted
+* ``BYTE2`` :  omitted
 * ``>`` = End DCC++ EX command
   ..
 
@@ -216,11 +219,11 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``\ **
 
 
 Breakdown for this example ``<f 3265 144>``
-``<``\ ** = Begin DCC++ EX command
-``f``\ ** = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell
-``3265``\ ** = CAB: the short (1-127) or long (128-10293) address of the engine decoder
-``144``\ ** = Turn on headlight
-``>``\ ** = End DCC++ EX command  
+``<`` = Begin DCC++ EX command
+``f`` = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell
+``3265`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder
+``144`` = Turn on headlight
+``>`` = End DCC++ EX command  
 
 To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -228,7 +231,7 @@ To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 
 * ``<`` = Begin DCC++ EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
-* ``BYTE1``\ :  176 + F5*1 + F6*2 + F7*4 + F8*8
+* ``BYTE1`` :  176 + F5*1 + F6*2 + F7*4 + F8*8
 
   * ADD 176 + the ones you want **ON** together
   * Add 1 for F5 ON
@@ -237,7 +240,7 @@ To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 8 for F8 ON
   * 176 Alone Turns OFF **F5-F8**
 
-* ``BYTE2``\ :  omitted
+* ``BYTE2`` :  omitted
 * ``>`` = End DCC++ EX command  
 
 To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
@@ -340,27 +343,27 @@ Defining (Setting up) a Turnout
 To have the DCC++ EX CommandStation store and retain the direction of DCC-connected turnouts, as well as automatically invoke the required ``<a>`` command as needed, first define/edit/delete such turnouts using the following variations of the "T" command:
 
 
-* Command to define a Turnout: ``<T ID ADDRESS SUBADDRESS>``\ :
+* Command to define a Turnout: ``<T ID ADDRESS SUBADDRESS>`` :
 
   * Creates a new turnout ID, with specified ADDRESS and SUBADDRESS if turnout ID already exists, it is updated (over written) with the new specified ADDRESS and SUBADDRESS
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
 
-* Command to Delete a turnout ``<T ID>``\ :
+* Command to Delete a turnout ``<T ID>`` :
 
   * Deletes the definition of a turnout with this ID
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)
 
-* Command to List all defined turnouts: ``<T>``\ :
+* Command to List all defined turnouts: ``<T>`` :
 
   * Lists all defined turnouts.
   * Returns: ``<H ID ADDRESS SUBADDRESS THROW>`` for each defined turnout or ``<X>`` if no turnouts have beed defined or saved.  
 
-* ``ID``\ : The numeric ID (0-32767) of the turnout to control.  
+* ``ID`` : The numeric ID (0-32767) of the turnout to control.  
 
   * (You pick the ID & They ares shared between Turnouts, Sensors and Outputs)
 
-* ``ADDRESS``\ :  the primary address of the decoder controlling this turnout (0-511)
-* ``SUBADDRESS``\ : the subaddress of the decoder controlling this turnout (0-3)
+* ``ADDRESS`` :  the primary address of the decoder controlling this turnout (0-511)
+* ``SUBADDRESS`` : the subaddress of the decoder controlling this turnout (0-3)
 
 Once all turnouts have been properly defined, Use the ``<E>`` command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the turnout definitions, you must invoke the ``<E>`` command if you want those new definitions updated in the EEPROM.
@@ -375,19 +378,19 @@ You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the
 
 
    * This Command means:  
-   * ``<``\ : Begin DCC++ EX command  
-   * ``T``\ : (Upper case T) Define a Turnout  
-   * ``10``\ : ID number I am setting to use this turnout  
-   * ``123``\ : The accessory decoders address  
-   * ``3``\ : The turnout is wired to output 3  
-   * ``>``\ : End DCC++ EX command
+   * ``<`` : Begin DCC++ EX command  
+   * ``T`` : (Upper case T) Define a Turnout  
+   * ``10`` : ID number I am setting to use this turnout  
+   * ``123`` : The accessory decoders address  
+   * ``3`` : The turnout is wired to output 3  
+   * ``>`` : End DCC++ EX command
      RETURNS: ``<O>``  Meaning Command Successful
      Next you would send the following command to the DCC++ EX CommandStation
      ``<E>``  
    * This Command means:  
-   * ``<``\ : Begin DCC++ EX command  
-   * ``E``\ : (Upper case E) Store (save) this definition to EEPROM  
-   * ``>``\ : End DCC++ EX command
+   * ``<`` : Begin DCC++ EX command  
+   * ``E`` : (Upper case E) Store (save) this definition to EEPROM  
+   * ``>`` : End DCC++ EX command
      RETURNS: ``<O>``  Meaning Command Successful  
 
 
@@ -397,8 +400,8 @@ Controlling a Defined Turnout
 
 * Sets turnout ID to either the "thrown"(turned) or "unthrown"(straight) position  
 * The Turnout format is ``<T ID THROW>``  
-* ``ID``\ : The numeric ID (0-32767) That you gave the turnout to control when you defined it. 
-* ``THROW``\ : 0 (unthrown) or 1 (thrown)  
+* ``ID`` : The numeric ID (0-32767) That you gave the turnout to control when you defined it. 
+* ``THROW`` : 0 (unthrown) or 1 (thrown)  
 * 
   RETURNS: ``<H ID THROW>`` or ``<X>`` if turnout ID does not exist  
 
@@ -410,12 +413,12 @@ Controlling a Defined Turnout
 
 
      * This Command means:  
-     * ``<``\ : Begin DCC++ EX command  
-     * ``T``\ : (Upper case T) Throw a turnout.  
-     * ``10``\ : ID number of the defined turnout I want to control.  
-     * ``1``\ : Set turnout to Thrown (turned, on) position.  
+     * ``<`` : Begin DCC++ EX command  
+     * ``T`` : (Upper case T) Throw a turnout.  
+     * ``10`` : ID number of the defined turnout I want to control.  
+     * ``1`` : Set turnout to Thrown (turned, on) position.  
      * 
-       ``>``\ : End DCC++ EX command
+       ``>`` : End DCC++ EX command
        DCC++ EX should return ``<H 10 1>``  Meaning Command Throw turnout 10 was Successful
 
        NOTE: The ``<T>`` command by itself with no parameters will list all turnouts and their directions
@@ -433,22 +436,22 @@ The Sensor code utilizes exponential smoothing to "de-bounce" spikes generated b
 To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the ``<S>`` command:  
 
 
-* ``<S ID PIN PULLUP>``\ : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).  
+* ``<S ID PIN PULLUP>`` : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).  
 
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
 
-* ``<S ID>``\ : Deletes definition of sensor ID  
+* ``<S ID>`` : Deletes definition of sensor ID  
 
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)  
 
-* ``<S>``\ : Lists all defined sensors  
+* ``<S>`` : Lists all defined sensors  
 
   * RETURNS: ``<Q ID PIN PULLUP>`` for each defined sensor or ``<X>`` if no sensors defined  
 
-``ID``\ : The numeric ID (0-32767) of the sensor
+``ID`` : The numeric ID (0-32767) of the sensor
 (You pick the ID & They ares shared between Turnouts, Sensors and Outputs)
-``PIN``\ : The Arduino pin number the sensor is connected to on the Arduino board.
-``PULLUP``\ : 1 = Use internal pull-up resistor for PIN, 0 = don't use internal pull-up resistor for PIN  
+``PIN`` : The Arduino pin number the sensor is connected to on the Arduino board.
+``PULLUP`` : 1 = Use internal pull-up resistor for PIN, 0 = don't use internal pull-up resistor for PIN  
 
 Once all sensors have been properly defined, use the ``<E>`` (upper case E) command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the sensor definitions, you must invoke the ``<E>`` (upper case E) command if you want those new definitions updated in the EEPROM.
@@ -474,25 +477,25 @@ The default is to set each defined pin to active or inactive according to its re
 To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
 
 
-* ``<Z ID PIN IFLAG>``\ : Creates a new output ID, with specified PIN and IFLAG values.  
+* ``<Z ID PIN IFLAG>`` : Creates a new output ID, with specified PIN and IFLAG values.  
 
   * if output ID already exists, it is updated with specificed PIN and IFLAG.  
   * Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specifcied (see below).  
   * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory).  
 
-* ``<Z ID>``\ : Deletes definition of output ID  
+* ``<Z ID>`` : Deletes definition of output ID  
 
   * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)  
 
-* ``<Z>``\ : Lists all defined output pins
+* ``<Z>`` : Lists all defined output pins
 
   * RETURNS: ``<Y ID PIN IFLAG STATE>`` for each defined output pin or ``<X>`` if no output pins defined.
 
-``ID``\ : The numeric ID (0-32767) of the output
+``ID`` : The numeric ID (0-32767) of the output
 (You pick the ID & They ares shared between Turnouts, Sensors and Outputs)
-``PIN``\ : The Arduino pin number to use for the output.
-``STATE``\ : The state of the output (0=INACTIVE / 1=ACTIVE)
-``IFLAG``\ : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:  
+``PIN`` : The Arduino pin number to use for the output.
+``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)
+``IFLAG`` : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:  
 
 .. code-block::
 
@@ -515,11 +518,11 @@ You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the
 To change the state of outputs that have been defined use:  
 
 
-* ``<Z ID STATE>``\ : Sets output ID to either ACTIVE or INACTIVE state  
-* RETURNS: ``<Y ID STATE>``\ , or ``<X>`` if output ID does not exist  
+* ``<Z ID STATE>`` : Sets output ID to either ACTIVE or INACTIVE state  
+* RETURNS: ``<Y ID STATE>`` , or ``<X>`` if output ID does not exist  
 
-  * ``ID``\ : The numeric ID (0-32767) of the defined output to control  
-  * ``STATE``\ : The state of the output (0=INACTIVE / 1=ACTIVE)  
+  * ``ID`` : The numeric ID (0-32767) of the defined output to control  
+  * ``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)  
 
 When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power. A list of the current states of each output in the form ``<Y ID STATE>`` is generated by DCC++ EX CommandStation whenever the ``<s>`` status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.  
 
@@ -536,9 +539,9 @@ Writes, without any verification, a Configuration Variable BYTE to the decoder o
 
 
 * Write CV BYTE Format is: ``<w CAB CV VALUE>``  
-* ``CAB``\ : The short (1-127) or long (128-10293) address of the engine decoder  
-* ``CV``\ : The number of the Configuration Variable memory location in the decoder to write to (1-1024)  
-* ``VALUE``\ : The value to be written to the Configuration Variable memory location (0-255)  
+* ``CAB`` : The short (1-127) or long (128-10293) address of the engine decoder  
+* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024)  
+* ``VALUE`` : The value to be written to the Configuration Variable memory location (0-255)  
 * RETURNS: NONE
 
 WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK
@@ -548,10 +551,10 @@ Writes, without any verification, a single bit within a Configuration Variable B
 
 
 * Write CV BIT Format is: ``<b CAB CV BIT VALUE>``
-* ``CAB``\ :  the short (1-127) or long (128-10293) address of the engine decoder  
-* ``CV``\ : the number of the Configuration Variable memory location in the decoder to write to (1-1024)  
-* ``BIT``\ : the bit number of the Configurarion Variable regsiter to write (0-7)  
-* ``VALUE``\ : the value of the bit to be written (0-1)  
+* ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder  
+* ``CV`` : the number of the Configuration Variable memory location in the decoder to write to (1-1024)  
+* ``BIT`` : the bit number of the Configurarion Variable regsiter to write (0-7)  
+* ``VALUE`` : the value of the bit to be written (0-1)  
 
   * RETURNS: NONE
 
@@ -565,10 +568,10 @@ Writes, and then verifies, a Configuration Variable BYTE to the decoder of an en
 
 
 * Write CV BYTE Format is: ``<W CV VALUE CALLBACKNUM CALLBACKSUB>``
-* ``CV``\ : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  
-* ``VALUE``\ : The value to be written to the Configuration Variable memory location (0-255).  
-* ``CALLBACKNUM``\ : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB``\ : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
+* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  
+* ``VALUE`` : The value to be written to the Configuration Variable memory location (0-255).  
+* ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
+* ``CALLBACKSUB`` : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
 
   * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV Value>``  
   * ``CV VALUE:`` Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.  
@@ -580,11 +583,11 @@ Writes, and then verifies, a Configuration Variable BIT to the decoder of an eng
 
 
 * Write CV BIT Format is: ``<B CV BIT VALUE CALLBACKNUM CALLBACKSUB>``  
-* ``CV``\ : The number of the Configuration Variable memory location in the decoder to write to (1-1024).  
-* ``BIT``\ : The bit number of the Configuration Variable memory location to write (0-7).  
-* ``VALUE``\ : The value of the bit to be written (0-1).  
-* ``CALLBACKNUM``\ : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB``\ : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
+* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024).  
+* ``BIT`` : The bit number of the Configuration Variable memory location to write (0-7).  
+* ``VALUE`` : The value of the bit to be written (0-1).  
+* ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
+* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
 
   * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV BIT VALUE>``  
   * ``CV VALUE`` is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.  
@@ -595,10 +598,10 @@ READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 Reads a Configuration Variable from the decoder of an engine on the programming track.  
 
 
-* Read CV BYTE Format is:\ ``<R CV CALLBACKNUM CALLBACKSUB>``  
-* ``CV``\ : The number of the Configuration Variable memory location in the decoder to read from (1-1024).  
-* ``CALLBACKNUM``\ : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB``\ : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
+* Read CV BYTE Format is: ``<R CV CALLBACKNUM CALLBACKSUB>``  
+* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).  
+* ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
+* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
 
   * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV VALUE>``  
   * ``CV VALUE`` is a number from 0-255 as read from the requested CV, or -1 if read could not be verified. 
@@ -609,9 +612,9 @@ VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read byte command (see above) and return the value read.
 
 
-* Verify CV BYTE Format is:\ ``<V CV BYTEVALUE>``
-* ``CV``\ : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
-* ``BYTEVALUE``\ : The value of they byte expected to be in the CV
+* Verify CV BYTE Format is: ``<V CV BYTEVALUE>``
+* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
+* ``BYTEVALUE`` : The value of they byte expected to be in the CV
 * ``RETURNS:`` ``<v CV BYTEVALUE>`` 
 * ``BYTEVALUE:`` reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
 
@@ -621,10 +624,10 @@ VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK
 This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read bit command (see above) and return the value read.
 
 
-* Verify CV BIT Format is:\ ``<V CV BIT BITVALUE>``
-* ``CV``\ : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
-* ``BIT``\ : The bit position of the bit in the CV byte being validated (0-7)
-* ``BITVALUE``\ : 0 or 1 indicating the expected value
+* Verify CV BIT Format is: ``<V CV BIT BITVALUE>``
+* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
+* ``BIT`` : The bit position of the bit in the CV byte being validated (0-7)
+* ``BITVALUE`` : 0 or 1 indicating the expected value
 * ``RETURNS:`` ``<v CV BIT BITVALUE>`` A return value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
 * ``BIT:`` Reports the bit in the CV byte that was verified
 * ``BITVALUE:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 

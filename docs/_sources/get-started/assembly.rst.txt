@@ -1,17 +1,19 @@
 Assembly
 ========
 
-Let's start with the basics and add as you see fit. For this install, you'll need the items lited on the `Get Started <index.html>`_ page, plus:
+Let's start with the basics and add as you see fit. For this install, you'll need the items listed on the `Get Started <index.html>`_ page, plus:
 
 * 18 to 16 AWG twisted pair hookup wire to connect your tracks
 * A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional)
 
 .. image:: ../_static/images/basic_setup.jpg
    :alt: Command Station Setup
+   :width: 800px
+   :align: center
 
-**Figure 1** - basic setup
+**Figure 1** - basic setup (click to enlarge picture)
 
-* For an Uno, Nano or other microcontroller, please see `Using a different microcontroller <../reference/hardware/microcontrollers.md>`_. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see `Motor Controllers <../reference/hardware/motor-boards.md>`_
+* For an Uno, Nano or other microcontroller, please see `Using a different microcontroller <../reference/hardware/microcontroller-boards.html>`_. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see `Motor Controllers <../reference/hardware/motor-boards.html>`_
 
 For a video on how to do this, click here **link coming soon**
 

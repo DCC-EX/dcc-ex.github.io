@@ -31,7 +31,7 @@ Here is an example of a 20 x 4 LCD screen. They come in different colors like bl
 And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:
 
 
-.. image:: ../../_static/images/display/lcd_16x2_backpack.jpg]
+.. image:: ../../_static/images/display/lcd_16x2_backpack.jpg
    :alt: 16 x 2 LCD
 
 **Figure 2** - 16 x 2 LCD with backpack

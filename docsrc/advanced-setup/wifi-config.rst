@@ -20,17 +20,23 @@ WiThrottle itself is a standard for how WiFi throttles can communicate with Comm
 AP Mode vs. Station Mode
 ------------------------
 
-There are two ways to connect your Throttle to either JMRI or the CS; "Access Point Mode" (aka "AP MODE) and "Station Mode". We often abbreviate the latter to "STA". You will also see people refer to it as "Client Mode". We will focus on how to connect to the Command Station. For info on using WiFi with JMRI, click here **missing link**
+There are two ways to setup the Wifi chip connected to DCC++: "Access Point Mode" (aka "AP MODE) and "Station Mode". We often abbreviate the latter to "STA". You will also see people refer to it as "Client Mode". 
+
+In AP mode the tiny ESP chip acts as a very basic Wifi base and provides a small IP network for your throttle and maybe your computer with JMRI only. In this mode there is no connection to the Internet for any of the devices only connected to the AP of the ESP chip.
+
+In STA (Client) mode the ESP chip uses an existing (home) Wifi network and connects to that along with all the other devices you might have in your home. If you have a stable Wifi network where you place your Command Station this is a good choice because the Wifi Station of your home network is normally better in managing all devices and the frequencies involved in runnung a stable Wifi network that the ESP chip.
+
+We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with JMRI, click here **missing link**
 
 AP Mode
 ^^^^^^^
 
-Most people will want to connect in AP mode. This is the default for DCC-EX. In this mode, your CS acts like an AP. In other words, it acts just like any other wireless router you could connect to. The router in your home is in effect, an AP. Using the CS in AP mode allows you to have to separate network so you can keep your layout network separate from your home network. If you travel to shows or take your setup to a friend's house, this allows for an autonomous, transportable system that does not need a connection to and hopefully will not interfere with, other networks. See **dealing with interference (missing link)**
+If there is no exising Wifi or the Wifi is still unconfigured, the default for DCC-EX is AP mode. In this mode, your CS acts like an AP. In other words, it acts just like any other wireless router you could connect to. The router in your home is in effect, an AP. Using the CS in AP mode allows you to have to separate network so you can keep your layout network separate from your home network. If you travel to shows or take your setup to a friend's house, this allows for an autonomous, transportable system that does not need a connection to and hopefully will not interfere with, other networks. See **dealing with interference (missing link)**
 
 Station Mode (STA Mode)
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being an AP your Throttle connects directly to, it becomes a station that connects to your existing network. The Throttle then connects to the CS by finding its IP address on the network.
+Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being an AP which manages the IP of the smartphone that contains your Throttle, it becomes a station that connects to your existing network. The Throttle then connects to the CS by finding its IP address on the network.
 
 Default Operation - AP Mode (No Configuration Necessary)
 --------------------------------------------------------
@@ -48,7 +54,7 @@ You will see the line that has ``AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\
 
 Next you will see ``+CIFSR:APIP,"192.168.4.1"``, where your IP address is 192.168.4.1.
 
-AP IP here stands for "Access Point IP Address" You will notice that your home network may have a range of 192.168.1.1 to 192.168.1.255 or similar. You can see that the "4" in the AP address means it is on a different subnet. Remember to enter it correctly into your WiFi Throttle when you configure that later.
+AP IP here stands for "Access Point IP Address". Your throttle is assigned an IP in the same IP range, typically 192.168.4.10 to 15. As in this case your AP is at the same time your DCC-EX CS, you connect your throttle to the AP IP. Remember to enter it correctly into your WiFi Throttle when you configure that later.
 
 Once you see an AP IP Address and see ```++ Wifi Setup OK ++`` at the bottom of the log (it may take a few seconds for the CS to complete the configuration), you can connect to it. See the next section.
 
@@ -61,14 +67,14 @@ On your mobile device, go into your WiFi settings that same way you would to con
 
 Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it.
 
-Simply click on that network and connect to it. Ignore the warning that may popup telling you that "Internet may not be available". The CS is not connected to the internet and you are connecting your mobile device directly to it. Your mobile device can still access the internet via its cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), see the section below on Station Mode to connect using your home network instead
+Simply click on that network and connect to it. Ignore the warning that may popup telling you that "Internet may not be available". The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
 Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address, 2560 for the Port number, and then select and acquire your loco by its address.
 
 Connecting to your Network - Station Mode (edit config.h)
 ---------------------------------------------------------
 
-In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials. The easiest way to do this is to use the Arduino IDE and open the project. Look for these lines in the file:
+In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials or you have already entered your credentials via the installer. The easiest way to do this is to use the Arduino IDE and open the project. Look for these lines in the file:
 
 .. code-block::
 

@@ -56,7 +56,7 @@ SINGLE LETTER COMMANDS
 
   .. code-block::
 
-      RETURNS: **``<Q ID PIN PULLUP>** for each defined sensor or **``<X>``** if no sensors defined. 
+      RETURNS: **``<Q ID PIN PULLUP>``** for each defined sensor or **``<X>``** if no sensors defined. 
 
 * 
   ``<Z>`` Upper Case Z: Lists all defined output pins
@@ -105,20 +105,24 @@ SINGLE LETTER COMMANDS
 Track Power Commands
 ^^^^^^^^^^^^^^^^^^^^
 
-``<0|1>`` - Turns power to both tracks on or off
-
-examples:
-
-  ``<1>`` - Turn power to all tracks on
-  ``<0>`` - Turn power to all tracks off
-
-``<0|1 MAIN|PROG|JOIN>``\ ** - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
+``<0|1>``\ - Turns power to both tracks on or off
 
 Examples:
 
-  ``<1 MAIN>`` - Turns on power just to the MAIN track
-  ``<0 PROG>`` - Turns off power just to the PROG track
-  ``<1 JOIN>`` - Joins both tracks together to be both MAIN
+``<1>`` - Turn power to all tracks on
+
+``<0>`` - Turn power to all tracks off
+
+``<0|1 MAIN|PROG|JOIN>`` - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
+
+
+Examples:
+
+``<1 MAIN>`` - Turns on power just to the MAIN track
+
+``<0 PROG>`` - Turns off power just to the PROG track
+
+``<1 JOIN>`` - Joins both tracks together to be both MAIN
 
 .. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.
 
@@ -128,8 +132,7 @@ Engine Decoder (CAB) Operation Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-Throttle Command
-^^^^^^^^^^^^^^^^^
+**The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``\.  
 
 **The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``.  
 

@@ -1,0 +1,25 @@
+.wy-nav-content {
+    max-width: none
+}
+
+.wy-side-nav-search>a img.logo {
+    width: 60%;
+}
+
+.rst-content img {
+    width: 70%;
+    height: auto;
+    margin: 5% 15%;
+}
+
+.rst-content table.docutils{
+    width: 50%;
+    margin: 0 25%;
+}
+
+@media screen and (max-width:1400px) {
+    .rst-content table.docutils {
+        width: 100%;
+        margin: 0;
+    }
+}

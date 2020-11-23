@@ -25,7 +25,6 @@ jobs:
       uses: actions/checkout@1.0.0
     - name: Build docs
       run:  make github
-        && cd _build/html
         && touch .nojekyll
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3

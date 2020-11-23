@@ -173,7 +173,7 @@
             
   <div class="section" id="dcc-ex-user-guide">
 <h1>DCC++ EX User Guide<a class="headerlink" href="#dcc-ex-user-guide" title="Permalink to this headline">¶</a></h1>
-<p>This is the documentation for the DCC++ EX suite of open source model
+<p>Welcome to this website and documentation for the DCC++ EX suite of open source model
 railroading software, firmware, and hardware. DCC++ EX is an extension of the
 original DCC++ program written by Gregg E Bermann.</p>
 <table class="docutils align-left">
@@ -183,17 +183,17 @@ original DCC++ program written by Gregg E Bermann.</p>
 <col style="width: 36%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="get-started/index.html"><img alt="Get Started" src="_images/timer.png" /></a></p></td>
-<td><p><a class="reference external" href="download/index.html"><img alt="Download" src="_images/download.png" /></a></p></td>
-<td><p><a class="reference external" href="reference/index.html"><img alt="Reference" src="_images/api.png" /></a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="get-started/index.html"><img alt="Get Started" src="_images/timer_bl.png" /></a></p></td>
+<td><p><a class="reference external" href="download/index.html"><img alt="Download" src="_images/download_bl.png" /></a></p></td>
+<td><p><a class="reference external" href="reference/index.html"><img alt="Reference" src="_images/api_bl.png" /></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="get-started/index.html">Get Started</a></p></td>
 <td><p><a class="reference external" href="download/index.html">Download</a></p></td>
 <td><p><a class="reference external" href="reference/index.html">Reference</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="advanced-setup/index.html"><img alt="Advanced Setup" src="_images/advanced.png" /></a></p></td>
-<td><p><a class="reference external" href="support/index.html"><img alt="Support" src="_images/question.png" /></a></p></td>
-<td><p><a class="reference external" href="contribute/index.html"><img alt="Contribute" src="_images/puzzle.png" /></a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="advanced-setup/index.html"><img alt="Advanced Setup" src="_images/advanced_bl.png" /></a></p></td>
+<td><p><a class="reference external" href="support/index.html"><img alt="Support" src="_images/question_bl.png" /></a></p></td>
+<td><p><a class="reference external" href="contribute/index.html"><img alt="Contribute" src="_images/puzzle_bl.png" /></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="advanced-setup/index.html">Advanced Setup</a></p></td>
 <td><p><a class="reference external" href="support/index.html">Support</a></p></td>
@@ -208,23 +208,25 @@ original DCC++ program written by Gregg E Bermann.</p>
 </div>
 <div class="section" id="what-is-dcc-ex">
 <h2>What is DCC++ EX?<a class="headerlink" href="#what-is-dcc-ex" title="Permalink to this headline">¶</a></h2>
-<p>DCC++ EX is the organization maintaining several codebases that together represent a fully open source DCC system. Currently, this includes the following:</p>
+<p>DCC++ EX is the organization developing and maintaining several products that together represent a fully open source DCC system. Currently, this includes the following:</p>
 <ul class="simple">
-<li><p><strong>CommandStation-EX</strong> - the latest take on the DCC++ command station for controlling your trains. Runs on an Arduino board, and includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.</p></li>
-<li><p><strong>exWebThrottle</strong> - a simple web based controller for your DCC++ command station.</p></li>
-<li><p><strong>BaseStation-installer</strong> - an installer executable that takes care of downloading and installing DCC++ firmware onto your hardware setup.</p></li>
+<li><p><strong>CommandStation-EX</strong> - the latest take on the DCC++ command station for controlling your model railroad. DCC-EX runs on an Arduino board, and includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.</p></li>
+<li><p><strong>WebThrottle-EX</strong> - a simple web based controller for your DCC++ and DCC-EX command station.</p></li>
+<li><p><strong>Installer-EX</strong> - an installer that takes care of downloading and installing DCC++ or DCC-EX firmware onto your hardware setup.</p></li>
 <li><p><strong>BaseStation-Classic</strong> - the original DCC++ software, packaged in a stable release. No active development, bug fixes only.</p></li>
 </ul>
 <p>A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:</p>
 <ul class="simple">
 <li><p>simultaneous control of multiple locomotives</p></li>
-<li><p>2-byte and 4-byte locomotive addressing</p></li>
+<li><p>1 and 2 byte byte locomotive addressing</p></li>
 <li><p>128-step speed throttling</p></li>
 <li><p>Activate/de-activate all accessory function addresses 0-2048</p></li>
 <li><p>Control of all cab functions F0-F28</p></li>
 <li><p>Main Track: Write configuration variable bytes and set/clear specific configuration variable (CV) bits (aka Programming on Main or POM)</p></li>
 <li><p>Programming Track: Same as the main track with the addition of reading configuration variable bytes</p></li>
-<li><p>What’s new in CommandStation-EX?</p></li>
+</ul>
+<p><strong>What's new in CommandStation-EX?</strong></p>
+<ul class="simple">
 <li><p>WiThrottle server built in. Connect Engine Driver or WiThrottle clients directly to your Command Station</p></li>
 <li><p>WiFi and Ethernet shield support</p></li>
 <li><p>No more jumpers or soldering!</p></li>
@@ -234,7 +236,6 @@ original DCC++ program written by Gregg E Bermann.</p>
 <li><p>Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings</p></li>
 <li><p>Improved adherence to the NMRA DCC specification</p></li>
 <li><p>Complete support for all the old commands and front ends like JMRI</p></li>
-<li><p>Railcom cutout (beta)</p></li>
 <li><p>Simpler, modular, faster code with an API Library for developers for easy expansion</p></li>
 <li><p>New features and functions in JMRI</p></li>
 <li><p>Automation (coming soon)</p></li>
@@ -244,8 +245,29 @@ original DCC++ program written by Gregg E Bermann.</p>
 <p>DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click <a class="reference external" href="about/rewrite.html">here</a>.</p>
 </div>
 </div>
-<div class="section" id="sign-me-up">
-<h2>Sign me up!<a class="headerlink" href="#sign-me-up" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="levels">
+<h2>Levels<a class="headerlink" href="#levels" title="Permalink to this headline">¶</a></h2>
+<p><strong>Choose Your Path</strong></p>
+<p>We've found that our users tend to identify with one of the following three categories. So we've created different paths to help navigate our DCC-EX system and this website. Don't worry, the paths are integrated and you can &quot;switch a turnout&quot; at any point and take another path. See below if you most identify with being a, &quot;Conductor&quot;, a &quot;Tinkerer&quot; or an &quot;Engineer&quot;.</p>
+<div class="section" id="conductor">
+<h3>Conductor<a class="headerlink" href="#conductor" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/conductor_hat1.png"><img alt="Conductor Hat" class="align-left" src="_images/conductor_hat1.png" style="width: 100px; height: 72px;" /></a>
+<p>A Conductor, for the most part, just wants to enjoy operating trains. You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running DC and looking to switch over to DCC. This is also the perfect place for someone who just wants something that works without much tinkering. We'll show you how to put together a Command Station with a Controller and have you up and running in just a few minutes. In short, a Conductor wants to drive trains and doesn't want to have to deal with the details of the hardware or software involved. This path will keep things simple.</p>
+</div>
+<div class="section" id="tinkerer">
+<h3>Tinkerer<a class="headerlink" href="#tinkerer" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/propeller_beanie.png"><img alt="Propeller Beanie" class="align-left" src="_images/propeller_beanie.png" style="width: 110px; height: 110px;" /></a>
+<p>A Tinkerer likes the joy of building things themselves. They may not have an Engineering Degree, but they know how to connect a jumper wire and possibly use a soldering iron. They don't have a problem opening something like the Arduino IDE to change settings in a configuration file and upload it back to their Command Station. A Tinkerer wants to do more with model trains like using different motor controllers or getting into more detailed control of turnouts, sensors and other accessories. This path will provide more options over the Conductor path and cover things like expanding your system and using the JMRI software (Java Model Railroad Interface) for more advanced control of your locomotives and your track.</p>
+</div>
+<div class="section" id="engineer">
+<h3>Engineer<a class="headerlink" href="#engineer" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/engineer_hat2.png"><img alt="Engineer Hat" class="align-left" src="_images/engineer_hat2.png" style="width: 120px; height: 98px;" /></a>
+<p>An Engineer is a little more versed in computers and/or electronics. They have a desire to dig a little deeper into how things work. They can understand the basics of computer code and can look at the DCC++ EX software and perhaps make simple changes. They may want to help with offering their talents to the project. They are not averse to experimenting with things to make something work. These are the people whose layout looks like a telephone switching station when you look under their benchwork. This path will offer more technical information and cover more in depth topics like accessory control, sensors, and customizing the DCC++ EX System.</p>
+<p>Keep these definitions in mind as you proceed through this website.</p>
+</div>
+</div>
+<div class="section" id="i-m-ready">
+<h2>I'm Ready!<a class="headerlink" href="#i-m-ready" title="Permalink to this headline">¶</a></h2>
 <p>To learn more about how to build your own DCC++ EX station, go to the <a class="reference external" href="get-started/index.html">Get Started</a> page!</p>
 <div class="toctree-wrapper compound">
 </div>

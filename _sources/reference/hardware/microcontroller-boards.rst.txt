@@ -26,3 +26,5 @@ Will you support other microcontrollers in the future?
 ------------------------------------------------------
 
 Yes, that is on our roadmap.
+
+Click here for a complete `Shopping List <./shopping-list.html>`_

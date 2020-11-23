@@ -3,15 +3,15 @@ Command Station Downloads
 
 Welcome to the Command Station download page. You have several choices: 
 
-* **[RECOMMENDED]** If you aren't a tinkerer, or you just want an easy installer to do the work for you, go to the :ref:`exInstaller` section. 
-* If you would like to downlad a zip file and install the firmware using the Arduino IDE, go to the :ref:`Latest DCC++ EX Release` section. 
-* If you are a developer and want to clone the repository onto your computer, go to the :ref:`CommandStation-EX Repository` section.
+* **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the :ref:`exInstaller` section. 
+* If are a Tinkerer or you would like to downlad a zip file and install the firmware using the Arduino IDE, go to the :ref:`Latest DCC++ EX Release` section. 
+* If you are an Engineer or developer and want to clone the repository onto your computer, go to the :ref:`CommandStation-EX Repository` section.
 * If you're looking for BaseStation-Classic, go to the :ref:`Getting BaseStation-Classic` section.
 
 exInstaller
 -------------------------
 
-.. note:: After installing the software for your operating system, you will have the opportunity to select either exInstaller or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board.
+.. note:: After installing the exInstaller software for your operating system, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board.
 
 .. raw:: html 
 

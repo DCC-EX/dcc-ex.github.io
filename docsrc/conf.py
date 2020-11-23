@@ -30,16 +30,16 @@ author = 'Dave Cutting, Fred Decker, Mani Kumar'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
+   # 'sphinx.ext.intersphinx',
     'sphinx.ext.autosectionlabel',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.graphviz',
-    'sphinx_sitemap',
-    'sphinx.ext.inheritance_diagram',
+   # 'sphinx.ext.todo',
+   # 'sphinx.ext.coverage',
+   # 'sphinx.ext.mathjax',
+   # 'sphinx.ext.ifconfig',
+   # 'sphinx.ext.viewcode',
+   # 'sphinx.ext.graphviz',
+   # 'sphinx_sitemap',
+   # 'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.spelling',
 ]
 

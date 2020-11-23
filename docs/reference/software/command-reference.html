@@ -13,8 +13,7 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/dccex_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/layout.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/roundslider.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/throttle.css" type="text/css" />
@@ -222,7 +221,7 @@
 </div>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> Upper Case S: Lists all defined sensors.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>RETURNS: **``&lt;Q ID PIN PULLUP&gt;** for each defined sensor or **``&lt;X&gt;``** if no sensors defined.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>RETURNS: **``&lt;Q ID PIN PULLUP&gt;``** for each defined sensor or **``&lt;X&gt;``** if no sensors defined.
 </pre></div>
 </div>
 </li>
@@ -260,19 +259,15 @@
 </div>
 <div class="section" id="track-power-commands">
 <h2>Track Power Commands<a class="headerlink" href="#track-power-commands" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1&gt;</span></code>** - Turns power to both tracks on or off</p>
-<p>examples:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code>** - Turn power to all tracks on
-<code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code>** - Turn power to all tracks off</p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code>** - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1&gt;</span></code>- Turns power to both tracks on or off</p>
 <p>Examples:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code>** - Turns on power just to the MAIN track
-<code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code>** - Turns off power just to the PROG track
-<code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code>** - Joins both tracks together to be both MAIN</p>
-</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> - Turn power to all tracks on</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> - Turn power to all tracks off</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
+<p>Examples:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code> - Turns on power just to the MAIN track</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> - Turns off power just to the PROG track</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> - Joins both tracks together to be both MAIN</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.</p>
@@ -286,7 +281,7 @@
 <h2>Engine Decoder (CAB) Operation Commands<a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="throttle">
 <h3>Throttle<a class="headerlink" href="#throttle" title="Permalink to this headline">¶</a></h3>
-<p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">REGISTER</span> <span class="pre">CAB</span> <span class="pre">SPEED</span> <span class="pre">DIRECTION&gt;</span></code><a href="#id2"><span class="problematic" id="id3">**</span></a>.</p>
+<p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">REGISTER</span> <span class="pre">CAB</span> <span class="pre">SPEED</span> <span class="pre">DIRECTION&gt;</span></code>.</p>
 <p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">1</span> <span class="pre">03</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code>** is:
 <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = Start delimiter of a DCC++ EX command. (A space after <strong>&lt;</strong> is not required but acceptable)
 <code class="docutils literal notranslate"><span class="pre">t</span></code>** = (lower case t) This command is for a Decoder installed in a engine or simply a “cab”.

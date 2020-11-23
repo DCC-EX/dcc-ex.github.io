@@ -188,20 +188,20 @@
             
   <div class="section" id="dcc-ex-command-reference">
 <h1>DCC++ EX Command Reference<a class="headerlink" href="#dcc-ex-command-reference" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
+<p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several &quot;front end&quot; controllers are available or you can easily create your own. Here are some examples:</p>
 <ul class="simple">
 <li><p>exWebThrottle - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web <a class="reference external" href="../exwebthrottle.html">WebThrottle-EX Live</a> , or download and run from your computer <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">WebThrottle-EX download</a></p></li>
 <li><p>Engine Driver - Cellphone App WiFi Throttle</p></li>
 <li><p><a class="reference external" href="http://www.jmri.org/">JMRI (Java Model Railroad Interface)</a></p></li>
 <li><p>A serial console, like the Arduino Serial Monitor or PuTTY</p></li>
-<li><p><a class="reference external" href="https://github.com/DccPlusPlus/Controller">Gregg Bermann’s DCC++ Controller Software</a></p></li>
+<li><p><a class="reference external" href="https://github.com/DccPlusPlus/Controller">Gregg Bermann's DCC++ Controller Software</a></p></li>
 </ul>
 <p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX Firmware</a>.</p>
 <p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/">GitHub</a>. If you are new to we suggest you star with the <a class="reference external" href="https://dcc-ex.com">DCC++ EX Webpage</a>.</p>
 <div class="section" id="single-letter-commands">
 <h2>SINGLE LETTER COMMANDS<a class="headerlink" href="#single-letter-commands" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: DCC++ EX CommandStation Status</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase &quot;s&quot;: DCC++ EX CommandStation Status</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
 </pre></div>
 </div>
@@ -260,21 +260,6 @@
 </div>
 <div class="section" id="track-power-commands">
 <h2>Track Power Commands<a class="headerlink" href="#track-power-commands" title="Permalink to this headline">¶</a></h2>
-<<<<<<< HEAD
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1&gt;</span></code> - Turns power to both tracks on or off</p>
-<p>examples:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> - Turn power to all tracks on
-<code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> - Turn power to all tracks off</p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code>** - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
-<p>Examples:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code> - Turns on power just to the MAIN track
-<code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> - Turns off power just to the PROG track
-<code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> - Joins both tracks together to be both MAIN</p>
-</div></blockquote>
-=======
 <p><code class="docutils literal notranslate"><span class="pre">&lt;0|1&gt;</span></code>- Turns power to both tracks on or off</p>
 <p>Examples:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> - Turn power to all tracks on</p>
@@ -284,7 +269,6 @@
 <p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code> - Turns on power just to the MAIN track</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> - Turns off power just to the PROG track</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> - Joins both tracks together to be both MAIN</p>
->>>>>>> grbba
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.</p>
@@ -296,34 +280,11 @@
 </div>
 <div class="section" id="engine-decoder-cab-operation-commands">
 <h2>Engine Decoder (CAB) Operation Commands<a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this headline">¶</a></h2>
-<<<<<<< HEAD
-=======
-<div class="section" id="throttle">
-<h3>Throttle<a class="headerlink" href="#throttle" title="Permalink to this headline">¶</a></h3>
 <p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">REGISTER</span> <span class="pre">CAB</span> <span class="pre">SPEED</span> <span class="pre">DIRECTION&gt;</span></code>.</p>
-<p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">1</span> <span class="pre">03</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code>** is:
-<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = Start delimiter of a DCC++ EX command. (A space after <strong>&lt;</strong> is not required but acceptable)
-<code class="docutils literal notranslate"><span class="pre">t</span></code>** = (lower case t) This command is for a Decoder installed in a engine or simply a “cab”.
-<code class="docutils literal notranslate"><span class="pre">1</span></code>** = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
-<code class="docutils literal notranslate"><span class="pre">03</span></code>** = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
-<code class="docutils literal notranslate"><span class="pre">20</span></code>** = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
-<code class="docutils literal notranslate"><span class="pre">1</span></code>** = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
-<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>** = I am the end of this command</p>
-<p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">1</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code>** if the command was successful, meaning :
-<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = Begin DCC++ EX command
-<code class="docutils literal notranslate"><span class="pre">T</span></code>** = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
-<code class="docutils literal notranslate"><span class="pre">1</span></code>** = register 1 was changed
-<code class="docutils literal notranslate"><span class="pre">20</span></code>** = set to speed 20
-<code class="docutils literal notranslate"><span class="pre">1</span></code>** = forward direction
-<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>** = End DCC++ EX command</p>
->>>>>>> grbba
-</div>
-<div class="section" id="throttle-command">
-<h2>Throttle Command<a class="headerlink" href="#throttle-command" title="Permalink to this headline">¶</a></h2>
 <p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">REGISTER</span> <span class="pre">CAB</span> <span class="pre">SPEED</span> <span class="pre">DIRECTION&gt;</span></code>.</p>
 <p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">1</span> <span class="pre">03</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code> is:
 <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Start delimiter of a DCC++ EX command. (A space after <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> is not required but acceptable)
-<code class="docutils literal notranslate"><span class="pre">t</span></code> = (lower case t) This command is for a Decoder installed in a engine or simply a “cab”.
+<code class="docutils literal notranslate"><span class="pre">t</span></code> = (lower case t) This command is for a Decoder installed in a engine or simply a &quot;cab&quot;.
 <code class="docutils literal notranslate"><span class="pre">1</span></code> = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
 <code class="docutils literal notranslate"><span class="pre">03</span></code> = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
 <code class="docutils literal notranslate"><span class="pre">20</span></code> = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
@@ -525,7 +486,7 @@ If light is on (144), Then you turn on bell with light (145), Bell back off but 
 </div>
 <div class="section" id="defining-setting-up-a-turnout">
 <h4>Defining (Setting up) a Turnout<a class="headerlink" href="#defining-setting-up-a-turnout" title="Permalink to this headline">¶</a></h4>
-<p>To have the DCC++ EX CommandStation store and retain the direction of DCC-connected turnouts, as well as automatically invoke the required <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> command as needed, first define/edit/delete such turnouts using the following variations of the “T” command:</p>
+<p>To have the DCC++ EX CommandStation store and retain the direction of DCC-connected turnouts, as well as automatically invoke the required <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> command as needed, first define/edit/delete such turnouts using the following variations of the &quot;T&quot; command:</p>
 <ul class="simple">
 <li><p>Command to define a Turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code> :</p>
 <ul>
@@ -583,7 +544,7 @@ RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;<
 <div class="section" id="controlling-a-defined-turnout">
 <h4>Controlling a Defined Turnout<a class="headerlink" href="#controlling-a-defined-turnout" title="Permalink to this headline">¶</a></h4>
 <ul>
-<li><p>Sets turnout ID to either the “thrown”(turned) or “unthrown”(straight) position</p></li>
+<li><p>Sets turnout ID to either the &quot;thrown&quot;(turned) or &quot;unthrown&quot;(straight) position</p></li>
 <li><p>The Turnout format is <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">THROW&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) That you gave the turnout to control when you defined it.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">THROW</span></code> : 0 (unthrown) or 1 (thrown)</p></li>
@@ -610,9 +571,9 @@ DCC++ EX should return <code class="docutils literal notranslate"><span class="p
 </div>
 <div class="section" id="sensors">
 <h3>SENSORS<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h3>
-<p>DCC++ EX CommandStation supports Sensor inputs that can be connected to any Aruidno Pin not in use by this program. Sensors can be of any type (infrared, magnetic, mechanical…). The only requirement is that when “activated” the Sensor must force the specified Arduino Pin LOW (i.e. to ground), and when not activated, this Pin should remain HIGH (i.e. 5V), or be allowed to float HIGH if use of the Arduino Pin’s internal pull-up resistor is specified.</p>
+<p>DCC++ EX CommandStation supports Sensor inputs that can be connected to any Aruidno Pin not in use by this program. Sensors can be of any type (infrared, magnetic, mechanical...). The only requirement is that when &quot;activated&quot; the Sensor must force the specified Arduino Pin LOW (i.e. to ground), and when not activated, this Pin should remain HIGH (i.e. 5V), or be allowed to float HIGH if use of the Arduino Pin's internal pull-up resistor is specified.</p>
 <p>To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino.</p>
-<p>The Sensor code utilizes exponential smoothing to “de-bounce” spikes generated by mechanical switches and transistors. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors.</p>
+<p>The Sensor code utilizes exponential smoothing to &quot;de-bounce&quot; spikes generated by mechanical switches and transistors. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors.</p>
 <p>To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> command:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">PULLUP&gt;</span></code> : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).</p>
@@ -634,7 +595,7 @@ DCC++ EX should return <code class="docutils literal notranslate"><span class="p
 <p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the sensor
 (You pick the ID &amp; They ares shared between Turnouts, Sensors and Outputs)
 <code class="docutils literal notranslate"><span class="pre">PIN</span></code> : The Arduino pin number the sensor is connected to on the Arduino board.
-<code class="docutils literal notranslate"><span class="pre">PULLUP</span></code> : 1 = Use internal pull-up resistor for PIN, 0 = don’t use internal pull-up resistor for PIN</p>
+<code class="docutils literal notranslate"><span class="pre">PULLUP</span></code> : 1 = Use internal pull-up resistor for PIN, 0 = don't use internal pull-up resistor for PIN</p>
 <p>Once all sensors have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command if you want those new definitions updated in the EEPROM.
 You can also clear <strong>everything (turnouts, sensors, and outputs)</strong> stored in the EEPROM by invoking the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> (lower case e) command.
@@ -644,7 +605,7 @@ You can also clear <strong>everything (turnouts, sensors, and outputs)</strong> 
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">ID&gt;</span></code> - for transition of Sensor ID from HIGH state to LOW state (i.e. the sensor is triggered)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">ID&gt;</span></code> - for transition of Sensor ID from LOW state to HIGH state (i.e. the sensor is no longer triggered)</p></li>
 </ul>
-<p>Depending on whether the physical sensor is acting as an “event-trigger” or a “detection-sensor,” you may decide to ignore the <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">ID&gt;</span></code> return and only react to <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">ID&gt;</span></code> triggers.</p>
+<p>Depending on whether the physical sensor is acting as an &quot;event-trigger&quot; or a &quot;detection-sensor,&quot; you may decide to ignore the <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">ID&gt;</span></code> return and only react to <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">ID&gt;</span></code> triggers.</p>
 </div>
 <div class="section" id="arduino-output-pins">
 <h3>ARDUINO OUTPUT PINS<a class="headerlink" href="#arduino-output-pins" title="Permalink to this headline">¶</a></h3>
@@ -688,7 +649,7 @@ The default is to set each defined pin to active or inactive according to its re
               <span class="mi">1</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">ACTIVE</span> <span class="n">uponm</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">first</span> <span class="n">created</span>
 </pre></div>
 </div>
-<p>Once all outputs have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper Case “E” command to store their definitions to EEPROM.
+<p>Once all outputs have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper Case &quot;E&quot; command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the output definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> command if you want those new definitions updated in the EEPROM.
 You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> stored in the EEPROM by invoking the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> (lower case e) command.
 <strong>(There is no Un-Delete)</strong></p>
@@ -788,7 +749,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 </div>
 <div class="section" id="verify-configuration-variable-byte-from-engine-decoder-on-programming-track">
 <h4>VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
-<p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read byte command (see above) and return the value read.</p>
+<p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply &quot;read&quot;. If the verify fails, it will perform a read byte command (see above) and return the value read.</p>
 <ul class="simple">
 <li><p>Verify CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">CV</span> <span class="pre">BYTEVALUE&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
@@ -799,7 +760,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 </div>
 <div class="section" id="verify-configuration-variable-bit-from-engine-decoder-on-programming-track">
 <h4>VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-bit-from-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
-<p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read bit command (see above) and return the value read.</p>
+<p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply &quot;read&quot;. If the verify fails, it will perform a read bit command (see above) and return the value read.</p>
 <ul class="simple">
 <li><p>Verify CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">BITVALUE&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
@@ -815,7 +776,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <div class="section" id="diagnostics">
 <h2>DIAGNOSTICS<a class="headerlink" href="#diagnostics" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="d-commands">
-<h3>“D” Commands<a class="headerlink" href="#d-commands" title="Permalink to this headline">¶</a></h3>
+<h3>&quot;D&quot; Commands<a class="headerlink" href="#d-commands" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Shows cab numbers and speed in reminder table.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Shows remaining RAM.</p></li>

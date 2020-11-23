@@ -191,14 +191,17 @@
 </div>
 <div class="section" id="ap-mode-vs-station-mode">
 <h2>AP Mode vs. Station Mode<a class="headerlink" href="#ap-mode-vs-station-mode" title="Permalink to this headline">¶</a></h2>
-<p>There are two ways to connect your Throttle to either JMRI or the CS; “Access Point Mode” (aka “AP MODE) and “Station Mode”. We often abbreviate the latter to “STA”. You will also see people refer to it as “Client Mode”. We will focus on how to connect to the Command Station. For info on using WiFi with JMRI, click here <strong>missing link</strong></p>
+<p>There are two ways to setup the Wifi chip connected to DCC++: “Access Point Mode” (aka “AP MODE) and “Station Mode”. We often abbreviate the latter to “STA”. You will also see people refer to it as “Client Mode”.</p>
+<p>In AP mode the tiny ESP chip acts as a very basic Wifi base and provides a small IP network for your throttle and maybe your computer with JMRI only. In this mode there is no connection to the Internet for any of the devices only connected to the AP of the ESP chip.</p>
+<p>In STA (Client) mode the ESP chip uses an existing (home) Wifi network and connects to that along with all the other devices you might have in your home. If you have a stable Wifi network where you place your Command Station this is a good choice because the Wifi Station of your home network is normally better in managing all devices and the frequencies involved in runnung a stable Wifi network that the ESP chip.</p>
+<p>We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with JMRI, click here <strong>missing link</strong></p>
 <div class="section" id="ap-mode">
 <h3>AP Mode<a class="headerlink" href="#ap-mode" title="Permalink to this headline">¶</a></h3>
-<p>Most people will want to connect in AP mode. This is the default for DCC-EX. In this mode, your CS acts like an AP. In other words, it acts just like any other wireless router you could connect to. The router in your home is in effect, an AP. Using the CS in AP mode allows you to have to separate network so you can keep your layout network separate from your home network. If you travel to shows or take your setup to a friend’s house, this allows for an autonomous, transportable system that does not need a connection to and hopefully will not interfere with, other networks. See <strong>dealing with interference (missing link)</strong></p>
+<p>If there is no exising Wifi or the Wifi is still unconfigured, the default for DCC-EX is AP mode. In this mode, your CS acts like an AP. In other words, it acts just like any other wireless router you could connect to. The router in your home is in effect, an AP. Using the CS in AP mode allows you to have to separate network so you can keep your layout network separate from your home network. If you travel to shows or take your setup to a friend’s house, this allows for an autonomous, transportable system that does not need a connection to and hopefully will not interfere with, other networks. See <strong>dealing with interference (missing link)</strong></p>
 </div>
 <div class="section" id="station-mode-sta-mode">
 <h3>Station Mode (STA Mode)<a class="headerlink" href="#station-mode-sta-mode" title="Permalink to this headline">¶</a></h3>
-<p>Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being an AP your Throttle connects directly to, it becomes a station that connects to your existing network. The Throttle then connects to the CS by finding its IP address on the network.</p>
+<p>Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being an AP which manages the IP of the smartphone that contains your Throttle, it becomes a station that connects to your existing network. The Throttle then connects to the CS by finding its IP address on the network.</p>
 </div>
 </div>
 <div class="section" id="default-operation-ap-mode-no-configuration-necessary">
@@ -209,20 +212,20 @@
 <p><strong>Figure 1</strong> - Serial Monitor Log</p>
 <p>You will see the line that has <code class="docutils literal notranslate"><span class="pre">AT+CIPSERVER=1,2560\r\r\nno</span> <span class="pre">change\r\n\r\nOK\r\n</span></code>, where 2560 is your port number</p>
 <p>Next you will see <code class="docutils literal notranslate"><span class="pre">+CIFSR:APIP,&quot;192.168.4.1&quot;</span></code>, where your IP address is 192.168.4.1.</p>
-<p>AP IP here stands for “Access Point IP Address” You will notice that your home network may have a range of 192.168.1.1 to 192.168.1.255 or similar. You can see that the “4” in the AP address means it is on a different subnet. Remember to enter it correctly into your WiFi Throttle when you configure that later.</p>
+<p>AP IP here stands for “Access Point IP Address”. Your throttle is assigned an IP in the same IP range, typically 192.168.4.10 to 15. As in this case your AP is at the same time your DCC-EX CS, you connect your throttle to the AP IP. Remember to enter it correctly into your WiFi Throttle when you configure that later.</p>
 <p>Once you see an AP IP Address and see <code class="docutils literal notranslate"><span class="pre">`++</span> <span class="pre">Wifi</span> <span class="pre">Setup</span> <span class="pre">OK</span> <span class="pre">++</span></code> at the bottom of the log (it may take a few seconds for the CS to complete the configuration), you can connect to it. See the next section.</p>
 <div class="section" id="connecting-to-the-ap">
 <h3>Connecting to the AP<a class="headerlink" href="#connecting-to-the-ap" title="Permalink to this headline">¶</a></h3>
 <p>There are two steps to get you running trains with your WiFi throttle, the first is to connect to the AP instead of your home network, the second is to connect your throttle to the AP.</p>
 <p>On your mobile device, go into your WiFi settings that same way you would to connect to your home router. Look for another network to connect to. You should see a new network that begins with “DCCEX” like this: <code class="docutils literal notranslate"><span class="pre">DCCEX_6e321b</span></code></p>
 <p>Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it.</p>
-<p>Simply click on that network and connect to it. Ignore the warning that may popup telling you that “Internet may not be available”. The CS is not connected to the internet and you are connecting your mobile device directly to it. Your mobile device can still access the internet via its cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), see the section below on Station Mode to connect using your home network instead</p>
+<p>Simply click on that network and connect to it. Ignore the warning that may popup telling you that “Internet may not be available”. The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.</p>
 <p>Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address, 2560 for the Port number, and then select and acquire your loco by its address.</p>
 </div>
 </div>
 <div class="section" id="connecting-to-your-network-station-mode-edit-config-h">
 <h2>Connecting to your Network - Station Mode (edit config.h)<a class="headerlink" href="#connecting-to-your-network-station-mode-edit-config-h" title="Permalink to this headline">¶</a></h2>
-<p>In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials. The easiest way to do this is to use the Arduino IDE and open the project. Look for these lines in the file:</p>
+<p>In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials or you have already entered your credentials via the installer. The easiest way to do this is to use the Arduino IDE and open the project. Look for these lines in the file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="o">//</span>
 <span class="o">//</span> <span class="n">NOTE</span><span class="p">:</span> <span class="n">Only</span> <span class="n">supported</span> <span class="n">on</span> <span class="n">Arduino</span> <span class="n">Mega</span>

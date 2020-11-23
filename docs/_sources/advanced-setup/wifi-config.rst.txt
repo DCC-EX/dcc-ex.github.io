@@ -1,4 +1,4 @@
-Wifi Configutation
+Wifi Configuration
 ==================
 
 **work in progress**

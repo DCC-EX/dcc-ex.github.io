@@ -29,8 +29,18 @@ author = 'Dave Cutting, Fred Decker, Mani Kumar'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx_rtd_theme",
-    "sphinx.ext.autosectionlabel"
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.graphviz',
+    'sphinx_sitemap',
+    'sphinx.ext.inheritance_diagram',
+    'sphinxcontrib.spelling',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -49,7 +59,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = "sphinx_rtd_theme"
 
-html_style = 'css/customtheme.css'
+def setup(app):
+    app.add_stylesheet('css/dccex_theme.css')
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -59,7 +70,6 @@ html_static_path = ['_static']
 html_logo = "./_static/images/logo.png"
 
 html_theme_options = {
-    'logo_only': False,
     'style_nav_header_background': 'white',
     'logo_only': True,
     # Toc options

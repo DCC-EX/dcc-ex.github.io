@@ -5,15 +5,18 @@ This is the documentation for the DCC++ EX suite of open source model
 railroading software, firmware, and hardware. DCC++ EX is an extension of the 
 original DCC++ program written by Gregg E Bermann. 
 
-==================   ==================   ====================
-|Get Started|_       |Download|_          |Reference|_
-------------------   ------------------   --------------------
-`Get Started`_       `Download`_          `Reference`_
-------------------   ------------------   --------------------
-|Advanced Setup|_       |Support|_        |Contribute|_
-------------------   ------------------   --------------------
-`Advanced Setup`_       `Support`_        `Contribute`_
-==================   ==================   ====================
+.. table::
+   :align: left
+
+   ==================   ==================   ====================
+   |Get Started|_       |Download|_          |Reference|_
+   ------------------   ------------------   --------------------
+   `Get Started`_       `Download`_          `Reference`_
+   ------------------   ------------------   --------------------
+   |Advanced Setup|_       |Support|_        |Contribute|_
+   ------------------   ------------------   --------------------
+   `Advanced Setup`_       `Support`_        `Contribute`_
+   ==================   ==================   ====================
 
 .. |Get Started| image:: ./_static/images/timer.png
 .. _Get Started: get-started/index.html

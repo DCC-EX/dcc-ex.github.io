@@ -16,6 +16,7 @@ Hardware
     hardware/ethernet-boards
     hardware/i2c-displays
     hardware/power-supplies
+    hardware/shopping-list
     
 Software
 -------------------------

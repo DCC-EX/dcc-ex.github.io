@@ -25,7 +25,8 @@ jobs:
       uses: actions/checkout@1.0.0
     - name: Build docs
       run:  make github
-        && touch .nojekyll
+        && echo 'dcc-ex.com' > docs/CNAME
+        && touch docs/.nojekyll
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

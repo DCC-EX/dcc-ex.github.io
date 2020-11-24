@@ -7,16 +7,15 @@ REM Command file for Sphinx documentation
 if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
-set SOURCEDIR=docsrc\.
-set BUILDDIR=docsrc\_build
+set SOURCEDIR=docs\.
+set BUILDDIR=docs\_build
 
 if "%1" == "" goto help
 
 if "%1" == "github" (
     %SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
-    robocopy %BUILDDIR%/html ./docs /E > nul
-    echo.Generated files copied to ../docs
-	xcopy .\.nojekyll .\docs /y > nul
+	echo "dcc-ex.com" /y > docs\_build\html\CNAME
+	echo "" /y > docs\_build\html\.nojekyll
     goto end
 )
 

@@ -25,11 +25,11 @@ jobs:
       uses: actions/checkout@1.0.0
     - name: Build docs
       run:  make github
-        && echo 'dcc-ex.com' > docs/CNAME
-        && touch docs/.nojekyll
+        && echo 'dcc-ex.com' > docs/_build/html/CNAME
+        && touch docs/_build/html/.nojekyll
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: docs # The folder the action should deploy.
+        FOLDER: docs/_build/html # The folder the action should deploy.

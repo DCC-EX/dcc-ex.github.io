@@ -5,8 +5,8 @@
 # from the environment for the first two.
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = docsrc/.
-BUILDDIR      = docsrc/_build
+SOURCEDIR     = docs/.
+BUILDDIR      = docs/_build
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -16,7 +16,6 @@ help:
 
 github:
 	@make html
-	@cp -a "$(BUILDDIR)"/html/. ./docs
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

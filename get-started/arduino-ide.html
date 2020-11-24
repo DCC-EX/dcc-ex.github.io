@@ -182,8 +182,8 @@
             
   <div class="section" id="arduino-ide-setup">
 <h1>Arduino IDE Setup<a class="headerlink" href="#arduino-ide-setup" title="Permalink to this headline">¶</a></h1>
-<p>The Arduino IDE is an &quot;Integrated Development Environment&quot;. Don't let the name scare you away, it is really just a program that lets you open a project, like our DCC++ EX Software files, compile them into instructions the Arduino understands, and uploads them from your computer into the Arduino using a serial cable. It is very easy to use.</p>
-<p>Those on the Tinkerer or Engineer path (See [levels/path choice](levels.md))may want to make changes to the code or just learn more about how the Command Station software works. At a minimum, you may need to change options in the config.h file or use the IDE's &quot;Serial Monitor&quot; to monitor your CS, get logs if something is not working, or enter commands to test out features.</p>
+<p>The Arduino IDE is an “Integrated Development Environment”. Don’t let the name scare you away, it is really just a program that lets you open a project, like our DCC++ EX Software files, compile them into instructions the Arduino understands, and uploads them from your computer into the Arduino using a serial cable. It is very easy to use.</p>
+<p>Those on the Tinkerer or Engineer path (See [levels/path choice](levels.md))may want to make changes to the code or just learn more about how the Command Station software works. At a minimum, you may need to change options in the config.h file or use the IDE’s “Serial Monitor” to monitor your CS, get logs if something is not working, or enter commands to test out features.</p>
 <div class="section" id="download-and-install-the-arduino-ide">
 <h2>Download and install the Arduino IDE<a class="headerlink" href="#download-and-install-the-arduino-ide" title="Permalink to this headline">¶</a></h2>
 <p>Rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link and then return here.</p>
@@ -210,16 +210,16 @@
 </div>
 <div class="section" id="open-the-commandstation-ex-project">
 <h2>Open the CommandStation-EX Project<a class="headerlink" href="#open-the-commandstation-ex-project" title="Permalink to this headline">¶</a></h2>
-<p>Choose &quot;File -&gt; Open&quot; from the menu to open the file manager.</p>
+<p>Choose “File -&gt; Open” from the menu to open the file manager.</p>
 <img alt="File Open Menu" src="../_images/file_open.jpg" />
 <p><strong>Figure 2</strong> - File Open Menu</p>
-<p>Then click on the &quot;CommandStation-EX&quot; sketch folder to open it. Scroll down to the &quot;CommandStation-EX.ino&quot; file (It should have the round, blue Arduino logo on it) and open that file. We also provide example .ino files for those advanced users who want to use optional features like the &quot;User Command Override&quot; feature, high current motor boards, etc. But for now, and for most users, this will be all you need.</p>
+<p>Then click on the “CommandStation-EX” sketch folder to open it. Scroll down to the “CommandStation-EX.ino” file (It should have the round, blue Arduino logo on it) and open that file. We also provide example .ino files for those advanced users who want to use optional features like the “User Command Override” feature, high current motor boards, etc. But for now, and for most users, this will be all you need.</p>
 <img alt="Find the CommandStation-EX.ino File" src="../_images/commandstation-ex.jpg" />
 <p><strong>Figure 3</strong> - Find the CommandStation-EX.ino file</p>
 </div>
 <div class="section" id="install-the-dio2-h-library">
 <h2>Install the DIO2.h Library<a class="headerlink" href="#install-the-dio2-h-library" title="Permalink to this headline">¶</a></h2>
-<p>From the &quot;Tools&quot; menu, select &quot;Manage Libraries&quot;. It may take a few seconds for it to load the list of all the libraries. Libraries are shared pieces of code that can be used by sketches to add functionality without someone having to write them from scratch. Type &quot;DIO2&quot; into the search box. You should then see a box below with &quot;DIO2&quot; by Thierry Paris of Locduino. Click &quot;Install&quot; to install this library. After it installs, close the libary manger window and go back to the main window.</p>
+<p>From the “Tools” menu, select “Manage Libraries”. It may take a few seconds for it to load the list of all the libraries. Libraries are shared pieces of code that can be used by sketches to add functionality without someone having to write them from scratch. Type “DIO2” into the search box. You should then see a box below with “DIO2” by Thierry Paris of Locduino. Click “Install” to install this library. After it installs, close the libary manger window and go back to the main window.</p>
 <img alt="Find the DIO2.h Library" src="../_images/library_manager.jpg" />
 <p><strong>Figure 4</strong> - Find and install the DIO2.h Library</p>
 </div>
@@ -227,17 +227,17 @@
 <h2>Edit the config.h file (optional)<a class="headerlink" href="#edit-the-config-h-file-optional" title="Permalink to this headline">¶</a></h2>
 <p>If you are using the standard Arduino Motor Shield and if optionally using one of the supported Wifi boards and want to connect directly to the Command Station in Access Point Mode (AP) from your WiFi controller, there is nothing to do! Just upload the software to the Command Station in the next step.</p>
 <p>If you are using a different motor shield or motor controller board, or if you wish to connect your CS to your home network instead of having a separate access point, follow the instructions in the <code class="docutils literal notranslate"><span class="pre">config.h</span></code> file</p>
-<p>If you want to take a look at this file or make a simple change, just open the file and take a look. You should see many files open in tabs at the top of the IDE Window. Find the down facinng triangle near the upper right of the window and click on it to open the entire list of files. Scroll down to near the bottom and click on the &quot;config.h&quot; file you renamed in the previous step to open it in the editing window. If you are sure of your changes, make sure to click on &quot;File -&gt; Save&quot; from the top menu to save them.</p>
+<p>If you want to take a look at this file or make a simple change, just open the file and take a look. You should see many files open in tabs at the top of the IDE Window. Find the down facinng triangle near the upper right of the window and click on it to open the entire list of files. Scroll down to near the bottom and click on the “config.h” file you renamed in the previous step to open it in the editing window. If you are sure of your changes, make sure to click on “File -&gt; Save” from the top menu to save them.</p>
 </div>
 <div class="section" id="select-the-board-type-and-com-port">
 <h2>Select the board type and com port<a class="headerlink" href="#select-the-board-type-and-com-port" title="Permalink to this headline">¶</a></h2>
 <p>Before you attempt this step, make sure that you have everything connected properly from the <a class="reference external" href="assembly.md">assembly page</a>. And a final reminder to <strong>make sure you cut the Vin trace</strong> on the bottom of the Arduino Motor Shield. Ready? Proceed.</p>
-<p>Connect the computer to the Arduino with the USB cable. Note the 5V coming from your computer/raspberry Pi is enough to power the Mega, since it bypasses the regulator that converts your 7-9V power supply down to 5V and goes right to the 5V bus on the board. So don't be alarmed by lights on your Arduino.</p>
-<p>From the &quot;tools&quot; menu select the &quot;board&quot; menu, then &quot;Arduino AVR boards&quot;, and then &quot;Arduino Mega or Mega 2560&quot;.</p>
+<p>Connect the computer to the Arduino with the USB cable. Note the 5V coming from your computer/raspberry Pi is enough to power the Mega, since it bypasses the regulator that converts your 7-9V power supply down to 5V and goes right to the 5V bus on the board. So don’t be alarmed by lights on your Arduino.</p>
+<p>From the “tools” menu select the “board” menu, then “Arduino AVR boards”, and then “Arduino Mega or Mega 2560”.</p>
 <img alt="Select Arduino Mega" src="../_images/board_type_mega.jpg" />
 <p><strong>Figure 5</strong> - Select your board type</p>
-<p>Then select &quot;Processor&quot; and make sure it says &quot;ATMega2560&quot;</p>
-<p>Last, select &quot;Port&quot; and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards. See here <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">Drivers for the CH340</a></p>
+<p>Then select “Processor” and make sure it says “ATMega2560”</p>
+<p>Last, select “Port” and find the port on your computer that recognizes the Arduino. If you don’t see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards. See here <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">Drivers for the CH340</a></p>
 <img alt="Select the COM Port" src="../_images/board_port_mega.jpg" />
 <p><strong>Figure 6</strong> - Select the correct COM Port</p>
 </div>
@@ -246,8 +246,8 @@
 <p>Click on the upload button near the top left. If is a circle with a right arrow next to the compile button that looks like a check mark.</p>
 <img alt="Upload the CS Software to the Arduino" src="../_images/upload_arrow.jpg" />
 <p><strong>Figure 7</strong> - Upload the CS Software to the Arduino</p>
-<p>The IDE will go through a compile process which will build all the files into an application the Arduino can run and upload it. You may see many lines of logging as it finishes its task. When done, it will upload the file to the Arduino which you may see as some lights blinking on the Arduino. Make sure there are no errors in the log window and that it shows &quot;done uploading&quot; in the status bar and  &quot;SUCCESS&quot; and a listing of how much memory is used on the Arduino in the log window.</p>
-<p>Don't unplug the serial cable yet!</p>
+<p>The IDE will go through a compile process which will build all the files into an application the Arduino can run and upload it. You may see many lines of logging as it finishes its task. When done, it will upload the file to the Arduino which you may see as some lights blinking on the Arduino. Make sure there are no errors in the log window and that it shows “done uploading” in the status bar and  “SUCCESS” and a listing of how much memory is used on the Arduino in the log window.</p>
+<p>Don’t unplug the serial cable yet!</p>
 </div>
 <div class="section" id="plug-in-your-power-adapters">
 <h2>Plug in your power adapters<a class="headerlink" href="#plug-in-your-power-adapters" title="Permalink to this headline">¶</a></h2>
@@ -255,25 +255,25 @@
 </div>
 <div class="section" id="use-the-serial-monitor-to-do-a-quick-test">
 <h2>Use the Serial Monitor to do a quick test<a class="headerlink" href="#use-the-serial-monitor-to-do-a-quick-test" title="Permalink to this headline">¶</a></h2>
-<p>The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select &quot;Tools -&gt; Serial Monitor&quot;. Or click on the &quot;serial monitor&quot; icon near the upper right of the window.</p>
+<p>The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select “Tools -&gt; Serial Monitor”. Or click on the “serial monitor” icon near the upper right of the window.</p>
 <img alt="Open the Serial Monitor" src="../_images/arduino_ide2.jpg" />
 <p><strong>Figure 8</strong> - Open the Serial Monitor</p>
-<p>Make sure the baud rate at the lower right of the window is set to &quot;115200&quot;. Make sure the dropdown next to that says &quot;Both NL &amp; CR&quot;. That makes sure you send a new line command and carriage return which the Arduino expects.</p>
+<p>Make sure the baud rate at the lower right of the window is set to “115200”. Make sure the dropdown next to that says “Both NL &amp; CR”. That makes sure you send a new line command and carriage return which the Arduino expects.</p>
 <img alt="Serial Monitor" src="../_images/serial_monitor.jpg" />
 <p><strong>Figure 9</strong> - Serial Monitor</p>
-<p>You should see log information immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP or connect to your network if you gave it your credentials. If you don't have a network, that's fine, the CS will sense that, the network test will fail, but everything else will be working as it should.</p>
+<p>You should see log information immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP or connect to your network if you gave it your credentials. If you don’t have a network, that’s fine, the CS will sense that, the network test will fail, but everything else will be working as it should.</p>
 </div>
 <div class="section" id="type-in-a-command-or-two">
 <h2>Type in a command or two<a class="headerlink" href="#type-in-a-command-or-two" title="Permalink to this headline">¶</a></h2>
-<p>There is an entire language that DCC-EX understands. We call this the DCC-EX API for &quot;Application Programming Language&quot;. If you are interested, the list of all the commands is here in the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki">DCC++ EX Wiki</a>. Let's just try two commands to make sure everything is working.</p>
-<p>All DCC-EX commands begin with a <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and end with a <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. In the command window, type <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> and press the <code class="docutils literal notranslate"><span class="pre">send</span></code> button or enter on your keyboard. Power should come on to the main track. You should see 2 red leds light on the &quot;A&quot; power output.</p>
+<p>There is an entire language that DCC-EX understands. We call this the DCC-EX API for “Application Programming Language”. If you are interested, the list of all the commands is here in the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki">DCC++ EX Wiki</a>. Let’s just try two commands to make sure everything is working.</p>
+<p>All DCC-EX commands begin with a <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and end with a <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. In the command window, type <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> and press the <code class="docutils literal notranslate"><span class="pre">send</span></code> button or enter on your keyboard. Power should come on to the main track. You should see 2 red leds light on the “A” power output.</p>
 <p>Now enter <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> (lowercase). You should see status information for your command station appear in the log.</p>
-<p>Turn off the power to the track by sending <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> to the CS. That is a &quot;zero&quot;.</p>
+<p>Turn off the power to the track by sending <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> to the CS. That is a “zero”.</p>
 <p><strong>Exit the Arduino IDE software</strong>.</p>
 </div>
 <div class="section" id="run-your-trains">
 <h2>Run your trains!<a class="headerlink" href="#run-your-trains" title="Permalink to this headline">¶</a></h2>
-<p>Making sure power is off to your track, place your DCC enabled loco (not DCC ready!... DCC Ready just means it has the plumbing inside the loco to install an optional DCC decoder, but it is NOT yet DCC compatible). Now either download our exWebThrottle found <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">here</a> and run it in your browser, or run it directly from our <a class="reference external" href="../throttle/exwebthrottle.html">web page</a>. Follow the instructions on that page to enable chromium &quot;experimental features&quot;.</p>
+<p>Making sure power is off to your track, place your DCC enabled loco (not DCC ready!… DCC Ready just means it has the plumbing inside the loco to install an optional DCC decoder, but it is NOT yet DCC compatible). Now either download our exWebThrottle found <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">here</a> and run it in your browser, or run it directly from our <a class="reference external" href="../throttle/exwebthrottle.html">web page</a>. Follow the instructions on that page to enable chromium “experimental features”.</p>
 <p>The rest of the instructions show you how to use exWebThrottle. You should be able to find the CS by its serial port and enable it, then turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!</p>
 <p>You can also watch the <a class="reference external" href="https://www.youtube.com/watch?v=BkgsEOjxWaU">exWebThrottle Video</a>.</p>
 </div>

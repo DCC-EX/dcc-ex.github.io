@@ -192,7 +192,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For all versions make sure your USB Cable is conncted from your computer to the Command Station (CS). Make sure no other programs are using the computer's serial port</p>
+<p>For all versions make sure your USB Cable is conncted from your computer to the Command Station (CS). Make sure no other programs are using the computer’s serial port</p>
 </div>
 </div>
 <div class="section" id="windows">
@@ -242,12 +242,12 @@
 <li><p>Check the checkbox for your networking method if you have a Network shield or Wifi Shield installed</p></li>
 <li><p>Check the checkbox for your display type if using an LCD or OLED display</p></li>
 <li><p>check the Free Mem warning if you need to diagnose memory issues</p></li>
-<li><p>Press the &quot;Compile and Upload&quot; button</p></li>
+<li><p>Press the “Compile and Upload” button</p></li>
 </ol>
 <div class="section" id="wifi-checkbox">
 <h3>WiFi Checkbox<a class="headerlink" href="#wifi-checkbox" title="Permalink to this headline">¶</a></h3>
-<p>If you have installed a WiFi board, DCC++ EX will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), there is nothing to do, DO NOT CHECK THIS BOX. AP mode sets up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like &quot;DCC-EX-xxxxxx&quot; where the &quot;xxxxxx&quot; are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.</p>
-<p>If you wish to connect to your home network instead (connect to your router using &quot;Station Mode&quot;), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:</p>
+<p>If you have installed a WiFi board, DCC++ EX will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), there is nothing to do, DO NOT CHECK THIS BOX. AP mode sets up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like “DCC-EX-xxxxxx” where the “xxxxxx” are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.</p>
+<p>If you wish to connect to your home network instead (connect to your router using “Station Mode”), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:</p>
 <img alt="WiFi Options" src="../_images/wifi.jpg" />
 <p><strong>Figure 3</strong> - Wifi Options</p>
 <ul class="simple">
@@ -295,7 +295,7 @@
 </div>
 <div class="section" id="refresh-ports-button">
 <h3>Refresh Ports Button<a class="headerlink" href="#refresh-ports-button" title="Permalink to this headline">¶</a></h3>
-<p>This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.</p>
+<p>This button allows you to refresh the serial ports in case you didn’t have the Arduino connected when you opened the program or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.</p>
 </div>
 <div class="section" id="compile-and-upload-button">
 <h3>Compile and Upload Button<a class="headerlink" href="#compile-and-upload-button" title="Permalink to this headline">¶</a></h3>
@@ -312,7 +312,7 @@
 <img alt="Arduino IDE" src="../_images/arduino_ide1.jpg" />
 <p><strong>Figure 7</strong> - The Arduino IDE</p>
 <ul class="simple">
-<li><p>Select &quot;Tools -&gt; Serial Monitor&quot; from the Arduino IDE menu</p></li>
+<li><p>Select “Tools -&gt; Serial Monitor” from the Arduino IDE menu</p></li>
 </ul>
 <img alt="Open the Serial Monitor" src="../_images/arduino_ide2.jpg" />
 <p><strong>Figure 8</strong> - Open the Serial Monitor from the Tools Menu</p>
@@ -320,15 +320,15 @@
 <img alt="Serial Monitor" src="../_images/serial_monitor.jpg" />
 <p><strong>Figure 9</strong> - Serial Monitor</p>
 <ul class="simple">
-<li><p>Select &quot;115200&quot; as the baud rate in the dropdown in the lower right</p></li>
-<li><p>Select &quot;Both NL &amp; CR&quot; from the dropdown next to the baud rate</p></li>
+<li><p>Select “115200” as the baud rate in the dropdown in the lower right</p></li>
+<li><p>Select “Both NL &amp; CR” from the dropdown next to the baud rate</p></li>
 </ul>
 <p>When you open the serial monitor you will see at least one line sent out as status information. If you have a WiFi board or Ethernet Shield you will see a page full of log information as it configures and connects to your network.</p>
-<p>At the top of the serial monitr type <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> (lowercase &quot;s&quot;) into the command textbox and press &quot;Send&quot;. You should see:</p>
+<p>At the top of the serial monitr type <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> (lowercase “s”) into the command textbox and press “Send”. You should see:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">iDCC</span><span class="o">-</span><span class="n">EX</span> <span class="n">V</span><span class="o">-</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">1</span> <span class="o">/</span> <span class="n">MEGA</span> <span class="o">/</span> <span class="n">STANDARD_MOTOR_SHIELD</span> <span class="n">G</span><span class="o">-</span><span class="mi">9</span><span class="n">db6d36</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>This is the &quot;status&quot; command and reports your version, types of boards you are using and a build number.</p>
+<p>This is the “status” command and reports your version, types of boards you are using and a build number.</p>
 <p>There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki">DCC++ EX Wiki</a> for a list of commands.</p>
 </div>
 <div class="section" id="using-exwebthrottle">

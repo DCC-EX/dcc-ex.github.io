@@ -188,7 +188,7 @@
             
   <div class="section" id="motor-boards">
 <h1>Motor boards<a class="headerlink" href="#motor-boards" title="Permalink to this headline">¶</a></h1>
-<p>CommandStation-EX is compatible with a wide variety of motor boards, also known as &quot;dual H-bridges&quot; and &quot;motor shields&quot;. We've sorted them from least difficult to most difficult to use to help you decide what to use.</p>
+<p>CommandStation-EX is compatible with a wide variety of motor boards, also known as “dual H-bridges” and “motor shields”. We’ve sorted them from least difficult to most difficult to use to help you decide what to use.</p>
 <p><strong>TL;DR</strong> (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the <a class="reference external" href="shopping-list.html">Shopping List</a></p>
 <img alt="Deek Robot Motor Shield" src="../../_images/deek_robot1_sm.jpg" />
 <div class="section" id="boards-currently-supported">
@@ -210,14 +210,14 @@
 <li><p><strong>Hard to Use Boards (Tinkerer or Engineer Level)</strong> - these boards require you to add your own config to the config.h file, and may not have good current sensing.</p>
 <ul>
 <li><p><a class="reference internal" href="#bts7960-ibt-2-board-single"><span class="std std-ref">BTS7960 IBT_2 Board (single)</span></a> - 43A - <strong>may be too powerful</strong></p></li>
-<li><p><a class="reference internal" href="#keyes-fundumoto-beeper-board"><span class="std std-ref">Keyes/Fundumoto (&quot;Beeper Board&quot;)</span></a> - 2A</p></li>
+<li><p><a class="reference internal" href="#keyes-fundumoto-beeper-board"><span class="std std-ref">Keyes/Fundumoto (“Beeper Board”)</span></a> - 2A</p></li>
 <li><p><a class="reference internal" href="#velleman-ka03-kit-vma03-soldered"><span class="std std-ref">Velleman KA03 (kit) VMA03 (soldered)</span></a> - 2A</p></li>
 </ul>
 </li>
 <li><p><strong>Non-compatible boards</strong></p>
 <ul>
-<li><p>VNH2SP30 - Sparkfun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal</p></li>
-<li><p>IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.</p></li>
+<li><p>VNH2SP30 - Sparkfun Monster Moto and others. It can’t switch fast enough to generate a reliable DCC signal</p></li>
+<li><p>IFX9202ED - Infineon Dual H-Bridge. Can’t switch fast enough.</p></li>
 </ul>
 </li>
 </ul>
@@ -250,7 +250,7 @@
 <div class="section" id="l298-motor-driver-dual">
 <h3>L298 Motor Driver (dual)<a class="headerlink" href="#l298-motor-driver-dual" title="Permalink to this headline">¶</a></h3>
 <p><strong>Tinkerer level</strong></p>
-<p>This is an alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You'll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471.</p>
+<p>This is an alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You’ll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471.</p>
 <a class="reference internal image-reference" href="../../_images/l298_board.jpg"><img alt="L298 Motor Driver" src="../../_images/l298_board.jpg" style="width: 200px;" /></a>
 </div>
 <div class="section" id="pololu-mc33926">
@@ -266,11 +266,11 @@
 <p>This board can supply a LOT of current. The maximum reccommended current is 5A for N scale, 10A for HO and above. This board can supply a whopping 43A, enough to cause a LOT of damage. To use this board, make sure you have a fuse or circuit breaker connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES.</p>
 </div>
 <p><strong>Engineer level</strong></p>
-<p>You will either need 2 of these or one of these and another board to run your programming track. These boards can provide high current. Indeed, we have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards aren't enough for your track, this is one of the best options.</p>
+<p>You will either need 2 of these or one of these and another board to run your programming track. These boards can provide high current. Indeed, we have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards aren’t enough for your track, this is one of the best options.</p>
 <a class="reference internal image-reference" href="../../_images/ibt_2_bts7960.jpg"><img alt="IBT_2 Board" src="../../_images/ibt_2_bts7960.jpg" style="width: 200px;" /></a>
 </div>
 <div class="section" id="keyes-fundumoto-beeper-board">
-<h3>Keyes/Fundumoto (&quot;Beeper Board&quot;)<a class="headerlink" href="#keyes-fundumoto-beeper-board" title="Permalink to this headline">¶</a></h3>
+<h3>Keyes/Fundumoto (“Beeper Board”)<a class="headerlink" href="#keyes-fundumoto-beeper-board" title="Permalink to this headline">¶</a></h3>
 <p><strong>Engineer Level</strong></p>
 <p>You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board.</p>
 <img alt="Keyes/Fundumoto Motor Shield" src="../../_images/keyes_fundumoto.jpg" />

@@ -17,6 +17,8 @@ exInstaller
 
    <p><a class="dcclink" href="https://github.com/DCC-EX/exInstaller/releases">Automated installer release page</a></p>
 
+   <p><a class="reference external" onclick="getLink()"><span class="problematic">Automated Installer</span></a></p>
+
 Latest DCC++ EX Release
 -----------------------
 

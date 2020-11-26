@@ -46,45 +46,16 @@ Recommended Power Supplies
 * Wall warts are a good choice for beginners and those not comfortable with mains wiring. You can get a 12V, 3A, relatively small one for around $8 US. 
 
 .. image:: ../../_static/images/12v-3A-wall-wart-sm.jpg
-   :align: left
-   :scale: 100%
    :alt: 12V Wall Wart
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
 
 * You can also find plenty of laptop type "brick" power supplies. They come in ranges from 12V to 18V and 3-5 Amps.
 
 .. image:: ../../_static/images/12v-3A-brick.jpg
-   :align: left
-   :scale: 100%
    :alt: 12V 3A Brick Power Supply
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 * The Meanwell LRS-100-15 power supply is a good choice for larger scales. It supplies 15V and 105W (that's 7 amps), so it is plenty for running two channels simutaneously. At only $18, it is an inexpensive and solid option.
 
 .. image:: ../../_static/images/meanwell-lrs100.jpg
-   :align: left
-   :scale: 100%
    :alt: Meanwell
 
 `See on Digi-Key <https://www.digikey.com/product-detail/en/mean-well-usa-inc/LRS-100-15/1866-3313-ND/7705005>`_
@@ -99,8 +70,6 @@ With a dual voltage power supply, you can provide 12V for the motor controller a
 * Mean Well Dual Voltage Power Supply (5V and 12V)
 
 .. image:: ../../_static/images/meanwell_rd125A.jpg
-   :align: left
-   :scale: 100%
    :alt: Mean Well RD125A Dual voltage power supply
 
 `See on Amazon <https://www.amzn.com/B005T9FF4I/>`_

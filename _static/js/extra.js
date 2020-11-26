@@ -35,7 +35,9 @@ function getLink() {
             return;
         }
         for (let k in parsed[0].assets) {
-               window.open(parsed[0].assets[k].browser_download_url, "_blank");
+            if (parsed[0].assets[k].name.includes(needed)) {
+                window.open(parsed[0].assets[k].browser_download_url, "_blank");
+            }
         }
     });
 }

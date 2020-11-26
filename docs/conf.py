@@ -19,8 +19,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'DCC++ EX'
-copyright = '2020, Dave Cutting, Fred Decker, Mani Kumar'
-author = 'Dave Cutting, Fred Decker, Mani Kumar'
+copyright = '2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H'
+author = 'Dave Cutting, Fred Decker, Mani Kumar, Matt H'
 
 
 # -- General configuration ---------------------------------------------------
@@ -81,24 +81,24 @@ html_theme_options = {
     'titles_only': True
 }
 
-html_additional_pages = {
-    'exwebthrottle': 'exwebthrottle/index.html',
-}
+#html_additional_pages = {
+#    'exwebthrottle': 'exwebthrottle/index.html',
+#}
 
-html_css_files = [
-    'css/layout.css',
-    'css/roundslider.min.css',
-    'css/throttle.css'
-]
+#html_css_files = [
+#    'css/layout.css',
+#    'css/roundslider.min.css',
+#    'css/throttle.css'
+#]
 
-html_js_files = [
-    'js/platform.js',
-    'js/extra.js',
-    'js/commandController.js',
-    'js/exwebthrottle.js',
-    'js/fnMaster.js',
-    'js/jquery-3.2.1.min.js',
-    'js/jquery-ui.min.js',
-    'js/roundslider.min.js',
-    'js/storageController.js'
-]
+#html_js_files = [
+#    'js/platform.js',
+#    'js/extra.js',
+#    'js/commandController.js',
+#    'js/exwebthrottle.js',
+#    'js/fnMaster.js',
+#    'js/jquery-3.2.1.min.js',
+#    'js/jquery-ui.min.js',
+#    'js/roundslider.min.js',
+#    'js/storageController.js'
+#]

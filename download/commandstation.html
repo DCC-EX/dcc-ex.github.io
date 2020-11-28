@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/roundslider.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/throttle.css" type="text/css" />
 
   
   
@@ -31,6 +34,15 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script src="../_static/js/platform.js"></script>
+        <script src="../_static/js/extra.js"></script>
+        <script src="../_static/js/commandController.js"></script>
+        <script src="../_static/js/exwebthrottle.js"></script>
+        <script src="../_static/js/fnMaster.js"></script>
+        <script src="../_static/js/jquery-3.2.1.min.js"></script>
+        <script src="../_static/js/jquery-ui.min.js"></script>
+        <script src="../_static/js/roundslider.min.js"></script>
+        <script src="../_static/js/storageController.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -178,35 +190,32 @@
 <h2>exInstaller<a class="headerlink" href="#exinstaller" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>After installing the exInstaller software for your operating system, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board.</p>
+<p>After downloading the latest version of the installer from the release page for your operating system and installing the software, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board.</p>
 </div>
-<p><a class="reference external" onclick="getLink()"><span class="problematic">Automated Installer</span></a></p></div>
+<p><a class="dcclink" onclick="getLink()"><span class="problematic">Automated Installer</span></a></p></div>
 <div class="section" id="latest-dcc-ex-release">
 <h2>Latest DCC++ EX Release<a class="headerlink" href="#latest-dcc-ex-release" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On the releases page, select the most recent version and download the .zip file. The zip file contains the Arduino Sketch file for DCC++ EX. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board.</p>
 </div>
-<p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/releases">Releases page</a></p>
-</div>
+<p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX/releases">Release page</a></p></div>
 <div class="section" id="commandstation-ex-repository">
 <h2>CommandStation-EX Repository<a class="headerlink" href="#commandstation-ex-repository" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The above link will take you the the CommandStation-EX GitHub repository, where you can clone the project to your computer. We have made sure that you can still use the Arduino IDE if you like, but we recommend devlopers use the PlaformIO development environment. See the <a class="reference external" href="contributing/index.html">Contributing Page</a> for more information.</p>
+<p>The link below will take you the the CommandStation-EX GitHub repository, where you can clone the project to your computer. We have made sure that you can still use the Arduino IDE if you like, but we recommend devlopers use the PlaformIO development environment. See the <a class="reference external" href="../contributing/index.html">Contributing Page</a> for more information.</p>
 </div>
-<p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX Github</a></p>
-</div>
+<p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX GitHub</a></p></div>
 <div class="section" id="getting-basestation-classic">
 <h2>Getting BaseStation-Classic<a class="headerlink" href="#getting-basestation-classic" title="Permalink to this headline">¶</a></h2>
-<p>The installer will allow you to install BaseStation-Classic. We recommend using the newer CommandStation-EX. If you are looking for the original source for the project (with some minor bug fixes and improvements), see the below links.</p>
+<p>The installer will allow you to install BaseStation-Classic. We recommend using the newer CommandStation-EX. If you are looking for the original source for the project (with some minor bug fixes and improvements), see the links below.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This version is not actively maintained and will only be updated with bug fixes.</p>
 </div>
-<p><a class="reference external" href="https://github.com/DCC-EX/BaseStation-Classic/archive/master.zip">BaseStation-Classic .zip file</a></p>
-<p><a class="reference external" href="https://github.com/DCC-EX/BaseStation-Classic">BaseStation-Classic GitHub repository</a></p>
-</div>
+<p><a class="dcclink" href="https://github.com/DCC-EX/BaseStation-Classic/archive/master.zip">BaseStation-Classic .zip file</a></p>
+<p><a class="dcclink" href="https://github.com/DCC-EX/BaseStation-Classic">BaseStation-Classic GitHub</a></p></div>
 </div>
 
 
@@ -230,7 +239,7 @@
   <div role="contentinfo">
     <p>
         
-        &copy; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H
+        &copy; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar
 
     </p>
   </div>

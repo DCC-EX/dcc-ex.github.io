@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Contributing &mdash; DCC++ EX  documentation</title>
+  <title>Documentation &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -49,8 +49,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Requirements" href="requirements.html" />
-    <link rel="prev" title="Command Station Downloads" href="../download/commandstation.html" /> 
+    <link rel="next" title="Development" href="development.html" />
+    <link rel="prev" title="Requirements" href="requirements.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,9 +104,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributing</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="website.html">Documentation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development.html">Development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contactus.html">Contact us</a></li>
 </ul>
@@ -159,13 +159,15 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Contributing</li>
+          <li><a href="index.html">Contributing</a> &raquo;</li>
+        
+      <li>Documentation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/contributing/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/contributing/website.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,18 +180,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="contributing">
-<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
-<p>Thank you for your interest to help!</p>
-<p>Here you find all necessary ressources and information for contributing to the DCC-EX ++ project should
-you be interested to participate. Do not hesitate to contact us for more information and discussion.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="website.html">Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contactus.html">Contact us</a></li>
-</ul>
+  <div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<p>Thank you for your offer to help. Here’s some instructions for how to contribute. You might want to check in with
+an admin from the DCC++ EX team before working on documentation changes to identify current needs.</p>
+<div class="section" id="submission-procedure">
+<h2>Submission Procedure<a class="headerlink" href="#submission-procedure" title="Permalink to this headline">¶</a></h2>
+<p>We will assume that you have an appropriate text editor and Git installed on your machine. We recommend the free _Visual Studio Code IDE (VSC)_ and _GitHub <a href="#id1"><span class="problematic" id="id2">Desktop_</span></a> or _Git <a href="#id3"><span class="problematic" id="id4">Bash_</span></a>.</p>
+<ol class="arabic simple">
+<li><p>Clone the [dcc-ex.github.io](<a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx">https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx</a>) repository, to your local machine. Make sure you’re on the sphinx branch. ([Cloning a repository in GitHub](<a class="reference external" href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository</a>))</p></li>
+<li><p>Install _Python <a href="#id5"><span class="problematic" id="id6">3.8.x_</span></a> (which also installs pip) then use pip to install the required packages <code class="docutils literal notranslate"><span class="pre">`pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">sphinx_rtd_theme</span> <span class="pre">sphinxcontrib-spelling`</span></code></p></li>
+<li><p>Using Git Bash, go to the “website” folder and make a branch using GitHub desktop or this command: <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">your-branch-name`</span></code></p></li>
+<li><p>Open VSC and edit the files in the <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io/docs`</span></code> folder. Save, then Preview your changes by running <code class="docutils literal notranslate"><span class="pre">`make</span> <span class="pre">github`</span></code> from the root of the <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io`</span></code> folder. <em>This must be done from cmd.exe in windows, not powershell</em> Then go to the directory <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io/docs/build/html`</span></code> and open <code class="docutils literal notranslate"><span class="pre">`index.html`</span></code> in Chrome or another browser. Note that since 11/23/2020, this is just a local preview - when you push your changes GitHub will automatically rebuild your website.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">add`</span></code> and <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;MY</span> <span class="pre">CHANGE</span> <span class="pre">DESCRIPTION&quot;`</span></code> often to save changes. If you’re using GitHub desktop these are combined in the commit button.</p></li>
+</ol>
+<p>6. Push it to GitHub: <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">{your-name}-changes`</span></code>
+8. Go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it’s merged in by one of the admins, your changes will go live!
+<em>Work in progress</em></p>
 </div>
 </div>
 
@@ -201,10 +208,10 @@ you be interested to participate. Do not hesitate to contact us for more informa
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="requirements.html" class="btn btn-neutral float-right" title="Requirements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="development.html" class="btn btn-neutral float-right" title="Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../download/commandstation.html" class="btn btn-neutral float-left" title="Command Station Downloads" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="requirements.html" class="btn btn-neutral float-left" title="Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -29,7 +29,7 @@ Latest DCC++ EX Release
 CommandStation-EX Repository
 ----------------------------
 
-.. note:: The link below will take you the the CommandStation-EX GitHub repository, where you can clone the project to your computer. We have made sure that you can still use the Arduino IDE if you like, but we recommend devlopers use the PlaformIO development environment. See the `Contributing Page <contributing/index.html>`_ for more information.
+.. note:: The link below will take you the the CommandStation-EX GitHub repository, where you can clone the project to your computer. We have made sure that you can still use the Arduino IDE if you like, but we recommend devlopers use the PlaformIO development environment. See the `Contributing Page <../contributing/index.html>`_ for more information.
 
 .. raw:: html
 

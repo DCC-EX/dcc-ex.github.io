@@ -64,7 +64,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = "sphinx_rtd_theme"
 
 def setup(app):
-    app.add_stylesheet('css/dccex_theme.css')
+    app.add_css_file('css/dccex_theme.css')
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

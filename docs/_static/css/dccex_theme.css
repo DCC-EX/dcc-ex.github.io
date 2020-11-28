@@ -23,3 +23,29 @@
         margin: 0;
     }
 }
+
+
+.dcclink {
+  background-color: lightseagreen;
+  box-shadow: 0 2px 0 darkslategray;
+  color: white;
+  padding: 0.5em 0.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: none;
+  border-radius: 5px;
+}
+
+.dcclink:visited {
+    color: whitesmoke
+}
+
+.dcclink:hover {
+  background-color: darkslategrey;
+  cursor: pointer;
+}
+
+.dcclink:active {
+  box-shadow: none;
+  top: 5px;
+}

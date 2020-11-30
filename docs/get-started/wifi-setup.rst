@@ -3,16 +3,24 @@ WiFi Setup
 
 There are many ways to add Wifi to your CS. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
-You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the links on our `Support Page <../support/get-support.md>`_ if you have a question. 
+You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our `Support Page <../support/get-support.md>`_ if you have a question.
 
-For a video to help you click,`Adding WiFi To Your Command Station <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
+Note that you can click on any of the images to make them larger.
+
+For a video to help you click below.
+
+
+
+   .. raw:: html
+      
+      <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Why Use WiFi?
 -------------
 
-With the base Command Station (CS) consisting of an Arduino Mega and an Arduino Motor Shield, you must use a serial cable to connect to a computer to run JMRI, our exWebThrottle, or other controller. The controller is what sends commands to the CS to run your trains and control your accessories.
+With the base Command Station (CS) consisting of an Arduino Mega and an Arduino Motor Shield, you must use a serial cable to connect to a computer to run JMRI, to our WebThrottle-EX, or to other controller. The controller is what sends commands to the CS to run your trains and control your accessories.
 
-You can already go wireless when using software like JMRI. But this requires you to connect your CS to a computer. With CommandStation-EX WiFi, you can connect directly to your CS from any WiThrottle capable throttle, such as the Engine Driver phone app.
+You can already go wireless when using software like JMRI and WiThrottle. But this requires you to connect your CS to a computer. With CommandStation-EX WiFi, you can connect directly to your CS from any WiThrottle capable throttle, such as the Engine Driver phone app.
 
 Compatible Boards
 -----------------
@@ -45,6 +53,7 @@ We like this board here at DCC++ EX. It is simple, inexpensive, easy to use, and
 
 .. image:: ../_static/images/wifi_jumpers1.jpg
    :alt: Makerfabs ESP-8266 WiFi Shield
+   :scale: 75%
 
 **Figure 1** - Makerfabs ESP-8266 WiFi Shield
 
@@ -58,6 +67,7 @@ Note the two black plastic jumpers, we need to remove both of them. You can pull
 
 .. image:: ../_static/images/wifi_pins.jpg
    :alt: Remove the plastic jumpers
+   :scale: 75%
 
 **Figure 2** - Remove the plastic jumpers
 
@@ -69,6 +79,7 @@ Turn the board so that the tab end is to the left and the power connectors on th
 
 .. image:: ../_static/images/wifi_seat1.jpg
    :alt: Get the left side pins aligned
+   :scale: 75%
 
 **Figure 3** - Get the left side pins aligned
 
@@ -80,11 +91,13 @@ Now do the the other side. If all the pins are straight and lined up properly, h
 
 .. image:: ../_static/images/wifi_seat2a.jpg
    :alt: Get the right side pins aligned
+   :scale: 75%
 
 **Figure 4** - Get the right side pins aligned
 
 .. image:: ../_static/images/wifi_seat_full.jpg
    :alt: Fully Seated Boards
+   :scale: 75%
 
 **Figure 5** - Fully Seated Boards
 
@@ -103,6 +116,7 @@ Take a second jumper wire and connect it to any one of the Rx pins on the Wifi B
 
 .. image:: ../_static/images/wifi_jumpers2.png
    :alt: Figure 6 - Install the Jumper wires
+   :scale: 75%
 
 **Figure 6** - Install the jumper wires
 
@@ -117,6 +131,7 @@ This board is designed as an expansion/prototyping board as well as a WiFi board
 
 .. image:: ../_static/images/duinopeak.jpg
    :alt: Duinopeak WiFi Board
+   :scale: 75%
 
 **Figure 7** - Duinopeak WiFi Board
 
@@ -138,6 +153,7 @@ This is the board that started it all. It fueled the WiFi revolution in small de
 
 .. image:: ../_static/images/esp-01s_2.jpg
    :alt: ESP-01s
+   :scale: 75%
 
 **Figure 8** - ESP-01s
 
@@ -149,6 +165,7 @@ Below is a wiring diagram for connecting the ESP-8266 to the Arduino. For clarit
 
 .. image:: ../_static/images/esp8266_mega.jpg
    :alt: ESP-8266 Wiring to a Mega
+   :scale: 75%
 
 **Figure 9** - Wiring and ESP-01s to a Mega
 
@@ -171,10 +188,11 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the arduino, you ca
 
 .. image:: ../_static/images/esp-01_adapter.jpg
    :alt: ESP-01s Adapters
+   :scale: 75%
 
 **Figure 10** - ESP-01 Breakout Boards
 
-.. warning:: The ESP-8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don't need any additional circuitry.
+.. warning:: The ESP-8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don't need any additional circuitry. However, to be safe, you can use a small `level shifter board <https://www.mouser.com/ProductDetail/SparkFun/BOB-12009?qs=WyAARYrbSnb%252BGYLWggQnjQ%3D%3D&gclid=Cj0KCQiAzZL-BRDnARIsAPCJs73SnsmU-CTIk9V0XE6qjxY2WKlnxI0sLhT_rY5MYTbIOBmHne50Eh4aAm5ZEALw_wcB>`_ or use one of the breakout board like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.
 
 Install the Software
 --------------------

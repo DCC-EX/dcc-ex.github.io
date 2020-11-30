@@ -16,6 +16,7 @@ Why do you recommend the Mega?
 
 .. image:: ../../_static/images/mega.jpg
    :alt: Arduino Mega Microcontroller
+   :scale: 100%
 
 What about the Nano?
 --------------------

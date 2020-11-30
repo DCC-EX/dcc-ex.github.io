@@ -41,4 +41,4 @@ An Engineer is a little more versed in computers and/or electronics. They have a
 
 Keep these definitions in mind as you proceed through this website.
 
-To learn more about how to build your own DCC++ EX station, go to the `Get Started <get-started/assembly.html>`_ page!
+To learn more about how to build your own DCC++ EX station, proceed to the `Assembly Page <./assembly.html>`_ or click on the next button below.

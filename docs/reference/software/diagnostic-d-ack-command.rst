@@ -30,9 +30,15 @@ Your output may show different formatting with respect to linefeeds. Here the de
 
 The CURRENT should be over 60mA for a successful ACK and the length should be 6000uS +-1000uS but because of Decoder variations from the standard DCC-EX has some extra pulse length margin.
 
-If you encounter problems with ACKs from the Decoder and you want help, the DCC-EX support will probably ask you to provide this kind of diagnostics.
-
 The two values of 1 after each other in the ``<R>`` command and in the ``<r>`` answer you can safely ignore.
+
+If you encounter problems with ACKs from the Decoder and you want help, the DCC-EX support will probably ask you to provide this kind of diagnostics. A very simple test to provide us a log is enter each of these two commands folowed by pressing "send" to enter the command:
+
+``<D ACK ON>``
+``<R>``
+
+This will turn ACK diagnostics ON and then try to read the appropriate CVs to check your loco address.
+
 
 Ack Limit
 ---------

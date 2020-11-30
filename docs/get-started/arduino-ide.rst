@@ -5,6 +5,8 @@ The Arduino IDE is an "Integrated Development Environment". Don't let the name s
 
 Those on the Tinkerer or Engineer path see `Levels Path Choice <../levels>`_ may want to make changes to the code or just learn more about how the Command Station software works. At a minimum, you may need to change options in the config.h file or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
 
+**You can click on most of the images below to enlarge them**
+
 Download and install the Arduino IDE
 ------------------------------------
 
@@ -36,6 +38,7 @@ Start the Arduino IDE. You should see something like this:
 
 .. image:: ../_static/images/arduino-ide/arduino_ide.jpg
    :alt: Arduino IDE
+   :scale: 90%
 
 **Figure 1** - Arduino IDE
 
@@ -46,6 +49,7 @@ Choose "File -> Open" from the menu to open the file manager.
 
 .. image:: ../_static/images/arduino-ide/file_open.jpg
    :alt: File Open Menu
+   :scale: 90%
 
 **Figure 2** - File Open Menu
 
@@ -54,6 +58,7 @@ Then click on the "CommandStation-EX" sketch folder to open it. Scroll down to t
 
 .. image:: ../_static/images/arduino-ide/commandstation-ex.jpg
    :alt: Find the CommandStation-EX.ino File
+   :scale: 90%
 
 **Figure 3** - Find the CommandStation-EX.ino file
 
@@ -65,6 +70,7 @@ From the "Tools" menu, select "Manage Libraries". It may take a few seconds for 
 
 .. image:: ../_static/images/arduino-ide/library_manager.jpg
    :alt: Find the DIO2.h Library
+   :scale: 90%
 
 **Figure 4** - Find and install the DIO2.h Library
 
@@ -88,6 +94,7 @@ From the "tools" menu select the "board" menu, then "Arduino AVR boards", and th
 
 .. image:: ../_static/images/arduino-ide/board_type_mega.jpg
    :alt: Select Arduino Mega
+   :scale: 90%
 
 **Figure 5** - Select your board type
 
@@ -97,6 +104,7 @@ Last, select "Port" and find the port on your computer that recognizes the Ardui
 
 .. image:: ../_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port
+   :scale: 90%
 
 **Figure 6** - Select the correct COM Port
 
@@ -107,6 +115,7 @@ Click on the upload button near the top left. If is a circle with a right arrow 
 
 .. image:: ../_static/images/arduino-ide/upload_arrow.jpg
    :alt: Upload the CS Software to the Arduino
+   :scale: 90%
 
 **Figure 7** - Upload the CS Software to the Arduino
 
@@ -127,6 +136,7 @@ The Arduino IDE has a built in serial monitor. That means that in addition to up
 
 .. image:: ../_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
+   :scale: 90%
 
 **Figure 8** - Open the Serial Monitor
 
@@ -134,6 +144,7 @@ Make sure the baud rate at the lower right of the window is set to "115200". Mak
 
 .. image:: ../_static/images/installer/serial_monitor.jpg
    :alt: Serial Monitor
+   :scale: 90%
 
 **Figure 9** - Serial Monitor
 
@@ -160,3 +171,7 @@ Making sure power is off to your track, place your DCC enabled loco (not DCC rea
 The rest of the instructions show you how to use exWebThrottle. You should be able to find the CS by its serial port and enable it, then turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!
 
 You can also watch the `exWebThrottle Video <https://www.youtube.com/watch?v=BkgsEOjxWaU>`_.
+
+   .. raw:: html
+
+      <iframe width="336" height="189" src="https://www.youtube.com/embed/BkgsEOjxWaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

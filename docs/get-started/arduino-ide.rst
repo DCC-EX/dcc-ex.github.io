@@ -1,9 +1,9 @@
 Arduino IDE Setup
 =================
 
-The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away, it is really just a program that lets you open a project, like our DCC++ EX Software files, compile them into instructions the Arduino understands, and uploads them from your computer into the Arduino using a serial cable. It is very easy to use. 
+The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away, it is really just a program that lets you open a project, like our DCC++ EX Software files, compile them into instructions the Arduino understands, and uploads them from your computer into the Arduino using a serial cable. It is very easy to use.
 
-Those on the Tinkerer or Engineer path (See [levels/path choice](levels.md))may want to make changes to the code or just learn more about how the Command Station software works. At a minimum, you may need to change options in the config.h file or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
+Those on the Tinkerer or Engineer path see `Levels Path Choice <../levels>`_ may want to make changes to the code or just learn more about how the Command Station software works. At a minimum, you may need to change options in the config.h file or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
 
 Download and install the Arduino IDE
 ------------------------------------

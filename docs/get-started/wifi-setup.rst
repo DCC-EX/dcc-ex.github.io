@@ -5,6 +5,8 @@ There are many ways to add Wifi to your CS. We will cover three methods here. Yo
 
 You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the links on our `Support Page <../support/get-support.md>`_ if you have a question. 
 
+For a video to help you click,`Adding WiFi To Your Command Station <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
+
 Why Use WiFi?
 -------------
 
@@ -177,6 +179,6 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the arduino, you ca
 Install the Software
 --------------------
 
-If you already have the CS sofware running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and what port it is connected to. See the detailed instructions here: `WiFi Configuration <./wifi-config.html>`_
+If you already have the CS sofware running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and what port it is connected to. See the detailed instructions here: `WiFi Configuration <../advanced-setup/wifi-config.html>`_
 
 If you are setting up your Command Station for the first time, or are making changes click on the basic setup, navigate to `Command Station Downloads <../download/commandstation.html>`_ to load firmware onto the CS.

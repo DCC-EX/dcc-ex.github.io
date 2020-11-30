@@ -1,7 +1,7 @@
 Get Started
 ===========
 
-This page is intended to get you started with DCC++ EX by building your hardware setup, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
+This page is intended to get you started with DCC++ EX by helping you in building your hardware setup, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
 
 The Components of a Full System
 -------------------------------
@@ -38,13 +38,19 @@ What you need
 
 The DCC++ EX installer is recommended for most users and automatically downloads and installs the required software. 
 
-You'll also need something to control your trains. Because there's several options, we will discuss this following setup of the system.
+You'll also need something to control your trains. Because there are several options, we will discuss this following setup of the system.
 
-See this `Shopping list <../shopping-list.html>`_ for everything you need compiled in one place.
+See this `Shopping list <../reference/hardware/shopping-list.html>`_ for everything you need organized for you in one place.
+
+I'm NOT Ready!
+----------------
+
+Click the "next" button below to choose your path and then move ahead to how to assemble your Command Station.
 
 .. toctree::
     :hidden:
 
+    levels
     assembly
     wifi-setup
     installer

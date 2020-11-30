@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Dave Cutting, Fred Decker, Mani Kumar
+# This file is distributed under the same license as the DCC++ EX package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DCC++ EX \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-24 12:44+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../index.rst:2
+msgid "DCC++ EX User Guide"
+msgstr ""
+
+#: ../index.rst:4
+msgid "Welcome to this website and documentation for the DCC++ EX suite of open source model railroading software, firmware, and hardware. DCC++ EX is an extension of the original DCC++ program written by Gregg E Bermann."
+msgstr ""
+
+#: ../index.rst:12
+msgid "|Get Started|_"
+msgstr ""
+
+#: ../index.rst:12
+msgid "|Download|_"
+msgstr ""
+
+#: ../index.rst:12
+msgid "|Reference|_"
+msgstr ""
+
+#: ../index.rst:14
+msgid "`Get Started`_"
+msgstr ""
+
+#: ../index.rst:14
+msgid "`Download`_"
+msgstr ""
+
+#: ../index.rst:14
+msgid "`Reference`_"
+msgstr ""
+
+#: ../index.rst:16
+msgid "|Advanced Setup|_"
+msgstr ""
+
+#: ../index.rst:16
+msgid "|Support|_"
+msgstr ""
+
+#: ../index.rst:16
+msgid "|Contribute|_"
+msgstr ""
+
+#: ../index.rst:18
+msgid "`Advanced Setup`_"
+msgstr ""
+
+#: ../index.rst:18
+msgid "`Support`_"
+msgstr ""
+
+#: ../index.rst:18
+msgid "`Contribute`_"
+msgstr ""
+
+#: ../index.rst:40
+msgid "Mission"
+msgstr ""
+
+#: ../index.rst:42
+msgid "Our mission is to make the world of model railroading universally accessible."
+msgstr ""
+
+#: ../index.rst:44
+msgid "To achieve that, DCC++ EX provides the model railroad community with a complete, open source DCC (Digital Command Control) system - one that is simple, affordable, and expandable, to control model trains and accessories. Further, it is our goal that this project be organized, documented, and maintained so that it can continue far into the future."
+msgstr ""
+
+#: ../index.rst:47
+msgid "What is DCC++ EX?"
+msgstr ""
+
+#: ../index.rst:49
+msgid "DCC++ EX is the organization developing and maintaining several products that together represent a fully open source DCC system. Currently, this includes the following:"
+msgstr ""
+
+#: ../index.rst:51
+msgid "**CommandStation-EX** - the latest take on the DCC++ command station for controlling your model railroad. DCC-EX runs on an Arduino board, and includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration."
+msgstr ""
+
+#: ../index.rst:52
+msgid "**WebThrottle-EX** - a simple web based controller for your DCC++ and DCC-EX command station."
+msgstr ""
+
+#: ../index.rst:53
+msgid "**Installer-EX** - an installer that takes care of downloading and installing DCC++ or DCC-EX firmware onto your hardware setup."
+msgstr ""
+
+#: ../index.rst:54
+msgid "**BaseStation-Classic** - the original DCC++ software, packaged in a stable release. No active development, bug fixes only."
+msgstr ""
+
+#: ../index.rst:56
+msgid "A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:"
+msgstr ""
+
+#: ../index.rst:58
+msgid "simultaneous control of multiple locomotives"
+msgstr ""
+
+#: ../index.rst:59
+msgid "1 and 2 byte byte locomotive addressing"
+msgstr ""
+
+#: ../index.rst:60
+msgid "128-step speed throttling"
+msgstr ""
+
+#: ../index.rst:61
+msgid "Activate/de-activate all accessory function addresses 0-2048"
+msgstr ""
+
+#: ../index.rst:62
+msgid "Control of all cab functions F0-F28"
+msgstr ""
+
+#: ../index.rst:63
+msgid "Main Track: Write configuration variable bytes and set/clear specific configuration variable (CV) bits (aka Programming on Main or POM)"
+msgstr ""
+
+#: ../index.rst:64
+msgid "Programming Track: Same as the main track with the addition of reading configuration variable bytes"
+msgstr ""
+
+#: ../index.rst:66
+msgid "**What's new in CommandStation-EX?**"
+msgstr ""
+
+#: ../index.rst:68
+msgid "WiThrottle server built in. Connect Engine Driver or WiThrottle clients directly to your Command Station"
+msgstr ""
+
+#: ../index.rst:69
+msgid "WiFi and Ethernet shield support"
+msgstr ""
+
+#: ../index.rst:70
+msgid "No more jumpers or soldering!"
+msgstr ""
+
+#: ../index.rst:71
+msgid "Direct support for all the most popular motor control boards"
+msgstr ""
+
+#: ../index.rst:72
+msgid "I2C Display support"
+msgstr ""
+
+#: ../index.rst:73
+msgid "Improved short circuit detection and automatic reset from an overload"
+msgstr ""
+
+#: ../index.rst:74
+msgid "Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings"
+msgstr ""
+
+#: ../index.rst:75
+msgid "Improved adherence to the NMRA DCC specification"
+msgstr ""
+
+#: ../index.rst:76
+msgid "Complete support for all the old commands and front ends like JMRI"
+msgstr ""
+
+#: ../index.rst:77
+msgid "Simpler, modular, faster code with an API Library for developers for easy expansion"
+msgstr ""
+
+#: ../index.rst:78
+msgid "New features and functions in JMRI"
+msgstr ""
+
+#: ../index.rst:79
+msgid "Automation (coming soon)"
+msgstr ""
+
+#: ../index.rst:81
+msgid "DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click `here <about/rewrite.html>`_."
+msgstr ""
+
+#: ../index.rst:85
+msgid "I'm Ready!"
+msgstr ""
+
+#: ../index.rst:87
+msgid "To learn more about how to build your own DCC++ EX station, go to the `Get Started <get-started/index.html>`_ page!"
+msgstr ""

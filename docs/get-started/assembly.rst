@@ -15,7 +15,7 @@ Let's start with the basics and add as you see fit. For this install, you'll nee
 
 * For an Uno, Nano or other microcontroller, please see `Using a different microcontroller <../reference/hardware/microcontroller-boards.html>`_. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see `Motor Controllers <../reference/hardware/motor-boards.html>`_
 
-For a video on how to do this, click here **link coming soon**
+For a video on how to do this, click here for `Setting Up Your Command Station <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
 
 1. BEFORE YOU BEGIN, Cut the Vin trace on the motor controller
 --------------------------------------------------------------

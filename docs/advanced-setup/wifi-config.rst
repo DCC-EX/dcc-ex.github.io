@@ -3,7 +3,9 @@ Wifi Configuration
 
 **work in progress**
 
-This page describes the software configuration options for using WiFi to connect your Command Station wirelessly to JMRI or a WiFi throttle like Engine Driver. For information on how to connect your hardware, go to `WiFi Setup <../get-started/wifi-setup.html>`_
+This page describes the software configuration options for using WiFi to connect your Command Station wirelessly to JMRI or a WiFi throttle like Engine Driver. For information on how to connect your hardware, go to `WiFi Setup <../get-started/wifi-setup.html>`
+
+For a video clike `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
 
 Wireless Connections
 --------------------

@@ -50,7 +50,7 @@ Place both boards on the table with the power connector end facing in the same d
 
 .. image:: ../_static/images/mega_and_motor_shield.png
    :alt: Align Mega and Motor Shield
-
+   :scale: 100%
 **Figure 3** - Properly orient the boards
 
 a. Did you remember to cut the trace on the motor shield? If not, see above. Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.
@@ -58,6 +58,7 @@ a. Did you remember to cut the trace on the motor shield? If not, see above. Oth
 
 .. image:: ../_static/images/bent_pins.png
    :alt: bent pins
+   :scale: 100%
 
 **Figure 4** - Bent pins
 
@@ -66,6 +67,7 @@ b. Line up the pins on the side of the board closest to the USB with the header 
 
 .. image:: ../_static/images/seat1.jpg
    :alt: Line up the pins
+   :scale: 100%
 
 **Figure 5** - Line up left side first
 
@@ -74,6 +76,7 @@ c. Just align them and start to push them in but don't push them all the way. Us
 
 .. image:: ../_static/images/seat2.jpg
    :alt: Push the pins partway in
+   :scale: 100%
 
 **Figure 6** - Get all the pins started
 
@@ -82,6 +85,7 @@ d. Do the same on the other side. Get all the pins aligned and start to press ge
 
 .. image:: ../_static/images/seat_reverse1.jpg
    :alt: Line up the other side
+   :scale: 100%
 
 **Figure 7** - Start the other side
 
@@ -89,6 +93,7 @@ e. Now, being careful to not bend any pins gently press, using a rocking motion 
 
 .. image:: ../_static/images/seat_press.jpg
    :alt: Press together
+   :scale: 100%
    
 **Figure 8** - Gently press the boards together
 
@@ -97,6 +102,7 @@ f. The boards should be seated. Note the pins are longer than the headers. It is
 
 .. image:: ../_static/images/seated.jpg
    :alt: Fully seated
+   :scale: 100%
 
 **Figure 9** - The boards when fully seated
 
@@ -114,6 +120,7 @@ If you are using a "bench" or metal box type power supply, simply connect the DC
 
 .. image:: ../_static/images/motor_power2b.jpg
    :alt: Power in to the Motor Shield
+   :scale: 100%
 
 **Figure 10** - Power in to the Motor Shield
 
@@ -122,6 +129,7 @@ If you are using a laptop style "brick" power supply or an adapter that plugs in
 
 .. image:: ../_static/images/motor_power3.jpg
    :alt: Screw Terminal Adapter Power In
+   :scale: 100%
 
 **Figure 11** - Screw Terminal Adapter to Motor Shield
 
@@ -134,6 +142,7 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 
 .. image:: ../_static/images/motor_power2b.jpg
    :alt: Main and Prog Out to track
+   :scale: 100%
 
 **Figure 12** - Out to Main and Program tracks
 

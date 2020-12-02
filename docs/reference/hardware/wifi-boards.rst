@@ -10,6 +10,7 @@ Makerfabs WiFi Shield
 
 .. image:: ../../_static/images/wifi_jumpers1.jpg
    :alt: Makerfabs ESP-8266 WiFi Shield
+   :scale: 80%
 
 Duinopeak WiFi Shield
 ^^^^^^^^^^^^^^^^^^^^^
@@ -18,6 +19,7 @@ Duinopeak WiFi Shield
 
 .. image:: ../../_static/images/duinopeak.jpg
    :alt: Duinopeak ESP-8266 WiFi Shield
+   :scale: 80%
 
 See the ESP-01S below that installs on this board
 
@@ -28,5 +30,6 @@ ESP-01S
 
 .. image:: ../../_static/images/esp-01s_2.jpg
    :alt: ESP-01S
+   :scale: 80%
 
 You can use this board stand-alone with jumpers, or use the Duiopeak ESP-8266 Wifi Expansion Board above and plug this board into it.

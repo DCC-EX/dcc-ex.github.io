@@ -6,7 +6,7 @@ Let's start with the basics and add as you see fit. For this install, you'll nee
 * 18 to 16 AWG twisted pair hookup wire to connect your tracks
 * A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional)
 
-.. image:: ../_static/images/basic_setup.jpg
+.. image:: ../_static/images/basic_setup_lg.jpg
    :alt: Command Station Setup
    :width: 800px
    :align: center

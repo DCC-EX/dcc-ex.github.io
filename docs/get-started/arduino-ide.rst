@@ -3,7 +3,7 @@ Arduino IDE Setup
 
 The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away, it is really just a program that lets you open a project, like our DCC++ EX Software files, compile them into instructions the Arduino understands, and uploads them from your computer into the Arduino using a serial cable. It is very easy to use.
 
-Those on the Tinkerer or Engineer path see `Levels Path Choice <../levels>`_ may want to make changes to the code or just learn more about how the Command Station software works. At a minimum, you may need to change options in the config.h file or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
+Those on the Tinkerer or Engineer path see `Choose Your Path (levels) <levels.html>`_ may want to make changes to the code or just learn more about how the Command Station software works. At a minimum, you may need to change options in the config.h file or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
 
 **You can click on most of the images below to enlarge them**
 
@@ -24,7 +24,7 @@ Use the link to either the zip or tar file at the bottom of our Github page here
 Unzip the file into the Arduino IDE project folder
 --------------------------------------------------
 
-Find the zip file on your computer and unzip it. You should now have a folder with the entire DCC-EX project inside it.
+Find the zip file on your computer and unzip it. You should now have a folder with the entire DCC-EX project inside it called "CommandStation-EX". Make sure this folder is at the root level with all your other projects. Note that the name of this folder MUST be "CommandStation-EX"! Do not change it. Because of the way the Arduino IDE works, the folder name must match the .ino file inside it.
 
 Copy the config.example.h file or rename it
 -------------------------------------------

@@ -3,7 +3,7 @@ WiFi Setup
 
 There are many ways to add Wifi to your CS. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
-You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our `Support Page <../support/get-support.md>`_ if you have a question.
+You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our `Support Page <../support/index.html>`_ if you have a question.
 
 Note that you can click on any of the images to make them larger.
 

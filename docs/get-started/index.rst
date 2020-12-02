@@ -42,8 +42,8 @@ You'll also need something to control your trains. Because there are several opt
 
 See this `Shopping list <../reference/hardware/shopping-list.html>`_ for everything you need organized for you in one place.
 
-I'm NOT Ready!
-----------------
+I'm Ready!
+-----------
 
 Click the "next" button below to choose your path and then move ahead to how to assemble your Command Station.
 

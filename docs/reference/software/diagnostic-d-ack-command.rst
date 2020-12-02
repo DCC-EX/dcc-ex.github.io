@@ -9,15 +9,15 @@ When the ACK processing on the prog track does not work as expected, you may wan
    <D ACK ON>
    <R 8 1 1>
    ACK-BASELINE 33/98mA
-   V0 cv=8 bit=7 ACK-FAIL after 143mS max=12/35mA pulse=0uS
+   V0 cv=8 bit=7 NO-ACK after 143mS max=12/35mA pulse=0uS
    V1 cv=8 bit=7 ACK-OK after 34mS max=646/1931mA pulse=6852uS
    V0 cv=8 bit=6 ACK-OK after 34mS max=583/1743mA pulse=6844uS
    V0 cv=8 bit=5 ACK-OK after 34mS max=646/1931mA pulse=6800uS
-   V0 cv=8 bit=4 ACK-FAIL after 144mS max=12/35mA pulse=0uS
+   V0 cv=8 bit=4 NO-ACK after 144mS max=12/35mA pulse=0uS
    V0 cv=8 bit=3 ACK-OK after 34mS max=563/1683mA pulse=6792uS
    V0 cv=8 bit=2 ACK-OK after 34mS max=647/1934mA pulse=6800uS
    V0 cv=8 bit=1 ACK-OK after 34mS max=573/1713mA pulse=6844uS
-   V0 cv=8 bit=0 ACK-FAIL after 145mS max=14/41mA pulse=0uS
+   V0 cv=8 bit=0 NO-ACK after 145mS max=14/41mA pulse=0uS
    VB cv=8 value=145 ACK-OK after 34mS max=639/1910mA pulse=6848uS
    Callback(145)
    <r1|1|8 145>
@@ -26,7 +26,7 @@ Your output may show different formatting with respect to linefeeds. Here the de
 
 .. code-block:: none
 
-   OPER cv=n bit=b ACK-FAIL/OK after WAITTIME mS max=INTERNALVAL / CURRENT mA pulse= PULSELENGTH uS
+   OPER cv=n bit=b NO-ACK/OK after WAITTIME mS max=INTERNALVAL / CURRENT mA pulse= PULSELENGTH uS
 
 The CURRENT should be over 60mA for a successful ACK and the length should be 6000uS +-1000uS but because of Decoder variations from the standard DCC-EX has some extra pulse length margin.
 

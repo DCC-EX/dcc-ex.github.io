@@ -27,3 +27,8 @@ Software
     software/command-reference
     software/diagnostic-d-ack-command
     software/diagnostic-d-command
+
+Videos
+-------------------------
+
+* Please visit our Youtube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_

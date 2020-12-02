@@ -3,9 +3,9 @@ DCC++ EX Command Reference
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* exWebThrottle - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web `WebThrottle-EX Live <../exwebthrottle.html>`_ , or download and run from your computer `WebThrottle-EX download <https://github.com/DCC-EX/exWebThrottle>`_
+* `exWebThrottle <../../throttles/ex-webthrottle.html>`_ - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself! 
 
-* Engine Driver - Cellphone App WiFi Throttle  
+* `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Cellphone App WiFi Throttle  
 
 * `JMRI (Java Model Railroad Interface) <http://www.jmri.org/>`_
 
@@ -15,7 +15,7 @@ DCC++ EX Command Reference
 
 This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
-You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/>`_. If you are new to we suggest you star with the `DCC++ EX Webpage <https://dcc-ex.com>`_.  
+You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC++ EX Webpage <https://dcc-ex.com>`_.  
 
 SINGLE LETTER COMMANDS
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -97,7 +97,7 @@ SINGLE LETTER COMMANDS
     **(NOTE:There is NO Un-Delete)**
 
 * 
-  ``<D>`` Upper Case D: Please See `Diagnostics ``/<D/> Command Page <./diagnostic-d-command.html>`_
+  ``<D>`` Upper Case D: Please see `Diagnostics <D> Command Page <./diagnostic-d-command.html>`_
 
 * 
   There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).

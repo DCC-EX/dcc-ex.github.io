@@ -180,27 +180,30 @@
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK ON&gt;
 &lt;R 8 1 1&gt;
 ACK-BASELINE 33/98mA
-V0 cv=8 bit=7 ACK-FAIL after 143mS max=12/35mA pulse=0uS
+V0 cv=8 bit=7 NO-ACK after 143mS max=12/35mA pulse=0uS
 V1 cv=8 bit=7 ACK-OK after 34mS max=646/1931mA pulse=6852uS
 V0 cv=8 bit=6 ACK-OK after 34mS max=583/1743mA pulse=6844uS
 V0 cv=8 bit=5 ACK-OK after 34mS max=646/1931mA pulse=6800uS
-V0 cv=8 bit=4 ACK-FAIL after 144mS max=12/35mA pulse=0uS
+V0 cv=8 bit=4 NO-ACK after 144mS max=12/35mA pulse=0uS
 V0 cv=8 bit=3 ACK-OK after 34mS max=563/1683mA pulse=6792uS
 V0 cv=8 bit=2 ACK-OK after 34mS max=647/1934mA pulse=6800uS
 V0 cv=8 bit=1 ACK-OK after 34mS max=573/1713mA pulse=6844uS
-V0 cv=8 bit=0 ACK-FAIL after 145mS max=14/41mA pulse=0uS
+V0 cv=8 bit=0 NO-ACK after 145mS max=14/41mA pulse=0uS
 VB cv=8 value=145 ACK-OK after 34mS max=639/1910mA pulse=6848uS
 Callback(145)
 &lt;r1|1|8 145&gt;
 </pre></div>
 </div>
 <p>Your output may show different formatting with respect to linefeeds. Here the deocder reports that bits 7, 4 and 0 are <strong>not</strong> Zero. That gives the value of <code class="docutils literal notranslate"><span class="pre">10010001</span> <span class="pre">=</span> <span class="pre">145</span></code> which is the manufacturer ID for Zimo. That value is checked in the <code class="docutils literal notranslate"><span class="pre">VB</span></code> line. For a successful read, the result of the verify bit and verify byte commands have to match, otherwise the value can nor be read. If you have problems reading decoders, you can compare the received values with the expected values. The format is:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>OPER cv=n bit=b ACK-FAIL/OK after WAITTIME mS max=INTERNALVAL / CURRENT mA pulse= PULSELENGTH uS
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>OPER cv=n bit=b NO-ACK/OK after WAITTIME mS max=INTERNALVAL / CURRENT mA pulse= PULSELENGTH uS
 </pre></div>
 </div>
 <p>The CURRENT should be over 60mA for a successful ACK and the length should be 6000uS +-1000uS but because of Decoder variations from the standard DCC-EX has some extra pulse length margin.</p>
-<p>If you encounter problems with ACKs from the Decoder and you want help, the DCC-EX support will probably ask you to provide this kind of diagnostics.</p>
 <p>The two values of 1 after each other in the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> command and in the <code class="docutils literal notranslate"><span class="pre">&lt;r&gt;</span></code> answer you can safely ignore.</p>
+<p>If you encounter problems with ACKs from the Decoder and you want help, the DCC-EX support will probably ask you to provide this kind of diagnostics. A very simple test to provide us a log is enter each of these two commands folowed by pressing “send” to enter the command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code>
+<code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p>
+<p>This will turn ACK diagnostics ON and then try to read the appropriate CVs to check your loco address.</p>
 <div class="section" id="ack-limit">
 <h2>Ack Limit<a class="headerlink" href="#ack-limit" title="Permalink to this headline">¶</a></h2>
 <p>The Ack current limit is according to the DCC standard(s) set to 60mA. But as modern motors (N and Z scales) may have problems to draw that amount of current, you can adjust down that limit. Or if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive.</p>

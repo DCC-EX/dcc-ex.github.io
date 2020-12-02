@@ -6,7 +6,7 @@ Let's start with the basics and add as you see fit. For this install, you'll nee
 * 18 to 16 AWG twisted pair hookup wire to connect your tracks
 * A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional)
 
-.. image:: ../_static/images/basic_setup.jpg
+.. image:: ../_static/images/basic_setup_lg.jpg
    :alt: Command Station Setup
    :width: 800px
    :align: center
@@ -15,7 +15,7 @@ Let's start with the basics and add as you see fit. For this install, you'll nee
 
 * For an Uno, Nano or other microcontroller, please see `Using a different microcontroller <../reference/hardware/microcontroller-boards.html>`_. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see `Motor Controllers <../reference/hardware/motor-boards.html>`_
 
-For a video on how to do this, click here **link coming soon**
+For a video on how to do this, click here for `Setting Up Your Command Station <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
 
 1. BEFORE YOU BEGIN, Cut the Vin trace on the motor controller
 --------------------------------------------------------------
@@ -27,6 +27,7 @@ We recommend you use two separate power supplies (or one power supply that can d
 
 .. image:: ../_static/images/motor_shield_vin2.jpg
    :alt: Cut Vin trace on arduino motor shield
+   :scale: 100%
 
 **Figure 2** - Cutting the Vin trace
 
@@ -45,11 +46,13 @@ Here are some tips:
 * With the power connectors to your right, align the pins facing you first (pins 0-12, aref, gnd, etc.)
 * Look at the pins on the motorboard and make sure they are all straight and line up in a neat row
 
-Place both boards on the table with the power connector end facing in the same direction
+Place both boards on the table with the power connector end facing in the same direction.
 
+**Note that you can click on most of the images to enlarge them.**
 
 .. image:: ../_static/images/mega_and_motor_shield.png
    :alt: Align Mega and Motor Shield
+   :scale: 100%
 
 **Figure 3** - Properly orient the boards
 
@@ -58,6 +61,7 @@ a. Did you remember to cut the trace on the motor shield? If not, see above. Oth
 
 .. image:: ../_static/images/bent_pins.png
    :alt: bent pins
+   :scale: 75%
 
 **Figure 4** - Bent pins
 
@@ -66,6 +70,7 @@ b. Line up the pins on the side of the board closest to the USB with the header 
 
 .. image:: ../_static/images/seat1.jpg
    :alt: Line up the pins
+   :scale: 75%
 
 **Figure 5** - Line up left side first
 
@@ -74,6 +79,7 @@ c. Just align them and start to push them in but don't push them all the way. Us
 
 .. image:: ../_static/images/seat2.jpg
    :alt: Push the pins partway in
+   :scale: 75%
 
 **Figure 6** - Get all the pins started
 
@@ -82,6 +88,7 @@ d. Do the same on the other side. Get all the pins aligned and start to press ge
 
 .. image:: ../_static/images/seat_reverse1.jpg
    :alt: Line up the other side
+   :scale: 75%
 
 **Figure 7** - Start the other side
 
@@ -89,6 +96,7 @@ e. Now, being careful to not bend any pins gently press, using a rocking motion 
 
 .. image:: ../_static/images/seat_press.jpg
    :alt: Press together
+   :scale: 75%
    
 **Figure 8** - Gently press the boards together
 
@@ -97,6 +105,7 @@ f. The boards should be seated. Note the pins are longer than the headers. It is
 
 .. image:: ../_static/images/seated.jpg
    :alt: Fully seated
+   :scale: 75%
 
 **Figure 9** - The boards when fully seated
 
@@ -114,6 +123,7 @@ If you are using a "bench" or metal box type power supply, simply connect the DC
 
 .. image:: ../_static/images/motor_power2b.jpg
    :alt: Power in to the Motor Shield
+   :scale: 75%
 
 **Figure 10** - Power in to the Motor Shield
 
@@ -122,6 +132,7 @@ If you are using a laptop style "brick" power supply or an adapter that plugs in
 
 .. image:: ../_static/images/motor_power3.jpg
    :alt: Screw Terminal Adapter Power In
+   :scale: 75%
 
 **Figure 11** - Screw Terminal Adapter to Motor Shield
 
@@ -134,6 +145,7 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 
 .. image:: ../_static/images/motor_power2b.jpg
    :alt: Main and Prog Out to track
+   :scale: 75%
 
 **Figure 12** - Out to Main and Program tracks
 

@@ -78,13 +78,10 @@ A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino bo
 * New features and functions in JMRI
 * Automation (coming soon) 
 
-.. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click `here <about/rewrite.html>`_.
+.. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our `Rewrite Article <about/rewrite.html>`_.
 
 
-I'm Ready!
-###########
-
-To learn more about how to build your own DCC++ EX station, go to the `Get Started <get-started/index.html>`_ page!
+Next see the `Get Started section <get-started/index.html>`_ or click next below.
 
 .. toctree::
    :hidden:

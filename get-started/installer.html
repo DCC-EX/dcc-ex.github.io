@@ -88,6 +88,7 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Get Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="levels.html">Levels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assembly.html">Assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi-setup.html">WiFi Setup</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Installer Setup</a></li>
@@ -213,14 +214,14 @@
 </div>
 <div class="section" id="the-installer-window">
 <h2>The Installer Window<a class="headerlink" href="#the-installer-window" title="Permalink to this headline">¶</a></h2>
-<img alt="DCC-EX Installer" src="../_images/installer.jpg" />
+<a class="reference internal image-reference" href="../_images/installer.jpg"><img alt="DCC-EX Installer" src="../_images/installer.jpg" style="width: 595.5px; height: 362.25px;" /></a>
 <p><strong>Figure 1</strong> - Installer Window</p>
 <p>There will be a lot of information appearing in the log window which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete, this is normal. If you have a very slow internet connection it will take longer.</p>
 </div>
 <div class="section" id="choose-your-options">
 <h2>Choose your options<a class="headerlink" href="#choose-your-options" title="Permalink to this headline">¶</a></h2>
 <p>In the left side options pane use the dropdown selector boxes choose the following options:</p>
-<img alt="Options Pane" src="../_images/inst_options.jpg" />
+<a class="reference internal image-reference" href="../_images/inst_options.jpg"><img alt="Options Pane" src="../_images/inst_options.jpg" style="width: 332.25px; height: 393.0px;" /></a>
 <p><strong>Figure 2</strong> - Options Pane</p>
 <ol class="arabic simple">
 <li><p>Select your Command Station Type</p></li>
@@ -236,7 +237,7 @@
 <h3>WiFi Checkbox<a class="headerlink" href="#wifi-checkbox" title="Permalink to this headline">¶</a></h3>
 <p>If you have installed a WiFi board, DCC++ EX will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), there is nothing to do, DO NOT CHECK THIS BOX. AP mode sets up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like “DCC-EX-xxxxxx” where the “xxxxxx” are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.</p>
 <p>If you wish to connect to your home network instead (connect to your router using “Station Mode”), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:</p>
-<img alt="WiFi Options" src="../_images/wifi.jpg" />
+<a class="reference internal image-reference" href="../_images/wifi.jpg"><img alt="WiFi Options" src="../_images/wifi.jpg" style="width: 267.3px; height: 344.7px;" /></a>
 <p><strong>Figure 3</strong> - Wifi Options</p>
 <ul class="simple">
 <li><p><strong>WiFi SSID</strong> - The name of your home network</p></li>
@@ -249,7 +250,7 @@
 <div class="section" id="ethernet-checkbox">
 <h3>Ethernet Checkbox<a class="headerlink" href="#ethernet-checkbox" title="Permalink to this headline">¶</a></h3>
 <p>If you have an Ethernet shield and check this box, you will see options to change the following options:</p>
-<img alt="Ethernet Options" src="../_images/ethernet.jpg" />
+<a class="reference internal image-reference" href="../_images/ethernet.jpg"><img alt="Ethernet Options" src="../_images/ethernet.jpg" style="width: 269.1px; height: 295.2px;" /></a>
 <p><strong>Figure 4</strong> - Ethernet Options</p>
 <ul class="simple">
 <li><p><strong>Host Name</strong> - If your WiFi Board supports it, this name can be used in addition to the IP address.</p></li>
@@ -261,7 +262,7 @@
 <div class="section" id="lcd-checkbox">
 <h3>LCD Checkbox<a class="headerlink" href="#lcd-checkbox" title="Permalink to this headline">¶</a></h3>
 <p>If you have a 2 or 4 line LCD diplay connected and check this box, you will see the following options you can edit for your display:</p>
-<img alt="LCD Options" src="../_images/lcd.jpg" />
+<a class="reference internal image-reference" href="../_images/lcd.jpg"><img alt="LCD Options" src="../_images/lcd.jpg" style="width: 286.2px; height: 191.70000000000002px;" /></a>
 <p><strong>Figure 5</strong> - LCD Options</p>
 <ul class="simple">
 <li><p><strong>LCD Address (in Decimal format)</strong> - This is the address of your display, it us usually 39 (for 0x27) or 63 (for 0x3F)</p></li>
@@ -273,7 +274,7 @@
 <div class="section" id="oled-checkbox">
 <h3>OLED CheckBox<a class="headerlink" href="#oled-checkbox" title="Permalink to this headline">¶</a></h3>
 <p>If you have an OLED display connected and check this box, you will see the following options you can edit for your display:</p>
-<img alt="OLED Options" src="../_images/oled.jpg" />
+<a class="reference internal image-reference" href="../_images/oled.jpg"><img alt="OLED Options" src="../_images/oled.jpg" style="width: 285.3px; height: 148.5px;" /></a>
 <p><strong>Figure 6</strong> - OLED Options</p>
 <ul class="simple">
 <li><p><strong>OLED Width (in pixels)</strong> - Enter the width or number of horizontal pixels on your display</p></li>
@@ -297,15 +298,15 @@
 <p>To test with the Arduino Serial Monitor, download the Arduino IDE from the following link and install it on your computer.</p>
 <p><a class="reference external" href="https://www.arduino.cc/en/Main/software">Download the Arduino IDE</a></p>
 <p>To do a quick test, open the Arduino application:</p>
-<img alt="Arduino IDE" src="../_images/arduino_ide1.jpg" />
+<a class="reference internal image-reference" href="../_images/arduino_ide1.jpg"><img alt="Arduino IDE" src="../_images/arduino_ide1.jpg" style="width: 556.0px; height: 561.0px;" /></a>
 <p><strong>Figure 7</strong> - The Arduino IDE</p>
 <ul class="simple">
 <li><p>Select “Tools -&gt; Serial Monitor” from the Arduino IDE menu</p></li>
 </ul>
-<img alt="Open the Serial Monitor" src="../_images/arduino_ide2.jpg" />
+<a class="reference internal image-reference" href="../_images/arduino_ide2.jpg"><img alt="Open the Serial Monitor" src="../_images/arduino_ide2.jpg" style="width: 543.0px; height: 553.0px;" /></a>
 <p><strong>Figure 8</strong> - Open the Serial Monitor from the Tools Menu</p>
 <p>You will see the following screen:</p>
-<img alt="Serial Monitor" src="../_images/serial_monitor.jpg" />
+<a class="reference internal image-reference" href="../_images/serial_monitor.jpg"><img alt="Serial Monitor" src="../_images/serial_monitor.jpg" style="width: 644.0px; height: 505.0px;" /></a>
 <p><strong>Figure 9</strong> - Serial Monitor</p>
 <ul class="simple">
 <li><p>Select “115200” as the baud rate in the dropdown in the lower right</p></li>
@@ -321,13 +322,13 @@
 </div>
 <div class="section" id="using-exwebthrottle">
 <h3>Using exWebthrottle<a class="headerlink" href="#using-exwebthrottle" title="Permalink to this headline">¶</a></h3>
-<img alt="exWebThrottle" src="../_images/exwebthrottle.jpg" />
+<a class="reference internal image-reference" href="../_images/exwebthrottle.jpg"><img alt="exWebThrottle" src="../_images/exwebthrottle.jpg" style="width: 600.0px; height: 439.0px;" /></a>
 <p><strong>Figure 10</strong> - exWebThrottle</p>
 <p>Click this link: <a class="reference external" href="../throttles/ex-webthrottle.html">exWebThrottle</a> to run exWebThrottle hosted on our site, or visit <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">GitHub</a> to get the latest version to run on your computer.</p>
 </div>
 <div class="section" id="using-engine-driver-or-other-withrottle-cab-requires-wifi">
 <h3>Using Engine Driver (or other WiThrottle Cab) - Requires WiFi<a class="headerlink" href="#using-engine-driver-or-other-withrottle-cab-requires-wifi" title="Permalink to this headline">¶</a></h3>
-<img alt="Engine Driver" src="../_images/engine_driver.png" />
+<a class="reference internal image-reference" href="../_images/engine_driver.png"><img alt="Engine Driver" src="../_images/engine_driver.png" style="width: 157.0px; height: 321.0px;" /></a>
 <p><strong>Figure 11</strong> - Engine Driver</p>
 <p>You will need to install Engine Driver on your mobile device and then connect to the CS either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.</p>
 </div>

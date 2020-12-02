@@ -20,7 +20,7 @@ exInstaller
 Latest DCC++ EX Release
 -----------------------
 
-.. note:: On the releases page, select the most recent version and download the .zip file. The zip file contains the Arduino Sketch file for DCC++ EX. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board.
+.. note:: On the releases page, select the most recent version and download the .zip file. You will see the following 2 files for download, choose the compression format you prefer CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for DCC++ EX. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for `installation instructions <../get-started/arduino-ide.html>`_
 
 .. raw:: html
 

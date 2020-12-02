@@ -41,6 +41,7 @@ The Installer Window
 
 .. image:: ../_static/images/installer/installer.jpg
    :alt: DCC-EX Installer
+   :scale: 75%
 
 **Figure 1** - Installer Window
 
@@ -53,6 +54,7 @@ In the left side options pane use the dropdown selector boxes choose the followi
 
 .. image:: ../_static/images/installer/inst_options.jpg
    :alt: Options Pane
+   :scale: 75%
 
 **Figure 2** - Options Pane
 
@@ -75,6 +77,7 @@ If you wish to connect to your home network instead (connect to your router usin
 
 .. image:: ../_static/images/installer/wifi.jpg
    :alt: WiFi Options
+   :scale: 90%
 
 **Figure 3** - Wifi Options
 
@@ -95,6 +98,7 @@ If you have an Ethernet shield and check this box, you will see options to chang
 
 .. image:: ../_static/images/installer/ethernet.jpg
    :alt: Ethernet Options
+   :scale: 90%
 
 **Figure 4** - Ethernet Options
 
@@ -113,6 +117,7 @@ If you have a 2 or 4 line LCD diplay connected and check this box, you will see 
 
 .. image:: ../_static/images/installer/lcd.jpg
    :alt: LCD Options
+   :scale: 90%
 
 **Figure 5** - LCD Options
 
@@ -131,6 +136,7 @@ If you have an OLED display connected and check this box, you will see the follo
 
 .. image:: ../_static/images/installer/oled.jpg
    :alt: OLED Options
+   :scale: 90%
 
 **Figure 6** - OLED Options
 
@@ -164,6 +170,7 @@ To do a quick test, open the Arduino application:
 
 .. image:: ../_static/images/installer/arduino_ide.jpg
    :alt: Arduino IDE
+   :scale: 100%
 
 **Figure 7** - The Arduino IDE
 
@@ -172,6 +179,7 @@ To do a quick test, open the Arduino application:
 
 .. image:: ../_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
+   :scale: 100%
 
 **Figure 8** - Open the Serial Monitor from the Tools Menu
 
@@ -180,6 +188,7 @@ You will see the following screen:
 
 .. image:: ../_static/images/installer/serial_monitor.jpg
    :alt: Serial Monitor
+   :scale: 100%
 
 **Figure 9** - Serial Monitor
 
@@ -204,6 +213,7 @@ Using exWebthrottle
 
 .. image:: ../_static/images/installer/exwebthrottle.jpg
    :alt: exWebThrottle
+   :scale: 100%
 
 **Figure 10** - exWebThrottle
 
@@ -214,6 +224,7 @@ Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
 
 .. image:: ../_static/images/installer/engine_driver.png
    :alt: Engine Driver
+   :scale: 100%
 
 **Figure 11** - Engine Driver
 

@@ -23,7 +23,7 @@ You can check Amazon, Ebay, AliExpress, Banggood, Adafruit, Sparkfun and others 
 * `Steve Todd's Raspberry Pi Image (If you wannt to use a Pi) <https://mstevetodd.com/rpi>`__
 * `JMRI (If you want to use a laptop or desktop) <https://www.jmri.org/>`_
 * `Arduino Software IDE to edit and upload changes (Optional) <https://www.arduino.cc/>`_
-* `WebThrottle-EX Controller <https://dcc-ex.com/throttles/webthrottle-ex/>`_
+* `WebThrottle-EX Controller <https://DCC-EX.github.io/WebThrottle-EX>`_
 
 **Recap**
 
@@ -45,4 +45,4 @@ This can be a little confusing, so let explain it a different way:
 
     4. If you install an ESP8266 WiFi Shield, you don't need a computer or a Pi if you don't want it once you upload the software to the Arduino. You can connect directly to the CS via WiFi using any WiThrottle compatible controller such as Engine Driver running on a WiFi device like your mobile phone.
 
-.. note:: The computer USB port in option 1, 2, or 3 may be able to be the power supply for the Arduino (but you will still need a 12-14V DC power supply for the motor shield) See `Power Supplies`_ for information on how to choose the right power supplies and different ways you can power the Arduino.
+.. note:: The computer USB port in option 1, 2, or 3 may be able to be the power supply for the Arduino (but you will still need a 12-14V DC power supply for the motor shield) See `Power Supplies <power-supplies.html>`_ for information on how to choose the right power supplies and different ways you can power the Arduino.

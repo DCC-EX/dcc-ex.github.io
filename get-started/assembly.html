@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="WiFi Setup" href="wifi-setup.html" />
-    <link rel="prev" title="Get Started" href="index.html" /> 
+    <link rel="prev" title="Levels" href="levels.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,6 +88,7 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Get Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="levels.html">Levels</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi-setup.html">WiFi Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="installer.html">Installer Setup</a></li>
@@ -175,12 +176,12 @@
 <li><p>18 to 16 AWG twisted pair hookup wire to connect your tracks</p></li>
 <li><p>A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional)</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/basic_setup.jpg"><img alt="Command Station Setup" class="align-center" src="../_images/basic_setup.jpg" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/basic_setup_lg.jpg"><img alt="Command Station Setup" class="align-center" src="../_images/basic_setup_lg.jpg" style="width: 800px;" /></a>
 <p><strong>Figure 1</strong> - basic setup (click to enlarge picture)</p>
 <ul class="simple">
 <li><p>For an Uno, Nano or other microcontroller, please see <a class="reference external" href="../reference/hardware/microcontroller-boards.html">Using a different microcontroller</a>. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see <a class="reference external" href="../reference/hardware/motor-boards.html">Motor Controllers</a></p></li>
 </ul>
-<p>For a video on how to do this, click here <strong>link coming soon</strong></p>
+<p>For a video on how to do this, click here for <a class="reference external" href="https://www.youtube.com/watch?v=N6TWR7fIl0A&amp;t=5s">Setting Up Your Command Station</a></p>
 <div class="section" id="before-you-begin-cut-the-vin-trace-on-the-motor-controller">
 <h2>1. BEFORE YOU BEGIN, Cut the Vin trace on the motor controller<a class="headerlink" href="#before-you-begin-cut-the-vin-trace-on-the-motor-controller" title="Permalink to this headline">¶</a></h2>
 <p>We recommend you use two separate power supplies (or one power supply that can deliver two different voltages) one for the Arduino Mega and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.</p>
@@ -188,7 +189,7 @@
 <p class="admonition-title">Note</p>
 <p>By default, the motor controller connects its power supply via the pins, to the Arduino. This can supply too much voltage to the Arduino. If you do not cut this trace, you could damage the Arduino if you apply more than 12V to the motor shield. In the same way, if you don’t cut this trace and use the 2 power supplies as recommended, they would be connected to each other. This would not be good.</p>
 </div>
-<img alt="Cut Vin trace on arduino motor shield" src="../_images/motor_shield_vin2.jpg" />
+<a class="reference internal image-reference" href="../_images/motor_shield_vin2.jpg"><img alt="Cut Vin trace on arduino motor shield" src="../_images/motor_shield_vin2.jpg" style="width: 344.0px; height: 453.0px;" /></a>
 <p><strong>Figure 2</strong> - Cutting the Vin trace</p>
 <p>If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.</p>
 </div>
@@ -206,38 +207,39 @@
 <li><p>With the power connectors to your right, align the pins facing you first (pins 0-12, aref, gnd, etc.)</p></li>
 <li><p>Look at the pins on the motorboard and make sure they are all straight and line up in a neat row</p></li>
 </ul>
-<p>Place both boards on the table with the power connector end facing in the same direction</p>
-<img alt="Align Mega and Motor Shield" src="../_images/mega_and_motor_shield.png" />
+<p>Place both boards on the table with the power connector end facing in the same direction.</p>
+<p><strong>Note that you can click on most of the images to enlarge them.</strong></p>
+<a class="reference internal image-reference" href="../_images/mega_and_motor_shield.png"><img alt="Align Mega and Motor Shield" src="../_images/mega_and_motor_shield.png" style="width: 492.0px; height: 375.0px;" /></a>
 <p><strong>Figure 3</strong> - Properly orient the boards</p>
 <ol class="loweralpha simple">
 <li><p>Did you remember to cut the trace on the motor shield? If not, see above. Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.</p></li>
 </ol>
-<img alt="bent pins" src="../_images/bent_pins.png" />
+<a class="reference internal image-reference" href="../_images/bent_pins.png"><img alt="bent pins" src="../_images/bent_pins.png" style="width: 375.0px; height: 275.25px;" /></a>
 <p><strong>Figure 4</strong> - Bent pins</p>
 <ol class="loweralpha simple" start="2">
 <li><p>Line up the pins on the side of the board closest to the USB with the header connector on the Mega first. You want to line up pins 0-7 on the Mega with the same pins on the motor board. On the other side, IOREF, RESET, 3V3, etc. and A0-A5 need to line up on both boards. See the picture below and notice the small gap between the two sets of pins to match the two pin header sockets.</p></li>
 </ol>
-<img alt="Line up the pins" src="../_images/seat1.jpg" />
+<a class="reference internal image-reference" href="../_images/seat1.jpg"><img alt="Line up the pins" src="../_images/seat1.jpg" style="width: 450.0px; height: 300.0px;" /></a>
 <p><strong>Figure 5</strong> - Line up left side first</p>
 <ol class="loweralpha simple" start="3">
 <li><p>Just align them and start to push them in but don’t push them all the way. Use your fingers to try to push the pins to get them to all to into the holes.</p></li>
 </ol>
-<img alt="Push the pins partway in" src="../_images/seat2.jpg" />
+<a class="reference internal image-reference" href="../_images/seat2.jpg"><img alt="Push the pins partway in" src="../_images/seat2.jpg" style="width: 450.0px; height: 300.0px;" /></a>
 <p><strong>Figure 6</strong> - Get all the pins started</p>
 <ol class="loweralpha simple" start="4">
 <li><p>Do the same on the other side. Get all the pins aligned and start to press gently to get them into the holes. Notice on this side, you have more holes than you do pins. This is normal.</p></li>
 </ol>
-<img alt="Line up the other side" src="../_images/seat_reverse1.jpg" />
+<a class="reference internal image-reference" href="../_images/seat_reverse1.jpg"><img alt="Line up the other side" src="../_images/seat_reverse1.jpg" style="width: 450.0px; height: 300.0px;" /></a>
 <p><strong>Figure 7</strong> - Start the other side</p>
 <ol class="loweralpha simple" start="5">
 <li><p>Now, being careful to not bend any pins gently press, using a rocking motion if you need to, in order to get the motor board to seat firmly onto the Mega. Press gently until you feel you can’t put the pins in any further. Don’t force anything.</p></li>
 </ol>
-<img alt="Press together" src="../_images/seat_press.jpg" />
+<a class="reference internal image-reference" href="../_images/seat_press.jpg"><img alt="Press together" src="../_images/seat_press.jpg" style="width: 450.0px; height: 300.0px;" /></a>
 <p><strong>Figure 8</strong> - Gently press the boards together</p>
 <ol class="loweralpha simple" start="6">
 <li><p>The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimeters of the pins between the bottom of the motor board and the top of the headers. Figure 9 shows the boards as they look properly seated.</p></li>
 </ol>
-<img alt="Fully seated" src="../_images/seated.jpg" />
+<a class="reference internal image-reference" href="../_images/seated.jpg"><img alt="Fully seated" src="../_images/seated.jpg" style="width: 450.0px; height: 300.0px;" /></a>
 <p><strong>Figure 9</strong> - The boards when fully seated</p>
 <p>Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.</p>
 </div>
@@ -249,17 +251,17 @@
 </div>
 <p>Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, please see <a class="reference external" href="../reference/hardware/power-supplies.html">compatible Power Supplies</a></p>
 <p>If you are using a “bench” or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the motor shield and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the motor shield</p>
-<img alt="Power in to the Motor Shield" src="../_images/motor_power2b.jpg" />
+<a class="reference internal image-reference" href="../_images/motor_power2b.jpg"><img alt="Power in to the Motor Shield" src="../_images/motor_power2b.jpg" style="width: 285.0px; height: 315.0px;" /></a>
 <p><strong>Figure 10</strong> - Power in to the Motor Shield</p>
 <p>If you are using a laptop style “brick” power supply or an adapter that plugs into the wall (aka wall wart), use the barrel connector to screw terminal adapter to connect your power supply to the Vin and ground pins on the motor shield. Be careful to use the correct polarity. Make sure the positive terminal on the screw terminal adapter connects to the positive (+) on the motor shield and the negative terminal (- or gnd) connects to the negative terminal.</p>
-<img alt="Screw Terminal Adapter Power In" src="../_images/motor_power3.jpg" />
+<a class="reference internal image-reference" href="../_images/motor_power3.jpg"><img alt="Screw Terminal Adapter Power In" src="../_images/motor_power3.jpg" style="width: 450.0px; height: 333.75px;" /></a>
 <p><strong>Figure 11</strong> - Screw Terminal Adapter to Motor Shield</p>
 <p>If you don’t have a screw terminal adapter, you can cut the end off your power supply and strip the wires. The outer wire braid is usually the negative connection and the center wire is the positive connection. Check the wiring image on the power supply itself.</p>
 </div>
 <div class="section" id="connect-the-power-wires-to-the-tracks">
 <h2>4. Connect the power wires to the tracks<a class="headerlink" href="#connect-the-power-wires-to-the-tracks" title="Permalink to this headline">¶</a></h2>
 <p>There are two sets of output connectors on the motor shield, “A” and “B”. A is the main or operations (also called “Ops”) track while B is the programming or service track. Connect twisted pair wire of the proper gauge to each track. Polarity it non important here, but if you will be using a siding track instead of a separate, unused piece of track, make sure that the positive and negative for both tracks match. In other words, if you view one side of your main track as having a “left” side and a “right” side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be “in phase” with each other. Here is the diagram from above repeated again for reference.</p>
-<img alt="Main and Prog Out to track" src="../_images/motor_power2b.jpg" />
+<a class="reference internal image-reference" href="../_images/motor_power2b.jpg"><img alt="Main and Prog Out to track" src="../_images/motor_power2b.jpg" style="width: 285.0px; height: 315.0px;" /></a>
 <p><strong>Figure 12</strong> - Out to Main and Program tracks</p>
 </div>
 <div class="section" id="connect-the-power-supply-to-the-arduino-but-don-t-plug-it-in-yet">
@@ -299,7 +301,7 @@
         <a href="wifi-setup.html" class="btn btn-neutral float-right" title="WiFi Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="Get Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="levels.html" class="btn btn-neutral float-left" title="Levels" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

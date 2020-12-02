@@ -7,6 +7,7 @@ CommandStation-EX is compatible with a wide variety of motor boards, also known 
 
 .. image:: ../../_static/images/deek_robot1_sm.jpg
    :alt: Deek Robot Motor Shield
+   :scale: 100%
 
 Boards currently supported
 --------------------------
@@ -51,6 +52,7 @@ Easy to use, widely available and can support 2A load per channel.
 
 .. image:: ../../_static/images/motorboards/arduino_motorshield2.jpg
    :alt: Arduino Motor Shield R3
+   :scale: 100%
 
 
 Deek-Robot Motor Shield
@@ -62,6 +64,7 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 
 .. image:: ../../_static/images/motorboards/deek_robot1_sm.jpg
    :alt: Deek Robot Motor Shield
+   :scale: 100%
 
 
 DIY More L298NH Motor Shield
@@ -73,6 +76,7 @@ Another similar board to the Arduino motor shield. Supports 2A per channel.
 
 .. image:: ../../_static/images/motorboards/diy_more_motor.jpg
    :alt: DIY More Motor Shield
+   :scale: 100%
 
 
 L298 Motor Driver (dual)
@@ -84,7 +88,7 @@ This is an alternative to the Arduino and Deek-Robot shields. It uses the same L
 
 .. image:: ../../_static/images/motorboards/l298_board.jpg
    :alt: L298 Motor Driver
-   :width: 200px
+   :scale: 100%
 
 Pololu MC33926
 ^^^^^^^^^^^^^^
@@ -95,6 +99,7 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 
 .. image:: ../../_static/images/motorboards/pololu.png
    :alt: Pololu MC33926
+   :scale: 100%
 
 BTS7960 IBT_2 Board (single)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,7 +113,7 @@ You will either need 2 of these or one of these and another board to run your pr
 
 .. image:: ../../_static/images/motorboards/ibt_2_bts7960.jpg
    :alt: IBT_2 Board
-   :width: 200px
+   :scale: 100%
 
 Keyes/Fundumoto ("Beeper Board")
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -119,6 +124,7 @@ You have to lift two traces and solder 2 resistors and use 2 jumpers to the curr
 
 .. image:: ../../_static/images/motorboards/keyes_fundumoto.jpg
    :alt: Keyes/Fundumoto Motor Shield
+   :scale: 100%
 
 
 Velleman KA03 (kit) VMA03 (soldered)
@@ -130,5 +136,6 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 
 .. image:: ../../_static/images/motorboards/velleman_motor.jpg
    :alt: Velleman KA03
+   :scale: 100%
 
-Click here for a complete `Shopping List <./shopping-list.html>`_
+Click here for a complete `Parts Shopping List <./shopping-list.html>`_

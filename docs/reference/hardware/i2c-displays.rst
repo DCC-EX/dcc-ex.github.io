@@ -5,6 +5,7 @@ DCC++ EX is designed to accommodate a display. You don't need a display since th
 
 .. image:: ../../_static/images/display/I2C_LCD_Display_wired.jpg
    :alt: Example: 4 line I2C Display
+   :scale: 80%
 
 We currently support:
 
@@ -25,6 +26,7 @@ Here is an example of a 20 x 4 LCD screen. They come in different colors like bl
 
 .. image:: ../../_static/images/display/lcd_20x4_backpack.jpg
    :alt: 20 x 4 LCD
+   :scale: 80%
 
 **Figure 1** - 20 x 4 LCD with backpack
 
@@ -33,6 +35,7 @@ And here is an example of a 16 x 2 Display with its backpack sitting above it. R
 
 .. image:: ../../_static/images/display/lcd_16x2_backpack.jpg
    :alt: 16 x 2 LCD
+   :scale: 80%
 
 **Figure 2** - 16 x 2 LCD with backpack
 
@@ -44,6 +47,7 @@ And here is a picture of the board after soldering or if you purchase a board al
 
 .. image:: ../../_static/images/display/lcd_soldered.jpg
    :alt: Backpack Soldered to LCD
+   :scale: 80%
 
 **Figure 3** - LCD with backpack soldered to the back
 
@@ -108,12 +112,14 @@ OLED displays come in more varieties than LCD displays. The library to run them 
 
 .. image:: ../../_static/images/display/adafruit_96in_oled_sm.jpg
    :alt: Adafruit .96" OLED
+   :scale: 80%
 
 **Figure 4** - Adafruit .96" OLED Display
 
 
 .. image:: ../../_static/images/display/makerfocus_oled_sm.jpg
    :alt: Makerfocus OLED Display
+   :scale: 80%
 
 **Figure 5** - Makerfocus 128x32 .91" OLED Display
 

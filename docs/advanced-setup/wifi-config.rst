@@ -3,7 +3,13 @@ Wifi Configuration
 
 **work in progress**
 
-This page describes the software configuration options for using WiFi to connect your Command Station wirelessly to JMRI or a WiFi throttle like Engine Driver. For information on how to connect your hardware, go to `WiFi Setup <../get-started/wifi-setup.html>`_
+This page describes the software configuration options for using WiFi to connect your Command Station wirelessly to JMRI or a WiFi throttle like Engine Driver. For information on how to connect your hardware, go to `WiFi Setup <../get-started/wifi-setup.html>`
+
+For a video click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
+
+   .. raw:: html
+
+      <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Wireless Connections
 --------------------
@@ -47,8 +53,9 @@ Whenever you connect a USB cable and open the serial monitor, you reset the prog
 
 .. image:: ../_static/images/wifi/ap_mode1.jpg
    :alt: IP Address
+   :scale: 80%
 
-**Figure 1** - Serial Monitor Log
+**Figure 1** - Serial Monitor Log (click to enlarge)
 
 You will see the line that has ``AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\n``, where 2560 is your port number
 

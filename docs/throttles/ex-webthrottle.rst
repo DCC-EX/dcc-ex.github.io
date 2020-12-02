@@ -122,14 +122,19 @@ Try it now
 
 Just click this link and it will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the instructions above for what is required to run exWebThrottle in your browser.
 
-`Try it now <../exwebthrottle.html>`_
+`Try it now <https://DCC-EX.github.io/WebThrottle-EX>`_
+
+Also, if you go into the settings panel, you will find a button that says *Install*. Clicking this button will install it locally to your PC
+and you will find it with the rest of your installed applications (start menu on Windows). It will also work offline!
 
 Download
 --------
 
 Just download the latest zip file from here and extract it to any folder you have run permission on. Then run the index.html file.
 
-`Download <https://github.com/DCC-EX/exWebThrottle/releases/>`_
+`Download <https://github.com/DCC-EX/WebThrottle-EX/releases/>`_
+
+.. note:: We recommend using the version hosted on our servers as this will auto-update whenever we release a new update!
 
 Going Further / Developing
 --------------------------

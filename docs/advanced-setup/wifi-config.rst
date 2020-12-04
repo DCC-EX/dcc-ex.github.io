@@ -127,10 +127,11 @@ You will then see an "Ok" message. The WiFi Settings are forgotten. However, if 
 If you want to run in AP mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Edit the config.h, remove your SSID name, and then change the password line back to default. It MUST look like this:
+Edit the config.h, change your SSID name, and password lines back to default. It MUST look like this:
 
 .. code-block::
 
+    #define WIFI_SSID "Your network name"
    #define WIFI_PASSWORD "Your network passwd"
 
 Then upload the project into the CS
@@ -152,9 +153,9 @@ For reference, it may be helpful to know the sequnce the Command Station uses to
 
 1. Check for a WiFi Device - Scan serial ports 1, 2, and 3 in order to look for Wifi. If not abort network setup and start the Command Station
 2. If we find a WiFi device, next look if ``#define DONT_TOUCH_WIFI_CONF`` is uncommented. If so, abort config attempts here - done
-3. Next, IF no password is configured, check if the ESP is configured in STATION mode already from a previous network connection. If so, try to connect to that network. If we connect stop and start the CS, if not, go to step 4.
+3. Next, IF no SSID is configured, check if the ESP is configured in STATION mode already from a previous network connection. If so, try to connect to that network. If we connect stop and start the CS, if not, go to step 4.
 4. Try to configure in STATION mode from values in the config.h file - done
-5. If none of the above, set up AP with DCCEX_xxxxxx and PASS_xxxxxx
+5. If none of the above, set up as an AP with and ID of DCCEX_xxxxxx and a password set in the config.h file. If unconfigured, the default will be PASS_xxxxxx (xxxxxx will be the last 6 characters of the device MAC address)
 
 Tips and Tricks
 ----------------

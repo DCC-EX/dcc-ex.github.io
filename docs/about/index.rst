@@ -33,6 +33,16 @@ Developers
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Gregor Baues - Île-de-France, France (grbba)
 
+***************
+WebThrottle-EX
+***************
+
+Developers
+
+* Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
+* Mani Kumar - Bangalor, India (Mani / Mani Kumar)
+* Matt H.
+
 *************
 DCC++ Classic
 *************

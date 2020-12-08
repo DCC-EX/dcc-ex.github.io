@@ -34,7 +34,7 @@ original DCC++ program written by Gregg E Bermann.
 .. _Support: support/index.html
 
 .. |Contribute| image:: ./_static/images/puzzle_bl.png
-.. _Contribute: contribute/index.html
+.. _Contribute: contributing/index.html
 
 Mission
 #######

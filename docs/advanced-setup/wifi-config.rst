@@ -44,6 +44,19 @@ Station Mode (STA Mode)
 
 Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being an AP which manages the IP of the smartphone that contains your Throttle, it becomes a station that connects to your existing network. The Throttle then connects to the CS by finding its IP address on the network.
 
+Wifi Config options
+^^^^^^^^^^^^^^^^^^^^
+
+#define ENABLE_WIFI true
+#define DONT_TOUCH_WIFI_CONF
+#define WIFI_SSID "Your network name"
+#define WIFI_PASSWORD "Your network passwd"
+#define WIFI_HOSTNAME "dccex"
+#define WIFI_CONNECT_TIMEOUT 14000
+#define IP_ADDRESS { 192, 168, 1, 200 }
+#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }
+
+
 Default Operation - AP Mode (No Configuration Necessary)
 --------------------------------------------------------
 
@@ -72,7 +85,7 @@ There are two steps to get you running trains with your WiFi throttle, the first
 
 On your mobile device, go into your WiFi settings that same way you would to connect to your home router. Look for another network to connect to. You should see a new network that begins with "DCCEX" like this: ``DCCEX_6e321b``
 
-Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it. The are the last 6 letters of that device's MAC address.
+Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it. They are the last 6 letters of that device's MAC address.
 
 Simply click on that network and connect to it. You will need to enter the password you specified in the config.h file. Ignore the warning that may popup telling you that "Internet may not be available". The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
@@ -132,7 +145,7 @@ Edit the config.h, change your SSID name, and password lines back to default. It
 .. code-block::
 
     #define WIFI_SSID "Your network name"
-   #define WIFI_PASSWORD "Your network passwd"
+    #define WIFI_PASSWORD "Your network passwd"
 
 Then upload the project into the CS
 

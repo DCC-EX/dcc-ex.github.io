@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Microcontroller Boards &mdash; DCC++ EX  documentation</title>
+  <title>Hardware, Software, and Accessory Suppliers &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Motor boards" href="motor-boards.html" />
-    <link rel="prev" title="Reference" href="../index.html" /> 
+    <link rel="next" title="Downloads" href="../../download/index.html" />
+    <link rel="prev" title="Diagnostics &lt;D&gt; Command" href="../software/diagnostic-d-command.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,17 +91,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Microcontroller Boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motor-boards.html">Motor boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/motor-boards.html">Motor boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hardware, Software, and Accessory Suppliers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
@@ -156,13 +156,13 @@
         
           <li><a href="../index.html">Reference</a> &raquo;</li>
         
-      <li>Microcontroller Boards</li>
+      <li>Hardware, Software, and Accessory Suppliers</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/reference/hardware/microcontroller-boards.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/reference/accessories/suppliers.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -175,31 +175,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="microcontroller-boards">
-<h1>Microcontroller Boards<a class="headerlink" href="#microcontroller-boards" title="Permalink to this headline">¶</a></h1>
-<p>CommandStation-EX currently is designed exclusively for Arduino microcontollers. Out of the box, it is compatible with the following boards:</p>
-<ul class="simple">
-<li><p>Arduino Mega <strong>[RECOMMENDED]</strong></p></li>
-<li><p>Arduino Uno</p></li>
-<li><p>Arduino Nano</p></li>
-</ul>
-<div class="section" id="why-do-you-recommend-the-mega">
-<h2>Why do you recommend the Mega?<a class="headerlink" href="#why-do-you-recommend-the-mega" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>When compiled, our code just barely squeezes onto an Arduino Uno. <strong>A mega allows you to add more features</strong> like networking and displays because it has more memory.</p></li>
-<li><p>The Mega has many more GPIOs (General Purpose Input/Outputs) available to you for constructing control panels and controlling turnouts or signals.</p></li>
-<li><p>The mega is only modestly more expensive than an Uno, with clones available for less than $10 USD.</p></li>
-</ul>
-<a class="reference internal image-reference" href="../../_images/mega.jpg"><img alt="Arduino Mega Microcontroller" src="../../_images/mega.jpg" style="width: 302.0px; height: 167.0px;" /></a>
-</div>
-<div class="section" id="what-about-the-nano">
-<h2>What about the Nano?<a class="headerlink" href="#what-about-the-nano" title="Permalink to this headline">¶</a></h2>
-<p>The Arduino nano shares the same processor with the Arduino Uno, so we support it. The nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. Other than that difference, it is in every way as capable as an Arduino Uno.</p>
-</div>
-<div class="section" id="will-you-support-other-microcontrollers-in-the-future">
-<h2>Will you support other microcontrollers in the future?<a class="headerlink" href="#will-you-support-other-microcontrollers-in-the-future" title="Permalink to this headline">¶</a></h2>
-<p>Yes, that is on our roadmap.</p>
-<p>Click here for a complete <a class="reference external" href="./shopping-list.html">Shopping List</a></p>
+  <div class="section" id="hardware-software-and-accessory-suppliers">
+<h1>Hardware, Software, and Accessory Suppliers<a class="headerlink" href="#hardware-software-and-accessory-suppliers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cases-enclosures">
+<h2>Cases / Enclosures<a class="headerlink" href="#cases-enclosures" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../../_images/flag_uk.jpg"><img alt="UK Flag" class="align-left" src="../../_images/flag_uk.jpg" style="width: 60.0px; height: 30.0px;" /></a>
+<p><a class="reference external" href="https://chesterfield-models.co.uk/">Chesterfield Model Making &amp; Miniature Electronics</a></p>
+<p>Chesterfield sells a case to fit the Mega DCC-EX Command Station as well as a tiny decoder adapter board (The Dave Falkenburg optoisolator board to pickup the DCC signal from the tracks) that can connect to a microcontroller and operate as a decoder or DCC packet sniffer with the right sketch <a class="reference external" href="http://www.mynabay.com/dcc_monitor">See the Myna Bay Website</a> .</p>
+<a class="reference internal image-reference" href="../../_images/command_station_case.jpg"><img alt="Chesterfield Command Station Case" src="../../_images/command_station_case.jpg" style="width: 240.0px; height: 180.0px;" /></a>
+<p><a class="reference external" href="https://chesterfield-models.co.uk/product/dcc-3d-printed-case/">Chesterfiled DCC-EX Command Station Case</a></p>
 </div>
 </div>
 
@@ -211,10 +195,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="motor-boards.html" class="btn btn-neutral float-right" title="Motor boards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../download/index.html" class="btn btn-neutral float-right" title="Downloads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral float-left" title="Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../software/diagnostic-d-command.html" class="btn btn-neutral float-left" title="Diagnostics &lt;D&gt; Command" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

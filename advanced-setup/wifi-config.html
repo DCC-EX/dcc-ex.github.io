@@ -184,7 +184,7 @@
 <div class="section" id="ap-mode-vs-station-mode">
 <h2>AP Mode vs. Station Mode<a class="headerlink" href="#ap-mode-vs-station-mode" title="Permalink to this headline">¶</a></h2>
 <p>There are two ways to setup the Wifi chip connected to DCC++: “Access Point Mode” (aka “AP MODE) and “Station Mode”. We often abbreviate the latter to “STA”. You will also see people refer to it as “Client Mode”.</p>
-<p>In AP mode the tiny ESP chip acts as a very basic Wifi base and provides a small IP network for your throttle and maybe your computer with JMRI only. In this mode there is no connection to the Internet for any of the devices only connected to the AP of the ESP chip.</p>
+<p>In AP mode the tiny ESP chip acts as a very basic Wifi base and provides a small IP network for your throttle or for your computer running JMRI and WiThrottle. In this mode there is no connection to the Internet for any of the devices only connected to the AP of the ESP chip.</p>
 <p>In STA (Client) mode the ESP chip uses an existing (home) Wifi network and connects to that along with all the other devices you might have in your home. If you have a stable Wifi network where you place your Command Station this is a good choice because the Wifi Station of your home network is normally better in managing all devices and the frequencies involved in runnung a stable Wifi network that the ESP chip.</p>
 <p>We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with JMRI, click here <strong>missing link</strong></p>
 <div class="section" id="ap-mode">
@@ -194,6 +194,17 @@
 <div class="section" id="station-mode-sta-mode">
 <h3>Station Mode (STA Mode)<a class="headerlink" href="#station-mode-sta-mode" title="Permalink to this headline">¶</a></h3>
 <p>Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being an AP which manages the IP of the smartphone that contains your Throttle, it becomes a station that connects to your existing network. The Throttle then connects to the CS by finding its IP address on the network.</p>
+</div>
+<div class="section" id="wifi-config-options">
+<h3>Wifi Config options<a class="headerlink" href="#wifi-config-options" title="Permalink to this headline">¶</a></h3>
+<p>#define ENABLE_WIFI true
+#define DONT_TOUCH_WIFI_CONF
+#define WIFI_SSID “Your network name”
+#define WIFI_PASSWORD “Your network passwd”
+#define WIFI_HOSTNAME “dccex”
+#define WIFI_CONNECT_TIMEOUT 14000
+#define IP_ADDRESS { 192, 168, 1, 200 }
+#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }</p>
 </div>
 </div>
 <div class="section" id="default-operation-ap-mode-no-configuration-necessary">
@@ -210,9 +221,9 @@
 <h3>Connecting to the AP<a class="headerlink" href="#connecting-to-the-ap" title="Permalink to this headline">¶</a></h3>
 <p>There are two steps to get you running trains with your WiFi throttle, the first is to connect to the AP instead of your home network, the second is to connect your throttle to the AP.</p>
 <p>On your mobile device, go into your WiFi settings that same way you would to connect to your home router. Look for another network to connect to. You should see a new network that begins with “DCCEX” like this: <code class="docutils literal notranslate"><span class="pre">DCCEX_6e321b</span></code></p>
-<p>Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it.</p>
-<p>Simply click on that network and connect to it. Ignore the warning that may popup telling you that “Internet may not be available”. The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.</p>
-<p>Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address, 2560 for the Port number, and then select and acquire your loco by its address.</p>
+<p>Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it. They are the last 6 letters of that device’s MAC address.</p>
+<p>Simply click on that network and connect to it. You will need to enter the password you specified in the config.h file. Ignore the warning that may popup telling you that “Internet may not be available”. The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.</p>
+<p>Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address (the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure), 2560 for the Port number, and then select and acquire your loco by its address.</p>
 </div>
 </div>
 <div class="section" id="connecting-to-your-network-station-mode-edit-config-h">
@@ -248,19 +259,56 @@
 <p>Once you enter a network SSID and password, the CS will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.</p>
 <p>Go into your serial monitor and wait until the CS has gone through the startup sequence. Then in command textbox enter <code class="docutils literal notranslate"><span class="pre">+CWQAP</span></code></p>
 <p>and press “SEND”.</p>
-<p>You will then see an “Ok” message. The WiFi Settings are forgotten. However, if your config.h has WiFi Credentials in it, then as soon as your CS restarts, it will load and save those settings again. So…</p>
+<p>You will then see an “Ok” message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the CS had WiFi Credentials in it, then as soon as your CS restarts, it will load and save those settings again. So…</p>
 <div class="section" id="if-you-want-to-run-in-ap-mode">
 <h3>If you want to run in AP mode<a class="headerlink" href="#if-you-want-to-run-in-ap-mode" title="Permalink to this headline">¶</a></h3>
-<p>Edit the config.h, remove your SSID and password, and then upload the project into the CS</p>
+<p>Edit the config.h, change your SSID name, and password lines back to default. It MUST look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define WIFI_SSID &quot;Your network name&quot;</span>
+<span class="c1">#define WIFI_PASSWORD &quot;Your network passwd&quot;</span>
+</pre></div>
+</div>
+<p>Then upload the project into the CS</p>
 </div>
 <div class="section" id="if-you-want-to-change-your-network-login">
 <h3>If you want to change your network login<a class="headerlink" href="#if-you-want-to-change-your-network-login" title="Permalink to this headline">¶</a></h3>
-<p>Edit the config.h file, change your SSID and password, and then upload the project into the CS</p>
+<p>Edit the config.h file, change your SSID and password to your new credentials, and then upload the project into the CS</p>
 </div>
 </div>
 <div class="section" id="disabling-wifi">
 <h2>Disabling WiFi<a class="headerlink" href="#disabling-wifi" title="Permalink to this headline">¶</a></h2>
 <p>Edit the config.h file. Comment out the line <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">WIFI_ENABLE</span> <span class="pre">true</span></code> by adding two forward slash marks (<code class="docutils literal notranslate"><span class="pre">//</span></code>). Then upload the project back to the CS.</p>
+</div>
+<div class="section" id="network-startup-sequence">
+<h2>Network Startup sequence<a class="headerlink" href="#network-startup-sequence" title="Permalink to this headline">¶</a></h2>
+<p>For reference, it may be helpful to know the sequnce the Command Station uses to try and establish a network connection. The following provides the flow of this sequence.</p>
+<ol class="arabic simple">
+<li><p>Check for a WiFi Device - Scan serial ports 1, 2, and 3 in order to look for Wifi. If not abort network setup and start the Command Station</p></li>
+<li><p>If we find a WiFi device, next look if <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">DONT_TOUCH_WIFI_CONF</span></code> is uncommented. If so, abort config attempts here - done</p></li>
+<li><p>Next, IF no SSID is configured, check if the ESP is configured in STATION mode already from a previous network connection. If so, try to connect to that network. If we connect stop and start the CS, if not, go to step 4.</p></li>
+<li><p>Try to configure in STATION mode from values in the config.h file - done</p></li>
+<li><p>If none of the above, set up as an AP with and ID of DCCEX_xxxxxx and a password set in the config.h file. If unconfigured, the default will be PASS_xxxxxx (xxxxxx will be the last 6 characters of the device MAC address)</p></li>
+</ol>
+</div>
+<div class="section" id="tips-and-tricks">
+<h2>Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h2>
+<p>There are circumstances where you may want to make temporary changes to your network, such as when you take your layout to a show. The following are some handy things you can do. Use a serial monitor connected to the USB port of your CS and enter the commands you need. Remember that if you disconnect the serial monitor and reconnect it (or anything else) to the USB port, it will reset the CS and it will go back to the default configuration. Remember to press “send” after each command.</p>
+<div class="section" id="temporarily-log-into-a-different-network">
+<h3>Temporarily Log Into A Different Network<a class="headerlink" href="#temporarily-log-into-a-different-network" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Forget your network settings by entering <code class="docutils literal notranslate"><span class="pre">&lt;+CWQAP&gt;</span></code></p></li>
+<li><p>Login to the new network by entering</p></li>
+</ol>
+</div>
+<div class="section" id="create-a-static-ip-for-your-cs-in-ap-mode">
+<h3>Create a Static IP for your CS in AP Mode<a class="headerlink" href="#create-a-static-ip-for-your-cs-in-ap-mode" title="Permalink to this headline">¶</a></h3>
+<p>You must have a recent version of the firmware to support _DEF commands. If they don’t work, try entering them without this suffix</p>
+<ol class="arabic simple">
+<li><p>Forget your network settings by entering &gt;+&lt;CWQP&gt;</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">&lt;+CIPAP_DEF=&quot;192.168.5.1&quot;,&quot;192.168.5.1&quot;,&quot;255.255.255.0&quot;&gt;</span></code> to setup the AP with your IP address</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">&lt;+CWDHCP_DEF=1,1&gt;</span></code></p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">&lt;+CWDHCPPS_DEF=&quot;1,10,&quot;192.168.5.100&quot;,&quot;192.168.5.150&quot;&gt;</span></code></p></li>
+</ol>
+</div>
 </div>
 </div>
 

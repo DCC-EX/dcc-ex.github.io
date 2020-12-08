@@ -1,6 +1,11 @@
 Reference
 =========
 
+Videos
+^^^^^^^
+
+* Please visit our Youtube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_
+
 Command Station
 ^^^^^^^^^^^^^^^^
 
@@ -28,7 +33,11 @@ Software
     software/diagnostic-d-ack-command
     software/diagnostic-d-command
 
-Videos
--------------------------
+Accessories
+--------------
 
-* Please visit our Youtube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_
+.. toctree::
+    :maxdepth: 1
+
+    accessories/suppliers
+

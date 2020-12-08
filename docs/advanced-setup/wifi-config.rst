@@ -28,7 +28,7 @@ AP Mode vs. Station Mode
 
 There are two ways to setup the Wifi chip connected to DCC++: "Access Point Mode" (aka "AP MODE) and "Station Mode". We often abbreviate the latter to "STA". You will also see people refer to it as "Client Mode". 
 
-In AP mode the tiny ESP chip acts as a very basic Wifi base and provides a small IP network for your throttle and maybe your computer with JMRI only. In this mode there is no connection to the Internet for any of the devices only connected to the AP of the ESP chip.
+In AP mode the tiny ESP chip acts as a very basic Wifi base and provides a small IP network for your throttle or for your computer running JMRI and WiThrottle. In this mode there is no connection to the Internet for any of the devices only connected to the AP of the ESP chip.
 
 In STA (Client) mode the ESP chip uses an existing (home) Wifi network and connects to that along with all the other devices you might have in your home. If you have a stable Wifi network where you place your Command Station this is a good choice because the Wifi Station of your home network is normally better in managing all devices and the frequencies involved in runnung a stable Wifi network that the ESP chip.
 
@@ -43,6 +43,19 @@ Station Mode (STA Mode)
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being an AP which manages the IP of the smartphone that contains your Throttle, it becomes a station that connects to your existing network. The Throttle then connects to the CS by finding its IP address on the network.
+
+Wifi Config options
+^^^^^^^^^^^^^^^^^^^^
+
+#define ENABLE_WIFI true
+#define DONT_TOUCH_WIFI_CONF
+#define WIFI_SSID "Your network name"
+#define WIFI_PASSWORD "Your network passwd"
+#define WIFI_HOSTNAME "dccex"
+#define WIFI_CONNECT_TIMEOUT 14000
+#define IP_ADDRESS { 192, 168, 1, 200 }
+#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }
+
 
 Default Operation - AP Mode (No Configuration Necessary)
 --------------------------------------------------------
@@ -72,11 +85,11 @@ There are two steps to get you running trains with your WiFi throttle, the first
 
 On your mobile device, go into your WiFi settings that same way you would to connect to your home router. Look for another network to connect to. You should see a new network that begins with "DCCEX" like this: ``DCCEX_6e321b``
 
-Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it.
+Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it. They are the last 6 letters of that device's MAC address.
 
-Simply click on that network and connect to it. Ignore the warning that may popup telling you that "Internet may not be available". The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
+Simply click on that network and connect to it. You will need to enter the password you specified in the config.h file. Ignore the warning that may popup telling you that "Internet may not be available". The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
-Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address, 2560 for the Port number, and then select and acquire your loco by its address.
+Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address (the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure), 2560 for the Port number, and then select and acquire your loco by its address.
 
 Connecting to your Network - Station Mode (edit config.h)
 ---------------------------------------------------------
@@ -122,19 +135,58 @@ Go into your serial monitor and wait until the CS has gone through the startup s
 
 and press "SEND".
 
-You will then see an "Ok" message. The WiFi Settings are forgotten. However, if your config.h has WiFi Credentials in it, then as soon as your CS restarts, it will load and save those settings again. So...
+You will then see an "Ok" message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the CS had WiFi Credentials in it, then as soon as your CS restarts, it will load and save those settings again. So...
 
 If you want to run in AP mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Edit the config.h, remove your SSID and password, and then upload the project into the CS
+Edit the config.h, change your SSID name, and password lines back to default. It MUST look like this:
+
+.. code-block::
+
+    #define WIFI_SSID "Your network name"
+    #define WIFI_PASSWORD "Your network passwd"
+
+Then upload the project into the CS
 
 If you want to change your network login
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Edit the config.h file, change your SSID and password, and then upload the project into the CS
+Edit the config.h file, change your SSID and password to your new credentials, and then upload the project into the CS
 
 Disabling WiFi
 --------------
 
 Edit the config.h file. Comment out the line ``#define WIFI_ENABLE true`` by adding two forward slash marks (``//``). Then upload the project back to the CS.
+
+Network Startup sequence
+-------------------------
+
+For reference, it may be helpful to know the sequnce the Command Station uses to try and establish a network connection. The following provides the flow of this sequence.
+
+1. Check for a WiFi Device - Scan serial ports 1, 2, and 3 in order to look for Wifi. If not abort network setup and start the Command Station
+2. If we find a WiFi device, next look if ``#define DONT_TOUCH_WIFI_CONF`` is uncommented. If so, abort config attempts here - done
+3. Next, IF no SSID is configured, check if the ESP is configured in STATION mode already from a previous network connection. If so, try to connect to that network. If we connect stop and start the CS, if not, go to step 4.
+4. Try to configure in STATION mode from values in the config.h file - done
+5. If none of the above, set up as an AP with and ID of DCCEX_xxxxxx and a password set in the config.h file. If unconfigured, the default will be PASS_xxxxxx (xxxxxx will be the last 6 characters of the device MAC address)
+
+Tips and Tricks
+----------------
+
+There are circumstances where you may want to make temporary changes to your network, such as when you take your layout to a show. The following are some handy things you can do. Use a serial monitor connected to the USB port of your CS and enter the commands you need. Remember that if you disconnect the serial monitor and reconnect it (or anything else) to the USB port, it will reset the CS and it will go back to the default configuration. Remember to press "send" after each command.
+
+Temporarily Log Into A Different Network
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Forget your network settings by entering ``<+CWQAP>``
+2. Login to the new network by entering 
+
+Create a Static IP for your CS in AP Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You must have a recent version of the firmware to support _DEF commands. If they don't work, try entering them without this suffix
+
+1. Forget your network settings by entering >+<CWQP>
+2. Enter ``<+CIPAP_DEF="192.168.5.1","192.168.5.1","255.255.255.0">`` to setup the AP with your IP address
+3. Enter ``<+CWDHCP_DEF=1,1>`` 
+4. Enter ``<+CWDHCPPS_DEF="1,10,"192.168.5.100","192.168.5.150">``

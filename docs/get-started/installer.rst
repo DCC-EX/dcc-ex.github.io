@@ -36,6 +36,9 @@ Linux (incl. Raspberry Pi)
 * Open a terminal window and navigate to that folder
 * Run the following command: ``dotnet BaseStationInstaller``
 
+.. warning::
+   You may need to turn off your antivirus software before you try to install. We need a piece of Arduino software to be able to compile and upload the Command Station software which sometimes gets blocked. If you see errors on the install screen, this is usually the issue.
+
 The Installer Window
 --------------------
 

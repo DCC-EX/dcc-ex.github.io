@@ -47,6 +47,4 @@ Diagnostic Tools
 .. toctree::
     :maxdepth: 1
 
-    tools/diagnostic-tools
-    
-
+   tools/diagnostic-tools

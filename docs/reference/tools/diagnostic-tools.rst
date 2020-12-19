@@ -49,18 +49,13 @@ Analyzer
 
 A logic analyzer is a device that connects to the Command Station signal pins and to a computer via a USB connection and uses software to capture the DCC waveform for a set period of time. The software can also decode the packets and display them along with the waveform. The display looks similar that what would appear on an oscilloscope. Since it captures the waveform, it can let you see details about the signal that may be causing issues like irregular pulses.
 
-.. image:: ../../_static/images/tools/dccpp_ex_acc_packet.jpg
-   :align: left
+.. figure:: ../../_static/images/tools/dccpp_ex_acc_packet.jpg
+   :align: center
    :scale: 100%
    :alt: DCC Signal Analyzer output
+   :figclass: align-center
 
-|
-|
-|
-|
-|
-
-Figure 2: Example Packet Sniffer output
+   Figure 2: Example Packet Sniffer output
 
 DCC Sniffer (packet analyzer)
 ------------------------------
@@ -77,20 +72,32 @@ Build It
 
 Now things get fun. A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts.
 
-.. image:: ../../_static/images/tools/sniffer_block_diag.png
+.. figure:: ../../_static/images/tools/sniffer_block_diag.png
    :align: center
    :scale: 70%
    :alt: Packet Sniffer Block Diagram
+   :figclass: align-center
 
-Figure 3: DCC Packet Sniffer Block Diagram
+   Figure 3: DCC Packet Sniffer Block Diagram
+
+- **Power From Track** This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track.
+
+- **DCC Signal Decoder** This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your microcontroller. This can be as simple as a diode, two resistors and an opto-isolator chip.
+ 
+- **Microcontroller** This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266.
+
+
 
 Logic Analyzer/Decoder
 ----------------------------
 
-.. image:: ../../_static/images/tools/logic_analyzer.jpg
+.. figure:: ../../_static/images/tools/logic_analyzer.jpg
    :align: left
    :scale: 50%
    :alt: Logic Analyzer
+   :figclass: alight-center
+
+   Figure 4: Logic Analyzer
 
 No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. Ebay and AliExpress are good sources:
 

@@ -82,7 +82,7 @@ Another similar board to the Arduino motor shield. Supports 2A per channel.
 
 
 L298N Motor Driver (dual)
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Tinkerer level**
 

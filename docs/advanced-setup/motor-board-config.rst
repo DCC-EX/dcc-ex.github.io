@@ -7,6 +7,13 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 
 .. note:: DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use another GPIO pin on the Arduino and connect directly to these boards
 
+Jump to :ref:`Configure Using the Installer`
+Jump to :ref:`Configure By Editing the config.h File`
+Jump to :ref:`Your Board is in the Supported List`
+Jump to :ref:`Your Board is NOT in the Supported List`
+Jump to :ref:`Current Sense and Sense Factor`
+Jump to :ref:`Just Buy a Current Sense Board Instead`
+
 Configure Using the Installer
 -------------------------------
 
@@ -37,7 +44,7 @@ Find this section in the file:
 
 You will see a list of supported boards with their type and the "STANDARD_MOTOR_SHIELD" defined as the default. Continue below.
 
-Your board is in the supported listed
+Your Board is in the Supported List
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This option is possibly Conductor friendly for those just choosing a supported board that requires no wiring.
@@ -50,7 +57,7 @@ Just change the #define line to type for your board. The following line configur
 
 That's all you need to do. Make your change and then upload the sketch to your Arduino.
 
-Your board is NOT in the supported list
+Your board is NOT in the Supported List
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Tinkerer or Engineer level may be required with this option.
@@ -126,13 +133,13 @@ Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require 
 
 .. warning:: Choose your current sense resistor or circuit carefully, you need to account for all of the factors mentioned above and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).
 
-How do I find volts per amp?
+How Do I Find Volts per Amp?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you need separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V.
 
-Just Use a Current Sense Board instead
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Just Buy a Current Sense Board Instead
+---------------------------------------
 
 Tinkerers and Conductors who don't mind connecting a few jumper wires may like this option.
 

@@ -5,4 +5,4 @@ Advanced Setup
     :maxdepth: 1
     
     wifi-config
-    motor-boards
+    motor-board-config

@@ -1,0 +1,16 @@
+Motor Board Selection
+======================
+
+DCC++ EX supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
+
+.. note:: DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use another GPIO pin on the Arduino and connect directly to these boards
+
+Using the Installer
+--------------------
+
+If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your choosing
+
+Editing the config.h file
+--------------------------
+
+Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of `Currently supported boards <../hardware/motor-boards.html>`_

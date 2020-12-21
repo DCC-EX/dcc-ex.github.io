@@ -7,12 +7,12 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 
 .. note:: DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use another GPIO pin on the Arduino and connect directly to these boards
 
-Jump to :ref:`Configure Using the Installer`
-Jump to :ref:`Configure By Editing the config.h File`
-Jump to :ref:`Your Board is in the Supported List`
-Jump to :ref:`Your Board is NOT in the Supported List`
-Jump to :ref:`Current Sense and Sense Factor`
-Jump to :ref:`Just Buy a Current Sense Board Instead`
+* Jump to :ref:`Configure Using the Installer`
+* Jump to :ref:`Configure By Editing the config.h File`
+* Jump to :ref:`Your Board is in the Supported List`
+* Jump to :ref:`Your Board is NOT in the Supported List`
+* Jump to :ref:`Current Sense and Sense Factor`
+* Jump to :ref:`Just Buy a Current Sense Board Instead`
 
 Configure Using the Installer
 -------------------------------

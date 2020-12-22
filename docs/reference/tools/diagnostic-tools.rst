@@ -94,8 +94,16 @@ Well it isn't quite a turnkey solution, but it's close. You need this shield and
 |
 |
 |
+|
+|
 
 https://www.iascaled.com/store/ARD-DCCSHIELD
+
+It costs about $30 US.
+
+And since it is a shield, you just stick it on top of an Uno or Mega, upload a sketch, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
+
+*** Wiring and more info goes here ***
 
 Build It
 =========
@@ -149,13 +157,13 @@ The above is actually a simple circuit to build. To make it easy, Geoff has prov
 
 .. figure:: ../../_static/images/tools/bunza_dcc_interface.jpg
    :align: center
-   :scale: 40%
+   :scale: 60%
    :alt: Geoff Bunza DCC Interface Board
    :figclass: align-center
 
    Figure XX: Geoff Bunza DCC Interface Board
 
-All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Pro Mini because you can connect them both on another board or mount them in a case. The Pro Mini is powered from the USB connection to your computer running a serial monitor, and it, in turn, powers the DCC Interface Board.
+All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano because you can connect them both on another board or mount them in a case. The Nano is powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.
 
 Please check out Dr. Geoff's excellent blog on this board here:
 
@@ -167,9 +175,11 @@ https://model-railroad-hobbyist.com/node/41187
 
 If you always intend to have your computer or laptop connectd via the USB port to read the decoded DCC packets, then you can power everything from the 5V coming out of your USB port. But if you want something standalone, for example a sniffer with a display or that has wireless capability, then you are either going to have to power it from a 5V power supply (like a car charger) or take your power from the track.
 
-We will show you here how to add a power supply, but see the section below on Geoff Bunza's 17 function decoder because you can use that little board to do just about anything you would ever want to do on your layout. Not only can it be programmed to be a DCC Sniffer, but it can be a fully functional decoder with up to 17 functions. It even has the option to have an H-Bridge chip (motor controller) right on the board to power motors!
+Showing you how to build a power supply here wouldn't make much sense when you see Geoff Bunza's 17 function decoder board. It already has everything on it you need, power, optoisolator and space for an Arduino Pro Mini! You can use that little board to do just about anything you would ever want to do on your layout. Not only can it be programmed to be a DCC Sniffer, but it can be a fully functional decoder with up to 17 functions. It even has the option to have an H-Bridge chip (motor controller) right on the board to power motors!
 
-*** power supply info goes here ***
+If you just need the power supply for your own board, use the schematic to get what you need.
+
+**Geoff Bunza's 17 Function Decoder AND Sniffer**
 
 **Ready made circuit boards**
 

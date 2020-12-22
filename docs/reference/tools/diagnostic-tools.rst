@@ -33,9 +33,17 @@ A "sniffer" is a device (often made with an Arduino) that connects to the track 
 
 .. image:: ../../_static/images/tools/sniffer_out3.png
    :align: left
-   :scale: 25%
+   :scale: 22%
    :alt: Example Sniffer Output 3
 
+|
+|
+|
+|
+|
+|
+|
+|
 |
 |
 |
@@ -72,6 +80,15 @@ Buy it
 
 Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download a free sketch file. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
 
+.. figure:: ../../_static/images/tools/iowa_scale_eng_board.jpg
+   :align: center
+   :scale: 75%
+   :alt: Iowa Scale Engineering DCC Sniffer/Decoder Board
+   :figclass: align-center
+
+   Figure 3: Iowa Scale Engineering DCC Sniffer/Decoder Board
+
+
 https://www.iascaled.com/store/ARD-DCCSHIELD
 
 Build It
@@ -85,7 +102,7 @@ Now things get fun. A DCC sniffer is a very simple device that contains only 2 o
    :alt: Packet Sniffer Block Diagram
    :figclass: align-center
 
-   Figure 3: DCC Packet Sniffer Block Diagram
+   Figure 4: DCC Packet Sniffer Block Diagram
 
 - **Power From Track** This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track.
 
@@ -130,7 +147,18 @@ Logic Analyzer/Decoder
    :alt: Logic Analyzer
    :figclass: alight-center
 
-   Figure 4: Logic Analyzer
+   Figure 5: Logic Analyzer
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
 No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. Ebay and AliExpress are good sources:
 
@@ -145,11 +173,20 @@ Any set of probes that will connect to the pins that are exposed between the Ard
 
 .. figure:: ../../_static/images/tools/logic_probes.jpg
    :align: left
-   :scale: 50%
+   :scale: 20%
    :alt: Logic probes
    :figclass: alight-center
 
-   Figure 5: Logic Probes
+   Figure 6: Logic Probes
+
+|
+|
+|
+|
+|
+|
+|
+
 
 
 Install PulseView
@@ -174,18 +211,18 @@ It will look something line this. There will be just 2 files. The "cach" file wi
 
 .. figure:: ../../_static/images/tools/pv_install_folder.jpg
    :align: left
-   :scale: 50%
+   :scale: 100%
    :alt: Installing the DCC protocol decoder
    :figclass: alight-center
 
-   Figure 5: Installing the DCC protocol decoder
+   Figure 7: Installing the DCC protocol decoder
 
 Download USB Drivers
 =====================
 
 These device need USB drivers from Saleae. Download and install the 1.x drivers from here:
 
-`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/latest-beta-release`_
+`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/latest-beta-release`>_
 
 Connect the Analyzer
 =====================

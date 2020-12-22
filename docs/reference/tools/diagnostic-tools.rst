@@ -33,17 +33,9 @@ A "sniffer" is a device (often made with an Arduino) that connects to the track 
 
 .. image:: ../../_static/images/tools/sniffer_out3.png
    :align: left
-   :scale: 22%
+   :scale: 24%
    :alt: Example Sniffer Output 3
 
-|
-|
-|
-|
-|
-|
-|
-|
 |
 |
 |
@@ -80,14 +72,28 @@ Buy it
 
 Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download a free sketch file. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
 
-.. figure:: ../../_static/images/tools/iowa_scale_eng_board.jpg
-   :align: center
-   :scale: 75%
+.. figure:: ../../_static/images/tools/iowa_scale_eng_dcc_board.jpg
+   :align: left
+   :scale: 60%
    :alt: Iowa Scale Engineering DCC Sniffer/Decoder Board
-   :figclass: align-center
+   :figclass: align-left
 
    Figure 3: Iowa Scale Engineering DCC Sniffer/Decoder Board
 
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
 https://www.iascaled.com/store/ARD-DCCSHIELD
 
@@ -123,15 +129,56 @@ Connect to the track
 
 Let's us connect anywhere, easy wiring with clips. Downside, need a circuit.
 
-Simplest circuit
+In order to connect directly to the track, we need something that can isolate the track voltage, rectify the DCC signal so we just get the positive (or negative) going pulses, and level shift the track voltage to a safe 5 Volts to connect to an Arduino. It turns out a diode, a resitor and an optoisolator (aka optocoupler) are all you need for the job! However, to do it right, we do recommend a few other components.
 
-Optional OP-Amp circuit
+**Simplest circuit**
 
-Recommended circuit
+image and description goes here
 
-Ready made boards
+**Recommended circuit (courtesy of Geoff Bunza)**
+
+.. figure:: ../../_static/images/tools/dcc_fe2_schematic.jpg
+   :align: center
+   :scale: 35%
+   :alt: Geoff Bunza DCC Interface Schematic
+   :figclass: align-center
+
+   Figure XX: Geoff Bunza DCC Interface Schematic
+
+The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like Oshpark) and have the make boards for you. DCC-EX may be selling these, so keep checking back. Here is what the boards look like:
+
+.. figure:: ../../_static/images/tools/bunza_dcc_interface.jpg
+   :align: center
+   :scale: 40%
+   :alt: Geoff Bunza DCC Interface Board
+   :figclass: align-center
+
+   Figure XX: Geoff Bunza DCC Interface Board
+
+All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Pro Mini because you can connect them both on another board or mount them in a case. The Pro Mini is powered from the USB connection to your computer running a serial monitor, and it, in turn, powers the DCC Interface Board.
+
+Please check out Dr. Geoff's excellent blog on this board here:
+
+https://model-railroad-hobbyist.com/node/41187
+
+*** add info on wiring and sketches here ***
+
+**Optional Power Supply Circuit**
+
+If you always intend to have your computer or laptop connectd via the USB port to read the decoded DCC packets, then you can power everything from the 5V coming out of your USB port. But if you want something standalone, for example a sniffer with a display or that has wireless capability, then you are either going to have to power it from a 5V power supply (like a car charger) or take your power from the track.
+
+We will show you here how to add a power supply, but see the section below on Geoff Bunza's 17 function decoder because you can use that little board to do just about anything you would ever want to do on your layout. Not only can it be programmed to be a DCC Sniffer, but it can be a fully functional decoder with up to 17 functions. It even has the option to have an H-Bridge chip (motor controller) right on the board to power motors!
+
+*** power supply info goes here ***
+
+**Ready made circuit boards**
 
 - 17 function decoder
+
+http://www.modelrailroadcontrolsystems.com/improved-geoff-bunzas-low-cost-17-channel-dcc-decoder-bare-board/
+
+Have them fabricated
+
 - DCC Interface board
 
 fritzing diagram
@@ -145,10 +192,12 @@ Logic Analyzer/Decoder
    :align: left
    :scale: 50%
    :alt: Logic Analyzer
-   :figclass: alight-center
+   :figclass: align-left
 
    Figure 5: Logic Analyzer
 
+|
+|
 |
 |
 |
@@ -172,22 +221,12 @@ No need to make this yourself, simply buy it. You will need the following items.
 Any set of probes that will connect to the pins that are exposed between the Arduino and the Motor Shield will do, however we really like these "T" or "swept wing" probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.
 
 .. figure:: ../../_static/images/tools/logic_probes.jpg
-   :align: left
-   :scale: 20%
+   :align: center
+   :scale: 18%
    :alt: Logic probes
-   :figclass: alight-center
+   :figclass: align-center
 
    Figure 6: Logic Probes
-
-|
-|
-|
-|
-|
-|
-|
-
-
 
 Install PulseView
 ====================
@@ -199,21 +238,21 @@ Since the install instructions are particular for your operating system, we will
 Install the Plugin
 ===================
 
-Download the plugin from the link above and unzip it. Then install it in the user protocol decoder folder. This folder is NOT the main Sigrok folder where the factory installed decoders are. Here is that folder in Windows:
+Download the plugin from the link above and unzip it. Then install it in the user protocol decoder folder. This folder is NOT the main Sigrok folder where the factory installed decoders are. Here is that folder in Windows::
 
-C:\Program Files (x86)\sigrok\PulseView\share\libsigrokdecode\decoders
+   C:\Program Files (x86)\sigrok\PulseView\share\libsigrokdecode\decoders
 
-You want to drop the "dcc" folder you unzipped inside this folder:
+You want to drop the "dcc" folder you unzipped inside this folder::
 
-C:\ProgramData\libsigrokdecode\decoders
+   C:\ProgramData\libsigrokdecode\decoders
 
-It will look something line this. There will be just 2 files. The "cach" file will get create the first time you run PulseView and select the DCC decoder:
+It will look something line this. There will be just 2 files. The "cache" file will get created the first time you run PulseView and select the DCC decoder:
 
 .. figure:: ../../_static/images/tools/pv_install_folder.jpg
-   :align: left
+   :align: center
    :scale: 100%
    :alt: Installing the DCC protocol decoder
-   :figclass: alight-center
+   :figclass: align-center
 
    Figure 7: Installing the DCC protocol decoder
 
@@ -222,7 +261,7 @@ Download USB Drivers
 
 These device need USB drivers from Saleae. Download and install the 1.x drivers from here:
 
-`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/latest-beta-release`>_
+`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/latest-beta-release>`_
 
 Connect the Analyzer
 =====================

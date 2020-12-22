@@ -1,5 +1,10 @@
+#####################
 DCC Diagnostic Tools
-=====================
+#####################
+
+***Work in Progress. More detail and pictures soon!***
+
+**Engineers or Serious Tinkerer Level Only**
 
 There are many tools to help you operate your layout and find issues with your trains and accessories. We will list some of the most helpful tools here including whwere to buy them assembled or how to build them yourself.
 
@@ -7,11 +12,12 @@ There are many tools to help you operate your layout and find issues with your t
 * :ref:`DCC Sniffer (packet analyzer)`
 * :ref:`Logic Analyzer/Decoder`
  
+*********************
 Sniffer vs. Analyzer
-----------------------
+*********************
 
 Sniffer
-^^^^^^^^
+========
 
 A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor.
 
@@ -45,7 +51,7 @@ A "sniffer" is a device (often made with an Arduino) that connects to the track 
 Figure 1: Example outputs of a DCC Sniffer. Click on any of the images to view them full size.
 
 Analyzer
-^^^^^^^^^^
+=========
 
 A logic analyzer is a device that connects to the Command Station signal pins and to a computer via a USB connection and uses software to capture the DCC waveform for a set period of time. The software can also decode the packets and display them along with the waveform. The display looks similar that what would appear on an oscilloscope. Since it captures the waveform, it can let you see details about the signal that may be causing issues like irregular pulses.
 
@@ -57,18 +63,19 @@ A logic analyzer is a device that connects to the Command Station signal pins an
 
    Figure 2: Example Packet Sniffer output
 
+******************************
 DCC Sniffer (packet analyzer)
-------------------------------
+******************************
 
 Buy it
-^^^^^^^
+=======
 
 Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download a free sketch file. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
 
 https://www.iascaled.com/store/ARD-DCCSHIELD
 
 Build It
-^^^^^^^^^
+=========
 
 Now things get fun. A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts.
 
@@ -82,14 +89,40 @@ Now things get fun. A DCC sniffer is a very simple device that contains only 2 o
 
 - **Power From Track** This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track.
 
-- **DCC Signal Decoder** This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your microcontroller. This can be as simple as a diode, two resistors and an opto-isolator chip.
+- **DCC Signal Interface** This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your microcontroller. This can be as simple as a diode, two resistors and an opto-isolator chip.
  
-- **Microcontroller** This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266.
+- **Microcontroller Decoder** This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with a DCC Decoder sketch.
+
+DCC Signal Interface
+---------------------
+
+Connect directly to the PWM output pin of the Arduino
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Easy, don't need an interface since we are already at 5V and seeing only positive going pulses, etc. Downside, wiring, getting under the benchwork.
+
+Connect to the track
+^^^^^^^^^^^^^^^^^^^^^
+
+Let's us connect anywhere, easy wiring with clips. Downside, need a circuit.
+
+Simplest circuit
+
+Optional OP-Amp circuit
+
+Recommended circuit
+
+Ready made boards
+
+- 17 function decoder
+- DCC Interface board
+
+fritzing diagram
 
 
-
+***********************
 Logic Analyzer/Decoder
-----------------------------
+***********************
 
 .. figure:: ../../_static/images/tools/logic_analyzer.jpg
    :align: left
@@ -101,10 +134,87 @@ Logic Analyzer/Decoder
 
 No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. Ebay and AliExpress are good sources:
 
-* 8 Channel 24mHz USB Logic Anayzer ($8-10)
-* Logic Analyzer Probe Setup ($7)
-* Sigrok PulseView Sofware (FREE)
-* DCC Decoder Plugin for PulseView (FREE)
+* `8 Channel 24mHz USB Logic Anayzer ($8-20) <https://www.amazon.com/KeeYees-Analyzer-Device-Channel-Arduino/dp/B07K6HXDH1/ref=pd_lpo_193_t_0/130-6340217-7680634?_encoding=UTF8&pd_rd_i=B07K6HXDH1&pd_rd_r=c23ee4b0-ca9d-4b32-90ab-cdb4c48fe5be&pd_rd_w=gRofP&pd_rd_wg=8hefY&pf_rd_p=7b36d496-f366-4631-94d3-61b87b52511b&pf_rd_r=AD9WHN4F5RT3XHSJVX42&psc=1&refRID=AD9WHN4F5RT3XHSJVX42>`_
+* `Logic Analyzer Probe Setup ($7-18) May come with your analyzer <https://www.amazon.com/10PCS-Grabber-Jumper-Analyzer-Colors/dp/B083PRVPCR/ref=sr_1_4?dchild=1&keywords=logic+probe+with+hooks&qid=1608658759&sr=8-4>`_
+* `Sigrok PulseView Sofware (FREE) <https://sigrok.org/wiki/PulseView>`_
+* `DCC Decoder Plugin for PulseView (FREE) <https://github.com/littleyoda/sigrok-DCC-Protocoll/archive/master.zip>`_
+
+.. note:: Search for the best source. As usual, you can often find the hardware items from online stores or Amazon, but also find them cheaper on eBay or AliExpress  or BangGood direct from China.
+
+Any set of probes that will connect to the pins that are exposed between the Arduino and the Motor Shield will do, however we really like these "T" or "swept wing" probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.
+
+.. figure:: ../../_static/images/tools/logic_probes.jpg
+   :align: left
+   :scale: 50%
+   :alt: Logic probes
+   :figclass: alight-center
+
+   Figure 5: Logic Probes
+
+
+Install PulseView
+====================
+
+Since the install instructions are particular for your operating system, we will just refer you to the SigRok page where you can follow their detailed instructions:
+
+`SigRok PulseView Installation Instructions <https://sigrok.org/doc/pulseview/0.4.1/manual.html#installation>`_
+
+Install the Plugin
+===================
+
+Download the plugin from the link above and unzip it. Then install it in the user protocol decoder folder. This folder is NOT the main Sigrok folder where the factory installed decoders are. Here is that folder in Windows:
+
+C:\Program Files (x86)\sigrok\PulseView\share\libsigrokdecode\decoders
+
+You want to drop the "dcc" folder you unzipped inside this folder:
+
+C:\ProgramData\libsigrokdecode\decoders
+
+It will look something line this. There will be just 2 files. The "cach" file will get create the first time you run PulseView and select the DCC decoder:
+
+.. figure:: ../../_static/images/tools/pv_install_folder.jpg
+   :align: left
+   :scale: 50%
+   :alt: Installing the DCC protocol decoder
+   :figclass: alight-center
+
+   Figure 5: Installing the DCC protocol decoder
+
+Download USB Drivers
+=====================
+
+These device need USB drivers from Saleae. Download and install the 1.x drivers from here:
+
+`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/latest-beta-release`_
+
+Connect the Analyzer
+=====================
+
+* Connect a jumper wire into a probe if you haven't already and then connect that into pin 0 or 1 on the logic analyzer
+* Connect a jumper wire into a probe and connect the other end of the jumper into the GND pin on the analyzer
+* Connect the GND probe to GND on the Arduino
+* Connect pin 0 or pin 1 probe to the PWM output you want to measure on the Arduino/MotorShield connection. For the MAIN track, this would usually be pin 13 for a STANDARD_MOTOR_SHIELD. Pin 12 would be the PROG track.
+* Connect the Analyzer to the USB port of your computer
+
+Capture the samples in PulseView
+=================================
+
+* Open the PulseView software
+* Click on the "select device" dropdown and select the Saleae Analyzer
+* Click on the red probe icon to "configure channels". Check channel 1 (you could add two more. See below)
+* Click on the new channel in the left column and give it a name and a height (Main and 26 or more)
+* If you want to have a channel for PROG and one for a trigger if you want to use a trigger output in DCC-EX to begin the capture, you can add those too.
+* Select the waveform icon to add a protocol decoder. Choose "DCC"
+* Click on the new channel and change the name to DCC, then link it in the "data line" dropdown to MAIN (or whatever you named your first channel)
+* For "01 or 10", select 10 to display both the bits and the decoded packets. 01 will show just the bits
+* In the main PulseView window, select "100kHz" for the sampling rate
+* Next select your data sample size, which will determin how many seconds of data you save. If you select 100kHz sample rate and 100k samples, that is only 1 second. 1 M (as in Mega) is 1 Million sample, so that is 10 seconds.
+* Get ready to send whatever commands you want to monitor, then hit the "run" button in the upper left corner and run your tests for however many seconds you are capturing.
+* Analyze the data. You may want to click the "zoom/+" button several times to be able to see the waveform pulses and to have the decoder.
+
+You can save your captures and display them again at any time. More details coming soon.
+
+
 
 
 

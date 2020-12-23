@@ -9,6 +9,8 @@ CommandStation-EX is compatible with a wide variety of motor boards, also known 
    :alt: Deek Robot Motor Shield
    :scale: 100%
 
+.. note:: Where appropriate, we have used the terms "single" and "dual" to indicate on the non-shield type boards, which ones have just a single H-Bridge for one track and which ones have two. A single H-Bridge board will power your main track, but you will then need another board of some kind to connect to your programming track
+
 Boards currently supported
 --------------------------
 
@@ -22,9 +24,9 @@ Boards currently supported
 
 *  **Intermediate boards (Tinkerer Level)** - require wiring
 
-   * :ref:`L298 Motor Driver (dual)` - 2A
+   * :ref:`L298N Motor Driver (dual)` - 2A
 
-*  **Hard to Use Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing.
+*  **Hard to Use Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
   
    * :ref:`BTS7960 IBT_2 Board (single)` - 43A - **may be too powerful**
    * :ref:`Keyes/Fundumoto ("Beeper Board")` - 2A
@@ -79,8 +81,8 @@ Another similar board to the Arduino motor shield. Supports 2A per channel.
    :scale: 100%
 
 
-L298 Motor Driver (dual)
-^^^^^^^^^^^^^^^^^^^^^^^^
+L298N Motor Driver (dual)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Tinkerer level**
 
@@ -139,3 +141,5 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
    :scale: 100%
 
 Click here for a complete `Parts Shopping List <./shopping-list.html>`_
+
+Click here for  `Motor Board Install Instructions <../../advanced-setup/motor-board-config>`_

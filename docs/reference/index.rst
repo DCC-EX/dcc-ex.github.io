@@ -41,3 +41,10 @@ Accessories
 
     accessories/suppliers
 
+Diagnostic Tools
+------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    tools/diagnostic-tools

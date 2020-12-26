@@ -91,14 +91,14 @@ html_theme_options = {
 #    'css/throttle.css'
 #]
 
-#html_js_files = [
-#    'js/platform.js',
-#    'js/extra.js',
-#    'js/commandController.js',
-#    'js/exwebthrottle.js',
-#    'js/fnMaster.js',
-#    'js/jquery-3.2.1.min.js',
-#    'js/jquery-ui.min.js',
-#    'js/roundslider.min.js',
-#    'js/storageController.js'
-#]
+html_js_files = [
+   #'js/commandController.js',
+   #'js/exwebthrottle.js',
+   #'js/fnMaster.js',
+   #'js/jquery-3.2.1.min.js',
+   #'js/jquery-ui.min.js',
+   #'js/roundslider.min.js',
+   #'js/storageController.js'
+     'js/platform.js',
+   'js/extra.js'
+]

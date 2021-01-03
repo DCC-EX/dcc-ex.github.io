@@ -16,15 +16,16 @@ Boards currently supported
 
 *  **Easy to use boards**
 
-   * :ref:`Arduino Motor Shield` - 2A **[RECOMMENDED]**
-   * :ref:`Deek-Robot Motor Shield` - 2A
+   * :ref:`Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
+   * :ref:`Deek-Robot Motor Shield` - 2A rates, 1.5 possible
    * :ref:`DIY More L298NH Motor Shield` - 2A
-   * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most programming
+   * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
 
 *  **Intermediate boards (Tinkerer Level)** - require wiring
 
    * :ref:`L298N Motor Driver (dual)` - 2A
+   * :ref:`Makerfabs H-Bridge Motor Shield` - 8A
 
 *  **Hard to Use Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
   
@@ -44,6 +45,8 @@ Other boards, while not fully supported and tested, can be used. Look for the fo
 * It must have working and accurate current sensing (many do not)
 * It must be able to switch at least 10000 times per second (some do not)
 * Look for an Arduino shield form factor to eliminate wiring (not required but preferred)
+
+.. Note:: Current capabilities of these boards, especially the boards based on the L298 with no heat sink fins like the Arduino Motor Shield can really not deliver 2 Amps. A realistic number would be 1.5 Amps IF you added a heat sink and a cooling fan. If you need 2 Amps or more, you will need to go with a higher current board.
 
 Arduino Motor Shield
 ^^^^^^^^^^^^^^^^^^^^
@@ -91,6 +94,23 @@ This is an alternative to the Arduino and Deek-Robot shields. It uses the same L
 .. image:: ../../_static/images/motorboards/l298_board.jpg
    :alt: L298 Motor Driver
    :scale: 100%
+
+Makerfabs H-Bridge Motor Shield
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+THIS BOARD HAS NO CURRENT SENSE! This means you need to add it via an inexpensive external current sense board like the MAX471. See the section below about *** current sensing *** . The higher current capability and efficient power MOSFETs, make this board a good choice if you are running more than 3-5 locos.
+
+Select MAKERFABS_MOTOR_SHIELD in your config.h file.
+
+Pinout
+
+PWM1 - D9 (normally pin 3)
+PWM2 - D10 (normally pin 11)
+CNTRL1A (DIR1A) - D4 (normally 12)
+CNTRL1B (DIR1B) - D5
+CNTRL2A (DIR2A) - D7 (normally 13)
+CNTRL2B (DIR2B) - D8
+ENABLE/SHUTDOWN - D6
 
 Pololu MC33926
 ^^^^^^^^^^^^^^

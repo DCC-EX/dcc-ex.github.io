@@ -186,7 +186,7 @@ You will then see an "Ok" message. The WiFi Settings are forgotten. However, if 
 If you want to run in AP mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Edit the config.h, change your SSID name, and password lines back to default. It MUST look like this:
+Edit the config.h, change your SSID name, and password lines back to default. It MUST look like the following. If it is anything else it will try to login with whatever you type there as credentials!:
 
 .. code-block::
 

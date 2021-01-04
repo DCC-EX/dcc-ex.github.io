@@ -134,26 +134,24 @@ Engine Decoder (CAB) Operation Commands
 
 **The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``\.  
 
-**The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``.  
-
 Breakdown for this example ``<t 1 03 20 1>`` is:
-``<`` = Start delimiter of a DCC++ EX command. (A space after ``<`` is not required but acceptable)
-``t`` = (lower case t) This command is for a Decoder installed in a engine or simply a "cab".
-``1`` = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
-``03`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
-``20`` = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
-``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
-``>`` = I am the end of this command  
+* ``<`` = Start delimiter of a DCC++ EX command. (A space after ``<`` is not required but acceptable)
+* ``t`` = (lower case t) This command is for a Decoder installed in a engine or simply a "cab".
+* ``1`` = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
+* ``03`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
+* ``20`` = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
+* ``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
+* ``>`` = I am the end of this command  
 
 .. code-block::
 
-RETURNS: ``<T 1 20 1>`` if the command was successful, meaning :
-``<`` = Begin DCC++ EX command
-``T`` = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
-``1`` = register 1 was changed
-``20`` = set to speed 20
-``1`` = forward direction
-``<`` = End DCC++ EX command
+   RETURNS: ``<T 1 20 1>`` if the command was successful, meaning :
+   ``<`` = Begin DCC++ EX command
+   ``T`` = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
+   ``1`` = register 1 was changed
+   ``20`` = set to speed 20
+   ``1`` = forward direction
+   ``<`` = End DCC++ EX command
 
 CAB FUNCTIONS
 ~~~~~~~~~~~~~

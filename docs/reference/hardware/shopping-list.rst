@@ -9,7 +9,7 @@ Shopping List
 
 `12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/ref=redir_mobile_desktop?ie=UTF8&aaxitk=0jN3RieNiW-Jxn0JuJS6dQ&hsa_cr_id=2529139070101&ref_=sbx_be_s_sparkle_mcd_asin_0>`_ (connects to the motor shield)
 
-`9V 1Amp Power Supply for the Arduino <https://www.amazon.com/Arduino-Power-Supply-Adapter-110V/dp/B018OLREG4/ref=asc_df_B018OLREG4/?tag=hyprod-20&linkCode=df0&hvadid=198063088238&hvpos=&hvnetw=g&hvrand=14543638497706269076&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-318768096639&psc=1>`_ There is a way to use your computer connection, a USB charger, or a separate 5V power supply also, please see `Power Supplies <../hardware/power-supplies.md>`_ for options
+`9V 1Amp Power Supply for the Arduino <https://www.amazon.com/Arduino-Power-Supply-Adapter-110V/dp/B018OLREG4/ref=asc_df_B018OLREG4/?tag=hyprod-20&linkCode=df0&hvadid=198063088238&hvpos=&hvnetw=g&hvrand=14543638497706269076&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-318768096639&psc=1>`_ There is a way to use your computer connection, a USB charger, or a separate 5V power supply also, please see `Power Supplies <power-supplies.html>`_ for options
 
 `Raspberry Pi 4B <https://www.google.com/search?q=raspberry+pi+4&rlz=1C1CHVZ_enUS586US586&sxsrf=ALeKk00RT_osXNqIbJ_Xut4J5jqmo4mWjw:1592847200887&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjNidyc-pXqAhXPct8KHdPXA9kQ_AUoAXoECAwQAw&biw=1230&bih=617#spd=3143731532782929925>`_
 

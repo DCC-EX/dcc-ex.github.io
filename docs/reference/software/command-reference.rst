@@ -27,71 +27,69 @@ SINGLE LETTER COMMANDS
 
        RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
 
-* 
-  ``<0>`` Number Zero: Turn Power **OFF** to tracks (Both Main & Programming)
+* ``<0>`` Number Zero: Turn Power **OFF** to tracks (Both Main & Programming)
   
-  .. code-block::none
+  .. code-block:: none
 
-      RETURNS: **``<p0>``** Power to tracks OFF. (See extended power command below)
+      RETURNS: <p0> : Power to tracks OFF. (See extended power command below)
+
+* ``<1>`` Number One: Turn Power **ON** to tracks (Both Main & Programming). 
+
+  .. code-block:: none
+
+      RETURNS: <p1> : Power to tracks ON. (See extended power command below)
 
 * 
-  ``<1>`` Number One: Turn Power **ON** to tracks (Both Main & Programming). 
+  ``<T>`` Upper Case T : Lists all defined turnouts. 
 
-  .. code-block::
+  .. code-block:: none
 
-      RETURNS: **``<p1>``**: Power to tracks ON. (See extended power command below)
-
-* 
-  ``<T>`` Upper Case T: Lists all defined turnouts. 
-
-  .. code-block::
-
-      RETURNS: **``<H ID ADDRESS SUBADDRESS THROW>``** for each defined turnout or **``<X>``** if no turnouts defined.<br/>
-      **ID** - ID assigned to the turnout<br/>
-      **ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated<br/>
+      RETURNS: <H ID ADDRESS SUBADDRESS THROW> for each defined turnout or <X> if no turnouts defined.
+      **ID** - ID assigned to the turnout
+      **ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated
       **THROW** - False or a "0" is unthrown. True or "1" is thrown.
 
 * 
-  ``<S>`` Upper Case S: Lists all defined sensors. 
+  ``<S>`` Upper Case S : Lists all defined sensors. 
 
-  .. code-block::
+  .. code-block:: none
 
-      RETURNS: **``<Q ID PIN PULLUP>``** for each defined sensor or **``<X>``** if no sensors defined. 
-
-* 
-  ``<Z>`` Upper Case Z: Lists all defined output pins
-
-  .. code-block::
-
-      RETURNS: **``<Y ID PIN IFLAG STATE>``** for each defined output pin or **``<X>``** if no output pins defined
+      RETURNS: <Q ID PIN PULLUP> for each defined sensor or <X> if no sensors defined. 
 
 * 
-  ``<Q>`` Upper Case Q: Lists Status of all sensors.
+  ``<Z>`` Upper Case Z : Lists all defined output pins
 
-  .. code-block::
+  .. code-block:: none
 
-      RETURNS: **``<Q ID>``** (active) or **``<q ID>``** (not active)
+      RETURNS: <Y ID PIN IFLAG STATE> for each defined output pin or <X> if no output pins defined
 
 * 
-  ``<E>`` Upper case E: Command to **Store** definitions to EEPROM
+  ``<Q>`` Upper Case Q : Lists Status of all sensors.
 
-  .. code-block::
+  .. code-block:: none
 
-      RETURNS: **``<e nTurnouts nSensors>``**
+      RETURNS: <Q ID> (active) or <q ID> (not active)
+
+* 
+  ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
+
+  .. code-block:: none
+
+      RETURNS: <e nTurnouts nSensors>
 
 * 
   ``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
 
-  .. code-block::
+  .. code-block:: none
 
-      RETURNS: **``<c CURRENT>``**, where CURRENT is the Raw value of the current sense pin
+      RETURNS: <c CURRENT>, where CURRENT is the Raw value of the current sense pin
 
 * 
   ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
 
-  .. code-block::
+  .. code-block:: none
 
-      RETURNS: **``<0>``** EEPROM Empty
+      RETURNS: <0> EEPROM Empty
 
 
     **(NOTE:There is NO Un-Delete)**
@@ -105,7 +103,7 @@ SINGLE LETTER COMMANDS
 Track Power Commands
 ^^^^^^^^^^^^^^^^^^^^
 
-``<0|1>``\ - Turns power to both tracks on or off
+``<0|1>`` - Turns power to both tracks on or off
 
 Examples:
 
@@ -132,9 +130,10 @@ Engine Decoder (CAB) Operation Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-**The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``\.  
+**The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``  
 
 Breakdown for this example ``<t 1 03 20 1>`` is:
+
 * ``<`` = Start delimiter of a DCC++ EX command. (A space after ``<`` is not required but acceptable)
 * ``t`` = (lower case t) This command is for a Decoder installed in a engine or simply a "cab".
 * ``1`` = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
@@ -143,15 +142,15 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 * ``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
 * ``>`` = I am the end of this command  
 
-.. code-block::
+.. code-block:: none
 
-   RETURNS: ``<T 1 20 1>`` if the command was successful, meaning :
-   ``<`` = Begin DCC++ EX command
-   ``T`` = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
-   ``1`` = register 1 was changed
-   ``20`` = set to speed 20
-   ``1`` = forward direction
-   ``<`` = End DCC++ EX command
+   RETURNS: "<T 1 20 1>" if the command was successful, meaning :
+   "<" = Begin DCC++ EX command
+   "T" = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
+   "1" = register 1 was changed
+   "20" = set to speed 20
+   "1" = forward direction
+   "<" = End DCC++ EX command
 
 CAB FUNCTIONS
 ~~~~~~~~~~~~~
@@ -181,9 +180,10 @@ To set functions **F0-F28** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
 * ``>`` = End DCC++ EX command
 
 Examples:
-  ``<F 3 0 1>`` Turns the headlight ON for CAB (loco address) 3
-  ``<F 126 0 0>`` Turns the headlight OFF for CAB 126
-  ``<F 1330 1 1>`` Turns the horn ON for CAB 1330
+
+*  ``<F 3 0 1>`` Turns the headlight ON for CAB (loco address) 3
+*  ``<F 126 0 0>`` Turns the headlight OFF for CAB 126
+*  ``<F 1330 1 1>`` Turns the horn ON for CAB 1330
 
 **The Legacy CAB Functions format** is ``<f CAB BYTE1 [BYTE2]>``
 
@@ -206,25 +206,25 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
 
 * ``BYTE2`` :  omitted
 * ``>`` = End DCC++ EX command
-  ..
 
-     To make BYTE1 add the values of what you want ON together,
-     the ones that you want OFF do not get added to the base value of 128.
-     F0 (Light)=16, F1 (Bell)=1, F2 (Horn)=2, F3=4, F4=8
-     All off = 128
-     Light on 128 + 16 = 144
-     Light and bell on 128 + 16 + 1 = 145
-     Light and horn on 128 + 16 + 2 = 146
-     Just horn 128 + 2 = 130
-     If light is on (144), Then you turn on bell with light (145), Bell back off but light on (144)  
+To make BYTE1 add the values of what you want ON together, the ones that you want OFF do not get added to the base value of 128.
+
+* F0 (Light)=16, F1 (Bell)=1, F2 (Horn)=2, F3=4, F4=8
+* All off = 128
+* Light on 128 + 16 = 144
+* Light and bell on 128 + 16 + 1 = 145
+* Light and horn on 128 + 16 + 2 = 146
+* Just horn 128 + 2 = 130
+* If light is on (144), Then you turn on bell with light (145), Bell back off but light on (144)  
 
 
 Breakdown for this example ``<f 3265 144>``
-``<`` = Begin DCC++ EX command
-``f`` = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell
-``3265`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder
-``144`` = Turn on headlight
-``>`` = End DCC++ EX command  
+
+* ``<`` = Begin DCC++ EX command
+* ``f`` = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell
+* ``3265`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder
+* ``144`` = Turn on headlight
+* ``>`` = End DCC++ EX command  
 
 To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -311,7 +311,7 @@ RETURNS: NONE
 
 
 * CAB Functions do not have a Return
-* CAB **Functions** do not get stored in the DCC++ EX CommandStation
+* CAB Functions do not get stored in the DCC++ EX CommandStation
 * Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on. 
 
 STATIONARY ACCESSORY DECODERS & TURNOUTS
@@ -319,13 +319,12 @@ STATIONARY ACCESSORY DECODERS & TURNOUTS
 
 DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
 
-All decoders that are not in a engine are accessory decoders including turnouts.
+All decoders that are not in an engine are accessory decoders including turnouts.
 
 Besides being defined all turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:
 
-You Controlling a Accessory Decoder\ ** with   < a ADDRESS SUBADDRESS ACTIVATE >
+Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 * ``<`` = Begin DCC++ EX command
 * ``a`` (lower case a) this command is for a Acessory Decoder
@@ -336,7 +335,7 @@ You Controlling a Accessory Decoder\ ** with   < a ADDRESS SUBADDRESS ACTIVATE >
   ``">"`` = End DCC++ EX command
 
 
-  * However, this general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
+.. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
 Defining (Setting up) a Turnout
 """""""""""""""""""""""""""""""
@@ -346,7 +345,7 @@ To have the DCC++ EX CommandStation store and retain the direction of DCC-connec
 
 * Command to define a Turnout: ``<T ID ADDRESS SUBADDRESS>`` :
 
-  * Creates a new turnout ID, with specified ADDRESS and SUBADDRESS if turnout ID already exists, it is updated (over written) with the new specified ADDRESS and SUBADDRESS
+  * Creates a new turnout ID, with specified ADDRESS and SUBADDRESS if turnout ID already exists, it is updated (overwritten) with the new specified ADDRESS and SUBADDRESS
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
 
 * Command to Delete a turnout ``<T ID>`` :
@@ -361,22 +360,18 @@ To have the DCC++ EX CommandStation store and retain the direction of DCC-connec
 
 * ``ID`` : The numeric ID (0-32767) of the turnout to control.  
 
-  * (You pick the ID & They ares shared between Turnouts, Sensors and Outputs)
+  * (NOTE: You pick the ID. IDs are shared between Turnouts, Sensors and Outputs)
 
 * ``ADDRESS`` :  the primary address of the decoder controlling this turnout (0-511)
 * ``SUBADDRESS`` : the subaddress of the decoder controlling this turnout (0-3)
 
 Once all turnouts have been properly defined, Use the ``<E>`` command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the turnout definitions, you must invoke the ``<E>`` command if you want those new definitions updated in the EEPROM.
-You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the EEPROM by invoking the ``<e>`` (lower case e) command.
-**(There is no Un-Delete)**  
-
-..
+You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in the EEPROM by invoking the ``<e>`` (lower case e) command. **WARNING: (There is no Un-Delete)**  
 
    Example: You have a turnout on your main line going to warehouse industry. The turnout is controlled by a accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10.
-   You would send the following command to the DCC++ EX CommandStation
+   You would send the following command to the DCC++ EX CommandStation:
    ``<T 10 123 3>``  
-
 
    * This Command means:  
    * ``<`` : Begin DCC++ EX command  
@@ -385,14 +380,16 @@ You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the
    * ``123`` : The accessory decoders address  
    * ``3`` : The turnout is wired to output 3  
    * ``>`` : End DCC++ EX command
-     RETURNS: ``<O>``  Meaning Command Successful
-     Next you would send the following command to the DCC++ EX CommandStation
-     ``<E>``  
+   * RETURNS: ``<O>``  Meaning Command Successful
+
+ |    Next you would send the following command to the DCC++ EX CommandStation:
+     ``<E>``
+
    * This Command means:  
    * ``<`` : Begin DCC++ EX command  
    * ``E`` : (Upper case E) Store (save) this definition to EEPROM  
    * ``>`` : End DCC++ EX command
-     RETURNS: ``<O>``  Meaning Command Successful  
+   * RETURNS: ``<O>``  Meaning Command Successful  
 
 
 Controlling a Defined Turnout

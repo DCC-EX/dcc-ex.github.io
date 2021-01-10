@@ -21,15 +21,14 @@ Boards currently supported
    * :ref:`DIY More L298NH Motor Shield` - 2A
    * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
-
 *  **Intermediate boards (Tinkerer Level)** - require wiring
 
    * :ref:`L298N Motor Driver (dual)` - 2A
    * :ref:`Makerfabs H-Bridge Motor Shield` - 8A
+   * :ref:`BTS7960 IBT_2 Board (single)` - 43A
 
 *  **Hard to Use Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
   
-   * :ref:`BTS7960 IBT_2 Board (single)` - 43A - **may be too powerful**
    * :ref:`Keyes/Fundumoto ("Beeper Board")` - 2A
    * :ref:`Velleman KA03 (kit) VMA03 (soldered)` - 2A
 
@@ -98,6 +97,8 @@ This is an alternative to the Arduino and Deek-Robot shields. It uses the same L
 Makerfabs H-Bridge Motor Shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+**Engineer Level**
+
 THIS BOARD HAS NO CURRENT SENSE! This means you need to add it via an inexpensive external current sense board like the MAX471. See the section below about *** current sensing *** . The higher current capability and efficient power MOSFETs, make this board a good choice if you are running more than 3-5 locos.
 
 Select MAKERFABS_MOTOR_SHIELD in your config.h file.
@@ -126,23 +127,25 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 BTS7960 IBT_2 Board (single)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning:: This board can supply a LOT of current. The maximum reccommended current is 5A for N scale, 10A for HO and above. This board can supply a whopping 43A, enough to cause a LOT of damage. To use this board, make sure you have a fuse or circuit breaker connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. 
+**Tinkerer to Engineer Level**
 
-**Engineer level**
+.. warning:: This board can supply a LOT of current. The maximum reccommended current is 5A for N and HO scale. This board can supply a whopping 43A, enough to cause a LOT of damage. To use this board, make sure you have a fuse or circuit breaker connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. 
 
-You will either need 2 of these or one of these and another board to run your programming track. These boards can provide high current. Indeed, we have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards aren't enough for your track, this is one of the best options.
+You will either need 2 of these or one of these and another board to run your programming track. Most people use the Arduino Motor shield for the program track and add this board for MAIN. These boards can provide high current. Indeed, we have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards aren't enough for your track, this is one of the best options. IBT_2 is the manufacturer's name for this board, BTS7960 is the model number of the H-Bridge chip uses as the motor controller. The H-Bridge generates a clean wave form, has very low signal propagation delay and no significant voltage voltage drop.
 
 
 .. image:: ../../_static/images/motorboards/ibt_2_bts7960.jpg
    :alt: IBT_2 Board
    :scale: 100%
 
+`IBT_2 Intstallation Instructions <../../advanced-setup/IBT_2-motor-board-setup.html>`_
+
 Keyes/Fundumoto ("Beeper Board")
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Engineer Level**
 
-You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board.
+You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board. There are several versions of these boards and one run has the wrong, tiny, SMD transistors soldered to the board. Make sure 
 
 .. image:: ../../_static/images/motorboards/keyes_fundumoto.jpg
    :alt: Keyes/Fundumoto Motor Shield

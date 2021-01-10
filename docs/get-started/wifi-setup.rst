@@ -32,8 +32,10 @@ Most boards based on the ESP-8266 should work with DCC++ EX. However, with all t
 * `Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
-What you will need
-------------------
+Fore more boards, and more boards you may be able to use, see the `Wifi Boards Section <../reference/hardware/wifi-boards.html>`_
+
+What you will need (for WiFi)
+------------------------------
 
 * A Command Station (CS) made from a **Mega** and an Arduino Motor Shield
 * One of the above WiFi boards

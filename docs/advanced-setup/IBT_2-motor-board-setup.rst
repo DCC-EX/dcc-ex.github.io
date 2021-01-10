@@ -1,8 +1,9 @@
+#########################
 IB_2 BTS7960 Motor Board
-======================================
+#########################
 
 What You Will Need (for IBT_2)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*******************************
 An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
 An Arduino Motor Shield
 An IBT_2 Motor Board
@@ -15,14 +16,14 @@ We can assume that many of you may have started off with the Arduino Mega with A
 .. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.
 
 Upgrading and Using the Arduino Motor Shield
----------------------------------------------
+=============================================
 
 For this installation we are going to assume you already have a working CS or at least have a the parts you need as listed above.
 
-If you need instructions on how to install the Arduino Motor Shield, see ` Arduino Motor Shield Assembly <../assembly.html>`_
+If you need instructions on how to install the Arduino Motor Shield, see `Arduino Motor Shield Assembly <../get-started/assembly.html>`_
 
 What We Are Going To Do
-^^^^^^^^^^^^^^^^^^^^^^^^
+==========================
 
 * Use just 1 output of your existing Arduino Motor Shield for your program track with no hardware changes
 * Add an IBT_2 (BTS7960) Motor Board to replace the "A" output to power your MAIN track
@@ -31,7 +32,7 @@ What We Are Going To Do
 * Change your motor board type in your config.h file
 
 Steps 
-^^^^^^^
+======
 
 Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IBT_2
 
@@ -57,18 +58,20 @@ It shoud look like this:
 
 Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:
 
-``// DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:
-//
-//  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with 18V 2A per channel
-//  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)
-//  FUNDUMOTO_SHIELD      : Fundumoto Shield, no current sensing (not recommended, no short protection)
-//  IBT_2_WITH_ARDUINO    : IBT_2 Motor Board on MAIN and Arduino Motor Shield on PROG
-//  FIREBOX_MK1           : The Firebox MK1                    
-//  FIREBOX_MK1S          : The Firebox MK1S   
-//   |
-//   +-----------------------v
-//
-#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD``
+.. code-block:: C++
+
+   // DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:
+   //
+   //  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with 18V 2A per channel
+   //  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)
+   //  FUNDUMOTO_SHIELD      : Fundumoto Shield, no current sensing (not recommended, no short protection)
+   //  IBT_2_WITH_ARDUINO    : IBT_2 Motor Board on MAIN and Arduino Motor Shield on PROG
+   //  FIREBOX_MK1           : The Firebox MK1                    
+   //  FIREBOX_MK1S          : The Firebox MK1S   
+   //   |
+   //   +-----------------------
+   //
+   #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 
 Change the last line to look like this. To be sure of your spelling, you can copy and past IBT_2_WITH_ARDUINO and replace STANDARD_MOTOR_SHIELD
 
@@ -77,7 +80,9 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 Upload the sketch to your arduino. If you need help on how to upload a sketch, see 
 
 
-**tech notes**
+Tech Notes
+***********
+
 add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how they can chage the pins if there is a problem by creating a new motor board type.
 
 

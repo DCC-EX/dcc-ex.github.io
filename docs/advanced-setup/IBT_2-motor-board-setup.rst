@@ -1,8 +1,8 @@
-IB_2 BTS7960 Motor Board installation
+IB_2 BTS7960 Motor Board
 ======================================
 
-What You Will Need
-^^^^^^^^^^^^^^^^^^^
+What You Will Need (for IBT_2)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
 An Arduino Motor Shield
 An IBT_2 Motor Board

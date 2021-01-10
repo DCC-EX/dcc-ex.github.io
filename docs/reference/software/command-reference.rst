@@ -331,8 +331,7 @@ Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 * ``ADDRESS:``  the primary address of the decoder controlling this turnout (0-511)
 * ``SUBADDRESS:`` the subaddress of the decoder controlling this turnout (0-3)
 * ``ACTIVATE:`` (0) (Deactivate, Off, Unthrown) or (1) (Activate, On, Thrown)
-* 
-  ``">"`` = End DCC++ EX command
+* ``>`` = End DCC++ EX command
 
 
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.

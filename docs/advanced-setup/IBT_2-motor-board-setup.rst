@@ -2,6 +2,7 @@
 IB_2 BTS7960 Motor Board
 #########################
 
+*******************************
 What You Will Need (for IBT_2)
 *******************************
 An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
@@ -79,7 +80,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 Upload the sketch to your arduino. If you need help on how to upload a sketch, see 
 
-
+***********
 Tech Notes
 ***********
 

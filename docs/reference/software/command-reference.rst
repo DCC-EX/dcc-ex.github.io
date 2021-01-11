@@ -46,7 +46,7 @@ SINGLE LETTER COMMANDS
 
       RETURNS: <H ID ADDRESS SUBADDRESS THROW> for each defined turnout or <X> if no turnouts defined.
       **ID** - ID assigned to the turnout
-      **ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated
+      **ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated. (addresses 0-511, subaddresses 0-3)
       **THROW** - False or a "0" is unthrown. True or "1" is thrown.
 
 * 

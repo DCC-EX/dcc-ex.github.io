@@ -56,4 +56,3 @@ Click the "next" button below to choose your path and then move ahead to how to 
     installer
     arduino-ide
     controllers
-    

@@ -1,5 +1,5 @@
-Installer Setup
-===============
+Install using the Automated Installer
+======================================
 
 Requirements
 ------------

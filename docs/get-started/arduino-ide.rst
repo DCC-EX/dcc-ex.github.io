@@ -1,5 +1,5 @@
-Arduino IDE Setup
-=================
+Install using the Arduino IDE
+==============================
 
 The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away, it is really just a program that lets you open a project, like our DCC++ EX Software files, compile them into instructions the Arduino understands, and uploads them from your computer into the Arduino using a serial cable. It is very easy to use.
 

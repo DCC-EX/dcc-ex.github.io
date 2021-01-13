@@ -1,5 +1,5 @@
 ****************************
-Connecting Wirelessly
+Choosing a Controller
 ****************************
 
 You need just two things that work together to operate your model railroad:
@@ -7,25 +7,25 @@ You need just two things that work together to operate your model railroad:
 * The DCC++ EX Command Station
 * A Controller
 
-Command Station
----------------
+The Command Station
+---------------------
 
 The CS is covered in the getting started section and is usually an Arduino microcontroller and a motor shield or motor board. The CS accepts instructions from the frontend and generates packets that are transmitted to your track.
 
-Front End
-----------
+The Front End (aka Controller)
+---------------------------------
 
-Since the CS just accepts <DCC++> commands, you need something that sends those commands to run your trains. 
+Since the CS just accepts <DCC++> commands, you need something that sends those commands to run your trains. It isn't very practical to type <t 1 3 75 1> into a serial monitor to tell your train to move ;) Here are a few of the methods you can use to control your layout.
 
-WebThrottle-EX
-===============
+Our WebThrottle-EX
+===================
 
-The simplest option is to just use a "Throttle" aka "CAB" aka "Controller" connected directly to the CS. The simplest of all is probable WebThrottle-EX connected via a serial cable directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the HC-12 section.
+The simplest option is to just use a "Throttle" aka "CAB" aka "Controller" connected directly to the CS. The simplest of all is probable WebThrottle-EX connected via a USB cable from your computer an web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section.
 
 Engine Driver
 =======================
 
-Engine Driver is a throttle app for your phone that can control multiple locos and your turouts. There are two ways to connect it. The first method is by connecting directly to the CS via WiFi. You will need a WiFI board connected to the CS ***insert link here*** and that's it.
+Engine Driver is a throttle app for your phone that can control multiple locos and your turouts. There are two ways to connect it. The first method is by connecting directly to the CS via WiFi. You will need a WiFI board connected to the CS (see `WiFi Setup <wifi-setup.html>`_) and that's it.
 
 The second method is to use JMRI and connect Engine Driver (ED) to the computer running JMRI. That computer would then connect to the CS via a USB cable (normally) or via a Wireless USB Bridge. The computer running JMRI can be just about any type of computer, PC, Mac, Raspberry Pi, but most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that lets you flash it to a Micro-SD card and have a fill JMRI setup with WiFi with virtually no fuss.
 

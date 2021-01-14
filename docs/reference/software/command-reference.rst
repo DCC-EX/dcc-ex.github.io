@@ -504,8 +504,8 @@ To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outpu
                  1 = state of pin set on power-up, or when first created,
                      to either ACTIVE of INACTIVE depending on IFLAG, bit 2
 
-   IFLAG, bit 2: 0 = state of pin set to INACTIVE uponm power-up or when first created
-                 1 = state of pin set to ACTIVE uponm power-up or when first created 
+   IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
+                 1 = state of pin set to ACTIVE upon power-up or when first created 
 
 Once all outputs have been properly defined, use the ``<E>`` Upper Case "E" command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the output definitions, you must invoke the ``<E>`` command if you want those new definitions updated in the EEPROM.

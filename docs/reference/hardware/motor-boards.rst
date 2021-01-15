@@ -172,15 +172,17 @@ DFRobot 2x2A DC Motor Shield (DRI0009)
 
 **Engineer Level**
 
-This is another L298 based board with inadequate cooling. Fan and/or heat sink recommended. Max current realistically 1.3A. This board has NO CURRENT SENSE. As with many boards like this, both L298 current sense pins are tied to ground. Cutting traces and adding sense resistors or the use of an eternal current sense board is required for short circuit protection and loco programming.
+This is another L298 based board with inadequate cooling. Fan and/or heat sink recommended. Max current realistically 1.3A. This board has NO CURRENT SENSE. As with many boards like this, both L298 current sense pins are tied to ground. Cutting traces and adding sense resistors or the use of an eternal current sense board is required for short circuit protection and loco programming. If you don't use current sense, you must ground pins A0 and A1 on the Arduino or you will get an overcurrent condition.
 
 Speed Control Jumpers need to all be on the PWM side of the shield (all 4 jumpers on the right 4 pins)
 Power Source Selection Jumpers need to both be on PWRIN (to the left) and NOT VIN
 
-ENABLE1 - D4 (normally pin 3)
-ENABLE2 - D7 (normally pin 11)
-DIR1    - D5 (normally pin 12)
-DIR2    - D6 (normally pin 13)
+ENABLE1 (EN1) - D5 (normally pin 3)
+ENABLE2 (EN2) - D6 (normally pin 11)
+DIR1 (M1)     - D4 (normally pin 12)
+DIR2 (M2)     - D7 (normally pin 13)
+
+On the schematic, pin 1 of the jumper bank is the right side as you read the labels, the PWM side.
 
 NOTE: There is a "Twin" version of this board that uses pins 10, 11 and 12, 13 instead
 
@@ -204,4 +206,9 @@ Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Ardui
 
 Click here for a complete `Parts Shopping List <./shopping-list.html>`_
 
-Click here for  `Motor Board Install Instructions <../../advanced-setup/motor-board-config>`_
+Configuring Motor Boards
+-------------------------
+
+If your board is not in the list of supported motor board types, or if you need to make changes or have more information about how motor boards are configured in DCC++ EX, see:
+
+`Motor Board Configuration Guide <../../advanced-setup/motor-board-config.html>`_

@@ -1,5 +1,5 @@
-Motor Board Selection
-======================
+Motor Board Configuration
+==========================
 
 This section is for Tinkerer's and Engineers.
 
@@ -81,7 +81,7 @@ We are going to replace this with a new motor board definition and select it. Co
 
 1. Replace "MY_MOTOR_SHIELD" in both instances with whatever name you like or just leave it as MY_MOTOR_SHIELD.
 
-2. The first "new MotorDriver()" line defines your programming track, the second one is for your main track
+2. The first "new MotorDriver()" line defines your MAIN track, the second one is for your Programming track
 
 3. The format of the MotorDriver code is:
 

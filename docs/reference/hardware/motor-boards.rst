@@ -14,26 +14,26 @@ CommandStation-EX is compatible with a wide variety of motor boards, also known 
 Boards currently supported
 --------------------------
 
-*  **Easy to use boards**
+  **Easy to use boards**
 
    * :ref:`Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
    * :ref:`Deek-Robot Motor Shield` - 2A rates, 1.5 possible
    * :ref:`DIY More L298NH Motor Shield` - 2A
    * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
-*  **Intermediate boards (Tinkerer Level)** - require wiring
+  **Intermediate boards (Tinkerer Level)** - require wiring
 
    * :ref:`L298N Motor Driver (dual)` - 2A
    * :ref:`Makerfabs H-Bridge Motor Shield` - 8A
    * :ref:`BTS7960 IBT_2 Board (single)` - 43A
 
-*  **Hard to Use Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
+  **Hard to Use Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
   
    * :ref:`Keyes/Fundumoto ("Beeper Board")` - 2A
    * :ref:`Velleman KA03 (kit) VMA03 (soldered)` - 2A
    * :ref:`DFRobot 2x2A DC Motor Shield (DRI0009)` - 2A
 
-*  **Non-compatible boards**
+  **Non-compatible boards**
 
    * VNH2SP30 - Sparkfun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
    * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
@@ -182,7 +182,7 @@ DIR2 - D7 (normally pin 13)
 
 .. image:: ../../_static/images/motorboards/dfrobot_shield_2x2_main.jpg
    :alt: DFRobot 2x2
-   :scale: 75%
+   :scale: 65%
 
 
 Dfrobot Romeo V2
@@ -196,7 +196,7 @@ Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Ardui
 
 .. image:: ../../_static/images/motorboards/romeo_v2.jpg
    :alt: Romeo V2
-   :scale: 100%
+   :scale: 45%
 
 Click here for a complete `Parts Shopping List <./shopping-list.html>`_
 

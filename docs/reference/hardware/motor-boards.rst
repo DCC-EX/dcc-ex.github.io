@@ -80,12 +80,13 @@ DIY More L298NH Motor Shield
 
 **Conductor Level**
 
-Another similar board to the Arduino motor shield. Supports 2A per channel.
+Another similar board to the Arduino motor shield. Supports 2A per channel. This board uses the L298HN, which is the same L298 internally as the Arduino Motor Shield but in a different form factor with a larger heat sink tab. Current sense and other features are identical to the Arduino version.
 
 .. image:: ../../_static/images/motorboards/diy_more_motor.jpg
    :alt: DIY More Motor Shield
    :scale: 100%
-
+   
+`Install the DIY More Motor Shield <../../get-started/assembly.html>`_
 
 L298N Motor Driver (dual)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

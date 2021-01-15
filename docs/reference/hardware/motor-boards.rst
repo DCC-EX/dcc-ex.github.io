@@ -62,6 +62,8 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
 
 `Install the Arduino Motor Shield <../../get-started/assembly.html>`_
 
+|
+
 Deek-Robot Motor Shield
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -74,6 +76,8 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
    :scale: 100%
 
 `Install the Deek-Robot Motor Shield <../../get-started/assembly.html>`_
+
+|
 
 DIY More L298NH Motor Shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -88,6 +92,8 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
    
 `Install the DIY More Motor Shield <../../get-started/assembly.html>`_
 
+|
+
 L298N Motor Driver (dual)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -98,6 +104,8 @@ THIS BOARD HAS NO CURRENT SENSE! This is an alternative to the Arduino and Deek-
 .. image:: ../../_static/images/motorboards/l298_board.jpg
    :alt: L298 Motor Driver
    :scale: 100%
+
+|
 
 Makerfabs H-Bridge Motor Shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -118,6 +126,8 @@ Pinout
 | CNTRL2B (DIR2B) - D8
 | ENABLE/SHUTDOWN - D6
 
+|
+
 Pololu MC33926
 ^^^^^^^^^^^^^^
 
@@ -128,6 +138,8 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 .. image:: ../../_static/images/motorboards/pololu.png
    :alt: Pololu MC33926
    :scale: 100%
+
+|
 
 BTS7960 IBT_2 Board (single)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -145,6 +157,8 @@ You will either need 2 of these or one of these and another board to run your pr
 
 `IBT_2 Intstallation Instructions <../../advanced-setup/IBT_2-motor-board-setup.html>`_
 
+|
+
 Keyes/Fundumoto ("Beeper Board")
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -156,6 +170,7 @@ You have to lift two traces and solder 2 resistors and use 2 jumpers to the curr
    :alt: Keyes/Fundumoto Motor Shield
    :scale: 100%
 
+|
 
 Velleman KA03 (kit) VMA03 (soldered)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -167,6 +182,8 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 .. image:: ../../_static/images/motorboards/velleman_motor.jpg
    :alt: Velleman KA03
    :scale: 100%
+
+|
 
 DFRobot 2x2A DC Motor Shield (DRI0009)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -189,8 +206,9 @@ NOTE: There is a "Twin" version of this board that uses pins 10, 11 and 12, 13 i
 
 .. image:: ../../_static/images/motorboards/dfrobot_shield_2x2_main.jpg
    :alt: DFRobot 2x2
-   :scale: 65%
+   :scale: 60%
 
+|
 
 DFRobot Romeo V2
 ^^^^^^^^^^^^^^^^^
@@ -203,7 +221,7 @@ Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Ardui
 
 .. image:: ../../_static/images/motorboards/romeo_v2.jpg
    :alt: Romeo V2
-   :scale: 45%
+   :scale: 40%
 
 Click here for a complete `Parts Shopping List <./shopping-list.html>`_
 

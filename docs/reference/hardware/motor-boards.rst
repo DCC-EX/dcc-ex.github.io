@@ -93,7 +93,7 @@ L298N Motor Driver (dual)
 
 **Tinkerer level**
 
-This is an alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You'll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471.
+THIS BOARD HAS NO CURRENT SENSE! This is an alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You'll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471.
 
 .. image:: ../../_static/images/motorboards/l298_board.jpg
    :alt: L298 Motor Driver
@@ -104,19 +104,19 @@ Makerfabs H-Bridge Motor Shield
 
 **Engineer Level**
 
-THIS BOARD HAS NO CURRENT SENSE! This means you need to add it via an inexpensive external current sense board like the MAX471. See the section below about *** current sensing *** . The higher current capability and efficient power MOSFETs, make this board a good choice if you are running more than 3-5 locos.
+THIS BOARD HAS NO CURRENT SENSE! See the section below about *** current sensing *** . The higher current capability and efficient power MOSFETs, make this board a good choice if you are running more than 3-5 locos.
 
 Select MAKERFABS_MOTOR_SHIELD in your config.h file.
 
 Pinout
 
-PWM1 - D9 (normally pin 3)
-PWM2 - D10 (normally pin 11)
-CNTRL1A (DIR1A) - D4 (normally 12)
-CNTRL1B (DIR1B) - D5
-CNTRL2A (DIR2A) - D7 (normally 13)
-CNTRL2B (DIR2B) - D8
-ENABLE/SHUTDOWN - D6
+| PWM1 - D9 (normally pin 3)
+| PWM2 - D10 (normally pin 11)
+| CNTRL1A (DIR1A) - D4 (normally 12)
+| CNTRL1B (DIR1B) - D5
+| CNTRL2A (DIR2A) - D7 (normally 13)
+| CNTRL2B (DIR2B) - D8
+| ENABLE/SHUTDOWN - D6
 
 Pololu MC33926
 ^^^^^^^^^^^^^^
@@ -178,10 +178,10 @@ This is another L298 based board with inadequate cooling. Fan and/or heat sink r
 Speed Control Jumpers need to all be on the PWM side of the shield (all 4 jumpers on the right 4 pins)
 Power Source Selection Jumpers need to both be on PWRIN (to the left) and NOT VIN
 
-ENABLE1 (EN1) - D5 (normally pin 3)
-ENABLE2 (EN2) - D6 (normally pin 11)
-DIR1 (M1)     - D4 (normally pin 12)
-DIR2 (M2)     - D7 (normally pin 13)
+| ENABLE1 (EN1) - D5 (normally pin 3)
+| ENABLE2 (EN2) - D6 (normally pin 11)
+| DIR1 (M1)     - D4 (normally pin 12)
+| DIR2 (M2)     - D7 (normally pin 13)
 
 On the schematic, pin 1 of the jumper bank is the right side as you read the labels, the PWM side.
 

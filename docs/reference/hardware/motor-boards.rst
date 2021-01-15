@@ -172,13 +172,13 @@ DFRobot 2x2A DC Motor Shield (DRI0009)
 
 This is another L298 based board with inadequate cooling. Fan and/or heat sink recommended. Max current realistically 1.3A. This board has NO CURRENT SENSE. As with many boards like this, both L298 current sense pins are tied to ground. Cutting traces and adding sense resistors or the use of an eternal current sense board is required for short circuit protection and loco programming.
 
-Speed Control Jumpers need to all be on the PWM shield
-Power Source Selection Jumpers need to both be on PWRIN  (to the left) and NOT VIN
+Speed Control Jumpers need to all be on the PLL side of the shield (all 4 jumpers on the left 4 pins)
+Power Source Selection Jumpers need to both be on PWRIN (to the left) and NOT VIN
 
-PWM1 - D5 (normally pin 3)
-PWM2 - D6 (normally pin 11)
-DIR1 - D4 (normally pin 12)
-DIR2 - D7 (normally pin 13)
+ENABLE1 - D4 (normally pin 3)
+ENABLE2 - D7 (normally pin 11)
+DIR1    - D5 (normally pin 12)
+DIR2    - D6 (normally pin 13)
 
 .. image:: ../../_static/images/motorboards/dfrobot_shield_2x2_main.jpg
    :alt: DFRobot 2x2

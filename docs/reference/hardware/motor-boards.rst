@@ -37,7 +37,7 @@ Boards currently supported
 
    * VNH2SP30 - Sparkfun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
    * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
-   * Dfrobot Romeo V2 - Well, an Engineer could perhaps get this one to work.
+   * :ref:`Dfrobot Romeo V2` - Well, an Engineer could perhaps get this one to work.
    
 Other boards, while not fully supported and tested, can be used. Look for the following criteria:
 
@@ -54,24 +54,26 @@ Arduino Motor Shield
 
 **Conductor level**
 
-Easy to use, widely available and can support 2A load per channel.
+Easy to use, widely available and is rated 2A load per channel. In reality, without a heatsink and fan, it can only handle about 1.3 Amps. This is the standard by which we campare other boards that are about the same, worse, or better. 
 
 .. image:: ../../_static/images/motorboards/arduino_motorshield2.jpg
    :alt: Arduino Motor Shield R3
    :scale: 100%
 
+`Install the Arduino Motor Shield <../../get-started/assembly.html>`_
 
 Deek-Robot Motor Shield
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 **Conductor Level**
 
-Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel
+Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realisticly 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan.
 
 .. image:: ../../_static/images/motorboards/deek_robot1_sm.jpg
    :alt: Deek Robot Motor Shield
    :scale: 100%
 
+`Install the Deek-Robot Motor Shield <../../get-started/assembly.html>`_
 
 DIY More L298NH Motor Shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -187,7 +189,7 @@ NOTE: There is a "Twin" version of this board that uses pins 10, 11 and 12, 13 i
    :scale: 65%
 
 
-Dfrobot Romeo V2
+DFRobot Romeo V2
 ^^^^^^^^^^^^^^^^^
 
 **Engineer Level**

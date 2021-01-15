@@ -31,11 +31,13 @@ Boards currently supported
   
    * :ref:`Keyes/Fundumoto ("Beeper Board")` - 2A
    * :ref:`Velleman KA03 (kit) VMA03 (soldered)` - 2A
+   * :ref:`DFRobot 2x2A DC Motor Shield (DRI0009)` - 2A
 
 *  **Non-compatible boards**
 
    * VNH2SP30 - Sparkfun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
    * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
+   * Dfrobot Romeo V2 - Well, an Engineer could perhaps get this one to work.
    
 Other boards, while not fully supported and tested, can be used. Look for the following criteria:
 
@@ -162,6 +164,31 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 .. image:: ../../_static/images/motorboards/velleman_motor.jpg
    :alt: Velleman KA03
    :scale: 100%
+
+DFRobot 2x2A DC Motor Shield (DRI0009)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Engineer Level**
+
+This is another L298 based board with inadequate cooling. Fan and/or heat sink recommended. Max current realistically 1.3A. This board has NO CURRENT SENSE. As with many boards like this, both L298 current sense pins are tied to ground. Cutting traces and adding sense resistors or the use of an eternal current sense board is required for short circuit protection and loco programming.
+
+Speed Control Jumpers need to all be on the PWM shield
+Power Source Selection Jumpers need to both be on PWRIN  (to the left) and NOT VIN
+
+PWM1 - D5 (normally pin 3)
+PWM2 - D6 (normally pin 11)
+DIR1 - D4 (normally pin 12)
+DIR2 - D7 (normally pin 13)
+
+
+Dfrobot Romeo V2
+^^^^^^^^^^^^^^^^^
+
+**Engineer Level**
+
+On the surface, this seems like a great idea, an Aduino and motor controller on one board. It is a very thin surface ;) While we don't recommend it, an Engineer who reads these notes, may still find a use for it. The V2 uses the ATmega32u4 chip instead of either of the chips used on an Uno or a Mega. It only has 2 interrupts that are usable and it reverses their pin assignments. It uses serial on the chip, not with a UART as on the other boards. It may need a sofware change to accomodate the timer. It also has the same amount of memory as an Uno, which will only run the basic version of DCC++ EX without options. In addition, the serial port uses memory to operate, so you have even less memory free to use than on an Uno.
+
+Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Arduino Motor Shield. It will only deliver 1.2 to 1.3A instead of 2A, if you add a fan. Very importantly it has NO CURRENT SENSE for either track. The sense outputs are tied to ground. You would have to cut traces and add resistors at the least, or buy current sense boards.
 
 Click here for a complete `Parts Shopping List <./shopping-list.html>`_
 

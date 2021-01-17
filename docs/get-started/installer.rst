@@ -1,5 +1,5 @@
-Installer Setup
-===============
+Install using the Automated Installer
+======================================
 
 Requirements
 ------------
@@ -232,3 +232,4 @@ Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
 **Figure 11** - Engine Driver
 
 You will need to install Engine Driver on your mobile device and then connect to the CS either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
+

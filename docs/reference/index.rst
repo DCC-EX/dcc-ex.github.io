@@ -41,6 +41,14 @@ Accessories
 
     accessories/suppliers
 
+Documents
+-----------
+
+.. toctree::
+    :maxdepth: 1
+
+    documents/decoder-table
+
 Diagnostic Tools
 ------------------
 

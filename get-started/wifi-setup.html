@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>WiFi Setup &mdash; DCC++ EX  documentation</title>
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -38,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installer Setup" href="installer.html" />
+    <link rel="next" title="Install using the Automated Installer" href="installer.html" />
     <link rel="prev" title="Assembly" href="assembly.html" /> 
 </head>
 
@@ -92,8 +95,9 @@
 <li class="toctree-l2"><a class="reference internal" href="levels.html">Levels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assembly.html">Assembly</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">WiFi Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installer.html">Installer Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arduino-ide.html">Arduino IDE Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installer.html">Install using the Automated Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arduino-ide.html">Install using the Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Choosing a Controller (Throttle)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a></li>
@@ -143,6 +147,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -156,7 +162,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/get-started/wifi-setup.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -172,6 +178,7 @@
             
   <div class="section" id="wifi-setup">
 <h1>WiFi Setup<a class="headerlink" href="#wifi-setup" title="Permalink to this headline">¶</a></h1>
+<p>Using WiFi is optional, if you wish to simply use your computer connected via a USB cable to to the Command Station, you can skip ahead to the next page.</p>
 <p>There are many ways to add Wifi to your CS. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this.</p>
 <p>You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our <a class="reference external" href="../support/index.html">Support Page</a> if you have a question.</p>
 <p>Note that you can click on any of the images to make them larger.</p>
@@ -180,7 +187,7 @@
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
 <div class="section" id="why-use-wifi">
 <h2>Why Use WiFi?<a class="headerlink" href="#why-use-wifi" title="Permalink to this headline">¶</a></h2>
-<p>With the base Command Station (CS) consisting of an Arduino Mega and an Arduino Motor Shield, you must use a serial cable to connect to a computer to run JMRI, to our WebThrottle-EX, or to other controller. The controller is what sends commands to the CS to run your trains and control your accessories.</p>
+<p>With the base Command Station (CS) consisting of an Arduino Mega and an Arduino Motor Shield, you must use a USB  cable to connect to a computer to run JMRI or our WebThrottle-EX, or to connect to another controller. The controller is what sends commands to the CS to run your trains and control your accessories.</p>
 <p>You can already go wireless when using software like JMRI and WiThrottle. But this requires you to connect your CS to a computer. With CommandStation-EX WiFi, you can connect directly to your CS from any WiThrottle capable throttle, such as the Engine Driver phone app.</p>
 </div>
 <div class="section" id="compatible-boards">
@@ -191,9 +198,10 @@
 <li><p><a class="reference external" href="https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN">Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s)</a></p></li>
 <li><p><a class="reference external" href="https://www.amzn.com/B00O34AGSU/">ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers)</a></p></li>
 </ul>
+<p>Fore more boards, and more boards you may be able to use, see the <a class="reference external" href="../reference/hardware/wifi-boards.html">Wifi Boards Section</a></p>
 </div>
-<div class="section" id="what-you-will-need">
-<h2>What you will need<a class="headerlink" href="#what-you-will-need" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-you-will-need-for-wifi">
+<h2>What you will need (for WiFi)<a class="headerlink" href="#what-you-will-need-for-wifi" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>A Command Station (CS) made from a <strong>Mega</strong> and an Arduino Motor Shield</p></li>
 <li><p>One of the above WiFi boards</p></li>
@@ -313,37 +321,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="installer.html" class="btn btn-neutral float-right" title="Installer Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="assembly.html" class="btn btn-neutral float-left" title="Assembly" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="installer.html" class="btn btn-neutral float-right" title="Install using the Automated Installer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="assembly.html" class="btn btn-neutral float-left" title="Assembly" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H
+        &#169; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -5,7 +5,7 @@ What's New in DCC++ EX?
 Everything you loved is still there
 -----------------------------------
 
-First, we want to stress that we didn't break anything! Whether you are using JMRI as a front end to send commands to your track, handle turnouts or read and write CVs, or any using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won't affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.
+First, we want to stress that we didn't break anything! Whether you are using JMRI as a controller/front-end to send commands to your track, handle turnouts or read and write CVs, or any using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won't affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.
 
 DCC++ EX is all new!
 --------------------

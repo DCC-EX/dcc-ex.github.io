@@ -16,5 +16,5 @@ The Wiznet W5100 provides a network (IP) stack capable of both TCP and UDP, and 
    :alt: Arduino Ethernet Shield 2
    :scale: 70%
 
-   *** more information coming soon ***
+*** more information coming soon ***
 

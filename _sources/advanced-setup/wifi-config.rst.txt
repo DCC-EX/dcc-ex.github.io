@@ -44,23 +44,69 @@ Station Mode (STA Mode)
 
 Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being an AP which manages the IP of the smartphone that contains your Throttle, it becomes a station that connects to your existing network. The Throttle then connects to the CS by finding its IP address on the network.
 
-Wifi Config options
-^^^^^^^^^^^^^^^^^^^^
+WiFi Config Options
+--------------------
+
+The following defines are all in the config.h file created automatically by the installer, or manually by you by renaming the "config.example.h" file to "config.h".
+
+| :ref:`#define IP_PORT 2560`
+| :ref:`#define ENABLE_WIFI true`
+| :ref:`#define DONT_TOUCH_WIFI_CONF`
+| :ref:`#define WIFI_SSID "Your network name"`
+| :ref:`#define WIFI_PASSWORD "Your network passwd"`
+| :ref:`#define WIFI_HOSTNAME "dccex"`
+| :ref:`#define WIFI_CONNECT_TIMEOUT 14000`
+| :ref:`#define ENABLE_ETHERNET true`
+| :ref:`#define IP_ADDRESS { 192, 168, 1, 200 }`
+| :ref:`#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
+
+#define IP_PORT 2560
+^^^^^^^^^^^^^^^^^^^^^^
+**Default: 2560** - This is the port used to communicate with the WiFi board or Ethernet Shield. We use the default value of 2560 because that is the port JMRI uses. You can change this value if you would prefer it to be something else. You will need to enter this in sofware like Engine Driver in order to connect to the CS via networking.
 
 #define ENABLE_WIFI true
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: true** - WiFi is supported only on a Mega. If you do not wish to use WiFi and want to save boot time by not having the Mega check for a WiFi board each time, you may set this to "false"
+
 #define DONT_TOUCH_WIFI_CONF
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: commented out** If uncommented, this tells the CS to NOT process any WiFi commands in the CS. If other WiFi defines are enabled, the CS will ignore them. With this command, you can leave #define ENABLE_WIFI true so that networking is active, but send no configuration commands to ESP8266. This allows you to enter your own AT commands to set up your Wifi however you want. To do this, you would enter <+> commands in the serial monitor or add code to send these commands automatically.
+
 #define WIFI_SSID "Your network name"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: "Your network name"** - To connect to your CS as an AP (Access Point), do not change this setting. If you wish to connect to your home network instead, enter the SSID (network name) for that network. If you do NOT set the WIFI_SSID, the WiFi chip will first try to connect to the previously configured network and if that fails fall back to Access Point mode. The SSID of the AP will be automatically set to DCCEX_xxxxxx, where xxxxxx is the last 6 digits of the MAC address for the WiFi chip.
+Your SSID may not conain ``"`` (double quote, ASCII 0x22).
+
 #define WIFI_PASSWORD "Your network passwd"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: "Your network passwd"** - WIFI_PASSWORD is the network password for your home network or if you want to change the password from default AP mode password to the AP password you want. 
+Your password may not conain ``"`` (double quote, ASCII 0x22).
+
 #define WIFI_HOSTNAME "dccex"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: "dccex"** You would normally not want to change this, it is the host name that will appear in the list of available networks that a device you want to connect to DCC-EX will display. It helps you know which device is your Command Station.
+
 #define WIFI_CONNECT_TIMEOUT 14000
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: 14000 milliseconds (14 seconds)** - You only need to set this if you have an extremely slow Wifi router and the response to the connection request takes longer than normal.
+
+#define ENABLE_ETHERNET true
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: commented out** - Uncomment this line if you with to use an Ethernet Shield (not WiFi, see above for tha). You will also need to install the Arduino Ethernet Library on whatever development environment you use to compile and upload your sketch.
+
 #define IP_ADDRESS { 192, 168, 1, 200 }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: commented out** - Uncomment this line if you wish to use a static IP address, otherwise the CS will use DHCP to automatcally assign an IP address from your router. If you use a static IP, you will also have to configure this on your router.
+
 #define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Default: commented out** - This is for Ethernet only! Ethernet shields do not normally come with a defined MAC address. We give you two and you can uncomment the one you prefer. You can also choose any other validly formatted MAC address that will not conflict with any devices already on your network.
 
 
 Default Operation - AP Mode (No Configuration Necessary)
 --------------------------------------------------------
 
-To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in `WiFi Setup <../get-started/wifi-setup.html>`_. That's it! We find your device, no matter which of the extra serial ports you attached it to and create a WiThrottle server running and waiting for you to connect to. All you need to know is the IP address assigned by the WiFi board and the port to communicate through. You can find this using the Arduino Serial Monitor.
+To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in `WiFi Setup <../get-started/wifi-setup.html>`_. That's it! We find your device, no matter which of the extra serial ports you attached it to and create a WiThrottle Server that waits for you to connect to it with software like Engine Driver. All you need to know is the IP address assigned by the WiFi board and the port to communicate through. You can find this using the Arduino Serial Monitor.
 
 Whenever you connect a USB cable and open the serial monitor, you reset the program running on your CS. It will go through the bootup sequence and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red
 
@@ -94,14 +140,14 @@ Once you are connected to the CS, you can run your WiFi Throttle program, enter 
 Connecting to your Network - Station Mode (edit config.h)
 ---------------------------------------------------------
 
-In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials or you have already entered your credentials via the installer. The easiest way to do this is to use the Arduino IDE and open the project. Look for these lines in the file:
+In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials or you have already entered your credentials via the installer. The easiest way to do this other than the installer is to use the Arduino IDE and open the project. Look for these lines in the file:
 
 .. code-block::
 
    /////////////////////////////////////////////////////////////////////////////////////
    //
    // NOTE: Only supported on Arduino Mega
-   // Set to false if you not even want it on the Arduino Mega
+   // Set to false if you do not want it even on the Arduino Mega
    //
    #define ENABLE_WIFI true
 
@@ -140,7 +186,7 @@ You will then see an "Ok" message. The WiFi Settings are forgotten. However, if 
 If you want to run in AP mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Edit the config.h, change your SSID name, and password lines back to default. It MUST look like this:
+Edit the config.h, change your SSID name, and password lines back to default. It MUST look like the following. If it is anything else it will try to login with whatever you type there as credentials!:
 
 .. code-block::
 
@@ -164,11 +210,11 @@ Network Startup sequence
 
 For reference, it may be helpful to know the sequnce the Command Station uses to try and establish a network connection. The following provides the flow of this sequence.
 
-1. Check for a WiFi Device - Scan serial ports 1, 2, and 3 in order to look for Wifi. If not abort network setup and start the Command Station
+1. Check for a WiFi Device - Scan serial ports 1, 2, and 3 in order to look for Wifi. If no response, abort network setup and start the Command Station without WiFi.
 2. If we find a WiFi device, next look if ``#define DONT_TOUCH_WIFI_CONF`` is uncommented. If so, abort config attempts here - done
-3. Next, IF no SSID is configured, check if the ESP is configured in STATION mode already from a previous network connection. If so, try to connect to that network. If we connect stop and start the CS, if not, go to step 4.
+3. Next, IF no SSID is configured, check if the ESP is configured in STATION mode already from a previous network connection. If so, try to connect to that network. If we connect, stop and start the CS, if not, go to step 4.
 4. Try to configure in STATION mode from values in the config.h file - done
-5. If none of the above, set up as an AP with and ID of DCCEX_xxxxxx and a password set in the config.h file. If unconfigured, the default will be PASS_xxxxxx (xxxxxx will be the last 6 characters of the device MAC address)
+5. If none of the above, set up as an AP with an ID of DCCEX_xxxxxx and a password set in the config.h file. If unconfigured, the default will be PASS_xxxxxx (xxxxxx will be the last 6 characters of the device MAC address)
 
 Tips and Tricks
 ----------------
@@ -184,7 +230,7 @@ Temporarily Log Into A Different Network
 Create a Static IP for your CS in AP Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You must have a recent version of the firmware to support _DEF commands. If they don't work, try entering them without this suffix
+You must have a recent version of the firmware to support _DEF commands. If they don't work, try entering them without this suffix (Example: <+CIPAP> instead of <+CIPAP_DEF>)
 
 1. Forget your network settings by entering >+<CWQP>
 2. Enter ``<+CIPAP_DEF="192.168.5.1","192.168.5.1","255.255.255.0">`` to setup the AP with your IP address

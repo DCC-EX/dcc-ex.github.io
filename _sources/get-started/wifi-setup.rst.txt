@@ -1,6 +1,8 @@
 WiFi Setup
 ==========
 
+Using WiFi is optional, if you wish to simply use your computer connected via a USB cable to to the Command Station, you can skip ahead to the next page.
+
 There are many ways to add Wifi to your CS. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
 You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our `Support Page <../support/index.html>`_ if you have a question.
@@ -18,7 +20,7 @@ For a video to help you click below.
 Why Use WiFi?
 -------------
 
-With the base Command Station (CS) consisting of an Arduino Mega and an Arduino Motor Shield, you must use a serial cable to connect to a computer to run JMRI, to our WebThrottle-EX, or to other controller. The controller is what sends commands to the CS to run your trains and control your accessories.
+With the base Command Station (CS) consisting of an Arduino Mega and an Arduino Motor Shield, you must use a USB  cable to connect to a computer to run JMRI or our WebThrottle-EX, or to connect to another controller. The controller is what sends commands to the CS to run your trains and control your accessories.
 
 You can already go wireless when using software like JMRI and WiThrottle. But this requires you to connect your CS to a computer. With CommandStation-EX WiFi, you can connect directly to your CS from any WiThrottle capable throttle, such as the Engine Driver phone app.
 
@@ -32,8 +34,10 @@ Most boards based on the ESP-8266 should work with DCC++ EX. However, with all t
 * `Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
-What you will need
-------------------
+Fore more boards, and more boards you may be able to use, see the `Wifi Boards Section <../reference/hardware/wifi-boards.html>`_
+
+What you will need (for WiFi)
+------------------------------
 
 * A Command Station (CS) made from a **Mega** and an Arduino Motor Shield
 * One of the above WiFi boards

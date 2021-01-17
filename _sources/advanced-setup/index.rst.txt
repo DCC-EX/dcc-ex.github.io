@@ -6,3 +6,4 @@ Advanced Setup
     
     wifi-config
     motor-board-config
+    IBT_2-motor-board-setup

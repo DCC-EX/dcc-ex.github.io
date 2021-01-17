@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>WiFi Boards &mdash; DCC++ EX  documentation</title>
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -103,6 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documents/decoder-table.html">Stationary Decoder Address Table</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
 </ul>
 </li>
@@ -150,6 +154,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -163,7 +169,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../../_sources/reference/hardware/wifi-boards.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -179,13 +185,14 @@
             
   <div class="section" id="wifi-boards">
 <h1>WiFi Boards<a class="headerlink" href="#wifi-boards" title="Permalink to this headline">¶</a></h1>
-<p>For more information see <a class="reference external" href="..//get-started/wifi-setup.html">Wifi Setup</a></p>
+<p>For more information see <a class="reference external" href="../../get-started/wifi-setup.html">Wifi Setup</a></p>
 <div class="section" id="makerfabs-wifi-shield">
 <h2>Makerfabs WiFi Shield<a class="headerlink" href="#makerfabs-wifi-shield" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP-8266 WiFi Shield (recommended)</a></p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/wifi_jumpers11.jpg"><img alt="Makerfabs ESP-8266 WiFi Shield" src="../../_images/wifi_jumpers11.jpg" style="width: 480.0px; height: 363.20000000000005px;" /></a>
+<p><a class="reference external" href="../../get-started/wifi-setup.html">Installation Instructions</a></p>
 </div>
 <div class="section" id="duinopeak-wifi-shield">
 <h2>Duinopeak WiFi Shield<a class="headerlink" href="#duinopeak-wifi-shield" title="Permalink to this headline">¶</a></h2>
@@ -193,7 +200,9 @@
 <li><p><a class="reference external" href="https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN">Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s)</a></p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/duinopeak1.jpg"><img alt="Duinopeak ESP-8266 WiFi Shield" src="../../_images/duinopeak1.jpg" style="width: 480.0px; height: 461.6px;" /></a>
-<p>See the ESP-01S below that installs on this board</p>
+<p>You will need an ESP-01s to plug into this board. This is just an expansion shield board. It allows you to plug an ESP8266 onto an Arduino with no jumper wires. This board also has a voltage regulator, level shifters and a reset button for programming.</p>
+<p><a class="reference external" href="../../get-started/wifi-setup.html">Installation Instructions</a></p>
+<p>See the ESP-01S in the next section below that must be installed on this board</p>
 </div>
 <div class="section" id="esp-01s">
 <h2>ESP-01S<a class="headerlink" href="#esp-01s" title="Permalink to this headline">¶</a></h2>
@@ -201,7 +210,22 @@
 <li><p><a class="reference external" href="https://www.amzn.com/B00O34AGSU/">ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers)</a></p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/esp-01s_21.jpg"><img alt="ESP-01S" src="../../_images/esp-01s_21.jpg" style="width: 320.0px; height: 312.8px;" /></a>
-<p>You can use this board stand-alone with jumpers, or use the Duiopeak ESP-8266 Wifi Expansion Board above and plug this board into it.</p>
+<p>You can use this board stand-alone with jumpers, or use the Duinopeak ESP-8266 Wifi Expansion Board above and plug this board into it.</p>
+<p>There are also other boards that require jumper wires (they are not shields) but they work great and provide a voltage regulator to take 5V and convert it to the 3.3V these boards need. They also have level shifters to offer more protection by converting the 5V from the Arduino Tx pin to 3.3V and convert the Tx pin on the ESP8266 from 3.3V to 5V which offers a little more certainty that the signal is read properly. It is better to power the board from the 5V output of the Arduino because it can deliver more current than the 3.3V regulator on the Arduino.</p>
+<p><a class="reference external" href="https://www.aliexpress.com/i/32842569436.html">Esp8266 Serial Wi-Fi Wireless Esp-01 Breakout Adapter Board</a></p>
+<p>Buy the one that looks like this:</p>
+<a class="reference internal image-reference" href="../../_images/esp_breakout2.jpg"><img alt="ESP8266 Breakout Board" src="../../_images/esp_breakout2.jpg" style="width: 300.0px; height: 300.0px;" /></a>
+<p>We have used the ones that look like the one below just as well, but you have to make sure to wire power to 3.3V NOT 5V and there is no voltage regulation and NO LEVEL SHIFTERS. The GPIO pins on the ESP8266 appear to be 5V tolerant, but there is not guarantee it won’t shorten its life to have a 5V signal on the Tx pin. Several testt versions are running fine like this after a year, but if you are going to buy a board to stick this into instead of wiring it directly, then why not buy one with the extra circuitry?</p>
+<a class="reference internal image-reference" href="../../_images/esp_breakout1.jpg"><img alt="ESP8266 Breakout Board" src="../../_images/esp_breakout1.jpg" style="width: 300.0px; height: 300.0px;" /></a>
+<p><a class="reference external" href="../../get-started/wifi-setup.html">Installation Instructions</a></p>
+</div>
+<div class="section" id="wangtongze-board-uno-r3-mega-esp8266-serial-wifi-shield-esp-12e-board">
+<h2>WangTongze Board (Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board)<a class="headerlink" href="#wangtongze-board-uno-r3-mega-esp8266-serial-wifi-shield-esp-12e-board" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../../_images/wangtongze_wifi_board.jpg"><img alt="ESP-01S" src="../../_images/wangtongze_wifi_board.jpg" style="width: 525.6999999999999px; height: 417.2px;" /></a>
+<p>This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for “WangTongze” on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a “good” board, it will work perfectly, if you get a bad clone, it won’t work employing workarounds. One board has “shield” spelled incorrectly as “shiald”. The “shiald” version works, but some say it has an unreliable WiFi connection. A genuine Wangtongze has no misspellings.</p>
+<p>There is another version where the “more” in “more info” is spelled “moer” and “Arduino” is spelled “Arbuino”. This board has the wrong transistors soldered onto ot. You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the level shifters. You can buy the correct surface mount transistors and replace two of them using a magnifier as we have when we had nothing better to do that day, but we that’s a lot of trouble to go through unless this is the only board you can find in your country.</p>
+<p>The bottom line is that we don’t recommend this board because you would have to be very careful and know which one you are buying. That said, we can provide more information on these boards if you have one and want to try and get it to work.</p>
+<p>Here is a link to the <a class="reference external" href="https://www.youtube.com/watch?v=LJcYgR479Vw">Video and info from Wang Tongze himself</a></p>
 </div>
 </div>
 
@@ -210,37 +234,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ethernet-boards.html" class="btn btn-neutral float-right" title="Ethernet Boards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="motor-boards.html" class="btn btn-neutral float-left" title="Motor boards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="ethernet-boards.html" class="btn btn-neutral float-right" title="Ethernet Boards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="motor-boards.html" class="btn btn-neutral float-left" title="Motor boards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H
+        &#169; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -73,7 +73,7 @@ A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino bo
 * Improved short circuit detection and automatic reset from an overload
 * Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings
 * Improved adherence to the NMRA DCC specification
-* Complete support for all the old commands and front ends like JMRI
+* Complete support for all the old commands and controllers/front-ends like JMRI
 * Simpler, modular, faster code with an API Library for developers for easy expansion
 * New features and functions in JMRI
 * Automation (coming soon) 

@@ -1,5 +1,5 @@
-Arduino IDE Setup
-=================
+Install using the Arduino IDE
+==============================
 
 The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away, it is really just a program that lets you open a project, like our DCC++ EX Software files, compile them into instructions the Arduino understands, and uploads them from your computer into the Arduino using a serial cable. It is very easy to use.
 
@@ -175,3 +175,4 @@ You can also watch the `exWebThrottle Video <https://www.youtube.com/watch?v=Bkg
    .. raw:: html
 
       <iframe width="336" height="189" src="https://www.youtube.com/embed/BkgsEOjxWaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      

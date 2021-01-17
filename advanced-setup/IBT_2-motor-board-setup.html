@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>IB_2 BTS7960 Motor Board &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/platform.js"></script>
+        <script src="../_static/js/extra.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Throttles" href="../throttles/index.html" />
+    <link rel="prev" title="Motor Board Configuration" href="motor-board-config.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Advanced Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="wifi-config.html">Wifi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motor-board-config.html">Motor Board Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">IB_2 BTS7960 Motor Board</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Advanced Setup</a> &raquo;</li>
+        
+      <li>IB_2 BTS7960 Motor Board</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/advanced-setup/IBT_2-motor-board-setup.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ib-2-bts7960-motor-board">
+<h1>IB_2 BTS7960 Motor Board<a class="headerlink" href="#ib-2-bts7960-motor-board" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-you-will-need-for-ibt-2">
+<h2>What You Will Need (for IBT_2)<a class="headerlink" href="#what-you-will-need-for-ibt-2" title="Permalink to this headline">¶</a></h2>
+<p>An Arduino Mega or clone (or an Uno if you don’t need WiFi or Ethernet)
+An Arduino Motor Shield
+An IBT_2 Motor Board
+Version 3.0.1 of the DCC++ EX Command Station Software
+A 1 Ohm 1/4 Watt resistor
+Some Jumper Wires</p>
+<p>We can assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover how to “upgrade” with just one IBT_2 board to run your MAIN track and relegate your Arduino Motor Shield to the PROG track as well as explain other options.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We can’t say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.</p>
+</div>
+<div class="section" id="upgrading-and-using-the-arduino-motor-shield">
+<h3>Upgrading and Using the Arduino Motor Shield<a class="headerlink" href="#upgrading-and-using-the-arduino-motor-shield" title="Permalink to this headline">¶</a></h3>
+<p>For this installation we are going to assume you already have a working CS or at least have a the parts you need as listed above.</p>
+<p>If you need instructions on how to install the Arduino Motor Shield, see <a class="reference external" href="../get-started/assembly.html">Arduino Motor Shield Assembly</a></p>
+</div>
+<div class="section" id="what-we-are-going-to-do">
+<h3>What We Are Going To Do<a class="headerlink" href="#what-we-are-going-to-do" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use just 1 output of your existing Arduino Motor Shield for your program track with no hardware changes</p></li>
+<li><p>Add an IBT_2 (BTS7960) Motor Board to replace the “A” output to power your MAIN track</p></li>
+<li><p>Move a few wires and connect a few jumpers to your IBT_2</p></li>
+<li><p>Add a current sense resistor to the IBT_2</p></li>
+<li><p>Change your motor board type in your config.h file</p></li>
+</ul>
+</div>
+<div class="section" id="steps">
+<h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
+<p>Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IBT_2</p>
+<p>Disconect the wires coming out of output A of the Arduino Motor Board that connect to your MAIN track.</p>
+<p>Connect those two wires coming from the MAIN track to the B+ and B- Screw terminals. If using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as a train would sit on the track. We need to keep the phase of the DCC signal in sync between power districts and reversing sections.</p>
+<p>Connect or solder a resistor (see alternate method using a current sense board below) to XXX</p>
+<p>Use the following table to connect pins from the Arduino Mega to the IBT_2</p>
+<p><strong>insert table here</strong></p>
+<p>Connect pin X on Mega to pin Y on IBT_2
+Connect pin A on Mega to pin B on IBT_2
+Connect current sense resistor to pin A5 on the Arduino Motor Shield</p>
+<p>It shoud look like this:</p>
+<p><strong>insert friting diagram here</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are going to edit your config.h file. If this is your first time using the Command Station software and do not have a config.h file, rename your config.example.h file to config.hardware</p>
+</div>
+<p>Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:</span>
+<span class="c1">//</span>
+<span class="c1">//  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with 18V 2A per channel</span>
+<span class="c1">//  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)</span>
+<span class="c1">//  FUNDUMOTO_SHIELD      : Fundumoto Shield, no current sensing (not recommended, no short protection)</span>
+<span class="c1">//  IBT_2_WITH_ARDUINO    : IBT_2 Motor Board on MAIN and Arduino Motor Shield on PROG</span>
+<span class="c1">//  FIREBOX_MK1           : The Firebox MK1</span>
+<span class="c1">//  FIREBOX_MK1S          : The Firebox MK1S</span>
+<span class="c1">//   |</span>
+<span class="c1">//   +-----------------------</span>
+<span class="c1">//</span>
+<span class="cp">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
+</pre></div>
+</div>
+<p>Change the last line to look like this. To be sure of your spelling, you can copy and past IBT_2_WITH_ARDUINO and replace STANDARD_MOTOR_SHIELD</p>
+<p><code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MOTOR_SHIELD_TYPE</span> <span class="pre">IBT_2_WITH_ARDUINO</span></code></p>
+<p>Upload the sketch to your arduino. If you need help on how to upload a sketch, see</p>
+</div>
+</div>
+<div class="section" id="tech-notes">
+<h2>Tech Notes<a class="headerlink" href="#tech-notes" title="Permalink to this headline">¶</a></h2>
+<p>add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how they can chage the pins if there is a problem by creating a new motor board type.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../throttles/index.html" class="btn btn-neutral float-right" title="Throttles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="motor-board-config.html" class="btn btn-neutral float-left" title="Motor Board Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

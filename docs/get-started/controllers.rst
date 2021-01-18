@@ -24,17 +24,18 @@ The simplest option is to just use a throttle connected directly to the CS. The 
 
 .. image:: ../_static/images/throttles/webthrottle1.jpg
    :alt: WebThrottle-EX
+   :align: center
    :scale: 40%
 
 Here are you connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
 
 .. image:: ../_static/images/throttles/webthrottle_setup.jpg
    :alt: WebThrottle-EX
-   :scale: 100%
+   :align: center
+   :scale: 45%
 
-See `how to use WebThrottle-EX <../throttles/ex-webthrottle.html>`_
+For operating instructions see `how to use WebThrottle-EX <../throttles/ex-webthrottle.html>`_
 
-***insert diagram here of the webthrottle layout***
 
 Engine Driver (WiThrottle devices)
 ==================================

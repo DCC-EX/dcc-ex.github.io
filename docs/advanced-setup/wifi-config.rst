@@ -129,13 +129,28 @@ Connecting to the AP
 
 There are two steps to get you running trains with your WiFi throttle, the first is to connect to the AP instead of your home network, the second is to connect your throttle to the AP.
 
-On your mobile device, go into your WiFi settings that same way you would to connect to your home router. Look for another network to connect to. You should see a new network that begins with "DCCEX" like this: ``DCCEX_6e321b``
+On your mobile device, go into your WiFi settings that same way you would to connect to your home router. Look for another network to connect to. You should see a new network that begins with "DCCEX" like this example: ``DCCEX_6e321b``
 
-Note that the last 6 letters and numbers will be specific to your WiFi board and uniquely identify it. They are the last 6 letters of that device's MAC address.
+Simply click on that network and connect to it. You will need to enter the password you specified in the config.h file. If you did not enter one, the default will be **PASS_xxxxxx** where "xxxxxx" are the same last 6 digits of your device's MAC address like this example:
+``PASS_6e321b``
 
-Simply click on that network and connect to it. You will need to enter the password you specified in the config.h file. Ignore the warning that may popup telling you that "Internet may not be available". The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
+.. Note:: The last 6 letters and numbers of your AP name and default password will be specific to your WiFi board and uniquely identify it. They are the last 6 letters of that device's MAC address.
 
-Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address (the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure), 2560 for the Port number, and then select and acquire your loco by its address.
+Ignore the warning that may popup telling you that "Internet may not be available". The CS is not connected to the internet and you are connecting your mobile device directly to it. Depending on the config and OS of your device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
+
+Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address.
+
+**Once again:**
+
+IP Address - Normally 192.168.4.1
+Port Number - 2560
+Server Name - DCCEX_123456 where the last 6 characters are unique to your WiFi device
+Server Password - PASS_123456 where the last 6 charaters are the same as above
+
+All this information appears in the startup log if you are connected using a serial monitor in case you forget.
+
+.. Note:: If you experience dropped connections to the AP, turn off the auto-connect feature on your phone to prevent it from randomly disconnecting from the AP and connecting to your home router because it thinks it's a better connection.
+
 
 Connecting to your Network - Station Mode (edit config.h)
 ---------------------------------------------------------

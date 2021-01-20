@@ -1,7 +1,7 @@
 WiFi Setup
 ==========
 
-Using WiFi is optional, if you wish to simply use your computer connected via a USB cable to to the Command Station, you can skip ahead to the next page.
+The purpose of this WiFi solution is for connecting a Wifi Throttle DIRECTLY to the Command Station and elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can skip ahead to the next page.
 
 There are many ways to add Wifi to your CS. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
@@ -20,9 +20,13 @@ For a video to help you click below.
 Why Use WiFi?
 -------------
 
-With the base Command Station (CS) consisting of an Arduino Mega and an Arduino Motor Shield, you must use a USB  cable to connect to a computer to run JMRI or our WebThrottle-EX, or to connect to another controller. The controller is what sends commands to the CS to run your trains and control your accessories.
+**BEFORE you purchase a Wifi card, please consider whether you actually need it:**
 
-You can already go wireless when using software like JMRI and WiThrottle. But this requires you to connect your CS to a computer. With CommandStation-EX WiFi, you can connect directly to your CS from any WiThrottle capable throttle, such as the Engine Driver phone app.
+With the base Command Station (CS) consisting of just an Arduino Mega and an Arduino Motor Shield (no WiFi board), you must use a USB cable to connect to a computer to run JMRI or our WebThrottle-EX, or to connect to another controller. The controller (aka Throttle) is what sends commands to the CS to run your trains and control your accessories.
+
+If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using WebThrottle-EX, JMRI, RocRail, or similar, then YOU DO NOT NEED WiFi ON THE CS.. save yourself money and a lot of hassle by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between JMRI and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a JMRI setup. The computer or Pi you use to run your train software will already have WiFi capability and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
+
+If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY EngineDriver (or other Withrottle-protocol devices) connected dirctly to the CS, then you will need  Wifi and will have to budget some setup and learning time.
 
 Compatible Boards
 -----------------

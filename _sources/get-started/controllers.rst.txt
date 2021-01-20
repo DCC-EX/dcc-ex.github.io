@@ -20,11 +20,22 @@ Since the CS just accepts <DCC++> commands, you need something that sends those 
 Our WebThrottle-EX
 ===================
 
-The simplest option is to just use a throttle connected directly to the CS. The simplest of all is arguably WebThrottle-EX connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section.
+The simplest option is to just use a throttle connected directly to the CS. The simplest of all is arguably WebThrottle-EX connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of WT-EX with the side menu open. You can click on the image to see it full size.
 
-See `how to use WebThrottle-EX <../throttles/ex-webthrottle.html>`_
+.. image:: ../_static/images/throttles/webthrottle1.jpg
+   :alt: WebThrottle-EX
+   :align: center
+   :scale: 40%
 
-***insert diagram here of the webthrottle layout***
+Here are you connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
+
+.. image:: ../_static/images/throttles/webthrottle_setup.jpg
+   :alt: WebThrottle-EX
+   :align: center
+   :scale: 45%
+
+For operating instructions see `how to use WebThrottle-EX <../throttles/ex-webthrottle.html>`_
+
 
 Engine Driver (WiThrottle devices)
 ==================================

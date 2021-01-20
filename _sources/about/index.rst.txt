@@ -27,9 +27,9 @@ CommandStation-EX
 
 Developers
 
-* Dave Cutting - Logan, Utah, USA (Dave Cutting/ David Cutting)
 * Chris Harlow - Bournemouth, UK (UKBloke)
 * Harald Barth - Stockholm, Sweden (Haba)
+* Dave Cutting - Logan, Utah, USA (Dave Cutting/ David Cutting)
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Gregor Baues - Île-de-France, France (grbba)
 
@@ -41,7 +41,15 @@ Developers
 
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
-* Matt H.
+* Matt H. - Somewhere in Europe
+
+****************
+DCCInspector-EX
+****************
+
+Developers
+
+* Neil McKechnie -  Worcestershire, UK
 
 *************
 DCC++ Classic
@@ -66,13 +74,12 @@ Website
 
 Lead Developers
 
-* Mani Kumar - Bangalor, India (Mani / Mani Kumar)
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
+* Mani Kumar - Bangalor, India (Mani / Mani Kumar)
 
 Developers
 
 * Dave Cutting - Logan, Utah, USA (Dave Cutting/ David Cutting)
-* Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 
 **************************
 Documentation / Management
@@ -86,6 +93,13 @@ Documentation / Management
 Testing / Research / Support
 ****************************
 
+Team Lead
+
+* Larry Dribin - (H0Guy, LarryD)
+
+Team
+
+* Scott Eric Catalano - Western Pennsylvania, USA (PilotinControl)
 * Sumner Patterson - Blanding, Utah, USA (Sumner)
 * Larry Dribin - (H0Guy)
 * Paul - Virginia, USA (Paul1361)

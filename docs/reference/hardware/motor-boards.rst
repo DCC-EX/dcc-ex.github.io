@@ -164,7 +164,7 @@ Keyes/Fundumoto ("Beeper Board")
 
 **Engineer Level**
 
-You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board. There are several versions of these boards and one run has the wrong, tiny, SMD transistors soldered to the board. Make sure 
+You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board. There are several versions of these boards and one run has the wrong, tiny, SMD transistors soldered to the board. Make sure if you have the board with "more" spelled "moer", that the 2 transistors are labelled JIY and NOT J3Y. You will need a magnifier or a cell phone to take a picture and zoom in. If you have J3Y transistors, you can order replacements and remove the old ones and resolder new ones (a job for a skilled solderer) or connect to the debug pins instead and provide your own level shifting to the Rx pin ***More details on this fix soon***
 
 .. image:: ../../_static/images/motorboards/keyes_fundumoto.jpg
    :alt: Keyes/Fundumoto Motor Shield

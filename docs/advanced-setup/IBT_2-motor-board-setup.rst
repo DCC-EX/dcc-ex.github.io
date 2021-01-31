@@ -5,12 +5,13 @@ IB_2 BTS7960 Motor Board
 *******************************
 What You Will Need (for IBT_2)
 *******************************
-An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
-An Arduino Motor Shield
-An IBT_2 Motor Board
-Version 3.0.1 of the DCC++ EX Command Station Software
-A 1 Ohm 1/4 Watt resistor
-Some Jumper Wires
+
+* An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
+* An Arduino Motor Shield
+* An IBT_2 Motor Board
+* Version 3.0.1 of the DCC++ EX Command Station Software
+* 1k Resitor (Optional)
+* Some Jumper Wires
 
 We can assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover how to "upgrade" with just one IBT_2 board to run your MAIN track and relegate your Arduino Motor Shield to the PROG track as well as explain other options.
 
@@ -32,16 +33,22 @@ What We Are Going To Do
 * Add a current sense resistor to the IBT_2
 * Change your motor board type in your config.h file
 
+.. WARNING:: Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. Both outputs of the motor shield are still connected, we just don't enable it. DO NOT try to use the A output of the motor shield! You will have no current sense and not short circuit protection.
+
 Steps 
 ======
 
-Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IBT_2
+1. Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IBT_2
 
-Disconect the wires coming out of output A of the Arduino Motor Board that connect to your MAIN track.
+2. Disconect the wires coming out of output A of the Arduino Motor Board that connect to your MAIN track.
 
-Connect those two wires coming from the MAIN track to the B+ and B- Screw terminals. If using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as a train would sit on the track. We need to keep the phase of the DCC signal in sync between power districts.
+3. Connect those two wires coming from the MAIN track to the B+ and B- Screw terminals. If using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as a train would sit on the track. We need to keep the phase of the DCC signal in sync between power districts.
 
-Connect or solder a resistor (see alternate method using a current sense board below) to XXX
+4. Connect or solder a resistor (see alternate method using a current sense board below)
+
+5. Select your IBT_2 board in the config.h file
+
+6. Upload the new sketch to your Arduino Mega
 
 Use the following table to connect pins from the Arduino Mega to the IBT_2:
 
@@ -59,11 +66,11 @@ Use the following table to connect pins from the Arduino Mega to the IBT_2:
 |     GND      |        GND, R1b             |
 +--------------+-----------------------------+
 
-Here is a visual diagram:
+Here is a visual diagram, click to enlarge:
 
 .. image:: ../_static/images/motorboards/ibt_2_wiring.png
    :alt: IP Address
-
+   :scale: 40%
 
 
 
@@ -117,7 +124,7 @@ add notes here showing what pins are in the motordrivers section and what the pi
 Below is a link to the IBT_2 schematic. Click to enlarge.
 
 .. image:: ../_static/images/schematics/IBT_2_schematic.jpg
-   :scale: 30
+   :scale: 50
 
 
 

@@ -39,17 +39,33 @@ Make sure all power supplies are disconnected from your Arduino, The Motor Shiel
 
 Disconect the wires coming out of output A of the Arduino Motor Board that connect to your MAIN track.
 
-Connect those two wires coming from the MAIN track to the B+ and B- Screw terminals. If using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as a train would sit on the track. We need to keep the phase of the DCC signal in sync between power districts and reversing sections.
+Connect those two wires coming from the MAIN track to the B+ and B- Screw terminals. If using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as a train would sit on the track. We need to keep the phase of the DCC signal in sync between power districts.
 
 Connect or solder a resistor (see alternate method using a current sense board below) to XXX
 
-Use the following table to connect pins from the Arduino Mega to the IBT_2
+Use the following table to connect pins from the Arduino Mega to the IBT_2:
 
-**insert table here**
++--------------+-----------------------------+
+|  Arduino     |           IBT_2             |
++==============+=============================+
+| 4 (enable)   | 3,4,7  (R_EN, L_EN, VCC)    |
++--------------+-----------------------------+
+| 5 (signal 1) | 2 (LPWM)                    |
++--------------+-----------------------------+
+| 6 (signal 2) | 1 (RPWM)                    |
++--------------+-----------------------------+
+| A5 (CS MAIN) | 5,6, R1a  (R_IS, L_IS, R1a) |
++--------------+-----------------------------+
+|     GND      |        GND, R1b             |
++--------------+-----------------------------+
 
-Connect pin X on Mega to pin Y on IBT_2
-Connect pin A on Mega to pin B on IBT_2
-Connect current sense resistor to pin A5 on the Arduino Motor Shield
+Here is a visual diagram:
+
+.. image:: ../_static/images/motorboards/ibt_2_wiring.png
+   :alt: IP Address
+
+
+
 
 It shoud look like this:
 
@@ -74,17 +90,36 @@ Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-
    //
    #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 
-Change the last line to look like this. To be sure of your spelling, you can copy and past IBT_2_WITH_ARDUINO and replace STANDARD_MOTOR_SHIELD
+Change the last line to look like this. To be sure of your spelling, you can copy and paste IBT_2_WITH_ARDUINO and replace STANDARD_MOTOR_SHIELD
 
 ``#define MOTOR_SHIELD_TYPE IBT_2_WITH_ARDUINO``
 
-Upload the sketch to your arduino. If you need help on how to upload a sketch, see 
+Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../get-started/index.html>_`
+
+Using One IBT_2 for MAIN and another for PROG
+==============================================
+
+This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IBT_2 can deliver much more current than you need for a proramming track. If you install 1 Amp fuses in between the IBT_2 outputs and both rails of your programming that, that and the lower trip current we set in the CS for the programming track should protect your layout.
+
+Using External Curent Sense
+============================
+
+Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the main track). 
+
+***TODO: Insert help for using or pointing to a section for external CS boards***
 
 ***********
 Tech Notes
 ***********
 
 add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how they can chage the pins if there is a problem by creating a new motor board type.
+
+Below is a link to the IBT_2 schematic. Click to enlarge.
+
+.. image:: ../_static/images/schematics/IBT_2_schematic.jpg
+   :scale: 30
+
+
 
 
 

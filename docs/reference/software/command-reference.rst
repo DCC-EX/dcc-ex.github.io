@@ -20,13 +20,6 @@ You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/M
 SINGLE LETTER COMMANDS
 ^^^^^^^^^^^^^^^^^^^^^^
 
-
-* ``<s>`` Lowercase "s": DCC++ EX CommandStation Status
-
-  .. code-block:: none
-
-       RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
-
 * ``<0>`` Number Zero: Turn Power **OFF** to tracks (Both Main & Programming)
   
   .. code-block:: none
@@ -39,53 +32,21 @@ SINGLE LETTER COMMANDS
 
       RETURNS: <p1> : Power to tracks ON. (See extended power command below)
 
-* 
-  ``<T>`` Upper Case T : Lists all defined turnouts. 
-
-  .. code-block:: none
-
-      RETURNS: <H ID ADDRESS SUBADDRESS THROW> for each defined turnout or <X> if no turnouts defined.
-      **ID** - ID assigned to the turnout
-      **ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated. (addresses 0-511, subaddresses 0-3)
-      **THROW** - False or a "0" is unthrown. True or "1" is thrown.
-
-* 
-  ``<S>`` Upper Case S : Lists all defined sensors. 
-
-  .. code-block:: none
-
-      RETURNS: <Q ID PIN PULLUP> for each defined sensor or <X> if no sensors defined. 
-
-* 
-  ``<Z>`` Upper Case Z : Lists all defined output pins
-
-  .. code-block:: none
-
-      RETURNS: <Y ID PIN IFLAG STATE> for each defined output pin or <X> if no output pins defined
-
-* 
-  ``<Q>`` Upper Case Q : Lists Status of all sensors.
-
-  .. code-block:: none
-
-      RETURNS: <Q ID> (active) or <q ID> (not active)
-
-* 
-  ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
-
-  .. code-block:: none
-
-      RETURNS: <e nTurnouts nSensors>
-
-* 
-  ``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
+* ``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
 
   .. code-block:: none
 
       RETURNS: <c CURRENT>, where CURRENT is the Raw value of the current sense pin
 
-* 
-  ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
+* ``<D>`` Upper Case D: Please see `Diagnostics <D> Command Page <./diagnostic-d-command.html>`_
+
+* ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
+
+  .. code-block:: none
+
+      RETURNS: <e nTurnouts nSensors>
+
+* ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
 
   .. code-block:: none
 
@@ -94,8 +55,46 @@ SINGLE LETTER COMMANDS
 
     **(NOTE:There is NO Un-Delete)**
 
-* 
-  ``<D>`` Upper Case D: Please see `Diagnostics <D> Command Page <./diagnostic-d-command.html>`_
+
+* ``<Q>`` Upper Case Q : Lists Status of all sensors.
+
+  .. code-block:: none
+
+      RETURNS: <Q ID> (active) or <q ID> (not active)
+
+* ``<R>`` Upper Case R : Read Loco address (programming track only)
+
+  .. code-block:: none
+
+      RETURNS: <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
+
+
+* ``<S>`` Upper Case S : Lists all defined sensors. 
+
+  .. code-block:: none
+
+      RETURNS: <Q ID PIN PULLUP> for each defined sensor or <X> if no sensors defined. 
+
+* ``<s>`` Lowercase "s": DCC++ EX CommandStation Status
+
+  .. code-block:: none
+
+       RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
+
+* ``<T>`` Upper Case T : Lists all defined turnouts. 
+
+  .. code-block:: none
+
+      RETURNS: <H ID ADDRESS SUBADDRESS THROW> for each defined turnout or <X> if no turnouts defined.
+      **ID** - ID assigned to the turnout
+      **ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated. (addresses 0-511, subaddresses 0-3)
+      **THROW** - False or a "0" is unthrown. True or "1" is thrown.
+
+* ``<Z>`` Upper Case Z : Lists all defined output pins
+
+  .. code-block:: none
+
+      RETURNS: <Y ID PIN IFLAG STATE> for each defined output pin or <X> if no output pins defined
 
 * 
   There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).
@@ -592,16 +591,25 @@ Writes, and then verifies, a Configuration Variable BIT to the decoder of an eng
 READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Reads a Configuration Variable from the decoder of an engine on the programming track.  
+If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programing track.
 
 
-* Read CV BYTE Format is: ``<R CV CALLBACKNUM CALLBACKSUB>``  
+Read CV BYTE Format is: ``<R CV CALLBACKNUM CALLBACKSUB>``  
+
 * ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).  
 * ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
+* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function. 
 
   * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV VALUE>``  
-  * ``CV VALUE`` is a number from 0-255 as read from the requested CV, or -1 if read could not be verified. 
+  * ``CV VALUE`` is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.
+
+Read Engine address format is simply: ``<R>``
+
+* ``RETURNS:`` ``<r ADDRESS>`` when successul and ``<r -1>`` if it is not.
+
+**IMPORTANT: If the loco is on a consist, the address returned will be the consist address**
+
+.. Note:: When combined with the ``<D ACK ON>`` Command, the <R> Command (with or without parameters) can be used for diagnostics, for example when you get a "-1" response. (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
 
 VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -635,6 +643,7 @@ DIAGNOSTICS
 "D" Commands
 ~~~~~~~~~~~~
 
+.. Note:: 1 and 0 and ON and OFF can be used interchangeably in DCC++ EX
 
 * ``<D CABS>`` Shows cab numbers and speed in reminder table.
 * ``<D RAM>`` Shows remaining RAM.
@@ -647,11 +656,14 @@ DIAGNOSTICS
 SEND PACKET TO THE TRACK
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-``<M>`` Command - Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register driving the main operations track
+.. Warning:: THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER
 
-  **FORMAT:** ``<M REGISTER BYTE1 BYTE2 [BYTE3] [BYTE4] [BYTE5]>``
+| ``<M>`` Command writes a packet the MAIN track
+| ``<P>`` Command writes a packet to the PROG track
 
-**NOTE:** THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER
+Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register driving the selected track
+
+  **FORMAT:** ``<M|P REGISTER BYTE1 BYTE2 [BYTE3] [BYTE4] [BYTE5]>``
 
 .. code-block::
 

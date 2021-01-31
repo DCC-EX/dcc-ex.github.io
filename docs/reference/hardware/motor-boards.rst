@@ -1,7 +1,7 @@
 Motor boards
 ============
 
-CommandStation-EX is compatible with a wide variety of motor boards, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use.
+CommandStation-EX is compatible with a wide variety of motor boards, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.
 
 **TL;DR** (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the `Shopping List <shopping-list.html>`_
 
@@ -26,8 +26,9 @@ Boards currently supported
    * :ref:`L298N Motor Driver (dual)` - 2A
    * :ref:`Makerfabs H-Bridge Motor Shield` - 8A
    * :ref:`BTS7960 IBT_2 Board (single)` - 43A
+   * :ref:`Dual Motor Driver Module H-bridge MOSFET IRF3205` - 15A
 
-  **Hard to Use Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
+  **Expert Level Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
   
    * :ref:`Keyes/Fundumoto ("Beeper Board")` - 2A
    * :ref:`Velleman KA03 (kit) VMA03 (soldered)` - 2A
@@ -156,6 +157,23 @@ You will either need 2 of these or one of these and another board to run your pr
    :scale: 100%
 
 `IBT_2 Intstallation Instructions <../../advanced-setup/IBT_2-motor-board-setup.html>`_
+
+|
+
+Dual Motor Driver Module H-bridge MOSFET IRF3205
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Tinkerer to Engineer Level**
+
+.. warning:: This board can supply a LOT of current. The maximum reccommended current is 5A for N and HO scale. This board can supply a 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense. 
+
+You can use this board to handle both your MAIN and PROG track, or you can use one of the H-Bridges to power your MAIN track and use the Arduino Motor Shield for your PROG track. This board can provide up to 15A when you need more current than the 1.2-1.5A the Arduino Motor Shield can provide. IRF3205 is the model number of the N Channel MOSFETS used in the H-Bridge circuit. MOSFETS are a type of transistor, and rather than many other boards that use an integrated circuit for the H-Bridge, this board uses 4 discrete transistors per H-Bridge. This allows for a highly efficient motor controller with a negligible voltage drop.
+
+.. image:: ../../_static/images/motorboards/3205_motor_board.jpg
+   :alt: IRF3205 Motor Board
+   :scale: 100%
+
+`Dual Motor Driver IRF3205 Intstallation Instructions <../../advanced-setup/IBT_2-motor-board-setup.html>`_
 
 |
 

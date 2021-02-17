@@ -130,6 +130,12 @@ Below is a link to the IBT_2 schematic. Click to enlarge.
 .. image:: ../_static/images/schematics/IBT_2_schematic.jpg
    :scale: 50
 
+Below is the Handsen Technology datasheet. Engineers please read
+
+`Handsen Technology BTS7960 High Current 43A H-Bridge Motor Driver <../_static/documents/bts7960-motor-driver.pdf>`_
+
+
+
 
 
 

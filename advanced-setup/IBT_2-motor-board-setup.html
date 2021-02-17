@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>IB_2 BTS7960 Motor Board &mdash; DCC++ EX  documentation</title>
+  <title>IBT_2 BTS7960 Motor Board &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -95,7 +95,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Advanced Setup</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="wifi-config.html">Wifi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motor-board-config.html">Motor Board Configuration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">IB_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">IBT_2 BTS7960 Motor Board</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
@@ -154,7 +154,7 @@
         
           <li><a href="index.html">Advanced Setup</a> &raquo;</li>
         
-      <li>IB_2 BTS7960 Motor Board</li>
+      <li>IBT_2 BTS7960 Motor Board</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,17 +173,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ib-2-bts7960-motor-board">
-<h1>IB_2 BTS7960 Motor Board<a class="headerlink" href="#ib-2-bts7960-motor-board" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ibt-2-bts7960-motor-board">
+<h1>IBT_2 BTS7960 Motor Board<a class="headerlink" href="#ibt-2-bts7960-motor-board" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-you-will-need-for-ibt-2">
 <h2>What You Will Need (for IBT_2)<a class="headerlink" href="#what-you-will-need-for-ibt-2" title="Permalink to this headline">¶</a></h2>
-<p>An Arduino Mega or clone (or an Uno if you don’t need WiFi or Ethernet)
-An Arduino Motor Shield
-An IBT_2 Motor Board
-Version 3.0.1 of the DCC++ EX Command Station Software
-A 1 Ohm 1/4 Watt resistor
-Some Jumper Wires</p>
-<p>We can assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover how to “upgrade” with just one IBT_2 board to run your MAIN track and relegate your Arduino Motor Shield to the PROG track as well as explain other options.</p>
+<ul class="simple">
+<li><p>An Arduino Mega or clone (or an Uno if you don’t need WiFi or Ethernet)</p></li>
+<li><p>An Arduino Motor Shield</p></li>
+<li><p>An IBT_2 Motor Board</p></li>
+<li><p>Version 3.1.0 or later of the DCC++ EX Command Station Software</p></li>
+<li><p>1k Resitor (Optional)</p></li>
+<li><p>Some Jumper Wires</p></li>
+</ul>
+<p>We assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover how to “upgrade” with just one IBT_2 board to run your MAIN track and relegate your Arduino Motor Shield to the PROG track as well as explain other options.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We can’t say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.</p>
@@ -197,28 +199,62 @@ Some Jumper Wires</p>
 <h3>What We Are Going To Do<a class="headerlink" href="#what-we-are-going-to-do" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Use just 1 output of your existing Arduino Motor Shield for your program track with no hardware changes</p></li>
-<li><p>Add an IBT_2 (BTS7960) Motor Board to replace the “A” output to power your MAIN track</p></li>
+<li><p>Add an IBT_2 (BTS7960) Motor Board to replace the “A” output of the motor shield to power your MAIN track</p></li>
 <li><p>Move a few wires and connect a few jumpers to your IBT_2</p></li>
-<li><p>Add a current sense resistor to the IBT_2</p></li>
+<li><p>Optionally add a current sense resistor to the IBT_2</p></li>
 <li><p>Change your motor board type in your config.h file</p></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. Both outputs of the motor shield are still connected, we just don’t enable it. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.</p>
+</div>
 </div>
 <div class="section" id="steps">
 <h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
-<p>Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IBT_2</p>
-<p>Disconect the wires coming out of output A of the Arduino Motor Board that connect to your MAIN track.</p>
-<p>Connect those two wires coming from the MAIN track to the B+ and B- Screw terminals. If using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as a train would sit on the track. We need to keep the phase of the DCC signal in sync between power districts and reversing sections.</p>
-<p>Connect or solder a resistor (see alternate method using a current sense board below) to XXX</p>
-<p>Use the following table to connect pins from the Arduino Mega to the IBT_2</p>
-<p><strong>insert table here</strong></p>
-<p>Connect pin X on Mega to pin Y on IBT_2
-Connect pin A on Mega to pin B on IBT_2
-Connect current sense resistor to pin A5 on the Arduino Motor Shield</p>
-<p>It shoud look like this:</p>
-<p><strong>insert friting diagram here</strong></p>
+<ol class="arabic simple">
+<li><p>Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IBT_2</p></li>
+<li><p>Disconect the wires coming out of output A of the Arduino Motor Shield that normally connect to your MAIN track.</p></li>
+<li><p>Move the two wires we just disconnected from the motor shield and connected them to the B+ and B- Screw terminals of the IBT_2. If you will be using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as viewd from a train sitting on the track. We need to keep the phase of the DCC signal in sync between power districts.</p></li>
+<li><p>Option = You may need to connect or solder a 1k resistor between pin 5 or 6 and ground on the IBT_2 (see alternate method using a current sense board below). There is already a 1k resistor on both boards, but if there isn’t we will need to install our own. Below we will cover how to know.</p></li>
+<li><p>Select your IBT_2 board in the config.h file</p></li>
+<li><p>Upload the new sketch to your Arduino Mega</p></li>
+</ol>
+<p>Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Arduino</p></th>
+<th class="head"><p>IBT_2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>4 (enable)</p></td>
+<td><p>3,4,7  (R_EN, L_EN, VCC)</p></td>
+</tr>
+<tr class="row-odd"><td><p>5 (signal 1)</p></td>
+<td><p>2 (LPWM)</p></td>
+</tr>
+<tr class="row-even"><td><p>6 (signal 2)</p></td>
+<td><p>1 (RPWM)</p></td>
+</tr>
+<tr class="row-odd"><td><p>A5 (CS MAIN)</p></td>
+<td><p>5,6, R1a  (R_IS, L_IS, R1a)</p></td>
+</tr>
+<tr class="row-even"><td><p>GND</p></td>
+<td><p>GND, R1b</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here is a visual diagram, click to enlarge:</p>
+<a class="reference internal image-reference" href="../_images/ibt_2_wiring.png"><img alt="IBT_2 Wiring 1" src="../_images/ibt_2_wiring.png" style="width: 264.40000000000003px; height: 340.0px;" /></a>
+<p>It shoud look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3,4, and 7 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.</p>
+<a class="reference internal image-reference" href="../_images/ibt_2_wiring_fritz.jpg"><img alt="IBT_2 Wiring 2" src="../_images/ibt_2_wiring_fritz.jpg" style="width: 578.0px; height: 334.8px;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We are going to edit your config.h file. If this is your first time using the Command Station software and do not have a config.h file, rename your config.example.h file to config.hardware</p>
+<p>We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.</p>
 </div>
 <p>Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:</span>
@@ -235,14 +271,26 @@ Connect current sense resistor to pin A5 on the Arduino Motor Shield</p>
 <span class="cp">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
 </pre></div>
 </div>
-<p>Change the last line to look like this. To be sure of your spelling, you can copy and past IBT_2_WITH_ARDUINO and replace STANDARD_MOTOR_SHIELD</p>
+<p>Change the last line to look like this. To be sure of your spelling, you can copy and paste IBT_2_WITH_ARDUINO and replace STANDARD_MOTOR_SHIELD</p>
 <p><code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MOTOR_SHIELD_TYPE</span> <span class="pre">IBT_2_WITH_ARDUINO</span></code></p>
-<p>Upload the sketch to your arduino. If you need help on how to upload a sketch, see</p>
+<p>Upload the sketch to your arduino. If you need help on how to upload a sketch, see <a class="reference external" href="../get-started/index.html">Getting Started</a></p>
+</div>
+<div class="section" id="using-one-ibt-2-for-main-and-another-for-prog">
+<h3>Using One IBT_2 for MAIN and another for PROG<a class="headerlink" href="#using-one-ibt-2-for-main-and-another-for-prog" title="Permalink to this headline">¶</a></h3>
+<p>This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IBT_2 can deliver much more current than you need for a proramming track. If you install 1 Amp fuses in between the IBT_2 outputs and both rails of your programming that, that and the lower trip current we set in the CS for the programming track should protect your layout.</p>
+<p><strong>*TODO: Finish this section*</strong></p>
+</div>
+<div class="section" id="using-external-curent-sense">
+<h3>Using External Curent Sense<a class="headerlink" href="#using-external-curent-sense" title="Permalink to this headline">¶</a></h3>
+<p>Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the main track).</p>
+<p><strong>*TODO: Insert help for using or pointing to a section for external CS boards*</strong></p>
 </div>
 </div>
 <div class="section" id="tech-notes">
 <h2>Tech Notes<a class="headerlink" href="#tech-notes" title="Permalink to this headline">¶</a></h2>
 <p>add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how they can chage the pins if there is a problem by creating a new motor board type.</p>
+<p>Below is a link to the IBT_2 schematic. Click to enlarge.</p>
+<a class="reference internal image-reference" href="../_images/IBT_2_schematic.jpg"><img alt="../_images/IBT_2_schematic.jpg" src="../_images/IBT_2_schematic.jpg" style="width: 525.0px; height: 237.5px;" /></a>
 </div>
 </div>
 

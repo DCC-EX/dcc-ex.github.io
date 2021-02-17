@@ -102,6 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/release-notes.html">Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
@@ -185,7 +186,7 @@
             
   <div class="section" id="motor-boards">
 <h1>Motor boards<a class="headerlink" href="#motor-boards" title="Permalink to this headline">¶</a></h1>
-<p>CommandStation-EX is compatible with a wide variety of motor boards, also known as “dual H-bridges” and “motor shields”. We’ve sorted them from least difficult to most difficult to use to help you decide what to use.</p>
+<p>CommandStation-EX is compatible with a wide variety of motor boards, also known as “dual H-bridges” and “motor shields”. We’ve sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.</p>
 <p><strong>TL;DR</strong> (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the <a class="reference external" href="shopping-list.html">Shopping List</a></p>
 <a class="reference internal image-reference" href="../../_images/deek_robot1_sm.jpg"><img alt="Deek Robot Motor Shield" src="../../_images/deek_robot1_sm.jpg" style="width: 400.0px; height: 304.0px;" /></a>
 <div class="admonition note">
@@ -210,9 +211,10 @@
 <li><p><a class="reference internal" href="#l298n-motor-driver-dual"><span class="std std-ref">L298N Motor Driver (dual)</span></a> - 2A</p></li>
 <li><p><a class="reference internal" href="#makerfabs-h-bridge-motor-shield"><span class="std std-ref">Makerfabs H-Bridge Motor Shield</span></a> - 8A</p></li>
 <li><p><a class="reference internal" href="#bts7960-ibt-2-board-single"><span class="std std-ref">BTS7960 IBT_2 Board (single)</span></a> - 43A</p></li>
+<li><p><a class="reference internal" href="#dual-motor-driver-module-h-bridge-mosfet-irf3205"><span class="std std-ref">Dual Motor Driver Module H-bridge MOSFET IRF3205</span></a> - 15A</p></li>
 </ul>
 </div></blockquote>
-<p><strong>Hard to Use Boards (Tinkerer or Engineer Level)</strong> - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)</p>
+<p><strong>Expert Level Boards (Tinkerer or Engineer Level)</strong> - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="#keyes-fundumoto-beeper-board"><span class="std std-ref">Keyes/Fundumoto (“Beeper Board”)</span></a> - 2A</p></li>
@@ -322,10 +324,24 @@
 <div class="line"><br /></div>
 </div>
 </div>
+<div class="section" id="dual-motor-driver-module-h-bridge-mosfet-irf3205">
+<h3>Dual Motor Driver Module H-bridge MOSFET IRF3205<a class="headerlink" href="#dual-motor-driver-module-h-bridge-mosfet-irf3205" title="Permalink to this headline">¶</a></h3>
+<p><strong>Tinkerer to Engineer Level</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This board can supply a LOT of current. The maximum reccommended current is 5A for N and HO scale. This board can supply a 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.</p>
+</div>
+<p>You can use this board to handle both your MAIN and PROG track, or you can use one of the H-Bridges to power your MAIN track and use the Arduino Motor Shield for your PROG track. This board can provide up to 15A when you need more current than the 1.2-1.5A the Arduino Motor Shield can provide. IRF3205 is the model number of the N Channel MOSFETS used in the H-Bridge circuit. MOSFETS are a type of transistor, and rather than many other boards that use an integrated circuit for the H-Bridge, this board uses 4 discrete transistors per H-Bridge. This allows for a highly efficient motor controller with a negligible voltage drop.</p>
+<a class="reference internal image-reference" href="../../_images/3205_motor_board.jpg"><img alt="IRF3205 Motor Board" src="../../_images/3205_motor_board.jpg" style="width: 585.0px; height: 452.0px;" /></a>
+<p><a class="reference external" href="../../advanced-setup/IBT_2-motor-board-setup.html">Dual Motor Driver IRF3205 Intstallation Instructions</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
 <div class="section" id="keyes-fundumoto-beeper-board">
 <h3>Keyes/Fundumoto (“Beeper Board”)<a class="headerlink" href="#keyes-fundumoto-beeper-board" title="Permalink to this headline">¶</a></h3>
 <p><strong>Engineer Level</strong></p>
-<p>You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board. There are several versions of these boards and one run has the wrong, tiny, SMD transistors soldered to the board. Make sure</p>
+<p>You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board. There are several versions of these boards and one run has the wrong, tiny, SMD transistors soldered to the board. Make sure if you have the board with “more” spelled “moer”, that the 2 transistors are labelled JIY and NOT J3Y. You will need a magnifier or a cell phone to take a picture and zoom in. If you have J3Y transistors, you can order replacements and remove the old ones and resolder new ones (a job for a skilled solderer) or connect to the debug pins instead and provide your own level shifting to the Rx pin <strong>*More details on this fix soon*</strong></p>
 <a class="reference internal image-reference" href="../../_images/keyes_fundumoto.jpg"><img alt="Keyes/Fundumoto Motor Shield" src="../../_images/keyes_fundumoto.jpg" style="width: 300.0px; height: 256.0px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>

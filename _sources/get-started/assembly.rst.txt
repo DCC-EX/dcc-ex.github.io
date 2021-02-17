@@ -1,5 +1,6 @@
+*********
 Assembly
-========
+*********
 
 Let's start with the basics and add as you see fit. For this install, you'll need the items listed on the `Get Started <index.html>`_ page, plus:
 
@@ -15,15 +16,27 @@ Let's start with the basics and add as you see fit. For this install, you'll nee
 
 * For an Uno, Nano or other microcontroller, please see `Using a different microcontroller <../reference/hardware/microcontroller-boards.html>`_. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see `Motor Controllers <../reference/hardware/motor-boards.html>`_
 
-For a video on how to do this, click here for `Setting Up Your Command Station <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
+For a video on how to do this, click below: `Setting Up Your Command Station <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
 
-1. BEFORE YOU BEGIN, Cut the Vin trace on the motor controller
---------------------------------------------------------------
+   .. raw:: html
+      
+      <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-We recommend you use two separate power supplies (or one power supply that can deliver two different voltages) one for the Arduino Mega and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
+1. BEFORE YOU BEGIN, Cut the Vin trace on the motor controller OR Bend out the Vin Pin
+=======================================================================================
 
-.. note:: By default, the motor controller connects its power supply via the pins, to the Arduino. This can supply too much voltage to the Arduino. If you do not cut this trace, you could damage the Arduino if you apply more than 12V to the motor shield. In the same way, if you don't cut this trace and use the 2 power supplies as recommended, they would be connected to each other. This would not be good.
+We recommend you use two separate power supplies (or one power supply that can deliver two different voltages) one for the Arduino Mega and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and do ONE of the following:
 
+1. Cut the Vin trace on the bottom of the board.
+
+2. Bend out or cut off the Vin Pin
+
+.. note:: By default, the motor controller connects its power supply via the pins, to the Arduino. This can supply too much voltage to the Arduino. If you do not cut this trace or bend out the Vin, you could damage the Arduino if you apply more than 12V to the motor shield. In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other. This would not be good.
+
+Cutting the Trace
+------------------
+
+Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
 
 .. image:: ../_static/images/motor_shield_vin2.jpg
    :alt: Cut Vin trace on arduino motor shield
@@ -33,8 +46,22 @@ We recommend you use two separate power supplies (or one power supply that can d
 
 If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.
 
+Bending out or Cutting the Vin Pin
+-----------------------------------
+
+In this method, you can just bend the Vin pin so that instead of connecting to the header in the Aduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
+
+.. image:: ../_static/images/motor_shield_vin2.jpg
+   :alt: Bend out the Vin pin on the arduino motor shield
+   :scale: 100%
+
+**Figure 3** - Bending out the Pin
+
+
+
+
 2. You need to connect the motor shield on top of the Arduino.
---------------------------------------------------------------
+===============================================================
 
 .. warning:: It is very easy to misalign the pins and then either have trouble diagnosing problems or damage the board!
 
@@ -100,7 +127,7 @@ e. Now, being careful to not bend any pins gently press, using a rocking motion 
    
 **Figure 8** - Gently press the boards together
 
-f. The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimeters of the pins between the bottom of the motor board and the top of the headers. Figure 9 shows the boards as they look properly seated.
+f. The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimeters of the pins between the bottom of the motor board and the top of the headers. Figure 9 shows the boards as they look properly seated. 
 
 
 .. image:: ../_static/images/seated.jpg
@@ -111,8 +138,11 @@ f. The boards should be seated. Note the pins are longer than the headers. It is
 
 Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.
 
+.. NOTE:: You may notice that the soldered pins on the underside of the power connector hit the top of the USB connector on the Arduino. You can either lift the board slightly, it will still connect properly, or take diagonal cutters and carefully trim the ends of the pins a bit.
+
+
 3. Connect your power supply to the motor shield (But don't plug it in yet!)
-----------------------------------------------------------------------------
+==============================================================================
 
 .. warning:: Make sure you have cut the trace on the motor control board. If not, see above first. Once you know the trace is cut, connect power to the motor board
 
@@ -139,7 +169,7 @@ If you are using a laptop style "brick" power supply or an adapter that plugs in
 If you don't have a screw terminal adapter, you can cut the end off your power supply and strip the wires. The outer wire braid is usually the negative connection and the center wire is the positive connection. Check the wiring image on the power supply itself.
 
 4. Connect the power wires to the tracks
-----------------------------------------
+=========================================
 
 There are two sets of output connectors on the motor shield, "A" and "B". A is the main or operations (also called "Ops") track while B is the programming or service track. Connect twisted pair wire of the proper gauge to each track. Polarity it non important here, but if you will be using a siding track instead of a separate, unused piece of track, make sure that the positive and negative for both tracks match. In other words, if you view one side of your main track as having a "left" side and a "right" side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be "in phase" with each other. Here is the diagram from above repeated again for reference.
 
@@ -150,28 +180,28 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 **Figure 12** - Out to Main and Program tracks
 
 5. Connect the power supply to the Arduino (but don't plug it in yet!)
------------------------------------------------------------------------
+========================================================================
 
 Connect the 2.5mm barrel connector from your separate 7-9V DC powersupply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the "Vin" and "Gnd" pins on the Arduino.
 
 .. note:: There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run exWebThrottle or JMRI. There is also a way to use a 5V power supply. Please read `Power Supplies <../reference/hardware/power-supplies.html>`_ to help you find what will work best for you).
 
 6. Install the optional WiFi board
-----------------------------------
+===================================
 
 You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing a ESP8266 Shield or bare ESP8266 to connect wirelessly, Click the link below.
 
 `Wifi Setup <./wifi-setup.html>`_
 
 7. Load firmware on your Command Station
--------------------------------------------
+==========================================
 
 Keep your USB cable handy because we are going to need it in this step.
 
 Go to the `Command Station downloads <../download/commandstation.html>`_ page. Most users will want to use the installer.
 
 TECHNICAL NOTES
----------------
+================
 
 **Wire Gauge** - The Arduino Motor controller can only provide about 1.5 Amps of power (despite being rated for 2), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).
 

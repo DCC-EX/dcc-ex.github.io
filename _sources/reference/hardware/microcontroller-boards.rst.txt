@@ -18,6 +18,8 @@ Why do you recommend the Mega?
    :alt: Arduino Mega Microcontroller
    :scale: 100%
 
+If you already have an Uno, or will use JMRI to control your trains, then by all means use an Uno.
+
 What about the Nano?
 --------------------
 

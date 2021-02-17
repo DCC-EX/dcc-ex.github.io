@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Diagnostics &lt;D ACK&gt; Command" href="diagnostic-d-ack-command.html" />
-    <link rel="prev" title="Shopping List" href="../hardware/shopping-list.html" /> 
+    <link rel="prev" title="Release Notes" href="release-notes.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,6 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">DCC++ EX Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
@@ -198,11 +199,6 @@
 <div class="section" id="single-letter-commands">
 <h2>SINGLE LETTER COMMANDS<a class="headerlink" href="#single-letter-commands" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: DCC++ EX CommandStation Status</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
-</pre></div>
-</div>
-</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> Number Zero: Turn Power <strong>OFF</strong> to tracks (Both Main &amp; Programming)</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;p0&gt; : Power to tracks OFF. (See extended power command below)
 </pre></div>
@@ -213,36 +209,14 @@
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> Upper Case T : Lists all defined turnouts.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;H ID ADDRESS SUBADDRESS THROW&gt; for each defined turnout or &lt;X&gt; if no turnouts defined.
-**ID** - ID assigned to the turnout
-**ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated. (addresses 0-511, subaddresses 0-3)
-**THROW** - False or a &quot;0&quot; is unthrown. True or &quot;1&quot; is thrown.
-</pre></div>
-</div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> Upper Case S : Lists all defined sensors.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Q ID PIN PULLUP&gt; for each defined sensor or &lt;X&gt; if no sensors defined.
-</pre></div>
-</div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> Upper Case Z : Lists all defined output pins</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Y ID PIN IFLAG STATE&gt; for each defined output pin or &lt;X&gt; if no output pins defined
-</pre></div>
-</div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> Upper Case Q : Lists Status of all sensors.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Q ID&gt; (active) or &lt;q ID&gt; (not active)
-</pre></div>
-</div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;e nTurnouts nSensors&gt;
-</pre></div>
-</div>
-</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code> Lower case c: Displays the instantaneous current on the MAIN Track</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;c CURRENT&gt;, where CURRENT is the Raw value of the current sense pin
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Upper Case D: Please see <a class="reference external" href="./diagnostic-d-command.html">Diagnostics &lt;D&gt; Command Page</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;e nTurnouts nSensors&gt;
 </pre></div>
 </div>
 </li>
@@ -254,7 +228,39 @@
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Upper Case D: Please see <a class="reference external" href="./diagnostic-d-command.html">Diagnostics &lt;D&gt; Command Page</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> Upper Case Q : Lists Status of all sensors.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Q ID&gt; (active) or &lt;q ID&gt; (not active)
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;r ADDRESS&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> Upper Case S : Lists all defined sensors.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Q ID PIN PULLUP&gt; for each defined sensor or &lt;X&gt; if no sensors defined.
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: DCC++ EX CommandStation Status</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> Upper Case T : Lists all defined turnouts.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;H ID ADDRESS SUBADDRESS THROW&gt; for each defined turnout or &lt;X&gt; if no turnouts defined.
+**ID** - ID assigned to the turnout
+**ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated. (addresses 0-511, subaddresses 0-3)
+**THROW** - False or a &quot;0&quot; is unthrown. True or &quot;1&quot; is thrown.
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> Upper Case Z : Lists all defined output pins</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Y ID PIN IFLAG STATE&gt; for each defined output pin or &lt;X&gt; if no output pins defined
+</pre></div>
+</div>
+</li>
 <li><p>There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).</p></li>
 </ul>
 </div>
@@ -740,9 +746,9 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 </div>
 <div class="section" id="read-configuration-variable-byte-from-engine-decoder-on-programming-track">
 <h4>READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#read-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
-<p>Reads a Configuration Variable from the decoder of an engine on the programming track.</p>
+<p>If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programing track.</p>
+<p>Read CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">CV</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p>
 <ul class="simple">
-<li><p>Read CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">CV</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code> : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.</p>
@@ -752,6 +758,15 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 </ul>
 </li>
 </ul>
+<p>Read Engine address format is simply: <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">ADDRESS&gt;</span></code> when successul and <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">-1&gt;</span></code> if it is not.</p></li>
+</ul>
+<p><strong>IMPORTANT: If the loco is on a consist, the address returned will be the consist address</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When combined with the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code> Command, the &lt;R&gt; Command (with or without parameters) can be used for diagnostics, for example when you get a “-1” response. (See <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues">Diagnosing Issues</a>** for more help)</p>
+</div>
 </div>
 <div class="section" id="verify-configuration-variable-byte-from-engine-decoder-on-programming-track">
 <h4>VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
@@ -783,6 +798,10 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <h2>DIAGNOSTICS<a class="headerlink" href="#diagnostics" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="d-commands">
 <h3>“D” Commands<a class="headerlink" href="#d-commands" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>1 and 0 and ON and OFF can be used interchangeably in DCC++ EX</p>
+</div>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Shows cab numbers and speed in reminder table.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Shows remaining RAM.</p></li>
@@ -795,11 +814,18 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 </div>
 <div class="section" id="send-packet-to-the-track">
 <h3>SEND PACKET TO THE TRACK<a class="headerlink" href="#send-packet-to-the-track" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;M&gt;</span></code> Command - Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register driving the main operations track</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER</p>
+</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;M&gt;</span></code> Command writes a packet the MAIN track</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;P&gt;</span></code> Command writes a packet to the PROG track</div>
+</div>
+<p>Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register driving the selected track</p>
 <blockquote>
-<div><p><strong>FORMAT:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">REGISTER</span> <span class="pre">BYTE1</span> <span class="pre">BYTE2</span> <span class="pre">[BYTE3]</span> <span class="pre">[BYTE4]</span> <span class="pre">[BYTE5]&gt;</span></code></p>
+<div><p><strong>FORMAT:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;M|P</span> <span class="pre">REGISTER</span> <span class="pre">BYTE1</span> <span class="pre">BYTE2</span> <span class="pre">[BYTE3]</span> <span class="pre">[BYTE4]</span> <span class="pre">[BYTE5]&gt;</span></code></p>
 </div></blockquote>
-<p><strong>NOTE:</strong> THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``REGISTER:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER&gt;0) the packet
 ``BYTE1:``  first hexadecimal byte in the packet
 ``BYTE2:``  second hexadecimal byte in the packet
@@ -825,7 +851,7 @@ returns: NONE
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="diagnostic-d-ack-command.html" class="btn btn-neutral float-right" title="Diagnostics &lt;D ACK&gt; Command" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../hardware/shopping-list.html" class="btn btn-neutral float-left" title="Shopping List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="release-notes.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

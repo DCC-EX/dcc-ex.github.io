@@ -76,7 +76,7 @@ Here is a visual diagram, click to enlarge:
 
 It shoud look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3,4, and 7 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
 
-.. image:: ../_static/images/motorboards/ibt_2_wiring_fritz.png
+.. image:: ../_static/images/motorboards/ibt_2_wiring_fritz.jpg
    :alt: IBT_2 Wiring 2
    :scale: 40%
 

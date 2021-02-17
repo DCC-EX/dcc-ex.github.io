@@ -29,6 +29,7 @@ Software
 .. toctree::
     :maxdepth: 1
 
+    software/release-notes
     software/command-reference
     software/diagnostic-d-ack-command
     software/diagnostic-d-command

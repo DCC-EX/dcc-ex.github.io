@@ -103,7 +103,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 ``#define MOTOR_SHIELD_TYPE IBT_2_WITH_ARDUINO``
 
-Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../get-started/index.html>_`
+Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../get-started/index.html>`_
 
 Using One IBT_2 for MAIN and another for PROG
 ==============================================

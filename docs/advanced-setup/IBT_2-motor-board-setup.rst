@@ -45,6 +45,7 @@ Steps
 3. Move the two wires we just disconnected from the motor shield and connected them to the B+ and B- Screw terminals of the IBT_2. If you will be using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as viewd from a train sitting on the track. We need to keep the phase of the DCC signal in sync between power districts.
 
 4. Option = You may need to connect or solder a 1k resistor between pin 5 or 6 and ground on the IBT_2 (see alternate method using a current sense board below). There is already a 1k resistor on both boards, but if there isn't we will need to install our own. Below we will cover how to know.
+<<<<<<< HEAD
 
 5. Select your IBT_2 board in the config.h file
 
@@ -76,6 +77,39 @@ Here is a visual diagram, click to enlarge:
 
 It shoud look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3,4, and 7 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
 
+=======
+
+5. Select your IBT_2 board in the config.h file
+
+6. Upload the new sketch to your Arduino Mega
+
+Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
+
++--------------+-----------------------------+
+|  Arduino     |           IBT_2             |
++==============+=============================+
+| 4 (enable)   | 3,4,7  (R_EN, L_EN, VCC)    |
++--------------+-----------------------------+
+| 5 (signal 1) | 2 (LPWM)                    |
++--------------+-----------------------------+
+| 6 (signal 2) | 1 (RPWM)                    |
++--------------+-----------------------------+
+| A5 (CS MAIN) | 5,6, R1a  (R_IS, L_IS, R1a) |
++--------------+-----------------------------+
+|     GND      |        GND, R1b             |
++--------------+-----------------------------+
+
+Here is a visual diagram, click to enlarge:
+
+.. image:: ../_static/images/motorboards/ibt_2_wiring.png
+   :alt: IBT_2 Wiring 1
+   :scale: 40%
+
+
+
+It shoud look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3,4, and 7 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
+
+>>>>>>> sphinx
 .. image:: ../_static/images/motorboards/ibt_2_wiring_fritz.jpg
    :alt: IBT_2 Wiring 2
    :scale: 40%
@@ -130,12 +164,15 @@ Below is a link to the IBT_2 schematic. Click to enlarge.
 .. image:: ../_static/images/schematics/IBT_2_schematic.jpg
    :scale: 50
 
+<<<<<<< HEAD
 Below is the Handson Technology datasheet, recommended reading for Tinkerers and Engineers
 
 `Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver <../_static/documents/bts7960-motor-driver.pdf>`_
 
 
 
+=======
+>>>>>>> sphinx
 
 
 

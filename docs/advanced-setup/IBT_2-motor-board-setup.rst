@@ -1,5 +1,5 @@
 #########################
-IB_2 BTS7960 Motor Board
+IBT_2 BTS7960 Motor Board
 #########################
 
 *******************************
@@ -80,7 +80,7 @@ It shoud look like following. Note we have included the Arduino Mega and have th
    :alt: IBT_2 Wiring 2
    :scale: 40%
 
-.. Note:: We are going to edit your config.h file. If this is your first time using the Command Station software and do not have a config.h file, rename your config.example.h file to config.hardware
+.. Note:: We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.
 
 Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:
 
@@ -109,6 +109,8 @@ Using One IBT_2 for MAIN and another for PROG
 ==============================================
 
 This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IBT_2 can deliver much more current than you need for a proramming track. If you install 1 Amp fuses in between the IBT_2 outputs and both rails of your programming that, that and the lower trip current we set in the CS for the programming track should protect your layout.
+
+***TODO: Finish this section***
 
 Using External Curent Sense
 ============================

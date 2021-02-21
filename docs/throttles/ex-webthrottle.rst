@@ -9,47 +9,67 @@ For a video on how to install and use WebThrottle-EX click below.
    
       <iframe width="336" height="189" src="https://www.youtube.com/embed/BkgsEOjxWaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-What you need to setup the project
-----------------------------------
+What you need to run WebThrottle-EX
+------------------------------------
 
 * Chromium-Based Browser version 80 or above
   (Chrome, Opera, Edge)
 * You must enable the experimental Web Serial API
 
-To enable the Web Serial API, in your browser URL bar type:
+You don't need anything else to test it out and to run in emulator mode, just run it and play. To use it to run real trains you will need:
+
+* An Arduino Mega or Uno Microcontroller
+* An Arduino Motor Control Shield
+* The DCC++ EX Command Station sketch loaded on your Arduino
+
+
+Getting started
+---------------
+
+First, you must enable the Web Serial API, in your browser URL bar type:
 
 .. code-block::
 
    chrome://flags
 
 
+If you are using a different Chromium browser, substitute your browser name for chrome (ex: edge://flags).
+
 Then set the **#enable-experimental-web-platform-features** flag by looking on the page for "Experimental Web Platform Features" and click on the "enable" button.
 
-.. note:: Substitute the name of your browser above if you don't use Chrome
 
-What you’ll need to use this application
-----------------------------------------
+.. note:: If you don't have your hardware yet or just want to play with the throttle and see commands being sent to the log window, you can skip the part about connecting your Command Station.
 
-You don't need anything to test it out and to run in emulator mode, to run trains you will need:
+To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.
 
-* An Arduino Mega or Uno Microcontroller
-* An Arduino Motor Control Shield
-* Chromium based browser version 80 or later
+Run or Install WebThrottle-EX
+--------------------
 
-Getting started
----------------
+You have an option for how you would like to run WebThrottle-Ex, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
 
-.. note:: If you don't have your hardware yet or just want to play with the throttle
-    and see commands being sent to the log window, you can skip to the operation
-    section.
+Try it now (Run from the cloud)
+--------------------------------
 
-To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the serial connector on the Arduino. Click on the "index.html" or "exwebthrotle.html" file to load the webpage.
+Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run exWebThrottle in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+
+`TRY IT NOW <https://DCC-EX.github.io/WebThrottle-EX>`_
+
+WebThrottle-EX is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the WT-EX settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find WebThrottle-EX with your other Apps!
+
+Download
+---------
+
+This will install all the files to run locally on your machine. You won't need an internet connection to run the software. Just download the latest zip file from the link below and extract it to any folder you have run permission on. Then click on the index.html file to launch the throttle in your browser. Create a shortcut to it on your desktop so you can launch it more easily.
+
+`DOWNLOAD <https://github.com/DCC-EX/WebThrottle-EX/releases/>`_
+
+.. note:: We recommend using the version hosted on our servers as this will auto-update whenever we release a new update!
 
 
 Operation
 ---------
 
-To use the program, you can either click on the "Serial" dropodown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial"
+To use the program, you can either click on the "Serial" dropodown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
 
 Next, click on the "Connect DCC++ EX" button. 
 
@@ -117,24 +137,6 @@ The options button lets you save labels to go on your function buttons for each 
 
 .. note:: Not all CS functions are fully supported in the emulator yet. This means that although the software works, not all the responses will be shown in the debug console. This will be completed in a next release.
 
-Try it now
-----------
-
-Just click this link and it will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the instructions above for what is required to run exWebThrottle in your browser.
-
-`Try it now <https://DCC-EX.github.io/WebThrottle-EX>`_
-
-Also, if you go into the settings panel, you will find a button that says *Install*. Clicking this button will install it locally to your PC
-and you will find it with the rest of your installed applications (start menu on Windows). It will also work offline!
-
-Download
---------
-
-Just download the latest zip file from here and extract it to any folder you have run permission on. Then run the index.html file.
-
-`Download <https://github.com/DCC-EX/WebThrottle-EX/releases/>`_
-
-.. note:: We recommend using the version hosted on our servers as this will auto-update whenever we release a new update!
 
 Going Further / Developing
 --------------------------

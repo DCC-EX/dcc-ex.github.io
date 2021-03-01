@@ -166,7 +166,7 @@ Server Password - PASS_123456 where the last 6 charaters are the same as above
 
 All this information appears in the startup log if you are connected using a serial monitor in case you forget.
 
-.. Note:: If you experience dropped connections to the AP, turn off the auto-connect feature on your phone to prevent it from randomly disconnecting from the AP and connecting to your home router because it thinks it's a better connection.
+.. Note:: If you experience dropped connections to the AP, turn off the auto-connect feature on your phone to prevent it from randomly disconnecting from the AP and connecting to your home router because it thinks it's a better connection. You can also "forget" the connection it wants to switch to and then manually connect to that network when you need it.
 
 
 Connecting to your Network - Station Mode (edit config.h)

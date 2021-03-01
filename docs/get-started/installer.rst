@@ -162,6 +162,8 @@ Once you have configured your options, press this button to compile all the sour
 Test your setup
 ---------------
 
+.. NOTE:: The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
+
 Using the Arduino IDE Serial Monitor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

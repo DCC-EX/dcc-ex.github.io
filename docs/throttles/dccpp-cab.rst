@@ -10,8 +10,7 @@ Features
 =========
 
 * Speaks the <DCC++> Command Language natively
-* Connect via WiFi
-* Connect via Bluetooth
+* Connect via WiFi or Bluetooth
 * Read and Write CVs
 
 Screenshots
@@ -28,7 +27,7 @@ Screenshots
 Requirements
 =============
 
-* A DCC++ EX Commmand Station (Mega OR Uno/Nano based)
+* A DCC++ EX Commmand Station (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)
 * An Android Cell Phone or Tablet
 * A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi `Wifi Setup <../get-started/wifi-setup.html>`_
 * An HC-06 Board if you want to connect using Bluetooth
@@ -42,8 +41,21 @@ Operation
 Using Wifi
 -----------
 
+To use Wifi, make sure you have a WiFi enabled Command Station as described in the `Wifi Setup <../get-started/wifi-setup.html>`_ section.
+
+We have not tested the WiFi implementation yet
+
+
+***insert tutorial here***
+
 Using Bluetooth
 ----------------
+
+The Bluetooth connection requires an Android device with Bluetooth capability and a Bluetooth board attached to the Command Station. The setup is similar to how we use a WiFi Sheild or an ESP-01s board. It is just a different method to create a wireless serial connection to the CS from another device.
+
+You will need one of these inexpensive HC-06 boards.
+
+***insert tutorial here***
 
 
 

@@ -117,11 +117,9 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
 * Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). When we tied the two CS outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current.
 * Put a 5A fuse on each output leg going to your track.
 
-The spec sheet of the BTS7960B states that the "expected" (aka nominal) value expected for the ratio of output current to the current reported at the current sense is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of output current. If we appy that through our 5k or resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This translates at 3A to be anywhere from 1V to 5V. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connect to your Arduino!
+The spec sheet of the BTS7960B states that the "expected" (aka nominal) value expected for the ratio of output current to the current reported at the current sense is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the CS pin. If we appy that through our 5k or resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This translates at 3A to be anywhere from 1V to 5V. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connect to your Arduino! In other words, **You could destroy the analog input pin on your Arduino**.
 
-.. WARNING:: If you are going to use more than 3 Amps, you should add a 10k current sense resistor and a 5V Zener diode protection circuit. This would give you .392 Volts per Amp and will require a small change to your sketch to adjust your current conversion factor.
-
-A 2.2k resistor would allow you to measure up to 10A, but the larger the current range the less sensitivity and accuracy we have.
+.. WARNING:: If you are going to use more than 3 Amps, you should add a 10k current sense resistor and a 5V Zener diode protection circuit. This would give you .392 Volts per Amp and will require a small change to your sketch to adjust your current conversion factor. A 2.2k resistor would allow you to measure up to 10A, but the larger the current range the less sensitivity and accuracy you can get. Besides, we should use boosters and power districts if we need more than 5 Amps, right? ;)
 
 
 
@@ -135,7 +133,7 @@ This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG
 Using External Curent Sense
 ============================
 
-Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the main track). Three circuits we tested are the MAX471 (up to 3A), the ACS724 (5A), and a 5A current sense transformer for use on a wire going directly to the track.
+Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on  circuits we tested are the MAX471 (up to 3A), the ACS724 (5A), and a 5A current sense transformer for use on a wire going directly to the track.
 
 ***TODO: Insert help for using or pointing to a section for external CS boards***
 
@@ -143,7 +141,7 @@ Using an external current sense board instead of the onboard current sense inclu
 Tech Notes
 ***********
 
-***TODO: Add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how they can chage the pins if there is a problem by creating a new motor board type.
+***TODO: Add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how they can chage the pins if there is a problem by creating a new motor board type.***
 
 Below is a link to the IBT_2 schematic. Click to enlarge.
 

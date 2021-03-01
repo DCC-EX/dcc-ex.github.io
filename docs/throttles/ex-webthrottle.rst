@@ -43,7 +43,7 @@ Then set the **#enable-experimental-web-platform-features** flag by looking on t
 To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.
 
 Run or Install WebThrottle-EX
---------------------
+------------------------------
 
 You have an option for how you would like to run WebThrottle-Ex, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
 
@@ -67,7 +67,7 @@ This will install all the files to run locally on your machine. You won't need a
 
 
 Operation
----------
+----------
 
 To use the program, you can either click on the "Serial" dropodown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
 

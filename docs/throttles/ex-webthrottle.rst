@@ -53,7 +53,7 @@ Try it now (Run from the cloud)
 
 Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run exWebThrottle in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
-`TRY IT NOW <https://DCC-EX.github.io/WebThrottle-EX>`_
+<p><a class="dcclink" href="https://DCC-EX.github.io/WebThrottle-EX">Try It Now</a></p>
 
 WebThrottle-EX is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the WT-EX settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find WebThrottle-EX with your other Apps!
 
@@ -62,7 +62,7 @@ Download
 
 This will install all the files to run locally on your machine. You won't need an internet connection to run the software. Just download the latest zip file from the link below and extract it to any folder you have run permission on. Then click on the index.html file to launch the throttle in your browser. Create a shortcut to it on your desktop so you can launch it more easily.
 
-`DOWNLOAD <https://github.com/DCC-EX/WebThrottle-EX/releases/>`_
+<p><a class="dcclink" href="https://github.com/DCC-EX/WebThrottle-EX/releases"> Download</a></p>
 
 .. note:: We recommend using the version hosted on our servers as this will auto-update whenever we release a new update!
 

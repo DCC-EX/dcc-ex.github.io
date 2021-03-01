@@ -1,5 +1,6 @@
+**********************
 DCC++ EX Web Throttle
-=====================
+**********************
 
 This is a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Commmand Station directly through the USB port of a computer.
 
@@ -10,7 +11,7 @@ For a video on how to install and use WebThrottle-EX click below.
       <iframe width="336" height="189" src="https://www.youtube.com/embed/BkgsEOjxWaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 What you need to run WebThrottle-EX
-------------------------------------
+====================================
 
 * Chromium-Based Browser version 80 or above
   (Chrome, Opera, Edge)
@@ -24,7 +25,7 @@ You don't need anything else to test it out and to run in emulator mode, just ru
 
 
 Getting started
----------------
+=================
 
 First, you must enable the Web Serial API, in your browser URL bar type:
 
@@ -43,12 +44,12 @@ Then set the **#enable-experimental-web-platform-features** flag by looking on t
 To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.
 
 Run or Install WebThrottle-EX
-------------------------------
+==============================
 
 You have an option for how you would like to run WebThrottle-Ex, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
 
 Try it now (Run from the cloud)
---------------------------------
+=================================
 
 Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run exWebThrottle in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
@@ -57,7 +58,7 @@ Just click this link and you will load a web page from our server that will run 
 WebThrottle-EX is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the WT-EX settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find WebThrottle-EX with your other Apps!
 
 Download
----------
+==========
 
 This will install all the files to run locally on your machine. You won't need an internet connection to run the software. Just download the latest zip file from the link below and extract it to any folder you have run permission on. Then click on the index.html file to launch the throttle in your browser. Create a shortcut to it on your desktop so you can launch it more easily.
 
@@ -67,7 +68,7 @@ This will install all the files to run locally on your machine. You won't need a
 
 
 Operation
-----------
+==========
 
 To use the program, you can either click on the "Serial" dropodown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
 
@@ -139,14 +140,14 @@ The options button lets you save labels to go on your function buttons for each 
 
 
 Going Further / Developing
---------------------------
+===========================
 
 If you want to really delve into how this works and help us improve it with your comments or your development skills, please contact us.
 
 To load the Chrome DevTools to look at logging and be able to manually enter "write" commands for testing, click on the Menu (the 3 vertical dots in the upper right hand corner of the Chrome Window), then select "more tools" and then "Developer Tools". Or you can just hit "Ctrl-Shift-I".
 
 License
--------
+========
 
 Copyright 2020 DCC-EX
 

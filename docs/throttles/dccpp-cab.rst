@@ -34,7 +34,7 @@ Screenshots
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section
 
-.. _dccpp--requirements:
+.. _dccpp-requirements:
 
 Requirements
 =============
@@ -43,6 +43,8 @@ Requirements
 * An Android Cell Phone or Tablet
 * A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi `Wifi Setup <../get-started/wifi-setup.html>`_
 * An HC-06 Board if you want to connect using Bluetooth
+
+.. _dccpp-operation:
 
 Operation
 ==========

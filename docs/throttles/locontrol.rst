@@ -2,6 +2,10 @@
 Locontrol
 *******************
 
+.. image:: ../_static/images/throttles/icon_ios.webp
+   :alt: Dccpp CAB Screenshot 2
+   :scale: 70%
+
 This iOS App is simply beautiful, but you would expect this from a team of talented people consisting of an artist/graphic designer, an iOS Developer, and a User Interface (UI) Designer.
 
 Today, you can use Locontrol on an iOS device connected to JMRI throuth its Web Interface. JMRI then connects to DCC++EX with a USB cable or wireless USB bridge.

@@ -42,9 +42,9 @@ Steps
 
 2. Disconect the wires coming out of output A of the Arduino Motor Shield that normally connect to your MAIN track.
 
-3. Move the two wires we just disconnected from the motor shield and connected them to the B+ and B- Screw terminals of the IBT_2. If you will be using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as viewd from a train sitting on the track. We need to keep the phase of the DCC signal in sync between power districts.
+3. Move the two wires we just disconnected from the motor shield and connected them to the M+ and M- Screw terminals of the IBT_2. If you will be using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as viewd from a train sitting on the track. We need to keep the phase of the DCC signal in sync between power districts.
 
-4. Option = You may need to connect or solder a 1k resistor between pin 5 or 6 and ground on the IBT_2 (see alternate method using a current sense board below). There is already a 1k resistor on both boards, but if there isn't we will need to install our own. Below we will cover how to know.
+4. Option = You may need to connect or solder a 10k resistor between pin 5 or 6 and ground on the IBT_2 (see alternate method using a current sense board below). There is already a 1k resistor on both boards, but if there isn't we will need to install our own. Below we will cover how to know.
 
 5. Select your IBT_2 board in the config.h file
 

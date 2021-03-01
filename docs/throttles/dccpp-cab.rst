@@ -16,11 +16,11 @@ Features
 Screenshots
 ============
 
-.. image:: ../../_static/images/throttles/dccpp2.jpg
+.. image:: ../_static/images/throttles/dccpp2.jpg
    :alt: Dccpp CAB Screenshot 2
    :scale: 70%
 
-.. image:: ../../_static/images/throttles/dccpp3.jpg
+.. image:: ../_static/images/throttles/dccpp3.jpg
    :alt: Dccpp CAB Screenshot 3
    :scale: 70%
 

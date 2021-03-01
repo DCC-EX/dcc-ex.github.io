@@ -43,3 +43,5 @@ Keep these definitions in mind as you proceed through this website.
 
 To learn more about how to build your own DCC++ EX station, proceed to the `Assembly Page <./assembly.html>`_ or click on the next button below.
 
+Special Note: We would like to thank Alex Leão of Locontrol who as a personal favor created our modeller levels icons.
+

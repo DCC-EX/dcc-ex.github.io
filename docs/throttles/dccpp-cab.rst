@@ -6,6 +6,8 @@ This is an Android App (with plans for iOS) from Spain. One of the major benefit
 
 You can find it in the Play Store: `DCCpp CAB <https://play.google.com/store/apps/details?id=com.infotronikblog.dcc_cab>`_
 
+.. _dccpp-features:
+
 Features
 =========
 
@@ -27,7 +29,7 @@ Screenshots
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section
 
-.. _dccpp-throttle-requirements:
+.. _dccpp--requirements:
 
 Requirements
 =============

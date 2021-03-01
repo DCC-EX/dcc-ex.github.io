@@ -3,8 +3,9 @@ DCCpp CAB
 **********
 
 .. image:: ../_static/images/throttles/icon_android.png
-   :alt: Dccpp CAB Screenshot 2
-   :scale: 40%
+   :alt: Android Logo
+   :scale: 30%
+   :align: left
 
 This is an Android App (with plans for iOS) from Spain. One of the major benefits of DCCpp CAB is that it speaks the <DCC++> Application Programming language (API) natively (see our `Command Reference <../reference/software/command-reference.html>`_). This means it is fast and can take advantage of some features that exist in the DCC++ EX Command Station not implemented in other APIs. Another benefit is that this throttle can use Bluetooth instead of Wifi if you choose! There are several advantages to usingn Bluetooth, the main one being that Uno and Nano users can use a wireless throttle!
 

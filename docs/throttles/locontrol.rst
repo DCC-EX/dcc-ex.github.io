@@ -3,8 +3,9 @@ Locontrol
 *******************
 
 .. image:: ../_static/images/throttles/icon_ios.png
-   :alt: Dccpp CAB Screenshot 2
-   :scale: 20%
+   :alt: iOS Logo
+   :scale: 30%
+   :align: left
 
 This iOS App is simply beautiful, but you would expect this from a team of talented people consisting of an artist/graphic designer, an iOS Developer, and a User Interface (UI) Designer.
 

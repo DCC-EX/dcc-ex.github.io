@@ -9,7 +9,7 @@ Today, you can use Locontrol on an iOS device connected to JMRI throuth its Web 
 We are currently working with the Locontrol folks to work directly with DCC++ EX without the need for external software. Come back soon for more information. In the meantime, please visit their website https://www.locontrol.com
 
 .. image:: ../_static/images/throttles/locontrol1.jpg
-   :alt: Dccpp CAB Screenshot 2
+   :alt: Locontrol Screenshot 1
    :scale: 100%
 
 

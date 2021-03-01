@@ -10,7 +10,7 @@ What You Will Need (for IBT_2)
 * An Arduino Motor Shield
 * An IBT_2 Motor Board
 * Version 3.1.0 or later of the DCC++ EX Command Station Software
-* 1k Resitor (Optional)
+* 10k or a even a 1k Resitor (Optional)
 * Some Jumper Wires
 
 We assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover how to "upgrade" with just one IBT_2 board to run your MAIN track and relegate your Arduino Motor Shield to the PROG track as well as explain other options.
@@ -44,9 +44,9 @@ Steps
 
 3. Move the two wires we just disconnected from the motor shield and connected them to the B+ and B- Screw terminals of the IBT_2. If you will be using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as viewd from a train sitting on the track. We need to keep the phase of the DCC signal in sync between power districts.
 
-4. Option = You may need to connect or solder a 1k resistor between pin 5 or 6 and ground on the IBT_2 (see alternate method using a current sense board below). There is already a 1k resistor on both boards, but if there isn't we will need to install our own. Below we will cover how to know.
+4. Option - You may need to connect or solder a 10k resistor between pin 5 or 6 and ground on the IBT_2 (see alternate method using a current sense board below). There is already a 10k resistor on each chip, which gives us a resistance of 5k when we connect both current sense outputs together. See the notes below for more detail about current sense.
 
-5. Select your IBT_2 board in the config.h file
+5. Select your IBT_2 board in the config.h file.
 
 6. Upload the new sketch to your Arduino Mega
 
@@ -105,6 +105,26 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../get-started/index.html>`_
 
+Important Notes about Current Sensing Resistors
+================================================
+
+.. WARNING:: Make sure your board has the expected current sensing resistors and that the this value is correct for the maximum current you expect to use. Also, make sure you don't apply more than 5V to to the Arduino Analog pin. Our calculations use NOMINAL values, but these chips can vary widely in how much voltage they report per Amp of current out. The value of your resistor will also affect this.
+
+Please do the following to ensure you won't damage the Arduino, your layout, or yourself:
+
+* Test your board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your requred current, example 5A, that this does not produce more than 5V output.
+* Use a 5V zener diode and current limiting resistor. This would normally be a 270 Ohm resistor.
+* Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). When we tied the two CS outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current.
+* Put a 5A fuse on each output leg going to your track.
+
+The spec sheet of the BTS7960B states that the "expected" (aka nominal) value expected for the ratio of output current to the current reported at the current sense is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of output current. If we appy that through our 5k or resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This translates at 3A to be anywhere from 1V to 5V. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connect to your Arduino!
+
+.. WARNING:: If you are going to use more than 3 Amps, you should add a 10k current sense resistor and a 5V Zener diode protection circuit. This would give you .392 Volts per Amp and will require a small change to your sketch to adjust your current conversion factor.
+
+A 2.2k resistor would allow you to measure up to 10A, but the larger the current range the less sensitivity and accuracy we have.
+
+
+
 Using One IBT_2 for MAIN and another for PROG
 ==============================================
 
@@ -115,7 +135,7 @@ This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG
 Using External Curent Sense
 ============================
 
-Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the main track). 
+Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the main track). Three circuits we tested are the MAX471 (up to 3A), the ACS724 (5A), and a 5A current sense transformer for use on a wire going directly to the track.
 
 ***TODO: Insert help for using or pointing to a section for external CS boards***
 
@@ -123,7 +143,7 @@ Using an external current sense board instead of the onboard current sense inclu
 Tech Notes
 ***********
 
-add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how they can chage the pins if there is a problem by creating a new motor board type.
+***TODO: Add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how they can chage the pins if there is a problem by creating a new motor board type.
 
 Below is a link to the IBT_2 schematic. Click to enlarge.
 

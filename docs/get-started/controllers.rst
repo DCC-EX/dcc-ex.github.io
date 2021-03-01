@@ -27,7 +27,7 @@ The simplest option is to just use a throttle connected directly to the CS. The 
    :align: center
    :scale: 40%
 
-Here are you connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
+Here are your connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
 
 .. image:: ../_static/images/throttles/webthrottle_setup.jpg
    :alt: WebThrottle-EX
@@ -37,10 +37,10 @@ Here are you connections, just a computer running a chromium-based browser, a US
 For operating instructions see `how to use WebThrottle-EX <../throttles/ex-webthrottle.html>`_
 
 
-Engine Driver (WiThrottle devices)
-==================================
+Engine Driver (Android)
+===========================
 
-Engine Driver is a throttle app for your phone that can control multiple locos and your turouts. It uses an interface called "WiThrottle" (for WiFi Throttle) and any WiThrottle compatible throttle will work with DCC++ EX. There are two ways to connect it; the first method is by connecting directly to the CS via WiFi. You will need a WiFI board connected to the CS (see `WiFi Setup <wifi-setup.html>`_).
+Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "WiThrottle" (for WiFi Throttle) and any WiThrottle compatible throttle will work with DCC++ EX. There are two ways to connect it; the first method is by connecting directly to the CS via WiFi. You will need a WiFI board connected to the CS (see Wifi Setup `WiFi Setup <wifi-setup.html>`_).
 
 
 ***insert diagram here***
@@ -50,6 +50,19 @@ The second method is to use JMRI and connect Engine Driver (ED) to the computer 
 See `How to use Engine Driver (WiThrottle) <../throttles/withrottle.html>`_
 
 ***insert diagram here***
+
+DCCpp CAB (Android)
+====================
+
+DCCpp CAB is throttle that natively speaks the <DCC++> command language (API). It can connect via WiFi or Bluetooth! If you don't need software like JMRI running on a computer, DCCpp CAB lets you connect directly to the CS.
+
+See `How to use DCCpp CAB <../throttles/dccpp-cab.html>`_
+
+WiThrottle (iOS)
+=================
+
+Withrottle is an app for iPhones and iPads, it can connect directly to the CS like Engine Driver does or connect to JMRI on a computer and then have JMRI connect to the CS via a USB cable.
+
 
 JMRI
 ========

@@ -9,7 +9,7 @@ We've found that our users tend to identify with one of the following three cate
 Conductor
 ---------
 
-.. image:: ../_static/images/conductor_hat1.png
+.. image:: ../_static/images/conductor.png
    :alt: Conductor Hat
    :width: 100px
    :height: 72px
@@ -20,7 +20,7 @@ A Conductor, for the most part, just wants to enjoy operating trains. You could 
 Tinkerer
 --------
 
-.. image:: ../_static/images/propeller_beanie.png
+.. image:: ../_static/images/tinkerer.png
    :alt: Propeller Beanie
    :width: 110px
    :height: 110px
@@ -31,7 +31,7 @@ A Tinkerer likes the joy of building things themselves. They may not have an Eng
 Engineer
 --------
 
-.. image:: ../_static/images/engineer_hat2.png
+.. image:: ../_static/images/engineer.png
    :alt: Engineer Hat
    :width: 120px
    :height: 98px

@@ -36,13 +36,13 @@ Most larger scales will run higher voltages. For reference, Digitrax systems put
 Amperage
 ~~~~~~~~
 
-A 3A power supply will give you plenty of current to handle the maximum of 2A on channel A to the MAIN track (assuming you're using the Arduino motor shield or Pololu motor shield). Channel B for the programming track will only be used occasionally and does not need much current. In fact, it is limited to protect your trains. Running trains on main and programming a loco on Prog at the same time will be fine. The overcurrent limit set in the CS will automatically cut power if you go over that number of Amps. A rule of thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards. For larger layouts with higher current requriements on the MAIN track and a motor driver that can handle those currents, you'll want power supply that can deliver that larger current. See `Motor Boards <motor-boards.html>`_ for more information about higher current motor controllers.
+A 3A power supply will give you plenty of current to handle the maximum of 2A on channel A to the MAIN track (assuming you're using the Arduino motor shield or Pololu motor shield). Channel B for the programming track will only be used occasionally and does not need much current. In fact, it is limited to protect your trains (normally to 250mA). Running trains on main and programming a loco on Prog at the same time will be fine. The overcurrent limit set in the CS will automatically cut power if you go over that number of Amps. A rule of thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards. For larger layouts with higher current requriements on the MAIN track and a motor driver that can handle those currents, you'll want power supply that can deliver that larger current. See `Motor Boards <motor-boards.html>`_ for more information about higher current motor controllers.
 
 A device will only draw the current it needs. So whether you have a 2A power supply or a 20A power supply, if you setup only needs 1A, then both supplies will work just fine, but no sense paying for more than you need. And it is also worth noting that devices that can supply a large current can cause a large amount of damage if you don't have proper safety features installed like the overprotection feature of the CS AND fuses to the track.
 
 .. warning:: If you think you need more that 5 Amps to your track, you should strongly consider using boosters and power districts. 
 
-Recommended Power Supplies
+Wall Warts
 --------------------------
 
 * Wall warts are a good choice for beginners and those not comfortable with mains wiring. You can get a 12V, 3A, relatively small one for around $8 US. 
@@ -64,6 +64,7 @@ Recommended Power Supplies
 |
 
 
+
 * You can also find plenty of laptop type "brick" power supplies. They come in ranges from 12V to 18V and 3-5 Amps.
 
 .. image:: ../../_static/images/12v-3A-brick.jpg
@@ -82,6 +83,21 @@ Recommended Power Supplies
 |
 |
 
+Adjustable Power Supplies
+--------------------------
+
+* These have a selector switch to choose the voltage. Be careful to get a model that can deliver the current you need at the voltage you want. Sometimes the maximum output current will vary depending on the voltage selected.
+
+https://www.amazon.com/dp/B07J6RC43S/ref=cm_sw_r_cp_api_glt_fabc_HFY5CW4MH3XJXFXQT4BW
+
+https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU
+
+14V 3A 
+14V 3A https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ref=sr_1_3?dchild=1&keywords=14V+3A+power+supply&qid=1613861442&s=electronics&sr=1-3
+
+Cage Power Supplies
+--------------------
+
 * The Meanwell LRS-100-15 power supply is a good choice for larger scales. It supplies 15V and 105W (that's 7 amps), so it is plenty for running two channels simutaneously. At only $18, it is an inexpensive and solid option.
 
 .. image:: ../../_static/images/meanwell-lrs100.jpg
@@ -94,7 +110,7 @@ Recommended Power Supplies
 .. warning:: For the Meanwell LRS-100-15 you will need to do your own mains wiring. If you don't have experience with this get a friend who does or hire an electrician to do it for you. MAINS POWER IS DANGEROUS.
 
 Dual voltage power supplies
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 With a dual voltage power supply, you can provide 12V for the motor controller and 5V for the Arduino. You may also be able to find higher voltage units if you need such as 14-15V if your scale trains require it.
 
@@ -108,3 +124,33 @@ With a dual voltage power supply, you can provide 12V for the motor controller a
 `See on Amazon <https://www.amzn.com/B005T9FF4I/>`_
 
 .. warning:: For the Meanwell RD125A, you will need to do your own mains wiring. If you don't have experience with this get a friend who does or hire an electrician to do it for you. MAINS POWER IS DANGEROUS.
+
+Using one power supply with cheap converters to power everyting 
+---------------------------------------------------------------
+
+**Tinkerers and Engineers**
+
+* Using this method, you select a power supply that can power the track (or your highest voltage devices) and deliver enough Amps to power everything you will connect to it. This includes the DC-DC downconverters (Buck Converters) that take your higher voltage and reduce it to 5V, 7V, 9V, etc. Note that most buck converters are also boost converters, then can take a lower voltage and raise it to a higher one. We will just cover the first option here.
+
+***Insert Image Here of a wiring diagram***
+
+12V 20A Power supply (You may want 14V)
+
+https://www.amazon.com/Universal-Regulated-Switching-Transformers-Surveillance/dp/B07J4V24BN/ref=asc_df_B07J4V24BN/?tag=hyprod-20&linkCode=df0&hvadid=366288678718&hvpos=&hvnetw=g&hvrand=8143390141430119947&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-637719808697&psc=1&tag=&ref=&adgrpid=75985295013&hvpone=&hvptwo=&hvadid=366288678718&hvpos=&hvnetw=g&hvrand=8143390141430119947&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-637719808697
+
+https://www.amazon.com/dp/B074GGMD5J?tag=amz-mkt-chr-us-20&ascsubtag=1ba00-01000-a0049-win10-other-nomod-us000-pcomp-feature-scomp-wm-5&ref=aa_scomp
+
+4 Pack of Buck Converters
+
+https://www.amazon.com/dp/B079N9BFZC?tag=amz-mkt-chr-us-20&ascsubtag=1ba00-01000-a0049-win10-other-nomod-us000-pcomp-feature-scomp-wm-5&ref=aa_scomp
+
+https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/ref=pd_vtp_6?pd_rd_w=NMR1C&pf_rd_p=55cbb45e-2534-4809-9135-12f41eecb852&pf_rd_r=696YH3MQ2QHKXXR9VDW0&pd_rd_r=3e7133ca-ea27-4967-8d7e-ea1c40c8381a&pd_rd_wg=GZd2x&pd_rd_i=B07VNDGFT6&psc=1
+
+
+Buck Converter with Display
+
+https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/ref=pd_vtp_6?pd_rd_w=NMR1C&pf_rd_p=55cbb45e-2534-4809-9135-12f41eecb852&pf_rd_r=696YH3MQ2QHKXXR9VDW0&pd_rd_r=3e7133ca-ea27-4967-8d7e-ea1c40c8381a&pd_rd_wg=GZd2x&pd_rd_i=B07VNDGFT6&psc=1
+
+Cheap Buck Converter with Display $5
+
+https://www.dfrobot.com/product-1552.html?gclid=CjwKCAiAg8OBBhA8EiwAlKw3ks8tC8ywVBKBOQ6dKOSRZZSxoKMphpav7r7WmfW29Nl9uU7Mn7SJzRoCMSUQAvD_BwE

@@ -5,14 +5,14 @@ Choosing a Controller (Throttle)
 You need just two things that work together to operate your model railroad:
 
 * The DCC++ EX Command Station
-* A Controller
+* A Controller (aka Frontend, aka CAB, aka Throttle)
 
 The Command Station
 ---------------------
 
 The CS is covered in the `getting started <get-started.html>`_ section and is usually an Arduino microcontroller and a motor shield or motor board. The CS accepts instructions from a controller and generates packets that are transmitted to your track.
 
-The Front End (aka Controller)
+The Controller
 ---------------------------------
 
 Since the CS just accepts <DCC++> commands, you need something that sends those commands to run your trains - a controller. It isn't very practical to type <t 1 3 75 1> into a serial monitor to tell your train to move ;)  A controller can be a hardware device like a handheld throttle (also called a CAB), or front-end software like JMRI or Rocrail. Here are a few of the methods you can use to control your layout.
@@ -27,7 +27,7 @@ The simplest option is to just use a throttle connected directly to the CS. The 
    :align: center
    :scale: 40%
 
-Here are you connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
+Here are your connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
 
 .. image:: ../_static/images/throttles/webthrottle_setup.jpg
    :alt: WebThrottle-EX
@@ -37,10 +37,10 @@ Here are you connections, just a computer running a chromium-based browser, a US
 For operating instructions see `how to use WebThrottle-EX <../throttles/ex-webthrottle.html>`_
 
 
-Engine Driver (WiThrottle devices)
-==================================
+Engine Driver (Android)
+===========================
 
-Engine Driver is a throttle app for your phone that can control multiple locos and your turouts. It uses an interface called "WiThrottle" (for WiFi Throttle) and any WiThrottle compatible throttle will work with DCC++ EX. There are two ways to connect it; the first method is by connecting directly to the CS via WiFi. You will need a WiFI board connected to the CS (see `WiFi Setup <wifi-setup.html>`_).
+Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "WiThrottle" (for WiFi Throttle) and any WiThrottle compatible throttle will work with DCC++ EX. There are two ways to connect it; the first method is by connecting directly to the CS via WiFi. You will need a WiFI board connected to the CS (see Wifi Setup `WiFi Setup <wifi-setup.html>`_).
 
 
 ***insert diagram here***
@@ -50,6 +50,29 @@ The second method is to use JMRI and connect Engine Driver (ED) to the computer 
 See `How to use Engine Driver (WiThrottle) <../throttles/withrottle.html>`_
 
 ***insert diagram here***
+
+DCCpp CAB (Android)
+====================
+
+DCCpp CAB is throttle that natively speaks the <DCC++> command language (API). It can connect via WiFi or Bluetooth! If you don't need software like JMRI running on a computer, DCCpp CAB lets you connect directly to the CS.
+
+See `How to use DCCpp CAB <../throttles/dccpp-cab.html>`_
+
+WiThrottle (iOS)
+=================
+
+Withrottle is an app for iPhones and iPads, it can connect directly to the CS like Engine Driver does or connect to JMRI on a computer and then have JMRI connect to the CS via a USB cable.
+
+Locontrol (iOS)
+================
+
+Locontrol is a beautiful and functional Throttle that connects that uses the JMRI Web Server to connect. Soon it will be able to connect directly to the CS by using the <DCC++> Command set.
+
+DigiTrainsPro (Android, iOS, Windows)
+======================================
+
+This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to DCC-EX using our command language.
+
 
 JMRI
 ========

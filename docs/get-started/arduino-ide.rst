@@ -131,6 +131,8 @@ You should already have the 7-9V adapter plugged into the Arduino and the 13-14V
 Use the Serial Monitor to do a quick test
 -----------------------------------------
 
+.. NOTE:: The programming track (PROG) is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.
+
 The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor". Or click on the "serial monitor" icon near the upper right of the window.
 
 
@@ -166,7 +168,13 @@ Turn off the power to the track by sending ``<0>`` to the CS. That is a "zero".
 Run your trains!
 -----------------
 
-Making sure power is off to your track, place your DCC enabled loco (not DCC ready!... DCC Ready just means it has the plumbing inside the loco to install an optional DCC decoder, but it is NOT yet DCC compatible). Now either download our exWebThrottle found `here <https://github.com/DCC-EX/exWebThrottle>`_ and run it in your browser, or run it directly from our `web page <../throttle/exwebthrottle.html>`_. Follow the instructions on that page to enable chromium "experimental features".
+* Make sure power is off to the track
+
+* Make sure your loco is DCC ENABLED (not DCC Ready!... DCC Ready just means it has the plumbing inside the loco to install an optional DCC decoder, but it is NOT yet DCC compatible)
+
+* Put your loco on the MAIN track. The loco cannot move or respond to non-programming commands on the PROG track.
+
+Now either download our exWebThrottle found `here <https://github.com/DCC-EX/exWebThrottle>`_ and run it in your browser, or run it directly from our `web page <../throttle/exwebthrottle.html>`_. Follow the instructions on that page to enable chromium "experimental features".
 
 The rest of the instructions show you how to use exWebThrottle. You should be able to find the CS by its serial port and enable it, then turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!
 

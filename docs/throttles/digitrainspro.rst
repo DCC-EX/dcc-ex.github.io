@@ -46,10 +46,12 @@ Screenshots
 .. image:: ../_static/images/throttles/digitrainspro1.png
    :alt: DigiTrainsPro Main Screen
    :scale: 40%
+   :align: left
 
 .. image:: ../_static/images/throttles/digitrainspro2.png
    :alt: DigiTrainsPro Windows Setup Screen
    :scale: 40%
+   :aligne: left
 
 .. _digitrains-requireents:
 

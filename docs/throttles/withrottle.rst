@@ -27,3 +27,4 @@ A Note about WiFi Dropped Connections
 
 Phones and laptop like to think they are "smart" and want to connect you to the strongest signal and to a network that has internet capability. If you use the DCC++ EX Command Station as an Access Point (AP), which doesn't connect to the internet, and you connect to DCC++ EX with your throttle, your device may disconnect you from the CS without you knowing and without your permission. You should turn off the option to "automatically connect" to your home network. You may even have to "forget" your home network when you are using your wireless device to connect to DCC-EX. If you would rather, you can change settings in your config.h file to connect to your home network as a client instead running as an AP, and then have your throttle devices find the CS by its IP Address on your home network. You can find out more about that in `Wifi Setup <../get-started/wifi-setup.html>`_
 
+

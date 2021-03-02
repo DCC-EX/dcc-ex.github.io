@@ -35,19 +35,19 @@ Screenshots
 
 .. image:: ../_static/images/throttles/ed1.png
    :alt: Engine Driver Main Screen
-   :scale: 70%
+   :scale: 50%
 
 .. image:: ../_static/images/throttles/ed2.png
    :alt: Engine Driver 2
-   :scale: 70%
+   :scale: 50%
 
 .. image:: ../_static/images/throttles/ed3.png
    :alt: Engine Driver 3
-   :scale: 70%
+   :scale: 50%
 
 .. image:: ../_static/images/throttles/ed4.png
    :alt: Engine Driver 4
-   :scale: 70%
+   :scale: 50%
 
 .. _ed-operation:
 

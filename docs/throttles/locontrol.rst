@@ -13,11 +13,12 @@ Today, you can use Locontrol on an iOS device connected to JMRI throuth its Web 
 
 We are currently working with the Locontrol folks to work directly with DCC++ EX without the need for external software. Come back soon for more information. In the meantime, please visit their website https://www.locontrol.com
 
+`Get it on the Apple App Store <https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920>`_
+
 .. image:: ../_static/images/throttles/locontrol1.jpg
    :alt: Locontrol Screenshot 1
    :scale: 100%
 
-j
 .. _locontrol-features:
 
 Features
@@ -34,3 +35,5 @@ Requirements
 =============
 
 * An iOS Device
+
+***TODO: More content coming soon***

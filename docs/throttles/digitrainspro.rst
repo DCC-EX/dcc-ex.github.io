@@ -1,5 +1,5 @@
 *******************************
-digitrainspro
+DigiTrainsPro
 *******************************
 
 .. image:: ../_static/images/throttles/icon_android.png
@@ -8,16 +8,18 @@ digitrainspro
    :align: left
 
 .. image:: ../_static/images/throttles/icon_ios.png
-   :alt: Android Logo
+   :alt: Apple iOS Logo
    :scale: 30%
    :align: left
 
 .. image:: ../_static/images/throttles/icon_windows.png
-   :alt: Android Logo
+   :alt: Windows Logo
    :scale: 30%
    :align: left
 
 Currently, DigitTrainsPro works with DCC-EX through JMRI. You use JMRI's Web Server for the connection. However, we are working with the author and will soon have an option to connect directly to the DCC-EX Command Station using <DCC++> Commands (estimated April 2021).
+
+.. _digitrains-features:
 
 Features
 ==========
@@ -30,3 +32,32 @@ Features
 * Club Server feature (connect multiple CABs through a computer connected to the CS)
 * Function control
 * CV Programming
+
+.. _digitrains-screenshots:
+
+Screenshots
+============
+
+.. image:: ../_static/images/throttles/digitrainspro1.png
+   :alt: DigiTrainsPro Main Screen
+   :scale: 70%
+
+.. image:: ../_static/images/throttles/digitrainspro2.png
+   :alt: DigiTrainsPro Windows Setup Screen
+   :scale: 70%
+
+.. _digitrains-requireents:
+
+Requirements
+=============
+
+* An Android, IOS, Widnows 10 (Desktop, Tablet and Mobile) device
+* Command Station (WiFi if you want to connect directly)
+* JMRI (If you want to connect through the JMRI WEB Server)
+
+.. _digitrains-operation:
+
+Operation
+==========
+
+***TODO: Write the operatio section***

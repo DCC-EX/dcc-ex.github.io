@@ -11,13 +11,48 @@ Engine Driver is an Android App that uses the WiThrottle Protocol to either conn
 
 https://enginedriver.mstevetodd.com/
 
-..
-  _ed-features
+`Get it from the Google Play Store <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_
+
+   .. raw:: html
+      
+      <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+.. _ed-features:
 
 Features
 ==========
 
-Speed, direction, and up to 29 DCC functions are supported for one to six locomotives or consists. You can create and edit consists (software-defined). You can also control layout power, turnouts, routes, and access JMRI web panels and windows.
+* Speed and directipn control
+* Up to 29 DCC functions
+* One to six locomotives or consists 
+* Create and edit consists (software-defined)
+* You can also control layout power, turnouts, routes, and access JMRI web panels and windows.
+
+.. _ed-screenshots:
+
+Screenshots
+============
+
+.. image:: ../_static/images/throttles/ed1.jpg
+   :alt: Engine Driver Main Screen
+   :scale: 70%
+
+.. image:: ../_static/images/throttles/ed2.jpg
+   :alt: Engine Driver 2
+   :scale: 70%
+
+.. image:: ../_static/images/throttles/ed3.jpg
+   :alt: Engine Driver 3
+   :scale: 70%
+
+.. image:: ../_static/images/throttles/ed4.jpg
+   :alt: Engine Driver 4
+   :scale: 70%
+
+.. _ed-operation:
+
+Operation
+===========
 
 
 ***TODO: More details to come***

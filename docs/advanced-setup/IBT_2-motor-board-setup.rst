@@ -44,7 +44,7 @@ Steps
 
 3. Move the two wires we just disconnected from the motor shield and connected them to the M+ and M- Screw terminals of the IBT_2. If you will be using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as viewd from a train sitting on the track. We need to keep the phase of the DCC signal in sync between power districts.
 
-4. Option - You may need to connect or solder a 10k resistor between pin 5 or 6 and ground on the IBT_2 (be low and also see alternate method using a current sense board below). There is already a 10k resistor on each chip, which gives us a resistance of 5k when we connect both current sense outputs together. See the notes below for more detail about current sense.
+4. Option - You may need to connect or solder a 10k resistor between pin 5 or 6 and ground on the IBT_2 (see below and also see alternate method using a current sense board below). There is already a 10k resistor on each chip, which gives us a resistance of 5k when we connect both current sense outputs together. See the notes below for more detail about current sense.
 
 5. Select your IBT_2 board in the config.h file.
 

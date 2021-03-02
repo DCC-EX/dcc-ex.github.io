@@ -9,4 +9,5 @@ Throttles
     withrottle
     dccpp-cab
     locontrol
+    digitrainspro
 

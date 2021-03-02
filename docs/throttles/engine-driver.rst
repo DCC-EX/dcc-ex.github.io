@@ -33,19 +33,19 @@ Features
 Screenshots
 ============
 
-.. image:: ../_static/images/throttles/ed1.jpg
+.. image:: ../_static/images/throttles/ed1.png
    :alt: Engine Driver Main Screen
    :scale: 70%
 
-.. image:: ../_static/images/throttles/ed2.jpg
+.. image:: ../_static/images/throttles/ed2.png
    :alt: Engine Driver 2
    :scale: 70%
 
-.. image:: ../_static/images/throttles/ed3.jpg
+.. image:: ../_static/images/throttles/ed3.png
    :alt: Engine Driver 3
    :scale: 70%
 
-.. image:: ../_static/images/throttles/ed4.jpg
+.. image:: ../_static/images/throttles/ed4.png
    :alt: Engine Driver 4
    :scale: 70%
 

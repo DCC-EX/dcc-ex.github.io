@@ -6,7 +6,6 @@ DigiTrainsPro
    :alt: Android Logo
    :scale: 30%
 
-
 .. image:: ../_static/images/throttles/icon_ios.png
    :alt: Apple iOS Logo
    :scale: 30%

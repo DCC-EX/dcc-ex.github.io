@@ -25,11 +25,11 @@ Screenshots
 
 .. image:: ../_static/images/throttles/dccpp2.jpg
    :alt: Dccpp CAB Screenshot 2
-   :scale: 30%
+   :scale: 70%
 
 .. image:: ../_static/images/throttles/dccpp3.jpg
    :alt: Dccpp CAB Screenshot 3
-   :scale: 30%
+   :scale: 70%
 
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section

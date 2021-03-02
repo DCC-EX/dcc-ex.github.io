@@ -45,11 +45,11 @@ Screenshots
 
 .. image:: ../_static/images/throttles/digitrainspro1.png
    :alt: DigiTrainsPro Main Screen
-   :scale: 70%
+   :scale: 40%
 
 .. image:: ../_static/images/throttles/digitrainspro2.png
    :alt: DigiTrainsPro Windows Setup Screen
-   :scale: 70%
+   :scale: 40%
 
 .. _digitrains-requireents:
 

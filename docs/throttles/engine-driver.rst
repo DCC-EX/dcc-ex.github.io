@@ -51,7 +51,10 @@ Screenshots
 .. image:: ../_static/images/throttles/ed4.png
    :alt: Engine Driver 4
    :scale: 30%
-   :aligne: left
+   :align: left
+|
+|
+|
 
 .. _ed-operation:
 

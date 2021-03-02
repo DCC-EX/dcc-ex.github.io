@@ -5,14 +5,14 @@ Choosing a Controller (Throttle)
 You need just two things that work together to operate your model railroad:
 
 * The DCC++ EX Command Station
-* A Controller
+* A Controller (aka Frontend, aka CAB, aka Throttle)
 
 The Command Station
 ---------------------
 
 The CS is covered in the `getting started <get-started.html>`_ section and is usually an Arduino microcontroller and a motor shield or motor board. The CS accepts instructions from a controller and generates packets that are transmitted to your track.
 
-The Front End (aka Controller)
+The Controller
 ---------------------------------
 
 Since the CS just accepts <DCC++> commands, you need something that sends those commands to run your trains - a controller. It isn't very practical to type <t 1 3 75 1> into a serial monitor to tell your train to move ;)  A controller can be a hardware device like a handheld throttle (also called a CAB), or front-end software like JMRI or Rocrail. Here are a few of the methods you can use to control your layout.
@@ -62,6 +62,16 @@ WiThrottle (iOS)
 =================
 
 Withrottle is an app for iPhones and iPads, it can connect directly to the CS like Engine Driver does or connect to JMRI on a computer and then have JMRI connect to the CS via a USB cable.
+
+Locontrol (iOS)
+================
+
+Locontrol is a beautiful and functional Throttle that connects that uses the JMRI Web Server to connect. Soon it will be able to connect directly to the CS by using the <DCC++> Command set.
+
+DigiTrainsPro (Android, iOS, Windows)
+======================================
+
+This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to DCC-EX using our command language.
 
 
 JMRI

@@ -252,6 +252,10 @@
 </div>
 <div class="section" id="use-the-serial-monitor-to-do-a-quick-test">
 <h2>Use the Serial Monitor to do a quick test<a class="headerlink" href="#use-the-serial-monitor-to-do-a-quick-test" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The programming track (PROG) is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.</p>
+</div>
 <p>The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select “Tools -&gt; Serial Monitor”. Or click on the “serial monitor” icon near the upper right of the window.</p>
 <a class="reference internal image-reference" href="../_images/arduino_ide2.jpg"><img alt="Open the Serial Monitor" src="../_images/arduino_ide2.jpg" style="width: 488.7px; height: 497.7px;" /></a>
 <p><strong>Figure 8</strong> - Open the Serial Monitor</p>
@@ -270,7 +274,12 @@
 </div>
 <div class="section" id="run-your-trains">
 <h2>Run your trains!<a class="headerlink" href="#run-your-trains" title="Permalink to this headline">¶</a></h2>
-<p>Making sure power is off to your track, place your DCC enabled loco (not DCC ready!… DCC Ready just means it has the plumbing inside the loco to install an optional DCC decoder, but it is NOT yet DCC compatible). Now either download our exWebThrottle found <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">here</a> and run it in your browser, or run it directly from our <a class="reference external" href="../throttle/exwebthrottle.html">web page</a>. Follow the instructions on that page to enable chromium “experimental features”.</p>
+<ul class="simple">
+<li><p>Make sure power is off to the track</p></li>
+<li><p>Make sure your loco is DCC ENABLED (not DCC Ready!… DCC Ready just means it has the plumbing inside the loco to install an optional DCC decoder, but it is NOT yet DCC compatible)</p></li>
+<li><p>Put your loco on the MAIN track. The loco cannot move or respond to non-programming commands on the PROG track.</p></li>
+</ul>
+<p>Now either download our exWebThrottle found <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">here</a> and run it in your browser, or run it directly from our <a class="reference external" href="../throttle/exwebthrottle.html">web page</a>. Follow the instructions on that page to enable chromium “experimental features”.</p>
 <p>The rest of the instructions show you how to use exWebThrottle. You should be able to find the CS by its serial port and enable it, then turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!</p>
 <p>You can also watch the <a class="reference external" href="https://www.youtube.com/watch?v=BkgsEOjxWaU">exWebThrottle Video</a>.</p>
 <blockquote>

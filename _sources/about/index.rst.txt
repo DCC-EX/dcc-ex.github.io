@@ -87,7 +87,7 @@ Documentation / Management
 
 * Roger Beschizza - Dorset, UK (Roger Beschizza)
 * Keith Ledbetter - Chicago, Illinois, USA (Keith Ledbetter)
-* Kevin Smith - (KCSmith)
+* Kevin Smith - Rochester Hills, Michigan - USA (KC Smith)
 
 ****************************
 Testing / Research / Support

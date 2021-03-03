@@ -1,4 +1,4 @@
-Motor boards
+Motor Boards
 ============
 
 CommandStation-EX is compatible with a wide variety of motor boards, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.
@@ -17,7 +17,8 @@ Boards currently supported
   **Easy to use boards**
 
    * :ref:`Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
-   * :ref:`Deek-Robot Motor Shield` - 2A rates, 1.5 possible
+   * :ref:`Deek-Robot Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
+   * :ref:`Flashtree Motor Shield` - 2A rated, 1.5 possible
    * :ref:`DIY More L298NH Motor Shield` - 2A
    * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
@@ -40,6 +41,7 @@ Boards currently supported
    * VNH2SP30 - Sparkfun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
    * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
    * :ref:`Dfrobot Romeo V2` - Well, an Engineer could perhaps get this one to work.
+   * Kuman Board (and any L293D based boards) - not enough current.
    
 Other boards, while not fully supported and tested, can be used. Look for the following criteria:
 
@@ -80,6 +82,24 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 `Install the Deek-Robot Motor Shield <../../get-started/assembly.html>`_
 
 |
+
+Flashtree Motor Shield
+^^^^^^^^^^^^^^^^^^^^^^^
+
+**Conductor Level**
+
+Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realisticly 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. Since it identical to the Arduino and the Deek-Robot boards, use the Deek-Robot install below.
+
+https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
+
+.. image:: ../../_static/images/motorboards/flashtree1.jpg
+   :alt: Flashtree Motor Shield
+   :scale: 30%
+
+`Install the Flashtree (same as Deek-Robot) Motor Shield <../../get-started/assembly.html>`_
+
+|
+
 
 DIY More L298NH Motor Shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

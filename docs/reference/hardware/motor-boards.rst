@@ -94,7 +94,7 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 
 .. image:: ../../_static/images/motorboards/flashtree1.jpg
    :alt: Flashtree Motor Shield
-   :scale: 30%
+   :scale: 40%
 
 `Install the Flashtree (same as Deek-Robot) Motor Shield <../../get-started/assembly.html>`_
 

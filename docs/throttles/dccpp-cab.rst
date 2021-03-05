@@ -89,5 +89,3 @@ The Bluetooth connection requires an Android device with Bluetooth capability an
 You will need one of these inexpensive HC-06 boards.
 
 ***insert tutorial here***
-
-

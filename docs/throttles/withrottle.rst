@@ -4,7 +4,7 @@ WiThrottle
 
 .. image:: ../_static/images/throttles/icon_ios.png
    :alt: iOS Logo
-   :scale: 30%
+   :scale: 50%
    :align: left
 
 This is an iOS App (with plans for iOS) from the USA. WiThrottle is probably the most popular iOS throttle since early on JMRI built a WiThrottle Server into its program. You can connect WiThrottle to JMRI and connect JMRI to DCC++EX, or you if you are not going to use JMRI, you can connect directly to the CS if you install a WiFi board.

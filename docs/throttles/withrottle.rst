@@ -33,7 +33,7 @@ Screenshots
 
 .. image:: ../_static/images/throttles/withrottle1.png
    :alt: WiThrottle Screenshot 1
-   :scale: 70%
+   :scale: 90%
    :align: left
 
 |

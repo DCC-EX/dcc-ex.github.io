@@ -6,6 +6,7 @@ For an overview of throttles and how to choose one, please read the `Getting Sta
 .. toctree::
     :maxdepth: 1
     
+    protocols
     ex-webthrottle
     engine-driver
     withrottle

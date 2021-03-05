@@ -1,0 +1,82 @@
+********************
+SRCP Client for iOS
+********************
+
+.. image:: ../_static/images/throttles/icon_ios.png
+   :alt: iOS Logo
+   :scale: 30%
+   :align: left
+
+This is an iOS App (with plans for iOS) from Germany. One of the major benefits of SRCPClient is that it speaks the <DCC++> Application Programming language (API) natively (see our `Command Reference <../reference/software/command-reference.html>`_). This means it is fast and can take advantage of some features that exist in the DCC++ EX Command Station not implemented in other APIs. Is also connect to a WiThrottle server so you can use it with JMRI too.
+
+Please visit their website: https://www.io-expert.com/
+
+You can find it in the App Store: `SRCP Client for iOS <https://apps.apple.com/us/app/srcpclient/id1495402734>`_
+
+.. _srcpclient-features:
+
+Features
+=========
+
+* Supports the <DCC++> Command (API) natively
+* Supports WiThrottle
+* Connect via WiFi
+* Read and Write CVs
+
+.. _srcpclient-screenshots:
+
+Screenshots
+============
+
+.. image:: ../_static/images/throttles/srcpclient1.jpg
+   :alt: SrcpClient Screenshot 1
+   :scale: 50%
+   :align: left
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+..
+   The next line is trying to avoid a duplicate label name since many files may have a requirements section
+
+.. _srcpcleint-requirements:
+
+Requirements
+=============
+
+* A DCC++ EX Commmand Station (Mega based for WiFi)
+* An iOS Cell Phone or Tablet
+* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi `Wifi Setup <../get-started/wifi-setup.html>`_
+
+.. _srcpclient-operation:
+
+Operation
+==========
+
+.. Note:: A Mega is required for using the WiFi connection
+
+.. _srcpclient-wifi:
+
+Using Wifi
+++++++++++++
+
+To use Wifi, make sure you have a WiFi enabled Command Station as described in the `Wifi Setup <../get-started/wifi-setup.html>`_ section.
+
+We have not tested the WiFi implementation yet
+
+
+***TODO:insert tutorial here***

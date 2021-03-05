@@ -73,6 +73,11 @@ DigiTrainsPro (Android, iOS, Windows)
 
 This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to DCC-EX using our command language.
 
+SRCPClient (iOS)
+=================
+
+Operate up to 3 locos from your iOS device. It supports both WiThrottle AND the DCC++ APIs.
+
 
 JMRI
 ========

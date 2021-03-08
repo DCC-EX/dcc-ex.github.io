@@ -51,7 +51,7 @@ Bending out or Cutting the Vin Pin
 
 In this method, you can just bend the Vin pin so that instead of connecting to the header in the Aduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
 
-.. image:: ../_static/images/bend_pin1.jpg
+.. image:: ../_static/images/motorboards/bend_pin1.jpg
    :alt: Bend out the Vin pin on the arduino motor shield
    :scale: 50%
 

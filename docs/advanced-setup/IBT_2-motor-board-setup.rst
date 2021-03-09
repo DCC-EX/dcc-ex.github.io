@@ -70,7 +70,7 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
 
 Here is a visual diagram, click to enlarge:
 
-.. image:: ../_static/images/motorboards/ibt_2_wiring.png
+.. image:: ../_static/images/motorboards/ibt2_wiring.png
    :alt: IBT_2 Wiring 1
    :scale: 40%
 
@@ -80,7 +80,7 @@ It should look like following. Note we have included the Arduino Mega and have t
 
 .. image:: ../_static/images/motorboards/ibt_2_wiring_fritz.png
    :alt: IBT_2 Wiring 2
-   :scale: 30%
+   :scale: 25%
 
 .. Note:: We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.
 

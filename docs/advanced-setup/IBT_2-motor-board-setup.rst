@@ -68,7 +68,7 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
 |     GND      |        GND, R1b             |
 +--------------+-----------------------------+
 
-Here is a visual diagram, click to enlarge:
+Here is a visual diagram. R1, R2 and D1 are optional. See current sense notes below. Click to enlarge:
 
 .. image:: ../_static/images/motorboards/ibt_wiring.png
    :alt: IBT_2 Wiring 1

@@ -72,7 +72,7 @@ Here is a visual diagram, click to enlarge:
 
 .. image:: ../_static/images/motorboards/ibt_wiring.png
    :alt: IBT_2 Wiring 1
-   :scale: 40%
+   :scale: 60%
 
 
 

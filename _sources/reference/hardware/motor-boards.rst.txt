@@ -1,7 +1,9 @@
-Motor boards
+Motor Boards
 ============
 
 CommandStation-EX is compatible with a wide variety of motor boards, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.
+
+If you have trouble finding a particular board from the list, try searching based on it's name or the type of chip on the board and the terms "H-Bridge" or "Motor Shield". There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.
 
 **TL;DR** (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the `Shopping List <shopping-list.html>`_
 
@@ -17,7 +19,8 @@ Boards currently supported
   **Easy to use boards**
 
    * :ref:`Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
-   * :ref:`Deek-Robot Motor Shield` - 2A rates, 1.5 possible
+   * :ref:`Deek-Robot Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
+   * :ref:`Flashtree Motor Shield` - 2A rated, 1.5 possible
    * :ref:`DIY More L298NH Motor Shield` - 2A
    * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
@@ -40,6 +43,7 @@ Boards currently supported
    * VNH2SP30 - Sparkfun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
    * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
    * :ref:`Dfrobot Romeo V2` - Well, an Engineer could perhaps get this one to work.
+   * Kuman Board (and any L293D based boards) - not enough current.
    
 Other boards, while not fully supported and tested, can be used. Look for the following criteria:
 
@@ -81,6 +85,24 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 
 |
 
+Flashtree Motor Shield
+^^^^^^^^^^^^^^^^^^^^^^^
+
+**Conductor Level**
+
+Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realisticly 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. Since it identical to the Arduino and the Deek-Robot boards, use the Deek-Robot install below.
+
+https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
+
+.. image:: ../../_static/images/motorboards/flashtree1.jpg
+   :alt: Flashtree Motor Shield
+   :scale: 20%
+
+`Install the Flashtree (same as Deek-Robot) Motor Shield <../../get-started/assembly.html>`_
+
+|
+
+
 DIY More L298NH Motor Shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -91,8 +113,10 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
 .. image:: ../../_static/images/motorboards/diy_more_motor.jpg
    :alt: DIY More Motor Shield
    :scale: 100%
+
+`DIY More Website <https://www.diymore.cc/products/replace-l298p-for-arduino-uno-r3-dual-channel-dc-motor-driver-shield-expansion-board-l298nh-module-driving-module-mega2560-one>`_
    
-`Install the DIY More Motor Shield <../../get-started/assembly.html>`_
+`Install the DIY More Motor Shield (same as Deek-Robot) <../../get-started/assembly.html>`_
 
 |
 
@@ -107,6 +131,9 @@ THIS BOARD HAS NO CURRENT SENSE! This is an alternative to the Arduino and Deek-
    :alt: L298 Motor Driver
    :scale: 100%
 
+`L298N Motor Driver on Amazon <https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/ref=asc_df_B014KMHSW6/?tag=hyprod-20&linkCode=df0&hvadid=167139094796&hvpos=&hvnetw=g&hvrand=1461693454543934465&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-306436938191&psc=1>`_
+https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
+
 |
 
 MiniIBT Motor Driver L6201P (single)
@@ -116,7 +143,7 @@ Found on Ebay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge
 
 .. image:: ../../_static/images/motorboards/wingxine.jpg
    :alt: L6201P Wingxine Motor Driver
-   :scale: 100%
+   :scale: 30%
 
 |
 
@@ -176,6 +203,8 @@ You will either need 2 of these or one of these and another board to run your pr
 .. image:: ../../_static/images/motorboards/ibt_2_bts7960.jpg
    :alt: IBT_2 Board
    :scale: 100%
+
+Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 
 `IBT_2 Intstallation Instructions <../../advanced-setup/IBT_2-motor-board-setup.html>`_
 

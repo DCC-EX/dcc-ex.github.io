@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Motor boards &mdash; DCC++ EX  documentation</title>
+  <title>Motor Boards &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -96,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Motor boards</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Motor Boards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
@@ -165,7 +165,7 @@
         
           <li><a href="../index.html">Reference</a> &raquo;</li>
         
-      <li>Motor boards</li>
+      <li>Motor Boards</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,8 +185,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="motor-boards">
-<h1>Motor boards<a class="headerlink" href="#motor-boards" title="Permalink to this headline">¶</a></h1>
+<h1>Motor Boards<a class="headerlink" href="#motor-boards" title="Permalink to this headline">¶</a></h1>
 <p>CommandStation-EX is compatible with a wide variety of motor boards, also known as “dual H-bridges” and “motor shields”. We’ve sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.</p>
+<p>If you have trouble finding a particular board from the list, try searching based on it’s name or the type of chip on the board and the terms “H-Bridge” or “Motor Shield”. There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.</p>
 <p><strong>TL;DR</strong> (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the <a class="reference external" href="shopping-list.html">Shopping List</a></p>
 <a class="reference internal image-reference" href="../../_images/deek_robot1_sm.jpg"><img alt="Deek Robot Motor Shield" src="../../_images/deek_robot1_sm.jpg" style="width: 400.0px; height: 304.0px;" /></a>
 <div class="admonition note">
@@ -200,7 +201,8 @@
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="#arduino-motor-shield"><span class="std std-ref">Arduino Motor Shield</span></a> - 2A rated, 1.5 possible <strong>[RECOMMENDED]</strong></p></li>
-<li><p><a class="reference internal" href="#deek-robot-motor-shield"><span class="std std-ref">Deek-Robot Motor Shield</span></a> - 2A rates, 1.5 possible</p></li>
+<li><p><a class="reference internal" href="#deek-robot-motor-shield"><span class="std std-ref">Deek-Robot Motor Shield</span></a> - 2A rated, 1.5 possible <strong>[RECOMMENDED]</strong></p></li>
+<li><p><a class="reference internal" href="#flashtree-motor-shield"><span class="std std-ref">Flashtree Motor Shield</span></a> - 2A rated, 1.5 possible</p></li>
 <li><p><a class="reference internal" href="#diy-more-l298nh-motor-shield"><span class="std std-ref">DIY More L298NH Motor Shield</span></a> - 2A</p></li>
 <li><p><a class="reference internal" href="#pololu-mc33926"><span class="std std-ref">Pololu MC33926</span></a> - 3A - current sensing is not appropriate for most CV programming</p></li>
 </ul>
@@ -229,6 +231,7 @@
 <li><p>VNH2SP30 - Sparkfun Monster Moto and others. It can’t switch fast enough to generate a reliable DCC signal</p></li>
 <li><p>IFX9202ED - Infineon Dual H-Bridge. Can’t switch fast enough.</p></li>
 <li><p><a class="reference internal" href="#dfrobot-romeo-v2"><span class="std std-ref">DFRobot Romeo V2</span></a> - Well, an Engineer could perhaps get this one to work.</p></li>
+<li><p>Kuman Board (and any L293D based boards) - not enough current.</p></li>
 </ul>
 </div></blockquote>
 </div></blockquote>
@@ -264,12 +267,24 @@
 <div class="line"><br /></div>
 </div>
 </div>
+<div class="section" id="flashtree-motor-shield">
+<h3>Flashtree Motor Shield<a class="headerlink" href="#flashtree-motor-shield" title="Permalink to this headline">¶</a></h3>
+<p><strong>Conductor Level</strong></p>
+<p>Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realisticly 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. Since it identical to the Arduino and the Deek-Robot boards, use the Deek-Robot install below.</p>
+<p><a class="reference external" href="https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079">https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079</a></p>
+<a class="reference internal image-reference" href="../../_images/flashtree1.jpg"><img alt="Flashtree Motor Shield" src="../../_images/flashtree1.jpg" style="width: 300.0px; height: 259.40000000000003px;" /></a>
+<p><a class="reference external" href="../../get-started/assembly.html">Install the Flashtree (same as Deek-Robot) Motor Shield</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
 <div class="section" id="diy-more-l298nh-motor-shield">
 <h3>DIY More L298NH Motor Shield<a class="headerlink" href="#diy-more-l298nh-motor-shield" title="Permalink to this headline">¶</a></h3>
 <p><strong>Conductor Level</strong></p>
 <p>Another similar board to the Arduino motor shield. Supports 2A per channel. This board uses the L298HN, which is the same L298 internally as the Arduino Motor Shield but in a different form factor with a larger heat sink tab. Current sense and other features are identical to the Arduino version.</p>
 <a class="reference internal image-reference" href="../../_images/diy_more_motor.jpg"><img alt="DIY More Motor Shield" src="../../_images/diy_more_motor.jpg" style="width: 300.0px; height: 281.0px;" /></a>
-<p><a class="reference external" href="../../get-started/assembly.html">Install the DIY More Motor Shield</a></p>
+<p><a class="reference external" href="https://www.diymore.cc/products/replace-l298p-for-arduino-uno-r3-dual-channel-dc-motor-driver-shield-expansion-board-l298nh-module-driving-module-mega2560-one">DIY More Website</a></p>
+<p><a class="reference external" href="../../get-started/assembly.html">Install the DIY More Motor Shield (same as Deek-Robot)</a></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -279,6 +294,8 @@
 <p><strong>Tinkerer level</strong></p>
 <p>THIS BOARD HAS NO CURRENT SENSE! This is an alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You’ll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471.</p>
 <a class="reference internal image-reference" href="../../_images/l298_board.jpg"><img alt="L298 Motor Driver" src="../../_images/l298_board.jpg" style="width: 150.0px; height: 150.0px;" /></a>
+<p><a class="reference external" href="https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/ref=asc_df_B014KMHSW6/?tag=hyprod-20&amp;linkCode=df0&amp;hvadid=167139094796&amp;hvpos=&amp;hvnetw=g&amp;hvrand=1461693454543934465&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9009681&amp;hvtargid=pla-306436938191&amp;psc=1">L298N Motor Driver on Amazon</a>
+<a class="reference external" href="https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board">https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board</a></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -286,7 +303,7 @@
 <div class="section" id="miniibt-motor-driver-l6201p-single">
 <h3>MiniIBT Motor Driver L6201P (single)<a class="headerlink" href="#miniibt-motor-driver-l6201p-single" title="Permalink to this headline">¶</a></h3>
 <p>Found on Ebay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge chip and is rated for 5 Amps. With a fan and heat sink, it can handle 3 or 4 Amps at 12-14V. Search for MiniIBT or Wingxine to find it. Be careful to match the picture since there is another board that sometimes comes up in searches.</p>
-<a class="reference internal image-reference" href="../../_images/wingxine.jpg"><img alt="L6201P Wingxine Motor Driver" src="../../_images/wingxine.jpg" style="width: 557.0px; height: 497.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/wingxine.jpg"><img alt="L6201P Wingxine Motor Driver" src="../../_images/wingxine.jpg" style="width: 167.1px; height: 149.1px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -334,6 +351,7 @@
 </div>
 <p>You will either need 2 of these or one of these and another board to run your programming track. Most people using this board use the Arduino Motor shield for the program track and add this board for MAIN. These boards can provide high current. We have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards aren’t enough for your track, this is one of the best options. IBT_2 is the manufacturer’s name for this board, BTS7960 is the model number of the H-Bridge chip used as the motor controller. The H-Bridge generates a clean wave form, has very low signal propagation delay and no significant voltage drop.</p>
 <a class="reference internal image-reference" href="../../_images/ibt_2_bts7960.jpg"><img alt="IBT_2 Board" src="../../_images/ibt_2_bts7960.jpg" style="width: 150.0px; height: 150.0px;" /></a>
+<p>Just search for “IBT 2 Motor Driver” or “IBT 2 H-Bridge”</p>
 <p><a class="reference external" href="../../advanced-setup/IBT_2-motor-board-setup.html">IBT_2 Intstallation Instructions</a></p>
 <div class="line-block">
 <div class="line"><br /></div>

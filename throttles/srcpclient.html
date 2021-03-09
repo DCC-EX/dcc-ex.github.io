@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Engine Driver &mdash; DCC++ EX  documentation</title>
+  <title>SRCP Client for iOS &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="WiThrottle" href="withrottle.html" />
-    <link rel="prev" title="DCC++ EX Web Throttle" href="ex-webthrottle.html" /> 
+    <link rel="next" title="Reference" href="../reference/index.html" />
+    <link rel="prev" title="DigiTrainsPro" href="digitrainspro.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,12 +96,12 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Throttles</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Engine Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="engine-driver.html">Engine Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="withrottle.html">WiThrottle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dccpp-cab.html">DCCpp CAB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="locontrol.html">Locontrol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="digitrainspro.html">DigiTrainsPro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srcpclient.html">SRCP Client for iOS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SRCP Client for iOS</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
@@ -159,13 +159,13 @@
         
           <li><a href="index.html">Throttles</a> &raquo;</li>
         
-      <li>Engine Driver</li>
+      <li>SRCP Client for iOS</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/throttles/engine-driver.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/throttles/srcpclient.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,30 +178,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="engine-driver">
-<h1>Engine Driver<a class="headerlink" href="#engine-driver" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="../_images/icon_android.png"><img alt="Android Logo" class="align-left" src="../_images/icon_android.png" style="width: 76.8px; height: 76.8px;" /></a>
-<p>Engine Driver is an Android App that uses the WiThrottle Protocol to either connect directly to the DCC++ EX Command Station or connect to the JMRI WiThrottle Server. If you connect Engine Driver to JMRI, you connect the computer running JMRI to the Command Station using a USB cable. If you connect Engine Driver directly to DCC++ EX, you connect using Wifi. See <a class="reference external" href="../get-started/wifi-setup">WiFi Setup</a></p>
-<p>Please visit the Engine Driver Website: <a class="reference external" href="https://enginedriver.mstevetodd.com/">https://enginedriver.mstevetodd.com/</a></p>
-<p><a class="reference external" href="https://play.google.com/store/apps/details?id=jmri.enginedriver">Get it from the Google Play Store</a></p>
-<blockquote>
-<div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
+  <div class="section" id="srcp-client-for-ios">
+<h1>SRCP Client for iOS<a class="headerlink" href="#srcp-client-for-ios" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/icon_ios.png"><img alt="iOS Logo" class="align-left" src="../_images/icon_ios.png" style="width: 76.8px; height: 76.8px;" /></a>
+<p>This is an iOS App from Germany. One of the major benefits of SRCPClient is that it speaks the &lt;DCC++&gt; Application Programming language (API) natively (see our <a class="reference external" href="../reference/software/command-reference.html">Command Reference</a>). This means it is fast and can take advantage of some features that exist in the DCC++ EX Command Station not implemented in other APIs. Is also can connect to a WiThrottle server so you can use it with JMRI too.</p>
+<p>Please visit their website: <a class="reference external" href="https://www.io-expert.com/">https://www.io-expert.com/</a></p>
+<p>You can find it in the App Store: <a class="reference external" href="https://apps.apple.com/us/app/srcpclient/id1495402734">SRCP Client for iOS</a></p>
 <div class="section" id="features">
-<span id="ed-features"></span><h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<span id="srcpclient-features"></span><h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Speed and directipn control</p></li>
-<li><p>Up to 29 DCC functions</p></li>
-<li><p>One to six locomotives or consists</p></li>
-<li><p>Create and edit consists (software-defined)</p></li>
-<li><p>You can also control layout power, turnouts, routes, and access JMRI web panels and windows.</p></li>
+<li><p>Supports the &lt;DCC++&gt; Command (API) natively</p></li>
+<li><p>Supports WiThrottle</p></li>
+<li><p>Connect via WiFi</p></li>
+<li><p>Read and Write CVs</p></li>
 </ul>
 </div>
 <div class="section" id="screenshots">
-<span id="ed-screenshots"></span><h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/ed1.png"><img alt="Engine Driver Main Screen" class="align-left" src="../_images/ed1.png" style="width: 131.4px; height: 240.0px;" /></a>
-<a class="reference internal image-reference" href="../_images/ed2.png"><img alt="Engine Driver 2" class="align-left" src="../_images/ed2.png" style="width: 131.4px; height: 240.0px;" /></a>
-<a class="reference internal image-reference" href="../_images/ed3.png"><img alt="Engine Driver 3" class="align-left" src="../_images/ed3.png" style="width: 131.4px; height: 240.0px;" /></a>
-<a class="reference internal image-reference" href="../_images/ed4.png"><img alt="Engine Driver 4" class="align-left" src="../_images/ed4.png" style="width: 131.4px; height: 240.0px;" /></a>
+<span id="srcpclient-screenshots"></span><h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/srcpclient1.jpg"><img alt="SrcpClient Screenshot 1" class="align-left" src="../_images/srcpclient1.jpg" style="width: 400.0px; height: 243.5px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><br /></div>
@@ -213,11 +207,32 @@
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
 </div>
+</div>
+<div class="section" id="requirements">
+<span id="srcpcleint-requirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A DCC++ EX Commmand Station (Mega based for WiFi)</p></li>
+<li><p>An iOS Cell Phone or Tablet</p></li>
+<li><p>A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi <a class="reference external" href="../get-started/wifi-setup.html">Wifi Setup</a></p></li>
+</ul>
 </div>
 <div class="section" id="operation">
-<span id="ed-operation"></span><h2>Operation<a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h2>
-<p><strong>*TODO: More details to come*</strong></p>
+<span id="srcpclient-operation"></span><h2>Operation<a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Mega is required for using the WiFi connection</p>
+</div>
+<div class="section" id="using-wifi">
+<span id="srcpclient-wifi"></span><h3>Using Wifi<a class="headerlink" href="#using-wifi" title="Permalink to this headline">¶</a></h3>
+<p>To use Wifi, make sure you have a WiFi enabled Command Station as described in the <a class="reference external" href="../get-started/wifi-setup.html">Wifi Setup</a> section.</p>
+<p>We have not tested the WiFi implementation yet</p>
+<p><strong>*TODO:insert tutorial here*</strong></p>
+</div>
 </div>
 </div>
 
@@ -227,8 +242,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="withrottle.html" class="btn btn-neutral float-right" title="WiThrottle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="ex-webthrottle.html" class="btn btn-neutral float-left" title="DCC++ EX Web Throttle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../reference/index.html" class="btn btn-neutral float-right" title="Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="digitrainspro.html" class="btn btn-neutral float-left" title="DigiTrainsPro" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

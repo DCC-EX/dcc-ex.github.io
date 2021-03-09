@@ -70,7 +70,7 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
 
 Here is a visual diagram, click to enlarge:
 
-.. image:: ../_static/images/motorboards/ibt_2_wiring.jpg
+.. image:: ../_static/images/motorboards/ibt_2_wiring.png
    :alt: IBT_2 Wiring 1
    :scale: 40%
 

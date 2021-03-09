@@ -40,9 +40,9 @@ Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 
 
 .. image:: ../_static/images/motor_shield_vin2.jpg
    :alt: Cut Vin trace on arduino motor shield
-   :scale: 100%
+   :scale: 80%
 
-**Figure 2** - Cutting the Vin trace
+**Figure 2** - Cutting the Vin trace (click to enlarge)
 
 If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.
 
@@ -51,11 +51,11 @@ Bending out or Cutting the Vin Pin
 
 In this method, you can just bend the Vin pin so that instead of connecting to the header in the Aduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
 
-.. image:: ../_static/images/motor_shield_vin2.jpg
+.. image:: ../_static/images/motorboards/bend_pin1.jpg
    :alt: Bend out the Vin pin on the arduino motor shield
-   :scale: 100%
+   :scale: 50%
 
-**Figure 3** - Bending out the Pin
+**Figure 3** - Bending out the Pin (click to enlarge)
 
 
 

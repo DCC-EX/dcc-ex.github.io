@@ -1,5 +1,6 @@
+*************
 Motor Boards
-============
+*************
 
 CommandStation-EX is compatible with a wide variety of motor boards, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.
 
@@ -14,7 +15,7 @@ If you have trouble finding a particular board from the list, try searching base
 .. note:: Where appropriate, we have used the terms "single" and "dual" to indicate on the non-shield type boards, which ones have just a single H-Bridge for one track and which ones have two. A single H-Bridge board will power your main track, but you will then need another board of some kind to connect to your programming track
 
 Boards currently supported
---------------------------
+===========================
 
   **Easy to use boards**
 
@@ -56,7 +57,7 @@ Other boards, while not fully supported and tested, can be used. Look for the fo
 .. Note:: Current capabilities of these boards, especially the boards based on the L298 with no heat sink fins like the Arduino Motor Shield can really not deliver 2 Amps. A realistic number would be 1.5 Amps IF you added a heat sink and a cooling fan. If you need 2 Amps or more, you will need to go with a higher current board.
 
 Arduino Motor Shield
-^^^^^^^^^^^^^^^^^^^^
+=====================
 
 **Conductor level**
 
@@ -71,7 +72,7 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
 |
 
 Deek-Robot Motor Shield
-^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 **Conductor Level**
 
@@ -86,7 +87,7 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 |
 
 Flashtree Motor Shield
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 **Conductor Level**
 
@@ -104,7 +105,7 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 
 
 DIY More L298NH Motor Shield
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 **Conductor Level**
 
@@ -121,7 +122,7 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
 |
 
 L298N Motor Driver (dual)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 **Tinkerer level**
 
@@ -137,7 +138,7 @@ https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
 |
 
 MiniIBT Motor Driver L6201P (single)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 Found on Ebay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge chip and is rated for 5 Amps. With a fan and heat sink, it can handle 3 or 4 Amps at 12-14V. Search for MiniIBT or Wingxine to find it. Be careful to match the picture since there is another board that sometimes comes up in searches.
 
@@ -157,7 +158,7 @@ https://www.aliexpress.com/item/531569334.html
 http://trainelectronics.com/DCC_Arduino/DCC++/
 
 Makerfabs H-Bridge Motor Shield
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 **Engineer Level**
 
@@ -178,7 +179,7 @@ Pinout
 |
 
 Pololu MC33926
-^^^^^^^^^^^^^^
+---------------
 
 **Tinkerer Level**
 
@@ -191,7 +192,7 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 |
 
 BTS7960 IBT_2 Board (single)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 **Tinkerer to Engineer Level**
 
@@ -211,7 +212,7 @@ Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 |
 
 Dual Motor Driver Module H-bridge MOSFET IRF3205
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
 
 **Tinkerer to Engineer Level**
 
@@ -228,7 +229,7 @@ You can use this board to handle both your MAIN and PROG track, or you can use o
 |
 
 Keyes/Fundumoto ("Beeper Board")
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 **Engineer Level**
 
@@ -241,7 +242,7 @@ You have to lift two traces and solder 2 resistors and use 2 jumpers to the curr
 |
 
 Velleman KA03 (kit) VMA03 (soldered)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 **Engineer Level**
 
@@ -254,7 +255,7 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 |
 
 DFRobot 2x2A DC Motor Shield (DRI0009)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 **Engineer Level**
 
@@ -279,7 +280,7 @@ NOTE: There is a "Twin" version of this board that uses pins 10, 11 and 12, 13 i
 |
 
 DFRobot Romeo V2
-^^^^^^^^^^^^^^^^^
+-----------------
 
 **Engineer Level**
 
@@ -294,7 +295,7 @@ Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Ardui
 Click here for a complete `Parts Shopping List <./shopping-list.html>`_
 
 Configuring Motor Boards
--------------------------
+=========================
 
 If your board is not in the list of supported motor board types, or if you need to make changes or have more information about how motor boards are configured in DCC++ EX, see:
 

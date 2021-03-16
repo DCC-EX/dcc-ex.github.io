@@ -49,7 +49,7 @@ Run the 3.8.5 Flasher Tool {relax give it time to completely open}
 - press [Developer Mode] button
 - Press [ESP8266 Download Tool] button
 
-Set up file location in the Tool version 3.8.5
+Set up file location in the Tool version 385
 - Pay close attention setting up the Exact *.bin Files & locations 0x......
 - [​IMG]
 

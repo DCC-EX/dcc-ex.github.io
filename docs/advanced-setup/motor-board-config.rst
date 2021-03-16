@@ -1,11 +1,12 @@
+**************************
 Motor Board Configuration
-==========================
+**************************
 
 This section is for Tinkerer's and Engineers.
 
 DCC++ EX supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
 
-.. note:: DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use another GPIO pin on the Arduino and connect directly to these boards
+.. note:: DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use "high accuracy waveform" mode if you need it. See below for more information on high accuracy mode.
 
 **Links in This Page**
 
@@ -13,16 +14,17 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 * :ref:`Configure By Editing the config.h File`
 * :ref:`Your Board is in the Supported List`
 * :ref:`Your Board is NOT in the Supported List`
+* :ref:`High Accuracy Waveform Mode`
 * :ref:`Current Sense and Sense Factor`
 * :ref:`Just Buy a Current Sense Board Instead`
 
 Configure Using the Installer
--------------------------------
+==============================
 
 Tinkerers and even Conductors should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your Command Station. 
 
 Configure By Editing the config.h File
-----------------------------------------
+=======================================
 
 Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of `Currently supported boards <../reference/hardware/motor-boards.html>`_
 
@@ -47,7 +49,7 @@ Find this section in the file:
 You will see a list of supported boards with their type and the "STANDARD_MOTOR_SHIELD" defined as the default. Continue below.
 
 Your Board is in the Supported List
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 This option is possibly Conductor friendly for those just choosing a supported board that requires no wiring.
 
@@ -62,7 +64,7 @@ That's all you need to do. Make your change and then upload the sketch to your A
 .. Note:: If your board is not a shield that plugs onto your Arduino, then you are going to have to run jumper wires. An IBT_2 High Current Motor Board is an example of such a board. See the section on your board for installation help.
 
 Your board is NOT in the Supported List
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------
 
 Tinkerer or Engineer level may be required with this option.
 
@@ -102,8 +104,16 @@ Let's look at the details of how this works, first here are all the configuratio
 * **senseFactor** - This is the multiplier specific to your board or current sense circuit that converts the raw reading into track current in milliAmps. Important information about current sense is below.
 * **faultPin** - Some boards can report a fault condition, for example under-voltage or over-heating. If you want this feature, you can the Arduino digital pin here and connect it to the fault output of the motor board.
 
+High Accuracy Waveform Mode
+============================
+
+You may ask, "Do I need high accuracy waveforms" and the answer is probably not. But we are engineers and we love to spend our days trying to eek out every bit of perfomance out of the system and maintain bragging rights for thinking of something 5% more clever than the other members of our team. Even our "standard" waveform is within the NMRA specification. For purists, or if you find a particular decoder that is not in spec and needs to have tighter timing on the DCC waveform, you can make sure you are using high accuracy mode.
+
+If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change what pins you use and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see `High Accuracy Waveform Mode <../reference/software/high-accuracy.html>`_
+
+
 Current Sense and Sense factor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===============================
 
 .. note:: It is VERY imortant to connect some form of current sensing, without it, you cannot program decoders on the programming track and you will not have any short circuit protection on either track!
 
@@ -140,7 +150,7 @@ Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require 
 How Do I Find Volts per Amp?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you need separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V.
+In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you need separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the `Advanced Setup Section <../advanced-setup/index.html>`_
 
 Just Buy a Current Sense Board Instead
 ---------------------------------------

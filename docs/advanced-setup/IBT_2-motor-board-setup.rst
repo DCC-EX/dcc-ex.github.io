@@ -86,7 +86,7 @@ It should look like following. Note we have included the Arduino Mega and have t
 
 Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:
 
-.. code-block:: C++
+.. code-block:: cpp
 
    // DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:
    //

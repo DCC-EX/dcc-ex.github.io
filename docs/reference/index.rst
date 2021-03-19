@@ -49,6 +49,7 @@ Documents
     :maxdepth: 1
 
     documents/decoder-table
+    documents/wire-gauge
 
 Diagnostic Tools
 ------------------

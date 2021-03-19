@@ -47,12 +47,12 @@ Steps;
 
 .. raw:: html
 
-  <p><a class="dcclink" href="../_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p>
+   <p><a class="dcclink" href="../_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p>
   
 
 .. raw:: html
   
-      <p><a class="dcclink" href="../_static/files/esp8266/mega_wifi_esp866_bin_files">ESP8266 Firmware Zipped</a></p>
+   <p><a class="dcclink" href="../_static/files/esp8266/mega_wifi_esp866_bin_files">ESP8266 Firmware Zipped</a></p>
   
 
 **2)** To Flash with ESP8266_NONOS_AT_Bin_v1.7.4 set the ESP section of the board with the USB unplugged. (no power)
@@ -60,18 +60,18 @@ Steps;
  -  (set TX/RX Slide Pin to RxD3 & TxD3)
  -  Plugged in Mega+WiFI board to comm port X, press the **Mode button**
 
-***TODO:*** use a toothpick tiny screwdriver. fragile note. And add note about buying antenna. find link
+**TODO:** use a toothpick tiny screwdriver. fragile note. And add note about buying antenna. find link
 
- .. image:: ../_static/images/wifi/ap_mode1.jpg
- :alt: IP Address
- :scale: 80%
+.. image:: ../_static/images/wifi/switches_program.pngjpg
+   :alt: Switches in flash mode
+   :scale: 80%
 
 Run the Flasher Tool (it may take a few seconds to open while you see a black cmd window)
 - press [Developer Mode] button
 - Press [ESP8266 Download Tool] button
 
 Setup the file location in the Flasher Tool
-- Pay close attention setting up the Exact *.bin Files & locations 0xYYYYYYYY
+- Pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
 - ​[IMG]
 
 And then set the Exact radial dial & baud rate settings;
@@ -82,7 +82,7 @@ And then set the Exact radial dial & baud rate settings;
 First press the **Erase button** and let the ESP erase the chip memory.   
 Then press the **Start button** and the bin files will flash load onto the ESP-WiFi chip
 
-***TODO:***watch swith position
+***TODO:*** watch swith position
 may give an error the first time. press reset? try again?
 
 After flashing, the ESP8266 Log will show it uploaded them all successfully and it closes the port.
@@ -139,7 +139,7 @@ If the Engine driver fails to connect the first time with the Command Station ju
 
 You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone WiFI Command Station Via your home router.
 
-**.. Note::** This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.
+.. Note:: This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.
 
 Going Further
 ==============
@@ -151,13 +151,13 @@ https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined
 
 Fernando Koyanagi's excellent site including a video. Just be careful not to use his settings since he used an older version of the firmware: https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/
 
-The Expressif ESP8266 page (The manufacturer of the chip): https://www.espressif.com/en/products/socs/esp8266
+The Expressif ESP8266 page (The manufacturer of the chip): https://www.espressif.com/en/products/socs/esp8266/
 
 
- Enjoy your New DCC++EX MEGA + WiFI On-Board Command Station!
+Enjoy your New DCC++EX MEGA + WiFI On-Board Command Station!
 
- Suppliers
- ==========
+Suppliers
+==========
 
  https://robotdyn.com/mega-wifi-r3-atmega2560-esp8266-flash-32mb-usb-ttl-ch340g-micro-usb.html
 

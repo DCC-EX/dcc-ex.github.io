@@ -2,7 +2,11 @@
 Mega+WiFi Configuration
 **************************
 
-This is a combination of a Mega Clone and an ESP8266 WiFi board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands:
+.. image:: ../_static/images/mega_wifi.png
+   :alt: IP Address
+   :scale: 50%
+
+This is a combination of a Mega Clone and an ESP8266 WiFi board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers at at the bottom of this page:
 
 * Wemos
 * RobotDyn
@@ -14,7 +18,7 @@ A Operational Standalone WiFI DCC Command Station
 What You Will Need
 -------------------
 
-This is a tested and proven configuration
+This is our tested and proven configuration
 
 * DCC++EX 3.0.5 or greater
 * ATMega2560 + ESP8266 WiFI - Combo Board
@@ -29,35 +33,57 @@ What You Will Do
 
 1. Download the ESP Files
 2. Flash the ESP8266 chip
-3. Edit your config file and Load the DCC++EX 3.0.5+ to the Mega2560 chip
+3. Edit your config file and Load the DCC++EX v3.0.5 to the Mega2560 chip
 4. Setup your Throttle
 
-Note: This board uses a Micro-USB connector instead of the USB-B printer type connector uses on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands,so may require you to install a driver.
+.. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector uses on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands,so may require you to install a driver.
 
 Steps;
 ------
-**1)** Downloaded the Flash Download Tool 3.8.5 nodencu-flasher & download the ESP8266_NONOS_AT_Bin_v1.7.4 Bin files found here;
- -   https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined-mega-8266-board/
 
+***TODO:*** plug in board and see if we need the ch340 driver
+
+**1)** Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware files found here:
+
+.. raw:: html
+
+  <p><a class="dcclink" href="../_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p>
+  
+
+.. raw:: html
+  
+      <p><a class="dcclink" href="../_static/files/esp8266/mega_wifi_esp866_bin_files">ESP8266 Firmware Zipped</a></p>
+  
 
 **2)** To Flash with ESP8266_NONOS_AT_Bin_v1.7.4 set the ESP section of the board with the USB unplugged. (no power)
- -  set dip switches 1,2,3,4,8 off .. 5,6,7 on
+ -  set dip switches 5,6,7 on (1,2,3,4, and 8 off)
  -  (set TX/RX Slide Pin to RxD3 & TxD3)
- -  Plugged in Mega+WiFI board to comm port X, press the **Mode button**,
+ -  Plugged in Mega+WiFI board to comm port X, press the **Mode button**
 
-Run the 3.8.5 Flasher Tool {relax give it time to completely open}
+***TODO:*** use a toothpick tiny screwdriver. fragile note. And add note about buying antenna. find link
+
+ .. image:: ../_static/images/wifi/ap_mode1.jpg
+ :alt: IP Address
+ :scale: 80%
+
+Run the Flasher Tool (it may take a few seconds to open while you see a black cmd window)
 - press [Developer Mode] button
 - Press [ESP8266 Download Tool] button
 
-Set up file location in the Tool version 385
-- Pay close attention setting up the Exact *.bin Files & locations 0x......
-- [​IMG]
+Setup the file location in the Flasher Tool
+- Pay close attention setting up the Exact *.bin Files & locations 0xYYYYYYYY
+- ​[IMG]
 
 And then set the Exact radial dial & baud rate settings;
 - (26M, 40MHz, DIO, 16Mbit-C1, com: xx, 460800 baud).
 
+.. NOTE:: These settings are for the ESP8266EX chip on the Mega+Wifi, you may need different settings to flash an ESP-01s, ESP12, etc.
+
 First press the **Erase button** and let the ESP erase the chip memory.   
 Then press the **Start button** and the bin files will flash load onto the ESP-WiFi chip
+
+***TODO:***watch swith position
+may give an error the first time. press reset? try again?
 
 After flashing, the ESP8266 Log will show it uploaded them all successfully and it closes the port.
 - You disconnect the USB cable.
@@ -115,6 +141,27 @@ You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone Wi
 
 **.. Note::** This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.
 
+Going Further
+==============
+
+If you want to understand what is happening in more detail, such as what the different settings and firmware does, you may consult the following resources. 
+
+Detailed tutorial and analysis by DCC-EX team member Neil McKechnie (NeilMc):
+https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined-mega-8266-board/
+
+Fernando Koyanagi's excellent site including a video. Just be careful not to use his settings since he used an older version of the firmware: https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/
+
+The Expressif ESP8266 page (The manufacturer of the chip): https://www.espressif.com/en/products/socs/esp8266
+
+
  Enjoy your New DCC++EX MEGA + WiFI On-Board Command Station!
 
-* The RobotDyn Mega2560+ESP8266 WiFI combo-board May also be setup & configured this same way. We have not as yet tested it.
+ Suppliers
+ ==========
+
+ https://robotdyn.com/mega-wifi-r3-atmega2560-esp8266-flash-32mb-usb-ttl-ch340g-micro-usb.html
+
+ https://www.amazon.com/SongHe-Mega2560-ATmega2560-ESP8266-Compatible/dp/B07THDDFSJ
+
+ https://usa.banggood.com/Geekcreit-Mega-+WiFi-R3-Module-ATmega2560+ESP8266-32Mb-Memory-USB-TTL-CH340G-p-1205437.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=minha-usg-pc&currency=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=frank&utm_campaign=frank-ssc-usg-all-21LP-0112-01sale&ad_id=490995939324&gclid=Cj0KCQjwl9GCBhDvARIsAFunhsmmtqTacFhEVspUMw3shUU51ed2Akuh65HHr6uYDtXNEvkIbV9LgrwaAuZEEALw_wcB
+

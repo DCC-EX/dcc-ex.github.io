@@ -217,7 +217,7 @@ Resetting Network Settings
 Once you enter a network SSID and password, the CS will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.
 
 Clearing the ESP-WiFI SSID Settings
-=====================================
+------------------------------------
 Go into your serial monitor and wait until the CS has gone through the startup sequence. 
 Then in command textbox enter ``+CWQAP``
 and press "SEND".

@@ -1,0 +1,17 @@
+********************
+ESP 8266 Files
+********************
+
+Expressif Flash Dowload tool (note: You can also use the python tool esptool.py which is installed using the pip command)
+
+.. raw:: html
+
+<p><a class="dcclink" href="../_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p>
+
+The 1.7.4 "NonOS AT" version of firmware we use to flash the ESP8266.
+
+.. raw:: html
+
+    <p><a class="dcclink" href="../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware</a></p>
+
+

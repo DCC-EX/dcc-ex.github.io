@@ -2,18 +2,19 @@
 Mega+WiFi Configuration
 **************************
 
+A Operational Standalone WiFI DCC Command Station
+==================================================
+
 .. image:: ../_static/images/mega_wifi.png
    :alt: IP Address
-   :scale: 50%
+   :scale: 40%
 
-This is a combination of a Mega Clone and an ESP8266 WiFi board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers at at the bottom of this page:
+This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers at at the bottom of this page:
 
 * Wemos
 * RobotDyn
 * Geekcreit
 
-A Operational Standalone WiFI DCC Command Station
-==================================================
 
 What You Will Need
 -------------------
@@ -29,7 +30,7 @@ This is our tested and proven configuration
 * USB-A male to Micro USB-B cable
 
 What You Will Do
------------------
+------------------
 
 1. Download the ESP Files
 2. Flash the ESP8266 chip
@@ -38,12 +39,24 @@ What You Will Do
 
 .. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector uses on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands,so may require you to install a driver.
 
-Steps;
-------
+Steps
+-------
 
-***TODO:*** plug in board and see if we need the ch340 driver
+Plug in and test your Mega
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**1)** Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware files found here:
+**1.** Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
+
+.. image:: ../_static/images/wifi/ch340_driver.png
+   :alt: IP Address
+   :scale: 100%
+
+There are two tools you can use to flash the firmware, one is the Windows utilty called **"Expressif Flash Download tool"** for Windows and the other is a pyhthon script called **esptool** that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.
+
+Using the Flash Download Tool (Windows)
+---------------------------------------
+
+Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware files by clicking on the buttons below. Unzip them wherever you like:
 
 .. raw:: html
 
@@ -53,6 +66,28 @@ Steps;
 .. raw:: html
   
    <p><a class="dcclink" href="../_static/files/esp8266/mega_wifi_esp866_bin_files">ESP8266 Firmware Zipped</a></p>
+
+Using esptool.py (Windows, Mac, Linux)
+---------------------------------------
+
+Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button below:
+
+.. raw:: html
+   
+   <p><a class="dcclink" href="../_static/files/esp8266/mega_wifi_esp866_bin_files">ESP8266 Firmware Zipped</a></p>
+
+Install python if you don't already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don't:
+
+https://wiki.python.org/moin/BeginnersGuide/Download
+
+Once you have Python installed, you will need to install etptool.py. Open a command prompt and use pip to find and install it from the web:
+
+.. code-block:: cpp
+
+$ pip install –upgrade esptool
+
+Plug in your WiFi+Mega
+-----------------------
   
 
 **2)** To Flash with ESP8266_NONOS_AT_Bin_v1.7.4 set the ESP section of the board with the USB unplugged. (no power)
@@ -62,7 +97,7 @@ Steps;
 
 **TODO:** use a toothpick tiny screwdriver. fragile note. And add note about buying antenna. find link
 
-.. image:: ../_static/images/wifi/switches_program.pngjpg
+.. image:: ../_static/images/wifi/switches_program.png
    :alt: Switches in flash mode
    :scale: 80%
 

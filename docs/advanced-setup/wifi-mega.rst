@@ -6,7 +6,7 @@ A Operational Standalone WiFI DCC Command Station
 ==================================================
 
 .. image:: ../_static/images/mega_wifi.png
-   :alt: IP Address
+   :alt: Mega WiFi
    :scale: 40%
 
 This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers at at the bottom of this page:
@@ -23,9 +23,9 @@ This is our tested and proven configuration
 
 * DCC++EX 3.0.5 or greater
 * ATMega2560 + ESP8266 WiFI - Combo Board
-* Deek Robot L298P Standard Motor Shield (or other approve motor controller)
+* Deek Robot L298P Standard Motor Shield (or other `approved motor controllers <../reference/hardware/motor-boards.html>`_
 * 12-16Vdc Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)
-* 7.5-9Vdc power supply to the ATmega boards with a female 2.1mm power barrel
+* 7-9Vdc power supply to the ATmega boards with a female 2.1mm power barrel
 * Android Smartphone w Engine Driver v2.28.123 or iOS Smarphone with WiThrottle
 * USB-A male to Micro USB-B cable
 
@@ -39,22 +39,31 @@ What You Will Do
 
 .. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector uses on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands,so may require you to install a driver.
 
-Steps
--------
+1. Plug in and test your Mega
+------------------------------
 
-Plug in and test your Mega
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**1.** Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
+Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
 
 .. image:: ../_static/images/wifi/ch340_driver.png
-   :alt: IP Address
+   :alt: CH340 Recognized
    :scale: 100%
+   :align: center
+
+If you don't see the CH340 with the Mega plugged into USB, download and install the drivers from here:
+
+http://www.wch-ic.com/downloads/CH341SER_ZIP.html
+
+Once you can see your computer recognizes your board, remember the port. For a PC running windows, it will be something like "COM24" as in the picture above. For a Mac, it will be something like "/dev/cu.wchusbserial*****", and for Linux it will look like "/dev/ttyUSBx". Write it down. Unplug the Mega.
+
+For more detail on how to do this for your OS, you can see this `Sparkfun Tutorial <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+
+2. Download and install the flash download tool
+------------------------------------------------
 
 There are two tools you can use to flash the firmware, one is the Windows utilty called **"Expressif Flash Download tool"** for Windows and the other is a pyhthon script called **esptool** that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.
 
 Using the Flash Download Tool (Windows)
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware files by clicking on the buttons below. Unzip them wherever you like:
 
@@ -68,7 +77,7 @@ Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware fi
    <p><a class="dcclink" href="../_static/files/esp8266/mega_wifi_esp866_bin_files">ESP8266 Firmware Zipped</a></p>
 
 Using esptool.py (Windows, Mac, Linux)
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button below:
 
@@ -84,18 +93,41 @@ Once you have Python installed, you will need to install etptool.py. Open a comm
 
 .. code-block:: cpp
 
-$ pip install –upgrade esptool
+$ pip install esptool
 
-Plug in your WiFi+Mega
------------------------
-  
+NOTE:with some Python installations that command may not work and you’ll receive an error. If that’s the case, try to install esptool.py with one of the following:
 
-**2)** To Flash with ESP8266_NONOS_AT_Bin_v1.7.4 set the ESP section of the board with the USB unplugged. (no power)
- -  set dip switches 5,6,7 on (1,2,3,4, and 8 off)
+pip3 install esptool
+python -m pip install esptool
+pip2 install esptool
+
+When that is installed, install setup tools:
+
+.. code-block:: cpp
+
+$ pip install setuptools
+
+3. Set the switches on your Mega for flashing
+-----------------------------------------------
+
+With the Mega UNPLUGGED (no power connected!), you will set some switches. Use the following diagram to see the locations on the board.
+
+.. image:: ../_static/images/wifi/mega_wifi_1.png
+   :alt: Mega WiFi Switch Locations
+   :scale: 50%
+   :align: center
+
+Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, ON is up in this picture.
+
+.. image:: ../_static/images/wifi/mega_wifi_sw_flash.png
+   :alt: Dip Switches Set to Flash Mode
+   :scale: 100%
+   :align: center
+
+ -  set dip switches 5,6,7 ON (1,2,3,4 OFF)
  -  (set TX/RX Slide Pin to RxD3 & TxD3)
- -  Plugged in Mega+WiFI board to comm port X, press the **Mode button**
-
-**TODO:** use a toothpick tiny screwdriver. fragile note. And add note about buying antenna. find link
+ -  Connect Mega+WiFI board to your computer with the USB cable
+ -  press the **Mode button**
 
 .. image:: ../_static/images/wifi/switches_program.png
    :alt: Switches in flash mode
@@ -199,4 +231,6 @@ Suppliers
  https://www.amazon.com/SongHe-Mega2560-ATmega2560-ESP8266-Compatible/dp/B07THDDFSJ
 
  https://usa.banggood.com/Geekcreit-Mega-+WiFi-R3-Module-ATmega2560+ESP8266-32Mb-Memory-USB-TTL-CH340G-p-1205437.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=minha-usg-pc&currency=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=frank&utm_campaign=frank-ssc-usg-all-21LP-0112-01sale&ad_id=490995939324&gclid=Cj0KCQjwl9GCBhDvARIsAFunhsmmtqTacFhEVspUMw3shUU51ed2Akuh65HHr6uYDtXNEvkIbV9LgrwaAuZEEALw_wcB
+
+ ***TODO:*** show link for external antenna.
 

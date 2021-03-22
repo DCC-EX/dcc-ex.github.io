@@ -150,24 +150,69 @@ With the Flash Download Tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
 Run the Flasher Tool (it may take a few seconds to open while you see a black cmd window)
+
 - press [Developer Mode] button
 - Press [ESP8266 Download Tool] button
 
-Setup the file location in the Flasher Tool
-- Pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
-- ​[IMG]
-- Make sure to check all the file checkboxes!
+.. image:: ../_static/images/wifi/download_tool_dev_mode.jpg
+   :alt: Flasher Tool Buttons
+   :scale: 80%
+   :align: left
 
-And then set the EXACT settings using the radio buttons & baud rate settings;
-- (26M, 40MHz, DIO, 16Mbit-C1, com: xx, 460800 baud).
+.. figure:: ../_static/images/wifi/download_tool_esp8266.jpg
+   :alt: Flasher Tool Buttons 2
+   :scale: 80%
+   :align: left
+
+   Figure 5 - Flash Tool Button Selections
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+Setup the files and memory locations in the Flasher Tool
+
+- Pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
+- Make sure to check all the file checkboxes!
+- Set the EXACT settings using the radio buttons & baud rate settings: (26M, 40MHz, DIO, 16Mbit-C1, Your COM port selected, and 460800 baud).
+
+.. figure:: ../_static/images/wifi/flasher_1.png
+   :alt: Flasher Settings Screen
+   :scale: 80%
+   :align: center
+
+   Figure 6 - Flasher Settings Screen
 
 .. NOTE:: These settings are for the ESP8266EX chip on the Mega+Wifi, you may need different settings to flash an ESP-01s, ESP12, etc.
 
-First press the **Erase button** and let the ESP erase the chip memory.   
-Then press the **Start button** and the bin files will flash load onto the ESP-WiFi chip
+- First press the **Erase button** and let the ESP erase the chip memory.   
+- Then press the **Start button** and the bin files will flash load onto the ESP-WiFi chip
 
 After flashing, the ESP8266 Log will show it uploaded them all successfully and it closes the port.
-- You disconnect the USB cable.
+
+- Disconnect the USB cable.
+
+Skip ahead to :ref:`3. Set the switches for run/sketch mode`
 
 With esptool.py
 ^^^^^^^^^^^^^^^^
@@ -175,13 +220,28 @@ With esptool.py
 ***TODO: Put instructions here***
 
 
-**3)** Set up the Arduino ATmega2560 side of the board with DCC++EX version 3.0.5+
-- dip switches 1,2,5,6,7,8 off .. 3,4 on
+3. Set the switches for run/sketch mode
+==========================================
+
+With the power disconnected from the Mega, set the switches back to the upload/run mode
+- dip switches 5,6,7 OFF and 1,2,3,4 ON
 - (Leave the TX/RX slide Pin on RxD3 TxD3)
-- re-connected the USB cable
+- re-connect the USB cable
+
+.. figure:: ../_static/images/wifi/mega_wifi_sw_run.png
+   :alt: Switches in flash mode
+   :scale: 30%
+   :align: center
+
+   Figure 7 - Switch Settings for sketch load/run
+
+4. Install the DCC++EX Command Station Software
+==================================================
 
 Download and install DCC++EX from either the Automated exInstaller or the Latest DCC++ EX Release >= 3.0.5
 - https://dcc-ex.com/download/index.html
+
+***TODO: Link to the installer pages here***
 
 Once you have DCC-EX installed on the Mega you need to Open the CommandStation-EX Folder make a Copy of the config.example.h file and rename the copy to config.h
 

@@ -62,18 +62,6 @@ Then click on the "CommandStation-EX" sketch folder to open it. Scroll down to t
 
 **Figure 3** - Find the CommandStation-EX.ino file
 
-Install the DIO2.h Library
---------------------------
-
-From the "Tools" menu, select "Manage Libraries". It may take a few seconds for it to load the list of all the libraries. Libraries are shared pieces of code that can be used by sketches to add functionality without someone having to write them from scratch. Type "DIO2" into the search box. You should then see a box below with "DIO2" by Thierry Paris of Locduino. Click "Install" to install this library. After it installs, close the libary manger window and go back to the main window.
-
-
-.. image:: ../_static/images/arduino-ide/library_manager.jpg
-   :alt: Find the DIO2.h Library
-   :scale: 90%
-
-**Figure 4** - Find and install the DIO2.h Library
-
 Edit the config.h file (optional)
 ---------------------------------
 

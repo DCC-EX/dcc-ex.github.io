@@ -24,7 +24,7 @@ What You Will Need
 
 This is our tested and proven configuration
 
-* DCC++EX 3.0.5 or greater
+* DCC++EX 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFI - Combo Board
 * Deek Robot L298P Standard Motor Shield (or other `approved motor controllers <../reference/hardware/motor-boards.html>`_
 * 12-16Vdc Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)
@@ -37,7 +37,7 @@ What You Will Do
 
 1. Download the ESP Files
 2. Flash the ESP8266 chip
-3. Edit your config file and Load the DCC++EX v3.0.5 to the Mega2560 chip
+3. Edit your config file and Load the DCC++EX v3.0.6 to the Mega2560 chip
 4. Setup your Throttle
 
 .. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector uses on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands,so may require you to install a driver.
@@ -219,6 +219,8 @@ With esptool.py
 
 ***TODO: Put instructions here***
 
+esptool.py write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
+
 
 3. Set the switches for run/sketch mode
 ==========================================
@@ -238,10 +240,13 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 4. Install the DCC++EX Command Station Software
 ==================================================
 
-Download and install DCC++EX from either the Automated exInstaller or the Latest DCC++ EX Release >= 3.0.5
+Download and install DCC++EX from either the Automated exInstaller or the Latest DCC++ EX Release >= 3.0.6
 - https://dcc-ex.com/download/index.html
 
-***TODO: Link to the installer pages here***
+We recommend using the Arduino IDE by following these instructions:
+
+../get-started/arduino-ide.html
+
 
 Once you have DCC-EX installed on the Mega you need to Open the CommandStation-EX Folder make a Copy of the config.example.h file and rename the copy to config.h
 
@@ -299,6 +304,8 @@ Fernando Koyanagi's excellent site including a video. Just be careful not to use
 
 The Expressif ESP8266 page (The manufacturer of the chip): https://www.espressif.com/en/products/socs/esp8266/
 
+Expressif detailed instructions on using the esptool
+https://github.com/espressif/esptool#installation--dependencies
 
 Enjoy your New DCC++EX MEGA + WiFI On-Board Command Station!
 

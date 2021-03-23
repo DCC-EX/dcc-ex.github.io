@@ -237,54 +237,85 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 
    Figure 7 - Switch Settings for sketch load/run
 
-4. Install the DCC++EX Command Station Software
-==================================================
+4. Decide if you want AP Mode or Station Mode
+==============================================
 
-Download and install DCC++EX from either the Automated exInstaller or the Latest DCC++ EX Release >= 3.0.6
-- https://dcc-ex.com/download/index.html
+AP Mode (the default) makes the Command Station an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet, No Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the CS so your Throttles can find it on your network.
 
-We recommend using the Arduino IDE by following these instructions:
+If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to setp 5.
 
-../get-started/arduino-ide.html
+If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
 
-Once you have DCC-EX installed on the Mega you need to Open the CommandStation-EX Folder make a Copy of the config.example.h file and rename the copy to config.h
+5. Download and Configure the DCC++EX Command Station Software
+================================================================
 
-Decide which Mode of WiFi Communication you wish to run, Either Access Point AP Mode, Or Station STA Mode.
+Download and install DCC++EX from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 
-AP mode is Local Intranet, No Internet access.  Station Mode is your local WiFi Router With Internet access.
-**Note:**  See WiFi Configuration for more details.
+`How to install using the installer <../get-started/installer.html>`_
+
+`How to install using the Arduino IDE <../get-started/arduino-ide.html>`_
+
+`I know what I'm doing, just point me to the dowloads page! <../download/commandstation.html>`_
+
+Short Version of Network Setup
+===============================
+
+`Long/Detailed Network Setup HERE <../advanced-setup/wifi-config.html>`_
+
+All settings are in the config.h file in your CommandStation-EX folder. If you don't have a config.h, rename config.example.h to config.h.
+
+**First, make sure your dip switches are set with 1,2,3,4 ON and 5,6,7 OFF (8 doesn't matter)**
 
 Setting up in Access Point AP Mode
-- No additional changes require, Leave SSID & Passwd alone
-- Your ESP-Wifi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the ESP8266 MAC ID number.
+-----------------------------------
 
-Setting up WiFi in Station STA Mode with Router
-- Open the CommandStation-EX.ino in the Arduino IDE Interactive Development Editor then
-- Edited & change the new config.h file to your local or home Router's SSID & Password.
-- #define WIFI_SSID "Your network name" to your "Local SSID"
-- #define WIFI_PASSWORD "Your network passwd" to your "Local PW" 
+- If using the installer, just check the WiFi check box and leave SSID and password alone
+  
+- If using the Arduino IDE,Make sure you didn't put "//" in front of the `#define ENABLE_WIFI true` line
+- No additional changes required, Leave SSID & Passwd alone
+- Your ESP-Wifi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address.
+- Upload the software to your Mega+WiFi (see Compile and Re-upload below)
 
-Compile and Re-upload DCC-EX to the
-- ATMega2560 board (com: xx, baud 115200),
-- Verify your com port and baud rate in Windows device manager
+Setting up WiFi in Station (STA) Mode with Router
+--------------------------------------------------
 
-After the Arduino IDE uploads DCC-EX 3.0.5 sketch
-- Disconnect USB cable
-- Reset dip switches 1,2,3,4 on .. 5,6,7,8 off
-- (Leave the TX/RX slide Pin on RxD3 TxD3)
+- This mode is also sometimes called "Client" mode
 
-Power up the Arduino ATMega2560 + ESP8266 WiFi board by Either a USB cable, Or  
-  **Note:** {For Standalone Operations (no USB) you can use a 7-12vdc power supply in the Arduino 2.1mm female barrel.}
+- If using the installer, select the WiFi Checkbox and enter the name (SSID) of your network and the password to log into it.
+
+- If using the Arduino IDE open the CommandStation-EX.ino file in the Arduino IDE program then
+- Open, then Edit & change the new config.h file to your local or home Router's SSID & Password.
+  - Change `#define WIFI_SSID "Your network name"` to the name of your local network.
+  - Change `#define WIFI_PASSWORD "Your network passwd"` to the password for your network.
+
+6. Compile and Re-upload DCC-EX to the Arduino
+===============================================
+
+- If using the Arduino IDE, select ATMega2560 board from the "tools, boards" menu.
+- Select the correct COM port that sees your Mega and set baud rate to 115200)
+
+7. Operate Your Command Station
+================================
+
+After the Arduino IDE uploads DCC-EX sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.
+
+If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi board by Either a USB cable, or for Standalone Operations (no USB) you can use a 7-9vdc power supply in the Arduino 2.1mm female barrel jack.
 
 - When powered on through a USB cable, check the Arduino IDE Tools > Serial Monitor.
 - It should show the ATMega2560 & ESP8266 WiFI communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new DCC++EX Command Station.
-- ++ Wifi Setup CONNECTED ++
+- You should see `++ Wifi Setup CONNECTED ++`
 
+8. Connect your Phone as a Controller (Throttle)
+===================================================
 
-**4)** Set your Smartphone WiFi to the same local SSID & PASSwd you entered into the DCC++EX config.h file
-- Start your Smart Phone (Andriod) Engine Driver App Or (Apple iOs) WiTHrottlle App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560.
+- If operating in STA mode, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)
 
+- If Operating in AP mode, disconnect from any other network and find the SSID for your Command Station in your network list. It will be "DCCEX_xxxxxx" where the x's are the last 6 characters of your WiFi chip's MAC address. Use the password "PASS_xxxxxx" where the x's are the same 6 characters.
+
+.. NOTE:: You MUST either forget your local network or turn off "auto-reconnect" for that connection when using AP Mode. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.
+
+- Start your Smart Phone (Andriod) Engine Driver App Or (Apple iOs) WiTHrottlle App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.
 
 If the Engine driver fails to connect the first time with the Command Station just press the Mega's red Reset button and try the IP/Port connection again.
 

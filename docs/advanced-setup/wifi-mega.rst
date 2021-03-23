@@ -26,13 +26,13 @@ This is our tested and proven configuration
 
 * DCC++EX 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFI - Combo Board
-* Deek Robot L298P Standard Motor Shield (or other `approved motor controllers <../reference/hardware/motor-boards.html>`_)
-* 12-16Vdc Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
-* 7-9Vdc power supply to the ATmega boards with a female 2.1mm power barrel
-* Android Smartphone w Engine Driver v2.28.123 or iOS Smarphone with WiThrottle
+* Deek Robot L298P Standard Motor Shield (or other `approved motor controller <../reference/hardware/motor-boards.html>`_)
+* 12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
+* 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
+* Android Smartphone with Engine Driver v2.28.123 or iOS Smarphone with WiThrottle
 * USB-A male to Micro USB-B cable
 
-/* NOTE: The L298 Based motor drivers like the Arduino Motor Shield have a 1.5-2V voltage drop. More efficient boards to not have this issue. Be careful in choosing the correct voltage.
+\* NOTE: The L298 Based motor drivers like the Arduino Motor Shield have a 1.5-2V voltage drop. More efficient boards do not have this issue. Be careful in choosing the correct voltage so that you don't put too much voltage on the track and potentially damage your decoders.
 
 What You Will Do
 ------------------
@@ -42,7 +42,7 @@ What You Will Do
 3. Edit your config file and Load the DCC++EX v3.0.6 to the Mega2560 chip
 4. Setup your Throttle
 
-.. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector used on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands,so may require you to install a driver.
+.. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector used on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands, so may require you to install a driver.
 
 1. Plug in and test your Mega
 ------------------------------
@@ -198,7 +198,7 @@ NOTE: It may take a few seconds to open while you see a black cmd window
 Setup the files and memory locations in the Flasher Tool
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-- Click on the file button (the "..." buttons) and find the bin files you extracted.
+- Click on the each file button (the "..." buttons) and find the bin files you extracted.
 - Follow Figure 6 and pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
 - Make sure to check all the file checkboxes to the left of the filled in file names
 - Set the EXACT settings using the radio buttons & baud rate settings: (26M, 40MHz, DIO, 16Mbit-C1, Your COM port selected, and 460800 baud).
@@ -224,9 +224,15 @@ Skip ahead to :ref:`3. Set the switches for run/sketch mode`
 With esptool.py
 ^^^^^^^^^^^^^^^^
 
-***TODO: Put instructions here***
+Unzip the firmware files and put them in a folder off your root so that they are easy to find and the path name you have to enter will be short. We recommend putting them in an "esp" folder (ex: C:\esp)
 
-esptool.py write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
+***TODO: We will be expanding this section soon, but needed to get what we had up for the amount of people asking about this board. If you have more you can contribut to the page, please send it to support@dcc-ec.com***
+
+esptool.py write_flash --flash_size 2MB-c1 0x0 esp/boot_v1.7.bin 0x01000 esp/user1.2048.new.5.bin 0x1fc000 esp/esp_init_data_default_v08.bin 0xfe000 esp/blank.bin 0x1fe000 esp/blank.bin
+
+Example: 
+
+esptool.py -p /dev/ttyUSB0 write_flash --flash_size 2MB-c1 0x0 esp/boot_v1.7.bin 0x01000 esp/user1.2048.new.5.bin 0x1fc000 esp/esp_init_data_default_v08.bin 0xfe000 esp/blank.bin 0x1fe000 esp/blank.bin
 
 
 3. Set the switches for run/sketch mode
@@ -247,7 +253,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 4. Decide if you want AP Mode or Station Mode
 ==============================================
 
-AP Mode (the default) makes the Command Station an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet, No Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the CS so your Throttles can find it on your network.
+AP Mode (the default) makes the Command Station an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the CS so your Throttles can find it on your network.
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to setp 5.
 
@@ -279,9 +285,9 @@ Setting up in Access Point AP Mode
 
 - If using the installer, just check the WiFi check box and leave SSID and password alone
   
-- If using the Arduino IDE,Make sure you didn't put "//" in front of the `#define ENABLE_WIFI true` line
+- If using the Arduino IDE,Make sure you didn't put "//" in front of the `#define ENABLE_WIFI true` line in your config.h file
 - No additional changes required, Leave SSID & Passwd alone
-- Your ESP-Wifi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address.
+- Your ESP-Wifi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address
 - Upload the software to your Mega+WiFi (see Compile and Re-upload below)
 
 Setting up WiFi in Station (STA) Mode with Router
@@ -293,6 +299,7 @@ Setting up WiFi in Station (STA) Mode with Router
 
 - If using the Arduino IDE open the CommandStation-EX.ino file in the Arduino IDE program then
 - Open, then Edit & change the new config.h file to your local or home Router's SSID & Password.
+  
   - Change `#define WIFI_SSID "Your network name"` to the name of your local network.
   - Change `#define WIFI_PASSWORD "Your network passwd"` to the password for your network.
 
@@ -300,7 +307,8 @@ Setting up WiFi in Station (STA) Mode with Router
 ===============================================
 
 - If using the Arduino IDE, select ATMega2560 board from the "tools, boards" menu.
-- Select the correct COM port that sees your Mega and set baud rate to 115200)
+- Select the correct COM port that sees your Mega and set baud rate to 115200
+- Click the upload button (the arrow pointing to the right near the checkmark in the upper left of the program window)
 
 7. Operate Your Command Station
 ================================

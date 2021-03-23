@@ -5,7 +5,7 @@ Wire Gauge Information
 Why is Wire Size Important?
 ============================
 
-Voltage, current, and resistance to that current are all interrelated and described by the Ohm's law formula V=IR. The thinner the wire, the more resistance it has. As you can see from the formula, if your wire had a .5 Ohm resistance and there was 5 Amps flowing through it, you would lose... we're waiting. Get out your calculator... Yes, 2.5 Volts. If you only started with say, 12V, that would leave you with only 9.5 to run your trains. And that lost energy is wasted as heat. This is an exaggerated example, but you get the idea.
+Voltage, current, and resistance to that current are all interrelated and described by the Ohm's law formula, Voltage = Current * Resistace (V=IR). The thinner the wire, the more resistance it has. As you can see from the formula, if your wire had a .5 Ohm resistance and there was 5 Amps flowing through it, you would lose... we're waiting. Get out your calculator... Yes, 2.5 Volts. If you only started with say, 12V, that would leave you with only 9.5 to run your trains. And that lost energy is wasted as heat. This is an exaggerated example, but you get the idea.
 
 There can be a lot of wiring on a complicated layout, here are the main areas that require wiring, they are often different wire sizes.
 
@@ -24,7 +24,7 @@ The main bus provides a low resistance, high current capable path for the voltag
    :scale: 100%
    :align: left
 
-**Rule of Thumb:** 14 gauge (2.08mm2) solid core wire for main bus up to 100ft (30m) for HO.  24 gauge (.205mm2) stranded wire for short feeder wires from the bus to short sections of track around the layout.
+**Rule of Thumb:** 14 gauge (2.08mm\ :sup:`2`) solid core wire for main bus up to 100ft (30m) for HO.  24 gauge (.205mm\ :sup:`2`) stranded wire for short feeder wires from the bus to short sections of track around the layout.
 
 .. NOTE:: In the USA the smaller the number, the bigger the wire!
 
@@ -35,7 +35,7 @@ Feeders
 
 Feeder wires a smaller, more manageable wires that you run from the main bus to the tracks. You will need feeders every few feet on larger scales and on every track for N and Z scales. The wires can be smaller because they are only a few inches long and the current is distributed between feeders.
 
-current
+Current
 ========
 
 If you want to compute how much current you are actually going to use, you will have to refer to some tables. You may need a different size wire. For example to only carry 2 Amps, your bus wire can be 18 gauge. To handle more than 5A, you would need larger wire.
@@ -43,10 +43,10 @@ If you want to compute how much current you are actually going to use, you will 
 Here are some examples of the electrical specifications of a few sizes of wire:
 
 +-------+--------+--------+--------+--------+---------+--------+------+---------+
-|  AWG  | dia.   | dia.   | x-sec. | Ohms   | Ohms    | Amps   | Amps | freq.   |
-| gauge | in.    |  mm    |  mm2   | 1000ft |  km     | feeder | bus  | skin ef.|
-+-------+--------+--------+--------+--------+---------+--------+------+---------+
-| 10    | 0.1019 | 2.5882 |	 5.26  | 0.9989 | 3.2763  |  55    | 15   | 2600 Hz |
+| AWG   | dia.   | dia.   | x-Sec. | Ohms   | Ohms    | Amps   | Amps | freq.   |
+| gauge | in.    | mm.    | mm2    | 1000ft | km.     | feeder | bus  | skin ef.|
++=======+========+========+========+========+=========+========+======+=========+
+| 10    | 0.1019 | 2.5882 | 5.26   | 0.9989 | 3.2763  |  55    | 15   | 2600 Hz |
 +-------+--------+--------+--------+--------+---------+--------+------+---------+
 | 12    | 0.0808 | 2.0523 |  3.31  | 1.588  | 5.2086  |  41    | 9.3  | 4150 Hz |
 +-------+--------+--------+--------+--------+---------+--------+------+---------+
@@ -54,7 +54,7 @@ Here are some examples of the electrical specifications of a few sizes of wire:
 +-------+--------+--------+--------+--------+---------+--------+------+---------+
 | 16    | 0.0508 | 1.2903 |  1.31  | 4.016  | 13.1724 |  22    | 3.7  | 11 k Hz |
 +-------+--------+--------+--------+--------+---------+--------+------+---------+
-| 18    | 0.0403 | 1.0236 |	0.823  | 6.385  | 20.9428 |  16    | 2.3  | 17 kHz  |
+| 18    | 0.0403 | 1.0236 | 0.823  | 6.385  | 20.9428 |  16    | 2.3  | 17 kHz  |
 +-------+--------+--------+--------+--------+---------+--------+------+---------+
 | 20    | 0.032  | 0.8128 | 0.519  | 10.15  | 33.292  |  11    | 1.5  | 27 kHz  |
 +-------+--------+--------+--------+--------+---------+--------+------+---------+
@@ -88,8 +88,10 @@ Accessory Bus
 
 If you have a small to medium sized layout you could usually power your locos, turnouts, and other accessories and lighting all from the power from the tracks. But there are a few reasons why you may want to expand your system to have a separate bus for accessories.
 
-**1. Efficiency** - The Command station already has a lot to do if are running a lot of locos. While you could run 10, 20... even 50 trains or more, each train can get only so many commands per second. If you are running in a club situation and If you add a lot of accessories, you could find a short delay before a train responds to something like an emergency stop.
+**1. Efficiency** - The Command station already has a lot to do if you are running a lot of locos. While you could run 10, 20... even 50 trains or more, each train can get only so many commands per second. If you are running in a club situation and If you add a lot of accessories, you could find a short delay before a train responds to something like an emergency stop.
+
 **2. Voltage and current needs** - If you take the power requirements of your accessories off your main track, and power them from a separate supply, you can either run with less Amps or run more locos.
+
 **3. Bi-Directional Communication** - The DCC standard provides no way for accessories or locos to talk back to the CS using the signal on the track. DCC++ EX *does* have this capability by using the GPIO pins as outputs to accessories and inputs from sensors instead of having decoders on your accessories. You can power your accessories with another power supply. There are also everal bus structures and accessory control systems, like LCN, that allow not only a separate power system, but 2-way communication system with dedicated microcontrollers that handle turnouts, sensors, lights and other accessories. DCC++ EX can work directly with some of those systems with a simple software switch to hand off commands.
 
 

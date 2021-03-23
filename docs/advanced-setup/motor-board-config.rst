@@ -14,7 +14,7 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 * :ref:`Configure By Editing the config.h File`
 * :ref:`Your Board is in the Supported List`
 * :ref:`Your Board is NOT in the Supported List`
-* :ref:`High Accuracy Waveform Mode`
+* :ref:`Using High Accuracy Waveform Mode`
 * :ref:`Current Sense and Sense Factor`
 * :ref:`Just Buy a Current Sense Board Instead`
 
@@ -104,8 +104,8 @@ Let's look at the details of how this works, first here are all the configuratio
 * **senseFactor** - This is the multiplier specific to your board or current sense circuit that converts the raw reading into track current in milliAmps. Important information about current sense is below.
 * **faultPin** - Some boards can report a fault condition, for example under-voltage or over-heating. If you want this feature, you can the Arduino digital pin here and connect it to the fault output of the motor board.
 
-High Accuracy Waveform Mode
-============================
+Using High Accuracy Waveform Mode
+===================================
 
 You may ask, "Do I need high accuracy waveforms" and the answer is probably not. But we are engineers and we love to spend our days trying to eek out every bit of perfomance out of the system and maintain bragging rights for thinking of something 5% more clever than the other members of our team. Even our "standard" waveform is within the NMRA specification. For purists, or if you find a particular decoder that is not in spec and needs to have tighter timing on the DCC waveform, you can make sure you are using high accuracy mode.
 

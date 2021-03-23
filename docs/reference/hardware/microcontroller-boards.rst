@@ -57,3 +57,4 @@ Boards that will NOT work
 **ESP32** - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atemel family of processors. It also is a smaller board so shields would have to be connected with jumpers.
 
 Click here for a complete `Shopping List <./shopping-list.html>`_
+

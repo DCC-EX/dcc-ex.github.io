@@ -46,3 +46,4 @@ There may be a time if you are experiencing issues and we need to verify that a 
 ``<D DCC SLOW>`` This runs the DCC signal at 512 times slower than normal so you can watch a LED blinking out the DCC waveform. It's also fun to watch. But remember, to not place your locos on the track with this function running!
 
 Reset with ``<D DCC NORMAL>``.
+

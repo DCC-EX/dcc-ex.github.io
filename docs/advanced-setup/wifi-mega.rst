@@ -12,7 +12,7 @@ A Operational Standalone WiFI DCC Command Station
 
    figure 1 - Mega+WiFi Board
 
-This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers at at the bottom of this page:
+This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers are at the bottom of this page:
 
 * Wemos
 * RobotDyn
@@ -26,11 +26,13 @@ This is our tested and proven configuration
 
 * DCC++EX 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFI - Combo Board
-* Deek Robot L298P Standard Motor Shield (or other `approved motor controllers <../reference/hardware/motor-boards.html>`_
-* 12-16Vdc Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)
+* Deek Robot L298P Standard Motor Shield (or other `approved motor controllers <../reference/hardware/motor-boards.html>`_)
+* 12-16Vdc Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9Vdc power supply to the ATmega boards with a female 2.1mm power barrel
 * Android Smartphone w Engine Driver v2.28.123 or iOS Smarphone with WiThrottle
 * USB-A male to Micro USB-B cable
+
+/* NOTE: The L298 Based motor drivers like the Arduino Motor Shield have a 1.5-2V voltage drop. More efficient boards to not have this issue. Be careful in choosing the correct voltage.
 
 What You Will Do
 ------------------
@@ -40,7 +42,7 @@ What You Will Do
 3. Edit your config file and Load the DCC++EX v3.0.6 to the Mega2560 chip
 4. Setup your Throttle
 
-.. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector uses on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands,so may require you to install a driver.
+.. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector used on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands,so may require you to install a driver.
 
 1. Plug in and test your Mega
 ------------------------------
@@ -355,4 +357,3 @@ Suppliers
  https://usa.banggood.com/Geekcreit-Mega-+WiFi-R3-Module-ATmega2560+ESP8266-32Mb-Memory-USB-TTL-CH340G-p-1205437.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=minha-usg-pc&currency=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=frank&utm_campaign=frank-ssc-usg-all-21LP-0112-01sale&ad_id=490995939324&gclid=Cj0KCQjwl9GCBhDvARIsAFunhsmmtqTacFhEVspUMw3shUU51ed2Akuh65HHr6uYDtXNEvkIbV9LgrwaAuZEEALw_wcB
 
  ***TODO:*** show link for external antenna.
-

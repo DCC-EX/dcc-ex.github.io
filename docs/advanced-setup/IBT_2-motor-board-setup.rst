@@ -155,14 +155,3 @@ Below is a link to the IBT_2 schematic. Click to enlarge.
 Below is the Handson Technology datasheet, recommended reading for Tinkerers and Engineers
 
 `Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver <../_static/documents/bts7960-motor-driver.pdf>`_
-
-
-
-
-
-
-
-
-
-
-

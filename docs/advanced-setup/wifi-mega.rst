@@ -149,7 +149,10 @@ Configure the board as follows:
 With the Flash Download Tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
-Run the Flasher Tool (it may take a few seconds to open while you see a black cmd window)
+Run the Flasher Tool 
+"""""""""""""""""""""""
+
+NOTE: It may take a few seconds to open while you see a black cmd window
 
 - press [Developer Mode] button
 - Press [ESP8266 Download Tool] button
@@ -191,9 +194,11 @@ Run the Flasher Tool (it may take a few seconds to open while you see a black cm
 
 
 Setup the files and memory locations in the Flasher Tool
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-- Pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
-- Make sure to check all the file checkboxes!
+- Click on the file button (the "..." buttons) and find the bin files you extracted.
+- Follow Figure 6 and pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
+- Make sure to check all the file checkboxes to the left of the filled in file names
 - Set the EXACT settings using the radio buttons & baud rate settings: (26M, 40MHz, DIO, 16Mbit-C1, Your COM port selected, and 460800 baud).
 
 .. figure:: ../_static/images/wifi/flasher_1.png
@@ -206,7 +211,7 @@ Setup the files and memory locations in the Flasher Tool
 .. NOTE:: These settings are for the ESP8266EX chip on the Mega+Wifi, you may need different settings to flash an ESP-01s, ESP12, etc.
 
 - First press the **Erase button** and let the ESP erase the chip memory.   
-- Then press the **Start button** and the bin files will flash load onto the ESP-WiFi chip
+- Then press the **Start button** and the bin files will flash (load) onto the ESP-WiFi chip
 
 After flashing, the ESP8266 Log will show it uploaded them all successfully and it closes the port.
 
@@ -256,7 +261,7 @@ Download and install DCC++EX from by using the Automated exInstaller or using th
 
 `How to install using the Arduino IDE <../get-started/arduino-ide.html>`_
 
-`I know what I'm doing, just point me to the dowloads page! <../download/commandstation.html>`_
+`I know what I'm doing, just point me to the downloads page! <../download/commandstation.html>`_
 
 Short Version of Network Setup
 ===============================
@@ -311,7 +316,7 @@ If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi
 
 - If operating in STA mode, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)
 
-- If Operating in AP mode, disconnect from any other network and find the SSID for your Command Station in your network list. It will be "DCCEX_xxxxxx" where the x's are the last 6 characters of your WiFi chip's MAC address. Use the password "PASS_xxxxxx" where the x's are the same 6 characters.
+- If Operating in AP mode, disconnect your phone/tablet from any other network and find the SSID for your Command Station in your network list. It will be "DCCEX_xxxxxx" where the x's are the last 6 characters of your WiFi chip's MAC address. Use the password "PASS_xxxxxx" where the x's are the same 6 characters.
 
 .. NOTE:: You MUST either forget your local network or turn off "auto-reconnect" for that connection when using AP Mode. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.
 
@@ -338,7 +343,7 @@ The Expressif ESP8266 page (The manufacturer of the chip): https://www.espressif
 Expressif detailed instructions on using the esptool
 https://github.com/espressif/esptool#installation--dependencies
 
-Enjoy your New DCC++EX MEGA + WiFI On-Board Command Station!
+**Enjoy your New DCC++EX MEGA + WiFI On-Board Command Station!**
 
 Suppliers
 ==========

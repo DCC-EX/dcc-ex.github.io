@@ -108,6 +108,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../documents/decoder-table.html">Stationary Decoder Address Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documents/wire-gauge.html">Wire Gauge Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
 </ul>
 </li>
@@ -186,11 +187,15 @@
             
   <div class="section" id="diagnostics-d-command">
 <h1>Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command<a class="headerlink" href="#diagnostics-d-command" title="Permalink to this headline">¶</a></h1>
-<p>There are a number of diagnostic facilities under the  <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> command, most are harmless but caution is advised.</p>
+<p>These commands either enable diagnostics or allow settings to be changed. There are a number of diagnostic facilities under the  <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> command, most are harmless but caution is advised.</p>
 <p><strong>The ``&lt;D&gt;`` commands are intended for diagnostics only which means that their behaviour can change from one release to another without warning</strong></p>
 <p>These commands can be entered directly via the USB serial console or through a Wifi connection to the command station with a tool such as Telnet or Putty. JMRI includes the DCC++ traffic monitor which lets you insert DCC++ serial commands as well. (links required)</p>
+<div class="section" id="speed-step-configuation">
+<h2>Speed Step Configuation<a class="headerlink" href="#speed-step-configuation" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SPEED28|SPEED128&gt;</span></code> By default, the CS sends speed commands in 128 steps. You can change to 28 speed steps and back again with this command. If speed steps are set to 28, you can still use 128 speed step locos, they will just have a resolution of 28 steps also instead of 128.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Lists the locomotives which the command station is currently managing.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Displays the free RAM on your Arduino.</p>
+</div>
 <div class="section" id="the-following-commands-turn-on-1-or-off-0-various-diagnostic-traces">
 <h2>The following commands turn ON(1) or OFF(0) various diagnostic traces<a class="headerlink" href="#the-following-commands-turn-on-1-or-off-0-various-diagnostic-traces" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON|OFF&gt;</span></code> trace DCC ACK processing when reading/writing on the prog track. [[Diagnostics D ACK Command]]</p>

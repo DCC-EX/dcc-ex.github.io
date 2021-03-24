@@ -82,4 +82,3 @@ would set the limit to 100mA (less sensitive).
 The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanenly set the ACK LIMIT, you may enter it as a command in the setup.h file.
 
 ***Add help on how to set this in the autoexec file***
-

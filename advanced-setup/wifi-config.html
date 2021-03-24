@@ -96,6 +96,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Wifi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Mode</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
@@ -347,13 +350,13 @@ Look for these lines in the file:</p>
 <div class="section" id="resetting-network-settings">
 <h2>Resetting Network Settings<a class="headerlink" href="#resetting-network-settings" title="Permalink to this headline">¶</a></h2>
 <p>Once you enter a network SSID and password, the CS will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.</p>
-</div>
 <div class="section" id="clearing-the-esp-wifi-ssid-settings">
-<h2>Clearing the ESP-WiFI SSID Settings<a class="headerlink" href="#clearing-the-esp-wifi-ssid-settings" title="Permalink to this headline">¶</a></h2>
+<h3>Clearing the ESP-WiFI SSID Settings<a class="headerlink" href="#clearing-the-esp-wifi-ssid-settings" title="Permalink to this headline">¶</a></h3>
 <p>Go into your serial monitor and wait until the CS has gone through the startup sequence.
 Then in command textbox enter <code class="docutils literal notranslate"><span class="pre">+CWQAP</span></code>
 and press “SEND”.</p>
 <p>You will then see an “Ok” message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the CS had WiFi Credentials in it, then as soon as your CS restarts, it will load and save those settings again. So…</p>
+</div>
 <div class="section" id="if-you-want-to-run-in-ap-mode">
 <h3>If you want to run in AP mode<a class="headerlink" href="#if-you-want-to-run-in-ap-mode" title="Permalink to this headline">¶</a></h3>
 <p>Edit the config.h, change your SSID name, and password lines back to default. It MUST look like the following. If it is anything else it will try to login with whatever you type there as credentials!:</p>

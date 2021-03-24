@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Throttles" href="../throttles/index.html" />
+    <link rel="next" title="L298N Motor Board Setup" href="L298N-motor-board-setup.html" />
     <link rel="prev" title="Motor Board Configuration" href="motor-board-config.html" /> 
 </head>
 
@@ -96,6 +96,9 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi-config.html">Wifi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Mode</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
@@ -260,7 +263,7 @@
 <p>We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.</p>
 </div>
 <p>Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:</span>
 <span class="c1">//</span>
 <span class="c1">//  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with 18V 2A per channel</span>
 <span class="c1">//  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)</span>
@@ -325,7 +328,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../throttles/index.html" class="btn btn-neutral float-right" title="Throttles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="L298N-motor-board-setup.html" class="btn btn-neutral float-right" title="L298N Motor Board Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="motor-board-config.html" class="btn btn-neutral float-left" title="Motor Board Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

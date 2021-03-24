@@ -96,6 +96,8 @@ SINGLE LETTER COMMANDS
 
       RETURNS: <Y ID PIN IFLAG STATE> for each defined output pin or <X> if no output pins defined
 
+* ``<!>`` Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.
+
 * 
   There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).
 
@@ -121,7 +123,7 @@ Examples:
 
 ``<1 JOIN>`` - Joins both tracks together to be both MAIN
 
-.. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.
+.. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
 
 .. note:: In some split motor shield hardware configurations JOIN will not be able to work.  
 
@@ -139,7 +141,21 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 * ``03`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
 * ``20`` = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
 * ``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
-* ``>`` = I am the end of this command  
+* ``>`` = I am the end of this command
+
+**Forget Locos**
+
+* **``<- [CAB]>``** - (For minus as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
+
+Examples:
+
+  **``<- 74>``** - Forgets loco at address 74<br>
+  **``<->``** - Forgets all locos<br>
+
+**Emergency Stop**
+
+* **``<!>``** - Emergency Stop ALL TRAINS.  
+
 
 .. code-block:: none
 
@@ -652,6 +668,7 @@ DIAGNOSTICS
 * ``<D WIFI 1|0>`` Enables Wifi diagnostics
 * ``<D WIT 0|1>`` Enables Withrottle diagnostics
 * ``<D TEST|NORMAL>`` DCC Signal Diagnostics (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
+* ``<D SPEED28|SPEED128`` Switch between 28 and 128 speed steps
 
 SEND PACKET TO THE TRACK
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -681,3 +698,4 @@ User Commands
 ~~~~~~~~~~~~~
 
 ``<U>`` Is reserved for user commands.
+

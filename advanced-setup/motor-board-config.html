@@ -96,6 +96,9 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi-config.html">Wifi Configuration</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Mode</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
@@ -179,7 +182,7 @@
 <p>DCC++ EX supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use another GPIO pin on the Arduino and connect directly to these boards</p>
+<p>DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use “high accuracy waveform” mode if you need it. See below for more information on high accuracy mode.</p>
 </div>
 <p><strong>Links in This Page</strong></p>
 <ul class="simple">
@@ -187,6 +190,7 @@
 <li><p><a class="reference internal" href="#configure-by-editing-the-config-h-file"><span class="std std-ref">Configure By Editing the config.h File</span></a></p></li>
 <li><p><a class="reference internal" href="#your-board-is-in-the-supported-list"><span class="std std-ref">Your Board is in the Supported List</span></a></p></li>
 <li><p><a class="reference internal" href="#your-board-is-not-in-the-supported-list"><span class="std std-ref">Your board is NOT in the Supported List</span></a></p></li>
+<li><p><a class="reference internal" href="#using-high-accuracy-waveform-mode"><span class="std std-ref">Using High Accuracy Waveform Mode</span></a></p></li>
 <li><p><a class="reference internal" href="#current-sense-and-sense-factor"><span class="std std-ref">Current Sense and Sense factor</span></a></p></li>
 <li><p><a class="reference internal" href="#just-buy-a-current-sense-board-instead"><span class="std std-ref">Just Buy a Current Sense Board Instead</span></a></p></li>
 </ul>
@@ -266,8 +270,14 @@
 <li><p><strong>faultPin</strong> - Some boards can report a fault condition, for example under-voltage or over-heating. If you want this feature, you can the Arduino digital pin here and connect it to the fault output of the motor board.</p></li>
 </ul>
 </div>
+</div>
+<div class="section" id="using-high-accuracy-waveform-mode">
+<h2>Using High Accuracy Waveform Mode<a class="headerlink" href="#using-high-accuracy-waveform-mode" title="Permalink to this headline">¶</a></h2>
+<p>You may ask, “Do I need high accuracy waveforms” and the answer is probably not. But we are engineers and we love to spend our days trying to eek out every bit of perfomance out of the system and maintain bragging rights for thinking of something 5% more clever than the other members of our team. Even our “standard” waveform is within the NMRA specification. For purists, or if you find a particular decoder that is not in spec and needs to have tighter timing on the DCC waveform, you can make sure you are using high accuracy mode.</p>
+<p>If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change what pins you use and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see <a class="reference external" href="../reference/software/high-accuracy.html">High Accuracy Waveform Mode</a></p>
+</div>
 <div class="section" id="current-sense-and-sense-factor">
-<h3>Current Sense and Sense factor<a class="headerlink" href="#current-sense-and-sense-factor" title="Permalink to this headline">¶</a></h3>
+<h2>Current Sense and Sense factor<a class="headerlink" href="#current-sense-and-sense-factor" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is VERY imortant to connect some form of current sensing, without it, you cannot program decoders on the programming track and you will not have any short circuit protection on either track!</p>
@@ -295,17 +305,13 @@
 <p class="admonition-title">Warning</p>
 <p>Choose your current sense resistor or circuit carefully, you need to account for all of the factors mentioned above and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).</p>
 </div>
-</div>
-<div class="section" id="how-do-i-find-volts-per-amp">
-<h3>How Do I Find Volts per Amp?<a class="headerlink" href="#how-do-i-find-volts-per-amp" title="Permalink to this headline">¶</a></h3>
-<p>In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm’s law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you need separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V.</p>
-</div>
-</div>
+<p>In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm’s law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you need separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the <a class="reference external" href="../advanced-setup/index.html">Advanced Setup Section</a></p>
 <div class="section" id="just-buy-a-current-sense-board-instead">
-<h2>Just Buy a Current Sense Board Instead<a class="headerlink" href="#just-buy-a-current-sense-board-instead" title="Permalink to this headline">¶</a></h2>
+<h3>Just Buy a Current Sense Board Instead<a class="headerlink" href="#just-buy-a-current-sense-board-instead" title="Permalink to this headline">¶</a></h3>
 <p>Tinkerers and Conductors who don’t mind connecting a few jumper wires may like this option.</p>
 <p>This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards.</p>
 <p><strong>* Connection Instructions coming soon *</strong></p>
+</div>
 </div>
 </div>
 

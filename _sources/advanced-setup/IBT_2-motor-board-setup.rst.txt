@@ -86,7 +86,7 @@ It should look like following. Note we have included the Arduino Mega and have t
 
 Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:
 
-.. code-block:: C++
+.. code-block:: cpp
 
    // DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:
    //
@@ -155,14 +155,3 @@ Below is a link to the IBT_2 schematic. Click to enlarge.
 Below is the Handson Technology datasheet, recommended reading for Tinkerers and Engineers
 
 `Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver <../_static/documents/bts7960-motor-driver.pdf>`_
-
-
-
-
-
-
-
-
-
-
-

@@ -300,7 +300,3 @@ Capture the samples in PulseView
 
 You can save your captures and display them again at any time. More details coming soon.
 
-
-
-
-

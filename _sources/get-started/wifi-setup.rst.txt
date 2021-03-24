@@ -47,6 +47,8 @@ What you will need (for WiFi)
 * One of the above WiFi boards
 * Two (2) Male to Female Jumpers (plus 3 more if you are using an ESP-01 or 01s)
 
+.. NOTE:: While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10 kb of progmem and about 2kb of ram). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like JMRI being shared.
+
 Quick links
 -----------
 

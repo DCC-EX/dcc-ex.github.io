@@ -144,3 +144,4 @@ Changing the I2C Address
 If you have other I2C devices, like an I2C bus to control turnouts or other accessories, you may need to change the address of your I2C display to avoid a conflict. The display should have instructions available for how to do this.
 
 ** Not Finished. Coming soon! **
+

@@ -226,13 +226,18 @@ With esptool.py
 
 Unzip the firmware files and put them in a folder off your root so that they are easy to find and the path name you have to enter will be short. We recommend putting them in an "esp" folder (ex: C:\esp)
 
-***TODO: We will be expanding this section soon, but needed to get what we had up for the amount of people asking about this board. If you have more you can contribut to the page, please send it to support@dcc-ec.com***
+***TODO: We will be expanding this section soon, but needed to get what we had up for the amount of people asking about this board. If you have more you can contribute to the page, please send it to support <at> dcc-ec.com***
 
 esptool.py write_flash --flash_size 2MB-c1 0x0 esp/boot_v1.7.bin 0x01000 esp/user1.2048.new.5.bin 0x1fc000 esp/esp_init_data_default_v08.bin 0xfe000 esp/blank.bin 0x1fe000 esp/blank.bin
 
-Example: 
+Examples: 
 
 esptool.py -p /dev/ttyUSB0 write_flash --flash_size 2MB-c1 0x0 esp/boot_v1.7.bin 0x01000 esp/user1.2048.new.5.bin 0x1fc000 esp/esp_init_data_default_v08.bin 0xfe000 esp/blank.bin 0x1fe000 esp/blank.bin
+
+esptool.exe -p COM5 --baud 115200 write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
+
+If there is an error, press and hold the mode button, then press and release the reset button while still holding down the mode button. Press enter to send the esptool command and let go of the mode button.
+
 
 
 3. Set the switches for run/sketch mode

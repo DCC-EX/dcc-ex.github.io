@@ -20,23 +20,24 @@ The Motor Board Config
 
 You will notice that your motor driver type is set in the *config.h* file. This line sets a standard motor shield compatible with the Arduino Motor Shield:
 
-.. code-block:: cpp
+.. code-block::
 
-#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
+   #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 
 Whether called Motor "boards" or "shields" or "drivers", they are defined in the *MotorDrivers.h* file and look like this:
 
-.. code-block:: cpp
+.. code-block::
 
-#define STANDARD_MOTOR_SHIELD F("STANDARD_MOTOR_SHIELD"), \
-  new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN), \
-  new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
+   #define STANDARD_MOTOR_SHIELD F("STANDARD_MOTOR_SHIELD"), \
+   new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN), \
+   new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
 
 The first line after setting the name and display text is for the Main track and the next line is for the programming track. The parameters are as follows:
 
-.. code-block:: cpp
+.. code-block::
 
-MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)
+   MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)
+
 
 Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise. If you want to use two pins so that you don't need a transister or integrated circuit inverter, then you can't use the high accuracy waveform.
 

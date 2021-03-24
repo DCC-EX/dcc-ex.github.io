@@ -38,6 +38,7 @@ The first line after setting the name and display text is for the Main track and
 
    MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)
 
+
 Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise. If you want to use two pins so that you don't need a transister or integrated circuit inverter, then you can't use the high accuracy waveform.
 
 If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit described ***TODO: Enter link here***, you can use the high accuracy mode.

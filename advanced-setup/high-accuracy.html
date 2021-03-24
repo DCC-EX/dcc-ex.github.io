@@ -193,23 +193,19 @@
 <div class="section" id="the-motor-board-config">
 <h2>The Motor Board Config<a class="headerlink" href="#the-motor-board-config" title="Permalink to this headline">¶</a></h2>
 <p>You will notice that your motor driver type is set in the <em>config.h</em> file. This line sets a standard motor shield compatible with the Arduino Motor Shield:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
 </pre></div>
 </div>
-<p>#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</p>
 <p>Whether called Motor “boards” or “shields” or “drivers”, they are defined in the <em>MotorDrivers.h</em> file and look like this:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define STANDARD_MOTOR_SHIELD F(&quot;STANDARD_MOTOR_SHIELD&quot;), \</span>
+<span class="n">new</span> <span class="n">MotorDriver</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">,</span> <span class="n">A0</span><span class="p">,</span> <span class="mf">2.99</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">),</span> \
+<span class="n">new</span> <span class="n">MotorDriver</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="mf">2.99</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>#define STANDARD_MOTOR_SHIELD F(“STANDARD_MOTOR_SHIELD”), </dt><dd><p>new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN), new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)</p>
-</dd>
-</dl>
 <p>The first line after setting the name and display text is for the Main track and the next line is for the programming track. The parameters are as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MotorDriver</span><span class="p">(</span><span class="n">power_pin</span><span class="p">,</span> <span class="n">signal_pin</span><span class="p">,</span> <span class="n">signal_pin2</span><span class="p">,</span> <span class="n">brake_pin</span><span class="p">,</span> <span class="n">current_pin</span><span class="p">,</span> <span class="n">senseFactor</span><span class="p">,</span> <span class="n">tripMilliamps</span><span class="p">,</span> <span class="n">faultPin</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)</p>
 <p>Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise. If you want to use two pins so that you don’t need a transister or integrated circuit inverter, then you can’t use the high accuracy waveform.</p>
 <p>If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit described <strong>*TODO: Enter link here*</strong>, you can use the high accuracy mode.</p>
 <p>You must choose signal pins from the following list for your Arduino:</p>

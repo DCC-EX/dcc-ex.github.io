@@ -38,8 +38,6 @@ SINGLE LETTER COMMANDS
 
       RETURNS: <c CURRENT>, where CURRENT is the Raw value of the current sense pin
 
-* ``<D>`` Upper Case D: Please see `Diagnostics <D> Command Page <./diagnostic-d-command.html>`_
-
 * ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
 
   .. code-block:: none
@@ -174,7 +172,8 @@ There are two formats for setting CAB functions, the DCC++ Classic legacy method
 
 
 * This turns on and off engine decoder functions  
-* F0-F28 (F0 is sometimes called FL)  
+* F0-F28 (F0 is sometimes called FL)
+* F29-F68 Support for the RCN-212 Functions
 * NOTE: setting requests are transmitted directly to mobile engine decoder   
 * current state of engine functions (as known by commands issued since power on)  IS stored by the CommandStation  
 * All functions within a group get set all at once per NMRA DCC standards.
@@ -183,7 +182,7 @@ There are two formats for setting CAB functions, the DCC++ Classic legacy method
 
 **CAB Functions format** is ``<F CAB FUNC 1|0>``
 
-To set functions **F0-F28** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
+To set functions **F0-F68** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -573,6 +572,15 @@ Writes, without any verification, a single bit within a Configuration Variable B
 PROGRAMMING-PROGRAMMING TRACK
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track.
+
+Write loco address Format is: ``<W ADDRESS>``
+ADDRESS: The loco address to be written (1-10239).
+
+
 WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -669,6 +677,8 @@ DIAGNOSTICS
 * ``<D WIT 0|1>`` Enables Withrottle diagnostics
 * ``<D TEST|NORMAL>`` DCC Signal Diagnostics (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
 * ``<D SPEED28|SPEED128`` Switch between 28 and 128 speed steps
+
+example: <D ACK ON> 
 
 SEND PACKET TO THE TRACK
 ~~~~~~~~~~~~~~~~~~~~~~~~

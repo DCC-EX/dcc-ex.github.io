@@ -1,13 +1,14 @@
+**********
 Reference
-=========
+**********
 
 Videos
-^^^^^^^
+========
 
 * Please visit our Youtube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_
 
 Command Station
-^^^^^^^^^^^^^^^^
+================
 
 Hardware
 -------------------------
@@ -42,8 +43,8 @@ Accessories
 
     accessories/suppliers
 
-Documents
------------
+Documents/Papers
+-----------------
 
 .. toctree::
     :maxdepth: 1

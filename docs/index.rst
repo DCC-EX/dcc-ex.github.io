@@ -1,9 +1,7 @@
-DCC++ EX User Guide
-===================
+DCC++ EX Model Railroading
+===========================
 
-Welcome to this website and documentation for the DCC++ EX suite of open source model 
-railroading software, firmware, and hardware. DCC++ EX is an extension of the 
-original DCC++ program written by Gregg E Bermann. 
+Welcome! DCC++ EX is an easy to use, do-it yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrial and more.
 
 .. table::
    :align: left
@@ -48,7 +46,7 @@ What is DCC++ EX?
 
 DCC++ EX is the organization developing and maintaining several products that together represent a fully open source DCC system. Currently, this includes the following:
 
-* **CommandStation-EX** - the latest take on the DCC++ command station for controlling your model railroad. DCC-EX runs on an Arduino board, and includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.
+* **CommandStation-EX** - the latest take on the DCC++ command station for controlling your model railroad. DCC-EX runs on Arduino boards, and includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.
 * **WebThrottle-EX** - a simple web based controller for your DCC++ and DCC-EX command station.
 * **Installer-EX** - an installer that takes care of downloading and installing DCC++ or DCC-EX firmware onto your hardware setup.
 * **BaseStation-Classic** - the original DCC++ software, packaged in a stable release. No active development, bug fixes only.

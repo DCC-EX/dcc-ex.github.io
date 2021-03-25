@@ -8,3 +8,5 @@ Welcome to the central downloads page for all DCC++ EX software solutions. Pleas
 
     commandstation
     esp8266
+    documents
+    schematics

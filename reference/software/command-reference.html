@@ -215,7 +215,6 @@
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Upper Case D: Please see <a class="reference external" href="./diagnostic-d-command.html">Diagnostics &lt;D&gt; Command Page</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;e nTurnouts nSensors&gt;
 </pre></div>
@@ -327,6 +326,7 @@
 <ul class="simple">
 <li><p>This turns on and off engine decoder functions</p></li>
 <li><p>F0-F28 (F0 is sometimes called FL)</p></li>
+<li><p>F29-F68 Support for the RCN-212 Functions</p></li>
 <li><p>NOTE: setting requests are transmitted directly to mobile engine decoder</p></li>
 <li><p>current state of engine functions (as known by commands issued since power on)  IS stored by the CommandStation</p></li>
 <li><p>All functions within a group get set all at once per NMRA DCC standards.</p></li>
@@ -334,8 +334,8 @@
 settings in the same group and will not, for example, unset F2 because you change F1. If however, you have never set F2, then changing F1 WILL unset F2.</p></li>
 </ul>
 <p><strong>CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">1|0&gt;</span></code></p>
-<div class="section" id="to-set-functions-f0-f28-on-1-or-off-0-f-cab-func-0-1">
-<h4>To set functions <strong>F0-F28</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">0|1&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f28-on-1-or-off-0-f-cab-func-0-1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1">
+<h4>To set functions <strong>F0-F68</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">0|1&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> = (upper case F) This command is for a CAB function ie: Lights, horn, bell</p></li>
@@ -726,6 +726,12 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 </div>
 <div class="section" id="programming-programming-track">
 <h3>PROGRAMMING-PROGRAMMING TRACK<a class="headerlink" href="#programming-programming-track" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="write-loco-address-to-engine-decoder-on-programming-track">
+<h4>WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-loco-address-to-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
+<p>Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track.</p>
+<p>Write loco address Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">ADDRESS&gt;</span></code>
+ADDRESS: The loco address to be written (1-10239).</p>
+</div>
 <div class="section" id="write-cv-byte-to-engine-decoder-on-programming-track">
 <h4>WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-cv-byte-to-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
 <p>Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track</p>
@@ -827,6 +833,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TEST|NORMAL&gt;</span></code> DCC Signal Diagnostics (See <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues">Diagnosing Issues</a>** for more help)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SPEED28|SPEED128</span></code> Switch between 28 and 128 speed steps</p></li>
 </ul>
+<p>example: &lt;D ACK ON&gt;</p>
 </div>
 <div class="section" id="send-packet-to-the-track">
 <h3>SEND PACKET TO THE TRACK<a class="headerlink" href="#send-packet-to-the-track" title="Permalink to this headline">¶</a></h3>

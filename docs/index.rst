@@ -1,9 +1,34 @@
+
+An Introduction to DCC++ EX ‘Extended’ Command Station
+======================================================
+Digital Command & Control for DCC enabled Model Railroad Layouts
+================================================================
+
+Overview
+########
+DCC++ is an Open Source Arduino Microcontroller based Do-it-Yourself and Affordable suite of DCC Command Stations.
+Capable of operating on nearly all sizes of DCC Model Railroads layouts with Z, N, HO and G scales.
+It can utilize various Controllers and applications like JMRI, Engine Driver, WiThrottle & Rocrail Apps to name a few.
+
+Both DCC++EX & DCC++ original products are written in C++ and utilizing the Arduino IDE and PlatformIO & MS Visual Studio editors. 
+
+Recent History
+##############
+First a Special thanks to Gregg E. Berman who had the original vision & idea for a model railroad Command Station using an Arduino Uno or Mega microcontroller with a Arduino Motor Shield, along with Mark Underwood (Twindad) who was instrumental in developing the first JMRI interfaces to the Original DCC++ Base Station.
+
+The first DCC++ Base Station was released in August 2015 and was enhanced through 2017 by various GitHub users.  
+In the Spring 2020 Fred Decker (FlightRisk) headed up a group of new and existing DCC++ developers to Enhance the DCC++ project.  Our first attempt to build up and out the Vision on the original code left us with a technological software decision of stay with the Original or build a New design with updated code structures and application interfaces.  
+
+We opted to fix up and keep Gregg’s Original DCC++ 1.2.1+ Base Station code and Rename it to DCC++ ‘Classic’ this version can still can be downloaded from this website and it is now named DCC++ Base Station Classic.  
+Note: For a look back at history and where it all began, see Gregg’s DCC++ build videos at [DCC++ 'Classic' Videos](https://www.youtube.com/channel/UCJmvQx-fe0OMAIH-_g-_rZw )
+
+
 DCC++ EX User Guide
 ===================
 
-Welcome to this website and documentation for the DCC++ EX suite of open source model 
-railroading software, firmware, and hardware. DCC++ EX is an extension of the 
-original DCC++ program written by Gregg E Bermann. 
+Welcome again to this website and documentation for the DCC++ EX suite of open source model 
+railroading software, firmware, and hardware. 
+Please click on the Panels below navigate to the area of interest.
 
 .. table::
    :align: left

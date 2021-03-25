@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>An Introduction to DCC++ EX ‘Extended’ Command Station &mdash; DCC++ EX  documentation</title>
+  <title>DCC++ EX User Guide &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -146,7 +146,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>An Introduction to DCC++ EX ‘Extended’ Command Station</li>
+      <li>DCC++ EX User Guide</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -165,37 +165,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="an-introduction-to-dcc-ex-extended-command-station">
-<h1>An Introduction to DCC++ EX ‘Extended’ Command Station<a class="headerlink" href="#an-introduction-to-dcc-ex-extended-command-station" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="digital-command-control-for-dcc-enabled-model-railroad-layouts">
-<h1>Digital Command &amp; Control for DCC enabled Model Railroad Layouts<a class="headerlink" href="#digital-command-control-for-dcc-enabled-model-railroad-layouts" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>DCC++ is an Open Source Arduino Microcontroller based Do-it-Yourself and Affordable suite of DCC Command Stations.
-Capable of operating on nearly all sizes of DCC Model Railroads layouts with Z, N, HO and G scales.
-It can utilize various Controllers and applications like JMRI, Engine Driver, WiThrottle &amp; Rocrail Apps to name a few.</p>
-<p>Both DCC++EX &amp; DCC++ original products are written in C++ and utilizing the Arduino IDE and PlatformIO &amp; MS Visual Studio editors.</p>
-</div>
-<div class="section" id="recent-history">
-<h2>Recent History<a class="headerlink" href="#recent-history" title="Permalink to this headline">¶</a></h2>
-<p>First a Special thanks to Gregg E. Berman who had the original vision &amp; idea for a model railroad Command Station using an Arduino Uno or Mega microcontroller with a Arduino Motor Shield, along with Mark Underwood (Twindad) who was instrumental in developing the first JMRI interfaces to the Original DCC++ Base Station.</p>
-<p>The first DCC++ Base Station was released in August 2015 and was enhanced through 2017 by various GitHub users.
-In the Spring 2020 Fred Decker (FlightRisk) headed up a group of new and existing DCC++ developers to Enhance the DCC++ project.  Our first attempt to build up and out the Vision on the original code left us with a technological software decision of stay with the Original or build a New design with updated code structures and application interfaces.</p>
-<p>We opted to fix up and keep Gregg’s Original DCC++ 1.2.1+ Base Station code and Rename it to DCC++ ‘Classic’ this version can still can be downloaded from this website and it is now named DCC++ Base Station Classic.
-Note: For a look back at history and where it all began, see Gregg’s DCC++ build videos at [DCC++ ‘Classic’ Videos](<a class="reference external" href="https://www.youtube.com/channel/UCJmvQx-fe0OMAIH-_g-_rZw">https://www.youtube.com/channel/UCJmvQx-fe0OMAIH-_g-_rZw</a> )</p>
-</div>
-<div class="section" id="fast-forward">
-<h2>Fast Forward<a class="headerlink" href="#fast-forward" title="Permalink to this headline">¶</a></h2>
-<p>In the Summer of 2020 we began New Development on DCC++ EX ‘Extended’ Command Station.
-Our First General Realease was DCC++ EX 3.0 Command Station in November 2020 and is now continuously being enhanced and supported and is available here in Command Station Downloads under ‘Latest DCC-EX Release’.
-The Current Developmnt version can be found in Command Station Downloads under ‘CommandStations-EX Repository’which resides in GitHub.</p>
-</div>
-</div>
-<div class="section" id="dcc-ex-user-guide">
+  <div class="section" id="dcc-ex-user-guide">
 <h1>DCC++ EX User Guide<a class="headerlink" href="#dcc-ex-user-guide" title="Permalink to this headline">¶</a></h1>
-<p>Welcome again to this website and documentation for the DCC++ EX suite of open source model railroading software, firmware, and hardware.
-Please click on the Panels below navigate to the area of interest.</p>
+<p>Welcome to this website and documentation for the DCC++ EX suite of open source model
+railroading software, firmware, and hardware. DCC++ EX is an extension of the
+original DCC++ program written by Gregg E Bermann.</p>
 <table class="docutils align-left">
 <colgroup>
 <col style="width: 32%" />
@@ -238,7 +212,7 @@ Please click on the Panels below navigate to the area of interest.</p>
 <p>A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:</p>
 <ul class="simple">
 <li><p>simultaneous control of multiple locomotives</p></li>
-<li><p>2 and 4 byte byte locomotive addressing</p></li>
+<li><p>1 and 2 byte byte locomotive addressing</p></li>
 <li><p>128-step speed throttling</p></li>
 <li><p>Activate/de-activate all accessory function addresses 0-2048</p></li>
 <li><p>Control of all cab functions F0-F28</p></li>
@@ -248,15 +222,15 @@ Please click on the Panels below navigate to the area of interest.</p>
 <p><strong>What’s new in CommandStation-EX?</strong></p>
 <ul class="simple">
 <li><p>WiThrottle server built in. Connect Engine Driver or WiThrottle clients directly to your Command Station</p></li>
-<li><p>WiFi Sheild and Ethernet Shield support</p></li>
-<li><p>No more jumper wires pins or soldering!</p></li>
+<li><p>WiFi and Ethernet shield support</p></li>
+<li><p>No more jumpers or soldering!</p></li>
 <li><p>Direct support for all the most popular motor control boards</p></li>
-<li><p>I2C bus for LCD Liquid Crystal Display &amp; Servo &amp; LED boards support</p></li>
+<li><p>I2C Display support</p></li>
 <li><p>Improved short circuit detection and automatic reset from an overload</p></li>
 <li><p>Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings</p></li>
 <li><p>Improved adherence to the NMRA DCC specification</p></li>
 <li><p>Complete support for all the old commands and controllers/front-ends like JMRI</p></li>
-<li><p>Simpler, modular, faster code with an API Application Program Interface Library for developers for easy expansion</p></li>
+<li><p>Simpler, modular, faster code with an API Library for developers for easy expansion</p></li>
 <li><p>New features and functions in JMRI</p></li>
 <li><p>Automation (coming soon)</p></li>
 </ul>

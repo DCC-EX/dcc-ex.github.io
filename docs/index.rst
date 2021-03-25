@@ -22,12 +22,16 @@ In the Spring 2020 Fred Decker (FlightRisk) headed up a group of new and existin
 We opted to fix up and keep Gregg’s Original DCC++ 1.2.1+ Base Station code and Rename it to DCC++ ‘Classic’ this version can still can be downloaded from this website and it is now named DCC++ Base Station Classic.  
 Note: For a look back at history and where it all began, see Gregg’s DCC++ build videos at [DCC++ 'Classic' Videos](https://www.youtube.com/channel/UCJmvQx-fe0OMAIH-_g-_rZw )
 
+Fast Forward
+############
+In the Summer of 2020 we began New Development on DCC++ EX 'Extended' Command Station.
+Our First General Realease was DCC++ EX 3.0 Command Station in November 2020 and is now continuously being enhanced and supported and is available here in Command Station Downloads under 'Latest DCC-EX Release'. 
+The Current Developmnt version can be found in Command Station Downloads under 'CommandStations-EX Repository'which resides in GitHub. 
 
 DCC++ EX User Guide
 ===================
 
-Welcome again to this website and documentation for the DCC++ EX suite of open source model 
-railroading software, firmware, and hardware. 
+Welcome again to this website and documentation for the DCC++ EX suite of open source model railroading software, firmware, and hardware. 
 Please click on the Panels below navigate to the area of interest.
 
 .. table::
@@ -81,7 +85,7 @@ DCC++ EX is the organization developing and maintaining several products that to
 A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:
 
 * simultaneous control of multiple locomotives
-* 1 and 2 byte byte locomotive addressing
+* 2 and 4 byte byte locomotive addressing
 * 128-step speed throttling
 * Activate/de-activate all accessory function addresses 0-2048
 * Control of all cab functions F0-F28
@@ -91,15 +95,15 @@ A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino bo
 **What's new in CommandStation-EX?**
 
 * WiThrottle server built in. Connect Engine Driver or WiThrottle clients directly to your Command Station
-* WiFi and Ethernet shield support
-* No more jumpers or soldering!
+* WiFi Sheild and Ethernet Shield support
+* No more jumper wires pins or soldering!
 * Direct support for all the most popular motor control boards
-* I2C Display support
+* I2C bus for LCD Liquid Crystal Display & Servo & LED boards support
 * Improved short circuit detection and automatic reset from an overload
 * Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings
 * Improved adherence to the NMRA DCC specification
 * Complete support for all the old commands and controllers/front-ends like JMRI
-* Simpler, modular, faster code with an API Library for developers for easy expansion
+* Simpler, modular, faster code with an API Application Program Interface Library for developers for easy expansion
 * New features and functions in JMRI
 * Automation (coming soon) 
 

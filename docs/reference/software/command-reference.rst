@@ -96,6 +96,10 @@ SINGLE LETTER COMMANDS
 
 * ``<!>`` Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.
 
+.. code-block:: none
+
+       RETURNS: NONE
+
 * 
   There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).
 
@@ -141,20 +145,6 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 * ``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
 * ``>`` = I am the end of this command
 
-**Forget Locos**
-
-* **``<- [CAB]>``** - (For minus as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
-
-Examples:
-
-  **``<- 74>``** - Forgets loco at address 74<br>
-  **``<->``** - Forgets all locos<br>
-
-**Emergency Stop**
-
-* **``<!>``** - Emergency Stop ALL TRAINS.  
-
-
 .. code-block:: none
 
    RETURNS: "<T 1 20 1>" if the command was successful, meaning :
@@ -164,6 +154,25 @@ Examples:
    "20" = set to speed 20
    "1" = forward direction
    "<" = End DCC++ EX command
+
+   **Forget Locos**
+
+* ``<- [CAB]>`` - (For minus as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
+
+  RETURNS: NONE
+
+Examples:
+
+* ``<- 74>`` - Forgets loco at address 74<br>
+* ``<->`` - Forgets all locos<br>
+
+**Emergency Stop**
+
+* ``<!>`` - Emergency Stop ALL TRAINS.  
+
+.. code-block:: none
+
+       RETURNS: NONE
 
 CAB FUNCTIONS
 ~~~~~~~~~~~~~

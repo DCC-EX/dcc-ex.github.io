@@ -96,9 +96,9 @@ SINGLE LETTER COMMANDS
 
 * ``<!>`` Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.
 
-.. code-block:: none
+  .. code-block:: none
 
-       RETURNS: NONE
+      RETURNS: NONE
 
 * 
   There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).
@@ -106,24 +106,24 @@ SINGLE LETTER COMMANDS
 Track Power Commands
 ^^^^^^^^^^^^^^^^^^^^
 
-``<0|1>`` - Turns power to both tracks on or off
-
-Examples:
-
-``<1>`` - Turn power to all tracks on
-
-``<0>`` - Turn power to all tracks off
-
 ``<0|1 MAIN|PROG|JOIN>`` - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
 
+  .. code-block:: none
+
+      RETURNS: <pX [MAIN|PROG|JOIN]> where "X" is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
 
 Examples:
 
-``<1 MAIN>`` - Turns on power just to the MAIN track
+``<1>`` - Turn power to all tracks on. RETURNS: <p1>
 
-``<0 PROG>`` - Turns off power just to the PROG track
+``<0>`` - Turn power to all tracks off. RETURNS: <p0>
 
-``<1 JOIN>`` - Joins both tracks together to be both MAIN
+``<1 MAIN>`` - Turns on power just to the MAIN track. RETURNS: <p1 MAIN>
+
+``<0 PROG>`` - Turns off power just to the PROG track. RETURNS: <p0 PROG>
+
+``<1 JOIN>`` - Joins both tracks together to be both MAIN (ops) tracks. Any other power command turns it off. RETURNS: <p1 JOIN>
+
 
 .. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
 

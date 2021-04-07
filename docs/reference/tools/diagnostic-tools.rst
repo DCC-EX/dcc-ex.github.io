@@ -4,9 +4,9 @@ DCC Diagnostic Tools
 
 ***Work in Progress. More detail and pictures soon!***
 
-**Engineers or Serious Tinkerer Level Only**
+**LEVEL: Engineers or Serious Tinkerers**
 
-There are many tools to help you operate your layout and find issues with your trains and accessories. We will list some of the most helpful tools here including whwere to buy them assembled or how to build them yourself.
+There are many tools to help you operate your layout and find issues with your trains and accessories. We will list some of the most helpful tools here including where to buy them assembled or how to build them yourself.
 
 * :ref:`Sniffer vs. Analyzer`
 * :ref:`DCC Sniffer (packet analyzer)`
@@ -19,7 +19,7 @@ Sniffer vs. Analyzer
 Sniffer
 ========
 
-A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor.
+A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section.
 
 .. image:: ../../_static/images/tools/sniffer_out1.png
    :align: left
@@ -64,7 +64,7 @@ A logic analyzer is a device that connects to the Command Station signal pins an
    Figure 2: Example Packet Sniffer output
 
 ******************************
-DCC Sniffer (packet analyzer)
+DCC Sniffer (PACKET analyzer)
 ******************************
 
 Buy it
@@ -122,26 +122,34 @@ Now things get fun. A DCC sniffer is a very simple device that contains only 2 o
 
 - **DCC Signal Interface** This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your microcontroller. This can be as simple as a diode, two resistors and an opto-isolator chip.
  
-- **Microcontroller Decoder** This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with a DCC Decoder sketch.
+- **Microcontroller Decoder** This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with a DCC Decoder sketch. Our DCCInspector-EX will run on Arduinos and the ESP32.
 
 DCC Signal Interface
 ---------------------
 
-Connect directly to the PWM output pin of the Arduino
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Connect directly to the PWM output pin of the Arduino CS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Easy, don't need an interface since we are already at 5V and seeing only positive going pulses, etc. Downside, wiring, getting under the benchwork.
+Easy! You don't need an interface to bypass the track and connect to the Arduino signal pins since we are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You will have to get under your benchwork and jumper 2 wires directly to your command station logic-level signal pins. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!)
 
 Connect to the track
 ^^^^^^^^^^^^^^^^^^^^^
 
-Let's us connect anywhere, easy wiring with clips. Downside, need a circuit.
+With this option, you can connect to anywhere on your track. Wiring can be temporary with alligator clips. In order to connect directly to the track, we need something that can isolate the track voltage from your sniffer, rectify the DCC signal so we just get the positive (or negative) going pulses, and level shift the track voltage to a safe 5 Volts to connect to an Arduino. It turns out a diode, a resitor and an optoisolator (aka optocoupler) are all you need for the job! However, to do it right, we do recommend a few other components.
 
-In order to connect directly to the track, we need something that can isolate the track voltage, rectify the DCC signal so we just get the positive (or negative) going pulses, and level shift the track voltage to a safe 5 Volts to connect to an Arduino. It turns out a diode, a resitor and an optoisolator (aka optocoupler) are all you need for the job! However, to do it right, we do recommend a few other components.
+.. NOTE:: While you could substitute other optoisolator chips and get mixed results, the 6N137 was specifically chosen for it's switching speed. This allows for more reliable decoding and can even check the accuracy of the DCC signal.
 
 **Simplest circuit**
 
-image and description goes here
+.. figure:: ../../_static/images/tools/dcc_interface_1.png
+   :align: center
+   :scale: 35%
+   :alt: Minimum recommended circuit
+   :figclass: align-center
+
+   Figure 5: Minimum recommended circuit
+
+The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1uF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our DCCInspector-EX sketch uses the pin 13 LED to provide the same function.
 
 **Recommended circuit (courtesy of Geoff Bunza)**
 
@@ -151,9 +159,9 @@ image and description goes here
    :alt: Geoff Bunza DCC Interface Schematic
    :figclass: align-center
 
-   Figure XX: Geoff Bunza DCC Interface Schematic
+   Figure 6: Geoff Bunza DCC Interface Schematic
 
-The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like Oshpark) and have the make boards for you. DCC-EX may be selling these, so keep checking back. Here is what the boards look like:
+The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like Oshpark) and have them make boards for you. DCC-EX may be selling these, so keep checking back. Here is what the boards look like:
 
 .. figure:: ../../_static/images/tools/bunza_dcc_interface.jpg
    :align: center
@@ -161,9 +169,9 @@ The above is actually a simple circuit to build. To make it easy, Geoff has prov
    :alt: Geoff Bunza DCC Interface Board
    :figclass: align-center
 
-   Figure XX: Geoff Bunza DCC Interface Board
+   Figure 7: Geoff Bunza DCC Interface Board
 
-All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano because you can connect them both on another board or mount them in a case. The Nano is powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.
+All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the microcontroller and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.
 
 Please check out Dr. Geoff's excellent blog on this board here:
 
@@ -173,13 +181,13 @@ https://model-railroad-hobbyist.com/node/41187
 
 **Optional Power Supply Circuit**
 
-If you always intend to have your computer or laptop connectd via the USB port to read the decoded DCC packets, then you can power everything from the 5V coming out of your USB port. But if you want something standalone, for example a sniffer with a display or that has wireless capability, then you are either going to have to power it from a 5V power supply (like a car charger) or take your power from the track.
+If you always intend to have your computer or laptop connectd via the USB port to read the decoded DCC packets, then you can power everything from the 5V coming out of your USB port. But if you want something standalone, for example a sniffer with a display or that has wireless capability, then you are either going to have to power it from a 5V power supply (like a wall charger) or take your power from the track.
 
-Showing you how to build a power supply here wouldn't make much sense when you see Geoff Bunza's 17 function decoder board. It already has everything on it you need, power, optoisolator and space for an Arduino Pro Mini! You can use that little board to do just about anything you would ever want to do on your layout. Not only can it be programmed to be a DCC Sniffer, but it can be a fully functional decoder with up to 17 functions. It even has the option to have an H-Bridge chip (motor controller) right on the board to power motors!
-
-If you just need the power supply for your own board, use the schematic to get what you need.
+Showing you how to build a power supply here wouldn't make much sense when you see Geoff Bunza's 17 function decoder board. It already has everything on it you need, power, optoisolator and space for an Arduino Pro Mini or Nano! You can use that little board to do just about anything you would ever want to do on your layout. Not only can it be programmed to be a DCC Sniffer, but it can be a fully functional decoder with up to 17 functions. It even has the option to have an H-Bridge chip (motor controller) right on the board to power motors!
 
 **Geoff Bunza's 17 Function Decoder AND Sniffer**
+
+If you just need the power supply for your own board, use the schematic to get what you need. Here at DCC-EX labs, we use lots of these decoders and solder just the components we need. If we need a DCC interface, we just solder those components. If we need to connect it to the track, we add the rectifier and voltage regulator components. 
 
 **Ready made circuit boards**
 

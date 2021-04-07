@@ -221,12 +221,10 @@
 </div>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> Lower Case e: Command to <strong>Erase ALL (turnouts, sensors, and outputs)</strong> definitions from EEPROM</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  RETURNS: &lt;0&gt; EEPROM Empty
-
-
-**(NOTE:There is NO Un-Delete)**
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;0&gt; EEPROM Empty
 </pre></div>
 </div>
+<p><em>NOTE:There is NO Un-Delete</em></p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> Upper Case Q : Lists Status of all sensors.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Q ID&gt; (active) or &lt;q ID&gt; (not active)
@@ -244,7 +242,8 @@
 </div>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: DCC++ EX CommandStation Status</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
+Example: &lt;iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab&gt;&lt;H 1 0&gt;&lt;H 2 0&gt;&lt;H 3 0&gt;&lt;H 4 0&gt;&lt;Y 52 0&gt;&lt;q 53&gt;&lt;q 50&gt;
 </pre></div>
 </div>
 </li>
@@ -261,21 +260,28 @@
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code> Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code> Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: NONE
+</pre></div>
+</div>
+</li>
 <li><p>There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).</p></li>
 </ul>
 </div>
 <div class="section" id="track-power-commands">
 <h2>Track Power Commands<a class="headerlink" href="#track-power-commands" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1&gt;</span></code> - Turns power to both tracks on or off</p>
-<p>Examples:</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> - Turn power to all tracks on</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> - Turn power to all tracks off</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;pX [MAIN|PROG|JOIN]&gt; where &quot;X&quot; is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
+</pre></div>
+</div>
+</div></blockquote>
 <p>Examples:</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code> - Turns on power just to the MAIN track</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> - Turns off power just to the PROG track</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> - Joins both tracks together to be both MAIN</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> - Turn power to all tracks on. RETURNS: &lt;p1&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> - Turn power to all tracks off. RETURNS: &lt;p0&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code> - Turns on power just to the MAIN track. RETURNS: &lt;p1 MAIN&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> - Turns off power just to the PROG track. RETURNS: &lt;p0 PROG&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> - Joins both tracks together to be both MAIN (ops) tracks. Any other power command turns it off. RETURNS: &lt;p1 JOIN&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is “joined” and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
@@ -298,19 +304,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = I am the end of this command</p></li>
 </ul>
-<p><strong>Forget Locos</strong></p>
-<ul class="simple">
-<li><p><strong>``&lt;- [CAB]&gt;``</strong> - (For minus as in “subtract”) Forgets one or all locos. The “CAB” parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">CAB&gt;</span></code> will forget/clear that loco. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> will clear all the locos. This doesn’t do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.</p></li>
-</ul>
-<p>Examples:</p>
-<blockquote>
-<div><p><strong>``&lt;- 74&gt;``</strong> - Forgets loco at address 74&lt;br&gt;
-<strong>``&lt;-&gt;``</strong> - Forgets all locos&lt;br&gt;</p>
-</div></blockquote>
-<p><strong>Emergency Stop</strong></p>
-<ul class="simple">
-<li><p><strong>``&lt;!&gt;``</strong> - Emergency Stop ALL TRAINS.</p></li>
-</ul>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &quot;&lt;T 1 20 1&gt;&quot; if the command was successful, meaning :
 &quot;&lt;&quot; = Begin DCC++ EX command
 &quot;T&quot; = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
@@ -320,15 +313,34 @@
 &quot;&lt;&quot; = End DCC++ EX command
 </pre></div>
 </div>
+<p><strong>Forget Locos</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[CAB]&gt;</span></code> - (Minus symbol as in “subtract”) Forgets one or all locos. The “CAB” parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">CAB&gt;</span></code> will forget/clear that loco. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> will clear all the locos. This doesn’t do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: NONE
+</pre></div>
+</div>
+<p>Examples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">74&gt;</span></code> - Forgets loco at address 74</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> - Forgets all locos</p></li>
+</ul>
+<p><strong>Emergency Stop</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code> - Emergency Stop ALL TRAINS.  (But leaves power to the track turned on)</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: NONE
+</pre></div>
+</div>
 <div class="section" id="cab-functions">
 <h3>CAB FUNCTIONS<a class="headerlink" href="#cab-functions" title="Permalink to this headline">¶</a></h3>
 <p>There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC++ EX method. Both methods are described here though new applications are encouraged to use the newer <code class="docutils literal notranslate"><span class="pre">&lt;F&gt;</span></code> command (capital F vs. small f).</p>
 <ul class="simple">
-<li><p>This turns on and off engine decoder functions</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">&lt;F&gt;</span></code> command turns engine decoder functions ON and OFF</p></li>
 <li><p>F0-F28 (F0 is sometimes called FL)</p></li>
-<li><p>F29-F68 Support for the RCN-212 Functions</p></li>
+<li><p>F29-F68 (Support for the RCN-212 Functions)</p></li>
 <li><p>NOTE: setting requests are transmitted directly to mobile engine decoder</p></li>
-<li><p>current state of engine functions (as known by commands issued since power on)  IS stored by the CommandStation</p></li>
+<li><p>Current state of engine functions (as known by commands issued since power on) is stored by the CommandStation</p></li>
 <li><p>All functions within a group get set all at once per NMRA DCC standards.</p></li>
 <li><p>Using the new F command, the command station knows about the previous
 settings in the same group and will not, for example, unset F2 because you change F1. If however, you have never set F2, then changing F1 WILL unset F2.</p></li>

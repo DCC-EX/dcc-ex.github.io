@@ -51,7 +51,7 @@ SINGLE LETTER COMMANDS
       RETURNS: <0> EEPROM Empty
 
 
-    **(NOTE:There is NO Un-Delete)**
+  *NOTE:There is NO Un-Delete*
 
 
 * ``<Q>`` Upper Case Q : Lists Status of all sensors.
@@ -77,7 +77,8 @@ SINGLE LETTER COMMANDS
 
   .. code-block:: none
 
-       RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
+       RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
+       Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
 
 * ``<T>`` Upper Case T : Lists all defined turnouts. 
 
@@ -155,20 +156,22 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
    "1" = forward direction
    "<" = End DCC++ EX command
 
-   **Forget Locos**
+**Forget Locos**
 
-* ``<- [CAB]>`` - (For minus as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
+* ``<- [CAB]>`` - (Minus symbol as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
 
-  RETURNS: NONE
+.. code-block:: none
+
+   RETURNS: NONE
 
 Examples:
 
-* ``<- 74>`` - Forgets loco at address 74<br>
-* ``<->`` - Forgets all locos<br>
+* ``<- 74>`` - Forgets loco at address 74
+* ``<->`` - Forgets all locos
 
 **Emergency Stop**
 
-* ``<!>`` - Emergency Stop ALL TRAINS.  
+* ``<!>`` - Emergency Stop ALL TRAINS.  (But leaves power to the track turned on)
 
 .. code-block:: none
 
@@ -180,11 +183,11 @@ CAB FUNCTIONS
 There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC++ EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
 
 
-* This turns on and off engine decoder functions  
+* The ``<F>`` command turns engine decoder functions ON and OFF
 * F0-F28 (F0 is sometimes called FL)
-* F29-F68 Support for the RCN-212 Functions
+* F29-F68 (Support for the RCN-212 Functions)
 * NOTE: setting requests are transmitted directly to mobile engine decoder   
-* current state of engine functions (as known by commands issued since power on)  IS stored by the CommandStation  
+* Current state of engine functions (as known by commands issued since power on) is stored by the CommandStation  
 * All functions within a group get set all at once per NMRA DCC standards.
 * Using the new F command, the command station knows about the previous
   settings in the same group and will not, for example, unset F2 because you change F1. If however, you have never set F2, then changing F1 WILL unset F2.     

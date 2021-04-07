@@ -51,7 +51,7 @@ SINGLE LETTER COMMANDS
       RETURNS: <0> EEPROM Empty
 
 
-    **(NOTE:There is NO Un-Delete)**
+  *NOTE:There is NO Un-Delete*
 
 
 * ``<Q>`` Upper Case Q : Lists Status of all sensors.
@@ -77,7 +77,8 @@ SINGLE LETTER COMMANDS
 
   .. code-block:: none
 
-       RETURNS: Track powerstatus, Throttle status, Turn-out status, and a version number.
+       RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
+       Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
 
 * ``<T>`` Upper Case T : Lists all defined turnouts. 
 
@@ -96,30 +97,34 @@ SINGLE LETTER COMMANDS
 
 * ``<!>`` Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.
 
+  .. code-block:: none
+
+      RETURNS: NONE
+
 * 
   There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).
 
 Track Power Commands
 ^^^^^^^^^^^^^^^^^^^^
 
-``<0|1>`` - Turns power to both tracks on or off
-
-Examples:
-
-``<1>`` - Turn power to all tracks on
-
-``<0>`` - Turn power to all tracks off
-
 ``<0|1 MAIN|PROG|JOIN>`` - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
 
+  .. code-block:: none
+
+      RETURNS: <pX [MAIN|PROG|JOIN]> where "X" is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
 
 Examples:
 
-``<1 MAIN>`` - Turns on power just to the MAIN track
+``<1>`` - Turn power to all tracks on. RETURNS: <p1>
 
-``<0 PROG>`` - Turns off power just to the PROG track
+``<0>`` - Turn power to all tracks off. RETURNS: <p0>
 
-``<1 JOIN>`` - Joins both tracks together to be both MAIN
+``<1 MAIN>`` - Turns on power just to the MAIN track. RETURNS: <p1 MAIN>
+
+``<0 PROG>`` - Turns off power just to the PROG track. RETURNS: <p0 PROG>
+
+``<1 JOIN>`` - Joins both tracks together to be both MAIN (ops) tracks. Any other power command turns it off. RETURNS: <p1 JOIN>
+
 
 .. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
 
@@ -141,20 +146,6 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 * ``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
 * ``>`` = I am the end of this command
 
-**Forget Locos**
-
-* **``<- [CAB]>``** - (For minus as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
-
-Examples:
-
-  **``<- 74>``** - Forgets loco at address 74<br>
-  **``<->``** - Forgets all locos<br>
-
-**Emergency Stop**
-
-* **``<!>``** - Emergency Stop ALL TRAINS.  
-
-
 .. code-block:: none
 
    RETURNS: "<T 1 20 1>" if the command was successful, meaning :
@@ -165,17 +156,38 @@ Examples:
    "1" = forward direction
    "<" = End DCC++ EX command
 
+**Forget Locos**
+
+* ``<- [CAB]>`` - (Minus symbol as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
+
+.. code-block:: none
+
+   RETURNS: NONE
+
+Examples:
+
+* ``<- 74>`` - Forgets loco at address 74
+* ``<->`` - Forgets all locos
+
+**Emergency Stop**
+
+* ``<!>`` - Emergency Stop ALL TRAINS.  (But leaves power to the track turned on)
+
+.. code-block:: none
+
+       RETURNS: NONE
+
 CAB FUNCTIONS
 ~~~~~~~~~~~~~
 
 There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC++ EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
 
 
-* This turns on and off engine decoder functions  
+* The ``<F>`` command turns engine decoder functions ON and OFF
 * F0-F28 (F0 is sometimes called FL)
-* F29-F68 Support for the RCN-212 Functions
+* F29-F68 (Support for the RCN-212 Functions)
 * NOTE: setting requests are transmitted directly to mobile engine decoder   
-* current state of engine functions (as known by commands issued since power on)  IS stored by the CommandStation  
+* Current state of engine functions (as known by commands issued since power on) is stored by the CommandStation  
 * All functions within a group get set all at once per NMRA DCC standards.
 * Using the new F command, the command station knows about the previous
   settings in the same group and will not, for example, unset F2 because you change F1. If however, you have never set F2, then changing F1 WILL unset F2.     

@@ -222,7 +222,7 @@ You can use this board to handle both your MAIN and PROG track, or you can use o
 
 .. image:: ../../_static/images/motorboards/3205_motor_board.jpg
    :alt: IRF3205 Motor Board
-   :scale: 100%
+   :scale: 75%
 
 `Dual Motor Driver IRF3205 Intstallation Instructions <../../advanced-setup/IBT_2-motor-board-setup.html>`_
 

@@ -68,9 +68,29 @@ WangTongze Board (Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board)
    :alt: ESP-01S
    :scale: 70%
 
-This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for "WangTongze" on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a "good" board, it will work perfectly, if you get a bad clone, it won't work employing workarounds. One board has "shield" spelled incorrectly as "shiald". The "shiald" version works, but some say it has an unreliable WiFi connection. A genuine Wangtongze has no misspellings.
+This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for "WangTongze" on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a "good" board, it will work perfectly, if you get a bad clone, it won't work without employing workarounds. One board has "shield" spelled incorrectly as "shiald". The "shiald" version works, but some say it has an unreliable WiFi connection. A genuine Wangtongze has no misspellings.
 
-There is another version where the "more" in "more info" is spelled "moer" and "Arduino" is spelled "Arbuino". This board has the wrong transistors soldered onto ot. You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the level shifters. You can buy the correct surface mount transistors and replace two of them using a magnifier as we have when we had nothing better to do that day, but we that's a lot of trouble to go through unless this is the only board you can find in your country. 
+There is another version where the "more" in "more info" is spelled "moer" and "Arduino" is spelled "Arbuino". This board has the wrong transistors soldered onto it in the level shifter circuit. Get out your cell phone, take a picture of the section of the board you see here and zoom in:
+
+.. image:: ../../_static/images/wifi/wangtongze_transistors.jpg
+:alt: ESP8266 Breakout Board
+:scale: 40%
+
+If these 2 transistors are labelled "JIY" you are lucky and the board with work with no modifications. If they are labelled "J3Y", you have two choices to get this to work:
+
+ 1. **Tinkerer way** - You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the Tx/Rx level shifters. The ESP8266 Tx/Rx pins are 5V tolerant, but always best if you can to shift 5V from the Arduino to 3.3V. You could also make a small 2 resistor voltage divider to connect to the debug header Rx pin. The Tx pin to the Arduino will be fine as is.
+
+ .. image:: ../../_static/images/wifi/wangtongze_jumpers.jpg
+ :alt: ESP8266 Breakout Board
+ :scale: 40%
+
+ And here is a level shifter circuit you can use:
+
+ .. image:: ../../_static/images/wifi/esp_level_shifter.png
+ :alt: ESP8266 Breakout Board
+ :scale: 40%
+
+ 2. **Engineer way** - You can buy the correct surface mount transistors and replace two of them using a magnifier as we have when we had nothing better to do that day, but that's a lot of trouble to go through unless this is the only board you can find in your country. To do this get out your cell phone, take a picture of the section of the board you see here ***TODO: show picture***. If these 2 transistors are labelled "JIY" you are lucky and the board with work with no modifications. If they are labelled "J3Y", you can order replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.
 
 The bottom line is that we don't recommend this board because you would have to be very careful and know which one you are buying. That said, we can provide more information on these boards if you have one and want to try and get it to work.
 

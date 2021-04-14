@@ -1,10 +1,11 @@
+************
 WiFi Boards
-===========
+************
 
 For more information see `Wifi Setup <../../get-started/wifi-setup.html>`_
 
 Makerfabs WiFi Shield
-^^^^^^^^^^^^^^^^^^^^^
+======================
 
 * `Makerfabs ESP-8266 WiFi Shield (recommended) <https://www.makerfabs.com/esp8266-wifi-shield.html>`_
 
@@ -15,7 +16,7 @@ Makerfabs WiFi Shield
 `Installation Instructions <../../get-started/wifi-setup.html>`_
 
 Duinopeak WiFi Shield
-^^^^^^^^^^^^^^^^^^^^^
+======================
 
 * `Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 
@@ -31,7 +32,7 @@ See the ESP-01S in the next section below that must be installed on this board
 
 
 ESP-01S
-^^^^^^^
+=========
 
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
@@ -62,7 +63,7 @@ We have used the ones that look like the one below just as well, but you have to
 `Installation Instructions <../../get-started/wifi-setup.html>`_
 
 WangTongze Board (Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===========================================================================
 
 .. image:: ../../_static/images/wifi/wangtongze_wifi_board.jpg
    :alt: ESP-01S
@@ -90,7 +91,13 @@ If these 2 transistors are labelled "JIY" you are lucky and the board with work 
     :alt: ESP8266 Breakout Board
     :scale: 40%
 
- 2. **Engineer way** - You can buy the correct surface mount transistors and replace two of them using a magnifier as we have when we had nothing better to do that day, but that's a lot of trouble to go through unless this is the only board you can find in your country. To do this get out your cell phone, take a picture of the section of the board you see here ***TODO: show picture***. If these 2 transistors are labelled "JIY" you are lucky and the board with work with no modifications. If they are labelled "J3Y", you can order replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.
+ 2. **Engineer way** - You can buy the correct surface mount transistors and replace two of them using a magnifier as we have when we had nothing better to do that day, but that's a lot of trouble to go through unless this is the only board you can find. To do this get out your cell phone, take a picture of the section of the board you see here:
+
+ .. image:: ../../_static/images/wifi/wangtongze_transistors.png
+ :alt: ESP8266 Breakout Board
+ :scale: 40%
+  
+ If these 2 transistors are labelled "JIY" you are lucky and the board with work with no modifications. If they are labelled "J3Y", you can order replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.
 
 The bottom line is that we don't recommend this board because you would have to be very careful and know which one you are buying. That said, we can provide more information on these boards if you have one and want to try and get it to work.
 

@@ -22,7 +22,7 @@ Duinopeak WiFi Shield
 
 .. image:: ../../_static/images/duinopeak.jpg
    :alt: Duinopeak ESP-8266 WiFi Shield
-   :scale: 80%
+   :scale: 70%
 
 You will need an ESP-01s to plug into this board. This is just an expansion shield board. It allows you to plug an ESP8266 onto an Arduino with no jumper wires. This board also has a voltage regulator, level shifters and a reset button for programming.
 
@@ -38,7 +38,7 @@ ESP-01S
 
 .. image:: ../../_static/images/esp-01s_2.jpg
    :alt: ESP-01S
-   :scale: 80%
+   :scale: 70%
 
 You can use this board stand-alone with jumpers, or use the Duinopeak ESP-8266 Wifi Expansion Board above and plug this board into it. 
 
@@ -75,7 +75,9 @@ There is another version where the "more" in "more info" is spelled "moer" and "
 
 .. image:: ../../_static/images/wifi/wangtongze_transistors.png
    :alt: ESP8266 Breakout Board
-   :scale: 40%
+   :scale: 10%
+
+   WiFi board level shifting transistors should be J1Y (click the image to enlarge)
 
 If these 2 transistors are labelled "JIY" you are lucky and the board with work with no modifications. If they are labelled "J3Y", you have two choices to get this to work:
 
@@ -89,16 +91,10 @@ If these 2 transistors are labelled "JIY" you are lucky and the board with work 
 
  .. image:: ../../_static/images/wifi/esp_level_shifter.png
     :alt: ESP8266 Breakout Board
-    :scale: 40%
+    :scale: 60%
 
- 2. **Engineer way** - You can buy the correct surface mount transistors and replace two of them using a magnifier as we have when we had nothing better to do that day, but that's a lot of trouble to go through unless this is the only board you can find. To do this get out your cell phone, take a picture of the section of the board you see here:
+ 2. **Engineer way** - You can buy the correct surface mount transistors and replace two of them using a magnifier as we did when we had nothing better to do that day, but that's a lot of trouble to go through unless this is the only board you can find. If they are labelled "J3Y", you can order "J1Y" replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.
 
- .. image:: ../../_static/images/wifi/wangtongze_transistors.png
- :alt: ESP8266 Breakout Board
- :scale: 40%
-  
- If these 2 transistors are labelled "JIY" you are lucky and the board with work with no modifications. If they are labelled "J3Y", you can order replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.
-
-The bottom line is that we don't recommend this board because you would have to be very careful and know which one you are buying. That said, we can provide more information on these boards if you have one and want to try and get it to work.
+The bottom line is that we don't recommend this board because you would have to be very careful and know which one you are buying. That said, we can provide more information on these boards if you have one and want to get it to work.
 
 Here is a link to the `Video and info from Wang Tongze himself <https://www.youtube.com/watch?v=LJcYgR479Vw>`_

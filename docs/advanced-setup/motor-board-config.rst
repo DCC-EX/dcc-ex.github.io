@@ -77,8 +77,9 @@ We are going to replace this with a new motor board definition and select it. Co
 .. code-block:: cpp
 
   #define MY_MOTOR_SHIELD F("MY_MOTOR_SHIELD"),\
-     new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN), \
-     new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN)
+    new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN), \
+    new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN) 
+     
   #define MOTOR_SHIELD_TYPE MY_MOTOR_SHIELD
 
 1. Replace "MY_MOTOR_SHIELD" in both instances with whatever name you like or just leave it as MY_MOTOR_SHIELD.

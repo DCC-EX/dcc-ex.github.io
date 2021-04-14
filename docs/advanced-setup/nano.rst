@@ -30,7 +30,7 @@ That Arduino Nano is an Uno in disguise. It has the same processor, the same spe
    :alt: Gravitech Nano Motor Shield
    :scale: 50%
 
-.. image:: ../_static/images/motorboards/nano_cheap.jpg
+.. image:: ../_static/images/motorboards/nano_cheap_motor_shield.jpgjpg
    :alt: Nano Motor Shield Clone
    :scale: 50%
 

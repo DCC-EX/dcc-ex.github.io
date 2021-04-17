@@ -1,5 +1,6 @@
+*************
 I2C Displays
-============
+*************
 
 DCC++ EX is designed to accommodate a display. You don't need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.
 
@@ -7,19 +8,19 @@ DCC++ EX is designed to accommodate a display. You don't need a display since th
    :alt: Example: 4 line I2C Display
    :scale: 80%
 
-We currently support:
+We currently support LCDs based on the PCF8574 backpack:
 
 * 16 column by 2 row (16x2) and 20 column by 4 row (20x4) LCD displays 
 * .96" and 1.3" OLED displays.
 
-The LCD displays require a "backpack" that converts the raw display to I2C. I2C allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn't have enough pins, especially on an Uno, to use a display. 
+.. NOTE:: Do NOT modify any code related to displays without contacting us. We use our own included code, NOT an external library you have to download. The code was written to support LCD and OLED displays and to fit on a Mega *and* an Uno. It has a custom font table and the LCD macro works to output diagnostics even if there is no display. If your display is not supported, let us know and we can take a look.
 
-Examples of compatible displays
+The LCD displays require a "backpack" that converts the raw display to I2C. I2C allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn't have enough pins, especially on an Uno, to use a display. 
 
 .. warning:: You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!
 
-Connecting an LCD Display
--------------------------
+Examples of compatible displays
+================================
 
 Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.
 
@@ -39,8 +40,11 @@ And here is an example of a 16 x 2 Display with its backpack sitting above it. R
 
 **Figure 2** - 16 x 2 LCD with backpack
 
+Connecting an LCD Display
+==========================
+
 Soldering on the Backpack (if you purchased separate pieces)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------
 
 And here is a picture of the board after soldering or if you purchase a board already solderd (or "welded" as some of the Chinese sites call it)
 
@@ -52,7 +56,7 @@ And here is a picture of the board after soldering or if you purchase a board al
 **Figure 3** - LCD with backpack soldered to the back
 
 Connecting the Jumper Wires
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 To connect the Display to the CS, you will need 4 male to female jumper wires:
 
@@ -61,33 +65,16 @@ To connect the Display to the CS, you will need 4 male to female jumper wires:
 #. Connect SCL on the Arduino (pin x on the Mega, pin x on the Uno) to SCL on the backpack
 #. Connect SDA on the Arduino (pin x on the Mega, pin x on the Uno) to SDA on the backpack
 
-Installing the Software (LCD)
------------------------------
+Controlling Brightness
+-----------------------
 
-There are two steps to install the software:
+The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:
 
+***TODO: Add image***
 
-* Install the LiquidCrystal I2C library
-* Edit the config.h file and upload the sketch to your CS
-
-Install the library
-^^^^^^^^^^^^^^^^^^^
-
-To install the library, open the Arduino IDE and do the following:
-
-
-#. Select Tools -> Manage libraries
-#. Wait for the download to finish updating the list of libraries
-#. In the "Filter your search..." box, type "liquidcrystal_i2c"
-#. Scroll down the search results until you find the ``"LiquidCrystal_I2C by Frank Brabander"`` entry. Click on that library to select it
-#. Click "Install"
-#. Wait for the installation to finish.
-#. Click "Close"
-
-Once the library is installed on your computer, you don't have to install it again.
 
 Upload the sketch to your CS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 To upload the new sketch on your Command Station
 
@@ -105,7 +92,7 @@ To upload the new sketch on your Command Station
 #. Make sure to connect the Arduino to your computer with the USB cable and click the upload button to compile and upload the updated Command Station sketch.
 
 Connecting an OLED display
---------------------------
+============================
 
 OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO. You will require a Mega. Here are some examples of OLED displays:
 
@@ -124,12 +111,12 @@ OLED displays come in more varieties than LCD displays. The library to run them 
 **Figure 5** - Makerfocus 128x32 .91" OLED Display
 
 Soldering Wires to the Display
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------
 
 For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.
 
 Connecting Jumper Wires to the CS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 ** Not Finished. Coming soon! **
 

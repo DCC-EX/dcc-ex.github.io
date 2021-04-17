@@ -8,5 +8,6 @@ Advanced Setup
     motor-board-config
     IBT_2-motor-board-setup
     L298N-motor-board-setup
+    nano
     wifi-mega
     high-accuracy

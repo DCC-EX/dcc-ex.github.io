@@ -167,7 +167,7 @@
             
   <div class="section" id="dcc-ex-model-railroading">
 <h1>DCC++ EX Model Railroading<a class="headerlink" href="#dcc-ex-model-railroading" title="Permalink to this headline">¶</a></h1>
-<p>Welcome! DCC++ EX is an easy to use, do-it yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrial and more.</p>
+<p>Welcome! DCC++ EX is an easy to use, do-it yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.</p>
 <table class="docutils align-left">
 <colgroup>
 <col style="width: 32%" />
@@ -210,10 +210,10 @@
 <p>A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:</p>
 <ul class="simple">
 <li><p>simultaneous control of multiple locomotives</p></li>
-<li><p>1 and 2 byte byte locomotive addressing</p></li>
-<li><p>128-step speed throttling</p></li>
+<li><p>2 and 4 byte byte locomotive addressing</p></li>
+<li><p>28 and 128 step speed throttling</p></li>
 <li><p>Activate/de-activate all accessory function addresses 0-2048</p></li>
-<li><p>Control of all cab functions F0-F28</p></li>
+<li><p>Control of all cab functions F0-F28 and F29-F68</p></li>
 <li><p>Main Track: Write configuration variable bytes and set/clear specific configuration variable (CV) bits (aka Programming on Main or POM)</p></li>
 <li><p>Programming Track: Same as the main track with the addition of reading configuration variable bytes</p></li>
 </ul>
@@ -223,13 +223,16 @@
 <li><p>WiFi and Ethernet shield support</p></li>
 <li><p>No more jumpers or soldering!</p></li>
 <li><p>Direct support for all the most popular motor control boards</p></li>
+<li><p>28 speed steps in addition to 128</p></li>
 <li><p>I2C Display support</p></li>
 <li><p>Improved short circuit detection and automatic reset from an overload</p></li>
 <li><p>Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings</p></li>
 <li><p>Improved adherence to the NMRA DCC specification</p></li>
 <li><p>Complete support for all the old commands and controllers/front-ends like JMRI</p></li>
 <li><p>Simpler, modular, faster code with an API Library for developers for easy expansion</p></li>
-<li><p>New features and functions in JMRI</p></li>
+<li><p>New throttle support from apps like DCCpp cab</p></li>
+<li><p>Ability to JOIN operations and service track as one “main” track with 2 power districts when not programming</p></li>
+<li><p>New features and functions in JMRI, like a new current meter.</p></li>
 <li><p>Automation (coming soon)</p></li>
 </ul>
 <div class="admonition note">

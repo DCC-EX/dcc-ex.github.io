@@ -1,13 +1,12 @@
-#########################
+**************************
 IBT_2 BTS7960 Motor Board
-#########################
+**************************
 
-*******************************
 What You Will Need (for IBT_2)
-*******************************
+================================
 
 * An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
-* An Arduino Motor Shield
+* An Arduino Motor Shield (or another board for your service track)
 * An IBT_2 Motor Board
 * Version 3.1.0 or later of the DCC++ EX Command Station Software
 * 10k or a even a 1k Resistor (Optional)
@@ -18,14 +17,14 @@ We assume that many of you may have started off with the Arduino Mega with Ardui
 .. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.
 
 Upgrading and Using the Arduino Motor Shield
-=============================================
+----------------------------------------------
 
 For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.
 
 If you need instructions on how to install the Arduino Motor Shield, see `Arduino Motor Shield Assembly <../get-started/assembly.html>`_
 
 What We Are Going To Do
-==========================
+-------------------------
 
 * Use just 1 output of your existing Arduino Motor Shield for your program track with no hardware changes
 * Add an IBT_2 (BTS7960) Motor Board to replace the "A" output of the motor shield to power your MAIN track
@@ -36,7 +35,7 @@ What We Are Going To Do
 .. WARNING:: Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. Both outputs of the motor shield are still connected, we just don't enable the A or main side. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.
 
 Steps 
-======
+------
 
 1. Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IBT_2
 
@@ -108,7 +107,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../get-started/index.html>`_
 
 Important Notes about Current Sensing Resistors
-================================================
+------------------------------------------------
 
 .. WARNING:: Make sure your board has the expected current sensing resistors and that their value is correct for the maximum current you expect to use. Also, make sure you don't apply more than 5V to the Arduino Analog pin. Our calculations use NOMINAL values, but these chips can vary widely in how much voltage they report per Amp of current at the output. The value of your resistor will also affect this.
 
@@ -128,22 +127,21 @@ The spec sheet of the BTS7960B states that the "expected" (aka nominal) value fo
 
 
 Using One IBT_2 for MAIN and another for PROG
-==============================================
+----------------------------------------------
 
 This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IBT_2 can deliver much more current than you need for a programming track. If you install 1 Amp fuses in between the IBT_2 outputs and both rails of your programming track, that and the lower trip current we set in the CS for the programming track should protect your layout.
 
 ***TODO: Finish this section***
 
 Using External Current Sense
-=============================
+------------------------------
 
 Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (10A+), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
 
 ***TODO: Insert help for using or pointing to a section for external CS boards***
 
-***********
 Tech Notes
-***********
+===========
 
 ***TODO: Add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how users can change the pins if there is a problem by creating a new motor board type.***
 

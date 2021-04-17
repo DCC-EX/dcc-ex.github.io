@@ -36,7 +36,24 @@ SINGLE LETTER COMMANDS
 
   .. code-block:: none
 
-      RETURNS: <c CURRENT>, where CURRENT is the Raw value of the current sense pin
+      RETURNS: <c "CurrentMAIN" CURRENT C "Milli" "0" MAX_MA "1" TRIP_MA >
+      
+
+  Example <c CurrentMAIN 120 C Milli 0 1996 1 1800>
+
+  The above shows a MAIN track current of 120mA, 1.996A max, 1.8A trip current
+
+  ``c`` - the current response indicator
+  ``CurrentMAIN`` - Static text for software like JMRI
+  ``CURRENT`` - Current in MilliAmps
+  ``C`` - Designator to signify this is a current meter (V would be for voltage)
+  ``Milli`` - Unit of measure for external sofware with a meter like JMRI (Milli, Kilo, etc.)
+  c.)
+  ``0`` - numbered parameter for external sofware (1,2,3, etc.)
+  ``MAX_MA`` - The maximum current handling of the motor controller in MilliAmps
+  1 - number parameter for external software (we use 2 parameters here, 0 and 1)
+  ``TRIP_MA`` - The overcurrent limit that will trip the software circuit breaker in mA
+  
 
 * ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
 
@@ -348,6 +365,26 @@ DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is 
 All decoders that are not in an engine are accessory decoders including turnouts.
 
 Besides being defined all turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:
+
+Accessory Decoder Commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka "Dual-Coil" method) and linear addressing method. You can either specify an address and it's subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 0 -2047)
+
+For example, address/subaddres 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3
+
+Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table<../documents/decoder-table.html>`_
+
+NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
+
+Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+* ``<`` = Begin DCC++ EX command
+* ``a`` (lower case a) this command is for a Acessory Decoder
+* ``LINEAR_ADDRESS:``  the linear address of the decoder controlling this turnout (0-2047)
+* ``ACTIVATE:`` (0 or OFF) (for Deactivate, Off, Unthrown) or (1 or ON) (for Activate, On, Thrown)
+* ``>`` = End DCC++ EX command
 
 Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

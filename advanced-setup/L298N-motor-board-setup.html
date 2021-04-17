@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mega+WiFi Configuration" href="wifi-mega.html" />
+    <link rel="next" title="Arduino Nano Setup" href="nano.html" />
     <link rel="prev" title="IBT_2 BTS7960 Motor Board" href="IBT_2-motor-board-setup.html" /> 
 </head>
 
@@ -97,6 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">L298N Motor Board Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nano.html">Arduino Nano Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi-mega.html">Mega+WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Mode</a></li>
 </ul>
@@ -178,6 +179,18 @@
             
   <div class="section" id="l298n-motor-board-setup">
 <h1>L298N Motor Board Setup<a class="headerlink" href="#l298n-motor-board-setup" title="Permalink to this headline">¶</a></h1>
+<p>The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are the key differences:</p>
+<ul class="simple">
+<li><p>It is in a much smaller form factor</p></li>
+<li><p>It isn’t a shield so you have to jumper wires to connect it to your CS</p></li>
+<li><p>It doesn’t have current sense, so you are going to have to use one of the solutions below</p></li>
+<li><p>It stands vertically on the board with a big heat sink for better controlling</p></li>
+</ul>
+<p><strong>*TODO: More description to come*</strong></p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/L298_board2.jpg"><img alt="L298N Motor Board" src="../_images/L298_board2.jpg" style="width: 225.0px; height: 232.25px;" /></a>
+<p class="caption"><span class="caption-text">Figure 1. L298N Motor Board</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 
 
@@ -186,7 +199,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="wifi-mega.html" class="btn btn-neutral float-right" title="Mega+WiFi Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nano.html" class="btn btn-neutral float-right" title="Arduino Nano Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="IBT_2-motor-board-setup.html" class="btn btn-neutral float-left" title="IBT_2 BTS7960 Motor Board" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

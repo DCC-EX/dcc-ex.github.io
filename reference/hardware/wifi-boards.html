@@ -187,9 +187,11 @@
             
   <div class="section" id="wifi-boards">
 <h1>WiFi Boards<a class="headerlink" href="#wifi-boards" title="Permalink to this headline">¶</a></h1>
-<p>For more information see <a class="reference external" href="../../get-started/wifi-setup.html">Wifi Setup</a></p>
+<p>For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the <a class="reference external" href="../advanced-setup/wif-mega.html">Mega+WiFi page</a></p>
+<p>For more information on how to configure your CS to use the boards below, see <a class="reference external" href="../../get-started/wifi-setup.html">Wifi Setup</a></p>
 <div class="section" id="makerfabs-wifi-shield">
 <h2>Makerfabs WiFi Shield<a class="headerlink" href="#makerfabs-wifi-shield" title="Permalink to this headline">¶</a></h2>
+<p>Conductor Friendly</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP-8266 WiFi Shield (recommended)</a></p></li>
 </ul>
@@ -198,35 +200,61 @@
 </div>
 <div class="section" id="duinopeak-wifi-shield">
 <h2>Duinopeak WiFi Shield<a class="headerlink" href="#duinopeak-wifi-shield" title="Permalink to this headline">¶</a></h2>
+<p>Tinkerer</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN">Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s)</a></p></li>
 </ul>
-<a class="reference internal image-reference" href="../../_images/duinopeak.jpg"><img alt="Duinopeak ESP-8266 WiFi Shield" src="../../_images/duinopeak.jpg" style="width: 480.0px; height: 461.6px;" /></a>
+<a class="reference internal image-reference" href="../../_images/duinopeak.jpg"><img alt="Duinopeak ESP-8266 WiFi Shield" src="../../_images/duinopeak.jpg" style="width: 420.0px; height: 403.9px;" /></a>
 <p>You will need an ESP-01s to plug into this board. This is just an expansion shield board. It allows you to plug an ESP8266 onto an Arduino with no jumper wires. This board also has a voltage regulator, level shifters and a reset button for programming.</p>
 <p><a class="reference external" href="../../get-started/wifi-setup.html">Installation Instructions</a></p>
 <p>See the ESP-01S in the next section below that must be installed on this board</p>
 </div>
 <div class="section" id="esp-01s">
 <h2>ESP-01S<a class="headerlink" href="#esp-01s" title="Permalink to this headline">¶</a></h2>
+<p>Tinkerer Level</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.amzn.com/B00O34AGSU/">ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers)</a></p></li>
 </ul>
-<a class="reference internal image-reference" href="../../_images/esp-01s_2.jpg"><img alt="ESP-01S" src="../../_images/esp-01s_2.jpg" style="width: 320.0px; height: 312.8px;" /></a>
+<a class="reference internal image-reference" href="../../_images/esp-01s_2.jpg"><img alt="ESP-01S" src="../../_images/esp-01s_2.jpg" style="width: 240.0px; height: 234.6px;" /></a>
 <p>You can use this board stand-alone with jumpers, or use the Duinopeak ESP-8266 Wifi Expansion Board above and plug this board into it.</p>
 <p>There are also other boards that require jumper wires (they are not shields) but they work great and provide a voltage regulator to take 5V and convert it to the 3.3V these boards need. They also have level shifters to offer more protection by converting the 5V from the Arduino Tx pin to 3.3V and convert the Tx pin on the ESP8266 from 3.3V to 5V which offers a little more certainty that the signal is read properly. It is better to power the board from the 5V output of the Arduino because it can deliver more current than the 3.3V regulator on the Arduino.</p>
 <p><a class="reference external" href="https://www.aliexpress.com/i/32842569436.html">Esp8266 Serial Wi-Fi Wireless Esp-01 Breakout Adapter Board</a></p>
 <p>Buy the one that looks like this:</p>
-<a class="reference internal image-reference" href="../../_images/esp_breakout2.jpg"><img alt="ESP8266 Breakout Board" src="../../_images/esp_breakout2.jpg" style="width: 300.0px; height: 300.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/esp_breakout2.jpg"><img alt="ESP8266 Breakout Board" src="../../_images/esp_breakout2.jpg" style="width: 250.0px; height: 250.0px;" /></a>
 <p>We have used the ones that look like the one below just as well, but you have to make sure to wire power to 3.3V NOT 5V and there is no voltage regulation and NO LEVEL SHIFTERS. The GPIO pins on the ESP8266 appear to be 5V tolerant, but there is not guarantee it won’t shorten its life to have a 5V signal on the Tx pin. Several testt versions are running fine like this after a year, but if you are going to buy a board to stick this into instead of wiring it directly, then why not buy one with the extra circuitry?</p>
-<a class="reference internal image-reference" href="../../_images/esp_breakout1.jpg"><img alt="ESP8266 Breakout Board" src="../../_images/esp_breakout1.jpg" style="width: 300.0px; height: 300.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/esp_breakout1.jpg"><img alt="ESP8266 Breakout Board" src="../../_images/esp_breakout1.jpg" style="width: 250.0px; height: 250.0px;" /></a>
 <p><a class="reference external" href="../../get-started/wifi-setup.html">Installation Instructions</a></p>
 </div>
 <div class="section" id="wangtongze-board-uno-r3-mega-esp8266-serial-wifi-shield-esp-12e-board">
 <h2>WangTongze Board (Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board)<a class="headerlink" href="#wangtongze-board-uno-r3-mega-esp8266-serial-wifi-shield-esp-12e-board" title="Permalink to this headline">¶</a></h2>
+<p>Tinkerer to Engineer Level</p>
 <a class="reference internal image-reference" href="../../_images/wangtongze_wifi_board.jpg"><img alt="ESP-01S" src="../../_images/wangtongze_wifi_board.jpg" style="width: 525.6999999999999px; height: 417.2px;" /></a>
-<p>This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for “WangTongze” on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a “good” board, it will work perfectly, if you get a bad clone, it won’t work employing workarounds. One board has “shield” spelled incorrectly as “shiald”. The “shiald” version works, but some say it has an unreliable WiFi connection. A genuine Wangtongze has no misspellings.</p>
-<p>There is another version where the “more” in “more info” is spelled “moer” and “Arduino” is spelled “Arbuino”. This board has the wrong transistors soldered onto ot. You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the level shifters. You can buy the correct surface mount transistors and replace two of them using a magnifier as we have when we had nothing better to do that day, but we that’s a lot of trouble to go through unless this is the only board you can find in your country.</p>
-<p>The bottom line is that we don’t recommend this board because you would have to be very careful and know which one you are buying. That said, we can provide more information on these boards if you have one and want to try and get it to work.</p>
+<p>This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for “WangTongze” on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a “good” board, it will work perfectly, if you get a bad clone, it won’t work without employing workarounds. A genuine Wangtongze has no misspellings.</p>
+<p>One board has “shield” spelled incorrectly as “shiald”. The “shiald” version works, but some say it has an unreliable WiFi connection.</p>
+<p>There is another version where the “more” in “more info” is spelled “moer” and “Arduino” is spelled “Arbuino”. This board has the wrong transistors soldered onto it in the level shifter circuit. Get out your cell phone, take a picture of your board and zoom in on the section of the board you see here:</p>
+<div class="figure align-default" id="id3">
+<a class="with-shadow reference internal image-reference" href="../../_images/wangtongze_transistors.png"><img alt="Wangongze level shifter transistors" class="with-shadow" src="../../_images/wangtongze_transistors.png" style="width: 378.59999999999997px; height: 276.9px;" /></a>
+<p class="caption"><span class="caption-text">WiFi board level shifting transistors should be J1Y (click the image to enlarge)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>If these 2 transistors are labelled “JIY” you are lucky and the board with work with no modifications. If they are labelled “J3Y”, you have two choices to get this to work:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Tinkerer way</strong> - You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the Tx/Rx level shifters. The ESP8266 Tx/Rx pins are 5V tolerant, but it is always best if you can to shift 5V from the Arduino to 3.3V. You could also make a small 2 resistor voltage divider to connect to the debug header Rx pin. The Tx pin to the Arduino will be fine as is.</p></li>
+</ol>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../../_images/wangtongze_jumpered.jpg"><img alt="Wangtongze Jumpering to the debug header" src="../../_images/wangtongze_jumpered.jpg" style="width: 436.8px; height: 317.7px;" /></a>
+<p class="caption"><span class="caption-text">Using Jumpers Directly to the Debug Header</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>And here is a voltage divider with just two resistors you can use as a signal level shifter circuit:</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../../_images/esp_level_shifter.png"><img alt="" src="../../_images/esp_level_shifter.png" style="width: 368.2px; height: 287.7px;" /></a>
+<p class="caption"><span class="caption-text">Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Engineer way</strong> - You can buy the correct surface mount transistors and replace two of them using a magnifier as we did when we had nothing better to do that day, but that’s a lot of trouble to go through unless this is the only board you can find. If they are labelled “J3Y”, you can order “J1Y” replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.</p></li>
+</ol>
+</div></blockquote>
+<p>The bottom line is that we don’t recommend this board because you would have to be very careful and know which one you are buying. That said, we can provide more information on these boards if you have one and want to get it to work.</p>
 <p>Here is a link to the <a class="reference external" href="https://www.youtube.com/watch?v=LJcYgR479Vw">Video and info from Wang Tongze himself</a></p>
 </div>
 </div>

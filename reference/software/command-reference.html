@@ -211,9 +211,21 @@
 </div>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code> Lower case c: Displays the instantaneous current on the MAIN Track</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;c CURRENT&gt;, where CURRENT is the Raw value of the current sense pin
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;c &quot;CurrentMAIN&quot; CURRENT C &quot;Milli&quot; &quot;0&quot; MAX_MA &quot;1&quot; TRIP_MA &gt;
 </pre></div>
 </div>
+<p>Example &lt;c CurrentMAIN 120 C Milli 0 1996 1 1800&gt;</p>
+<p>The above shows a MAIN track current of 120mA, 1.996A max, 1.8A trip current</p>
+<p><code class="docutils literal notranslate"><span class="pre">c</span></code> - the current response indicator
+<code class="docutils literal notranslate"><span class="pre">CurrentMAIN</span></code> - Static text for software like JMRI
+<code class="docutils literal notranslate"><span class="pre">CURRENT</span></code> - Current in MilliAmps
+<code class="docutils literal notranslate"><span class="pre">C</span></code> - Designator to signify this is a current meter (V would be for voltage)
+<code class="docutils literal notranslate"><span class="pre">Milli</span></code> - Unit of measure for external sofware with a meter like JMRI (Milli, Kilo, etc.)
+c.)
+<code class="docutils literal notranslate"><span class="pre">0</span></code> - numbered parameter for external sofware (1,2,3, etc.)
+<code class="docutils literal notranslate"><span class="pre">MAX_MA</span></code> - The maximum current handling of the motor controller in MilliAmps
+1 - number parameter for external software (we use 2 parameters here, 0 and 1)
+<code class="docutils literal notranslate"><span class="pre">TRIP_MA</span></code> - The overcurrent limit that will trip the software circuit breaker in mA</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;e nTurnouts nSensors&gt;
@@ -501,6 +513,23 @@ settings in the same group and will not, for example, unset F2 because you chang
 <p>DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).</p>
 <p>All decoders that are not in an engine are accessory decoders including turnouts.</p>
 <p>Besides being defined all turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:</p>
+</div>
+<div class="section" id="accessory-decoder-commands">
+<h3>Accessory Decoder Commands<a class="headerlink" href="#accessory-decoder-commands" title="Permalink to this headline">¶</a></h3>
+<p>There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka “Dual-Coil” method) and linear addressing method. You can either specify an address and it’s subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 0 -2047)</p>
+<p>For example, address/subaddres 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3</p>
+<p>Here is a spreadsheet in .XLSX format to help you: <a href="#id2"><span class="problematic" id="id3">`Decoder Address Decoder Table&lt;../documents/decoder-table.html&gt;`_</span></a></p>
+<p>NOTE: Both the following commands do the same thing. Pick the one that works for your needs.</p>
+<div class="section" id="controlling-an-accessory-with-a-linear-address-activate">
+<h4>Controlling an Accessory with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">LINEAR_ADDRESS</span> <span class="pre">ACTIVATE&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-with-a-linear-address-activate" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Acessory Decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LINEAR_ADDRESS:</span></code>  the linear address of the decoder controlling this turnout (0-2047)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ACTIVATE:</span></code> (0 or OFF) (for Deactivate, Off, Unthrown) or (1 or ON) (for Activate, On, Thrown)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC++ EX command</p></li>
+</ul>
+</div>
 <div class="section" id="controlling-an-accessory-decoder-with-a-address-subaddress-activate">
 <h4>Controlling an Accessory Decoder with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">ACTIVATE&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-decoder-with-a-address-subaddress-activate" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">

@@ -187,12 +187,14 @@
             
   <div class="section" id="microcontroller-boards">
 <h1>Microcontroller Boards<a class="headerlink" href="#microcontroller-boards" title="Permalink to this headline">¶</a></h1>
-<p>CommandStation-EX currently is designed exclusively for Arduino microcontollers. Out of the box, it is compatible with the following boards:</p>
+<p>CommandStation-EX currently is designed for Arduino and select microcontollers. Out of the box, it is compatible with the following boards:</p>
 <ul class="simple">
 <li><p>Arduino Mega <strong>[RECOMMENDED]</strong></p></li>
 <li><p>Mega+Wifi (Tinkerer Level)</p></li>
 <li><p>Arduino Uno</p></li>
 <li><p>Arduino Nano</p></li>
+<li><p>Nano Every</p></li>
+<li><p>Teensy 3.x &amp; 4.x</p></li>
 </ul>
 <div class="section" id="why-do-you-recommend-the-mega">
 <h2>Why do you recommend the Mega?<a class="headerlink" href="#why-do-you-recommend-the-mega" title="Permalink to this headline">¶</a></h2>
@@ -208,7 +210,7 @@
 </div>
 <div class="section" id="what-about-the-nano">
 <h2>What about the Nano?<a class="headerlink" href="#what-about-the-nano" title="Permalink to this headline">¶</a></h2>
-<p>The Arduino nano shares the same processor with the Arduino Uno, so we support it. The nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. Other than that difference, it is in every way as capable as an Arduino Uno.</p>
+<p>The Arduino nano shares the same processor with the Arduino Uno, so we support it. The nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There <em>is</em> a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.</p>
 <p>See our section on Using a Nano <strong>*TODO: Add the Nano page*</strong></p>
 </div>
 <div class="section" id="a-special-note-about-the-wifi-mega">
@@ -225,7 +227,7 @@
 <div class="section" id="boards-that-will-not-work">
 <h2>Boards that will NOT work<a class="headerlink" href="#boards-that-will-not-work" title="Permalink to this headline">¶</a></h2>
 <p><strong>WAVGAT Uno clone</strong> - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called “Logic Green”. It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen corretly and compile skethes. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a CS with more testing and some code changes, but we will leave that to someone else to attempt. Megas and Mega clones offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.</p>
-<p><strong>ESP32</strong> - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atemel family of processors. It also is a smaller board so shields would have to be connected with jumpers.</p>
+<p><strong>ESP32</strong> - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atemel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.</p>
 <p>Click here for a complete <a class="reference external" href="./shopping-list.html">Shopping List</a></p>
 </div>
 </div>

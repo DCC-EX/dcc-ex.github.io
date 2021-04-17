@@ -189,25 +189,31 @@
 <h1>I2C Displays<a class="headerlink" href="#i2c-displays" title="Permalink to this headline">¶</a></h1>
 <p>DCC++ EX is designed to accommodate a display. You don’t need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.</p>
 <a class="reference internal image-reference" href="../../_images/I2C_LCD_Display_wired.jpg"><img alt="Example: 4 line I2C Display" src="../../_images/I2C_LCD_Display_wired.jpg" style="width: 512.0px; height: 331.20000000000005px;" /></a>
-<p>We currently support:</p>
+<p>We currently support LCDs based on the PCF8574 backpack:</p>
 <ul class="simple">
 <li><p>16 column by 2 row (16x2) and 20 column by 4 row (20x4) LCD displays</p></li>
 <li><p>.96” and 1.3” OLED displays.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do NOT modify any code related to displays without contacting us. We use our own included code, NOT an external library you have to download. The code was written to support LCD and OLED displays and to fit on a Mega <em>and</em> an Uno. It has a custom font table and the LCD macro works to output diagnostics even if there is no display. If your display is not supported, let us know and we can take a look.</p>
+</div>
 <p>The LCD displays require a “backpack” that converts the raw display to I2C. I2C allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn’t have enough pins, especially on an Uno, to use a display.</p>
-<p>Examples of compatible displays</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!</p>
 </div>
-<div class="section" id="connecting-an-lcd-display">
-<h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="examples-of-compatible-displays">
+<h2>Examples of compatible displays<a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this headline">¶</a></h2>
 <p>Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
 <a class="reference internal image-reference" href="../../_images/lcd_20x4_backpack.jpg"><img alt="20 x 4 LCD" src="../../_images/lcd_20x4_backpack.jpg" style="width: 320.0px; height: 291.2px;" /></a>
 <p><strong>Figure 1</strong> - 20 x 4 LCD with backpack</p>
 <p>And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:</p>
 <a class="reference internal image-reference" href="../../_images/lcd_16x2_backpack.jpg"><img alt="16 x 2 LCD" src="../../_images/lcd_16x2_backpack.jpg" style="width: 320.0px; height: 276.8px;" /></a>
 <p><strong>Figure 2</strong> - 16 x 2 LCD with backpack</p>
+</div>
+<div class="section" id="connecting-an-lcd-display">
+<h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
 <h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this headline">¶</a></h3>
 <p>And here is a picture of the board after soldering or if you purchase a board already solderd (or “welded” as some of the Chinese sites call it)</p>
@@ -224,27 +230,10 @@
 <li><p>Connect SDA on the Arduino (pin x on the Mega, pin x on the Uno) to SDA on the backpack</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="installing-the-software-lcd">
-<h2>Installing the Software (LCD)<a class="headerlink" href="#installing-the-software-lcd" title="Permalink to this headline">¶</a></h2>
-<p>There are two steps to install the software:</p>
-<ul class="simple">
-<li><p>Install the LiquidCrystal I2C library</p></li>
-<li><p>Edit the config.h file and upload the sketch to your CS</p></li>
-</ul>
-<div class="section" id="install-the-library">
-<h3>Install the library<a class="headerlink" href="#install-the-library" title="Permalink to this headline">¶</a></h3>
-<p>To install the library, open the Arduino IDE and do the following:</p>
-<ol class="arabic simple">
-<li><p>Select Tools -&gt; Manage libraries</p></li>
-<li><p>Wait for the download to finish updating the list of libraries</p></li>
-<li><p>In the “Filter your search…” box, type “liquidcrystal_i2c”</p></li>
-<li><p>Scroll down the search results until you find the <code class="docutils literal notranslate"><span class="pre">&quot;LiquidCrystal_I2C</span> <span class="pre">by</span> <span class="pre">Frank</span> <span class="pre">Brabander&quot;</span></code> entry. Click on that library to select it</p></li>
-<li><p>Click “Install”</p></li>
-<li><p>Wait for the installation to finish.</p></li>
-<li><p>Click “Close”</p></li>
-</ol>
-<p>Once the library is installed on your computer, you don’t have to install it again.</p>
+<div class="section" id="controlling-brightness">
+<h3>Controlling Brightness<a class="headerlink" href="#controlling-brightness" title="Permalink to this headline">¶</a></h3>
+<p>The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:</p>
+<p><strong>*TODO: Add image*</strong></p>
 </div>
 <div class="section" id="upload-the-sketch-to-your-cs">
 <h3>Upload the sketch to your CS<a class="headerlink" href="#upload-the-sketch-to-your-cs" title="Permalink to this headline">¶</a></h3>
@@ -279,15 +268,15 @@
 <h3>Connecting Jumper Wires to the CS<a class="headerlink" href="#connecting-jumper-wires-to-the-cs" title="Permalink to this headline">¶</a></h3>
 <p>** Not Finished. Coming soon! **</p>
 </div>
-</div>
 <div class="section" id="installing-the-software-oled">
-<h2>Installing the Software (OLED)<a class="headerlink" href="#installing-the-software-oled" title="Permalink to this headline">¶</a></h2>
+<h3>Installing the Software (OLED)<a class="headerlink" href="#installing-the-software-oled" title="Permalink to this headline">¶</a></h3>
 <p>** Not Finished. Coming soon! **</p>
 </div>
 <div class="section" id="changing-the-i2c-address">
-<h2>Changing the I2C Address<a class="headerlink" href="#changing-the-i2c-address" title="Permalink to this headline">¶</a></h2>
+<h3>Changing the I2C Address<a class="headerlink" href="#changing-the-i2c-address" title="Permalink to this headline">¶</a></h3>
 <p>If you have other I2C devices, like an I2C bus to control turnouts or other accessories, you may need to change the address of your I2C display to avoid a conflict. The display should have instructions available for how to do this.</p>
 <p>** Not Finished. Coming soon! **</p>
+</div>
 </div>
 </div>
 

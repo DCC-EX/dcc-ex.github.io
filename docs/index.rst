@@ -67,13 +67,16 @@ A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino bo
 * WiFi and Ethernet shield support
 * No more jumpers or soldering!
 * Direct support for all the most popular motor control boards
+* 28 speed steps in addition to 128
 * I2C Display support
 * Improved short circuit detection and automatic reset from an overload
 * Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings
 * Improved adherence to the NMRA DCC specification
 * Complete support for all the old commands and controllers/front-ends like JMRI
 * Simpler, modular, faster code with an API Library for developers for easy expansion
-* New features and functions in JMRI
+* New throttle support from apps like DCCpp cab
+* Ability to JOIN operations and service track as one "main" track with 2 power districts when not programming
+* New features and functions in JMRI, like a new current meter.
 * Automation (coming soon) 
 
 .. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our `Rewrite Article <about/rewrite.html>`_.

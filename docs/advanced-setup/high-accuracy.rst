@@ -29,17 +29,17 @@ Whether called Motor "boards" or "shields" or "drivers", they are defined in the
 .. code-block::
 
    #define STANDARD_MOTOR_SHIELD F("STANDARD_MOTOR_SHIELD"), \
-   new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN), \
-   new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
+     new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN), \
+     new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
 
-The first line after setting the name and display text is for the Main track and the next line is for the programming track. The parameters are as follows:
+The first line after setting the name and display text is for the Main (operations) track and the next line is for the programming (service) track. The parameters are as follows:
 
 .. code-block::
 
    MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)
 
 
-Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise. If you want to use two pins so that you don't need a transister or integrated circuit inverter, then you can't use the high accuracy waveform.
+Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise. If you want to use two pins so that you don't need a transister or integrated circuit inverter to take one output from the CS and split it into two, then you can't use the high accuracy waveform.
 
 If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit described ***TODO: Enter link here***, you can use the high accuracy mode.
 
@@ -55,4 +55,4 @@ However, an Uno's pins do not line up with this shield. In order to use high acc
 
 ***TODO: put description here***
 
-***TODO: put description of creating a motor board type here or link to another section if I did it already***
+***TODO: put description of creating a motor board type here or link to another section***

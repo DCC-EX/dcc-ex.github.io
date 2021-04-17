@@ -9,8 +9,10 @@ The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are
 * It doesn't have current sense, so you are going to have to use one of the solutions below
 * It stands vertically on the board with a big heat sink for better controlling
 
-***TODO: More description to come
+***TODO: More description to come***
 
 .. figure:: ../_static/images/motorboards/L298_board2.jpg
   :alt: L298N Motor Board
-  :scale: 30%
+  :scale: 25%
+
+  Figure 1. L298N Motor Board

@@ -369,4 +369,4 @@ Suppliers
 
  https://usa.banggood.com/Geekcreit-Mega-+WiFi-R3-Module-ATmega2560+ESP8266-32Mb-Memory-USB-TTL-CH340G-p-1205437.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=minha-usg-pc&currency=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=frank&utm_campaign=frank-ssc-usg-all-21LP-0112-01sale&ad_id=490995939324&gclid=Cj0KCQjwl9GCBhDvARIsAFunhsmmtqTacFhEVspUMw3shUU51ed2Akuh65HHr6uYDtXNEvkIbV9LgrwaAuZEEALw_wcB
 
- ***TODO:*** show link for external antenna.
+ ***TODO:*** show link for external antenna and how to cut the trace to the circuit trace antenna on the board.

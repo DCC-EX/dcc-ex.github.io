@@ -45,7 +45,7 @@ What You need
 **Hardware**
 
 * Arduino Nano (or clone)
-* Gravitech Nano Motor Shield (or clone, or regular motor shield)
+* Gravitech Nano Motor Shield (or clone, or any supported motor shield)
 * 5V 1A Power Supply with Mini-USB for Arduino and Micro-USB for clones
 * 12-14.5V 3-5A Power Supply for the motor shield
 * Barrel Connector to Screw Terminal Adapter if using the Nano Motor Shield
@@ -102,7 +102,6 @@ The Gravitech is available from RobotShop and direct from Gravitech for $29 US p
 To use this board, you simple plug the nano into the motor shield (really a carrier board), upload the software and wire it to your track. It is just as easy as Using a Mega and an Arduino Motor shield.
 
 
-
 ***TODO: Finish the above and the below sections***
 ***TODO: Show VCC power wiring option***
 ***TODO: Show all the other terminal boards and the ethernet board***
@@ -127,6 +126,8 @@ Tinkerer Level
 |
 |
 
+You will need jumpers to connect the Nano to the Arduino Motor Shield
+
 Wiring other Motor Boards
 ============================
 
@@ -134,3 +135,5 @@ Wiring other Motor Boards
    :alt: Tinkerer Icon
    :scale: 50%
    :align: left
+
+As long as you know the pinouts, you can jumper wires to any motor shield you can connect to an Uno or Mega.

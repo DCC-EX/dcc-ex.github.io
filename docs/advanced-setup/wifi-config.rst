@@ -277,4 +277,3 @@ You must have a recent version of the firmware to support _DEF commands. If they
 2. Enter ``<+CIPAP_DEF="192.168.5.1","192.168.5.1","255.255.255.0">`` to setup the AP with your IP address
 3. Enter ``<+CWDHCP_DEF=1,1>`` 
 4. Enter ``<+CWDHCPPS_DEF="1,10,"192.168.5.100","192.168.5.150">``
-

@@ -1,7 +1,7 @@
 WiFi Setup
 ==========
 
-The purpose of this WiFi solution is for connecting a Wifi Throttle DIRECTLY to the Command Station and elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can skip ahead to the next page.
+The purpose of this WiFi solution is for connecting a Wifi Throttle DIRECTLY to the Command Station and elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can `skip ahead to the next page <installer.html>`_.
 
 There are many ways to add Wifi to your CS. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
@@ -24,7 +24,7 @@ Why Use WiFi?
 
 With the base Command Station (CS) consisting of just an Arduino Mega and an Arduino Motor Shield (no WiFi board), you must use a USB cable to connect to a computer to run JMRI or our WebThrottle-EX, or to connect to another controller. The controller (aka Throttle) is what sends commands to the CS to run your trains and control your accessories.
 
-If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using WebThrottle-EX, JMRI, RocRail, or similar, then YOU DO NOT NEED WiFi ON THE CS.. save yourself money and a lot of hassle by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between JMRI and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a JMRI setup. The computer or Pi you use to run your train software will already have WiFi capability and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
+If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using WebThrottle-EX, JMRI, Rocrail, or similar, then YOU DO NOT NEED WiFi ON THE CS.. save yourself money and a lot of hassle by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between JMRI and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a JMRI setup. The computer or Pi you use to run your train software will already have WiFi capability and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
 
 If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY EngineDriver (or other Withrottle-protocol devices) connected dirctly to the CS, then you will need  Wifi and will have to budget some setup and learning time.
 
@@ -191,7 +191,7 @@ Below is a wiring diagram for connecting the ESP-8266 to the Arduino. For clarit
    Rx   -----> Tx
 
 
-In order to connect both Vcc and CH_PD to the 3.3V output of the arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V
+In order to connect both Vcc and CH_PD to the 3.3V output of the arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V and "level shifters" to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In the Figure 10 below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.
 
 .. note:: About current requirements: While we at DCC-EX Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply or find another way to provide clean, regulated 3.3V to the ESP
 
@@ -200,7 +200,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the arduino, you ca
    :alt: ESP-01s Adapters
    :scale: 75%
 
-**Figure 10** - ESP-01 Breakout Boards
+**Figure 10** - ESP-01 Breakout Boards.
 
 .. warning:: The ESP-8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don't need any additional circuitry. However, to be safe, you can use a small `level shifter board <https://www.mouser.com/ProductDetail/SparkFun/BOB-12009?qs=WyAARYrbSnb%252BGYLWggQnjQ%3D%3D&gclid=Cj0KCQiAzZL-BRDnARIsAPCJs73SnsmU-CTIk9V0XE6qjxY2WKlnxI0sLhT_rY5MYTbIOBmHne50Eh4aAm5ZEALw_wcB>`_ or use one of the breakout board like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.
 

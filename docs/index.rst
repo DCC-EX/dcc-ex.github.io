@@ -1,7 +1,7 @@
 DCC++ EX Model Railroading
 ===========================
 
-Welcome! DCC++ EX is an easy to use, do-it yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrial and more.
+Welcome! DCC++ EX is an easy to use, do-it yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.
 
 .. table::
    :align: left
@@ -54,10 +54,10 @@ DCC++ EX is the organization developing and maintaining several products that to
 A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:
 
 * simultaneous control of multiple locomotives
-* 1 and 2 byte byte locomotive addressing
-* 128-step speed throttling
+* 2 and 4 byte byte locomotive addressing
+* 28 and 128 step speed throttling
 * Activate/de-activate all accessory function addresses 0-2048
-* Control of all cab functions F0-F28
+* Control of all cab functions F0-F28 and F29-F68
 * Main Track: Write configuration variable bytes and set/clear specific configuration variable (CV) bits (aka Programming on Main or POM)
 * Programming Track: Same as the main track with the addition of reading configuration variable bytes
 
@@ -67,13 +67,16 @@ A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino bo
 * WiFi and Ethernet shield support
 * No more jumpers or soldering!
 * Direct support for all the most popular motor control boards
+* 28 speed steps in addition to 128
 * I2C Display support
 * Improved short circuit detection and automatic reset from an overload
 * Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings
 * Improved adherence to the NMRA DCC specification
 * Complete support for all the old commands and controllers/front-ends like JMRI
 * Simpler, modular, faster code with an API Library for developers for easy expansion
-* New features and functions in JMRI
+* New throttle support from apps like DCCpp cab
+* Ability to JOIN operations and service track as one "main" track with 2 power districts when not programming
+* New features and functions in JMRI, like a new current meter.
 * Automation (coming soon) 
 
 .. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our `Rewrite Article <about/rewrite.html>`_.

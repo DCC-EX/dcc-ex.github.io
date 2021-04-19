@@ -2,9 +2,16 @@
 Ethernet Boards
 ****************
 
-DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the `Wifi Boards Section <wifi-boards>`_
+DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the `Wifi Boards Section <../wifi-boards.html>`_
 
-To use Ethernet instead of WiFi, you simply plug your Ethernet shield onto the stack with your Mega and Motor Shield, open your config.h file in your editor and uncomment the line "#define ENABLE_ETHERNET = true" by removing the "//" characters, and add "//" comment lines in front of "#defind ENABLE_WIFI = true" (if it isn't already commented out). Then upload the sketch to your Mega.
+To use Ethernet instead of WiFi, follow these simple steps:
+
+* Stick your Ethernet shield onto the stack with your Mega and Motor Shield
+* Open your config.h file in your editor (like the Arduino IDE)
+* Uncomment the line ``"#define ENABLE_ETHERNET = true"`` by removing the "//" characters
+* Add "//" comment lines in front of ``"#defind ENABLE_WIFI = true"`` (if it isn't already commented out).
+* Enter the SSID for your router by replacing "Your network name" with the name of your network in ``#define WIFI_SSID "Your network name"`` in between the quotes.
+* Enter the Password for your router by replacing "Your Network Passws" with your password in the line:``#define WIFI_PASSWORD "Your network passwd"`` in between the quotes.
 
 
 Arduino Network Shield 2
@@ -14,7 +21,7 @@ There have been different revisions for the Arduino Network Shields, the main di
 
 .. image:: ../../_static/images/ethernet/arduino_ethernet_shield_2.jpg
    :alt: Arduino Ethernet Shield 2
-   :scale: 70%
+   :scale: 75%
 
 
 Wiznet WIZ850IO
@@ -24,7 +31,7 @@ This is a micro Ethernet board no bigger than the RJ45 connector it is attached 
 
 .. image:: ../../_static/images/ethernet/WIZ850IO.png
    :alt: WIZ850IO Ethernet Adapter
-   :scale: 40%
+   :scale: 35%
 
 Sunfounder Ethernet Shield
 ============================
@@ -33,7 +40,7 @@ We haven't tested this one yet, but it looks like it should work. It is less exp
 
 .. image:: ../../_static/images/ethernet/sunfounder_ethernet_shield.jpg
    :alt: Sunfounder Ethernet Shield
-   :scale: 50%
+   :scale: 30%
 
 
 Nano Ethernet Shield
@@ -43,6 +50,6 @@ This board actually works with an Arduino Nano, you can plug your Nano directly 
 
 .. image:: ../../_static/images/ethernet/nano_ethernet_shield.jpg
    :alt: Sunfounder Ethernet Shield
-   :scale: 40%
+   :scale: 30%
 
 

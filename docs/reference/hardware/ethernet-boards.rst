@@ -2,7 +2,7 @@
 Ethernet Boards
 ****************
 
-DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the `Wifi Boards Section <../wifi-boards.html>`_
+DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the `Wifi Boards Section <../hardware/wifi-boards.html>`_
 
 To use Ethernet instead of WiFi, follow these simple steps:
 
@@ -21,7 +21,7 @@ There have been different revisions for the Arduino Network Shields, the main di
 
 .. image:: ../../_static/images/ethernet/arduino_ethernet_shield_2.jpg
    :alt: Arduino Ethernet Shield 2
-   :scale: 75%
+   :scale: 85%
 
 
 Wiznet WIZ850IO
@@ -31,7 +31,7 @@ This is a micro Ethernet board no bigger than the RJ45 connector it is attached 
 
 .. image:: ../../_static/images/ethernet/WIZ850IO.png
    :alt: WIZ850IO Ethernet Adapter
-   :scale: 35%
+   :scale: 25%
 
 Sunfounder Ethernet Shield
 ============================
@@ -40,7 +40,7 @@ We haven't tested this one yet, but it looks like it should work. It is less exp
 
 .. image:: ../../_static/images/ethernet/sunfounder_ethernet_shield.jpg
    :alt: Sunfounder Ethernet Shield
-   :scale: 30%
+   :scale: 25%
 
 
 Nano Ethernet Shield
@@ -50,6 +50,6 @@ This board actually works with an Arduino Nano, you can plug your Nano directly 
 
 .. image:: ../../_static/images/ethernet/nano_ethernet_shield.jpg
    :alt: Sunfounder Ethernet Shield
-   :scale: 30%
+   :scale: 25%
 
 

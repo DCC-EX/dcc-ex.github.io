@@ -53,7 +53,21 @@ There are two ways to configure the Wifi board connected to DCC++ EX: "Access Po
 
 In AP mode the tiny ESP-WiFi chip acts as a very basic Wifi server and provides a small IP network for your throttle or for your computer running JMRI and WiThrottle. It acts much like your router does to let things connect directly to it.
 
+.. figure:: ../_static/images/wifi/Wifi_softap_mode.png
+   :alt: AP Mode
+   :scale: 50%
+
+   Figure 1: Access Point Mode
+
 In STA (Client) mode the ESP-WiFI chip uses an existing (home) Wifi network and connects to that along with all the other devices you might have in your home. If you have a stable Wifi network where you place your Command Station and you would rather have one network with your router to manage it all, you can configure this option.
+
+.. figure:: ../_static/images/wifi/Wifi_station_mode.png
+   :alt: Station Mode
+   :scale: 50%
+
+   Figure 1: Station Mode
+
+Images courtesy of and a great tutorial on WiFi by `NodMCU <https://nodemcu.readthedocs.io/en/latest/modules/wifi/>`_
 
 We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with JMRI, click here **TODO:Add link***.
 
@@ -67,6 +81,7 @@ If there is no previously configured network in range or the Wifi setup in your 
 In this mode there is no connection to the Internet for any of the devices that are only connected to the AP. It simply provides a private network to allow a direct connection to your throttles (currently up to four).
 
 If you travel to shows or take your setup to a friend's house, this allows for an autonomous, transportable system that does not need a connection to and hopefully will not interfere with, other networks. See **TODO:dealing with interference (missing link)**
+
 
 Station Mode (STA Mode)
 -----------------------
@@ -124,8 +139,9 @@ Simply click on that network and connect to it on your mobile device. You will n
 
 Ignore the warning that may popup telling you that "Internet may not be available". The CS is not connected to the internet, you are connecting the CS directly to your mobile device. Depending on the config and OS of your mobile device you may still have Internet over mobile data through a cell tower connection. If you wish to use your home network internet (for example if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
-Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see ***missing link for the <R> command***.  
-Note; Your Mobile Throttle function keys are user defined default function keys and Not the fuction keys you used in either JMRI or Rockrail engine roster function keys.
+Once you are connected to the CS, you can run your WiFi Throttle program, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the `Decoder Test <../reference/software/command-reference.html#decoder-test>`_ section of the Command Reference. 
+
+Note: Your Mobile Throttle function keys are user defined default function keys and Not the function keys you used in either JMRI or Rockrail engine roster function keys.
 
 **Once again:**
 

@@ -41,11 +41,11 @@ The first line after setting the name and display text is for the Main (operatio
 
 Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise. If you want to use two pins so that you don't need a transister or integrated circuit inverter to take one output from the CS and split it into two, then you can't use the high accuracy waveform.
 
-If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit described ***TODO: Enter link here***, you can use the high accuracy mode.
+If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit shown below, you can use the high accuracy mode.
 
 You must choose signal pins from the following list for your Arduino:
 
-Mega - 11, 12 and 12
+Mega - 11, 12 and 13
 Uno - 9 and 10
 Nano - 9 and 10
 
@@ -55,4 +55,13 @@ However, an Uno's pins do not line up with this shield. In order to use high acc
 
 ***TODO: put description here***
 
-***TODO: put description of creating a motor board type here or link to another section***
+Inverter Circuit
+================
+
+Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM Signal from your CS, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.
+
+.. figure:: ../_static/images/motorboards/inverter1.jpg
+   :alt: Transistor inverter circuit
+   :scale: 75% 
+
+You will also have to make sure that you use a motor board definition that uses pin 11, 12 or 13 for the output signal on a Mega or pin 9 or 10 for an Uno or Nano. For information about how to do this see the section on `Creating a motor board definition <motor-board-config.html#Your board is NOT in the Supported List>`_

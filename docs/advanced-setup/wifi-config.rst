@@ -51,13 +51,13 @@ Access Point Mode vs. Station Mode
 
 There are two ways to configure the Wifi board connected to DCC++ EX: "Access Point Mode" (aka "AP MODE") and "Station Mode". We often abbreviate the latter to "STA". You will also see people refer to it as "Client Mode". 
 
-In AP mode the tiny ESP-WiFi chip acts as a very basic Wifi server and provides a small IP network for your throttle or for your computer running JMRI and WiThrottle. It acts much like your router does to let things connect directly to it.
+In AP mode the tiny ESP-WiFi chip acts as a very basic Wifi server and provides a small IP network for your throttle or for your computer running JMRI and WiThrottle. It acts much like your router does to let things connect directly to it. (Remember you can click on images to enlarge them)
 
 .. figure:: ../_static/images/wifi/Wifi_softap_mode.png
    :alt: AP Mode
    :scale: 50%
 
-   Figure 1: Access Point Mode
+   Figure 1: Access Point Mode - Things connect to the WiFi Board
 
 In STA (Client) mode the ESP-WiFI chip uses an existing (home) Wifi network and connects to that along with all the other devices you might have in your home. If you have a stable Wifi network where you place your Command Station and you would rather have one network with your router to manage it all, you can configure this option.
 
@@ -65,7 +65,7 @@ In STA (Client) mode the ESP-WiFI chip uses an existing (home) Wifi network and 
    :alt: Station Mode
    :scale: 50%
 
-   Figure 1: Station Mode
+   Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP
 
 Images courtesy of and a great tutorial on WiFi by `NodMCU <https://nodemcu.readthedocs.io/en/latest/modules/wifi/>`_
 

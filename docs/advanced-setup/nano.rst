@@ -114,10 +114,6 @@ Wiring a Motor Shield
    :scale: 50%
    :align: left
 
-|
-|
-|
-|
 
 Tinkerer Level
 
@@ -135,5 +131,12 @@ Wiring other Motor Boards
    :alt: Tinkerer Icon
    :scale: 50%
    :align: left
+
+   Tinkerer Level
+
+   |
+   |
+   |
+   |
 
 As long as you know the pinouts, you can jumper wires to any motor shield you can connect to an Uno or Mega.

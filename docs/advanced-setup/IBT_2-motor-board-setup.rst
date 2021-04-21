@@ -152,7 +152,7 @@ The choice of motor driver is set in the config.h file. It is set in the followi
 
 The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
-If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the `Motor Board Config Section <motor-board.config.html>`_
+If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the `Motor Board Config Section <motor-board-config.html>`_
 
 For the Engineers, the defintions and implementation for motor board control are in the following files:
 

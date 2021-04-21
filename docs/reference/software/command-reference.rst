@@ -106,6 +106,8 @@ SINGLE LETTER COMMANDS
       **ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated. (addresses 0-511, subaddresses 0-3)
       **THROW** - False or a "0" is unthrown. True or "1" is thrown.
 
+ ``<+X>`` Pluse sign and upper case X : A special case WiFi command for Engineers to force the CS into "WiFi Connected" mode so that it processes commands from a WiFi board. This is for when users override our network startup and enter their own <+COMMAND> AT commands.
+
  ``<Z>`` Upper Case Z : Lists all defined output pins
 
   .. code-block:: none
@@ -621,6 +623,8 @@ Writes, without any verification, a single bit within a Configuration Variable B
 PROGRAMMING-PROGRAMMING TRACK
 -------------------------------
 
+.. NOTE:: By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little "jumps" you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an "ACK" (acnowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+
 WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -762,6 +766,26 @@ Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register
    ``BYTE5:``  optional fifth hexadecimal byte in the packet
 
    returns: NONE
+
+WiFi "AT Commands
+==================
+
+``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the "+" and the command.
+
+Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the mySetup.h file. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
+
+``<+X>`` A special command to force the "connected" flag to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created.
+
+Examples:
+
+  <+GMR> - Sends the "AT+GMR" command that prints version information from the WiFi device.
+  <+CIFSR> - Gets the local IP Address.
+
+For more detail follow these links:
+
+`DCC-EX WiFi Configuration <../../advanced-setup/wifi-config.html>`_
+
+`Expressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
 
 
 User Commands

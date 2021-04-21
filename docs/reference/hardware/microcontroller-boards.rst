@@ -32,7 +32,7 @@ What about the Nano?
 
 The Arduino nano shares the same processor with the Arduino Uno, so we support it. The nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There *is* a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.
 
-See our section on Using a Nano ***TODO: Add the Nano page***
+See our section on `Using a Nano <../../advanced-setup/nano.html>`_
 
 A Special Note about the WiFi+Mega 
 ===================================
@@ -41,7 +41,7 @@ A Special Note about the WiFi+Mega
 
 Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you ok with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
 
-See our section on Using the WiFi+Mega ***TODO: Link to the WiFi Mega Page***
+See our section on Using the `WiFi+Mega Page <../advanced-setup/wii-mega.html>`_
 
 Will you support other microcontrollers in the future?
 =======================================================

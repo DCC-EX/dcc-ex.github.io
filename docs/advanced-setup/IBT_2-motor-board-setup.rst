@@ -143,7 +143,27 @@ Using an external current sense board instead of the onboard current sense inclu
 Tech Notes
 ===========
 
-***TODO: Add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how users can change the pins if there is a problem by creating a new motor board type.***
+Motor Board Definitions
+------------------------
+
+The choice of motor driver is set in the config.h file. It is set in the following line:
+
+``#define MOTOR_SHIELD_TYPE [Motor Board Type]``
+
+The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
+
+If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the `Motor Board Config Section <motor-board.config.html>`_
+
+For the Engineers, the defintions and implementation for motor board control are in the following files:
+
+  **MotorDrivers.h**  - Contains the definitions for all the currently supported motor boards
+  **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller
+  **MotorDriver.cpp** - The routines that control the operation of a motor controller (Power, Current Sense, etc.)
+
+Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customize your motor board definition or see how things work.
+
+IBT_2 schematic
+---------------
 
 Below is a link to the IBT_2 schematic. Click to enlarge.
 

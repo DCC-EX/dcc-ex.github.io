@@ -85,4 +85,4 @@ To use Wifi, make sure you have a WiFi enabled Command Station as described in t
 We have not tested the WiFi implementation yet
 
 
-***TODO:insert tutorial here***
+***TODO:Tutorial coming soon***

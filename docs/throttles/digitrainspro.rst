@@ -87,6 +87,4 @@ Requirements
 Operation
 ==========
 
-***TODO: Write the operatio section***
-
-g
+***TODO: Write the operation section***

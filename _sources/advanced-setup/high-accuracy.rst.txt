@@ -2,7 +2,14 @@
 High Accuracy Waveform Mode
 ********************************
 
-**Engineers Only**
+.. image:: ../_static/images/engineer.png
+   :alt: Engineer Icon
+   :scale: 50%
+   :align: left
+
+**Engineer Level**
+
+|
 
 Do you need it? Most likely, you don't. But if you run into a problem with a particular decoder and all the usual settings don't help, you may want to try this mode. We have found that some older decoders do not adhere to the NMRA specification tolerances. They can fail to read bits that are within the proper range. While rare, this could occur. The High Accuracy mode makes the waveform, the pulse train of 1's and 0's, even tighter to the nominal values in the specification.
 
@@ -39,15 +46,15 @@ The first line after setting the name and display text is for the Main (operatio
    MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)
 
 
-Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise. If you want to use two pins so that you don't need a transister or integrated circuit inverter to take one output from the CS and split it into two, then you can't use the high accuracy waveform.
+Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise or LPWM and RPWM for left and right pulse width. If you want to use two pins so that you don't need a transister or integrated circuit inverter to take one output from the CS and split it into two, then you can't use the high accuracy waveform.
 
-If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit described ***TODO: Enter link here***, you can use the high accuracy mode.
+If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit shown below, you can use the high accuracy mode.
 
 You must choose signal pins from the following list for your Arduino:
 
-Mega - 11, 12 and 12
-Uno - 9 and 10
-Nano - 9 and 10
+| Mega - 11, 12 and 13
+| Uno - 9 and 10
+| Nano - 9 and 10
 
 By luck, two of the Mega pins associated with Timer 1 are directly under the DIRA and DIRB pins of an Arduino Motor Shield or pin compatible shield; pins 12 and 13. Therefore, the combination of a Mega and this shield will automatically use high accuracy for both tracks.
 
@@ -55,4 +62,13 @@ However, an Uno's pins do not line up with this shield. In order to use high acc
 
 ***TODO: put description here***
 
-***TODO: put description of creating a motor board type here or link to another section***
+Inverter Circuit
+================
+
+Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM Signal from your CS, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.
+
+.. figure:: ../_static/images/motorboards/inverter1.jpg
+   :alt: Transistor inverter circuit
+   :scale: 70% 
+
+You will also have to make sure that you use a motor board definition that uses pin 11, 12 or 13 for the output signal on a Mega or pin 9 or 10 for an Uno or Nano. For information about how to do this see the section on `Creating a motor board definition <motor-board-config.html#your-board-is-not-in-the-supported-list>`_

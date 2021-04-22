@@ -105,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
@@ -179,7 +180,11 @@
             
   <div class="section" id="motor-board-configuration">
 <h1>Motor Board Configuration<a class="headerlink" href="#motor-board-configuration" title="Permalink to this headline">¶</a></h1>
-<p>This section is for Tinkerer’s and Engineers.</p>
+<a class="reference internal image-reference" href="../_images/tinkerer.png"><img alt="Tinkerer Icon" class="align-left" src="../_images/tinkerer.png" style="width: 60.0px; height: 49.0px;" /></a>
+<p>Tinkerer to Engineer Level</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>DCC++ EX supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -237,7 +242,7 @@
 </div>
 <div class="section" id="your-board-is-not-in-the-supported-list">
 <h3>Your board is NOT in the Supported List<a class="headerlink" href="#your-board-is-not-in-the-supported-list" title="Permalink to this headline">¶</a></h3>
-<p>Tinkerer or Engineer level may be required with this option.</p>
+<p>Tinkerer may be required with this option.</p>
 <p>If your board is not in the list (remember many boards are considered a “STANDARD_MOTOR_SHIELD”), you can easily add it. In your config.h file, find the line that looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
 </pre></div>
@@ -271,6 +276,21 @@
 <li><p><strong>senseFactor</strong> - This is the multiplier specific to your board or current sense circuit that converts the raw reading into track current in milliAmps. Important information about current sense is below.</p></li>
 <li><p><strong>faultPin</strong> - Some boards can report a fault condition, for example under-voltage or over-heating. If you want this feature, you can the Arduino digital pin here and connect it to the fault output of the motor board.</p></li>
 </ul>
+<p>As another example let’s create a motor board definition or a board that requires 2 PWM inputs and has the following specifications:</p>
+<ul class="simple">
+<li><p>current sense factor of 1 Amp per volt</p></li>
+<li><p>Maximum current of 5 Amps</p></li>
+<li><p>We will choose pin 9 for our second PWM pin</p></li>
+</ul>
+<p>senseFactor = ((5/1024)/Board Volts/Amp)*1000 = ((.00488)/(1/1))*1000 = 4.88</p>
+<p>The second board will be an Arduino Motor Shield to use for programming. We already have the defintion for the standard motor shield so we will leave the second MotorDriver line alone. Our new definition will look like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define 2_PWM_MOTOR_BOARD F(&quot;2_PWM_MOTOR_BOARD&quot;),\</span>
+<span class="cp">  new MotorDriver(3, 12, 9, UNUSED_PIN, A0, 4.88, 5000, UNUSED_PIN), \</span>
+<span class="cp">  new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)</span>
+
+<span class="cp">#define MOTOR_SHIELD_TYPE 2_PWM_MOTOR_BOARD</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="using-high-accuracy-waveform-mode">
@@ -307,7 +327,10 @@
 <p class="admonition-title">Warning</p>
 <p>Choose your current sense resistor or circuit carefully, you need to account for all of the factors mentioned above and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).</p>
 </div>
+<div class="section" id="how-do-i-find-volts-per-amp">
+<h3>How Do I Find Volts per Amp?<a class="headerlink" href="#how-do-i-find-volts-per-amp" title="Permalink to this headline">¶</a></h3>
 <p>In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm’s law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you need separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the <a class="reference external" href="../advanced-setup/index.html">Advanced Setup Section</a></p>
+</div>
 <div class="section" id="just-buy-a-current-sense-board-instead">
 <h3>Just Buy a Current Sense Board Instead<a class="headerlink" href="#just-buy-a-current-sense-board-instead" title="Permalink to this headline">¶</a></h3>
 <p>Tinkerers and Conductors who don’t mind connecting a few jumper wires may like this option.</p>

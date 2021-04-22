@@ -104,6 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
@@ -309,11 +310,15 @@
 <p>Keep your USB cable handy because we are going to need it in this step.</p>
 <p>Go to the <a class="reference external" href="../download/commandstation.html">Command Station downloads</a> page. Most users will want to use the installer.</p>
 </div>
+<div class="section" id="locos-can-t-respond-to-throttle-commands-on-the-programming-track">
+<h2>Locos Can’t Respond to Throttle Commands on the Programming Track!<a class="headerlink" href="#locos-can-t-respond-to-throttle-commands-on-the-programming-track" title="Permalink to this headline">¶</a></h2>
+<p>We have repeated this several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. <strong>THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK</strong> This is by design and part of the NMRA specification. There is such a thing as “Programming on Main”, where you can adjust things like sounds, throttle curves, speed matching, etc., but you can’t get acknowledgment back from the loco on the main track. That is usally fine beause you will know if a setting like a sound change “took” or not. We will have a section or programming on main. <strong>*TODO: Write the POM*</strong> help.</p>
+</div>
 <div class="section" id="technical-notes">
 <h2>TECHNICAL NOTES<a class="headerlink" href="#technical-notes" title="Permalink to this headline">¶</a></h2>
 <p><strong>Wire Gauge</strong> - The Arduino Motor controller can only provide about 1.5 Amps of power (despite being rated for 2), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
 <p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20? Can’t you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14 (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.</p>
-<p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield.</p>
+<p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield. For more information, see <a class="reference external" href="../reference/hardware/power-supplies.html">Power Supplies</a></p>
 </div>
 </div>
 

@@ -105,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
@@ -315,11 +316,27 @@
 </div>
 <div class="section" id="tech-notes">
 <h2>Tech Notes<a class="headerlink" href="#tech-notes" title="Permalink to this headline">¶</a></h2>
-<p><strong>*TODO: Add notes here showing what pins are in the motordrivers section and what the pins are on the motor boards. Also show the motor board section. Show how users can change the pins if there is a problem by creating a new motor board type.*</strong></p>
+<div class="section" id="motor-board-definitions">
+<h3>Motor Board Definitions<a class="headerlink" href="#motor-board-definitions" title="Permalink to this headline">¶</a></h3>
+<p>The choice of motor driver is set in the config.h file. It is set in the following line:</p>
+<p><code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MOTOR_SHIELD_TYPE</span> <span class="pre">[Motor</span> <span class="pre">Board</span> <span class="pre">Type]</span></code></p>
+<p>The default is “STANDARD_MOTOR_SHIELD” For Arduino and clone shields.</p>
+<p>If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the <a class="reference external" href="motor-board-config.html">Motor Board Config Section</a></p>
+<p>For the Engineers, the defintions and implementation for motor board control are in the following files:</p>
+<blockquote>
+<div><p><strong>MotorDrivers.h</strong>  - Contains the definitions for all the currently supported motor boards
+<strong>MotorDriver.h</strong> - Creates the “MotorDriver” C++ class that defines the data type for a motor controller
+<strong>MotorDriver.cpp</strong> - The routines that control the operation of a motor controller (Power, Current Sense, etc.)</p>
+</div></blockquote>
+<p>Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customize your motor board definition or see how things work.</p>
+</div>
+<div class="section" id="ibt-2-schematic">
+<h3>IBT_2 schematic<a class="headerlink" href="#ibt-2-schematic" title="Permalink to this headline">¶</a></h3>
 <p>Below is a link to the IBT_2 schematic. Click to enlarge.</p>
 <a class="reference internal image-reference" href="../_images/IBT_2_schematic.jpg"><img alt="../_images/IBT_2_schematic.jpg" src="../_images/IBT_2_schematic.jpg" style="width: 525.0px; height: 237.5px;" /></a>
 <p>Below is the Handson Technology datasheet, recommended reading for Tinkerers and Engineers</p>
 <p><a class="reference external" href="../_static/documents/bts7960-motor-driver.pdf">Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver</a></p>
+</div>
 </div>
 </div>
 

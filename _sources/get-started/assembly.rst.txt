@@ -200,6 +200,11 @@ Keep your USB cable handy because we are going to need it in this step.
 
 Go to the `Command Station downloads <../download/commandstation.html>`_ page. Most users will want to use the installer.
 
+Locos Can't Respond to Throttle Commands on the Programming Track!
+==================================================================
+
+We have repeated this several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification. There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc., but you can't get acknowledgment back from the loco on the main track. That is usally fine beause you will know if a setting like a sound change "took" or not. We will have a section or programming on main. ***TODO: Write the POM*** help.
+
 TECHNICAL NOTES
 ================
 
@@ -207,5 +212,5 @@ TECHNICAL NOTES
 
 **Power Supplies** - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20? Can't you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14 (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.
 
-**Using a 5V Supply** - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield.
+**Using a 5V Supply** - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield. For more information, see `Power Supplies <../reference/hardware/power-supplies.html>`_
 

@@ -1,5 +1,6 @@
+****************************
 DCC++ EX Command Reference
---------------------------
+****************************
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
@@ -18,21 +19,21 @@ This reference explains the available command structure, and for commands that p
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC++ EX Webpage <https://dcc-ex.com>`_.  
 
 SINGLE LETTER COMMANDS
-^^^^^^^^^^^^^^^^^^^^^^
+=======================
 
-* ``<0>`` Number Zero: Turn Power **OFF** to tracks (Both Main & Programming)
+ ``<0>`` Number Zero: Turn Power **OFF** to tracks (Both Main & Programming)
   
   .. code-block:: none
 
       RETURNS: <p0> : Power to tracks OFF. (See extended power command below)
 
-* ``<1>`` Number One: Turn Power **ON** to tracks (Both Main & Programming). 
+ ``<1>`` Number One: Turn Power **ON** to tracks (Both Main & Programming). 
 
   .. code-block:: none
 
       RETURNS: <p1> : Power to tracks ON. (See extended power command below)
 
-* ``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
+ ``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
 
   .. code-block:: none
 
@@ -43,25 +44,24 @@ SINGLE LETTER COMMANDS
 
   The above shows a MAIN track current of 120mA, 1.996A max, 1.8A trip current
 
-  ``c`` - the current response indicator
-  ``CurrentMAIN`` - Static text for software like JMRI
-  ``CURRENT`` - Current in MilliAmps
-  ``C`` - Designator to signify this is a current meter (V would be for voltage)
-  ``Milli`` - Unit of measure for external sofware with a meter like JMRI (Milli, Kilo, etc.)
-  c.)
-  ``0`` - numbered parameter for external sofware (1,2,3, etc.)
-  ``MAX_MA`` - The maximum current handling of the motor controller in MilliAmps
-  1 - number parameter for external software (we use 2 parameters here, 0 and 1)
-  ``TRIP_MA`` - The overcurrent limit that will trip the software circuit breaker in mA
+  * ``c`` - the current response indicator
+  * ``CurrentMAIN`` - Static text for software like JMRI
+  *  ``CURRENT`` - Current in MilliAmps
+  *  ``C`` - Designator to signify this is a current meter (V would be for voltage)
+  *  ``Milli`` - Unit of measure for external sofware with a meter like JMRI (Milli, Kilo, etc.)
+  *  ``0`` - numbered parameter for external sofware (1,2,3, etc.)
+  *  ``MAX_MA`` - The maximum current handling of the motor controller in MilliAmps
+  *  ``1`` - number parameter for external software (we use 2 parameters here, 0 and 1)
+  *  ``TRIP_MA`` - The overcurrent limit that will trip the software circuit breaker in mA
   
 
-* ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
+ ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
 
   .. code-block:: none
 
       RETURNS: <e nTurnouts nSensors>
 
-* ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
+ ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
 
   .. code-block:: none
 
@@ -71,33 +71,33 @@ SINGLE LETTER COMMANDS
   *NOTE:There is NO Un-Delete*
 
 
-* ``<Q>`` Upper Case Q : Lists Status of all sensors.
+ ``<Q>`` Upper Case Q : Lists Status of all sensors.
 
   .. code-block:: none
 
       RETURNS: <Q ID> (active) or <q ID> (not active)
 
-* ``<R>`` Upper Case R : Read Loco address (programming track only)
+ ``<R>`` Upper Case R : Read Loco address (programming track only)
 
   .. code-block:: none
 
       RETURNS: <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
 
 
-* ``<S>`` Upper Case S : Lists all defined sensors. 
+ ``<S>`` Upper Case S : Lists all defined sensors. 
 
   .. code-block:: none
 
       RETURNS: <Q ID PIN PULLUP> for each defined sensor or <X> if no sensors defined. 
 
-* ``<s>`` Lowercase "s": DCC++ EX CommandStation Status
+ ``<s>`` Lowercase "s": DCC++ EX CommandStation Status
 
   .. code-block:: none
 
        RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
        Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
 
-* ``<T>`` Upper Case T : Lists all defined turnouts. 
+ ``<T>`` Upper Case T : Lists all defined turnouts. 
 
   .. code-block:: none
 
@@ -106,13 +106,15 @@ SINGLE LETTER COMMANDS
       **ADDRESS, SUBADDRESS** - The two part address of the turnout. See this formula for how the address, subaddress pair is calculated. (addresses 0-511, subaddresses 0-3)
       **THROW** - False or a "0" is unthrown. True or "1" is thrown.
 
-* ``<Z>`` Upper Case Z : Lists all defined output pins
+ ``<+X>`` Pluse sign and upper case X : A special case WiFi command for Engineers to force the CS into "WiFi Connected" mode so that it processes commands from a WiFi board. This is for when users override our network startup and enter their own <+COMMAND> AT commands.
+
+ ``<Z>`` Upper Case Z : Lists all defined output pins
 
   .. code-block:: none
 
       RETURNS: <Y ID PIN IFLAG STATE> for each defined output pin or <X> if no output pins defined
 
-* ``<!>`` Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.
+ ``<!>`` Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.
 
   .. code-block:: none
 
@@ -122,7 +124,7 @@ SINGLE LETTER COMMANDS
   There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).
 
 Track Power Commands
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 ``<0|1 MAIN|PROG|JOIN>`` - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
 
@@ -148,7 +150,7 @@ Examples:
 .. note:: In some split motor shield hardware configurations JOIN will not be able to work.  
 
 Engine Decoder (CAB) Operation Commands
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========================================
 
 
 **The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``  
@@ -195,7 +197,7 @@ Examples:
        RETURNS: NONE
 
 CAB FUNCTIONS
-~~~~~~~~~~~~~
+--------------
 
 There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC++ EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
 
@@ -212,7 +214,7 @@ There are two formats for setting CAB functions, the DCC++ Classic legacy method
 **CAB Functions format** is ``<F CAB FUNC 1|0>``
 
 To set functions **F0-F68** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 * ``<`` = Begin DCC++ EX command
@@ -231,7 +233,7 @@ Examples:
 **The Legacy CAB Functions format** is ``<f CAB BYTE1 [BYTE2]>``
 
 To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 * ``<`` = Begin DCC++ EX command
@@ -270,7 +272,7 @@ Breakdown for this example ``<f 3265 144>``
 * ``>`` = End DCC++ EX command  
 
 To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 * ``<`` = Begin DCC++ EX command
@@ -288,7 +290,7 @@ To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 * ``>`` = End DCC++ EX command  
 
 To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 * ``<`` = Begin DCC++ EX command
@@ -306,7 +308,7 @@ To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 * ``>`` = End DCC++ EX command  
 
 To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 * ``<`` = Begin DCC++ EX command
@@ -328,7 +330,7 @@ To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 * ``>`` = End DCC++ EX command  
 
 To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 * ``<`` = Begin DCC++ EX command
@@ -350,7 +352,7 @@ To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 * ``>`` = End DCC++ EX command  
 
 RETURNS: NONE
-"""""""""""""
+^^^^^^^^^^^^^^^
 
 
 * CAB Functions do not have a Return
@@ -358,7 +360,7 @@ RETURNS: NONE
 * Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on. 
 
 STATIONARY ACCESSORY DECODERS & TURNOUTS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------
 
 DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
 
@@ -367,18 +369,18 @@ All decoders that are not in an engine are accessory decoders including turnouts
 Besides being defined all turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:
 
 Accessory Decoder Commands
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka "Dual-Coil" method) and linear addressing method. You can either specify an address and it's subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 0 -2047)
 
 For example, address/subaddres 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3
 
-Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table<../documents/decoder-table.html>`_
+Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../documents/decoder-table.html>`_
 
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 
 Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 * ``<`` = Begin DCC++ EX command
 * ``a`` (lower case a) this command is for a Acessory Decoder
@@ -400,7 +402,7 @@ Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
 Defining (Setting up) a Turnout
-"""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To have the DCC++ EX CommandStation store and retain the direction of DCC-connected turnouts, as well as automatically invoke the required ``<a>`` command as needed, first define/edit/delete such turnouts using the following variations of the "T" command:
 
@@ -455,7 +457,7 @@ You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in th
 
 
 Controlling a Defined Turnout
-"""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 * Sets turnout ID to either the "thrown"(turned) or "unthrown"(straight) position  
@@ -484,8 +486,8 @@ Controlling a Defined Turnout
        NOTE: The ``<T>`` command by itself with no parameters will list all turnouts and their directions
 
 
-SENSORS
-~~~~~~~
+SENSORS (Inputs)
+=================
 
 DCC++ EX CommandStation supports Sensor inputs that can be connected to any Aruidno Pin not in use by this program. Sensors can be of any type (infrared, magnetic, mechanical...). The only requirement is that when "activated" the Sensor must force the specified Arduino Pin LOW (i.e. to ground), and when not activated, this Pin should remain HIGH (i.e. 5V), or be allowed to float HIGH if use of the Arduino Pin's internal pull-up resistor is specified.  
 
@@ -526,8 +528,8 @@ All sensors defined as per above are repeatedly and sequentially checked within 
 
 Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor," you may decide to ignore the ``<q ID>`` return and only react to ``<Q ID>`` triggers.
 
-ARDUINO OUTPUT PINS
-~~~~~~~~~~~~~~~~~~~
+OUTPUTS (DIO Pins)
+=====================
 
 DCC++ EX CommandStation supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.  
 
@@ -587,13 +589,13 @@ To change the state of outputs that have been defined use:
 When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power. A list of the current states of each output in the form ``<Y ID STATE>`` is generated by DCC++ EX CommandStation whenever the ``<s>`` status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.  
 
 Engine Decoder Programming Commands
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+======================================
 
 PROGRAMMING-MAIN TRACK
-~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK
-"""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Writes, without any verification, a Configuration Variable BYTE to the decoder of an engine on the main operations track. 
 
@@ -605,7 +607,7 @@ Writes, without any verification, a Configuration Variable BYTE to the decoder o
 * RETURNS: NONE
 
 WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK
-""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Writes, without any verification, a single bit within a Configuration Variable BIT to the decoder of an engine on the main operations track. 
 
@@ -619,10 +621,12 @@ Writes, without any verification, a single bit within a Configuration Variable B
   * RETURNS: NONE
 
 PROGRAMMING-PROGRAMMING TRACK
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
+
+.. NOTE:: By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little "jumps" you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an "ACK" (acnowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
 WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track.
 
@@ -631,7 +635,7 @@ ADDRESS: The loco address to be written (1-10239).
 
 
 WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track  
 
@@ -646,7 +650,7 @@ Writes, and then verifies, a Configuration Variable BYTE to the decoder of an en
   * ``CV VALUE:`` Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.  
 
 WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK
-"""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Writes, and then verifies, a Configuration Variable BIT to the decoder of an engine on the programming track  
 
@@ -662,7 +666,7 @@ Writes, and then verifies, a Configuration Variable BIT to the decoder of an eng
   * ``CV VALUE`` is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.  
 
 READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programing track.
 
@@ -685,7 +689,7 @@ Read Engine address format is simply: ``<R>``
 .. Note:: When combined with the ``<D ACK ON>`` Command, the <R> Command (with or without parameters) can be used for diagnostics, for example when you get a "-1" response. (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
 
 VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read byte command (see above) and return the value read.
 
@@ -697,7 +701,7 @@ This command is designed to offer faster verification of the value held in a CV 
 * ``BYTEVALUE:`` reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
 
 VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read bit command (see above) and return the value read.
 
@@ -711,10 +715,10 @@ This command is designed to offer faster verification of the value held in a CV 
 * ``BITVALUE:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 
 
 DIAGNOSTICS
-^^^^^^^^^^^
+============
 
 "D" Commands
-~~~~~~~~~~~~
+-------------
 
 .. Note:: 1 and 0 and ON and OFF can be used interchangeably in DCC++ EX
 
@@ -727,10 +731,21 @@ DIAGNOSTICS
 * ``<D TEST|NORMAL>`` DCC Signal Diagnostics (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
 * ``<D SPEED28|SPEED128`` Switch between 28 and 128 speed steps
 
-example: <D ACK ON> 
+example: <D ACK ON>
+
+DECODER TEST
+-------------
+
+These following commands are detailed above but are worth repeating here. The ``<R>`` command will attempt to read the decoder on the service (programming) track and attempt to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn't moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the ``<D ACK ON>`` command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.
+
+``<R>`` - Reads the address of the decoder and reports the long or short value to the serial monitor
+
+``<D ACK ON><R>`` - When sent together as shown or one right after the other, this combined command shows the detailed results of what happened when trying to read the Address CV(s) and any response back from the decoder.-
+
+
 
 SEND PACKET TO THE TRACK
-~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 .. Warning:: THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER
 
@@ -752,9 +767,29 @@ Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register
 
    returns: NONE
 
+WiFi "AT Commands
+==================
+
+``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the "+" and the command.
+
+Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the mySetup.h file. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
+
+``<+X>`` A special command to force the "connected" flag to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created.
+
+Examples:
+
+  <+GMR> - Sends the "AT+GMR" command that prints version information from the WiFi device.
+  <+CIFSR> - Gets the local IP Address.
+
+For more detail follow these links:
+
+`DCC-EX WiFi Configuration <../../advanced-setup/wifi-config.html>`_
+
+`Expressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
+
 
 User Commands
-~~~~~~~~~~~~~
+==============
 
-``<U>`` Is reserved for user commands.
+ ``<U>`` Is reserved for user commands.
 

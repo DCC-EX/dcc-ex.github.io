@@ -2,7 +2,14 @@
 Motor Board Configuration
 **************************
 
-This section is for Tinkerer's and Engineers.
+.. image:: ../_static/images/tinkerer.png
+   :alt: Tinkerer Icon
+   :scale: 50%
+   :align: left
+
+Tinkerer to Engineer Level
+
+| 
 
 DCC++ EX supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
 
@@ -66,7 +73,7 @@ That's all you need to do. Make your change and then upload the sketch to your A
 Your board is NOT in the Supported List
 -------------------------------------------
 
-Tinkerer or Engineer level may be required with this option.
+Tinkerer may be required with this option.
 
 If your board is not in the list (remember many boards are considered a "STANDARD_MOTOR_SHIELD"), you can easily add it. In your config.h file, find the line that looks like this::
 
@@ -104,6 +111,26 @@ Let's look at the details of how this works, first here are all the configuratio
 * **tripMilliamps** - This is the value for what current in mA will trip the overcurrent protection.
 * **senseFactor** - This is the multiplier specific to your board or current sense circuit that converts the raw reading into track current in milliAmps. Important information about current sense is below.
 * **faultPin** - Some boards can report a fault condition, for example under-voltage or over-heating. If you want this feature, you can the Arduino digital pin here and connect it to the fault output of the motor board.
+
+As another example let's create a motor board definition or a board that requires 2 PWM inputs and has the following specifications:
+
+* current sense factor of 1 Amp per volt
+* Maximum current of 5 Amps  
+* We will choose pin 9 for our second PWM pin
+
+senseFactor = ((5/1024)/Board Volts/Amp)*1000 = ((.00488)/(1/1))*1000 = 4.88
+
+The second board will be an Arduino Motor Shield to use for programming. We already have the defintion for the standard motor shield so we will leave the second MotorDriver line alone. Our new definition will look like this:
+
+.. code-block:: cpp
+
+  #define 2_PWM_MOTOR_BOARD F("2_PWM_MOTOR_BOARD"),\
+    new MotorDriver(3, 12, 9, UNUSED_PIN, A0, 4.88, 5000, UNUSED_PIN), \
+    new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN) 
+     
+  #define MOTOR_SHIELD_TYPE 2_PWM_MOTOR_BOARD
+
+
 
 Using High Accuracy Waveform Mode
 ===================================
@@ -149,7 +176,7 @@ Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require 
 .. warning:: Choose your current sense resistor or circuit carefully, you need to account for all of the factors mentioned above and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).
 
 How Do I Find Volts per Amp?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you need separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the `Advanced Setup Section <../advanced-setup/index.html>`_
 

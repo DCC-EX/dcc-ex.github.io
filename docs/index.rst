@@ -93,6 +93,7 @@ Next see the `Get Started section <get-started/index.html>`_ or click next below
    throttles/index
    reference/index
    download/index
+   projects/index
    contributing/index
    support/index
    about/index

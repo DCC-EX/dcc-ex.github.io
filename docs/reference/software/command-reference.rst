@@ -375,7 +375,7 @@ There are two interchangeable commands for controlling Accessory Decoders, the A
 
 For example, address/subaddres 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3
 
-Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../../documents/decoder-table.html>`_
+Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../documents/decoder-table.html>`_
 
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 

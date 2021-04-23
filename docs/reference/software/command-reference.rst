@@ -691,7 +691,7 @@ Read Engine address format is simply: ``<R>``
 VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read byte command (see above) and return the value read.
+This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read byte command (see above) and return the value read.
 
 
 * Verify CV BYTE Format is: ``<V CV BYTEVALUE>``

@@ -2,12 +2,23 @@
 Engine Driver
 ******************
 
+.. image:: ../_static/images/throttles/engine_driver_logo.png
+   :alt: Android Logo
+   :scale: 60%
+   :align: left
+
+**Engine Driver** is an Android App that uses the WiThrottle Protocol to either connect directly to the DCC++ EX Command Station or connect to the JMRI WiThrottle Server via WiFi. If you connect Engine Driver to JMRI, you connect to the computer running JMRI via WiFi and connect the JMRI computer to the Command Station using a USB cable. If you connect Engine Driver directly to DCC++ EX, you will to add a WiFi option to your DCC++ EX Command Station as explained here: `WiFi Setup <../get-started/wifi-setup>`_
+
+.. _ed-platforms:
+
+Platforms
+===========
+
 .. image:: ../_static/images/throttles/icon_android.png
    :alt: Android Logo
    :scale: 30%
    :align: left
 
-**Engine Driver** is an Android App that uses the WiThrottle Protocol to either connect directly to the DCC++ EX Command Station or connect to the JMRI WiThrottle Server via WiFi. If you connect Engine Driver to JMRI, you connect to the computer running JMRI via WiFi and connect the JMRI computer to the Command Station using a USB cable. If you connect Engine Driver directly to DCC++ EX, you will to add a WiFi option to your DCC++ EX Command Station as explained here: `WiFi Setup <../get-started/wifi-setup>`_
 
 Please visit the Engine Driver Website: https://enginedriver.mstevetodd.com/
 

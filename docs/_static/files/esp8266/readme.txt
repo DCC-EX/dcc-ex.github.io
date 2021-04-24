@@ -1,0 +1,1 @@
+.gitignore is set to ignore zip files. Until this can be researched, I am dragging them and dropping them. where there are entire directory structures or I want things done as a package, it doesn't make sense to have them unzipped as is recommeneded. At some point, we may want to remove the block on compressed file types.

@@ -83,7 +83,7 @@ Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware fi
 
 .. raw:: html
   
-   <p><a class="dcclink" href="../_static/files/esp8266/mega_wifi_esp866_bin_files">ESP8266 Firmware Zipped</a></p>
+   <p><a class="dcclink" href="../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
 
 
 Using esptool.py (Windows, Mac, Linux)
@@ -93,7 +93,7 @@ Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button b
 
 .. raw:: html
    
-   <p><a class="dcclink" href="../_static/files/esp8266/mega_wifi_esp866_bin_files">ESP8266 Firmware Zipped</a></p>
+   <p><a class="dcclink" href="../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
 
 Install python if you don't already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don't:
 

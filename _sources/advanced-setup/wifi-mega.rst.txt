@@ -130,7 +130,7 @@ With the Mega UNPLUGGED (no power connected!), you will set some switches. Use t
 
    Figure 3 - Important Board Locations
 
-Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, ON is up in this picture. Switches 5,6, and 7 are on.
+Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
 
 .. figure:: ../_static/images/wifi/mega_wifi_sw_flash.png
    :alt: Switches in flash mode

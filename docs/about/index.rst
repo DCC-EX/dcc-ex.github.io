@@ -50,6 +50,7 @@ DCCInspector-EX
 Developers
 
 * Neil McKechnie -  Worcestershire, UK
+* Fred Decker - Holly Springs NC, USA
 
 DCC++ Classic
 ==============
@@ -95,10 +96,12 @@ Team Lead
 Team
 
 * Scott Eric Catalano - Western Pennsylvania, USA (PilotinControl)
-* Sumner Patterson - Blanding, Utah, USA (Sumner)
+* Sumner Patterson - Blanding Utah, USA (Sumner)
 * Larry Dribin - (H0Guy)
 * Paul - Virginia, USA (Paul1361)
 * Gregor Baues - Île-de-France, France (grbba)
+* Herb Morton - Kingwood Texas, USA (Ash++)
+* Travis Farmer - Farmington Maine, USA (travis_farmer)
 
 
 .. toctree::

@@ -9,5 +9,7 @@ Advanced Setup
     IBT_2-motor-board-setup
     L298N-motor-board-setup
     nano
+    nano-Every
     wifi-mega
+    teensy
     high-accuracy

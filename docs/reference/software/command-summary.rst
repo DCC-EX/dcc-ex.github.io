@@ -14,11 +14,14 @@ Power management
 
  ``<s>`` CommandStation Status
 
+ ``<D RESET>``  Re-boot the command Station
+
+
 ----------------------------
 Cab functions
 ----------------------------
  
- ``<! [cab] >`` EMERGENCY STOP 
+ ``<!>`` EMERGENCY STOP 
  
  ``<t [ignored] cab speed 1|0>``  Throttle speed<127 direction 1=forward
  
@@ -26,7 +29,7 @@ Cab functions
  
  ``<F cab function 1|0>`` command turns engine decoder functions ON and OFF
  
- ``<f CAB BYTE1 [BYTE2]>`` legacy functions, see command reference.
+ ``<f cab byte1 [byte2]]>`` legacy functions, see command reference.
  
  ``<#>`` Show number of supported cabs
  
@@ -132,6 +135,7 @@ EEPROM management
  
  ``<e>`` Erase ALL (turnouts, sensors, and outputs) from EEPROM 
  
+ ``<D EEPROM>`` Diagnostic dump eeprom contents
 
 ----------------------------
 Wifi Control
@@ -142,7 +146,7 @@ Wifi Control
 
 
 ----------------------------
-Diagnostics
+Diagnostic traces
 ----------------------------
 
  ``<D CABS>`` Shows cab numbers and speed in reminder table
@@ -153,11 +157,29 @@ Diagnostics
 
  ``<D CMD ON|OFF>`` Enables Command Parser diagnostics
 
+ ``<D ETHERNET ON|OFF>`` Enables Ethernet diagnostics
+
  ``<D LCN ON|OFF>`` Enables LCN interface diagnostics
 
  ``<D WIFI ON|OFF>`` Enables Wifi diagnostics
 
  ``<D WIT ON|OFF>`` Enables Withrottle diagnostics
+
+======================
+Tuning
+======================
+
+ ``<D ACK LIMIT mA>`` Override ACK processing mA pulse size
+ 
+ ``<D ACK MIN uS>`` Override ACK processing minimum pulse width
+ 
+ ``<D ACK MAX uS>`` Override ACK processing max pulse width
+
+ ``<D PROGBOOST>``  Override 250mA prog track limit while idle.
+
+
+ 
+  
  
  ``<U ...>`` Is reserved for user commands (through user filter)
  s

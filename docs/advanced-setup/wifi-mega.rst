@@ -344,6 +344,19 @@ You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone Wi
 
 .. Note:: This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.
 
+Diagnosing Problems
+=============================
+
+There a few things to try if you experience issues connecting or staying connected:
+
+1. Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an "AT" command. You will see "OK" on a line where it finds your WiFi board on serial port 3 and failure if it does not.
+
+2. Make sure the little slide switch is set to Tx/Rx 3
+
+3. Make sure you forget your local network if using AP mode or set your home network to not automatically reconned.
+
+4. Try changing the WiFi Channel in your config.h file to another channel and uploading the firmware again.
+
 Going Further
 ==============
 

@@ -56,7 +56,7 @@ Boards that will NOT work
 
 **WAVGAT Uno clone** - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called "Logic Green". It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen corretly and compile skethes. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a CS with more testing and some code changes, but we will leave that to someone else to attempt. Megas and Mega clones offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.
 
-**ESP32** - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atemel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.
+**ESP32** - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atmel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.
 
 Click here for a complete `Shopping List <./shopping-list.html>`_
 

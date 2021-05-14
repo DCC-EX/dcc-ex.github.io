@@ -7,7 +7,7 @@ Welcome to the Command Station download page. You have several choices:
 * **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the :ref:`exInstaller` section. 
 * If are a Tinkerer or you would like to downlad a zip file and install the firmware using the Arduino IDE, go to the :ref:`Latest DCC++ EX Official Release` section.
 * To get the latest unreleased development version, go to the :ref:`Latest DCC++ Unreleased Development Version`
-* If you are an Engineer or developer and want to clone the repository onto your computer, go to the :ref:`CommandStation-EX Repository` section.
+* If you are an Engineer or developer and want to clone the repository onto your computer, go to the :ref:`CommandStation-EX Repository (project source files)` section.
 * If you're looking for BaseStation-Classic, go to the :ref:`Getting BaseStation-Classic` section.
 
 exInstaller
@@ -38,7 +38,7 @@ Latest DCC++ Unreleased Development Version
    <p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX/archive/refs/heads/master.zip">Development Version</a></p>
 
 CommandStation-EX Repository (project source files)
-===================================================================================
+=====================================================
 
 .. note:: The link below will take you the the CommandStation-EX GitHub repository, where you can clone the project to your computer. Click on the green button to get a clone link or to download the zip file. We have made sure that you can still use the Arduino IDE if you like, but we recommend devlopers use the PlaformIO development environment. See the `Contributing Page <../contributing/index.html>`_ for more information.
 

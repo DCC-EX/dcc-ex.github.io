@@ -2,12 +2,12 @@
 Arduino Nano Setup
 ***********************
 
-.. image:: ../_static/images/conductor.png
+.. image:: ../_static/images/tinkerer.png
    :alt: Conductor Icon
    :scale: 50%
    :align: left
 
-Conductor Level
+Tinkerer Level
 
 |
 
@@ -17,23 +17,11 @@ The Arduino Nano is an Uno in disguise. It has the same processor, the same spee
 
 .. figure:: ../_static/images/microcontrollers/nano.jpg
    :alt: Arduino Nano
-   :scale: 50%
-   :align: left
+   :scale: 60%
+   :align: center
    
    **Figure 1** - Arduino Nano
 
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 What You need
 ===============

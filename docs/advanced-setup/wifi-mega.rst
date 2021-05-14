@@ -2,6 +2,15 @@
 Mega+WiFi Configuration
 **************************
 
+.. image:: ../_static/images/tinkerer.png
+   :alt: Tinkerer Icon
+   :scale: 50%
+   :align: left
+
+Tinkerer Level
+
+|
+
 A Operational Standalone WiFI DCC Command Station
 ==================================================
 
@@ -100,7 +109,7 @@ Install python if you don't already have it installed. This quick quide shows yo
 
 https://wiki.python.org/moin/BeginnersGuide/Download
 
-Once you have Python installed, you will need to install etptool.py. Open a command prompt and use pip to find and install it from the web:
+Once you have Python installed, you will need to install etptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:
 
 .. code-block::
 
@@ -225,15 +234,15 @@ Skip ahead to :ref:`3. Set the switches for run/sketch mode`
 With esptool.py
 ^^^^^^^^^^^^^^^^
 
-Unzip the firmware files and put them in a folder off your root so that they are easy to find and the path name you have to enter will be short. We recommend putting them in an "esp" folder (ex: C:\esp)
+Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on MacOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. Esptool.py should be in your path and will automatically find your ESP8266 if it is connected. If it does not find your ESP, see the examples for how to select the port.
 
-***TODO: We will be expanding this section soon, but needed to get what we had up for the amount of people asking about this board. If you have more you can contribute to the page, please send it to support <at> dcc-ec.com***
 
-esptool.py write_flash --flash_size 2MB-c1 0x0 esp/boot_v1.7.bin 0x01000 esp/user1.2048.new.5.bin 0x1fc000 esp/esp_init_data_default_v08.bin 0xfe000 esp/blank.bin 0x1fe000 esp/blank.bin
+``esptool.py write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin``
 
-Examples: 
 
-esptool.py -p /dev/ttyUSB0 write_flash --flash_size 2MB-c1 0x0 esp/boot_v1.7.bin 0x01000 esp/user1.2048.new.5.bin 0x1fc000 esp/esp_init_data_default_v08.bin 0xfe000 esp/blank.bin 0x1fe000 esp/blank.bin
+Examples with port specified: 
+
+esptool.py -p /dev/ttyUSB0 write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1023+1024/user1.2048.new.5.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
 esptool.exe -p COM5 --baud 115200 write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
@@ -343,6 +352,19 @@ If the Engine driver fails to connect the first time with the Command Station ju
 You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone WiFI Command Station Via your home router.
 
 .. Note:: This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.
+
+Diagnosing Problems
+=============================
+
+There a few things to try if you experience issues connecting or staying connected:
+
+1. Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an "AT" command. You will see "OK" on a line where it finds your WiFi board on serial port 3 and failure if it does not.
+
+2. Make sure the little slide switch is set to Tx/Rx 3
+
+3. Make sure you forget your local network if using AP mode or set your home network to not automatically reconned.
+
+4. Try changing the WiFi Channel in your config.h file to another channel and uploading the firmware again.
 
 Going Further
 ==============

@@ -9,7 +9,9 @@ DCCpp CAB
 
 This is an Android App (with plans for iOS) from Spain. One of the major benefits of DCCpp CAB is that it speaks the <DCC++> Application Programming language (API) natively (see our `Command Reference <../reference/software/command-reference.html>`_). This means it is fast and can take advantage of some features that exist in the DCC++ EX Command Station not implemented in other APIs. Another benefit is that this throttle can use Bluetooth instead of Wifi if you choose! There are several advantages to usingn Bluetooth, the main one being that Uno and Nano users can use a wireless throttle!
 
-You can find it in the Play Store: `DCCpp CAB <https://play.google.com/store/apps/details?id=com.infotronikblog.dcc_cab>`_
+You can find it in the Play Store: `DCCpp CAB App <https://play.google.com/store/apps/details?id=com.infotronikblog.dcc_cab>`_
+
+And the website here: `DCCpp Android Cab Infotrokik Blog <http://lamaquetade.infotronikblog.com/dccpp-android-cab/`_
 
 .. _dccpp-features:
 
@@ -17,8 +19,9 @@ Features
 =========
 
 * Speaks the <DCC++> Command Language natively
-* Connect via WiFi or Bluetooth
+* Connect via WiFi *or* Bluetooth
 * Read and Write CVs
+* Serial Monitor to send manual commands and view the log
 
 Screenshots
 ============
@@ -60,7 +63,7 @@ Requirements
 
 * A DCC++ EX Commmand Station (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)
 * An Android Cell Phone or Tablet
-* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi `Wifi Setup <../get-started/wifi-setup.html>`_
+* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi `Wifi Setup Page <../get-started/wifi-setup.html>`_
 * An HC-06 Board if you want to connect using Bluetooth
 
 .. _dccpp-operation:

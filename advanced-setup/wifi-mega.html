@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -41,8 +44,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="High Accuracy Waveform Mode" href="high-accuracy.html" />
-    <link rel="prev" title="Arduino Nano Setup" href="nano.html" /> 
+    <link rel="next" title="Teensy" href="teensy.html" />
+    <link rel="prev" title="Nano Every" href="nano-every.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,7 +101,9 @@
 <li class="toctree-l2"><a class="reference internal" href="IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
 <li class="toctree-l2"><a class="reference internal" href="L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nano-every.html">Nano Every</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Mega+WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teensy.html">Teensy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Mode</a></li>
 </ul>
 </li>
@@ -180,6 +185,11 @@
             
   <div class="section" id="mega-wifi-configuration">
 <h1>Mega+WiFi Configuration<a class="headerlink" href="#mega-wifi-configuration" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/tinkerer.png"><img alt="Tinkerer Icon" class="align-left" src="../_images/tinkerer.png" style="width: 60.0px; height: 49.0px;" /></a>
+<p>Tinkerer Level</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <div class="section" id="a-operational-standalone-wifi-dcc-command-station">
 <h2>A Operational Standalone WiFI DCC Command Station<a class="headerlink" href="#a-operational-standalone-wifi-dcc-command-station" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id1">
@@ -247,7 +257,7 @@
 <p>Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button below:</p>
 <p><a class="dcclink" href="../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p><p>Install python if you don’t already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don’t:</p>
 <p><a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide/Download">https://wiki.python.org/moin/BeginnersGuide/Download</a></p>
-<p>Once you have Python installed, you will need to install etptool.py. Open a command prompt and use pip to find and install it from the web:</p>
+<p>Once you have Python installed, you will need to install etptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install esptool
 </pre></div>
 </div>
@@ -355,11 +365,10 @@
 </div>
 <div class="section" id="with-esptool-py">
 <h4>With esptool.py<a class="headerlink" href="#with-esptool-py" title="Permalink to this headline">¶</a></h4>
-<p>Unzip the firmware files and put them in a folder off your root so that they are easy to find and the path name you have to enter will be short. We recommend putting them in an “esp” folder (ex: C:esp)</p>
-<p><strong>*TODO: We will be expanding this section soon, but needed to get what we had up for the amount of people asking about this board. If you have more you can contribute to the page, please send it to support &lt;at&gt; dcc-ec.com*</strong></p>
-<p>esptool.py write_flash –flash_size 2MB-c1 0x0 esp/boot_v1.7.bin 0x01000 esp/user1.2048.new.5.bin 0x1fc000 esp/esp_init_data_default_v08.bin 0xfe000 esp/blank.bin 0x1fe000 esp/blank.bin</p>
-<p>Examples:</p>
-<p>esptool.py -p /dev/ttyUSB0 write_flash –flash_size 2MB-c1 0x0 esp/boot_v1.7.bin 0x01000 esp/user1.2048.new.5.bin 0x1fc000 esp/esp_init_data_default_v08.bin 0xfe000 esp/blank.bin 0x1fe000 esp/blank.bin</p>
+<p>Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type “cmd” and click OK, or run “terminal” on MacOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. Esptool.py should be in your path and will automatically find your ESP8266 if it is connected. If it does not find your ESP, see the examples for how to select the port.</p>
+<p><code class="docutils literal notranslate"><span class="pre">esptool.py</span> <span class="pre">write_flash</span> <span class="pre">--flash_mode</span> <span class="pre">dio</span> <span class="pre">--flash_size</span> <span class="pre">2MB-c1</span> <span class="pre">0x0</span> <span class="pre">boot_v1.7.bin</span> <span class="pre">0x01000</span> <span class="pre">at/1024+1024/user1.2048.new.5.bin</span> <span class="pre">0x1fb000</span> <span class="pre">blank.bin</span> <span class="pre">0x1fc000</span> <span class="pre">esp_init_data_default_v08.bin</span> <span class="pre">0xfe000</span> <span class="pre">blank.bin</span> <span class="pre">0x1fe000</span> <span class="pre">blank.bin</span></code></p>
+<p>Examples with port specified:</p>
+<p>esptool.py -p /dev/ttyUSB0 write_flash –flash_mode dio –flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1023+1024/user1.2048.new.5.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin</p>
 <p>esptool.exe -p COM5 –baud 115200 write_flash –flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin</p>
 <p>If there is an error, press and hold the mode button, then press and release the reset button while still holding down the mode button. Press enter to send the esptool command and let go of the mode button.</p>
 </div>
@@ -457,6 +466,16 @@
 <p>This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.</p>
 </div>
 </div>
+<div class="section" id="diagnosing-problems">
+<h2>Diagnosing Problems<a class="headerlink" href="#diagnosing-problems" title="Permalink to this headline">¶</a></h2>
+<p>There a few things to try if you experience issues connecting or staying connected:</p>
+<ol class="arabic simple">
+<li><p>Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an “AT” command. You will see “OK” on a line where it finds your WiFi board on serial port 3 and failure if it does not.</p></li>
+<li><p>Make sure the little slide switch is set to Tx/Rx 3</p></li>
+<li><p>Make sure you forget your local network if using AP mode or set your home network to not automatically reconned.</p></li>
+<li><p>Try changing the WiFi Channel in your config.h file to another channel and uploading the firmware again.</p></li>
+</ol>
+</div>
 <div class="section" id="going-further">
 <h2>Going Further<a class="headerlink" href="#going-further" title="Permalink to this headline">¶</a></h2>
 <p>If you want to understand what is happening in more detail, such as what the different settings and firmware does, you may consult the following resources.</p>
@@ -485,8 +504,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="high-accuracy.html" class="btn btn-neutral float-right" title="High Accuracy Waveform Mode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="nano.html" class="btn btn-neutral float-left" title="Arduino Nano Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="teensy.html" class="btn btn-neutral float-right" title="Teensy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nano-every.html" class="btn btn-neutral float-left" title="Nano Every" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

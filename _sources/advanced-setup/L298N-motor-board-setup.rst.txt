@@ -2,6 +2,15 @@
 L298N Motor Board Setup
 ************************
 
+.. image:: ../_static/images/tinkerer.png
+   :alt: Tinkerer Icon
+   :scale: 50%
+   :align: left
+
+Tinkerer Level
+
+|
+
 The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are the key differences:
 
 * It is in a much smaller form factor

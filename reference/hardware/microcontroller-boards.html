@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -218,7 +221,7 @@
 <h2>A Special Note about the WiFi+Mega<a class="headerlink" href="#a-special-note-about-the-wifi-mega" title="Permalink to this headline">¶</a></h2>
 <p><strong>Tinkerer level</strong></p>
 <p>Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you ok with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn’t involve any soldering or jumper wiring.</p>
-<p>See our section on Using the <a class="reference external" href="../advanced-setup/wii-mega.html">WiFi+Mega Page</a></p>
+<p>See our section on Using the <a class="reference external" href="../../advanced-setup/wifi-mega.html">WiFi+Mega Page</a></p>
 </div>
 <div class="section" id="will-you-support-other-microcontrollers-in-the-future">
 <h2>Will you support other microcontrollers in the future?<a class="headerlink" href="#will-you-support-other-microcontrollers-in-the-future" title="Permalink to this headline">¶</a></h2>
@@ -228,7 +231,7 @@
 <div class="section" id="boards-that-will-not-work">
 <h2>Boards that will NOT work<a class="headerlink" href="#boards-that-will-not-work" title="Permalink to this headline">¶</a></h2>
 <p><strong>WAVGAT Uno clone</strong> - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called “Logic Green”. It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen corretly and compile skethes. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a CS with more testing and some code changes, but we will leave that to someone else to attempt. Megas and Mega clones offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.</p>
-<p><strong>ESP32</strong> - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atemel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.</p>
+<p><strong>ESP32</strong> - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atmel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.</p>
 <p>Click here for a complete <a class="reference external" href="./shopping-list.html">Shopping List</a></p>
 </div>
 </div>

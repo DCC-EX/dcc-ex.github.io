@@ -2,12 +2,12 @@
 Arduino Nano Setup
 ***********************
 
-.. image:: ../_static/images/conductor.png
-   :alt: Tinkerer Icon
+.. image:: ../_static/images/tinkerer.png
+   :alt: Conductor Icon
    :scale: 50%
    :align: left
 
-Conductor Level
+Tinkerer Level
 
 |
 
@@ -15,29 +15,13 @@ The Arduino Nano is an Uno in disguise. It has the same processor, the same spee
 
 .. NOTE:: Be sure to compare the Mega before using the Nano ***TODO: add link to the comparison page***
 
-.. figure:: ../_static/images/microcontrollers/nano2.jpg
-   :alt: Arduino Nano with box and enlarged
-   :scale: 50%
-   :align: left
+.. figure:: ../_static/images/microcontrollers/nano.jpg
+   :alt: Arduino Nano
+   :scale: 60%
+   :align: center
    
-   **Figure 1** - Arduino Nano with box and enlarged
+   **Figure 1** - Arduino Nano
 
-.. figure:: ../_static/images/microcontrollers/nano3.jpg
-   :alt: Arduino
-   :scale: 50%
-   :align: left
-   
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 What You need
 ===============
@@ -62,7 +46,6 @@ Optional Hardware
 ==================
 
 Supported `ESP8266 WiFi Option <../reference/hardware/wifi-boards.html>`_
-
 
 
 .. NOTE:: Before you order a Nano, be sure whether the headers are soldered or not. The Arduino brand is not soldered, while many of the Chinese sites give you the option. If you are a conductor, you probably don't want to solder. If you are an Engineer, you may want to solder directly to the board and having to unsolder headers would be an unwelcome surprise.
@@ -104,10 +87,11 @@ To use this board, you simple plug the nano into the motor shield (really a carr
 
 ***TODO: Finish the above and the below sections***
 ***TODO: Show VCC power wiring option***
-***TODO: Show all the other terminal boards and the ethernet board***
+***TODO: Show all the other Nano sized terminal boards and the ethernet board***
 
 Wiring a Motor Shield
 =====================
+
 
 .. image:: ../_static/images/tinkerer.png
    :alt: Tinkerer Icon
@@ -132,11 +116,11 @@ Wiring other Motor Boards
    :scale: 50%
    :align: left
 
-   Tinkerer Level
+Tinkerer Level
 
-   |
-   |
-   |
-   |
+|
+|
+|
+|
 
 As long as you know the pinouts, you can jumper wires to any motor shield you can connect to an Uno or Mega.

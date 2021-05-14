@@ -2,6 +2,15 @@
 Wifi Configuration
 *******************
 
+.. image:: ../_static/images/conductor.png
+   :alt: Conductor Icon
+   :scale: 50%
+   :align: left
+
+Conductor Level (Tinkerer if wiring an ESP instead of using a shield)
+
+|
+
 This page describes the software configuration options for using WiFi to connect your Command Station CS wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to `WiFi Setup <../get-started/wifi-setup.html>`_
 
 As mentioned in the above link, you will need the following to proceed:

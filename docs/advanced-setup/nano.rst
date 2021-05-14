@@ -64,7 +64,6 @@ Optional Hardware
 Supported `ESP8266 WiFi Option <../reference/hardware/wifi-boards.html>`_
 
 
-
 .. NOTE:: Before you order a Nano, be sure whether the headers are soldered or not. The Arduino brand is not soldered, while many of the Chinese sites give you the option. If you are a conductor, you probably don't want to solder. If you are an Engineer, you may want to solder directly to the board and having to unsolder headers would be an unwelcome surprise.
 
 Using the special Nano Motor Shield
@@ -109,6 +108,7 @@ To use this board, you simple plug the nano into the motor shield (really a carr
 Wiring a Motor Shield
 =====================
 
+
 .. image:: ../_static/images/tinkerer.png
    :alt: Tinkerer Icon
    :scale: 50%
@@ -132,11 +132,11 @@ Wiring other Motor Boards
    :scale: 50%
    :align: left
 
-   Tinkerer Level
+Tinkerer Level
 
-   |
-   |
-   |
-   |
+|
+|
+|
+|
 
 As long as you know the pinouts, you can jumper wires to any motor shield you can connect to an Uno or Mega.

@@ -2,6 +2,15 @@
 Mega+WiFi Configuration
 **************************
 
+.. image:: ../_static/images/tinkerer.png
+   :alt: Tinkerer Icon
+   :scale: 50%
+   :align: left
+
+Tinkerer Level
+
+|
+
 A Operational Standalone WiFI DCC Command Station
 ==================================================
 

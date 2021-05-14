@@ -2,6 +2,15 @@
 IBT_2 BTS7960 Motor Board
 **************************
 
+.. image:: ../_static/images/engineer.png
+   :alt: Engineer Icon
+   :scale: 50%
+   :align: left
+
+Engineer Level
+
+|
+
 What You Will Need (for IBT_2)
 ================================
 

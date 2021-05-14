@@ -15,22 +15,47 @@ There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. DCC++ EX will run on all the
 
 .. image:: ../_static/images/microcontrollers/teensy_3_2.jpg
    :alt: Teensy 3.2
-   :scale: 50%
-   :align: left
+   :scale: 40%
+   :align: center
+
+The above is a Teensy 3.2 compared to a quarter. Below is a Teensy 3.6 if you need more GPIO pins
 
 .. image:: ../_static/images/microcontrollers/teensy_3_6.png
    :alt: Teensy 3.6
-   :scale: 50%
-   :align: left
+   :scale: 40%
+   :align: center
 
 There are even expansion boards to add WiFi and Ethernet. There is a Mega form factor board available to allow you to use 3.3V shields.
 
-.. image:: ../_static/images/microcontrollers/teensy41_ethernet.jpg
+.. image:: ../_static/images/microcontrollers/teensy41_ethernet2.jpg
    :alt: Teensy Ethernet
-   :scale: 50%
+   :scale: 40%
    :align: left
 
-Teesy Specifications
+.. image:: ../_static/images/microcontrollers/teensy_4_expansion_brd.jpg
+   :alt: Teensy WiFi Expansion Board
+   :scale: 60%
+   :align: left
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+Teensy Specifications
 =======================
 
 * 180 MHz ARM Cortex-M4 with Floating Point Unit
@@ -60,3 +85,5 @@ Teesy Specifications
 * 4 I2C Ports Real Time Clock
 
 The only downside is that PJRC is a very small company, it doesn't have the resources or the staff of Arduino or Expressif. The board is also 3.3V, so you have to be careful that anything connected to the GPIO porst is also 3.3V 
+
+***TODO: Add pinouts and motor shield wiring diagrams***

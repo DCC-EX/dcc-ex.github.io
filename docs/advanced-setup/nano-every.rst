@@ -32,4 +32,3 @@ PWM Pins 6
 
 5V regulator can handle much more power (1A theoretical), 3.3V 600mA
 4 UARTS! But serial1 is wired differently than on the Nano. Where pins 0 and 1 on a Nano are serial and connected to the USB and pins 0 and 1, the Every runs serial 1 to those pins.
-

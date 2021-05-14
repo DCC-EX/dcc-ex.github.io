@@ -2,21 +2,32 @@
 Nano Every
 *******************
 
+.. image:: ../_static/images/microcontrollers/nanoevery_box.jpg
+   :alt: Arduino
+   :scale: 50%
+   :align: left
+
+.. image:: ../_static/images/microcontrollers/nanoevery1.jpg
+   :alt: Arduino
+   :scale: 50%
+   :align: left
+
+|
+|
+|
+|
+|
+|
+|
+|
+   
+
 The Nano Every is a direct replacement for the Arduino Nano. It runs on 5V and is the same size as a Nano, 45 x18mm. However it is a much more powerful board than a standard Nano or Uno. In particular:
 
 * Uses the ATmega4809 instead of the ATmega328
 * Has 50% More program memory (you can use WiFi or Ethernet!)
 * Has 200% More flash memory
 * Micro-USB connector instead of
-
-Clock 16 MHz 
-Flash Memory 32 KB 
-SRAM 2 KB
-EEPROM 1 KB
-14 Digital I/O Pins
-Analog Input Pins 8 (with 10-bit resolution)
-Digital IO Pins 22
-PWM Pins 6
 
 **Nano Every**
 

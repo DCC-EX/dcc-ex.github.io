@@ -15,18 +15,14 @@ The Arduino Nano is an Uno in disguise. It has the same processor, the same spee
 
 .. NOTE:: Be sure to compare the Mega before using the Nano ***TODO: add link to the comparison page***
 
-.. figure:: ../_static/images/microcontrollers/nano2.jpg
-   :alt: Arduino Nano with box and enlarged
+.. figure:: ../_static/images/microcontrollers/nano.jpg
+   :alt: Arduino Nano
    :scale: 50%
    :align: left
    
-   **Figure 1** - Arduino Nano with box and enlarged
+   **Figure 1** - Arduino Nano
 
-.. figure:: ../_static/images/microcontrollers/nano3.jpg
-   :alt: Arduino
-   :scale: 50%
-   :align: left
-   
+
 |
 |
 |

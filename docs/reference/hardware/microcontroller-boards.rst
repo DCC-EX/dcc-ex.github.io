@@ -41,7 +41,7 @@ A Special Note about the WiFi+Mega
 
 Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you ok with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
 
-See our section on Using the `WiFi+Mega Page <../advanced-setup/wifi-mega.html>`_
+See our section on Using the `WiFi+Mega Page <../../advanced-setup/wifi-mega.html>`_
 
 Will you support other microcontrollers in the future?
 =======================================================

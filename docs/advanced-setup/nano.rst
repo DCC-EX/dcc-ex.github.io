@@ -3,7 +3,7 @@ Arduino Nano Setup
 ***********************
 
 .. image:: ../_static/images/conductor.png
-   :alt: Tinkerer Icon
+   :alt: Conductor Icon
    :scale: 50%
    :align: left
 

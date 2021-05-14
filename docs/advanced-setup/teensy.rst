@@ -18,14 +18,14 @@ There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. DCC++ EX will run on all the
    :scale: 50%
    :align: left
 
-   .. image:: ../_static/images/teensy_3_6.png
+.. image:: ../_static/images/microcontrollers/teensy_3_6.png
    :alt: Teensy 3.6
    :scale: 50%
    :align: left
 
 There are even expansion boards to add WiFi and Ethernet. There is a Mega form factor board available to allow you to use 3.3V shields.
 
-.. image:: ../_static/images/teensy41_ethernet.jpg
+.. image:: ../_static/images/microcontrollers/teensy41_ethernet.jpg
    :alt: Teensy Ethernet
    :scale: 50%
    :align: left

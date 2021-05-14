@@ -95,6 +95,7 @@ Team Lead
 
 Team
 
+* Kevin Smith Rochester Hills, Michigan USA (KC Smith)
 * Scott Eric Catalano - Western Pennsylvania, USA (PilotinControl)
 * Sumner Patterson - Blanding Utah, USA (Sumner)
 * Larry Dribin - (H0Guy)

@@ -104,7 +104,7 @@ To use this board, you simple plug the nano into the motor shield (really a carr
 
 ***TODO: Finish the above and the below sections***
 ***TODO: Show VCC power wiring option***
-***TODO: Show all the other terminal boards and the ethernet board***
+***TODO: Show all the other Nano sized terminal boards and the ethernet board***
 
 Wiring a Motor Shield
 =====================

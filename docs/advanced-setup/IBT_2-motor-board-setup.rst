@@ -138,7 +138,7 @@ Using External Current Sense
 
 Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (10A+), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
 
-***TODO: Insert help for using or pointing to a section for external CS boards***
+***TODO: Add help or point to a section for external CS boards***
 
 Tech Notes
 ===========

@@ -31,22 +31,28 @@ Your controller can connect to the DCC++ EX Command Station several different wa
 
 The most popular methods for connecting your throttle is with a USB cable or wirelessly with Wifi or Bluetooth. Make sure to check the feature list to see if your controller uses the type of connection you prefer.
 
-Wireless Connections
-====================
+Wireless Connection Details
+-----------------------------
+
+Direct (Without JMRI)
+^^^^^^^^^^^^^^^^^^^^^^
 
 For those who just want to run trains and not use an other control software, the simplest method to get going is to download a compatible phone or tablet app and connect diretly from your wireless device to the Command Station. You need a CS with a WiFi Shield or other type of WiFi board or a Bluetooth board and a throttle that supports Bluetooth. Here is an image that represents a direct connetion.
 
 .. image:: ../_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
    :align: center
-   :scale: 60%
+   :scale: 50%
 
-For those who want the power of JMRI to operate a complex layout, you would install JMRI on a computer or Raspberry Pi and connect your throttle to JMRI wirelessly through it's preferred method, usually the WiThrottle Server or Web Server Interface. Here is an image that shows connecting wirelessly to JMRI can connecting JMRI via a USB cable to the CS.
+With JMRI
+^^^^^^^^^^^^^
+
+For those who want the power of JMRI to operate a complex layout, you would install JMRI on a computer or Raspberry Pi and connect your throttle to JMRI wirelessly through it's preferred method, usually the WiThrottle Server or Web Server Interface. Here is an image that shows connecting wirelessly to JMRI and connecting JMRI via a USB cable to the CS.
 
 .. image:: ../_static/images/throttles/throttle_wifi_jmri.png
    :alt:  WiFi Throttle to JMRI and JMRI to CS with USB cable
    :align: center
-   :scale: 60%
+   :scale: 50%
 
 
 Command Language (API)

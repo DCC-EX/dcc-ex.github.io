@@ -11,18 +11,12 @@ Command Station
 ================
 
 Hardware
--------------------------
+-----------------------
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
-    hardware/microcontroller-boards
-    hardware/motor-boards
-    hardware/wifi-boards
-    hardware/ethernet-boards
-    hardware/i2c-displays
-    hardware/power-supplies
-    hardware/shopping-list
+    hardware/index
     
 Software
 -------------------------
@@ -49,8 +43,7 @@ Documents/Papers
 .. toctree::
     :maxdepth: 1
 
-    documents/decoder-table
-    documents/wire-gauge
+    documents/index
 
 Diagnostic Tools
 ------------------

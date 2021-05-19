@@ -37,7 +37,7 @@ Accessories
 
     accessories/suppliers
 
-Documents/Papers
+Documents
 -----------------
 
 .. toctree::

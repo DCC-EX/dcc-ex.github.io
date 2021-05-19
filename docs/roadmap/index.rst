@@ -37,12 +37,10 @@ New Motor shield
 -----------------
 
 
-
-
 New all-in-one DCC-EX Command Station
 --------------------------------------
-* (perhaps revive FireBox)to provide a self-contained, yet expandable custom developed Command Station
-Features
+
+  * Provide a self-contained, yet expandable custom developed Command Station Features (perhaps revive FireBox)
   * Based on a powerful processor to be chosen from ESP32, Teensy, Xtensa, SAMC21, etc.
   * At least 20 GPIO Pins
   * More efficient, higher current capacity Motor Driver chip or independent MOSFETS

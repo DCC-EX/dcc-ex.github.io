@@ -41,7 +41,7 @@ Documents/Papers
 -----------------
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     documents/index
 

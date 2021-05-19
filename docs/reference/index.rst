@@ -52,3 +52,4 @@ Diagnostic Tools
     :maxdepth: 1
 
     tools/diagnostic-tools
+    

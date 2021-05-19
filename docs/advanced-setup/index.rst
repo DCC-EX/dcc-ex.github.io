@@ -6,8 +6,7 @@ Advanced Setup
     
     wifi-config
     motor-board-config
-    IBT_2-motor-board-setup
-    L298N-motor-board-setup
+    supported-motorboards/index
     nano
     nano-every
     wifi-mega

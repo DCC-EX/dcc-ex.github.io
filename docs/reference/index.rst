@@ -38,7 +38,7 @@ Accessories
     accessories/suppliers
 
 Documents
------------------
+---------------
 
 .. toctree::
     :maxdepth: 2
@@ -52,4 +52,3 @@ Diagnostic Tools
     :maxdepth: 1
 
     tools/diagnostic-tools
-    

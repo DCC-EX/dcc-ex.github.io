@@ -22,7 +22,7 @@ if "%1" == "github" (
 
 if "%1" == "clean" (
     echo.CLEAN BUILD with -E -a
-    %SPHINXOPTS% = "-E -a"
+REM    %SPHINXOPTS% = "-E -a"
     %SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% -E -a
 	echo "dcc-ex.com" /y > docs\_build\html\CNAME
 	echo "" /y > docs\_build\html\.nojekyll

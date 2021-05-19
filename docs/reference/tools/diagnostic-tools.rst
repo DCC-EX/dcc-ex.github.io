@@ -143,7 +143,7 @@ With this option, you can connect to anywhere on your track. Wiring can be tempo
 
 .. figure:: ../../_static/images/tools/dcc_interface_1.png
    :align: center
-   :scale: 35%
+   :scale: 90%
    :alt: Minimum recommended circuit
    :figclass: align-center
 

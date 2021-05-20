@@ -9,7 +9,7 @@ Submission Procedure
 
 We will assume that you have an appropriate text editor and Git installed on your machine. We recommend the free `Visual Studio Code IDE (VSC) <https://code.visualstudio.com/>`_ and `GitHub Desktop <https://desktop.github.com/>`_ or `Git Bash (the command line interface in Git) <https://git-scm.com/downloads>`_.
 
-1. Clone the [dcc-ex.github.io](https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx) repository, to your local machine. Make sure you're on the sphinx branch. ([Cloning a repository in GitHub](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
+1. Clone the `dcc-ex.github.io <https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx>`_Support repository, to your local machine. Make sure you're on the sphinx branch. (`Cloning a repository in GitHub <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository>`_)
 
 2. Install Python 3.8. (which also installs pip) then use pip to install the required packages ```pip install sphinx sphinx_rtd_theme sphinxcontrib-spelling```
 
@@ -26,13 +26,11 @@ We will assume that you have an appropriate text editor and Git installed on you
 Standards
 ==========
 
-Main Headings have asterisks above and below them.
-///**************///
-Heading
-///**************///
-Subheadings are underlined with equals signals
-The next level is underlines with underscores
-And and the next level is underlines with carets
+* Main Headings have asterisks above and below them
+* Subheadings are underlined with equals signals
+* The next level is underlines with underscores
+* And and the next level is underlines with carets
+* And the last one we use is underlined with tildes
 
 All heading underlines and overlines must be at least as long at the text of the heading
 

@@ -7,4 +7,16 @@ Documents
 .. raw:: html
 
    <p><a class="dcclink" href="../_static/documents/DCCpp-stationary-decoder-addresses.xlsx">Stationary Decoder Address Table</a></p>
+   
+
+   .. image:: ../../_static/documents/dcc_shortcuts_card.png
+   :alt: DCC Shortcuts Card Thumbnail
+   :scale: 90%
+   :align: center   
+
+.. raw:: html
+
+   <p><a class="dcclink" href="../_static/documents/DCC_Shortcuts_Card.pdf">DCC Shortcut Card</a></p>
+
+   
 

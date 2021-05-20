@@ -2,7 +2,7 @@
 Nano Every
 *******************
 
-.. image:: ../_static/images/tinkerer.png
+.. image:: ../../_static/images/tinkerer.png
    :alt: Conductor Icon
    :scale: 50%
    :align: left
@@ -11,12 +11,12 @@ Tinkerer Level
 
 |
 
-.. image:: ../_static/images/microcontrollers/nanoevery_box.jpg
+.. image:: ../../_static/images/microcontrollers/nanoevery_box.jpg
    :alt: Arduino
    :scale: 50%
    :align: left
 
-.. image:: ../_static/images/microcontrollers/nanoevery1.jpg
+.. image:: ../../_static/images/microcontrollers/nanoevery1.jpg
    :alt: Arduino
    :scale: 50%
    :align: left

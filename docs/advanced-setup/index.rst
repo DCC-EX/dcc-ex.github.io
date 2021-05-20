@@ -7,8 +7,5 @@ Advanced Setup
     wifi-config
     motor-board-config
     supported-motorboards/index
-    nano
-    nano-every
-    wifi-mega
-    teensy
+    supported-microcontrollers/index
     high-accuracy

@@ -45,6 +45,14 @@ Documents
 
     documents/index
 
+Downloads
+-----------
+
+.. toctree::
+    :maxdepth: 2
+
+    downloads/index
+
 Diagnostic Tools
 ------------------
 

@@ -1,11 +1,12 @@
+***************
 Documentation
-=============
+***************
 
 Thank you for your offer to help. Here's some instructions for how to contribute. You might want to check in with
 an admin from the DCC++ EX team before working on documentation changes to identify current needs.
 
 Submission Procedure
---------------------
+======================
 
 We will assume that you have an appropriate text editor and Git installed on your machine. We recommend the free _Visual Studio Code IDE (VSC)_ and _GitHub Desktop_ or _Git Bash_.
 
@@ -22,5 +23,15 @@ We will assume that you have an appropriate text editor and Git installed on you
 6. Push it to GitHub: ```git push origin {your-name}-changes```
 
 7. Go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it's merged in by one of the admins, your changes will go live!
+
+Standards
+==========
+
+Main Headings have asterisks above and below them.
+Subheadings are underlined with equals signals
+The next level is underlines with underscores
+And and the next level is underlines with carets
+
+All heading underlines and overlines must be at least as long at the text of the heading
 
 *Work in progress*

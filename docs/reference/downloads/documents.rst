@@ -52,9 +52,11 @@ DCC++EX Commands Python Script for JMRI
 This file installs in JMRI to allow it to display a DCC++ EX Command Reference.
 
 .. image:: ../../_static/documents/python_thumbnail.jpg
-   :alt: DCC Shortcuts Card Thumbnail
+   :alt: DCC++EX JMRI script to display a command reference
    :scale: 75%
-   :align: left 
+   :align: left
+   
+.. raw:: html
 
    <a class="dcclink" href="../../_static/documents/DCCEX_Commands.zip">DCC++ EX Commands JMRI Script</a>
 

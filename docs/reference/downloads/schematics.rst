@@ -7,8 +7,8 @@ Mega+WiFi Board
 
 .. image:: ../../_static/images/schematics/mega_wifi1.png
    :alt: Mega WiFi Schematic Thumbnail
-   :scale: 10%
-   :align: center 
+   :scale: 12%
+   :align: left 
 
 .. raw:: html
 

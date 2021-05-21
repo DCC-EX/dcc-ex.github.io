@@ -31,7 +31,7 @@ DCC Shortcuts Card
 
 .. image:: ../../_static/documents/dcc_shortcuts_card_thumbnail.png
    :alt: DCC Shortcuts Card Thumbnail
-   :scale: 70%
+   :scale: 26%
    :align: left   
 
 .. raw:: html

@@ -98,26 +98,30 @@
 <li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Motor Boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l2"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../software/release-notes.html">Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../documents/decoder-table.html">Stationary Decoder Address Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../documents/wire-gauge.html">Wire Gauge Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wire-gauge.html">Wire Gauge Information</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Software Downloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap/index.html">DCC-EX Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
 </ul>
@@ -170,6 +174,8 @@
         
           <li><a href="../index.html">Reference</a> &raquo;</li>
         
+          <li><a href="index.html">Hardware</a> &raquo;</li>
+        
       <li>Motor Boards</li>
     
     
@@ -198,6 +204,10 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Where appropriate, we have used the terms “single” and “dual” to indicate on the non-shield type boards, which ones have just a single H-Bridge for one track and which ones have two. A single H-Bridge board will power your main track, but you will then need another board of some kind to connect to your programming track</p>
+</div>
+<div class="section" id="what-is-a-motor-controller">
+<h2>What is a Motor Controller?<a class="headerlink" href="#what-is-a-motor-controller" title="Permalink to this headline">¶</a></h2>
+<p>A motor controller (aka shield, aka board) is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (PWM) signal would be applied to a motor with the PWM pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the PWM pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polor square wave. In this way, we use the 5V DC (or 3.3V) microcontroller output to switch the voltage from separate 12-18V DC power supply connected to the motor controller, and create a pulse train signal of 1’s and 0’s that a mobile decoder can interpret as commands.</p>
 </div>
 <div class="section" id="boards-currently-supported">
 <h2>Boards currently supported<a class="headerlink" href="#boards-currently-supported" title="Permalink to this headline">¶</a></h2>

@@ -98,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Software Downloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributing</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="requirements.html">Requirements</a></li>
@@ -107,6 +107,7 @@
 <li class="toctree-l2"><a class="reference internal" href="contactus.html">Contact us</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/index.html">DCC-EX Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
 </ul>
@@ -180,20 +181,30 @@
             
   <div class="section" id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
-<p>Thank you for your offer to help. Here’s some instructions for how to contribute. You might want to check in with
-an admin from the DCC++ EX team before working on documentation changes to identify current needs.</p>
+<p>Thank you for your offer to help. Here’s some instructions for how to contribute. You might want to check in with an admin from the DCC++ EX team before working on documentation changes to identify current needs.</p>
 <div class="section" id="submission-procedure">
 <h2>Submission Procedure<a class="headerlink" href="#submission-procedure" title="Permalink to this headline">¶</a></h2>
-<p>We will assume that you have an appropriate text editor and Git installed on your machine. We recommend the free _Visual Studio Code IDE (VSC)_ and _GitHub <a href="#id1"><span class="problematic" id="id2">Desktop_</span></a> or _Git <a href="#id3"><span class="problematic" id="id4">Bash_</span></a>.</p>
+<p>We will assume that you have an appropriate text editor and Git installed on your machine. We recommend the free <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code IDE (VSC)</a> and <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> or <a class="reference external" href="https://git-scm.com/downloads">Git Bash (the command line interface in Git)</a>.</p>
 <ol class="arabic simple">
-<li><p>Clone the [dcc-ex.github.io](<a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx">https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx</a>) repository, to your local machine. Make sure you’re on the sphinx branch. ([Cloning a repository in GitHub](<a class="reference external" href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository</a>))</p></li>
-<li><p>Install _Python <a href="#id5"><span class="problematic" id="id6">3.8.x_</span></a> (which also installs pip) then use pip to install the required packages <code class="docutils literal notranslate"><span class="pre">`pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">sphinx_rtd_theme</span> <span class="pre">sphinxcontrib-spelling`</span></code></p></li>
+<li><p>Clone the <a class="reference external" href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">dcc-ex.github.io &lt;https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx&gt;`_Support repository, to your local machine. Make sure you’re on the sphinx branch. (`Cloning a repository in GitHub</a>)</p></li>
+<li><p>Install Python 3.8. (which also installs pip) then use pip to install the required packages <code class="docutils literal notranslate"><span class="pre">`pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">sphinx_rtd_theme</span> <span class="pre">sphinxcontrib-spelling`</span></code></p></li>
 <li><p>Using Git Bash, go to the “website” folder and make a branch using GitHub desktop or this command: <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">your-branch-name`</span></code></p></li>
 <li><p>Open VSC and edit the files in the <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io/docs`</span></code> folder. Save, then Preview your changes by running <code class="docutils literal notranslate"><span class="pre">`make</span> <span class="pre">github`</span></code> from the root of the <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io`</span></code> folder. <em>This must be done from cmd.exe in windows, not powershell</em> Then go to the directory <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io/docs/build/html`</span></code> and open <code class="docutils literal notranslate"><span class="pre">`index.html`</span></code> in Chrome or another browser. Note that since 11/23/2020, this is just a local preview - when you push your changes GitHub will automatically rebuild your website.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">add`</span></code> and <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;MY</span> <span class="pre">CHANGE</span> <span class="pre">DESCRIPTION&quot;`</span></code> often to save changes. If you’re using GitHub desktop these are combined in the commit button.</p></li>
 <li><p>Push it to GitHub: <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">{your-name}-changes`</span></code></p></li>
 <li><p>Go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it’s merged in by one of the admins, your changes will go live!</p></li>
 </ol>
+</div>
+<div class="section" id="standards">
+<h2>Standards<a class="headerlink" href="#standards" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Main Headings have asterisks above and below them</p></li>
+<li><p>Subheadings are underlined with equals signals</p></li>
+<li><p>The next level is underlines with underscores</p></li>
+<li><p>And and the next level is underlines with carets</p></li>
+<li><p>And the last one we use is underlined with tildes</p></li>
+</ul>
+<p>All heading underlines and overlines must be at least as long at the text of the heading</p>
 <p><em>Work in progress</em></p>
 </div>
 </div>

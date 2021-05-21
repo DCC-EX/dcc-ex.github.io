@@ -1,5 +1,6 @@
+***********
 WiFi Setup
-==========
+***********
 
 The purpose of this WiFi solution is for connecting a Wifi Throttle DIRECTLY to the Command Station and elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can `skip ahead to the next page <installer.html>`_.
 
@@ -18,7 +19,7 @@ For a video to help you click below.
       <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Why Use WiFi?
--------------
+================
 
 **BEFORE you purchase a Wifi card, please consider whether you actually need it:**
 
@@ -29,7 +30,7 @@ If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++
 If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY EngineDriver (or other Withrottle-protocol devices) connected dirctly to the CS, then you will need  Wifi and will have to budget some setup and learning time.
 
 Compatible Boards
------------------
+==================
 
 Most boards based on the ESP-8266 should work with DCC++ EX. However, with all the variations and software versions out there, we've compiled this list of known tested, working hardware. We will add more over time.
 
@@ -41,7 +42,7 @@ Most boards based on the ESP-8266 should work with DCC++ EX. However, with all t
 Fore more boards, and more boards you may be able to use, see the `Wifi Boards Section <../reference/hardware/wifi-boards.html>`_
 
 What you will need (for WiFi)
-------------------------------
+================================
 
 * A Command Station (CS) made from a **Mega** and an Arduino Motor Shield
 * One of the above WiFi boards
@@ -50,14 +51,14 @@ What you will need (for WiFi)
 .. NOTE:: While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10 kb of progmem and about 2kb of ram). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like JMRI being shared.
 
 Quick links
------------
+==============
 
 * Jump to :ref:`Makerfabs ESP-8266 WiFi Shield (recommended)`
 * Jump to :ref:`Duinopeak ESP-8266 WiFi Expansion Board`
 * Jump to :ref:`ESP-01 and ESP-01s`
 
 Makerfabs ESP-8266 WiFi Shield (recommended)
---------------------------------------------
+===============================================
 
 We like this board here at DCC++ EX. It is simple, inexpensive, easy to use, and it works.
 
@@ -70,7 +71,7 @@ We like this board here at DCC++ EX. It is simple, inexpensive, easy to use, and
 Installing the board follows the same procedure in the previous section on assembly. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.
 
 Remove the plastic jumpers
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 Note the two black plastic jumpers, we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.
 
@@ -82,7 +83,7 @@ Note the two black plastic jumpers, we need to remove both of them. You can pull
 **Figure 2** - Remove the plastic jumpers
 
 Align the boards
-^^^^^^^^^^^^^^^^
+------------------
 
 Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Tx, Rx, 2, 3, 4, 6, 6, 7 pins on the Motor Shield line up with the 0 through 7 pins on the Makerfabs WiFi Board. Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.
 
@@ -94,7 +95,7 @@ Turn the board so that the tab end is to the left and the power connectors on th
 **Figure 3** - Get the left side pins aligned
 
 Seat the boards
-^^^^^^^^^^^^^^^
+-----------------
 
 Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (Figure 4). Note that the pins are quite long and will not go all the way into the header. You shoud have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (Figure 5).
 
@@ -112,7 +113,7 @@ Now do the the other side. If all the pins are straight and lined up properly, h
 **Figure 5** - Fully Seated Boards
 
 Install the jumper wires
-^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 We now need to connect The Transmit (Tx) and Receive (Rx) pins on the ESP-8266 to the Rx and Tx pins for Serial1 on the Mega. The mega has one serial port connected to the USB port and then 3 extra ones we can access from pins on the board. You can think of Tx as "talking" and Rx as "listening". That will help you remember that if one thing is talking, the other has to use its ears to listen. So we must connect the Tx of the WiFi board to Rx1 on the Mega and the Rx pin on the WiFi Board to Tx1 on the Mega.
 
@@ -133,7 +134,7 @@ Take a second jumper wire and connect it to any one of the Rx pins on the Wifi B
 .. note:: The screenprinting on the board may make it hard to see which pins are 18 and 19, they may not be aligned exactly. Count the pins if you need to to make sure that you are using the correct ones.
 
 Duinopeak ESP-8266 WiFi Expansion Board
----------------------------------------
+========================================
 
 This board is designed as an expansion/prototyping board as well as a WiFi board. Tinkerers that want the extra space on the board to solder your expriements can have a party on the PCB. The only caveat with this board is that it cannot easily be connected in "passthrough mode" if you needed to use the Arduino to test a direct connection to the on board ESP-8266. It does not like the USB cable connected at the same time as a signal is on the Tx/Rx pins. This is a minor issue and does not affect normal operation since you won't have anything connected to the USB port.
 
@@ -146,7 +147,7 @@ This board is designed as an expansion/prototyping board as well as a WiFi board
 **Figure 7** - Duinopeak WiFi Board
 
 Install the Shield
-^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 To install this board on your Arduino, follow the same steps as above with the added step of installing and ESP-01s onto the board:
 
@@ -156,7 +157,7 @@ To install this board on your Arduino, follow the same steps as above with the a
 * Seat an ESP-01s onto the 8 pin header on the board oriented with the white ESP-01 outline
 
 ESP-01 and ESP-01s
--------------------
+=====================
 
 This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduno Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
 
@@ -168,7 +169,7 @@ This is the board that started it all. It fueled the WiFi revolution in small de
 **Figure 8** - ESP-01s
 
 Install the Module
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 Below is a wiring diagram for connecting the ESP-8266 to the Arduino. For clarity, the image does not show the motor board already on top of the Mega, but since the headers connect all the pins together vertically, you can find the same pins on the motor board to get the 3.3V and Gnd to power the ESP-8266.
 
@@ -205,7 +206,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the arduino, you ca
 .. warning:: The ESP-8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don't need any additional circuitry. However, to be safe, you can use a small `level shifter board <https://www.mouser.com/ProductDetail/SparkFun/BOB-12009?qs=WyAARYrbSnb%252BGYLWggQnjQ%3D%3D&gclid=Cj0KCQiAzZL-BRDnARIsAPCJs73SnsmU-CTIk9V0XE6qjxY2WKlnxI0sLhT_rY5MYTbIOBmHne50Eh4aAm5ZEALw_wcB>`_ or use one of the breakout board like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.
 
 Install the Software
---------------------
+======================
 
 If you already have the CS sofware running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and what port it is connected to. See the detailed instructions here: `WiFi Configuration <../advanced-setup/wifi-config.html>`_
 

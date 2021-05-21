@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Teensy &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/platform.js"></script>
+        <script src="../../_static/js/extra.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="High Accuracy Waveform Mode" href="../high-accuracy.html" />
+    <link rel="prev" title="Nano Every" href="nano-every.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Advanced Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html">Wifi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motor-board-config.html">Motor Board Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../supported-motorboards/index.html">Supported Motorboards Setup Notes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Supported Microcontrollers Setup Notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nano-every.html">Nano Every</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Teensy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../high-accuracy.html">High Accuracy Waveform Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Software Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap/index.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Advanced Setup</a> &raquo;</li>
+        
+          <li><a href="index.html">Supported Microcontrollers Setup Notes</a> &raquo;</li>
+        
+      <li>Teensy</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/advanced-setup/supported-microcontrollers/teensy.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="teensy">
+<h1>Teensy<a class="headerlink" href="#teensy" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../../_images/tinkerer.png"><img alt="Tinkerer Icon" class="align-left" src="../../_images/tinkerer.png" style="width: 60.0px; height: 49.0px;" /></a>
+<p>Tinkerer Level</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>It’s teensy because it is even smaller than a nano, but it is even more powerful than a Nano Every. This is not an Arduino, it is from a company called PJRC. Since it is a different processor, there are a lot of changes in the software that load onto the teensy when you select that as your processor.</p>
+<p>There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. DCC++ EX will run on all these boards. The biggest difference is size/number of pins. You can also purchase the boards with or without the headers soldered on.</p>
+<a class="reference internal image-reference" href="../../_images/teensy_3_2.jpg"><img alt="Teensy 3.2" class="align-center" src="../../_images/teensy_3_2.jpg" style="width: 196.8px; height: 184.0px;" /></a>
+<p>The above is a Teensy 3.2 compared to a quarter. Below is a Teensy 3.6 if you need more GPIO pins</p>
+<a class="reference internal image-reference" href="../../_images/teensy_3_6.png"><img alt="Teensy 3.6" class="align-center" src="../../_images/teensy_3_6.png" style="width: 256.0px; height: 256.0px;" /></a>
+<p>There are even expansion boards to add WiFi and Ethernet. There is a Mega form factor board available to allow you to use 3.3V shields.</p>
+<a class="reference internal image-reference" href="../../_images/teensy41_ethernet2.jpg"><img alt="Teensy Ethernet" class="align-left" src="../../_images/teensy41_ethernet2.jpg" style="width: 320.0px; height: 357.20000000000005px;" /></a>
+<a class="reference internal image-reference" href="../../_images/teensy_4_expansion_brd.jpg"><img alt="Teensy WiFi Expansion Board" class="align-left" src="../../_images/teensy_4_expansion_brd.jpg" style="width: 498.0px; height: 280.2px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="teensy-specifications">
+<h2>Teensy Specifications<a class="headerlink" href="#teensy-specifications" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>180 MHz ARM Cortex-M4 with Floating Point Unit</p></li>
+<li><p>1M Flash, 256K RAM, 4K EEPROM</p></li>
+<li><p>Microcontroller Chip MK66FX1M0VMD18</p></li>
+<li><p>MK66FX1M0VMD18 USB High Speed (480 Mbit/sec) Port</p></li>
+<li><p>2 CAN Bus Ports</p></li>
+<li><p>32 General Purpose DMA Channels</p></li>
+<li><p>22 PWM Outputs</p></li>
+<li><p>4 I2C Ports</p></li>
+<li><p>11 Touch Sensing Inputs</p></li>
+<li><p>62 I/O Pins (42 breadboard friendly)</p></li>
+<li><p>25 Analog Inputs to 2 ADCs with 13 bits resolution</p></li>
+<li><p>2 Analog Outputs (DACs) with 12 bit resolution</p></li>
+<li><p>22 PWM Outputs USB Full Speed (12 Mbit/sec)</p></li>
+<li><p>Port Ethernet mac, capable of full 100 Mbit/sec speed</p></li>
+<li><p>Native (4 bit SDIO)</p></li>
+<li><p>micro SD card port</p></li>
+<li><p>I2S Audio Port</p></li>
+<li><p>4 Channel Digital Audio Input &amp; Output</p></li>
+<li><p>14 Hardware Timers</p></li>
+<li><p>Cryptographic Acceleration Unit</p></li>
+<li><p>Random Number Generator</p></li>
+<li><p>CRC Computation Unit</p></li>
+<li><p>6 Serial Ports (2 with FIFO &amp; Fast Baud Rates)</p></li>
+<li><p>3 SPI Ports (1 with FIFO)</p></li>
+<li><p>4 I2C Ports Real Time Clock</p></li>
+</ul>
+<p>The only downside is that PJRC is a very small company, it doesn’t have the resources or the staff of Arduino or Expressif. The board is also 3.3V, so you have to be careful that anything connected to the GPIO porst is also 3.3V</p>
+<p><strong>*TODO: Add pinouts and motor shield wiring diagrams*</strong></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../high-accuracy.html" class="btn btn-neutral float-right" title="High Accuracy Waveform Mode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nano-every.html" class="btn btn-neutral float-left" title="Nano Every" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

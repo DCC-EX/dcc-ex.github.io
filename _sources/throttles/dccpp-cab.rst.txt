@@ -11,7 +11,7 @@ This is an Android App (with plans for iOS) from Spain. One of the major benefit
 
 You can find it in the Play Store: `DCCpp CAB App <https://play.google.com/store/apps/details?id=com.infotronikblog.dcc_cab>`_
 
-And the website here: `DCCpp Android Cab Infotrokik Blog <http://lamaquetade.infotronikblog.com/dccpp-android-cab/`_
+And the website here: `DCCpp Android Cab Infotrokik Blog <http://lamaquetade.infotronikblog.com/dccpp-android-cab/>`_
 
 .. _dccpp-features:
 

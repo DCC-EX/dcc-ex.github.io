@@ -46,7 +46,7 @@ See our section on Using the `WiFi+Mega Page <../../advanced-setup/wifi-mega.htm
 Will you support other microcontrollers in the future?
 =======================================================
 
-Yes, that is on our roadmap.
+Yes, that is on our `roadmap <../../roadmap/index.html>`_.
 
 Click here for a complete `Shopping List <./shopping-list.html>`_
 

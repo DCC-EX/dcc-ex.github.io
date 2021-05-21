@@ -95,5 +95,6 @@ Next see the `Get Started section <get-started/index.html>`_ or click next below
    download/index
    projects/index
    contributing/index
+   roadmap/index
    support/index
    about/index

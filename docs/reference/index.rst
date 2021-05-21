@@ -60,3 +60,11 @@ Diagnostic Tools
     :maxdepth: 1
 
     tools/diagnostic-tools
+
+Miscellaneous
+---------------
+
+.. toctree::
+    :maxdepth: 1
+
+    wire-guage

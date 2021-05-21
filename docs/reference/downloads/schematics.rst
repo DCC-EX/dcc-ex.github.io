@@ -9,7 +9,7 @@ Schematics
 
 .. raw:: html
 
-    <a class="dcclink" href="../../_static/images/schematics/mega_wifi1.png">Mega WiFi</a>
+    <a class="dcclink" href="../../_static/images/schematics/mega_wifi1.png">Mega+WiFi</a>
  
- |
- |
+|
+|

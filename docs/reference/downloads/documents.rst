@@ -38,5 +38,30 @@ DCC Shortcuts Card
 
    <a class="dcclink" href="../_static/documents/DCC_Shortcuts_Card.pdf">DCC Shortcuts Card</a>
 
-   
+|
+|
+|
+|
+|
+|
+
+
+DCC++EX Commands Python Script for JMRI
+========================================
+
+This file installs in JMRI to allow it to display a DCC++ EX Command Reference.
+
+.. image:: ../../_static/documents/python_thumbnail.png
+   :alt: DCC Shortcuts Card Thumbnail
+   :scale: 75%
+   :align: left 
+
+   <a class="dcclink" href="../_static/documents/DCCEX_Commands.zip">DCC++ EX Commands JMRI Script</a>
+
+|
+|
+|
+|
+|
+|
 

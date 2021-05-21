@@ -26,6 +26,7 @@ Software
 
     software/release-notes
     software/command-reference
+    software/command-summary
     software/diagnostic-d-ack-command
     software/diagnostic-d-command
 

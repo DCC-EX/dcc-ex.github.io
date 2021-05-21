@@ -198,7 +198,7 @@
 <h2>Sniffer vs. Analyzer<a class="headerlink" href="#sniffer-vs-analyzer" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sniffer">
 <h3>Sniffer<a class="headerlink" href="#sniffer" title="Permalink to this headline">¶</a></h3>
-<p>A “sniffer” is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a “PACKET analyzer” which shouldn’t be confused with “LOGIC analyzer” in the next section.</p>
+<p>A “sniffer” is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a “PACKET analyzer” which shouldn’t be confused with “LOGIC analyzer” in the next section. We recommend using our <a class="reference external" href="../../download/dcc-inspector-ex.html">DCCInspector-EX</a> sketch.</p>
 <a class="reference internal image-reference" href="../../_images/sniffer_out1.png"><img alt="Example Sniffer Output 1" class="align-left" src="../../_images/sniffer_out1.png" style="width: 257.25px; height: 247.45px;" /></a>
 <a class="reference internal image-reference" href="../../_images/sniffer_out2.jpg"><img alt="Example Sniffer Output 2" class="align-left" src="../../_images/sniffer_out2.jpg" style="width: 279.5px; height: 181.5px;" /></a>
 <a class="reference internal image-reference" href="../../_images/sniffer_out3.png"><img alt="Example Sniffer Output 3" class="align-left" src="../../_images/sniffer_out3.png" style="width: 298.32px; height: 170.88px;" /></a>
@@ -220,9 +220,9 @@
 <div class="section" id="analyzer">
 <h3>Analyzer<a class="headerlink" href="#analyzer" title="Permalink to this headline">¶</a></h3>
 <p>A logic analyzer is a device that connects to the Command Station signal pins and to a computer via a USB connection and uses software to capture the DCC waveform for a set period of time. The software can also decode the packets and display them along with the waveform. The display looks similar that what would appear on an oscilloscope. Since it captures the waveform, it can let you see details about the signal that may be causing issues like irregular pulses.</p>
-<div class="align-center figure" id="id1">
+<div class="align-center figure" id="id4">
 <a class="reference internal image-reference" href="../../_images/dccpp_ex_acc_packet.jpg"><img alt="DCC Signal Analyzer output" src="../../_images/dccpp_ex_acc_packet.jpg" style="width: 405.0px; height: 131.0px;" /></a>
-<p class="caption"><span class="caption-text">Figure 2: Example Packet Sniffer output</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 2: Example Packet Sniffer output</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -230,10 +230,10 @@
 <h2>DCC Sniffer (PACKET analyzer)<a class="headerlink" href="#dcc-sniffer-packet-analyzer" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="buy-it">
 <h3>Buy it<a class="headerlink" href="#buy-it" title="Permalink to this headline">¶</a></h3>
-<p>Well it isn’t quite a turnkey solution, but it’s close. You need this shield and an Arduino Uno or Mega and then to download a free sketch file. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.</p>
-<div class="align-left figure" id="id2">
+<p>Well it isn’t quite a turnkey solution, but it’s close. You need this shield and an Arduino Uno or Mega and then to download our free <a class="reference external" href="../../download/dcc-inspector-ex.html">DCCInspector-EX</a>  file and upload it to your microcontroller with the Arduiono IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.</p>
+<div class="align-left figure" id="id5">
 <a class="reference internal image-reference" href="../../_images/iowa_scale_eng_dcc_board.jpg"><img alt="Iowa Scale Engineering DCC Sniffer/Decoder Board" src="../../_images/iowa_scale_eng_dcc_board.jpg" style="width: 300.0px; height: 300.0px;" /></a>
-<p class="caption"><span class="caption-text">Figure 3: Iowa Scale Engineering DCC Sniffer/Decoder Board</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 3: Iowa Scale Engineering DCC Sniffer/Decoder Board</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -254,21 +254,22 @@
 <div class="line"><br /></div>
 </div>
 <p><a class="reference external" href="https://www.iascaled.com/store/ARD-DCCSHIELD">https://www.iascaled.com/store/ARD-DCCSHIELD</a></p>
-<p>It costs about $30 US.</p>
-<p>And since it is a shield, you just stick it on top of an Uno or Mega, upload a sketch, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.</p>
+<p><strong>It costs about $30 US.</strong></p>
+<p>And since it is a shield, you just stick it on top of an Uno or Mega, upload <a class="reference external" href="../../download/dcc-inspector-ex.html">DCCInspector-EX</a>, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.</p>
 <p><strong>* Wiring and more info goes here *</strong></p>
 </div>
 <div class="section" id="build-it">
 <h3>Build It<a class="headerlink" href="#build-it" title="Permalink to this headline">¶</a></h3>
-<p>Now things get fun. A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts.</p>
-<div class="align-center figure" id="id3">
+<p>Now things get fun. A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don’t even need anything other than an Arduino or an ESP32 if you connect to the signal pin of the DCC++EX Command Station instead of to the track.</p>
+<p>You will need to upload our <a class="reference external" href="../../download/dcc-inspector-ex.html">DCCInspector-EX</a> to whatever microcontroller you choose.</p>
+<div class="align-center figure" id="id6">
 <a class="reference internal image-reference" href="../../_images/sniffer_block_diag.png"><img alt="Packet Sniffer Block Diagram" src="../../_images/sniffer_block_diag.png" style="width: 599.9px; height: 322.0px;" /></a>
-<p class="caption"><span class="caption-text">Figure 4: DCC Packet Sniffer Block Diagram</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 4: DCC Packet Sniffer Block Diagram</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p><strong>Power From Track</strong> This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track.</p></li>
 <li><p><strong>DCC Signal Interface</strong> This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your microcontroller. This can be as simple as a diode, two resistors and an opto-isolator chip.</p></li>
-<li><p><strong>Microcontroller Decoder</strong> This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with a DCC Decoder sketch. Our DCCInspector-EX will run on Arduinos and the ESP32.</p></li>
+<li><p><strong>Microcontroller Decoder</strong> This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with the DCCInspector-EX sketch.</p></li>
 </ul>
 <div class="section" id="dcc-signal-interface">
 <h4>DCC Signal Interface<a class="headerlink" href="#dcc-signal-interface" title="Permalink to this headline">¶</a></h4>
@@ -284,20 +285,20 @@
 <p>While you could substitute other optoisolator chips and get mixed results, the 6N137 was specifically chosen for it’s switching speed. This allows for more reliable decoding and can even check the accuracy of the DCC signal.</p>
 </div>
 <p><strong>Simplest circuit</strong></p>
-<div class="align-center figure" id="id4">
+<div class="align-center figure" id="id7">
 <a class="reference internal image-reference" href="../../_images/dcc_interface_1.png"><img alt="Minimum recommended circuit" src="../../_images/dcc_interface_1.png" style="width: 581.4px; height: 201.6px;" /></a>
-<p class="caption"><span class="caption-text">Figure 5: Minimum recommended circuit</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 5: Minimum recommended circuit</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <p>The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1uF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our DCCInspector-EX sketch uses the pin 13 LED to provide the same function.</p>
-<p><strong>Recommended circuit (courtesy of Geoff Bunza)</strong></p>
-<div class="align-center figure" id="id5">
+<p><strong>Another tested circuit (courtesy of Geoff Bunza)</strong></p>
+<div class="align-center figure" id="id8">
 <a class="reference internal image-reference" href="../../_images/dcc_fe2_schematic.jpg"><img alt="Geoff Bunza DCC Interface Schematic" src="../../_images/dcc_fe2_schematic.jpg" style="width: 560.0px; height: 208.95px;" /></a>
-<p class="caption"><span class="caption-text">Figure 6: Geoff Bunza DCC Interface Schematic</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 6: Geoff Bunza DCC Interface Schematic</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <p>The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like Oshpark) and have them make boards for you. DCC-EX may be selling these, so keep checking back. Here is what the boards look like:</p>
-<div class="align-center figure" id="id6">
+<div class="align-center figure" id="id9">
 <a class="reference internal image-reference" href="../../_images/bunza_dcc_interface.jpg"><img alt="Geoff Bunza DCC Interface Board" src="../../_images/bunza_dcc_interface.jpg" style="width: 397.8px; height: 137.4px;" /></a>
-<p class="caption"><span class="caption-text">Figure 7: Geoff Bunza DCC Interface Board</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 7: Geoff Bunza DCC Interface Board</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 <p>All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the microcontroller and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.</p>
 <p>Please check out Dr. Geoff’s excellent blog on this board here:</p>
@@ -320,15 +321,24 @@
 <p>fritzing diagram</p>
 <p><strong>*TODO: Add this board*</strong></p>
 <p><a class="reference external" href="https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/">https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/</a></p>
+<p>And if you want to get into the development of DCCInspector-EX and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit DCC-EX team member Neil McKechnie’s blog.</p>
+<div class="align-center figure" id="id10">
+<a class="reference internal image-reference" href="../../_images/neil_sniffer.png"><img alt="Neil's DCC-EX Sniffer" src="../../_images/neil_sniffer.png" style="width: 267.0px; height: 145.2px;" /></a>
+<p class="caption"><span class="caption-text">Figure 8: Neil’s DCC-EX Sniffer in a 3D Printed Case</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here:</p>
+<p><a class="reference external" href="https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/">https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/</a></p>
+<p>and here:</p>
+<p><a class="reference external" href="https://wakwak2popo.wordpress.com/2021/01/28/stand-alone-dcc-diagnostics/">https://wakwak2popo.wordpress.com/2021/01/28/stand-alone-dcc-diagnostics/</a></p>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="logic-analyzer-decoder">
 <h2>Logic Analyzer/Decoder<a class="headerlink" href="#logic-analyzer-decoder" title="Permalink to this headline">¶</a></h2>
-<div class="align-left figure" id="id7">
+<div class="align-left figure" id="id11">
 <a class="reference internal image-reference" href="../../_images/logic_analyzer.jpg"><img alt="Logic Analyzer" src="../../_images/logic_analyzer.jpg" style="width: 300.0px; height: 220.5px;" /></a>
-<p class="caption"><span class="caption-text">Figure 5: Logic Analyzer</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 5: Logic Analyzer</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -356,9 +366,9 @@
 <p>Search for the best source. As usual, you can often find the hardware items from online stores or Amazon, but also find them cheaper on eBay or AliExpress  or BangGood direct from China.</p>
 </div>
 <p>Any set of probes that will connect to the pins that are exposed between the Arduino and the Motor Shield will do, however we really like these “T” or “swept wing” probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.</p>
-<div class="align-center figure" id="id8">
+<div class="align-center figure" id="id12">
 <a class="reference internal image-reference" href="../../_images/logic_probes.jpg"><img alt="Logic probes" src="../../_images/logic_probes.jpg" style="width: 270.0px; height: 270.0px;" /></a>
-<p class="caption"><span class="caption-text">Figure 6: Logic Probes</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 6: Logic Probes</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="install-pulseview">
 <h3>Install PulseView<a class="headerlink" href="#install-pulseview" title="Permalink to this headline">¶</a></h3>
@@ -376,9 +386,9 @@
 </pre></div>
 </div>
 <p>It will look something line this. There will be just 2 files. The “cache” file will get created the first time you run PulseView and select the DCC decoder:</p>
-<div class="align-center figure" id="id9">
+<div class="align-center figure" id="id13">
 <a class="reference internal image-reference" href="../../_images/pv_install_folder.jpg"><img alt="Installing the DCC protocol decoder" src="../../_images/pv_install_folder.jpg" style="width: 551.0px; height: 153.0px;" /></a>
-<p class="caption"><span class="caption-text">Figure 7: Installing the DCC protocol decoder</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 7: Installing the DCC protocol decoder</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="download-usb-drivers">

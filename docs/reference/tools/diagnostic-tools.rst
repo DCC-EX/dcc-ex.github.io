@@ -207,7 +207,9 @@ fritzing diagram
 
 https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/
 
-And if you want to get into the development of DCCInspector-EX and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit DCC-EX team member Neil McKechnie's blog.
+**Build it in a case with a display!**
+
+And if you want to get into the development of DCCInspector-EX and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit DCC-EX team member Neil McKechnie's blog. This version has plans for a 3D printed case and uses an ESP32 development board with an OLED display attached.
 
 .. figure:: ../../_static/images/tools/neil_sniffer.png
    :align: center
@@ -217,12 +219,10 @@ And if you want to get into the development of DCCInspector-EX and why we recomm
 
    Figure 8: Neil's DCC-EX Sniffer in a 3D Printed Case
 
-Here:
-
+HERE:
 https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/
 
-and here:
-
+and HERE:
 https://wakwak2popo.wordpress.com/2021/01/28/stand-alone-dcc-diagnostics/
 
 

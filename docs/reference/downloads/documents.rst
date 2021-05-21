@@ -10,7 +10,7 @@ With DCC++EX's new linear address function, there is no need to have to convert 
 
 .. image:: ../../_static/documents/acc_conv_sheet_thumbnail.png
    :alt: Accessory conversion sheet thumbnail
-   :scale: 80%
+   :scale: 70%
    :align: center 
 
 .. raw:: html

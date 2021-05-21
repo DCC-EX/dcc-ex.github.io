@@ -67,4 +67,4 @@ Miscellaneous
 .. toctree::
     :maxdepth: 1
 
-    wire-guage
+    wire-gauge

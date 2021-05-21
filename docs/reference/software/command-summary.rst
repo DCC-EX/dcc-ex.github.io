@@ -2,6 +2,9 @@
 DCC++ EX Command Summary
 ****************************
 
+**This is a summary, for a detailed command, see...**
+  `Command Reference <command-reference.html>`_
+
 ----------------------------
 Power management
 ----------------------------
@@ -182,4 +185,6 @@ Tuning
   
  
  ``<U ...>`` Is reserved for user commands (through user filter)
- s
+
+ **For a detailed command reference, see...**
+  `Command Reference <command-reference.html>`_

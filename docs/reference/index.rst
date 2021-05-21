@@ -41,7 +41,7 @@ Documents
 ---------------
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 4
 
     documents/index
 
@@ -49,7 +49,7 @@ Downloads
 -----------
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 4
 
     downloads/index
 

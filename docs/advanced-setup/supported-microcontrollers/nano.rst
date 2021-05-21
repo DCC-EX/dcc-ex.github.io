@@ -2,7 +2,7 @@
 Arduino Nano Setup
 ***********************
 
-.. image:: ../_static/images/tinkerer.png
+.. image:: ../../_static/images/tinkerer.png
    :alt: Conductor Icon
    :scale: 50%
    :align: left
@@ -15,7 +15,7 @@ The Arduino Nano is an Uno in disguise. It has the same processor, the same spee
 
 .. NOTE:: Be sure to compare the Mega before using the Nano ***TODO: add link to the comparison page***
 
-.. figure:: ../_static/images/microcontrollers/nano.jpg
+.. figure:: ../../_static/images/microcontrollers/nano.jpg
    :alt: Arduino Nano
    :scale: 60%
    :align: center
@@ -39,13 +39,13 @@ What You need
 Software
 ========
 
-* See `Command Station Download Page <../download/commandstation.html>`_
+* See `Command Station Download Page <../../download/commandstation.html>`_
 * A Controller (aka Throttle or CAB). More on this below.
 
 Optional Hardware
 ==================
 
-Supported `ESP8266 WiFi Option <../reference/hardware/wifi-boards.html>`_
+Supported `ESP8266 WiFi Option <../../reference/hardware/wifi-boards.html>`_
 
 
 .. NOTE:: Before you order a Nano, be sure whether the headers are soldered or not. The Arduino brand is not soldered, while many of the Chinese sites give you the option. If you are a conductor, you probably don't want to solder. If you are an Engineer, you may want to solder directly to the board and having to unsolder headers would be an unwelcome surprise.
@@ -53,12 +53,12 @@ Supported `ESP8266 WiFi Option <../reference/hardware/wifi-boards.html>`_
 Using the special Nano Motor Shield
 =====================================
 
-.. image:: ../_static/images/motorboards/nano_gravitech.jpg
+.. image:: ../../_static/images/motorboards/nano_gravitech.jpg
    :alt: Gravitech Nano Motor Shield
    :scale: 20%
    :align: left
 
-.. image:: ../_static/images/motorboards/nano_cheap_motor_shield.jpg
+.. image:: ../../_static/images/motorboards/nano_cheap_motor_shield.jpg
    :alt: Nano Motor Shield Clone
    :scale: 70%
    :align: left
@@ -93,7 +93,7 @@ Wiring a Motor Shield
 =====================
 
 
-.. image:: ../_static/images/tinkerer.png
+.. image:: ../../_static/images/tinkerer.png
    :alt: Tinkerer Icon
    :scale: 50%
    :align: left
@@ -111,7 +111,7 @@ You will need jumpers to connect the Nano to the Arduino Motor Shield
 Wiring other Motor Boards
 ============================
 
-.. image:: ../_static/images/tinkerer.png
+.. image:: ../../_static/images/tinkerer.png
    :alt: Tinkerer Icon
    :scale: 50%
    :align: left

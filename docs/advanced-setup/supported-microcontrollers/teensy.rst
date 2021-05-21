@@ -2,7 +2,7 @@
 Teensy
 ************
 
-.. image:: ../_static/images/tinkerer.png
+.. image:: ../../_static/images/tinkerer.png
    :alt: Tinkerer Icon
    :scale: 50%
    :align: left
@@ -15,26 +15,26 @@ It's teensy because it is even smaller than a nano, but it is even more powerful
 
 There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. DCC++ EX will run on all these boards. The biggest difference is size/number of pins. You can also purchase the boards with or without the headers soldered on.
 
-.. image:: ../_static/images/microcontrollers/teensy_3_2.jpg
+.. image:: ../../_static/images/microcontrollers/teensy_3_2.jpg
    :alt: Teensy 3.2
    :scale: 40%
    :align: center
 
 The above is a Teensy 3.2 compared to a quarter. Below is a Teensy 3.6 if you need more GPIO pins
 
-.. image:: ../_static/images/microcontrollers/teensy_3_6.png
+.. image:: ../../_static/images/microcontrollers/teensy_3_6.png
    :alt: Teensy 3.6
    :scale: 40%
    :align: center
 
 There are even expansion boards to add WiFi and Ethernet. There is a Mega form factor board available to allow you to use 3.3V shields.
 
-.. image:: ../_static/images/microcontrollers/teensy41_ethernet2.jpg
+.. image:: ../../_static/images/microcontrollers/teensy41_ethernet2.jpg
    :alt: Teensy Ethernet
    :scale: 40%
    :align: left
 
-.. image:: ../_static/images/microcontrollers/teensy_4_expansion_brd.jpg
+.. image:: ../../_static/images/microcontrollers/teensy_4_expansion_brd.jpg
    :alt: Teensy WiFi Expansion Board
    :scale: 60%
    :align: left

@@ -187,4 +187,4 @@ Tinkerers and Conductors who don't mind connecting a few jumper wires may like t
 
 This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards.
 
-*** Connection Instructions coming soon ***
+For details and instructions on how to connect and configure Non Arduino Motor Shield boards and their clones, see the `Supported Motorboards Setup Notes <../advanced-setup/supported-motorboards/index.html>`_

@@ -6,10 +6,6 @@ Advanced Setup
     
     wifi-config
     motor-board-config
-    IBT_2-motor-board-setup
-    L298N-motor-board-setup
-    nano
-    nano-every
-    wifi-mega
-    teensy
+    supported-motorboards/index
+    supported-microcontrollers/index
     high-accuracy

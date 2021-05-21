@@ -19,7 +19,7 @@ Main DCC Bus
 
 The main bus provides a low resistance, high current capable path for the voltage and current to your track. It may power several locos and all your lights, servos, switches and other accessories. Optionally, you may want to have a separate bus for accessory control and reserve the main bus just for your locos. More on that later. ***TODO: Add link here***
 
-.. image:: ../../_static/images/icons/thumb_up.png
+.. image:: ../_static/images/icons/thumb_up.png
    :alt: thumbs-up icon
    :scale: 100%
    :align: left

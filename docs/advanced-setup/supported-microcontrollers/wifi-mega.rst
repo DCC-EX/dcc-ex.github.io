@@ -2,7 +2,7 @@
 Mega+WiFi Configuration
 **************************
 
-.. image:: ../_static/images/tinkerer.png
+.. image:: ../../_static/images/tinkerer.png
    :alt: Tinkerer Icon
    :scale: 50%
    :align: left
@@ -14,7 +14,7 @@ Tinkerer Level
 A Operational Standalone WiFI DCC Command Station
 ==================================================
 
-.. figure:: ../_static/images/mega_wifi.png
+.. figure:: ../../_static/images/mega_wifi.png
    :alt: Mega WiFi
    :scale: 40%
    :align: center
@@ -35,7 +35,7 @@ This is our tested and proven configuration
 
 * DCC++EX 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFI - Combo Board
-* Deek Robot L298P Standard Motor Shield (or other `approved motor controller <../reference/hardware/motor-boards.html>`_)
+* Deek Robot L298P Standard Motor Shield (or other `approved motor controller <../../reference/hardware/motor-boards.html>`_)
 * 12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
 * Android Smartphone with Engine Driver v2.28.123 or iOS Smarphone with WiThrottle
@@ -58,7 +58,7 @@ What You Will Do
 
 Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
 
-.. figure:: ../_static/images/wifi/ch340_driver.png
+.. figure:: ../../_static/images/wifi/ch340_driver.png
    :alt: CH340 Recognized
    :scale: 100%
    :align: center
@@ -87,12 +87,12 @@ Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware fi
 
 .. raw:: html
 
-   <p><a class="dcclink" href="../_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p>
+   <p><a class="dcclink" href="../../_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p>
   
 
 .. raw:: html
   
-   <p><a class="dcclink" href="../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
+   <p><a class="dcclink" href="../../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
 
 |
 
@@ -103,7 +103,7 @@ Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button b
 
 .. raw:: html
    
-   <p><a class="dcclink" href="../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
+   <p><a class="dcclink" href="../../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
 
 Install python if you don't already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don't:
 
@@ -132,7 +132,7 @@ When that is installed, install setup tools:
 
 With the Mega UNPLUGGED (no power connected!), you will set some switches. Use the following diagram to see the locations on the board. You can click on any picture to enlarge it.
 
-.. figure:: ../_static/images/wifi/mega_wifi1.png
+.. figure:: ../../_static/images/wifi/mega_wifi1.png
    :alt: Mega WiFi Switch Locations
    :scale: 50%
    :align: center
@@ -141,7 +141,7 @@ With the Mega UNPLUGGED (no power connected!), you will set some switches. Use t
 
 Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
 
-.. figure:: ../_static/images/wifi/mega_wifi_sw_flash.png
+.. figure:: ../../_static/images/wifi/mega_wifi_sw_flash.png
    :alt: Switches in flash mode
    :scale: 30%
    :align: center
@@ -169,12 +169,12 @@ NOTE: It may take a few seconds to open while you see a black cmd window
 - press [Developer Mode] button
 - Press [ESP8266 Download Tool] button
 
-.. image:: ../_static/images/wifi/download_tool_dev_mode.jpg
+.. image:: ../../_static/images/wifi/download_tool_dev_mode.jpg
    :alt: Flasher Tool Buttons
    :scale: 80%
    :align: left
 
-.. figure:: ../_static/images/wifi/download_tool_esp8266.jpg
+.. figure:: ../../_static/images/wifi/download_tool_esp8266.jpg
    :alt: Flasher Tool Buttons 2
    :scale: 80%
    :align: left
@@ -213,7 +213,7 @@ Setup the files and memory locations in the Flasher Tool
 - Make sure to check all the file checkboxes to the left of the filled in file names
 - Set the EXACT settings using the radio buttons & baud rate settings: (26M, 40MHz, DIO, 16Mbit-C1, Your COM port selected, and 460800 baud).
 
-.. figure:: ../_static/images/wifi/flasher_1.png
+.. figure:: ../../_static/images/wifi/flasher_1.png
    :alt: Flasher Settings Screen
    :scale: 80%
    :align: center
@@ -258,7 +258,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 - (Leave the TX/RX slide Pin on RxD3 TxD3)
 - re-connect the USB cable
 
-.. figure:: ../_static/images/wifi/mega_wifi_sw_run.png
+.. figure:: ../../_static/images/wifi/mega_wifi_sw_run.png
    :alt: Switches in flash mode
    :scale: 30%
    :align: center
@@ -280,16 +280,16 @@ If you are going to want to connect to your WiFi router, you just need to enter 
 
 Download and install DCC++EX from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 
-`How to install using the installer <../get-started/installer.html>`_
+`How to install using the installer <../../get-started/installer.html>`_
 
-`How to install using the Arduino IDE <../get-started/arduino-ide.html>`_
+`How to install using the Arduino IDE <../../get-started/arduino-ide.html>`_
 
-`I know what I'm doing, just point me to the downloads page! <../download/commandstation.html>`_
+`I know what I'm doing, just point me to the downloads page! <../../download/commandstation.html>`_
 
 Short Version of Network Setup
 ===============================
 
-`Long/Detailed Network Setup HERE <../advanced-setup/wifi-config.html>`_
+`Long/Detailed Network Setup HERE <../../advanced-setup/wifi-config.html>`_
 
 All settings are in the config.h file in your CommandStation-EX folder. If you don't have a config.h, rename config.example.h to config.h.
 

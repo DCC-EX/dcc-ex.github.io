@@ -2,7 +2,7 @@
 IBT_2 BTS7960 Motor Board
 **************************
 
-.. image:: ../_static/images/engineer.png
+.. image:: ../../_static/images/engineer.png
    :alt: Engineer Icon
    :scale: 50%
    :align: left
@@ -30,7 +30,7 @@ Upgrading and Using the Arduino Motor Shield
 
 For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.
 
-If you need instructions on how to install the Arduino Motor Shield, see `Arduino Motor Shield Assembly <../get-started/assembly.html>`_
+If you need instructions on how to install the Arduino Motor Shield, see `Arduino Motor Shield Assembly <../../get-started/assembly.html>`_
 
 What We Are Going To Do
 -------------------------
@@ -78,7 +78,7 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
 
 Here is a visual diagram. R1, R2 and D1 are optional. See current sense notes below. Click to enlarge:
 
-.. image:: ../_static/images/motorboards/ibt_wiring.png
+.. image:: ../../_static/images/motorboards/ibt_wiring.png
    :alt: IBT_2 Wiring 1
    :scale: 70%
 
@@ -86,7 +86,7 @@ Here is a visual diagram. R1, R2 and D1 are optional. See current sense notes be
 
 It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
 
-.. image:: ../_static/images/motorboards/ibt_2_wiring_fritz.png
+.. image:: ../../_static/images/motorboards/ibt_2_wiring_fritz.png
    :alt: IBT_2 Wiring 2
    :scale: 25%
 
@@ -113,7 +113,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 ``#define MOTOR_SHIELD_TYPE IBT_2_WITH_ARDUINO``
 
-Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../get-started/index.html>`_
+Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../../get-started/index.html>`_
 
 Important Notes about Current Sensing Resistors
 ------------------------------------------------
@@ -161,7 +161,7 @@ The choice of motor driver is set in the config.h file. It is set in the followi
 
 The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
-If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the `Motor Board Config Section <motor-board-config.html>`_
+If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the `Motor Board Config Section <../motor-board-config.html>`_
 
 For the Engineers, the defintions and implementation for motor board control are in the following files:
 
@@ -176,9 +176,9 @@ IBT_2 schematic
 
 Below is a link to the IBT_2 schematic. Click to enlarge.
 
-.. image:: ../_static/images/schematics/IBT_2_schematic.jpg
+.. image:: ../../_static/images/schematics/IBT_2_schematic.jpg
    :scale: 50
 
 Below is the Handson Technology datasheet, recommended reading for Tinkerers and Engineers
 
-`Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver <../_static/documents/bts7960-motor-driver.pdf>`_
+`Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver <../../_static/documents/bts7960-motor-driver.pdf>`_

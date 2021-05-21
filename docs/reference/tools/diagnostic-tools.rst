@@ -209,7 +209,7 @@ https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-gr
 
 And if you want to get into the development of DCCInspector-EX and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit DCC-EX team member Neil McKechnie's blog.
 
-.. figure:: ../../_static/images/tools/neil_sniffer.jpg
+.. figure:: ../../_static/images/tools/neil_sniffer.png
    :align: center
    :scale: 60%
    :alt: Neil's DCC-EX Sniffer

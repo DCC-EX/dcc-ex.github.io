@@ -37,14 +37,6 @@ Accessories
 
     accessories/suppliers
 
-Documents
----------------
-
-.. toctree::
-    :maxdepth: 4
-
-    documents/index
-
 Downloads
 -----------
 

@@ -19,7 +19,7 @@ Sniffer vs. Analyzer
 Sniffer
 ----------
 
-A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section.
+A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ sketch.
 
 .. image:: ../../_static/images/tools/sniffer_out1.png
    :align: left
@@ -70,7 +70,7 @@ DCC Sniffer (PACKET analyzer)
 Buy it
 -------
 
-Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download a free sketch file. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
+Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_  file and upload it to your microcontroller with the Arduiono IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
 
 .. figure:: ../../_static/images/tools/iowa_scale_eng_dcc_board.jpg
    :align: left
@@ -99,16 +99,18 @@ Well it isn't quite a turnkey solution, but it's close. You need this shield and
 
 https://www.iascaled.com/store/ARD-DCCSHIELD
 
-It costs about $30 US.
+**It costs about $30 US.**
 
-And since it is a shield, you just stick it on top of an Uno or Mega, upload a sketch, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
+And since it is a shield, you just stick it on top of an Uno or Mega, upload `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
 
 *** Wiring and more info goes here ***
 
 Build It
 ----------
 
-Now things get fun. A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts.
+Now things get fun. A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP32 if you connect to the signal pin of the DCC++EX Command Station instead of to the track.
+
+You will need to upload our `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ to whatever microcontroller you choose.
 
 .. figure:: ../../_static/images/tools/sniffer_block_diag.png
    :align: center
@@ -122,7 +124,7 @@ Now things get fun. A DCC sniffer is a very simple device that contains only 2 o
 
 - **DCC Signal Interface** This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your microcontroller. This can be as simple as a diode, two resistors and an opto-isolator chip.
  
-- **Microcontroller Decoder** This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with a DCC Decoder sketch. Our DCCInspector-EX will run on Arduinos and the ESP32.
+- **Microcontroller Decoder** This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with the DCCInspector-EX sketch.
 
 DCC Signal Interface
 ^^^^^^^^^^^^^^^^^^^^^
@@ -151,7 +153,7 @@ With this option, you can connect to anywhere on your track. Wiring can be tempo
 
 The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1uF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our DCCInspector-EX sketch uses the pin 13 LED to provide the same function.
 
-**Recommended circuit (courtesy of Geoff Bunza)**
+**Another tested circuit (courtesy of Geoff Bunza)**
 
 .. figure:: ../../_static/images/tools/dcc_fe2_schematic.jpg
    :align: center
@@ -204,6 +206,24 @@ fritzing diagram
 ***TODO: Add this board***
 
 https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/
+
+And if you want to get into the development of DCCInspector-EX and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit DCC-EX team member Neil McKechnie's blog.
+
+.. figure:: ../../_static/images/tools/neil_sniffer.jpg
+   :align: center
+   :scale: 60%
+   :alt: Neil's DCC-EX Sniffer
+   :figclass: align-center
+
+   Figure 8: Neil's DCC-EX Sniffer in a 3D Printed Case
+
+Here:
+
+https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/
+
+and here:
+
+https://wakwak2popo.wordpress.com/2021/01/28/stand-alone-dcc-diagnostics/
 
 
 

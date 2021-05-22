@@ -22,7 +22,7 @@ Chesterfield sells a case to fit the Mega DCC-EX Command Station as well as a ti
     :alt: Chesterfield Command Station Case
     :scale: 80%
 
-`Chesterfiled DCC-EX Command Station Case <https://chesterfield-models.co.uk/product/dcc-3d-printed-case/>`_
+`Chesterfiled DCC-EX Command Station Case <https://chesterfield-models.co.uk/product/dccex/>`_
 
 Command Station Rack (The Mac Rack)
 -----------------------------------

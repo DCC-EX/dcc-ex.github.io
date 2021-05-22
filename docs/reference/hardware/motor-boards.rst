@@ -212,7 +212,7 @@ You will either need 2 of these or one of these and another board to run your pr
 
 Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 
-`IBT_2 Intstallation Instructions <../../advanced-setup/IBT_2-motor-board-setup.html>`_
+`IBT_2 Intstallation Instructions <../../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html>`_
 
 |
 

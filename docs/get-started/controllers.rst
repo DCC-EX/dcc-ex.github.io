@@ -58,7 +58,7 @@ For those who want the power of JMRI to operate a complex layout, you would inst
 Command Language (API)
 ======================
 
-There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and Via the JMRI WEB Server command language. For an explanation of what these terms mean and what that means to you, please see `Protocols: WiThrottle, DCC++, and WEB Servers Explained <../protocols.html>`_ DCC++ EX natively understands our own DCC++ API and the WiThrottle API and will work with a direct connection to these throttles, however, you can connect throttles to the computer running JMRI and use JMRI as the middleware to send commands to DCC++EX. JMRI uses DCC++ commands when speaking to the Command Station.
+There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and Via the JMRI WEB Server command language. For an explanation of what these terms mean and what that means to you, please see `Protocols: WiThrottle, DCC++, and WEB Servers Explained <../throttles/protocols.html>`_ DCC++ EX natively understands our own DCC++ API and the WiThrottle API and will work with a direct connection to these throttles, however, you can connect throttles to the computer running JMRI and use JMRI as the middleware to send commands to DCC++EX. JMRI uses DCC++ commands when speaking to the Command Station.
 
 Compatible Throttles
 =====================

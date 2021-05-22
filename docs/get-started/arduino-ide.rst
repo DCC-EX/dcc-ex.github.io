@@ -75,7 +75,7 @@ If you want to take a look at this file or make a simple change, just open the f
 Select the board type and com port
 ===================================
 
-Before you attempt this step, make sure that you have everything connected properly from the `assembly page <assembly.md>`_. And a final reminder to **make sure you cut the Vin trace** on the bottom of the Arduino Motor Shield. Ready? Proceed.
+Before you attempt this step, make sure that you have everything connected properly from the `assembly page <assembly.html>`_. And a final reminder to **make sure you cut the Vin trace** on the bottom of the Arduino Motor Shield. Ready? Proceed.
 
 Connect the computer to the Arduino with the USB cable. Note the 5V coming from your computer/raspberry Pi is enough to power the Mega, since it bypasses the regulator that converts your 7-9V power supply down to 5V and goes right to the 5V bus on the board. So don't be alarmed by lights on your Arduino.
 
@@ -163,7 +163,9 @@ Run your trains!
 
 * Put your loco on the MAIN track. **The loco cannot move or respond to non-programming commands on the PROG track!**
 
-Now either download our exWebThrottle found `here <https://github.com/DCC-EX/exWebThrottle>`_ and run it in your browser, or run it directly from our `web page <../throttle/exwebthrottle.html>`_. Follow the instructions on that page to enable chromium "experimental features".
+**Now run WebThrottle-EX** directly from our `WebThrottle-EX web page <../throttles/ex-webthrottle.html>`_. Follow the instructions on that page to enable chromium "experimental features". Note that you can run the throttle from your browser and install it locally from its own menu.
+
+You can also download our WebThrottle-EX found at `WebThrottle-EX on GitHub <https://github.com/DCC-EX/exWebThrottle>`_ and run it in your browser. Again, see the WebThrottle web page to see how to enable chrom experimental features.
 
 The rest of the instructions show you how to use exWebThrottle. You should be able to find the CS by its serial port and enable it, then turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!
 

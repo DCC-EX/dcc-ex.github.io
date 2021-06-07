@@ -23,7 +23,7 @@ Conductor Friendly
 
 .. image:: ../../_static/images/wifi_jumpers1.jpg
    :alt: Makerfabs ESP-8266 WiFi Shield
-   :scale: 80%
+   :scale: 70%
 
 
 `Installation Instructions for WiFi <../../get-started/wifi-setup.html>`_
@@ -37,7 +37,7 @@ Tinkerer
 
 .. image:: ../../_static/images/duinopeak.jpg
    :alt: Duinopeak ESP-8266 WiFi Shield
-   :scale: 70%
+   :scale: 60%
 
 You will need an ESP-01s to plug into this board. This is just an expansion shield board. It allows you to plug an ESP8266 onto an Arduino with no jumper wires. This board also has a voltage regulator, level shifters and a reset button for programming.
 
@@ -88,7 +88,7 @@ Tinkerer to Engineer Level
 
 .. image:: ../../_static/images/wifi/wangtongze_wifi_board.jpg
    :alt: ESP-01S
-   :scale: 70%
+   :scale: 60%
 
 This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for "WangTongze" on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a "good" board, it will work perfectly, if you get a bad clone, it won't work without employing workarounds. A genuine Wangtongze has no misspellings.
 
@@ -129,6 +129,7 @@ The bottom line is that we don't recommend this board because you would have to 
 
 Here is a link to the `Video and info from Wang Tongze himself <https://www.youtube.com/watch?v=LJcYgR479Vw>`_
 
+
 Sparkfun Thing Plus (ESP32)
 =============================
 
@@ -137,10 +138,10 @@ Tinkerer Level
 This is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. The board is relatively expensive, but Sparkfun has quality products and top notch support. Detailed installation instructions can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html
 
 .. image:: ../../_static/images/wifi/sparkfun_thing_plus.jpg
-   :alt: ESP-01S
-   :scale: 80%
+   :alt: Sparkfun Thing Plus
+   :scale: 40%
 
-   https://www.sparkfun.com/products/17381
+https://www.sparkfun.com/products/17381
 
 
 ESP32_Ant-01 Breakout and Development Board (ESP32)
@@ -150,7 +151,7 @@ Tinkerer Level
 
 .. image:: ../../_static/images/wifi/esp32_dev_board.jpg
    :alt: ESP32 dev board
-   :scale: 90%
+   :scale: 65%
 
 Like the Sparkfun board, this board is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. It is half the price of the Sparkfun board and comes with an antenna. Detailed instructions on intallation can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html
 

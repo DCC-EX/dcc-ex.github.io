@@ -6,12 +6,12 @@ This page is intended to get you started with DCC++ EX by helping you in buildin
 The Components of a Full System
 -------------------------------
 
-- **Command Station** - An Arduino with a motorboard and the DCC-EX uploadable firmware
-- **Controller** - A Throttle/CAB such as WebThrottle-EX, JMRI, Engine Driver, etc.
-- **Power** - A DC power supply for the motor board to the track and optionally one for the Arduino
-- **A "main" track** aka "operations" track - most people already have this, it's your layout
-- **A "programming" track** aka "service" track - a short section of track that you will use to program locomotives (see section on layout)
-- **A Train** Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
+- **Command Station** - An Arduino with a motor board and the DCC-EX uploadable firmware
+- **Controller** - A Throttle/CAB such as WebThrottle-EX, JMRI, Engine Driver, etc
+- **Power** - A DC power supply for the motor board to the track, and optionally one for the Arduino
+- **A "main" track** aka "Operations" track - most people already have this: it's your layout
+- **A "programming" track** aka "Service" track - a short section of track that you will use to program locomotives (see section on layout)
+- **A Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
 
 
 What you need
@@ -40,12 +40,12 @@ The DCC++ EX installer is recommended for most users and automatically downloads
 
 You'll also need something to control your trains. Because there are several options, we will discuss this following setup of the system.
 
-See this `Shopping list <../reference/hardware/shopping-list.html>`_ for everything you need organized for you in one place.
+See this `Shopping list <../reference/hardware/shopping-list.html>`_ for everything you need, organized for you in one place.
 
 I'm Ready!
 -----------
 
-Click the "next" button below to choose your path and then move ahead to how to assemble your Command Station.
+Click the "next" button below to choose your path, and then move ahead to how to assemble your Command Station.
 
 .. toctree::
     :hidden:

@@ -2,7 +2,7 @@
 WiFi Boards
 ************
 
-For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the `Mega+WiFi page <../../advanced-setup/supported-microcontrollers/wif-mega.html>`_
+You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the `Mega+WiFi page <../../advanced-setup/supported-microcontrollers/wif-mega.html>`_
 
 For more information on how to configure your CS to use the boards below, see `Wifi Setup <../../get-started/wifi-setup.html>`_
 
@@ -13,6 +13,8 @@ For more information on how to configure your CS to use the boards below, see `W
 - :ref:`Mega+WiFi Configuration`. (this link will take you to another page)
 - :ref:`Sparkfun Thing Plus (ESP32)`.
 - :ref:`ESP32_Ant-01 Breakout and Development Board (ESP32)`.
+
+.. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead. The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
 
 Makerfabs WiFi Shield
 ======================

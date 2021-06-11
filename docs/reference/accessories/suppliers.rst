@@ -6,6 +6,24 @@ Hardware, Software, and Accessory Suppliers
 Cases / Enclosures
 ==================
 
+David Yale
+------------
+
+.. image:: ../../_static/images/suppliers/flag_us.jpg
+   :alt: US Flag
+   :scale: 100%
+   :align: left
+   
+`David's Makerbot Thingverse page <https://www.thingiverse.com/thing:4619514?fbclid=IwAR3-iPhSOXOwbS5HytoKfxdfWuaaSgolslN52x9rp18dW1OhLEbnCUFGRs8>`_
+
+David provides the files to make a 3D printed case or can sell an alread made case to fit the Mega DCC-EX Command Station with a motor shield, WiFi shield, and LCD display.
+
+.. image:: ../../_static/images/suppliers/david_yale_case.png
+   :alt: David Yale DCC-EX case
+   :scale: 50%
+   :align: left
+
+
 Chesterfield Cases
 -------------------
 

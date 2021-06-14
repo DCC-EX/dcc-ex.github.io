@@ -23,9 +23,15 @@ Why do we recommend the Mega?
 * The mega is only modestly more expensive than an Uno, with clones available for less than $10 USD.
 * See the special note about the Mega+WiFi board below for a board that has the microcontroller and WiFi already on one board.
 
-.. image:: ../../_static/images/mega.jpg
+.. image:: ../../_static/images/microcontrollers/mega2.jpg
    :alt: Arduino Mega Microcontroller
-   :scale: 100%
+   :scale: 75%
+
+Note that if the size of the regular Mega board is an issue, there are condensed Mega clones that are only 52mm long! They don't take shields, so you will need to use headers and jumper wires, but they will fit in a very small box. Look for boards by the name "Arduino Mega 2560 PRO Embedded" or "Mini MEGA 2560 Pro Micro" or just "Mega Pro 2560". Be careful to get the correct one for what you are trying to do because they can come in 3.3V versions or 5V versions and have a micro-usb port (which you probably want) or just pins to a TTL serial port, and come with header pins you have to solder or not. Remember it must be a 2560 not a 328.
+
+.. image:: ../../_static/images/microcontrollers/mega_pro2.jpg
+   :alt: Mega Pro Micro
+   :scale: 35%
 
 Arduino Uno
 =============

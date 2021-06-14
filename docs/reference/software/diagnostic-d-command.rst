@@ -21,7 +21,7 @@ Speed Step Configuation
 The following commands turn ON(1) or OFF(0) various diagnostic traces
 ======================================================================
 
-``<D ACK ON|OFF>`` trace DCC ACK processing when reading/writing on the prog track. [[Diagnostics D ACK Command]]
+``<D ACK ON|OFF>`` trace DCC ACK processing when reading/writing on the prog track. See `Diagnostics D ACK Command<diagnosti-d-ack-command.html>`_
 
 ``<D CMD ON|OFF>`` trace received JMRI commands.
 

@@ -13,9 +13,8 @@ For a video on how to install and use WebThrottle-EX click below.
 What you need to run WebThrottle-EX
 ====================================
 
-* Chromium-Based Browser version 80 or above
+* Chromium-Based Browser version 89 or above (March 2021)
   (Chrome, Opera, Edge)
-* You must enable the experimental Web Serial API
 
 You don't need anything else to test it out and to run in emulator mode, just run it and play. To use it to run real trains you will need:
 
@@ -27,17 +26,7 @@ You don't need anything else to test it out and to run in emulator mode, just ru
 Getting started
 =================
 
-First, you must enable the Web Serial API, in your browser URL bar type:
-
-.. code-block::
-
-   chrome://flags
-
-
-If you are using a different Chromium browser, substitute your browser name for chrome (ex: edge://flags).
-
-Then set the **#enable-experimental-web-platform-features** flag by looking on the page for "Experimental Web Platform Features" and click on the "enable" button.
-
+Make sure you are using Chrome version 89 or above (check the menu, help, about screen).
 
 .. note:: If you don't have your hardware yet or just want to play with the throttle and see commands being sent to the log window, you can skip the part about connecting your Command Station.
 

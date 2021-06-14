@@ -1,17 +1,25 @@
-
 ********************************
 Diagnostics ``<D ACK>`` Command
 ********************************
+
+- :ref:`<D ACK ON>` - Turn on Loco acknowledgement diagnostics
+- :ref:`<D ACK LIMIT mA>` - Override ACK processing mA pulse size
+- :ref:`<D ACK MIN µS>` - Override ACK processing minimum pulse width
+- :ref:`<D ACK MAX µS>` - Override ACK processing max pulse width
+- :ref:`<D PROGBOOST>` - Override 250mA prog track limit while idle.
+
+<D ACK ON>
+============
 
 If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands folowed by pressing "send":
 
 | ``<D ACK ON>`` 
 | ``<R>``
 
-This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. If you don't see your loco address at the end of the report, send us the log (see below for an example), and we can help you diagnose the problem.
+This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. If you don't see your loco address at the end of the report (it could be incorrect or <r -1>), send us the log (see below for an example), and we can help you diagnose the problem. 
 
 More Detail
-===========
+-------------
 
 When the ACK processing on the prog track does not work as expected, you may want to use the ``<D ACK ON>`` command in a serial command window. This is an example how to read CV8 with diagnostics on. You enter the first 2 lines, ``<D ACK ON>`` followed by ``send``, then ``<R 8 1 1>`` followed by ``send``. DCC-EX does not echo what you write, but your serial command window may. With diag on you get the extra 11 lines of output compared to if you just entered the command with diagnostics off. The last line is the answer, CV8=145:
 
@@ -57,13 +65,13 @@ To turn off the ack diagnoistics use any parameter that is not "ON" or "LIMIT".
 
 .. code-block:: none
 
-   <D ACK NOPE>
+   <D ACK NOPE>, <D ACK OFF>, etc.
 
 Diag messages off.
 
 
-Ack Limit
-==========
+<D ACK LIMIT mA>
+==================
 
 The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too "trigger happy" you can make it less sensitive by raising this limit.
 
@@ -81,4 +89,35 @@ would set the limit to 100mA (less sensitive).
 
 The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanenly set the ACK LIMIT, you may enter it as a command in the mySetup.h file.
 
-***Add help on how to set this in the autoexec file***
+***Add help on how to set this in the mySetup.h file***
+
+
+<D ACK MIN µS>
+================
+
+<D ACK MAX µS>
+===============
+
+The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC++ EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
+
+Example 1: You use the <D ACK ON> and <R> commands described above to generate a test log from a loco on your programming track. You see that there are ACK pulses but that their durations are less than 4000 microseconds. The log shows the shortest one was 3450. You might then choose a setting a little bit lower than your lowest reading:
+
+.. code-block:: none
+
+   <D ACK MIN 3300>
+
+Example 2: You use the <D ACK ON> and <R> commands described above to generate a test log from a loco on your programming track. You see that some of the ACK pulses are longer than 8500 µS. The longet one is 10350 µS. Pick a setting a little bit higher than your highest reading like this:
+
+.. code-block:: none
+
+   <D ACK MIN 10500>
+
+<D PROGBOOST>
+===============
+
+``<D PROGBOOST>`` - Override 250mA prog track limit while idle. 
+
+When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the CS is reset.
+
+***TODO: Add instruction on how to make these permanent by using a mySetup.h file***
+

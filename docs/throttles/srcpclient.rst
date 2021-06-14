@@ -75,8 +75,6 @@ Using Wifi
 
 To use Wifi, make sure you have a WiFi enabled Command Station as described in the `Wifi Setup <../get-started/wifi-setup.html>`_ section.
 
-We have not tested the WiFi implementation yet
-
 
 
 ***TODO:insert tutorial here***

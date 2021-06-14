@@ -2,7 +2,9 @@
 WiFi Setup
 ***********
 
-The purpose of this WiFi solution is for connecting a Wifi Throttle DIRECTLY to the Command Station and elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can `skip ahead to the next page <installer.html>`_.
+The purpose of this WiFi solution is for connecting up to 5 Wifi throttles DIRECTLY to the Command Station and elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can `skip ahead to the next page <installer.html>`_.
+
+.. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12). The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
 
 There are many ways to add Wifi to your CS. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 

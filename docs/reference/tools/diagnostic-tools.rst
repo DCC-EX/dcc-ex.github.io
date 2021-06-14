@@ -303,7 +303,7 @@ Download USB Drivers
 
 These device need USB drivers from Saleae. Download and install the 1.x drivers from here:
 
-`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/latest-beta-release>`_
+`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/older-software-releases>`_
 
 Connect the Analyzer
 ---------------------

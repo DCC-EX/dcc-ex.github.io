@@ -193,14 +193,14 @@
 <a class="reference internal image-reference" href="../_images/basic_setup_lg.jpg"><img alt="Command Station Setup" class="align-center" src="../_images/basic_setup_lg.jpg" style="width: 800px;" /></a>
 <p><strong>Figure 1</strong> - basic setup (click to enlarge picture)</p>
 <ul class="simple">
-<li><p>For an Uno, Nano or other microcontroller, please see <a class="reference external" href="../reference/hardware/microcontroller-boards.html">Using a different microcontroller</a>. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see <a class="reference external" href="../reference/hardware/motor-boards.html">Motor Controllers</a></p></li>
+<li><p>For an Uno, Nano, or other microcontroller, please see <a class="reference external" href="../reference/hardware/microcontroller-boards.html">Using a different microcontroller</a>. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see <a class="reference external" href="../reference/hardware/motor-boards.html">Motor Controllers</a></p></li>
 </ul>
 <p>For a video on how to do this, click below: <a class="reference external" href="https://www.youtube.com/watch?v=N6TWR7fIl0A&amp;t=5s">Setting Up Your Command Station</a></p>
 <blockquote>
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
 <div class="section" id="before-you-begin-cut-the-vin-trace-on-the-motor-controller-or-bend-out-the-vin-pin">
-<h2>1. BEFORE YOU BEGIN, Cut the Vin trace on the motor controller OR Bend out the Vin Pin<a class="headerlink" href="#before-you-begin-cut-the-vin-trace-on-the-motor-controller-or-bend-out-the-vin-pin" title="Permalink to this headline">¶</a></h2>
-<p>We recommend you use two separate power supplies (or one power supply that can deliver two different voltages) one for the Arduino Mega and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and do ONE of the following:</p>
+<h2>1. BEFORE YOU BEGIN: Cut the Vin trace on the motor controller, OR: Bend out the Vin Pin<a class="headerlink" href="#before-you-begin-cut-the-vin-trace-on-the-motor-controller-or-bend-out-the-vin-pin" title="Permalink to this headline">¶</a></h2>
+<p>We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and do ONE of the following:</p>
 <ol class="arabic simple">
 <li><p>Cut the Vin trace on the bottom of the board.</p></li>
 <li><p>Bend out or cut off the Vin Pin</p></li>
@@ -211,7 +211,7 @@
 </div>
 <div class="section" id="cutting-the-trace">
 <h3>Cutting the Trace<a class="headerlink" href="#cutting-the-trace" title="Permalink to this headline">¶</a></h3>
-<p>Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.</p>
+<p>Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.</p>
 <a class="reference internal image-reference" href="../_images/motor_shield_vin2.jpg"><img alt="Cut Vin trace on arduino motor shield" src="../_images/motor_shield_vin2.jpg" style="width: 275.2px; height: 362.40000000000003px;" /></a>
 <p><strong>Figure 2</strong> - Cutting the Vin trace (click to enlarge)</p>
 <p>If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.</p>
@@ -231,11 +231,11 @@
 </div>
 <p>Here are some tips:</p>
 <ul class="simple">
-<li><p>There are power connectors on both boards. They must point in the same direction</p></li>
+<li><p>There are power connectors on both boards. They must point in the same direction.</p></li>
 <li><p>There are outdented “tabs” on the opposite end of the board. They must point in the same direction.</p></li>
-<li><p>The pin numbers on both boards must align (pin 1 goes to pin 1, gnd goes to gnd, etc)</p></li>
-<li><p>With the power connectors to your right, align the pins facing you first (pins 0-12, aref, gnd, etc.)</p></li>
-<li><p>Look at the pins on the motorboard and make sure they are all straight and line up in a neat row</p></li>
+<li><p>The pin numbers on both boards must align (pin 1 goes to pin 1, gnd goes to gnd, etc).</p></li>
+<li><p>With the power connectors to your right, align the pins facing you first (pins 0-12, aref, gnd, etc).</p></li>
+<li><p>Look at the pins on the motorboard and make sure they are all straight and line up in a neat row.</p></li>
 </ul>
 <p>Place both boards on the table with the power connector end facing in the same direction.</p>
 <p><strong>Note that you can click on most of the images to enlarge them.</strong></p>
@@ -247,12 +247,12 @@
 <a class="reference internal image-reference" href="../_images/bent_pins.png"><img alt="bent pins" src="../_images/bent_pins.png" style="width: 375.0px; height: 275.25px;" /></a>
 <p><strong>Figure 4</strong> - Bent pins</p>
 <ol class="loweralpha simple" start="2">
-<li><p>Line up the pins on the side of the board closest to the USB with the header connector on the Mega first. You want to line up pins 0-7 on the Mega with the same pins on the motor board. On the other side, IOREF, RESET, 3V3, etc. and A0-A5 need to line up on both boards. See the picture below and notice the small gap between the two sets of pins to match the two pin header sockets.</p></li>
+<li><p>Line up the pins on the side of the board closest to the USB with the header connector on the Mega first. You want to line up pins 0-7 on the Mega with the same pins on the motor board. On the other side, IOREF, RESET, 3V3, etc, and A0-A5 need to line up on both boards. See the picture below and notice the small gap between the two sets of pins to match the two pin header sockets.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/seat1.jpg"><img alt="Line up the pins" src="../_images/seat1.jpg" style="width: 450.0px; height: 300.0px;" /></a>
 <p><strong>Figure 5</strong> - Line up left side first</p>
 <ol class="loweralpha simple" start="3">
-<li><p>Just align them and start to push them in but don’t push them all the way. Use your fingers to try to push the pins to get them to all to into the holes.</p></li>
+<li><p>Just align them and start to push them in but don’t push them all the way. Use your fingers to try to push the pins to get them to all go into the holes.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/seat2.jpg"><img alt="Push the pins partway in" src="../_images/seat2.jpg" style="width: 450.0px; height: 300.0px;" /></a>
 <p><strong>Figure 6</strong> - Get all the pins started</p>
@@ -284,7 +284,7 @@
 <p>Make sure you have cut the trace on the motor control board. If not, see above first. Once you know the trace is cut, connect power to the motor board</p>
 </div>
 <p>Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, please see <a class="reference external" href="../reference/hardware/power-supplies.html">compatible Power Supplies</a></p>
-<p>If you are using a “bench” or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the motor shield and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the motor shield</p>
+<p>If you are using a “bench” or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the motor shield and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the motor shield.</p>
 <a class="reference internal image-reference" href="../_images/motor_power2b.jpg"><img alt="Power in to the Motor Shield" src="../_images/motor_power2b.jpg" style="width: 285.0px; height: 315.0px;" /></a>
 <p><strong>Figure 10</strong> - Power in to the Motor Shield</p>
 <p>If you are using a laptop style “brick” power supply or an adapter that plugs into the wall (aka wall wart), use the barrel connector to screw terminal adapter to connect your power supply to the Vin and ground pins on the motor shield. Be careful to use the correct polarity. Make sure the positive terminal on the screw terminal adapter connects to the positive (+) on the motor shield and the negative terminal (- or gnd) connects to the negative terminal.</p>
@@ -294,13 +294,13 @@
 </div>
 <div class="section" id="connect-the-power-wires-to-the-tracks">
 <h2>4. Connect the power wires to the tracks<a class="headerlink" href="#connect-the-power-wires-to-the-tracks" title="Permalink to this headline">¶</a></h2>
-<p>There are two sets of output connectors on the motor shield, “A” and “B”. A is the main or operations (also called “Ops”) track while B is the programming or service track. Connect twisted pair wire of the proper gauge to each track. Polarity it non important here, but if you will be using a siding track instead of a separate, unused piece of track, make sure that the positive and negative for both tracks match. In other words, if you view one side of your main track as having a “left” side and a “right” side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be “in phase” with each other. Here is the diagram from above repeated again for reference.</p>
+<p>There are two sets of output connectors on the motor shield, “A” and “B”. A is the Main or Operations (also called “Ops”) track while B is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track. Polarity is not important here, but if you will be using a siding track instead of a separate, unused piece of track, make sure that the positive and negative for both tracks match. In other words, if you view one side of your main track as having a “left” side and a “right” side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be “in phase” with each other. Here is the diagram from above repeated again for reference.</p>
 <a class="reference internal image-reference" href="../_images/motor_power2b.jpg"><img alt="Main and Prog Out to track" src="../_images/motor_power2b.jpg" style="width: 285.0px; height: 315.0px;" /></a>
 <p><strong>Figure 12</strong> - Out to Main and Program tracks</p>
 </div>
 <div class="section" id="connect-the-power-supply-to-the-arduino-but-don-t-plug-it-in-yet">
 <h2>5. Connect the power supply to the Arduino (but don’t plug it in yet!)<a class="headerlink" href="#connect-the-power-supply-to-the-arduino-but-don-t-plug-it-in-yet" title="Permalink to this headline">¶</a></h2>
-<p>Connect the 2.5mm barrel connector from your separate 7-9V DC powersupply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the “Vin” and “Gnd” pins on the Arduino.</p>
+<p>Connect the 2.5mm barrel connector from your separate 7-9V DC power supply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the “Vin” and “Gnd” pins on the Arduino.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run exWebThrottle or JMRI. There is also a way to use a 5V power supply. Please read <a class="reference external" href="../reference/hardware/power-supplies.html">Power Supplies</a> to help you find what will work best for you).</p>
@@ -308,8 +308,8 @@
 </div>
 <div class="section" id="install-the-optional-wifi-board">
 <h2>6. Install the optional WiFi board<a class="headerlink" href="#install-the-optional-wifi-board" title="Permalink to this headline">¶</a></h2>
-<p>You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing a ESP8266 Shield or bare ESP8266 to connect wirelessly, Click the link below.</p>
-<p><a class="reference external" href="./wifi-setup.html">Wifi Setup</a></p>
+<p>You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.</p>
+<p><a class="reference external" href="./wifi-setup.html">WiFi Setup</a></p>
 </div>
 <div class="section" id="load-firmware-on-your-command-station">
 <h2>7. Load firmware on your Command Station<a class="headerlink" href="#load-firmware-on-your-command-station" title="Permalink to this headline">¶</a></h2>
@@ -318,12 +318,12 @@
 </div>
 <div class="section" id="locos-can-t-respond-to-throttle-commands-on-the-programming-track">
 <h2>Locos Can’t Respond to Throttle Commands on the Programming Track!<a class="headerlink" href="#locos-can-t-respond-to-throttle-commands-on-the-programming-track" title="Permalink to this headline">¶</a></h2>
-<p>We have repeated this several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. <strong>THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK</strong> This is by design and part of the NMRA specification. There is such a thing as “Programming on Main”, where you can adjust things like sounds, throttle curves, speed matching, etc., but you can’t get acknowledgment back from the loco on the main track. That is usally fine beause you will know if a setting like a sound change “took” or not. We will have a section or programming on main. <strong>*TODO: Write the POM*</strong> help.</p>
+<p>We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. <strong>THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK</strong> This is by design and part of the NMRA specification. There is such a thing as “Programming on Main”, where you can adjust things like sounds, throttle curves, speed matching, etc, but you can’t get acknowledgment back from the loco on the main track. That is usally fine beause you will know if a setting like a sound change “took” or not. We will have a section on programming on main. <strong>*TODO: Write the POM*</strong> help.</p>
 </div>
 <div class="section" id="technical-notes">
 <h2>TECHNICAL NOTES<a class="headerlink" href="#technical-notes" title="Permalink to this headline">¶</a></h2>
-<p><strong>Wire Gauge</strong> - The Arduino Motor controller can only provide about 1.5 Amps of power (despite being rated for 2), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
-<p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20? Can’t you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14 (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.</p>
+<p><strong>Wire Gauge</strong> - The Arduino motor controller can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
+<p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20V? Can’t you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14V (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.</p>
 <p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield. For more information, see <a class="reference external" href="../reference/hardware/power-supplies.html">Power Supplies</a></p>
 </div>
 </div>

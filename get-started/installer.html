@@ -211,7 +211,7 @@
 <ul class="simple">
 <li><p>Install <a class="reference external" href="https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.301-macos-x64-installer">OS X dotnet core</a></p></li>
 <li><p>Download <a class="reference external" href="https://github.com/DCC-EX/BaseStation-Installer/releases">Mac OS X Installer</a></p></li>
-<li><p>Extract the Installer into its own folder.</p></li>
+<li><p>Extract the Installer into its own folder</p></li>
 <li><p>Open a terminal window and navigate to that folder</p></li>
 <li><p>Run the following command: <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">BaseStationInstaller</span></code></p></li>
 </ul>
@@ -221,7 +221,7 @@
 <ul class="simple">
 <li><p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/core/install/linux">Linux dotnet core</a></p></li>
 <li><p>Download <a class="reference external" href="https://github.com/DCC-EX/BaseStation-Installer/releases">Mac OS X Installer</a></p></li>
-<li><p>Extract the Installer into its own folder.</p></li>
+<li><p>Extract the Installer into its own folder</p></li>
 <li><p>Open a terminal window and navigate to that folder</p></li>
 <li><p>Run the following command: <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">BaseStationInstaller</span></code></p></li>
 </ul>
@@ -248,22 +248,22 @@
 <li><p>Select your com port (The installer should usually find it for you)</p></li>
 <li><p>Check the checkbox for your networking method if you have a Network shield or Wifi Shield installed</p></li>
 <li><p>Check the checkbox for your display type if using an LCD or OLED display</p></li>
-<li><p>check the Free Mem warning if you need to diagnose memory issues</p></li>
+<li><p>Check the Free Mem warning if you need to diagnose memory issues</p></li>
 <li><p>Press the “Compile and Upload” button</p></li>
 </ol>
 <div class="section" id="wifi-checkbox">
 <h3>WiFi Checkbox<a class="headerlink" href="#wifi-checkbox" title="Permalink to this headline">¶</a></h3>
-<p>MAKE SURE THIS BOX IS CHECKED - If you want Wifi, this box <strong>must</strong> be checked. If you don’t want WiFi, you can leave it checked anyway so that if you add WiFi later, you won’t have to upload the sketch again. The WiFi check only takes a few seconds after which it will report no WiFi was found and start the Command Station. If you aren’t using WiFi and was to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren’t going to use WiFi, unchecking the box will free about 10 kb of progmem and about 2kb of ram.</p>
-<p>If you have installed a WiFi board, DCC++ EX will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode). AP mode sets up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like “DCC-EX-xxxxxx” where the “xxxxxx” are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.</p>
+<p>MAKE SURE THIS BOX IS CHECKED - If you want Wifi, this box <strong>must</strong> be checked. If you don’t want WiFi, you can leave it checked anyway so that if you add WiFi later, you won’t have to upload the sketch again. The WiFi check only takes a few seconds after which it will report no WiFi was found and start the Command Station. If you aren’t using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren’t going to use WiFi, unchecking the box will free about 10 kb of progmem and about 2kb of RAM.</p>
+<p>If you have installed a WiFi board, DCC++ EX will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), this will set up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like “DCC-EX-xxxxxx”, where the “xxxxxx” are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.</p>
 <p>If you wish to connect to your home network instead (connect to your router using “Station Mode”), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:</p>
 <a class="reference internal image-reference" href="../_images/wifi.jpg"><img alt="WiFi Options" src="../_images/wifi.jpg" style="width: 267.3px; height: 344.7px;" /></a>
 <p><strong>Figure 3</strong> - Wifi Options</p>
 <ul class="simple">
-<li><p><strong>WiFi SSID</strong> - The name of your home network</p></li>
-<li><p><strong>WiFi Password</strong> - The password required to connect to your home network</p></li>
+<li><p><strong>WiFi SSID</strong> - The name of your home network.</p></li>
+<li><p><strong>WiFi Password</strong> - The password required to connect to your home network.</p></li>
 <li><p><strong>Host Name</strong> - If your WiFi Board supports it, this name can be used in addition to the IP address.</p></li>
-<li><p><strong>Server Port</strong> - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use JMRI</p></li>
-<li><p><strong>IP Address</strong> - Normally, the DHCP server for your network will assign and IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.</p></li>
+<li><p><strong>Server Port</strong> - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use JMRI.</p></li>
+<li><p><strong>IP Address</strong> - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.</p></li>
 </ul>
 </div>
 <div class="section" id="ethernet-checkbox">
@@ -273,19 +273,19 @@
 <p><strong>Figure 4</strong> - Ethernet Options</p>
 <ul class="simple">
 <li><p><strong>Host Name</strong> - If your WiFi Board supports it, this name can be used in addition to the IP address.</p></li>
-<li><p><strong>Server Port</strong> - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use JMRI</p></li>
+<li><p><strong>Server Port</strong> - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use JMRI.</p></li>
 <li><p><strong>MAC Address</strong> - This is the unique identifier for your Ethernet Shield. We recommend leaving this setting as is. If you ever have more than one Ethernet shield on your network and there is a conflict, you can change this setting.</p></li>
-<li><p><strong>IP Address</strong> - Normally, the DHCP server for your network will assign and IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.</p></li>
+<li><p><strong>IP Address</strong> - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.</p></li>
 </ul>
 </div>
 <div class="section" id="lcd-checkbox">
 <h3>LCD Checkbox<a class="headerlink" href="#lcd-checkbox" title="Permalink to this headline">¶</a></h3>
-<p>If you have a 2 or 4 line LCD diplay connected and check this box, you will see the following options you can edit for your display:</p>
+<p>If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:</p>
 <a class="reference internal image-reference" href="../_images/lcd.jpg"><img alt="LCD Options" src="../_images/lcd.jpg" style="width: 286.2px; height: 191.70000000000002px;" /></a>
 <p><strong>Figure 5</strong> - LCD Options</p>
 <ul class="simple">
-<li><p><strong>LCD Address (in Decimal format)</strong> - This is the address of your display, it us usually 39 (for 0x27) or 63 (for 0x3F)</p></li>
-<li><p><strong>LCD Columns</strong> - The number over vertical columns on your display</p></li>
+<li><p><strong>LCD Address (in Decimal format)</strong> - This is the address of your display, it is usually 39 (for 0x27) or 63 (for 0x3F)</p></li>
+<li><p><strong>LCD Columns</strong> - The number of vertical columns on your display</p></li>
 <li><p><strong>LCD Rows</strong> - The number of horizontal rows or lines on your display</p></li>
 </ul>
 <p>For more information about using displays, see <a class="reference external" href="../reference/hardware/i2c-displays.html">I2C Displays</a></p>
@@ -297,13 +297,13 @@
 <p><strong>Figure 6</strong> - OLED Options</p>
 <ul class="simple">
 <li><p><strong>OLED Width (in pixels)</strong> - Enter the width or number of horizontal pixels on your display</p></li>
-<li><p><strong>OLED Heigh (in pixels)</strong> - Enter the heighr or number of vertical pixels on your display</p></li>
+<li><p><strong>OLED Height (in pixels)</strong> - Enter the height or number of vertical pixels on your display</p></li>
 </ul>
 <p>For more information about using displays, see <a class="reference external" href="../reference/hardware/i2c-displays.html">I2C Displays</a></p>
 </div>
 <div class="section" id="refresh-ports-button">
 <h3>Refresh Ports Button<a class="headerlink" href="#refresh-ports-button" title="Permalink to this headline">¶</a></h3>
-<p>This button allows you to refresh the serial ports in case you didn’t have the Arduino connected when you opened the program or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.</p>
+<p>This button allows you to refresh the serial ports in case you didn’t have the Arduino connected when you opened the program, or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.</p>
 </div>
 <div class="section" id="compile-and-upload-button">
 <h3>Compile and Upload Button<a class="headerlink" href="#compile-and-upload-button" title="Permalink to this headline">¶</a></h3>
@@ -336,15 +336,15 @@
 <li><p>Select “Both NL &amp; CR” from the dropdown next to the baud rate</p></li>
 </ul>
 <p>When you open the serial monitor you will see at least one line sent out as status information. If you have a WiFi board or Ethernet Shield you will see a page full of log information as it configures and connects to your network.</p>
-<p>At the top of the serial monitr type <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> (lowercase “s”) into the command textbox and press “Send”. You should see:</p>
+<p>At the top of the serial monitor type <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> (lowercase “s”) into the command textbox and press “Send”. You should see:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">iDCC</span><span class="o">-</span><span class="n">EX</span> <span class="n">V</span><span class="o">-</span><span class="mf">0.2.1</span> <span class="o">/</span> <span class="n">MEGA</span> <span class="o">/</span> <span class="n">STANDARD_MOTOR_SHIELD</span> <span class="n">G</span><span class="o">-</span><span class="mi">9</span><span class="n">db6d36</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>This is the “status” command and reports your version, types of boards you are using and a build number.</p>
+<p>This is the “status” command and reports your version, types of boards you are using, and a build number.</p>
 <p>There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki">DCC++ EX Wiki</a> for a list of commands.</p>
 </div>
 <div class="section" id="using-exwebthrottle">
-<h3>Using exWebthrottle<a class="headerlink" href="#using-exwebthrottle" title="Permalink to this headline">¶</a></h3>
+<h3>Using exWebThrottle<a class="headerlink" href="#using-exwebthrottle" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/exwebthrottle.jpg"><img alt="exWebThrottle" src="../_images/exwebthrottle.jpg" style="width: 600.0px; height: 439.0px;" /></a>
 <p><strong>Figure 10</strong> - exWebThrottle</p>
 <p>Click this link: <a class="reference external" href="../throttles/ex-webthrottle.html">exWebThrottle</a> to run exWebThrottle hosted on our site, or visit <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">GitHub</a> to get the latest version to run on your computer.</p>
@@ -353,7 +353,7 @@
 <h3>Using Engine Driver (or other WiThrottle Cab) - Requires WiFi<a class="headerlink" href="#using-engine-driver-or-other-withrottle-cab-requires-wifi" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/engine_driver.png"><img alt="Engine Driver" src="../_images/engine_driver.png" style="width: 157.0px; height: 321.0px;" /></a>
 <p><strong>Figure 11</strong> - Engine Driver</p>
-<p>You will need to install Engine Driver on your mobile device and then connect to the CS either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.</p>
+<p>You will need to install Engine Driver on your mobile device and then connect to the CS, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.</p>
 </div>
 </div>
 </div>

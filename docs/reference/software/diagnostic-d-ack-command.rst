@@ -65,7 +65,7 @@ To turn off the ack diagnoistics use any parameter that is not "ON" or "LIMIT".
 
 .. code-block:: none
 
-   <D ACK NOPE>
+   <D ACK NOPE>, <D ACK OFF>, etc.
 
 Diag messages off.
 

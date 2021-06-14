@@ -6,7 +6,7 @@ Diagnostics ``<D ACK>`` Command
 - :ref:`<D ACK LIMIT mA>` - Override ACK processing mA pulse size
 - :ref:`<D ACK MIN µS>` - Override ACK processing minimum pulse width
 - :ref:`<D ACK MAX µS>` - Override ACK processing max pulse width
-- see also: `<D PROGBOOST>`  Override 250mA prog track limit while idle.
+- :ref:`<D PROGBOOST>` - Override 250mA prog track limit while idle.
 
 <D ACK ON>
 ============
@@ -112,6 +112,12 @@ Example 2: You use the <D ACK ON> and <R> commands described above to generate a
 
    <D ACK MIN 10500>
 
+<D PROGBOOST>
+===============
+
+``<D PROGBOOST>`` - Override 250mA prog track limit while idle. 
+
+When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the CS is reset.
+
 ***TODO: Add instruction on how to make these permanent by using a mySetup.h file***
 
- ``<D PROGBOOST>``  Override 250mA prog track limit while idle.

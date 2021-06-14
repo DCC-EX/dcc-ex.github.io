@@ -19,6 +19,8 @@
 
   
   
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
 
   
   
@@ -110,6 +112,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../software/release-notes.html">Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/command-summary.html">DCC++ EX Command Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
@@ -199,15 +202,17 @@
 <h1>Microcontroller Boards<a class="headerlink" href="#microcontroller-boards" title="Permalink to this headline">¶</a></h1>
 <p>CommandStation-EX currently is designed for Arduino and select microcontollers. Out of the box, it is compatible with the following boards:</p>
 <ul class="simple">
-<li><p>Arduino Mega <strong>[RECOMMENDED]</strong></p></li>
-<li><p>Mega+Wifi (Tinkerer Level)</p></li>
-<li><p>Arduino Uno</p></li>
-<li><p>Arduino Nano</p></li>
-<li><p>Nano Every</p></li>
-<li><p>Teensy 3.x &amp; 4.x</p></li>
+<li><p><a class="reference internal" href="#arduino-mega"><span class="std std-ref">Arduino Mega</span></a> <strong>[RECOMMENDED]</strong></p></li>
+<li><p><a class="reference internal" href="#mega-wifi"><span class="std std-ref">Mega+WiFi</span></a> (Tinkerer Level)</p></li>
+<li><p><a class="reference internal" href="#arduino-uno"><span class="std std-ref">Arduino Uno</span></a></p></li>
+<li><p><a class="reference internal" href="#arduino-nano"><span class="std std-ref">Arduino Nano</span></a> (Tinkerer Level)</p></li>
+<li><p><a class="reference internal" href="#nano-every"><span class="std std-ref">Nano Every</span></a> (Tinkerer Level)</p></li>
+<li><p><a class="reference internal" href="#teensy-3-x-4-x"><span class="std std-ref">Teensy 3.x &amp; 4.x</span></a> (Engineer Level)</p></li>
 </ul>
-<div class="section" id="why-do-you-recommend-the-mega">
-<h2>Why do you recommend the Mega?<a class="headerlink" href="#why-do-you-recommend-the-mega" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="arduino-mega">
+<h2>Arduino Mega<a class="headerlink" href="#arduino-mega" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="why-do-we-recommend-the-mega">
+<h3>Why do we recommend the Mega?<a class="headerlink" href="#why-do-we-recommend-the-mega" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>When compiled, our code just barely squeezes onto an Arduino Uno. <strong>A mega allows you to add more features</strong> like networking and displays because it has more memory.</p></li>
 <li><p>The Mega has many more GPIOs (General Purpose Input/Outputs) available to you for constructing control panels and controlling turnouts, signals and other accessories.</p></li>
@@ -215,19 +220,37 @@
 <li><p>The mega is only modestly more expensive than an Uno, with clones available for less than $10 USD.</p></li>
 <li><p>See the special note about the Mega+WiFi board below for a board that has the microcontroller and WiFi already on one board.</p></li>
 </ul>
-<a class="reference internal image-reference" href="../../_images/mega.jpg"><img alt="Arduino Mega Microcontroller" src="../../_images/mega.jpg" style="width: 302.0px; height: 167.0px;" /></a>
-<p>If you already have an Uno, or will use JMRI to control your trains, then by all means use an Uno.</p>
+<a class="reference internal image-reference" href="../../_images/mega2.jpg"><img alt="Arduino Mega Microcontroller" src="../../_images/mega2.jpg" style="width: 446.25px; height: 276.0px;" /></a>
+<p>Note that if the size of the regular Mega board is an issue, there are condensed Mega clones that are only 52mm long! They don’t take shields, so you will need to use headers and jumper wires, but they will fit in a very small box. Look for boards by the name “Arduino Mega 2560 PRO Embedded” or “Mini MEGA 2560 Pro Micro” or just “Mega Pro 2560”. Be careful to get the correct one for what you are trying to do because they can come in 3.3V versions or 5V versions and have a micro-usb port (which you probably want) or just pins to a TTL serial port, and come with header pins you have to solder or not. Remember it must be a 2560 not a 328.</p>
+<a class="reference internal image-reference" href="../../_images/mega_pro2.jpg"><img alt="Mega Pro Micro" src="../../_images/mega_pro2.jpg" style="width: 210.0px; height: 210.0px;" /></a>
 </div>
-<div class="section" id="what-about-the-nano">
-<h2>What about the Nano?<a class="headerlink" href="#what-about-the-nano" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="arduino-uno">
+<h2>Arduino Uno<a class="headerlink" href="#arduino-uno" title="Permalink to this headline">¶</a></h2>
+<p>If you already have an Uno, or will use JMRI to control your trains, then by all means use an Uno. Just remember that you can’t have WiFi, Ethernet or a few other options due to memory limitations. But as a Command Station connected to JMRI with a USB cable it works great.</p>
+</div>
+<div class="section" id="arduino-nano">
+<h2>Arduino Nano<a class="headerlink" href="#arduino-nano" title="Permalink to this headline">¶</a></h2>
 <p>The Arduino nano shares the same processor with the Arduino Uno, so we support it. The nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There <em>is</em> a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.</p>
-<p>See our section on <a class="reference external" href="../../advanced-setup/nano.html">Using a Nano</a></p>
+<p>See our section on <a class="reference external" href="../../advanced-setup/supported-microcontrollers/nano.html">Using a Nano</a></p>
 </div>
-<div class="section" id="a-special-note-about-the-wifi-mega">
-<h2>A Special Note about the WiFi+Mega<a class="headerlink" href="#a-special-note-about-the-wifi-mega" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mega-wifi">
+<h2>Mega+WiFi<a class="headerlink" href="#mega-wifi" title="Permalink to this headline">¶</a></h2>
 <p><strong>Tinkerer level</strong></p>
 <p>Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you ok with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn’t involve any soldering or jumper wiring.</p>
-<p>See our section on Using the <a class="reference external" href="../../advanced-setup/wifi-mega.html">WiFi+Mega Page</a></p>
+<p>See our section on Using the <a class="reference external" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html">WiFi+Mega Page</a></p>
+</div>
+<div class="section" id="nano-every">
+<h2>Nano Every<a class="headerlink" href="#nano-every" title="Permalink to this headline">¶</a></h2>
+<p><strong>Tinkerer level</strong></p>
+<p>The Nano Every is an updated Nano. It uses a completely different processor family than the Uno and Nano. S</p>
+<p>See the detailed section on the <a class="reference external" href="../../advanced-setup/supported-microcontrollers/nano-every.html">Nano Every</a></p>
+</div>
+<div class="section" id="teensy-3-x-4-x">
+<h2>Teensy 3.x &amp; 4.x<a class="headerlink" href="#teensy-3-x-4-x" title="Permalink to this headline">¶</a></h2>
+<p><strong>Engineer level</strong></p>
+<p>The Teensy Series by PJRC is a next generation micrxocontroller. It has loads of RAM, a faster clock speed and a host of add-ons.</p>
+<p>See the detailed section on the <a class="reference external" href="../../advanced-setup/supported-microcontrollers/teensy.html">Teensy</a></p>
 </div>
 <div class="section" id="will-you-support-other-microcontrollers-in-the-future">
 <h2>Will you support other microcontrollers in the future?<a class="headerlink" href="#will-you-support-other-microcontrollers-in-the-future" title="Permalink to this headline">¶</a></h2>

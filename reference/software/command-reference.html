@@ -19,6 +19,8 @@
 
   
   
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
 
   
   
@@ -44,7 +46,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Diagnostics &lt;D ACK&gt; Command" href="diagnostic-d-ack-command.html" />
+    <link rel="next" title="DCC++ EX Command Summary" href="command-summary.html" />
     <link rel="prev" title="Release Notes" href="release-notes.html" /> 
 </head>
 
@@ -101,6 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-summary.html">DCC++ EX Command Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
@@ -186,6 +189,7 @@
             
   <div class="section" id="dcc-ex-command-reference">
 <h1>DCC++ EX Command Reference<a class="headerlink" href="#dcc-ex-command-reference" title="Permalink to this headline">¶</a></h1>
+<p>This is a detailed reference. For a summary version, please see <a class="reference external" href="command-summary.html">Command Summary</a></p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="../../throttles/ex-webthrottle.html">exWebThrottle</a> - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!</p></li>
@@ -532,7 +536,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 <h4>Accessory Decoder Commands<a class="headerlink" href="#accessory-decoder-commands" title="Permalink to this headline">¶</a></h4>
 <p>There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka “Dual-Coil” method) and linear addressing method. You can either specify an address and it’s subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 0 -2047)</p>
 <p>For example, address/subaddres 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3</p>
-<p>Here is a spreadsheet in .XLSX format to help you: <a class="reference external" href="../documents/decoder-table.html">Decoder Address Decoder Table</a></p>
+<p>Here is a spreadsheet in .XLSX format to help you: <a class="reference external" href="../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet">Decoder Address Decoder Table</a></p>
 <p>NOTE: Both the following commands do the same thing. Pick the one that works for your needs.</p>
 <div class="section" id="controlling-an-accessory-with-a-linear-address-activate">
 <h5>Controlling an Accessory with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">LINEAR_ADDRESS</span> <span class="pre">ACTIVATE&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-with-a-linear-address-activate" title="Permalink to this headline">¶</a></h5>
@@ -945,6 +949,7 @@ returns: NONE
 <h2>User Commands<a class="headerlink" href="#user-commands" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;U&gt;</span></code> Is reserved for user commands.</p>
+<p>This is a detailed reference. For a summary version, please see <a class="reference external" href="command-summary.html">Command Summary</a></p>
 </div></blockquote>
 </div>
 </div>
@@ -955,7 +960,7 @@ returns: NONE
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="diagnostic-d-ack-command.html" class="btn btn-neutral float-right" title="Diagnostics &lt;D ACK&gt; Command" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="command-summary.html" class="btn btn-neutral float-right" title="DCC++ EX Command Summary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="release-notes.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

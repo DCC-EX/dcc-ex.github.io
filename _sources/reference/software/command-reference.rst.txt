@@ -2,6 +2,8 @@
 DCC++ EX Command Reference
 ****************************
 
+This is a detailed reference. For a summary version, please see `Command Summary <command-summary.html>`_
+
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
 * `exWebThrottle <../../throttles/ex-webthrottle.html>`_ - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself! 
@@ -375,7 +377,7 @@ There are two interchangeable commands for controlling Accessory Decoders, the A
 
 For example, address/subaddres 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3
 
-Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../documents/decoder-table.html>`_
+Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet>`_
 
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 
@@ -793,3 +795,4 @@ User Commands
 
  ``<U>`` Is reserved for user commands.
 
+ This is a detailed reference. For a summary version, please see `Command Summary <command-summary.html>`_

@@ -19,6 +19,8 @@
 
   
   
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
 
   
   
@@ -45,7 +47,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Diagnostics &lt;D&gt; Command" href="diagnostic-d-command.html" />
-    <link rel="prev" title="DCC++ EX Command Reference" href="command-reference.html" /> 
+    <link rel="prev" title="DCC++ EX Command Summary" href="command-summary.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,6 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-summary.html">DCC++ EX Command Summary</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
@@ -186,14 +189,23 @@
             
   <div class="section" id="diagnostics-d-ack-command">
 <h1>Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command<a class="headerlink" href="#diagnostics-d-ack-command" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="#d-ack-on"><span class="std std-ref">&lt;D ACK ON&gt;</span></a> - Turn on Loco acknowledgement diagnostics</p></li>
+<li><p><a class="reference internal" href="#d-ack-limit-ma"><span class="std std-ref">&lt;D ACK LIMIT mA&gt;</span></a> - Override ACK processing mA pulse size</p></li>
+<li><p><a class="reference internal" href="#d-ack-min-s"><span class="std std-ref">&lt;D ACK MIN µS&gt;</span></a> - Override ACK processing minimum pulse width</p></li>
+<li><p><a class="reference internal" href="#d-ack-max-s"><span class="std std-ref">&lt;D ACK MAX µS&gt;</span></a> - Override ACK processing max pulse width</p></li>
+<li><p><a class="reference internal" href="#d-progboost"><span class="std std-ref">&lt;D PROGBOOST&gt;</span></a> - Override 250mA prog track limit while idle.</p></li>
+</ul>
+<div class="section" id="d-ack-on">
+<h2>&lt;D ACK ON&gt;<a class="headerlink" href="#d-ack-on" title="Permalink to this headline">¶</a></h2>
 <p>If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands folowed by pressing “send”:</p>
 <div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></div>
 </div>
-<p>This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. If you don’t see your loco address at the end of the report, send us the log (see below for an example), and we can help you diagnose the problem.</p>
+<p>This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. If you don’t see your loco address at the end of the report (it could be incorrect or &lt;r -1&gt;), send us the log (see below for an example), and we can help you diagnose the problem.</p>
 <div class="section" id="more-detail">
-<h2>More Detail<a class="headerlink" href="#more-detail" title="Permalink to this headline">¶</a></h2>
+<h3>More Detail<a class="headerlink" href="#more-detail" title="Permalink to this headline">¶</a></h3>
 <p>When the ACK processing on the prog track does not work as expected, you may want to use the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code> command in a serial command window. This is an example how to read CV8 with diagnostics on. You enter the first 2 lines, <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code> followed by <code class="docutils literal notranslate"><span class="pre">send</span></code>, then <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">8</span> <span class="pre">1</span> <span class="pre">1&gt;</span></code> followed by <code class="docutils literal notranslate"><span class="pre">send</span></code>. DCC-EX does not echo what you write, but your serial command window may. With diag on you get the extra 11 lines of output compared to if you just entered the command with diagnostics off. The last line is the answer, CV8=145:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK ON&gt;
 &lt;R 8 1 1&gt;
@@ -224,13 +236,14 @@ Callback(145)
 <p>We do one final test at the end to <code class="docutils literal notranslate"><span class="pre">Verify</span> <span class="pre">Byte</span></code>, you see that as <code class="docutils literal notranslate"><span class="pre">VB</span></code>. This does a double-check to see if the byte contains what we found by checking it one bit at a time. The must match for a successful read.</p>
 <p>Other than when using the “decoder address test”, <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> with no parameters, you need to enter CV read commands with all 3 parameters. The format is <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">CV</span> <span class="pre">x</span> <span class="pre">y&gt;</span></code> where R stands for read and CV is the CV number you want to check. The X and Y values can be anything, but must be entered. They are an advanced feature for programmers whose software can work with DCC-EX (like JMRI). So you would enter <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">8</span> <span class="pre">55</span> <span class="pre">55&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">8</span> <span class="pre">1</span> <span class="pre">1&gt;</span></code> to try and read CV 8. The response is <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CV</span> <span class="pre">x</span> <span class="pre">y&gt;</span></code> where “x” and “y” are whatever numbers you entered after the CV value.</p>
 <p>To turn off the ack diagnoistics use any parameter that is not “ON” or “LIMIT”.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK NOPE&gt;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK NOPE&gt;, &lt;D ACK OFF&gt;, etc.
 </pre></div>
 </div>
 <p>Diag messages off.</p>
 </div>
-<div class="section" id="ack-limit">
-<h2>Ack Limit<a class="headerlink" href="#ack-limit" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="d-ack-limit-ma">
+<h2>&lt;D ACK LIMIT mA&gt;<a class="headerlink" href="#d-ack-limit-ma" title="Permalink to this headline">¶</a></h2>
 <p>The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK LIMIT 30&gt;
 </pre></div>
@@ -241,7 +254,28 @@ Callback(145)
 </div>
 <p>would set the limit to 100mA (less sensitive).</p>
 <p>The custom ack limit will be effective until you restart the Command Station (it will not “stick” in EEPROM). If you wish to permanenly set the ACK LIMIT, you may enter it as a command in the mySetup.h file.</p>
-<p><strong>*Add help on how to set this in the autoexec file*</strong></p>
+<p><strong>*Add help on how to set this in the mySetup.h file*</strong></p>
+</div>
+<div class="section" id="d-ack-min-s">
+<h2>&lt;D ACK MIN µS&gt;<a class="headerlink" href="#d-ack-min-s" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="d-ack-max-s">
+<h2>&lt;D ACK MAX µS&gt;<a class="headerlink" href="#d-ack-max-s" title="Permalink to this headline">¶</a></h2>
+<p>The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC++ EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.</p>
+<p>Example 1: You use the &lt;D ACK ON&gt; and &lt;R&gt; commands described above to generate a test log from a loco on your programming track. You see that there are ACK pulses but that their durations are less than 4000 microseconds. The log shows the shortest one was 3450. You might then choose a setting a little bit lower than your lowest reading:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK MIN 3300&gt;
+</pre></div>
+</div>
+<p>Example 2: You use the &lt;D ACK ON&gt; and &lt;R&gt; commands described above to generate a test log from a loco on your programming track. You see that some of the ACK pulses are longer than 8500 µS. The longet one is 10350 µS. Pick a setting a little bit higher than your highest reading like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK MIN 10500&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="d-progboost">
+<h2>&lt;D PROGBOOST&gt;<a class="headerlink" href="#d-progboost" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> - Override 250mA prog track limit while idle.</p>
+<p>When the programming track is switched on with <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">PROG&gt;</span></code> it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> or the CS is reset.</p>
+<p><strong>*TODO: Add instruction on how to make these permanent by using a mySetup.h file*</strong></p>
 </div>
 </div>
 
@@ -252,7 +286,7 @@ Callback(145)
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="diagnostic-d-command.html" class="btn btn-neutral float-right" title="Diagnostics &lt;D&gt; Command" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="command-reference.html" class="btn btn-neutral float-left" title="DCC++ EX Command Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="command-summary.html" class="btn btn-neutral float-left" title="DCC++ EX Command Summary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

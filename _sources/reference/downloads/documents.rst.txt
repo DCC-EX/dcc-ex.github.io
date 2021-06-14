@@ -49,7 +49,7 @@ DCC Shortcuts Card
 DCC++EX Commands Python Script for JMRI
 ========================================
 
-This file installs in JMRI to allow it to display a DCC++ EX Command Reference.
+This file installs in JMRI to allow it to display a DCC++ EX Command Reference through the Script Output Window in DecoderPro. Download, unzip and put the .py file in your JMRI script folder.
 
 .. image:: ../../_static/documents/python_thumbnail.jpg
    :alt: DCC++EX JMRI script to display a command reference

@@ -19,6 +19,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
 
   
   
@@ -227,7 +229,7 @@
 </div>
 <div class="section" id="select-the-board-type-and-com-port">
 <h2>Select the board type and com port<a class="headerlink" href="#select-the-board-type-and-com-port" title="Permalink to this headline">¶</a></h2>
-<p>Before you attempt this step, make sure that you have everything connected properly from the <a class="reference external" href="assembly.md">assembly page</a>. And a final reminder to <strong>make sure you cut the Vin trace</strong> on the bottom of the Arduino Motor Shield. Ready? Proceed.</p>
+<p>Before you attempt this step, make sure that you have everything connected properly from the <a class="reference external" href="assembly.html">assembly page</a>. And a final reminder to <strong>make sure you cut the Vin trace</strong> on the bottom of the Arduino Motor Shield. Ready? Proceed.</p>
 <p>Connect the computer to the Arduino with the USB cable. Note the 5V coming from your computer/raspberry Pi is enough to power the Mega, since it bypasses the regulator that converts your 7-9V power supply down to 5V and goes right to the 5V bus on the board. So don’t be alarmed by lights on your Arduino.</p>
 <p>From the “tools” menu select the “board” menu, then “Arduino AVR boards”, and then “Arduino Mega or Mega 2560”.</p>
 <a class="reference internal image-reference" href="../_images/board_type_mega.jpg"><img alt="Select Arduino Mega" src="../_images/board_type_mega.jpg" style="width: 720.0px; height: 291.6px;" /></a>
@@ -278,7 +280,8 @@
 <li><p>Make sure your loco is DCC ENABLED (not DCC Ready!… DCC Ready just means it has the plumbing inside the loco to install an optional DCC decoder, but it is NOT yet DCC compatible)</p></li>
 <li><p>Put your loco on the MAIN track. <strong>The loco cannot move or respond to non-programming commands on the PROG track!</strong></p></li>
 </ul>
-<p>Now either download our exWebThrottle found <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">here</a> and run it in your browser, or run it directly from our <a class="reference external" href="../throttle/exwebthrottle.html">web page</a>. Follow the instructions on that page to enable chromium “experimental features”.</p>
+<p><strong>Now run WebThrottle-EX</strong> directly from our <a class="reference external" href="../throttles/ex-webthrottle.html">WebThrottle-EX web page</a>. Follow the instructions on that page to enable chromium “experimental features”. Note that you can run the throttle from your browser and install it locally from its own menu.</p>
+<p>You can also download our WebThrottle-EX found at <a class="reference external" href="https://github.com/DCC-EX/exWebThrottle">WebThrottle-EX on GitHub</a> and run it in your browser. Again, see the WebThrottle web page to see how to enable chrom experimental features.</p>
 <p>The rest of the instructions show you how to use exWebThrottle. You should be able to find the CS by its serial port and enable it, then turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!</p>
 <p>You can also watch the <a class="reference external" href="https://www.youtube.com/watch?v=BkgsEOjxWaU">exWebThrottle Video</a>.</p>
 <blockquote>

@@ -40,6 +40,7 @@ This is our tested and proven configuration
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
 * Android Smartphone with Engine Driver v2.28.123 or iOS Smarphone with WiThrottle
 * USB-A male to Micro USB-B cable
+* You will also need software provided in the links below and a toothpick or small jewellers screwdriver to be able to flip small switches.
 
 \* NOTE: The L298 Based motor drivers like the Arduino Motor Shield have a 1.5-2V voltage drop. More efficient boards do not have this issue. Be careful in choosing the correct voltage so that you don't put too much voltage on the track and potentially damage your decoders.
 
@@ -148,10 +149,20 @@ Note that switch 8 is not connected to anything, you don't need to touch it. Wit
 
    Figure 4 - Switch Settings for Flashing
 
-Configure the board as follows:
+Use this image to set the serial port switch to **RXD3/TXD3**.
+
+.. figure:: ../../_static/images/wifi/mega_wifi_sw_serial_cw.png
+   :alt: Switch setting for Serial Port
+   :scale: 100%
+   :align: center
+
+   Figure 5 - Switch Setting for Serial Port
+
+
+Your board should be configured follows:
 
  -  set dip switches **5,6,7 ON** (1,2,3,4 OFF)
- -  set Serial Port (TX/RX) Slide Pin to **RxD3 & TxD3**
+ -  set Serial Port (TX/RX) Slide Pin to **RXD3 & TXD3**
  -  Connect Mega+WiFI board to your computer with the USB cable
  -  press the **Mode button**
 
@@ -179,7 +190,7 @@ NOTE: It may take a few seconds to open while you see a black cmd window
    :scale: 80%
    :align: left
 
-   Figure 5 - Flash Tool Button Selections
+   Figure 6 - Flash Tool Button Selections
 
 |
 |
@@ -218,7 +229,7 @@ Setup the files and memory locations in the Flasher Tool
    :scale: 80%
    :align: center
 
-   Figure 6 - Flasher Settings Screen
+   Figure 7 - Flasher Settings Screen
 
 .. NOTE:: These settings are for the ESP8266EX chip on the Mega+Wifi, you may need different settings to flash an ESP-01s, ESP12, etc.
 
@@ -263,7 +274,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
    :scale: 30%
    :align: center
 
-   Figure 7 - Switch Settings for sketch load/run
+   Figure 8 - Switch Settings for sketch load/run
 
 4. Decide if you want AP Mode or Station Mode
 ==============================================

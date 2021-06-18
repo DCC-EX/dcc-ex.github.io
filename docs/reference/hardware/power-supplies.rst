@@ -2,12 +2,26 @@
 Power Supplies
 ****************
 
-The power supply is one of the most important parts of your setup. You need to select a clean, filtered power supply that can supply the correct voltage and deliver the amount of current required by your devices. 
+The power supply is one of the most important parts of your setup. You need to select a clean, filtered power supply that can supply the correct voltage and deliver the amount of current required by your devices.
+
+**What's covered here:**
+
+* :ref:`Do I need two power supplies?`
+* :ref:`Four ways to power the Arduino`
+* :ref:`Powering the Motor Controller`
+* :ref:`Wall Warts`
+* :ref:`Bricks (Laptop Style)`
+* :ref:`Adjustable Power Supplies`
+* :ref:`Cage Power Supplies`
+* :ref:`Dual voltage power supplies`
+* :ref:`Using one power supply with cheap converters to power everything`
+* :ref:`Using Buck Converters`
+
 
 Do I need two power supplies?
 ==============================
 
-Well, you at least need two voltages. It is possible to get multiple voltages from one power supply, how to do that is covered below in the :ref:`Using one power supply with cheap converters to power everything section`. Both your microcontroller (the Arduino) and the motor controller need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. The voltage requirement to the motor controller does not change based on how you power your Arduino, you need the correct voltage and amperage for your guage and layout.
+Well, you at least need two voltages. It is possible to get multiple voltages from one power supply, how to do that is covered below in the :ref:`Using one power supply with cheap converters to power everything`. Both your microcontroller (the Arduino) and the motor controller need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. The voltage requirement to the motor controller does not change based on how you power your Arduino, you need the correct voltage and amperage for your guage and layout.
 
 Four ways to power the Arduino
 ----------------------------------

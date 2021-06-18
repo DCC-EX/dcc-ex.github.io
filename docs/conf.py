@@ -80,7 +80,9 @@ html_theme_options = {
     'logo_only': True,
     # Toc options
     'includehidden': True,
-    'titles_only': True
+    'titles_only': True,
+    'collapse_navigation': False,
+    'navigation_depth': -1 
 }
 
 #html_additional_pages = {

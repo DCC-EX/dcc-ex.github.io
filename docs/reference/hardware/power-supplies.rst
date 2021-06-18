@@ -7,7 +7,7 @@ The power supply is one of the most important parts of your setup. You need to s
 Do I need two power supplies?
 ==============================
 
-Well, you at least need two voltages. While it is possible to get multiple voltages from one power supply, how to do that will be covered in the advanced section. Both your microcontroller (the Arduino) and the motor controller need power. While we recommend a 9 Volt, 1 Amp, DC power supply for the microcontroller, there are other ways to power it. The voltage requirement to the motor controller does not change based on how you power your Arduino, you need the correct voltage and amperage for your guage and layout.
+Well, you at least need two voltages. It is possible to get multiple voltages from one power supply, how to do that is covered below in the :ref:`Using one power supply with cheap converters to power everything section`. Both your microcontroller (the Arduino) and the motor controller need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. The voltage requirement to the motor controller does not change based on how you power your Arduino, you need the correct voltage and amperage for your guage and layout.
 
 Four ways to power the Arduino
 ----------------------------------
@@ -20,9 +20,9 @@ Four ways to power the Arduino
 
 **5V pin** - Engineers only! Arduino recommends against this. You can connect a good quality 5V power supply directly to the 5V pin and ground. You can NOT ever plug anything into the other power connectors if you connect power this way! This bypasses the voltage regulator on the board which means you can use more current. But it also connects voltage to the output of the 5V regulator. Be aware that there is no diode for reverse voltage protection and no fuse for overcurrent. Research this option before attempting it.
 
-**Barrel Connector and USB at the same time?** You may wonder what happens if you have a 7-9V power supply connected to the barrel connector and plug your laptop into the USB port to use the serial monitor. The Uno and Mega actually have a conflict protection circuit. If you plug in a 7V or more power supply to the barrel connector, the Arduino automatically switches internally to use that power supply. So regardless of which connector you plug in first, if the barrel connector has voltage applied to it, that is the voltage the Arduino will use and the USB connection will just provide communication signals.
+**Barrel Connector and USB at the same time?** You may wonder what happens if you have a 7-9V power supply connected to the barrel connector and plug your laptop into the USB port to use the serial monitor. The Uno and Mega actually have a conflict protection circuit. If you plug in a 7V or more power supply to the barrel connector, the Arduino automatically switches internally to use that power supply. So regardless of which connector you plug in first, if the barrel connector has a voltage 7V or greater applied to it, that is the voltage the Arduino will use and the USB connection will just provide communication signals.
 
-.. warning:: We recommend only a 7-9V DC power supply for your Arduino because, despite what may be said on a specification sheet, anything over 5V is generated as heat in the voltage regulator on an Arduino. There is a 2V voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12V and connected a WiFi board or other devices that also use the 5V power supply on the arduino, the voltage regulator is likely to overheat.
+.. warning:: We recommend only a 7-9V DC power supply for your Arduino because, despite what may be said on a specification sheet, anything over 5V is generates unneccesary heat in the voltage regulator on an Arduino. There is a 2V voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12V and connected a WiFi board or other devices that also use the 5V power supply on the arduino, the voltage regulator is likely to overheat.
 
 Powering the Motor Controller
 -------------------------------
@@ -32,7 +32,7 @@ Voltage
 
 N and Z scale layouts should run at at about 12V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `Trainboard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/home/technical-discussions/boosters/choosing-the-right-booster>`_
 
-Most larger scales will run higher voltages. For reference, Digitrax systems put the rails at around 14V. Do some homework to determine what voltage is best for your system.
+Most larger scales will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
 
 Amperage
 ^^^^^^^^^
@@ -83,7 +83,7 @@ Bricks (Laptop Style)
    :scale: 25%
    :alt: Samsung brick
 
-14V 3A https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ref=sr_1_3?dchild=1&keywords=14V+3A+power+supply&qid=1613861442&s=electronics&sr=1-3
+https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ref=sr_1_3?dchild=1&keywords=14V+3A+power+supply&qid=1613861442&s=electronics&sr=1-3
 
 
 Adjustable Power Supplies

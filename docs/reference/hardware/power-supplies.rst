@@ -191,19 +191,36 @@ Some options for a power supply are the **Meanwell SP-200-15** or the **ATOS-300
    :scale: 18%
    :alt: 60W 6A 5-24V Buck Power Supply
 
-   **One example from Amazon**, a `5 to 30V Adjustable regulator converter<https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/ref=pd_vtp_6?pd_rd_w=NMR1C&pf_rd_p=55cbb45e-2534-4809-9135-12f41eecb852&pf_rd_r=696YH3MQ2QHKXXR9VDW0&pd_rd_r=3e7133ca-ea27-4967-8d7e-ea1c40c8381a&pd_rd_wg=GZd2x&pd_rd_i=B07VNDGFT6&psc=1>`_
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+**One example from Amazon**, a `5 to 30V Adjustable regulator converter <https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/ref=pd_vtp_6?pd_rd_w=NMR1C&pf_rd_p=55cbb45e-2534-4809-9135-12f41eecb852&pf_rd_r=696YH3MQ2QHKXXR9VDW0&pd_rd_r=3e7133ca-ea27-4967-8d7e-ea1c40c8381a&pd_rd_wg=GZd2x&pd_rd_i=B07VNDGFT6&psc=1>`_
 
 
-https://www.amazon.com/Universal-Regulated-Switching-Transformers-Surveillance/dp/B07J4V24BN/ref=asc_df_B07J4V24BN/?tag=hyprod-20&linkCode=df0&hvadid=366288678718&hvpos=&hvnetw=g&hvrand=8143390141430119947&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-637719808697&psc=1&tag=&ref=&adgrpid=75985295013&hvpone=&hvptwo=&hvadid=366288678718&hvpos=&hvnetw=g&hvrand=8143390141430119947&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-637719808697
+**4 Pack of Buck Converters**
 
-https://www.amazon.com/dp/B074GGMD5J?tag=amz-mkt-chr-us-20&ascsubtag=1ba00-01000-a0049-win10-other-nomod-us000-pcomp-feature-scomp-wm-5&ref=aa_scomp
-
-4 Pack of Buck Converters
+.. image:: ../../_static/images/power/4_pack_buck_converters.jpg
+   :align: left
+   :scale: 18%
+   :alt: 4 pack of buck converters
 
 https://www.amazon.com/dp/B079N9BFZC?tag=amz-mkt-chr-us-20&ascsubtag=1ba00-01000-a0049-win10-other-nomod-us000-pcomp-feature-scomp-wm-5&ref=aa_scomp
 
 
-Cheap Buck Converter with Display $5
+**Cheap Buck Converter with Display $5**
+
+.. image:: ../../_static/images/power/20W_DC_buck.jpg
+   :align: left
+   :scale: 18%
+   :alt: 20W DC Buck converter with display
 
 https://www.dfrobot.com/product-1552.html?gclid=CjwKCAiAg8OBBhA8EiwAlKw3ks8tC8ywVBKBOQ6dKOSRZZSxoKMphpav7r7WmfW29Nl9uU7Mn7SJzRoCMSUQAvD_BwE
 

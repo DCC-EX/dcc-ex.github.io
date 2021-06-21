@@ -66,7 +66,7 @@ We typically like compressed PNG files, but can take JPG as well. The resolution
 Graphs & Schemas
 -----------------
 
-Use draw.io to keep compatibility and allow group collaboration on the same document. Not evryone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
+Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
 
 --- to be done graphviz to be added ---
 

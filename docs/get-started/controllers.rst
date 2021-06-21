@@ -5,6 +5,7 @@ Choosing a Controller (Throttle)
 You need just two things that work together to operate your model railroad:
 
 * The DCC++ EX Command Station (aka CS)
+
 * A Controller (aka Front-end, Cab, or Throttle)
 
 The Command Station

@@ -7,9 +7,9 @@ Requirements
 * Windows/Linux/MacOS Computer
 * DCC-EX Compatible motor shield / motor controller board
 * DCC-EX Compatible Microcontroller (Arduino Mega/Uno)
-* USB cable to connect your computer to the Microcontroller Trains
+* USB cable to connect your computer to the Microcontroller
 
-.. note:: For all versions make sure your USB Cable is conncted from your computer to the Command Station (CS). Make sure no other programs are using the computer's serial port
+.. note:: For all versions, make sure your USB Cable is connected from your computer to the Command Station (CS). Make sure no other programs are using the computer's serial port.
 
 Windows
 -----------------
@@ -48,12 +48,12 @@ The Installer Window
 
 **Figure 1** - Installer Window
 
-There will be a lot of information appearing in the log window which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete, this is normal. If you have a very slow internet connection it will take longer.
+There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
 Choose your options
 -------------------
 
-In the left side options pane use the dropdown selector boxes choose the following options:
+In the left side options pane, use the dropdown selector boxes to choose the following options:
 
 .. image:: ../_static/images/installer/inst_options.jpg
    :alt: Options Pane
@@ -64,8 +64,8 @@ In the left side options pane use the dropdown selector boxes choose the followi
 1. Select your Command Station Type
 2. Select your Arduino Board Type
 3. Select your Motor Shield
-4. Select your com port (The installer should usually find it for you)
-5. Check the checkbox for your networking method if you have a Network shield or Wifi Shield installed
+4. Select your COM Port (The installer should usually find it for you)
+5. Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed
 6. Check the checkbox for your display type if using an LCD or OLED display
 7. Check the Free Mem warning if you need to diagnose memory issues
 8. Press the "Compile and Upload" button
@@ -73,7 +73,7 @@ In the left side options pane use the dropdown selector boxes choose the followi
 WiFi Checkbox
 ^^^^^^^^^^^^^
 
-MAKE SURE THIS BOX IS CHECKED - If you want Wifi, this box **must** be checked. If you don't want WiFi, you can leave it checked anyway so that if you add WiFi later, you won't have to upload the sketch again. The WiFi check only takes a few seconds after which it will report no WiFi was found and start the Command Station. If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren't going to use WiFi, unchecking the box will free about 10 kb of progmem and about 2kb of RAM.
+MAKE SURE THIS BOX IS CHECKED - If you want WiFi, this box **must** be checked. If you don't want WiFi, you can leave it checked anyway so that if you add WiFi later, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren't going to use WiFi, unchecking the box will free about 10kb of progmem and about 2kb of RAM.
 
 If you have installed a WiFi board, DCC++ EX will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), this will set up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like "DCC-EX-xxxxxx", where the "xxxxxx" are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.
 
@@ -99,7 +99,7 @@ If you wish to connect to your home network instead (connect to your router usin
 Ethernet Checkbox
 ^^^^^^^^^^^^^^^^^
 
-If you have an Ethernet shield and check this box, you will see options to change the following options:
+If you have an Ethernet shield and check this box, you will see options to change the following settings:
 
 .. image:: ../_static/images/installer/ethernet.jpg
    :alt: Ethernet Options
@@ -107,7 +107,7 @@ If you have an Ethernet shield and check this box, you will see options to chang
 
 **Figure 4** - Ethernet Options
 
-* **Host Name** - If your WiFi Board supports it, this name can be used in addition to the IP address.\ 
+* **Host Name** - If your Ethernet Board supports it, this name can be used in addition to the IP address.\ 
 
 * **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use JMRI.\ 
 

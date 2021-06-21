@@ -23,7 +23,7 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
       <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 1. BEFORE YOU BEGIN: Cut the Vin trace on the motor controller, OR: Bend out the Vin Pin
-=========================================================================================
+==============================================================================================
 
 We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and do ONE of the following:
 

@@ -12,8 +12,9 @@ Tinkerer Level
 |
 
 - :ref:`What You Will Need (for the IRF3205)`
-- :ref:`Use Arduino Motor Shield for PROG and IRF3205 for MAIN`
-- :ref:`Use IRF3205 alone for both PROG and MAIN`
+- :ref:`Which option should you choose?`
+- :ref:`Upgrading (Use the Arduino Motor Shield AND the IRF3205)`
+- :ref:`Replacing (Use both IRF3205 outputs to control MAIN and PROG)`
 - :ref:``
 - :ref:``
 - :ref:``
@@ -40,7 +41,7 @@ We assume that many of you may have started off with the Arduino Mega with Ardui
 2. "Replace" by using both outputs of the IRF3205 board to handle both the MAIN and PROG tracks. You won't need a second motor controller. This is a Tinkerer or perhaps an Engineer option since it requires a little more knowledge.
 
 Which option should you choose?
------------------------------------
+--------------------------------
 
 Upgrade
 ^^^^^^^^
@@ -62,7 +63,7 @@ There are two ways to monitor motor board current, one is to the input of the bo
 
 .. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.
 
-.. image:: ../../_static/images/motor-boards/15A_Dual_HBridge3.jpg
+.. image:: ../../_static/images/motorboards/15A_Dual_HBridge3.jpg
    :alt: 15A Dual H-Bridge
    :scale: 50%
    :align: center
@@ -70,7 +71,7 @@ There are two ways to monitor motor board current, one is to the input of the bo
 The IRF3205 is actually the part number of the transistors on the board, N-Channel Power MOSFETS specifically. It takes 4 of them to make one full H-Bridge circuit to control one track. This board has 2 sets of 4 for 2 H-Bridges. You may find other boards that use this transistor, but this guide only covers the 15A Dual H-Bridge pictured above.
 
 Upgrading (Use the Arduino Motor Shield AND the IRF3205)
----------------------------------------------------------
+===========================================================
 
 For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.
 
@@ -78,8 +79,8 @@ If you need instructions on how to install the Arduino Motor Shield, see `Arduin
 
 Tinkerers will use their existing motor shield for PROG and replace the MAIN output with one of the outputs of this board. Engineers can skip to TODO: XXX to see how to modify the board so that just the IRF3205 can manage both tracks.
 
-What Tinkerers Are Going To Do
--------------------------------
+What Tinkerers Are Going To Do (Upgrade)
+-----------------------------------------
 
 * Use just 1 output of your existing Arduino Motor Shield for your program track with no hardware changes
 * Add an IRF3205 Motor Board to replace the "A" output of the motor shield to power your MAIN track
@@ -89,8 +90,8 @@ What Tinkerers Are Going To Do
 
 .. WARNING:: Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. Both outputs of the motor shield are still connected, we just don't enable the A or main side of the Arduino Motor Shield. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.
 
-Steps 
-------
+Steps (Upgrade)
+-----------------
 
 1. Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IRF3205 motor board.
 
@@ -107,7 +108,7 @@ Steps
 Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. "CS" in the table means "Current Sense":
 
 +--------------+----------------------+
-|  Arduino     |        IRF3205       |
+|  Arduino     |       IRF3205        |
 +==============+======================+
 | 2 (enable)   |        PWM1          |
 +--------------+----------------------+
@@ -154,16 +155,126 @@ Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-
 
 Remove the last line and replace it with this. To be sure of your spelling, you can copy and paste everything:
 
-``#define MOTOR_SHIELD_TYPE IRF3205_ARDUINO_ACS724``
-``#define STANDARD_MOTOR_SHIELD F("STANDARD_MOTOR_SHIELD"), \
-new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A3, 12.2, 6000, UNUSED_PIN), \
-new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)``
+.. code-block:: c
+
+   #define MOTOR_SHIELD_TYPE IRF3205_ARDUINO_ACS724
+
+   #define STANDARD_MOTOR_SHIELD F("STANDARD_MOTOR_SHIELD"), \
+     new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A3, 12.2, 6000, UNUSED_PIN), \
+     new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
 
 This will us pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to not explaining high accuracy).
 Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../../get-started/index.html>`_
 
+See :ref:`Important Notes Current Sensing`
+
+***TODO: organize the above and add pictures***
+
+
+Replacing (Use both IRF3205 outputs to control MAIN and PROG)
+==============================================================
+
+This section will cover how to the MOTOR1 output to control MAIN and MOTOR2 to control PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IRF3205 can deliver much more current than you need for a programming track. If you install 1 Amp fuses in between the IRF3205 Motor2 outputs and both rails of your programming track, that and the lower trip current we set in the Command Station for the programming track should protect your layout and your locos.
+
+What Tinkerers Are Going To Do (Replace)
+------------------------------------------
+
+* Use both outputs of your IRF3205 15A board (MOTOR1 and MOTOR2) to control your MAIN and PROG track
+* Connect a few jumpers (wires) to your IRF3205 board
+* Add a current sense board and fuses (or just fuses for Engineers)
+* Change your motor board type in your config.h file
+
+Steps (Replace) 
+----------------
+
+1. Make sure all power supplies are disconnected from your Arduino and the IRF3205 motor board.
+2. Option - TODO: fnd curent sense / fuses! See the notes below for more detail about current sense and a suggestion for using an external current sense board.
+3. Select your IRF3205 board in the config.h file. TODO: fnd XXX need to add this type
+4. Upload the new sketch to your Arduino Mega
+
+Connect wires of the proper gauge (TODO: see gauge) from the "MOTOR1" screw terminals of the IRF3205 board to your MAIN track and connect 2 more wires from the "MOTOR2" terminals to your PROG track. 
+
+.. NOTE:: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use <1 JOIN> to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "Driveaway" feature. TODO: fnd finish this. How do know phase?
+
+Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. "CS" in the table means "Current Sense":
+
++--------------+----------------------+
+|  Arduino     |       IRF3205        |
++==============+======================+
+| 2 (enable)   |        PWM1          |
++--------------+----------------------+
+| 12 (signal)  |        DIR1          |
++--------------+----------------------+
+| A5 (CS MAIN) |   CS Board Sense     |
++--------------+----------------------+
+|     5V       |        +5V           |
++--------------+----------------------+
+|     GND      |        GND           |
++--------------+----------------------+
+
+Here is a schematic diagram. See current sense notes below. Click to enlarge:
+
+.. image:: ../../_static/images/motorboards/ibt_wiring.png
+   :alt: IRF3205 Wiring Diagram
+   :scale: 70%
+
+
+It should look like following graphical image. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IRF3205 directly to the same pins on the Arduino microcontroller. Please use fuses on BOTH wires of the output to your MAIN track. As with most of our diagrams, you can click on them to enlarge them.
+
+Pay attention to board labels, not their position on this drawing. Your current sensor may have its connections wired differently!
+
+If you want to use more than 5A (but we recommend not to), there are changes you need to make to the hardware AND to the config.h settings. See TODO: link to section below.
+
+.. image:: ../../_static/images/motorboards/ibt_2_wiring_fritz.png
+   :alt: IRF3205 Wiring Schematic
+   :scale: 25%
+
+.. Note:: We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.
+
+Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:
+
+.. code-block:: cpp
+
+   // DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:
+   //
+   //  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with 18V 2A per channel
+   //  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)
+   //  FUNDUMOTO_SHIELD      : Fundumoto Shield, no current sensing (not recommended, no short protection)
+   //  IBT_2_WITH_ARDUINO    : IBT_2 Motor Board on MAIN and Arduino Motor Shield on PROG
+   //  FIREBOX_MK1           : The Firebox MK1                    
+   //  FIREBOX_MK1S          : The Firebox MK1S   
+   //   |
+   //   +-----------------------
+   //
+   #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
+
+Remove the last line and replace it with this. To be sure of your spelling, you can copy and paste everything:
+
+.. code-block:: c
+
+   #define MOTOR_SHIELD_TYPE IRF3205_ARDUINO_ACS724
+
+   #define STANDARD_MOTOR_SHIELD F("STANDARD_MOTOR_SHIELD"), \
+     new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A3, 12.2, 6000, UNUSED_PIN), \
+     new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
+
+This will us pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to not explaining high accuracy).
+Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../../get-started/index.html>`_
+
+
+***TODO: organize the above and add pictures***
+
+***TODO: Finish this section***
+
+Using Other External Current Sense
+=====================================
+
+TODO: finish this. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (10A+), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
+
+***TODO: Add help or point to a section for external CS boards***
+
 Important Notes Current Sensing
-----------------------------------------
+=================================
 
 .. WARNING:: You must have current sensing in order to have the Command Station software detect an overload and but power to the MAIN track. Alternately, you can use fuses. If the fuses blow, the Command Station will still think there is power to the track, you will recieve no notification in the log. Also, make sure you don't apply more than 5V to the Arduino Analog pin. Make sure your calculation for what voltage the current sense board will report at the maximum current will not be more than 5V for a 5V Arduino or 3.3V for another Command Station board.
 
@@ -172,23 +283,6 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
 * Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, to CS output does not produce more than 5V.
 * Consider using a 5V zener diode and current limiting resistor to clamp the voltage on the analog pin. This would normally be a 270 Ohm resistor.
 * Put a 5A fuse on each output leg going to your track.
-
-***TODO: organize the above and add pictures***
-
-
-Replacing (Use both IRF3205 outputs to control MAIN and PROG
--------------------------------------------------------------
-
-This section will cover how to the MOTOR1 output to control MAIN and MOTOR2 to control PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IRF3205 can deliver much more current than you need for a programming track. If you install 1 Amp fuses in between the IRF3205 Motor2 outputs and both rails of your programming track, that and the lower trip current we set in the Command Station for the programming track should protect your layout and your locos.
-
-***TODO: Finish this section***
-
-Using Other External Current Sense
-------------------------------------
-
-TODO: finish this. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (10A+), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
-
-***TODO: Add help or point to a section for external CS boards***
 
 Tech Notes
 ===========
@@ -270,3 +364,5 @@ DCC::setJoinRelayPin(n)
 more TODO: What about the motor shield main output we aren't using? Any pins to bend out? Ground current sense? Don't think so on the latter.
 
 What does the ACS724 report for 6 or 7 amps? How to make sure it doesn't go over 5V to the Arduino analog pin.
+
+Make a note on how to test the phase of the tracks. Put a meter between the LEFT rails on PROG and MAIN. If the meter measures an AC voltage near track voltage (around 17 VAC normally) then reverse one of the wires. It should read 0.

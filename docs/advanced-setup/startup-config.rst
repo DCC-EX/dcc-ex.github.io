@@ -1,0 +1,68 @@
+**********************
+Startup Configuration
+**********************
+
+Sometimes, you will need to configure your DCC++ EX with settings which are not saved by the Command Station when restarted, for example the `ACK min <../reference/software/diagnostic-d-ack-command.html#d-ack-limit-ma>`_ for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to `30µS` to be recognised).
+
+To automatically run commands at start up, a new file can be created called `mySetup.h` to contain these commands.
+
+
+
+Make sure you are running the Arduino IDE
+=========================================
+
+This will need to be done in the `Arduino-IDE <../get-started/arduino-ide.html>`_ so first make sure you have followed these steps to load up the Arduino IDE.
+
+
+Create a new tab
+================
+
+First you will need to add a new file, just like the `config.h file <../get-started/arduino-ide.html#copy-the-config-example-h-file-or-rename-it>`_. Create a new tab using the following menu option.
+
+.. image:: /_static/images/arduino-ide/arduino_ide_newtab.jpg
+   :alt: Arduino IDE New Tab
+   :scale: 40%
+
+**Figure 1** - Creating a new tab in the Arduino IDE
+
+Creating the mySetup.h file
+===========================
+
+At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``mySetup.h`` (case sensitive, so upper case S in setup) and click ``OK`` to create the new file.
+
+.. image:: /_static/images/arduino-ide/arduino_ide_mysetup.jpg
+   :alt: Arduino IDE New Tab
+   :scale: 40%
+
+**Figure 2** - Choosing a file name for the new file
+
+Adding in the startup commands
+==============================
+
+Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the command: 
+
+.. code-block:: none
+
+   <D ACK MIN 30>
+
+Then you would need to enter into the `mySetup.h` file:
+
+.. code-block:: none
+
+   SETUP("D ACK MIN 30");
+
+Note the upper case ``SETUP`` with the ``< >`` missing.
+
+You will need to enter each additional command on a new line, so a longer ``mySetup.h`` file could look like:
+
+.. code-block:: none
+
+   SETUP("D CMD ON");
+   SETUP("D ACK ON");
+   SETUP("T 1 123 45");
+   SETUP("D ACK MIN 30");
+
+Upload the new version of the software
+======================================
+
+Finally, upload the code to the Arduino as you would do during the standard `Arduino IDE Setup <../get-started/arduino-ide.html#upload-the-software>`_. Restart the Command Station and these commands will have run at start up.

@@ -87,10 +87,7 @@ would set the ack limit to 30mA (more sensitive).
 
 would set the limit to 100mA (less sensitive). 
 
-The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanenly set the ACK LIMIT, you may enter it as a command in the mySetup.h file.
-
-***Add help on how to set this in the mySetup.h file***
-
+The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the `mySetup.h <../../advanced-setup/startup-config.html>`_ file.
 
 <D ACK MIN µS>
 ================
@@ -119,5 +116,4 @@ Example 2: You use the <D ACK ON> and <R> commands described above to generate a
 
 When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the CS is reset.
 
-***TODO: Add instruction on how to make these permanent by using a mySetup.h file***
-
+To make these settings permanent, you can use a `mySetup.h file <../../advanced-setup/startup-config.html>`_ with these commands in to run at the startup of the Command Station.

@@ -39,28 +39,33 @@ At the bottom of the IDE window, a yellow bar will appear asking for a `Name for
 Adding in the startup commands
 ==============================
 
-Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the command: 
+Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the following command each time your Command Station starts up: 
 
 .. code-block:: none
 
-   <D ACK MIN 30>
+   <D ACK LIMIT 30>
 
-Then you would need to enter into the `mySetup.h` file:
-
-.. code-block:: none
-
-   SETUP("D ACK MIN 30");
-
-Note the upper case ``SETUP`` with the ``< >`` missing.
-
-You will need to enter each additional command on a new line, so a longer ``mySetup.h`` file could look like:
+Then you would need to enter into the `mySetup.h` file.:
 
 .. code-block:: none
 
-   SETUP("D CMD ON");
-   SETUP("D ACK ON");
-   SETUP("T 1 123 45");
-   SETUP("D ACK MIN 30");
+   SETUP("<D ACK LIMIT 30>");
+
+Note the upper case word ``SETUP`` at the start.
+
+Adding in more than one startup command
+=======================================
+
+If you need to have multiple commands run at start up, you will need to enter each additional command on a new line, so a longer ``mySetup.h`` file could look like:
+
+.. code-block:: none
+
+   SETUP("<D ACK MAX 9200>"); // Set ACK detection to allow pulses up to 9200uS
+   SETUP("<D ACK LIMIT 60>"); // 60mA is the default
+   SETUP("<0>"); // tracks off at startup
+   SETUP("<D CMD 0>"); // can be set to ON for testing in the serial monitor
+
+Here you can add comments on each line, these can be added by using the double forward slash character ``//`` and then your comments. This makes it easier to understand why you added these start up commands.
 
 Upload the new version of the software
 ======================================

@@ -43,13 +43,13 @@ Within the new file that has been created, you can add in the commands that you 
 
 .. code-block:: none
 
-   <D ACK LIMIT 30>
+   <D ACK LIMIT 60>
 
 Then you would need to enter into the `mySetup.h` file.:
 
 .. code-block:: none
 
-   SETUP("<D ACK LIMIT 30>");
+   SETUP("<D ACK LIMIT 60>");
 
 Note the upper case word ``SETUP`` at the start.
 

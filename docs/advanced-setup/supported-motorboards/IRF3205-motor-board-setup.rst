@@ -362,48 +362,50 @@ See the PDF file IRF3205_mega_ACS724 in my trains folder
 
 .. WARNING:: Heat sinks must be insulated! The metal tabs on the transistors are connected to their drain (the middle pin). If you touched the metal of heat sink that was not insulated, or an uninsulated heat sink connected to one transistor touched the heatsink connected to another transistor, the results could be bad. You can used one big heat sink to connect the transistors, but you would have to use proper mounting hardware and thermal compound. Ideas below
 
-XXX put images of thermal double sides tape or the mica and screw solution
+..
+  TODO: finish and remove these comments
+  XXX put images of thermal double sides tape or the mica and screw solution
 
-1. Current sense on the input of the board for both tracks
-2. Curent sense at the motor board outputs (to the tracks) for separate measurement
-3. Cut the thick trace on the board and have separate current sense to each H-Bridge
+  1. Current sense on the input of the board for both tracks
+  2. Curent sense at the motor board outputs (to the tracks) for separate measurement
+  3. Cut the thick trace on the board and have separate current sense to each H-Bridge
 
-from chris, re not using <1 JOIN> Alternatively you can connect the tracks through a dpdt relay and drive that with the feature that sets a gpio pin when joined... 
+  from chris, re not using <1 JOIN> Alternatively you can connect the tracks through a dpdt relay and drive that with the feature that sets a gpio pin when joined... 
 
-Add to mySetup.h
-DCC::setJoinRelayPin(n)
+  Add to mySetup.h
+  DCC::setJoinRelayPin(n)
 
-more TODO: What about the motor shield main output we aren't using? Any pins to bend out? Ground current sense? Don't think so on the latter.
+  more TODO: What about the motor shield main output we aren't using? Any pins to bend out? Ground current sense? Don't think so on the latter.
 
-What does the ACS724 report for 6 or 7 amps? How to make sure it doesn't go over 5V to the Arduino analog pin.
+  What does the ACS724 report for 6 or 7 amps? How to make sure it doesn't go over 5V to the Arduino analog pin.
 
-Make a note on how to test the phase of the tracks. Put a meter between the LEFT rails on PROG and MAIN. If the meter measures an AC voltage near track voltage (around 17 VAC normally) then reverse one of the wires. It should read 0.
+  Make a note on how to test the phase of the tracks. Put a meter between the LEFT rails on PROG and MAIN. If the meter measures an AC voltage near track voltage (around 17 VAC normally) then reverse one of the wires. It should read 0.
 
-put a note somewhere in the second install that measuring at the input means the current is for both tracks and that used by the board. We check for an offset, so the board current is cancelled out, but if either track has a short, both tracks cut out. Can't have locos anywhere when programming.Current sensing for IRF3205 motor board.
+  put a note somewhere in the second install that measuring at the input means the current is for both tracks and that used by the board. We check for an offset, so the board current is cancelled out, but if either track has a short, both tracks cut out. Can't have locos anywhere when programming.Current sensing for IRF3205 motor board.
 
-To use the IRF3205 motor board with a common current sense module, turn off main.
+  To use the IRF3205 motor board with a common current sense module, turn off main.
 
-Note that I was able to successfully read several decoders with 0-10A and +/-10A external current sensors, but not the recent model SD70Ace Genesis w/Tsunami2 OEM sound decoder.
+  Note that I was able to successfully read several decoders with 0-10A and +/-10A external current sensors, but not the recent model SD70Ace Genesis w/Tsunami2 OEM sound decoder.
 
-Locoduino site shows a method for separating the channels and adding a MAX471.
-https://forum-locoduino-org.translate.goog/index.php?PHPSESSID=7cbbfc3255ae799160a2b9a6aa42e375&topic=843.msg10416&_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc,elem#msg10416
+  Locoduino site shows a method for separating the channels and adding a MAX471.
+  https://forum-locoduino-org.translate.goog/index.php?PHPSESSID=7cbbfc3255ae799160a2b9a6aa42e375&topic=843.msg10416&_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc,elem#msg10416
 
-I wonder if the 1.5 ohm 3 watt resistor could be added to this setup instead of the MAX471.
+  I wonder if the 1.5 ohm 3 watt resistor could be added to this setup instead of the MAX471.
 
-Perhaps the two channels of the IRF3205 motor board would be better utilized for two power districts.
+  Perhaps the two channels of the IRF3205 motor board would be better utilized for two power districts.
 
-Perhaps anyone who is up to the challenges of the IRF3205 would also be able to add the 1.5 ohm resistor to the L298N motor board.
+  Perhaps anyone who is up to the challenges of the IRF3205 would also be able to add the 1.5 ohm resistor to the L298N motor board.
 
-But take a step back.  What to recommend?
+  But take a step back.  What to recommend?
 
-1.  Mega + motor shield
-2.  Add a motor board if more power is needed for main track
-  a.  IBT_2
-    or 
-  b.  IRF3205 + external current sensor
+  1.  Mega + motor shield
+  2.  Add a motor board if more power is needed for main track
+    a.  IBT_2
+      or 
+    b.  IRF3205 + external current sensor
 
-And consider adding the LEDs to confirm when tracks are powered.  I like using two LEDs per output instead of LED/diode -- if only one is lit, there is a problem...
+  And consider adding the LEDs to confirm when tracks are powered.  I like using two LEDs per output instead of LED/diode -- if only one is lit, there is a problem...
 
--- instructions at:  https://www.locoduino.org/spip.php?article253
-where IRF3205 is incorrectly identified as L9110S.
+  -- instructions at:  https://www.locoduino.org/spip.php?article253
+  where IRF3205 is incorrectly identified as L9110S.
 

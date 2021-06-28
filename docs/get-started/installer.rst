@@ -11,30 +11,15 @@ Requirements
 
 .. note:: For all versions, make sure your USB Cable is connected from your computer to the Command Station (CS). Make sure no other programs are using the computer's serial port.
 
-Windows
------------------
+Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
+--------------------------------------------------------------------------
 
-* Download the `Windows Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_ which will automatically determine the version you need and download it
-* Extract the Installer into its own folder
-* Open the folder and run the ``exInstaller.exe``
+* Download the `DCC-EX Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_ which will automatically determine the version you need and download it
+* Extract the Installer into its own folder with your favorite unzip program
+* Open File Manager for Windows or a terminal window in Mac OS and Linux and navigate to that folder
+* Windows users run ``exInstaller.exe``
+* Mac and Linux users run the following command: ``./exInstaller``
 
-Mac OS X
-----------------
-
-* Install `OS X dotnet core <https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.301-macos-x64-installer>`_
-* Download `Mac OS X Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_
-* Extract the Installer into its own folder
-* Open a terminal window and navigate to that folder
-* Run the following command: ``./exInstaller``
-
-Linux (incl. Raspberry Pi)
---------------------------------------------
-
-* Install `Linux dotnet core <https://docs.microsoft.com/en-us/dotnet/core/install/linux>`_
-* Download `Mac OS X Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_
-* Extract the Installer into its own folder
-* Open a terminal window and navigate to that folder
-* Run the following command: ``./exInstaller``
 
 .. warning::
    You may need to turn off your antivirus software before you try to install. We need a piece of Arduino software to be able to compile and upload the Command Station software which sometimes gets blocked. If you see errors on the install screen, this is usually the issue.

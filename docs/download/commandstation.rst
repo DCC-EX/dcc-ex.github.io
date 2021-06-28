@@ -13,7 +13,7 @@ Welcome to the Command Station download page. You have several choices:
 exInstaller
 =============
 
-.. note:: After downloading the latest version of the installer from the release page for your operating system and installing the software, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board.
+.. note:: Clicking on the link below will automatically find the correct version for your Computer and Operating system (Windows, Mac, Linux, ect.) and download it. After unzipping the files to a folder on your computer and running the "exInstaller" program, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board. For instructions, read the `Getting Started Section<../get-started/installer.html`_. If you have an issue with the web page getting you the correct version, click on the "Latest DCC++ EX Official Release" button in the next section to manually download the correct version.
 
 .. raw:: html 
 

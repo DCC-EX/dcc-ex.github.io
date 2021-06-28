@@ -1,3 +1,14 @@
+/*
+  This script is tied to the command station download page and automatically modifies the download
+  link in order to supply the user with the correct download for their Operating System. To do this,
+  it goes to the JSON version of the GitHub API here: 
+  
+   https://api.github.com/repos/DCC-EX/exInstaller/releases
+
+   It then finds the OS of the machine running the users browser and searches for that string (ex: win-x64) in
+   the "name" field of the first "Assets" section (parsed[0].assets), which is the latest release. It then
+   initiates a download to the link in that "name" field.
+*/
 function getLink(needed = "nope") {
     httpGetAsync("https://api.github.com/repos/DCC-EX/exInstaller/releases", (data) => {
         let parsed = JSON.parse(data);

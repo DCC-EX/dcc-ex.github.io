@@ -14,15 +14,15 @@ Requirements
 Windows
 -----------------
 
-* Download the `Windows 32bit or 64bit Installer <https://github.com/DCC-EX/exInstaller/releases>`_, depending on your computer
+* Download the `Windows Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_ which will automatically determine the version you need and download it
 * Extract the Installer into its own folder
-* Open the folder and run the **exInstaller.exe**
+* Open the folder and run the ``exInstaller.exe``
 
 Mac OS X
 ----------------
 
 * Install `OS X dotnet core <https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.301-macos-x64-installer>`_
-* Download `Mac OS X Installer <https://github.com/DCC-EX/exInstaller/releases>`_
+* Download `Mac OS X Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_
 * Extract the Installer into its own folder
 * Open a terminal window and navigate to that folder
 * Run the following command: ``./exInstaller``
@@ -31,7 +31,7 @@ Linux (incl. Raspberry Pi)
 --------------------------------------------
 
 * Install `Linux dotnet core <https://docs.microsoft.com/en-us/dotnet/core/install/linux>`_
-* Download `Mac OS X Installer <https://github.com/DCC-EX/exInstaller/releases>`_
+* Download `Mac OS X Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_
 * Extract the Installer into its own folder
 * Open a terminal window and navigate to that folder
 * Run the following command: ``./exInstaller``

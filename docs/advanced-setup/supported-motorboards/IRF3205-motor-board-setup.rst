@@ -45,11 +45,15 @@ We assume that many of you may have started off with the Arduino Mega with Ardui
 1. **"Upgrade"** - Using ONE output of your Arduino Motor Shield to control your PROG track and ONE output of your IRF3205 board to run your MAIN track.
 2. **"Replace"** - Using BOTH outputs of the IRF3205 board to handle BOTH the MAIN and PROG tracks. You won't need a second motor controller. This is a Tinkerer or perhaps an Engineer option since it requires a little more knowledge and abilities.
 
+.. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the trip (short circuit) current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.
+
+The IRF3205 is actually the part number of the transistors on the board, N-Channel Power MOSFETS specifically. It takes 4 of them to make one full H-Bridge circuit to control one track. This board has 2 sets of 4 for 2 H-Bridges. You may find other boards that use this transistor, but this guide only covers the 15A Dual H-Bridge pictured above. Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means **there is no voltage drop to the tracks** like there is for those boards. Keep that in mind because that means **there can be an extra 2 to 3 volts to your track**. Your trains will run faster than they did before and things could overheat if they were able to handle the 12V reaching the track from a 14.5V power supply, but don't like the full 14+ volts.
+
 Which Option Should You Choose?
---------------------------------
+=================================
 
 Upgrade
-^^^^^^^^
+---------
 
 The main benefit of using the upgrade option, keeping the Arduino Motor Shield for programming and adding the IRF3205 for providing more current for your MAIN track, is that you already have a working system for programming, and therefore need to make fewer changes. The other reason is that current sensing for programming requires more sensitivity that simply being able to detect a short condition, which is all you need on MAIN. 
 
@@ -58,17 +62,13 @@ The circuitry on the Arduino Motor Shield is designed to measure current from ju
 It would be possible to just use fuses to both rails of your MAIN track to protect for shorts on the track and not have to have an external current sense board as long at you also had protection in your power supply to protect against a short in the board itself. Just note that without a current sense board, the Command Station would not be able to automatically turn off power to the board in the event of a short and current monitoring, like in the JMRI DCC++ monitor, will not report main track current.
 
 Replace
-^^^^^^^^
+--------
 
 The main benefit of the replace option, using only the IRF3205 board, is that you only need one board. If you are building a new CS and don't already have an Arduino Motor Shield, you can save money and space by not having to buy another board.
 
 To use this option *and* be able to program locos, you **must** have an external current sense board so you can detect the acknowledgement (ACK) pulses from a loco on your programming track. The current sensor also allows the CS to monitor for a short and automatically cut the power to the tracks if there is an overload condition (a short).
 
 There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`Important Notes on Current Sensing` section.
-
-.. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the trip (short circuit) current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.
-
-The IRF3205 is actually the part number of the transistors on the board, N-Channel Power MOSFETS specifically. It takes 4 of them to make one full H-Bridge circuit to control one track. This board has 2 sets of 4 for 2 H-Bridges. You may find other boards that use this transistor, but this guide only covers the 15A Dual H-Bridge pictured above.
 
 Upgrading (Use the Arduino Motor Shield AND the IRF3205)
 ===========================================================

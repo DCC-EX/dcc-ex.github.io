@@ -11,17 +11,17 @@ Tinkerer Level
 
 |
 
-- :ref:`What You Will Need (re:IRF3205 CS)`
+- :ref:`What You Will Need (IRF3205)`
 - :ref:`Which option should you choose?`
 - :ref:`Upgrading (Use the Arduino Motor Shield AND the IRF3205)`
 - :ref:`Replacing (Use both IRF3205 outputs to control MAIN and PROG)`
 - :ref:`Important Notes on Current Sensing`
 - :ref:``
 - :ref:``
-- :ref:`Parts list (re:IRF3205 CS Setup)`
+- :ref:`Parts list (IRF3205)`
 
-What You Will (re:IRF3205 CS)
-============================================
+What You Will Need (IRF3205)
+=============================
 
 * An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
 * An Arduino Motor Shield (If you are upgrading or already have an Arduino Motor Shield)
@@ -33,7 +33,7 @@ What You Will (re:IRF3205 CS)
 * A separate current sense board like one based on the ACS724 chip (or just depend on the 5A fuses)
 * Some Jumper Wires
 
-See the :ref:`Parts list (re:IRF3205 CS Setup)`
+See the :ref:`Parts list (IRF3205)`
 
 .. image:: ../../_static/images/motorboards/15A_Dual_HBridge3.jpg
    :alt: 15A Dual H-Bridge
@@ -45,7 +45,7 @@ We assume that many of you may have started off with the Arduino Mega with Ardui
 1. **"Upgrade"** - Using ONE output of your Arduino Motor Shield to control your PROG track and ONE output of your IRF3205 board to run your MAIN track.
 2. **"Replace"** - Using BOTH outputs of the IRF3205 board to handle BOTH the MAIN and PROG tracks. You won't need a second motor controller. This is a Tinkerer or perhaps an Engineer option since it requires a little more knowledge and abilities.
 
-Which option should you choose?
+Which Option Should You Choose?
 --------------------------------
 
 Upgrade
@@ -79,7 +79,7 @@ If you need instructions on how to install the Arduino Motor Shield, see `Arduin
 
 Tinkerers will use their existing motor shield for PROG and replace the MAIN output with one of the outputs of this board. Engineers can skip to :ref:`Replacing (Use both IRF3205 outputs to control MAIN and PROG)` to see how to modify the board so that just the IRF3205 can manage both tracks.
 
-What Tinkerers Are Going To Do (Upgrade)
+What Tinkerers Are Going to Do (Upgrade)
 -----------------------------------------
 
 * Use just ONE output (the "B" Output) of your existing Arduino Motor Shield for your program track with no hardware changes
@@ -117,7 +117,7 @@ Steps (Upgrade)
 |     GND      |        GND           |
 +--------------+----------------------+
 
-Here is a visual diagram. See current sense notes below (TODO:add link). Click to enlarge:
+Here is a visual diagram. See :ref:`Important Notes on Current Sense`. Click to enlarge:
 
 .. image:: ../../_static/images/motorboards/IRF3205_w_arduino_fritz.png
    :alt: IRF3205 Wiring Diagram
@@ -169,7 +169,7 @@ This will us pin 3 for Enable and 12 for signal, which will use the "High Accura
 
 8. If you intend to use your Command station for programming on a separate programming track, or you will want to monitor current on your main track, you will connect an external current sense board. See the notes below for more detail about current sense and a suggestion for using an external current sense board.
 
-See :ref:`Important Notes Current Sensing`
+See :ref:`Important Notes on Current Sensing`
 
 ***TODO: organize the above and add pictures***
 
@@ -179,7 +179,7 @@ Replacing (Use both IRF3205 outputs to control MAIN and PROG)
 
 This section will cover how to the MOTOR1 output to control MAIN and MOTOR2 to control PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IRF3205 can deliver much more current than you need for a programming track. If you install 1 Amp fuses in between the IRF3205 Motor2 outputs and both rails of your programming track, that and the lower trip current we set in the Command Station for the programming track should protect your layout and your locos.
 
-What Tinkerers Are Going To Do (Replace)
+What Tinkerers Are Going to Do (Replace)
 ------------------------------------------
 
 * Use both outputs of your IRF3205 15A board (MOTOR1 and MOTOR2) to control your MAIN and PROG track
@@ -218,7 +218,7 @@ Use the following diagrams to connect pins from the Arduino Mega to the IRF3205.
 
 It should look like following graphical image. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IRF3205 directly to the same pins on the Arduino microcontroller. Please use fuses on BOTH wires of the output to your MAIN track. As with most of our diagrams, you can click on them to enlarge them.
 
-Here is a wiring diagram. See current sense notes below. Click on images to enlarge them:
+Here is a wiring diagram. See :ref:`Important Notes on Current Sensing` below. Click on images to enlarge them:
 
 .. image:: ../../_static/images/motorboards/IRF3205_w_arduino_fritz.png
    :alt: IRF3205 Wiring Diagram
@@ -277,7 +277,7 @@ Important Notes on Current Sensing
 
 Please do the following to verify you won't damage the Arduino, your layout, or yourself:
 
-* Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, to CS output does not produce more than 5V.
+* Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the output going to pin A5 of the CS does not produce more than 5V.
 * Consider using a 5V zener diode and current limiting resistor to clamp the voltage on the analog pin. This would normally be a 270 Ohm resistor.
 * Put a 5A fuse on each output leg going to your track.
 
@@ -290,6 +290,7 @@ TODO: finish this. Circuits and boards we tested are the MAX471 (up to 3A), the 
 
 Sense Current at the Tracks instead of the motor board input
 --------------------------------------------------------------
+
 TODO: Finish this.
 
 Tech Notes
@@ -322,18 +323,19 @@ Below is a link to the IBT_2 schematic. Click to enlarge. TODO: this is wrong
 .. image:: ../../_static/images/schematics/IBT_2_schematic.jpg
    :scale: 50
 
-Keeping your tracks in phase
+Keeping Your tracks in Phase
 ------------------------------
    
 If you are an Engineer will be using the <1 JOIN> command to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as viewed from a train sitting on the track. We need to keep the phase of the DCC signal in sync between power districts.
 
+To check phase, Put an AC Voltmeter with one lead on the LEFT rail on PROG and the other lead on the left rail on MAIN. If the meter measures an AC voltage near track voltage (around 17-20 VAC normally) then reverse one of the power wires to one of the tracks at the track or at the motor board output. Test again.It should now read 0 Volts AC.
+
 TODO: Finish this section
 
 
- Parts list (IRF3205)
------------------------
+Parts List (IRF3205)
+=====================
 
-Parts list:
 Mean Well LRS-150-15
 Enclosed Switchable Power Supply 1U Profile, 150W 15V 10A
 http://amazon.com/gp/product/B019GYOPSS/
@@ -363,49 +365,50 @@ See the PDF file IRF3205_mega_ACS724 in my trains folder
 .. WARNING:: Heat sinks must be insulated! The metal tabs on the transistors are connected to their drain (the middle pin). If you touched the metal of heat sink that was not insulated, or an uninsulated heat sink connected to one transistor touched the heatsink connected to another transistor, the results could be bad. You can used one big heat sink to connect the transistors, but you would have to use proper mounting hardware and thermal compound. Ideas below
 
 ..
-  TODO: finish and remove these comments
-  XXX put images of thermal double sides tape or the mica and screw solution
+   TODO: finish and remove these comments
+   XXX put images of thermal double sides tape or the mica and screw solution
 
-  1. Current sense on the input of the board for both tracks
-  2. Curent sense at the motor board outputs (to the tracks) for separate measurement
-  3. Cut the thick trace on the board and have separate current sense to each H-Bridge
+..
+   1. Current sense on the input of the board for both tracks
+   2. Curent sense at the motor board outputs (to the tracks) for separate measurement
+   3. Cut the thick trace on the board and have separate current sense to each H-Bridge
+   
+   from chris, re not using <1 JOIN> Alternatively you can connect the tracks through a dpdt relay and drive that with the feature that sets a gpio pin when joined... 
 
-  from chris, re not using <1 JOIN> Alternatively you can connect the tracks through a dpdt relay and drive that with the feature that sets a gpio pin when joined... 
+   Add to mySetup.h
+   DCC::setJoinRelayPin(n)
 
-  Add to mySetup.h
-  DCC::setJoinRelayPin(n)
+   more TODO: What about the motor shield main output we aren't using? Any pins to bend out? Ground current sense? Don't think so on the latter.
 
-  more TODO: What about the motor shield main output we aren't using? Any pins to bend out? Ground current sense? Don't think so on the latter.
+   What does the ACS724 report for 6 or 7 amps? How to make sure it doesn't go over 5V to the Arduino analog pin.
 
-  What does the ACS724 report for 6 or 7 amps? How to make sure it doesn't go over 5V to the Arduino analog pin.
+   
 
-  Make a note on how to test the phase of the tracks. Put a meter between the LEFT rails on PROG and MAIN. If the meter measures an AC voltage near track voltage (around 17 VAC normally) then reverse one of the wires. It should read 0.
+   put a note somewhere in the second install that measuring at the input means the current is for both tracks and that used by the board. We check for an offset, so the board current is cancelled out, but if either track has a short, both tracks cut out. Can't have locos anywhere when programming.Current sensing for IRF3205 motor board.
 
-  put a note somewhere in the second install that measuring at the input means the current is for both tracks and that used by the board. We check for an offset, so the board current is cancelled out, but if either track has a short, both tracks cut out. Can't have locos anywhere when programming.Current sensing for IRF3205 motor board.
+   To use the IRF3205 motor board with a common current sense module, turn off main.
 
-  To use the IRF3205 motor board with a common current sense module, turn off main.
-
-  Note that I was able to successfully read several decoders with 0-10A and +/-10A external current sensors, but not the recent model SD70Ace Genesis w/Tsunami2 OEM sound decoder.
-
-  Locoduino site shows a method for separating the channels and adding a MAX471.
-  https://forum-locoduino-org.translate.goog/index.php?PHPSESSID=7cbbfc3255ae799160a2b9a6aa42e375&topic=843.msg10416&_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc,elem#msg10416
-
-  I wonder if the 1.5 ohm 3 watt resistor could be added to this setup instead of the MAX471.
-
-  Perhaps the two channels of the IRF3205 motor board would be better utilized for two power districts.
-
-  Perhaps anyone who is up to the challenges of the IRF3205 would also be able to add the 1.5 ohm resistor to the L298N motor board.
-
-  But take a step back.  What to recommend?
-
-  1.  Mega + motor shield
-  2.  Add a motor board if more power is needed for main track
+   Note that I was able to successfully read several decoders with 0-10A and +/-10A external current sensors, but not the recent model SD70Ace Genesis w/Tsunami2 OEM sound decoder.
+   
+   Locoduino site shows a method for separating the channels and adding a MAX471.
+   https://forum-locoduino-org.translate.goog/index.php?PHPSESSID=7cbbfc3255ae799160a2b9a6aa42e375&topic=843.msg10416&_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc,elem#msg10416
+   
+   I wonder if the 1.5 ohm 3 watt resistor could be added to this setup instead of the MAX471.
+   
+   Perhaps the two channels of the IRF3205 motor board would be better utilized for two power districts.
+   
+   Perhaps anyone who is up to the challenges of the IRF3205 would also be able to add the 1.5 ohm resistor to the L298N motor board.
+   
+   But take a step back.  What to recommend?
+   1.  Mega + motor shield
+   2.  Add a motor board if more power is needed for main track
     a.  IBT_2
       or 
     b.  IRF3205 + external current sensor
 
-  And consider adding the LEDs to confirm when tracks are powered.  I like using two LEDs per output instead of LED/diode -- if only one is lit, there is a problem...
+   And consider adding the LEDs to confirm when tracks are powered.  I like using two LEDs per output instead of LED/diode -- if only one is lit, there is a problem...
+   
+   -- instructions at:  https://www.locoduino.org/spip.php?article253
+   where IRF3205 is incorrectly identified as L9110S.
 
-  -- instructions at:  https://www.locoduino.org/spip.php?article253
-  where IRF3205 is incorrectly identified as L9110S.
 

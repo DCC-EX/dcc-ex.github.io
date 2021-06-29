@@ -117,7 +117,7 @@ Steps (Upgrade)
 |     GND      |        GND           |
 +--------------+----------------------+
 
-Here is a visual diagram. See :ref:`Important Notes on Current Sense`. Click to enlarge:
+Here is a visual diagram. See :ref:`Important Notes on Current Sensing`. Click to enlarge:
 
 .. image:: ../../_static/images/motorboards/IRF3205_w_arduino_fritz.png
    :alt: IRF3205 Wiring Diagram
@@ -293,11 +293,11 @@ Sense Current at the Tracks instead of the motor board input
 
 TODO: Finish this.
 
-Tech Notes
-===========
+Tech Notes (IRF3205)
+=====================
 
-Motor Board Definitions
-------------------------
+Motor Board Definition for IRF3205
+------------------------------------
 
 The choice of motor driver is set in the config.h file. It is set in the following line:
 
@@ -380,13 +380,11 @@ See the PDF file IRF3205_mega_ACS724 in my trains folder
 
    more TODO: What about the motor shield main output we aren't using? Any pins to bend out? Ground current sense? Don't think so on the latter.
 
-   What does the ACS724 report for 6 or 7 amps? How to make sure it doesn't go over 5V to the Arduino analog pin.
-
-   
+   What does the ACS724 report for 6 or 7 amps? How to make sure it doesn't go over 5V to the Arduino analog pin.   
 
    put a note somewhere in the second install that measuring at the input means the current is for both tracks and that used by the board. We check for an offset, so the board current is cancelled out, but if either track has a short, both tracks cut out. Can't have locos anywhere when programming.Current sensing for IRF3205 motor board.
 
-   To use the IRF3205 motor board with a common current sense module, turn off main.
+   To use the IRF3205 motor board with a common current sense module, turn off main when programming.
 
    Note that I was able to successfully read several decoders with 0-10A and +/-10A external current sensors, but not the recent model SD70Ace Genesis w/Tsunami2 OEM sound decoder.
    

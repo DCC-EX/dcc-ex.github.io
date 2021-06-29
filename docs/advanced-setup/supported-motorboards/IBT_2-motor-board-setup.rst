@@ -134,7 +134,7 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
 
 .. figure:: ../../_static/images/motorboards/ibt_2_resistors.jpg
    :alt: IBT_2 Resistors
-   :scale: 75%
+   :scale: 60%
 
    Figure 3. - 10k (103) current sense resistors
 

@@ -62,8 +62,11 @@ To connect the Display to the CS, you will need 4 male to female jumper wires:
 
 #. Connect a wire from +5V on the Motor Shield or WiFi Board to Vcc on the backpack
 #. Connect a wire from Gnd on the CS to Gnd on the backpack
-#. Connect SCL on the Arduino (pin x on the Mega, pin x on the Uno) to SCL on the backpack
-#. Connect SDA on the Arduino (pin x on the Mega, pin x on the Uno) to SDA on the backpack
+#. Connect SDA on the Arduino (pin 20 on the Mega, pin 16 on the Uno) to SDA on the backpack
+#. Connect SCL on the Arduino (pin 21 on the Mega, pin 17 on the Uno) to SCL on the backpack
+
+.. Note:: Look closely on the Uno or Mega for markings, including on the inside or outside of the black header. SCA and SCL are usually clearly labeled.
+
 
 Controlling Brightness
 -----------------------

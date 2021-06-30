@@ -103,6 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../get-started/installer.html">Install using the Automated Installer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Advanced Setup</a><ul class="current">
@@ -111,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
@@ -411,7 +413,27 @@
 <h3>Just Buy a Current Sense Board Instead<a class="headerlink" href="#just-buy-a-current-sense-board-instead" title="Permalink to this headline">¶</a></h3>
 <p>Tinkerers and Conductors who don’t mind connecting a few jumper wires may like this option.</p>
 <p>This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards.</p>
+</div>
+<div class="section" id="where-do-i-measure-the-current">
+<h3>Where do I measure the current?<a class="headerlink" href="#where-do-i-measure-the-current" title="Permalink to this headline">¶</a></h3>
+<p>Anoter way to ask the question is, “How do I connect a current sensor”? There are 2 ways to connect a current sensor board, here they are listed by ease of use:</p>
+<ol class="arabic simple">
+<li><p>Insert the board in the current path of the Voltage going into the motor board.</p></li>
+<li><p>Insert the board in the current path from the output of the board to the track.</p></li>
+</ol>
+<div class="section" id="reading-the-input-to-the-motor-board">
+<h4>Reading the input to the motor board<a class="headerlink" href="#reading-the-input-to-the-motor-board" title="Permalink to this headline">¶</a></h4>
+<p>The first option has the advantage of a simple connection and that it can use a DC (unidirectional) current sensor or a bi-directional current sensor. To connect it, you take the ground lead of the track power supply and connect it to the ground lug of the motor board. Then, instead of connecting the positive wire to the motor board input, you connect it to the positive terminal of the current sensor. You then use another wire to go from the negative terminal of the current sensor to the positive lug of the motor board. By insterting the current sense board in series with power connection, we can measure current.</p>
+<p>The disadvantage of measuring at the input power stage is that we are measuring the <em>total current</em> to the board. That means we are measuring the current of the board <em>and</em> your trains. It takes power to run any electonics and so there is current being used by the motor board even without any locos on the track. The good news is that it is a small current and we can account for it. As a matter of fact, on the programming track, DCC++EX does a quick calibration to “zero out” or “tare” the resting current so we have a baseline to measure ack pulses against.</p>
+<p>The other disadvantage is that if your motor board has both MAIN and PROG sections on it, you need to turn off power to the MAIN track when you are going to do any programming (reading and writing CVs) on the PROG track. There is no way without modifying a dual H-Bridge board like this of reading the current of each H-Bridge separately.</p>
+</div>
+<div class="section" id="reading-the-output-to-the-track">
+<h4>Reading the output to the track<a class="headerlink" href="#reading-the-output-to-the-track" title="Permalink to this headline">¶</a></h4>
+<p>This method has the advantage or reading the actual current being used by things attached to the track. It has the further advantage of being able to read MAIN current and PROG current separately, even on boards that have both H-Bridges on the same board. That makes sense, because you are, in effect, connecting to the track circuit, not the motor board.</p>
+<p>The disadvantage is that you MUST use a bi-directional current sensor and you need 2 sensors if you want to use one to sense ACKS (adknowledgements) from locos on the programming track and to sense current and detect an overload (short circuit) on either track.</p>
+<p>No matter method you choose, you are going to have to either select the correct motor board type in your config.h file or create a motorboard definition to tell DCC++EX which pins you are connecting your current sense board(s) to and what current sense factor to use to report the current accurately.</p>
 <p>For details and instructions on how to connect and configure Non Arduino Motor Shield boards and their clones, see the <a class="reference external" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a></p>
+</div>
 </div>
 </div>
 </div>

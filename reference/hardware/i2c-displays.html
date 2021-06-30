@@ -103,6 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/installer.html">Install using the Automated Installer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
@@ -111,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
@@ -297,9 +299,13 @@
 <ol class="arabic simple">
 <li><p>Connect a wire from +5V on the Motor Shield or WiFi Board to Vcc on the backpack</p></li>
 <li><p>Connect a wire from Gnd on the CS to Gnd on the backpack</p></li>
-<li><p>Connect SCL on the Arduino (pin x on the Mega, pin x on the Uno) to SCL on the backpack</p></li>
-<li><p>Connect SDA on the Arduino (pin x on the Mega, pin x on the Uno) to SDA on the backpack</p></li>
+<li><p>Connect SDA on the Arduino (pin 20 on the Mega, pin 16 on the Uno) to SDA on the backpack</p></li>
+<li><p>Connect SCL on the Arduino (pin 21 on the Mega, pin 17 on the Uno) to SCL on the backpack</p></li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Look closely on the Uno or Mega for markings, including on the inside or outside of the black header. SCA and SCL are usually clearly labeled.</p>
+</div>
 </div>
 <div class="section" id="controlling-brightness">
 <h3>Controlling Brightness<a class="headerlink" href="#controlling-brightness" title="Permalink to this headline">¶</a></h3>

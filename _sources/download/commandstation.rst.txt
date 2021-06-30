@@ -13,7 +13,7 @@ Welcome to the Command Station download page. You have several choices:
 exInstaller
 =============
 
-.. note:: After downloading the latest version of the installer from the release page for your operating system and installing the software, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic. The installer will let you select options, such as your Arduino type and motor shield type, then automatically compile the firmware and upload it to your Arduino or compatible board.
+.. note:: Clicking on the link below will automatically find the correct version for your Computer and Operating system (Windows, Mac, Linux) and download it. After unzipping the files to a folder on your computer and running the "exInstaller" program, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic, and options, such as your Arduino type and motor shield type. It will automatically upload the software to your Arduino or other supported board. Click here for `exInstaller installation instructions <../get-started/installer.html>`_. If you have an issue with the web page getting you the correct version, click on the :ref:`Latest DCC++ EX Official Release` button in the next section to manually download the correct version.
 
 .. raw:: html 
 
@@ -22,7 +22,7 @@ exInstaller
 Latest DCC++ EX Official Release
 ==================================
 
-.. note:: On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for DCC++ EX. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for `installation instructions <../get-started/arduino-ide.html>`_
+.. note:: On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for DCC++ EX. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for `Arduino IDE installation instructions <../get-started/arduino-ide.html>`_.
 
 .. raw:: html
 

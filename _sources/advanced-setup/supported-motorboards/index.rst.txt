@@ -9,4 +9,5 @@ These pages are notes and guides for how to connect and configure each specific 
 
     L298N-motor-board-setup
     IBT_2-motor-board-setup
+    IRF3205-motor-board-setup
     

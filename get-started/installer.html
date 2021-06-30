@@ -103,6 +103,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Install using the Automated Installer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arduino-ide.html">Install using the Arduino IDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
@@ -111,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
@@ -256,8 +258,8 @@
             
   <div class="section" id="install-using-the-automated-installer">
 <h1>Install using the Automated Installer<a class="headerlink" href="#install-using-the-automated-installer" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="requirements-for-installing">
+<h2>Requirements (for installing)<a class="headerlink" href="#requirements-for-installing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Windows/Linux/MacOS Computer</p></li>
 <li><p>DCC-EX Compatible motor shield / motor controller board</p></li>
@@ -269,32 +271,14 @@
 <p>For all versions, make sure your USB Cable is connected from your computer to the Command Station (CS). Make sure no other programs are using the computer’s serial port.</p>
 </div>
 </div>
-<div class="section" id="windows">
-<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instructions-for-windows-mac-os-x-and-linux-including-the-raspberry-pi">
+<h2>Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi<a class="headerlink" href="#instructions-for-windows-mac-os-x-and-linux-including-the-raspberry-pi" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Download the <a class="reference external" href="https://github.com/DCC-EX/BaseStation-Installer/releases">Windows 32bit or 64bit Installer</a>, depending on your computer</p></li>
-<li><p>Extract the Installer into its own folder</p></li>
-<li><p>Open the folder and run the BaseStationInstaller.exe</p></li>
-</ul>
-</div>
-<div class="section" id="mac-os-x">
-<h2>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Install <a class="reference external" href="https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.301-macos-x64-installer">OS X dotnet core</a></p></li>
-<li><p>Download <a class="reference external" href="https://github.com/DCC-EX/BaseStation-Installer/releases">Mac OS X Installer</a></p></li>
-<li><p>Extract the Installer into its own folder</p></li>
-<li><p>Open a terminal window and navigate to that folder</p></li>
-<li><p>Run the following command: <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">BaseStationInstaller</span></code></p></li>
-</ul>
-</div>
-<div class="section" id="linux-incl-raspberry-pi">
-<h2>Linux (incl. Raspberry Pi)<a class="headerlink" href="#linux-incl-raspberry-pi" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/core/install/linux">Linux dotnet core</a></p></li>
-<li><p>Download <a class="reference external" href="https://github.com/DCC-EX/BaseStation-Installer/releases">Mac OS X Installer</a></p></li>
-<li><p>Extract the Installer into its own folder</p></li>
-<li><p>Open a terminal window and navigate to that folder</p></li>
-<li><p>Run the following command: <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">BaseStationInstaller</span></code></p></li>
+<li><p>Download the <a class="reference external" href="https://dcc-ex.com/download/commandstation.html#exinstaller">DCC-EX Installer</a> which will automatically determine the version you need and download it</p></li>
+<li><p>Extract the Installer into its own folder with your favorite unzip program</p></li>
+<li><p>Open File Manager for Windows or a terminal window in Mac OS and Linux and navigate to that folder</p></li>
+<li><p>Windows users run <code class="docutils literal notranslate"><span class="pre">exInstaller.exe</span></code></p></li>
+<li><p>Mac and Linux users run the following command: <code class="docutils literal notranslate"><span class="pre">./exInstaller</span></code></p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

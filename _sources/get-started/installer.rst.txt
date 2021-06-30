@@ -1,8 +1,9 @@
+**************************************
 Install using the Automated Installer
-======================================
+**************************************
 
-Requirements
-------------
+Requirements (for installing)
+==============================
 
 * Windows/Linux/MacOS Computer
 * DCC-EX Compatible motor shield / motor controller board
@@ -11,36 +12,21 @@ Requirements
 
 .. note:: For all versions, make sure your USB Cable is connected from your computer to the Command Station (CS). Make sure no other programs are using the computer's serial port.
 
-Windows
------------------
+Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
+============================================================================
 
-* Download the `Windows 32bit or 64bit Installer <https://github.com/DCC-EX/BaseStation-Installer/releases>`_, depending on your computer
-* Extract the Installer into its own folder
-* Open the folder and run the BaseStationInstaller.exe
+* Download the `DCC-EX Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_ which will automatically determine the version you need and download it
+* Extract the Installer into its own folder with your favorite unzip program
+* Open File Manager for Windows or a terminal window in Mac OS and Linux and navigate to that folder
+* Windows users run ``exInstaller.exe``
+* Mac and Linux users run the following command: ``./exInstaller``
 
-Mac OS X
-----------------
-
-* Install `OS X dotnet core <https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.301-macos-x64-installer>`_
-* Download `Mac OS X Installer <https://github.com/DCC-EX/BaseStation-Installer/releases>`_
-* Extract the Installer into its own folder
-* Open a terminal window and navigate to that folder
-* Run the following command: ``dotnet BaseStationInstaller``
-
-Linux (incl. Raspberry Pi)
---------------------------------------------
-
-* Install `Linux dotnet core <https://docs.microsoft.com/en-us/dotnet/core/install/linux>`_
-* Download `Mac OS X Installer <https://github.com/DCC-EX/BaseStation-Installer/releases>`_
-* Extract the Installer into its own folder
-* Open a terminal window and navigate to that folder
-* Run the following command: ``dotnet BaseStationInstaller``
 
 .. warning::
    You may need to turn off your antivirus software before you try to install. We need a piece of Arduino software to be able to compile and upload the Command Station software which sometimes gets blocked. If you see errors on the install screen, this is usually the issue.
 
 The Installer Window
---------------------
+=====================
 
 .. image:: ../_static/images/installer/installer.jpg
    :alt: DCC-EX Installer
@@ -51,7 +37,7 @@ The Installer Window
 There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
 Choose your options
--------------------
+====================
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
 
@@ -71,7 +57,7 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 8. Press the "Compile and Upload" button
 
 WiFi Checkbox
-^^^^^^^^^^^^^
+--------------
 
 MAKE SURE THIS BOX IS CHECKED - If you want WiFi, this box **must** be checked. If you don't want WiFi, you can leave it checked anyway so that if you add WiFi later, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren't going to use WiFi, unchecking the box will free about 10kb of progmem and about 2kb of RAM.
 
@@ -97,7 +83,7 @@ If you wish to connect to your home network instead (connect to your router usin
 * **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
 
 Ethernet Checkbox
-^^^^^^^^^^^^^^^^^
+------------------
 
 If you have an Ethernet shield and check this box, you will see options to change the following settings:
 
@@ -116,7 +102,7 @@ If you have an Ethernet shield and check this box, you will see options to chang
 * **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
 
 LCD Checkbox
-^^^^^^^^^^^^
+-------------
 
 If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:
 
@@ -135,7 +121,7 @@ If you have a 2 or 4 line LCD display connected and check this box, you will see
 For more information about using displays, see `I2C Displays <../reference/hardware/i2c-displays.html>`_
 
 OLED CheckBox
-^^^^^^^^^^^^^
+---------------
 
 If you have an OLED display connected and check this box, you will see the following options you can edit for your display:
 
@@ -152,22 +138,22 @@ If you have an OLED display connected and check this box, you will see the follo
 For more information about using displays, see `I2C Displays <../reference/hardware/i2c-displays.html>`_
 
 Refresh Ports Button
-^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program, or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.
 
 Compile and Upload Button
-^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
 Once you have configured your options, press this button to compile all the source code and upload it to your Command Station.
 
 Test your setup
----------------
+=================
 
 .. NOTE:: The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
 
 Using the Arduino IDE Serial Monitor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 To test with the Arduino Serial Monitor, download the Arduino IDE from the following link and install it on your computer.
 
@@ -216,7 +202,7 @@ This is the "status" command and reports your version, types of boards you are u
 There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC++ EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands.
 
 Using exWebThrottle
-^^^^^^^^^^^^^^^^^^^
+--------------------
 
 .. image:: ../_static/images/installer/exwebthrottle.jpg
    :alt: exWebThrottle
@@ -227,7 +213,7 @@ Using exWebThrottle
 Click this link: `exWebThrottle <../throttles/ex-webthrottle.html>`_ to run exWebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/exWebThrottle>`_ to get the latest version to run on your computer.
 
 Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 .. image:: ../_static/images/installer/engine_driver.png
    :alt: Engine Driver

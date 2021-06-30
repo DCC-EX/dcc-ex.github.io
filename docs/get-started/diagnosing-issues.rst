@@ -69,3 +69,5 @@ With all of the decoder manufacturers creating hardware and the difficulties in 
 ..
 
    TODO: finish this section. Link to notes about current sensing.
+
+Updated June 30, 2021

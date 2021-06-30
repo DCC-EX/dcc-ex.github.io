@@ -20,9 +20,9 @@ Engineer Level
 
 See the :ref:`Parts list (IBT_2)`
 
-.. image:: ../../_static/images/motorboards/ibt_2_bts7960.jpg
+.. image:: ../../_static/images/motorboards/ibt_2_bts7960_2.jpg
    :alt: IBT_2 Motor driver
-   :scale: 35%
+   :scale: 50%
    :align: center   
 
 What You Will Need (IBT_2)
@@ -325,3 +325,6 @@ Below is the Handson Technology datasheet, recommended reading for Tinkerers and
    There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`Important Notes on Current Sensing` section.
 
    Also, mention "high accuracy mode" and include the circtuit for that.
+
+
+Updated June 30, 2021

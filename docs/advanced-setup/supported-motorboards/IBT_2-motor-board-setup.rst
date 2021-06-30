@@ -227,8 +227,8 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 fo
 
 
 
-Important Notes on Current Sensing
-====================================
+Important Notes on Current Sensing (IBT_2)
+===========================================
 
 .. WARNING:: Make sure your board has the expected current sensing resistors (see below) and that their value is correct for the maximum current you expect to use. Also, make sure you don't apply more than 5V to the Arduino Analog pin. Our calculations use NOMINAL values, but these chips can vary widely in how much voltage they report per Amp of current at the output. The value of your resistor will also affect this.
 

@@ -16,13 +16,11 @@ Engineer Level
 - :ref:`Upgrading (Use the Arduino Motor Shield AND the IBT_2)`
 - :ref:`Replacing (Using One IBT_2 for MAIN and another for PROG)`
 - :ref:`Important Notes on Current Sensing (IBT_2)`
-- :ref:``
-- :ref:``
 - :ref:`Parts list (IBT_2)`
 
 See the :ref:`Parts list (IBT_2)`
 
-.. image:: ../../_static/images/motorboards/IBT_2.jpg
+.. image:: ../_static/images/motorboards/ibt_2_bts7960
    :alt: IBT_2 Motor driver
    :scale: 35%
    :align: center   
@@ -51,8 +49,8 @@ Anything with MOSFETS in them is more efficient than something with Bipolar Junc
 Which Option Should You Choose? (IBT_2)
 =========================================
 
-Upgrade
----------
+Upgrade (IBT_2)
+----------------
 
 The main benefit of using the upgrade option, keeping the Arduino Motor Shield for programming and adding the IBT_2 for providing more current for your MAIN track, is that you already have a working system for programming, and therefore need to make fewer changes. The other reason is that current sensing for programming requires more sensitivity that simply being able to detect a short condition, which is all you need on MAIN. 
 
@@ -60,8 +58,8 @@ The circuitry on the Arduino Motor Shield is designed to measure current from ju
 
 It would be possible to just use fuses to both rails of your MAIN track to protect for shorts on the track and not have to have an external current sense board as long at you also had protection in your power supply to protect against a short in the board itself. Just note that without a current sense board, the Command Station would not be able to automatically turn off power to the board in the event of a short and current monitoring, like in the JMRI DCC++ monitor, will not report main track current.
 
-Replace
----------
+Replace (IBT_2)
+---------------
 
 The main benefit of the replace option, using 2 IBT_2 boards, is that you don't have to have two different types of boards. If you are building a new CS and don't already have an Arduino Motor Shield, you will need two of the IBT_2 boards.
 
@@ -211,9 +209,9 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 fo
 +--------------+-----------------------------+
 |  Arduino     |        IBT_2 PROG           |
 +==============+=============================+
-| 11 (enable)   | 3,4  (R_EN, L_EN)           |
+| 11 (enable)   | 3,4  (R_EN, L_EN)          |
 +--------------+-----------------------------+
-| 12 (signal 1) | 2 (LPWM)                    |
+| 12 (signal 1) | 2 (LPWM)                   |
 +--------------+-----------------------------+
 | 13 (signal 2) | 1 (RPWM)                   |
 +--------------+-----------------------------+

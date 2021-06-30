@@ -4,6 +4,8 @@ Diagnosing Issues (Troubleshooting)
 
 This is the "Help, it's not working!" page.
 
+NOTE: This section is a very rough draft. More coming soon.
+
 There are a lot of optional settings and choices a user can make and sometimes things don't work as you expect them to. If you upload software to the Command Station, connect power to your motor controller and the CS and then connect the output to your track and don't see power or your train responding, here are the steps to follow.
 
 Is it Plugged In, Is it Turned On?
@@ -60,8 +62,9 @@ Loco Programming Issues (-1 or JMRI 308 error)
 
 With all of the decoder manufacturers creating hardware and the difficulties in properly interpreting the NMRA standard, we have found that quite a few decoders are wildly outside the specification. That presents a few challenges. If you can't read CVs or program your loco or you see "Error 308" in your JMRI log, it could be one of the following:
 
-#. Out of spec. decoder (most likely). You will need to run a test and then modify a setting or two. Please go to the `<Diagnostic \<D ACK\> <../reference/software/diagnostic-d-ack-command.html>`_. Send us your log.
-#. Current sense issue - Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capabiliy on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.
+#. **Current sense issue** - From the Arduino Serial monitor with ``115200 baud`` set and ``Both CR & NL`` selected in the dropdown, put a loco on the MAIN track. Enter the <1> command to turn on power. Then enter the <C> command and check the response. You should see a valid number for current.
+#. Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capabiliy on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.
+#. **Out of spec. decoder (most likely)** - You will need to run a test and then modify a setting or two. Please go to the `<Diagnostic \<D ACK\> <../reference/software/diagnostic-d-ack-command.html>`_. Send us your log.
 
 ..
 

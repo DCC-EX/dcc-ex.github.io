@@ -88,7 +88,7 @@ What Tinkerers Are Going to Do (Upgrade)
 * Add a current sense board and fuses (or just fuses for Engineers)
 * Change your motor board type in your config.h file
 
-.. WARNING:: Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. Both outputs of the motor shield are still connected, we just don't enable the A, or main, side of the Arduino Motor Shield. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.
+.. WARNING:: Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A3. Both outputs of the motor shield are still connected, we just don't enable the A, or main, side of the Arduino Motor Shield. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.
 
 Steps (Upgrade IRF3205)
 --------------------------
@@ -110,7 +110,7 @@ Steps (Upgrade IRF3205)
 +--------------+----------------------+
 | 12 (signal)  |        DIR1          |
 +--------------+----------------------+
-| A5 (CS MAIN) |   CS Board Sense     |
+| A3 (CS MAIN) |   CS Board Sense     |
 +--------------+----------------------+
 |     5V       |        +5V           |
 +--------------+----------------------+
@@ -159,11 +159,11 @@ Remove the last line and replace it with this. To be sure of your spelling, you 
 
    #define MOTOR_SHIELD_TYPE IRF3205_ARDUINO_ACS724
 
-   #define STANDARD_MOTOR_SHIELD F("STANDARD_MOTOR_SHIELD"), \
+   #define IRF3205_ARDUINO_ACS724 F("IRF3205_ARDUINO_ACS724"), \
      new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A3, 12.2, 6000, UNUSED_PIN), \
      new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
 
-This will us pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to not explaining high accuracy).
+This will use pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to not explaining high accuracy).
 
 7. Upload the new sketch to your Arduino. If you need help on how to upload a sketch, see `Getting Started <../../get-started/index.html>`_
 
@@ -261,13 +261,13 @@ Remove the last line and replace it with this. To be sure of your spelling, you 
 
 .. code-block:: c
 
-   #define MOTOR_SHIELD_TYPE IRF3205_ARDUINO_ACS724
+   #define MOTOR_SHIELD_TYPE IRF3205_ACS724
 
-   #define STANDARD_MOTOR_SHIELD F("STANDARD_MOTOR_SHIELD"), \
-     new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A3, 12.2, 6000, UNUSED_PIN), \
+   #define IRF3205_ACS724 F("IRF3205_ACS724"), \
+     new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 12.2, 6000, UNUSED_PIN), \
      new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
 
-This will us pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to not explaining high accuracy).
+This will us pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to note explaining high accuracy).
 Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../../get-started/index.html>`_
 
 
@@ -283,7 +283,7 @@ Important Notes on Current Sensing
 
 Please do the following to verify you won't damage the Arduino, your layout, or yourself:
 
-* Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the output going to pin A5 of the CS does not produce more than 5V.
+* Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the output going to pin A3 of the CS does not produce more than 5V.
 * Consider using a 5V zener diode and current limiting resistor to clamp the voltage on the analog pin. This would normally be a 270 Ohm resistor.
 * Put a 5A fuse on each output leg going to your track.
 
@@ -411,6 +411,8 @@ TODO: See the PDF file IRF3205_mega_ACS724 in trains folder to include here
     b.  IRF3205 + external current sensor
 
    And consider adding the LEDs to confirm when tracks are powered.  I like using two LEDs per output instead of LED/diode -- if only one is lit, there is a problem...
+
+   make a note about how current sense is affected by 3.3V boards
    
    -- instructions at:  https://www.locoduino.org/spip.php?article253
    where IRF3205 is incorrectly identified as L9110S.

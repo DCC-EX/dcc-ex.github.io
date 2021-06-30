@@ -1,34 +1,41 @@
-## Diagnosing Issues (aka "Something's not working!") ##
+Diagnosing Issues
+====================
+
+This is the "Help, it's not working!" page.
 
 There are a lot of optional settings and choices a user can make and sometimes things don't work as you expect them to. If you upload software to the Command Station, connect power to your motor controller and the CS and then connect the output to your track and don't see power or your train responding, here are the steps to follow.
 
-### Is it plugged in, is it turned on ###
+Is it Plugged In, Is it Turned On?
+===================================
 
-Yes, we need to start with the basics. If you have 12V DC or less connected to the input power of the Arduino and did not cut the power connect trace underneath the Motor Controller, then the Motor Controller and the Arduino can be powered from the one power supply. If you cut the trace, then you will need two power supplies, a 9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the Motor Controller.
+Yes, we need to start with the basics. If you have 12V DC or less connected to the input power of the Arduino and did not cut the power connect trace underneath the Motor Controller, then the Motor Controller and the Arduino can be powered from the one power supply. If you cut the trace, then you will need two power supplies, a 7-9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the Motor Controller.
 
 * If you have one power supply, is it plugged into the wall and is it at least capable of delivering 2 Amps of current?
-* If you have two power supplies, see above for the Motor Controller board and add a 9V power supply for the Arduino of at least 1 Amp
-* Do you see a green led marked ```on``` glowing to indicate the Arduino has power? If not, there is a power issue
+* If you have two power supplies, see above for the Motor Controller board and add a 7-9V power supply for the Arduino of at least 1 Amp
+* Do you see a green led marked ```on``` on the Arduino board glowing to indicate the Arduino has power? If not, there is a power issue
 
-### Diagnosing and Testing ###
+Diagnosing and Testing
+=============================
 
 1. Remove the Motor Shield ---we are going to test just the Arduino first.
-2. Download and install the most current version of [DCC++ EX Command Station](https://github.com/DCC-EX/CommandStation-EX)
+2. Download and install the most current version of [DCC++ EX Command Station](https://github.com/DCC-EX/CommandStation-EX/releases)
 3. Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to 115200 baud and make sure you have set ````Both CR & NL``` from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see "DCC-EX" and the software version as well as other log lines that mention WiFi. If you don't see anything in the log, it could be that the software did not upload correctly, or be an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.
 
-###Testing the Arduino and Base Station code###
+Testing the Arduino and Base Station code
+==============================================
 
 *** TO BE WRITTEN ***  
 
 
-###Testing the DCC signal###
+Testing the DCC signal
+=========================
 
 Now the fun part -- we are going to test the generation of the DCC signal itself.  
 
 *** TO BE WRITTEN ***
 
-
-###Testing the Motor Shield###
+Testing the Motor Shield
+==============================
 
 If first two tests pass, then the Arduino is functioning correctly and it's time to test the Motor Shield.  
 

@@ -12,12 +12,10 @@ Tinkerer Level
 |
 
 - :ref:`What You Will Need (IRF3205)`
-- :ref:`Which option should you choose?`
+- :ref:`Which option should you choose? (IRF3205)`
 - :ref:`Upgrading (Use the Arduino Motor Shield AND the IRF3205)`
 - :ref:`Replacing (Use both IRF3205 outputs to control MAIN and PROG)`
 - :ref:`Important Notes on Current Sensing`
-- :ref:``
-- :ref:``
 - :ref:`Parts list (IRF3205)`
 
 What You Will Need (IRF3205)
@@ -49,13 +47,13 @@ We assume that many of you may have started off with the Arduino Mega with Ardui
 
 The IRF3205 is actually the part number of the transistors on the board, N-Channel Power MOSFETS specifically. It takes 4 of them to make one full H-Bridge circuit to control one track. This board has 2 sets of 4 for 2 H-Bridges. You may find other boards that use this transistor, but this guide only covers the 15A Dual H-Bridge pictured above. Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means **there is no voltage drop to the tracks** like there is for those boards. Keep that in mind because that means **there can be an extra 2 to 3 volts to your track**. Your trains will run faster than they did before and things could overheat if they were able to handle the 12V reaching the track from a 14.5V power supply, but don't like the full 14+ volts.
 
-Which Option Should You Choose?
-=================================
+Which Option Should You Choose? (IRF3205)
+===========================================
 
-.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like DCCInspector-EX). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see `High Accuracy Waveform Mode <high-accuracy.html>`_
+.. NOTE:: This board can use the "High Accuracy Waveform" option since it uses just one direction pin per H-Bridge. As long as you use one of our motor board definitions for MOTOR_BOARD_TYPE in your config.h file that uses a Timer1 pin, this will all be automatic. See `High Accuracy Waveform <../high-accuracy.html>`_
 
-Upgrade
----------
+Upgrade (IRF3205)
+------------------
 
 The main benefit of using the upgrade option, keeping the Arduino Motor Shield for programming and adding the IRF3205 for providing more current for your MAIN track, is that you already have a working system for programming, and therefore need to make fewer changes. The other reason is that current sensing for programming requires more sensitivity that simply being able to detect a short condition, which is all you need on MAIN. 
 
@@ -63,8 +61,8 @@ The circuitry on the Arduino Motor Shield is designed to measure current from ju
 
 It would be possible to just use fuses to both rails of your MAIN track to protect for shorts on the track and not have to have an external current sense board as long at you also had protection in your power supply to protect against a short in the board itself. Just note that without a current sense board, the Command Station would not be able to automatically turn off power to the board in the event of a short and current monitoring, like in the JMRI DCC++ monitor, will not report main track current.
 
-Replace
---------
+Replace (IRF3205)
+-----------------
 
 The main benefit of the replace option, using only the IRF3205 board, is that you only need one board. If you are building a new CS and don't already have an Arduino Motor Shield, you can save money and space by not having to buy another board.
 
@@ -92,8 +90,8 @@ What Tinkerers Are Going to Do (Upgrade)
 
 .. WARNING:: Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. Both outputs of the motor shield are still connected, we just don't enable the A, or main, side of the Arduino Motor Shield. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.
 
-Steps (Upgrade)
------------------
+Steps (Upgrade IRF3205)
+--------------------------
 
 1. Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IRF3205 motor board.
 
@@ -173,28 +171,28 @@ This will us pin 3 for Enable and 12 for signal, which will use the "High Accura
 
 See :ref:`Important Notes on Current Sensing`
 
-***TODO: organize the above and add pictures***
-
 
 Replacing (Use both IRF3205 outputs to control MAIN and PROG)
 ==============================================================
 
+.. NOTE:: This option requires a small external current sense board wired in series with the DC power into the board. This monitors the total current the board uses, so cannot measure the MAIN and PROG tracks separately. You will need to turn off power to MAIN ``<0 MAIN>`` when programming. There is an option to use 2 current sense boards at the output to each track (requires bi-directional current sense boards) or to create a break in the power trace on the board to one of the H-Bridge circuits to monitor DC input current separately. Those options are covered in the :ref:`Tech Notes (IRF3205)` section.
+
 This section will cover how to the MOTOR1 output to control MAIN and MOTOR2 to control PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IRF3205 can deliver much more current than you need for a programming track. If you install 1 Amp fuses in between the IRF3205 Motor2 outputs and both rails of your programming track, that and the lower trip current we set in the Command Station for the programming track should protect your layout and your locos.
 
-What Tinkerers Are Going to Do (Replace)
-------------------------------------------
+What Tinkerers Are Going to Do (Replace IRF3205)
+-------------------------------------------------
 
 * Use both outputs of your IRF3205 15A board (MOTOR1 and MOTOR2) to control your MAIN and PROG track
 * Connect a few jumpers (wires) to your IRF3205 board
 * Add a current sense board and fuses (you MUST have current sense to program locos)
 * Change your motor board type in your config.h file
 
-Steps (Replace) 
-----------------
+Steps (Replace IRF3205) 
+-------------------------
 
 1. Make sure all power supplies are disconnected from your Arduino and the IRF3205 motor board.
 2. Option - TODO: fnd curent sense / fuses! See the notes below for more detail about current sense and a suggestion for using an external current sense board.
-3. Select your IRF3205 board in the config.h file. TODO: fnd XXX need to add this type
+3. Select your IRF3205 board in the config.h file. ***TODO: fnd need to add this type***
 4. Upload the new sketch to your Arduino Mega
 
 Connect wires of the proper gauge (TODO: see gauge) from the "MOTOR1" screw terminals of the IRF3205 board to your MAIN track and connect 2 more wires from the "MOTOR2" terminals to your PROG track. 
@@ -206,11 +204,17 @@ Use the following diagrams to connect pins from the Arduino Mega to the IRF3205.
 +--------------+----------------------+
 |  Arduino     |       IRF3205        |
 +==============+======================+
-| 2 (enable)   |        PWM1          |
+| 3 (enable)   |        PWM1          |
 +--------------+----------------------+
 | 12 (signal)  |        DIR1          |
 +--------------+----------------------+
-| A5 (CS MAIN) |   CS Board Sense     |
+| A0 (CS MAIN) |   CS Board Sense     |
++--------------+----------------------+
+| 11 (enable)  |        PWM2          |
++--------------+----------------------+
+| 13 (signal)  |        DIR2          |
++--------------+----------------------+
+| A1 (CS PROG) |   CS Board Sense     |
 +--------------+----------------------+
 |     5V       |        +5V           |
 +--------------+----------------------+

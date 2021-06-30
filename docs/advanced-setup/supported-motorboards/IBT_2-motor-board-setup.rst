@@ -20,7 +20,7 @@ Engineer Level
 
 See the :ref:`Parts list (IBT_2)`
 
-.. image:: ../_static/images/motorboards/ibt_2_bts7960
+.. image:: ../../_static/images/motorboards/ibt_2_bts7960.jpg
    :alt: IBT_2 Motor driver
    :scale: 35%
    :align: center   
@@ -48,6 +48,8 @@ Anything with MOSFETS in them is more efficient than something with Bipolar Junc
 
 Which Option Should You Choose? (IBT_2)
 =========================================
+
+.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like DCCInspector-EX). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see `High Accuracy Waveform Mode <high-accuracy.html>`_
 
 Upgrade (IBT_2)
 ----------------
@@ -160,7 +162,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../../get-started/index.html>`_
 
-Please see :ref:`Important Notes About Current Sensing Resistors`.
+Please see :ref:`Important Notes on Current Sensing (IBT_2)`.
 
 
 Replacing (Using One IBT_2 for MAIN and another for PROG)
@@ -182,7 +184,7 @@ Steps (Replace)
 ------------------
 The same rules as above apply to using 2 boards. The only difference is that we would use one IBT_2 board for Main and another for PROG. That wiring would look like this:
 
-Please see :ref:`Important Notes About Current Sensing Resistors`.
+Please see :ref:`Important Notes on Current Sensing (IBT_2)`.
 
 TODO: Fritzing image of 2 ibt 2 boards here
 
@@ -225,8 +227,8 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 fo
 
 
 
-Important Notes about Current Sensing Resistors
-=================================================
+Important Notes on Current Sensing
+====================================
 
 .. WARNING:: Make sure your board has the expected current sensing resistors (see below) and that their value is correct for the maximum current you expect to use. Also, make sure you don't apply more than 5V to the Arduino Analog pin. Our calculations use NOMINAL values, but these chips can vary widely in how much voltage they report per Amp of current at the output. The value of your resistor will also affect this.
 
@@ -254,7 +256,34 @@ Using External Current Sense
 
 Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (5A or 10A boards), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
 
-***TODO: Add help or point to a section for external CS boards***
+***TODO: Add help or point to a section for external current sense boards***
+
+Parts List (IBT_2)
+=====================
+
+Mean Well LRS-150-15
+Enclosed Switchable Power Supply 1U Profile, 150W 15V 10A
+http://amazon.com/gp/product/B019GYOPSS/
+$23.38 +tax; prime shipping
+
+ELEGOO MEGA 2560 R3 Board ATmega2560 ATMEGA16U2 + USB Cable
+https://www.amazon.com/gp/product/B01H4ZLZLQ
+$16.99 +tax; prime shipping
+
+ACS724 Current Sensor Carrier 0 to 10A (this one has 400mv/A sensitivity)
+https://www.pololu.com/product/4042
+$9.95 + $3.95 shipping
+
+DuPont pin M/F jumper wires 20cm – an assortment is fine
+https://www.amazon.com/dp/B07GD2BWPY
+$5.79 +tax; prime shipping
+
+Single Motor Driver Board H-Bridge IBT_2, 3-36V, 15A, Peak 43A
+various sellers, prices and delivery methods. $7 to $14.
+Here is a pack of two:
+https://www.amazon.com/BTS7960-Driver-Module-Arduino-Current/dp/B07TFB22H5/ref=asc_df_B07TFB22H5/?tag=hyprod-20&linkCode=df0&hvadid=366016835942&hvpos=&hvnetw=g&hvrand=9794586518900556692&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-790247286209&psc=1&tag=&ref=&adgrpid=80266838630&hvpone=&hvptwo=&hvadid=366016835942&hvpos=&hvnetw=g&hvrand=9794586518900556692&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-790247286209
+$15.51 +tax; prime shipping
+
 
 Tech Notes (IBT_2)
 ===================

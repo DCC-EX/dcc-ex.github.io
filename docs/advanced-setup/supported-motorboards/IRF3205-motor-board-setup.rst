@@ -52,6 +52,8 @@ The IRF3205 is actually the part number of the transistors on the board, N-Chann
 Which Option Should You Choose?
 =================================
 
+.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like DCCInspector-EX). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see `High Accuracy Waveform Mode <high-accuracy.html>`_
+
 Upgrade
 ---------
 
@@ -358,7 +360,7 @@ various sellers, prices and delivery methods. $16 and higher.
 https://www.amazon.com/gp/product/B087PF8CZM
 $24.40 +tax; prime shipping
 
-See the PDF file IRF3205_mega_ACS724 in my trains folder
+TODO: See the PDF file IRF3205_mega_ACS724 in trains folder to include here
 
 .. WARNING:: If you intend to use more than 5A of current though this board, we recommend using heat sinks.
 

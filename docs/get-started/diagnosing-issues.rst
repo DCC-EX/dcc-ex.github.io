@@ -1,0 +1,49 @@
+## Diagnosing Issues (aka "Something's not working!") ##
+
+There are a lot of optional settings and choices a user can make and sometimes things don't work as you expect them to. If you upload software to the Command Station, connect power to your motor controller and the CS and then connect the output to your track and don't see power or your train responding, here are the steps to follow.
+
+### Is it plugged in, is it turned on ###
+
+Yes, we need to start with the basics. If you have 12V DC or less connected to the input power of the Arduino and did not cut the power connect trace underneath the Motor Controller, then the Motor Controller and the Arduino can be powered from the one power supply. If you cut the trace, then you will need two power supplies, a 9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the Motor Controller.
+
+* If you have one power supply, is it plugged into the wall and is it at least capable of delivering 2 Amps of current?
+* If you have two power supplies, see above for the Motor Controller board and add a 9V power supply for the Arduino of at least 1 Amp
+* Do you see a green led marked ```on``` glowing to indicate the Arduino has power? If not, there is a power issue
+
+### Diagnosing and Testing ###
+
+1. Remove the Motor Shield ---we are going to test just the Arduino first.
+2. Download and install the most current version of [DCC++ EX Command Station](https://github.com/DCC-EX/CommandStation-EX)
+3. Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to 115200 baud and make sure you have set ````Both CR & NL``` from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see "DCC-EX" and the software version as well as other log lines that mention WiFi. If you don't see anything in the log, it could be that the software did not upload correctly, or be an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.
+
+###Testing the Arduino and Base Station code###
+
+*** TO BE WRITTEN ***  
+
+
+###Testing the DCC signal###
+
+Now the fun part -- we are going to test the generation of the DCC signal itself.  
+
+*** TO BE WRITTEN ***
+
+
+###Testing the Motor Shield###
+
+If first two tests pass, then the Arduino is functioning correctly and it's time to test the Motor Shield.  
+
+1. Power down the Arduino
+2. Install the Motor Shield, then connect power to your Arduino and the Motor Shield, though do not connect to the tracks. Verify that you have the correct supply going to the correct board 
+3. Verify that all the pins are properly seating in the headers and that they are aligned correctly and not shifted and off by one or more pins
+4. Verify that all of the mappings are correct for your motor shield. For an Arduino Motor Shield, you should not have changed any pin settings in the XXX file
+4. Open (or re-open) the Arduino Serial window  
+5. Send a ```<1>``` command.  
+6. All 4 lights next to the outputs of the Motor Shield should be on. If you see only output A or output B lit, then <what???
+7. MAKE SURE THERE ARE NO TRAINS ON YOUR TRACKS! Then send a ```<D DCC SLOW>``` command to enter diagnostic mode  
+8. All 4 lights should now be blinking - the two attached to the 'A' output channel should blink in alternation, and the two attached to the 'B' output channel should also blink in alternation.  
+
+If neither of the LEDs attached to one of the output channels comes on when you send a ```<1>``` command, this indicates you are not correctly mapping either the SIGNAL_ENABLE_PIN_MAIN or SIGNAL_ENABLE_PIN_PROG pins from the Arduino (depending on which output channel does not appear to be working). Make sure you did not change any of the default settings in the XXX file.
+
+If only one of the LEDs attached to the one of the output channels comes on when you send a ```<1>``` command, but the other does not, this suggests that either the DCC signal is not getting through to the Motor Shield, in which case it is a mapping/wiring/jumper problem, OR that the signal is getting through but the H-bridge on the Motor Shield itself is not functioning (and the Motor Shield may need to be replaced). To see which is the case, check whether the lone-LED begins to blink once you send the ```<D>``` command. If it does not, that indicates that problem is in mapping the DCC signal generation pin to the Direction pin on the Motor Shield. If the lone-LED does start to blink after sending a ```<D>``` command, but the opposing LED does not blink in alternation, then something is wrong with the Motor Shield and it likely needs to be replaced.  
+
+If you still need help, please find us on Discord or send an email to support@dcc-ex.com

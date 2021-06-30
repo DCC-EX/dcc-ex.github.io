@@ -188,7 +188,7 @@ Please see :ref:`Important Notes About Current Sensing Resistors`.
 
 TODO: Fritzing image of 2 ibt 2 boards here
 
-Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
+Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 for your MAIN track:
 
 +--------------+-----------------------------+
 |  Arduino     |        IBT_2 MAIN           |
@@ -206,18 +206,18 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
 |     GND      |        GND, R1b             |
 +--------------+-----------------------------+
 
-Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
+Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 for your PROG track:
 
 +--------------+-----------------------------+
 |  Arduino     |        IBT_2 PROG           |
 +==============+=============================+
-| 4 (enable)   | 3,4  (R_EN, L_EN)           |
+| 11 (enable)   | 3,4  (R_EN, L_EN)           |
 +--------------+-----------------------------+
-| 5 (signal 1) | 2 (LPWM)                    |
+| 12 (signal 1) | 2 (LPWM)                    |
 +--------------+-----------------------------+
-| 6 (signal 2) | 1 (RPWM)                    |
+| 13 (signal 2) | 1 (RPWM)                   |
 +--------------+-----------------------------+
-| A5 (CS MAIN) | 5,6, R1a  (R_IS, L_IS, R1a) |
+| A4 (CS MAIN) | 5,6, R1a  (R_IS, L_IS, R1a) |
 +--------------+-----------------------------+
 |     5V       |        7 (Vcc)              |
 +--------------+-----------------------------+
@@ -292,5 +292,9 @@ Below is the Handson Technology datasheet, recommended reading for Tinkerers and
 
 `Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver <../../_static/documents/bts7960-motor-driver.pdf>`_
 
-TODO: this has to go somewhere:
-There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`Important Notes on Current Sensing` section.
+..
+
+   TODO: this has to go somewhere:
+   There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`Important Notes on Current Sensing` section.
+
+   Also, mention "high accuracy mode" and include the circtuit for that.

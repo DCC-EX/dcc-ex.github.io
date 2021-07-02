@@ -2,7 +2,24 @@
 EX-RAIL – Introduction
 ***********************
 
-My aim was to see if I could create an automated layout with lots going
+@KEBBIN  I have added some notes/questions marked as @KEBBIN 
+
+What you can do with it:
+- Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver
+- Intercept turnout changes to automatically adjust signals
+- Animate accessories such as lights, crossings or cranes
+- Automatically drive multiple trains simultaneously and manage complex interactions such as single line working and crossovers
+- Drive trains manually and hand a train over to an automation
+
+What you don't need:
+- JMRI or any additional utilities other than the Arduino IDE.
+- Knowlege of C++ or Python/Jython programming
+
+
+A note from the author:
+@KEBBIN  can we put this in a kind of box so its clear its just a note and where it ends?
+
+My original aim was to see if I could create an automated layout with lots going
 on that didn’t just run around in circles. Having looked at JMRI
 (briefly I must say) and DCC++ I began to wonder whether I could
 actually make a simpler automation system and run it entirely on the
@@ -12,14 +29,22 @@ Some of the automation techniques I read about using python scripts in
 JRMI made my blood run cold… there’s a lot I could say here but won’t
 without a pint or two.
 
-It seemed to me that basing an automation on “signals controlling trains” leaves a lot of complex technical problems to be solved… and wanting to be cheap, I didn’t want to invest in a range of block occupation detectors or ABC braking modules which are all very well on
-circular layouts but not good at complex crossings or single line operations with passing places. Also I didn’t want the automation to be an obvious cycle of movements… some random timings and decisions need to be introduced so that two trains don’t always arrive at the same place in the same order, nor go on the same journey in a predictable cycle.
+It seemed to me that basing an automation on block occupancy detection leaves a 
+lot of complex technical problems to be solved… and wanting to be cheap,
+I didn’t want to invest in a range of block occupation detectors 
+or ABC braking modules which are all very well on
+circular layouts but not good at complex crossings 
+or single line operations with passing places. 
+Also I didn’t want the automation to be an obvious cycle of movements… 
+some random timings and decisions need to be introduced so
+that two trains don’t always arrive at the same place in the same order, 
+nor go on the same journey in a predictable cycle.
 
-By reversing the usual assumptions, I think I have a workable, extendable and cheap solution. DCC-EX, which
-grew out of the early EX-RAIL system, provides a clean and efficient API for
+By reversing the usual assumptions, I think I have a workable, extendable and cheap solution.
+DCC++-EX, which grew out of the early DCC++ system, provides a clean and efficient API for
 the EX-RAIL automation to call.
 
-A small amount of code (already in CommandStation-EX v4) , sits between
+A small amount of code (The EX-RAIL executor) , sits between
 the layout owner and DCC so that the layout owner can write automation
 scripts in a form that is much more user friendly. In fact the
 automation is written in the Arduino IDE (or PlatformIO) as per a normal
@@ -28,74 +53,29 @@ you don’t need to see or understand it. This means that you already have
 all the tools you will need and there is nothing else to download or
 install.
 
-[NOTE: For memory/performance worriers… The EX-RAIL code is surprisingly
+For memory/performance worriers… The EX-RAIL code is surprisingly
 small and requires very little PROGMEM or RAM to execute. It is only
 included in the compilation of the CommandStation code if the compiler
 detects a “myEX-RAIL.h” file. During execution, an EX-RAIL automation is much
 (perhaps 2 orders of magnitude) more time efficient than the code
 required to process incoming requests from an external automation
-processor. ]
+processor.
 
-When EX-RAIL is enabled, there are a few command differences in comparison
-to a basic CommandStation build.
 
-The automation takes place entirely within the Command Station. Thus
-EX-RAIL can only make sense of routes if the turnouts, sensors, signals
-pins etc are already defined. The user must include these in the
-myLayout.h file (for details see later) which is used to provide a
-definitive list of these items, effectively describing your layout and
-how the command station can manipulate it electronically.
-Having these items defined in one, easily editable, file and being
-able to upload them to the Command station in a single click with
-existing tools makes this a simple and elegant solution.
+@KEBBIN ... the bit about command differences isnt really relevant if EX-RAIL 
+is just animating a few flashing lights... so I've taken it out of this part.
 
-It is assumed that JMRI, if used at all, will only be used for
-programming or manual throttle operations, where EX-RAIL is not
-controlling the loco or is paused.
-
-Turnouts <T command>
-=====================
-The JMRI idea of defining turnouts externally and loading some of them
-to EEPROM and handling others through a mixture of DCC accessory calls
-or Output pins, without the CommandStation even knowing that it is a
-turnout, is unsuitable.
-The DCC++ commands for defining or deleting turnouts will be trapped
-and ignored.
-
-Turnouts already known to EX-RAIL may still be manipulated by the <T id
-0/1> command but
-EX-RAIL refers to turnout state as LEFT or RIGHT to avoid confusion.
-Turnout definition can choose whether an “activate” request from JMRI
-means LEFT or RIGHT on an individual basis.
-
-Sensors
-========
-Sensors defined in EX-RAIL are not polled continuously. JMRI will not be
-informed if they change.
-Commands to define, delete or query sensors will be rejected.
-
-Throttles
-==========
-
--  Throttle operations through JMRI, Withrottle (Engine Driver etc) will
-   be limited to locos that are not taking part in, or have been
-   released from, an automation (such as manual shunting) or when EX-RAIL
-   automation is paused (for placement of locos before being sent on an
-   automated journey)
-
--  Additional EX-RAIL diagnostic and control commands become available. See
-   later.
-
+@KEBBIN I think this sensor stuff needs to go much further down, don't want to confuse people too early.
 Sensors
 ========
 
--  EX-RAIL allows for sensors that are LOW-on or HIGH-on, this is
+-  DCC++EX allows for sensors that are LOW-on or HIGH-on, this is
    particularly important for IR sensors that have been converted to
    detect by broken beam, rather than reflection.
 
--  Magnetic/Hall sensors are not particularly useful as they cant be
-   used to detect the non-loco end of a train approaching a buffer or
-   clearing a crossing, but are still supported.
+-  Magnetic/Hall sensors work for some layouts but beware of how you detect the
+back end of a train approching the buffers in a siding, or knowing when the last car has
+cleared a crossing.
 
 -  Handling sensors in the automation is made easy because EX-RAIL throws
    away the concept of interrupts (“oh… sensor 5 has been detected…
@@ -103,79 +83,155 @@ Sensors
    the route scripts work on the basis of “do nothing, maintain speed
    until sensor 5 triggers and then carry on in the script”
 
--  EX-RAIL supports the <1 JOIN> feature of CommandStation-EX. This allows a
+-  EX-RAIL supports the PROG track drive-away feature of CommandStation-EX. This allows a
    script to automatically detect the address of a loco on the programming
    track, then drive it onto the main track to join in the fun.
 
 Introduction to the Automation process
 ======================================
 
-The first thing to understand is the concept of a route… this is the
-steps required to get from A to B (but can also be the steps to handle
-an animation such as a level crossing, sludge farm or fairground)
+All routes, automations etc step through a list of simple keywords until they reach an ENDTASK
+keyword. The reference list is here @KEBBIN?
+
+@KEBBIN  -- mabe we should call ENDTASK  "DONE" 
+
+Routes for Engine Driver
+************************
+A typical route might be to set a sequence of turnouts in response to a single button in Engine Driver.
+The EX-RAIL instructions to do this might look like 
+.. code-block::
+   ROUTE(1)
+     THROW(1)
+     CLOSE(7)
+     ENDTASK
+
+or you can write it like this
+.. code-block::
+   ROUTE(1)  THROW(1)  CLOSE(7) ENDTASK
+
+or add comments
+.. code-block::
+// This is my coal yard to engine shed route
+   ROUTE(1)     // appears as "Route 1" in Engine Driver
+     THROW(1)   // Throw turnout onto coal yard siding
+     CLOSE(7)   // close turnout for engine shed
+     ENDTASK    // thats all folks!
+
+of course, you may want to add signals, and time delays 
+.. code-block::
+   ROUTE(1)
+     RED(77)
+     THROW(1)
+     CLOSE(7)
+     DELAY(50)  // this is a 5 second wait
+     GREEN(9)
+     ENDTASK
+
+Automating Signals with turnouts
+********************************
+By intercepting a turnout change its easy to automatically adjust signals or 
+automatically switch a facing turnout.
+Use an ONTHROW or ONCLOSE keyword to detect a particular turnout change:
+.. code-block::
+   ONTHROW(8)  // When turnout 8 is thrown
+     THROW(9)  // must also throw the facing turnout
+     RED(14)
+     DELAY(20)
+     GREEN(13)
+     ENDTASK
+
+   ONCLOSE(8)  // When turnout 8 is closed
+     CLOSE(9)
+     RED(13)
+     DELAY(20)
+     GREEN(14)
+     ENDTASK
+
+Automating various non-track items 
+**********************************
+This normally takes place in a timed loop, for example alternate flashing a 
+fire engine's lights. To do this use a SEQUENCE.
+.. code-block::
+   SEQUENCE(66)  
+     SET(101)   // sets output 101 HIGH
+     RESET(102) // sets output 102 LOW
+     DELAY(5)   // wait 0.5 seconds
+     SET(102)   // swap the lights   
+     RESET(101) 
+     DELAY(5)   // wait 0.5 seconds
+     FOLLOW(66)  // follow sequence 66 continuously
+     
+Note however that this sequence will not start automatically, it must be SCHEDULE'd
+during the startup process (see later) using SCHEDULE(66)
+@KEBBIN... maybe this would be better named START.
+
+Automating a train
+******************
+     
+Start with something as simple as a single loop of track with a station and a sensor at the 
+point where you want the train to stop.
+Using an AUTOMATION keyword means that this automation will appear in Engine Driver so
+you can drive the train manually, and then had it over to the automation at the press of a button.
+Notice that this automation does not specify the loco address. If you drive a loco with Engine Driver 
+and then hand it over to this automation, then the automation will run with the loco you last drove.
+
+[technically an automation can independently run multiple locos along the same path 
+through the layout but this is discussed later]
+
+.. code-block::
+   AUTOMATION(4)
+      FWD(40)   // move forward at DCC speed 40 (out of 127)
+      AT(1)     // when you get to sensor 1
+      STOP      // Stop the train 
+      DELAYRANDOM(50,200) // delay somewhere between 5 and 20 seconds
+      FWD(30)   // start a bit slower
+      AFTER(1)  // until sensor 1 has been passed
+      FOLLOW(4) // and continue to follow the automation
+
+Perhaps you also have a single line shuttling between stations A and B.
 
 These steps may be something like:
 
 -  Wait between 10 and 20 seconds for the guard to stop chatting up the
    girl in the ticket office.
-
 -  Move forward at speed 30
-
 -  When I get to sensor B stop.
 
 Similarly, the route from B to A could be something like this
-
 -  Wait 15 seconds for the tea trolley to be restocked
-
 -  Move backwards at speed 20
-
 -  When I get to A stop.
 
-..
 
-   Notice that the sensors at A and B are near the ends of the track
-   (allowing for braking distance but don’t care about train length or
-   whether the engine is at the front or back.)
-
-   | Fort the time being, we’ll assume they are IR reflection sensors
-     and will go LOW when a train is detected.
-   | [You could have converted them to IR beam-breaking sensors which
-     would go HIGH when the beam is broken. Other options see
-     reference.]
-
-So your Arduino script looks like this in the Arduino IDE: in files
-myLayout.h and **myEX-RAIL.h
-The presence of this file is what makes this compilation EX-RAIL and not
-just CommandStation.**
+Notice that the sensors at A and B are near the ends of the track (allowing for braking
+distance but don’t care about train length or whether the engine is at the front or back.)
+For the time being, we’ll assume they are IR reflection sensors and will go LOW when a train is detected.
 
 .. code-block::
-
- myLayout.h
- LAYOUT
- PIN_SENSOR(1,21,LOW) // PIN 21 goes LOW when detected
- PIN_SENSOR(2,22,LOW) // PIN 22 goes LOW when detected
- ENDLAYOUT
-
- myEX-RAIL.h
- BEGINROUTES
- SETLOCO(3)
- ROUTE(1)
- DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
- FWD(30)
- AT(2) // sensor 2 is at the far end of platform B
- STOP
- DELAY(150)
- REV(20)
- AT(1)
- STOP
- FOLLOW(1) // follows Route 1 again… forever
- ENDROUTES
+    SEQUENCE(13)
+      DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
+      FWD(50)
+      AT(2) // sensor 2 is at the far end of platform B
+      STOP
+      DELAY(150)
+      REV(20)
+      AT(1)
+      STOP
+      FOLLOW(13) // follows animation 1 again… forever
 
 
-When the CommandStation is powered up or reset, the process starts at
-BEGINROUTES and in this case sets the loco address to 3 and drops
-through to Route(1) . If there are going to be multiple locos, it’s a
-bit different as we will see.
+Note a SEQUENCE is exactly the same as an ANIMATION except that it does NOT appear
+in Engine Driver.
+
+When the CommandStation is powered up or reset, EX-RAIL starts operating at
+the beginning of the file.  For this sequence we need to set a loco address
+and start the sequence:
+
+.. code-block::
+SETLOCO(3)
+START(13) 
+DONE        // This marks the end of the startup process
+
 
 Notice that the route instructions are followed in sequence by loco 3,
 the AT command just leaves the loco running until that sensor is
@@ -194,6 +250,7 @@ OK, that was too easy, what about routes that cross (passing places etc)
 … lets add a passing place between A and B. S= sensors, T=Turnout
 number. So now our route looks like this:
 
+@KEBBIN  I got this far
 - **TODO: Add image reference.**
 
 .. code-block::

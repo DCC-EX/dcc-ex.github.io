@@ -168,12 +168,11 @@ during the startup process (see later) using SCHEDULE(66)
 Automating a train
 ******************
      
-Start with something as simple as a single loop of track with a station and a sensor at the 
+Start with something as simple as a single loop of track with a station and a 
+sensor (connected to pin 40 for this example) at the 
 point where you want the train to stop.
 Using an AUTOMATION keyword means that this automation will appear in Engine Driver so
 you can drive the train manually, and then had it over to the automation at the press of a button.
-Notice that this automation does not specify the loco address. If you drive a loco with Engine Driver 
-and then hand it over to this automation, then the automation will run with the loco you last drove.
 
 [technically an automation can independently run multiple locos along the same path 
 through the layout but this is discussed later]
@@ -181,12 +180,16 @@ through the layout but this is discussed later]
 .. code-block::
    AUTOMATION(4)
       FWD(40)   // move forward at DCC speed 40 (out of 127)
-      AT(1)     // when you get to sensor 1
+      AT(40)     // when you get to sensor on pin (40)
       STOP      // Stop the train 
       DELAYRANDOM(50,200) // delay somewhere between 5 and 20 seconds
       FWD(30)   // start a bit slower
-      AFTER(1)  // until sensor 1 has been passed
+      AFTER(40)  // until sensor on pin 40 has been passed
       FOLLOW(4) // and continue to follow the automation
+
+Notice that this automation does not specify the loco address. If you drive a loco with Engine Driver 
+and then hand it over to this automation, then the automation will run with the loco you last drove.
+
 
 Perhaps you also have a single line shuttling between stations A and B.
 
@@ -205,17 +208,17 @@ Similarly, the route from B to A could be something like this
 
 Notice that the sensors at A and B are near the ends of the track (allowing for braking
 distance but don’t care about train length or whether the engine is at the front or back.)
-For the time being, we’ll assume they are IR reflection sensors and will go LOW when a train is detected.
+We have wired sensor A on pin 41 and B on pin 42 for this example.
 
 .. code-block::
     SEQUENCE(13)
       DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
       FWD(50)
-      AT(2) // sensor 2 is at the far end of platform B
+      AT(42) // sensor 42 is at the far end of platform B
       STOP
       DELAY(150)
       REV(20)
-      AT(1)
+      AT(41) // far end of platform A
       STOP
       FOLLOW(13) // follows animation 1 again… forever
 
@@ -232,10 +235,16 @@ SETLOCO(3)
 START(13) 
 DONE        // This marks the end of the startup process
 
+The sequence can also be started from a serial monitor with the command </ START 3 13>
 
-Notice that the route instructions are followed in sequence by loco 3,
+Notice that the route instructions are followed in sequence by the loco given to it,
 the AT command just leaves the loco running until that sensor is
-detected. Although the above is trivial, the routes are designed to be
+detected. 
+
+If you have multiple separate sections of track which do not require inter-train
+cooperation you may add many more separate sequences and they will operate independently.
+
+Although the above is trivial, the routes are designed to be
 independent of the loco address so that we can have several locos
 following the same route at the same time (not in the end to end example
 above!) perhaps passing each other or crossing over with trains on other
@@ -246,40 +255,36 @@ the right direction. A bit later I will show how to script an automatic
 process to take whatever loco is placed on the programming track and
 send it on it’s way to join in the fun.
 
-OK, that was too easy, what about routes that cross (passing places etc)
+Running multiple inter-connected trains
+***************************************
+So what about routes that cross or shere single lines (passing places etc)
 … lets add a passing place between A and B. S= sensors, T=Turnout
 number. So now our route looks like this:
 
-@KEBBIN  I got this far
+
 - **TODO: Add image reference.**
 
+Assuming we have already defined our turnouts with <T> or TURNOUT commands.
 .. code-block::
-
- LAYOUT
- PIN_SENSOR(1,21,LOW) // PIN 21 goes LOW when detected
- PIN_SENSOR(2,22,LOW) // PIN 22 goes LOW when detected
- I2C_TURNOUT(1,1,150,190) // see reference for meanings here
- I2C_TURNOUT(2,2,150,190)
- ENDLAYOUT
-
- BEGINROUTES
+ 
  SETLOCO(3)
- ROUTE(1)
+ SEQUENCE(11)
  DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
- TR(1)
- TL(2)
+ THROW(1)
+ CLOSE(2)
  FWD(30)
- AT(2) // sensor 2 is at the far end of platform B
+ AT(42) // sensor 42 is at the far end of platform B
  STOP
  DELAY(150)
- TR(2)
- TL(1)
+ THROW(2)
+ CLOSE(1)
  REV(20)
- AT(1)
+ AT(41)
  STOP
- FOLLOW(1) // follows Route 1 again… forever
- ENDROUTES
+ FOLLOW(11) // follows sequence 11 again… forever
 
+ @KEBBIN got to here
+ 
 All well and good for 1 loco, but with 2 (or even 3) on this track we
 need some rules. The principle behind this is
 

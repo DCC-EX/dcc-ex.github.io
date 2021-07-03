@@ -5,15 +5,20 @@ EX-RAIL – Reference
 Numbers
 ========
 
-All route, sensor, output, turnout or signal ids are limited to 0- 255 (
-A UNO does not have enough RAM so the compiler limits this to 0-63 on a
-UNO device)
+All route, sensor, output, turnout or signal ids are limited to 0- 255.
 
-The same id may be used for a route, turnout, sensor, output or signal
-without confusing the software (the same may not be true of the user!).
+ROUTE, AUTOMATION and SEQUENCE use the same number space so a FOLLOW(n) command
+can be used for any of them.
+
+Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH refer directly to
+Arduino pins and those handled by I2C expansion (@KEBBIN refer to Hal , ask neil).
+
+Signals also refer directkly to pins and the signal id (for RED/AMBER/GREEN) is
+is always the same as the red signal pin.
+(@KEBBIN Servo signals?) 
 
 Its OK to use sensor ids that have no physical item in the layout. These
-can only be set, tested or reset in the scripts. If a sensor is set on
+can only be LATCHED, tested(IF/IFNOT)  or UNLATCHED in the scripts. If a sensor is set on
 by the script, it can only be set off by the script… so AT(5) SET(5) for
 example effectively latches the sensor 5 on when detected once.
 
@@ -26,15 +31,11 @@ COMMAND REFERENCE
 There are some diagnostic and control commands added to the <tag>
 language normally used to control the command station over USB, Wifi or
 Ethermet:
+@KEBBIN this needs work still, as I keep changing my mind about various statements!
 
 +-----------------------------------+-----------------------------------+
 | <D EX-RAIL ON|OFF>                | Turns on/off diagnostic traces    |
 |                                   | for EX-RAIL events                |
-+===================================+===================================+
-| <t …>                             | Throttle commands are only        |
-|                                   | accepted for locos that are not   |
-|                                   | currently controlled by EX-RAIL   |
-|                                   | (This not yet implemented)        |
 +-----------------------------------+-----------------------------------+
 | </ PAUSE>                         | Pauses automation, all locos      |
 |                                   | ESTOP.                            |
@@ -56,9 +57,9 @@ Ethermet:
 | </ FREE id>                       | Manually frees a virtual track    |
 |                                   | block                             |
 +-----------------------------------+-----------------------------------+
-| </ TL Id>                         | Set turnout LEFT                  |
+| </ THROW Id>                      | Set turnout LEFT                  |
 +-----------------------------------+-----------------------------------+
-| </ TR id >                        | Set turnout RIGHT                 |
+| </ CLOSE id >                     | Set turnout RIGHT                 |
 +-----------------------------------+-----------------------------------+
 | </ SET id>                        | Lock sensor                       |
 +-----------------------------------+-----------------------------------+
@@ -80,9 +81,15 @@ At system startup, a single thread is created to follow the first entry
 in the routes table, with no loco. .
 
 +-----------------------------------+-----------------------------------+
-| ROUTES                            | Start of routes table.            |
+| EXRAIL                            | Start of routes table.            |
 +===================================+===================================+
-| ROUTE(routeid)                    | Start if a route                  |
+| ROUTE(routeid)                    | Start of a route                  |
+|                                   | routeid=0-255                     |
++-----------------------------------+-----------------------------------+
+| AUTOMATION(routeid)               | Start if a route                  |
+|                                   | routeid=0-255                     |
++-----------------------------------+-----------------------------------+
+| SEQUENCE(routeid)                 | Start if a route                  |
 |                                   | routeid=0-255                     |
 +-----------------------------------+-----------------------------------+
 | AFTER(sensorid)                   | Waits until sensor reached, then  |
@@ -95,8 +102,8 @@ in the routes table, with no loco. .
 +-----------------------------------+-----------------------------------+
 | DELAYMINS(duration)               | Waits for a number of minutes     |
 +-----------------------------------+-----------------------------------+
-| DEL                               | Waits a random time between       |
-| AYRANDOM(minduration.maxduration) | minDuration/10 and maxDuration/10 |
+| DELAYRANDOM                       | Waits a random time between       |
+|  (minduration.maxduration)        | minDuration/10 and maxDuration/10 |
 |                                   | seconds.                          |
 +-----------------------------------+-----------------------------------+
 | ENDIF                             | Marks end of IF block (see IF     |

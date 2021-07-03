@@ -267,23 +267,22 @@ number. So now our route looks like this:
 Assuming we have already defined our turnouts with <T> or TURNOUT commands.
 .. code-block::
  
- SETLOCO(3)
+ 
  SEQUENCE(11)
- DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
- THROW(1)
- CLOSE(2)
- FWD(30)
- AT(42) // sensor 42 is at the far end of platform B
- STOP
- DELAY(150)
- THROW(2)
- CLOSE(1)
- REV(20)
- AT(41)
- STOP
- FOLLOW(11) // follows sequence 11 again… forever
+   DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
+   THROW(1)
+   CLOSE(2)
+   FWD(30)
+   AT(42) // sensor 42 is at the far end of platform B
+   STOP
+   DELAY(150)
+   THROW(2)
+   CLOSE(1)
+   REV(20)
+   AT(41)
+   STOP
+   FOLLOW(11) // follows sequence 11 again… forever
 
- @KEBBIN got to here
  
 All well and good for 1 loco, but with 2 (or even 3) on this track we
 need some rules. The principle behind this is
@@ -311,50 +310,49 @@ to 255 is Ok. Anyone want more than that and I will fix it.
 
 .. code-block::
 
- BEGINROUTES
- … see later for startup
-
  ROUTE(12) // From block 1 to block 2
- DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
- RESERVE(2) // we wish to enter block 2… so wait for it
- TR(1) // Now we “own” the block, set the turnout
- FWD(30) // and proceed forward
- AFTER(11) // Once we have reached AND passed sensor 11
- FREE(1) // we no longer occupy block 1
- AT(12) // When we get to sensor 12
- FOLLOW(23) // follow route from block 2 to block 3
+   DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
+   RESERVE(2) // we wish to enter block 2… so wait for it
+   THROW(1) // Now we “own” the block, set the turnout
+   FWD(30) // and proceed forward
+   AFTER(11) // Once we have reached AND passed sensor 11
+   FREE(1) // we no longer occupy block 1
+   AT(12) // When we get to sensor 12
+   FOLLOW(23) // follow route from block 2 to block 3
 
- ROUTE(23) // Travel from block 2 to block 3
- RESERVE(3) // will STOP if block 3 occupied
- TL(2) // Now we have the block, we can set turnouts
- FWD(20) // we may or may not have stopped at the RESERVE
- AT(2) // sensor 2 is at the far end of platform B
- STOP
- FREE(2)
- DELAY(150)
- FOLLOW(34)
+ROUTE(23) // Travel from block 2 to block 3
+   RESERVE(3) // will STOP if block 3 occupied
+   CLOSE(2) // Now we have the block, we can set turnouts
+   FWD(20) // we may or may not have stopped at the RESERVE
+   AT(2) // sensor 2 is at the far end of platform B
+   STOP
+   FREE(2)
+   DELAY(150)
+   FOLLOW(34)
 
  ROUTE(34) // you get the idea
- RESERVE(4)
- TR(2)
- REV(20)
- AFTER(13)
- FREE(3)
- AT(14)
- FOLLOW(41)
+   RESERVE(4)
+   THROW(2)
+   REV(20)
+   AFTER(13)
+   FREE(3)
+   AT(14)
+   FOLLOW(41)
 
  ROUTE(41)
- RESERVE(1)
- TL(1)
- REV(20)
- AT(1)
- STOP
- FREE(4)
- FOLLOW(12) // follows Route 1 again… forever
- ENDROUTES
+   RESERVE(1)
+   CLOSE(1)
+   REV(20)
+   AT(1)
+   STOP
+   FREE(4)
+   FOLLOW(12) // follows Route 12 again… forever
+ 
+   
+@KEBBIN got to here
 
 Does that look long? Worried about memory on your Arduino…. Well the
-script above takes just 70 BYTES of program memory and no dynamic.
+script above takes just 82 BYTES of program memory and no dynamic.
 
 If you follow this carefully, it allows for up to 3 trains at a time
 because one of them will always have somewhere to go. Notice that there
@@ -367,7 +365,7 @@ is common theme to this…
    routes)
 
 -  Set the points to enter the reserved area.. do this ASAP as you may
-   be still moving towards them. (EX-RAIL knows if this is a panic and
+   be still moving towards them. (@KEBBIN... maybe...EX-RAIL knows if this is a panic and
    switches the points at full speed, if you are not moving then the
    switch is a more realistic sweep motion(feature not yet))
 
@@ -406,10 +404,6 @@ Some interesting points about the startup… You don’t need to set
 turnouts because each route is setting them as required. Signals default
 to RED on powerup and get turned green when a route decides.
 
-Startup can also SCHEDULE a “route” that is merely a decorative
-automation such as flashing lights or moving doors but has no loco
-attached to it. For example, using a signal connection to flash a red
-light on the pin for signal 7, green will turn it off!
 
 .. code-block::
 
@@ -419,7 +413,6 @@ light on the pin for signal 7, green will turn it off!
  GREEN(7)
  DELAY(15)
  FOLLOW(66)
- ENDROUTES
 
 Fancy Startup
 ==============
@@ -432,24 +425,23 @@ allows locos to be added at station 1 while the system is in motion.
 Let’s assume that the track section at Station1 is isolated and
 connected to the programming track power supply. Also that we have a
 “launch” button connected where sensor 17 would be and an optional
-signal (ie 2 leds) on the control panel connected where signal 17 would
+signal (ie 2 leds) on the control panel connected where signal 18 would
 be (see Signals below).
 
 .. code-block::
 
- BEGINROUTES
- PROG_TRACK(0) // start as program track connected to mainline
-
+ 
  ROUTE(99)
  AFTER(17) // user presses and releases launch button
  RESERVE(1) // Wait until block free and keep others out
- PROG_TRACK(1) // power on the programming track
- GREEN(17) // Show a green light to user
+ UNJOIN // separate the programming track from main
+ DELAY(20)
+ GREEN(18) // Show a green light to user
  // user places loco on track and presses “launch” again
  AFTER(17)
  READ_LOCO // identify the loco
  RED(17) // show red light to user
- PROG_TRACK(0) // connect prog track to main
+ JOIN // connect prog track to main
  SCHEDULE(12) // send loco off along route 12
  FOLLOW(99) // keep doing this for another launch
 
@@ -464,25 +456,29 @@ Signals
 Signals are now simply a decoration to be switched by the route process…
 they don’t control anything.
 
-``GREEN(5)`` would turn signal 5 green and ``RED(5)`` would turn it red.
+``GREEN(55)`` would turn signal 55 green and ``RED(55)`` would turn it red.
+Somewhere in the script there must be a SIGNAL command like this:
+SIGNAL(55,56,57)  This defines a singal with ID 55 where the red/stop lamp is connected to 
+pin 55, the amber/caution lamp to pin 56 and the green.proceed lamp to pin 57.
+The pins do not need to be contiguous and the red pin is also used as the signal id. Thus  
+you can change the signal by RED(55), AMBER(55) and GREEN(55)
 
 Sounds
-
+======
 You can use ``FON(n)`` and ``FOFF(n``) to switch loco functions… eg sound horn
 
 Numbers
 ========
 
-All route, sensor, output, turnout or signal ids are limited to 0- 255 (
-A UNO does not have enough RAM so the compiler limits this to 0-63 on a
-UNO device)
+All route/automation/sequence, sensor, output, turnout or signal ids are limited to 0- 255 (
 
-The same id may be used for a route, turnout, sensor, output or signal
+The same id may be used for a route, turnout, but sensor, output or signal ids share the same 
+number range as the reference hardware pins. 
 without confusing the software (the same may not be true of the user!).
 
 Its OK to use sensor ids that have no physical item in the layout. These
-can only be set, tested or reset in the scripts. If a sensor is set on
-by the script, it can only be set off by the script… so AT(5) SET(5) for
+can only be LATCHed, tested or UNLATCHED in the scripts. If a sensor is set on
+by the script, it can only be set off by the script… so AT(5) LATCH(5) for
 example effectively latches the sensor 5 on when detected once.
 
 You can give names to routes turnouts signals and sensors etc using
@@ -498,282 +494,3 @@ Future plans
 -  I want to add some more commands for controlling animations, such as
    SERVO, STEPPER and LED
 
-COMMAND REFERENCE
-==================
-
-There are some diagnostic and control commands added to the <tag>
-language normally used to control the command station over USB, WiFi or
-Ethernet:
-
-+-----------------------------------+-----------------------------------+
-| <D EX-RAIL ON|OFF>                | Turns on/off diagnostic traces    |
-|                                   | for EX-RAIL events                |
-+===================================+===================================+
-| <S …>                             | These JMRI related commands are   |
-|                                   | rejected as they are incompatible |
-| <Q …>                             | with EX-RAIL                      |
-|                                   |                                   |
-| <Z …>                             |                                   |
-|                                   |                                   |
-| <E>                               |                                   |
-|                                   |                                   |
-| <e>                               |                                   |
-+-----------------------------------+-----------------------------------+
-| <t …>                             | Throttle commands are only        |
-|                                   | accepted for locos that are not   |
-|                                   | currently controlled by EX-RAIL   |
-|                                   | (This not yet implemented)        |
-+-----------------------------------+-----------------------------------+
-| <T id address subaddress>         | Incompatible with predefined      |
-| <T id>                            | layout and so rejected.           |
-|                                   | <T> and <T id 0|1> are accepted.  |
-+-----------------------------------+-----------------------------------+
-| </ PAUSE>                         | Pauses automation, all locos      |
-|                                   | ESTOP.                            |
-+-----------------------------------+-----------------------------------+
-| </ RESUME>                        | Resumes automation, Locos are     |
-|                                   | restarted at speed when paused.   |
-+-----------------------------------+-----------------------------------+
-| </ STATUS>                        | Displays EX-RAIL running thread   |
-|                                   | information                       |
-+-----------------------------------+-----------------------------------+
-| </ SCHEDULE [loco] route>         | Starts a new thread to send loco  |
-|                                   | onto route.                       |
-|                                   | or Start a non-loco animation     |
-|                                   | route)                            |
-+-----------------------------------+-----------------------------------+
-| </ RESERVE id>                    | Manually reserves a virtual track |
-|                                   | block.                            |
-+-----------------------------------+-----------------------------------+
-| </ FREE id>                       | Manually frees a virtual track    |
-|                                   | block                             |
-+-----------------------------------+-----------------------------------+
-| </ TL Id>                         | Set turnout LEFT                  |
-+-----------------------------------+-----------------------------------+
-| </ TR id >                        | Set turnout RIGHT                 |
-+-----------------------------------+-----------------------------------+
-| </ SET id>                        | Lock sensor                       |
-+-----------------------------------+-----------------------------------+
-| </ RESET id>                      | Unlock sensor                     |
-+-----------------------------------+-----------------------------------+
-
-
-LAYOUT REFERENCE
-=================
-
-+-------------------------------+--------------------------------------+
-| LAYOUT                        | Identifies start of LAYOUT section.  |
-|                               | Only one layout section is           |
-|                               | permitted.                           |
-+===============================+======================================+
-| --- Turnouts ---              | Each turnout must have a unique id   |
-|                               | (0-255) which is used in TL and TR   |
-|                               | commands.                            |
-+-------------------------------+--------------------------------------+
-| SER                           | Pin= pin number on I2C xxxx board.   |
-| VO_TURNOUT(id,pin,left,right) | (0-64, over 4 chained boards)        |
-|                               |                                      |
-|                               | Left=servo PWM value for turnout     |
-|                               | LEFT                                 |
-|                               |                                      |
-|                               | Right=servo PWM value for turnout    |
-|                               | RIGHT                                |
-+-------------------------------+--------------------------------------+
-| DCC_TURNOU                    | Addr=DCC accessory address           |
-| T(id,addr,subaddr,leftActive) |                                      |
-|                               | Subaddr= DCC accessory subaddress    |
-|                               |                                      |
-|                               | leftIsActive (true/false) set true   |
-|                               | if TL command should “activate”      |
-|                               | turnout.                             |
-+-------------------------------+--------------------------------------+
-| PIN_TURNOUT(id,pin,leftValue) | Pin= Arduino CPU pin to drive        |
-|                               | turnout                              |
-|                               | leftvalue= (HIGH/LOW) TL sets pin to |
-|                               | this.                                |
-+-------------------------------+--------------------------------------+
-| I2C                           | Pin= pin n umber on I2C xxx board    |
-| PIN_TURNOUT(id,pin,leftValue) | (0-64, over 4 chained boards)        |
-|                               | leftvalue= (HIGH/LOW) TL sets pin to |
-|                               | this.                                |
-+-------------------------------+--------------------------------------+
-| --- Sensors ---               | Each sensor must have a unique id    |
-|                               | (0-255) which is used in AT or AFTER |
-|                               | commands.                            |
-+-------------------------------+--------------------------------------+
-| I2C_SENSOR(id,pin,activeWhen) | Pin= pin n umber on I2C xxx board    |
-|                               | (0-64, over 4 chained boards)        |
-|                               |                                      |
-|                               | activeWhen= (HIGH/LOW) value         |
-|                               | indicating sensor triggered.         |
-+-------------------------------+--------------------------------------+
-| PIN_SENSOR(id,pin,activeWhen) | Pin= Arduino CPU pin number          |
-|                               |                                      |
-|                               | activeWhen= (HIGH/LOW) value         |
-|                               | indicating sensor triggered.         |
-+-------------------------------+--------------------------------------+
-| --- Outputs ---               | Each output must have a unique id    |
-|                               | (0-255) which is used in AT or AFTER |
-|                               | commands.                            |
-+-------------------------------+--------------------------------------+
-| I2                            | Pin= pin n umber on I2C xxx board    |
-| CO_OUTPUT(id,pin,activeValue) | (0-64, over 4 chained boards)        |
-|                               |                                      |
-|                               | activeValue = (HIGH.LOW) value used  |
-|                               | for SET command                      |
-+-------------------------------+--------------------------------------+
-| PINOUTPUT(id,pin,activeWhen)  | Pin=Arduino CPU pin n umber          |
-|                               |                                      |
-|                               | activeValue = (HIGH.LOW) value used  |
-|                               | for SET command                      |
-+-------------------------------+--------------------------------------+
-|    --- Signals ---            | TO BE DEFINED                        |
-+-------------------------------+--------------------------------------+
-| ENDLAYOUT                     |                                      |
-+-------------------------------+--------------------------------------+
-
-Routes and animations
-======================
-
-The EX-RAIL system operates on a number of concurrent “threads”. Each thread
-is following a route through the system and usually has an associated
-loco that it is driving. Some threads may be driving animations and have
-no loco attached. The thread keeps track of the position withing the
-route and the loco speed. A thread may be delayed deliberately or when
-waiting for a sensor or block section, this does not affect other
-threads.
-
-At system startup, a single thread is created to follow the first entry
-in the routes table, with no loco. .
-
-+-----------------------------------+-----------------------------------+
-| ROUTES                            | Start of routes table.            |
-+===================================+===================================+
-| ROUTE(routeid)                    | Start if a route                  |
-|                                   | routeid=0-255                     |
-+-----------------------------------+-----------------------------------+
-| AFTER(sensorid)                   | Waits until sensor reached, then  |
-|                                   | waits until sensor no longer      |
-|                                   | active for 0.5 seconds            |
-+-----------------------------------+-----------------------------------+
-| AT(sensorid)                      | Waits until sensor reached        |
-+-----------------------------------+-----------------------------------+
-| DELAY(duration)                   | Waits for duration/10 seconds     |
-+-----------------------------------+-----------------------------------+
-| DELAYMINS(duration)               | Waits for a number of minutes     |
-+-----------------------------------+-----------------------------------+
-| DEL                               | Waits a random time between       |
-| AYRANDOM(minduration.maxduration) | minDuration/10 and maxDuration/10 |
-|                                   | seconds.                          |
-+-----------------------------------+-----------------------------------+
-| ENDIF                             | Marks end of IF block (see IF     |
-|                                   | command)                          |
-+-----------------------------------+-----------------------------------+
-| FOFF(func)                        | Switches loco function off        |
-+-----------------------------------+-----------------------------------+
-| FON(func)                         | Switches loco function on         |
-+-----------------------------------+-----------------------------------+
-| FOLLOW(routeid)                   | Continue at ROUTE(routeid)        |
-|                                   | command                           |
-+-----------------------------------+-----------------------------------+
-| FREE(blockid)                     | Frees a previously reserved       |
-|                                   | block. See RESERVE(blockid)       |
-+-----------------------------------+-----------------------------------+
-| FWD(speed)                        | Drive loco at given speed (0-127) |
-|                                   | forwards (0=stop, 1=ESTOP)        |
-+-----------------------------------+-----------------------------------+
-| GREEN(signalId)                   | Sets signal to green              |
-+-----------------------------------+-----------------------------------+
-| IF(sensorId)                      | Checks if sensor is activated, if |
-|                                   | NOT then processing skips to the  |
-|                                   | matching ENDIF command (allowing  |
-|                                   | for nested IF/IFNOTs )            |
-+-----------------------------------+-----------------------------------+
-| IFNOT(sensorId)                   | Checks if sensor is activated, if |
-|                                   | it is active then processing      |
-|                                   | skips to the matching ENDIF       |
-|                                   | command (allowing for nested      |
-|                                   | IF/IFNOT/IFRANDOMs )              |
-+-----------------------------------+-----------------------------------+
-| IFRANDOM(percent)                 | Randomly decides whether to       |
-|                                   | continue or skip to the matching  |
-|                                   | ENDIF                             |
-+-----------------------------------+-----------------------------------+
-| INVERT_DIRECTION                  | Causes current loco FWD and REV   |
-|                                   | commands to be reversed (e.g.     |
-|                                   | used if loco is pointing in wrong |
-|                                   | direction)                        |
-+-----------------------------------+-----------------------------------+
-| PAUSE                             | Sets EX-RAIL into paused mode, all|
-|                                   | animations and locos are stopped  |
-|                                   | and manual control is possible    |
-+-----------------------------------+-----------------------------------+
-| PROGTRACK_JOIN                    | See DCCEX cmd <1 JOIN>            |
-+-----------------------------------+-----------------------------------+
-| PROGTRACK_OFF                     | See DCC cmd <0 PROG> (Disconnects |
-|                                   | a JOIN)                           |
-+-----------------------------------+-----------------------------------+
-| READ_LOCO                         | Reads loco id from prog track and |
-|                                   | assigns it to current route       |
-+-----------------------------------+-----------------------------------+
-| RED(signalId)                     | Sets Signal to RED                |
-+-----------------------------------+-----------------------------------+
-| RESERVE(blockId)                  | Blockid=(0-255)                   |
-|                                   | If block is already reserved by   |
-|                                   | another train, this loco will     |
-|                                   | STOP and wait for the block to    |
-|                                   | become free.                      |
-|                                   | block is marked as reserved and   |
-|                                   | this train continues..            |
-|                                   | When you leave a block that you   |
-|                                   | have reserved, you must FREE it.  |
-+-----------------------------------+-----------------------------------+
-| RESET(sensorId)                   | Clears a sensor flag (see SET)    |
-+-----------------------------------+-----------------------------------+
-| RESUME                            | Resumes EX-RAIL from PAUSE mode.  |
-|                                   | Locos stopped by PAUSE are        |
-|                                   | restarted.                        |
-+-----------------------------------+-----------------------------------+
-| REV(speed)                        | Move loco in reverse (see FWD)    |
-+-----------------------------------+-----------------------------------+
-| SCHEDULE(routeid)                 | Starts a new thread at            |
-|                                   | ROUTE(routeid) and transfers      |
-|                                   | current loco to it.               |
-+-----------------------------------+-----------------------------------+
-| SETLOCO(locoid)                   | Sets the loco id of the current   |
-|                                   | thread.                           |
-+-----------------------------------+-----------------------------------+
-| SET(sensorId)                     | Locks on the software part of a   |
-|                                   | sensor.                           |
-|                                   | If a sensor is tested by          |
-|                                   | AT/AFTER/IF etc and the software  |
-|                                   | part is locked on, then the       |
-|                                   | sensor is seen as active without  |
-|                                   | a hardware check.                 |
-|                                   | NOTE: This can be used for        |
-|                                   | debounce. It can also be used for |
-|                                   | virtual sensors that ONLY exist   |
-|                                   | in software and have no hardware  |
-|                                   | equivalent. Can be used for       |
-|                                   | example to pass information from  |
-|                                   | a travelling train thread to a    |
-|                                   | lineside animation thread.        |
-+-----------------------------------+-----------------------------------+
-| SPEED(speed)                      | Changes loco speed in current     |
-|                                   | direction.                        |
-+-----------------------------------+-----------------------------------+
-| STOP                              | =SPEED(0)                         |
-+-----------------------------------+-----------------------------------+
-| ESTOP                             | =SPEED(1) DCC emergency stop      |
-+-----------------------------------+-----------------------------------+
-| TL(turnoutId)                     | Sets turnout LEFT                 |
-+-----------------------------------+-----------------------------------+
-| TR(turnoutId)                     | Sets turnout RIGHT                |
-+-----------------------------------+-----------------------------------+
-|                                   |                                   |
-+-----------------------------------+-----------------------------------+
-| ENDROUTE                          | Terminates a route thread         |
-+-----------------------------------+-----------------------------------+
-| ENDROUTES                         | End of ROUTES table, must be last |
-|                                   | entry.                            |
-+-----------------------------------+-----------------------------------+

@@ -1,10 +1,20 @@
 ***********************
-EX-RAIL – Introduction
+EX-RAIL Automation
 ***********************
 
-@KEBBIN  I have added some notes/questions marked as @KEBBIN 
+|
+
+Introduction
+***********************
+
+EX-RAIL is an **EX**\panded **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage
+that can be easily used to describe sequential action to automatically take place on your model layout.
+
+|
 
 What you can do with it:
+========================
+
 - Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver
 - Intercept turnout changes to automatically adjust signals
 - Animate accessories such as lights, crossings or cranes
@@ -12,37 +22,40 @@ What you can do with it:
 - Drive trains manually and hand a train over to an automation
 
 What you don't need:
+====================
+
 - JMRI or any additional utilities other than the Arduino IDE.
 - Knowlege of C++ or Python/Jython programming
 
+.. sidebar:: A note from the Author
 
-A note from the author:
-@KEBBIN  can we put this in a kind of box so its clear its just a note and where it ends?
+   My original aim was to see if I could create an automated layout with lots going
+   on that didn’t just run around in circles. Having looked at JMRI
+   (briefly I must say) and DCC++ I began to wonder whether I could
+   actually make a simpler automation system and run it entirely on the
+   Arduino used for DCC++.
 
-My original aim was to see if I could create an automated layout with lots going
-on that didn’t just run around in circles. Having looked at JMRI
-(briefly I must say) and DCC++ I began to wonder whether I could
-actually make a simpler automation system and run it entirely on the
-Arduino used for DCC++.
+   Some of the automation techniques I read about using python scripts in
+   JRMI made my blood run cold… there’s a lot I could say here but won’t
+   without a pint or two.
 
-Some of the automation techniques I read about using python scripts in
-JRMI made my blood run cold… there’s a lot I could say here but won’t
-without a pint or two.
+   It seemed to me that basing an automation on block occupancy detection leaves a 
+   lot of complex technical problems to be solved… and wanting to be cheap,
+   I didn’t want to invest in a range of block occupation detectors 
+   or ABC braking modules which are all very well on
+   circular layouts but not good at complex crossings 
+   or single line operations with passing places. 
+   Also I didn’t want the automation to be an obvious cycle of movements… 
+   some random timings and decisions need to be introduced so
+   that two trains don’t always arrive at the same place in the same order, 
+   nor go on the same journey in a predictable cycle.
 
-It seemed to me that basing an automation on block occupancy detection leaves a 
-lot of complex technical problems to be solved… and wanting to be cheap,
-I didn’t want to invest in a range of block occupation detectors 
-or ABC braking modules which are all very well on
-circular layouts but not good at complex crossings 
-or single line operations with passing places. 
-Also I didn’t want the automation to be an obvious cycle of movements… 
-some random timings and decisions need to be introduced so
-that two trains don’t always arrive at the same place in the same order, 
-nor go on the same journey in a predictable cycle.
+   By reversing the usual assumptions, I think I have a workable, extendable and cheap solution.
+   DCC++-EX, which grew out of the early DCC++ system, provides a clean and efficient API for
+   the EX-RAIL automation to call.
 
-By reversing the usual assumptions, I think I have a workable, extendable and cheap solution.
-DCC++-EX, which grew out of the early DCC++ system, provides a clean and efficient API for
-the EX-RAIL automation to call.
+How it works
+=============
 
 A small amount of code (The EX-RAIL executor) , sits between
 the layout owner and DCC so that the layout owner can write automation
@@ -66,59 +79,51 @@ processor.
 is just animating a few flashing lights... so I've taken it out of this part.
 
 @KEBBIN I think this sensor stuff needs to go much further down, don't want to confuse people too early.
-Sensors
-========
 
--  DCC++EX allows for sensors that are LOW-on or HIGH-on, this is
-   particularly important for IR sensors that have been converted to
-   detect by broken beam, rather than reflection.
+|
 
--  Magnetic/Hall sensors work for some layouts but beware of how you detect the
-back end of a train approching the buffers in a siding, or knowing when the last car has
-cleared a crossing.
-
--  Handling sensors in the automation is made easy because EX-RAIL throws
-   away the concept of interrupts (“oh… sensor 5 has been detected…
-   which loco was that and what the hell do I do now?”) and instead has
-   the route scripts work on the basis of “do nothing, maintain speed
-   until sensor 5 triggers and then carry on in the script”
-
--  EX-RAIL supports the PROG track drive-away feature of CommandStation-EX. This allows a
-   script to automatically detect the address of a loco on the programming
-   track, then drive it onto the main track to join in the fun.
-
-Introduction to the Automation process
-======================================
+The Automation Process
+******************************************
 
 All routes, automations etc step through a list of simple keywords until they reach an ENDTASK
 keyword. The reference list is here @KEBBIN?
 
 @KEBBIN  -- mabe we should call ENDTASK  "DONE" 
 
+|
+
 Routes for Engine Driver
-************************
+==========================
 A typical route might be to set a sequence of turnouts in response to a single button in Engine Driver.
-The EX-RAIL instructions to do this might look like 
+The EX-RAIL instructions to do this might look like
+
 .. code-block::
+
    ROUTE(1)
      THROW(1)
      CLOSE(7)
      ENDTASK
 
 or you can write it like this
+
 .. code-block::
-   ROUTE(1)  THROW(1)  CLOSE(7) ENDTASK
+
+   ROUTE(1)  THROW(1)  CLOSE(7)  ENDTASK
 
 or add comments
+
 .. code-block::
-// This is my coal yard to engine shed route
+
+ // This is my coal yard to engine shed route
    ROUTE(1)     // appears as "Route 1" in Engine Driver
      THROW(1)   // Throw turnout onto coal yard siding
      CLOSE(7)   // close turnout for engine shed
      ENDTASK    // thats all folks!
 
-of course, you may want to add signals, and time delays 
+of course, you may want to add signals, and time delays
+
 .. code-block::
+
    ROUTE(1)
      RED(77)
      THROW(1)
@@ -126,9 +131,9 @@ of course, you may want to add signals, and time delays
      DELAY(50)  // this is a 5 second wait
      GREEN(9)
      ENDTASK
-
+|
 Automating Signals with turnouts
-********************************
+==================================
 By intercepting a turnout change its easy to automatically adjust signals or 
 automatically switch a facing turnout.
 Use an ONTHROW or ONCLOSE keyword to detect a particular turnout change:
@@ -148,7 +153,7 @@ Use an ONTHROW or ONCLOSE keyword to detect a particular turnout change:
      ENDTASK
 
 Automating various non-track items 
-**********************************
+====================================
 This normally takes place in a timed loop, for example alternate flashing a 
 fire engine's lights. To do this use a SEQUENCE.
 .. code-block::
@@ -166,7 +171,7 @@ during the startup process (see later) using SCHEDULE(66)
 @KEBBIN... maybe this would be better named START.
 
 Automating a train
-******************
+=====================
      
 Start with something as simple as a single loop of track with a station and a 
 sensor (connected to pin 40 for this example) at the 
@@ -256,7 +261,7 @@ process to take whatever loco is placed on the programming track and
 send it on it’s way to join in the fun.
 
 Running multiple inter-connected trains
-***************************************
+========================================
 So what about routes that cross or shere single lines (passing places etc)
 … lets add a passing place between A and B. S= sensors, T=Turnout
 number. So now our route looks like this:
@@ -466,6 +471,27 @@ you can change the signal by RED(55), AMBER(55) and GREEN(55)
 Sounds
 ======
 You can use ``FON(n)`` and ``FOFF(n``) to switch loco functions… eg sound horn
+
+Sensors
+========
+
+-  DCC++EX allows for sensors that are LOW-on or HIGH-on, this is
+   particularly important for IR sensors that have been converted to
+   detect by broken beam, rather than reflection.
+
+-  Magnetic/Hall sensors work for some layouts but beware of how you detect
+   the back end of a train approching the buffers in a siding,
+   or knowing when the last car has cleared a crossing.
+
+-  Handling sensors in the automation is made easy because EX-RAIL throws
+   away the concept of interrupts (“oh… sensor 5 has been detected…
+   which loco was that and what the hell do I do now?”) and instead has
+   the route scripts work on the basis of “do nothing, maintain speed
+   until sensor 5 triggers and then carry on in the script”
+
+-  EX-RAIL supports the PROG track drive-away feature of CommandStation-EX. This allows a
+   script to automatically detect the address of a loco on the programming
+   track, then drive it onto the main track to join in the fun.
 
 Numbers
 ========

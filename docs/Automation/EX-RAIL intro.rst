@@ -8,14 +8,14 @@ Introduction
 ***********************
 
 EX-RAIL is an **EX**\panded **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage
-that can be easily used to describe sequential action to automatically take place on your model layout.
+that can be easily used to describe sequential actions to automatically take place on your model layout.
 
 |
 
 What you can do with it:
 ========================
 
-- Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver
+- Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver (other Withrottle-compatible throttles are available)
 - Intercept turnout changes to automatically adjust signals
 - Animate accessories such as lights, crossings or cranes
 - Automatically drive multiple trains simultaneously and manage complex interactions such as single line working and crossovers
@@ -51,8 +51,10 @@ What you don't need:
    nor go on the same journey in a predictable cycle.
 
    By reversing the usual assumptions, I think I have a workable, extendable and cheap solution.
-   DCC++-EX, which grew out of the early DCC++ system, provides a clean and efficient API for
-   the EX-RAIL automation to call.
+   
+   Because the original DCC++ used a software design inappropriate for internal automation, I had to start by 
+   rewriting the entire command station and this became DCC-EX, so 
+   automation has been in the plan from the start.
 
 How it works
 =============
@@ -69,18 +71,12 @@ install.
 For memory/performance worriers… The EX-RAIL code is surprisingly
 small and requires very little PROGMEM or RAM to execute. It is only
 included in the compilation of the CommandStation code if the compiler
-detects a “myEX-RAIL.h” file. During execution, an EX-RAIL automation is much
+detects a “myAutomation.h” file. During execution, an EX-RAIL automation is much
 (perhaps 2 orders of magnitude) more time efficient than the code
 required to process incoming requests from an external automation
 processor.
 
 
-@KEBBIN ... the bit about command differences isnt really relevant if EX-RAIL 
-is just animating a few flashing lights... so I've taken it out of this part.
-
-@KEBBIN I think this sensor stuff needs to go much further down, don't want to confuse people too early.
-
-|
 
 The Automation Process
 ******************************************
@@ -90,10 +86,11 @@ keyword. The reference list is here @KEBBIN?
 
 @KEBBIN  -- mabe we should call ENDTASK  "DONE" 
 
-|
+Here are some very simple examples  
 
-Routes for Engine Driver
-==========================
+Example 1: Creating Routes for Engine Driver
+=================================
+
 A typical route might be to set a sequence of turnouts in response to a single button in Engine Driver.
 The EX-RAIL instructions to do this might look like
 
@@ -123,40 +120,60 @@ or add comments
 of course, you may want to add signals, and time delays
 
 .. code-block::
-
+   SIGNAL(77,78,79)  // see later for details
+   SIGNAL(92,0,93)   // of signal definitions
+   
    ROUTE(1)
-     RED(77)
-     THROW(1)
-     CLOSE(7)
-     DELAY(50)  // this is a 5 second wait
-     GREEN(9)
-     ENDTASK
-|
-Automating Signals with turnouts
-==================================
+      RED(77)
+      THROW(1)
+      CLOSE(7)
+      DELAY(50)  // this is a 5 second wait
+      GREEN(92)
+      ENDDTASK
+
+
+Example 2: Automating Signals with turnouts
+===========================================
 By intercepting a turnout change its easy to automatically adjust signals or 
-automatically switch a facing turnout.
-Use an ONTHROW or ONCLOSE keyword to detect a particular turnout change:
+automatically switch a facing turnout. Use an ONTHROW or ONCLOSE keyword to detect a particular turnout change:
+
 .. code-block::
+
    ONTHROW(8)  // When turnout 8 is thrown
-     THROW(9)  // must also throw the facing turnout
-     RED(14)
-     DELAY(20)
-     GREEN(13)
-     ENDTASK
+      THROW(9)  // must also throw the facing turnout
+      RED(24)
+      DELAY(20)
+      GREEN(27)
+      ENDTASK
 
    ONCLOSE(8)  // When turnout 8 is closed
      CLOSE(9)
-     RED(13)
+     RED(27)
      DELAY(20)
-     GREEN(14)
+     GREEN(24)
      ENDTASK
 
-Automating various non-track items 
-====================================
+DCC-EX++ supports a number of different 
+turnout hardware configurations but your automation treats them all
+as simple id numbers. Turnouts may be defined using <T> commands from JMRI
+or in SETUP("...") commands or c++ code in mySetup.h as in earlier versions. 
+You may however find it more convenient to define turnouts using EX-RAIL
+commands which may appear anywhere in the myAutomation.h file, even after they are
+referenced in an ONTHROW, ONCLOSE, THROW or CLOSE command. 
+Turnouts defined in myAutomation.h will still be visible to WiThrottle and JMRI in the normal way.
+( However it is possible with EX-RAIL to hide a turnout from Withrottle which is useful if
+it is a facing turnout that will be automatically adjusted by your script to
+match its partner.)
+See reference section for TURNOUT definitions. 
+
+
+Example 3: Automating various non-track items 
+==============================================
 This normally takes place in a timed loop, for example alternate flashing a 
 fire engine's lights. To do this use a SEQUENCE.
+
 .. code-block::
+
    SEQUENCE(66)  
      SET(101)   // sets output 101 HIGH
      RESET(102) // sets output 102 LOW
@@ -167,11 +184,10 @@ fire engine's lights. To do this use a SEQUENCE.
      FOLLOW(66)  // follow sequence 66 continuously
      
 Note however that this sequence will not start automatically, it must be SCHEDULE'd
-during the startup process (see later) using SCHEDULE(66)
-@KEBBIN... maybe this would be better named START.
+during the startup process (see later) using START(66)
 
-Automating a train
-=====================
+Example 4: Automating a train (simple loop)
+===========================================
      
 Start with something as simple as a single loop of track with a station and a 
 sensor (connected to pin 40 for this example) at the 
@@ -183,6 +199,7 @@ you can drive the train manually, and then had it over to the automation at the 
 through the layout but this is discussed later]
 
 .. code-block::
+
    AUTOMATION(4)
       FWD(40)   // move forward at DCC speed 40 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
@@ -192,20 +209,48 @@ through the layout but this is discussed later]
       AFTER(40)  // until sensor on pin 40 has been passed
       FOLLOW(4) // and continue to follow the automation
 
+The instructions are followed in sequence by the loco given to it,
+the AT command just leaves the loco running until that sensor is
+detected.
+
 Notice that this automation does not specify the loco address. If you drive a loco with Engine Driver 
 and then hand it over to this automation, then the automation will run with the loco you last drove.
 
+Example 5: Signals in a train script
+====================================
 
-Perhaps you also have a single line shuttling between stations A and B.
+Adding a station signal to the loop script is extreemly simple but it does require a mind-shift
+for some modellers who like to think in terms of signals being in 
+control of trains. 
+EX-RAIL takes a different approach, by animating the signals as part of
+the driving script. Thus set a signal GREEN before setting off (and allow a little delay for the driver to react)
+and RED after you have passed it.
 
-These steps may be something like:
+.. code-block::
+
+   SIGNAL(77,78,79)  // see later for details
+   AUTOMATION(4)
+      FWD(40)   // move forward at DCC speed 40 (out of 127)
+      AT(40)     // when you get to sensor on pin (40)
+      STOP      // Stop the train 
+      DELAYRANDOM(50,200) // delay somewhere between 5 and 20 seconds
+      GREEN(77)
+      DEALY(25)  // This is not Formula1!
+      FWD(30)   // start a bit slower
+      AFTER(40)  // until sensor on pin 40 has been passed
+      RED(77)
+      FOLLOW(4) // and continue to follow the automation
+
+Example 6: Single line shuttle
+======================================
+Consider a single line shuttling between stations A and B.
+
+Starting from Station A, the steps may be something like:
 
 -  Wait between 10 and 20 seconds for the guard to stop chatting up the
    girl in the ticket office.
 -  Move forward at speed 30
--  When I get to sensor B stop.
-
-Similarly, the route from B to A could be something like this
+-  When I get to B stop.
 -  Wait 15 seconds for the tea trolley to be restocked
 -  Move backwards at speed 20
 -  When I get to A stop.
@@ -216,6 +261,7 @@ distance but don’t care about train length or whether the engine is at the fro
 We have wired sensor A on pin 41 and B on pin 42 for this example.
 
 .. code-block::
+
     SEQUENCE(13)
       DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
       FWD(50)
@@ -225,7 +271,7 @@ We have wired sensor A on pin 41 and B on pin 42 for this example.
       REV(20)
       AT(41) // far end of platform A
       STOP
-      FOLLOW(13) // follows animation 1 again… forever
+      FOLLOW(13) // follows sequence 13 again… forever
 
 
 Note a SEQUENCE is exactly the same as an ANIMATION except that it does NOT appear
@@ -236,15 +282,13 @@ the beginning of the file.  For this sequence we need to set a loco address
 and start the sequence:
 
 .. code-block::
-SETLOCO(3)
-START(13) 
-DONE        // This marks the end of the startup process
+
+   SETLOCO(3)
+   START(13) 
+   DONE        // This marks the end of the startup process
 
 The sequence can also be started from a serial monitor with the command </ START 3 13>
 
-Notice that the route instructions are followed in sequence by the loco given to it,
-the AT command just leaves the loco running until that sensor is
-detected. 
 
 If you have multiple separate sections of track which do not require inter-train
 cooperation you may add many more separate sequences and they will operate independently.
@@ -260,8 +304,8 @@ the right direction. A bit later I will show how to script an automatic
 process to take whatever loco is placed on the programming track and
 send it on it’s way to join in the fun.
 
-Running multiple inter-connected trains
-========================================
+Example 7: Running multiple inter-connected trains
+==================================================
 So what about routes that cross or shere single lines (passing places etc)
 … lets add a passing place between A and B. S= sensors, T=Turnout
 number. So now our route looks like this:
@@ -289,7 +333,7 @@ Assuming we have already defined our turnouts with <T> or TURNOUT commands.
    FOLLOW(11) // follows sequence 11 again… forever
 
  
-All well and good for 1 loco, but with 2 (or even 3) on this track we
+All well and good for one loco, but with 2 (or even 3) on this track we
 need some rules. The principle behind this is
 
 -  To enter a section of track that may be shared, you must RESERVE it.
@@ -313,48 +357,53 @@ So… lets take a look at the routes now. For convenience I have used
 route numbers that help remind us what the route is for… any number up
 to 255 is Ok. Anyone want more than that and I will fix it.
 
+@KEBBIN **the sensor numbers in the code below are all a mess. 
+Because the sensor numbers are now direct pin references, we need
+to avoid pin numbers that may clash with motor shield, I2C or similar
+pins that have special meanings.**
+
+
 .. code-block::
 
- ROUTE(12) // From block 1 to block 2
-   DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
-   RESERVE(2) // we wish to enter block 2… so wait for it
-   THROW(1) // Now we “own” the block, set the turnout
-   FWD(30) // and proceed forward
-   AFTER(11) // Once we have reached AND passed sensor 11
-   FREE(1) // we no longer occupy block 1
-   AT(12) // When we get to sensor 12
-   FOLLOW(23) // follow route from block 2 to block 3
+   SEQUENCE(12) // From block 1 to block 2
+      DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
+      RESERVE(2) // we wish to enter block 2… so wait for it
+      THROW(1) // Now we “own” the block, set the turnout
+      FWD(30) // and proceed forward
+      AFTER(71) // Once we have reached AND passed sensor 71
+      FREE(1) // we no longer occupy block 1
+      AT(72) // When we get to sensor 72
+      FOLLOW(23) // follow route from block 2 to block 3
 
-ROUTE(23) // Travel from block 2 to block 3
-   RESERVE(3) // will STOP if block 3 occupied
-   CLOSE(2) // Now we have the block, we can set turnouts
-   FWD(20) // we may or may not have stopped at the RESERVE
-   AT(2) // sensor 2 is at the far end of platform B
-   STOP
-   FREE(2)
-   DELAY(150)
-   FOLLOW(34)
+   SEQUENCE(23) // Travel from block 2 to block 3
+      RESERVE(3) // will STOP if block 3 occupied
+      CLOSE(2) // Now we have the block, we can set turnouts
+      FWD(20) // we may or may not have stopped at the RESERVE
+      AT(2) // sensor 2 is at the far end of platform B
+      STOP
+      FREE(2)
+      DELAY(150)
+      FOLLOW(34)
 
- ROUTE(34) // you get the idea
-   RESERVE(4)
-   THROW(2)
-   REV(20)
-   AFTER(13)
-   FREE(3)
-   AT(14)
-   FOLLOW(41)
+   ROUTE(34) // you get the idea
+      RESERVE(4)
+      THROW(2)
+      REV(20)
+      AFTER(13)
+      FREE(3)
+      AT(14)
+      FOLLOW(41)
 
- ROUTE(41)
-   RESERVE(1)
-   CLOSE(1)
-   REV(20)
-   AT(1)
-   STOP
-   FREE(4)
-   FOLLOW(12) // follows Route 12 again… forever
+   ROUTE(41)
+      RESERVE(1)
+      CLOSE(1)
+      REV(20)
+      AT(1)
+      STOP
+      FREE(4)
+      FOLLOW(12) // follows Route 12 again… forever
  
    
-@KEBBIN got to here
 
 Does that look long? Worried about memory on your Arduino…. Well the
 script above takes just 82 BYTES of program memory and no dynamic.

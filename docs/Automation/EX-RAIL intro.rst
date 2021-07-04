@@ -83,8 +83,19 @@ The Automation Process
 
 All routes, automations etc step through a list of simple keywords until they reach an ENDTASK
 keyword. The reference list is here @KEBBIN?
+Automation scripts are added to your Command Station by creating a file called "myAutomation.h"
+in the same folder as CommandStation-EX.ino and adding in the scripts 
+as follows:
 
-@KEBBIN  -- mabe we should call ENDTASK  "DONE" 
+.. code_block::
+
+   EXRAIL
+     ... your scripts
+     ENDEXRAIL
+
+Connecting your Arduino and pressing the upload button in the usual way
+will save the file and upload your script into the command station.
+
 
 Here are some very simple examples  
 

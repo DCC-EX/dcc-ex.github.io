@@ -6,6 +6,7 @@ Advanced Setup
     
     wifi-config
     motor-board-config
+    startup-config
     supported-motorboards/index
     supported-microcontrollers/index
     high-accuracy

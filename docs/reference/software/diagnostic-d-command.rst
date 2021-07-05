@@ -38,12 +38,3 @@ The following commands might help in exceptional circumstances
 to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>``
 temporarily removes this limit to allow the decoder more power. The normal limit will be re-imposed when the programming track
 is switched off with ``<0>`` or ``<0 PROG>``.
-
-.. caution:: The following command must not be used with locos on the track. It could reprogram or damage you locos!
-
-There may be a time if you are experiencing issues and we need to verify that a signal is being generated and sent to the motorboard. This test will allow you to see if the signal is varying without having to connect an oscilloscope or a packet analyzer.
-
-``<D DCC SLOW>`` This runs the DCC signal at 512 times slower than normal so you can watch a LED blinking out the DCC waveform. It's also fun to watch. But remember, to not place your locos on the track with this function running!
-
-Reset with ``<D DCC NORMAL>``.
-

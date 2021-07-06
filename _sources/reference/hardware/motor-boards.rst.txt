@@ -229,7 +229,7 @@ You can use this board to handle both your MAIN and PROG track, or you can use o
    :alt: IRF3205 Motor Board
    :scale: 75%
 
-`Dual Motor Driver IRF3205 Intstallation Instructions <../../advanced-setup/suported-motorboards/IRF3205-motor-board-setup.html>`_
+`Dual Motor Driver IRF3205 Intstallation Instructions <../../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html>`_
 
 |
 

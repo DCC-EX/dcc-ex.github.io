@@ -38,3 +38,4 @@ The following commands might help in exceptional circumstances
 to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>``
 temporarily removes this limit to allow the decoder more power. The normal limit will be re-imposed when the programming track
 is switched off with ``<0>`` or ``<0 PROG>``.
+

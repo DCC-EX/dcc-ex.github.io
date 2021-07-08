@@ -19,8 +19,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'DCC++ EX'
-copyright = '2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H'
-author = 'Dave Cutting, Fred Decker, Mani Kumar, Matt H'
+copyright = '2020, Fred Decker, Mani Kumar'
+author = 'Dave Cutting, Fred Decker, Mani Kumar'
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,7 +32,7 @@ extensions = [
     'sphinx.ext.autodoc',
    # 'sphinx.ext.intersphinx',
     'sphinx.ext.autosectionlabel',
-   # 'sphinx.ext.todo',
+    'sphinx.ext.todo',
    # 'sphinx.ext.coverage',
    # 'sphinx.ext.mathjax',
    # 'sphinx.ext.ifconfig',
@@ -84,6 +84,9 @@ html_theme_options = {
     'collapse_navigation': False,
     'navigation_depth': -1 
 }
+
+#leave this off to have todos invisible, set to true to render them and make the easy to see
+todo_include_todos = False
 
 #html_additional_pages = {
 #    'exwebthrottle': 'exwebthrottle/index.html',

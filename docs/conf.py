@@ -86,6 +86,7 @@ html_theme_options = {
 }
 
 #leave this off to have todos invisible, set to true to render them and make the easy to see
+#A list of all the todos in the document can be shown in the about page
 todo_include_todos = False
 
 #html_additional_pages = {

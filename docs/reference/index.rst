@@ -53,6 +53,7 @@ Diagnostic Tools
     :maxdepth: 1
 
     tools/diagnostic-tools
+    tools/serial-monitor
 
 Miscellaneous
 ---------------

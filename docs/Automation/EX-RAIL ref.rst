@@ -19,7 +19,7 @@ is always the same as the red signal pin.
 
 Its OK to use sensor ids that have no physical item in the layout. These
 can only be LATCHED, tested(IF/IFNOT)  or UNLATCHED in the scripts. If a sensor is set on
-by the script, it can only be set off by the script… so AT(5) SET(5) for
+by the script, it can only be set off by the script… so AT(5) LATCH(5) for
 example effectively latches the sensor 5 on when detected once.
 
 You can give names to routes turnouts signals and sensors etc using
@@ -46,7 +46,7 @@ Ethermet:
 | </ STATUS>                        | Displays EX-RAIL running thread   |
 |                                   | information                       |
 +-----------------------------------+-----------------------------------+
-| </ SCHEDULE [loco] route>         | Starts a new thread to send loco  |
+| </ START [loco] route>            | Starts a new thread to send loco  |
 |                                   | onto route.                       |
 |                                   | or Start a non-loco animation     |
 |                                   | route)                            |
@@ -57,13 +57,9 @@ Ethermet:
 | </ FREE id>                       | Manually frees a virtual track    |
 |                                   | block                             |
 +-----------------------------------+-----------------------------------+
-| </ THROW Id>                      | Set turnout LEFT                  |
+| </ LATCH id>                      | Lock sensor ON                       |
 +-----------------------------------+-----------------------------------+
-| </ CLOSE id >                     | Set turnout RIGHT                 |
-+-----------------------------------+-----------------------------------+
-| </ SET id>                        | Lock sensor                       |
-+-----------------------------------+-----------------------------------+
-| </ RESET id>                      | Unlock sensor                     |
+| </ UNLATCH id>                    | Unlock sensor                     |
 +-----------------------------------+-----------------------------------+
 
 Routes and animations
@@ -83,13 +79,14 @@ in the routes table, with no loco. .
 +-----------------------------------+-----------------------------------+
 | EXRAIL                            | Start of routes table.            |
 +===================================+===================================+
-| ROUTE(routeid)                    | Start of a route                  |
+| ROUTE(routeid)                    | Start of a route visible to       | 
+|                                   | Withrottle                        |
 |                                   | routeid=0-255                     |
 +-----------------------------------+-----------------------------------+
-| AUTOMATION(routeid)               | Start if a route                  |
+| AUTOMATION(routeid)               | Start of a route                  |
 |                                   | routeid=0-255                     |
 +-----------------------------------+-----------------------------------+
-| SEQUENCE(routeid)                 | Start if a route                  |
+| SEQUENCE(routeid)                 | Start 0f a sequence                  |
 |                                   | routeid=0-255                     |
 +-----------------------------------+-----------------------------------+
 | AFTER(sensorid)                   | Waits until sensor reached, then  |
@@ -103,7 +100,7 @@ in the routes table, with no loco. .
 | DELAYMINS(duration)               | Waits for a number of minutes     |
 +-----------------------------------+-----------------------------------+
 | DELAYRANDOM                       | Waits a random time between       |
-|  (minduration.maxduration)        | minDuration/10 and maxDuration/10 |
+|  (minduration,maxduration)        | minDuration/10 and maxDuration/10 |
 |                                   | seconds.                          |
 +-----------------------------------+-----------------------------------+
 | ENDIF                             | Marks end of IF block (see IF     |
@@ -148,10 +145,7 @@ in the routes table, with no loco. .
 |                                   | animations and locos are stopped  |
 |                                   | and manual control is possible    |
 +-----------------------------------+-----------------------------------+
-| PROGTRACK_JOIN                    | See DCCEX cmd <1 JOIN>            |
-+-----------------------------------+-----------------------------------+
-| PROGTRACK_OFF                     | See DCC cmd <0 PROG> (Disconnects |
-|                                   | a JOIN)                           |
+| JOIN / UNJOIN                     | See DCCEX cmd <1 JOIN>            |
 +-----------------------------------+-----------------------------------+
 | READ_LOCO                         | Reads loco id from prog track and |
 |                                   | assigns it to current route       |
@@ -163,12 +157,12 @@ in the routes table, with no loco. .
 |                                   | another train, this loco will     |
 |                                   | STOP and wait for the block to    |
 |                                   | become free.                      |
-|                                   | block is marked as reserved and   |
+|                                   | Block is marked as reserved and   |
 |                                   | this train continues..            |
 |                                   | When you leave a block that you   |
 |                                   | have reserved, you must FREE it.  |
 +-----------------------------------+-----------------------------------+
-| RESET(sensorId)                   | Clears a sensor flag (see SET)    |
+| RESET(outputId)                   | Clears an output pin              |
 +-----------------------------------+-----------------------------------+
 | RESUME                            | Resumes EX-RAIL from PAUSE mode.  |
 |                                   | Locos stopped by PAUSE are        |
@@ -176,14 +170,18 @@ in the routes table, with no loco. .
 +-----------------------------------+-----------------------------------+
 | REV(speed)                        | Move loco in reverse (see FWD)    |
 +-----------------------------------+-----------------------------------+
-| SCHEDULE(routeid)                 | Starts a new thread at            |
+| SIGNAL(redPin,amberPin,greenPin)  | defines signal with pins.         |
+|                                   | redpin is used as the RED signal  |
+|                                   | pin and also as the id.           |
++-----------------------------------+-----------------------------------+
+| START(routeid)                    | Starts a new thread at            |
 |                                   | ROUTE(routeid) and transfers      |
-|                                   | current loco to it.               |
+|                                   | current loco, if any, to it.      |
 +-----------------------------------+-----------------------------------+
 | SETLOCO(locoid)                   | Sets the loco id of the current   |
 |                                   | thread.                           |
 +-----------------------------------+-----------------------------------+
-| SET(sensorId)                     | Locks on the software part of a   |
+| LATCH(sensorId)                   | Locks on the software part of a   |
 |                                   | sensor.                           |
 |                                   | If a sensor is tested by          |
 |                                   | AT/AFTER/IF etc and the software  |
@@ -206,14 +204,17 @@ in the routes table, with no loco. .
 +-----------------------------------+-----------------------------------+
 | ESTOP                             | =SPEED(1) DCC emergency stop      |
 +-----------------------------------+-----------------------------------+
-| TL(turnoutId)                     | Sets turnout LEFT                 |
+| TURNOUT(turnoutId, dccaddr,       | defines a turnout                 |
+|          subaddr)                 |                                   |
 +-----------------------------------+-----------------------------------+
-| TR(turnoutId)                     | Sets turnout RIGHT                |
+| THROW(turnoutId)                  | Throws turnout                    |
++-----------------------------------+-----------------------------------+
+| CLOSE(turnoutId)                  | Closes turnout                    |
 +-----------------------------------+-----------------------------------+
 |                                   |                                   |
 +-----------------------------------+-----------------------------------+
-| ENDROUTE                          | Terminates a route thread         |
+| ENDTASK                           | Terminates a process              |
 +-----------------------------------+-----------------------------------+
-| ENDROUTES                         | End of ROUTES table, must be last |
+| ENDEXRAIL                         | End of EXRAIL table, must be last |
 |                                   | entry.                            |
 +-----------------------------------+-----------------------------------+

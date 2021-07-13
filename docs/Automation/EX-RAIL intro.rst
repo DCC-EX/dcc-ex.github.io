@@ -12,11 +12,11 @@ that can be easily used to describe sequential actions to automatically take pla
 
 |
 
-What you can do with it:
+Some of the things you can do with it:
 ========================
 
 - Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver (other Withrottle-compatible throttles are available)
-- Intercept turnout changes to automatically adjust signals
+- Intercept turnout changes to automatically adjust signals or other turnouts
 - Animate accessories such as lights, crossings or cranes
 - Automatically drive multiple trains simultaneously and manage complex interactions such as single line working and crossovers
 - Drive trains manually and hand a train over to an automation
@@ -24,8 +24,8 @@ What you can do with it:
 What you don't need:
 ====================
 
-- JMRI or any additional utilities other than the Arduino IDE.
-- Knowlege of C++ or Python/Jython programming
+- You DON'T need JMRI or any additional utilities other than the Arduino IDE.
+- You DON'T need Knowlege of C++ or Python/Jython programming
 
 .. sidebar:: A note from the Author
 
@@ -35,9 +35,9 @@ What you don't need:
    actually make a simpler automation system and run it entirely on the
    Arduino used for DCC++.
 
-   Some of the automation techniques I read about using python scripts in
-   JRMI made my blood run cold… there’s a lot I could say here but won’t
-   without a pint or two.
+   Some of the automation techniques I read about using jython scripts in
+   JRMI seem to require extensive programming skills and complex table configurations 
+   which appeared awkward to me despite my years of programming in dozens of languages.
 
    It seemed to me that basing an automation on block occupancy detection leaves a 
    lot of complex technical problems to be solved… and wanting to be cheap,
@@ -69,23 +69,30 @@ all the tools you will need and there is nothing else to download or
 install.
 
 For memory/performance worriers… The EX-RAIL code is surprisingly
-small and requires very little PROGMEM or RAM to execute. It is only
-included in the compilation of the CommandStation code if the compiler
-detects a “myAutomation.h” file. During execution, an EX-RAIL automation is much
+small and requires very little PROGMEM or RAM to execute although a UNO and Nano are
+simply too small to include EX-RAIL with the rest of the Command Station code.
+The EX-RAIL code is only
+included in the compilation of the CommandStation if the compiler
+detects a “myAutomation.h” file. 
+
+During execution, an EX-RAIL automation is much
 (perhaps 2 orders of magnitude) more time efficient than the code
 required to process incoming requests from an external automation
 processor.
 
-
-
 The Automation Process
 ******************************************
 
-All routes, automations etc step through a list of simple keywords until they reach an ENDTASK
-keyword. The reference list is here @KEBBIN?
+All routes, automations etc step through a list of simple keywords until they reach a DONE
+keyword. 
+
+The reference list is here @KEBBIN? I also kept ENDTASK as alias of DONE
+
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h"
 in the same folder as CommandStation-EX.ino and adding in the scripts 
 as follows:
+
+@KEBBIN Why doesnt this code block appear in the preview?????
 
 .. code_block::
 
@@ -96,8 +103,11 @@ as follows:
 Connecting your Arduino and pressing the upload button in the usual way
 will save the file and upload your script into the command station.
 
+@KEBBIN need pic of IDE adding a myAutomation.h file with some example content taken from below maybe. 
+
 
 Here are some very simple examples  
+**********************************
 
 Example 1: Creating Routes for Engine Driver
 =================================
@@ -110,13 +120,13 @@ The EX-RAIL instructions to do this might look like
    ROUTE(1)
      THROW(1)
      CLOSE(7)
-     ENDTASK
+     DONE
 
 or you can write it like this
 
 .. code-block::
 
-   ROUTE(1)  THROW(1)  CLOSE(7)  ENDTASK
+   ROUTE(1)  THROW(1)  CLOSE(7)  DONE
 
 or add comments
 
@@ -126,7 +136,7 @@ or add comments
    ROUTE(1)     // appears as "Route 1" in Engine Driver
      THROW(1)   // Throw turnout onto coal yard siding
      CLOSE(7)   // close turnout for engine shed
-     ENDTASK    // thats all folks!
+     DONE    // thats all folks!
 
 of course, you may want to add signals, and time delays
 
@@ -140,7 +150,7 @@ of course, you may want to add signals, and time delays
       CLOSE(7)
       DELAY(50)  // this is a 5 second wait
       GREEN(92)
-      ENDDTASK
+      DONE
 
 
 Example 2: Automating Signals with turnouts
@@ -155,27 +165,50 @@ automatically switch a facing turnout. Use an ONTHROW or ONCLOSE keyword to dete
       RED(24)
       DELAY(20)
       GREEN(27)
-      ENDTASK
+      DONE
 
    ONCLOSE(8)  // When turnout 8 is closed
      CLOSE(9)
      RED(27)
      DELAY(20)
      GREEN(24)
-     ENDTASK
+     DONE
+
+@KEBBIN, I'm not sure whether to include the defining turnouts and signals pars here before
+the examples that use them or merely forward fererence them from the simple examples.
+
+Defining Turnouts
+*****************
 
 DCC-EX++ supports a number of different 
 turnout hardware configurations but your automation treats them all
 as simple id numbers. Turnouts may be defined using <T> commands from JMRI
-or in SETUP("...") commands or c++ code in mySetup.h as in earlier versions. 
+or in SETUP("<T ...>") commands or c++ code in mySetup.h as in earlier versions.
+
 You may however find it more convenient to define turnouts using EX-RAIL
 commands which may appear anywhere in the myAutomation.h file, even after they are
 referenced in an ONTHROW, ONCLOSE, THROW or CLOSE command. 
 Turnouts defined in myAutomation.h will still be visible to WiThrottle and JMRI in the normal way.
-( However it is possible with EX-RAIL to hide a turnout from Withrottle which is useful if
+(@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from Withrottle which is useful if
 it is a facing turnout that will be automatically adjusted by your script to
 match its partner.)
 See reference section for TURNOUT definitions. 
+
+
+Signals
+========
+
+Signals are now simply a decoration to be switched by the route process…
+they don’t control anything.
+
+``GREEN(55)`` would turn signal 55 green and ``RED(55)`` would turn it red.
+Somewhere in the script there must be a SIGNAL command like this:
+SIGNAL(55,56,57)  This defines a singal with ID 55 where the red/stop lamp is connected to 
+pin 55, the amber/caution lamp to pin 56 and the green.proceed lamp to pin 57.
+The pins do not need to be contiguous and the red pin is also used as the signal id. Thus  
+you can change the signal by RED(55), AMBER(55) and GREEN(55).
+This means you don't have to manually turn off the other lamps. 
+A RED/GREEN only signal may be created with a zero amber pin.
 
 
 Example 3: Automating various non-track items 
@@ -212,7 +245,7 @@ through the layout but this is discussed later]
 .. code-block::
 
    AUTOMATION(4)
-      FWD(40)   // move forward at DCC speed 40 (out of 127)
+      FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // Stop the train 
       DELAYRANDOM(50,200) // delay somewhere between 5 and 20 seconds
@@ -241,7 +274,7 @@ and RED after you have passed it.
 
    SIGNAL(77,78,79)  // see later for details
    AUTOMATION(4)
-      FWD(40)   // move forward at DCC speed 40 (out of 127)
+      FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // Stop the train 
       DELAYRANDOM(50,200) // delay somewhere between 5 and 20 seconds
@@ -279,7 +312,7 @@ We have wired sensor A on pin 41 and B on pin 42 for this example.
       AT(42) // sensor 42 is at the far end of platform B
       STOP
       DELAY(150)
-      REV(20)
+      REV(20) // Reverse at DCC speed 20 (out of 127)
       AT(41) // far end of platform A
       STOP
       FOLLOW(13) // follows sequence 13 again… forever
@@ -310,7 +343,7 @@ following the same route at the same time (not in the end to end example
 above!) perhaps passing each other or crossing over with trains on other
 routes.
 
-The example above assumes that loco 3 is sitting at A and pointing in
+The example above assumes that loco 3 is sitting on the track and pointing in
 the right direction. A bit later I will show how to script an automatic
 process to take whatever loco is placed on the programming track and
 send it on it’s way to join in the fun.
@@ -322,9 +355,9 @@ So what about routes that cross or shere single lines (passing places etc)
 number. So now our route looks like this:
 
 
-- **TODO: Add image reference.**
+- @KEBBIN **TODO: Add image reference.**
 
-Assuming we have already defined our turnouts with <T> or TURNOUT commands.
+Assuming we have already defined our turnouts with TURNOUT commands.
 .. code-block::
  
  
@@ -353,7 +386,8 @@ need some rules. The principle behind this is
    reserve it. When you leave a shared section you must free it.
 
 -  Each “section” is merely a logical concept, there are no electronic
-   section breaks in the track.
+   section breaks in the track. You may have up to 255 sections (More can be supported by a code mod if required)
+
 
 So we will need some extra sensors (hardware required) and some logical
 blocks (all in the mind!):
@@ -365,8 +399,7 @@ imagine 4 separate routes, each passing from one block to the next. Then
 we can chain them together but also start from any block.
 
 So… lets take a look at the routes now. For convenience I have used
-route numbers that help remind us what the route is for… any number up
-to 255 is Ok. Anyone want more than that and I will fix it.
+route numbers that help remind us what the route is for.
 
 @KEBBIN **the sensor numbers in the code below are all a mess. 
 Because the sensor numbers are now direct pin references, we need
@@ -417,7 +450,7 @@ pins that have special meanings.**
    
 
 Does that look long? Worried about memory on your Arduino…. Well the
-script above takes just 82 BYTES of program memory and no dynamic.
+script above takes about 100 BYTES of program memory and no dynamic.
 
 If you follow this carefully, it allows for up to 3 trains at a time
 because one of them will always have somewhere to go. Notice that there
@@ -430,15 +463,15 @@ is common theme to this…
    routes)
 
 -  Set the points to enter the reserved area.. do this ASAP as you may
-   be still moving towards them. (@KEBBIN... maybe...EX-RAIL knows if this is a panic and
+   be still moving towards them. (@KEBBIN... maybe. TODO ..EX-RAIL knows if this is a panic and
    switches the points at full speed, if you are not moving then the
-   switch is a more realistic sweep motion(feature not yet))
+   switch is a more realistic sweep motion if you are using servos rather than slam-solenoid motors.)
 
--  Set any signals (see later)
+-  Set any signals 
 
 -  Move into the reserved area
 
--  Reset your signal (see later)
+-  Reset your signals
 
 -  Free off your previous reserve as soon as you have fully left the
    block
@@ -461,7 +494,7 @@ at the beginning of ROUTES , e.g. for two engines, one at each station
  RESERVE(3) // and another in block 3
  SENDLOCO(3,12) // send Loco DCC addr 3 on to route 12
  SENDLOCO(17,34) // send loco DCC addr 17 to route 34
- ENDPROG // don’t drop through to the first route
+ DONE // don’t drop through to the first route
 
 CAUTION: this isn’t ready to handle locos randomly placed on the layout after a power down.
 
@@ -470,17 +503,8 @@ turnouts because each route is setting them as required. Signals default
 to RED on powerup and get turned green when a route decides.
 
 
-.. code-block::
-
- ROUTE(66)
- RED(7)
- DELAY(15)
- GREEN(7)
- DELAY(15)
- FOLLOW(66)
-
-Fancy Startup
-==============
+Drive Away feature
+==================
 
 EX-RAIL can switch a track section between programming and mainline
 automatically.
@@ -490,43 +514,32 @@ allows locos to be added at station 1 while the system is in motion.
 Let’s assume that the track section at Station1 is isolated and
 connected to the programming track power supply. Also that we have a
 “launch” button connected where sensor 17 would be and an optional
-signal (ie 2 leds) on the control panel connected where signal 18 would
-be (see Signals below).
+signal (ie 3 leds) on the control panel connected where signal 27 would
+be .
 
 .. code-block::
 
  
  ROUTE(99)
- AFTER(17) // user presses and releases launch button
- RESERVE(1) // Wait until block free and keep others out
- UNJOIN // separate the programming track from main
- DELAY(20)
- GREEN(18) // Show a green light to user
- // user places loco on track and presses “launch” again
- AFTER(17)
- READ_LOCO // identify the loco
- RED(17) // show red light to user
- JOIN // connect prog track to main
- SCHEDULE(12) // send loco off along route 12
- FOLLOW(99) // keep doing this for another launch
+   SIGNAL(27,28,29)
+   RED(27)   // indicate launch not ready
+   AFTER(17) // user presses and releases launch button
+   UNJOIN // separate the programming track from main
+   DELAY(20)
+   AMBER(27) // Show amber, user may place loco
+   // user places loco on track and presses “launch” again
+   AFTER(17)
+   READ_LOCO // identify the loco
+   GREEN(27) // show green light to user
+   JOIN // connect prog track to main
+   SCHEDULE(12) // send loco off along route 12
+   FOLLOW(99) // keep doing this for another launch
 
-The READ_LOCO reads the loco address and the current route takes on that
+The READ_LOCO reads the loco address from the PROG track and the current route takes on that
 loco. By altering the script slightly and adding another sensor, it’s
 possible to detect which way the loco sets off and switch the code logic
-to send it in the correct direction. (easily done with diesels!)
-
-Signals
-========
-
-Signals are now simply a decoration to be switched by the route process…
-they don’t control anything.
-
-``GREEN(55)`` would turn signal 55 green and ``RED(55)`` would turn it red.
-Somewhere in the script there must be a SIGNAL command like this:
-SIGNAL(55,56,57)  This defines a singal with ID 55 where the red/stop lamp is connected to 
-pin 55, the amber/caution lamp to pin 56 and the green.proceed lamp to pin 57.
-The pins do not need to be contiguous and the red pin is also used as the signal id. Thus  
-you can change the signal by RED(55), AMBER(55) and GREEN(55)
+to send it in the correct direction by using the INVERT_DIRECTION instruction so that
+this locos FWD and REV commands are reversed. (easily done with diesels!)
 
 Sounds
 ======
@@ -537,7 +550,7 @@ Sensors
 
 -  DCC++EX allows for sensors that are LOW-on or HIGH-on, this is
    particularly important for IR sensors that have been converted to
-   detect by broken beam, rather than reflection.
+   detect by broken beam, rather than reflection. @KEBBIN This is TODO!!!
 
 -  Magnetic/Hall sensors work for some layouts but beware of how you detect
    the back end of a train approching the buffers in a siding,
@@ -549,34 +562,57 @@ Sensors
    the route scripts work on the basis of “do nothing, maintain speed
    until sensor 5 triggers and then carry on in the script”
 
--  EX-RAIL supports the PROG track drive-away feature of CommandStation-EX. This allows a
-   script to automatically detect the address of a loco on the programming
-   track, then drive it onto the main track to join in the fun.
+- Sensor numbers are direct references to virtual pin numbers in the Hardware Adapter Layer. 
+   For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to 
+   pin expanders etc. 
 
-Numbers
+- Sensors with id's 0 to 255 may be LATCHED/UNLATCHED in your script.
+   If a sensor is latched on
+   by the script, it can only be set off by the script… so AT(5) LATCH(5) for
+   example effectively latches the sensor 5 on when detected once.
+
+- Sensor polling by JMRI is independent of this and may continue if <S> commands are used.
+
+
+Outputs
 ========
 
-All route/automation/sequence, sensor, output, turnout or signal ids are limited to 0- 255 (
+- Generic Outputs are mapped to VPINs on the HAL (as for sensors)
+- SIGNAL definitions are just groups of 3 Outputs that can be more easily managed.
 
-The same id may be used for a route, turnout, but sensor, output or signal ids share the same 
-number range as the reference hardware pins. 
-without confusing the software (the same may not be true of the user!).
+Sequence Numbers
+================
 
-Its OK to use sensor ids that have no physical item in the layout. These
-can only be LATCHed, tested or UNLATCHED in the scripts. If a sensor is set on
-by the script, it can only be set off by the script… so AT(5) LATCH(5) for
-example effectively latches the sensor 5 on when detected once.
+- All ROUTE / AUTOMATION / SEQUENCE  ids are limited to 1- 32767 
+- 0 is reserved for the startup sequence appearing as the first entry in  the EXRAIL script. 
 
-You can give names to routes turnouts signals and sensors etc using
-``#define`` or ``const byte`` statements.
+Various techniques
+===================
 
-Future plans
-=============
+As the myAutomation.h file is effecticely being C++ compiled, 
+it is possible to use some preprocessor tricks to aid your scripts.
 
--  Some of the constructs above are not yet in the code, or need
-   cleaning up a bit. Its early days but world situation suggests I will
-   have plenty of time on my hands.
+- Defining names for some or all of the numbers 
+   For example:
+   .. code-block::
 
--  I want to add some more commands for controlling animations, such as
-   SERVO, STEPPER and LED
+      #define COAL_YARD_EXIT 32 
+      EXRAIL
+         ROUTE(COAL_YARD_EXIT) 
+            THROW(19)
+            GREEN(27)
+
+- Including sub-files
+For example:
+.. code-block::
+
+   EXRAIL
+      ROUTE(COAL_YARD_EXIT) 
+         THROW(19)
+         GREEN(27)
+         DONE
+   #include "myFireEngineLights.h"
+   #include "myShuttle.h"
+
+
 

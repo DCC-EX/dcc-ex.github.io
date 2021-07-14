@@ -30,9 +30,12 @@ COMMAND REFERENCE
 
 There are some diagnostic and control commands added to the <tag>
 language normally used to control the command station over USB, Wifi or
-Ethermet:
+Ethernet:
+
 @KEBBIN this needs work still, as I keep changing my mind about various statements!
 
++-----------------------------------+-----------------------------------+
+| Command                           | Description                       |
 +-----------------------------------+-----------------------------------+
 | <D EX-RAIL ON|OFF>                | Turns on/off diagnostic traces    |
 |                                   | for EX-RAIL events                |
@@ -57,7 +60,7 @@ Ethermet:
 | </ FREE id>                       | Manually frees a virtual track    |
 |                                   | block                             |
 +-----------------------------------+-----------------------------------+
-| </ LATCH id>                      | Lock sensor ON                       |
+| </ LATCH id>                      | Lock sensor ON                    |
 +-----------------------------------+-----------------------------------+
 | </ UNLATCH id>                    | Unlock sensor                     |
 +-----------------------------------+-----------------------------------+
@@ -86,7 +89,7 @@ in the routes table, with no loco. .
 | AUTOMATION(routeid)               | Start of a route                  |
 |                                   | routeid=0-255                     |
 +-----------------------------------+-----------------------------------+
-| SEQUENCE(routeid)                 | Start 0f a sequence                  |
+| SEQUENCE(routeid)                 | Start 0f a sequence               |
 |                                   | routeid=0-255                     |
 +-----------------------------------+-----------------------------------+
 | AFTER(sensorid)                   | Waits until sensor reached, then  |

@@ -13,44 +13,44 @@ that can be easily used to describe sequential actions to automatically take pla
 |
 
 Some of the things you can do with it:
-========================
+=======================================
 
-- Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver (other Withrottle-compatible throttles are available)
+- Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver (other WiThrottle-compatible throttles are available)
 - Intercept turnout changes to automatically adjust signals or other turnouts
-- Animate accessories such as lights, crossings or cranes
-- Automatically drive multiple trains simultaneously and manage complex interactions such as single line working and crossovers
-- Drive trains manually and hand a train over to an automation
+- Animate accessories such as lights, crossings, or cranes
+- Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers
+- Drive trains manually, and hand a train over to an automation
 
 What you don't need:
 ====================
 
-- You DON'T need JMRI or any additional utilities other than the Arduino IDE.
-- You DON'T need Knowlege of C++ or Python/Jython programming
+- You DON'T need JMRI or any additional utilities, other than the Arduino IDE.
+- You DON'T need knowlege of C++ or Python/Jython programming.
 
 .. sidebar:: A note from the Author
 
    My original aim was to see if I could create an automated layout with lots going
-   on that didn’t just run around in circles. Having looked at JMRI
-   (briefly I must say) and DCC++ I began to wonder whether I could
-   actually make a simpler automation system and run it entirely on the
+   on, that didn’t just run around in circles. Having looked at JMRI
+   (briefly I must say) and DCC++, I began to wonder whether I could
+   actually make a simpler automation system, and run it entirely on the
    Arduino used for DCC++.
 
-   Some of the automation techniques I read about using jython scripts in
-   JRMI seem to require extensive programming skills and complex table configurations 
-   which appeared awkward to me despite my years of programming in dozens of languages.
+   Some of the automation techniques I read about, using jython scripts in
+   JRMI, seem to require extensive programming skills and complex table configurations 
+   which appeared awkward to me, despite my years of programming in dozens of languages.
 
    It seemed to me that basing an automation on block occupancy detection leaves a 
    lot of complex technical problems to be solved… and wanting to be cheap,
-   I didn’t want to invest in a range of block occupation detectors 
-   or ABC braking modules which are all very well on
-   circular layouts but not good at complex crossings 
+   I didn’t want to invest in a range of block occupancy detectors,
+   or ABC braking modules, which are all very well on
+   circular layouts, but not good at complex crossings 
    or single line operations with passing places. 
-   Also I didn’t want the automation to be an obvious cycle of movements… 
+   Also, I didn’t want the automation to be an obvious cycle of movements… 
    some random timings and decisions need to be introduced so
    that two trains don’t always arrive at the same place in the same order, 
    nor go on the same journey in a predictable cycle.
 
-   By reversing the usual assumptions, I think I have a workable, extendable and cheap solution.
+   By reversing the usual assumptions, I think I have a workable, extensible and cheap solution.
    
    Because the original DCC++ used a software design inappropriate for internal automation, I had to start by 
    rewriting the entire command station and this became DCC-EX, so 
@@ -92,9 +92,7 @@ Automation scripts are added to your Command Station by creating a file called "
 in the same folder as CommandStation-EX.ino and adding in the scripts 
 as follows:
 
-@KEBBIN Why doesnt this code block appear in the preview?????
-
-.. code_block::
+.. code-block::
 
    EXRAIL
      ... your scripts
@@ -180,16 +178,16 @@ the examples that use them or merely forward fererence them from the simple exam
 Defining Turnouts
 *****************
 
-DCC-EX++ supports a number of different 
-turnout hardware configurations but your automation treats them all
+DCC-EX supports a number of different 
+turnout hardware configurations, but your automation treats them all
 as simple id numbers. Turnouts may be defined using <T> commands from JMRI
-or in SETUP("<T ...>") commands or c++ code in mySetup.h as in earlier versions.
+or in SETUP("<T ...>") commands or C++ code in mySetup.h as in earlier versions.
 
 You may however find it more convenient to define turnouts using EX-RAIL
 commands which may appear anywhere in the myAutomation.h file, even after they are
 referenced in an ONTHROW, ONCLOSE, THROW or CLOSE command. 
 Turnouts defined in myAutomation.h will still be visible to WiThrottle and JMRI in the normal way.
-(@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from Withrottle which is useful if
+(@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from WiThrottle which is useful if
 it is a facing turnout that will be automatically adjusted by your script to
 match its partner.)
 See reference section for TURNOUT definitions. 
@@ -392,7 +390,7 @@ need some rules. The principle behind this is
 So we will need some extra sensors (hardware required) and some logical
 blocks (all in the mind!):
 
-- **TODO: Add image reference.**
+- @KEBBIN **TODO: Add image reference.**
 
 We can use this map to plan routes, when we do so, it will be easier to
 imagine 4 separate routes, each passing from one block to the next. Then

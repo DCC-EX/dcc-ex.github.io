@@ -108,7 +108,7 @@ Here are some very simple examples
 **********************************
 
 Example 1: Creating Routes for Engine Driver
-=================================
+==============================================
 
 A typical route might be to set a sequence of turnouts in response to a single button in Engine Driver.
 The EX-RAIL instructions to do this might look like
@@ -356,23 +356,23 @@ number. So now our route looks like this:
 - @KEBBIN **TODO: Add image reference.**
 
 Assuming we have already defined our turnouts with TURNOUT commands.
+
 .. code-block::
- 
- 
- SEQUENCE(11)
-   DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
-   THROW(1)
-   CLOSE(2)
-   FWD(30)
-   AT(42) // sensor 42 is at the far end of platform B
-   STOP
-   DELAY(150)
-   THROW(2)
-   CLOSE(1)
-   REV(20)
-   AT(41)
-   STOP
-   FOLLOW(11) // follows sequence 11 again… forever
+
+   SEQUENCE(11)
+      DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
+      THROW(1)
+      CLOSE(2)
+      FWD(30)
+      AT(42) // sensor 42 is at the far end of platform B
+      STOP
+      DELAY(150)
+      THROW(2)
+      CLOSE(1)
+      REV(20)
+      AT(41)
+      STOP
+      FOLLOW(11) // follows sequence 11 again… forever
 
  
 All well and good for one loco, but with 2 (or even 3) on this track we
@@ -592,6 +592,7 @@ it is possible to use some preprocessor tricks to aid your scripts.
 
 - Defining names for some or all of the numbers 
    For example:
+
    .. code-block::
 
       #define COAL_YARD_EXIT 32 
@@ -601,16 +602,17 @@ it is possible to use some preprocessor tricks to aid your scripts.
             GREEN(27)
 
 - Including sub-files
-For example:
-.. code-block::
+   For example:
+   
+   .. code-block::
 
-   EXRAIL
-      ROUTE(COAL_YARD_EXIT) 
-         THROW(19)
-         GREEN(27)
-         DONE
-   #include "myFireEngineLights.h"
-   #include "myShuttle.h"
+      EXRAIL
+         ROUTE(COAL_YARD_EXIT) 
+            THROW(19)
+            GREEN(27)
+            DONE
+      #include "myFireEngineLights.h"
+      #include "myShuttle.h"
 
 
 

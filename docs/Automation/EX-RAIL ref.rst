@@ -67,9 +67,9 @@ Routes and animations
     - Function
   * - EXRAIL
     - All scripts exist in a single block between EXRAIL and ENDEXRAIL keywords
-  * - AUTOMATION(sequence_id) 
+  * - AUTOMATION(sequence_id, "description") 
     - Start of an automation SEQUENCE which Withrottles can send a train along
-  * - ROUTE(sequence_id) 
+  * - ROUTE(sequence_id, "description") 
     - Start of a route SEQUENCE settable in Withrottle 
   * - SEQUENCE(sequence_id) 
     - A general purpose sequence

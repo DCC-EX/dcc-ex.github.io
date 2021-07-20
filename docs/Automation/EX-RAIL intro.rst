@@ -2,7 +2,6 @@
 EX-RAIL Automation
 ***********************
 
-|
 
 Introduction
 ***********************
@@ -115,7 +114,7 @@ The EX-RAIL instructions to do this might look like
 
 .. code-block::
 
-   ROUTE(1)
+   ROUTE(1,"Exit Yard")
      THROW(1)
      CLOSE(7)
      DONE
@@ -124,14 +123,14 @@ or you can write it like this
 
 .. code-block::
 
-   ROUTE(1)  THROW(1)  CLOSE(7)  DONE
+   ROUTE(1,"Exit Yard")  THROW(1)  CLOSE(7)  DONE
 
 or add comments
 
 .. code-block::
 
  // This is my coal yard to engine shed route
-   ROUTE(1)     // appears as "Route 1" in Engine Driver
+   ROUTE(1,"Exit Yard")     // appears as "Exkit Yard" in Engine Driver
      THROW(1)   // Throw turnout onto coal yard siding
      CLOSE(7)   // close turnout for engine shed
      DONE    // thats all folks!
@@ -142,7 +141,7 @@ of course, you may want to add signals, and time delays
    SIGNAL(77,78,79)  // see later for details
    SIGNAL(92,0,93)   // of signal definitions
    
-   ROUTE(1)
+   ROUTE(1,"Exit Yard")
       RED(77)
       THROW(1)
       CLOSE(7)
@@ -242,7 +241,7 @@ through the layout but this is discussed later]
 
 .. code-block::
 
-   AUTOMATION(4)
+   AUTOMATION(4,"Run around")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // Stop the train 
@@ -271,7 +270,7 @@ and RED after you have passed it.
 .. code-block::
 
    SIGNAL(77,78,79)  // see later for details
-   AUTOMATION(4)
+   AUTOMATION(4,"Run around")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // Stop the train 
@@ -427,7 +426,7 @@ pins that have special meanings.**
       DELAY(150)
       FOLLOW(34)
 
-   ROUTE(34) // you get the idea
+   SEQUENCE(34) // you get the idea
       RESERVE(4)
       THROW(2)
       REV(20)
@@ -436,7 +435,7 @@ pins that have special meanings.**
       AT(14)
       FOLLOW(41)
 
-   ROUTE(41)
+   SEQUENCE(41)
       RESERVE(1)
       CLOSE(1)
       REV(20)
@@ -518,7 +517,7 @@ be .
 .. code-block::
 
  
- ROUTE(99)
+ SEQUENCE(99)
    SIGNAL(27,28,29)
    RED(27)   // indicate launch not ready
    AFTER(17) // user presses and releases launch button
@@ -590,29 +589,21 @@ Various techniques
 As the myAutomation.h file is effecticely being C++ compiled, 
 it is possible to use some preprocessor tricks to aid your scripts.
 
-- Defining names for some or all of the numbers 
-   For example:
-
-   .. code-block::
-
-      #define COAL_YARD_EXIT 32 
-      EXRAIL
-         ROUTE(COAL_YARD_EXIT) 
-            THROW(19)
-            GREEN(27)
-
 - Including sub-files
    For example:
    
    .. code-block::
 
       EXRAIL
-         ROUTE(COAL_YARD_EXIT) 
+         ROUTE(1,"Exit Yard") 
             THROW(19)
             GREEN(27)
             DONE
       #include "myFireEngineLights.h"
       #include "myShuttle.h"
+      ENDEXRAIL
+
+
 
 
 

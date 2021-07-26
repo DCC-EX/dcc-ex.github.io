@@ -1,0 +1,71 @@
+*************************
+Using a Serial Monitor
+*************************
+
+What is a Serial Monitor and Why Do I Need One?
+================================================
+
+A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your CS, and connect to it to view logs and send manual commands. If anything goes wrong with our CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
+
+* Test your Command Station
+* View startup and other diagnostic logs to fix issues or help us support you
+* Turn on extra diagnostic commands
+* Get the ID of a loco on the programming track
+* Diagnose communication issues with your loco on the programming track (ACK failure/Error 308)
+* Send commands to your WiFi board
+* Manually control your locos
+* Program CVs without the need for any other software
+
+If you know how to use a terminal program it is as simple as connecting your device to the Command Station, opening a session and selecting the right baud rate (115200) and line endings (Carriage Return and Line Feed). For the rest of us, we will include detailed instructions on how to use a computer or a phone app to connect to your CS.
+
+Connect with the Arduino Serial Monitor
+========================================
+
+**What You Will Need**
+
+* The Arduino IDE
+* A Computer (Just about any Windows, Mac or Linux machine including the Raspberry Pi)
+* The USB cable for your Arduino
+
+Connect with a Cell Phone
+===========================
+
+**What You Will Need**
+
+* A Cell Phone
+* A Terminal program (see below)
+* An "On The Go" Cable (aka. OTG Cable)
+* The USB Cable for your Arduino
+
+.. NOTE:: You can also use BlueTooth if you have a BlueTooth board attached to your CS and make a small modification to the sketch (CS Software). We will cover how to do that in a **Project** tutorial
+
+.. todo::
+   show how to use bluetooth. There is blutooth serial monitor by CSA and Android bluetooth serial monitor by Rupak Poddar
+
+OTG Cable
+-----------
+
+You will need to find one that is compatible with your phone. Some phones come with one. It is usually Micro USB or USB-C or Apple Lightning on one end and USB 2.0 Female on the other. It acts like an adapter to connect a regular cable that would normally plug into a computer or laptop, and let it connect to your phone instead.
+
+Here is an adapter:
+
+https://www.amazon.com/Thunderbolt-Compatible-Chromebook-Pixelbook-Microsoft/dp/B07KR45LJW/ref=sr_1_4?dchild=1&keywords=otg+adapter&qid=1625863945&s=electronics&sr=1-4
+
+Here is one for Android or MacBook Pro with USB-C with a short pigtail:
+
+https://www.amazon.com/Adapter-JSAUX-Compatible-MacBook-Samsung/dp/B07L749R9R/ref=sr_1_5?dchild=1&keywords=otg+cable&qid=1625863614&sr=8-5
+
+And one for an iPad or iPhone:
+
+https://www.amazon.com/dp/B07V2CMXQT/ref=redir_mobile_desktop?_encoding=UTF8&aaxitk=7aa803dc4108c96ff75758ce1d6f9e46&hsa_cr_id=1752570960701&pd_rd_plhdr=t&pd_rd_r=486502c7-13e1-40e1-9f35-f52cd9335772&pd_rd_w=vHecY&pd_rd_wg=pxSba&ref_=sbx_be_s_sparkle_mcd_asin_0_title
+
+Every cell phone OS such as Android or iOS has a program or two that will work as a serial monitor. For Android, here are a few:
+
+* Serial USB Terminal by Kai Morich
+* `Serial Monitor by CSA <https://play.google.com/store/apps/details?id=com.csa.serialmonitor>`_
+* `USB Serial Console by Felipe Herranz <https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole>`_
+
+Serial Monitor by CSA
+-----------------------
+
+Light and Dark themes

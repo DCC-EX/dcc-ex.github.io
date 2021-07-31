@@ -117,6 +117,8 @@ Routes and animations
     - If sensor is NOT activated, continue. Otherwise skip to matching ENDIF.
   * - IFRANDOM(percent)
     - Randomly choose to continue or skip to matching ENDIF.
+  * - IFRESERVE(block)
+    - If block is not reserved, RESERVE it and continue. Otherwise skip to matching ENDIF.
   * - INVERT_DIRECTION
     - Further FWD/REV commands to this loco will be reversed
   * - JOIN

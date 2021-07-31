@@ -476,6 +476,12 @@ is common theme to this…
 -  Free off your previous reserve as soon as you have fully left the
    block
 
+In addition, it is possible to take decisions based on blocks reserved by other trains.
+The IFRESERVE(block) can be used to reserve a block if it not already reserved by some other train,
+or skip to the matching ENDIF. For example, this allows a train to choose which platform to stop at
+based on prior occupancy. It is features like this that allow for more interesting and unpredictable
+automations.       
+
 Starting the system
 ===================
 

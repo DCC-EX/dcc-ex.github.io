@@ -228,7 +228,7 @@ This normally takes place in a timed loop, for example alternate flashing of a f
      DELAY(5)   // wait 0.5 seconds
      FOLLOW(66)  // follow sequence 66 continuously
      
-Note, however, that this sequence will not start automatically: it must be ``SCHEDULE``'d
+Note, however, that this sequence will not start automatically: it must be started
 during the startup process (see later) using ``START(66)``.
 
 Example 4: Automating a train (simple loop)

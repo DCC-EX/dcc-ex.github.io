@@ -146,7 +146,7 @@ Of course, you may want to add signals, and time delays
       RED(77)
       THROW(1)
       CLOSE(7)
-      DELAY(50)  // this is a 5 second wait
+      DELAY(5000)  // this is a 5 second wait
       GREEN(92)
       DONE
 
@@ -161,14 +161,14 @@ automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE
    ONTHROW(8)  // When turnout 8 is thrown,
       THROW(9)  // must also throw the facing turnout
       RED(24)
-      DELAY(20)
+      DELAY(2000)
       GREEN(27)
       DONE
 
    ONCLOSE(8)  // When turnout 8 is closed
      CLOSE(9)
      RED(27)
-     DELAY(20)
+     DELAY(2000)
      GREEN(24)
      DONE
 
@@ -222,10 +222,10 @@ This normally takes place in a timed loop, for example alternate flashing of a f
    SEQUENCE(66)  
      SET(101)   // sets output 101 HIGH
      RESET(102) // sets output 102 LOW
-     DELAY(5)   // wait 0.5 seconds
+     DELAY(500)   // wait 0.5 seconds
      SET(102)   // swap the lights   
      RESET(101) 
-     DELAY(5)   // wait 0.5 seconds
+     DELAY(500)   // wait 0.5 seconds
      FOLLOW(66)  // follow sequence 66 continuously
      
 Note, however, that this sequence will not start automatically: it must be started
@@ -249,7 +249,7 @@ through the layout but this is discussed later]
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // stop the train 
-      DELAYRANDOM(50,200) // delay somewhere between 5 and 20 seconds
+      DELAYRANDOM(5000,20000) // delay somewhere between 5 and 20 seconds
       FWD(30)   // start a bit slower
       AFTER(40)  // until sensor on pin 40 has been passed
       FOLLOW(4) // and continue to follow the automation
@@ -278,7 +278,7 @@ and RED after you have passed it.
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // Stop the train 
-      DELAYRANDOM(50,200) // delay somewhere between 5 and 20 seconds
+      DELAYRANDOM(5000,20000) // delay somewhere between 5 and 20 seconds
       GREEN(77)
       DEALY(25)  // This is not Formula1!
       FWD(30)   // start a bit slower
@@ -308,11 +308,11 @@ We have wired sensor A on pin 41, and sensor B on pin 42 for this example.
 .. code-block::
 
     SEQUENCE(13)
-      DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
+      DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
       FWD(50)
       AT(42) // sensor 42 is at the far end of platform B
       STOP
-      DELAY(150)
+      DELAY(15000)
       REV(20) // Reverse at DCC speed 20 (out of 127)
       AT(41) // far end of platform A
       STOP
@@ -363,13 +363,13 @@ Assuming that you have defined your turnouts with TURNOUT commands.
 .. code-block::
 
    SEQUENCE(11)
-      DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
+      DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
       THROW(1)
       CLOSE(2)
       FWD(30)
       AT(42) // sensor 42 is at the far end of platform B
       STOP
-      DELAY(150)
+      DELAY(15000)
       THROW(2)
       CLOSE(1)
       REV(20)
@@ -412,7 +412,7 @@ pins that have special meanings.**
 .. code-block::
 
    SEQUENCE(12) // From block 1 to block 2
-      DELAYRANDOM(100,200) // random wait between 10 and 20 seconds
+      DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
       RESERVE(2) // we wish to enter block 2… so wait for it
       THROW(1) // Now we “own” the block, set the turnout
       FWD(30) // and proceed forward
@@ -428,7 +428,7 @@ pins that have special meanings.**
       AT(2) // sensor 2 is at the far end of platform B
       STOP
       FREE(2)
-      DELAY(150)
+      DELAY(15000)
       FOLLOW(34)
 
    SEQUENCE(34) // you get the idea
@@ -531,7 +531,7 @@ be .
    RED(27)   // indicate launch not ready
    AFTER(17) // user presses and releases launch button
    UNJOIN // separate the programming track from main
-   DELAY(20)
+   DELAY(2000)
    AMBER(27) // Show amber, user may place loco
    // user places loco on track and presses “launch” again
    AFTER(17)

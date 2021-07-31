@@ -90,11 +90,11 @@ Routes and animations
   * - CLOSE(turnout_id)
     - close defined turnout
   * - DELAY(delay)
-    - Wait in 10ths second.
+    - Wait in mS.
   * - DELAYMINS(mindelay)
     - Wait minutes
   * - DELAYRANDOM(mindelay,maxdelay)
-    - Delay random time between min and max in 10ths second
+    - Delay random time between min and max mS
   * - ENDIF  
     - End of IF type block
   * - ESTOP 

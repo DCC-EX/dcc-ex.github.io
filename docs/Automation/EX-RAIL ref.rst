@@ -65,6 +65,8 @@ Routes and animations
 
   * - Command
     - Function
+  * - ALIAS(name,value)
+    - Gives name to a value for script readability. Must appear BEFORE the EXRAIL command. 
   * - EXRAIL
     - All scripts exist in a single block between EXRAIL and ENDEXRAIL keywords
   * - AUTOMATION(sequence_id, "description") 

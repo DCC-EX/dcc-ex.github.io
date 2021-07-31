@@ -117,7 +117,7 @@ The EX-RAIL instructions to do this might look like
 
 .. code-block::
 
-   ROUTE(1)
+   ROUTE(1,"Coal Yard e")
      THROW(1)
      CLOSE(7)
      DONE
@@ -126,14 +126,14 @@ Or you can write it like this
 
 .. code-block::
 
-   ROUTE(1)  THROW(1)  CLOSE(7)  DONE
+   ROUTE(1,"Coal Yard exit")  THROW(1)  CLOSE(7)  DONE
 
 or add comments
 
 .. code-block::
 
  // This is my coal yard to engine shed route
-   ROUTE(1)     // appears as "Route 1" in Engine Driver
+   ROUTE(1,"Coal Yard exit")     // appears in Engine Driver
      THROW(1)   // throw turnout onto coal yard siding
      CLOSE(7)   // close turnout for engine shed
      DONE    // that's all folks!
@@ -144,7 +144,7 @@ Of course, you may want to add signals, and time delays
    SIGNAL(77,78,79)  // see later for details
    SIGNAL(92,0,93)   //   on signal definitions
    
-   ROUTE(1)
+   ROUTE(1,"Coal Yard exit")
       RED(77)
       THROW(1)
       CLOSE(7)
@@ -249,7 +249,7 @@ through the layout but this is discussed later]
 
 .. code-block::
 
-   AUTOMATION(4)
+   AUTOMATION(4,"Round in circles")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // stop the train 
@@ -278,7 +278,7 @@ and RED after you have passed it.
 .. code-block::
 
    SIGNAL(77,78,79)  // see later for details
-   AUTOMATION(4)
+   AUTOMATION(4,"Round in circles")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // Stop the train 
@@ -434,7 +434,7 @@ pins that have special meanings.**
       DELAY(150)
       FOLLOW(34)
 
-   ROUTE(34) // you get the idea
+   SEQUENCE(34) // you get the idea
       RESERVE(4)
       THROW(2)
       REV(20)
@@ -443,7 +443,7 @@ pins that have special meanings.**
       AT(14)
       FOLLOW(41)
 
-   ROUTE(41)
+   SEQUENCE(41)
       RESERVE(1)
       CLOSE(1)
       REV(20)
@@ -525,7 +525,7 @@ be .
 .. code-block::
 
  
- ROUTE(99)
+ SEQUENCE(99)
    SIGNAL(27,28,29)
    RED(27)   // indicate launch not ready
    AFTER(17) // user presses and releases launch button
@@ -537,7 +537,7 @@ be .
    READ_LOCO // identify the loco
    GREEN(27) // show green light to user
    JOIN // connect prog track to main
-   SCHEDULE(12) // send loco off along route 12
+   START(12) // send loco off along route 12
    FOLLOW(99) // keep doing this for another launch
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that
@@ -555,7 +555,8 @@ Sensors
 
 -  DCC++EX allows for sensors that are LOW-on or HIGH-on, this is
    particularly important for IR sensors that have been converted to
-   detect by broken beam, rather than reflection. @KEBBIN This is TODO!!!
+   detect by broken beam, rather than reflection. By making the sensor
+   number negative, the sensor state is inverted. e.g. AT(-5)
 
 -  Magnetic/Hall sensors work for some layouts but beware of how you detect
    the back end of a train approching the buffers in a siding,
@@ -594,19 +595,19 @@ Sequence Numbers
 Various techniques
 ===================
 
-As the myAutomation.h file is effecticely being C++ compiled, 
-it is possible to use some preprocessor tricks to aid your scripts.
 
-- Defining names for some or all of the numbers 
+- Defining names for some or all of the numbers, use the ALIAS command. (this must come BEFORE the EXRAIL command)
+
    For example:
 
    .. code-block::
 
-      #define COAL_YARD_EXIT 32 
+   ALIAS(COAL_YARD_TURNOUT,19) 
+   ALIAS(COAL_YARD_SIGNAL,27) 
       EXRAIL
-         ROUTE(COAL_YARD_EXIT) 
-            THROW(19)
-            GREEN(27)
+         ROUTE(1,"Coal yard exit") 
+            THROW(COAL_YARD_TURNOUT)
+            GREEN(COAL_YARD_SIGNAL)
 
 - Including sub-files
    For example:
@@ -614,7 +615,7 @@ it is possible to use some preprocessor tricks to aid your scripts.
    .. code-block::
 
       EXRAIL
-         ROUTE(COAL_YARD_EXIT) 
+         ROUTE(1,"Coal yard exit") 
             THROW(19)
             GREEN(27)
             DONE

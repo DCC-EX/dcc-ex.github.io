@@ -79,9 +79,7 @@ detects a “myAutomation.h” file.
 During execution, an EX-RAIL automation is much
 (perhaps 2 orders of magnitude) more time efficient than the code
 required to process incoming requests from an external automation
-processor, therefore internally automating pre-written scripts can be done much faster and on a much larger scale.
-
-@Chris - Is this correct?
+processor, or the contunuous polling of every sensor.
 
 The Automation Process
 ******************************************
@@ -89,7 +87,7 @@ The Automation Process
 All routes, automations, etc step through a list of simple keywords until they reach a ``DONE``
 keyword. 
 
-The reference list is here @KEBBIN? I also kept ENDTASK as alias of DONE
+The reference list is here @KEBBIN? 
 
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h"
 in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:
@@ -174,8 +172,6 @@ automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE
      GREEN(24)
      DONE
 
-@KEBBIN, I'm not sure whether to include the defining turnouts and signals pars here before
-the examples that use them or merely forward fererence them from the simple examples.
 
 @Chris - I think the definition info might be best after the examples?
 
@@ -190,13 +186,13 @@ or in ``SETUP("<T ...>")`` commands or C++ code in mySetup.h, just like earlier 
 You may, however, find it more convenient to define turnouts using EX-RAIL
 commands, which may appear anywhere in the 'myAutomation.h' file, even after they are
 referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command.
-
-@Chris - need to include a line explaining why commands can be placed anywhere in the script file, i.e. compiling.
+(EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
 
 Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 (@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from WiThrottle which is useful if
 it is a facing turnout that will be automatically adjusted by your script to
 match its partner.)
+
 See the Reference section for TURNOUT definitions. 
 
 
@@ -362,7 +358,7 @@ number. So now our route looks like this:
 
 - @KEBBIN **TODO: Add image reference.**
 
-Assuming we have already defined our turnouts with TURNOUT commands.
+Assuming that you have defined your turnouts with TURNOUT commands.
 
 .. code-block::
 
@@ -405,6 +401,7 @@ we can chain them together but also start from any block.
 
 So… lets take a look at the routes now. For convenience I have used
 route numbers that help remind us what the route is for.
+
 
 @KEBBIN **the sensor numbers in the code below are all a mess. 
 Because the sensor numbers are now direct pin references, we need
@@ -467,11 +464,9 @@ is common theme to this…
    Arduino process… DCC and the other locos continue to follow their
    routes)
 
--  Set the points to enter the reserved area.. do this ASAP as you may
-   be still moving towards them. (@KEBBIN... maybe. TODO ..EX-RAIL knows if this is a panic and
-   switches the points at full speed, if you are not moving then the
-   switch is a more realistic sweep motion if you are using servos rather than slam-solenoid motors.)
-
+-  Set the points to enter the reserved area.. do that ASAP as you may
+   be still moving towards them. 
+   
 -  Set any signals 
 
 -  Move into the reserved area

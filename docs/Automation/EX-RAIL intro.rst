@@ -87,7 +87,7 @@ The Automation Process
 All routes, automations, etc step through a list of simple keywords until they reach a ``DONE``
 keyword. 
 
-The reference list is here @KEBBIN? 
+.. The reference list is here @KEBBIN? 
 
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h"
 in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:
@@ -101,7 +101,8 @@ in the same folder as CommandStation-EX.ino, and adding in the scripts as follow
 Connecting your Arduino and pressing the Upload button in the usual way
 will save the file and upload your script into the Command Station.
 
-@KEBBIN need pic of Arduino IDE adding a myAutomation.h file with some example content taken from below maybe. 
+..
+  @KEBBIN need pic of Arduino IDE adding a myAutomation.h file with some example content taken from below maybe. 
 
 
 Here are some very simple examples  
@@ -189,9 +190,9 @@ referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command.
 (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
 
 Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
-(@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from WiThrottle which is useful if
-it is a facing turnout that will be automatically adjusted by your script to
-match its partner.)
+
+..
+  (@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from WiThrottle which is useful if it is a facing turnout that will be automatically adjusted by your script to match its partner.)
 
 See the Reference section for TURNOUT definitions. 
 
@@ -233,15 +234,20 @@ during the startup process (see later) using ``START(66)``.
 
 Example 4: Automating a train (simple loop)
 ===========================================
-     
+
 Start with something as simple as a single loop of track with a station and a 
 sensor (connected to pin 40 for this example) at the 
 point where you want the train to stop.
+
+.. image:: ../_static/images/ex-rail/Example_4_diagram.png
+   :alt:  Simple example 4
+   :align: center
+   :scale: 100%
+
 Using an ``AUTOMATION`` keyword means that this automation will appear in Engine Driver so
 you can drive the train manually, and then hand it over to the automation at the press of a button.
 
-[technically an automation can independently run multiple locos along the same path 
-through the layout but this is discussed later]
+\* Technically, an automation can independently run multiple locos along the same path through the layout, but this is discussed later...
 
 .. code-block::
 
@@ -289,6 +295,11 @@ and RED after you have passed it.
 Example 6: Single line shuttle
 ======================================
 Consider a single line, shuttling between stations A and B.
+
+.. image:: ../_static/images/ex-rail/Example_6_diagram.png
+   :alt:  Simple example 4
+   :align: center
+   :scale: 100%
 
 Starting from Station A, the steps may be something like:
 
@@ -352,11 +363,13 @@ send it on its way to join in the fun!
 Example 7: Running multiple inter-connected trains
 ==================================================
 So what about routes that cross or share single lines (passing places etc)?
-Lets add a passing place between A and B. S= sensors, T=Turnout
+Let's add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:
 
-
-- @KEBBIN **TODO: Add image reference.**
+.. image:: ../_static/images/ex-rail/Example_7a_diagram.png
+   :alt:  Simple example 4
+   :align: center
+   :scale: 100%
 
 Assuming that you have defined your turnouts with TURNOUT commands.
 
@@ -393,7 +406,10 @@ need some rules. The principle behind this is
 So we will need some extra sensors (hardware required) and some logical
 blocks (all in the mind!):
 
-- @KEBBIN **TODO: Add image reference.**
+.. image:: ../_static/images/ex-rail/Example_7b_diagram.png
+   :alt:  Simple example 4
+   :align: center
+   :scale: 100%
 
 We can use this map to plan routes, when we do so, it will be easier to
 imagine 4 separate routes, each passing from one block to the next. Then
@@ -403,10 +419,8 @@ So… lets take a look at the routes now. For convenience I have used
 route numbers that help remind us what the route is for.
 
 
-@KEBBIN **the sensor numbers in the code below are all a mess. 
-Because the sensor numbers are now direct pin references, we need
-to avoid pin numbers that may clash with motor shield, I2C or similar
-pins that have special meanings.**
+..
+  @KEBBIN **the sensor numbers in the code below are all a mess. Because the sensor numbers are now direct pin references, we need to avoid pin numbers that may clash with motor shield, I2C or similar pins that have special meanings.**
 
 
 .. code-block::

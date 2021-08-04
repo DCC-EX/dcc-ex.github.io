@@ -115,7 +115,7 @@ The EX-RAIL instructions to do this might look like
 
 .. code-block::
 
-   ROUTE(1,"Coal Yard e")
+   ROUTE(1,"Coal Yard exit")
      THROW(1)
      CLOSE(7)
      DONE
@@ -351,8 +351,8 @@ send it on its way to join in the fun!
 
 Example 7: Running multiple inter-connected trains
 ==================================================
-So what about routes that cross or shere single lines (passing places etc)
-… lets add a passing place between A and B. S= sensors, T=Turnout
+So what about routes that cross or share single lines (passing places etc)?
+Lets add a passing place between A and B. S= sensors, T=Turnout
 number. So now our route looks like this:
 
 

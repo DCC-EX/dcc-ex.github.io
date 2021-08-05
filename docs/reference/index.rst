@@ -52,8 +52,7 @@ Diagnostic Tools
 .. toctree::
     :maxdepth: 2
 
-    tools/diagnostic-tools
-    tools/serial-monitor
+    tools/index
 
 Miscellaneous
 ---------------

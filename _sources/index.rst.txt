@@ -71,12 +71,20 @@ A basic DCC++ EX hardware setup can use easy to find, widely available Arduino b
 * I2C Display support
 * Improved short circuit detection and automatic reset from an overload
 * Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings
+* Non blocking Ack processing - Main track signal is not interrupted when programming on the service track
+* Advanced cv programming diagnostics and tuning
 * Improved adherence to the NMRA DCC specification
 * Complete support for all the old commands and controllers/front-ends like JMRI
+* New DCC-EX features and integrations built into JMRI, Engine, DCCppCab and more
 * Simpler, modular, faster code with an API Library for developers for easy expansion
-* New throttle support from apps like DCCpp Cab
+* New direct throttle support from apps like Engine Driver, DCCpp Cab, 
 * Ability to JOIN operations and service track as one "main" track with 2 power districts when not programming
 * New features and functions in JMRI, like a new current meter
+* Simple address read and set without understanding long/short  cvs
+* Function reminders - Function commands are repeated to ensure changes are read by your decoder
+* Ability to run many more locos
+* Emergency Stop commands
+* Forget locos command - Stops reminders for locos no longer on the track
 * Automation (coming soon!) 
 
 .. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our `Rewrite Article <about/rewrite.html>`_.

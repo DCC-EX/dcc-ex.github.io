@@ -16,7 +16,9 @@ This page describes the software configuration options for using WiFi to connect
 As mentioned in the above link, you will need the following to proceed:
 
 * A DCC++ EX Command station with Motor Controller
-* A WiFi board (for Blutooth configuration, click here ***TODO: link to bluetooth***
+* A WiFi board (for Blutooth configuration, click here 
+  
+.. todo:: link item above to bluetooth
 
 For a video click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
 
@@ -27,7 +29,10 @@ For a video click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A&
 Wireless Connections
 =====================
 
-As mentioned in `WiFi Setup <../get-started/wifi-setup.html>`_, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recomend the HC-12 serial wireless bridge boards which we cover in ***TODO: Link here***.
+As mentioned in `WiFi Setup <../get-started/wifi-setup.html>`_, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recomend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**
+
+.. todo::
+   Add Link above
 
 That said, there are two main wireless technologies that let you send commands to your CS and control your trains:
 

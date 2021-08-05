@@ -161,7 +161,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../wire-gauge.html">Wire Gauge Information</a></li>
 </ul>
 </li>
@@ -282,13 +286,6 @@
 to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code>
 temporarily removes this limit to allow the decoder more power. The normal limit will be re-imposed when the programming track
 is switched off with <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code>.</p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>The following command must not be used with locos on the track. It could reprogram or damage you locos!</p>
-</div>
-<p>There may be a time if you are experiencing issues and we need to verify that a signal is being generated and sent to the motorboard. This test will allow you to see if the signal is varying without having to connect an oscilloscope or a packet analyzer.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">DCC</span> <span class="pre">SLOW&gt;</span></code> This runs the DCC signal at 512 times slower than normal so you can watch a LED blinking out the DCC waveform. It’s also fun to watch. But remember, to not place your locos on the track with this function running!</p>
-<p>Reset with <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">DCC</span> <span class="pre">NORMAL&gt;</span></code>.</p>
 </div>
 </div>
 
@@ -306,7 +303,7 @@ is switched off with <code class="docutils literal notranslate"><span class="pre
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H.
+        &#169; Copyright 2020, Fred Decker, Mani Kumar.
 
     </p>
   </div>

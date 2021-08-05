@@ -161,7 +161,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../../reference/downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/wire-gauge.html">Wire Gauge Information</a></li>
 </ul>
 </li>
@@ -378,7 +382,7 @@
 <p>Here is a visual diagram. See <a class="reference internal" href="#important-notes-on-current-sensing"><span class="std std-ref">Important Notes on Current Sensing</span></a>. Click to enlarge:</p>
 <a class="reference internal image-reference" href="../../_images/IRF3205_w_arduino_fritz.png"><img alt="IRF3205 Wiring Diagram" class="align-center" src="../../_images/IRF3205_w_arduino_fritz.png" style="width: 874.0px; height: 375.06px;" /></a>
 <p>It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IRF3205 (TODO: What does this mean? Did I mean to connect this other board to those pins or the IRF3205?? Fix this in the IBT_2 board page also) to the same pins on the Arduino microcontroller. As with most of our diagrams, you can click on them to enlarge them. )TODO: Mention fuses here? Another diagram?)</p>
-<a class="reference internal image-reference" href="../../_images/IRF3205_w_arduino.png"><img alt="IRF3205 Wiring Schematic" class="align-center" src="../../_images/IRF3205_w_arduino.png" style="width: 791.0px; height: 409.5px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IRF3205_w_arduino.png"><img alt="IRF3205 Wiring Schematic" class="align-center" src="../../_images/IRF3205_w_arduino.png" style="width: 786.8px; height: 422.79999999999995px;" /></a>
 <ol class="arabic simple" start="6">
 <li><p>Select your IRF3205 board type in the config.h file. TODO: fnd XXX need to add this type in EX</p></li>
 </ol>
@@ -488,7 +492,7 @@
 <p>Here is a wiring diagram. See <a class="reference internal" href="#important-notes-on-current-sensing"><span class="std std-ref">Important Notes on Current Sensing</span></a> below. Click on images to enlarge them:</p>
 <a class="reference internal image-reference" href="../../_images/IRF3205_w_arduino_fritz.png"><img alt="IRF3205 Wiring Diagram" src="../../_images/IRF3205_w_arduino_fritz.png" style="width: 690.0px; height: 296.09999999999997px;" /></a>
 <p>Pay attention to board labels, not their position on this drawing. Your current sensor may have its connections wired differently! Here is a schematic image to help clarify the wiring.</p>
-<a class="reference internal image-reference" href="../../_images/IRF3205_w_arduino.png"><img alt="IRF3205 Wiring Schematic" src="../../_images/IRF3205_w_arduino.png" style="width: 565.0px; height: 292.5px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IRF3205_w_arduino.png"><img alt="IRF3205 Wiring Schematic" src="../../_images/IRF3205_w_arduino.png" style="width: 562.0px; height: 302.0px;" /></a>
 <p>If you want to use more than 5A (but we recommend not to), there are changes you need to make to the hardware AND to the config.h settings. See TODO: link to section below.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -619,7 +623,7 @@ $24.40 +tax; prime shipping</p>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H.
+        &#169; Copyright 2020, Fred Decker, Mani Kumar.
 
     </p>
   </div>

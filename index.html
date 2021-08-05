@@ -160,7 +160,11 @@
 <li class="toctree-l3"><a class="reference internal" href="reference/downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="reference/wire-gauge.html">Wire Gauge Information</a></li>
 </ul>
 </li>
@@ -316,12 +320,20 @@
 <li><p>I2C Display support</p></li>
 <li><p>Improved short circuit detection and automatic reset from an overload</p></li>
 <li><p>Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings</p></li>
+<li><p>Non blocking Ack processing - Main track signal is not interrupted when programming on the service track</p></li>
+<li><p>Advanced cv programming diagnostics and tuning</p></li>
 <li><p>Improved adherence to the NMRA DCC specification</p></li>
 <li><p>Complete support for all the old commands and controllers/front-ends like JMRI</p></li>
+<li><p>New DCC-EX features and integrations built into JMRI, Engine, DCCppCab and more</p></li>
 <li><p>Simpler, modular, faster code with an API Library for developers for easy expansion</p></li>
-<li><p>New throttle support from apps like DCCpp Cab</p></li>
+<li><p>New direct throttle support from apps like Engine Driver, DCCpp Cab,</p></li>
 <li><p>Ability to JOIN operations and service track as one “main” track with 2 power districts when not programming</p></li>
 <li><p>New features and functions in JMRI, like a new current meter</p></li>
+<li><p>Simple address read and set without understanding long/short  cvs</p></li>
+<li><p>Function reminders - Function commands are repeated to ensure changes are read by your decoder</p></li>
+<li><p>Ability to run many more locos</p></li>
+<li><p>Emergency Stop commands</p></li>
+<li><p>Forget locos command - Stops reminders for locos no longer on the track</p></li>
 <li><p>Automation (coming soon!)</p></li>
 </ul>
 <div class="admonition note">
@@ -347,7 +359,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H.
+        &#169; Copyright 2020, Fred Decker, Mani Kumar.
 
     </p>
   </div>

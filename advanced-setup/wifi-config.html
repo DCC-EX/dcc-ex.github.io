@@ -161,7 +161,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../reference/downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/wire-gauge.html">Wire Gauge Information</a></li>
 </ul>
 </li>
@@ -268,14 +272,14 @@
 <p>As mentioned in the above link, you will need the following to proceed:</p>
 <ul class="simple">
 <li><p>A DCC++ EX Command station with Motor Controller</p></li>
-<li><p>A WiFi board (for Blutooth configuration, click here <strong>*TODO: link to bluetooth*</strong></p></li>
+<li><p>A WiFi board (for Blutooth configuration, click here</p></li>
 </ul>
 <p>For a video click <a class="reference external" href="https://www.youtube.com/watch?v=N6TWR7fIl0A&amp;t=5s">Setting up WiFi</a></p>
 <blockquote>
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
 <div class="section" id="wireless-connections">
 <h2>Wireless Connections<a class="headerlink" href="#wireless-connections" title="Permalink to this headline">¶</a></h2>
-<p>As mentioned in <a class="reference external" href="../get-started/wifi-setup.html">WiFi Setup</a>, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recomend the HC-12 serial wireless bridge boards which we cover in <strong>*TODO: Link here*</strong>.</p>
+<p>As mentioned in <a class="reference external" href="../get-started/wifi-setup.html">WiFi Setup</a>, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recomend the HC-12 serial wireless bridge boards which we cover in <strong>HC-12 page coming</strong></p>
 <p>That said, there are two main wireless technologies that let you send commands to your CS and control your trains:</p>
 <ul class="simple">
 <li><p>WiFi</p></li>
@@ -307,17 +311,17 @@
 <p>If you travel to shows or take your setup to a friend’s house, this allows for an autonomous, transportable system that does not need a connection to and hopefully will not interfere with, other networks.</p>
 <p>NOTE: In this mode there is no connection to the Internet for any of the devices that are only connected to the AP. It simply provides a private network to allow a direct connection to your throttles.</p>
 <p>(Remember you can click on images to enlarge them)</p>
-<div class="figure align-default" id="id3">
+<div class="figure align-default" id="id5">
 <a class="reference internal image-reference" href="../_images/Wifi_softap_mode.png"><img alt="AP Mode" src="../_images/Wifi_softap_mode.png" style="width: 400.0px; height: 193.5px;" /></a>
-<p class="caption"><span class="caption-text">Figure 1: Access Point Mode - Things connect to the WiFi Board</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 1: Access Point Mode - Things connect to the WiFi Board</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="station-mode">
 <h3>Station Mode<a class="headerlink" href="#station-mode" title="Permalink to this headline">¶</a></h3>
 <p>Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the CS by finding its IP address on the network. You will have to find what IP address is assigned to the CS (see below). Alternately, you can define a static IP address in your router to assign to the CS.</p>
-<div class="figure align-default" id="id4">
+<div class="figure align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/Wifi_station_mode.png"><img alt="Station Mode" src="../_images/Wifi_station_mode.png" style="width: 400.0px; height: 210.0px;" /></a>
-<p class="caption"><span class="caption-text">Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>Images are courtesy of, and you can find a great tutorial on WiFi by <a class="reference external" href="https://nodemcu.readthedocs.io/en/latest/modules/wifi/">NodeMCU</a></p>
 <p>We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with JMRI, click here <strong>TODO:Add link*</strong>.</p>
@@ -541,7 +545,7 @@ Then upload the project back to the CS.</p>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Dave Cutting, Fred Decker, Mani Kumar, Matt H.
+        &#169; Copyright 2020, Fred Decker, Mani Kumar.
 
     </p>
   </div>

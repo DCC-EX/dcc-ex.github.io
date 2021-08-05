@@ -50,7 +50,7 @@ Diagnostic Tools
 ------------------
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     tools/diagnostic-tools
     tools/serial-monitor

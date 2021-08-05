@@ -87,7 +87,7 @@ The Automation Process
 All routes, automations, etc step through a list of simple keywords until they reach a ``DONE``
 keyword. 
 
-.. The reference list is here @KEBBIN? 
+For a full list of keywords, see :ref:`EX-RAIL – Reference`
 
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h"
 in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:

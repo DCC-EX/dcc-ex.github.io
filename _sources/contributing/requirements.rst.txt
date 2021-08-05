@@ -2,7 +2,7 @@
 Requirements
 **************
 
-We assume, since you got here, that you already have a computer up and running being either a Liunx, MacOS, or Windows machine, as well as a working internet connection and some disk space available. 
+We assume, since you got here, that you already have a computer up and running being either a Linux, MacOS, or Windows machine, as well as a working internet connection and some disk space available. 
 
 A 64 bit operating system is preferred, running as much as possible the latest version of your chosen OS. This in any case is good practice to keep your environment healthy and up-to-date.
 

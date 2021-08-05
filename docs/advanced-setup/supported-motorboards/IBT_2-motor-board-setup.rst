@@ -98,9 +98,9 @@ Steps (Upgrade)
 
 5. The diagrams below also show an optional diode protection circuit. If you don't test your board first to make sure that the current you will be using does not put more that 5V on your Arduino analog pin, this will keep you from destroying the input. It is a 5 or 5.1 zener diode (1N4733A, 1N5231B, NZX5V1B, BZX55C5V1, etc.). R2 can be whatever you have on hand. We recommend 2k - 10k.
 
-5. Select your IBT_2 board in the config.h file.
+6. Select your IBT_2 board in the config.h file.
 
-6. Upload the new sketch to your Arduino Mega
+7. Upload the new sketch to your Arduino Mega
 
 Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
 

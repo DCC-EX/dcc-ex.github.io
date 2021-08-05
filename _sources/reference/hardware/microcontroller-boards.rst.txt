@@ -68,7 +68,7 @@ Teensy 3.x & 4.x
 
 **Engineer level**
 
-The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons. 
+The Teensy Series by PJRC is a next generation micrxocontroller. It has loads of RAM, a faster clock speed and a host of add-ons. 
 
 See the detailed section on the `Teensy <../../advanced-setup/supported-microcontrollers/teensy.html>`_
 

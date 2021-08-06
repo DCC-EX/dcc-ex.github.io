@@ -139,7 +139,8 @@ or add comments
 
 Of course, you may want to add signals, and time delays
 
-.. code-block::
+.. code-block:: cpp
+
    SIGNAL(77,78,79)  // see later for details
    SIGNAL(92,0,93)   //   on signal definitions
    
@@ -423,7 +424,7 @@ route numbers that help remind us what the route is for.
   @KEBBIN **the sensor numbers in the code below are all a mess. Because the sensor numbers are now direct pin references, we need to avoid pin numbers that may clash with motor shield, I2C or similar pins that have special meanings.**
 
 
-.. code-block::
+.. code-block:: cpp
 
    SEQUENCE(12) // From block 1 to block 2
       DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
@@ -434,7 +435,7 @@ route numbers that help remind us what the route is for.
       FREE(1) // we no longer occupy block 1
       AT(72) // When we get to sensor 72
       FOLLOW(23) // follow route from block 2 to block 3
-
+   
    SEQUENCE(23) // Travel from block 2 to block 3
       RESERVE(3) // will STOP if block 3 occupied
       CLOSE(2) // Now we have the block, we can set turnouts
@@ -444,7 +445,7 @@ route numbers that help remind us what the route is for.
       FREE(2)
       DELAY(15000)
       FOLLOW(34)
-
+   
    SEQUENCE(34) // you get the idea
       RESERVE(4)
       THROW(2)
@@ -453,7 +454,7 @@ route numbers that help remind us what the route is for.
       FREE(3)
       AT(14)
       FOLLOW(41)
-
+   
    SEQUENCE(41)
       RESERVE(1)
       CLOSE(1)
@@ -462,8 +463,7 @@ route numbers that help remind us what the route is for.
       STOP
       FREE(4)
       FOLLOW(12) // follows Route 12 again… forever
- 
-   
+
 
 Does that look long? Worried about memory on your Arduino…. Well the
 script above takes about 100 BYTES of program memory and no dynamic.
@@ -615,7 +615,7 @@ Various techniques
 
    For example:
 
-   .. code-block::
+.. code-block:: cpp
 
    ALIAS(COAL_YARD_TURNOUT,19) 
    ALIAS(COAL_YARD_SIGNAL,27) 
@@ -627,13 +627,13 @@ Various techniques
 - Including sub-files
    For example:
    
-   .. code-block::
+.. code-block:: cpp
 
-      EXRAIL
-         ROUTE(1,"Coal yard exit") 
-            THROW(19)
-            GREEN(27)
-            DONE
+   EXRAIL
+      ROUTE(1,"Coal yard exit") 
+         THROW(19)
+         GREEN(27)
+         DONE
       #include "myFireEngineLights.h"
       #include "myShuttle.h"
 

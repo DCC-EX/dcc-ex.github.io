@@ -4,7 +4,7 @@ EX-RAIL Automation
 
 
 Introduction
-***********************
+==============
 
 EX-RAIL is an **EX**\panded **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage
 that can be easily used to describe sequential actions to automatically take place on your model layout.
@@ -59,33 +59,18 @@ What You Don't Need:
 How It Works
 =============
 
-A small amount of code (The EX-RAIL executor), sits between
-the layout owner and DCC so that the layout owner can write automation
-scripts in a form that is much more user friendly. In fact the
-automation is written in the Arduino IDE (or PlatformIO) as per a normal
-Arduino script, but all the C++ boilerplate code is stripped away where
-you don’t need to see or understand it. This means that you already have
-all the tools you will need, and there is nothing else to download or
-install.
-The method of creating your script file is described in the next section.
+A small amount of code in the CS (The EX-RAIL executor), lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don't have to be a programmer and you don't have to learn code. You simply add your own Automation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.
 
-For memory/performance worriers… The EX-RAIL code is surprisingly
-small and requires very little PROGMEM or RAM to execute, although a UNO and Nano are
-simply too small to include EX-RAIL with the rest of the Command Station code.
-The EX-RAIL code is only
-included in the compilation of the Command Station if the compiler
-detects a “myAutomation.h” file. 
+The EX-RAIL code is surprisingly small and requires very little PROGMEM (memory that holds the program code) or SRAM (the runtime workspace that stores variables and things the program needs) to operate. You will need a Mega for your CS, the UNO and Nano are simply too small to include EX-RAIL with the rest of the Command Station code.
 
-During execution, an EX-RAIL automation is much
-(perhaps 2 orders of magnitude) more time efficient than the code
-required to process incoming requests from an external automation
-processor, or the contunuous polling of every sensor.
+.. NOTE: The EX-RAIL code is only included in the compilation of the Command Station if the compiler detects a “myAutomation.h” file. If you don't create that file, no extra space is wasted for something you don't use.
+
+EX-RAIL automation is *much* (perhaps 2 orders of magnitude) more time efficient than the code required to process incoming requests from an external automation processor, or the contunuous polling of every sensor.
 
 The Automation Process
 ******************************************
 
-All routes, automations, etc step through a list of simple keywords until they reach a ``DONE``
-keyword. 
+All routes, automations, etc step through a list of simple keywords until they reach a ``DONE`` keyword. 
 
 For a full list of keywords, see :ref:`EX-RAIL – Reference`
 
@@ -98,8 +83,7 @@ in the same folder as CommandStation-EX.ino, and adding in the scripts as follow
      ... your scripts
      ENDEXRAIL
 
-Connecting your Arduino and pressing the Upload button in the usual way
-will save the file and upload your script into the Command Station.
+Connecting your Arduino and pressing the Upload button in the usual way will save the file and upload your script into the Command Station.
 
 ..
   @KEBBIN need pic of Arduino IDE adding a myAutomation.h file with some example content taken from below maybe. 

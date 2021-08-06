@@ -2,7 +2,6 @@
 EX-RAIL Automation
 ***********************
 
-|
 
 Introduction
 ***********************
@@ -10,10 +9,9 @@ Introduction
 EX-RAIL is an **EX**\panded **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage
 that can be easily used to describe sequential actions to automatically take place on your model layout.
 
-|
 
-Some of the things you can do with it:
-=======================================
+Things You Can Do With EX-RAIL
+====================================
 
 - Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver (other WiThrottle-compatible throttles are available)
 - Intercept turnout changes to automatically adjust signals or other turnouts
@@ -21,7 +19,7 @@ Some of the things you can do with it:
 - Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers
 - Drive trains manually, and hand a train over to an automation
 
-What you don't need:
+What You Don't Need:
 ====================
 
 - You DON'T need JMRI or any additional utilities, other than the Arduino IDE.
@@ -56,7 +54,9 @@ What you don't need:
    rewriting the entire Command Station code and this became DCC-EX, so 
    automation has been in the plan from the start.
 
-How it works
+   - Chris Harlow
+
+How It Works
 =============
 
 A small amount of code (The EX-RAIL executor), sits between
@@ -92,7 +92,7 @@ For a full list of keywords, see :ref:`EX-RAIL – Reference`
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h"
 in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:
 
-.. code-block::
+.. code-block:: cpp
 
    EXRAIL
      ... your scripts
@@ -105,7 +105,7 @@ will save the file and upload your script into the Command Station.
   @KEBBIN need pic of Arduino IDE adding a myAutomation.h file with some example content taken from below maybe. 
 
 
-Here are some very simple examples  
+Some Simple Examples  
 **********************************
 
 Example 1: Creating Routes for Engine Driver
@@ -114,7 +114,7 @@ Example 1: Creating Routes for Engine Driver
 A typical Route might be used to set a sequence of turnouts in response to a single button in Engine Driver.
 The EX-RAIL instructions to do this might look like
 
-.. code-block::
+.. code-block:: cpp
 
    ROUTE(1,"Coal Yard exit")
      THROW(1)
@@ -123,13 +123,13 @@ The EX-RAIL instructions to do this might look like
 
 Or you can write it like this
 
-.. code-block::
+.. code-block:: cpp
 
    ROUTE(1,"Coal Yard exit")  THROW(1)  CLOSE(7)  DONE
 
 or add comments
 
-.. code-block::
+.. code-block:: cpp
 
  // This is my coal yard to engine shed route
    ROUTE(1,"Coal Yard exit")     // appears in Engine Driver
@@ -158,7 +158,7 @@ Example 2: Automating Signals with Turnouts
 By intercepting a turnout change command, it's easy to automatically adjust signals or 
 automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE`` keyword to detect a particular turnout change:
 
-.. code-block::
+.. code-block:: cpp
 
    ONTHROW(8)  // When turnout 8 is thrown,
       THROW(9)  // must also throw the facing turnout
@@ -219,7 +219,7 @@ Example 3: Automating various non-track items
 
 This normally takes place in a timed loop, for example alternate flashing of a fire engine's lights. To do this use a SEQUENCE.
 
-.. code-block::
+.. code-block:: cpp
 
    SEQUENCE(66)  
      SET(101)   // sets output 101 HIGH
@@ -250,7 +250,7 @@ you can drive the train manually, and then hand it over to the automation at the
 
 \* Technically, an automation can independently run multiple locos along the same path through the layout, but this is discussed later...
 
-.. code-block::
+.. code-block:: cpp
 
    AUTOMATION(4,"Round in circles")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
@@ -278,7 +278,7 @@ EX-RAIL takes a different approach, by animating the signals as part of
 the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react)
 and RED after you have passed it.
 
-.. code-block::
+.. code-block:: cpp
 
    SIGNAL(77,78,79)  // see later for details
    AUTOMATION(4,"Round in circles")
@@ -295,6 +295,7 @@ and RED after you have passed it.
 
 Example 6: Single line shuttle
 ======================================
+
 Consider a single line, shuttling between stations A and B.
 
 .. image:: ../_static/images/ex-rail/Example_6_diagram.png
@@ -317,7 +318,7 @@ Notice that the sensors at A and B are near the ends of the track (allowing for 
 distance, but don’t care about train length or whether the engine is at the front or back.)
 We have wired sensor A on pin 41, and sensor B on pin 42 for this example.
 
-.. code-block::
+.. code-block:: cpp
 
     SEQUENCE(13)
       DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
@@ -338,7 +339,7 @@ When the Command Station is powered up or reset, EX-RAIL starts operating at
 the beginning of the file.  For this sequence we need to set a loco address
 and start the sequence:
 
-.. code-block::
+.. code-block:: cpp
 
    SETLOCO(3)
    START(13) 
@@ -374,7 +375,7 @@ number. So now our route looks like this:
 
 Assuming that you have defined your turnouts with TURNOUT commands.
 
-.. code-block::
+.. code-block:: cpp
 
    SEQUENCE(11)
       DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
@@ -507,7 +508,7 @@ from crashing into it.
 For a known set of locos, the easy way is to define the startup process
 at the beginning of ROUTES , e.g. for two engines, one at each station
 
-.. code-block::
+.. code-block:: cpp
 
  // ensure all blocks are reserved as if the locos had arrived there
  RESERVE(1) // start with a loco in block 1
@@ -537,9 +538,8 @@ connected to the programming track power supply. Also that we have a
 signal (ie 3 leds) on the control panel connected where signal 27 would
 be .
 
-.. code-block::
+.. code-block:: cpp
 
- 
  SEQUENCE(99)
    SIGNAL(27,28,29)
    RED(27)   // indicate launch not ready

@@ -85,8 +85,32 @@ in the same folder as CommandStation-EX.ino, and adding in the scripts as follow
 
 Connecting your Arduino and pressing the Upload button in the usual way will save the file and upload your script into the Command Station.
 
-..
-  @KEBBIN need pic of Arduino IDE adding a myAutomation.h file with some example content taken from below maybe. 
+
+To create the myAutomation.h file in the Arduino IDE, use the pulldown button and select New Tab (or simply press Ctrl+Shift+N
+
+.. image:: ../_static/images/ex-rail/Setup1.jpg
+   :alt:  Setup pulldown button
+   :align: center
+   :scale: 100%
+
+.. image:: ../_static/images/ex-rail/Setup2.jpg
+   :alt:  Setup pulldown menu
+   :align: center
+   :scale: 100%
+
+Enter the file name "myAutomation.h" (This is case sensitive)
+
+.. image:: ../_static/images/ex-rail/Setup3.jpg
+   :alt:  Setup myAutomation.h
+   :align: center
+   :scale: 100%
+
+And type your script in, starting with EXRAIL and ending with ENDEXRAIL. 
+
+.. image:: ../_static/images/ex-rail/Setup4.jpg
+   :alt:  Setup Example file
+   :align: center
+   :scale: 100%
 
 
 Some Simple Examples  

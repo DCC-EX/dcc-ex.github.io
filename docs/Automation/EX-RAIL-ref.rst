@@ -1,33 +1,28 @@
-********************
+*********************
 EX-RAIL – Reference
-********************
+*********************
 
 Notes
 ========
 
 
-ROUTE, AUTOMATION and SEQUENCE use the same number space so a FOLLOW(n) command
-can be used for any of them.
+ROUTE, AUTOMATION and SEQUENCE use the same number space, so a FOLLOW(n) command can be used for any of them.
 
-Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH refer directly to
-Arduino pins and those handled by I2C expansion (@KEBBIN refer to Hal , ask neil).
+Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH refer directly to Arduino pins and those handled by I2C expansion.
 
-Signals also refer directkly to pins and the signal id (for RED/AMBER/GREEN) is
-is always the same as the red signal pin.
-(@KEBBIN Servo signals?) 
+.. @KEBBIN refer to Hal , ask neil
 
-Its OK to use sensor ids that have no physical item in the layout. These
-can only be LATCHED, tested(IF/IFNOT)  or UNLATCHED in the scripts. If a sensor is LATCHed
-by the script, it can only be UNLATCHed by the script… so AT(35) LATCH(35) for
-example effectively latches the sensor 35 on when detected once.
+Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is is always the same as the red signal pin.
+
+.. @KEBBIN Servo signals?
+
+Its OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches the sensor 35 on when detected once.
 
 
 COMMAND REFERENCE
 ==================
 
-There are some diagnostic and control commands added to the <tag>
-language normally used to control the command station over USB, Wifi or
-Ethermet.
+There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet.
 
 .. list-table:: 
     :widths: 25 75
@@ -54,8 +49,8 @@ Ethermet.
     * - </ UNLATCH id>
       - Unlock sensor
 
-@KEBBIN I think this table may need splitting or reordering  to
-group together stuff like Turnouts and signals
+.. @KEBBIN I think this table may need splitting or reordering to group together stuff like Turnouts and signals
+
 Routes and animations
 ======================
 

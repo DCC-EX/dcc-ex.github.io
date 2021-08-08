@@ -242,15 +242,15 @@ Adding a station signal to the loop script is extremely simple, but it does requ
    SIGNAL(77,78,79)  // see later for details
    AUTOMATION(4,"Round in circles")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
-      AT(40)     // when you get to sensor on pin (40)
+      AT(40)    // when you get to sensor on pin (40)
       STOP      // Stop the train 
       DELAYRANDOM(5000,20000) // delay somewhere between 5 and 20 seconds
-      GREEN(77)
-      DEALY(25)  // This is not Formula1!
-      FWD(30)   // start a bit slower
+      GREEN(77)    // set signal #77 to Green
+      DELAY(2500)  // This is not Formula1!
+      FWD(30)    // start a bit slower
       AFTER(40)  // until sensor on pin 40 has been passed
-      RED(77)
-      FOLLOW(4) // and continue to follow the automation
+      RED(77)    // set signal #77 to Red
+      FOLLOW(4)  // and continue to follow the automation
 
 Example 6: Single line shuttle
 *******************************
@@ -375,7 +375,7 @@ So… lets take a look at the routes now. For convenience I have used route numb
       RESERVE(3) // will STOP if block 3 occupied
       CLOSE(2) // Now we have the block, we can set turnouts
       FWD(20) // we may or may not have stopped at the RESERVE
-      AT(2) // sensor 2 is at the far end of platform B
+      AT(42) // sensor 2 is at the far end of platform B
       STOP
       FREE(2)
       DELAY(15000)
@@ -385,26 +385,26 @@ So… lets take a look at the routes now. For convenience I have used route numb
       RESERVE(4)
       THROW(2)
       REV(20)
-      AFTER(13)
+      AFTER(73)
       FREE(3)
-      AT(14)
+      AT(74)
       FOLLOW(41)
    
    SEQUENCE(41)
       RESERVE(1)
       CLOSE(1)
       REV(20)
-      AT(1)
+      AT(41)
       STOP
       FREE(4)
       FOLLOW(12) // follows Route 12 again… forever
 
 
-Does that look long? Worried about memory on your Arduino…. Well the script above takes about 100 BYTES of program memory and no dynamic.
+Does that look long? Worried about memory on your Arduino…. Well the script above takes about 100 BYTES of program memory and no dynamic SRAM!
 
-If you follow this carefully, it allows for up to 3 trains at a time because one of them will always have somewhere to go. Notice that there is common theme to this…
+If you follow this carefully, it allows for up to 3 trains at a time because one of them will always have somewhere to go. Notice that there is a common theme to this…
 
--  RESERVE where you want to go, if you are moving and the reserve    fails, your loco will STOP and the reserve waits for the block to become available. (these waits and the manual WAITS do not block the Arduino process… DCC and the other locos continue to follow their routes)
+-  RESERVE where you want to go, if you are moving and the reserve fails, your loco will STOP and the reserve waits for the block to become available. (these waits and the manual WAITS do not block the Arduino process… DCC and the other locos continue to follow their routes)
 
 -  Set the points to enter the reserved area.. do that ASAP as you may be still moving towards them. 
    
@@ -416,7 +416,7 @@ If you follow this carefully, it allows for up to 3 trains at a time because one
 
 -  Free off your previous reserve as soon as you have fully left the block
 
-In addition, it is possible to take decisions based on blocks reserved by other trains. The IFRESERVE(block) can be used to reserve a block if it not already reserved by some other train, or skip to the matching ENDIF. For example, this allows a train to choose which platform to stop at based on prior occupancy. It is features like this that allow for more interesting and unpredictable automations.       
+In addition, it is possible to take decisions based on blocks reserved by other trains. The IFRESERVE(block) can be used to reserve a block if it's not already reserved by some other train, or skip to the matching ENDIF. For example, this allows a train to choose which platform to stop at based on prior occupancy. It is features like this that allow for more interesting and unpredictable automations.       
 
 Starting the system
 ===================

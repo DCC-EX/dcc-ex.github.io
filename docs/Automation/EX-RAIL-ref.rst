@@ -128,6 +128,8 @@ Routes and animations
     - ESTOP all locos and PAUSE all OTHER EXRAIL tasks until RESUMEd
   * - POM(cv,value)
     - Write loco cv on main track
+  * -PRINT("msg")
+    - Writes a message to the serial monitor
   * - READ_LOCO
     - Read loco ID from prog track
   * - RED(signal_id)

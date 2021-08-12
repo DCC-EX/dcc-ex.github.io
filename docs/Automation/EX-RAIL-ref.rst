@@ -119,7 +119,9 @@ Routes and animations
   * - JOIN
     - Join prog track to main
   * - LATCH(sensor_id)
-    - Latch sensor ON (Sensors 0-255 only) 
+    - Latch sensor ON (Sensors 0-255 only)
+  * - LCD(row,"msg")
+    - Write message on LCD/OLED 
   * - ONCLOSE(turnout_id)
     - Catch closure of turnout
   * - ONTHROW(turnout_id)
@@ -128,7 +130,7 @@ Routes and animations
     - ESTOP all locos and PAUSE all OTHER EXRAIL tasks until RESUMEd
   * - POM(cv,value)
     - Write loco cv on main track
-  * -PRINT("msg")
+  * - PRINT("msg")
     - Writes a message to the serial monitor
   * - READ_LOCO
     - Read loco ID from prog track

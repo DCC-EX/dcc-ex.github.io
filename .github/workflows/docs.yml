@@ -10,10 +10,9 @@ on:
     branches: [ sphinx ]
   
 jobs:
-  build:
+  build_job:
 
     runs-on: macos-latest
-
     steps:
     - name: Requirements
       run: brew install sphinx-doc
@@ -27,6 +26,13 @@ jobs:
       run:  make github
         && echo 'dcc-ex.com' > docs/_build/html/CNAME
         && touch docs/_build/html/.nojekyll
+        
+  deploy_job:
+  
+    runs-on: macos-latest
+    if: github.ref != 'refs/heads/sphinx'
+    steps:
+    
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

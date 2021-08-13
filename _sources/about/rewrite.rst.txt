@@ -42,7 +42,7 @@ We added many new functions such as:
 * Developed a new browser based throttle (`WebThrottle-EX <../throttles/ex-webthrottle.html>`_)
 * New "DriveAway" feature to be able to recognize a loco on a siding used as a programming track and drive off of onto the main track
 
-... and so much more. 
+... and much more. 
 
 How did you do it?
 ====================

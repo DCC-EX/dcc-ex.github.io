@@ -1,5 +1,5 @@
 *******************
-WiFi Configuration
+Wifi Configuration
 *******************
 
 .. image:: ../_static/images/conductor.png
@@ -7,7 +7,7 @@ WiFi Configuration
    :scale: 50%
    :align: left
 
-Conductor level (Tinkerer if wiring an ESP instead of using a shield)
+Conductor Level (Tinkerer if wiring an ESP instead of using a shield)
 
 |
 

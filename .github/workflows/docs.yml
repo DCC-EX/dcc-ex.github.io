@@ -10,7 +10,7 @@ on:
     branches: [ sphinx ]
   
 jobs:
-  build_job:
+  build:
 
     runs-on: macos-latest
     steps:
@@ -25,15 +25,9 @@ jobs:
     - name: Build docs
       run:  make github
         && echo 'dcc-ex.com' > docs/_build/html/CNAME
-        && touch docs/_build/html/.nojekyll
-        
-  deploy_job:
-  
-    runs-on: macos-latest
-    if: github.ref == 'refs/heads/sphinx'
-    steps:
-    
+        && touch docs/_build/html/.nojekyll        
     - name: Deploy
+      if: github.ref == 'refs/heads/sphinx'
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

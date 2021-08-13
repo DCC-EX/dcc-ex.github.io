@@ -7,7 +7,7 @@ Wifi Configuration
    :scale: 50%
    :align: left
 
-Conductor Level (Tinkerer if wiring an ESP instead of using a shield)
+Conductor Level  (Tinkerer if wiring an ESP instead of using a shield)
 
 |
 

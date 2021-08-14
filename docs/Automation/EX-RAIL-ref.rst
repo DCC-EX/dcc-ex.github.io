@@ -160,9 +160,9 @@ Routes and animations
     - Same as SPEED(0)
   * - SIGNAL(red_pin,amber_pin,green_pin) 
     - Define a signal, Red_pin becomes signal_id for RED/AMBER/GREEN 
-  * - SERVO_TURNOUT(pin,activeAngle,inactiveAngle)
+  * - SERVO_TURNOUT(id,pin,activeAngle,inactiveAngle)
     - Define a servo turnout
-  * - PIN_TURNOUT(pin) 
+  * - PIN_TURNOUT(id,pin) 
     - Define a pin turnout
   * - THROW(id)
     - Throw a defined turnout

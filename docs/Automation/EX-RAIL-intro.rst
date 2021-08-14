@@ -174,7 +174,7 @@ Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMR
 ..
   (@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from WiThrottle which is useful if it is a facing turnout that will be automatically adjusted by your script to match its partner.)
 
-See the Reference section for TURNOUT definitions. 
+See the Reference section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
 
 
 Defining Signals

@@ -2,7 +2,7 @@
 Automation (EX-RAIL) 
 ********************
 
-Here is the home for DCC-EX Automation. 
+Welcome to the home for DCC-EX Automation, **EX-RAIL** is the "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 
 .. toctree::
     :maxdepth: 1

@@ -6,8 +6,14 @@ EX-RAIL Automation
 Introduction
 ==============
 
-EX-RAIL is an **EX**\panded **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage
-that can be easily used to describe sequential actions to automatically take place on your model layout.
+EX-RAIL is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
+that can be easily used to describe sequential actions to automatically take place on your model layout. To begin, let's define a few terms:
+
+**SEQUENCE** - Just a list if things to be done in order. These things might be to drive a train or merely to set some turnouts or flash some pretty lights. 
+
+**ROUTE** - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. 
+
+**AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let the sequence drive the train away, following each step in the sequence.
 
 
 Things You Can Do With EX-RAIL
@@ -68,7 +74,7 @@ The EX-RAIL code is surprisingly small and requires very little PROGMEM (memory 
 EX-RAIL automation is *much* (perhaps 2 orders of magnitude) more time efficient than the code required to process incoming requests from an external automation processor, or the contunuous polling of every sensor.
 
 The Automation Process
-******************************************
+=======================
 
 All routes, automations, etc step through a list of simple keywords until they reach a ``DONE`` keyword. 
 
@@ -90,10 +96,10 @@ Connecting your Arduino and pressing the Upload button in the usual way will sav
 
 
 Some Simple Examples  
-**********************************
+======================
 
 Example 1: Creating Routes for Engine Driver
-==============================================
+---------------------------------------------
 
 A typical Route might be used to set a sequence of turnouts in response to a single button in Engine Driver.
 The EX-RAIL instructions to do this might look like
@@ -138,7 +144,8 @@ Of course, you may want to add signals, and time delays
 
 
 Example 2: Automating Signals with Turnouts
-===========================================
+----------------------------------------------
+
 By intercepting a turnout change command, it's easy to automatically adjust signals or 
 automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE`` keyword to detect a particular turnout change:
 
@@ -162,7 +169,7 @@ automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE
 @Chris - I think the definition info might be best after the examples?
 
 Defining Turnouts
-*****************
+==================
 
 DCC-EX supports a number of different 
 turnout hardware configurations, but your automation treats them all
@@ -199,7 +206,7 @@ A RED/GREEN only signal may be created with a zero amber pin.
 
 
 Example 3: Automating various non-track items 
-==============================================
+-----------------------------------------------
 
 This normally takes place in a timed loop, for example alternate flashing of a fire engine's lights. To do this use a SEQUENCE.
 
@@ -218,7 +225,7 @@ Note, however, that this sequence will not start automatically: it must be start
 during the startup process (see later) using ``START(66)``.
 
 Example 4: Automating a train (simple loop)
-===========================================
+--------------------------------------------
 
 Start with something as simple as a single loop of track with a station and a 
 sensor (connected to pin 40 for this example) at the 
@@ -253,7 +260,7 @@ Notice that this automation does not specify the loco address. If you drive a lo
 and then hand it over to this automation, then the automation will run with the loco you last drove.
 
 Example 5: Signals in a train script
-====================================
+-------------------------------------
 
 Adding a station signal to the loop script is extremely simple, but it does require a mind-shift
 for some modellers who like to think in terms of signals being in 
@@ -278,7 +285,7 @@ and RED after you have passed it.
       FOLLOW(4) // and continue to follow the automation
 
 Example 6: Single line shuttle
-======================================
+-------------------------------
 
 Consider a single line, shuttling between stations A and B.
 
@@ -347,7 +354,8 @@ process to take whatever loco is placed on the programming track, and
 send it on its way to join in the fun!
 
 Example 7: Running multiple inter-connected trains
-==================================================
+---------------------------------------------------
+
 So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:
@@ -482,7 +490,7 @@ based on prior occupancy. It is features like this that allow for more interesti
 automations.       
 
 Starting the system
-===================
+====================
 
 Starting the system is tricky because we need to place the trains in a
 suitable position and set them off. We need to have a starting position

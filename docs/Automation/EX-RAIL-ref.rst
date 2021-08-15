@@ -1,6 +1,6 @@
-********************
+*********************
 EX-RAIL – Reference
-********************
+*********************
 
 Notes
 ========
@@ -12,7 +12,7 @@ can be used for any of them.
 Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH refer directly to
 Arduino pins and those handled by I2C expansion (@KEBBIN refer to Hal , ask neil).
 
-Signals also refer directkly to pins and the signal id (for RED/AMBER/GREEN) is
+Signals also refer directly to pins and the signal id (for RED/AMBER/GREEN) is
 is always the same as the red signal pin.
 (@KEBBIN Servo signals?) 
 
@@ -56,6 +56,7 @@ Ethermet.
 
 @KEBBIN I think this table may need splitting or reordering  to
 group together stuff like Turnouts and signals
+
 Routes and animations
 ======================
 

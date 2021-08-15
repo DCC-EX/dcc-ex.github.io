@@ -146,7 +146,9 @@ Routes and animations
   * - REV(speed)
     - Drive loco in reverse (see FWD)
   * - START(route)
-    - Start a new task along given route and handover loco
+    - Start a new task running route or sequence
+  * - SENDLOCO(loco,route)
+    - Start a new task to send loco along given route  
   * - SERVO(id,position,profile)
     - Move an animation servo. Do not use for Turnouts. (profile is one of  Instant, Fast, Medium, Slow or Bounce)
   * - SETLOCO(loco)

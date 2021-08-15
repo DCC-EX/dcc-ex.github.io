@@ -148,7 +148,7 @@ Routes and animations
   * - START(route)
     - Start a new task along given route and handover loco
   * - SERVO(id,position,profile)
-    - Move an animation servo. (Do not use for Turnouts)
+    - Move an animation servo. Do not use for Turnouts. (profile is one of  Instant, Fast, Medium, Slow or Bounce)
   * - SETLOCO(loco)
     - Set current loco id
   * - SET(output_pin)
@@ -159,8 +159,8 @@ Routes and animations
     - Same as SPEED(0)
   * - SIGNAL(red_pin,amber_pin,green_pin) 
     - Define a signal, Red_pin becomes signal_id for RED/AMBER/GREEN 
-  * - SERVO_TURNOUT(id,pin,activeAngle,inactiveAngle)
-    - Define a servo turnout
+  * - SERVO_TURNOUT(id,pin,activeAngle,inactiveAngle,profile)
+    - Define a servo turnout. (profile is one of  Instant, Fast, Medium, Slow or Bounce)
   * - PIN_TURNOUT(id,pin) 
     - Define a pin turnout
   * - THROW(id)

@@ -36,9 +36,9 @@ There are some diagnostic and control commands added to the <tag> language norma
     * - </ RESUME>
       - Resumes automation, Locos are restarted at speed when paused.
     * - </ >
-      - Displays EX-RAIL running thread information
+      - Displays EX-RAIL running task information
     * - </ START [loco] route>
-      - Starts a new thread to send loco onto route or Start a non-loco animation route
+      - Starts a new task to send loco onto route or Start a non-loco animation route
     * - </ RESERVE id>
       - Manually reserves a virtual track block.
     * - </ FREE id>
@@ -47,6 +47,9 @@ There are some diagnostic and control commands added to the <tag> language norma
       - Lock sensor ON                       
     * - </ UNLATCH id>
       - Unlock sensor
+    * - </ KILL id>
+      - Kills a task by id (use </> to list task ids) 
+
 
 .. @KEBBIN I think this table may need splitting or reordering to group together stuff like Turnouts and signals
 

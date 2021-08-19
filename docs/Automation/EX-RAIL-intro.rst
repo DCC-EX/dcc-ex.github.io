@@ -189,9 +189,6 @@ You may, however, find it more convenient to define turnouts using EX-RAIL comma
 
 Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 
-..
-  (@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from WiThrottle which is useful if it is a facing turnout that will be automatically adjusted by your script to match its partner.)
-
 See the :ref:`Reference<EX-RAIL – Reference>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
 
 
@@ -337,7 +334,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with TURNOUT commands.
+Assuming that you have defined your turnouts with :ref:`TURNOUT commands.<Routes, Automations & Sequences>`
 
 .. code-block:: cpp
 

@@ -209,21 +209,21 @@ Routes, Automations & Sequences
     -
   * - **--- Action output functions ---**
     -
-  * - AMBER(signal_id)
-    - Sets defined signal to amber 
-  * - CLOSE(turnout_id)
-    - close defined turnout
-  * - GREEN(signal_id)
-    - Set defined signal green
-  * - RED(signal_id)
-    - Set defined signal to red
-  * - RESET(output_pin)
-    - Zero an output pin. 
-  * - SERVO(id,position,profile)
-    - Move an animation servo. Do not use for Turnouts. (profile is one of  Instant, Fast, Medium, Slow or Bounce)
   * - SET(output_pin)
     - Set output pin HIGH
+  * - RESET(output_pin)
+    - Zero an output pin. 
+  * - CLOSE(turnout_id)
+    - close defined turnout
   * - THROW(id)
     - Throw a defined turnout
+  * - GREEN(signal_id)
+    - Set defined signal green
+  * - AMBER(signal_id)
+    - Sets defined signal to amber 
+  * - RED(signal_id)
+    - Set defined signal to red
+  * - SERVO(id,position,profile)
+    - Move an animation servo. Do not use for Turnouts. (profile is one of  Instant, Fast, Medium, Slow or Bounce)
 
 

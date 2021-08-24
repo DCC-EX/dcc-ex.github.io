@@ -90,28 +90,28 @@ We are going to replace this with a new motor board definition and select it. Co
   #define MOTOR_SHIELD_TYPE MY_MOTOR_SHIELD
 
 1. Replace "MY_MOTOR_SHIELD" in both instances with whatever name you like or just leave it as MY_MOTOR_SHIELD.
-::
 
 2. The first "new MotorDriver()" line defines your MAIN track, the second one is for your Programming track.
-::
 
 3. The format of the MotorDriver code is:
-::
+
+.. code ::
+
   MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)
 
 4. Enter the appropriate pin numbers on the Arduino you will connect to your motor board.
-::
+
 
 Let's look at the details of how this works, first here are all the configuration options:
 
 * **power_pin** - This goes to the EN (enable pin) of the motor board; it turns power on and off.
-- **signal_pin** - This is the pin that outputs the DCC signal and goes to the PWM input of the motor board. For boards that combine the signal into one pin, like the Arduino Motor Shield, you just need to enter the pin here and connect it to the single PWM pin on the motor board.
+* **signal_pin** - This is the pin that outputs the DCC signal and goes to the PWM input of the motor board. For boards that combine the signal into one pin, like the Arduino Motor Shield, you just need to enter the pin here and connect it to the single PWM pin on the motor board.
 * **signal_pin2** - If your motor board has a "left" and "right" or "CW" and "CCW" input, then this is the pin on the Arduino you want to use to output this half of the signal. The other half comes from the signal_pin mentioned above. If not used, it must be left set to "UNUSED_PIN".
-- **brake_pin** - If you were going to use the braking feature (for example to use a Railcom cutout), and have NOT cut the trace for this if one exists for your motor board, then you would enter this pin here. If not used, leave it set to "UNUSED_PIN".
+* **brake_pin** - If you were going to use the braking feature (for example to use a Railcom cutout), and have NOT cut the trace for this if one exists for your motor board, then you would enter this pin here. If not used, leave it set to "UNUSED_PIN".
 * **sense_pin** - This is the analog input pin on the Arduino that will get current sense information from the motor board. The programming track usually connects to A1, and main to A0. Important information about current sense is below.
-- **tripMilliamps** - This is the value for what current in mA will trip the overcurrent protection.
+* **tripMilliamps** - This is the value for what current in mA will trip the overcurrent protection.
 * **senseFactor** - This is the multiplier specific to your board or current sense circuit that converts the raw reading into track current in milliAmps. Important information about current sense is below.
-- **faultPin** - Some boards can report a fault condition, for example under-voltage or over-heating. If you want this feature, you can specify the Arduino digital pin here, and connect it to the fault output of the motor board.
+* **faultPin** - Some boards can report a fault condition, for example under-voltage or over-heating. If you want this feature, you can specify the Arduino digital pin here, and connect it to the fault output of the motor board.
 
 As another example let's create a motor board definition or a board that requires 2 PWM inputs and has the following specifications:
 

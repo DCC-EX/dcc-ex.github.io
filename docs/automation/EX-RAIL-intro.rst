@@ -2,7 +2,7 @@
 Introduction to EX-RAIL Automation
 ***********************************
 
-.. note:: EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on discord to participate in the beta and get the link to the EX-RAIL version of the software.
+.. attention:: EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on Discord to participate in the Beta, and get the link to the EX-RAIL version of the software.
 
 
 

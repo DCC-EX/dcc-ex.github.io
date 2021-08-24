@@ -99,10 +99,10 @@ Next see the `Get Started section <get-started/index.html>`_ or click next below
    get-started/index
    advanced-setup/index
    throttles/index
+   automation/index
    reference/index
    download/index
    projects/index
-   automation/index
    contributing/index
    roadmap/index
    support/index

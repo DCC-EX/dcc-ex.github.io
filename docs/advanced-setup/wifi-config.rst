@@ -279,7 +279,7 @@ Once you enter a network SSID and password, the CS will always try to connect to
 Clearing the ESP-WiFI SSID Settings
 ------------------------------------
 
-Open your serial monitor and wait until the CS has gone through the startup sequence. Then in the command textbox enter ``<+RESTORE>``and press "SEND".
+Open your serial monitor and wait until the CS has gone through the startup sequence. Then in the command textbox enter ``<+RESTORE>`` and press "SEND".
 
 You will then see an "Ok" message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the CS had WiFi credentials in it, then as soon as your CS restarts, it will load and save those settings again. So...
 

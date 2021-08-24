@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>EX-RAIL Automation &mdash; DCC++ EX  documentation</title>
+  <title>Introduction to EX-RAIL Automation &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -46,7 +46,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="EX-RAIL – Reference" href="EX-RAIL-ref.html" />
+    <link rel="next" title="Reference" href="EX-RAIL-ref.html" />
     <link rel="prev" title="Automation (EX-RAIL) BETA!" href="index.html" /> 
 </head>
 
@@ -140,8 +140,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Automation (EX-RAIL) BETA!</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">EX-RAIL Automation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-ref.html">EX-RAIL – Reference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to EX-RAIL Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-ref.html">Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
@@ -247,7 +247,7 @@
         
           <li><a href="index.html">Automation (EX-RAIL) BETA!</a> &raquo;</li>
         
-      <li>EX-RAIL Automation</li>
+      <li>Introduction to EX-RAIL Automation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -266,9 +266,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ex-rail-automation">
-<h1>EX-RAIL Automation<a class="headerlink" href="#ex-rail-automation" title="Permalink to this headline">¶</a></h1>
-<p>..NOTE: EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on discord to participate in the beta and get the link to the EX-RAIL version of the software.</p>
+  <div class="section" id="introduction-to-ex-rail-automation">
+<h1>Introduction to EX-RAIL Automation<a class="headerlink" href="#introduction-to-ex-rail-automation" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on discord to participate in the beta and get the link to the EX-RAIL version of the software.</p>
+</div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>EX-RAIL is an “<strong>EX</strong>tended <strong>R</strong>ailroad <strong>A</strong>utomation <strong>I</strong>nstruction <strong>L</strong>anguage”
@@ -324,7 +327,7 @@ that can easily be used to describe sequential actions to automatically take pla
 <div class="section" id="the-automation-process">
 <h2>The Automation Process<a class="headerlink" href="#the-automation-process" title="Permalink to this headline">¶</a></h2>
 <p>All routes, automations, etc step through a list of simple keywords until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.</p>
-<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-ref.html#ex-rail-reference"><span class="std std-ref">EX-RAIL – Reference</span></a></p>
+<p>For a full list of keywords, see <span class="xref std std-ref">EX-RAIL – Reference</span></p>
 <p>Automation scripts are added to your Command Station by creating a file called “myAutomation.h” in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">EXRAIL</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">scripts</span><span class="w"></span>
@@ -404,7 +407,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <p>DCC-EX supports a number of different turnout hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> commands from JMRI, or in <code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;T</span> <span class="pre">...&gt;&quot;)</span></code> commands or C++ code in mySetup.h, just like earlier versions.</p>
 <p>You may, however, find it more convenient to define turnouts using EX-RAIL commands, which may appear anywhere in the ‘myAutomation.h’ file, even after they are referenced in an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code>, <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code>, <code class="docutils literal notranslate"><span class="pre">THROW</span></code> or <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts defined in ‘myAutomation.h’ will still be visible to WiThrottle and JMRI in the normal way.</p>
-<p>See the <a class="reference internal" href="EX-RAIL-ref.html#ex-rail-reference"><span class="std std-ref">Reference</span></a> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
+<p>See the <span class="xref std std-ref">Reference</span> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
 </div>
 <div class="section" id="defining-signals">
 <h2>Defining Signals<a class="headerlink" href="#defining-signals" title="Permalink to this headline">¶</a></h2>
@@ -705,7 +708,7 @@ number. So now our route looks like this:</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="EX-RAIL-ref.html" class="btn btn-neutral float-right" title="EX-RAIL – Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="EX-RAIL-ref.html" class="btn btn-neutral float-right" title="Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Automation (EX-RAIL) BETA!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

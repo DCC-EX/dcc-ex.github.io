@@ -11,14 +11,14 @@ Software
 DCC++ EX Command Station 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Develop Hardware Abstraction Layer (HAL) to allow for snap-in modules for different hardware and accessories. We will be both processor and input/output agnostic. Switches, lights, servos,etc. will all go through the same interface
-* Add support for an ESP-32 or Equivalent to get rid of resource limitations
-* Remove need to have any conditional compilation of features. This means the binary can be built and downloaded directly without a compiler or IDE. Customisation can take place through the command language API and mySetup.h
+* Develop a Hardware Abstraction Layer (HAL) to allow for snap-in modules for different hardware and accessories. We will be both processor and input/output agnostic. Switches, lights, servos, etc, will all go through the same interface.
+* Add support for an ESP-32 or equivalent to remove resource limitations.
+* Remove need to have any conditional compilation of features. This means the binary can be built and downloaded directly without a compiler or IDE. Customisation can take place through the command language API and mySetup.h file.
 * Program the WiFi solution with our own code that implements a “true” network connection, still has the AT command set, and can handle at least 12 sockets.
-* Upgrade the WiFi option with possible ESP32 containing custom AT firmware with possible Ethernet upgrade and Web Interface for configuration and/or control
+* Upgrade the WiFi option with possible ESP32 containing custom AT firmware with possible Ethernet upgrade and Web Interface for configuration and/or control.
 * OpenMRN on a co-processor?
-* Multiple simultaneous Motor Driver support (beyond the 2 we currently support)
-* Add EX-RAIL "Extended Railroad Automation Interface for Layouts". Automate your layout with a simple script.
+* Multiple simultaneous Motor Driver support (beyond the 2 we currently support).
+* Add EX-RAIL "Extended Railroad Automation Instruction Language". Automate your layout with a simple script.
 
 DCCInspector-EX
 ^^^^^^^^^^^^^^^^^
@@ -43,12 +43,12 @@ New all-in-one DCC-EX Command Station
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   * Provide a self-contained, yet expandable custom developed Command Station Features (perhaps revive FireBox)
-  * Based on a powerful processor to be chosen from ESP32, Teensy, Xtensa, SAMC21, etc.
+  * Based on a powerful processor to be chosen from ESP32, Teensy, Xtensa, SAMC21, etc
   * At least 20 GPIO Pins
   * More efficient, higher current capacity Motor Driver chip or independent MOSFETS
-  * Dual H-Bridge with sustained current of 5A, peaks to 10.
-  * Processor should have at least 2 - 12bit ADCs for current sense
-  * High-Side current sense with amplifier for measurements down to 10mA on the service track.
+  * Dual H-Bridge with sustained current of 5A, peaks to 10
+  * Processor should have at least 2 x 12bit ADCs for current sense
+  * High-Side current sense with amplifier for measurements down to 10mA on the service track
   * Track voltage reading from a resistor voltage divider
   * One USB with 3 or more additional UARTS (hardware serial ports)
   * Computer Interface using the USB port (USB-C or B. Micro too flimsy)
@@ -60,7 +60,7 @@ New all-in-one DCC-EX Command Station
   * I2C, CAN and SPI onboard
   * Add RailCom support - Combine main and prog RX signals
   * Add Layout Bus support for LCC
-  * Work with Smart Hobby to release LCN (layout control nodes)
+  * Work with Smart Hobby to release LCN (Layout Control Nodes)
   * Define footprint or header(s) for options/add-ons/FireBits
   * Accessible reset button
   * Standard interconnect for pluggable expansion options

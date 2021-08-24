@@ -74,7 +74,7 @@ In AP mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides
 
 If you travel to shows, or take your setup to a friend's house, this allows for an autonomous, transportable system that does not need a connection to, and hopefully will not interfere with, other networks. 
 
-.. NOTE:: In this mode there is no connection to the Internet for any of the devices that are only connected to the AP. It simply provides a private network to allow a direct connection to your throttles.
+.. note:: In this mode there is no connection to the Internet for any of the devices that are only connected to the AP. It simply provides a private network to allow a direct connection to your throttles.
 
 (Remember you can click on images to enlarge them)
 
@@ -118,7 +118,7 @@ You will need to know:
 * The SSID or Server name to connect to (**DCCEX_xxxxxx** where the x's are the last 6 digits of your device' MAC address)
 * The password (Unless you change it in config.h, your local WiFi password.)  Its default is **PASS_xxxxxx** where the x's are the last 6 digits of your device' MAC address)
 
-.. Note:: All of this information is displayed in the startup log if you connect the CS to a serial monitor. The IP address and port also appear on the optional LCD or OLED display.
+.. note:: All of this information is displayed in the startup log if you connect the CS to a serial monitor. The IP address and port also appear on the optional LCD or OLED display.
 
 Whenever you connect a USB cable and open the serial monitor, you reset the program running on your CS. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
 
@@ -153,13 +153,13 @@ You should see a new network that begins with "DCCEX" like this example: ``DCCEX
 
 Simply click on that network and connect to it on your mobile device. You will need to enter the password you specified in the config.h file. If you did not enter one, the default will be **PASS_xxxxxx** where "xxxxxx" are the same last 6 digits of your device's MAC address displayed in the SSID like this example: ``PASS_6e321b``
 
-.. Note:: The last 6 letters and numbers of your AP name and default password will be specific to your WiFi board, and uniquely identify it. They are the last 6 letters of that device's MAC address. You can always find it in the log or by simply looking at the DCCEX_xxxxxx SSID name in your list of available networks.
+.. note:: The last 6 letters and numbers of your AP name and default password will be specific to your WiFi board, and uniquely identify it. They are the last 6 letters of that device's MAC address. You can always find it in the log or by simply looking at the DCCEX_xxxxxx SSID name in your list of available networks.
 
 Ignore the warning that may pop up telling you that "Internet may not be available". The CS is not connected to the internet, and you are connecting ro the CS directly from your mobile device for the purpose of controlling trains, not surfing the web. Depending on the config and OS of your mobile device, you may still have internet access over mobile data through a cell tower connection. If you wish to use your home network internet (for example, if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
 Once you are connected to the CS with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the `Decoder Test <../reference/software/command-reference.html#decoder-test>`_ section of the Command Reference. 
 
-.. Note:: Your Mobile Throttle function keys are user defined default function keys, not the function keys you used in either JMRI or Rocrail engine roster function keys.
+.. note:: Your Mobile Throttle function keys are user defined default function keys, not the function keys you used in either JMRI or Rocrail engine roster function keys.
 
 **Once again:**
 
@@ -170,7 +170,7 @@ Once you are connected to the CS with your cell phone, you can run your WiFi Thr
 
 **All this information appears in the startup log when connected using a serial monitor, in case you forget.**
 
-.. Note:: If you experience dropped connections to the AP, turn off the Auto-connect feature on your phone to prevent it from randomly disconnecting from the AP and connecting to your home router because it thinks it's a better connection. You can also "Forget" the connection it wants to switch to and then manually connect to that network when you need it.
+.. note:: If you experience dropped connections to the AP, turn off the Auto-connect feature on your phone to prevent it from randomly disconnecting from the AP and connecting to your home router because it thinks it's a better connection. You can also "Forget" the connection it wants to switch to and then manually connect to that network when you need it.
 
 
 Connecting to your Network - Station Mode "STA" (edit config.h)
@@ -278,8 +278,8 @@ Once you enter a network SSID and password, the CS will always try to connect to
 
 Clearing the ESP-WiFI SSID Settings
 ------------------------------------
-Open your serial monitor and wait until the CS has gone through the startup sequence. 
-Then in the command textbox enter ``<+RESTORE>``and press "SEND".
+
+Open your serial monitor and wait until the CS has gone through the startup sequence. Then in the command textbox enter ``<+RESTORE>`` and press "SEND".
 
 You will then see an "Ok" message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the CS had WiFi credentials in it, then as soon as your CS restarts, it will load and save those settings again. So...
 

@@ -2,7 +2,7 @@
 EX-RAIL Reference
 *********************
 
-.. note:: EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on discord to participate in the beta and get the link to the EX-RAIL version of the software.
+.. attention:: EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on Discord to participate in the Beta, and get the link to the EX-RAIL version of the software.
 
 
 Notes
@@ -15,7 +15,7 @@ Notes
 
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
 
-- Its OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once.
+- It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once.
 
 - All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
 
@@ -24,13 +24,15 @@ Notes
 Command Reference
 ==================
 
+.. hint:: Scroll the tables across to view entire contents of two columns!  <--->
+
 Diagnostics & Control
 ----------------------
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. 
 
 .. list-table:: 
-    :widths: 25 75
+    :widths: 30 70
     :header-rows: 1
 
     * - *Command*
@@ -43,6 +45,8 @@ There are some diagnostic and control commands added to the <tag> language norma
       - Resumes all automation - all locos are restarted at speed when paused
     * - </ >
       - Displays EX-RAIL running task information
+    * - </ ROUTES>
+      - Returns the Routes & Automations control list in WiThrottle format. **JMRI integration only!**
     * - </ START [loco_addr ]route_id>
       - Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
     * - </ KILL task_id>

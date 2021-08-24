@@ -268,9 +268,9 @@
             
   <div class="section" id="ex-rail-reference">
 <h1>EX-RAIL Reference<a class="headerlink" href="#ex-rail-reference" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on discord to participate in the beta and get the link to the EX-RAIL version of the software.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on Discord to participate in the Beta, and get the link to the EX-RAIL version of the software.</p>
 </div>
 <div class="section" id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
@@ -278,7 +278,7 @@
 <li><p><em>ROUTE</em>, <em>AUTOMATION</em> and <em>SEQUENCE</em> use the same ID number space, so a <code class="docutils literal notranslate"><span class="pre">FOLLOW(n)</span></code> command can be used for any of them.</p></li>
 <li><p>Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH refer directly to Arduino pins, and those handled by I2C expansion.</p></li>
 <li><p>Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.</p></li>
-<li><p>Its OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so <code class="docutils literal notranslate"><span class="pre">AT(35)</span> <span class="pre">LATCH(35)</span></code> for example, effectively latches sensor 35 on when detected once.</p></li>
+<li><p>It’s OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so <code class="docutils literal notranslate"><span class="pre">AT(35)</span> <span class="pre">LATCH(35)</span></code> for example, effectively latches sensor 35 on when detected once.</p></li>
 <li><p>All IDs used in commands and functions will be numbers, or an ALIAS name if configured.</p></li>
 </ul>
 <div class="line-block">
@@ -287,13 +287,17 @@
 </div>
 <div class="section" id="command-reference">
 <h2>Command Reference<a class="headerlink" href="#command-reference" title="Permalink to this headline">¶</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Scroll the tables across to view entire contents of two columns!  &lt;—&gt;</p>
+</div>
 <div class="section" id="diagnostics-control">
 <h3>Diagnostics &amp; Control<a class="headerlink" href="#diagnostics-control" title="Permalink to this headline">¶</a></h3>
 <p>There are some diagnostic and control commands added to the &lt;tag&gt; language normally used to control the Command Station over USB, WiFi or Ethernet.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col style="width: 30%" />
+<col style="width: 70%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><em>Command</em></p></th>
@@ -313,22 +317,25 @@
 <tr class="row-odd"><td><p>&lt;/ &gt;</p></td>
 <td><p>Displays EX-RAIL running task information</p></td>
 </tr>
-<tr class="row-even"><td><p>&lt;/ START [loco_addr ]route_id&gt;</p></td>
+<tr class="row-even"><td><p>&lt;/ ROUTES&gt;</p></td>
+<td><p>Returns the Routes &amp; Automations control list in WiThrottle format. <strong>JMRI integration only!</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;/ START [loco_addr ]route_id&gt;</p></td>
 <td><p>Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence</p></td>
 </tr>
-<tr class="row-odd"><td><p>&lt;/ KILL task_id&gt;</p></td>
+<tr class="row-even"><td><p>&lt;/ KILL task_id&gt;</p></td>
 <td><p>Kills a currently running script task by ID (use <code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">&gt;</span></code> to list task IDs)</p></td>
 </tr>
-<tr class="row-even"><td><p>&lt;/ RESERVE block_id&gt;</p></td>
+<tr class="row-odd"><td><p>&lt;/ RESERVE block_id&gt;</p></td>
 <td><p>Manually reserves a virtual track Block</p></td>
 </tr>
-<tr class="row-odd"><td><p>&lt;/ FREE block_id&gt;</p></td>
+<tr class="row-even"><td><p>&lt;/ FREE block_id&gt;</p></td>
 <td><p>Manually frees a virtual track Block</p></td>
 </tr>
-<tr class="row-even"><td><p>&lt;/ LATCH sensor_id&gt;</p></td>
+<tr class="row-odd"><td><p>&lt;/ LATCH sensor_id&gt;</p></td>
 <td><p>Lock sensor ON, preventing external influence</p></td>
 </tr>
-<tr class="row-odd"><td><p>&lt;/ UNLATCH sensor_ID&gt;</p></td>
+<tr class="row-even"><td><p>&lt;/ UNLATCH sensor_ID&gt;</p></td>
 <td><p>Unlock sensor, returning to current external state</p></td>
 </tr>
 </tbody>
@@ -586,7 +593,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, Fred Decker, Mani Kumar.
+        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
 
     </p>
   </div>

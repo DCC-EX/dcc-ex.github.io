@@ -274,7 +274,7 @@
 <div class="line"><br /></div>
 </div>
 <p>Do you need it? Most likely, you don’t. But if you run into a problem with a particular decoder and all the usual settings don’t help, you may want to try this mode. We have found that some older decoders do not adhere to the NMRA specification tolerances. They can fail to read bits that are within the proper range. While rare, this could occur. The High Accuracy mode makes the waveform, the pulse train of 1’s and 0’s, even tighter to the nominal values in the specification.</p>
-<p>The nominal spec asks for 58us 1 bits and 100us 0 bits with a few microseconds leeway in either direction. We opted to use 116us 0 bits since it is exactly twice a 1 bit and made it easy for us to use one timer to generate both bits. On occasion, with all the other things going on inside the command station, and the way we use timers and interrupts in normal accuracy mode, it is possible for there also to be a little jitter. That’s when the bit durations from bit to bit can vary a few microseconds. High Accuracy Mode uses the hardware timers instead of just our software routine, to tighten up any jitter.</p>
+<p>The nominal spec asks for 58us ‘1’ bits and 100us ‘0’ bits, with a few microseconds leeway in either direction. We opted to use 116us ‘0’ bits since it is exactly twice a ‘1’ bit, and made it easy for us to use one timer to generate both bits. On occasion, with all the other things going on inside the command station, and the way we use timers and interrupts in normal accuracy mode, it is possible for there also to be a little jitter. That’s when the bit durations from bit to bit can vary a few microseconds. High Accuracy Mode uses the hardware timers instead of just our software routine, to tighten up any jitter.</p>
 <p>For this to work, you need two things:</p>
 <ul class="simple">
 <li><p>The signal pin for the track you want to have high accuracy must be a Timer1 pin</p></li>
@@ -282,25 +282,25 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You do not have to do anything to enable High Accuracy Waveform Mode. If your motor board config meets the above two criterion, it will be enabled automatically and report that in the serial monitor boot log.</p>
+<p>You do not have to do anything to enable High Accuracy Waveform Mode. If your motor board config meets the above two criteria, it will be enabled automatically and report that in the serial monitor boot log.</p>
 </div>
 <div class="section" id="the-motor-board-config">
 <h2>The Motor Board Config<a class="headerlink" href="#the-motor-board-config" title="Permalink to this headline">¶</a></h2>
 <p>You will notice that your motor driver type is set in the <em>config.h</em> file. This line sets a standard motor shield compatible with the Arduino Motor Shield:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
 </pre></div>
 </div>
 <p>Whether called Motor “boards” or “shields” or “drivers”, they are defined in the <em>MotorDrivers.h</em> file and look like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define STANDARD_MOTOR_SHIELD F(&quot;STANDARD_MOTOR_SHIELD&quot;), \</span>
-  <span class="n">new</span> <span class="n">MotorDriver</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">,</span> <span class="n">A0</span><span class="p">,</span> <span class="mf">2.99</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">),</span> \
-  <span class="n">new</span> <span class="n">MotorDriver</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="mf">2.99</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="n">UNUSED_PIN</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define STANDARD_MOTOR_SHIELD F(&quot;STANDARD_MOTOR_SHIELD&quot;), \</span>
+<span class="cp">  new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN), \</span>
+<span class="cp">  new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)</span>
 </pre></div>
 </div>
 <p>The first line after setting the name and display text is for the Main (operations) track and the next line is for the programming (service) track. The parameters are as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MotorDriver</span><span class="p">(</span><span class="n">power_pin</span><span class="p">,</span> <span class="n">signal_pin</span><span class="p">,</span> <span class="n">signal_pin2</span><span class="p">,</span> <span class="n">brake_pin</span><span class="p">,</span> <span class="n">current_pin</span><span class="p">,</span> <span class="n">senseFactor</span><span class="p">,</span> <span class="n">tripMilliamps</span><span class="p">,</span> <span class="n">faultPin</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MotorDriver</span><span class="p">(</span><span class="n">power_pin</span><span class="p">,</span><span class="w"> </span><span class="n">signal_pin</span><span class="p">,</span><span class="w"> </span><span class="n">signal_pin2</span><span class="p">,</span><span class="w"> </span><span class="n">brake_pin</span><span class="p">,</span><span class="w"> </span><span class="n">current_pin</span><span class="p">,</span><span class="w"> </span><span class="n">senseFactor</span><span class="p">,</span><span class="w"> </span><span class="n">tripMilliamps</span><span class="p">,</span><span class="w"> </span><span class="n">faultPin</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (ex: IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise or LPWM and RPWM for left and right pulse width. If you want to use two pins so that you don’t need a transister or integrated circuit inverter to take one output from the CS and split it into two, then you can’t use the high accuracy waveform.</p>
+<p>Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (e.g. IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise, or LPWM and RPWM for left and right pulse width modulation. If you want to use two pins, so that you don’t need a transister or integrated circuit inverter to take one output from the CS and split it into two, then you can’t use the high accuracy waveform.</p>
 <p>If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit shown below, you can use the high accuracy mode.</p>
 <p>You must choose signal pins from the following list for your Arduino:</p>
 <div class="line-block">
@@ -309,15 +309,15 @@
 <div class="line">Nano - 9 and 10</div>
 </div>
 <p>By luck, two of the Mega pins associated with Timer 1 are directly under the DIRA and DIRB pins of an Arduino Motor Shield or pin compatible shield; pins 12 and 13. Therefore, the combination of a Mega and this shield will automatically use high accuracy for both tracks.</p>
-<p>However, an Uno’s pins do not line up with this shield. In order to use high accuracy mode, you would have to change the signal pin assignements and use a jumper wire.</p>
+<p>However, an Uno’s pins do not line up with this shield. In order to use high accuracy mode, you would have to change the signal pin assignments and use a jumper wire.</p>
 </div>
 <div class="section" id="inverter-circuit">
 <h2>Inverter Circuit<a class="headerlink" href="#inverter-circuit" title="Permalink to this headline">¶</a></h2>
-<p>Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM Signal from your CS, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.</p>
+<p>Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your CS, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.</p>
 <div class="figure align-default">
 <a class="reference internal image-reference" href="../_images/inverter1.jpg"><img alt="Transistor inverter circuit" src="../_images/inverter1.jpg" style="width: 449.4px; height: 224.0px;" /></a>
 </div>
-<p>You will also have to make sure that you use a motor board definition that uses pin 11, 12 or 13 for the output signal on a Mega or pin 9 or 10 for an Uno or Nano. For information about how to do this see the section on <a class="reference external" href="motor-board-config.html#your-board-is-not-in-the-supported-list">Creating a motor board definition</a></p>
+<p>You will also have to make sure that you use a motor board definition that uses pin 11, 12, or 13 for the output signal on a Mega, or pin 9 or 10 for an Uno or Nano. For information about how to do this, see the section on <a class="reference external" href="motor-board-config.html#your-board-is-not-in-the-supported-list">Creating a motor board definition</a>.</p>
 </div>
 </div>
 
@@ -335,7 +335,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, Fred Decker, Mani Kumar.
+        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
 
     </p>
   </div>

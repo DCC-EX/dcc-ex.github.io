@@ -11,7 +11,7 @@ To automatically run commands at start up, a new file can be created called `myS
 Make sure you are running the Arduino IDE
 =========================================
 
-This will need to be done in the `Arduino-IDE <../get-started/arduino-ide.html>`_ so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the `Arduino-IDE <../get-started/arduino-ide.html>`_, so first make sure you have followed these steps to load up the Arduino IDE.
 
 
 Create a new tab
@@ -45,7 +45,7 @@ Within the new file that has been created, you can add in the commands that you 
 
    <D ACK MIN 2600>
 
-Then you would need to enter into the `mySetup.h` file.:
+Then you would need to enter into the `mySetup.h` file:
 
 .. code-block:: none
 
@@ -65,7 +65,7 @@ If you need to have multiple commands run at start up, you will need to enter ea
    SETUP("<0>"); // tracks off at startup
    SETUP("<D CMD 0>"); // can be set to ON for testing in the serial monitor
 
-Here you can add comments on each line, these can be added by using the double forward slash character ``//`` and then your comments. This makes it easier to understand why you added these start up commands.
+Here you can add comments on each line, these can be added by using the double forward slash character ``//`` and then your comments. This makes it easier to remember why you added these start up commands.
 
 Upload the new version of the software
 ======================================

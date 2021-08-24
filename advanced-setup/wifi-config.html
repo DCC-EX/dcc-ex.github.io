@@ -485,8 +485,7 @@ If you don’t change this setting and start up in AP mode instead, the default 
 <p>Once you enter a network SSID and password, the CS will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.</p>
 <div class="section" id="clearing-the-esp-wifi-ssid-settings">
 <h3>Clearing the ESP-WiFI SSID Settings<a class="headerlink" href="#clearing-the-esp-wifi-ssid-settings" title="Permalink to this headline">¶</a></h3>
-<p>Open your serial monitor and wait until the CS has gone through the startup sequence.
-Then in the command textbox enter <a href="#id7"><span class="problematic" id="id8">``</span></a>&lt;+RESTORE&gt;``and press “SEND”.</p>
+<p>Open your serial monitor and wait until the CS has gone through the startup sequence. Then in the command textbox enter <a href="#id7"><span class="problematic" id="id8">``</span></a>&lt;+RESTORE&gt;``and press “SEND”.</p>
 <p>You will then see an “Ok” message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the CS had WiFi credentials in it, then as soon as your CS restarts, it will load and save those settings again. So…</p>
 </div>
 <div class="section" id="if-you-want-to-run-in-ap-mode">

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>DCC-EX Roadmap &mdash; DCC++ EX  documentation</title>
+  <title>Automation (EX-RAIL) &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -45,9 +45,7 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Support" href="../support/index.html" />
-    <link rel="prev" title="Contact us" href="../contributing/contactus.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,7 +93,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/levels.html">Levels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/assembly.html">Assembly</a></li>
@@ -183,7 +181,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributing/contactus.html">Contact us</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/index.html">DCC-EX Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../support/create-ticket.html">Submit a Support Ticket</a></li>
 </ul>
@@ -240,13 +238,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>DCC-EX Roadmap</li>
+      <li>Automation (EX-RAIL)</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/roadmap/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Automation/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -259,85 +257,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dcc-ex-roadmap">
-<h1>DCC-EX Roadmap<a class="headerlink" href="#dcc-ex-roadmap" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>2021<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="software">
-<h3>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="dcc-ex-command-station">
-<h4>DCC++ EX Command Station<a class="headerlink" href="#dcc-ex-command-station" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>Develop a Hardware Abstraction Layer (HAL) to allow for snap-in modules for different hardware and accessories. We will be both processor and input/output agnostic. Switches, lights, servos, etc, will all go through the same interface.</p></li>
-<li><p>Add support for an ESP-32 or equivalent to remove resource limitations.</p></li>
-<li><p>Remove need to have any conditional compilation of features. This means the binary can be built and downloaded directly without a compiler or IDE. Customisation can take place through the command language API and mySetup.h file.</p></li>
-<li><p>Program the WiFi solution with our own code that implements a “true” network connection, still has the AT command set, and can handle at least 12 sockets.</p></li>
-<li><p>Upgrade the WiFi option with possible ESP32 containing custom AT firmware with possible Ethernet upgrade and Web Interface for configuration and/or control.</p></li>
-<li><p>OpenMRN on a co-processor?</p></li>
-<li><p>Multiple simultaneous Motor Driver support (beyond the 2 we currently support).</p></li>
-<li><p>Add EX-RAIL “Extended Railroad Automation Instruction Language”. Automate your layout with a simple script.</p></li>
+  <div class="section" id="automation-ex-rail">
+<h1>Automation (EX-RAIL)<a class="headerlink" href="#automation-ex-rail" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the home for DCC-EX Automation, <strong>EX-RAIL</strong> is the “<strong>EX</strong>tended <strong>R</strong>ailroad <strong>A</strong>utomation <strong>I</strong>nstruction <strong>L</strong>anguage”</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EX-RAIL-intro.html">EX-RAIL Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EX-RAIL-ref.html">EX-RAIL – Reference</a></li>
 </ul>
-</div>
-<div class="section" id="dccinspector-ex">
-<h4>DCCInspector-EX<a class="headerlink" href="#dccinspector-ex" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>Add other report formatting options</p></li>
-</ul>
-</div>
-<div class="section" id="webthrottle-ex">
-<h4>WebThrottle-EX<a class="headerlink" href="#webthrottle-ex" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>Add Turnout support</p></li>
-<li><p>Add capability to use as an installer/updater/configurer for DCC++ EX</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="hardware">
-<h3>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="new-motor-shield">
-<h4>New Motor shield<a class="headerlink" href="#new-motor-shield" title="Permalink to this headline">¶</a></h4>
-</div>
-<div class="section" id="new-all-in-one-dcc-ex-command-station">
-<h4>New all-in-one DCC-EX Command Station<a class="headerlink" href="#new-all-in-one-dcc-ex-command-station" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><ul class="simple">
-<li><p>Provide a self-contained, yet expandable custom developed Command Station Features (perhaps revive FireBox)</p></li>
-<li><p>Based on a powerful processor to be chosen from ESP32, Teensy, Xtensa, SAMC21, etc</p></li>
-<li><p>At least 20 GPIO Pins</p></li>
-<li><p>More efficient, higher current capacity Motor Driver chip or independent MOSFETS</p></li>
-<li><p>Dual H-Bridge with sustained current of 5A, peaks to 10</p></li>
-<li><p>Processor should have at least 2 x 12bit ADCs for current sense</p></li>
-<li><p>High-Side current sense with amplifier for measurements down to 10mA on the service track</p></li>
-<li><p>Track voltage reading from a resistor voltage divider</p></li>
-<li><p>One USB with 3 or more additional UARTS (hardware serial ports)</p></li>
-<li><p>Computer Interface using the USB port (USB-C or B. Micro too flimsy)</p></li>
-<li><p>5V Operation through a 5V regulator, 1A output</p></li>
-<li><p>3.3V Operation through a 3.3V regulator, 800 mA output</p></li>
-<li><p>Manufactured in different countries with partners</p></li>
-<li><p>WiFi, Bluetooth onboard</p></li>
-<li><p>Use ESP32 as WiFi and optional Ethernet bridge using AT commands</p></li>
-<li><p>I2C, CAN and SPI onboard</p></li>
-<li><p>Add RailCom support - Combine main and prog RX signals</p></li>
-<li><p>Add Layout Bus support for LCC</p></li>
-<li><p>Work with Smart Hobby to release LCN (Layout Control Nodes)</p></li>
-<li><p>Define footprint or header(s) for options/add-ons/FireBits</p></li>
-<li><p>Accessible reset button</p></li>
-<li><p>Standard interconnect for pluggable expansion options</p></li>
-<li><p>Display?</p></li>
-<li><p>SDCard?</p></li>
-<li><p>Snap on Raspberry Pi to run JMRI?</p></li>
-</ul>
-</div></blockquote>
-</div>
-<div class="section" id="firebit-modules">
-<h4>Firebit Modules<a class="headerlink" href="#firebit-modules" title="Permalink to this headline">¶</a></h4>
-<p>Based on standard interconnect created for the CS, examples would be separate co-processors, boosters, motor controllers, etc.</p>
-</div>
-</div>
-<div class="section" id="outreach-partnering-evangelizing">
-<h3>Outreach/Partnering/Evangelizing<a class="headerlink" href="#outreach-partnering-evangelizing" title="Permalink to this headline">¶</a></h3>
-<p>Work with other manufacturers to get their hardware, accessories, motor shields, etc. to market and to gain support for DCC++ EX. Add more throttles to the list that support DCC++ directly or through JMRI.</p>
-</div>
 </div>
 </div>
 
@@ -346,10 +273,6 @@
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../support/index.html" class="btn btn-neutral float-right" title="Support" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../contributing/contactus.html" class="btn btn-neutral float-left" title="Contact us" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 

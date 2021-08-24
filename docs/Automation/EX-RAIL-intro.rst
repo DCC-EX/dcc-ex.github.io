@@ -7,13 +7,15 @@ Introduction
 ==============
 
 EX-RAIL is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
-that can be easily used to describe sequential actions to automatically take place on your model layout. To begin, let's define a few terms:
+that can easily be used to describe sequential actions to automatically take place on your model layout. These actions are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. EX-RAIL will then run automatically on CS startup.
 
-**SEQUENCE** - Just a list if things to be done in order. These things might be to drive a train or merely to set some turnouts or flash some pretty lights. 
+To begin, let's define a few terms:
+
+**SEQUENCE** - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 
 **ROUTE** - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. 
 
-**AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let the sequence drive the train away, following each step in the sequence.
+**AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence.
 
 .. sidebar:: A note from the Author
 
@@ -34,28 +36,35 @@ that can be easily used to describe sequential actions to automatically take pla
 Things You Can Do With EX-RAIL
 ====================================
 
-- Create "Routes" which set multiple turnouts and signals at the press of a button in Engine Driver (other WiThrottle-compatible throttles are available)
+- Create "Routes" which set multiple turnouts and signals at the press of a button in EngineDriver (other WiThrottle-compatible throttles are available)
+- Animate accessories such as lights, crossings, or cranes using "Sequences"
+- Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up "Automations"
+- Drive trains manually, and hand a train over to an Automation
 - Intercept turnout changes to automatically adjust signals or other turnouts
-- Animate accessories such as lights, crossings, or cranes
-- Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers
-- Drive trains manually, and hand a train over to an automation
+- Turn on the coffee pot when the train reaches the station
 
 What You Don't Need
 ====================
 
-- You DON'T need JMRI or any additional utilities, other than the Arduino IDE.
-- You DON'T need knowledge of C++ or Python/Jython programming.
+While extra functionality may be attained by using additional tools and applications, to get the benefit of EX-RAIL you don't need anything more than a *DCC-EX Command Station, and the Arduino IDE* used to configure it.
+
+You DON'T need:
+
+- JMRI, or any additional utilities
+- EngineDriver, or any other WiThrottle app
+- A separate computer living under your layout
+- Knowledge of C++ or Python/Jython programming
 
 How It Works
 =============
 
-A small amount of code in the CS (The EX-RAIL executor), lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don't have to be a programmer and you don't have to learn code. You simply add your own Automation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.
+A small amount of code in the CS, the EX-RAIL executor, lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don't have to be a programmer and you don't have to learn code. You simply add your own myAutomation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.
 
-The EX-RAIL code is surprisingly small and requires very little PROGMEM (memory that holds the program code) or SRAM (the runtime workspace that stores variables and things the program needs) to operate. You will need a Mega for your CS; the UNO and Nano are simply too small to include EX-RAIL with the rest of the Command Station code.
+The EX-RAIL code is surprisingly small and requires very little PROGMEM (memory that holds the program code) or SRAM (the runtime workspace that stores variables and things the program needs) to operate. However, you will still need a Mega for your CS; the UNO and Nano memory is simply too small to include EX-RAIL with the rest of the Command Station code.
 
-EX-RAIL automation is *much* (perhaps 2 orders of magnitude) more time efficient than the code required to process incoming requests from an external automation processor, or the contunuous polling of every sensor.
+EX-RAIL automation is *much* (perhaps 2 orders of magnitude) more time efficient than the code required to process incoming requests from an external automation processor, or the continuous polling of every sensor.
 
-.. NOTE:: The EX-RAIL code is only included in the compilation of the Command Station if the compiler detects a “myAutomation.h” file. If you don't create that file, no extra space is wasted for something you don't use.
+.. note:: The EX-RAIL code is only included in the compilation of the Command Station if the compiler detects a “myAutomation.h” file. If you don't create that file, no extra space is wasted for something you don't use.
 
 The Automation Process
 =======================
@@ -107,7 +116,7 @@ Some Simple Examples
 Example 1: Creating Routes for Engine Driver
 ---------------------------------------------
 
-A typical Route might be used to set a sequence of turnouts in response to a single button in Engine Driver.
+A typical Route might be used to set a sequence of turnouts in response to a single button in Engine Driver, or a pushbutton on a fascia panel near a yard.
 The EX-RAIL instructions to do this might look like
 
 .. code-block:: cpp
@@ -137,8 +146,8 @@ Of course, you may want to add signals, and time delays
 
 .. code-block:: cpp
 
-   SIGNAL(77,78,79)  // see later for details
-   SIGNAL(92,0,93)   //   on signal definitions
+   SIGNAL(77,78,79)  // see the Defining Signals section
+   SIGNAL(92,0,93)   //      below for details
    
    ROUTE(1,"Coal Yard exit")
       RED(77)
@@ -180,18 +189,15 @@ You may, however, find it more convenient to define turnouts using EX-RAIL comma
 
 Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 
-..
-  (@KEBBIN.. feature TODO  However it is possible with EX-RAIL to hide a turnout from WiThrottle which is useful if it is a facing turnout that will be automatically adjusted by your script to match its partner.)
-
-See the Reference section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
+See the :ref:`Reference<EX-RAIL – Reference>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
 
 
 Defining Signals
 =================
 
-Signals are now simply a decoration to be switched by the route process; they don’t control anything.
+Signals can now simply be a decoration to be switched by the route process; they don’t need to control anything.
 
-``GREEN(55)`` would turn signal 55 green, and ``RED(55)`` would turn it red. Somewhere in the script there must be a SIGNAL command like this: ``SIGNAL(55,56,57)``.  This defines a singal with ID 55, where the red/Stop lamp is connected to pin 55, the amber/Caution lamp to pin 56, and the green/Proceed lamp to pin 57. The pin allocations do not need to be contiguous, and the red pin is also used as the signal ID. Thus you can change the signal by ``RED(55)``, ``AMBER(55)``, or ``GREEN(55)``. This means you don't have to manually turn off the other lamps. A RED/GREEN only signal may be created with a zero amber pin.
+``GREEN(55)`` would turn signal 55 green, and ``RED(55)`` would turn it red. Somewhere in the script there must be a SIGNAL command like this: ``SIGNAL(55,56,57)``.  This defines a signal with ID 55, where the Red/Stop lamp is connected to pin 55, the Amber/Caution lamp to pin 56, and the Green/Proceed lamp to pin 57. The pin allocations do not need to be contiguous, and the red pin number is also used as the signal ID. Thus you can change the signal by ``RED(55)``, ``AMBER(55)``, or ``GREEN(55)``. This means you don't have to manually turn off the other lamps. A RED/GREEN only signal may be created with a zero amber pin.
 
 
 Example 3: Automating various non-track items 
@@ -222,7 +228,7 @@ Start with something as simple as a single loop of track with a station and a se
    :align: center
    :scale: 100%
 
-Using an ``AUTOMATION`` keyword means that this automation will appear in Engine Driver so you can drive the train manually, and then hand it over to the automation at the press of a button.
+Using an ``AUTOMATION`` keyword means that this automation will appear in EngineDriver so you can drive the train manually, and then hand it over to the automation at the press of a button.
 
 \* Technically, an automation can independently run multiple locos along the same path through the layout, but this is discussed later...
 
@@ -239,7 +245,7 @@ Using an ``AUTOMATION`` keyword means that this automation will appear in Engine
 
 The instructions are followed in sequence by the loco given to it; the ``AT`` command just leaves the loco running until that sensor is detected.
 
-Notice that this automation does not specify the loco address. If you drive a loco with Engine Driver and then hand it over to this automation, then the automation will run with the loco you last drove.
+Notice that this automation does not specify the loco address. If you drive a loco with EngineDriver and then hand it over to this automation, then the automation will run with the loco you last drove.
 
 Example 5: Signals in a train script
 -------------------------------------
@@ -248,7 +254,7 @@ Adding a station signal to the loop script is extremely simple, but it does requ
 
 .. code-block:: cpp
 
-   SIGNAL(77,78,79)  // see later for details
+   SIGNAL(77,78,79)  // see the Defining Signals section above for details
    AUTOMATION(4,"Round in circles")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)    // when you get to sensor on pin (40)
@@ -297,7 +303,7 @@ Notice that the sensors at A and B are near the ends of the track (allowing for 
       FOLLOW(13) // follows sequence 13 again… forever
 
 
-Note a SEQUENCE is exactly the same as an ANIMATION except that it does NOT appear in Engine Driver.
+Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the EngineDriver app.
 
 When the Command Station is powered up or reset, EX-RAIL starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:
 
@@ -328,20 +334,20 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with TURNOUT commands.
+Assuming that you have defined your turnouts with :ref:`TURNOUT commands.<Routes, Automations & Sequences>`
 
 .. code-block:: cpp
 
    SEQUENCE(11)
       DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
-      THROW(1)
+      CLOSE(1)
       CLOSE(2)
       FWD(30)
       AT(42) // sensor 42 is at the far end of platform B
       STOP
       DELAY(15000)
       THROW(2)
-      CLOSE(1)
+      THROW(1)
       REV(20)
       AT(41)
       STOP
@@ -362,20 +368,16 @@ So we will need some extra sensors (hardware required) and some logical blocks (
    :align: center
    :scale: 100%
 
-We can use this map to plan routes, when we do so, it will be easier to imagine 4 separate routes, each passing from one block to the next. Then we can chain them together but also start from any block.
+We can use this diagram to plan routes. When we do so, it will be easier to imagine 4 separate mini routes, each passing from one block to the next. Then we can chain them together to form a full route, but also start from any block.
 
 So… lets take a look at the routes now. For convenience I have used route numbers that help remind us what the route is for.
-
-
-.. @KEBBIN **the sensor numbers in the code below are all a mess. Because the sensor numbers are now direct pin references, we need to avoid pin numbers that may clash with motor shield, I2C or similar pins that have special meanings.**
-
 
 .. code-block:: cpp
 
    SEQUENCE(12) // From block 1 to block 2
       DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
       RESERVE(2) // we wish to enter block 2… so wait for it
-      THROW(1) // Now we “own” the block, set the turnout
+      CLOSE(1) // Now we “own” the block, set the turnout
       FWD(30) // and proceed forward
       AFTER(71) // Once we have reached AND passed sensor 71
       FREE(1) // we no longer occupy block 1
@@ -403,7 +405,7 @@ So… lets take a look at the routes now. For convenience I have used route numb
    
    SEQUENCE(41)
       RESERVE(1)
-      CLOSE(1)
+      THROW(1)
       REV(20)
       AT(41)
       STOP
@@ -413,28 +415,30 @@ So… lets take a look at the routes now. For convenience I have used route numb
 
 Does that look long? Worried about memory on your Arduino…. Well the script above takes about 100 BYTES of program memory and no dynamic SRAM!
 
-If you follow this carefully, it allows for up to 3 trains at a time because one of them will always have somewhere to go. Notice that there is a common theme to this…
+If you follow this example carefully, you'll see it allows for up to 3 trains at a time, because one of them will always have somewhere to go. Notice that there is a common theme to this…
 
--  RESERVE where you want to go, if you are moving and the reserve fails, your loco will STOP and the reserve waits for the block to become available. (these waits and the manual WAITS do not block the Arduino process… DCC and the other locos continue to follow their routes)
+-  RESERVE where you want to go. If you are moving and the reserve fails, your loco will STOP and the reserve waits for the block to become available. \*These waits and the manual WAITS do not block the Arduino process… DCC and the other locos continue to follow their routes!
 
--  Set the points to enter the reserved area.. do that ASAP as you may be still moving towards them. 
+-  Set the points to enter the reserved area. Do this ASAP, as you may be still moving towards them. 
    
--  Set any signals 
+-  Set any signals.
 
--  Move into the reserved area
+-  Move into the reserved area.
 
--  Reset your signals
+-  Reset your signals.
 
--  Free off your previous reserve as soon as you have fully left the block
+-  Free off your previous reserve as soon as you have fully left the block.
 
 In addition, it is possible to take decisions based on blocks reserved by other trains. The IFRESERVE(block) can be used to reserve a block if it's not already reserved by some other train, or skip to the matching ENDIF. For example, this allows a train to choose which platform to stop at based on prior occupancy. It is features like this that allow for more interesting and unpredictable automations.       
 
 Starting the system
 ====================
 
-Starting the system is tricky because we need to place the trains in a suitable position and set them off. We need to have a starting position for each loco and reserve the block(s) it needs to keep other trains from crashing into it.
+Starting the system is tricky, because we need to place the trains in a suitable position and set them going. We need to have a starting position for each loco, and reserve the block(s) it needs to keep other trains from crashing into it.
 
-For a known set of locos, the easy way is to define the startup process at the beginning of ROUTES , e.g. for two engines, one at each station.
+.. warning:: This EX-RAIL version isn’t ready to handle locos randomly placed on the layout after a power down!
+
+For a known set of locos, the easiest way is to define the startup process at the beginning of ROUTES. E.g. for two engines, one at each station.
 
 .. code-block:: cpp
 
@@ -443,11 +447,12 @@ For a known set of locos, the easy way is to define the startup process at the b
  RESERVE(3) // and another in block 3
  SENDLOCO(3,12) // send Loco DCC addr 3 on to route 12
  SENDLOCO(17,34) // send loco DCC addr 17 to route 34
- DONE // don’t drop through to the first route
+ DONE // don’t drop through to the first route definition that follows in the script file
 
-CAUTION: this isn’t ready to handle locos randomly placed on the layout after a power down.
+.. hint:: Some interesting points about the startup:
 
-Some interesting points about the startup… You don’t need to set turnouts because each route is setting them as required. Signals default to RED on powerup and get turned green when a route decides.
+ * You don’t need to set turnouts, because each route is setting them as required.
+ * Signals default to RED on power up, and get turned GREEN when a route clears them.
 
 
 Drive Away feature
@@ -463,14 +468,13 @@ Here for example is a startup route that has no predefined locos but allows loco
    SIGNAL(27,28,29)
    RED(27)   // indicate launch not ready
    AFTER(17) // user presses and releases launch button
-   UNJOIN // separate the programming track from main
+   UNJOIN    // separate the programming track from main
    DELAY(2000)
    AMBER(27) // Show amber, user may place loco
-   // user places loco on track and presses “launch” again
-   AFTER(17)
+   AFTER(17) // user places loco on track and presses “launch” again
    READ_LOCO // identify the loco
    GREEN(27) // show green light to user
-   JOIN // connect prog track to main
+   JOIN      // connect prog track to main
    START(12) // send loco off along route 12
    FOLLOW(99) // keep doing this for another launch
 
@@ -483,50 +487,61 @@ You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn
 Sensors
 ========
 
--  DCC++EX allows for sensors that are LOW-on or HIGH-on, this is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. AT(-5).
+-  DCC++EX allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-5)``.
 
--  Magnetic/Hall sensors work for some layouts but beware of how you detect the back end of a train approching the buffers in a siding, or knowing when the last car has cleared a crossing.
+-  Magnetic/Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.
 
--  Handling sensors in the automation is made easy because EX-RAIL throws away the concept of interrupts (“oh… sensor 5 has been detected… which loco was that and what the hell do I do now?”) and instead has the route scripts work on the basis of “do nothing, maintain speed until sensor 5 triggers and then carry on in the script”.
+-  Handling sensors in the automation is made easy because EX-RAIL throws away the concept of interrupts (“oh… sensor 5 has been detected… which loco was that and whatever do I do now?”) and instead has the route scripts work on the basis of “do nothing, maintain speed until sensor 5 triggers, and then carry on in the script”.
 
-- Sensor numbers are direct references to virtual pin numbers in the Hardware Adapter Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to pin expanders etc. 
+- Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. 
 
-- Sensors with id's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so AT(5) LATCH(5) for example effectively latches the sensor 5 on when detected once.
+- Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(5) LATCH(5)`` for example effectively latches the sensor 5 on when detected once.
 
-- Sensor polling by JMRI is independent of this and may continue if <S> commands are used.
+- Sensor polling by JMRI is independent of this, and may continue if <S> commands are used.
 
 
 Outputs
 ========
 
 - Generic Outputs are mapped to VPINs on the HAL (as for sensors)
-- SIGNAL definitions are just groups of 3 Outputs that can be more easily managed.
+- SIGNAL definitions are just groups of 3 Output pins that can be more easily managed.
 
 Sequence Numbers
 ================
 
 - All ROUTE / AUTOMATION / SEQUENCE  ids are limited to 1- 32767 
-- 0 is reserved for the startup sequence appearing as the first entry in  the EXRAIL script. 
+- 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script. 
 
 Various techniques
 ===================
 
 
-- Defining names for some or all of the numbers, use the ALIAS command. (this must come BEFORE the EXRAIL command)
+Defining names for any ID numbers
+----------------------------------
 
-   For example:
+Use the ``ALIAS()`` command in your script file. This must come *BEFORE* the ``EXRAIL`` command.
+
+Alias names:
+
+- **Should be** reasonably short but descriptive.
+- **Must start** with letters A-Z or underscore _ .
+- **May then** also contain numbers.
+- **Must not** contain spaces or special characters.
+   
+  For example:
 
 .. code-block:: cpp
 
    ALIAS(COAL_YARD_TURNOUT,19) 
-   ALIAS(COAL_YARD_SIGNAL,27) 
+   ALIAS(COAL_YARD_SIGNAL_3,27) 
       EXRAIL
          ROUTE(1,"Coal yard exit") 
             THROW(COAL_YARD_TURNOUT)
-            GREEN(COAL_YARD_SIGNAL)
+            GREEN(COAL_YARD_SIGNAL_3)
 
 - Including sub-files
-   For example:
+  
+  For example:
    
 .. code-block:: cpp
 

@@ -314,17 +314,17 @@
 <p>In this mode there is no connection to the Internet for any of the devices that are only connected to the AP. It simply provides a private network to allow a direct connection to your throttles.</p>
 </div>
 <p>(Remember you can click on images to enlarge them)</p>
-<div class="figure align-default" id="id9">
+<div class="figure align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/Wifi_softap_mode.png"><img alt="AP Mode" src="../_images/Wifi_softap_mode.png" style="width: 400.0px; height: 193.5px;" /></a>
-<p class="caption"><span class="caption-text">Figure 1: Access Point Mode - Things connect to the WiFi Board</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 1: Access Point Mode - Things connect to the WiFi Board</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="station-mode">
 <h3>Station Mode<a class="headerlink" href="#station-mode" title="Permalink to this headline">¶</a></h3>
 <p>Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the CS by finding its IP address on the network. You will have to find what IP address is assigned to the CS (see below). Alternately, you can define a static IP address in your router to assign to the CS.</p>
-<div class="figure align-default" id="id10">
+<div class="figure align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/Wifi_station_mode.png"><img alt="Station Mode" src="../_images/Wifi_station_mode.png" style="width: 400.0px; height: 210.0px;" /></a>
-<p class="caption"><span class="caption-text">Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP address</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP address</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <p>Images are courtesy of <a class="reference external" href="https://nodemcu.readthedocs.io/en/latest/modules/wifi/">NodeMCU</a>. You can find a great tutorial on WiFi there also.</p>
 <p>We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with JMRI, click <strong>here</strong>.</p>
@@ -485,7 +485,7 @@ If you don’t change this setting and start up in AP mode instead, the default 
 <p>Once you enter a network SSID and password, the CS will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.</p>
 <div class="section" id="clearing-the-esp-wifi-ssid-settings">
 <h3>Clearing the ESP-WiFI SSID Settings<a class="headerlink" href="#clearing-the-esp-wifi-ssid-settings" title="Permalink to this headline">¶</a></h3>
-<p>Open your serial monitor and wait until the CS has gone through the startup sequence. Then in the command textbox enter <a href="#id7"><span class="problematic" id="id8">``</span></a>&lt;+RESTORE&gt;``and press “SEND”.</p>
+<p>Open your serial monitor and wait until the CS has gone through the startup sequence. Then in the command textbox enter <code class="docutils literal notranslate"><span class="pre">&lt;+RESTORE&gt;</span></code> and press “SEND”.</p>
 <p>You will then see an “Ok” message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the CS had WiFi credentials in it, then as soon as your CS restarts, it will load and save those settings again. So…</p>
 </div>
 <div class="section" id="if-you-want-to-run-in-ap-mode">

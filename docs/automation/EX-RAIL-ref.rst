@@ -11,7 +11,7 @@ Notes
 
 - *ROUTE*, *AUTOMATION* and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 
-- Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH refer directly to Arduino pins, and those handled by I2C expansion.
+- Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.
 
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
 
@@ -116,7 +116,7 @@ Routes, Automations & Sequences
     - Return to CALL statement
   * - DELAY(delay)
     - Wait in mS.
-  * - DELAYMINS(mindelay)
+  * - DELAYMINS(delay)
     - Wait minutes
   * - DELAYRANDOM(mindelay,maxdelay)
     - Delay random time between min and max mS
@@ -220,7 +220,7 @@ Routes, Automations & Sequences
     - Zero an output pin. 
   * - CLOSE(turnout_id)
     - close defined turnout
-  * - THROW(id)
+  * - THROW(turnout_id)
     - Throw a defined turnout
   * - GREEN(signal_id)
     - Set defined signal green
@@ -228,7 +228,7 @@ Routes, Automations & Sequences
     - Sets defined signal to amber 
   * - RED(signal_id)
     - Set defined signal to red
-  * - SERVO(id,position,profile)
-    - Move an animation servo. Do not use for Turnouts. (profile is one of  Instant, Fast, Medium, Slow or Bounce)
+  * - SERVO(Vpin,position,Profile)
+    - Move an animation servo. Do not use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
 
 

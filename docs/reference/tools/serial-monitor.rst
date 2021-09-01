@@ -74,7 +74,7 @@ Make sure the **baud rate at the lower right of the window is set to "115200"**.
    :alt: Serial Monitor
    :scale: 90%
 
-**Figure 4** - Serial Monitor
+**Figure 4** - Serial Monitor - Note line ending and baud rate settings!
 
 Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the CS will sense that, the network test will fail, but everything else will be working as it should.
 

@@ -327,7 +327,7 @@ that can easily be used to describe sequential actions to automatically take pla
 <div class="section" id="the-automation-process">
 <h2>The Automation Process<a class="headerlink" href="#the-automation-process" title="Permalink to this headline">¶</a></h2>
 <p>All routes, automations, etc step through a list of simple keywords until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.</p>
-<p>For a full list of keywords, see <span class="xref std std-ref">EX-RAIL – Reference</span></p>
+<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-ref.html#ex-rail-reference"><span class="std std-ref">EX-RAIL Reference</span></a></p>
 <p>Automation scripts are added to your Command Station by creating a file called “myAutomation.h” in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">EXRAIL</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">scripts</span><span class="w"></span>
@@ -407,7 +407,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <p>DCC-EX supports a number of different turnout hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> commands from JMRI, or in <code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;T</span> <span class="pre">...&gt;&quot;)</span></code> commands or C++ code in mySetup.h, just like earlier versions.</p>
 <p>You may, however, find it more convenient to define turnouts using EX-RAIL commands, which may appear anywhere in the ‘myAutomation.h’ file, even after they are referenced in an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code>, <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code>, <code class="docutils literal notranslate"><span class="pre">THROW</span></code> or <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts defined in ‘myAutomation.h’ will still be visible to WiThrottle and JMRI in the normal way.</p>
-<p>See the <span class="xref std std-ref">Reference</span> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
+<p>See the <a class="reference internal" href="EX-RAIL-ref.html#ex-rail-reference"><span class="std std-ref">Reference</span></a> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
 </div>
 <div class="section" id="defining-signals">
 <h2>Defining Signals<a class="headerlink" href="#defining-signals" title="Permalink to this headline">¶</a></h2>

@@ -74,7 +74,7 @@ The Automation Process
 
 All routes, automations, etc step through a list of simple keywords until they reach a ``DONE`` keyword. 
 
-For a full list of keywords, see :ref:`EX-RAIL – Reference`
+For a full list of keywords, see :ref:`EX-RAIL Reference`
 
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:
 
@@ -192,7 +192,7 @@ You may, however, find it more convenient to define turnouts using EX-RAIL comma
 
 Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 
-See the :ref:`Reference<EX-RAIL – Reference>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
+See the :ref:`Reference<EX-RAIL Reference>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
 
 
 Defining Signals

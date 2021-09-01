@@ -5,7 +5,7 @@ Using a Serial Monitor
 What is a Serial Monitor and Why Do I Need One?
 ================================================
 
-A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your CS, and connect to it to view logs and send manual commands. If anything goes wrong with our CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
+A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your CS, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
 
 * Test your Command Station
 * View startup and other diagnostic logs to fix issues or help us support you
@@ -89,7 +89,9 @@ Now enter ``<s>`` (lowercase). You should see status information for your Comman
 
 Turn off the power to the track by sending ``<0>`` to the CS. That is a "zero".
 
-There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver and more. Experiment!
+There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver, Etheret debugging,  and more. Read the documentation and experiment!
+
+If you run into trouble, remember to send us a log by cutting and pasting the text from the Serial Monitor window to our support channel in Discord or one of the other methods of contacting us mentioned here: https://dcc-ex.com/support/index.html.
 
 Connect with a Cell Phone
 =========================== 

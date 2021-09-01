@@ -5,7 +5,7 @@ Using a Serial Monitor
 What is a Serial Monitor and Why Do I Need One?
 ================================================
 
-A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your CS, and connect to it to view logs and send manual commands. If anything goes wrong with our CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
+A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your CS, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
 
 * Test your Command Station
 * View startup and other diagnostic logs to fix issues or help us support you
@@ -26,9 +26,75 @@ Connect with the Arduino Serial Monitor
 * The Arduino IDE
 * A Computer (Just about any Windows, Mac or Linux machine including the Raspberry Pi)
 * The USB cable for your Arduino
+  
+Download and install the Arduino IDE
+-------------------------------------
+
+Rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link and then return here.
+
+`Arduino IDE Guide <https://www.arduino.cc/en/Guide>`_
+
+Run the Arduino IDE
+--------------------
+
+Start the Arduino IDE. You should see something like this:
+
+.. image:: ../../_static/images/arduino-ide/arduino_ide.jpg
+   :alt: Arduino IDE
+   :scale: 90%
+
+**Figure 1** - Arduino IDE
+
+Select the Correct COM Port
+----------------------------
+
+Select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+
+.. image:: ../../_static/images/arduino-ide/board_port_mega.jpg
+   :alt: Select the COM Port
+   :scale: 90%
+
+**Figure 2** - Select the correct COM Port
+
+Open the Serial Monitor
+------------------------
+
+The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
+
+
+.. image:: ../../_static/images/installer/arduino_ide2.jpg
+   :alt: Open the Serial Monitor
+   :scale: 90%
+
+**Figure 3** - Open the Serial Monitor
+
+Make sure the **baud rate at the lower right of the window is set to "115200"**. This is the data communication speed, equivalent to 115.2kb/s! **Make sure the dropdown next to that says "Both NL & CR"**. That makes sure you send a 'new line' command and 'carriage return' which the Arduino expects.
+
+.. image:: ../../_static/images/installer/serial_monitor.jpg
+   :alt: Serial Monitor
+   :scale: 90%
+
+**Figure 4** - Serial Monitor - Note line ending and baud rate settings!
+
+Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the CS will sense that, the network test will fail, but everything else will be working as it should.
+
+Enter Commands to the CS
+-------------------------
+
+There is an entire language that DCC-EX understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the `DCC++ EX Command Reference <https://dcc-ex.com/reference/software/command-reference.html>`_ . Let's just try two commands to make sure everything is working.
+
+All DCC-EX commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the motor shield.
+
+Now enter ``<s>`` (lowercase). You should see status information for your Command Station appear in the log.
+
+Turn off the power to the track by sending ``<0>`` to the CS. That is a "zero".
+
+There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver, Etheret debugging,  and more. Read the documentation and experiment!
+
+If you run into trouble, remember to send us a log by cutting and pasting the text from the Serial Monitor window to our support channel in Discord or one of the other methods of contacting us mentioned here: https://dcc-ex.com/support/index.html.
 
 Connect with a Cell Phone
-===========================
+=========================== 
 
 **What You Will Need**
 

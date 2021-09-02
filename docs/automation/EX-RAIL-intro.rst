@@ -10,7 +10,6 @@ Introduction to EX-RAIL Automation
    You can find instructions to download the EX-RAIL version of the software :ref:`here<Getting the EX-RAIL Beta Development Version>`.
 
 
-
 Introduction
 ==============
 

@@ -61,7 +61,7 @@ A logic analyzer is a device that connects to the Command Station signal pins an
    :alt: DCC Signal Analyzer output
    :figclass: align-center
 
-   Figure 2: Example Packet Sniffer output
+   Figure 2: Example Logic Analyzer output
 
 
 DCC Sniffer (PACKET analyzer)
@@ -108,9 +108,9 @@ And since it is a shield, you just stick it on top of an Uno or Mega, upload `DC
 Build It
 ----------
 
-Now things get fun. A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP32 if you connect to the signal pin of the DCC++EX Command Station instead of to the track.
+Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the DCC++EX Command Station instead of to the track.
 
-You will need to upload our `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ to whatever microcontroller you choose.
+You will need to upload our `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ software to whatever microcontroller you choose.
 
 .. figure:: ../../_static/images/tools/sniffer_block_diag.png
    :align: center
@@ -120,7 +120,7 @@ You will need to upload our `DCCInspector-EX <../../download/dcc-inspector-ex.ht
 
    Figure 4: DCC Packet Sniffer Block Diagram
 
-- **Power From Track** This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track.
+- **Power From Track** This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track OR from batteries.
 
 - **DCC Signal Interface** This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your microcontroller. This can be as simple as a diode, two resistors and an opto-isolator chip.
  
@@ -129,10 +129,10 @@ You will need to upload our `DCCInspector-EX <../../download/dcc-inspector-ex.ht
 DCC Signal Interface
 ^^^^^^^^^^^^^^^^^^^^^
 
-Connect directly to the PWM output pin of the Arduino CS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect directly to the Signal output (enable pin) of the Arduino CS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Easy! You don't need an interface to bypass the track and connect to the Arduino signal pins since we are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You will have to get under your benchwork and jumper 2 wires directly to your command station logic-level signal pins. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!)
+Easy! You don't need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ download page for which pins to use.
 
 Connect to the track
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -311,7 +311,7 @@ Connect the Analyzer
 * Connect a jumper wire into a probe if you haven't already and then connect that into pin 0 or 1 on the logic analyzer
 * Connect a jumper wire into a probe and connect the other end of the jumper into the GND pin on the analyzer
 * Connect the GND probe to GND on the Arduino
-* Connect pin 0 or pin 1 probe to the PWM output you want to measure on the Arduino/MotorShield connection. For the MAIN track, this would usually be pin 13 for a STANDARD_MOTOR_SHIELD. Pin 12 would be the PROG track.
+* Connect pin 0 or pin 1 probe to the DCC signal output (enable pin) you want to measure on the Arduino/MotorShield connection. For the MAIN track, this would usually be pin 13 for a STANDARD_MOTOR_SHIELD. Pin 12 would be the PROG track.
 * Connect the Analyzer to the USB port of your computer
 
 Capture the samples in PulseView

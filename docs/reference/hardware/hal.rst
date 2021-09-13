@@ -197,11 +197,11 @@ I2C_USE_INTERRUPTS
 I2C_NO_INTERRUPTS
   Don’t use interrupts to signal completion of an I2C operation.  The I2C state is instead checked whenever the following functions are called:
   
-  .. code-block::
+  .. code-block:: cpp
 
-    I2CManager::loop()
-    I2CRB::wait()
-    I2CRB::isBusy()
+    I2CManager::loop();
+    I2CRB::wait();
+    I2CRB::isBusy();
 
   This option will reduce the amount of time spent in interrupt code, but not completely eliminate it (since interrupts 
   are also used by the serial USB, clock and other components).  It will also slow down the I2C throughput as there will be increased latency between consecutive bytes sent and received.
@@ -280,7 +280,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   and digitalRead calls or equivalents.  On other platforms, a selection of Vpins are enabled for use 
   of certain drivers.  The current build has the following directives in the IODevice::begin() method:
 
-    .. code-block::
+    .. code-block:: cpp
 
       // Initialise the IO subsystem
       ArduinoPins::create(2, NUM_DIGITAL_PINS-2);  // Reserve pins for direct access
@@ -318,7 +318,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 - Displays: Enable upper-case only mode for SSD1306Ascii, optionally reducing FLASH usage for font storage.
 - Turnouts/Sensors/Outputs: Revise Turnout command handling to support new commands, e.g.
 
-    .. code-block::
+    .. code-block:: none
 
       <T id SERVO vpin activeposition inactiveposition profile>
       <T id DCC address subaddress>  // address 1-512, subaddress 0-3
@@ -489,7 +489,7 @@ Future Enhancements
 1.  HAL: Produce a simple IODevice class template, to help DCC++EX developers/tinkerers who want to implement their own extensions protocols, 
     e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.
 
-    .. code-block:: 
+    .. code-block:: none
 
         _begin	Initialise serial line.
         _loop	State machine to read incoming characters and decode rudimentary data messsages.

@@ -373,9 +373,9 @@ Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories c
 Accessory Decoder Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka "Dual-Coil" method) and linear addressing method. You can either specify an address and it's subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 0 -2047)
+There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka "Dual-Coil" method) and linear addressing method. You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).
 
-For example, address/subaddress 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3
+For example, address/subaddress 1/3 would be linear address 4. And linear address 8 would be address 2, subaddress 3.  Decoder address 0 does not have a corresponding linear address.
 
 Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet>`_
 
@@ -427,7 +427,9 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 * Command to define a Servo-based turnout: ``<T ID SERVO ID THROWNPOSITION CLOSEDPOSITION PROFILE>`` :
 
   * Create a new turnout ``ID`` using the servo output pin ``ID``.  The positions for thrown and closed states are ``THROWNPOSITION`` and ``CLOSEDPOSITION`` 
-    respectively.  The transition between states is defined by ``PROFILE``, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).
+    respectively.  For an SG90 servo, positions in the range of 102-490 will give up to 180 degrees motion, but the range of 205-410 (corresponding to
+    1.0-2.0 millisecond pulses) is recommended for the SG90.  
+    The transition between states is defined by ``PROFILE``, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).
   * Example: ``<T 24 SERVO 100 410 205 2>``  defines a servo turnout on the first PCA9685 pin, moving at medium speed between positions 205 and 410.
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
   * This command is available from Version 3.2.0.
@@ -784,7 +786,7 @@ DIAGNOSTICS
 * ``<D TEST|NORMAL>`` DCC Signal Diagnostics (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
 * ``<D SPEED28|SPEED128`` Switch between 28 and 128 speed steps
 * ``<D SERVO pin pos profile>`` Set servo on VPIN ``pin`` to position ``pos``, moving according to profile ``profile``.  
-  ``pos`` is normally in the range of about 102 to 450 for SG90 servos; values outside of this range may drive the servo outside of its normal range.
+  ``pos`` is normally in the range of about 102 to 490 for SG90 servos; values outside of this range may drive the servo outside of its normal range.
   ``profile`` (optional, default=0) may be 0 (Immediate), 1 (Fast), 2 (Medium), 3 (Slow) or 4 (Bounce).  This command is intended to help users to identify appropriate 
   position values for configuring the servo in-situ.  This command is available from Version 3.2.0.
 * ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.

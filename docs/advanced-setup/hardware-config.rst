@@ -136,7 +136,7 @@ A servo turnout may be configured using the DCC++ EX Turnout commands, as follow
 This command associates turnout ID 301 with VPIN 100 (PCA9685 first pin).
 When the turnout is 'thrown', the PWM position is set to 410.
 When the turnout is 'closed', the PWM position is set to 205.
-The movement of the turnout is 'medium' speed (2).  The movement profile may be 0 (Immediate), 1 (Fast=0.5 sec), 
+The movement of the turnout is Medium speed (2).  The movement profile may be 0 (Immediate), 1 (Fast=0.5 sec), 
 2 (Medium=1 sec), 3 (Slow=2 sec), or 4 (Bounce profile for semaphore signals).
 
 Many references quote a PWM pulse length of 1ms to 2ms, which corresponds to PWM values of 205 to 410.  
@@ -149,11 +149,11 @@ cause damage to the servo gearing, or to any layout components you have connecte
 	<T 301 1>  -- Instructs the turnout to move to the 'thrown' position.
 	<T 301 0>  -- Instructs the turnout to move the the 'closed' position.
 
-In EX-RAIL, the servo can be controlled directly via the **SERVO(vin,position,profile)** or **SERVO2(vpin,position,duration)** commands.
+In EX-RAIL, the servo can be controlled directly via the **SERVO(pin,position,profile)** or **SERVO2(pin,position,duration)** commands.
 	
 **Good to know:** The PCA9685 is not only used for servos.  It generates pulses of variable mark-to-space
 ratio, with a value of 0 being full off, and 4095 being full on.  So it can be used to control an LED
-to varying brightness levels.  the EX-RAIL automation has a command **FADE(pin,value,ms)** which operates the 
+to different brightness levels.  the EX-RAIL automation has a command **FADE(pin,value,ms)** which operates the 
 PCA9685 to do exactly this.
 
 Adding A New Device Configuration File
@@ -178,7 +178,7 @@ Creating the mySetup.cpp file
 -----------------------------
 
 At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``mySetup.cpp`` (case sensitive, 
-so upper case S in setup) and click ``OK`` to create the new file.
+so upper case S in setup) and click ``OK`` to create the new file. [The screen shot shows mySetup.h, so be sure to enter ``mySetup.cpp``.]
 
 .. image:: ../../_static/images/arduino-ide/arduino_ide_mysetup.jpg
    :alt: Arduino IDE New Tab

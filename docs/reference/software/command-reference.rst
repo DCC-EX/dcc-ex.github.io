@@ -368,14 +368,14 @@ DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is 
 
 All decoders that are not in an engine are accessory decoders including turnouts.
 
-Besides being defined all turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:
+Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:
 
 Accessory Decoder Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka "Dual-Coil" method) and linear addressing method. You can either specify an address and it's subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 0 -2047)
 
-For example, address/subaddres 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3
+For example, address/subaddress 0,3 would be linear address 4. And address 2 would be address 2, subaddress 3
 
 Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet>`_
 
@@ -387,7 +387,7 @@ Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
 * ``<`` = Begin DCC++ EX command
 * ``a`` (lower case a) this command is for a Acessory Decoder
 * ``LINEAR_ADDRESS:``  the linear address of the decoder controlling this turnout (0-2047)
-* ``ACTIVATE:`` (0 or OFF) (for Deactivate, Off, Unthrown) or (1 or ON) (for Activate, On, Thrown)
+* ``ACTIVATE:`` (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)
 * ``>`` = End DCC++ EX command
 
 Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
@@ -397,7 +397,7 @@ Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 * ``a`` (lower case a) this command is for a Acessory Decoder
 * ``ADDRESS:``  the primary address of the decoder controlling this turnout (0-511)
 * ``SUBADDRESS:`` the subaddress of the decoder controlling this turnout (0-3)
-* ``ACTIVATE:`` (0) (Deactivate, Off, Unthrown) or (1) (Activate, On, Thrown)
+* ``ACTIVATE:`` (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)
 * ``>`` = End DCC++ EX command
 
 
@@ -406,42 +406,78 @@ Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 Defining (Setting up) a Turnout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To have the DCC++ EX CommandStation store and retain the direction of DCC-connected turnouts, as well as automatically invoke the required ``<a>`` command as needed, first define/edit/delete such turnouts using the following variations of the "T" command:
+The Turnout commands provide a more flexible and more functional way of operating turnouts.  It requires that the turnout be pre-defined through the ``<T ...>`` commands, described below.
 
+Turnouts may be in either of two states:  Closed or Thrown.  The turnout commands below use the values ``1`` for ``Throw`` or ``Thrown`` and ``0`` for ``Close`` or ``Closed``.
 
-* Command to define a Turnout: ``<T ID ADDRESS SUBADDRESS>`` :
+* Command to define a DCC Accessory Turnout: ``<T ID ADDRESS SUBADDRESS>`` :
 
-  * Creates a new turnout ID, with specified ADDRESS and SUBADDRESS if turnout ID already exists, it is updated (overwritten) with the new specified ADDRESS and SUBADDRESS
+  * Creates a new turnout ``ID``, with specified ``ADDRESS`` and ``SUBADDRESS`` if turnout ``ID`` already exists, it is updated (overwritten) with the new specified ``ADDRESS`` and ``SUBADDRESS``
+  * Example:  ``<T 23 5 0>``
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
+  * From Version 3.2.0, this command is deprecated and has been replaced by ``<T ID DCC ADDRESS SUBADDRESS>``.
 
+* Command to define a DCC Accessory Decoder turnout: ``<T ID DCC ADDRESS SUBADDRESS>`` :
+
+  * Create a new turnout ``ID`` which operates the DCC Accessory Decoder configured for the ``ADDRESS`` and ``SUBADDRESS``. 
+  * Example: ``<T 23 DCC 5 0>``
+  * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
+  * This command is available from Version 3.2.0.
+  
+* Command to define a Servo-based turnout: ``<T ID SERVO ID THROWNPOSITION CLOSEDPOSITION PROFILE>`` :
+
+  * Create a new turnout ``ID`` using the servo output pin ``ID``.  The positions for thrown and closed states are ``THROWNPOSITION`` and ``CLOSEDPOSITION`` 
+    respectively.  The transition between states is defined by ``PROFILE``, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).
+  * Example: ``<T 24 SERVO 100 410 205 2>``  defines a servo turnout on the first PCA9685 pin, moving at medium speed between positions 205 and 410.
+  * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
+  * This command is available from Version 3.2.0.
+
+* Command to define a VPIN-based turnout: ``<T ID VPIN PIN>`` :
+
+  * Create a new turnout ``ID`` which operates the output defined by ``PIN``.  If ``PIN`` is in the range of Arduino digital output pins, then 
+    throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If ``PIN`` is associated 
+    with an external device, then the device will be operated accordingly.
+  * Example: ``<T 25 VPIN 50>`` defines a turnout that operates Arduino digital output pin D50.  
+  * Example: ``<T 26 VPIN 164>`` defines a turnout that operates the first pin on the first MCP23017 GPIO Extender (if present).
+  * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
+  * This command is available from Version 3.2.0.
+  
 * Command to Delete a turnout ``<T ID>`` :
 
-  * Deletes the definition of a turnout with this ID
+  * Deletes the definition of a turnout with this ``ID``.
+  * Example: ``<T 25>`` deletes the previously defined turnout number 25.
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)
 
 * Command to List all defined turnouts: ``<T>`` :
 
   * Lists all defined turnouts.
-  * Returns: ``<H ID ADDRESS SUBADDRESS THROW>`` for each defined turnout or ``<X>`` if no turnouts have beed defined or saved.  
+  * Before Version 3.2 0: Returns: ``<H ID address subaddress thrown>`` for each defined DCC Accessory Turnout or ``<X>`` if no turnouts have beed defined or saved.  
+  * After Version 3.2.0: Returns the command that would be used to create the turnout, with the ``thrown`` state (1=thrown, 0=closed) appended.  For example, 
+    a servo turnout definition will be listed as ``<H id SERVO vpin thrownPosition closedPosition profile thrown>`` and a DCC turnout
+    will be listed as ``<H id DCC address subaddress thrown>``.
 
 * ``ID`` : The numeric ID (0-32767) of the turnout to control.  
 
   * (NOTE: You pick the ID. IDs are shared between Turnouts, Sensors and Outputs)
 
-* ``ADDRESS`` :  the primary address of the decoder controlling this turnout (0-511)
-* ``SUBADDRESS`` : the subaddress of the decoder controlling this turnout (0-3)
+* ``ADDRESS`` :  the primary address of a DCC accessory decoder controlling a turnout (0-511)
+* ``SUBADDRESS`` : the subaddress of a DCC accessory decoder controlling a turnout (0-3)
+* ``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
+  servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
+  116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.
 
 Once all turnouts have been properly defined, Use the ``<E>`` command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the turnout definitions, you must invoke the ``<E>`` command if you want those new definitions updated in the EEPROM.
 You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in the EEPROM by invoking the ``<e>`` (lower case e) command. **WARNING: (There is no Un-Delete)**  
 
-   Example: You have a turnout on your main line going to warehouse industry. The turnout is controlled by a accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10.
+   Example: You have a turnout on your main line going to warehouse industry. The turnout is controlled by an accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10.
    You would send the following command to the DCC++ EX CommandStation:
-   ``<T 10 123 3>``  
+   ``<T 10 DCC 123 3>``  
 
    * This Command means:  
    * ``<`` : Begin DCC++ EX command  
    * ``T`` : (Upper case T) Define a Turnout  
+   * ``DCC`` : The turnout is DCC Accessory Decoder based
    * ``10`` : ID number I am setting to use this turnout  
    * ``123`` : The accessory decoders address  
    * ``3`` : The turnout is wired to output 3  
@@ -457,17 +493,21 @@ You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in th
    * ``>`` : End DCC++ EX command
    * RETURNS: ``<O>``  Meaning Command Successful  
 
+If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.  
+Consequently, when the DCC++ EX CommandStation is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
+This is indended so that the servos don't perform a sweep on power-on because their physical position does not match initial position in the CommandStation.
+
 
 Controlling a Defined Turnout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* Sets turnout ID to either the "thrown"(turned) or "unthrown"(straight) position  
-* The Turnout format is ``<T ID THROW>``  
-* ``ID`` : The numeric ID (0-32767) That you gave the turnout to control when you defined it. 
-* ``THROW`` : 0 (unthrown) or 1 (thrown)  
+* Sets turnout ID to either the "closed" (turned) or "thrown" (straight) position  
+* The Turnout format is ``<T id throw>``  
+* ``id`` : The numeric ID (0-32767) That you gave the turnout to control when you defined it. 
+* ``throw`` : 0 or C (closed), or 1 or T (thrown)  
 * 
-  RETURNS: ``<H ID THROW>`` or ``<X>`` if turnout ID does not exist  
+  RETURNS: ``<H id throw>`` or ``<X>`` if turnout ID does not exist  
 
   ..
 
@@ -483,9 +523,9 @@ Controlling a Defined Turnout
      * ``1`` : Set turnout to Thrown (turned, on) position.  
      * 
        ``>`` : End DCC++ EX command
-       DCC++ EX should return ``<H 10 1>``  Meaning Command Throw turnout 10 was Successful
+       DCC++ EX should return ``<H 10 1>``  Meaning Command was Successful
 
-       NOTE: The ``<T>`` command by itself with no parameters will list all turnouts and their directions
+       NOTE: The ``<T>`` command by itself with no parameters will list all turnout definitions and their directions
 
 
 SENSORS (Inputs)
@@ -495,7 +535,9 @@ DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arui
 
 To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino.  
 
-The Sensor code utilizes exponential smoothing to "de-bounce" spikes generated by mechanical switches and transistors. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors.  
+The Sensor code utilizes exponential smoothing to "de-bounce" spikes generated by mechanical switches and transistors. This avoids the need to create smoothing circuitry for each sensor. 
+You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors,
+but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.
 
 To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the ``<S>`` command:  
 
@@ -513,8 +555,12 @@ To have this sketch monitor one or more Arduino pins for sensor triggers, first 
   * RETURNS: ``<Q ID PIN PULLUP>`` for each defined sensor or ``<X>`` if no sensors defined  
 
 ``ID`` : The numeric ID (0-32767) of the sensor
-(You pick the ID & They ares shared between Turnouts, Sensors and Outputs)
-``PIN`` : The Arduino pin number the sensor is connected to on the Arduino board.
+(You pick the ID & they are shared between Turnouts, Sensors and Outputs)
+
+``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
+servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.
+
 ``PULLUP`` : 1 = Use internal pull-up resistor for PIN, 0 = don't use internal pull-up resistor for PIN  
 
 Once all sensors have been properly defined, use the ``<E>`` (upper case E) command to store their definitions to EEPROM.
@@ -556,9 +602,14 @@ To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outpu
   * RETURNS: ``<Y ID PIN IFLAG STATE>`` for each defined output pin or ``<X>`` if no output pins defined.
 
 ``ID`` : The numeric ID (0-32767) of the output
-(You pick the ID & They ares shared between Turnouts, Sensors and Outputs)
-``PIN`` : The Arduino pin number to use for the output.
+(You pick the ID & they are shared between Turnouts, Sensors and Outputs)
+
+``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
+servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.
+
 ``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)
+
 ``IFLAG`` : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:  
 
 .. code-block::
@@ -732,6 +783,11 @@ DIAGNOSTICS
 * ``<D WIT 0|1>`` Enables Withrottle diagnostics
 * ``<D TEST|NORMAL>`` DCC Signal Diagnostics (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
 * ``<D SPEED28|SPEED128`` Switch between 28 and 128 speed steps
+* ``<D SERVO pin pos profile>`` Set servo on VPIN ``pin`` to position ``pos``, moving according to profile ``profile``.  
+  ``pos`` is normally in the range of about 102 to 450 for SG90 servos; values outside of this range may drive the servo outside of its normal range.
+  ``profile`` (optional, default=0) may be 0 (Immediate), 1 (Fast), 2 (Medium), 3 (Slow) or 4 (Bounce).  This command is intended to help users to identify appropriate 
+  position values for configuring the servo in-situ.  This command is available from Version 3.2.0.
+* ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.
 
 example: <D ACK ON>
 

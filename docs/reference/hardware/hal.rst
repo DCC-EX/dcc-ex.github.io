@@ -32,7 +32,7 @@ The class hierarchy is shown below.
 
 .. image:: ../../_static/images/HAL_class_hierarchy.png
    :alt: HAL Class Hierarchy
-   :scale: 30%
+   :scale: 80%
 
 IODevice defines the overall base class interface, which is implemented in each HAL device driver class.  
 The class GPIOBase implements functionality that is common to, and inherited by, the drivers for GPIO input/output modules 

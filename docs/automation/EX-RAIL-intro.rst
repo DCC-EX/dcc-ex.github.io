@@ -2,8 +2,12 @@
 Introduction to EX-RAIL Automation
 ***********************************
 
-.. attention:: EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on Discord to participate in the Beta, and get the link to the EX-RAIL version of the software.
-
+.. attention::
+   EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues.
+   
+   We can use your help in final testing and ideas for new features. Please see us on Discord `here <https://discord.gg/y2sB4Fp>`_ to participate in the Beta, and get notified of new code releases.
+   
+   You can find instructions to download the EX-RAIL version of the software :ref:`here<Getting the EX-RAIL Beta Development Version>`.
 
 
 Introduction
@@ -74,7 +78,7 @@ The Automation Process
 
 All routes, automations, etc step through a list of simple keywords until they reach a ``DONE`` keyword. 
 
-For a full list of keywords, see :ref:`EX-RAIL – Reference`
+For a full list of keywords, see :ref:`EX-RAIL Reference`
 
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:
 
@@ -192,7 +196,7 @@ You may, however, find it more convenient to define turnouts using EX-RAIL comma
 
 Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 
-See the :ref:`Reference<EX-RAIL – Reference>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
+See the :ref:`Reference<EX-RAIL Reference>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
 
 
 Defining Signals

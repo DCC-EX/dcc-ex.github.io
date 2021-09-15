@@ -159,7 +159,7 @@ Routes, Automations & Sequences
   * - RESUME
     - Resume all paused tasks
   * - RESERVE(blockid)
-    - Reserve a block (0-255) If already reserved current loco will STOP and script waits for block to become free.
+    - Reserve a block (0-255) If already reserved, current loco will STOP and script waits for block to become free.
   * - FREE(blockid)
     - Free previously reserved block
   * - START(route)
@@ -230,5 +230,9 @@ Routes, Automations & Sequences
     - Set defined signal to red
   * - SERVO(Vpin,position,Profile)
     - Move an animation servo. Do not use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+  * - XFON(cab,func)
+    - Turn on accessory function, e.g. lit carriages. **Not for Loco use - use FON instead!**
+  * - XFOFF(cab,func)
+    - Turn off accessory function, e.g. lit carriages. **Not for Loco use - use FOFF instead!**
 
 

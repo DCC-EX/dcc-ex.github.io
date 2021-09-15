@@ -1,81 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>I2C Displays &mdash; DCC++ EX  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Power Supplies" href="power-supplies.html" />
     <link rel="prev" title="Ethernet Boards" href="ethernet-boards.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
-          
-
-          
             <a href="../../index.html">
-          
-
-          
-            
             <img src="../../_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -83,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Levels</a></li>
@@ -199,77 +146,34 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">DCC++ EX</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html">Reference</a> &raquo;</li>
-        
           <li><a href="index.html">Hardware</a> &raquo;</li>
-        
       <li>I2C Displays</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/reference/hardware/i2c-displays.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="i2c-displays">
-<h1>I2C Displays<a class="headerlink" href="#i2c-displays" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="i2c-displays">
+<h1>I2C Displays<a class="headerlink" href="#i2c-displays" title="Permalink to this headline"></a></h1>
 <p>DCC++ EX is designed to accommodate a display. You don’t need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.</p>
 <a class="reference internal image-reference" href="../../_images/I2C_LCD_Display_wired.jpg"><img alt="Example: 4 line I2C Display" src="../../_images/I2C_LCD_Display_wired.jpg" style="width: 512.0px; height: 331.20000000000005px;" /></a>
 <p>We currently support LCDs based on the PCF8574 backpack:</p>
@@ -286,25 +190,25 @@
 <p class="admonition-title">Warning</p>
 <p>You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!</p>
 </div>
-<div class="section" id="examples-of-compatible-displays">
-<h2>Examples of compatible displays<a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this headline">¶</a></h2>
+<section id="examples-of-compatible-displays">
+<h2>Examples of compatible displays<a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this headline"></a></h2>
 <p>Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
 <a class="reference internal image-reference" href="../../_images/lcd_20x4_backpack.jpg"><img alt="20 x 4 LCD" src="../../_images/lcd_20x4_backpack.jpg" style="width: 320.0px; height: 291.2px;" /></a>
 <p><strong>Figure 1</strong> - 20 x 4 LCD with backpack</p>
 <p>And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:</p>
 <a class="reference internal image-reference" href="../../_images/lcd_16x2_backpack.jpg"><img alt="16 x 2 LCD" src="../../_images/lcd_16x2_backpack.jpg" style="width: 320.0px; height: 276.8px;" /></a>
 <p><strong>Figure 2</strong> - 16 x 2 LCD with backpack</p>
-</div>
-<div class="section" id="connecting-an-lcd-display">
-<h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
-<h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="connecting-an-lcd-display">
+<h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this headline"></a></h2>
+<section id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
+<h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this headline"></a></h3>
 <p>And here is a picture of the board after soldering or if you purchase a board already solderd (or “welded” as some of the Chinese sites call it)</p>
 <a class="reference internal image-reference" href="../../_images/lcd_soldered.jpg"><img alt="Backpack Soldered to LCD" src="../../_images/lcd_soldered.jpg" style="width: 400.0px; height: 400.0px;" /></a>
 <p><strong>Figure 3</strong> - LCD with backpack soldered to the back</p>
-</div>
-<div class="section" id="connecting-the-jumper-wires">
-<h3>Connecting the Jumper Wires<a class="headerlink" href="#connecting-the-jumper-wires" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="connecting-the-jumper-wires">
+<h3>Connecting the Jumper Wires<a class="headerlink" href="#connecting-the-jumper-wires" title="Permalink to this headline"></a></h3>
 <p>To connect the Display to the CS, you will need 4 male to female jumper wires:</p>
 <ol class="arabic simple">
 <li><p>Connect a wire from +5V on the Motor Shield or WiFi Board to Vcc on the backpack</p></li>
@@ -316,14 +220,14 @@
 <p class="admonition-title">Note</p>
 <p>Look closely on the Uno or Mega for markings, including on the inside or outside of the black header. SCA and SCL are usually clearly labeled.</p>
 </div>
-</div>
-<div class="section" id="controlling-brightness">
-<h3>Controlling Brightness<a class="headerlink" href="#controlling-brightness" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="controlling-brightness">
+<h3>Controlling Brightness<a class="headerlink" href="#controlling-brightness" title="Permalink to this headline"></a></h3>
 <p>The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:</p>
 <p><strong>*TODO: Add image*</strong></p>
-</div>
-<div class="section" id="upload-the-sketch-to-your-cs">
-<h3>Upload the sketch to your CS<a class="headerlink" href="#upload-the-sketch-to-your-cs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="upload-the-sketch-to-your-cs">
+<h3>Upload the sketch to your CS<a class="headerlink" href="#upload-the-sketch-to-your-cs" title="Permalink to this headline"></a></h3>
 <p>To upload the new sketch on your Command Station</p>
 <ol class="arabic simple">
 <li><p>Open the Arduino IDE</p></li>
@@ -338,81 +242,64 @@
 <li><p>Save the file</p></li>
 <li><p>Make sure to connect the Arduino to your computer with the USB cable and click the upload button to compile and upload the updated Command Station sketch.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="connecting-an-oled-display">
-<h2>Connecting an OLED display<a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="connecting-an-oled-display">
+<h2>Connecting an OLED display<a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this headline"></a></h2>
 <p>OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won’t work with an UNO. You will require a Mega. Here are some examples of OLED displays:</p>
 <a class="reference internal image-reference" href="../../_images/adafruit_96in_oled_sm.jpg"><img alt="Adafruit .96&quot; OLED" src="../../_images/adafruit_96in_oled_sm.jpg" style="width: 160.0px; height: 153.60000000000002px;" /></a>
 <p><strong>Figure 4</strong> - Adafruit .96” OLED Display</p>
 <a class="reference internal image-reference" href="../../_images/makerfocus_oled_sm.jpg"><img alt="Makerfocus OLED Display" src="../../_images/makerfocus_oled_sm.jpg" style="width: 160.0px; height: 113.60000000000001px;" /></a>
 <p><strong>Figure 5</strong> - Makerfocus 128x32 .91” OLED Display</p>
-<div class="section" id="soldering-wires-to-the-display">
-<h3>Soldering Wires to the Display<a class="headerlink" href="#soldering-wires-to-the-display" title="Permalink to this headline">¶</a></h3>
+<section id="soldering-wires-to-the-display">
+<h3>Soldering Wires to the Display<a class="headerlink" href="#soldering-wires-to-the-display" title="Permalink to this headline"></a></h3>
 <p>For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.</p>
-</div>
-<div class="section" id="connecting-jumper-wires-to-the-cs">
-<h3>Connecting Jumper Wires to the CS<a class="headerlink" href="#connecting-jumper-wires-to-the-cs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="connecting-jumper-wires-to-the-cs">
+<h3>Connecting Jumper Wires to the CS<a class="headerlink" href="#connecting-jumper-wires-to-the-cs" title="Permalink to this headline"></a></h3>
 <p>** Not Finished. Coming soon! **</p>
-</div>
-<div class="section" id="installing-the-software-oled">
-<h3>Installing the Software (OLED)<a class="headerlink" href="#installing-the-software-oled" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="installing-the-software-oled">
+<h3>Installing the Software (OLED)<a class="headerlink" href="#installing-the-software-oled" title="Permalink to this headline"></a></h3>
 <p>** Not Finished. Coming soon! **</p>
-</div>
-<div class="section" id="changing-the-i2c-address">
-<h3>Changing the I2C Address<a class="headerlink" href="#changing-the-i2c-address" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="changing-the-i2c-address">
+<h3>Changing the I2C Address<a class="headerlink" href="#changing-the-i2c-address" title="Permalink to this headline"></a></h3>
 <p>If you have other I2C devices, like an I2C bus to control turnouts or other accessories, you may need to change the address of your I2C display to avoid a conflict. The display should have instructions available for how to do this.</p>
 <p>** Not Finished. Coming soon! **</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="power-supplies.html" class="btn btn-neutral float-right" title="Power Supplies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ethernet-boards.html" class="btn btn-neutral float-left" title="Ethernet Boards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="power-supplies.html" class="btn btn-neutral float-right" title="Power Supplies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
-
-    </p>
+    <p>&#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

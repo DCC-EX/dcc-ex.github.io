@@ -58,7 +58,7 @@ This file installs in JMRI to allow it to display a DCC++ EX Command Reference t
    
 .. raw:: html
 
-   <a class="dcclink" href="../../_static/documents/DCCEX_Commands.zip">DCC++ EX Commands JMRI Script</a>
+   <a class="dcclink" href="../../_static/documents/DCCEX_Commands_3.1.py.zip">DCC++ EX Commands JMRI Script</a>
 
 |
 |

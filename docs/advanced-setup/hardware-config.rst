@@ -156,6 +156,25 @@ ratio, with a value of 0 being full off, and 4095 being full on.  So it can be u
 to different brightness levels.  the EX-RAIL automation has a command **FADE(pin,value,ms)** which operates the 
 PCA9685 to do exactly this.
 
+Adding a New Device
+===================
+
+If you want to add a device that is not handled by DCC++ EX 'out-of-the-box', then you will need to create a device 
+configuration file, with details of the device driver and how to access the device.
+
+DCC++ EX already has a few useful device drivers for different types of sensors, and new ones are appearing regularly.  The
+device drivers can be installed in DCC++ EX just by adding them to the configuration file, using the steps shown below.
+No change is required to the DCC++ EX base code in order to do this, the device driver is configured in a user-specific 
+configuration file.
+
+Many device drivers are completely contained within an "#include" file, with a ".h" file extension.  Some may also have one or
+more ".cpp" files too.  You need to ensure that the driver files are present in the DCC++ EX source file folder.  If you have 
+received them from another source, then copy them to this folder.
+
+Then you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
+file ``mySetup.cpp_example.txt`` to ``mySetup.cpp`` and then edit it, or you can create a new ``mySetup.cpp`` from scratch.
+
+
 Adding A New Device Configuration File
 ======================================
 
@@ -184,7 +203,7 @@ so upper case S in setup) and click ``OK`` to create the new file. [The screen s
    :alt: Arduino IDE New Tab
    :scale: 40%
 
-**Figure 2** - Choosing a file name for the new file
+**Figure 2** - Choosing a file name for the new file, use ``mySetup.cpp``
 
 Adding in the configuration commands
 ------------------------------------
@@ -200,13 +219,31 @@ Within the new file that has been created, you can add in the definitions of new
 		
 	}
 
-Then you would need to enter into the `mySetup` function:
+Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be 
+played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(18)/RX1(19) which is Serial 1.
+Connect the DFPlayer's RX to the arduino TX1 (18) via a 1kOhm resistor, and DFPlayer's TX direct to the Ardino RX1 (19).  You also need to connect +5V power to VCC, 
+and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up. 
+
+Copy a few MP3 files to a Micro-SD card.  The order in which you copy them is important, as the first file copied is referenced as file 1, the second as file 2, etc.
+The names of the files are not used, but best keep them below 8 characters (excluding the .mp3 file extension).  Don't include any other files (.txt etc) on the 
+card, including hidden files - the DFPlayer may find them and attempt to play them!  When you're done, insert the card into the DFPlayer.
+
+Now you're ready to set up the software.
+
+Add the following line to the top of the ``mySetup.cpp`` file:
 
 .. code-block:: cpp
 
-   MCP23017::create(196, 16, 0x22);
+  #include "IO_DFPlayer.h"
 
-This instructs the HAL to create a driver for the MCP23017 module configured for I2C address 0x22, and associates its 16 pins with VPIN numbers 196-211.
+This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the ``mySetup() { }`` function definition:
+
+.. code-block:: cpp
+
+  DFPlayer::create(1000, 5, Serial1);
+
+This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial1, and allocates 5 virtual pins (VPINs) to interface
+with it.
 
 Upload the new version of the software
 --------------------------------------
@@ -217,27 +254,54 @@ Restart the Command Station and the new device will be configured at startup.
 Checking the Driver
 -------------------
 
-If you look at the output from the 
-Arduino IDE's serial monitor with the module disconnected, you should see the following message:
+Start the Arduino IDE's serial monitor program, and set its speed to 115200 baud.  If you enter the following command:
 
-.. code-block::
-
-  <* MCP23017 I2C:x22 Error:2 No response from device (address NAK) *>
-
-If you connect the device, and then reset the Arduino, this message should no longer be output.  If you enter the following command:
-
-.. code-block::
+.. code-block:: none
 
   <D HAL SHOW>
 
 You will see a list of the configured devices, and among them should be the new device, as follows:
 
-.. code-block::
+.. code-block:: none
 
   <* Arduino Vpins:2-69 *>
   <* PCA9685 I2C:x40 Configured on Vpins:100-115 *>
   <* PCA9685 I2C:x41 Configured on Vpins:116-131 *>
   <* MCP23017 I2C:x20 Configured on Vpins:164-179 *>
   <* MCP23017 I2C:x21 Configured on Vpins:180-195 *>
-  <* MCP23017 I2C:x22 Configured on Vpins:196-211 *>     <<== New device
+  <* DFPlayer Configured on Vpins:1000-1002 *>           <<== New device
+
+Using the Device
+----------------
+
+The three VPINs, 1000, 1001 and 1002, allow the first three MP3 files on the Micro-SD card to be played directly.  You just need to
+write to the pins as if they were real digital output pins on the Arduino.  For example, set up
+some outputs using the Arduino IDE's serial monitor program, by entering the following commands:
+
+.. code-block:: none
+
+  <Z 1000 1000 0>
+  <Z 1001 1001 0>
+  <Z 1002 1002 0>
+
+Now you can trigger any of the three MP3 files by using one of the following commands:
+
+.. code-block:: none
+
+  <Z 1000 1>
+  <Z 1001 1>
+  <Z 1002 1>
+
+To stop the player, use ``<Z 1000 0>`` etc.
+
+You may also control the player by writing to the VPINs as analogue-capable pins. Try the following commands:
+
+.. code-block:: none
+
+  <D SERVO 1000 5>        // play MP3 file number 5.
+  <D SERVO 1001 30>       // set volume to maximum (range 0-30)
+  <D SERVO 1001 10>       // set volume to low
+
+Note: These commands apply to the whole device, not to the specific MP3 files.
+
 

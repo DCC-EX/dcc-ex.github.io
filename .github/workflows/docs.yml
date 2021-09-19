@@ -17,7 +17,7 @@ jobs:
     - name: Requirements
       run: brew install sphinx-doc
         && brew install enchant
-        && pip3 install sphinx-rtd-theme
+        && pip3 install sphinx-rtd-theme==0.5.2
         && pip3 install sphinx-sitemap
         && pip3 install sphinxcontrib-spelling
     - name: Checkout repo

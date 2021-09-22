@@ -2,4 +2,9 @@
 Projects
 ****************
 
-Here we will post projects from DCC-EX Labs and from our users.
+This page holds projects by some of our team members and users. If you have a project you would like to submit, just send us a note.
+
+.. toctree::
+    :maxdepth: 1
+
+    railsnail-bluetooth

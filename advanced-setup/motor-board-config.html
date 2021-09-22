@@ -180,7 +180,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Blutooth DCC++EX Command Station</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/requirements.html">Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/website.html">Documentation</a></li>
@@ -319,7 +322,7 @@
 <p>The Arduino Motor Shield, Deek-Robot Motor Shield, DIY More Motor Shield and any other shield or board that is 100% compatible with the Arduino Motor Shield is defined as a “STANDARD_MOTOR_SHIELD”</p>
 </div>
 <p>To select your board, just change the #define line to the type for your board. The following line configures a Pololu Motor Shield. We just copy and paste its name over the STANDARD_MOTOR_SHIELD:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define MOTOR_SHIELD_TYPE POLOLU_MOTOR_SHIELD</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MOTOR_SHIELD_TYPE POLOLU_MOTOR_SHIELD</span>
 </pre></div>
 </div>
 <p>That’s all you need to do. Make your change and then upload the sketch to your Arduino.</p>
@@ -332,7 +335,7 @@
 <h3>Your board is NOT in the Supported List<a class="headerlink" href="#your-board-is-not-in-the-supported-list" title="Permalink to this headline">¶</a></h3>
 <p>Tinkerer may be required with this option.</p>
 <p>If your board is not in the list (remember many boards are considered a “STANDARD_MOTOR_SHIELD”), you can easily add it. In your config.h file, find the line that looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
 </pre></div>
 </div>
 <p>We are going to replace this with a new motor board definition and select it. Comment out the above line and replace it with something that looks like this:</p>

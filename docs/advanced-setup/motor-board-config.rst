@@ -62,22 +62,26 @@ This option is possibly Conductor friendly for those just choosing a supported b
 
 .. note:: The Arduino Motor Shield, Deek-Robot Motor Shield, DIY More Motor Shield and any other shield or board that is 100% compatible with the Arduino Motor Shield is defined as a "STANDARD_MOTOR_SHIELD"
 
-To select your board, just change the #define line to the type for your board. The following line configures a Pololu Motor Shield. We just copy and paste its name over the STANDARD_MOTOR_SHIELD::
+To select your board, just change the #define line to the type for your board. The following line configures a Pololu Motor Shield. We just copy and paste its name over the STANDARD_MOTOR_SHIELD:
 
- #define MOTOR_SHIELD_TYPE POLOLU_MOTOR_SHIELD
+.. code-block:: cpp
+
+   #define MOTOR_SHIELD_TYPE POLOLU_MOTOR_SHIELD
 
 That's all you need to do. Make your change and then upload the sketch to your Arduino.
 
-.. Note:: If your board is not a shield that plugs onto your Arduino, then you are going to have to run jumper wires. An IBT_2 High Current Motor Board is an example of such a board. See the section on your board for installation help.
+.. note:: If your board is not a shield that plugs onto your Arduino, then you are going to have to run jumper wires. An IBT_2 High Current Motor Board is an example of such a board. See the section on your board for installation help.
 
 Your board is NOT in the Supported List
 -------------------------------------------
 
 Tinkerer may be required with this option.
 
-If your board is not in the list (remember many boards are considered a "STANDARD_MOTOR_SHIELD"), you can easily add it. In your config.h file, find the line that looks like this::
+If your board is not in the list (remember many boards are considered a "STANDARD_MOTOR_SHIELD"), you can easily add it. In your config.h file, find the line that looks like this:
 
-  #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
+.. code-block:: cpp
+
+   #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 
 We are going to replace this with a new motor board definition and select it. Comment out the above line and replace it with something that looks like this:
 

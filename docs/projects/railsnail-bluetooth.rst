@@ -3,7 +3,7 @@ RailSnail's Complete Blutooth DCC++EX Command Station
 *******************************************************
 
 .. image:: ../_static/images/bluetooth/ex-bluetooth-1.png
-   :alt: Conductor Icon
+   :alt: Bluetooth Command Station
    :scale: 50%
    :align: center
 
@@ -24,8 +24,8 @@ In keeping with the DCC++ Ex current design philosophy, the microcontroller boar
 The whole CommandStation is powered by one DC power supply (+15V DC) fitted with a 5.5mm x 2.1mm DC plug. A buck converter module (LM2596) reduces the input voltage to 7.5V DC to power the Arduino Mega2560.
 
 .. image:: ../_static/images/bluetooth/ex-bluetooth-2.png
-   :alt: Conductor Icon
-   :scale: 50%
+   :alt: Bluetooth Command Station Internals
+   :scale: 60%
    :align: left
 
 For complete details, see:

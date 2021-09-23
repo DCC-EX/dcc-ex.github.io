@@ -1,12 +1,12 @@
-**************************
-Hardware I/O Configuration
-**************************
+******************
+I/O Device Drivers
+******************
 
 The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may 
 outgrow the built-in capabilities and want to access more output pins than the arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.  
 
-DCC++ EX, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
+DCC++ EX, as of version 3.1.7, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
 piece of software called the **HAL** or **H**\ardware **A**\bstraction **L**\ayer.  
 The HAL provides support for a range of different input and output modules through drivers that are supplied with DCC++ EX.
 In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to DCC++ EX 
@@ -18,15 +18,21 @@ The specific device end-points are given by a kind of pin number, called a **V**
 Any module has one or more VPINs associated with it.
 
 When DCC++ EX code needs to write to an Arduino digital output pin, the output is uniquely identified by a pin number.  
-The Arduino Mega has digital I/O pin numbers ranging up to 69.  A call to ``IODevice::write(50,1)`` will set pin 50 HIGH.
+The Arduino Mega has digital I/O pin numbers ranging up to 69.  For example, you may set up an Output in DCC++ EX using the 
+`<Z 1 50 0>` command (id=1, pin=50).  Then the command `<Z 1 1>` will set pin 50 HIGH and `<Z 1 0>` will set pin 50 LOW.
 
 The HAL extends this model to other devices.  If you want to write to a digital output pin on an external GPIO Extender Module, 
-then the same function is called, but the pin number identifies a virtual pin number associated with an extender module.  The call is passed to
+then you do exactly the same thing, but the pin number identifies a virtual pin number associated with an extender module.  The call is passed to
 the driver software for that module, and a command is sent to the module to modify its pin state.
 DCC++ EX does not need to know what type of device it is, or what low-level commands are necessary to operate it.  
 It just sends an instruction for the pin to be set on or off.
 If you want to reposition a servo, the same function is called, but with a VPIN number that identifies a pin
 on a servo controller module; consequently, a command is sent to the servo control module to move the servo to the appropriate position.
+
+The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command `<S 2 50 1>` command (id=2, pin=50, pullup=enabled). 
+When pin 50 is connected to 0V (ground), a message `<Q 2>` is generated, and when it is disconnected, `<q 2>` is generated.  But if you have an MCP23017
+GPIO Extender module connected up, and you replace the pin number 50 with 164 (the number of the first pin on the MCP23017), 
+then you will get the messages when the MCP23017 pin is connected to 0V or disconnected.
 
 So how are these 'VPINs' configured?  
 
@@ -171,8 +177,14 @@ Many device drivers are completely contained within an "#include" file, with a "
 more ".cpp" files too.  You need to ensure that the driver files are present in the DCC++ EX source file folder.  If you have 
 received them from another source, then copy them to this folder.
 
-Then you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
+Many of the driver ".h" files also include a description of how the driver operates, and what configuration lines are
+required in order to use it, together with examples.  If you can't find documentation elsewhere, then check at the top of the
+".h" file.
+
+Now you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
 file ``mySetup.cpp_example.txt`` to ``mySetup.cpp`` and then edit it, or you can create a new ``mySetup.cpp`` from scratch.
+In fact, the file can have any name you like.  You could use ``AA_setup.cpp`` for example, then it will appear at the beginning of the
+list of files in the Arduino IDE.
 
 
 Adding A New Device Configuration File

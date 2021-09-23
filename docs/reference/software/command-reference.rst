@@ -104,12 +104,12 @@ SINGLE LETTER COMMANDS
   .. code-block:: none
 
       RETURNS: One of the following for each defined turnout or <X> if no turnouts defined.
-      <H ID DCC ADDRESS SUBADDRESS THROW>     -- DCC Accessory Turnouts
-      <H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROW>  -- Servo Turnouts
-      <H ID VPIN PIN THROW>  -- VPIN Turnouts
-      <H ID LCN>  -- LCN Turnouts
+      <H ID DCC ADDRESS SUBADDRESS THROWN>     -- DCC Accessory Turnouts
+      <H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>  -- Servo Turnouts
+      <H ID VPIN PIN THROWN>  -- VPIN Turnouts
+      <H ID LCN THROWN>  -- LCN Turnouts
       **ID** - ID assigned to the turnout
-      **THROW** - "0" is closed.  "1" is thrown.
+      **THROWN** - "0" is closed.  "1" is thrown.
       The rest of the parameters are as defined for the turnout definition commands.
 
  ``<+X>`` Plus sign and upper case X : A special case WiFi command for Engineers to force the CS into "WiFi Connected" mode so that it processes commands from a WiFi board. This is for when users override our network startup and enter their own <+COMMAND> AT commands.
@@ -463,7 +463,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   * Before Version 3.1.7: Returns: ``<H ID ADDRESS SUBADDRESS THROWN>`` for each defined DCC Accessory Turnout or ``<X>`` if no turnouts have beed defined or saved.  
   * After Version 3.1.7: Returns the parameters that would be used to create the turnout, with the ``THROWN`` state (1=thrown, 0=closed) appended.  For example, 
     a servo turnout definition will be listed as ``<H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>`` and a DCC turnout
-    will be listed as ``<H ID DCC ADDRESS SUBADDRESS THROWN>``, and a VPIN turnout as ``<H ID VPIN PIN THROWN>
+    will be listed as ``<H ID DCC ADDRESS SUBADDRESS THROWN>``, a VPIN turnout as ``<H ID VPIN PIN THROWN> and an LCN turnout as ``<H ID LCN THROWN>``.
 
 * ``ID`` : The numeric ID (0-32767) of the turnout to control.  
 
@@ -547,8 +547,8 @@ SENSORS (Inputs)
 DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O extenders
 and other devices. 
 Physical sensors can be of any type (infrared, magnetic, mechanical...).  They may be configured to pull-up or not.  
-When configured for pull-up, the output is connected (within the CS) to 
-+5V via a resistor.  This sort of output is suited to sensors that have two wires (a switch or relay contacts, or a device with an 'open collector' or 'open drain' output.
+When configured for pull-up, the input is connected (within the CS) to 
++5V via a resistor.  This sort of input is suited to sensors that have two wires (a switch or relay contacts, or a device with an 'open collector' or 'open drain' output.
 Some sensors may be sensitive to the pull-up resistor and not operate as expected - in this case you can turn off the pull-up.
 
 The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin is pulled down to 0V.

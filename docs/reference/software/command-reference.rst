@@ -431,9 +431,9 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
   * This command is available from Version 3.1.7
   
-* Command to define a Servo-based turnout: ``<T ID SERVO ID THROWNPOSITION CLOSEDPOSITION PROFILE>`` :
+* Command to define a Servo-based turnout: ``<T ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE>`` :
 
-  * Create a new turnout ``ID`` using the servo output pin ``ID``.  The positions for thrown and closed states are ``THROWNPOSITION`` and ``CLOSEDPOSITION`` 
+  * Create a new turnout ``ID`` using the servo output pin ``PIN``.  The positions for thrown and closed states are ``THROWNPOSITION`` and ``CLOSEDPOSITION`` 
     respectively.  For an SG90 servo, positions in the range of 102-490 will give up to 180 degrees motion, but the range of 205-410 (corresponding to
     1.0-2.0 millisecond pulses) is recommended for the SG90.  
     The transition between states is defined by ``PROFILE``, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).

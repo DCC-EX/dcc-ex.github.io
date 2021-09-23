@@ -544,12 +544,14 @@ Controlling a Defined Turnout
 SENSORS (Inputs)
 =================
 
-DCC++ EX CommandStation supports Sensor inputs that can be connected to any Aruidno Pin not in use by this program. Sensors can be of any type 
-(infrared, magnetic, mechanical...).  They may be configured to pull-up or not.  When configured for pull-up, the output is connected (within the CS) to 
+DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O extenders
+and other devices. 
+Physical sensors can be of any type (infrared, magnetic, mechanical...).  They may be configured to pull-up or not.  
+When configured for pull-up, the output is connected (within the CS) to 
 +5V via a resistor.  This sort of output is suited to sensors that have two wires (a switch or relay contacts, or a device with an 'open collector' or 'open drain' output.
-The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin is pulled down to 0V.
+Some sensors may be sensitive to the pull-up resistor and not operate as expected - in this case you can turn off the pull-up.
 
-When a pull-up is not configured, the input is treated as ACTIVE when the pin is at +5V and INACTIVE when at 0V.
+The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin is pulled down to 0V.
 
 To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino.  
 

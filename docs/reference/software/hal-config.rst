@@ -281,12 +281,12 @@ You will see a list of the configured devices, and among them should be the new 
   <* PCA9685 I2C:x41 Configured on Vpins:116-131 *>
   <* MCP23017 I2C:x20 Configured on Vpins:164-179 *>
   <* MCP23017 I2C:x21 Configured on Vpins:180-195 *>
-  <* DFPlayer Configured on Vpins:1000-1002 *>           <<== New device
+  <* DFPlayer Configured on Vpins:1000-1004 *>           <<== New device
 
 Using the Device
 ----------------
 
-The three VPINs, 1000, 1001 and 1002, allow the first three MP3 files on the Micro-SD card to be played directly.  You just need to
+The five VPINs, 1000 to 1004, allow the first three MP3 files on the Micro-SD card to be played directly.  You just need to
 write to the pins as if they were real digital output pins on the Arduino.  For example, set up
 some outputs using the Arduino IDE's serial monitor program, by entering the following commands:
 

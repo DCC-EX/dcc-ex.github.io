@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>I/O Device Drivers &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/platform.js"></script>
+        <script src="../../_static/js/extra.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Diagnostics &lt;D ACK&gt; Command" href="diagnostic-d-ack-command.html" />
+    <link rel="prev" title="DCC++ EX Command Summary" href="command-summary.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/wifi-setup.html">WiFi Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/installer.html">Install using the Automated Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/teensy.html">Teensy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/high-accuracy.html">High Accuracy Waveform Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/engine-driver.html">Engine Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/withrottle.html">WiThrottle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/dccpp-cab.html">DCCpp CAB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/locontrol.html">Locontrol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/digitrainspro.html">DigiTrainsPro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/srcpclient.html">SRCP Client for iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../automation/index.html">Automation (EX-RAIL) BETA!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-ref.html">EX-RAIL Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/motor-boards.html">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-summary.html">DCC++ EX Command Summary</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">I/O Device Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wire-gauge.html">Wire Gauge Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Software Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../download/commandstation.html">Command Station Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Blutooth DCC++EX Command Station</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/website.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/contactus.html">Contact us</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap/index.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/rewrite.html">What’s New in DCC++ EX?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Reference</a> &raquo;</li>
+        
+      <li>I/O Device Drivers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference/software/hal-config.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="i-o-device-drivers">
+<h1>I/O Device Drivers<a class="headerlink" href="#i-o-device-drivers" title="Permalink to this headline">¶</a></h1>
+<p>The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may
+outgrow the built-in capabilities and want to access more output pins than the arduino has available.  Or you may wish to attach servos to the controller
+for turnout control or for animating a layout component, such as the doors to an engine shed.</p>
+<p>DCC++ EX, as of version 3.1.7, provides support for a wider set of input and output devices than previous versions.  This is thanks to a
+piece of software called the <strong>HAL</strong> or <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer.
+The HAL provides support for a range of different input and output modules through drivers that are supplied with DCC++ EX.
+In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to DCC++ EX
+without having to change a line of the core application code.</p>
+<p>The HAL exposes a standard set of functions which the rest of DCC++ EX code is able to call upon, and the HAL directs the
+calls to the appropriate device driver.
+The specific device end-points are given by a kind of pin number, called a <strong>V</strong>irtual <strong>pin</strong> or VPIN.
+Any module has one or more VPINs associated with it.</p>
+<p>When DCC++ EX code needs to write to an Arduino digital output pin, the output is uniquely identified by a pin number.
+The Arduino Mega has digital I/O pin numbers ranging up to 69.  For example, you may set up an Output in DCC++ EX using the
+<cite>&lt;Z 1 50 0&gt;</cite> command (id=1, pin=50).  Then the command <cite>&lt;Z 1 1&gt;</cite> will set pin 50 HIGH and <cite>&lt;Z 1 0&gt;</cite> will set pin 50 LOW.</p>
+<p>The HAL extends this model to other devices.  If you want to write to a digital output pin on an external GPIO Extender Module,
+then you do exactly the same thing, but the pin number identifies a virtual pin number associated with an extender module.  The call is passed to
+the driver software for that module, and a command is sent to the module to modify its pin state.
+DCC++ EX does not need to know what type of device it is, or what low-level commands are necessary to operate it.
+It just sends an instruction for the pin to be set on or off.
+If you want to reposition a servo, the same function is called, but with a VPIN number that identifies a pin
+on a servo controller module; consequently, a command is sent to the servo control module to move the servo to the appropriate position.</p>
+<p>The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command <cite>&lt;S 2 50 1&gt;</cite> command (id=2, pin=50, pullup=enabled).
+When pin 50 is connected to 0V (ground), a message <cite>&lt;Q 2&gt;</cite> is generated, and when it is disconnected, <cite>&lt;q 2&gt;</cite> is generated.  But if you have an MCP23017
+GPIO Extender module connected up, and you replace the pin number 50 with 164 (the number of the first pin on the MCP23017),
+then you will get the messages when the MCP23017 pin is connected to 0V or disconnected.</p>
+<p>So how are these ‘VPINs’ configured?</p>
+<p>The standard DCC++ EX build for an Arduino Mega already contains support for four external modules, two GPIO Extender modules
+and two servo modules.  The GPIO Extender modules are MCP23017 modules which each have 16 pins that can be configured as inputs or outputs.  The Servo modules are
+PCA9685 modules which each have 16 pins that each provide a pulse-width-modulated signal that may be used to control a servo.  That’s sixteen independently controlled
+servos on each module.</p>
+<p>If you need more modules, then they can be added from a user-specific configuration file, as described further on.</p>
+<p><strong>IMPORTANT NOTE</strong>  The Arduino Nano and Arduino Uno both have very limited FLASH program space and RAM memory, compared to the Arduino Mega.
+The rest of the DCC++ EX code takes up most of the FLASH program space, and so there is very little spare for any HAL code.  Consequently, when
+DCC++ EX is compiled for a Nano or Uno, a <em>reduced HAL</em> is included in place of the full HAL.  This provides limited functionality and supports
+only for the Arduino digital input and output functions and analogue input functions.  No advanced drivers (Servos, external GPIO etc.) can be installed.
+It is theoretically possible to create an ‘on-line only’ version of DCC++ EX which excludes the loco programming functions and
+therefore frees up FLASH on the Uno and Nano to allow the full HAL to operate, but this is not currently supported.</p>
+<div class="section" id="catching-the-i2c-bus">
+<h2>Catching the I2C Bus<a class="headerlink" href="#catching-the-i2c-bus" title="Permalink to this headline">¶</a></h2>
+<p>Many of the external modules are connected to the Arduino via the I2C (Inter Integrated Circuit) interface.
+This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts).
+Your motor shield may have convenient connectors for I2C devices; for example, the DeekRobot shield has two sets of
+four I2C pins on the top.  If not, then check the Arduino’s data sheet to find the applicable I2C and power connections.
+For an Arduino Mega, SCL and SDA are the two connectors nearest the reset button, in the connector block running along the edge of the Arduino.</p>
+<p><strong>WARNING</strong>  <em>There is no standard pin order for the I2C bus connectors, so be careful that you identify which pin is
+which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/+5V.</em></p>
+<p>All I2C devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them.
+However, only a device with a matching address will respond.  Each device attached to the bus should have a unique address.</p>
+<div class="section" id="pull-ups">
+<h3>Pull-Ups<a class="headerlink" href="#pull-ups" title="Permalink to this headline">¶</a></h3>
+<p>The I2C bus requires pull-up resistors in order for it to operate.  However, many I2C modules contain
+pull-up resistors already, and the Arduino also has built-in pull-up resistors which are sufficient for
+installations with short bus cables, so you don’t have to be concerned about this unless you’re
+really <em>pushing the envelope</em>!</p>
+</div>
+<div class="section" id="identifying-what-devices-are-connected">
+<h3>Identifying What Devices Are Connected<a class="headerlink" href="#identifying-what-devices-are-connected" title="Permalink to this headline">¶</a></h3>
+<p>During the startup phase of DCC++ EX, the I2C bus is queried to identify what (if any) devices are connected.
+The list of active I2C addresses is shown on the serial output during startup.  An example is shown below, with annotations.
+Note that the address does not necessarily tell you what the device is, since different modules may have the same default
+address.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;*</span> <span class="n">License</span> <span class="n">GPLv3</span> <span class="n">fsf</span><span class="o">.</span><span class="n">org</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="n">dcc</span><span class="o">-</span><span class="n">ex</span><span class="o">.</span><span class="n">com</span> <span class="o">*&gt;</span>
+<span class="o">&lt;*</span> <span class="n">I2C</span> <span class="n">Device</span> <span class="n">found</span> <span class="n">at</span> <span class="n">x20</span> <span class="o">*&gt;</span>    <span class="o">--</span> <span class="n">GPIO</span> <span class="n">Extender</span> <span class="n">device</span>
+<span class="o">&lt;*</span> <span class="n">I2C</span> <span class="n">Device</span> <span class="n">found</span> <span class="n">at</span> <span class="n">x3C</span> <span class="o">*&gt;</span>    <span class="o">--</span> <span class="n">OLED</span> <span class="n">display</span>
+<span class="o">&lt;*</span> <span class="n">I2C</span> <span class="n">Device</span> <span class="n">found</span> <span class="n">at</span> <span class="n">x40</span> <span class="o">*&gt;</span>    <span class="o">--</span> <span class="n">PWM</span> <span class="p">(</span><span class="n">Servo</span><span class="p">)</span> <span class="n">Control</span> <span class="n">Module</span>
+<span class="o">&lt;*</span> <span class="n">I2C</span> <span class="n">Device</span> <span class="n">found</span> <span class="n">at</span> <span class="n">x48</span> <span class="o">*&gt;</span>    <span class="o">--</span> <span class="mi">4</span><span class="o">-</span><span class="n">pin</span> <span class="n">Analogue</span> <span class="n">Input</span> <span class="n">Module</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mcp23017-modules">
+<h2>MCP23017 Modules<a class="headerlink" href="#mcp23017-modules" title="Permalink to this headline">¶</a></h2>
+<p>The MCP23017 GPIO Extender module has 16 input/output pins.  Like the Arduino input/output pins, you can access any of these in input mode (as a sensor input)
+or output mode (driving a digital output and illuminating an LED or switching some external hardware).  Each module has an address associated with it, which
+is generally either 0x20, 0x21, 0x22 or 0x23.  By default, the module is usually 0x20.  The address will only need to be changed if you have more
+than one module, in which case the second one will have to be set to address 0x21, usually by moving jumpers on the module or by soldering across pads on
+the circuit board.  Refer to the documentation for your own board for details.</p>
+<p>When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal.
+When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow.  When the sensor/switch deactivates,
+the current stops flowing.  This is just the same as the Arduino digital GPIO pins.</p>
+<p>Two MCP23017 modules are pre-configured, one is address 0x20 and uses VPINs 164-179.  The second is address 0x21 and uses VPINs 180-195.</p>
+<p>An input pin may be configured using the DCC++ EX Sensor commands, as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">S</span> <span class="mi">201</span> <span class="mi">164</span> <span class="mi">1</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pullup.</p>
+<p>When the sensor activates and deactivates, the following messages are sent by DCC++ EX over the serial output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Q</span> <span class="mi">201</span><span class="o">&gt;</span>         <span class="o">--</span> <span class="n">Activation</span>
+<span class="o">&lt;</span><span class="n">q</span> <span class="mi">201</span><span class="o">&gt;</span>         <span class="o">--</span> <span class="n">Deactivation</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pca9685-modules">
+<h2>PCA9685 Modules<a class="headerlink" href="#pca9685-modules" title="Permalink to this headline">¶</a></h2>
+<p>The PCA9685 PWM (servo) controller module has 16 input/output pins.  In addition, next to each PWM pin is a +5V and a GND pin, so that a servo connector may
+be directly plugged onto the group of three pins.  Even better, the pins are usually colour-coded to match the colours of the servo cables!</p>
+<p>Like the MCP23017 module, each PCA9685 has an address.  The default address is 0x40, and may be changed to 0x41, 0x42 or 0x43 for the second, third and fourth module
+on the bus.</p>
+<p>Servos contain motors, and so may draw more power than the Arduino can support.  Therefore, the PCA9685 module usually has a block connector allowing connection
+of an external 5V power supply, to power the servo motors.  If this power isn’t connected and on, then the servos won’t move.</p>
+<p>Two PCA9685 modules are pre-configured, one is address 0x40 and uses VPINs 100-115.  The second is address 0x41 and uses VPINs 116-131.</p>
+<p>A servo turnout may be configured using the DCC++ EX Turnout commands, as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">T</span> <span class="mi">301</span> <span class="n">SERVO</span> <span class="mi">100</span> <span class="mi">410</span> <span class="mi">205</span> <span class="mi">2</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This command associates turnout ID 301 with VPIN 100 (PCA9685 first pin).
+When the turnout is ‘thrown’, the PWM position is set to 410.
+When the turnout is ‘closed’, the PWM position is set to 205.
+The movement of the turnout is Medium speed (2).  The movement profile may be 0 (Immediate), 1 (Fast=0.5 sec),
+2 (Medium=1 sec), 3 (Slow=2 sec), or 4 (Bounce profile for semaphore signals).</p>
+<p>Many references quote a PWM pulse length of 1ms to 2ms, which corresponds to PWM values of 205 to 410.
+However, I’ve found, with SG90 servos, that 102 to 490 gives a full servo sweep of nearly 180 degrees.
+<em>But use with care, as an attempt to position a servo outside of its range may
+cause damage to the servo gearing, or to any layout components you have connected to the servo!</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">T</span> <span class="mi">301</span> <span class="mi">1</span><span class="o">&gt;</span>  <span class="o">--</span> <span class="n">Instructs</span> <span class="n">the</span> <span class="n">turnout</span> <span class="n">to</span> <span class="n">move</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;thrown&#39;</span> <span class="n">position</span><span class="o">.</span>
+<span class="o">&lt;</span><span class="n">T</span> <span class="mi">301</span> <span class="mi">0</span><span class="o">&gt;</span>  <span class="o">--</span> <span class="n">Instructs</span> <span class="n">the</span> <span class="n">turnout</span> <span class="n">to</span> <span class="n">move</span> <span class="n">the</span> <span class="n">the</span> <span class="s1">&#39;closed&#39;</span> <span class="n">position</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>In EX-RAIL, the servo can be controlled directly via the <strong>SERVO(pin,position,profile)</strong> or <strong>SERVO2(pin,position,duration)</strong> commands.</p>
+<p><strong>Good to know:</strong> The PCA9685 is not only used for servos.  It generates pulses of variable mark-to-space
+ratio, with a value of 0 being full off, and 4095 being full on.  So it can be used to control an LED
+to different brightness levels.  the EX-RAIL automation has a command <strong>FADE(pin,value,ms)</strong> which operates the
+PCA9685 to do exactly this.</p>
+</div>
+<div class="section" id="adding-a-new-device">
+<h2>Adding a New Device<a class="headerlink" href="#adding-a-new-device" title="Permalink to this headline">¶</a></h2>
+<p>If you want to add a device that is not handled by DCC++ EX ‘out-of-the-box’, then you will need to create a device
+configuration file, with details of the device driver and how to access the device.</p>
+<p>DCC++ EX already has a few useful device drivers for different types of sensors, and new ones are appearing regularly.  The
+device drivers can be installed in DCC++ EX just by adding them to the configuration file, using the steps shown below.
+No change is required to the DCC++ EX base code in order to do this, the device driver is configured in a user-specific
+configuration file.</p>
+<p>Many device drivers are completely contained within an “#include” file, with a “.h” file extension.  Some may also have one or
+more “.cpp” files too.  You need to ensure that the driver files are present in the DCC++ EX source file folder.  If you have
+received them from another source, then copy them to this folder.</p>
+<p>Many of the driver “.h” files also include a description of how the driver operates, and what configuration lines are
+required in order to use it, together with examples.  If you can’t find documentation elsewhere, then check at the top of the
+“.h” file.</p>
+<p>Now you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
+file <code class="docutils literal notranslate"><span class="pre">mySetup.cpp_example.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> and then edit it, or you can create a new <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> from scratch.
+In fact, the file can have any name you like.  You could use <code class="docutils literal notranslate"><span class="pre">AA_setup.cpp</span></code> for example, then it will appear at the beginning of the
+list of files in the Arduino IDE.</p>
+</div>
+<div class="section" id="adding-a-new-device-configuration-file">
+<h2>Adding A New Device Configuration File<a class="headerlink" href="#adding-a-new-device-configuration-file" title="Permalink to this headline">¶</a></h2>
+<p>This will need to be done in the <a class="reference external" href="../get-started/arduino-ide.html">Arduino-IDE</a>, so first make sure you have followed these steps to load up the Arduino IDE.</p>
+<div class="section" id="create-a-new-tab">
+<h3>Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permalink to this headline">¶</a></h3>
+<p>First you will need to add a new file, just like the <a class="reference external" href="../get-started/arduino-ide.html#copy-the-config-example-h-file-or-rename-it">config.h file</a>.
+Create a new tab using the following menu option.</p>
+<a class="reference internal image-reference" href="../../_images/arduino_ide_newtab.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_newtab.jpg" style="width: 654.4000000000001px; height: 172.8px;" /></a>
+<p><strong>Figure 1</strong> - Creating a new tab in the Arduino IDE</p>
+</div>
+<div class="section" id="creating-the-mysetup-cpp-file">
+<h3>Creating the mySetup.cpp file<a class="headerlink" href="#creating-the-mysetup-cpp-file" title="Permalink to this headline">¶</a></h3>
+<p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> (case sensitive,
+so upper case S in setup) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file. [The screen shot shows mySetup.h, so be sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code>.]</p>
+<a class="reference internal image-reference" href="../../_images/arduino_ide_mysetup.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_mysetup.jpg" style="width: 503.20000000000005px; height: 161.60000000000002px;" /></a>
+<p><strong>Figure 2</strong> - Choosing a file name for the new file, use <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code></p>
+</div>
+<div class="section" id="adding-in-the-configuration-commands">
+<h3>Adding in the configuration commands<a class="headerlink" href="#adding-in-the-configuration-commands" title="Permalink to this headline">¶</a></h3>
+<p>Within the new file that has been created, you can add in the definitions of new devices.  But first you need to add the following lines:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">mySetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Insert your commands here...</span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be
+played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(18)/RX1(19) which is Serial 1.
+Connect the DFPlayer’s RX to the arduino TX1 (18) via a 1kOhm resistor, and DFPlayer’s TX direct to the Ardino RX1 (19).  You also need to connect +5V power to VCC,
+and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that’s the hardware set up.</p>
+<p>Copy a few MP3 files to a Micro-SD card.  The order in which you copy them is important, as the first file copied is referenced as file 1, the second as file 2, etc.
+The names of the files are not used, but best keep them below 8 characters (excluding the .mp3 file extension).  Don’t include any other files (.txt etc) on the
+card, including hidden files - the DFPlayer may find them and attempt to play them!  When you’re done, insert the card into the DFPlayer.</p>
+<p>Now you’re ready to set up the software.</p>
+<p>Add the following line to the top of the <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> file:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the <code class="docutils literal notranslate"><span class="pre">mySetup()</span> <span class="pre">{</span> <span class="pre">}</span></code> function definition:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial1, and allocates 5 virtual pins (VPINs) to interface
+with it.</p>
+</div>
+<div class="section" id="upload-the-new-version-of-the-software">
+<h3>Upload the new version of the software<a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permalink to this headline">¶</a></h3>
+<p>Finally, upload the code to the Arduino as you would do during the standard <a class="reference external" href="../get-started/arduino-ide.html#upload-the-software">Arduino IDE Setup</a>.
+Restart the Command Station and the new device will be configured at startup.</p>
+</div>
+<div class="section" id="checking-the-driver">
+<h3>Checking the Driver<a class="headerlink" href="#checking-the-driver" title="Permalink to this headline">¶</a></h3>
+<p>Start the Arduino IDE’s serial monitor program, and set its speed to 115200 baud.  If you enter the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D HAL SHOW&gt;
+</pre></div>
+</div>
+<p>You will see a list of the configured devices, and among them should be the new device, as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;* Arduino Vpins:2-69 *&gt;
+&lt;* PCA9685 I2C:x40 Configured on Vpins:100-115 *&gt;
+&lt;* PCA9685 I2C:x41 Configured on Vpins:116-131 *&gt;
+&lt;* MCP23017 I2C:x20 Configured on Vpins:164-179 *&gt;
+&lt;* MCP23017 I2C:x21 Configured on Vpins:180-195 *&gt;
+&lt;* DFPlayer Configured on Vpins:1000-1004 *&gt;           &lt;&lt;== New device
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-device">
+<h3>Using the Device<a class="headerlink" href="#using-the-device" title="Permalink to this headline">¶</a></h3>
+<p>The five VPINs, 1000 to 1004, allow the first three MP3 files on the Micro-SD card to be played directly.  You just need to
+write to the pins as if they were real digital output pins on the Arduino.  For example, set up
+some outputs using the Arduino IDE’s serial monitor program, by entering the following commands:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 1000 1000 0&gt;
+&lt;Z 1001 1001 0&gt;
+&lt;Z 1002 1002 0&gt;
+</pre></div>
+</div>
+<p>Now you can trigger any of the three MP3 files by using one of the following commands:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 1000 1&gt;
+&lt;Z 1001 1&gt;
+&lt;Z 1002 1&gt;
+</pre></div>
+</div>
+<p>To stop the player, use <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">1000</span> <span class="pre">0&gt;</span></code> etc.</p>
+<p>You may also control the player by writing to the VPINs as analogue-capable pins. Try the following commands:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D SERVO 1000 5&gt;        // play MP3 file number 5.
+&lt;D SERVO 1001 30&gt;       // set volume to maximum (range 0-30)
+&lt;D SERVO 1001 10&gt;       // set volume to low
+</pre></div>
+</div>
+<p>Note: These commands apply to the whole device, not to the specific MP3 files.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="diagnostic-d-ack-command.html" class="btn btn-neutral float-right" title="Diagnostics &lt;D ACK&gt; Command" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="command-summary.html" class="btn btn-neutral float-left" title="DCC++ EX Command Summary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

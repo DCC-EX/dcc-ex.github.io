@@ -15,13 +15,9 @@ Overview
 
 **HAL** = **H**\ardware **A**\bstraction **L**\ayer.
 
-The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, 
-set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), 
-to be controlled from DCC++EX code through a standardised application programming interface (API) defined in class IODevice, 
-irrespective of the type of hardware, the electrical connection or the control protocol that is used.
+The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from DCC++EX code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.
 
-The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a 
-DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.
+The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.
 
 When CS changes a turnout or output, the CS code issues calls in the form **IODevice::write(vpin,value)**.  
 The vpin is used to route the call to the correct device handler, and the device handler sends a command to 

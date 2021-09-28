@@ -45,7 +45,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="I/O Device Drivers" href="hal-config.html" />
+    <link rel="prev" title="Shopping List" href="../hardware/shopping-list.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,7 +95,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Levels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembly</a></li>
@@ -142,23 +144,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-ref.html">EX-RAIL Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index.html">Hardware</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="motor-boards.html">Motor Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/motor-boards.html">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../software/release-notes.html">Release Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/command-summary.html">DCC++ EX Command Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/hal-config.html">I/O Device Drivers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview of DCC++EX HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hal-config.html">I/O Device Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-summary.html">DCC++ EX Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
@@ -247,13 +250,15 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="../index.html">Reference</a> &raquo;</li>
+        
       <li>Overview of DCC++EX HAL</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/reference/hardware/hal.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/reference/software/hal.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -277,12 +282,8 @@ Consequently, it is badly structured, random, and mostly extremely technical.  F
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p><strong>HAL</strong> = <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer.</p>
-<p>The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2,
-set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.),
-to be controlled from DCC++EX code through a standardised application programming interface (API) defined in class IODevice,
-irrespective of the type of hardware, the electrical connection or the control protocol that is used.</p>
-<p>The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a
-DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.</p>
+<p>The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from DCC++EX code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.</p>
+<p>The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.</p>
 <p>When CS changes a turnout or output, the CS code issues calls in the form <strong>IODevice::write(vpin,value)</strong>.
 The vpin is used to route the call to the correct device handler, and the device handler sends a command to
 the device being controlled to carry out an action; for example, a digital output is switched to illuminate an
@@ -769,6 +770,10 @@ servo’s range.</p></li>
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="hal-config.html" class="btn btn-neutral float-right" title="I/O Device Drivers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../hardware/shopping-list.html" class="btn btn-neutral float-left" title="Shopping List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

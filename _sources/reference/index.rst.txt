@@ -24,10 +24,11 @@ Software
 .. toctree::
     :maxdepth: 1
 
+    software/hal
+    software/hal-config
     software/release-notes
     software/command-reference
     software/command-summary
-    software/hal-config
     software/diagnostic-d-ack-command
     software/diagnostic-d-command
 

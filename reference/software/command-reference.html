@@ -874,9 +874,9 @@ However, the default behavior can be modified so that any pin can be forced to b
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the output
 (You pick the ID &amp; they are shared between Turnouts, Sensors and Outputs)</p>
-<p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For
+<p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For
 servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.</p>
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.</p>
 <p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFLAG</span></code> : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">forward</span> <span class="n">operation</span> <span class="p">(</span><span class="n">ACTIVE</span><span class="o">=</span><span class="n">HIGH</span> <span class="o">/</span> <span class="n">INACTIVE</span><span class="o">=</span><span class="n">LOW</span><span class="p">)</span>

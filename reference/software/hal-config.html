@@ -487,25 +487,30 @@ Restart the Command Station and the new device will be configured at startup.</p
 </div>
 <div class="section" id="using-the-device">
 <h3>Using the Device<a class="headerlink" href="#using-the-device" title="Permalink to this headline">¶</a></h3>
-<p>The five VPINs, 1000 to 1004, allow the first three MP3 files on the Micro-SD card to be played directly.  You just need to
+<p>The five VPINs, 1000 to 1004, allow the first five MP3 files on the Micro-SD card to be played directly.  You just need to
 write to the pins as if they were real digital output pins on the Arduino.  For example, set up
 some outputs using the Arduino IDE’s serial monitor program, by entering the following commands:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 1000 1000 0&gt;
 &lt;Z 1001 1001 0&gt;
 &lt;Z 1002 1002 0&gt;
+&lt;Z 1003 1003 0&gt;
+&lt;Z 1004 1004 0&gt;
 </pre></div>
 </div>
 <p>Now you can trigger any of the three MP3 files by using one of the following commands:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 1000 1&gt;
 &lt;Z 1001 1&gt;
 &lt;Z 1002 1&gt;
+&lt;Z 1003 1&gt;
+&lt;Z 1004 1&gt;
 </pre></div>
 </div>
 <p>To stop the player, use <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">1000</span> <span class="pre">0&gt;</span></code> etc.</p>
 <p>You may also control the player by writing to the VPINs as analogue-capable pins. Try the following commands:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D SERVO 1000 5&gt;        // play MP3 file number 5.
-&lt;D SERVO 1001 30&gt;       // set volume to maximum (range 0-30)
-&lt;D SERVO 1001 10&gt;       // set volume to low
+&lt;D SERVO 1000 4 10&gt;     // play MP3 file number 4 at low volume (10).
+&lt;D SERVO 1001 30&gt;       // set volume to maximum (range 0-30).
+&lt;D SERVO 1001 10&gt;       // set volume to low.
 </pre></div>
 </div>
 <p>Note: These commands apply to the whole device, not to the specific MP3 files.</p>

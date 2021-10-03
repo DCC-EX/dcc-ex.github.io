@@ -627,9 +627,9 @@ To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outpu
 ``ID`` : The numeric ID (0-32767) of the output
 (You pick the ID & they are shared between Turnouts, Sensors and Outputs)
 
-``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
+``PIN`` : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For 
 servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.
 
 ``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)
 

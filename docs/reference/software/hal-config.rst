@@ -286,7 +286,7 @@ You will see a list of the configured devices, and among them should be the new 
 Using the Device
 ----------------
 
-The five VPINs, 1000 to 1004, allow the first three MP3 files on the Micro-SD card to be played directly.  You just need to
+The five VPINs, 1000 to 1004, allow the first five MP3 files on the Micro-SD card to be played directly.  You just need to
 write to the pins as if they were real digital output pins on the Arduino.  For example, set up
 some outputs using the Arduino IDE's serial monitor program, by entering the following commands:
 
@@ -295,6 +295,8 @@ some outputs using the Arduino IDE's serial monitor program, by entering the fol
   <Z 1000 1000 0>
   <Z 1001 1001 0>
   <Z 1002 1002 0>
+  <Z 1003 1003 0>
+  <Z 1004 1004 0>
 
 Now you can trigger any of the three MP3 files by using one of the following commands:
 
@@ -303,6 +305,8 @@ Now you can trigger any of the three MP3 files by using one of the following com
   <Z 1000 1>
   <Z 1001 1>
   <Z 1002 1>
+  <Z 1003 1>
+  <Z 1004 1>
 
 To stop the player, use ``<Z 1000 0>`` etc.
 
@@ -311,8 +315,9 @@ You may also control the player by writing to the VPINs as analogue-capable pins
 .. code-block:: none
 
   <D SERVO 1000 5>        // play MP3 file number 5.
-  <D SERVO 1001 30>       // set volume to maximum (range 0-30)
-  <D SERVO 1001 10>       // set volume to low
+  <D SERVO 1000 4 10>     // play MP3 file number 4 at low volume (10).
+  <D SERVO 1001 30>       // set volume to maximum (range 0-30).
+  <D SERVO 1001 10>       // set volume to low.
 
 Note: These commands apply to the whole device, not to the specific MP3 files.
 

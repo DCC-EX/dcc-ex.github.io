@@ -392,7 +392,7 @@ Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 * ``<`` = Begin DCC++ EX command
-* ``a`` (lower case a) this command is for a Acessory Decoder
+* ``a`` (lower case a) this command is for a Accessory Decoder
 * ``LINEAR_ADDRESS:``  the linear address of the decoder controlling this turnout (1-2044)
 * ``ACTIVATE:`` (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)
 * ``>`` = End DCC++ EX command
@@ -401,7 +401,7 @@ Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 * ``<`` = Begin DCC++ EX command
-* ``a`` (lower case a) this command is for a Acessory Decoder
+* ``a`` (lower case a) this command is for a Accessory Decoder
 * ``ADDRESS:``  the primary address of the decoder controlling this turnout (0-511)
 * ``SUBADDRESS:`` the subaddress of the decoder controlling this turnout (0-3)
 * ``ACTIVATE:`` (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)
@@ -446,7 +446,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   * Create a new turnout ``ID`` which operates the output defined by ``PIN``.  If ``PIN`` is in the range of Arduino digital output pins, then 
     throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If ``PIN`` is associated 
     with an external device, then the device will be operated accordingly.
-  * Example: ``<T 25 VPIN 50>`` defines a turnout that operates Arduino digital output pin D50.  
+  * Example: ``<T 25 VPIN 30>`` defines a turnout that operates Arduino digital output pin D30.  
   * Example: ``<T 26 VPIN 164>`` defines a turnout that operates the first pin on the first MCP23017 GPIO Extender (if present).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
   * This command is available from Version 3.1.7.
@@ -693,7 +693,7 @@ Writes, without any verification, a single bit within a Configuration Variable B
 * Write CV BIT Format is: ``<b CAB CV BIT VALUE>``
 * ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder  
 * ``CV`` : the number of the Configuration Variable memory location in the decoder to write to (1-1024)  
-* ``BIT`` : the bit number of the Configurarion Variable regsiter to write (0-7)  
+* ``BIT`` : the bit number of the Configurarion Variable register to write (0-7)  
 * ``VALUE`` : the value of the bit to be written (0-1)  
 
   * RETURNS: NONE

@@ -1,6 +1,6 @@
-*************************
-Overview of DCC++EX HAL
-*************************
+************************
+DCC++EX HAL Architecture
+************************
 
 Introduction
 ==============
@@ -430,7 +430,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   (e.g. turnout is in motion), and false otherwise.
 - Turnouts: Allow DCC Accessory turnouts to be swapped in polarity.  Classic DCC++ has the <T id 1> command throwing the 
   turnout and <T id 0> closing it.  This is translated in classic DCC++ to a packet with D=1 for Throw and D=0 for Close.  
-  RCN-213 standard specifies that the packet should contain D=1 for Close and D=1 for Throw, i.e. the opposite of DCC++.  
+  RCN-213 standard specifies that the packet should contain D=1 for Close and D=0 for Throw, i.e. the opposite of DCC++.  
   Consequently an option is added to allow classic behaviour within the packet generation, or RCN-213 compliant behaviour by editing the Config.h file. 
   The command format of <T id 1> meaning 'Throw' has been retained to avoid confusion.
 - HAL: New device support for HC-SR04 Ultrasonic Distance Sensor.  This device senses distance of nearby objects by sending

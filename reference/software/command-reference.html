@@ -155,8 +155,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="hal.html">Overview of DCC++EX HAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hal-config.html">I/O Device Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hal.html">DCC++EX HAL Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">DCC++ EX Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command-summary.html">DCC++ EX Command Summary</a></li>
@@ -633,7 +633,7 @@ Decoder address 0 does not have a corresponding linear address.  This mapping ma
 <h5>Controlling an Accessory with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">LINEAR_ADDRESS</span> <span class="pre">ACTIVATE&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-with-a-linear-address-activate" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Acessory Decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Accessory Decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">LINEAR_ADDRESS:</span></code>  the linear address of the decoder controlling this turnout (1-2044)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ACTIVATE:</span></code> (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC++ EX command</p></li>
@@ -643,7 +643,7 @@ Decoder address 0 does not have a corresponding linear address.  This mapping ma
 <h5>Controlling an Accessory Decoder with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">ACTIVATE&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-decoder-with-a-address-subaddress-activate" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Acessory Decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Accessory Decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ADDRESS:</span></code>  the primary address of the decoder controlling this turnout (0-511)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">SUBADDRESS:</span></code> the subaddress of the decoder controlling this turnout (0-3)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ACTIVATE:</span></code> (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)</p></li>
@@ -692,7 +692,7 @@ The transition between states is defined by <code class="docutils literal notran
 <li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> which operates the output defined by <code class="docutils literal notranslate"><span class="pre">PIN</span></code>.  If <code class="docutils literal notranslate"><span class="pre">PIN</span></code> is in the range of Arduino digital output pins, then
 throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If <code class="docutils literal notranslate"><span class="pre">PIN</span></code> is associated
 with an external device, then the device will be operated accordingly.</p></li>
-<li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">25</span> <span class="pre">VPIN</span> <span class="pre">50&gt;</span></code> defines a turnout that operates Arduino digital output pin D50.</p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">25</span> <span class="pre">VPIN</span> <span class="pre">30&gt;</span></code> defines a turnout that operates Arduino digital output pin D30.</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">26</span> <span class="pre">VPIN</span> <span class="pre">164&gt;</span></code> defines a turnout that operates the first pin on the first MCP23017 GPIO Extender (if present).</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
 <li><p>This command is available from Version 3.1.7.</p></li>
@@ -931,7 +931,7 @@ status command is invoked. This provides an efficient way of initializing the st
 <li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">CAB</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">VALUE&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : the number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : the bit number of the Configurarion Variable regsiter to write (0-7)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : the bit number of the Configurarion Variable register to write (0-7)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : the value of the bit to be written (0-1)</p>
 <ul>
 <li><p>RETURNS: NONE</p></li>

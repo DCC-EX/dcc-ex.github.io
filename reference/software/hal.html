@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Overview of DCC++EX HAL &mdash; DCC++ EX  documentation</title>
+  <title>DCC++EX HAL Architecture &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -46,8 +46,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="I/O Device Drivers" href="hal-config.html" />
-    <link rel="prev" title="Shopping List" href="../hardware/shopping-list.html" /> 
+    <link rel="next" title="Release Notes" href="release-notes.html" />
+    <link rel="prev" title="I/O Device Drivers and HAL" href="hal-config.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -155,8 +155,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview of DCC++EX HAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hal-config.html">I/O Device Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DCC++EX HAL Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command-reference.html">DCC++ EX Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command-summary.html">DCC++ EX Command Summary</a></li>
@@ -252,7 +252,7 @@
         
           <li><a href="../index.html">Reference</a> &raquo;</li>
         
-      <li>Overview of DCC++EX HAL</li>
+      <li>DCC++EX HAL Architecture</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -271,8 +271,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="overview-of-dcc-ex-hal">
-<h1>Overview of DCC++EX HAL<a class="headerlink" href="#overview-of-dcc-ex-hal" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="dcc-ex-hal-architecture">
+<h1>DCC++EX HAL Architecture<a class="headerlink" href="#dcc-ex-hal-architecture" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Firstly, an apology.  The document below is mostly based on my activity log while developing the HAL software and other associated modules (I2C etc.).
@@ -650,7 +650,7 @@ of 410 and 205 (as above).</p></li>
 (e.g. turnout is in motion), and false otherwise.</p></li>
 <li><p>Turnouts: Allow DCC Accessory turnouts to be swapped in polarity.  Classic DCC++ has the &lt;T id 1&gt; command throwing the
 turnout and &lt;T id 0&gt; closing it.  This is translated in classic DCC++ to a packet with D=1 for Throw and D=0 for Close.
-RCN-213 standard specifies that the packet should contain D=1 for Close and D=1 for Throw, i.e. the opposite of DCC++.
+RCN-213 standard specifies that the packet should contain D=1 for Close and D=0 for Throw, i.e. the opposite of DCC++.
 Consequently an option is added to allow classic behaviour within the packet generation, or RCN-213 compliant behaviour by editing the Config.h file.
 The command format of &lt;T id 1&gt; meaning ‘Throw’ has been retained to avoid confusion.</p></li>
 <li><p>HAL: New device support for HC-SR04 Ultrasonic Distance Sensor.  This device senses distance of nearby objects by sending
@@ -771,8 +771,8 @@ servo’s range.</p></li>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="hal-config.html" class="btn btn-neutral float-right" title="I/O Device Drivers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../hardware/shopping-list.html" class="btn btn-neutral float-left" title="Shopping List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="release-notes.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="hal-config.html" class="btn btn-neutral float-left" title="I/O Device Drivers and HAL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

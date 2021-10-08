@@ -234,7 +234,7 @@ any executable code.  Outside the function, you can declare variables and add in
       // Servo controller on I2C addr 0x41
       PCA9685::create(300, 16, 0x41);
       // Define servo on first pin
-      Turnout::createServo(10, 300, 420 210, 0);
+      ServoTurnout::create(10, 300, 420 210, 0);
     }
 
 The ``create()`` function allocates memory for the device at run-time.  As an alternative to the ``create()`` function, the 
@@ -250,7 +250,7 @@ device can be declared statically so that the compiler allocates the basic RAM r
 
     void mySetup() {
       // Define servo on first pin
-      Turnout::createServo(10, 300, 420 210, 0);
+      ServoTurnout::create(10, 300, 420 210, 0);
     }
 
 Because the mySetup.cpp module is a self-contained C++ module, autocomplete and visual syntax checking will be fully 

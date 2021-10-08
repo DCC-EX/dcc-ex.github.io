@@ -452,7 +452,7 @@ any executable code.  Outside the function, you can declare variables and add in
 <span class="w">  </span><span class="c1">// Servo controller on I2C addr 0x41</span>
 <span class="w">  </span><span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Define servo on first pin</span>
-<span class="w">  </span><span class="n">Turnout</span><span class="o">::</span><span class="n">createServo</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">420</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">420</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
@@ -468,7 +468,7 @@ device can be declared statically so that the compiler allocates the basic RAM r
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">mySetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Define servo on first pin</span>
-<span class="w">  </span><span class="n">Turnout</span><span class="o">::</span><span class="n">createServo</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">420</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">420</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>

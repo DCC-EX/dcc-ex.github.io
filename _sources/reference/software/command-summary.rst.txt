@@ -82,13 +82,21 @@ DCC Accessories
 Turnouts
 ----------------------------
 
- ``<T id address subaddress>`` Define DCC turnout
+ ``<T id address subaddress>`` Define DCC turnout (deprecated)
+
+ ``<T id DCC address subaddress>`` Define DCC turnout
+
+ ``<T id DCC linearaddress>`` Define DCC turnout
+
+ ``<T id SERVO vpin thrownPos closedPos profile>`` Define servo turnout
+
+ ``<T id VPIN vpin>`` Define VPIN turnout
 
  ``<T id>`` Delete turnout
 
  ``<T>`` List defined turnouts
 
- ``<T id 0|1>`` Throw (1) or close(0) a defined tirnout 
+ ``<T id 0|1|C|T>`` Throw (1 or T) or close(0 or C) a defined turnout 
  
 
 ----------------------------
@@ -180,10 +188,22 @@ Tuning
 
  ``<D PROGBOOST>``  Override 250mA prog track limit while idle.
 
+=====================
+I/O (HAL) Diagnostics
+=====================
 
- 
+ ``<D HAL SHOW>`` List HAL devices and allocated VPINs
+
+ ``<D SERVO vpin value [profile]>`` Set servo position to `value` on pin `vpin`.
+
+ ``<D ANOUT vpin value [param2]>``  Write `value` to analogue pin `vpin`, supplying `param2` to the driver.
+
+ ``<D ANIN vpin>``  Read and display pin `vpin`'s analogue value.
   
- 
+
+ ==========
+ Other
+ ==========
  ``<U ...>`` Is reserved for user commands (through user filter)
 
  **For a detailed command reference, see...**

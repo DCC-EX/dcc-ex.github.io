@@ -121,12 +121,17 @@ IODevice::write(vpin, 1); IODevice::write(vpin, 0);
   The vpin will be implicitly switched into output mode by this call.
   If the device in question does not support the write operation, the call will be ignored.
 
-IODevice::writeAnalogue(vpin, position, profile, duration);
-  Write required position value to a pin capable of analogue operations (e.g. a servo attached to a PCA9685 module). This function does not require the 
+IODevice::writeAnalogue(vpin, value, param2, param3);
+  Write value to a pin capable of analogue operations (e.g. a servo attached to a PCA9685 module). This function does not require the 
   pin to have been previously configured by the IODevice::configure() function.  
-  [For the PCA9685, position is between 0 and 4095 and represents the PWM ratio, with 0 being fully off and 4095 being 
-  fully on; profile defines how the servo moves, and may be 0 (Instant), 1 (Fast), 2 (Medium), 3 (Slow) or 4 (Bounce).  
-  If profile is zero, then duration is the time that the animation is to take in 20ths of a second (default 0).]
+
+  [For the PCA9685, value is the position, between 0 and 4095 and represents the PWM ratio, with 0 being fully off and 4095 being 
+  fully on; param2 is profile, which defines how the servo moves, and may be 0 (Instant), 1 (Fast), 2 (Medium), 3 (Slow) or 4 (Bounce).  
+  If param2 is zero, then param3 is the time that the animation is to take in 20ths of a second (default 0).
+  If the top bit of param2 is set (e.g. param2=0x80 + 1) then the PWM output will be maintained after the desired position is reached.
+  This is useful if the device is controlling an LED, since otherwise the LED will be turned off at the end.]
+
+  [For the DFPlayer MP3 player device, value is the number of the sound file to be played; and param2 is the volume.]
   If the device in question does not support the writeAnalogue operation, the call will be ignored.
 
 int state = IODevice::read(vpin);
@@ -208,7 +213,7 @@ mySetup Files
 
 There are various ways of configuring I/O and creating turnouts, sensors and other objects when the CS is powered on:
 
-After using the commands (<T ...>, <Z ...>, <S ...> etc) to define turnouts, outputs and sensors, use the <E> command to 
+After using the commands (<S ...>, <T ...>, <Z ...> etc) to define sensors, turnouts and outputs, use the <E> command to 
 save them to EEPROM.  Then, when the CS restarts, the definitions are read back from EEPROM and the objects recreated.  This is limited to turnout, sensor and output definitions.
 
 Create a ‘mySetup.h’ file, and add commands in the form ``SETUP("....");``.  This can be used for any command that is accepted 
@@ -302,15 +307,15 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   consumption and to eliminate servo buzz. [Note: Helper class code has subsequently been incorporated 
   within the PCA9685 class.]
 
-- Turnouts/Sensors/Outputs: Revise Sensor, Output and Turnout classes to interface them to the IODevice interface using virtual I/O pins (VPINs).
+- Sensors/Turnouts/Outputs: Revise Sensor, Turnout and Output classes to interface them to the IODevice interface using virtual I/O pins (VPINs).
 - Displays: Rationalise SSD1306 OLED driver to reduce RAM and FLASH usage, and to consolidate the 
   code into two source files (.SSD1306Ascii.h and SSD1306Ascii.cpp).
 - Displays: Rationalise LiquidCrystal_I2C driver to remove unnecessary code.
 - I2C: During I2CManager startup, detect and list I2C devices that are connected and responding.
-- Turnouts/Sensors/Outputs: Revise memory layout for Sensor, Output and Turnout classes to optimise EEPROM usage and RAM usage.
+- Sensors/Turnouts/Outputs: Revise memory layout for Sensor, Output and Turnout classes to optimise EEPROM usage and RAM usage.
 - Displays: Make SSD1306Ascii and LiquidCrystal_I2C into subclasses of LcdDisplay.
 - Displays: Enable upper-case only mode for SSD1306Ascii, optionally reducing FLASH usage for font storage.
-- Turnouts/Sensors/Outputs: Revise Turnout command handling to support new commands, e.g.
+- Sensors/Turnouts/Outputs: Revise Turnout command handling to support new commands, e.g.
 
     .. code-block:: none
 
@@ -319,9 +324,9 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
       <T id DCC linearaddress>         // linearaddress 1-2048
       <T id VPIN pin>
 
-- Turnouts/Sensors/Outputs: Move detailed turnout command handling from DCCEXParser.cpp to Turnouts.cpp and PCA9685, 
+- Sensors/Turnouts/Outputs: Move detailed turnout command handling from DCCEXParser.cpp to Turnouts.cpp and PCA9685, 
   closer to where the functionality is implemented.  Therefore, the code for handling a servo is only included in FLASH if the servo driver module is configured.
-- Turnouts/Sensors/Outputs: Modify turnout handling to more effectively store the turnout parameters in the available space.  
+- Sensors/Turnouts/Outputs: Modify turnout handling to more effectively store the turnout parameters in the available space.  
   Allows range of up to 0-511 for activeposition and inactiveposition (nominal range for a typical servo is 200-400).
 - HAL: For GPIO devices (MCP23008 and MCP23017) allow the ‘interrupt’ output pin from the module to be connected to an 
   Arduino digital input pin so that the module will only be polled if this ‘interrupt’ signal is activated (pulled down) 
@@ -332,14 +337,14 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 - Displays: Make display scroll mode 1 the default (scroll by page).   If there are more messages than the screen can hold, 
   then the screen alternates between displaying the first four lines, and displaying the remaining lines.  Previous behaviour 
   (cycle through the messsages, always displaying four lines) can be reinstated by adding “#define SCROLLMODE 0” in the config.h file.
-- Turnouts/Sensors/Outputs: Improve EEPROM handling so that when EEPROM writes are turned off, they stay off.  When turnout 
+- Sensors/Turnouts/Outputs: Improve EEPROM handling so that when EEPROM writes are turned off, they stay off.  When turnout 
   state changes, only write one byte to EEPROM instead of rewriting the entire EEPROM.
 - HAL: Adjust the existing LCN handling to fit alongside the use of VPINs:
 
   - Replace use of pin 255 for ‘impossible pin’ with constant VPIN_NONE, since 255 is a valid value for a VPIN.
   - When an LCN message is received put the value into the inputState field of a sensor, instead of the active field (to facilitate notification of change to JMRI).
 
-- Turnouts/Sensors/Outputs: Ensure that servo turnouts and outputs are driven to the correct position (as configured, 
+- Sensors/Turnouts/Outputs: Ensure that servo turnouts and outputs are driven to the correct position (as configured, 
   or as last saved in EEPROM) when the CS is powered on or reset.
 - I2C: Revise I2CManager class to add the following features:
   
@@ -384,7 +389,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   If the non-blocking I2C driver is not available (e.g. on controllers other than ATmega328, ATmega2560 and ATmega4809), 
   the blocking I2C functions in the Wire library are automatically used instead, without any changes to the CS code.
 
-- Turnouts/Sensors/Outputs: Totally revised Turnout class and TurnoutData struct layout for more optimal storage and layout.  
+- Turnouts: Totally revised Turnout class and TurnoutData struct layout for more optimal storage and layout.  
   The struct is now optimised for access and for storage size.  Further optimisation is possible by writing (and reading) only 
   the number of bytes applicable to each turnout type, instead of the worst case turnout size.
 - HAL: IODevice::configure method originally passed supplied parameters to the specified pin handler without any way of checking 
@@ -496,14 +501,14 @@ Future Enhancements
     would indicate that the device in question is connected to the primary bus and is not affected by the state of the 
     multiplexer.  The impact on I2C traffic is minimal;  two additional bytes need to be sent if an I2C request requires 
     to switch to a different sub-bus and the affect on the code is just the changes above to the I2C handling.
-4.  Turnouts/Sensors/Outputs: I can’t see anything in the existing code which checks whether the EEPROM writes 
+4.  Sensors/Turnouts/Outputs: I can’t see anything in the existing code which checks whether the EEPROM writes 
     overrun the available EEPROM space.  If not, then when the address overflows, I think that the writes will wrap 
     around and overwrite the start of the EEPROM space.  This is, in fact, safe since the beginning of the EEPROM 
     contains a text flag and, if it s not present or has been overwritten, the EEPROM is considered to be empty.  
     PROPOSAL: Analyse more thoroughly and, if the address overrun check is missing, add suitable checks, and report 
     failure (<X>) if there is insufficient EEPROM to store everything.  I’ve added a DIAG report of how much EEPROM 
     is written when <E> command is executed.
-5.  Turnouts/Sensors/Outputs: Sensor handling is not ideal.  When the Sensor class scans for changes in current 
+5.  Sensors: Sensor handling is not ideal.  When the Sensor class scans for changes in current 
     state by calling IODevice::read(), potentially each device (ArduinoPins, MCP23017 etc) needs to be checked to find 
     the correct device, which takes time.  For a system with, say, three I2C devices, this means up to four devices being 
     checked for each pin being read.  This can be mitigated by using the callback capability, but this also has its 
@@ -518,7 +523,7 @@ Future Enhancements
     must be the same for two consecutive scans to be considered a valid change).  This would use minimal RAM in external 
     GPIO module drivers (one extra byte per 8 input pins) but would need more changes for Arduino pins, which are 
     currently scanned on demand.
-6.  HAL, Turnouts/Sensors: Each HAL device and pin, each turnout, and each sensor requires some RAM to hold its 
+6.  HAL, Sensors/Turnouts: Each HAL device and pin, each turnout, and each sensor requires some RAM to hold its 
     configuration parameters and its current state.  While the configuration parameters associated with dynamically created 
     objects (e.g. turnouts through the <T> command) must be held in RAM, it is theoretically possible to provide an 
     alternative way of creating these objects where the configuration parameters are held only in FLASH, thereby reducing 

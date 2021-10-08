@@ -382,7 +382,8 @@ You can either specify an address and its subaddress (Addresses 0-511 with Subad
 
 In the mapping used by DCC++EX, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
 Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders.
-Decoder address 0 does not have a corresponding linear address.  This mapping may be different to the mapping used in commercial equipment.
+Decoder address 0 does not have a corresponding linear address.  This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.
+If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works.  Or use the address/subaddress versions of the commands.
 
 Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet>`_
 
@@ -427,7 +428,16 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 * Command to define a DCC Accessory Decoder turnout: ``<T ID DCC ADDRESS SUBADDRESS>`` :
 
   * Create a new turnout ``ID`` which operates the DCC Accessory Decoder configured for the ``ADDRESS`` and ``SUBADDRESS``. 
+    ``ADDRESS`` ranges from 0 to 511 and ``SUBADDRESS`` ranges from 0 to 3. 
   * Example: ``<T 23 DCC 5 0>``
+  * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
+  * This command is available from Version 3.1.7
+  
+* Command to define a DCC Accessory Decoder turnout: ``<T ID DCC LINEARADDRESS>`` :
+
+  * Create a new turnout ``ID`` which operates the DCC Accessory Decoder configured for the ``LINEARADDRESS``. 
+    ``LINEARADDRESS`` ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).
+  * Example: ``<T 23 DCC 44>`` (corresponds to address 11 subaddress 3).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
   * This command is available from Version 3.1.7
   
@@ -812,6 +822,11 @@ DIAGNOSTICS
   ``pos`` is normally in the range of about 102 to 490 for SG90 servos; values outside of this range may drive the servo outside of its normal range.
   ``profile`` (optional, default=0) may be 0 (Immediate), 1 (Fast), 2 (Medium), 3 (Slow) or 4 (Bounce).  This command is intended to help users to identify appropriate 
   position values for configuring the servo in-situ.  This command is available from Version 3.1.7.
+* ``<D ANOUT pin value param2>`` Write the specified value and param2 to the analogue output VPIN pin.  This is an alias for the <D SERVO...> command.  
+  The significance of param2 depends on the device type associated with the VPIN.  The command is ignored if the pin is not configured or does not 
+  support analogue write operations.  This command is available from Version 3.1.7.
+* ``<D ANIN pin>`` Read the analogue value of the specified pin and display it.  The value will be zero if the pin is not configured or does not support
+  analogue read operations.  This command is available from Version 3.1.7.
 * ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.1.7.
 
 example: <D ACK ON>

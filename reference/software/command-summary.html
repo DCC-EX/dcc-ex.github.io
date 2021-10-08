@@ -328,10 +328,14 @@
 <div class="section" id="turnouts">
 <h2>Turnouts<a class="headerlink" href="#turnouts" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code> Define DCC turnout</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code> Define DCC turnout (deprecated)</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code> Define DCC turnout</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linearaddress&gt;</span></code> Define DCC turnout</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrownPos</span> <span class="pre">closedPos</span> <span class="pre">profile&gt;</span></code> Define servo turnout</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code> Define VPIN turnout</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code> Delete turnout</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> List defined turnouts</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">0|1&gt;</span></code> Throw (1) or close(0) a defined tirnout</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">0|1|C|T&gt;</span></code> Throw (1 or T) or close(0 or C) a defined turnout</p>
 </div></blockquote>
 </div>
 <div class="section" id="sensors">
@@ -401,6 +405,15 @@
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code> Override ACK processing minimum pulse width</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">uS&gt;</span></code> Override ACK processing max pulse width</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code>  Override 250mA prog track limit while idle.</p>
+</div></blockquote>
+</div>
+<div class="section" id="i-o-hal-diagnostics">
+<h3>I/O (HAL) Diagnostics<a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> List HAL devices and allocated VPINs</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code> Set servo position to <cite>value</cite> on pin <cite>vpin</cite>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANOUT</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[param2]&gt;</span></code>  Write <cite>value</cite> to analogue pin <cite>vpin</cite>, supplying <cite>param2</cite> to the driver.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANIN</span> <span class="pre">vpin&gt;</span></code>  Read and display pin <cite>vpin</cite>’s analogue value.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;U</span> <span class="pre">...&gt;</span></code> Is reserved for user commands (through user filter)</p>
 <dl class="simple">
 <dt><strong>For a detailed command reference, see…</strong></dt><dd><p><a class="reference external" href="command-reference.html">Command Reference</a></p>

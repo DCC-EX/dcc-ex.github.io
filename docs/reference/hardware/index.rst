@@ -11,4 +11,5 @@ Hardware
     ethernet-boards
     i2c-displays
     power-supplies
+    accessory-controllers
     shopping-list

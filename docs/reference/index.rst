@@ -24,8 +24,8 @@ Software
 .. toctree::
     :maxdepth: 1
 
-    software/hal
     software/hal-config
+    software/hal
     software/release-notes
     software/command-reference
     software/command-summary

@@ -382,7 +382,8 @@ You can either specify an address and its subaddress (Addresses 0-511 with Subad
 
 In the mapping used by DCC++EX, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
 Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders.
-Decoder address 0 does not have a corresponding linear address.  This mapping may be different to the mapping used in commercial equipment.
+Decoder address 0 does not have a corresponding linear address.  This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.
+If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works.  Or use the address/subaddress versions of the commands.
 
 Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet>`_
 
@@ -392,7 +393,7 @@ Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 * ``<`` = Begin DCC++ EX command
-* ``a`` (lower case a) this command is for a Acessory Decoder
+* ``a`` (lower case a) this command is for a Accessory Decoder
 * ``LINEAR_ADDRESS:``  the linear address of the decoder controlling this turnout (1-2044)
 * ``ACTIVATE:`` (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)
 * ``>`` = End DCC++ EX command
@@ -401,7 +402,7 @@ Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 * ``<`` = Begin DCC++ EX command
-* ``a`` (lower case a) this command is for a Acessory Decoder
+* ``a`` (lower case a) this command is for a Accessory Decoder
 * ``ADDRESS:``  the primary address of the decoder controlling this turnout (0-511)
 * ``SUBADDRESS:`` the subaddress of the decoder controlling this turnout (0-3)
 * ``ACTIVATE:`` (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)
@@ -427,7 +428,16 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 * Command to define a DCC Accessory Decoder turnout: ``<T ID DCC ADDRESS SUBADDRESS>`` :
 
   * Create a new turnout ``ID`` which operates the DCC Accessory Decoder configured for the ``ADDRESS`` and ``SUBADDRESS``. 
+    ``ADDRESS`` ranges from 0 to 511 and ``SUBADDRESS`` ranges from 0 to 3. 
   * Example: ``<T 23 DCC 5 0>``
+  * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
+  * This command is available from Version 3.1.7
+  
+* Command to define a DCC Accessory Decoder turnout: ``<T ID DCC LINEARADDRESS>`` :
+
+  * Create a new turnout ``ID`` which operates the DCC Accessory Decoder configured for the ``LINEARADDRESS``. 
+    ``LINEARADDRESS`` ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).
+  * Example: ``<T 23 DCC 44>`` (corresponds to address 11 subaddress 3).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
   * This command is available from Version 3.1.7
   
@@ -446,7 +456,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   * Create a new turnout ``ID`` which operates the output defined by ``PIN``.  If ``PIN`` is in the range of Arduino digital output pins, then 
     throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If ``PIN`` is associated 
     with an external device, then the device will be operated accordingly.
-  * Example: ``<T 25 VPIN 50>`` defines a turnout that operates Arduino digital output pin D50.  
+  * Example: ``<T 25 VPIN 30>`` defines a turnout that operates Arduino digital output pin D30.  
   * Example: ``<T 26 VPIN 164>`` defines a turnout that operates the first pin on the first MCP23017 GPIO Extender (if present).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
   * This command is available from Version 3.1.7.
@@ -627,9 +637,9 @@ To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outpu
 ``ID`` : The numeric ID (0-32767) of the output
 (You pick the ID & they are shared between Turnouts, Sensors and Outputs)
 
-``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
+``PIN`` : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For 
 servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.
 
 ``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)
 
@@ -693,7 +703,7 @@ Writes, without any verification, a single bit within a Configuration Variable B
 * Write CV BIT Format is: ``<b CAB CV BIT VALUE>``
 * ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder  
 * ``CV`` : the number of the Configuration Variable memory location in the decoder to write to (1-1024)  
-* ``BIT`` : the bit number of the Configurarion Variable regsiter to write (0-7)  
+* ``BIT`` : the bit number of the Configurarion Variable register to write (0-7)  
 * ``VALUE`` : the value of the bit to be written (0-1)  
 
   * RETURNS: NONE
@@ -812,6 +822,11 @@ DIAGNOSTICS
   ``pos`` is normally in the range of about 102 to 490 for SG90 servos; values outside of this range may drive the servo outside of its normal range.
   ``profile`` (optional, default=0) may be 0 (Immediate), 1 (Fast), 2 (Medium), 3 (Slow) or 4 (Bounce).  This command is intended to help users to identify appropriate 
   position values for configuring the servo in-situ.  This command is available from Version 3.1.7.
+* ``<D ANOUT pin value param2>`` Write the specified value and param2 to the analogue output VPIN pin.  This is an alias for the <D SERVO...> command.  
+  The significance of param2 depends on the device type associated with the VPIN.  The command is ignored if the pin is not configured or does not 
+  support analogue write operations.  This command is available from Version 3.1.7.
+* ``<D ANIN pin>`` Read the analogue value of the specified pin and display it.  The value will be zero if the pin is not configured or does not support
+  analogue read operations.  This command is available from Version 3.1.7.
 * ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.1.7.
 
 example: <D ACK ON>

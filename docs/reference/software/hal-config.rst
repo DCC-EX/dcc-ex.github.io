@@ -1,6 +1,6 @@
-******************
-I/O Device Drivers
-******************
+**************************
+I/O Device Drivers and HAL
+**************************
 
 The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may 
 outgrow the built-in capabilities and want to access more output pins than the arduino has available.  Or you may wish to attach servos to the controller
@@ -19,7 +19,7 @@ Any module has one or more VPINs associated with it.
 
 When DCC++ EX code needs to write to an Arduino digital output pin, the output is uniquely identified by a pin number.  
 The Arduino Mega has digital I/O pin numbers ranging up to 69.  For example, you may set up an Output in DCC++ EX using the 
-`<Z 1 50 0>` command (id=1, pin=50).  Then the command `<Z 1 1>` will set pin 50 HIGH and `<Z 1 0>` will set pin 50 LOW.
+`<Z 1 40 0>` command (id=1, pin=40).  Then the command `<Z 1 1>` will set pin 40 HIGH and `<Z 1 0>` will set pin 40 LOW.
 
 The HAL extends this model to other devices.  If you want to write to a digital output pin on an external GPIO Extender Module, 
 then you do exactly the same thing, but the pin number identifies a virtual pin number associated with an extender module.  The call is passed to
@@ -29,9 +29,9 @@ It just sends an instruction for the pin to be set on or off.
 If you want to reposition a servo, the same function is called, but with a VPIN number that identifies a pin
 on a servo controller module; consequently, a command is sent to the servo control module to move the servo to the appropriate position.
 
-The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command `<S 2 50 1>` command (id=2, pin=50, pullup=enabled). 
-When pin 50 is connected to 0V (ground), a message `<Q 2>` is generated, and when it is disconnected, `<q 2>` is generated.  But if you have an MCP23017
-GPIO Extender module connected up, and you replace the pin number 50 with 164 (the number of the first pin on the MCP23017), 
+The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command `<S 2 40 1>` command (id=2, pin=40, pullup=enabled). 
+When pin 40 is connected to 0V (ground), a message `<Q 2>` is generated, and when it is disconnected, `<q 2>` is generated.  But if you have an MCP23017
+GPIO Extender module connected up, and you replace the pin number 40 with 164 (the number of the first pin on the MCP23017), 
 then you will get the messages when the MCP23017 pin is connected to 0V or disconnected.
 
 So how are these 'VPINs' configured?  
@@ -67,10 +67,14 @@ However, only a device with a matching address will respond.  Each device attach
 
 Pull-Ups
 --------
-The I2C bus requires pull-up resistors in order for it to operate.  However, many I2C modules contain
-pull-up resistors already, and the Arduino also has built-in pull-up resistors which are sufficient for
+The I2C bus requires pull-up resistors in order for it to operate.  However, most I2C modules contain
+10kOhm pull-up resistors built in, and the Arduino also has built-in pull-up resistors which are sufficient for
 installations with short bus cables, so you don't have to be concerned about this unless you're
 really *pushing the envelope*\!
+
+For example, if you have 6 or more I2C modules connected to the same bus, you may need to remove the built-in 
+pull-up resistors from one or more of them since the minimum permitted pull-up is generally 1.7kOhm (at 5V supply), to avoid too much current flowing.
+Also, if your I2C bus cable is long then a pull-up value closer to the minimum is desirable.
 
 Identifying What Devices Are Connected
 --------------------------------------
@@ -162,6 +166,19 @@ ratio, with a value of 0 being full off, and 4095 being full on.  So it can be u
 to different brightness levels.  the EX-RAIL automation has a command **FADE(pin,value,ms)** which operates the 
 PCA9685 to do exactly this.
 
+Other Drivers
+=============
+
+There are also drivers included with DCC++ EX for the following modules:
+
+* PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I2C).
+* MCP23008 - Another 8-channel GPIO extender module.
+* DFPlayer - MP3 Media player with microSD card holder.  You can play different sounds from the player by activating or de-activating
+  output VPINs from within DCC++ EX.
+* ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.
+* VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
+* HC-SR04 - Ultrasound 'sonar' range sensor.  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
+
 Adding a New Device
 ===================
 
@@ -232,8 +249,8 @@ Within the new file that has been created, you can add in the definitions of new
 	}
 
 Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be 
-played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(18)/RX1(19) which is Serial 1.
-Connect the DFPlayer's RX to the arduino TX1 (18) via a 1kOhm resistor, and DFPlayer's TX direct to the Ardino RX1 (19).  You also need to connect +5V power to VCC, 
+played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3.
+Connect the DFPlayer's RX to the arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Ardino RX3 (15).  You also need to connect +5V power to VCC, 
 and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up. 
 
 Copy a few MP3 files to a Micro-SD card.  The order in which you copy them is important, as the first file copied is referenced as file 1, the second as file 2, etc.
@@ -252,9 +269,9 @@ This makes the driver software for the DFPlayer known to the compiler.  Now add 
 
 .. code-block:: cpp
 
-  DFPlayer::create(1000, 5, Serial1);
+  DFPlayer::create(1000, 5, Serial3);
 
-This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial1, and allocates 5 virtual pins (VPINs) to interface
+This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial3, and allocates 5 virtual pins (VPINs) to interface
 with it.
 
 Upload the new version of the software
@@ -286,7 +303,7 @@ You will see a list of the configured devices, and among them should be the new 
 Using the Device
 ----------------
 
-The five VPINs, 1000 to 1004, allow the first three MP3 files on the Micro-SD card to be played directly.  You just need to
+The five VPINs, 1000 to 1004, allow the first five MP3 files on the Micro-SD card to be played directly.  You just need to
 write to the pins as if they were real digital output pins on the Arduino.  For example, set up
 some outputs using the Arduino IDE's serial monitor program, by entering the following commands:
 
@@ -295,25 +312,30 @@ some outputs using the Arduino IDE's serial monitor program, by entering the fol
   <Z 1000 1000 0>
   <Z 1001 1001 0>
   <Z 1002 1002 0>
+  <Z 1003 1003 0>
+  <Z 1004 1004 0>
 
-Now you can trigger any of the three MP3 files by using one of the following commands:
+Now you can trigger any of the five MP3 files by using one of the following commands:
 
 .. code-block:: none
 
   <Z 1000 1>
   <Z 1001 1>
   <Z 1002 1>
+  <Z 1003 1>
+  <Z 1004 1>
 
 To stop the player, use ``<Z 1000 0>`` etc.
 
-You may also control the player by writing to the VPINs as analogue-capable pins. Try the following commands:
+You may also control the player by writing to the VPINs as analogue output capable pins. Try the following commands:
 
 .. code-block:: none
 
-  <D SERVO 1000 5>        // play MP3 file number 5.
-  <D SERVO 1001 30>       // set volume to maximum (range 0-30)
-  <D SERVO 1001 10>       // set volume to low
+  <D ANOUT 1000 5>        // play MP3 file number 5.
+  <D ANOUT 1000 4 10>     // play MP3 file number 4 at low volume (10).
+  <D ANOUT 1001 30>       // set volume to maximum (range 0-30).
+  <D ANOUT 1001 10>       // set volume to low.
 
-Note: These commands apply to the whole device, not to the specific MP3 files.
+Note: The volume commands apply to the device, not to the specific MP3 files.
 
 

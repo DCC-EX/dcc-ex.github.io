@@ -8,8 +8,11 @@ pins that you can use for interacting with your railway layout components.
 GPIO pins, in input mode, can be connected to sensors (such as Block Occupancy Detectors, Hall Effect magnetic sensors,
 Infra-Red sensors, microswitches and many more) or to switches, or many other things.  The pins
 sense the digital state (on or off) of the sensor or switch.  Typically, when a sensor is ON or ACTIVE
-it connects its output pin to the GROUND or 0V pin.  Some sensors may connect the output to +5V,
+it connects its output pin to the GROUND or 0V pin.  Some sensors may connect the output to +5V when ACTIVE,
 so be sure which type of sensor you have.
+
+When used in output mode, the GPIO pin may be connected (via a current-limiting resistor) to an LED indicator, or, via
+a suitable power driver, to a motor or solenoid.
 
 A GPIO Expander module typically has 8 or 16 pins that can each be used as an input or
 output.  When you reference a pin, it will be configured in the appropriate mode.  
@@ -39,16 +42,22 @@ This module has a row of three pin headers associated with each I/O pin; this al
 each sensor to have its own GND, VCC and signal pin connection, so we can use three-way 
 ribbon connectors for each sensor or output.
 
-More generally available is the MCP23017 in IC form (28-pin DIL package).  This can be mounted on 
+An example of circuit connections for a module is shown below:
+
+.. image:: ../../_static/images/i2c/ArduinoMega_MCP23017.png
+    :alt: MCP23017 module connections
+    :scale: 30%
+
+This diagram also shows an infra-red sensor (3-pin device) connected to GPIO0 of the 
+MCP23017, and a push-button (2-pin) connected to GPIO1.  
+
+Also generally available is the MCP23017 in IC form (28-pin DIL package).  This can be mounted on 
 a breadboard for use, as shown below, or on stripboard if you want a more permanent solution.
 
 .. image:: ../../_static/images/i2c/ArduinoMega_MCP23017_breadboard.png
     :alt: MCP23017 on a Breadboard
     :scale: 30%
  
-This diagram also shows an infra-red sensor (3-pin device) connected to GPIO0 of the 
-MCP23017, and a push-button (2-pin) connected to GPIO1.  
-
 Pins 15-17 of the MCP23017 allow selection of the I2C address.  If all three pins are connected
 to ground (as shown in the diagram with cyan wires) then the address will be 0x20.
 In DCC++EX, the sixteen GPIO pins on MCP23017 address 0x20 are accessed using pin numbers

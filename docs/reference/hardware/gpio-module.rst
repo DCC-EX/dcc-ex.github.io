@@ -31,7 +31,7 @@ Along the top-left and bottom-right edges are the sixteen GPIO pins, and two Vcc
 
 Here is another module, from DFRobot:
 
-.. image:: ../../_static/images/i2c/DFrobot_MCP23017.jpg
+.. image:: ../../_static/images/i2c/DFrobot_mcp23017.jpg
     :alt: MCP23017 Module (DFRobot)
     :scale: 80%
 

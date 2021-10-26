@@ -88,7 +88,7 @@ will be 0x27.
    :alt: PCF8574 GPIO Expander Module
    :scale: 30%
 
-**Figure 1: PCF8574 GPIO Expander Module**
+**Figure 1** - PCF8574 GPIO Expander Module
 
 .. code-block:: none
 
@@ -106,7 +106,7 @@ will be 0x27.
   | 0x27    | ON  | ON  | ON  |
   +=========+=====+=====+=====+
 
-**Table 1: I2C Address Setting Examples**
+**Table 1** - I2C Address Setting Examples
 
 One device notably uses software to configure the I2C address - the VL53L01 Time-Of-Flight sensor.  It is pre-programmed
 with an address of 0x29, which you may use if you only have one TOF device.  But if you have two or more devices, then at least one
@@ -129,7 +129,7 @@ The position of the I2C pins depends on what controller module you are using:
    :alt: Arduino Mega/Uno I2C pins
    :scale: 80%
 
-**Figure 2: Arduino Mega/Uno I2C pins**
+**Figure 2** - Arduino Mega/Uno I2C pins
 
 I2C devices are all effectively connected in parallel to the bus.  If you only 
 have one device, you can just run a four-wire connecter between the pins on the Arduino, or on
@@ -141,14 +141,14 @@ device!
    :alt: Arduino Mega with OLED Display
    :scale: 30%
 
-**Figure 3: Connecting an OLED Display to an Arduino Mega**
+**Figure 3** - Connecting an OLED Display to an Arduino Mega
 
 
 .. image:: ../../_static/images/i2c/ArduinoMegaServo.png
    :alt: Arduino Mega with one servo controllers
    :scale: 30%
 
-**Figure 4: Connecting a PCA9685 Servo Controller to an Arduino Mega**
+**Figure 4** - Connecting a PCA9685 Servo Controller to an Arduino Mega
 
 If you have more than one device, then there are a few options open to you.  Some modules 
 (PCA9685 and PCF8574 for example) have I2C pins at both ends of the PCB, so you can use one 
@@ -159,7 +159,7 @@ can chain multiple devices, subject to the restrictions described in sections fo
    :alt: Arduino Mega with two servo controllers
    :scale: 30%
 
-**Figure 5: Connecting Two Servo Controllers**
+**Figure 5** - Connecting Two Servo Controllers
 
 Alternatively, you can use an I2C hub, which you can purchase (Adafruit do one, but check
 that you have compatible connectors); or you can make one.  You can use a breadboard
@@ -174,7 +174,7 @@ an OLED display is fitted for testing.
    :alt: Home-brew I2C Passive Hub
    :scale: 60%
 
-**Figure 6: Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)**
+**Figure 6** - Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)
 
 Pull-ups
 ===========
@@ -209,13 +209,13 @@ As examples of where to find the pull-up resistors, take a look at the figures b
     :alt: PCA9685 pullup resistors
     :scale: 30%
   
-**Figure 7: Location of Pull-up Resistors for PCA9685 Module (ringed in red)**
+**Figure 7** - Location of Pull-up Resistors for PCA9685 Module (ringed in red)
 
 .. image:: ../../_static/images/i2c/pcf8574_pullups.jpg
     :alt: PCF8574 pullup resistors
     :scale: 50%
   
-**Figure 8: Location of Pull-up Resistors for PCF8574 Module (ringed in red)**
+**Figure 8** - Location of Pull-up Resistors for PCF8574 Module (ringed in red)
 
 Check the PCB tracks from the SDA and SCL pin connectors; one side of each resistors will be connected to one of these,
 and the other side of both will be connected to the Vcc supply.

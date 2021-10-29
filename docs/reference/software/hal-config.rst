@@ -65,6 +65,12 @@ which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/
 All I2C devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them.
 However, only a device with a matching address will respond.  Each device attached to the bus should have a unique address.
 
+.. image:: ../../_static/images/i2cbus.png
+   :alt: I2C Bus Topology
+   :scale: 20%
+
+**Figure 1** - Example I2C Bus Topology with Arduino Mega and Three I2C modules
+
 Pull-Ups
 --------
 The I2C bus requires pull-up resistors in order for it to operate.  However, most I2C modules contain
@@ -129,7 +135,7 @@ PCA9685 Modules
 The PCA9685 PWM (servo) controller module has 16 input/output pins.  In addition, next to each PWM pin is a +5V and a GND pin, so that a servo connector may
 be directly plugged onto the group of three pins.  Even better, the pins are usually colour-coded to match the colours of the servo cables!
 
-Like the MCP23017 module, each PCA9685 has an address.  The default address is 0x40, and may be changed to 0x41, 0x42 or 0x43 for the second, third and fourth module 
+Like the MCP23017 module, each PCA9685 has an address.  The default address is 0x40, and may be changed, for example to 0x41, 0x42 or 0x43 for the second, third and fourth module 
 on the bus.
 
 Servos contain motors, and so may draw more power than the Arduino can support.  Therefore, the PCA9685 module usually has a block connector allowing connection
@@ -220,7 +226,7 @@ Create a new tab using the following menu option.
    :alt: Arduino IDE New Tab
    :scale: 40%
 
-**Figure 1** - Creating a new tab in the Arduino IDE
+**Figure 2** - Creating a new tab in the Arduino IDE
 
 Creating the mySetup.cpp file
 -----------------------------
@@ -232,7 +238,7 @@ so upper case S in setup) and click ``OK`` to create the new file. [The screen s
    :alt: Arduino IDE New Tab
    :scale: 40%
 
-**Figure 2** - Choosing a file name for the new file, use ``mySetup.cpp``
+**Figure 3** - Choosing a file name for the new file, use ``mySetup.cpp``
 
 Adding in the configuration commands
 ------------------------------------
@@ -252,6 +258,12 @@ Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is wi
 played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3.
 Connect the DFPlayer's RX to the arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Ardino RX3 (15).  You also need to connect +5V power to VCC, 
 and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up. 
+
+.. image:: ../../_static/images/dfplayer.png
+   :alt: Arduino Mega with DFplayer
+   :scale: 30%
+
+**Figure 4** - Arduino Mega with DFPlayer
 
 Copy a few MP3 files to a Micro-SD card.  The order in which you copy them is important, as the first file copied is referenced as file 1, the second as file 2, etc.
 The names of the files are not used, but best keep them below 8 characters (excluding the .mp3 file extension).  Don't include any other files (.txt etc) on the 
@@ -327,7 +339,7 @@ Now you can trigger any of the five MP3 files by using one of the following comm
 
 To stop the player, use ``<Z 1000 0>`` etc.
 
-You may also control the player by writing to the VPINs as analogue output capable pins. Try the following commands:
+You may also control the player by writing to the first two VPINs as analogue output capable pins. Try the following commands:
 
 .. code-block:: none
 
@@ -338,4 +350,16 @@ You may also control the player by writing to the VPINs as analogue output capab
 
 Note: The volume commands apply to the device, not to the specific MP3 files.
 
+You can also control the DFPlayer through EX-RAIL, using commands like the following:
+
+.. code-block:: none
+
+  SET(1000)             // Start playing first sound
+  AT(-1000)             // Wait for playing to finish
+
+  RESET(1000)           // Stop player
+
+  SERVO(1000,4,10)      // Start playing 4th sound at volume level 10
+  SERVO(1001,20)        // Set volume level to 20
+  
 

@@ -47,7 +47,7 @@ There are some diagnostic and control commands added to the <tag> language norma
       - Displays EX-RAIL running task information
     * - </ ROUTES>
       - Returns the Routes & Automations control list in WiThrottle format. **JMRI integration only!**
-    * - </ START [loco_addr ]route_id>
+    * - </ START [loco_addr ] route_id>
       - Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
     * - </ KILL task_id>
       - Kills a currently running script task by ID (use ``</ >`` to list task IDs) 

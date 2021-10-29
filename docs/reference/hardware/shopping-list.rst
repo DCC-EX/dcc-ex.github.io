@@ -5,9 +5,10 @@ Shopping List
 .. NOTE:: There are many sources and sometimes different names for Mega and Motor Shield clones. Please see the Microcontroller Boards and Motor Boards page for info on specific motor boards and links of where to find them.
 
 :ref:`Motor Boards`
-:ref:`Microcontroller Boards`
+:ref:`Microcontroller Boards
 
-**Hardware**
+CS Hardware
+============
 
 `Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/ref=asc_df_B01H4ZLZLQ/?tag=hyprod-20&linkCode=df0&hvadid=309743296044&hvpos=&hvnetw=g&hvrand=2075336217815630856&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-490931309987&psc=1>`_
 
@@ -23,7 +24,8 @@ Shopping List
 
 You can check Amazon, Ebay, AliExpress, Banggood, Adafruit, Sparkfun and others for all the above
 
-**Software**
+Software
+=========
 
 * `DCC++ EX Installer <https://github.com/DCC-EX/BaseStation-Installer/releases/tag/v2.1>`_
 * `Steve Todd's Raspberry Pi Image (If you wannt to use a Pi) <https://mstevetodd.com/rpi>`__
@@ -31,7 +33,8 @@ You can check Amazon, Ebay, AliExpress, Banggood, Adafruit, Sparkfun and others 
 * `Arduino Software IDE to edit and upload changes (Optional) <https://www.arduino.cc/>`_
 * `WebThrottle-EX Controller <https://DCC-EX.github.io/WebThrottle-EX>`_
 
-**Recap**
+CS Build Review
+================
 
 This can be a little confusing, so let explain it a different way:
 
@@ -52,3 +55,11 @@ This can be a little confusing, so let explain it a different way:
     4. If you install an ESP8266 WiFi Shield, you don't need a computer or a Pi if you don't want it once you upload the software to the Arduino. You can connect directly to the CS via WiFi using any WiThrottle compatible controller such as Engine Driver running on a WiFi device like your mobile phone.
 
 .. note:: The computer USB port in option 1, 2, or 3 may be able to be the power supply for the Arduino (but you will still need a 12-14V DC power supply for the motor shield) See `Power Supplies <power-supplies.html>`_ for information on how to choose the right power supplies and different ways you can power the Arduino.
+  
+Add-Ons
+========
+
+This is just the beginning. You may want to add some items, like a display, or a board to control accessories like lights, motors, and servos. See the `Hardware Index Page <../index.html>`_ for information and more shopping list links.
+
+
+

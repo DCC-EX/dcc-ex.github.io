@@ -13,4 +13,5 @@ Hardware
     i2c-devices
     gpio-module
     power-supplies
+    accessory-controllers
     shopping-list

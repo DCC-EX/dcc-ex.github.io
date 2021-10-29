@@ -151,6 +151,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../hardware/wifi-boards.html">WiFi Boards</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/ethernet-boards.html">Ethernet Boards</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/gpio-module.html">I2C GPIO Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
 </ul>
@@ -322,6 +324,8 @@ For an Arduino Mega, SCL and SDA are the two connectors nearest the reset button
 which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/+5V.</em></p>
 <p>All I2C devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them.
 However, only a device with a matching address will respond.  Each device attached to the bus should have a unique address.</p>
+<a class="reference internal image-reference" href="../../_images/i2cbus.png"><img alt="I2C Bus Topology" src="../../_images/i2cbus.png" style="width: 389.40000000000003px; height: 311.40000000000003px;" /></a>
+<p><strong>Figure 1</strong> - Example I2C Bus Topology with Arduino Mega and Three I2C modules</p>
 <div class="section" id="pull-ups">
 <h3>Pull-Ups<a class="headerlink" href="#pull-ups" title="Permalink to this headline">¶</a></h3>
 <p>The I2C bus requires pull-up resistors in order for it to operate.  However, most I2C modules contain
@@ -373,7 +377,7 @@ the current stops flowing.  This is just the same as the Arduino digital GPIO pi
 <h2>PCA9685 Modules<a class="headerlink" href="#pca9685-modules" title="Permalink to this headline">¶</a></h2>
 <p>The PCA9685 PWM (servo) controller module has 16 input/output pins.  In addition, next to each PWM pin is a +5V and a GND pin, so that a servo connector may
 be directly plugged onto the group of three pins.  Even better, the pins are usually colour-coded to match the colours of the servo cables!</p>
-<p>Like the MCP23017 module, each PCA9685 has an address.  The default address is 0x40, and may be changed to 0x41, 0x42 or 0x43 for the second, third and fourth module
+<p>Like the MCP23017 module, each PCA9685 has an address.  The default address is 0x40, and may be changed, for example to 0x41, 0x42 or 0x43 for the second, third and fourth module
 on the bus.</p>
 <p>Servos contain motors, and so may draw more power than the Arduino can support.  Therefore, the PCA9685 module usually has a block connector allowing connection
 of an external 5V power supply, to power the servo motors.  If this power isn’t connected and on, then the servos won’t move.</p>
@@ -441,14 +445,14 @@ list of files in the Arduino IDE.</p>
 <p>First you will need to add a new file, just like the <a class="reference external" href="../get-started/arduino-ide.html#copy-the-config-example-h-file-or-rename-it">config.h file</a>.
 Create a new tab using the following menu option.</p>
 <a class="reference internal image-reference" href="../../_images/arduino_ide_newtab.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_newtab.jpg" style="width: 654.4000000000001px; height: 172.8px;" /></a>
-<p><strong>Figure 1</strong> - Creating a new tab in the Arduino IDE</p>
+<p><strong>Figure 2</strong> - Creating a new tab in the Arduino IDE</p>
 </div>
 <div class="section" id="creating-the-mysetup-cpp-file">
 <h3>Creating the mySetup.cpp file<a class="headerlink" href="#creating-the-mysetup-cpp-file" title="Permalink to this headline">¶</a></h3>
 <p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> (case sensitive,
 so upper case S in setup) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file. [The screen shot shows mySetup.h, so be sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code>.]</p>
 <a class="reference internal image-reference" href="../../_images/arduino_ide_mysetup.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_mysetup.jpg" style="width: 503.20000000000005px; height: 161.60000000000002px;" /></a>
-<p><strong>Figure 2</strong> - Choosing a file name for the new file, use <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code></p>
+<p><strong>Figure 3</strong> - Choosing a file name for the new file, use <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code></p>
 </div>
 <div class="section" id="adding-in-the-configuration-commands">
 <h3>Adding in the configuration commands<a class="headerlink" href="#adding-in-the-configuration-commands" title="Permalink to this headline">¶</a></h3>
@@ -465,6 +469,8 @@ so upper case S in setup) and click <code class="docutils literal notranslate"><
 played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3.
 Connect the DFPlayer’s RX to the arduino TX3 (14) via a 1kOhm resistor, and DFPlayer’s TX direct to the Ardino RX3 (15).  You also need to connect +5V power to VCC,
 and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that’s the hardware set up.</p>
+<a class="reference internal image-reference" href="../../_images/dfplayer.png"><img alt="Arduino Mega with DFplayer" src="../../_images/dfplayer.png" style="width: 497.7px; height: 387.9px;" /></a>
+<p><strong>Figure 4</strong> - Arduino Mega with DFPlayer</p>
 <p>Copy a few MP3 files to a Micro-SD card.  The order in which you copy them is important, as the first file copied is referenced as file 1, the second as file 2, etc.
 The names of the files are not used, but best keep them below 8 characters (excluding the .mp3 file extension).  Don’t include any other files (.txt etc) on the
 card, including hidden files - the DFPlayer may find them and attempt to play them!  When you’re done, insert the card into the DFPlayer.</p>
@@ -522,7 +528,7 @@ some outputs using the Arduino IDE’s serial monitor program, by entering the f
 </pre></div>
 </div>
 <p>To stop the player, use <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">1000</span> <span class="pre">0&gt;</span></code> etc.</p>
-<p>You may also control the player by writing to the VPINs as analogue output capable pins. Try the following commands:</p>
+<p>You may also control the player by writing to the first two VPINs as analogue output capable pins. Try the following commands:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ANOUT 1000 5&gt;        // play MP3 file number 5.
 &lt;D ANOUT 1000 4 10&gt;     // play MP3 file number 4 at low volume (10).
 &lt;D ANOUT 1001 30&gt;       // set volume to maximum (range 0-30).
@@ -530,6 +536,16 @@ some outputs using the Arduino IDE’s serial monitor program, by entering the f
 </pre></div>
 </div>
 <p>Note: The volume commands apply to the device, not to the specific MP3 files.</p>
+<p>You can also control the DFPlayer through EX-RAIL, using commands like the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SET(1000)             // Start playing first sound
+AT(-1000)             // Wait for playing to finish
+
+RESET(1000)           // Stop player
+
+SERVO(1000,4,10)      // Start playing 4th sound at volume level 10
+SERVO(1001,20)        // Set volume level to 20
+</pre></div>
+</div>
 </div>
 </div>
 </div>

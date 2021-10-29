@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Connecting a Servo Module &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/platform.js"></script>
+        <script src="../../_static/js/extra.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/wifi-setup.html">WiFi Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/installer.html">Install using the Automated Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/teensy.html">Teensy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/high-accuracy.html">High Accuracy Waveform Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/engine-driver.html">Engine Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/withrottle.html">WiThrottle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/dccpp-cab.html">DCCpp CAB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/locontrol.html">Locontrol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/digitrainspro.html">DigiTrainsPro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/srcpclient.html">SRCP Client for iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../automation/index.html">Automation (EX-RAIL) BETA!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-ref.html">EX-RAIL Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motor-boards.html">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpio-module.html">I2C GPIO Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../software/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/hal.html">DCC++EX HAL Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/release-notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/command-summary.html">DCC++ EX Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wire-gauge.html">Wire Gauge Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Software Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../download/commandstation.html">Command Station Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Blutooth DCC++EX Command Station</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/website.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/contactus.html">Contact us</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap/index.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/rewrite.html">What’s New in DCC++ EX?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Connecting a Servo Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference/hardware/servo-module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="connecting-a-servo-module">
+<h1>Connecting a Servo Module<a class="headerlink" href="#connecting-a-servo-module" title="Permalink to this headline">¶</a></h1>
+<p>To connect a servo module to DCC++EX, you first need to get a module, based on the PCA9685 chip.</p>
+<a class="reference internal image-reference" href="../../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
+<p>These are widely available from ebay, Amazon, etc. for a few dollars.</p>
+<p>Note the pin connectors along the left side of the module - these are where you connect to the
+Arduino.</p>
+<p>The 16 columns of three pins along the bottom of the module are where you connect the servos.
+The pins are arranged so that you can just plug a servo connector directly onto them, but be
+sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.</p>
+<p>The servo module itself is powered from the Arduino, but the servos themselves contain motors that
+consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the
+servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND.
+The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
+<p>Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:</p>
+<a class="reference internal image-reference" href="../../_images/ArduinoMegaServo.png"><img alt="PCA9685 Servo Module" src="../../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
+<p>In DCC++EX, the drivers for the PCA9685 module is already installed, and made available to for use as
+pin numbers 100-115.
+A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed
+using pin number 100.</p>
+<p>Once you’ve made all of the connections, apply power to the Arduino.</p>
+<p>Then, in the Serial Port Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it
+isn’t (by some fluke) already in that position.</p>
+<p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position)
+you can use any value between about 105 and 490.</p>
+<p>Try <cite>&lt;D SERVO 100 450 3&gt;</cite> and the servo should move slowly back.</p>
+<p>You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your
+layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard
+with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.</p>
+<a class="reference internal image-reference" href="../../_images/TurnoutServoMount.jpg"><img alt="Servo mount to operate a turnout" src="../../_images/TurnoutServoMount.jpg" style="width: 288.0px; height: 384.0px;" /></a>
+<p>And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
+servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
+<a class="reference internal image-reference" href="../../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

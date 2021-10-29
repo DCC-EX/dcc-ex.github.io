@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>I2C GPIO Modules &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/platform.js"></script>
+        <script src="../../_static/js/extra.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Power Supplies" href="power-supplies.html" />
+    <link rel="prev" title="I2C Devices" href="i2c-devices.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/wifi-setup.html">WiFi Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/installer.html">Install using the Automated Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/teensy.html">Teensy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/high-accuracy.html">High Accuracy Waveform Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/engine-driver.html">Engine Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/withrottle.html">WiThrottle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/dccpp-cab.html">DCCpp CAB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/locontrol.html">Locontrol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/digitrainspro.html">DigiTrainsPro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/srcpclient.html">SRCP Client for iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../automation/index.html">Automation (EX-RAIL) BETA!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-ref.html">EX-RAIL Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motor-boards.html">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">I2C GPIO Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../software/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/hal.html">DCC++EX HAL Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/release-notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/command-summary.html">DCC++ EX Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wire-gauge.html">Wire Gauge Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Software Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../download/commandstation.html">Command Station Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Blutooth DCC++EX Command Station</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/website.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/contactus.html">Contact us</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap/index.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/rewrite.html">What’s New in DCC++ EX?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Reference</a> &raquo;</li>
+        
+          <li><a href="index.html">Hardware</a> &raquo;</li>
+        
+      <li>I2C GPIO Modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference/hardware/gpio-module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="i2c-gpio-modules">
+<h1>I2C GPIO Modules<a class="headerlink" href="#i2c-gpio-modules" title="Permalink to this headline">¶</a></h1>
+<p>GPIO Expander modules, as the name implies, expand the number of General Purpose Input/Output
+pins that you can use for interacting with your railway layout components.</p>
+<p>GPIO pins, in input mode, can be connected to sensors (such as Block Occupancy Detectors, Hall Effect magnetic sensors,
+Infra-Red sensors, microswitches and many more) or to switches, or many other things.  The pins
+sense the digital state (on or off) of the sensor or switch.  Typically, when a sensor is ON or ACTIVE
+it connects its output pin to the GROUND or 0V pin.  Some sensors may connect the output to +5V when ACTIVE,
+so be sure which type of sensor you have.</p>
+<p>When used in output mode, the GPIO pin may be connected (via a current-limiting resistor) to an LED indicator, or, via
+a suitable power driver, to a motor or solenoid.</p>
+<p>A GPIO Expander module typically has 8 or 16 pins that can each be used as an input or
+output.  When you reference a pin, it will be configured in the appropriate mode.
+So if you use the EX-RAIL <cite>SET(pin)</cite> call, the pin will be configured as an output; but
+if you use the EX-RAIL <cite>AT(pin)</cite> call, the pin will be configured as an input.  If you
+associate the pin with a DCC++EX ‘Sensor’ object (through the <cite>&lt;S …&gt;</cite> commands), then it will
+be configured as an input.</p>
+<p>A typical GPIO Expander, for which DCC++EX is pre-configured, is the MCP23017.  An
+example board (from PiHut) is shown here.</p>
+<a class="reference internal image-reference" href="../../_images/MCP23017_module.jpg"><img alt="MCP23017 Module (PiHut)" src="../../_images/MCP23017_module.jpg" style="width: 320.0px; height: 262.40000000000003px;" /></a>
+<p>It has a Grove connector on the bottom-left side, for which a compatible converter cable is provided.  It also has
+five connector pads on the top-right side, to which pins or wires may be soldered.
+Along the top-left and bottom-right edges are the sixteen GPIO pins, and two Vcc and two GND pins.</p>
+<p>Here is another module, from DFRobot:</p>
+<a class="reference internal image-reference" href="../../_images/DFrobot_mcp23017.jpg"><img alt="MCP23017 Module (DFRobot)" src="../../_images/DFrobot_mcp23017.jpg" style="width: 451.20000000000005px; height: 300.8px;" /></a>
+<p>This module has a row of three pin headers associated with each I/O pin; this allows
+each sensor to have its own GND, VCC and signal pin connection, so we can use three-way
+ribbon connectors for each sensor or output.  At the far left of the board are the
+I2C connector pins; there is also what appears to be a Grove connector at the right side of the board.</p>
+<p>An example of circuit connections for a module is shown below:</p>
+<a class="reference internal image-reference" href="../../_images/ArduinoMega_MCP23017.png"><img alt="MCP23017 module connections" src="../../_images/ArduinoMega_MCP23017.png" style="width: 603.0px; height: 441.0px;" /></a>
+<p>This diagram also shows an infra-red sensor (3-pin device) connected to GPIO0 of the
+MCP23017, and a push-button (2-pin) connected to GPIO1.</p>
+<p>Also generally available is the MCP23017 in IC form (28-pin DIL package).  This can be mounted on
+a breadboard for use, as shown below, or on stripboard if you want a more permanent solution.</p>
+<a class="reference internal image-reference" href="../../_images/ArduinoMega_MCP23017_breadboard.png"><img alt="MCP23017 on a Breadboard" src="../../_images/ArduinoMega_MCP23017_breadboard.png" style="width: 619.1999999999999px; height: 508.5px;" /></a>
+<p>Pins 15-17 of the MCP23017 allow selection of the I2C address.  If all three pins are connected
+to ground (as shown in the diagram with cyan wires) then the address will be 0x20.
+In DCC++EX, the sixteen GPIO pins on MCP23017 address 0x20 are accessed using pin numbers
+164 to 179, so to associate a sensor object with the switch we would use a command in the form
+<cite>&lt;S 165 165 1&gt;</cite> (the final ‘1’ means enable pull-up for the sensor, so that the pin will
+normally be at HIGH level).  Now, when the switch is pressed,
+the input pin is switched to LOW level and a message <cite>&lt;Q 165&gt;</cite> is generated by DCC++EX to indicate that the
+pin is active.  When the switch is released, the input pin is pulled back to HIGH and a message
+<cite>&lt;q 165&gt;</cite> is generated to indicate that the pin is inactive.</p>
+<div class="section" id="interrupts">
+<h2>Interrupts<a class="headerlink" href="#interrupts" title="Permalink to this headline">¶</a></h2>
+<p>Many I2C GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
+expander chip to notify the microcontroller that one or more inputs have changed state.</p>
+<p>DCC++EX supports the use of these pins.  On controllers with INTA and INTB, the two pins should be connected together.
+The resulting INT signal may then be connected to an input pin of the Arduino.  The INT/INTA/INTB pins of multiple
+modules may be connected to one pin, or you may connect the interrupt pin(s) for each module to a different
+Arduino pin.  In either case, the Arduino pin number is specified when you configure the module in
+the <cite>mySetup.cpp</cite> file.</p>
+<p>Once configured and connected, the GPIO Expander driver will not poll the GPIO module to obtain the input states,
+unless the INT/INTA/INTB signal is active (LOW); so when no inputs are changing, the device will not be accessed.</p>
+<p><strong>Note</strong> The pre-configured MCP23017 modules do not have interrupt mode enabled, so are polled on a cyclic
+basis.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="power-supplies.html" class="btn btn-neutral float-right" title="Power Supplies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="i2c-devices.html" class="btn btn-neutral float-left" title="I2C Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

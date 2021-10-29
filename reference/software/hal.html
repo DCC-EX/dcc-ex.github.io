@@ -151,6 +151,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../hardware/wifi-boards.html">WiFi Boards</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/ethernet-boards.html">Ethernet Boards</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/gpio-module.html">I2C GPIO Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
 </ul>
@@ -289,7 +291,7 @@ The vpin is used to route the call to the correct device handler, and the device
 the device being controlled to carry out an action; for example, a digital output is switched to illuminate an
 LED, or a servo moves the railway track points from one position to another.</p>
 <p>The class hierarchy is shown below.</p>
-<a class="reference internal image-reference" href="../../_images/HAL_class_hierarchy.png"><img alt="HAL Class Hierarchy" src="../../_images/HAL_class_hierarchy.png" style="width: 440.8px; height: 429.6px;" /></a>
+<a class="reference internal image-reference" href="../../_images/HAL_class_hierarchy.png"><img alt="HAL Class Hierarchy" src="../../_images/HAL_class_hierarchy.png" style="width: 429.6px; height: 334.40000000000003px;" /></a>
 <p>IODevice defines the overall base class interface, which is implemented in each HAL device driver class.
 The class GPIOBase implements functionality that is common to, and inherited by, the drivers for GPIO input/output modules
 (MCP23017, MCP23008 and PCF8574).  Consequently, the drivers for those modules are relatively simple and just include the

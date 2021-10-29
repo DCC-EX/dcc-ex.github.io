@@ -45,14 +45,14 @@ Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
 You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your
 layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard 
-with a piece of wire passing through the baseboard, to operates a turnout.
+with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
 
 .. image:: ../../_static/images/i2c/TurnoutServoMount.jpg
    :alt: Servo mount to operate a turnout
    :scale: 60%
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
-mounting bracket, were 3d-printed on a Creality Ender-3 printer.
+servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
 .. image:: ../../_static/images/i2c/SemaphoreSignal.jpg
    :alt: Servo mount to operate a Semaphore Signal

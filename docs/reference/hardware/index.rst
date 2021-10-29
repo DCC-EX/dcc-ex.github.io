@@ -10,5 +10,7 @@ Hardware
     wifi-boards
     ethernet-boards
     i2c-displays
+    i2c-devices
+    gpio-module
     power-supplies
     shopping-list

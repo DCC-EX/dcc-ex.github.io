@@ -65,7 +65,7 @@ to communicate with, and a Slave device which matches that address will respond.
 then send further data which that Slave may interpret as a command.  Or the Master may wait to allow the Slave to 
 send data.  In this way, we can have two-way data flows from Master to Slave, and from Slave to Master.
 
-For more information about I2C, see `<https://www.i2c-bus.org/>`_.
+For more information about I2C, including a link to the I2C Standard, see `<https://www.i2c-bus.org/>`_.
 
 Addresses
 ===========
@@ -114,6 +114,38 @@ of them has to be programmed with a different address.  This is achieved through
 module's XSHUT pin. By operating the XSHUT pins, the device driver is able to programme one device at a time, while the remaining 
 unprogrammed devices are held in the 'shutdown' state.  So each device can use any I2C address!
 
+Connector Styles
+================
+
+Many I2C devices come with a set of four pins, spaced by 2.5mm, for you to connect to.  In some
+cases, the pins come separately and need to be soldered.  If you're not happy with soldering,
+then check before buying.  
+
+A common type of connector is the *DuPont* connectors, which are spaced by 2.5mm.  They come in female form, which fits over a standard pin header,
+and male form, which fits into a connector block such as found on the Arduino boards.  They come in the form of a length of ribbon cable (in standard lengths of 5cm, 10cm, 15cm and others)  
+with each wire pre-fitted at both ends with either a female or male DuPont connector.  
+
+You can also purchase kits of Dupont pins/sockets and shells which,
+with the aid of a crimping tool, and a bit of practice, will enable you to make your own custom connectors.
+
+Some devices (particularly from SeeedStudio, but some other manufacturers too) use
+a four-pin *Grove* male connector which takes a specific female connector, also manufactured and marketed by SeeedStudio.  The pins in the
+Grove connector are on a spacing of 2.0mm, so will not directly the 2.5mm connector pins on most I2C device.  However, converter cables are available
+with a Grove connector on one end and Dupont connectors on the other.
+
+I find the JST-XH connectors to be very good; they are 2.5mm pitch so fit directly
+onto standard pin headers, and provide a more positive connection than the Dupont 
+connectors.  Again, they are available in kit form for crimping onto ribbon cables,
+or they can be found in pre-assembled form.  Note that, while they look very much like the Grove connectors,
+they are a different size and are not interchangeable.
+
+.. image:: ../../_static/images/i2c/connectors.jpg
+    :alt: JST-XH, Dupont, and Grove connectors
+    :scale: 80%
+
+**Figure 2** - From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.
+
+
 Connecting Devices
 ===========
 
@@ -129,7 +161,7 @@ The position of the I2C pins depends on what controller module you are using:
    :alt: Arduino Mega/Uno I2C pins
    :scale: 80%
 
-**Figure 2** - Arduino Mega/Uno I2C pins
+**Figure 3** - Arduino Mega/Uno I2C pins
 
 I2C devices are all effectively connected in parallel to the bus.  If you only 
 have one device, you can just run a four-wire connecter between the pins on the Arduino, or on
@@ -141,14 +173,14 @@ device!
    :alt: Arduino Mega with OLED Display
    :scale: 30%
 
-**Figure 3** - Connecting an OLED Display to an Arduino Mega
+**Figure 4** - Connecting an OLED Display to an Arduino Mega
 
 
 .. image:: ../../_static/images/i2c/ArduinoMegaServo.png
    :alt: Arduino Mega with one servo controllers
    :scale: 30%
 
-**Figure 4** - Connecting a PCA9685 Servo Controller to an Arduino Mega
+**Figure 5** - Connecting a PCA9685 Servo Controller to an Arduino Mega
 
 If you have more than one device, then there are a few options open to you.  Some modules 
 (PCA9685 and PCF8574 for example) have I2C pins at both ends of the PCB, so you can use one 
@@ -159,22 +191,36 @@ can chain multiple devices, subject to the restrictions described in sections fo
    :alt: Arduino Mega with two servo controllers
    :scale: 30%
 
-**Figure 5** - Connecting Two Servo Controllers
+**Figure 6** - Connecting Two Servo Controllers
 
-Alternatively, you can use an I2C hub, which you can purchase (Adafruit do one, but check
-that you have compatible connectors); or you can make one.  You can use a breadboard
+Alternatively, you can use an I2C hub, which you can purchase 
+(`SeeedStudio do one <https://www.seeedstudio.com/Grove-I2C-Hub.html>`_, but check
+that you have compatible connectors - it uses Grove connectors); or you can make one.  You can use a breadboard
 with jumpers, or a stripboard with 4 rows of pins.  Just ensure that the strips separately connect
-all the SCL pins together, all the SDA together, all the Vcc together and all the GND together.
+all the SCL pins together, all the SDA together, all the Vcc together and all the GND together.  SeeedStudio also 
+sell 4-wire cables with three connectors (also Grove), allowing a single connector to 'fan out' to two devices; by connecting another
+cable, you can add another device, and so on.
 
 I use a small piece of stripboard with various 4-way pin headers and sockets soldered in, to allow various devices
-to be plugged in and removed as required.  I also have a four-way socket header connected in parallel, into which
+to be plugged in and removed as required.  There is a mixture of pin headers and sockets (which accept Dupont cables) 
+and JST-XH male sockets (which accept female cable connectors, or female Dupont connectors.
+I also have a four-way socket header connected in parallel, into which
 an OLED display is fitted for testing.
 
 .. image:: ../../_static/images/i2c/i2chub.jpg
    :alt: Home-brew I2C Passive Hub
    :scale: 60%
 
-**Figure 6** - Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)
+**Figure 7** - Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)
+
+If you just want a temporary hookup for multiple I2C devices, then you can use a small piece of breadboard.
+The board shown has space for five Dupont connectors in each half row.
+
+.. image:: ../../_static/images/i2c/breadboard-hub.jpg
+   :alt: Bread-board based I2C Passive Hub
+   :scale: 80%
+
+**Figure 8** - I2C Hub on Breadboard
 
 Pull-ups
 ===========
@@ -209,13 +255,13 @@ As examples of where to find the pull-up resistors, take a look at the figures b
     :alt: PCA9685 pullup resistors
     :scale: 30%
   
-**Figure 7** - Location of Pull-up Resistors for PCA9685 Module (ringed in red)
+**Figure 9** - Location of Pull-up Resistors for PCA9685 Module (ringed in red)
 
 .. image:: ../../_static/images/i2c/pcf8574_pullups.jpg
     :alt: PCF8574 pullup resistors
     :scale: 50%
   
-**Figure 8** - Location of Pull-up Resistors for PCF8574 Module (ringed in red)
+**Figure 10** - Location of Pull-up Resistors for PCF8574 Module (ringed in red)
 
 Check the PCB tracks from the SDA and SCL pin connectors; one side of each resistors will be connected to one of these,
 and the other side of both will be connected to the Vcc supply.
@@ -224,7 +270,7 @@ and the other side of both will be connected to the Vcc supply.
 solder forming a connection between the two pads.**
 
 
-Cabling
+Cabling Limits
 ===========
 
 The I2C bus spec allows bus operation at various speeds - on the Arduino, speeds of 100kHz and 400kHz are
@@ -232,9 +278,9 @@ generally used.  Some devices are not specified to operate at the higher speed (
 my testing hasn't shown any problems.
 
 The number of devices and the amount of cable on an I2C bus is limited, in the I2C specification, only by the
-total capacitance, which for 400kHz should be no more than 400pF.  At this capacitance and the optimal 
+total capacitance, which at 400kHz should be no more than 400pF.  At this capacitance and the optimal 
 pull-up value, the time taken for the bus wire to be pulled up from LOW to HIGH state is significant, compared to the pulse length.
-With a higher pull-up value (e.g. 10kOhm), the maximum capacitance will be lower.
+With a higher pull-up value (e.g. 10kOhm), the maximum permitted capacitance will be lower.
 If you need to run with higher capacitance (e.g. for longer cables), then it is possible to reduce the I2C
 clock speed.  On DCC++EX, operation will continue even with I2C speeds of 32kHz or lower, although the
 scan interval for digital inputs, and the refresh time for I2C displays, may be noticably slower at speeds

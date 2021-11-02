@@ -44,9 +44,35 @@ DCC Shortcuts Card
 |
 |
 |
+|
+|
 
 
-Adding DCC++EX Panels and Buttons to JMRI PDF)
+Adding DCC++EX Panels and Buttons to JMRI (Zip))
+===============================================
+
+This file provides instruction on how to install our custom scripts in JMRI and assign them to buttons. You can have the command references for DCC++ EX shown through the Script Output Window in DecoderPro. We also created buttons to open different JMRI Panels like Tools>Tables>
+ Sensors,  Turnouts, Outputs. You can even use a button to start multiple EXRAIL Automation(n), Route(n) & Sequence(n) scripts from a JMRI GUI button on DecoderPro and PanelPro. Click the image to see the full size screenshot of JMRI.
+
+.. image:: ../../_static/images/jmri/DCCEX_JMRI_Script_windows1.jpg
+   :alt: DCC++EX JMRI script innstall instructions
+   :scale: 25%
+   :align: left
+   
+.. raw:: html
+
+   <a class="dcclink" href="../../_static/documents/DCCEX_31_JMRI_Script+Button_Instructions.pdf">DCC++ EX Commands JMRI Script</a>
+
+|
+|
+|
+|
+|
+|
+|
+
+
+Adding DCC++EX Panels and Buttons to JMRI (PDF)
 ===============================================
 
 This file provides instruction on how to install our custom scripts in JMRI and assign them to buttons. You can have the command references for DCC++ EX shown through the Script Output Window in DecoderPro. We also created buttons to open different JMRI Panels like Tools>Tables>

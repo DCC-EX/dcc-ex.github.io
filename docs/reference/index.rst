@@ -26,7 +26,7 @@ Software
 
     software/hal-config
     software/hal
-    software/writing-hal-drivers
+    software/writing-hal-driver
     software/release-notes
     software/command-reference
     software/command-summary

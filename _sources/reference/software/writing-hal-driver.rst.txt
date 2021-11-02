@@ -1,6 +1,6 @@
-===========================
+*********************
 Writing a HAL Driver
-===========================
+*********************
 
 Suppose you have a particular device you want to use with DCC++EX,
 but there isn't a driver for it.  Well, you could ask for one, and 

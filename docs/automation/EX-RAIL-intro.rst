@@ -22,7 +22,7 @@ To begin, let's define a few terms:
 
 **ROUTE** - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. 
 
-**AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence.
+**AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence. This keword is just a special tag so that is can appear on a "handoff" button in Engine Driver. Engine Driver will supply or handoff the Loco ID to EX-RAIL. An example would be manually driving a train into a station and pressing the assigned handoff button in Engine driver that runs an AUTOMATION to take it on a journey around the layout.
 
 .. sidebar:: A note from the Author
 

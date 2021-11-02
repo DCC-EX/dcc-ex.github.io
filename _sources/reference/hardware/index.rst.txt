@@ -12,6 +12,7 @@ Hardware
     i2c-displays
     i2c-devices
     gpio-module
+    servo-module
     power-supplies
     accessory-controllers
     shopping-list

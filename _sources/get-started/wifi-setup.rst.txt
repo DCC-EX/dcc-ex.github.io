@@ -212,4 +212,6 @@ Install the Software
 
 If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: `WiFi Configuration <../advanced-setup/wifi-config.html>`_
 
+.. note:: LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
+
 If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to `Command Station Downloads <../download/commandstation.html>`_ to load firmware onto the CS.

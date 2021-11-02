@@ -22,7 +22,9 @@ To begin, let's define a few terms:
 
 **ROUTE** - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. 
 
-**AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence. This keword is just a special tag so that is can appear on a "handoff" button in Engine Driver. Engine Driver will supply or handoff the Loco ID to EX-RAIL. An example would be manually driving a train into a station and pressing the assigned handoff button in Engine driver that runs an AUTOMATION to take it on a journey around the layout.
+**AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence. 
+
+Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with throttles that support it (Engine Driver, EX-WebThrottle) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. Automations can appear on a "handoff" button that will supply or handoff the Loco ID to EX-RAIL where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in Engine driver that runs an AUTOMATION to take it on a journey around the layout.
 
 .. sidebar:: A note from the Author
 
@@ -86,7 +88,7 @@ Automation scripts are added to your Command Station by creating a file called "
 
    EXRAIL
      ... your scripts
-     ENDEXRAIL
+   ENDEXRAIL
 
 Connecting your Arduino and pressing the Upload button in the usual way will save the file and upload your script into the Command Station.
 
@@ -316,8 +318,8 @@ When the Command Station is powered up or reset, EX-RAIL starts operating at the
 
 .. code-block:: cpp
 
-   SENDLOCO(3,13)    // Start sequence 13 using loco 3
-   DONE              // This marks the end of the startup process
+   SENDLOCO(3,13) // Start sequence 12 using loco 3
+   DONE           // This marks the end of the startup process
 
 The sequence can also be started from a serial monitor with the command ``</ START 3 13>``.
 

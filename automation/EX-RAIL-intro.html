@@ -288,7 +288,8 @@ that can easily be used to describe sequential actions to automatically take pla
 <p>To begin, let’s define a few terms:</p>
 <p><strong>SEQUENCE</strong> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.</p>
 <p><strong>ROUTE</strong> - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.</p>
-<p><strong>AUTOMATION</strong> - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence. This keword is just a special tag so that is can appear on a “handoff” button in Engine Driver. Engine Driver will supply or handoff the Loco ID to EX-RAIL. An example would be manually driving a train into a station and pressing the assigned handoff button in Engine driver that runs an AUTOMATION to take it on a journey around the layout.</p>
+<p><strong>AUTOMATION</strong> - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence.</p>
+<p>Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with throttles that support it (Engine Driver, EX-WebThrottle) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. “Routes” go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. Automations can appear on a “handoff” button that will supply or handoff the Loco ID to EX-RAIL where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in Engine driver that runs an AUTOMATION to take it on a journey around the layout.</p>
 <div class="sidebar">
 <p class="sidebar-title">A note from the Author</p>
 <p>My original aim was to see if I could create an automated layout with lots going on, that didn’t just run around in circles. Having looked at JMRI (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.</p>
@@ -340,7 +341,7 @@ that can easily be used to describe sequential actions to automatically take pla
 <p>Automation scripts are added to your Command Station by creating a file called “myAutomation.h” in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">EXRAIL</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">scripts</span><span class="w"></span>
-<span class="w">  </span><span class="n">ENDEXRAIL</span><span class="w"></span>
+<span class="n">ENDEXRAIL</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Connecting your Arduino and pressing the Upload button in the usual way will save the file and upload your script into the Command Station.</p>
@@ -502,8 +503,8 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 </div>
 <p>Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the EngineDriver app.</p>
 <p>When the Command Station is powered up or reset, EX-RAIL starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span><span class="w">    </span><span class="c1">// Start sequence 13 using loco 3</span>
-<span class="n">DONE</span><span class="w">              </span><span class="c1">// This marks the end of the startup process</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span><span class="w"> </span><span class="c1">// Start sequence 12 using loco 3</span>
+<span class="n">DONE</span><span class="w">           </span><span class="c1">// This marks the end of the startup process</span>
 </pre></div>
 </div>
 <p>The sequence can also be started from a serial monitor with the command <code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">START</span> <span class="pre">3</span> <span class="pre">13&gt;</span></code>.</p>

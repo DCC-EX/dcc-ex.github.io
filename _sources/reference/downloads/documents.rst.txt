@@ -46,19 +46,20 @@ DCC Shortcuts Card
 |
 
 
-DCC++EX Commands Python Script for JMRI
-========================================
+Adding DCC++EX Panels and Buttons to JMRI PDF)
+===============================================
 
-This file installs in JMRI to allow it to display a DCC++ EX Command Reference through the Script Output Window in DecoderPro. Download, unzip and put the .py file in your JMRI script folder.
+This file provides instruction on how to install our custom scripts in JMRI and assign them to buttons. You can have the command references for DCC++ EX shown through the Script Output Window in DecoderPro. We also created buttons to open different JMRI Panels like Tools>Tables>
+ Sensors,  Turnouts, Outputs. You can even use a button to start multiple EXRAIL Automation(n), Route(n) & Sequence(n) scripts from a JMRI GUI button on DecoderPro and PanelPro. Click the image to see the full size screenshot of JMRI.
 
-.. image:: ../../_static/documents/python_thumbnail.jpg
-   :alt: DCC++EX JMRI script to display a command reference
-   :scale: 75%
+.. image:: ../../_static/images/jmri/DCCEX_JMRI_Script_windows1.jpg
+   :alt: DCC++EX JMRI script innstall instructions
+   :scale: 25%
    :align: left
    
 .. raw:: html
 
-   <a class="dcclink" href="../../_static/documents/DCCEX_Commands_3.1.py.zip">DCC++ EX Commands JMRI Script</a>
+   <a class="dcclink" href="../../_static/documents/"DCCEX_31_JMRI_Script+Button_Instructions.pdf">DCC++ EX Commands JMRI Script</a>
 
 |
 |

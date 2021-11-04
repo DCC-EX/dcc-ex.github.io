@@ -1,5 +1,5 @@
 *******************************************************
-RailSnail's Complete Blutooth DCC++EX Command Station
+RailSnail's Complete Bluetooth DCC++EX Command Station
 *******************************************************
 
 .. image:: ../_static/images/bluetooth/ex-bluetooth-1.png

@@ -28,6 +28,7 @@ Boards currently supported
    * :ref:`Deek-Robot Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
    * :ref:`Flashtree Motor Shield` - 2A rated, 1.5 possible
    * :ref:`DIY More L298NH Motor Shield` - 2A
+   * :ref:`YFRobot L298P Motor Shield` - 2A
    * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
   **Intermediate boards (Tinkerer Level)** - require wiring
@@ -81,7 +82,7 @@ Deek-Robot Motor Shield
 
 **Conductor Level**
 
-Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realisticly 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan.
+Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan.
 
 .. image:: ../../_static/images/motorboards/deek_robot1_sm.jpg
    :alt: Deek Robot Motor Shield
@@ -96,7 +97,7 @@ Flashtree Motor Shield
 
 **Conductor Level**
 
-Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realisticly 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. Since it identical to the Arduino and the Deek-Robot boards, use the Deek-Robot install below.
+Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. Since it identical to the Arduino and the Deek-Robot boards, use the Deek-Robot install below.
 
 https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 
@@ -126,8 +127,38 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
 
 |
 
+YFRobot L298P Motor Shield
+---------------------------
+
+**Conductor Level**
+
+Thsi board is electrically the same, though a different layout than the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
+
+.. image:: ../../_static/images/motorboards/YFRobot1_sm.jpg
+   :alt: YFRobot L298P Motor Driver Shield
+   :scale: 100%
+
+`Install the YFRobot Motor Shield (same as Deek-Robot <../../get-started/assembly.html>`_
+
+Remember to select YFROBOT_MOTOR_SHIELD in your config.h file
+
+Pinout for reference:
+
+| PWM1/MAIN Enable - D5 (normally pin 3)
+| PWM2/PROG Enable- D6 (normally pin 11)
+| DIR1/MAIN Signal - D4 (normally 12)
+| DIR2/PROG Signal - D7 (normally pin 13)
+| Current Sense MAIN - A0
+| Current Senst PROG - A1
+
+.. Note:: This configuration uses the normal accuracy waveform which is normally fine. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. See `High Accuracy Waveform <../../advanced-setup/hight-accuracy.html>`_
+
+.. Todo:: Give a link to how to handle the jumper reconfig
+
+|
+
 L298N Motor Driver (dual)
--------------------------
+-------------------------+
 
 **Tinkerer level**
 

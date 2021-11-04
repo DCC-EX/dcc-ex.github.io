@@ -132,15 +132,15 @@ YFRobot L298P Motor Shield
 
 **Conductor Level**
 
-Thsi board is electrically the same, though a different layout than the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
+This board is electrically the same, though a different layout than the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
 
-.. image:: ../../_static/images/motorboards/YFRobot1_sm.jpg
+.. image:: ../../_static/images/motorboards/YFRobot1.png
    :alt: YFRobot L298P Motor Driver Shield
-   :scale: 100%
+   :scale: 30%
 
-`Install the YFRobot Motor Shield (same as Deek-Robot <../../get-started/assembly.html>`_
+`Install the YFRobot Motor Shield (same as Deek-Robot) <../../get-started/assembly.html>`_
 
-Remember to select YFROBOT_MOTOR_SHIELD in your config.h file
+**Remember to select YFROBOT_MOTOR_SHIELD in your config.h file or from the motor board dropdown if using EX-Installer**
 
 Pinout for reference:
 
@@ -151,18 +151,20 @@ Pinout for reference:
 | Current Sense MAIN - A0
 | Current Senst PROG - A1
 
-.. Note:: This configuration uses the normal accuracy waveform which is normally fine. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. See `High Accuracy Waveform <../../advanced-setup/hight-accuracy.html>`_
+.. Note:: This configuration uses the normal accuracy waveform which is normally fine. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. For information about high-accuracy mode, See:
+
+`High Accuracy Waveform <../../advanced-setup/hight-accuracy.html>`_
 
 .. Todo:: Give a link to how to handle the jumper reconfig
 
 |
 
 L298N Motor Driver (dual)
--------------------------+
+-------------------------
 
 **Tinkerer level**
 
-THIS BOARD HAS NO CURRENT SENSE! This is an alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You'll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471.
+THIS BOARD HAS NO CURRENT SENSE! This is a high-current alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You'll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense in order to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471  instead.
 
 .. image:: ../../_static/images/motorboards/l298_board.jpg
    :alt: L298 Motor Driver
@@ -170,6 +172,9 @@ THIS BOARD HAS NO CURRENT SENSE! This is an alternative to the Arduino and Deek-
 
 `L298N Motor Driver on Amazon <https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/ref=asc_df_B014KMHSW6/?tag=hyprod-20&linkCode=df0&hvadid=167139094796&hvpos=&hvnetw=g&hvrand=1461693454543934465&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-306436938191&psc=1>`_
 https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
+
+
+`L298N Motor Driver Installaion Instructions <../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html>`_
 
 |
 

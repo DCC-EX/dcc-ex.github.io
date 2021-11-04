@@ -84,7 +84,7 @@ This file provides instruction on how to install our custom scripts in JMRI and 
    
 .. raw:: html
 
-   <a class="dcclink" href="../../_static/documents/DCCEX_31_JMRI_Script+Button_Instructions.pdf>DCC++EX + JMRI Custom Buttons Install"</a>
+   <a class="dcclink" href="../../_static/documents/DCCEX_31_JMRI_Script+Button_Instructions.pdf">DCC++EX + JMRI Custom Buttons Install"</a>
 
 |
 |

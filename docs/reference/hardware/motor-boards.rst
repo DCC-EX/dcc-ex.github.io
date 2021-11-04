@@ -151,9 +151,9 @@ Pinout for reference:
 | Current Sense MAIN - A0
 | Current Senst PROG - A1
 
-.. Note:: This configuration uses the normal accuracy waveform which is normally fine. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. For information about high-accuracy mode, See:
+.. Note:: This configuration uses the normal accuracy waveform to avoid having to use jumpers. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. For information about high-accuracy mode, See:
 
-`High Accuracy Waveform <../../advanced-setup/hight-accuracy.html>`_
+`High Accuracy Waveform <../../advanced-setup/motor-board-config.html#using-high-accuracy-waveform-mode>`_
 
 .. Todo:: Give a link to how to handle the jumper reconfig
 
@@ -174,7 +174,7 @@ THIS BOARD HAS NO CURRENT SENSE! This is a high-current alternative to the Ardui
 https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
 
 
-`L298N Motor Driver Installaion Instructions <../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html>`_
+`Install the L298N Motor Driver <../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html>`_
 
 |
 

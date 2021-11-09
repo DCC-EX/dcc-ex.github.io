@@ -108,6 +108,9 @@ will be 0x27.
 
 **Table 1** - I2C Address Setting Examples
 
+The same address settings apply for the MCP23017 and MCP23008 devices, which also have three address jumpers A2-A0 and use the 
+same address range 0x20-0x27.
+
 One device notably uses software to configure the I2C address - the VL53L01 Time-Of-Flight sensor.  It is pre-programmed
 with an address of 0x29, which you may use if you only have one TOF device.  But if you have two or more devices, then at least one
 of them has to be programmed with a different address.  This is achieved through an additional wire per module, connected to the
@@ -156,12 +159,34 @@ The position of the I2C pins depends on what controller module you are using:
 * On the Arduino Mega, they are pins D20 (SDA) and D21 (SCL), which are nearest to the reset button.
 
 * On the Arduino Uno, you may use pins A4 (SDA) and A5 (SCL), or pins D20 (SDA) and D21 (SCL), which are in the same place as on the Mega.
+  Bear in mind that, even if you use pins D20 and D21 for I2C, the pins A4 and A5 cannot be used for analogue inputs.
 
 .. image:: ../../_static/images/i2c/mega_i2cpins.png
    :alt: Arduino Mega/Uno I2C pins
    :scale: 80%
 
 **Figure 3** - Arduino Mega/Uno I2C pins
+
+Some motor shields come with header pins for the I2C connections, for example the Arduino motor shield and 
+the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.
+
+.. image:: ../../_static/images/i2c/deek_robot.jpg
+   :alt: Motor shield I2C pins
+   :scale: 40%
+
+**Figure 4** - Motor Shield I2C pins
+
+The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-printed 6-inch rack case, with
+one set of I2C pins connected to an OLED display on the front of the case, and one set of I2C pins connected to two external connectors at the
+rear of the case.  The orange wires connect four LEDs (with current-limiting series resistors) that provide panel indications of incoming
+5V and 14V power, and of outgoing DCC power to the Main and Programming tracks.  I've also mounted a small self-adhesive aluminium 
+heat sink onto the L298P device.
+
+.. image:: ../../_static/images/i2c/deekrobot_motor_shield.jpg
+   :alt: Motor shield I2C pins
+   :scale: 40%
+
+**Figure 5** - Motor Shield I2C pins
 
 I2C devices are all effectively connected in parallel to the bus.  If you only 
 have one device, you can just run a four-wire connecter between the pins on the Arduino, or on
@@ -173,14 +198,14 @@ device!
    :alt: Arduino Mega with OLED Display
    :scale: 30%
 
-**Figure 4** - Connecting an OLED Display to an Arduino Mega
+**Figure 6** - Connecting an OLED Display to an Arduino Mega
 
 
 .. image:: ../../_static/images/i2c/ArduinoMegaServo.png
    :alt: Arduino Mega with one servo controllers
    :scale: 30%
 
-**Figure 5** - Connecting a PCA9685 Servo Controller to an Arduino Mega
+**Figure 7** - Connecting a PCA9685 Servo Controller to an Arduino Mega
 
 If you have more than one device, then there are a few options open to you.  Some modules 
 (PCA9685 and PCF8574 for example) have I2C pins at both ends of the PCB, so you can use one 
@@ -191,7 +216,7 @@ can chain multiple devices, subject to the restrictions described in sections fo
    :alt: Arduino Mega with two servo controllers
    :scale: 30%
 
-**Figure 6** - Connecting Two Servo Controllers
+**Figure 8** - Connecting Two Servo Controllers
 
 Alternatively, you can use an I2C hub, which you can purchase 
 (`SeeedStudio do one <https://www.seeedstudio.com/Grove-I2C-Hub.html>`_, but check
@@ -211,7 +236,7 @@ an OLED display is fitted for testing.
    :alt: Home-brew I2C Passive Hub
    :scale: 60%
 
-**Figure 7** - Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)
+**Figure 9** - Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)
 
 If you just want a temporary hookup for multiple I2C devices, then you can use a small piece of breadboard.
 The board shown has space for five Dupont connectors in each half row.
@@ -220,7 +245,7 @@ The board shown has space for five Dupont connectors in each half row.
    :alt: Bread-board based I2C Passive Hub
    :scale: 80%
 
-**Figure 8** - I2C Hub on Breadboard
+**Figure 10** - I2C Hub on Breadboard
 
 Pull-ups
 ===========
@@ -255,13 +280,13 @@ As examples of where to find the pull-up resistors, take a look at the figures b
     :alt: PCA9685 pullup resistors
     :scale: 30%
   
-**Figure 9** - Location of Pull-up Resistors for PCA9685 Module (ringed in red)
+**Figure 11** - Location of Pull-up Resistors for PCA9685 Module (ringed in red)
 
 .. image:: ../../_static/images/i2c/pcf8574_pullups.jpg
     :alt: PCF8574 pullup resistors
     :scale: 50%
   
-**Figure 10** - Location of Pull-up Resistors for PCF8574 Module (ringed in red)
+**Figure 12** - Location of Pull-up Resistors for PCF8574 Module (ringed in red)
 
 Check the PCB tracks from the SDA and SCL pin connectors; one side of each resistors will be connected to one of these,
 and the other side of both will be connected to the Vcc supply.

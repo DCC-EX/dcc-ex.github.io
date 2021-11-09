@@ -75,13 +75,15 @@ Interrupts
 Many I2C GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
 expander chip to notify the microcontroller that one or more inputs have changed state.
 
-DCC++EX supports the use of these pins.  On controllers with INTA and INTB, the two pins should be connected together.
-The resulting INT signal may then be connected to an input pin of the Arduino.  The INT/INTA/INTB pins of multiple
-modules may be connected to one pin, or you may connect the interrupt pin(s) for each module to a different
+DCC++EX supports the use of these pins.  On controllers with INTA and INTB, the two pins should be connected together
+to make a common INT signal.
+
+The INT signal may be connected to an input pin of the Arduino.  The INT signals from multiple
+modules may be connected to one pin, or you may connect the INT signal for each module to a different
 Arduino pin.  In either case, the Arduino pin number is specified when you configure the module in 
 the `mySetup.cpp` file.
 
-Once configured and connected, the GPIO Expander driver will not poll the GPIO module to obtain the input states,
+Once configured and connected, the GPIO Expander driver will not poll the GPIO module to obtain the input states
 unless the INT/INTA/INTB signal is active (LOW); so when no inputs are changing, the device will not be accessed.
 
 **Note** The pre-configured MCP23017 modules do not have interrupt mode enabled, so are polled on a cyclic 

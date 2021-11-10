@@ -86,11 +86,9 @@ Getting the EX-RAIL Beta Development Version
 
 .. raw:: html
 
-   <p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX/archive/refs/heads/EX-RAIL.zip">EX-RAIL Beta Development Version</a></p>
+   <p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX/archive/refs/heads/master.zip">EX-RAIL Beta Development Version</a></p>
 
 .. raw:: html
 
-   <p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX/tree/EX-RAIL">EX-RAIL GitHub Repository</a></p>
+   <p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX">EX-RAIL GitHub Repository</a></p>
 
-
-|

@@ -106,4 +106,5 @@ Next see the `Get Started section <get-started/index.html>`_ or click next below
    contributing/index
    roadmap/index
    support/index
+   site-map/index
    about/index

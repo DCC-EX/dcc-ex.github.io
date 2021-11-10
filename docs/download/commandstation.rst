@@ -75,12 +75,12 @@ Getting the EX-RAIL Beta Development Version
 .. note::
    The first link below will download the latest *unreleased Beta* development version of CommandStation-EX, **with the new EX-RAIL Automation functions**, in zip file format.
 
-   Please open the zip file, go into the "CommandStation-EX-EX-RAIL" folder, and unzip all the files in that folder into your "CommandStation-EX" sketch folder. Make sure you DO NOT just unzip the entire zip file, since it will have the incorrect folder name. The Arduino IDE requires that the folder name and the .ino file inside that folder match names exactly, ie: "CommandStation-EX" not "CommandStation-EX-EX-RAIL".
+   Please open the zip file, go into the "CommandStation-EX-Master" folder, and unzip all the files in **that folder** into your "CommandStation-EX" sketch folder. Make sure you **DO NOT** just unzip the entire zip file, since it will have the incorrect folder name. The Arduino IDE requires that the folder name and the .ino file inside that folder match names exactly, ie: "CommandStation-EX" not "CommandStation-EX-Master".
 
    For the Engineers and Tinkerers, the second link is to the Command Station EX-RAIL GitHub repository, where you can clone the project to your computer. Click on the green button to get a clone link or to download the zip file. We have made sure that you can still use the Arduino IDE if you like, but we recommend developers use the PlaformIO development environment. See the `Contributing Page <../contributing/index.html>`_ for more information.
 
 .. attention::
-   **EX-RAIL is in Beta testing.** It is being actively developed, and as such, the code may change frequently! We appreciate your effort in testing the current features for us, and sharing your feedback to guide developer's efforts. Please join us on Discord `here <https://discord.gg/y2sB4Fp>`_ to participate in the Beta programme, and learn more about this exciting new stage of DCC++ EX development!
+   **EX-RAIL is in Beta testing.** It is being actively developed, and as such, the code may change before the upcomming officual release! We appreciate your effort in testing the current features for us, and sharing your feedback to guide developer's efforts. Please join us on Discord `here <https://discord.gg/y2sB4Fp>`_ to participate in the Beta programme, and learn more about this exciting new stage of DCC++ EX development!
 
    Discord is also the best place to keep up-to-date on new code releases, and you may be directed to download the latest version here from time to time, as new features are added and updated often.
 

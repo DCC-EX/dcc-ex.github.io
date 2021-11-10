@@ -1,5 +1,6 @@
+********
 Support
-=========
+********
 
 The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Qf>`_. Usually there is always a team member online to help with your issue, and if not you'll get a response within a few hours.
 

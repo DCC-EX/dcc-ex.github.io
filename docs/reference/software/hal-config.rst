@@ -231,10 +231,10 @@ Create a new tab using the following menu option.
 Creating the myHal.cpp file
 -----------------------------
 
-At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``myHal.cpp`` (case sensitive, 
-so upper case S in setup) and click ``OK`` to create the new file. [The screen shot shows mySetup.h, so be sure to enter ``myHal.cpp``.]
+At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``myHal.cpp``
+and click ``OK`` to create the new file.
 
-.. image:: ../../_static/images/arduino-ide/arduino_ide_mysetup.jpg
+.. image:: ../../_static/images/i2c/arduino_ide_myHal.jpg
    :alt: Arduino IDE New Tab
    :scale: 40%
 
@@ -290,13 +290,13 @@ The file contents should now look like:
 
 .. code-block:: cpp
 
-	#include "IODevice.h"
+  #include "IODevice.h"
   #include "IO_DFPlayer.h"
-	
-	void halSetup() {
-	  // Insert your commands here...
+
+  void halSetup() {
+    // Insert your commands here...
     DFPlayer::create(1000, 5, Serial3);
-	}
+  }
 
 Upload the new version of the software
 --------------------------------------

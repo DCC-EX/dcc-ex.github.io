@@ -11,6 +11,7 @@ There are many tools to help you operate your layout and find issues with your t
 * :ref:`Sniffer vs. Analyzer`
 * :ref:`DCC Sniffer (packet analyzer)`
 * :ref:`Logic Analyzer/Decoder`
+* :ref:`DCC Track Phase Detector`
  
 
 Sniffer vs. Analyzer
@@ -332,3 +333,20 @@ Capture the samples in PulseView
 
 You can save your captures and display them again at any time. More details coming soon.
 
+.. TODO:: Finish this above
+
+DCC Track Phase Detector
+==========================
+
+If you aren't using boosters or don't have isolated track sections/blocks, then you usually won't have to worry about  the phase of your DCC Signal so you can skip this section. But if you do use boosters, this is am important tool to add to your arsenal. And the best part, is anyone can make one!
+
+Why is Phase Important?
+------------------------
+
+The short answer is that if one block is out of phase with another and your loco bridges the gap, you will have a dangerous short circuit! Let's look at this situation in a bit more detail for the Engineers.
+
+The DCC Signal energizes one track with a short voltage pulse (58us) for a "1" and a long one (116us)
+for a "0". It immediately switches and does the same thing on the other track. The "pulse train" looks a bit like this:
+
+
+But those familiar with how DC and AC voltage works might look at that and see a square wave where there is positive and negative voltage. That isn't what is happening, there is never any negative voltage! Only the current changes direction. Each rail carries the same information, just 180 degrees out of phase from the other. When one rail has a pulse of full voltage, the other is zero.

@@ -423,7 +423,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   * Creates a new turnout ``ID``, with specified ``ADDRESS`` and ``SUBADDRESS`` if turnout ``ID`` already exists, it is updated (overwritten) with the new specified ``ADDRESS`` and ``SUBADDRESS``
   * Example:  ``<T 23 5 0>``
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * From Version 3.1.7, this command is deprecated and has been replaced by ``<T ID DCC ADDRESS SUBADDRESS>``.
+  * From Version 3.2.0, this command is deprecated and has been replaced by ``<T ID DCC ADDRESS SUBADDRESS>``.
 
 * Command to define a DCC Accessory Decoder turnout: ``<T ID DCC ADDRESS SUBADDRESS>`` :
 
@@ -431,7 +431,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
     ``ADDRESS`` ranges from 0 to 511 and ``SUBADDRESS`` ranges from 0 to 3. 
   * Example: ``<T 23 DCC 5 0>``
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * This command is available from Version 3.1.7
+  * This command is available from Version 3.2.0
   
 * Command to define a DCC Accessory Decoder turnout: ``<T ID DCC LINEARADDRESS>`` :
 
@@ -439,7 +439,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
     ``LINEARADDRESS`` ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).
   * Example: ``<T 23 DCC 44>`` (corresponds to address 11 subaddress 3).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * This command is available from Version 3.1.7
+  * This command is available from Version 3.2.0
   
 * Command to define a Servo-based turnout: ``<T ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE>`` :
 
@@ -449,7 +449,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
     The transition between states is defined by ``PROFILE``, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).
   * Example: ``<T 24 SERVO 100 410 205 2>``  defines a servo turnout on the first PCA9685 pin, moving at medium speed between positions 205 and 410.
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * This command is available from Version 3.1.7.
+  * This command is available from Version 3.2.0.
 
 * Command to define a VPIN-based turnout: ``<T ID VPIN PIN>`` :
 
@@ -459,7 +459,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   * Example: ``<T 25 VPIN 30>`` defines a turnout that operates Arduino digital output pin D30.  
   * Example: ``<T 26 VPIN 164>`` defines a turnout that operates the first pin on the first MCP23017 GPIO Extender (if present).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * This command is available from Version 3.1.7.
+  * This command is available from Version 3.2.0.
   
 * Command to Delete a turnout ``<T ID>`` :
 
@@ -470,8 +470,8 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 * Command to List all defined turnouts: ``<T>`` :
 
   * Lists all defined turnouts.
-  * Before Version 3.1.7: Returns: ``<H ID ADDRESS SUBADDRESS THROWN>`` for each defined DCC Accessory Turnout or ``<X>`` if no turnouts have beed defined or saved.  
-  * After Version 3.1.7: Returns the parameters that would be used to create the turnout, with the ``THROWN`` state (1=thrown, 0=closed) appended.  For example, 
+  * Before Version 3.2.0: Returns: ``<H ID ADDRESS SUBADDRESS THROWN>`` for each defined DCC Accessory Turnout or ``<X>`` if no turnouts have beed defined or saved.  
+  * After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the ``THROWN`` state (1=thrown, 0=closed) appended.  For example, 
     a servo turnout definition will be listed as ``<H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>`` and a DCC turnout
     will be listed as ``<H ID DCC ADDRESS SUBADDRESS THROWN>``, a VPIN turnout as ``<H ID VPIN PIN THROWN> and an LCN turnout as ``<H ID LCN THROWN>``.
 
@@ -821,13 +821,13 @@ DIAGNOSTICS
 * ``<D SERVO pin pos profile>`` Set servo on VPIN ``pin`` to position ``pos``, moving according to profile ``profile``.  
   ``pos`` is normally in the range of about 102 to 490 for SG90 servos; values outside of this range may drive the servo outside of its normal range.
   ``profile`` (optional, default=0) may be 0 (Immediate), 1 (Fast), 2 (Medium), 3 (Slow) or 4 (Bounce).  This command is intended to help users to identify appropriate 
-  position values for configuring the servo in-situ.  This command is available from Version 3.1.7.
+  position values for configuring the servo in-situ.  This command is available from Version 3.2.0.
 * ``<D ANOUT pin value param2>`` Write the specified value and param2 to the analogue output VPIN pin.  This is an alias for the <D SERVO...> command.  
   The significance of param2 depends on the device type associated with the VPIN.  The command is ignored if the pin is not configured or does not 
-  support analogue write operations.  This command is available from Version 3.1.7.
+  support analogue write operations.  This command is available from Version 3.2.0.
 * ``<D ANIN pin>`` Read the analogue value of the specified pin and display it.  The value will be zero if the pin is not configured or does not support
-  analogue read operations.  This command is available from Version 3.1.7.
-* ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.1.7.
+  analogue read operations.  This command is available from Version 3.2.0.
+* ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.
 
 example: <D ACK ON>
 

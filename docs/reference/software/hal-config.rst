@@ -6,7 +6,7 @@ The DCC++ EX controller has always had built-in support for turnout control, out
 outgrow the built-in capabilities and want to access more output pins than the arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.  
 
-DCC++ EX, as of version 3.1.7, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
+DCC++ EX, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
 piece of software called the **HAL** or **H**\ardware **A**\bstraction **L**\ayer.  
 The HAL provides support for a range of different input and output modules through drivers that are supplied with DCC++ EX.
 In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to DCC++ EX 

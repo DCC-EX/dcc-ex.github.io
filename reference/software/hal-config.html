@@ -463,9 +463,9 @@ Create a new tab using the following menu option.</p>
 </div>
 <div class="section" id="creating-the-myhal-cpp-file">
 <h3>Creating the myHal.cpp file<a class="headerlink" href="#creating-the-myhal-cpp-file" title="Permalink to this headline">¶</a></h3>
-<p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code> (case sensitive,
-so upper case S in setup) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file. [The screen shot shows mySetup.h, so be sure to enter <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code>.]</p>
-<a class="reference internal image-reference" href="../../_images/arduino_ide_mysetup.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_mysetup.jpg" style="width: 503.20000000000005px; height: 161.60000000000002px;" /></a>
+<p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code>
+and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file.</p>
+<a class="reference internal image-reference" href="../../_images/arduino_ide_myHal.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_myHal.jpg" style="width: 503.20000000000005px; height: 161.60000000000002px;" /></a>
 <p><strong>Figure 3</strong> - Choosing a file name for the new file, use <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code></p>
 </div>
 <div class="section" id="adding-in-the-configuration-commands">
@@ -500,13 +500,13 @@ card, including hidden files - the DFPlayer may find them and attempt to play th
 <p>This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial3, and allocates 5 virtual pins (VPINs) to interface
 with it.  Save the file.</p>
 <p>The file contents should now look like:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
 
-<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Insert your commands here...</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Insert your commands here...</span>
 <span class="w">  </span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

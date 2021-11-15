@@ -81,4 +81,30 @@ Operation
 ===========
 
 
-***TODO: More details to come***
+.. TODO:: Give some setup tutorial here. Need a video to match since ED is the top used software
+
+Using a Bluetooth Controller
+=============================
+
+.. image:: ../_static/images/throttles/bt_conroller_1.jpg
+   :alt: Bluetooth Lanyard Controller
+   :scale: 30%
+   :align: center
+
+`Wireless Bluetooh Gamepad/Joystic Controller <khttps://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119?mkcid=16&mkevt=1&_trksid=p2349624.m46890.l49286&mkrid=711-127632-2357-0>`_
+
+This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. You can use these as a start and customize them for your own use:
+
+.. Note:: From Steve: I set speedsteps to 10, change amount to 1, repeat delay to 9999, horizontal switching layout, throttle web view. I acquire loco/consist using my phone, then dim & lock and put phone in my holster. Then I can "bump" the joystick up and down 3,2,1,0,-1,-2,-3, easily keeping track of the current "notch". 1 is coupling speed, 2 is switching/yard speed, 3 is mainline. If I'm at home, I put the Conductor view in the web and I have my work for each location.
+
+.. image:: ../_static/images/throttles/ed_conductor_view1.png
+   :alt: Engine Driver Conductor View
+   :scale: 30%
+   :align: center
+
+.. image:: ../_static/images/throttles/bt_conroller_1.jpg
+   :alt: Ring Shape Hand Controller
+   :scale: 30%
+   :align: center
+   
+https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&selectedSellerId=101036302

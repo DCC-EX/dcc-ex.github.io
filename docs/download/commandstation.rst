@@ -6,7 +6,7 @@ Welcome to the Command Station download page. You have several choices:
 
 * **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the :ref:`exInstaller` section. 
 * If you are a Tinkerer, or you would like to download a zip file and install the firmware using the Arduino IDE, go to the :ref:`Latest DCC++ EX Official Release` section.
-* To get the latest unreleased development version, go to the :ref:`Latest DCC++ Unreleased Development Version`
+* To get the latest unreleased development version, go to the :ref:`Latest DCC++ EX Unreleased Development Version`
 * If you are an Engineer or developer, and want to clone the repository onto your computer, go to the :ref:`CommandStation-EX Repository (project source files)` section.
 * If you're looking for BaseStation-Classic, go to the :ref:`Getting BaseStation-Classic` section.
 * *AND NOW,* for those adventurous ones looking for the **thrill of EX-RAIL Automation** on your Command Station, see :ref:`Getting the EX-RAIL Beta Development Version` down the bottom.

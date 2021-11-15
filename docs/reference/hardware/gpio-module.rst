@@ -81,7 +81,7 @@ to make a common INT signal.
 The INT signal may be connected to an input pin of the Arduino.  The INT signals from multiple
 modules may be connected to one pin, or you may connect the INT signal for each module to a different
 Arduino pin.  In either case, the Arduino pin number is specified when you configure the module in 
-the `mySetup.cpp` file.
+the `myHal.cpp` file.
 
 Once configured and connected, the GPIO Expander driver will not poll the GPIO module to obtain the input states
 unless the INT/INTA/INTB signal is active (LOW); so when no inputs are changing, the device will not be accessed.

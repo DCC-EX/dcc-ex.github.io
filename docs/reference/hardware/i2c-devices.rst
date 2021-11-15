@@ -315,7 +315,7 @@ Changing the Clock speed
 ========================
 
 In DCC++EX the I2C clock speed is normally the highest speed supported by all configured devices.
-It may however be overridden within the mySetup.h or mySetup.cpp file, with a command of the form:
+It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:
 
 .. code-block::
 

@@ -284,7 +284,19 @@ This makes the driver software for the DFPlayer known to the compiler.  Now add 
   DFPlayer::create(1000, 5, Serial3);
 
 This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial3, and allocates 5 virtual pins (VPINs) to interface
-with it.
+with it.  Save the file.
+
+The file contents should now look like:
+
+.. code-block:: cpp
+
+	#include "IODevice.h"
+  #include "IO_DFPlayer.h"
+	
+	void halSetup() {
+	  // Insert your commands here...
+    DFPlayer::create(1000, 5, Serial3);
+	}
 
 Upload the new version of the software
 --------------------------------------

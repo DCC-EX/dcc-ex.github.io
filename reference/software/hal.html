@@ -347,7 +347,7 @@ and 4=Bounce (subject to revision).
 <div class="section" id="hal-programming-interface">
 <h3>HAL Programming Interface<a class="headerlink" href="#hal-programming-interface" title="Permalink to this headline">¶</a></h3>
 <p>The interface functions to the HAL are as follows.  Apart from the ‘create’ functions, these functions are generally only called internally
-from within the DCC++ EX software.  The xxxx::create() functions however are required to be added to the user’s mySetup.cpp or mySetup.h
+from within the DCC++ EX software.  The xxxx::create() functions however are required to be added to the user’s myHal.cpp or mySetup.h
 configuration file in order to register the device driver and configure the specified VPINs.</p>
 <dl class="simple">
 <dt>MCP23017::create(firstVpin, 16, 0x20); <em>— OR —</em> MCP23017 device1(firstVpin, 16, 0x20);</dt><dd><p>Create an instance of a HAL I/O driver for an MCP23017 GPIO Extender with 16 inputs/outputs (numbered from
@@ -458,13 +458,13 @@ by the DCC++EX parser, including turnout, sensor and output definition commands.
 executable code into other modules of the CS.  Consequently, the content is limited to executable statements (or macros
 that expand into executable statements).  Global variables or functions cannot be defined, and only very simple include
 files can be added. Consequently, only a limited number of the DCC++EX api function can be used from here.</p>
-<p>Create a ‘mySetup.cpp’ file and add a function definition <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">mySetup(){</span> <span class="pre">};</span></code>.  Within this function you can add
+<p>Create a ‘myHal.cpp’ file and add a function definition <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">halSetup(){</span> <span class="pre">};</span></code>.  Within this function you can add
 any executable code.  Outside the function, you can declare variables and add include files to allow other functions to be invoked.  For example:</p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Turnouts.h&quot;</span><span class="cp"></span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">mySetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Servo controller on I2C addr 0x41</span>
 <span class="w">  </span><span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Define servo on first pin</span>
@@ -482,14 +482,14 @@ device can be declared statically so that the compiler allocates the basic RAM r
 <span class="c1">// Servo controller on I2C addr 0x41</span>
 <span class="n">PCA9685</span><span class="w"> </span><span class="nf">pwmModule1</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">);</span><span class="w"></span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">mySetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Define servo on first pin</span>
 <span class="w">  </span><span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">420</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
-<p>Because the mySetup.cpp module is a self-contained C++ module, autocomplete and visual syntax checking will be fully
+<p>Because the myHal.cpp module is a self-contained C++ module, autocomplete and visual syntax checking will be fully
 functional in editors that support it (e.g. PlatformIO).</p>
 </div>
 </div>
@@ -643,15 +643,15 @@ supports Arduino I/O pins only, and excludes code from Turnouts.cpp and Sensors.
 HAL drivers to be present, such as drivers for external I/O modules, including servos.  This reduces the memory footprint
 on the Nano and Uno of the neil-hal branch to 27,724 bytes, 560 bytes less than the current master branch (28,284 at 10th May 2021).
 The symbol IO_NO_HAL is automatically defined for the Uno and Nano, but not for other architectures which are less limited by FLASH size.</p></li>
-<li><p>HAL: Add hook for optional mySetup.cpp file.  The existing mySetup.h hook provides a place for system-specific initialisation
+<li><p>HAL: Add hook for optional myHal.cpp file.  The existing mySetup.h hook provides a place for system-specific initialisation
 that is to be permamently built into the CS, but is limited to specific directives and commands (e.g. SETUP(“S 1 28 1”);
-to define a sensor).  For example, library #includes cannot be added to enable optional features.  The mySetup.cpp, however
+to define a sensor).  For example, library #includes cannot be added to enable optional features.  The myHal.cpp, however
 is expected to be a syntactically complete C++ module which may include #includes directives, and should have a definition
-of a function mySetup().  When included in the build, the mySetup() function will be called during the startup of the CS,
+of a function halSetup().  When included in the build, the halSetup() function will be called during the startup of the CS,
 before the directives in mySetup.h are executed.  This provides a simple yet flexible way of including optional features
 into the build, such as support for specific IO Extender modules, or optional advanced features as an alternative to
 conditional compilation or other changes to the CS code.  If it is required that the configuration, build and upload be
-automated, the mySetup.cpp file can be generated by a tool before invoking the build and upload.</p></li>
+automated, the myHal.cpp file can be generated by a tool before invoking the build and upload.</p></li>
 <li><p>HAL: Small servos such as the ubiquitous SG90, according to the datasheet, expect a pulse length of 1.0-2.0ms at 50Hz to
 operate over their full range, translating to PWM settings between 205 and 410.  Other servos might operate over a range
 of 0.5ms to 2.4ms (PWM settings 102 to 490).</p></li>
@@ -674,10 +674,10 @@ Consequently an option is added to allow classic behaviour within the packet gen
 The command format of &lt;T id 1&gt; meaning ‘Throw’ has been retained to avoid confusion.</p></li>
 <li><p>HAL: New device support for HC-SR04 Ultrasonic Distance Sensor.  This device senses distance of nearby objects by sending
 an ultrasound pulse and listening for the echo.  From the delay time, the distance can be calculated.
-The device is configured in mySetup.cpp by</p>
+The device is configured in myHal.cpp by</p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_HCSR04.h&quot;</span><span class="cp"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">mySetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"></span>
 <span class="w">  </span><span class="n">HCSR04</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">triggerPin</span><span class="p">,</span><span class="w"> </span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">onThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">offThreshold</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"></span>
@@ -690,10 +690,10 @@ offThreshold are the distances (in centimetres) at which the vpin is to be set t
 </li>
 <li><p>HAL: New function IODevice::readAnalogue(vpin) added to support analogue inputs on the arduino pins and on external
 I2C analogue input modules.  Driver for ADS1113 and ADS1114 (both single input) and ADS1115 (4-input) added as class ADS111x.
-The device is configured in mySetup.cpp by</p>
+The device is configured in myHal.cpp by</p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_AnalogueInputs.h&quot;</span><span class="cp"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">mySetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"></span>
 <span class="w">  </span><span class="n">ADS111x</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"></span>

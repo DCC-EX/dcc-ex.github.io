@@ -292,7 +292,7 @@
 <p>The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may
 outgrow the built-in capabilities and want to access more output pins than the arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.</p>
-<p>DCC++ EX, as of version 3.1.7, provides support for a wider set of input and output devices than previous versions.  This is thanks to a
+<p>DCC++ EX, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a
 piece of software called the <strong>HAL</strong> or <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer.
 The HAL provides support for a range of different input and output modules through drivers that are supplied with DCC++ EX.
 In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to DCC++ EX
@@ -447,7 +447,7 @@ received them from another source, then copy them to this folder.</p>
 required in order to use it, together with examples.  If you can’t find documentation elsewhere, then check at the top of the
 “.h” file.</p>
 <p>Now you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
-file <code class="docutils literal notranslate"><span class="pre">mySetup.cpp_example.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> and then edit it, or you can create a new <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> from scratch.
+file <code class="docutils literal notranslate"><span class="pre">myHal.cpp_example.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code> and then edit it, or you can create a new <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code> from scratch.
 In fact, the file can have any name you like.  You could use <code class="docutils literal notranslate"><span class="pre">AA_setup.cpp</span></code> for example, then it will appear at the beginning of the
 list of files in the Arduino IDE.</p>
 </div>
@@ -461,19 +461,19 @@ Create a new tab using the following menu option.</p>
 <a class="reference internal image-reference" href="../../_images/arduino_ide_newtab.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_newtab.jpg" style="width: 654.4000000000001px; height: 172.8px;" /></a>
 <p><strong>Figure 2</strong> - Creating a new tab in the Arduino IDE</p>
 </div>
-<div class="section" id="creating-the-mysetup-cpp-file">
-<h3>Creating the mySetup.cpp file<a class="headerlink" href="#creating-the-mysetup-cpp-file" title="Permalink to this headline">¶</a></h3>
-<p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> (case sensitive,
-so upper case S in setup) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file. [The screen shot shows mySetup.h, so be sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code>.]</p>
+<div class="section" id="creating-the-myhal-cpp-file">
+<h3>Creating the myHal.cpp file<a class="headerlink" href="#creating-the-myhal-cpp-file" title="Permalink to this headline">¶</a></h3>
+<p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code> (case sensitive,
+so upper case S in setup) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file. [The screen shot shows mySetup.h, so be sure to enter <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code>.]</p>
 <a class="reference internal image-reference" href="../../_images/arduino_ide_mysetup.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_mysetup.jpg" style="width: 503.20000000000005px; height: 161.60000000000002px;" /></a>
-<p><strong>Figure 3</strong> - Choosing a file name for the new file, use <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code></p>
+<p><strong>Figure 3</strong> - Choosing a file name for the new file, use <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code></p>
 </div>
 <div class="section" id="adding-in-the-configuration-commands">
 <h3>Adding in the configuration commands<a class="headerlink" href="#adding-in-the-configuration-commands" title="Permalink to this headline">¶</a></h3>
 <p>Within the new file that has been created, you can add in the definitions of new devices.  But first you need to add the following lines:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">mySetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Insert your commands here...</span>
 
 <span class="p">}</span><span class="w"></span>
@@ -489,11 +489,11 @@ and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the p
 The names of the files are not used, but best keep them below 8 characters (excluding the .mp3 file extension).  Don’t include any other files (.txt etc) on the
 card, including hidden files - the DFPlayer may find them and attempt to play them!  When you’re done, insert the card into the DFPlayer.</p>
 <p>Now you’re ready to set up the software.</p>
-<p>Add the following line to the top of the <code class="docutils literal notranslate"><span class="pre">mySetup.cpp</span></code> file:</p>
+<p>Add the following line to the top of the <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code> file:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
-<p>This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the <code class="docutils literal notranslate"><span class="pre">mySetup()</span> <span class="pre">{</span> <span class="pre">}</span></code> function definition:</p>
+<p>This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the <code class="docutils literal notranslate"><span class="pre">halSetup()</span> <span class="pre">{</span> <span class="pre">}</span></code> function definition:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>

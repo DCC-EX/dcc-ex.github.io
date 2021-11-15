@@ -343,7 +343,7 @@ to make a common INT signal.</p>
 <p>The INT signal may be connected to an input pin of the Arduino.  The INT signals from multiple
 modules may be connected to one pin, or you may connect the INT signal for each module to a different
 Arduino pin.  In either case, the Arduino pin number is specified when you configure the module in
-the <cite>mySetup.cpp</cite> file.</p>
+the <cite>myHal.cpp</cite> file.</p>
 <p>Once configured and connected, the GPIO Expander driver will not poll the GPIO module to obtain the input states
 unless the INT/INTA/INTB signal is active (LOW); so when no inputs are changing, the device will not be accessed.</p>
 <p><strong>Note</strong> The pre-configured MCP23017 modules do not have interrupt mode enabled, so are polled on a cyclic

@@ -350,7 +350,7 @@ for a "0". It then immediately switches and does the same thing on the other tra
 
 .. figure:: ../../_static/images/dcc/dcc_signal.png
    :align: center
-   :scale: 50%
+   :scale: 35%
    :alt: DCC Waveform
    :figclass: align-center
 
@@ -363,7 +363,7 @@ In order to fully understand how this works, we have to stop thinking in terms o
 
 .. figure:: ../../_static/images/dcc/dcc_pulse_train1.png
    :align: center
-   :scale: 50%
+   :scale: 25%
    :alt: DCC Pulse Train
    :figclass: align-center
 
@@ -373,7 +373,7 @@ Now let's see things from a different perspective, both literally and figurative
 
 .. figure:: ../../_static/images/dcc/dcc_pulse_train2.png
    :align: center
-   :scale: 50%
+   :scale: 25%
    :alt: DCC Pulse Train in Perspective
    :figclass: align-center
 
@@ -385,7 +385,7 @@ At any given instant, one rail or the other is at our full 12-24 Volts and the o
 
 .. figure:: ../../_static/images/dcc/dcc_phasing.png
    :align: center
-   :scale: 50%
+   :scale: 25%
    :alt: DCC Phasing Diagram
    :figclass: align-center
 
@@ -398,29 +398,29 @@ Using a Digital Multimeter (DMM)
 
 This is pretty easy. Set your DMM to AC Volts (important, NOT DC) in a range above your track voltage. For example, if your track voltage is 15 Volts, your meter may need to be set to the 20 volt range. Then follow these steps noting that unless you have a very expensive "TRUE RMS" Meter. we will just get an indication that there is a DCC signal is on the track, but the voltage will be off by a few volts.
 
-1. Put one probe on Rail A of the known block and the other prob on Rail B. For our expected voltage of a 15 Volt supply, depending on your meter, it should read anywhere from 12-28 Volts AC. If not, you have a power issue or a Motor Driver issue.
+| 1. Put one probe on Rail A of the known block and the other prob on Rail B. For our expected voltage of a 15 Volt supply, depending on your meter, it should read anywhere from 12-28 Volts AC. If not, you have a power issue or a Motor Driver issue.
 
-2. Move your meter to the other block. Connect one probe to Rail A and the other to Rail B. You should measure the same voltage as before. If not, you have a power issue in your booster. It is either putting out DC or no voltage at all.
+| 2. Move your meter to the other block. Connect one probe to Rail A and the other to Rail B. You should measure the same voltage as before. If not, you have a power issue in your booster. It is either putting out DC or no voltage at all.
 
-3. If tests 1 and 2 are good, move one lead of the meter back to Rail A of the known good block and connect the other lead to Rail A of the block you are testing. This will bridge the gap between the 2 sections where the rail is isolated. The meter should read close to 0 voltage. If not, you may have an issue with power from the booster or your wires on reversed from the booster to the test block. Reverse the wires from your booster to the track, repeat step 3. If you read close to 0 volts AC, this test passes.
+| 3. If tests 1 and 2 are good, move one lead of the meter back to Rail A of the known good block and connect the other lead to Rail A of the block you are testing. This will bridge the gap between the 2 sections where the rail is isolated. The meter should read close to 0 voltage. If not, you may have an issue with power from the booster or your wires on reversed from the booster to the test block. Reverse the wires from your booster to the track, repeat step 3. If you read close to 0 volts AC, this test passes.
 
-4. Leaving your meter attached to Rail A of the known block, move the other lead to Rail B of the track you are testing in the other block. If you get the same voltage reading from the first step in this configuration, the test is good. 
+| 4. Leaving your meter attached to Rail A of the known block, move the other lead to Rail B of the track you are testing in the other block. If you get the same voltage reading from the first step in this configuration, the test is good.
 
-5. Move the lead from Rail A of the known block to its Rail B. Attach the other lead to Rail B of the test block, there should be no voltage. Leaving the probe on Rail B of the known block, move the other probe to Rail A of the test block. You should have voltage again.
+| 5. Move the lead from Rail A of the known block to its Rail B. Attach the other lead to Rail B of the test block, there should be no voltage. Leaving the probe on Rail B of the known block, move the other probe to Rail A of the test block. You should have voltage again.
 
-Truth Table
+   Truth Table
 
-Known Block Rail A to Known Block Rail B voltage
-Test Block Rail A to Test Block Rail B voltage
-Known Block Rail A Test Block Rail A no voltage
-Known Block Rail B Test Block Rail B no voltage
-Known Block Rail A Test Block Rail B voltage
-Known Block Rail B Test Block Rail A voltage
+| Known Block Rail A to Known Block Rail B voltage
+| Test Block Rail A to Test Block Rail B voltage
+| Known Block Rail A Test Block Rail A no voltage
+| Known Block Rail B Test Block Rail B no voltage
+| Known Block Rail A Test Block Rail B voltage
+| Known Block Rail B Test Block Rail A voltage
 
 
-Pros - You probably already have one
+**Pros** - You probably already have one
 
-Cons - Unwieldy, you can't see it easily from across a large layout
+**Cons** - Unwieldy, you can't see it easily from across a large layout
 
 
 Circuit One
@@ -438,15 +438,15 @@ See the thread on the MRH blog here: https://model-railroad-hobbyist.com/node/17
 
 .. figure:: ../../_static/images/dcc/dcc_phase_checker1.png
    :align: center
-   :scale: 50%
+   :scale: 100%
    :alt: 2 Diode Phase Checker
    :figclass: align-center
 
    Figure 10: 2 Diode Phase Checker
 
-Pros - Just 4 components, small, simple
+**Pros** - Just 4 components, small, simple
 
-Cons - 
+**Cons** - 
 
 Circuit two
 ------------

@@ -33,7 +33,7 @@ Please visit the Engine Driver Website: https://enginedriver.mstevetodd.com/
 Features
 ==========
 
-* Speed and directipn control
+* Speed and direction control
 * Up to 29 DCC functions
 * One to six locomotives or consists 
 * Create and edit consists (software-defined)
@@ -86,9 +86,9 @@ Operation
 Using a Bluetooth Controller
 =============================
 
-.. image:: ../_static/images/throttles/bt_conroller_1.jpg
+.. image:: ../_static/images/throttles/bt_controller1.jpg
    :alt: Bluetooth Lanyard Controller
-   :scale: 30%
+   :scale: 50%
    :align: center
 
 `Wireless Bluetooh Gamepad/Joystic Controller <khttps://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119?mkcid=16&mkevt=1&_trksid=p2349624.m46890.l49286&mkrid=711-127632-2357-0>`_
@@ -99,12 +99,14 @@ This is the one Steve Todd uses himself on a lanyard. It leaves both hands free 
 
 .. image:: ../_static/images/throttles/ed_conductor_view1.png
    :alt: Engine Driver Conductor View
-   :scale: 30%
+   :scale: 15%
    :align: center
 
-.. image:: ../_static/images/throttles/bt_conroller_1.jpg
+And here is another Bluetooth controller that provides extra function buttons and you can hold by placing your finger in the ring.
+
+.. image:: ../_static/images/throttles/bt_controller2.jpg
    :alt: Ring Shape Hand Controller
-   :scale: 30%
+   :scale: 50%
    :align: center
    
 https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&selectedSellerId=101036302

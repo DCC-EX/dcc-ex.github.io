@@ -60,6 +60,12 @@ Developers
 * Mike Dunston - Sonora, California, USA (Atani)
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 
+LCN / LCOS (Layout Control)
+============================
+Rob Simonds - Reno, Nevada, USA (RobinS)
+Jack Reagan - Cape Girardeau, Missouri (Marada1)
+
+
 Installer Software
 ===================
 
@@ -103,6 +109,7 @@ Team
 * Gregor Baues - Île-de-France, France (grbba)
 * Herb Morton - Kingwood Texas, USA (Ash++)
 * Travis Farmer - Farmington Maine, USA (travis_farmer)
+* Jack Reagan - Cape Girardeau, Missouri, USA (Marada1)
 
 
 .. toctree::

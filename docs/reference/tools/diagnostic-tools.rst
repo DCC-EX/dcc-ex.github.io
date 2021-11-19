@@ -237,7 +237,7 @@ Logic Analyzer/Decoder
    :alt: Logic Analyzer
    :figclass: align-left
 
-   Figure 5: Logic Analyzer
+   Figure 9: Logic Analyzer
 
 |
 |
@@ -269,7 +269,7 @@ Any set of probes that will connect to the pins that are exposed between the Ard
    :alt: Logic probes
    :figclass: align-center
 
-   Figure 6: Logic Probes
+   Figure 10: Logic Probes
 
 Install PulseView
 --------------------
@@ -297,7 +297,7 @@ It will look something line this. There will be just 2 files. The "cache" file w
    :alt: Installing the DCC protocol decoder
    :figclass: align-center
 
-   Figure 7: Installing the DCC protocol decoder
+   Figure 11: Installing the DCC protocol decoder
 
 Download USB Drivers
 ---------------------
@@ -354,7 +354,7 @@ for a "0". It then immediately switches and does the same thing on the other tra
    :alt: DCC Waveform
    :figclass: align-center
 
-   Figure 7: DCC Waveform
+   Figure 12: DCC Waveform
 
 
 But those familiar with how DC and AC voltage works might look at that and see a square wave where there is positive and negative voltage. That isn't what is happening, there is never any negative voltage! Only the current changes direction inside something connected to the track, like the decoder in your loco. There is no "ground", only the voltage present on one rail with respect to the other.
@@ -367,7 +367,7 @@ In order to fully understand how this works, we have to stop thinking in terms o
    :alt: DCC Pulse Train
    :figclass: align-center
 
-   Figure 8: DCC Pulse Train
+   Figure 13: DCC Pulse Train
 
 Now let's see things from a different perspective, both literally and figuratively by tilting the track away from you and imagining the pulse train operating like your model train and riding down the track.
 
@@ -377,9 +377,17 @@ Now let's see things from a different perspective, both literally and figurative
    :alt: DCC Pulse Train in Perspective
    :figclass: align-center
 
-   Figure 9: DCC Pulse Train in Perspective
+   Figure 14: DCC Pulse Train in Perspective
 
-If it helps, you can think in the analog/DC world again for the purposes of connecting one piece of track in one block to a piece of track in another. Each rail is like a wire connected to our power supply, we have just cut it to length and are connecting to another piece connected to a different power supply.
+If it helps, you can think in the analog/DC world again for the purposes of connecting one piece of track in one block to a piece of track in another. Each rail is like a wire connected to our power supply, we have just cut it to length and are connecting to another piece that is connected to a different power supply. Here is the Command Station on the left connected to one section of track and a booster connected to another section of track with the two track sections isolated from each other by a small gap.
+
+.. figure:: ../../_static/images/dcc/booster_setup.png
+   :align: center
+   :scale: 25%
+   :alt: DCC Booster Setup
+   :figclass: align-center
+
+   Figure 15: DCC Booster Setup
 
 At any given instant, one rail or the other is at our full 12-24 Volts and the other is at zero. If our loco is rolling over the gap from one block or power district to another, we need to make sure that the signal, and therefore votage, is at the same level on both sides. We call this being "in phase". So if there is +15V on Rail A of the first block, we need that same +15V on Rail A of the next block. If not, and rail A on block 1 is at 15V and Rail A on block 2 is at 0V, and the metal wheels of our loco temporarily connect those two rails as they roll over them, we have a short circuit. Thus, if the rails of two blocks are out of phase with each other, then they are always at at a the opposite potential (except for a tiny transition period) and will represent a short circuit when crossing from one to the other.
 
@@ -389,7 +397,7 @@ At any given instant, one rail or the other is at our full 12-24 Volts and the o
    :alt: DCC Phasing Diagram
    :figclass: align-center
 
-   Figure 9: DCC Phasing Diagram
+   Figure 16: DCC Phasing Diagram
 
 So how can we check our phase? We can use any of the simple circuits below or a more complicated one listed at the end.
 
@@ -442,7 +450,7 @@ See the thread on the MRH blog here: https://model-railroad-hobbyist.com/node/17
    :alt: 2 Diode Phase Checker
    :figclass: align-center
 
-   Figure 10: 2 Diode Phase Checker
+   Figure 17: 2 Diode Phase Checker
 
 **Pros** - Just 4 components, small, simple
 
@@ -457,6 +465,6 @@ Circuit two
    :alt: Diode Phase Checker
    :figclass: align-center
 
-   Figure 10: Diode Phase Checker
+   Figure 18: Diode Phase Checker
 
 

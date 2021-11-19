@@ -6,7 +6,7 @@ The DCC++ EX controller has always had built-in support for turnout control, out
 outgrow the built-in capabilities and want to access more output pins than the arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.  
 
-DCC++ EX, as of version 3.1.7, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
+DCC++ EX, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
 piece of software called the **HAL** or **H**\ardware **A**\bstraction **L**\ayer.  
 The HAL provides support for a range of different input and output modules through drivers that are supplied with DCC++ EX.
 In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to DCC++ EX 
@@ -205,7 +205,7 @@ required in order to use it, together with examples.  If you can't find document
 ".h" file.
 
 Now you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
-file ``mySetup.cpp_example.txt`` to ``mySetup.cpp`` and then edit it, or you can create a new ``mySetup.cpp`` from scratch.
+file ``myHal.cpp_example.txt`` to ``myHal.cpp`` and then edit it, or you can create a new ``myHal.cpp`` from scratch.
 In fact, the file can have any name you like.  You could use ``AA_setup.cpp`` for example, then it will appear at the beginning of the
 list of files in the Arduino IDE.
 
@@ -228,17 +228,17 @@ Create a new tab using the following menu option.
 
 **Figure 2** - Creating a new tab in the Arduino IDE
 
-Creating the mySetup.cpp file
+Creating the myHal.cpp file
 -----------------------------
 
-At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``mySetup.cpp`` (case sensitive, 
-so upper case S in setup) and click ``OK`` to create the new file. [The screen shot shows mySetup.h, so be sure to enter ``mySetup.cpp``.]
+At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``myHal.cpp``
+and click ``OK`` to create the new file.
 
-.. image:: ../../_static/images/arduino-ide/arduino_ide_mysetup.jpg
+.. image:: ../../_static/images/i2c/arduino_ide_myHal.jpg
    :alt: Arduino IDE New Tab
    :scale: 40%
 
-**Figure 3** - Choosing a file name for the new file, use ``mySetup.cpp``
+**Figure 3** - Choosing a file name for the new file, use ``myHal.cpp``
 
 Adding in the configuration commands
 ------------------------------------
@@ -249,7 +249,7 @@ Within the new file that has been created, you can add in the definitions of new
 
 	#include "IODevice.h"
 	
-	void mySetup() {
+	void halSetup() {
 	  // Insert your commands here...
 		
 	}
@@ -271,20 +271,32 @@ card, including hidden files - the DFPlayer may find them and attempt to play th
 
 Now you're ready to set up the software.
 
-Add the following line to the top of the ``mySetup.cpp`` file:
+Add the following line to the top of the ``myHal.cpp`` file:
 
 .. code-block:: cpp
 
   #include "IO_DFPlayer.h"
 
-This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the ``mySetup() { }`` function definition:
+This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the ``halSetup() { }`` function definition:
 
 .. code-block:: cpp
 
   DFPlayer::create(1000, 5, Serial3);
 
 This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial3, and allocates 5 virtual pins (VPINs) to interface
-with it.
+with it.  Save the file.
+
+The file contents should now look like:
+
+.. code-block:: cpp
+
+  #include "IODevice.h"
+  #include "IO_DFPlayer.h"
+
+  void halSetup() {
+    // Insert your commands here...
+    DFPlayer::create(1000, 5, Serial3);
+  }
 
 Upload the new version of the software
 --------------------------------------

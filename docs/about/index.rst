@@ -110,6 +110,7 @@ Team
 * Herb Morton - Kingwood Texas, USA (Ash++)
 * Travis Farmer - Farmington Maine, USA (travis_farmer)
 * Jack Reagan - Cape Girardeau, Missouri, USA (Marada1)
+* Henk Kruisbrink - UK (Henkk)
 
 
 .. toctree::

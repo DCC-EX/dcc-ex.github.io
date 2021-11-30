@@ -2,14 +2,6 @@
 Introduction to EX-RAIL Automation
 ***********************************
 
-.. attention::
-   EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues.
-   
-   We can use your help in final testing and ideas for new features. Please see us on Discord `here <https://discord.gg/y2sB4Fp>`_ to participate in the Beta, and get notified of new code releases.
-   
-   You can find instructions to download the EX-RAIL version of the software :ref:`here<Getting the EX-RAIL Beta Development Version>`.
-
-
 Introduction
 ==============
 
@@ -20,7 +12,7 @@ To begin, let's define a few terms:
 
 **SEQUENCE** - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 
-**ROUTE** - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. 
+**ROUTE** - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.
 
 **AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence.
 
@@ -128,7 +120,7 @@ The EX-RAIL instructions to do this might look like
 
 .. code-block:: cpp
 
-   ROUTE(1,"Coal Yard exit")
+   ROUTE(1,Coal Yard exit)
      THROW(1)
      CLOSE(7)
      DONE
@@ -137,14 +129,14 @@ Or you can write it like this
 
 .. code-block:: cpp
 
-   ROUTE(1,"Coal Yard exit")  THROW(1)  CLOSE(7)  DONE
+   ROUTE(1,Coal Yard exit)  THROW(1)  CLOSE(7)  DONE
 
 Or add comments
 
 .. code-block:: cpp
 
  // This is my coal yard to engine shed route
-   ROUTE(1,"Coal Yard exit")     // appears in Engine Driver
+   ROUTE(1,Coal Yard exit)     // appears in Engine Driver
      THROW(1)   // throw turnout onto coal yard siding
      CLOSE(7)   // close turnout for engine shed
      DONE    // that's all folks!
@@ -156,7 +148,7 @@ Of course, you may want to add signals, and time delays
    SIGNAL(77,78,79)  // see the Defining Signals section
    SIGNAL(92,0,93)   //      below for details
    
-   ROUTE(1,"Coal Yard exit")
+   ROUTE(1,Coal Yard exit)
       RED(77)
       THROW(1)
       CLOSE(7)
@@ -241,7 +233,7 @@ Using an ``AUTOMATION`` keyword means that this automation will appear in Engine
 
 .. code-block:: cpp
 
-   AUTOMATION(4,"Round in circles")
+   AUTOMATION(4,Round in circles)
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
       STOP      // stop the train 
@@ -262,7 +254,7 @@ Adding a station signal to the loop script is extremely simple, but it does requ
 .. code-block:: cpp
 
    SIGNAL(77,78,79)  // see the Defining Signals section above for details
-   AUTOMATION(4,"Round in circles")
+   AUTOMATION(4,Round in circles)
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)    // when you get to sensor on pin (40)
       STOP      // Stop the train 
@@ -541,7 +533,7 @@ Alias names:
    ALIAS(COAL_YARD_TURNOUT,19) 
    ALIAS(COAL_YARD_SIGNAL_3,27) 
       EXRAIL
-         ROUTE(1,"Coal yard exit") 
+         ROUTE(1,Coal yard exit)
             THROW(COAL_YARD_TURNOUT)
             GREEN(COAL_YARD_SIGNAL_3)
 
@@ -552,7 +544,7 @@ Alias names:
 .. code-block:: cpp
 
    EXRAIL
-      ROUTE(1,"Coal yard exit") 
+      ROUTE(1,Coal yard exit)
          THROW(19)
          GREEN(27)
          DONE

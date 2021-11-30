@@ -2,9 +2,6 @@
 EX-RAIL Reference
 *********************
 
-.. attention:: EX-RAIL is in Beta testing. It is very far along, but you may experience unexpected issues. We can use your help in final testing and ideas for new features. Please see us on Discord to participate in the Beta, and get the link to the EX-RAIL version of the software.
-
-
 Notes
 ========
 
@@ -76,9 +73,9 @@ Routes, Automations & Sequences
     - 
   * - EXRAIL
     - All scripts exist in a single block between EXRAIL and ENDEXRAIL keywords
-  * - AUTOMATION(sequence_id, "description") 
+  * - AUTOMATION(sequence_id, description)
     - Start of an Automation Sequence which WiThrottles can send a train along
-  * - ROUTE(sequence_id, "description") 
+  * - ROUTE(sequence_id, description)
     - Start of a Route Sequence settable in WiThrottle 
   * - SEQUENCE(sequence_id) 
     - A general purpose Sequence for scenic animations, etc
@@ -92,7 +89,7 @@ Routes, Automations & Sequences
     - 
   * - **--- Object definitions ---**
     - 
-  * - ALIAS("name", value) **\* See note! --->**
+  * - ALIAS(name, value) **\* See note! --->**
     - Gives a name to a value for script readability. **\* Must appear BEFORE the EXRAIL command!** 
   * - SIGNAL(red_pin,amber_pin,green_pin) 
     - Define a signal, Red_pin becomes signal_id for RED/AMBER/GREEN 

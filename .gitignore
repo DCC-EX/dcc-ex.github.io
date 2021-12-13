@@ -1,6 +1,11 @@
 # sphinx build folder
 _build
 
+# IDE files #
+.idea
+*.xml
+*.iml
+
 # Compiled source #
 ###################
 *.com

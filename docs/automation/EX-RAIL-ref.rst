@@ -236,6 +236,8 @@ Routes, Automations & Sequences
 
 |
 
+begin raw html...
+
 .. raw: html
 
     <!DOCTYPE html>
@@ -352,3 +354,5 @@ Routes, Automations & Sequences
     </table>
     <body>
     <html>
+
+end raw html

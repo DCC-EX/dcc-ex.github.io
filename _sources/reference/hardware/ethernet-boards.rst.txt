@@ -11,7 +11,7 @@ To use Ethernet instead of WiFi, follow these simple steps:
 * Uncomment the line ``"#define ENABLE_ETHERNET = true"`` by removing the "//" characters
 * Add "//" comment lines in front of ``"#defind ENABLE_WIFI = true"`` (if it isn't already commented out).
 * Enter the SSID for your router by replacing "Your network name" with the name of your network in ``#define WIFI_SSID "Your network name"`` in between the quotes.
-* Enter the Password for your router by replacing "Your Network Passws" with your password in the line:``#define WIFI_PASSWORD "Your network passwd"`` in between the quotes.
+* Enter the Password for your router by replacing "Your network passwd" with your password in the line:``#define WIFI_PASSWORD "Your network passwd"`` in between the quotes.
 
 * :ref:`Arduino Network Shield 2` **[RECOMMENDED]**
 * :ref:`Wiznet WIZ850IO`

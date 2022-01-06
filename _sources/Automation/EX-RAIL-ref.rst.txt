@@ -35,17 +35,7 @@ There are some diagnostic and control commands added to the <tag> language norma
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    table,tbody, tr, th, td {
-	    margin: 0;
-	    padding: 0;
-	    border: 0;
-	    outline: 0;
-	    font-weight: inherit;
-	    font-style: inherit;
-	    font-family: inherit;
-	    vertical-align: baseline;
-    }
-  
+ 
     table {
       border: 1px solid #E0E0E0;
 
@@ -55,8 +45,8 @@ There are some diagnostic and control commands added to the <tag> language norma
       border: 1px solid #E0E0E0;
       text-align: left;
       padding-left: 0px;
-      padding-top: 100px;
-      padding-bottom: 0px;
+      padding-top: 7px;
+      padding-bottom: 5px;
       padding-right: 20px;
     }
 
@@ -147,8 +137,8 @@ Routes, Automations, and Sequences
       border: 1px solid #E0E0E0;
       text-align: left;
       padding-left: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 7px;
+      padding-bottom: 5px;
       padding-right: 0px;
     }
 

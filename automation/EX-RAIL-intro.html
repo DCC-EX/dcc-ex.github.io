@@ -46,7 +46,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="EX-RAIL Reference" href="EX-RAIL-ref.html" />
+    <link rel="next" title="EX-RAIL Command Summary" href="EX-RAIL-ref.html" />
     <link rel="prev" title="Automation (EX-RAIL) BETA!" href="index.html" /> 
 </head>
 
@@ -151,7 +151,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Automation (EX-RAIL) BETA!</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to EX-RAIL Automation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-ref.html">EX-RAIL Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-ref.html">EX-RAIL Command Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
@@ -297,7 +297,7 @@ that can easily be used to describe sequential actions to automatically take pla
 <p><strong>SEQUENCE</strong> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.</p>
 <p><strong>ROUTE</strong> - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.</p>
 <p><strong>AUTOMATION</strong> - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence.</p>
-<p>Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with throttles that support it (Engine Driver, EX-WebThrottle) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. “Routes” go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. Automations can appear on a “handoff” button that will supply or handoff the Loco ID to EX-RAIL where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in Engine driver that runs an AUTOMATION to take it on a journey around the layout.</p>
+<p>Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with throttles that support it (Engine Driver, EX-WebThrottle) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. “Routes” go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. “Automations” can appear on a “handoff” button that will supply or handoff the Loco ID to EX-RAIL where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in Engine driver that runs an AUTOMATION to take it on a journey around the layout.</p>
 <div class="sidebar">
 <p class="sidebar-title">A note from the Author</p>
 <p>My original aim was to see if I could create an automated layout with lots going on, that didn’t just run around in circles. Having looked at JMRI (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.</p>
@@ -345,7 +345,7 @@ that can easily be used to describe sequential actions to automatically take pla
 <div class="section" id="the-automation-process">
 <h2>The Automation Process<a class="headerlink" href="#the-automation-process" title="Permalink to this headline">¶</a></h2>
 <p>All routes, automations, etc step through a list of simple keywords until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.</p>
-<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-ref.html#ex-rail-reference"><span class="std std-ref">EX-RAIL Reference</span></a></p>
+<p>For a full list of keywords, see <span class="xref std std-ref">EX-RAIL Reference</span></p>
 <p>Automation scripts are added to your Command Station by creating a file called “myAutomation.h” in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">EXRAIL</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">scripts</span><span class="w"></span>
@@ -422,10 +422,11 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 </div>
 <div class="section" id="defining-turnouts">
 <h2>Defining Turnouts<a class="headerlink" href="#defining-turnouts" title="Permalink to this headline">¶</a></h2>
-<p>DCC-EX supports a number of different turnout hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> commands from JMRI, or in <code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;T</span> <span class="pre">...&gt;&quot;)</span></code> commands or C++ code in mySetup.h, just like earlier versions.</p>
+<p>DCC-EX supports a number of different turnout hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> commands from JMRI, or in <code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;T</span> <span class="pre">...&gt;&quot;)</span></code> commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.</p>
 <p>You may, however, find it more convenient to define turnouts using EX-RAIL commands, which may appear anywhere in the ‘myAutomation.h’ file, even after they are referenced in an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code>, <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code>, <code class="docutils literal notranslate"><span class="pre">THROW</span></code> or <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts defined in ‘myAutomation.h’ will still be visible to WiThrottle and JMRI in the normal way.</p>
-<p>See the <a class="reference internal" href="EX-RAIL-ref.html#ex-rail-reference"><span class="std std-ref">Reference</span></a> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
+<p>A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a “throw” or “close” (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.</p>
+<p>See the <span class="xref std std-ref">Reference</span> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
 </div>
 <div class="section" id="defining-signals">
 <h2>Defining Signals<a class="headerlink" href="#defining-signals" title="Permalink to this headline">¶</a></h2>
@@ -526,7 +527,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 Let’s add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:</p>
 <a class="reference internal image-reference" href="../_images/Example_7a_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_7a_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
-<p>Assuming that you have defined your turnouts with <a class="reference internal" href="EX-RAIL-ref.html#routes-automations-sequences"><span class="std std-ref">TURNOUT commands.</span></a></p>
+<p>Assuming that you have defined your turnouts with <span class="xref std std-ref">TURNOUT commands.</span></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
 <span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span><span class="w"> </span><span class="c1">// random wait between 10 and 20 seconds</span>
 <span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
@@ -725,7 +726,7 @@ number. So now our route looks like this:</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="EX-RAIL-ref.html" class="btn btn-neutral float-right" title="EX-RAIL Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="EX-RAIL-ref.html" class="btn btn-neutral float-right" title="EX-RAIL Command Summary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Automation (EX-RAIL) BETA!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

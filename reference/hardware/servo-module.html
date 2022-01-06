@@ -151,7 +151,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../automation/index.html">Automation (EX-RAIL) BETA!</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-ref.html">EX-RAIL Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-ref.html">EX-RAIL Command Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
@@ -300,28 +300,50 @@ Arduino.</p>
 The pins are arranged so that you can just plug a servo connector directly onto them, but be
 sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.</p>
 <p>The servo module itself is powered from the Arduino, but the servos themselves contain motors that
-consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the
-servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND.
-The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
+consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
 <p>Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:</p>
 <a class="reference internal image-reference" href="../../_images/ArduinoMegaServo.png"><img alt="PCA9685 Servo Module" src="../../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
-<p>In DCC++EX, the drivers for the PCA9685 module is already installed, and made available to for use as
-pin numbers 100-115.
-A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed
-using pin number 100.</p>
+<p>In DCC++EX, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
 <p>Once you’ve made all of the connections, apply power to the Arduino.</p>
-<p>Then, in the Serial Port Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it
-isn’t (by some fluke) already in that position.</p>
-<p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position)
-you can use any value between about 105 and 490.</p>
+<p>Then, in the Serial Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it isn’t (by some fluke) already in that position.</p>
+<p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
 <p>Try <cite>&lt;D SERVO 100 450 3&gt;</cite> and the servo should move slowly back.</p>
-<p>You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your
-layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard
-with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.</p>
+<p>You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.</p>
 <a class="reference internal image-reference" href="../../_images/TurnoutServoMount.jpg"><img alt="Servo mount to operate a turnout" src="../../_images/TurnoutServoMount.jpg" style="width: 288.0px; height: 384.0px;" /></a>
 <p>And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
 servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <a class="reference internal image-reference" href="../../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
+<div class="section" id="using-servos-with-ex-rail">
+<h2>Using Servos with EX-RAIL<a class="headerlink" href="#using-servos-with-ex-rail" title="Permalink to this headline">¶</a></h2>
+<p>Defining Turnouts?</p>
+<div class="section" id="controlling-servos-for-turnouts">
+<h3>Controlling Servos for Turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this headline">¶</a></h3>
+<p>SERVO_TURNOUT Command</p>
+</div>
+<div class="section" id="controlling-servos-for-animations">
+<h3>Controlling Servos for Animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this headline">¶</a></h3>
+<p>SERVO Command</p>
+</div>
+</div>
+<div class="section" id="technical-discussion-for-engineers">
+<h2>Technical Discussion for Engineers<a class="headerlink" href="#technical-discussion-for-engineers" title="Permalink to this headline">¶</a></h2>
+<p>There are three types of servos, standard or “Positional Rotation”, “Continuous Rotation” and “Linear”</p>
+<p><strong>A Standard, positional rotation servo</strong> allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo</p>
+<p><strong>A Continuous Rotation Servo</strong> can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counterclockwise.</p>
+<p><strong>Linear Servos</strong> use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its postion along a straight line, forward and back in a similar way by giving it a postion.</p>
+<p>Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechansim (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.</p>
+<p>For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds. The duration of the pulses are between 544 and 2400 milliseconds representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide th pulse durations by 20ms and multipy by 4096. That gives us a range of 111 to 491.</p>
+<p>Another way to look at this is that with our 12bit ADC, which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can’t represent the value 4096 in 12 bits.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000ms, which maps to 205-410, and 500 to 2400ms, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with “&lt;T id SERVO vpin thrownPos closedPos profile&gt;”.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Keep a spare slot (we recommend 100) open on your first PCA9685 board so that you can test servo positions with the <cite>&lt;D SERVO …&gt;</cite> command to connect your servos to and get the exact positions you need.</p>
+</div>
+<p>Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to the an external 5V power supply. Do NOT connect this to the 5V power of the Arduino! The ground wire is usually black or brown and connects to a ground pin. The signal pin is typically yellow, orange or white and should be connected to a digital pin of the PCA9685.</p>
+</div>
 </div>
 
 

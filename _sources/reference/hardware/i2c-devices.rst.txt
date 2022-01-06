@@ -24,7 +24,7 @@ so this section is an introduction to what I2C is and how to use it.
 
 
 What is I2C?
-===========
+=============
 
 I2C is a standard introduced by the Philips Semiconductors (now NXP Semiconductors) in the
 early 1980s to provide a mechanism for
@@ -150,7 +150,7 @@ they are a different size and are not interchangeable.
 
 
 Connecting Devices
-===========
+===================
 
 The position of the I2C pins depends on what controller module you are using:
 
@@ -296,7 +296,7 @@ solder forming a connection between the two pads.**
 
 
 Cabling Limits
-===========
+===============
 
 The I2C bus spec allows bus operation at various speeds - on the Arduino, speeds of 100kHz and 400kHz are
 generally used.  Some devices are not specified to operate at the higher speed (e.g. PCF8574) although 

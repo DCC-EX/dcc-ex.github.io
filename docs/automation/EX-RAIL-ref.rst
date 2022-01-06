@@ -1,6 +1,6 @@
-*********************
-EX-RAIL Reference
-*********************
+*************************
+EX-RAIL Command Summary
+*************************
 
 
 Notes
@@ -19,224 +19,102 @@ Notes
 
 |
 
-Command Reference
+Command Summary
 ==================
 
-.. hint:: Scroll the tables across to view entire contents of two columns!  <--->
 
 Diagnostics & Control
-----------------------
+-----------------------
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. 
 
-.. list-table:: 
-    :widths: 30 70
-    :header-rows: 1
+.. raw:: html
 
-    * - *Command*
-      - *Function*
-    * - <D EXRAIL ON|OFF>
-      - Turns on/off diagnostic traces for EX-RAIL events
-    * - </ PAUSE>
-      - Pauses all automation - all locos ESTOP
-    * - </ RESUME>
-      - Resumes all automation - all locos are restarted at speed when paused
-    * - </ >
-      - Displays EX-RAIL running task information
-    * - </ ROUTES>
-      - Returns the Routes & Automations control list in WiThrottle format. **JMRI integration only!**
-    * - </START [loco_addr] route_id>
-      - Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
-    * - </ KILL task_id>
-      - Kills a currently running script task by ID (use ``</ >`` to list task IDs) 
-    * - </ RESERVE block_id>
-      - Manually reserves a virtual track Block
-    * - </ FREE block_id>
-      - Manually frees a virtual track Block
-    * - </ LATCH sensor_id>
-      - Lock sensor ON, preventing external influence
-    * - </ UNLATCH sensor_ID>
-      - Unlock sensor, returning to current external state
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    table {
+      border: 1px solid #E0E0E0;
+      font-size: 14px;
+     }
 
+    th, td {
+      border: 1px solid #E0E0E0;
+      text-align: left;
+      padding-left: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 0px;
+    }
 
-Routes, Automations & Sequences
---------------------------------
-
-.. list-table:: 
-  :widths: 25 75
-  :header-rows: 1
-
-  * - *Command*
-    - *Function*
-  * -
-    - 
-  * - **--- Script definition items ---**
-    - 
-  * - EXRAIL
-    - All scripts exist in a single block between EXRAIL and ENDEXRAIL keywords
-  * - AUTOMATION(sequence_id, "description") 
-    - Start of an Automation Sequence which WiThrottles can send a train along
-  * - ROUTE(sequence_id, "description") 
-    - Start of a Route Sequence settable in WiThrottle 
-  * - SEQUENCE(sequence_id) 
-    - A general purpose Sequence for scenic animations, etc
-  * - ENDTASK or DONE
-    - Completes a Sequence 
-  * - ENDEXRAIL
-    - Ends entire script
-
-
-  * -
-    - 
-  * - **--- Object definitions ---**
-    - 
-  * - ALIAS(name, value) **\* See note! --->**
-    - Gives a name to a value for script readability. **\* Must appear BEFORE the EXRAIL command!** 
-  * - SIGNAL(red_pin,amber_pin,green_pin) 
-    - Define a signal, Red_pin becomes signal_id for RED/AMBER/GREEN 
-  * - TURNOUT(id,addr,subaddr)
-    - Define a DCC turnout
-  * - PIN_TURNOUT(id,pin) 
-    - Define a pin turnout
-  * - SERVO_TURNOUT(id,pin,activeAngle,inactiveAngle,profile)
-    - Define a servo turnout. (profile is one of  Instant, Fast, Medium, Slow or Bounce)
-
-
-  * - 
-    -
-  * - **--- Flow control functions ---**
-    -
-  * - FOLLOW(sequence_id)
-    - Branch to another sequence
-  * - CALL(sequence_id)
-    - branch to separate sequence and allows RETURN
-  * - RETURN
-    - Return to CALL statement
-  * - DELAY(delay)
-    - Wait in mS.
-  * - DELAYMINS(delay)
-    - Wait minutes
-  * - DELAYRANDOM(mindelay,maxdelay)
-    - Delay random time between min and max mS
-  * - IF(sensor_id)
-    - If sensor is activated, continue. Otherwise skip to matching ENDIF.
-  * - IFNOT(sensor_id)
-    - If sensor is NOT activated, continue. Otherwise skip to matching ENDIF.
-  * - IFRANDOM(percent)
-    - Randomly choose to continue or skip to matching ENDIF.
-  * - IFRESERVE(block)
-    - If block is *not reserved*, RESERVE it and continue. Otherwise skip to matching ENDIF.
-  * - ENDIF  
-    - End of IF type block
+    tr:nth-child(even) {
+      background-color: #E0E0E0;
+    }
+    tr:nth-child(odd) {
+      background-color: #F3F6F6;
+    }
+    td.fitwidth {
+        width: 1px;
+        white-space: nowrap;
+    }
+    </style>
+    </head>
+    <body>
+    <table>
+      <tr>
+          <th>EXRAIL Functions</th>
+          <th>Description</th>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;D EXRAIL ON|OFF(addr,subaddr)&lt;</td>
+        <td>Turns on/off diagnostic traces for EX-RAIL events</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;PAUSE&lt;</td>
+        <td>Pauses all automation - all locos ESTOP</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;RESUME&lt;</td>
+        <td>Resumes all automation - all locos are restarted at the speed when paused</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;/&lt;</td>
+        <td>Displays EX-RAIL running task information</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;/ ROUTES&lt;</td>
+        <td>Returns the Routes & Automations control list in WiThrottle format. JMRI integration only!</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;/ START [loco_addr] route_id&lt;</td>
+        <td>Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;/ KILL task_id&lt;</td>
+        <td>Kills a currently running script task by ID (use </ > to list task IDs)</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;/ RESERVE block_id&lt;</td>
+        <td>Manually reserves a virtual track Block</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;/ FREE block_id&lt;</td>
+        <td>Manually frees a virtual track Block</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;/ LATCH sensor_id&lt;</td>
+        <td>Lock sensor ON, preventing external influence</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &gt;/ UNLATCH sensor_id&lt;</td>
+        <td>Unlock sensor, returning to current external state</td>
+      </tr>
 
 
-  * -
-    - 
-  * - **--- Command Station functions ---**
-    - 
-  * - JOIN
-    - Join prog track to main
-  * - UNJOIN
-    - Disconnect prog track from main
-  * - READ_LOCO
-    - Read loco ID from prog track
-  * - POM(cv,value)
-    - Write loco cv on main track
-  * - LCD(row,"msg")
-    - Write message on LCD/OLED 
-  * - PRINT("msg")
-    - Writes a message to the serial monitor
-
-
-  * -
-    - 
-  * - **--- EX-RAIL Functions ---**
-    - 
-  * - PAUSE
-    - ESTOP all locos and PAUSE all other EXRAIL tasks until RESUMEd
-  * - RESUME
-    - Resume all paused tasks
-  * - RESERVE(blockid)
-    - Reserve a block (0-255) If already reserved, current loco will STOP and script waits for block to become free.
-  * - FREE(blockid)
-    - Free previously reserved block
-  * - START(route)
-    - Start a new task running route or sequence
-  * - SETLOCO(loco)
-    - Set current loco id
-  * - SENDLOCO(loco,route)
-    - Start a new task to send loco along given route  
-
-
-  * - 
-    -
-  * - **--- Loco DCC functions ---**
-    -
-  * - ESTOP 
-    - Emergency stop cuurrent loco 
-  * - FWD(speed)
-    - Drive loco forward at DCC speed (out of 127)
-  * - REV(speed)
-    - Drive loco in reverse (see FWD)
-  * - SPEED(speed)
-    - drive loco in current direction
-  * - STOP 
-    - Same as SPEED(0)
-  * - FON(func)
-    - Turn on loco function
-  * - FOFF(func)
-    - Turn off loco function
-  * - INVERT_DIRECTION
-    - Further FWD/REV commands to this loco will be reversed
-
-
-  * - 
-    -
-  * - **--- Sensor input functions ---**
-    -
-  * - AT(sensor_id)
-    - Waits for sensor to be triggered
-  * - AFTER(sensor_id)
-    - Waits for sensor to be detected and then off for 0.5 seconds
-  * - LATCH(sensor_id)
-    - Latch sensor ON (Sensors 0-255 only)
-  * - UNLATCH(sensor_id)
-    - Remove LATCH on sensor.
-  * - ONCLOSE(turnout_id)
-    - Catch closure of turnout
-  * - ONTHROW(turnout_id)
-    - Catch throw of Turnout
-
-
-  * - 
-    -
-  * - **--- Action output functions ---**
-    -
-  * - SET(output_pin)
-    - Set output pin HIGH
-  * - RESET(output_pin)
-    - Zero an output pin. 
-  * - CLOSE(turnout_id)
-    - close defined turnout
-  * - THROW(turnout_id)
-    - Throw a defined turnout
-  * - GREEN(signal_id)
-    - Set defined signal green
-  * - AMBER(signal_id)
-    - Sets defined signal to amber 
-  * - RED(signal_id)
-    - Set defined signal to red
-  * - SERVO(Vpin,position,Profile)
-    - Move an animation servo. Do not use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
-  * - XFON(cab,func)
-    - Turn on accessory function, e.g. lit carriages. **Not for Loco use - use FON instead!**
-  * - XFOFF(cab,func)
-    - Turn off accessory function, e.g. lit carriages. **Not for Loco use - use FOFF instead!**
-
-
-|
-
-begin raw html... <link rel="stylesheet" href="mystyle.css">
+Routes, Automations, and Sequences
+----------------------------------
 
 .. raw:: html
 
@@ -286,12 +164,16 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
         <td>Sends a DCC accessory packet with value 1 to a linear address</td>
       </tr>
       <tr>
+        <td class="fitwidth"> AFTER(sensor_id)</td>
+        <td>Waits for sensor to trigger and then go off for 0.5 seconds</td>
+      </tr>
+      <tr>
         <td class="fitwidth"> ALIAS(name,value)</td>
-        <td>Can now be anywhere</td>
+        <td>Assign names to values. Can go anywhere in the script</td>
       </tr>
       <tr>
         <td class="fitwidth"> AMBER(signal_id)</td>
-        <td>Set a signal to Amber</td>
+        <td>Set a defined signal to Amber. (See SIGNAL)</td>
       </tr>
       <tr>
         <td class="fitwidth"> AT(sensor_id)</td>
@@ -335,7 +217,7 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
       </tr>
       <tr>
         <td class="fitwidth"> DONE</td>
-        <td>Completes a Sequence/Route/Animation/Event handler etc</td>
+        <td>Completes a Sequence/Route/Animation/Event handler, etc.</td>
       </tr>
       <tr>
         <td class="fitwidth"> DRIVE(analogpin)</td>
@@ -371,7 +253,7 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
       </tr>
       <tr>
         <td class="fitwidth"> FOLLOW(route)</td>
-        <td>Follow numbered sequence (think of GOTO)</td>
+        <td>Follow numbered sequence (think of "GOTO")</td>
       </tr>
       <tr>
         <td class="fitwidth"> FON(func)</td>
@@ -387,7 +269,7 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
       </tr>
       <tr>
         <td class="fitwidth"> GREEN(signal_id)</td>
-        <td>Set signal to GREEN (see SIGNAL)</td>
+        <td>Set a defined signal to GREEN (see SIGNAL)</td>
       </tr>
       <tr>
         <td class="fitwidth"> IF(sensor_id)</td>
@@ -399,11 +281,11 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
       </tr>
       <tr>
         <td class="fitwidth"> IFGTE(sensor_id,value)</td>
-        <td> test if analog values id &gt=</td>
+        <td> test if analog values is greater than or equal to value (&gt;=)</td>
       </tr>
       <tr>
         <td class="fitwidth"> IFLT(sensor_id,value)</td>
-        <td>  test if analog value is </td>
+        <td>  test if analog value is less than value (&lt;)</td>
       </tr>
       <tr>
         <td class="fitwidth"> IFNOT(sensor_id)</td>
@@ -426,7 +308,7 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
       </tr>
       <tr>
         <td class="fitwidth"> JOIN</td>
-        <td>Joins prog track to main</td>
+        <td>Joins PROG and MAIN track outputs to send the same MAIN DCC signal</td>
       </tr>
       <tr>
         <td class="fitwidth"> LATCH(sensor_id)</td>
@@ -437,23 +319,23 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
         <td>Write message on LCD/OLED if fitted</td>
       </tr>
         <td class="fitwidth"> LCN(msg)</td>
-        <td>Send message to </td>
+        <td>Send message to LCN Accessory Network</td>
       </tr>
       <tr>
         <td class="fitwidth"> ONACTIVATE(addr,subaddr)</td>
-        <td>Event handler for DCC accessory packet value 1</td>
+        <td>Event handler for 2 part DCC accessory packet value 1</td>
       </tr>
       <tr>
         <td class="fitwidth"> ONACTIVATEL(linear)</td>
-        <td>Event handler for DCC accessory packet value 1</td>
+        <td>Event handler for linear DCC accessory packet value 1</td>
       </tr>
       <tr>
         <td class="fitwidth"> ONDEACTIVATE(addr,subaddr)</td>
-        <td>Event handler for DCC accessory packet value 0</td>
+        <td>Event handler for 2 part DCC accessory packet value 0</td>
       </tr>
       <tr>
         <td class="fitwidth"> ONDEACTIVATEL(linear)</td>
-        <td>Event handler for DCC accessory packet value 0</td> 
+        <td>Event handler for linear DCC accessory packet value 0</td> 
       </tr>
       <tr>
         <td class="fitwidth"> ONCLOSE(turnout_id)</td>
@@ -513,11 +395,11 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
         <td>Start of a Route Sequence settable in WiThrottle</td>
       </tr>
         <td class="fitwidth"> ROSTER(cab,name,funcmap...)</td>
-        <td> - proivide roster info for Withrottle</td>
+        <td>Provide roster info for Withrottle</td>
       </tr>
       <tr>
         <td class="fitwidth"> SENDLOCO(cab,route)</td>
-        <td>STart a new task taking given loco along given route/sequence</td>
+        <td>Start a new task taking given loco along given route/sequence</td>
       </tr>
       <tr>
         <td class="fitwidth"> SEQUENCE(id)</td>
@@ -525,11 +407,11 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
       </tr>
       <tr>
         <td class="fitwidth"> SERIAL(msg)</td>
-        <td>Writes ditrect to Serial</td>
+        <td>Writes direct to Serial (Serial0/USB)</td>
       </tr>
       <tr>
         <td class="fitwidth"> SERIAL1(msg)</td>
-        <td>Writes ditrect to Serial</td>
+        <td>Writes direct to Serial1</td>
       </tr>
       <tr>
         <td class="fitwidth"> SERIAL2(msg)</td>
@@ -545,7 +427,7 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
       </tr>
       <tr>
         <td class="fitwidth"> SERVO2(id,position,duration)</td>
-        <td>Move an animation servo taking duration ms. Do not use for Turnouts</td> 
+        <td>Move an animation servo taking duration in ms. Do not use for Turnouts</td> 
       </tr>
       <tr>
         <td class="fitwidth"> SERVO_TURNOUT(id,pin,activeAngle,<br>inactiveAngle,profile,description...)</td>
@@ -557,7 +439,7 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
       </tr>
       <tr>
         <td class="fitwidth"> SETLOCO(loco)</td>
-        <td>set te loco address for this task</td>
+        <td>set the loco address for this task</td>
       </tr>
       <tr>
         <td class="fitwidth"> SIGNAL(redpin,amberpin,greenpin)</td>
@@ -606,4 +488,3 @@ begin raw html... <link rel="stylesheet" href="mystyle.css">
     <body>
     <html>
 
-end raw html

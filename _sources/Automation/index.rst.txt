@@ -1,6 +1,6 @@
-***************************
-Automation (EX-RAIL) BETA!
-***************************
+*********************
+Automation (EX-RAIL)
+*********************
 
 Welcome to the home for DCC-EX Automation, **EX-RAIL** is the "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 

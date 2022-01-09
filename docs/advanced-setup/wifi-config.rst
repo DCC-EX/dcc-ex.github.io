@@ -78,7 +78,7 @@ If you travel to shows, or take your setup to a friend's house, this allows for 
 
 (Remember you can click on images to enlarge them)
 
-.. figure:: ../_static/images/wifi/Wifi_softap_mode.png
+.. figure:: ../_static/images/wifi/WiFi_softap_mode.png
    :alt: AP Mode
    :scale: 50%
 
@@ -89,7 +89,7 @@ Station Mode
 
 Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the CS by finding its IP address on the network. You will have to find what IP address is assigned to the CS (see below). Alternately, you can define a static IP address in your router to assign to the CS.
 
-.. figure:: ../_static/images/wifi/Wifi_station_mode.png
+.. figure:: ../_static/images/wifi/WiFi_station_mode.png
    :alt: Station Mode
    :scale: 50%
 

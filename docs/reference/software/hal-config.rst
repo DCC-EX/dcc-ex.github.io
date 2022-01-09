@@ -213,7 +213,7 @@ list of files in the Arduino IDE.
 Adding A New Device Configuration File
 ======================================
 
-This will need to be done in the `Arduino-IDE <../get-started/arduino-ide.html>`_, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`Arduino-IDE <../../get-started/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
 
 
 Create a new tab

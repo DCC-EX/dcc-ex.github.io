@@ -2,7 +2,7 @@
 WiFi Boards
 ************
 
-You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the `Mega+WiFi page <../../advanced-setup/supported-microcontrollers/wif-mega.html>`_
+You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the :doc:`Mega+WiFi page <../../advanced-setup/supported-microcontrollers/wifi-mega>`
 
 For more information on how to configure your CS to use the boards below, see `Wifi Setup <../../get-started/wifi-setup.html>`_
 

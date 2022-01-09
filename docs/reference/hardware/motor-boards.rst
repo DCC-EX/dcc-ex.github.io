@@ -134,7 +134,7 @@ YFRobot L298P Motor Shield
 
 This board is electrically the same, though a different layout than the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
 
-.. image:: ../../_static/images/motorboards/YFRobot1.png
+.. image:: ../../_static/images/motorboards/yfrobot1.png
    :alt: YFRobot L298P Motor Driver Shield
    :scale: 30%
 

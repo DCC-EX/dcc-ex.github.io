@@ -146,11 +146,11 @@ Routes, Automations, and Sequences
         <td>No longer required (does nothing)</td>
       </tr>
       <tr>
-        <td class="fitwidth"> AUTOMATION( id, description )</td>
+        <td class="fitwidth"> AUTOMATION( id, "description" )</td>
         <td>Start of an Automation Sequence which WiThrottles can send a train along</td>
       </tr>
       <tr>
-        <td class="fitwidth"> ROUTE( id, description )</td>
+        <td class="fitwidth"> ROUTE( id, "description" )</td>
         <td>Start of a Route Sequence settable in WiThrottle</td>
       </tr>
       <tr>
@@ -179,15 +179,15 @@ Routes, Automations, and Sequences
         <td> Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)</td>
       </tr>
       <tr>
-        <td class="fitwidth"> TURNOUT( id, addr, sub_addr [, description] )</td>
+        <td class="fitwidth"> TURNOUT( id, addr, sub_addr [, "description"] )</td>
         <td>Define DCC Accessory turnout</td>
       </tr>
       </tr>
-        <td class="fitwidth"> PIN_TURNOUT( id, pin [, description] )</td>
+        <td class="fitwidth"> PIN_TURNOUT( id, pin [, "description"] )</td>
         <td>Define pin operated turnout</td>
       </tr>
       <tr>
-        <td class="fitwidth"> SERVO_TURNOUT( id, pin, active_angle,<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp inactive_angle, profile [, description] )</td>
+        <td class="fitwidth"> SERVO_TURNOUT( id, pin, active_angle,<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp inactive_angle, profile [, "description"] )</td>
         <td>Define a servo turnout</td>
       </tr>
 
@@ -221,11 +221,11 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> IF( sensor_id )</td>
-        <td> If sensor activated or latched, continue. Otherwise skip to matching ENDIF</td> 
+        <td> If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF</td> 
       </tr>
       <tr>
         <td class="fitwidth"> IFNOT( sensor_id )</td>
-        <td>If sensor NOT activated and NOT latched, continue. Otherwise skip to matching ENDIF</td>
+        <td>If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF</td>
       </tr>
       <tr>
         <td class="fitwidth"> IFCLOSED( turnout_id )</td>
@@ -237,7 +237,7 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> IFLT( sensor_id, value )</td>
-        <td>  Test if analog pin reading is less than value (&lt;)</td>
+        <td> Test if analog pin reading is less than value (&lt;)</td>
       </tr>
       <tr>
         <td class="fitwidth"> IFRANDOM( percent )</td>
@@ -249,11 +249,19 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> IFRESERVE( block )</td>
-        <td>If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skipt to matching ENDIF</td>
+        <td>If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> IFTIMEOUT</td>
+        <td>Tests if "timed out" flag has been set by an ATTIMEOUT sensor reading attempt</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> ELSE</td>
+        <td>Provides alternative logic to any IF related command returning False</td>
       </tr>
       <tr>
         <td class="fitwidth"> ENDIF</td>
-        <td>Ends an IF/IFNOT/etc (Used in all IF.. functions)</td> 
+        <td>Required to end an IF/IFNOT/etc (Used in all IF.. functions)</td> 
       </tr>
 
       <tr>
@@ -319,7 +327,7 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> RESERVE( block_id )</td>
-        <td> Reserve a block (0-255) If already reserved, current loco will STOP and script waits for block to become free</td>
+        <td> Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free</td>
       </tr>
       <tr>
         <td class="fitwidth"> FREE( block_id )</td>
@@ -394,6 +402,10 @@ Routes, Automations, and Sequences
       <tr>
         <td class="fitwidth"> AT( sensor_id )</td>
         <td>Wait until sensor is active/triggered</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> ATTIMEOUT( sensor_id, timeout_ms )</td>
+        <td>Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag</td>
       </tr>
       <tr>
         <td class="fitwidth"> AFTER( sensor_id )</td>

@@ -133,7 +133,7 @@ Outputs
 
    IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
                  1 = state of pin set to ACTIVE upon power-up or when first created
-|
+..
 
  ``<Z id 0|1>`` : Sets output ID to either INACTIVE or ACTIVE state  
 

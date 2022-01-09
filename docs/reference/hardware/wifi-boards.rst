@@ -4,7 +4,7 @@ WiFi Boards
 
 You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the :doc:`Mega+WiFi page <../../advanced-setup/supported-microcontrollers/wifi-mega>`
 
-For more information on how to configure your CS to use the boards below, see `Wifi Setup <../../get-started/wifi-setup.html>`_
+For more information on how to configure your CS to use the boards below, see :doc:`Wifi Setup <../../get-started/wifi-setup>`
 
 - :ref:`Makerfabs WiFi Shield`.
 - :ref:`Duinopeak WiFi Shield`.
@@ -28,7 +28,7 @@ Conductor Friendly
    :scale: 70%
 
 
-`Installation Instructions for WiFi <../../get-started/wifi-setup.html>`_
+:doc:`Installation Instructions for WiFi <../../get-started/wifi-setup>`
 
 Duinopeak WiFi Shield
 ======================
@@ -43,7 +43,7 @@ Tinkerer
 
 You will need an ESP-01s to plug into this board. This is just an expansion shield board. It allows you to plug an ESP8266 onto an Arduino with no jumper wires. This board also has a voltage regulator, level shifters and a reset button for programming.
 
-`Installation Instructions <../../get-started/wifi-setup.html>`_
+:doc:`Installation Instructions <../../get-started/wifi-setup>`
 
 See the ESP-01S in the next section below that must be installed on this board
 
@@ -79,7 +79,7 @@ We have used the ones that look like the one below just as well, but you have to
 
 
 
-`Installation Instructions <../../get-started/wifi-setup.html>`_
+:doc:`Installation Instructions <../../get-started/wifi-setup>`
 
 WangTongze Board 
 ==================

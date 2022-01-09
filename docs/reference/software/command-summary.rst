@@ -3,7 +3,7 @@ DCC++ EX Command Summary
 ****************************
 
 **This is a summary, for a detailed command, see...**
-  `Command Reference <command-reference.html>`_
+  :doc:`Command Reference <command-reference>`
 
 ----------------------------
 Power management
@@ -207,4 +207,4 @@ I/O (HAL) Diagnostics
  ``<U ...>`` Is reserved for user commands (through user filter)
 
  **For a detailed command reference, see...**
-  `Command Reference <command-reference.html>`_
+  :doc:`Command Reference <command-reference>`

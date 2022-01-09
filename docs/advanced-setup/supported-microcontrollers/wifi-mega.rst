@@ -291,16 +291,16 @@ If you are going to want to connect to your WiFi router, you just need to enter 
 
 Download and install DCC++EX from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 
-`How to install using the installer <../../get-started/installer.html>`_
+:doc:`How to install using the installer <../../get-started/installer>`
 
-`How to install using the Arduino IDE <../../get-started/arduino-ide.html>`_
+:doc:`How to install using the Arduino IDE <../../get-started/arduino-ide>`
 
-`I know what I'm doing, just point me to the downloads page! <../../download/commandstation.html>`_
+:doc:`I know what I'm doing, just point me to the downloads page! <../../download/commandstation>`
 
 Short Version of Network Setup
 ===============================
 
-`Long/Detailed Network Setup HERE <../../advanced-setup/wifi-config.html>`_
+:doc:`Long/Detailed Network Setup HERE <../../advanced-setup/wifi-config>`
 
 All settings are in the config.h file in your CommandStation-EX folder. If you don't have a config.h, rename config.example.h to config.h.
 

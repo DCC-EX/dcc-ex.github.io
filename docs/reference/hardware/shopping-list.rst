@@ -16,7 +16,7 @@ CS Hardware
 
 `12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/ref=redir_mobile_desktop?ie=UTF8&aaxitk=0jN3RieNiW-Jxn0JuJS6dQ&hsa_cr_id=2529139070101&ref_=sbx_be_s_sparkle_mcd_asin_0>`_ (connects to the motor shield)
 
-`9V 1Amp Power Supply for the Arduino <https://www.amazon.com/Arduino-Power-Supply-Adapter-110V/dp/B018OLREG4/ref=asc_df_B018OLREG4/?tag=hyprod-20&linkCode=df0&hvadid=198063088238&hvpos=&hvnetw=g&hvrand=14543638497706269076&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-318768096639&psc=1>`_ There is a way to use your computer connection, a USB charger, or a separate 5V power supply also, please see `Power Supplies <power-supplies.html>`_ for options
+`9V 1Amp Power Supply for the Arduino <https://www.amazon.com/Arduino-Power-Supply-Adapter-110V/dp/B018OLREG4/ref=asc_df_B018OLREG4/?tag=hyprod-20&linkCode=df0&hvadid=198063088238&hvpos=&hvnetw=g&hvrand=14543638497706269076&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-318768096639&psc=1>`_ There is a way to use your computer connection, a USB charger, or a separate 5V power supply also, please see `Power Supplies <power-supplies>` for options
 
 `Raspberry Pi 4B <https://www.google.com/search?q=raspberry+pi+4&rlz=1C1CHVZ_enUS586US586&sxsrf=ALeKk00RT_osXNqIbJ_Xut4J5jqmo4mWjw:1592847200887&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjNidyc-pXqAhXPct8KHdPXA9kQ_AUoAXoECAwQAw&biw=1230&bih=617#spd=3143731532782929925>`_
 
@@ -54,12 +54,12 @@ This can be a little confusing, so let explain it a different way:
 
     4. If you install an ESP8266 WiFi Shield, you don't need a computer or a Pi if you don't want it once you upload the software to the Arduino. You can connect directly to the CS via WiFi using any WiThrottle compatible controller such as Engine Driver running on a WiFi device like your mobile phone.
 
-.. note:: The computer USB port in option 1, 2, or 3 may be able to be the power supply for the Arduino (but you will still need a 12-14V DC power supply for the motor shield) See `Power Supplies <power-supplies.html>`_ for information on how to choose the right power supplies and different ways you can power the Arduino.
+.. note:: The computer USB port in option 1, 2, or 3 may be able to be the power supply for the Arduino (but you will still need a 12-14V DC power supply for the motor shield) See :doc:`Power Supplies <power-supplies>` for information on how to choose the right power supplies and different ways you can power the Arduino.
   
 Add-Ons
 ========
 
-This is just the beginning. You may want to add some items, like a display, or a board to control accessories like lights, motors, and servos. See the `Hardware Index Page <../index.html>`_ for information and more shopping list links.
+This is just the beginning. You may want to add some items, like a display, or a board to control accessories like lights, motors, and servos. See the :doc:`Hardware Index Page <../index>` for information and more shopping list links.
 
 
 

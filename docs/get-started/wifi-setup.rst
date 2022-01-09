@@ -2,13 +2,13 @@
 WiFi Setup
 ***********
 
-The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can `skip ahead to the next page <installer.html>`_.
+The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page <installer>`.
 
 .. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12). The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
 
 There are many ways to add WiFi to your Command Station. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
-You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our `Support Page <../support/index.html>`_ if you have a question.
+You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our :doc:`Support Page <../support/index>` if you have a question.
 
 Note that you can click on any of the images to make them larger.
 
@@ -210,8 +210,8 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
 Install the Software
 ======================
 
-If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: `WiFi Configuration <../advanced-setup/wifi-config.html>`_
+If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
 
 .. note:: LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
 
-If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to `Command Station Downloads <../download/commandstation.html>`_ to load firmware onto the CS.
+If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads <../download/commandstation>` to load firmware onto the CS.

@@ -291,13 +291,13 @@
             
   <div class="section" id="ethernet-boards">
 <h1>Ethernet Boards<a class="headerlink" href="#ethernet-boards" title="Permalink to this headline">¶</a></h1>
-<p>DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the <a class="reference external" href="../hardware/wifi-boards.html">Wifi Boards Section</a></p>
+<p>DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the <a class="reference external" href="../hardware/wifi-boards.html">WiFi Boards Section</a></p>
 <p>To use Ethernet instead of WiFi, follow these simple steps:</p>
 <ul class="simple">
 <li><p>Stick your Ethernet shield onto the stack with your Mega and Motor Shield</p></li>
 <li><p>Open your config.h file in your editor (like the Arduino IDE)</p></li>
 <li><p>Uncomment the line <code class="docutils literal notranslate"><span class="pre">&quot;#define</span> <span class="pre">ENABLE_ETHERNET</span> <span class="pre">=</span> <span class="pre">true&quot;</span></code> by removing the “//” characters</p></li>
-<li><p>Add “//” comment lines in front of <code class="docutils literal notranslate"><span class="pre">&quot;#defind</span> <span class="pre">ENABLE_WIFI</span> <span class="pre">=</span> <span class="pre">true&quot;</span></code> (if it isn’t already commented out).</p></li>
+<li><p>Add “//” comment lines in front of <code class="docutils literal notranslate"><span class="pre">&quot;#define</span> <span class="pre">ENABLE_WIFI</span> <span class="pre">=</span> <span class="pre">true&quot;</span></code> (if it isn’t already commented out).</p></li>
 <li><p>Enter the SSID for your router by replacing “Your network name” with the name of your network in <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">WIFI_SSID</span> <span class="pre">&quot;Your</span> <span class="pre">network</span> <span class="pre">name&quot;</span></code> in between the quotes.</p></li>
 <li><p>Enter the Password for your router by replacing “Your network passwd” with your password in the line:<code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">WIFI_PASSWORD</span> <span class="pre">&quot;Your</span> <span class="pre">network</span> <span class="pre">passwd&quot;</span></code> in between the quotes.</p></li>
 <li><p><a class="reference internal" href="#arduino-network-shield-2"><span class="std std-ref">Arduino Network Shield 2</span></a> <strong>[RECOMMENDED]</strong></p></li>

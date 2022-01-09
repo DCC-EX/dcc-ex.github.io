@@ -132,10 +132,10 @@ Outputs
                      to either ACTIVE of INACTIVE depending on IFLAG, bit 2
 
    IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
-                 1 = state of pin set to ACTIVE upon power-up or when first created 
+                 1 = state of pin set to ACTIVE upon power-up or when first created
+|
 
  ``<Z id 0|1>`` : Sets output ID to either INACTIVE or ACTIVE state  
-
 
  ``<Z id>`` : Deletes definition of output ID  
 
@@ -149,7 +149,7 @@ EEPROM management
  ``<D EEPROM>`` Diagnostic dump eeprom contents
 
 ----------------------------
-Wifi Control
+WiFi Control
 ----------------------------
  ``<+command>`` Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
 
@@ -172,9 +172,9 @@ Diagnostic traces
 
  ``<D LCN ON|OFF>`` Enables LCN interface diagnostics
 
- ``<D WIFI ON|OFF>`` Enables Wifi diagnostics
+ ``<D WIFI ON|OFF>`` Enables WiFi diagnostics
 
- ``<D WIT ON|OFF>`` Enables Withrottle diagnostics
+ ``<D WIT ON|OFF>`` Enables WiThrottle diagnostics
 
 ======================
 Tuning

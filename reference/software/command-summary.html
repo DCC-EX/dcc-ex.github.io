@@ -369,23 +369,25 @@
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> Lists all defined output pins</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">iflag&gt;</span></code> : Creates a new output ID, with specified PIN and IFLAG values.</p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
-                1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">forward</span> <span class="n">operation</span> <span class="p">(</span><span class="n">ACTIVE</span><span class="o">=</span><span class="n">HIGH</span> <span class="o">/</span> <span class="n">INACTIVE</span><span class="o">=</span><span class="n">LOW</span><span class="p">)</span>
+              <span class="mi">1</span> <span class="o">=</span> <span class="n">inverted</span> <span class="n">operation</span> <span class="p">(</span><span class="n">ACTIVE</span><span class="o">=</span><span class="n">LOW</span> <span class="o">/</span> <span class="n">INACTIVE</span><span class="o">=</span><span class="n">HIGH</span><span class="p">)</span>
 
-  IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE
-                    depending on state before power-down.
-                1 = state of pin set on power-up, or when first created,
-                    to either ACTIVE of INACTIVE depending on IFLAG, bit 2
+<span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="n">restored</span> <span class="n">on</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span> <span class="n">to</span> <span class="n">either</span> <span class="n">ACTIVE</span> <span class="ow">or</span> <span class="n">INACTIVE</span>
+                  <span class="n">depending</span> <span class="n">on</span> <span class="n">state</span> <span class="n">before</span> <span class="n">power</span><span class="o">-</span><span class="n">down</span><span class="o">.</span>
+              <span class="mi">1</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="nb">set</span> <span class="n">on</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span><span class="p">,</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">first</span> <span class="n">created</span><span class="p">,</span>
+                  <span class="n">to</span> <span class="n">either</span> <span class="n">ACTIVE</span> <span class="n">of</span> <span class="n">INACTIVE</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">2</span>
 
-  IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
-                1 = state of pin set to ACTIVE upon power-up or when first created
-
-``&lt;Z id 0|1&gt;`` : Sets output ID to either INACTIVE or ACTIVE state
-
-
-``&lt;Z id&gt;`` : Deletes definition of output ID
+<span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">INACTIVE</span> <span class="n">upon</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">first</span> <span class="n">created</span>
+              <span class="mi">1</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">ACTIVE</span> <span class="n">upon</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">first</span> <span class="n">created</span>
 </pre></div>
 </div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">0|1&gt;</span></code> : Sets output ID to either INACTIVE or ACTIVE state</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id&gt;</span></code> : Deletes definition of output ID</p>
+</div></blockquote>
 </div>
 <div class="section" id="eeprom-management">
 <h2>EEPROM management<a class="headerlink" href="#eeprom-management" title="Permalink to this headline">¶</a></h2>
@@ -396,7 +398,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="wifi-control">
-<h2>Wifi Control<a class="headerlink" href="#wifi-control" title="Permalink to this headline">¶</a></h2>
+<h2>WiFi Control<a class="headerlink" href="#wifi-control" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code> Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> Force the CS into “WiFi Connected” mode</p>
@@ -411,8 +413,8 @@
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">ON|OFF&gt;</span></code> Enables Command Parser diagnostics</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ETHERNET</span> <span class="pre">ON|OFF&gt;</span></code> Enables Ethernet diagnostics</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">LCN</span> <span class="pre">ON|OFF&gt;</span></code> Enables LCN interface diagnostics</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">ON|OFF&gt;</span></code> Enables Wifi diagnostics</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIT</span> <span class="pre">ON|OFF&gt;</span></code> Enables Withrottle diagnostics</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">ON|OFF&gt;</span></code> Enables WiFi diagnostics</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIT</span> <span class="pre">ON|OFF&gt;</span></code> Enables WiThrottle diagnostics</p>
 </div></blockquote>
 <div class="section" id="tuning">
 <h3>Tuning<a class="headerlink" href="#tuning" title="Permalink to this headline">¶</a></h3>

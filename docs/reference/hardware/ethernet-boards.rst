@@ -2,14 +2,14 @@
 Ethernet Boards
 ****************
 
-DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the `Wifi Boards Section <../hardware/wifi-boards.html>`_
+DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the `WiFi Boards Section <../hardware/wifi-boards.html>`_
 
 To use Ethernet instead of WiFi, follow these simple steps:
 
 * Stick your Ethernet shield onto the stack with your Mega and Motor Shield
 * Open your config.h file in your editor (like the Arduino IDE)
 * Uncomment the line ``"#define ENABLE_ETHERNET = true"`` by removing the "//" characters
-* Add "//" comment lines in front of ``"#defind ENABLE_WIFI = true"`` (if it isn't already commented out).
+* Add "//" comment lines in front of ``"#define ENABLE_WIFI = true"`` (if it isn't already commented out).
 * Enter the SSID for your router by replacing "Your network name" with the name of your network in ``#define WIFI_SSID "Your network name"`` in between the quotes.
 * Enter the Password for your router by replacing "Your network passwd" with your password in the line:``#define WIFI_PASSWORD "Your network passwd"`` in between the quotes.
 

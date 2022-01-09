@@ -91,7 +91,7 @@ Using a Bluetooth Controller
    :scale: 50%
    :align: center
 
-`Wireless Bluetooh Gamepad/Joystic Controller <khttps://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119?mkcid=16&mkevt=1&_trksid=p2349624.m46890.l49286&mkrid=711-127632-2357-0>`_
+`Wireless Bluetooth Gamepad/Joystick Controller <https://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119?mkcid=16&mkevt=1&_trksid=p2349624.m46890.l49286&mkrid=711-127632-2357-0>`_
 
 This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. You can use these as a start and customize them for your own use:
 

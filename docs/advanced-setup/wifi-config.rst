@@ -1,6 +1,6 @@
 *******************
 WiFi Configuration
-********************
+*******************
 
 .. image:: ../_static/images/conductor.png
    :alt: Conductor Icon

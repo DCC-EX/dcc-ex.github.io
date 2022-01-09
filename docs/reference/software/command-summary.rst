@@ -199,11 +199,11 @@ I/O (HAL) Diagnostics
  ``<D ANOUT vpin value [param2]>``  Write `value` to analogue pin `vpin`, supplying `param2` to the driver.
 
  ``<D ANIN vpin>``  Read and display pin `vpin`'s analogue value.
-  
 
- ==========
- Other
- ==========
+==========
+Other
+==========
+
  ``<U ...>`` Is reserved for user commands (through user filter)
 
  **For a detailed command reference, see...**

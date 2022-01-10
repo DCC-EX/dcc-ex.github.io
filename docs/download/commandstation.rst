@@ -2,14 +2,13 @@
 Command Station Downloads
 **************************
 
-Welcome to the Command Station download page. You have several choices: 
+Welcome to the Command Station download page. You have several choices:
 
 * **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the :ref:`exInstaller` section. 
 * If you are a Tinkerer, or you would like to download a zip file and install the firmware using the Arduino IDE, go to the :ref:`Latest DCC++ EX Official Release` section.
-* To get the latest unreleased development version, go to the :ref:`Latest DCC++ EX Unreleased Development Version`
+* To get the latest unreleased development version, go to the :ref:`Latest DCC++ EX Unreleased Development Version`, including the excitement of **EX-RAIL Automation**!
 * If you are an Engineer or developer, and want to clone the repository onto your computer, go to the :ref:`CommandStation-EX Repository (project source files)` section.
-* If you're looking for BaseStation-Classic, go to the :ref:`Getting BaseStation-Classic` section.
-* *AND NOW,* for those adventurous ones looking for the **thrill of EX-RAIL Automation** on your Command Station, see :ref:`Getting the EX-RAIL Beta Development Version` down the bottom.
+* If you're still looking for BaseStation-Classic, go to the :ref:`Getting BaseStation-Classic` section.
 
 exInstaller
 =============
@@ -36,7 +35,9 @@ Latest DCC++ EX Official Release
 Latest DCC++ EX Unreleased Development Version
 ===============================================
 
-.. note:: The link below will download the latest *unreleased* development version in zip file format. Please open the zip file, go into the "CommandStation-EX-master" folder, and unzip all the files in that folder into your "CommandStation-EX" sketch folder. Make sure you DO NOT just unzip the entire zip file, since it will have the incorrect folder name. The Arduino IDE requires that the folder name and the .ino file inside that folder match names exactly, ie: "CommandStation-EX" not "CommandStation-EX-master".
+.. note:: The link below will download the latest *unreleased* development version in zip file format. Please open the zip file, go into the "CommandStation-EX-master" folder, and unzip all the files in that folder into your "CommandStation-EX" sketch folder. Make sure you **DO NOT** just unzip the entire zip file, since it will have the incorrect folder name. The Arduino IDE requires that the folder name and the .ino file inside that folder match names exactly, ie: "CommandStation-EX" not "CommandStation-EX-master".
+
+.. attention:: `Discord <https://discord.gg/y2sB4Fp>`_ is the best place to keep up-to-date on new code releases, and you may be directed to download the latest version here from time to time, as new features are added and updated often.
 
 .. raw:: html
 
@@ -68,27 +69,3 @@ The installer will allow you to install BaseStation-Classic. We recommend using 
    <p><a class="dcclink" href="https://github.com/DCC-EX/BaseStation-Classic">BaseStation-Classic GitHub</a></p>
 
 |
-
-Getting the EX-RAIL Beta Development Version
-===============================================
-
-.. note::
-   The first link below will download the latest *unreleased Beta* development version of CommandStation-EX, **with the new EX-RAIL Automation functions**, in zip file format.
-
-   Please open the zip file, go into the "CommandStation-EX-Master" folder, and unzip all the files in **that folder** into your "CommandStation-EX" sketch folder. Make sure you **DO NOT** just unzip the entire zip file, since it will have the incorrect folder name. The Arduino IDE requires that the folder name and the .ino file inside that folder match names exactly, ie: "CommandStation-EX" not "CommandStation-EX-Master".
-
-   For the Engineers and Tinkerers, the second link is to the Command Station EX-RAIL GitHub repository, where you can clone the project to your computer. Click on the green button to get a clone link or to download the zip file. We have made sure that you can still use the Arduino IDE if you like, but we recommend developers use the PlatformIO development environment. See the :doc:`Contributing Page <../contributing/index>` for more information.
-
-.. attention::
-   **EX-RAIL is in Beta testing.** It is being actively developed, and as such, the code may change before the upcomming officual release! We appreciate your effort in testing the current features for us, and sharing your feedback to guide developer's efforts. Please join us on Discord `here <https://discord.gg/y2sB4Fp>`_ to participate in the Beta programme, and learn more about this exciting new stage of DCC++ EX development!
-
-   Discord is also the best place to keep up-to-date on new code releases, and you may be directed to download the latest version here from time to time, as new features are added and updated often.
-
-.. raw:: html
-
-   <p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX/archive/refs/heads/master.zip">EX-RAIL Beta Development Version</a></p>
-
-.. raw:: html
-
-   <p><a class="dcclink" href="https://github.com/DCC-EX/CommandStation-EX">EX-RAIL GitHub Repository</a></p>
-

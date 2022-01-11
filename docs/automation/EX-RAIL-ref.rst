@@ -517,7 +517,7 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> DEACTIVATEL( addr )</td>
-        <td> Sends a DCC accessory packet with value 1 to a linear address</td>
+        <td> Sends a DCC accessory packet with value 0 to a linear address</td>
       </tr>
     </table>
     </body>

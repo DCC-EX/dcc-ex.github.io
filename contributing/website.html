@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -294,7 +284,7 @@
 <h2>Submission Procedure<a class="headerlink" href="#submission-procedure" title="Permalink to this headline">¶</a></h2>
 <p>We will assume that you have an appropriate text editor and Git installed on your machine. We recommend the free <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code IDE (VSC)</a> and <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> or <a class="reference external" href="https://git-scm.com/downloads">Git Bash (the command line interface in Git)</a>.</p>
 <ol class="arabic simple">
-<li><p>Clone the <a class="reference external" href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">dcc-ex.github.io &lt;https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx&gt;`_Support repository, to your local machine. Make sure you’re on the sphinx branch. (`Cloning a repository in GitHub</a>)</p></li>
+<li><p>Clone the <a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx">dcc-ex.github.io</a> website repository, to your local machine. Make sure you’re on the sphinx branch. (<a class="reference external" href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">Cloning a repository in GitHub</a>)</p></li>
 <li><p>Install Python 3.8 (which also installs pip) then use pip to install the required packages <code class="docutils literal notranslate"><span class="pre">`pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">sphinx_rtd_theme</span> <span class="pre">sphinxcontrib-spelling`</span></code></p></li>
 <li><p>Using Git Bash, go to the “website” folder and make a branch using GitHub desktop or this command: <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">your-branch-name`</span></code></p></li>
 <li><p>Open VSC and edit the files in the <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io/docs`</span></code> folder. Save, then Preview your changes by running <code class="docutils literal notranslate"><span class="pre">`make</span> <span class="pre">github`</span></code> from the root of the <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io`</span></code> folder. <em>This must be done from cmd.exe in Windows, not PowerShell</em> Then go to the directory <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io/docs/build/html`</span></code> and open <code class="docutils literal notranslate"><span class="pre">`index.html`</span></code> in Chrome or another browser. Note that since 11/23/2020, this is just a local preview - when you push your changes, GitHub will automatically rebuild your website.</p></li>

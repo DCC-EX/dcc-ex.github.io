@@ -47,7 +47,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Startup Configuration" href="startup-config.html" />
-    <link rel="prev" title="Wireless Connections" href="wifi-config.html" /> 
+    <link rel="prev" title="WiFi Configuration" href="wifi-config.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Advanced Setup</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -439,7 +429,7 @@
 </div>
 <div class="section" id="how-do-i-find-volts-per-amp">
 <h3>How Do I Find Volts per Amp?<a class="headerlink" href="#how-do-i-find-volts-per-amp" title="Permalink to this headline">¶</a></h3>
-<p>In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm’s law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you should use separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the <a class="reference external" href="../advanced-setup/index.html">Advanced Setup Section</a> for more info.</p>
+<p>In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm’s law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you should use separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the <a class="reference internal" href="index.html"><span class="doc">Advanced Setup Section</span></a> for more info.</p>
 </div>
 <div class="section" id="just-buy-a-current-sense-board-instead">
 <h3>Just Buy a Current Sense Board Instead<a class="headerlink" href="#just-buy-a-current-sense-board-instead" title="Permalink to this headline">¶</a></h3>
@@ -464,7 +454,7 @@
 <p>This method has the advantage of reading the actual current being used by things attached to the track, i.e. trains. It has the further advantage of being able to read MAIN current and PROG current separately, even on boards that have both H-Bridges on the same board. That makes sense, because you are, in effect, connecting to the track circuit, not the motor board.</p>
 <p>The disadvantage is that you MUST use a bi-directional current sensor, and you need 2 sensors if you want to use one to sense ACKs (acknowledgements) from locos on the programming track, and to sense current and detect an overload (short circuit) on either track.</p>
 <p>No matter which method you choose, you are going to have to either select the correct motor board type in your config.h file, or create a motorboard definition to tell DCC++EX which pins you are connecting your current sense board(s) to, and what current sense factor to use to report the current accurately.</p>
-<p>For details and instructions on how to connect and configure non-Arduino Motor Shield boards and their clones, see the <a class="reference external" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a>.</p>
+<p>For details and instructions on how to connect and configure non-Arduino Motor Shield boards and their clones, see the <a class="reference internal" href="supported-motorboards/index.html"><span class="doc">Supported Motorboards Setup Notes</span></a>.</p>
 </div>
 </div>
 </div>
@@ -477,7 +467,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="startup-config.html" class="btn btn-neutral float-right" title="Startup Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="wifi-config.html" class="btn btn-neutral float-left" title="Wireless Connections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wifi-config.html" class="btn btn-neutral float-left" title="WiFi Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

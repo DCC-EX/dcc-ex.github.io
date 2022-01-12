@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -291,8 +281,8 @@
             
   <div class="section" id="wifi-boards">
 <h1>WiFi Boards<a class="headerlink" href="#wifi-boards" title="Permalink to this headline">¶</a></h1>
-<p>You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the <a class="reference external" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html">Mega+WiFi page</a></p>
-<p>For more information on how to configure your CS to use the boards below, see <a class="reference external" href="../../get-started/wifi-setup.html">Wifi Setup</a></p>
+<p>You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the <a class="reference internal" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html"><span class="doc">Mega+WiFi page</span></a></p>
+<p>For more information on how to configure your CS to use the boards below, see <a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">Wifi Setup</span></a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#makerfabs-wifi-shield"><span class="std std-ref">Makerfabs WiFi Shield</span></a>.</p></li>
 <li><p><a class="reference internal" href="#duinopeak-wifi-shield"><span class="std std-ref">Duinopeak WiFi Shield</span></a>.</p></li>
@@ -313,7 +303,7 @@
 <li><p><a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP-8266 WiFi Shield (recommended)</a></p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/wifi_jumpers1.jpg"><img alt="Makerfabs ESP-8266 WiFi Shield" src="../../_images/wifi_jumpers1.jpg" style="width: 420.0px; height: 317.79999999999995px;" /></a>
-<p><a class="reference external" href="../../get-started/wifi-setup.html">Installation Instructions for WiFi</a></p>
+<p><a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">Installation Instructions for WiFi</span></a></p>
 </div>
 <div class="section" id="duinopeak-wifi-shield">
 <h2>Duinopeak WiFi Shield<a class="headerlink" href="#duinopeak-wifi-shield" title="Permalink to this headline">¶</a></h2>
@@ -323,7 +313,7 @@
 </ul>
 <a class="reference internal image-reference" href="../../_images/duinopeak.jpg"><img alt="Duinopeak ESP-8266 WiFi Shield" src="../../_images/duinopeak.jpg" style="width: 360.0px; height: 346.2px;" /></a>
 <p>You will need an ESP-01s to plug into this board. This is just an expansion shield board. It allows you to plug an ESP8266 onto an Arduino with no jumper wires. This board also has a voltage regulator, level shifters and a reset button for programming.</p>
-<p><a class="reference external" href="../../get-started/wifi-setup.html">Installation Instructions</a></p>
+<p><a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">Installation Instructions</span></a></p>
 <p>See the ESP-01S in the next section below that must be installed on this board</p>
 </div>
 <div class="section" id="esp-01s">
@@ -340,7 +330,7 @@
 <a class="reference internal image-reference" href="../../_images/esp_breakout2.jpg"><img alt="ESP8266 Breakout Board" src="../../_images/esp_breakout2.jpg" style="width: 250.0px; height: 250.0px;" /></a>
 <p>We have used the ones that look like the one below just as well, but you have to make sure to wire power to 3.3V NOT 5V and there is no voltage regulation and NO LEVEL SHIFTERS. The GPIO pins on the ESP8266 appear to be 5V tolerant, but there is not guarantee it won’t shorten its life to have a 5V signal on the Tx pin. Several testt versions are running fine like this after a year, but if you are going to buy a board to stick this into instead of wiring it directly, then why not buy one with the extra circuitry?</p>
 <a class="reference internal image-reference" href="../../_images/esp_breakout1.jpg"><img alt="ESP8266 Breakout Board" src="../../_images/esp_breakout1.jpg" style="width: 250.0px; height: 250.0px;" /></a>
-<p><a class="reference external" href="../../get-started/wifi-setup.html">Installation Instructions</a></p>
+<p><a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">Installation Instructions</span></a></p>
 </div>
 <div class="section" id="wangtongze-board">
 <h2>WangTongze Board<a class="headerlink" href="#wangtongze-board" title="Permalink to this headline">¶</a></h2>
@@ -350,23 +340,23 @@
 <p>This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for “WangTongze” on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a “good” board, it will work perfectly, if you get a bad clone, it won’t work without employing workarounds. A genuine Wangtongze has no misspellings.</p>
 <p>One board has “shield” spelled incorrectly as “shiald”. The “shiald” version works, but some say it has an unreliable WiFi connection.</p>
 <p>There is another version where the “more” in “more info” is spelled “moer” and “Arduino” is spelled “Arbuino”. This board has the wrong transistors soldered onto it in the level shifter circuit. Get out your cell phone, take a picture of your board and zoom in on the section of the board you see here:</p>
-<div class="figure align-default" id="id2">
+<div class="figure align-default" id="id1">
 <a class="with-shadow reference internal image-reference" href="../../_images/wangtongze_transistors.png"><img alt="Wangongze level shifter transistors" class="with-shadow" src="../../_images/wangtongze_transistors.png" style="width: 378.59999999999997px; height: 276.9px;" /></a>
-<p class="caption"><span class="caption-text">WiFi board level shifting transistors should be J1Y (click the image to enlarge)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">WiFi board level shifting transistors should be J1Y (click the image to enlarge)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>If these 2 transistors are labelled “JIY” you are lucky and the board with work with no modifications. If they are labelled “J3Y”, you have two choices to get this to work:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p><strong>Tinkerer way</strong> - You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the Tx/Rx level shifters. The ESP8266 Tx/Rx pins are 5V tolerant, but it is always best if you can to shift 5V from the Arduino to 3.3V. You could also make a small 2 resistor voltage divider to connect to the debug header Rx pin. The Tx pin to the Arduino will be fine as is.</p></li>
 </ol>
-<div class="figure align-default" id="id3">
+<div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/wangtongze_jumpered.jpg"><img alt="Wangtongze Jumpering to the debug header" src="../../_images/wangtongze_jumpered.jpg" style="width: 436.8px; height: 317.7px;" /></a>
-<p class="caption"><span class="caption-text">Using Jumpers Directly to the Debug Header</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Using Jumpers Directly to the Debug Header</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>And here is a voltage divider with just two resistors you can use as a signal level shifter circuit:</p>
-<div class="figure align-default" id="id4">
+<div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/esp_level_shifter.png"><img alt="" src="../../_images/esp_level_shifter.png" style="width: 368.2px; height: 287.7px;" /></a>
-<p class="caption"><span class="caption-text">Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p><strong>Engineer way</strong> - You can buy the correct surface mount transistors and replace two of them using a magnifier as we did when we had nothing better to do that day, but that’s a lot of trouble to go through unless this is the only board you can find. If they are labelled “J3Y”, you can order “J1Y” replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.</p></li>

@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Advanced Setup</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Supported Motorboards Setup Notes</a><ul class="current">
@@ -349,7 +339,7 @@
 <div class="section" id="upgrading-use-the-arduino-motor-shield-and-the-ibt-2">
 <h2>Upgrading (Use the Arduino Motor Shield AND the IBT_2)<a class="headerlink" href="#upgrading-use-the-arduino-motor-shield-and-the-ibt-2" title="Permalink to this headline">¶</a></h2>
 <p>For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.</p>
-<p>If you need instructions on how to install the Arduino Motor Shield, see <a class="reference external" href="../../get-started/assembly.html">Arduino Motor Shield Assembly</a></p>
+<p>If you need instructions on how to install the Arduino Motor Shield, see <a class="reference internal" href="../../get-started/assembly.html"><span class="doc">Arduino Motor Shield Assembly</span></a></p>
 <div class="section" id="what-we-are-going-to-do-upgrade">
 <h3>What We Are Going To Do (Upgrade)<a class="headerlink" href="#what-we-are-going-to-do-upgrade" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -439,7 +429,7 @@
 </div>
 <p>Change the last line to look like this. To be sure of your spelling, you can copy and paste IBT_2_WITH_ARDUINO to replace STANDARD_MOTOR_SHIELD</p>
 <p><code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MOTOR_SHIELD_TYPE</span> <span class="pre">IBT_2_WITH_ARDUINO</span></code></p>
-<p>Upload the sketch to your arduino. If you need help on how to upload a sketch, see <a class="reference external" href="../../get-started/index.html">Getting Started</a></p>
+<p>Upload the sketch to your arduino. If you need help on how to upload a sketch, see <a class="reference internal" href="../../get-started/index.html"><span class="doc">Getting Started</span></a></p>
 <p>Please see <a class="reference internal" href="#important-notes-on-current-sensing-ibt-2"><span class="std std-ref">Important Notes on Current Sensing (IBT_2)</span></a>.</p>
 </div>
 </div>
@@ -588,7 +578,7 @@ $15.51 +tax; prime shipping</p>
 <p>The choice of motor driver is set in the config.h file. It is set in the following line:</p>
 <p><code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MOTOR_SHIELD_TYPE</span> <span class="pre">[Motor</span> <span class="pre">Board</span> <span class="pre">Type]</span></code></p>
 <p>The default is “STANDARD_MOTOR_SHIELD” For Arduino and clone shields.</p>
-<p>If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the <a class="reference external" href="../motor-board-config.html">Motor Board Config Section</a></p>
+<p>If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the <a class="reference internal" href="../motor-board-config.html"><span class="doc">Motor Board Config Section</span></a></p>
 <p>For the Engineers, the defintions and implementation for motor board control are in the following files:</p>
 <blockquote>
 <div><p><strong>MotorDrivers.h</strong>  - Contains the definitions for all the currently supported motor boards

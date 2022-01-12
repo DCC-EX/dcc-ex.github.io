@@ -213,13 +213,13 @@ list of files in the Arduino IDE.
 Adding A New Device Configuration File
 ======================================
 
-This will need to be done in the `Arduino-IDE <../get-started/arduino-ide.html>`_, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`Arduino-IDE <../../get-started/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
 
 
 Create a new tab
 ----------------
 
-First you will need to add a new file, just like the `config.h file <../get-started/arduino-ide.html#copy-the-config-example-h-file-or-rename-it>`_. 
+First you will need to add a new file, just like the :ref:`config.h file <Copy the config.example.h file (or rename it)>`.
 Create a new tab using the following menu option.
 
 .. image:: ../../_static/images/arduino-ide/arduino_ide_newtab.jpg
@@ -301,7 +301,7 @@ The file contents should now look like:
 Upload the new version of the software
 --------------------------------------
 
-Finally, upload the code to the Arduino as you would do during the standard `Arduino IDE Setup <../get-started/arduino-ide.html#upload-the-software>`_. 
+Finally, upload the code to the Arduino as you would do during the standard :ref:`Arduino IDE Setup <Upload the software>`.
 Restart the Command Station and the new device will be configured at startup.  
 
 Checking the Driver

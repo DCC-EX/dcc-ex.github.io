@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -289,13 +279,13 @@
             
   <div class="section" id="wifi-setup">
 <h1>WiFi Setup<a class="headerlink" href="#wifi-setup" title="Permalink to this headline">¶</a></h1>
-<p>The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can <a class="reference external" href="installer.html">skip ahead to the next page</a>.</p>
+<p>The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can <a class="reference internal" href="installer.html"><span class="doc">skip ahead to the next page</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is NOT to make a connection to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12). The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.</p>
 </div>
 <p>There are many ways to add WiFi to your Command Station. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this.</p>
-<p>You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our <a class="reference external" href="../support/index.html">Support Page</a> if you have a question.</p>
+<p>You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our <a class="reference internal" href="../support/index.html"><span class="doc">Support Page</span></a> if you have a question.</p>
 <p>Note that you can click on any of the images to make them larger.</p>
 <p>For a video to help you, click below.</p>
 <blockquote>
@@ -432,12 +422,12 @@
 </div>
 <div class="section" id="install-the-software">
 <h2>Install the Software<a class="headerlink" href="#install-the-software" title="Permalink to this headline">¶</a></h2>
-<p>If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: <a class="reference external" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></p>
+<p>If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: <a class="reference internal" href="../advanced-setup/wifi-config.html"><span class="doc">WiFi Configuration</span></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where “abcdef” is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the “WiFi Configuration” link above for more detailed instruction.</p>
 </div>
-<p>If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to <a class="reference external" href="../download/commandstation.html">Command Station Downloads</a> to load firmware onto the CS.</p>
+<p>If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to <a class="reference internal" href="../download/commandstation.html"><span class="doc">Command Station Downloads</span></a> to load firmware onto the CS.</p>
 </div>
 </div>
 

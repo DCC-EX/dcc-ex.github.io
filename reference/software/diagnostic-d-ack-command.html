@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -353,7 +343,7 @@ Callback(145)
 </pre></div>
 </div>
 <p>would set the limit to 100mA (less sensitive).</p>
-<p>The custom ack limit will be effective until you restart the Command Station (it will not “stick” in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the <a class="reference external" href="../../advanced-setup/startup-config.html">mySetup.h</a> file.</p>
+<p>The custom ack limit will be effective until you restart the Command Station (it will not “stick” in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">mySetup.h</span></a> file.</p>
 </div>
 <div class="section" id="d-ack-min-s">
 <h2>&lt;D ACK MIN µS&gt;<a class="headerlink" href="#d-ack-min-s" title="Permalink to this headline">¶</a></h2>
@@ -374,7 +364,7 @@ Callback(145)
 <h2>&lt;D PROGBOOST&gt;<a class="headerlink" href="#d-progboost" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> - Override 250mA prog track limit while idle.</p>
 <p>When the programming track is switched on with <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">PROG&gt;</span></code> it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> or the CS is reset.</p>
-<p>To make these settings permanent, you can use a <a class="reference external" href="../../advanced-setup/startup-config.html">mySetup.h file</a> with these commands in to run at the startup of the Command Station.</p>
+<p>To make these settings permanent, you can use a <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a> with these commands in to run at the startup of the Command Station.</p>
 </div>
 </div>
 

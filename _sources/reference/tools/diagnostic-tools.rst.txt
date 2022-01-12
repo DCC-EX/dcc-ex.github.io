@@ -20,7 +20,7 @@ Sniffer vs. Analyzer
 Sniffer
 ----------
 
-A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ sketch.
+A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` sketch.
 
 .. image:: ../../_static/images/tools/sniffer_out1.png
    :align: left
@@ -71,7 +71,7 @@ DCC Sniffer (PACKET analyzer)
 Buy it
 -------
 
-Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_  file and upload it to your microcontroller with the Arduiono IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
+Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` file and upload it to your microcontroller with the Arduino IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
 
 .. figure:: ../../_static/images/tools/iowa_scale_eng_dcc_board.jpg
    :align: left
@@ -102,7 +102,7 @@ https://www.iascaled.com/store/ARD-DCCSHIELD
 
 **It costs about $30 US.**
 
-And since it is a shield, you just stick it on top of an Uno or Mega, upload `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
+And since it is a shield, you just stick it on top of an Uno or Mega, upload :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>`, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
 
 *** Wiring and more info goes here ***
 
@@ -111,7 +111,7 @@ Build It
 
 Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the DCC++EX Command Station instead of to the track.
 
-You will need to upload our `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ software to whatever microcontroller you choose.
+You will need to upload our :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` software to whatever microcontroller you choose.
 
 .. figure:: ../../_static/images/tools/sniffer_block_diag.png
    :align: center
@@ -133,7 +133,7 @@ DCC Signal Interface
 Connect directly to the Signal output (enable pin) of the Arduino CS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Easy! You don't need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ download page for which pins to use.
+Easy! You don't need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` download page for which pins to use.
 
 Connect to the track
 ~~~~~~~~~~~~~~~~~~~~~~

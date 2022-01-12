@@ -106,17 +106,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -328,7 +318,7 @@
 </div>
 <div class="section" id="how-did-you-do-it">
 <h2>How did you do it?<a class="headerlink" href="#how-did-you-do-it" title="Permalink to this headline">¶</a></h2>
-<p>We assembled a team of software developers and electronics engineers from around the world, created a plan, and started work early in 2020. (See the team information and credits on the <a class="reference external" href="index.html">About page</a></p>
+<p>We assembled a team of software developers and electronics engineers from around the world, created a plan, and started work early in 2020. (See the team information and credits on the <a class="reference internal" href="index.html"><span class="doc">About page</span></a>)</p>
 <p>We started with the DCC Signal Generation code, what we call the “Waveform Generator”. We got together as a team and looked at how we could make it better. It soon became clear that rather than make piecemeal changes, the entire concept of how the signal could be generated, and how to use timers and interrupts, would need to be re-imagined. This not only sped things up considerably, but allowed us to allow you to connect some shields right on top of your Command Station board without jumpers!</p>
 <p>Next we focused on packet generation. We looked at the complexities of reading and maintaining code that was using binary math, multiple “registers” to hold train data, and doing bit shifting everywhere to build bytes and stuff them into data packets. The new method gets rid of the old registers and simplifies the whole structure for building packets. Things like start and stop bits and preamble bits are static pieces of information. So being able to just insert them where they need to go saves time and processor bandwidth.</p>
 <p>We created an internal API for how modules communicated with each other, so the code is more modular and each unit is dedicated to its specific task.</p>
@@ -336,7 +326,7 @@
 </div>
 <div class="section" id="why-did-we-do-this">
 <h2>Why did we do this?<a class="headerlink" href="#why-did-we-do-this" title="Permalink to this headline">¶</a></h2>
-<p>First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Railroad Community for low cost and that worked as well or better than anything on the market. You can see our <a class="reference external" href="https://dcc-ex.com/#mission">Mission Statement</a> on the main page.</p>
+<p>First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Railroad Community for low cost and that worked as well or better than anything on the market. You can see our <a class="reference internal" href="../index.html#mission"><span class="std std-ref">Mission Statement</span></a> on the main page.</p>
 </div>
 <div class="section" id="details-to-make-engineer-s-propellers-spin">
 <h2>Details to Make Engineer’s Propellers Spin<a class="headerlink" href="#details-to-make-engineer-s-propellers-spin" title="Permalink to this headline">¶</a></h2>
@@ -362,7 +352,7 @@
 <div class="section" id="thanks">
 <h2>Thanks<a class="headerlink" href="#thanks" title="Permalink to this headline">¶</a></h2>
 <p>This is a team effort. There are a dedicated and organized group of about 15-20 core people involved in the project. In addition, there is all of you who contribute with your comments, feature ideas, evangelizing and testing. So we give you our heartfelt thanks. We will see you online!</p>
-<p>Click here for <a class="reference external" href="index.html">The DCC++ EX Team Credits</a></p>
+<p>Click here for <a class="reference internal" href="index.html"><span class="doc">The DCC++ EX Team Credits</span></a></p>
 <p>Fred Decker
 October 2020</p>
 </div>

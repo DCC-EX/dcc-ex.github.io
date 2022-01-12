@@ -1,6 +1,6 @@
 *******************
 WiFi Configuration
-********************
+*******************
 
 .. image:: ../_static/images/conductor.png
    :alt: Conductor Icon
@@ -11,7 +11,7 @@ Conductor Level (Tinkerer if wiring an ESP instead of using a shield)
 
 |
 
-This page describes the software configuration options for using WiFi to connect your Command Station (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to `WiFi Setup <../get-started/wifi-setup.html>`_.
+This page describes the software configuration options for using WiFi to connect your Command Station (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
 
 As mentioned in the above link, you will need the following to proceed:
 
@@ -29,7 +29,7 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 Wireless Connections
 =====================
 
-As mentioned in `WiFi Setup <../get-started/wifi-setup.html>`_, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
+As mentioned in :doc:`WiFi Setup <../get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
 
 .. todo::
    Add Link above
@@ -78,7 +78,7 @@ If you travel to shows, or take your setup to a friend's house, this allows for 
 
 (Remember you can click on images to enlarge them)
 
-.. figure:: ../_static/images/wifi/Wifi_softap_mode.png
+.. figure:: ../_static/images/wifi/WiFi_softap_mode.png
    :alt: AP Mode
    :scale: 50%
 
@@ -89,7 +89,7 @@ Station Mode
 
 Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the CS by finding its IP address on the network. You will have to find what IP address is assigned to the CS (see below). Alternately, you can define a static IP address in your router to assign to the CS.
 
-.. figure:: ../_static/images/wifi/Wifi_station_mode.png
+.. figure:: ../_static/images/wifi/WiFi_station_mode.png
    :alt: Station Mode
    :scale: 50%
 
@@ -105,7 +105,7 @@ We will focus on how to connect a Throttle to the Command Station. For info on u
 Default Operation - AP Mode (No Configuration Necessary)
 =========================================================
 
-To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in `WiFi Setup <../get-started/wifi-setup.html>`_. 
+To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup <../get-started/wifi-setup>`. 
 
 That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for DCC++ EX is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. DCC++ EX then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
 

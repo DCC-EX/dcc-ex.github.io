@@ -43,7 +43,7 @@ Arduino Nano
 
 The Arduino nano shares the same processor with the Arduino Uno, so we support it. The nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There *is* a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.
 
-See our section on `Using a Nano <../../advanced-setup/supported-microcontrollers/nano.html>`_
+See our section on :doc:`Using a Nano <../../advanced-setup/supported-microcontrollers/nano>`
 
 Mega+WiFi
 ==============
@@ -52,7 +52,7 @@ Mega+WiFi
 
 Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you ok with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
 
-See our section on Using the `WiFi+Mega Page <../../advanced-setup/supported-microcontrollers/wifi-mega.html>`_
+See our section on Using the :doc:`WiFi+Mega Page <../../advanced-setup/supported-microcontrollers/wifi-mega>`
 
 Nano Every
 ===========
@@ -61,7 +61,7 @@ Nano Every
 
 The Nano Every is an updated Nano. It uses a completely different processor family than the Uno and Nano. S
 
-See the detailed section on the `Nano Every <../../advanced-setup/supported-microcontrollers/nano-every.html>`_
+See the detailed section on the :doc:`Nano Every <../../advanced-setup/supported-microcontrollers/nano-every>`
 
 Teensy 3.x & 4.x
 =================
@@ -70,13 +70,13 @@ Teensy 3.x & 4.x
 
 The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons. 
 
-See the detailed section on the `Teensy <../../advanced-setup/supported-microcontrollers/teensy.html>`_
+See the detailed section on the :doc:`Teensy <../../advanced-setup/supported-microcontrollers/teensy>`
 
 
 Will you support other microcontrollers in the future?
 =======================================================
 
-Yes, that is on our `roadmap <../../roadmap/index.html>`_.
+Yes, that is on our :doc:`roadmap <../../roadmap/index>`.
 
 Click here for a complete `Shopping List <./shopping-list.html>`_
 

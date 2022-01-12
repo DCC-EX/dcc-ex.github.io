@@ -47,7 +47,7 @@ We added many new functions such as:
 How did you do it?
 ====================
 
-We assembled a team of software developers and electronics engineers from around the world, created a plan, and started work early in 2020. (See the team information and credits on the `About page <index.html>`_
+We assembled a team of software developers and electronics engineers from around the world, created a plan, and started work early in 2020. (See the team information and credits on the :doc:`About page <index>`)
 
 We started with the DCC Signal Generation code, what we call the "Waveform Generator". We got together as a team and looked at how we could make it better. It soon became clear that rather than make piecemeal changes, the entire concept of how the signal could be generated, and how to use timers and interrupts, would need to be re-imagined. This not only sped things up considerably, but allowed us to allow you to connect some shields right on top of your Command Station board without jumpers!
 
@@ -61,7 +61,7 @@ We completely re-wrote current sense and ACK detect routines to better protect y
 Why did we do this?
 ====================
 
-First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Railroad Community for low cost and that worked as well or better than anything on the market. You can see our `Mission Statement <https://dcc-ex.com/#mission>`_ on the main page.
+First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Railroad Community for low cost and that worked as well or better than anything on the market. You can see our :ref:`Mission Statement <Mission>` on the main page.
 
 Details to Make Engineer's Propellers Spin
 ============================================
@@ -104,7 +104,7 @@ Thanks
 
 This is a team effort. There are a dedicated and organized group of about 15-20 core people involved in the project. In addition, there is all of you who contribute with your comments, feature ideas, evangelizing and testing. So we give you our heartfelt thanks. We will see you online!
 
-Click here for `The DCC++ EX Team Credits <index.html>`_
+Click here for :doc:`The DCC++ EX Team Credits <index>`
 
 Fred Decker
 October 2020

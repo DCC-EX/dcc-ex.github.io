@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -290,7 +280,7 @@
   <div class="section" id="install-using-the-arduino-ide">
 <h1>Install using the Arduino IDE<a class="headerlink" href="#install-using-the-arduino-ide" title="Permalink to this headline">¶</a></h1>
 <p>The Arduino IDE is an “Integrated Development Environment”. Don’t let the name scare you away! It is really just a program that lets you open a project (like our DCC++ EX Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.</p>
-<p>Those on the Tinkerer or Engineer path—see <a class="reference external" href="levels.html">Choose Your Path (levels)</a> may want to make changes to the code, or just learn more about how the Command Station (CS) software works. At a minimum, you may need to change options in the config.h file, or use the IDE’s “Serial Monitor” to monitor your CS, get logs if something is not working, or enter commands to test out features.</p>
+<p>Those on the Tinkerer or Engineer path—see <a class="reference internal" href="levels.html"><span class="doc">Choose Your Path (levels)</span></a> may want to make changes to the code, or just learn more about how the Command Station (CS) software works. At a minimum, you may need to change options in the config.h file, or use the IDE’s “Serial Monitor” to monitor your CS, get logs if something is not working, or enter commands to test out features.</p>
 <p><strong>You can click on most of the images below to enlarge them</strong></p>
 <div class="section" id="download-and-install-the-arduino-ide">
 <h2>Download and install the Arduino IDE<a class="headerlink" href="#download-and-install-the-arduino-ide" title="Permalink to this headline">¶</a></h2>
@@ -333,7 +323,7 @@
 </div>
 <div class="section" id="select-the-board-type-and-com-port">
 <h2>Select the board type and COM port<a class="headerlink" href="#select-the-board-type-and-com-port" title="Permalink to this headline">¶</a></h2>
-<p>Before you attempt this step, make sure that you have everything connected properly from the <a class="reference external" href="assembly.html">assembly page</a>. And a final reminder to <strong>make sure you cut the Vin trace</strong> on the bottom of the Arduino Motor Shield. Ready? Proceed.</p>
+<p>Before you attempt this step, make sure that you have everything connected properly from the <a class="reference internal" href="assembly.html"><span class="doc">assembly page</span></a>. And a final reminder to <strong>make sure you cut the Vin trace</strong> on the bottom of the Arduino Motor Shield. Ready? Proceed.</p>
 <p>Connect the computer to the Arduino with the USB cable. Note the 5V coming from your computer/Raspberry Pi is enough to power the Mega, since it bypasses the regulator that converts your 7-9V power supply down to 5V, and goes right to the 5V bus on the board. So don’t be alarmed by lights on your Arduino.</p>
 <p>From the “Tools” menu select the “Board” menu, then “Arduino AVR boards”, and then “Arduino Mega or Mega 2560”.</p>
 <a class="reference internal image-reference" href="../_images/board_type_mega.jpg"><img alt="Select Arduino Mega" src="../_images/board_type_mega.jpg" style="width: 720.0px; height: 291.6px;" /></a>

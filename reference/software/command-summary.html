@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -290,7 +280,7 @@
   <div class="section" id="dcc-ex-command-summary">
 <h1>DCC++ EX Command Summary<a class="headerlink" href="#dcc-ex-command-summary" title="Permalink to this headline">¶</a></h1>
 <dl class="simple">
-<dt><strong>This is a summary, for a detailed command, see…</strong></dt><dd><p><a class="reference external" href="command-reference.html">Command Reference</a></p>
+<dt><strong>This is a summary, for a detailed command, see…</strong></dt><dd><p><a class="reference internal" href="command-reference.html"><span class="doc">Command Reference</span></a></p>
 </dd>
 </dl>
 <div class="section" id="power-management">
@@ -381,9 +371,6 @@
               <span class="mi">1</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">ACTIVE</span> <span class="n">upon</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">first</span> <span class="n">created</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">0|1&gt;</span></code> : Sets output ID to either INACTIVE or ACTIVE state</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id&gt;</span></code> : Deletes definition of output ID</p>
@@ -432,9 +419,14 @@
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code> Set servo position to <cite>value</cite> on pin <cite>vpin</cite>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANOUT</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[param2]&gt;</span></code>  Write <cite>value</cite> to analogue pin <cite>vpin</cite>, supplying <cite>param2</cite> to the driver.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANIN</span> <span class="pre">vpin&gt;</span></code>  Read and display pin <cite>vpin</cite>’s analogue value.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;U</span> <span class="pre">...&gt;</span></code> Is reserved for user commands (through user filter)</p>
+</div></blockquote>
+</div>
+<div class="section" id="other">
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;U</span> <span class="pre">...&gt;</span></code> Is reserved for user commands (through user filter)</p>
 <dl class="simple">
-<dt><strong>For a detailed command reference, see…</strong></dt><dd><p><a class="reference external" href="command-reference.html">Command Reference</a></p>
+<dt><strong>For a detailed command reference, see…</strong></dt><dd><p><a class="reference internal" href="command-reference.html"><span class="doc">Command Reference</span></a></p>
 </dd>
 </dl>
 </div></blockquote>

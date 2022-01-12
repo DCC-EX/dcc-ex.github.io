@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -289,7 +279,7 @@
             
   <div class="section" id="dcc-ex-command-reference">
 <h1>DCC++ EX Command Reference<a class="headerlink" href="#dcc-ex-command-reference" title="Permalink to this headline">¶</a></h1>
-<p>This is a detailed reference. For a summary version, please see <a class="reference external" href="command-summary.html">Command Summary</a></p>
+<p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="command-summary.html"><span class="doc">Command Summary</span></a></p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="../../throttles/ex-webthrottle.html">exWebThrottle</a> - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!</p></li>
@@ -1127,7 +1117,7 @@ returns: NONE
 <div class="section" id="wifi-at-commands">
 <h2>WiFi “AT Commands<a class="headerlink" href="#wifi-at-commands" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the “+” and the command.</p>
-<p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference external" href="../../advanced-setup/startup-config.html">mySetup.h file</a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
+<p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created.</p>
 <p>Examples:</p>
 <blockquote>
@@ -1135,14 +1125,14 @@ returns: NONE
 &lt;+CIFSR&gt; - Gets the local IP Address.</p>
 </div></blockquote>
 <p>For more detail follow these links:</p>
-<p><a class="reference external" href="../../advanced-setup/wifi-config.html">DCC-EX WiFi Configuration</a></p>
+<p><a class="reference internal" href="../../advanced-setup/wifi-config.html"><span class="doc">DCC-EX WiFi Configuration</span></a></p>
 <p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf">Expressif AT Command Set PDF File (Exressif makes the ESP8266)</a></p>
 </div>
 <div class="section" id="user-commands">
 <h2>User Commands<a class="headerlink" href="#user-commands" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;U&gt;</span></code> Is reserved for user commands.</p>
-<p>This is a detailed reference. For a summary version, please see <a class="reference external" href="command-summary.html">Command Summary</a></p>
+<p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="command-summary.html"><span class="doc">Command Summary</span></a></p>
 </div></blockquote>
 </div>
 </div>

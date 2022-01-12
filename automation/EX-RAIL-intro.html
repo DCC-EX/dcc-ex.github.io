@@ -107,17 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">Wireless Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connection-type-direct-to-command-station-or-through-jmri">Connection Type: Direct to Command Station or through JMRI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#what-s-a-withrottle-server">What’s a “WiThrottle Server”?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#access-point-mode-vs-station-mode">Access Point Mode vs. Station Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#default-operation-ap-mode-no-configuration-necessary">Default Operation - AP Mode (No Configuration Necessary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#connecting-to-your-network-station-mode-sta-edit-config-h">Connecting to your Network - Station Mode “STA” (edit config.h)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#wifi-config-options">WiFi Config Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#resetting-network-settings">Resetting Network Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#disabling-wifi">Disabling WiFi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#network-startup-sequence">Network Startup sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html#tips-and-tricks">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
@@ -345,7 +335,7 @@ that can easily be used to describe sequential actions to automatically take pla
 <div class="section" id="the-automation-process">
 <h2>The Automation Process<a class="headerlink" href="#the-automation-process" title="Permalink to this headline">¶</a></h2>
 <p>All routes, automations, etc step through a list of simple keywords until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.</p>
-<p>For a full list of keywords, see <span class="xref std std-ref">EX-RAIL Reference</span></p>
+<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-ref.html#ex-rail-command-summary"><span class="std std-ref">EX-RAIL Command Summary</span></a>.</p>
 <p>Automation scripts are added to your Command Station by creating a file called “myAutomation.h” in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">EXRAIL</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">scripts</span><span class="w"></span>
@@ -354,12 +344,12 @@ that can easily be used to describe sequential actions to automatically take pla
 </div>
 <p>Connecting your Arduino and pressing the Upload button in the usual way will save the file and upload your script into the Command Station.</p>
 <p>To create the myAutomation.h file in the Arduino IDE, use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).</p>
-<a class="reference internal image-reference" href="../_images/Setup1.jpg"><img alt="Setup pulldown button" class="align-center" src="../_images/Setup1.jpg" style="width: 158.0px; height: 90.0px;" /></a>
-<a class="reference internal image-reference" href="../_images/Setup2.jpg"><img alt="Setup pulldown menu" class="align-center" src="../_images/Setup2.jpg" style="width: 280.0px; height: 86.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/setup1.jpg"><img alt="Setup pulldown button" class="align-center" src="../_images/setup1.jpg" style="width: 158.0px; height: 90.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/setup2.jpg"><img alt="Setup pulldown menu" class="align-center" src="../_images/setup2.jpg" style="width: 280.0px; height: 86.0px;" /></a>
 <p>Enter the file name “myAutomation.h” (This is case sensitive)</p>
-<a class="reference internal image-reference" href="../_images/Setup3.jpg"><img alt="Setup myAutomation.h" class="align-center" src="../_images/Setup3.jpg" style="width: 296.0px; height: 112.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/setup3.jpg"><img alt="Setup myAutomation.h" class="align-center" src="../_images/setup3.jpg" style="width: 296.0px; height: 112.0px;" /></a>
 <p>And type your script in, starting with EXRAIL and ending with ENDEXRAIL.</p>
-<a class="reference internal image-reference" href="../_images/Setup4.jpg"><img alt="Setup Example file" class="align-center" src="../_images/Setup4.jpg" style="width: 436.0px; height: 258.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/setup4.jpg"><img alt="Setup Example file" class="align-center" src="../_images/setup4.jpg" style="width: 436.0px; height: 258.0px;" /></a>
 </div>
 <div class="section" id="some-simple-examples">
 <h2>Some Simple Examples<a class="headerlink" href="#some-simple-examples" title="Permalink to this headline">¶</a></h2>
@@ -426,7 +416,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <p>You may, however, find it more convenient to define turnouts using EX-RAIL commands, which may appear anywhere in the ‘myAutomation.h’ file, even after they are referenced in an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code>, <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code>, <code class="docutils literal notranslate"><span class="pre">THROW</span></code> or <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts defined in ‘myAutomation.h’ will still be visible to WiThrottle and JMRI in the normal way.</p>
 <p>A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a “throw” or “close” (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.</p>
-<p>See the <span class="xref std std-ref">Reference</span> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
+<p>See the <a class="reference internal" href="EX-RAIL-ref.html#ex-rail-command-summary"><span class="std std-ref">Reference</span></a> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
 </div>
 <div class="section" id="defining-signals">
 <h2>Defining Signals<a class="headerlink" href="#defining-signals" title="Permalink to this headline">¶</a></h2>
@@ -527,7 +517,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 Let’s add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:</p>
 <a class="reference internal image-reference" href="../_images/Example_7a_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_7a_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
-<p>Assuming that you have defined your turnouts with <span class="xref std std-ref">TURNOUT commands.</span></p>
+<p>Assuming that you have defined your turnouts with <a class="reference internal" href="EX-RAIL-ref.html#routes-automations-and-sequences"><span class="std std-ref">TURNOUT commands.</span></a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
 <span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span><span class="w"> </span><span class="c1">// random wait between 10 and 20 seconds</span>
 <span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>

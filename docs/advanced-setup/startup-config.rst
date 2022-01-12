@@ -11,7 +11,7 @@ To automatically run commands at start up, a new file can be created called `myS
 Make sure you are running the Arduino IDE
 =========================================
 
-This will need to be done in the `Arduino-IDE <../get-started/arduino-ide.html>`_, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`Arduino-IDE <../get-started/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
 
 
 Create a new tab

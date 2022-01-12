@@ -2,7 +2,7 @@
 Assembly
 *********
 
-Let's start with the basics and add as you see fit. For this install, you'll need the items listed on the `Get Started <index.html>`_ page, plus:
+Let's start with the basics and add as you see fit. For this install, you'll need the items listed on the :doc:`Get Started <index>` page, plus:
 
 * 18 to 16 AWG twisted pair hookup wire to connect your tracks
 * A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional)
@@ -191,14 +191,14 @@ Connect the 2.5mm barrel connector from your separate 7-9V DC power supply to th
 
 You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.
 
-`WiFi Setup <./wifi-setup.html>`_
+:doc:`WiFi Setup <./wifi-setup>`
 
 7. Load firmware on your Command Station
 ==========================================
 
 Keep your USB cable handy because we are going to need it in this step.
 
-Go to the `Command Station downloads <../download/commandstation.html>`_ page. Most users will want to use the installer.
+Go to the :doc:`Command Station downloads <../download/commandstation>` page. Most users will want to use the installer.
 
 Locos Can't Respond to Throttle Commands on the Programming Track!
 ==================================================================

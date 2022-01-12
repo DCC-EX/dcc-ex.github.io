@@ -72,7 +72,7 @@ Upgrading (Use the Arduino Motor Shield AND the IBT_2)
 
 For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.
 
-If you need instructions on how to install the Arduino Motor Shield, see `Arduino Motor Shield Assembly <../../get-started/assembly.html>`_
+If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly <../../get-started/assembly>`
 
 What We Are Going To Do (Upgrade)
 ----------------------------------
@@ -162,7 +162,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 ``#define MOTOR_SHIELD_TYPE IBT_2_WITH_ARDUINO``
 
-Upload the sketch to your arduino. If you need help on how to upload a sketch, see `Getting Started <../../get-started/index.html>`_
+Upload the sketch to your arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
 
 Please see :ref:`Important Notes on Current Sensing (IBT_2)`.
 
@@ -306,7 +306,7 @@ The choice of motor driver is set in the config.h file. It is set in the followi
 
 The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
-If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the `Motor Board Config Section <../motor-board-config.html>`_
+If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section <../motor-board-config>`
 
 For the Engineers, the defintions and implementation for motor board control are in the following files:
 

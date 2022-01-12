@@ -72,7 +72,7 @@ The Automation Process
 
 All routes, automations, etc step through a list of simple keywords until they reach a ``DONE`` keyword. 
 
-For a full list of keywords, see :ref:`EX-RAIL Reference`
+For a full list of keywords, see :ref:`EX-RAIL Command Summary`.
 
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:
 
@@ -86,26 +86,26 @@ Connecting your Arduino and pressing the Upload button in the usual way will sav
 
 To create the myAutomation.h file in the Arduino IDE, use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
 
-.. image:: ../_static/images/ex-rail/Setup1.jpg
+.. image:: ../_static/images/ex-rail/setup1.jpg
    :alt:  Setup pulldown button
    :align: center
    :scale: 100%
 
-.. image:: ../_static/images/ex-rail/Setup2.jpg
+.. image:: ../_static/images/ex-rail/setup2.jpg
    :alt:  Setup pulldown menu
    :align: center
    :scale: 100%
 
 Enter the file name "myAutomation.h" (This is case sensitive)
 
-.. image:: ../_static/images/ex-rail/Setup3.jpg
+.. image:: ../_static/images/ex-rail/setup3.jpg
    :alt:  Setup myAutomation.h
    :align: center
    :scale: 100%
 
 And type your script in, starting with EXRAIL and ending with ENDEXRAIL. 
 
-.. image:: ../_static/images/ex-rail/Setup4.jpg
+.. image:: ../_static/images/ex-rail/setup4.jpg
    :alt:  Setup Example file
    :align: center
    :scale: 100%
@@ -192,7 +192,7 @@ Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMR
 
 A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
  
-See the :ref:`Reference<EX-RAIL Reference>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions. 
+See the :ref:`Reference<EX-RAIL Command Summary>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 
 Defining Signals
@@ -336,7 +336,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with :ref:`TURNOUT commands.<Routes, Automations & Sequences>`
+Assuming that you have defined your turnouts with :ref:`TURNOUT commands.<Routes, Automations, and Sequences>`
 
 .. code-block:: cpp
 

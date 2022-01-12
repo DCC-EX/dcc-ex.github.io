@@ -47,13 +47,19 @@ spelling_lang='en_US'
 tokenizer_lang='en_US'
 spelling_word_list_filename = ['spelling_wordlist.txt']
 
+suppress_warnings = ['autosectionlabel.*']
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = [
+    '_build', 'Thumbs.db', '.DS_Store',
+    'reference/software/programming-locos.rst',
+    'throttles/physical-knobs.rst',
+    ]
 
 
 # -- Options for HTML output -------------------------------------------------

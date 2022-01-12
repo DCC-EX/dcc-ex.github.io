@@ -88,10 +88,10 @@ A basic DCC++ EX hardware setup can use easy to find, widely available Arduino b
 * Built-in Automation!
 * Lively community online, and active feature development
 
-.. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our `Rewrite Article <about/rewrite.html>`_.
+.. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
 
 
-Next see the `Get Started section <get-started/index.html>`_ or click next below.
+Next see the :doc:`Get Started section <get-started/index>` or click next below.
 
 .. toctree::
    :hidden:

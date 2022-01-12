@@ -73,7 +73,7 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
    :alt: Arduino Motor Shield R3
    :scale: 100%
 
-`Install the Arduino Motor Shield <../../get-started/assembly.html>`_
+:doc:`Install the Arduino Motor Shield <../../get-started/assembly>`
 
 |
 
@@ -88,7 +88,7 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
    :alt: Deek Robot Motor Shield
    :scale: 100%
 
-`Install the Deek-Robot Motor Shield <../../get-started/assembly.html>`_
+:doc:`Install the Deek-Robot Motor Shield <../../get-started/assembly>`
 
 |
 
@@ -105,7 +105,7 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
    :alt: Flashtree Motor Shield
    :scale: 20%
 
-`Install the Flashtree (same as Deek-Robot) Motor Shield <../../get-started/assembly.html>`_
+:doc:`Install the Flashtree (same as Deek-Robot) Motor Shield <../../get-started/assembly>`
 
 |
 
@@ -123,7 +123,7 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
 
 `DIY More Website <https://www.diymore.cc/products/replace-l298p-for-arduino-uno-r3-dual-channel-dc-motor-driver-shield-expansion-board-l298nh-module-driving-module-mega2560-one>`_
    
-`Install the DIY More Motor Shield (same as Deek-Robot) <../../get-started/assembly.html>`_
+:doc:`Install the DIY More Motor Shield (same as Deek-Robot) <../../get-started/assembly>`
 
 |
 
@@ -134,11 +134,11 @@ YFRobot L298P Motor Shield
 
 This board is electrically the same, though a different layout than the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
 
-.. image:: ../../_static/images/motorboards/YFRobot1.png
+.. image:: ../../_static/images/motorboards/yfrobot1.png
    :alt: YFRobot L298P Motor Driver Shield
    :scale: 30%
 
-`Install the YFRobot Motor Shield (same as Deek-Robot) <../../get-started/assembly.html>`_
+:doc:`Install the YFRobot Motor Shield (same as Deek-Robot) <../../get-started/assembly>`
 
 **Remember to select YFROBOT_MOTOR_SHIELD in your config.h file or from the motor board dropdown if using EX-Installer**
 
@@ -174,7 +174,7 @@ THIS BOARD HAS NO CURRENT SENSE! This is a high-current alternative to the Ardui
 https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
 
 
-`Install the L298N Motor Driver <../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html>`_
+:doc:`Install the L298N Motor Driver <../../advanced-setup/supported-motorboards/L298N-motor-board-setup>`
 
 |
 
@@ -248,7 +248,7 @@ You will either need 2 of these or one of these and another board to run your pr
 
 Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 
-`IBT_2 Intstallation Instructions <../../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html>`_
+:doc:`IBT_2 Intstallation Instructions <../../advanced-setup/supported-motorboards/IBT_2-motor-board-setup>`
 
 |
 
@@ -265,7 +265,7 @@ You can use this board to handle both your MAIN and PROG track, or you can use o
    :alt: IRF3205 Motor Board
    :scale: 75%
 
-`Dual Motor Driver IRF3205 Intstallation Instructions <../../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html>`_
+:doc:`Dual Motor Driver IRF3205 Intstallation Instructions <../../advanced-setup/supported-motorboards/IRF3205-motor-board-setup>`
 
 |
 
@@ -340,4 +340,4 @@ Configuring Motor Boards
 
 If your board is not in the list of supported motor board types, or if you need to make changes or have more information about how motor boards are configured in DCC++ EX, see:
 
-`Motor Board Configuration Guide <../../advanced-setup/motor-board-config.html>`_
+:doc:`Motor Board Configuration Guide <../../advanced-setup/motor-board-config>`

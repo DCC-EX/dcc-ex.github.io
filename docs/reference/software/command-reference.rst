@@ -2,7 +2,7 @@
 DCC++ EX Command Reference
 ****************************
 
-This is a detailed reference. For a summary version, please see `Command Summary <command-summary.html>`_
+This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
@@ -870,7 +870,7 @@ WiFi "AT Commands
 
 ``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the "+" and the command.
 
-Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the `mySetup.h file <../../advanced-setup/startup-config.html>`_. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
+Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file <../../advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
 
 ``<+X>`` A special command to force the "connected" flag to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created.
 
@@ -881,7 +881,7 @@ Examples:
 
 For more detail follow these links:
 
-`DCC-EX WiFi Configuration <../../advanced-setup/wifi-config.html>`_
+:doc:`DCC-EX WiFi Configuration <../../advanced-setup/wifi-config>`
 
 `Expressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
 
@@ -891,4 +891,4 @@ User Commands
 
  ``<U>`` Is reserved for user commands.
 
- This is a detailed reference. For a summary version, please see `Command Summary <command-summary.html>`_
+ This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`

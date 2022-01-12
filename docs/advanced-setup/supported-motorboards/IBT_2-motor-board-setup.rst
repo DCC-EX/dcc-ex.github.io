@@ -290,7 +290,7 @@ $5.79 +tax; prime shipping
 Single Motor Driver Board H-Bridge IBT_2, 3-36V, 15A, Peak 43A
 various sellers, prices and delivery methods. $7 to $14.
 Here is a pack of two:
-https://www.amazon.com/BTS7960-Driver-Module-Arduino-Current/dp/B07TFB22H5/ref=asc_df_B07TFB22H5/?tag=hyprod-20&linkCode=df0&hvadid=366016835942&hvpos=&hvnetw=g&hvrand=9794586518900556692&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-790247286209&psc=1&tag=&ref=&adgrpid=80266838630&hvpone=&hvptwo=&hvadid=366016835942&hvpos=&hvnetw=g&hvrand=9794586518900556692&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-790247286209
+https://www.amazon.com/dp/B07TFB22H5/
 $15.51 +tax; prime shipping
 
 

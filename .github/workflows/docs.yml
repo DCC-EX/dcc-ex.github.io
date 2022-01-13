@@ -8,7 +8,8 @@ on:
     branches: [ sphinx ]
   pull_request:
     branches: [ sphinx ]
-  
+  workflow_dispatch:
+
 jobs:
   build:
 

@@ -13,12 +13,10 @@ on:
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Requirements
-      run: brew install sphinx-doc
-        && brew install enchant
-        && pip3 install sphinx-rtd-theme==0.5.2
+      run: pip3 install sphinx-rtd-theme==0.5.2
         && pip3 install sphinx-sitemap
         && pip3 install sphinxcontrib-spelling
     - name: Checkout repo

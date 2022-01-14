@@ -16,15 +16,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Requirements
-      run: pip3 install sphinx-rtd-theme==0.5.2
-        && pip3 install sphinx-sitemap
-        && pip3 install sphinxcontrib-spelling
+      run: |
+        pip3 install sphinx-rtd-theme==0.5.2
+        pip3 install sphinx-sitemap
+        pip3 install sphinxcontrib-spelling
     - name: Checkout repo
       uses: actions/checkout@1.0.0
     - name: Build docs
-      run:  make github
-        && echo 'dcc-ex.com' > docs/_build/html/CNAME
-        && touch docs/_build/html/.nojekyll        
+      run: |
+        make github
+        echo 'dcc-ex.com' > docs/_build/html/CNAME
+        touch docs/_build/html/.nojekyll        
     - name: Deploy
       if: github.ref == 'refs/heads/sphinx'
       uses: JamesIves/github-pages-deploy-action@releases/v3

@@ -428,9 +428,9 @@ and received.  The native drivers are non-blocking and are able to perform I2C o
 operation (default unless I2C_NO_INTERRUPTS is defined).</p>
 </dd>
 <dt>I2C_NO_INTERRUPTS</dt><dd><p>Don’t use interrupts to signal completion of an I2C operation.  The I2C state is instead checked whenever the following functions are called:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="o">::</span><span class="n">loop</span><span class="p">();</span><span class="w"></span>
-<span class="n">I2CRB</span><span class="o">::</span><span class="n">wait</span><span class="p">();</span><span class="w"></span>
-<span class="n">I2CRB</span><span class="o">::</span><span class="n">isBusy</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="o">::</span><span class="n">loop</span><span class="p">();</span>
+<span class="n">I2CRB</span><span class="o">::</span><span class="n">wait</span><span class="p">();</span>
+<span class="n">I2CRB</span><span class="o">::</span><span class="n">isBusy</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>This option will reduce the amount of time spent in interrupt code, but not completely eliminate it (since interrupts
@@ -451,31 +451,31 @@ files can be added. Consequently, only a limited number of the DCC++EX api funct
 <p>Create a ‘myHal.cpp’ file and add a function definition <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">halSetup(){</span> <span class="pre">};</span></code>.  Within this function you can add
 any executable code.  Outside the function, you can declare variables and add include files to allow other functions to be invoked.  For example:</p>
 <blockquote>
-<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Turnouts.h&quot;</span><span class="cp"></span>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;Turnouts.h&quot;</span><span class="cp"></span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Servo controller on I2C addr 0x41</span>
-<span class="w">  </span><span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Define servo on first pin</span>
-<span class="w">  </span><span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">420</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Servo controller on I2C addr 0x41</span>
+  <span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">);</span>
+  <span class="c1">// Define servo on first pin</span>
+  <span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">420</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>The <code class="docutils literal notranslate"><span class="pre">create()</span></code> function allocates memory for the device at run-time.  As an alternative to the <code class="docutils literal notranslate"><span class="pre">create()</span></code> function, the
 device can be declared statically so that the compiler allocates the basic RAM required for it at compile-time.</p>
 <blockquote>
-<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Turnouts.h&quot;</span><span class="cp"></span>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;Turnouts.h&quot;</span><span class="cp"></span>
 
 <span class="c1">// Servo controller on I2C addr 0x41</span>
-<span class="n">PCA9685</span><span class="w"> </span><span class="nf">pwmModule1</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">);</span><span class="w"></span>
+<span class="n">PCA9685</span> <span class="nf">pwmModule1</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">);</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Define servo on first pin</span>
-<span class="w">  </span><span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">420</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Define servo on first pin</span>
+  <span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">420</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -504,15 +504,15 @@ and digitalRead calls or equivalents.  On other platforms, a selection of Vpins 
 of certain drivers.  The current build has the following directives in the IODevice::begin() method:</p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initialise the IO subsystem</span>
-<span class="n">ArduinoPins</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">NUM_DIGITAL_PINS</span><span class="mi">-2</span><span class="p">);</span><span class="w">  </span><span class="c1">// Reserve pins for direct access</span>
+<span class="n">ArduinoPins</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">NUM_DIGITAL_PINS</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>  <span class="c1">// Reserve pins for direct access</span>
 <span class="c1">// Predefine two PCA9685 modules 0x40-0x41</span>
 <span class="c1">// Allocates 32 pins 100-131</span>
-<span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x40</span><span class="p">);</span><span class="w"></span>
-<span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">116</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">);</span><span class="w"></span>
+<span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">);</span>
+<span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">116</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">);</span>
 <span class="c1">// Predefine two MCP23017 module 0x20/0x21</span>
 <span class="c1">// Allocates 32 pins 164-195</span>
-<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">);</span><span class="w"></span>
-<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x21</span><span class="p">);</span><span class="w"></span>
+<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">);</span>
+<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">);</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -666,12 +666,12 @@ The command format of &lt;T id 1&gt; meaning ‘Throw’ has been retained to av
 an ultrasound pulse and listening for the echo.  From the delay time, the distance can be calculated.
 The device is configured in myHal.cpp by</p>
 <blockquote>
-<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_HCSR04.h&quot;</span><span class="cp"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
-<span class="w">  </span><span class="n">HCSR04</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">triggerPin</span><span class="p">,</span><span class="w"> </span><span class="n">echoPin</span><span class="p">,</span><span class="w"> </span><span class="n">onThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">offThreshold</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IO_HCSR04.h&quot;</span><span class="cp"></span>
+<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="n">HCSR04</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">triggerPin</span><span class="p">,</span> <span class="n">echoPin</span><span class="p">,</span> <span class="n">onThreshold</span><span class="p">,</span> <span class="n">offThreshold</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -682,12 +682,12 @@ offThreshold are the distances (in centimetres) at which the vpin is to be set t
 I2C analogue input modules.  Driver for ADS1113 and ADS1114 (both single input) and ADS1115 (4-input) added as class ADS111x.
 The device is configured in myHal.cpp by</p>
 <blockquote>
-<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_AnalogueInputs.h&quot;</span><span class="cp"></span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
-<span class="w">  </span><span class="n">ADS111x</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IO_AnalogueInputs.h&quot;</span><span class="cp"></span>
+<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="n">ADS111x</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span> <span class="n">nPins</span><span class="p">,</span> <span class="n">i2cAddress</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>

@@ -4,8 +4,8 @@ Shopping List
 
 .. NOTE:: There are many sources and sometimes different names for Mega and Motor Shield clones. Please see the Microcontroller Boards and Motor Boards page for info on specific motor boards and links of where to find them.
 
-:ref:`Motor Boards`
-:ref:`Microcontroller Boards`
+:doc:`/reference/hardware/motor-boards`
+:doc:`/reference/hardware/microcontroller-boards`
 
 CS Hardware
 ============

@@ -2,11 +2,11 @@
 Diagnostics ``<D ACK>`` Command
 ********************************
 
-- :ref:`<D ACK ON>` - Turn on Loco acknowledgement diagnostics
-- :ref:`<D ACK LIMIT mA>` - Override ACK processing mA pulse size
-- :ref:`<D ACK MIN µS>` - Override ACK processing minimum pulse width
-- :ref:`<D ACK MAX µS>` - Override ACK processing max pulse width
-- :ref:`<D PROGBOOST>` - Override 250mA prog track limit while idle.
+- :ref:`reference/software/diagnostic-d-ack-command:\<D ACK ON\>` - Turn on Loco acknowledgement diagnostics
+- :ref:`reference/software/diagnostic-d-ack-command:\<D ACK LIMIT mA\>` - Override ACK processing mA pulse size
+- :ref:`reference/software/diagnostic-d-ack-command:\<D ACK MIN µS\>` - Override ACK processing minimum pulse width
+- :ref:`reference/software/diagnostic-d-ack-command:\<D ACK MAX µS\>` - Override ACK processing max pulse width
+- :ref:`reference/software/diagnostic-d-ack-command:\<D PROGBOOST\>` - Override 250mA prog track limit while idle.
 
 <D ACK ON>
 ============

@@ -55,9 +55,9 @@ What you will need (for WiFi)
 Quick links
 ==============
 
-* Jump to :ref:`Makerfabs ESP8266 WiFi Shield (recommended)`
-* Jump to :ref:`Duinopeak ESP8266 WiFi Expansion Board`
-* Jump to :ref:`ESP-01 and ESP-01s`
+* Jump to :ref:`get-started/wifi-setup:Makerfabs ESP8266 WiFi Shield (recommended)`
+* Jump to :ref:`get-started/wifi-setup:Duinopeak ESP8266 WiFi Expansion Board`
+* Jump to :ref:`get-started/wifi-setup:ESP-01 and ESP-01s`
 
 Makerfabs ESP8266 WiFi Shield (recommended)
 ===============================================

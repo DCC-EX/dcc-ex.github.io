@@ -24,32 +24,32 @@ Boards currently supported
 
   **Easy to use boards**
 
-   * :ref:`Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
-   * :ref:`Deek-Robot Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
-   * :ref:`Flashtree Motor Shield` - 2A rated, 1.5 possible
-   * :ref:`DIY More L298NH Motor Shield` - 2A
-   * :ref:`YFRobot L298P Motor Shield` - 2A
-   * :ref:`Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
+   * :ref:`reference/hardware/motor-boards:Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
+   * :ref:`reference/hardware/motor-boards:Deek-Robot Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
+   * :ref:`reference/hardware/motor-boards:Flashtree Motor Shield` - 2A rated, 1.5 possible
+   * :ref:`reference/hardware/motor-boards:DIY More L298NH Motor Shield` - 2A
+   * :ref:`reference/hardware/motor-boards:YFRobot L298P Motor Shield` - 2A
+   * :ref:`reference/hardware/motor-boards:Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
   **Intermediate boards (Tinkerer Level)** - require wiring
 
-   * :ref:`L298N Motor Driver (dual)` - 2A
-   * :ref:`MiniIBT Motor Driver L6201P (single)` - 5A
-   * :ref:`Makerfabs H-Bridge Motor Shield` - 8A
-   * :ref:`BTS7960 IBT_2 Board (single)` - 43A
-   * :ref:`Dual Motor Driver Module H-bridge MOSFET IRF3205` - 15A
+   * :ref:`reference/hardware/motor-boards:L298N Motor Driver (dual)` - 2A
+   * :ref:`reference/hardware/motor-boards:MiniIBT Motor Driver L6201P (single)` - 5A
+   * :ref:`reference/hardware/motor-boards:Makerfabs H-Bridge Motor Shield` - 8A
+   * :ref:`reference/hardware/motor-boards:BTS7960 IBT_2 Board (single)` - 43A
+   * :ref:`reference/hardware/motor-boards:Dual Motor Driver Module H-bridge MOSFET IRF3205` - 15A
 
   **Expert Level Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
   
-   * :ref:`Keyes/Fundumoto ("Beeper Board")` - 2A
-   * :ref:`Velleman KA03 (kit) VMA03 (soldered)` - 2A
-   * :ref:`DFRobot 2x2A DC Motor Shield (DRI0009)` - 2A
+   * :ref:`reference/hardware/motor-boards:Keyes/Fundumoto ("Beeper Board")` - 2A
+   * :ref:`reference/hardware/motor-boards:Velleman KA03 (kit) VMA03 (soldered)` - 2A
+   * :ref:`reference/hardware/motor-boards:DFRobot 2x2A DC Motor Shield (DRI0009)` - 2A
 
   **Non-compatible boards**
 
    * VNH2SP30 - Sparkfun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
    * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
-   * :ref:`Dfrobot Romeo V2` - Well, an Engineer could perhaps get this one to work.
+   * :ref:`reference/hardware/motor-boards:Dfrobot Romeo V2` - Well, an Engineer could perhaps get this one to work.
    * Kuman Board (and any L293D based boards) - not enough current.
    
 Other boards, while not fully supported and tested, can be used. Look for the following criteria:

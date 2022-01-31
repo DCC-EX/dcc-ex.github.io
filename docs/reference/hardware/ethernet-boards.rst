@@ -13,10 +13,10 @@ To use Ethernet instead of WiFi, follow these simple steps:
 * Enter the SSID for your router by replacing "Your network name" with the name of your network in ``#define WIFI_SSID "Your network name"`` in between the quotes.
 * Enter the Password for your router by replacing "Your network passwd" with your password in the line:``#define WIFI_PASSWORD "Your network passwd"`` in between the quotes.
 
-* :ref:`Arduino Network Shield 2` **[RECOMMENDED]**
-* :ref:`Wiznet WIZ850IO`
-* :ref:`Sunfounder Ethernet Shield`
-* :ref:`Nano Ethernet Shield`
+* :ref:`reference/hardware/ethernet-boards:Arduino Network Shield 2` **[RECOMMENDED]**
+* :ref:`reference/hardware/ethernet-boards:Wiznet WIZ850IO`
+* :ref:`reference/hardware/ethernet-boards:Sunfounder Ethernet Shield`
+* :ref:`reference/hardware/ethernet-boards:Nano Ethernet Shield`
 
 
 Arduino Network Shield 2

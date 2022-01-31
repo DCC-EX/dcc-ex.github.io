@@ -216,16 +216,16 @@ WiFi Config Options
 
 The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual Arduino IDE install, you will see all of these in the file you renamed from "config.example.h" to "config.h".
 
-| :ref:`#define IP_PORT 2560`
-| :ref:`#define ENABLE_WIFI true`
-| :ref:`#define DONT_TOUCH_WIFI_CONF`
-| :ref:`#define WIFI_SSID "Your network name"`
-| :ref:`#define WIFI_PASSWORD "Your network passwd"`
-| :ref:`#define WIFI_HOSTNAME "dccex"`
-| :ref:`#define WIFI_CONNECT_TIMEOUT 14000`
-| :ref:`#define ENABLE_ETHERNET true`
-| :ref:`#define IP_ADDRESS { 192, 168, 1, 200 }`
-| :ref:`#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
+| :ref:`advanced-setup/wifi-config:#define IP_PORT 2560`
+| :ref:`advanced-setup/wifi-config:#define ENABLE_WIFI true`
+| :ref:`advanced-setup/wifi-config:#define DONT_TOUCH_WIFI_CONF`
+| :ref:`advanced-setup/wifi-config:#define WIFI_SSID "Your network name"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_PASSWORD "Your network passwd"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_HOSTNAME "dccex"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_CONNECT_TIMEOUT 14000`
+| :ref:`advanced-setup/wifi-config:#define ENABLE_ETHERNET true`
+| :ref:`advanced-setup/wifi-config:#define IP_ADDRESS { 192, 168, 1, 200 }`
+| :ref:`advanced-setup/wifi-config:#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
 
 #define IP_PORT 2560
 --------------------

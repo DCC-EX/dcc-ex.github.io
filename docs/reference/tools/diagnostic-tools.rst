@@ -8,10 +8,10 @@ DCC Diagnostic Tools
 
 There are many tools to help you operate your layout and find issues with your trains and accessories. We will list some of the most helpful tools here including where to buy them assembled or how to build them yourself.
 
-* :ref:`Sniffer vs. Analyzer`
-* :ref:`DCC Sniffer (packet analyzer)`
-* :ref:`Logic Analyzer/Decoder`
-* :ref:`DCC Track Phase Detector`
+* :ref:`reference/tools/diagnostic-tools:Sniffer vs. Analyzer`
+* :ref:`reference/tools/diagnostic-tools:DCC Sniffer (packet analyzer)`
+* :ref:`reference/tools/diagnostic-tools:Logic Analyzer/Decoder`
+* :ref:`reference/tools/diagnostic-tools:DCC Track Phase Detector`
  
 
 Sniffer vs. Analyzer

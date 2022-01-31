@@ -97,8 +97,7 @@ Bricks (Laptop Style)
    :scale: 25%
    :alt: Samsung brick
 
-https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ref=sr_1_3?dchild=1&keywords=14V+3A+power+supply&qid=1613861442&s=electronics&sr=1-3
-
+https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/
 
 Adjustable Power Supplies
 ==========================
@@ -118,7 +117,7 @@ Adjustable Power Supplies
 |
 
 
-https://www.amazon.com/dp/B07J6RC43S/ref=cm_sw_r_cp_api_glt_fabc_HFY5CW4MH3XJXFXQT4BW
+https://www.amazon.com/dp/B07J6RC43S/
 
 .. image:: ../../_static/images/power/belker_adjustable_45w.jpg
    :align: left
@@ -229,7 +228,7 @@ These come in different sizes. Show here is a 2A and a 6A Version. You can look 
 |
 |
 
-**One example from Amazon**, click to follow the link: `5 to 30V Adjustable regulator converter <https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/ref=pd_vtp_6?pd_rd_w=NMR1C&pf_rd_p=55cbb45e-2534-4809-9135-12f41eecb852&pf_rd_r=696YH3MQ2QHKXXR9VDW0&pd_rd_r=3e7133ca-ea27-4967-8d7e-ea1c40c8381a&pd_rd_wg=GZd2x&pd_rd_i=B07VNDGFT6&psc=1>`_
+**One example from Amazon**, click to follow the link: `5 to 30V Adjustable regulator converter <https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/>`_
 
 
 4 Pack of Buck Regular Converters

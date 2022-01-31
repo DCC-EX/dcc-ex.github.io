@@ -26,6 +26,11 @@ We will assume that you have an appropriate text editor and Git installed on you
 Standards
 ==========
 
+.. highlight:: rst
+
+Headings
+--------
+
 * Main Headings have asterisks above and below them
 * Subheadings are underlined with equals signs
 * The next level is underlined with underscores
@@ -33,5 +38,91 @@ Standards
 * The last one we use is underlined with tildes
 
 All heading underlines and overlines must be at least as long as the text of the heading
+
+Links
+-----
+
+Internal
+^^^^^^^^
+
+Sphinx cross-references are used for internal links. This ensures they are
+correct and by default will use the destination heading text as the link text.
+
+To link to a page use ``:doc:``:
+
+.. admonition:: Example
+
+    ::
+
+        :doc:`/reference/hardware/motor-boards`
+
+    :doc:`/reference/hardware/motor-boards`
+
+The document name is a relative or absolute (within the documentation) file
+path, without the .rst suffix.
+
+To link to a position within a page use ``:ref:``. A reST label can be used as
+the reference, but on the DCC++EX website headings are made available to use as
+references:
+
+.. admonition:: Example
+
+    ::
+
+        :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+
+    :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+
+The reference is the full name of the document (the absolute path without
+a leading /), a colon, and the section heading. The full name must be used
+even when referring to headings in the same source file.
+
+Alternative text can be used for the link:
+
+.. admonition:: Example
+
+    ::
+
+        :ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
+
+    :ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
+
+External
+^^^^^^^^
+
+For URLs that are shown, just use the URL:
+
+.. admonition:: Example
+
+    ::
+
+        https://dcc-ex.com/index.html
+
+    https://dcc-ex.com/index.html
+
+To show link text instead of the URL:
+
+.. admonition:: Example
+
+    ::
+
+        `Trainboard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_
+
+    `Trainboard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_
+
+For better accessibility, and generally clearer content, use `strong link text <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#accessibility>`_.
+
+If the link will be used multiple times, or to keep the URL separate in the
+source file, define a target:
+
+.. admonition:: Example
+
+    ::
+
+        Link to the `DCC++EX home page`_.
+
+        .. _DCC++EX home page: https://dcc-ex.com/index.html
+
+    Link to the `DCC++EX home page <https://dcc-ex.com/index.html>`_.
 
 *Work in progress*

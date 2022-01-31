@@ -43,6 +43,8 @@ extensions = [
     'sphinxcontrib.spelling',
 ]
 
+autosectionlabel_prefix_document = True
+
 spelling_lang='en_US'
 tokenizer_lang='en_US'
 spelling_word_list_filename = ['spelling_wordlist.txt']

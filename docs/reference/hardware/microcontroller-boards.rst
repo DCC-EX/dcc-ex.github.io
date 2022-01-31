@@ -4,12 +4,12 @@ Microcontroller Boards
 
 CommandStation-EX currently is designed for Arduino and select microcontollers. Out of the box, it is compatible with the following boards:
 
-* :ref:`Arduino Mega` **[RECOMMENDED]**
-* :ref:`Mega+Wifi` (Tinkerer Level)
-* :ref:`Arduino Uno`
-* :ref:`Arduino Nano` (Tinkerer Level)
-* :ref:`Nano Every` (Tinkerer Level)
-* :ref:`Teensy 3.x & 4.x` (Engineer Level)
+* :ref:`reference/hardware/microcontroller-boards:Arduino Mega` **[RECOMMENDED]**
+* :ref:`reference/hardware/microcontroller-boards:Mega+Wifi` (Tinkerer Level)
+* :ref:`reference/hardware/microcontroller-boards:Arduino Uno`
+* :ref:`reference/hardware/microcontroller-boards:Arduino Nano` (Tinkerer Level)
+* :ref:`reference/hardware/microcontroller-boards:Nano Every` (Tinkerer Level)
+* :ref:`reference/hardware/microcontroller-boards:Teensy 3.x & 4.x` (Engineer Level)
 
 Arduino Mega
 ===============================

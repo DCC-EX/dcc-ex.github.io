@@ -240,7 +240,7 @@ After flashing, the ESP8266 Log will show it uploaded them all successfully and 
 
 - Disconnect the USB cable.
 
-Skip ahead to :ref:`3. Set the switches for run/sketch mode`
+Skip ahead to :ref:`advanced-setup/supported-microcontrollers/wifi-mega:3. Set the switches for run/sketch mode`
 
 With esptool.py
 ^^^^^^^^^^^^^^^^
@@ -283,7 +283,7 @@ AP Mode (the default) makes the Command Station an Access Point. That is a direc
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to setp 5.
 
-If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
+If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
 
 5. Download and Configure the DCC++EX Command Station Software

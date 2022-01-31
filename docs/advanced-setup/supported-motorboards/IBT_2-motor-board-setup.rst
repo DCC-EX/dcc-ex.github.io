@@ -11,14 +11,14 @@ Engineer Level
 
 |
 
-- :ref:`What You Will Need (IBT_2)`
-- :ref:`Which option should you choose? (IBT_2)`
-- :ref:`Upgrading (Use the Arduino Motor Shield AND the IBT_2)`
-- :ref:`Replacing (Using One IBT_2 for MAIN and another for PROG)`
-- :ref:`Important Notes on Current Sensing (IBT_2)`
-- :ref:`Parts list (IBT_2)`
+- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:What You Will Need (IBT_2)`
+- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Which option should you choose? (IBT_2)`
+- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Upgrading (Use the Arduino Motor Shield AND the IBT_2)`
+- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Replacing (Using One IBT_2 for MAIN and another for PROG)`
+- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)`
+- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Parts list (IBT_2)`
 
-See the :ref:`Parts list (IBT_2)`
+See the :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Parts list (IBT_2)`
 
 .. image:: ../../_static/images/motorboards/ibt_2_bts7960_2.jpg
    :alt: IBT_2 Motor driver
@@ -164,7 +164,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 Upload the sketch to your arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
 
-Please see :ref:`Important Notes on Current Sensing (IBT_2)`.
+Please see :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)`.
 
 
 Replacing (Using One IBT_2 for MAIN and another for PROG)
@@ -186,7 +186,7 @@ Steps (Replace)
 ------------------
 The same rules as above apply to using 2 boards. The only difference is that we would use one IBT_2 board for Main and another for PROG. That wiring would look like this:
 
-Please see :ref:`Important Notes on Current Sensing (IBT_2)`.
+Please see :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)`.
 
 TODO: Fritzing image of 2 ibt 2 boards here
 
@@ -331,7 +331,7 @@ Below is the Handson Technology datasheet, recommended reading for Tinkerers and
 ..
 
    TODO: this has to go somewhere:
-   There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`Important Notes on Current Sensing` section.
+   There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)` section.
 
    Also, mention "high accuracy mode" and include the circtuit for that.
 

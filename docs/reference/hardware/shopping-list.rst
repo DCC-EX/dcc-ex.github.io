@@ -10,15 +10,15 @@ Shopping List
 CS Hardware
 ============
 
-`Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/ref=asc_df_B01H4ZLZLQ/?tag=hyprod-20&linkCode=df0&hvadid=309743296044&hvpos=&hvnetw=g&hvrand=2075336217815630856&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-490931309987&psc=1>`_
+`Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/>`_
 
-`Deek-Robot Motor Shield <https://www.aliexpress.com/item/32832049214.html?src=google&src=google&albch=shopping&acnt=494-037-6276&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&&albagn=888888&albcp=1582410664&albag=59754279756&trgt=743612850874&crea=en32832049214&netw=u&device=c&albpg=743612850874&albpd=en32832049214&gclid=CjwKCAjwrcH3BRApEiwAxjdPTQJGRS7xnxV6FvOM14ZyRdKZHZiOUmS5oI74ytkxk5biSFBRGnazaxoCXaEQAvD_BwE&gclsrc=aw.ds>`_
+`Deek-Robot Motor Shield <https://www.aliexpress.com/item/32832049214.html>`_
 
-`12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/ref=redir_mobile_desktop?ie=UTF8&aaxitk=0jN3RieNiW-Jxn0JuJS6dQ&hsa_cr_id=2529139070101&ref_=sbx_be_s_sparkle_mcd_asin_0>`_ (connects to the motor shield)
+`12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/>`_ (connects to the motor shield)
 
-`9V 1Amp Power Supply for the Arduino <https://www.amazon.com/Arduino-Power-Supply-Adapter-110V/dp/B018OLREG4/ref=asc_df_B018OLREG4/?tag=hyprod-20&linkCode=df0&hvadid=198063088238&hvpos=&hvnetw=g&hvrand=14543638497706269076&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-318768096639&psc=1>`_ There is a way to use your computer connection, a USB charger, or a separate 5V power supply also, please see `Power Supplies <power-supplies>` for options
+`9V 1Amp Power Supply for the Arduino <https://www.amazon.com/Arduino-Power-Supply-Adapter-110V/dp/B018OLREG4/>`_ for options
 
-`Raspberry Pi 4B <https://www.google.com/search?q=raspberry+pi+4&rlz=1C1CHVZ_enUS586US586&sxsrf=ALeKk00RT_osXNqIbJ_Xut4J5jqmo4mWjw:1592847200887&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjNidyc-pXqAhXPct8KHdPXA9kQ_AUoAXoECAwQAw&biw=1230&bih=617#spd=3143731532782929925>`_
+`Raspberry Pi 4B <https://www.google.com/search?q=raspberry+pi+4&tbm=shop>`_
 
 .. note:: You may use your own computer instead of the Raspberry Pi. However, the image software below saves you installing software on your computer and does a lot more. See: "My Computer vs. Raspberry Pi" <insert link here> 
 

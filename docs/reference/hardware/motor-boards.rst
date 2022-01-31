@@ -170,7 +170,7 @@ THIS BOARD HAS NO CURRENT SENSE! This is a high-current alternative to the Ardui
    :alt: L298 Motor Driver
    :scale: 100%
 
-`L298N Motor Driver on Amazon <https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/ref=asc_df_B014KMHSW6/?tag=hyprod-20&linkCode=df0&hvadid=167139094796&hvpos=&hvnetw=g&hvrand=1461693454543934465&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009681&hvtargid=pla-306436938191&psc=1>`_
+`L298N Motor Driver on Amazon <https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/>`_
 https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
 
 

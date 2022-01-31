@@ -89,6 +89,13 @@ html_theme_options = {
     'navigation_depth': -1 
 }
 
+html_context = {
+    'display_github': True,
+    'github_user': 'DCC-EX',
+    'github_repo': 'dcc-ex.github.io',
+    'github_version': 'sphinx/docs/',
+}
+
 #leave this off to have todos invisible, set to true to render them and make the easy to see
 #A list of all the todos in the document can be shown in the about page
 todo_include_todos = False

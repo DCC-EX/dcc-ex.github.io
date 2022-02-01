@@ -254,5 +254,5 @@ Cheap Buck Converter with Display $5
 
 This is a push button programmable 20W adjustable DC-DC buck converter module with digital display. It is based on LM2596 3A step-down voltage regulator and supports an input of 0~40V DC to an output of 1.25 to 37V with an accuracy of ± 0.05V.
 
-Here is one example sold by DFRobot, click to follow the link: `20W 3A programmable buck converter <https://www.dfrobot.com/product-1552.html?gclid=CjwKCAiAg8OBBhA8EiwAlKw3ks8tC8ywVBKBOQ6dKOSRZZSxoKMphpav7r7WmfW29Nl9uU7Mn7SJzRoCMSUQAvD_BwE>`_
+Here is one example sold by DFRobot, click to follow the link: `20W 3A programmable buck converter <https://www.dfrobot.com/product-1552.html>`_.
 

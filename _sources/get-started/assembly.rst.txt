@@ -1,6 +1,6 @@
-*********
-Assembly
-*********
+*******************************
+Assembling the Command Station
+*******************************
 
 Let's start with the basics and add as you see fit. For this install, you'll need the items listed on the :doc:`Get Started <index>` page, plus:
 

@@ -2,7 +2,8 @@
 DCC-EX Roadmap
 ************************
 
-2021
+
+2022
 =====
 
 Software
@@ -11,7 +12,7 @@ Software
 DCC++ EX Command Station 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Develop a Hardware Abstraction Layer (HAL) to allow for snap-in modules for different hardware and accessories. We will be both processor and input/output agnostic. Switches, lights, servos, etc, will all go through the same interface.
+* 
 * Add support for an ESP-32 or equivalent to remove resource limitations.
 * Remove need to have any conditional compilation of features. This means the binary can be built and downloaded directly without a compiler or IDE. Customisation can take place through the command language API and mySetup.h file.
 * Program the WiFi solution with our own code that implements a “true” network connection, still has the AT command set, and can handle at least 12 sockets.

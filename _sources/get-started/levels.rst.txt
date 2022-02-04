@@ -1,6 +1,6 @@
-*********
-Levels
-*********
+******************
+Choose Your Level
+******************
 
 
 We've found that our users tend to identify with one of the following three categories, so we've created different paths to help navigate our DCC-EX system and this website. Don't worry, the paths are integrated and you can "switch a turnout" at any point and take another path! See below if you most identify with being a "Conductor", a "Tinkerer", or an "Engineer".

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Connecting a Servo Module &mdash; DCC++ EX  documentation</title>
+  <title>Using the “DriveAway” Feature &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -45,9 +45,7 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Power Supplies" href="power-supplies.html" />
-    <link rel="prev" title="I2C GPIO Expander Modules" href="gpio-module.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,7 +93,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Choose Your Level</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembling the Command Station</a></li>
@@ -144,29 +142,29 @@
 <li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="motor-boards.html">Motor Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gpio-module.html">I2C GPIO Expander Modules</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Connecting a Servo Module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="accessory-controllers.html">Accessory Controllers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/motor-boards.html">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/shopping-list.html">Shopping List</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../software/hal-config.html">I/O Device Drivers and HAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/hal.html">DCC++EX HAL Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/writing-hal-driver.html">Writing a HAL Driver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/release-notes.html">Release Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/command-summary.html">DCC++ EX Command Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hal.html">DCC++EX HAL Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-hal-driver.html">Writing a HAL Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-summary.html">DCC++ EX Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
@@ -257,17 +255,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../index.html">Reference</a> &raquo;</li>
-        
-          <li><a href="index.html">Hardware</a> &raquo;</li>
-        
-      <li>Connecting a Servo Module</li>
+      <li>Using the “DriveAway” Feature</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/reference/hardware/servo-module.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/reference/software/driveaway.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -280,60 +274,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="connecting-a-servo-module">
-<h1>Connecting a Servo Module<a class="headerlink" href="#connecting-a-servo-module" title="Permalink to this headline">¶</a></h1>
-<p>To connect a servo module to DCC++EX, you first need to get a module, based on the PCA9685 chip.</p>
-<a class="reference internal image-reference" href="../../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
-<p>These are widely available from ebay, Amazon, etc. for a few dollars.</p>
-<p>Note the pin connectors along the left side of the module - these are where you connect to the
-Arduino.</p>
-<p>The 16 columns of three pins along the bottom of the module are where you connect the servos.
-The pins are arranged so that you can just plug a servo connector directly onto them, but be
-sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.</p>
-<p>The servo module itself is powered from the Arduino, but the servos themselves contain motors that
-consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
-<p>Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:</p>
-<a class="reference internal image-reference" href="../../_images/ArduinoMegaServo.png"><img alt="PCA9685 Servo Module" src="../../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
-<p>In DCC++EX, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
-<p>Once you’ve made all of the connections, apply power to the Arduino.</p>
-<p>Then, in the Serial Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it isn’t (by some fluke) already in that position.</p>
-<p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
-<p>Try <cite>&lt;D SERVO 100 450 3&gt;</cite> and the servo should move slowly back.</p>
-<p>You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.</p>
-<a class="reference internal image-reference" href="../../_images/TurnoutServoMount.jpg"><img alt="Servo mount to operate a turnout" src="../../_images/TurnoutServoMount.jpg" style="width: 288.0px; height: 384.0px;" /></a>
-<p>And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
-servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
-<a class="reference internal image-reference" href="../../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
-<div class="section" id="using-servos-with-ex-rail">
-<h2>Using Servos with EX-RAIL<a class="headerlink" href="#using-servos-with-ex-rail" title="Permalink to this headline">¶</a></h2>
-<p>Defining Turnouts?</p>
-<div class="section" id="controlling-servos-for-turnouts">
-<h3>Controlling Servos for Turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this headline">¶</a></h3>
-<p>SERVO_TURNOUT Command</p>
+  <div class="section" id="using-the-driveaway-feature">
+<h1>Using the “DriveAway” Feature<a class="headerlink" href="#using-the-driveaway-feature" title="Permalink to this headline">¶</a></h1>
+<p>DCC++EX and Engine Drivers “Request Loco ID” &amp; “Drive Away”</p>
+<p>A new feature enhancement with a Arduino Mega 2560 +WiFi enabled DCC++EX Command Station directly connected to an Engine Driver Throttle on an Android smartphone.</p>
+<p>Place a DCC Engine on a programming track spur or siding, use Engine Driver WiFi Throttle “Request Loco ID” to automatically acquire &amp; load the loco# into the Engine Driver Throttle, then just throttle-up and “Drive Away” onto the main line tracks.</p>
+<div class="section" id="how-to-use-it">
+<h2>How to Use It<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline">¶</a></h2>
+<p>Place any DCC Engine on an insulated Programming track setup as spur or siding connected with dual plastic joiners to the Main layout track. On Engine Driver WiFi Throttle, touch “Select Loco” as normal, choose “Request Loco ID” radio dial and press “Request Loco” button, it automatically acquires &amp; loads the loco# into the Engine Driver WiFi Throttle, then sets and Joins the Programming track as a Mainline DCC signal, then you just throttle-up and “Drive Away” onto the main line tracks.</p>
+<p>Place a second engine on the programming track and repeat the steps as many times as you would like. This is a New &amp; Unique DCC WiFI Throttle client feature only found in DCC++EX &amp; Engine Driver WiFi Apps.</p>
+<p>Where it’s used;
+An Arduino Mega DCC++EX + WiFI enabled Command Station in Standalone Operations mode Directly WiFI connected with Engine Driver WiFi Throttles utilizing the new standalone WiThrottle Server feature imbedded in DCC++EX Command Station.</p>
+<p>Setup a Mega DCC++EX CS + ESP 8266 WiFi MakerFab Shield or a ESP01 WiFi board in either Access Point AP mode or Station STA (client) mode through a shared Router for a Command Station (CS) Standalone Operations configuration. Then the Engine Driver and Command Station both sign on to the common SSID and Password to share the common WiFi signal and channel.</p>
+<p>This Standalone WiFi configuration works Without the use of any additional hardware or third party software controller’s like JMRI or Rocrail interfaces.</p>
 </div>
-<div class="section" id="controlling-servos-for-animations">
-<h3>Controlling Servos for Animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this headline">¶</a></h3>
-<p>SERVO Command</p>
+<div class="section" id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>DCC++EX 3.1 and above has a new software implementation logic that in a sense replaces a hardwired DPDT switch and combines multiple DCC++ commands in a sequence to perform the magic dubbed “DriveAway(tm)”. It triggers a &lt;R&gt; read the CV1 Short or CV 17 &amp; 18 Long address and CV8 Mfr ID, and CV29 Setup and then returns and automatically loads the Loco# into the throttle. The Command Station then automatically sets <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> command to switch the PROG track to MAIN and allows your Engine Driver App to drive it away onto the main line tracks</p>
+<p>Logic Programming Protection;
+If you inadvertently touch or send any Programming command while an Engine is sitting on the PROG track when it’s active as a [JOIN] Main line track, the DCC++EX software Automatically kicks back to Program Track Mode before accepting any other commands as safety procedure.</p>
 </div>
+<div class="section" id="new-discovered-servers-on-wifi-throttles">
+<h2>New “Discovered Servers” on WiFi Throttles<a class="headerlink" href="#new-discovered-servers-on-wifi-throttles" title="Permalink to this headline">¶</a></h2>
+<p>WiThrottles now detect and display both DCC++EX Command Station name and JMRI WiThrottle Server Profile name in the WiFi Throttle Apps.</p>
+<dl class="simple">
+<dt>Sample Engine Driver App Discovered Servers:</dt><dd><p>“DCC++EX”                  {Direct connect to the Command Station}
+“My JMRI Railroad”        {JMRI connected via WiThrottle Server}</p>
+</dd>
+</dl>
+<p>Our new multicast Dynamic Network Server (mDNS) enhancement allows us to display the available WiFi server connections to a DCC++EX Command Station. Choosing one allows your WiThrottle App to connect to and load engine rosters and function keys to your throttle.</p>
+<p>Function key layout,</p>
 </div>
-<div class="section" id="technical-discussion-for-engineers">
-<h2>Technical Discussion for Engineers<a class="headerlink" href="#technical-discussion-for-engineers" title="Permalink to this headline">¶</a></h2>
-<p>There are three types of servos, standard or “Positional Rotation”, “Continuous Rotation” and “Linear”</p>
-<p><strong>A Standard, positional rotation servo</strong> allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo</p>
-<p><strong>A Continuous Rotation Servo</strong> can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counterclockwise.</p>
-<p><strong>Linear Servos</strong> use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its postion along a straight line, forward and back in a similar way by giving it a postion.</p>
-<p>Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechansim (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.</p>
-<p>For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds. The duration of the pulses are between 544 and 2400 milliseconds representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multipy by 4096. That gives us a range of 111 to 491.</p>
-<p>Another way to look at this is that with our 12bit ADC, which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can’t represent the value 4096 in 12 bits.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000ms, which maps to 205-410, and 500 to 2400ms, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with “&lt;T id SERVO vpin thrownPos closedPos profile&gt;”.</p>
+<div class="section" id="new-dcc-ex-4-0-exrail-roster-feature">
+<h2>New DCC++EX 4.0 EXRAIL “Roster” Feature<a class="headerlink" href="#new-dcc-ex-4-0-exrail-roster-feature" title="Permalink to this headline">¶</a></h2>
+<p>When choosing “DCC++EX” from discovered servers an Engine Driver or WiThrottle is Directly connected to the Command Station and the WiFi Throttle function keys can be loaded from either the “Default Mode” which load function names you have previously set up in Engine Driver, or now with the New EXRAIL “ROSTER” command which allows you to enter all your engine numbers, names and function keys into your myAutomation.h file and then automatically upload and pass the Command Stations Roster and Function keys into your Engine Driver and WiThrottle Apps.</p>
+<p>To load the JMRI Roster or Rocrail function keys you must switch your WiFi connection to the SSID the JMRI WiThrottle Server {Windows, Mac iOS or Raspberry Pi} is signed on to and then reconnect the new SSID IP address: port # displayed to the JMRI WiThrottle Server on your Engine Driver &amp; WiThrottle or choose “My JMRI Railroad” from discovered servers.</p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Keep a spare slot (we recommend 100) open on your first PCA9685 board so that you can test servo positions with the <cite>&lt;D SERVO …&gt;</cite> command to connect your servos to and get the exact positions you need.</p>
-</div>
-<p>Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to the an external 5V power supply. Do NOT connect this to the 5V power of the Arduino! The ground wire is usually black or brown and connects to a ground pin. The signal pin is typically yellow, orange or white and should be connected to a digital pin of the PCA9685.</p>
+<div class="section" id="precaution-wiring-prog-main">
+<h2>Precaution Wiring Prog &amp; Main<a class="headerlink" href="#precaution-wiring-prog-main" title="Permalink to this headline">¶</a></h2>
+<p>Please be sure “Both” Programming Track rails are Insulated with dual plastic joiners from the Main line and that both the wiring for CAB A Main and CAB B Prog positive leads are connected on the right rail and the negative leads are connected on the left rail.  Or else undesirable gremlins may appear, you’ve been forewarned. The proceeding is a public service announcement and the DCC++EX team makes no expressed or implied guarantees if the user fails his or her due diligence.</p>
 </div>
 </div>
 
@@ -342,10 +321,6 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="power-supplies.html" class="btn btn-neutral float-right" title="Power Supplies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="gpio-module.html" class="btn btn-neutral float-left" title="I2C GPIO Expander Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 

@@ -95,9 +95,9 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Levels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/wifi-setup.html">WiFi Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Choose Your Level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembling the Command Station</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/wifi-setup.html">Adding a WiFi Option</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/installer.html">Install using the Automated Installer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
@@ -139,7 +139,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../automation/index.html">Automation (EX-RAIL)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-ref.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Reference</a><ul>
@@ -203,6 +203,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../site-map/index.html">Site Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About Us - Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/rewrite.html">What’s New in DCC++ EX?</a></li>
 </ul>
 </li>
@@ -275,6 +276,18 @@
             
   <div class="section" id="programming-locos-cvs">
 <h1>Programming Locos (CVs)<a class="headerlink" href="#programming-locos-cvs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A DCC Enabled loco with a working Decoder</p></li>
+<li><p>A separate section of track or a siding electrically isolated from the main track</p></li>
+<li><p>A moter shield or motor driver with current sense capability</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default DCC++EX Command station with a dual output Arduino Motor shield has everything you need, a main track output, a programming track output, and a configuration that handles current sense for programming a loco on output B and current sense for overlimit detection on output A.</p>
+</div>
+</div>
 </div>
 
 

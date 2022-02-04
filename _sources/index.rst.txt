@@ -85,7 +85,7 @@ A basic DCC++ EX hardware setup can use easy to find, widely available Arduino b
 * Ability to run many more locos
 * Emergency Stop commands
 * Forget locos command - Stops reminders for locos no longer on the track
-* Built-in Automation!
+* Built-in Automation with EX-RAIL!
 * Lively community online, and active feature development
 
 .. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.

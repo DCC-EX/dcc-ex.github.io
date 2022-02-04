@@ -97,9 +97,9 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Levels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/wifi-setup.html">WiFi Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Choose Your Level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembling the Command Station</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/wifi-setup.html">Adding a WiFi Option</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/installer.html">Install using the Automated Installer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
@@ -141,7 +141,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../automation/index.html">Automation (EX-RAIL)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-ref.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
@@ -205,6 +205,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../site-map/index.html">Site Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About Us - Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/rewrite.html">What’s New in DCC++ EX?</a></li>
 </ul>
 </li>
@@ -279,11 +280,18 @@
             
   <div class="section" id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
-<p>Rather than try to maintain release notes in multiple places, we provide a link below to the original file on our GitHub page. You can read the file there or download it. If you already have installed the Command Station sketch to your local machine, you will have the release notes for the version you downloaed in your CommandStation-EX project folder. Click on the link below for our most current release notes.</p>
+<div class="section" id="what-s-new-in-version-4-0">
+<h2>What’s New in Version 4.0<a class="headerlink" href="#what-s-new-in-version-4-0" title="Permalink to this headline">¶</a></h2>
+<p>You may notice the jump from version 3.x to 4.0, this is because 4.0 is a MAJOR release. There are huge additions and changes. Here is a list of the highlights. To see the full release notes, continue to the link below.</p>
+<ul class="simple">
+<li><p>We developed a Hardware Abstraction Layer (HAL) to allow for snap-in modules for different hardware and accessories. We will be both processor and input/output agnostic. This means you are insulated from the complexity of different hardware. Switches, lights, servos, etc, will all go through the same interface.</p></li>
+</ul>
+<p>Rather than trying to maintain detailed release notes in multiple places, we provide a link below to the original file on our GitHub page. You can read the file there or download it. If you already have installed the Command Station sketch to your local machine, you will have the release notes for the version you downloaed in your CommandStation-EX project folder. Click on the link below for our most current release notes.</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/release_notes.md">https://github.com/DCC-EX/CommandStation-EX/blob/master/release_notes.md</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note that this will show the release notes for the latest “master” build that you can download and install and may contain changes that are not in the last “official” release. The master version is the current stable version, while the official release is the one bundled and installed from the installer and downloaded from the download link.</p>
+</div>
 </div>
 </div>
 

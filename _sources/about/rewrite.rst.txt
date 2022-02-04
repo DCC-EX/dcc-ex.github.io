@@ -20,8 +20,10 @@ We added many new functions such as:
 
 * Individual track power control
 * Programming track turned on automatically when programming and off when finished
-* User add-on functions
+* User add-on functions (intercept commands to route to your own routines)
 * Much simpler Function (F0-28) command
+* EX-RAIL Automation and/or accessory control
+* HAL - Hardware abstratction layer to make adding new types of hardware simple
 * Extended functions up to 68
 * Better turnout handling
 * Servo support
@@ -35,7 +37,7 @@ We added many new functions such as:
 * Nano and Teensy support
 * ARM Cortex M0 and M4 support
 * New DCC++ EX features added to JMRI like a current monitor display
-* Custom add-ons for Engine Driver
+* Custom add-ons for Engine Driver including Routes and Automations on buttons
 * 28 speed step support in addtion to 128
 * Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
 * Created many new commands

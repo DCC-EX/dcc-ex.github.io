@@ -113,8 +113,5 @@ Team
 * Henk Kruisbrink - UK (Henkk)
 
 
-.. toctree::
-    :hidden:
-
-    rewrite
+    
 

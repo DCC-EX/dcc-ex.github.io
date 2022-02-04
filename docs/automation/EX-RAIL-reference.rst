@@ -8,8 +8,8 @@ This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Co
 
 See Also:
 
-  :doc:`Introduction to EX-RAIL <EX-RAIL-intro>`
-  :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
+  :doc:`Introduction to EX-RAIL <EX-RAIL-intro>` |
+  :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`|
 
 Notes
 ========
@@ -32,7 +32,7 @@ DIAGNOSTICS AND CONTROL
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet.
 
- ``<D EXRAIL ON|OFF>`` Turns diagnostic traces for EX-RAIL events
+``<D EXRAIL ON|OFF>`` Turns diagnostic traces for EX-RAIL events
 
   .. code-block:: none
 
@@ -41,11 +41,11 @@ There are some diagnostic and control commands added to the <tag> language norma
     Example output:
 
   
- ``<PAUSE>`` Pause an EX-RAIL Script 
+``<PAUSE>`` Pause an EX-RAIL Script 
 
- ``<RESUME>`` Resume an EX-RAIL Script
+``<RESUME>`` Resume an EX-RAIL Script
 
- ``</>`` Displays EX-RAIL running task information
+``</>`` Displays EX-RAIL running task information
 
    Example output:
 

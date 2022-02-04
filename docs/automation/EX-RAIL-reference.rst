@@ -1,3 +1,7 @@
+:orphan:
+
+.. Remove orphan field when the document is added to a toctree
+
 ****************************
 DCC++ EX Command Reference
 ****************************
@@ -9,7 +13,8 @@ This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Co
 See Also:
 
   :doc:`Introduction to EX-RAIL <EX-RAIL-intro>` |
-  :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`|
+
+  :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
 
 Notes
 ========

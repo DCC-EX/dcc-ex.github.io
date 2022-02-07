@@ -59,6 +59,9 @@ exclude_patterns = [
     '_build', 'Thumbs.db', '.DS_Store',
 ]
 
+# Set the default for literal blocks and code-block
+highlight_language = 'none'
+
 
 # -- Options for HTML output -------------------------------------------------
 

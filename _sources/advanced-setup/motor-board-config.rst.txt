@@ -17,13 +17,13 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 
 **Links in This Page**
 
-* :ref:`Configure Using the Installer`
-* :ref:`Configure By Editing the config.h File`
-* :ref:`Your Board is in the Supported List`
-* :ref:`Your Board is NOT in the Supported List`
-* :ref:`Using High Accuracy Waveform Mode`
-* :ref:`Current Sense and Sense Factor`
-* :ref:`Just Buy a Current Sense Board Instead`
+* :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+* :ref:`advanced-setup/motor-board-config:Configure By Editing the config.h File`
+* :ref:`advanced-setup/motor-board-config:Your Board is in the Supported List`
+* :ref:`advanced-setup/motor-board-config:Your Board is NOT in the Supported List`
+* :ref:`advanced-setup/motor-board-config:Using High Accuracy Waveform Mode`
+* :ref:`advanced-setup/motor-board-config:Current Sense and Sense Factor`
+* :ref:`advanced-setup/motor-board-config:Just Buy a Current Sense Board Instead`
 
 Configure Using the Installer
 ==============================

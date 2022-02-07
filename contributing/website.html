@@ -265,7 +265,9 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/contributing/website.rst.txt" rel="nofollow"> View page source</a>
+            
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/contributing/website.rst" class="fa fa-github"> Edit on GitHub</a>
+            
           
         
       </li>
@@ -296,6 +298,8 @@
 </div>
 <div class="section" id="standards">
 <h2>Standards<a class="headerlink" href="#standards" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="headings">
+<h3>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Main Headings have asterisks above and below them</p></li>
 <li><p>Subheadings are underlined with equals signs</p></li>
@@ -304,7 +308,78 @@
 <li><p>The last one we use is underlined with tildes</p></li>
 </ul>
 <p>All heading underlines and overlines must be at least as long as the text of the heading</p>
+</div>
+<div class="section" id="links">
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="internal">
+<h4>Internal<a class="headerlink" href="#internal" title="Permalink to this headline">¶</a></h4>
+<p>Sphinx cross-references are used for internal links. This ensures they are
+correct and by default will use the destination heading text as the link text.</p>
+<p>To link to a page use <code class="docutils literal notranslate"><span class="pre">:doc:</span></code>:</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`/reference/hardware/motor-boards`</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../reference/hardware/motor-boards.html"><span class="doc">Motor Boards</span></a></p>
+</div>
+<p>The document name is a relative or absolute (within the documentation) file
+path, without the .rst suffix.</p>
+<p>To link to a position within a page use <code class="docutils literal notranslate"><span class="pre">:ref:</span></code>. A reST label can be used as
+the reference, but on the DCC++EX website headings are made available to use as
+references:</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`advanced-setup/motor-board-config:Configure Using the Installer`</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../advanced-setup/motor-board-config.html#configure-using-the-installer"><span class="std std-ref">Configure Using the Installer</span></a></p>
+</div>
+<p>The reference is the full name of the document (the absolute path without
+a leading /), a colon, and the section heading. The full name must be used
+even when referring to headings in the same source file.</p>
+<p>Alternative text can be used for the link:</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`WiFi configuration &lt;advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup&gt;`</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../advanced-setup/supported-microcontrollers/wifi-mega.html#short-version-of-network-setup"><span class="std std-ref">WiFi configuration</span></a></p>
+</div>
+</div>
+<div class="section" id="external">
+<h4>External<a class="headerlink" href="#external" title="Permalink to this headline">¶</a></h4>
+<p>For URLs that are shown, just use the URL:</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>https://dcc-ex.com/index.html
+</pre></div>
+</div>
+<p><a class="reference external" href="https://dcc-ex.com/index.html">https://dcc-ex.com/index.html</a></p>
+</div>
+<p>To show link text instead of the URL:</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">`Trainboard Thread </span><span class="si">&lt;https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/&gt;</span><span class="s">`_</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/">Trainboard Thread</a></p>
+</div>
+<p>For better accessibility, and generally clearer content, use <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#accessibility">strong link text</a>.</p>
+<p>If the link will be used multiple times, or to keep the URL separate in the
+source file, define a target:</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Link to the <span class="s">`DCC++EX home page`_</span>.
+
+<span class="p">..</span> <span class="nt">_DCC++EX home page:</span> https://dcc-ex.com/index.html
+</pre></div>
+</div>
+<p>Link to the <a class="reference external" href="https://dcc-ex.com/index.html">DCC++EX home page</a>.</p>
+</div>
 <p><em>Work in progress</em></p>
+</div>
+</div>
 </div>
 </div>
 

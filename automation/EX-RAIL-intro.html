@@ -265,7 +265,9 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/automation/EX-RAIL-intro.rst.txt" rel="nofollow"> View page source</a>
+            
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/automation/EX-RAIL-intro.rst" class="fa fa-github"> Edit on GitHub</a>
+            
           
         
       </li>
@@ -336,7 +338,7 @@ that can easily be used to describe sequential actions to automatically take pla
 <div class="section" id="the-automation-process">
 <h2>The Automation Process<a class="headerlink" href="#the-automation-process" title="Permalink to this headline">¶</a></h2>
 <p>All routes, automations, etc step through a list of simple keywords until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.</p>
-<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-summary.html#ex-rail-command-summary"><span class="std std-ref">EX-RAIL Command Summary</span></a>.</p>
+<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a>.</p>
 <p>Automation scripts are added to your Command Station by creating a file called “myAutomation.h” in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">EXRAIL</span>
   <span class="p">...</span> <span class="n">your</span> <span class="n">scripts</span>
@@ -417,7 +419,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <p>You may, however, find it more convenient to define turnouts using EX-RAIL commands, which may appear anywhere in the ‘myAutomation.h’ file, even after they are referenced in an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code>, <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code>, <code class="docutils literal notranslate"><span class="pre">THROW</span></code> or <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts defined in ‘myAutomation.h’ will still be visible to WiThrottle and JMRI in the normal way.</p>
 <p>A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a “throw” or “close” (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.</p>
-<p>See the <a class="reference internal" href="EX-RAIL-summary.html#ex-rail-command-summary"><span class="std std-ref">Reference</span></a> section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
+<p>See the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">Reference</span></a> page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
 </div>
 <div class="section" id="defining-signals">
 <h2>Defining Signals<a class="headerlink" href="#defining-signals" title="Permalink to this headline">¶</a></h2>

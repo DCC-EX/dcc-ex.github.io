@@ -72,7 +72,7 @@ The Automation Process
 
 All routes, automations, etc step through a list of simple keywords until they reach a ``DONE`` keyword. 
 
-For a full list of keywords, see :ref:`EX-RAIL Command Summary`.
+For a full list of keywords, see :doc:`EX-RAIL-summary`.
 
 Automation scripts are added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:
 
@@ -192,7 +192,7 @@ Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMR
 
 A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
  
-See the :ref:`Reference<EX-RAIL Command Summary>` section for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
+See the :doc:`Reference <EX-RAIL-summary>` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 
 Defining Signals
@@ -336,7 +336,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with :ref:`TURNOUT commands.<Routes, Automations, and Sequences>`
+Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <automation/EX-RAIL-summary:Routes, Automations, and Sequences>`
 
 .. code-block:: cpp
 

@@ -7,32 +7,32 @@ Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source 
    :align: left
 
    ==================   ==================   ====================
-   |Get Started|_       |Download|_          |Reference|_
+   |Timer|              |Arrow|              |Binder|
    ------------------   ------------------   --------------------
-   `Get Started`_       `Download`_          `Reference`_
+   |Get Started|        |Download|           |Reference|
    ------------------   ------------------   --------------------
-   |Advanced Setup|_       |Support|_        |Contribute|_
+   |Lightning|          |Question|           |Puzzle|
    ------------------   ------------------   --------------------
-   `Advanced Setup`_       `Support`_        `Contribute`_
+   |Advanced Setup|     |Support|            |Contribute|
    ==================   ==================   ====================
 
-.. |Get Started| image:: ./_static/images/timer_bl.png
-.. _Get Started: get-started/index.html
+.. |Timer| image:: ./_static/images/timer_bl.png
+.. |Get Started| replace:: :doc:`/get-started/index`
 
-.. |Download| image:: ./_static/images/download_bl.png
-.. _Download: download/index.html
+.. |Arrow| image:: ./_static/images/download_bl.png
+.. |Download| replace:: :doc:`Download </download/index>`
 
-.. |Reference| image:: ./_static/images/api_bl.png
-.. _Reference: reference/index.html
+.. |Binder| image:: ./_static/images/api_bl.png
+.. |Reference| replace:: :doc:`/reference/index`
 
-.. |Advanced Setup| image:: ./_static/images/advanced_bl.png
-.. _Advanced Setup: advanced-setup/index.html
+.. |Lightning| image:: ./_static/images/advanced_bl.png
+.. |Advanced Setup| replace:: :doc:`/advanced-setup/index`
 
-.. |Support| image:: ./_static/images/question_bl.png
-.. _Support: support/index.html
+.. |Question| image:: ./_static/images/question_bl.png
+.. |Support| replace:: :doc:`/support/index`
 
-.. |Contribute| image:: ./_static/images/puzzle_bl.png
-.. _Contribute: contributing/index.html
+.. |Puzzle| image:: ./_static/images/puzzle_bl.png
+.. |Contribute| replace:: :doc:`Contribute </contributing/index>`
 
 Mission
 #######

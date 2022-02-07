@@ -76,9 +76,9 @@ See the detailed section on the :doc:`Teensy <../../advanced-setup/supported-mic
 Will you support other microcontrollers in the future?
 =======================================================
 
-Yes, that is on our :doc:`roadmap <../../roadmap/index>`.
+Yes, that is on our :doc:`roadmap </roadmap/index>`.
 
-Click here for a complete `Shopping List <./shopping-list.html>`_
+Click here for a complete :doc:`Shopping List </reference/hardware/shopping-list>`.
 
 
 Boards that will NOT work
@@ -88,5 +88,5 @@ Boards that will NOT work
 
 **ESP32** - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atmel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.
 
-Click here for a complete `Shopping List <./shopping-list.html>`_
+Click here for a complete :doc:`Shopping List </reference/hardware/shopping-list>`.
 

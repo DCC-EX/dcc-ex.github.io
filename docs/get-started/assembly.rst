@@ -14,7 +14,7 @@ Let's start with the basics and add as you see fit. For this install, you'll nee
 
 **Figure 1** - basic setup (click to enlarge picture)
 
-* For an Uno, Nano, or other microcontroller, please see `Using a different microcontroller <../reference/hardware/microcontroller-boards.html>`_. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see `Motor Controllers <../reference/hardware/motor-boards.html>`_
+* For an Uno, Nano, or other microcontroller, please see :doc:`Using a different microcontroller </reference/hardware/microcontroller-boards>`. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see :doc:`Motor Controllers </reference/hardware/motor-boards>`
 
 For a video on how to do this, click below: `Setting Up Your Command Station <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
 
@@ -146,7 +146,7 @@ Check your work. Look under and through where the boards connect, make sure no p
 
 .. warning:: Make sure you have cut the trace on the motor control board. If not, see above first. Once you know the trace is cut, connect power to the motor board
 
-Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, please see `compatible Power Supplies <../reference/hardware/power-supplies.html>`_
+Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, please see :doc:`compatible Power Supplies </reference/hardware/power-supplies>`
 
 If you are using a "bench" or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the motor shield and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the motor shield.
 
@@ -184,21 +184,21 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 
 Connect the 2.5mm barrel connector from your separate 7-9V DC power supply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the "Vin" and "Gnd" pins on the Arduino.
 
-.. note:: There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run exWebThrottle or JMRI. There is also a way to use a 5V power supply. Please read `Power Supplies <../reference/hardware/power-supplies.html>`_ to help you find what will work best for you).
+.. note:: There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run exWebThrottle or JMRI. There is also a way to use a 5V power supply. Please read :doc:`Power Supplies </reference/hardware/power-supplies>` to help you find what will work best for you).
 
 6. Install the optional WiFi board
 ===================================
 
 You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.
 
-:doc:`WiFi Setup <./wifi-setup>`
+:doc:`WiFi Setup </get-started/wifi-setup>`
 
 7. Load firmware on your Command Station
 ==========================================
 
 Keep your USB cable handy because we are going to need it in this step.
 
-Go to the :doc:`Command Station downloads <../download/commandstation>` page. Most users will want to use the installer.
+Go to the :doc:`Command Station downloads </download/commandstation>` page. Most users will want to use the installer.
 
 Locos Can't Respond to Throttle Commands on the Programming Track!
 ==================================================================
@@ -212,5 +212,5 @@ TECHNICAL NOTES
 
 **Power Supplies** - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20V? Can't you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14V (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.
 
-**Using a 5V Supply** - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield. For more information, see `Power Supplies <../reference/hardware/power-supplies.html>`_
+**Using a 5V Supply** - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield. For more information, see :doc:`Power Supplies </reference/hardware/power-supplies>`
 

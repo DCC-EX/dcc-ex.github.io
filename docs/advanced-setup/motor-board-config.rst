@@ -33,7 +33,7 @@ Tinkerers and even Conductors should be comfortable with this option. If you are
 Configure By Editing the config.h File
 =======================================
 
-Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of `Currently supported boards <../reference/hardware/motor-boards.html>`_
+Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of :doc:`Currently supported boards </reference/hardware/motor-boards>`
 
 Open the config.h file in your editor. If this is the first time configuring your system, you may need to copy the "config.example.h" file and name the copy "config.h".
 

@@ -35,7 +35,7 @@ This is our tested and proven configuration
 
 * DCC++EX 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFI - Combo Board
-* Deek Robot L298P Standard Motor Shield (or other `approved motor controller <../../reference/hardware/motor-boards.html>`_)
+* Deek Robot L298P Standard Motor Shield (or other :doc:`approved motor controller </reference/hardware/motor-boards>`)
 * 12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
 * Android Smartphone with Engine Driver v2.28.123 or iOS Smarphone with WiThrottle

@@ -118,7 +118,7 @@ If you have a 2 or 4 line LCD display connected and check this box, you will see
 
 * **LCD Rows** - The number of horizontal rows or lines on your display
 
-For more information about using displays, see `I2C Displays <../reference/hardware/i2c-displays.html>`_
+For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
 
 OLED CheckBox
 ---------------
@@ -135,7 +135,7 @@ If you have an OLED display connected and check this box, you will see the follo
 
 * **OLED Height (in pixels)** - Enter the height or number of vertical pixels on your display
 
-For more information about using displays, see `I2C Displays <../reference/hardware/i2c-displays.html>`_
+For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
 
 Refresh Ports Button
 ----------------------

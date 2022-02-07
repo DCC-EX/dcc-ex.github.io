@@ -45,7 +45,7 @@ Software
 Optional Hardware
 ==================
 
-Supported `ESP8266 WiFi Option <../../reference/hardware/wifi-boards.html>`_
+Supported :doc:`ESP8266 WiFi Option </reference/hardware/wifi-boards>`
 
 
 .. NOTE:: Before you order a Nano, be sure whether the headers are soldered or not. The Arduino brand is not soldered, while many of the Chinese sites give you the option. If you are a conductor, you probably don't want to solder. If you are an Engineer, you may want to solder directly to the board and having to unsolder headers would be an unwelcome surprise.

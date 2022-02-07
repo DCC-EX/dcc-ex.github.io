@@ -50,7 +50,7 @@ The IRF3205 is actually the part number of the transistors on the board, N-Chann
 Which Option Should You Choose? (IRF3205)
 ===========================================
 
-.. NOTE:: This board can use the "High Accuracy Waveform" option since it uses just one direction pin per H-Bridge. As long as you use one of our motor board definitions for MOTOR_BOARD_TYPE in your config.h file that uses a Timer1 pin, this will all be automatic. See `High Accuracy Waveform <../high-accuracy.html>`_
+.. NOTE:: This board can use the "High Accuracy Waveform" option since it uses just one direction pin per H-Bridge. As long as you use one of our motor board definitions for MOTOR_BOARD_TYPE in your config.h file that uses a Timer1 pin, this will all be automatic. See :doc:`High Accuracy Waveform </advanced-setup/high-accuracy>`.
 
 Upgrade (IRF3205)
 ------------------

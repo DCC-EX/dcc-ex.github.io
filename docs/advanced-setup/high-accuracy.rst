@@ -72,4 +72,4 @@ Some motor boards like the IBT_2 and Wingzine boards have two separate PWM input
    :alt: Transistor inverter circuit
    :scale: 70% 
 
-You will also have to make sure that you use a motor board definition that uses pin 11, 12, or 13 for the output signal on a Mega, or pin 9 or 10 for an Uno or Nano. For information about how to do this, see the section on `Creating a motor board definition <motor-board-config.html#your-board-is-not-in-the-supported-list>`_.
+You will also have to make sure that you use a motor board definition that uses pin 11, 12, or 13 for the output signal on a Mega, or pin 9 or 10 for an Uno or Nano. For information about how to do this, see the section on :ref:`Creating a motor board definition <advanced-setup/motor-board-config:Your Board is in the Supported List>`.

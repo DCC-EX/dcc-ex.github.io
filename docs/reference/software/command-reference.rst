@@ -385,7 +385,7 @@ Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadc
 Decoder address 0 does not have a corresponding linear address.  This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.
 If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works.  Or use the address/subaddress versions of the commands.
 
-Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet>`_
+Here is a spreadsheet in .XLSX format to help you: :ref:`Decoder Address Decoder Table <reference/downloads/documents:Stationary Decoder Address Table (xlsx Spreadsheet)>`
 
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 

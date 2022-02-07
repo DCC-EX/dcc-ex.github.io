@@ -49,7 +49,7 @@ Anything with MOSFETS in them is more efficient than something with Bipolar Junc
 Which Option Should You Choose? (IBT_2)
 =========================================
 
-.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like DCCInspector-EX). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see `High Accuracy Waveform Mode <../high-accuracy.html>`_
+.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like DCCInspector-EX). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see :doc:`High Accuracy Waveform Mode </advanced-setup/high-accuracy>`.
 
 Upgrade (IBT_2)
 ----------------
@@ -257,7 +257,7 @@ Modifying Your Motor Board Definition To Give The Correct Current Sense Factor
 
 If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exacly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formulat to calculate it. Everything you need to create your own motor board defintion is here:
 
-`Creating a Custom Motor Board Definition <https://dcc-ex.com/advanced-setup/motor-board-config.html#your-board-is-not-in-the-supported-list>`_
+:ref:`Creating a Custom Motor Board Definition <advanced-setup/motor-board-config:Your board is NOT in the Supported List>`
 
 
 Using External Current Sense

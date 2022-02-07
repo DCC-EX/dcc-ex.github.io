@@ -210,7 +210,7 @@ Using exWebThrottle
 
 **Figure 10** - exWebThrottle
 
-Click this link: `exWebThrottle <../throttles/ex-webthrottle.html>`_ to run exWebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/exWebThrottle>`_ to get the latest version to run on your computer.
+Click this link: :doc:`exWebThrottle </throttles/ex-webthrottle>` to run exWebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/exWebThrottle>`_ to get the latest version to run on your computer.
 
 Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
 --------------------------------------------------------------

@@ -85,7 +85,7 @@ Here are your connections, just a computer running a chromium-based browser, a U
    :align: center
    :scale: 45%
 
-For operating instructions see `how to use WebThrottle-EX <../throttles/ex-webthrottle.html>`_
+For operating instructions see :doc:`how to use WebThrottle-EX </throttles/ex-webthrottle>`
 
 
 Engine Driver (Android | WiThrottle | WiFi)

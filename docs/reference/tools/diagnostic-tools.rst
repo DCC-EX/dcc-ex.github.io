@@ -299,6 +299,12 @@ It will look something line this. There will be just 2 files. The "cache" file w
 
    Figure 11: Installing the DCC protocol decoder
 
+On Linux::
+
+    $ unzip sigrok-DCC-Protocoll-master.zip
+    $ mkdir -p ~/.local/share/libsigrokdecode/decoders
+    $ cp -r sigrok-DCC-Protocoll-master/dcc/ ~/.local/share/libsigrokdecode/decoders/
+
 Download USB Drivers
 ---------------------
 

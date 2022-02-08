@@ -323,50 +323,50 @@
 </div>
 <div class="section" id="command-language-api">
 <h2>Command Language (API)<a class="headerlink" href="#command-language-api" title="Permalink to this headline">¶</a></h2>
-<p>There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and via the JMRI Web Server command language. For an explanation of what these terms mean, and what that means to you, please see <a class="reference external" href="../throttles/protocols.html">Protocols: WiThrottle, DCC++, and Web Servers Explained</a>. DCC++ EX natively understands our own DCC++ API and the WiThrottle API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running JMRI, and use JMRI as the middleware to send commands to DCC++EX. JMRI uses DCC++ commands when speaking to the Command Station.</p>
+<p>There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and via the JMRI Web Server command language. For an explanation of what these terms mean, and what that means to you, please see <a class="reference internal" href="../throttles/protocols.html"><span class="doc">Protocols: WiThrottle, DCC++, and Web Servers Explained</span></a>. DCC++ EX natively understands our own DCC++ API and the WiThrottle API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running JMRI, and use JMRI as the middleware to send commands to DCC++EX. JMRI uses DCC++ commands when speaking to the Command Station.</p>
 </div>
 <div class="section" id="compatible-throttles">
 <h2>Compatible Throttles<a class="headerlink" href="#compatible-throttles" title="Permalink to this headline">¶</a></h2>
 <p>Here is a list of some of the controllers you can use with DCC++EX. We work closely with developers to help them maintain compatibility with the DCC++EX Command Station. Check back on occasion, as new devices are being added all the time.</p>
-<p>For more information on any of these throttles, you can click on their links below or see our <a class="reference external" href="../throttles/index.html">Throttles Page Index</a>.</p>
+<p>For more information on any of these throttles, you can click on their links below or see our <a class="reference internal" href="../throttles/index.html"><span class="doc">Throttles Page Index</span></a>.</p>
 <div class="section" id="our-webthrottle-ex-dcc-usb-serial">
 <h3>Our WebThrottle-EX (DCC++ | USB/Serial)<a class="headerlink" href="#our-webthrottle-ex-dcc-usb-serial" title="Permalink to this headline">¶</a></h3>
 <p>The simplest option is to just use a throttle connected directly to the CS. The simplest of all is arguably WebThrottle-EX, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of WebThrottle-EX with the side menu open. You can click on the image to see it full size.</p>
 <a class="reference internal image-reference" href="../_images/webthrottle1.jpg"><img alt="WebThrottle-EX" class="align-center" src="../_images/webthrottle1.jpg" style="width: 546.4px; height: 307.20000000000005px;" /></a>
 <p>Here are your connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.</p>
 <a class="reference internal image-reference" href="../_images/webthrottle_setup.jpg"><img alt="WebThrottle-EX" class="align-center" src="../_images/webthrottle_setup.jpg" style="width: 818.1px; height: 272.7px;" /></a>
-<p>For operating instructions see <a class="reference external" href="../throttles/ex-webthrottle.html">how to use WebThrottle-EX</a></p>
+<p>For operating instructions see <a class="reference internal" href="../throttles/ex-webthrottle.html"><span class="doc">how to use WebThrottle-EX</span></a></p>
 </div>
 <div class="section" id="engine-driver-android-withrottle-wifi">
 <h3>Engine Driver (Android | WiThrottle | WiFi)<a class="headerlink" href="#engine-driver-android-withrottle-wifi" title="Permalink to this headline">¶</a></h3>
 <p>Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called “WiThrottle” (for WiFi Throttle) and any WiThrottle compatible throttle will work with DCC++ EX. There are two ways to connect it; the first method is by connecting directly to the CS via WiFi. You will need a WiFI board connected to the CS (see Wifi Setup <a class="reference internal" href="wifi-setup.html"><span class="doc">WiFi Setup</span></a>).</p>
 <p>The second method is to use JMRI and connect Engine Driver (ED) to the computer running JMRI. That computer would then connect to the CS via a USB cable (normally) or via a Wireless USB Bridge. The computer running JMRI can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full JMRI setup with WiFi with virtually no fuss.</p>
-<p>See <a class="reference external" href="../throttles/engine-driver.html">Engine Driver Page</a></p>
+<p>See <a class="reference internal" href="../throttles/engine-driver.html"><span class="doc">Engine Driver Page</span></a></p>
 </div>
 <div class="section" id="dccpp-cab-android-dcc-wifi-bluetooth">
 <h3>DCCpp CAB (Android | DCC++ | WiFi, BlueTooth)<a class="headerlink" href="#dccpp-cab-android-dcc-wifi-bluetooth" title="Permalink to this headline">¶</a></h3>
 <p>DCCpp CAB is a throttle that natively speaks the &lt;DCC++&gt; command language (API). It can connect via WiFi or Bluetooth! If you don’t need software like JMRI running on a computer, DCCpp CAB lets you connect directly to the CS.</p>
-<p>See <a class="reference external" href="../throttles/dccpp-cab.html">DCCpp CAB Page</a></p>
+<p>See <a class="reference internal" href="../throttles/dccpp-cab.html"><span class="doc">DCCpp CAB Page</span></a></p>
 </div>
 <div class="section" id="withrottle-ios-withrottle-wifi">
 <h3>WiThrottle (iOS | WiThrottle | WiFi)<a class="headerlink" href="#withrottle-ios-withrottle-wifi" title="Permalink to this headline">¶</a></h3>
 <p>WiThrottle is an app for iPhones and iPads. It can connect directly to the CS like Engine Driver does, or connect to JMRI on a computer and then have JMRI connect to the CS via a USB cable.</p>
-<p>See <a class="reference external" href="../throttles/withrottle.html">WiThrottle Page</a></p>
+<p>See <a class="reference internal" href="../throttles/withrottle.html"><span class="doc">WiThrottle Page</span></a></p>
 </div>
 <div class="section" id="locontrol-ios-jmri-web-server-dcc-wifi">
 <h3>Locontrol (iOS | JMRI Web Server, DCC++ | WiFi)<a class="headerlink" href="#locontrol-ios-jmri-web-server-dcc-wifi" title="Permalink to this headline">¶</a></h3>
 <p>Locontrol is a beautiful and functional throttle that uses the JMRI Web Server to connect. Soon it will be able to connect directly to the CS by using the &lt;DCC++&gt; Command set.</p>
-<p>See <a class="reference external" href="../throttles/locontrol.html">Locontrol Page</a></p>
+<p>See <a class="reference internal" href="../throttles/locontrol.html"><span class="doc">Locontrol Page</span></a></p>
 </div>
 <div class="section" id="digitrainspro-android-ios-windows-withrottle-dcc-wifi">
 <h3>DigiTrainsPro (Android, iOS, Windows | WiThrottle, DCC++ | WiFi)<a class="headerlink" href="#digitrainspro-android-ios-windows-withrottle-dcc-wifi" title="Permalink to this headline">¶</a></h3>
 <p>This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to DCC-EX using our command language.</p>
-<p>See <a class="reference external" href="../throttles/digitrainspro.html">DigiTrainsPro Page</a></p>
+<p>See <a class="reference internal" href="../throttles/digitrainspro.html"><span class="doc">DigiTrainsPro Page</span></a></p>
 </div>
 <div class="section" id="srcpclient-ios-withrottle-dcc-wifi">
 <h3>SRCPClient (iOS | WiThrottle, DCC++ | WiFi)<a class="headerlink" href="#srcpclient-ios-withrottle-dcc-wifi" title="Permalink to this headline">¶</a></h3>
 <p>Operate up to 3 locos from your iOS device. It supports both WiThrottle AND the DCC++ APIs.</p>
-<p>See <a class="reference external" href="../throttles/srcpclient.html">SRCPClient Page</a></p>
+<p>See <a class="reference internal" href="../throttles/srcpclient.html"><span class="doc">SRCPClient Page</span></a></p>
 </div>
 <div class="section" id="jmri">
 <h3>JMRI<a class="headerlink" href="#jmri" title="Permalink to this headline">¶</a></h3>
@@ -392,7 +392,7 @@
 <li><p>Connect normally-tethered handheld cabs (throttles) wirelessly to the Command Station</p></li>
 </ul>
 <p><strong>*TODO:insert diagram here*</strong></p>
-<p>For more information about all the throttles, see the <a class="reference external" href="../throttles/index.html">Throttles Section</a>&gt;</p>
+<p>For more information about all the throttles, see the <a class="reference internal" href="../throttles/index.html"><span class="doc">Throttles Section</span></a>&gt;</p>
 </div>
 </div>
 

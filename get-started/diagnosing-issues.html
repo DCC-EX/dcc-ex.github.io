@@ -298,7 +298,7 @@
 <h2>Diagnosing and Testing<a class="headerlink" href="#diagnosing-and-testing" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Remove the Motor Shield —we are going to test just the Arduino first.</p></li>
-<li><p>Download and install the most current version of <a class="reference external" href="https://dcc-ex.com/download/commandstation.html#latest-dcc-ex-official-release">DCC++ EX Command Station</a></p></li>
+<li><p>Download and install the most current version of <a class="reference internal" href="../download/commandstation.html#latest-dcc-ex-official-release"><span class="std std-ref">DCC++ EX Command Station</span></a></p></li>
 <li><p>Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to <code class="docutils literal notranslate"><span class="pre">115200</span> <span class="pre">baud</span></code> and make sure you have set <code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">CR</span> <span class="pre">&amp;</span> <span class="pre">NL</span></code> from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see “DCC-EX” and the software version as well as other log lines that mention WiFi. If you don’t see anything in the log, it could be that the software did not upload correctly, less than 7 Volts DC to the Arduino, or be an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.</p></li>
 </ol>
 </div>

@@ -6,7 +6,7 @@ CommandStation-EX is compatible with a wide variety of motor boards, also known 
 
 If you have trouble finding a particular board from the list, try searching based on it's name or the type of chip on the board and the terms "H-Bridge" or "Motor Shield". There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.
 
-**TL;DR** (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the `Shopping List <shopping-list.html>`_
+**TL;DR** (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the :doc:`/reference/hardware/shopping-list`.
 
 .. image:: ../../_static/images/deek_robot1_sm.jpg
    :alt: Deek Robot Motor Shield
@@ -153,7 +153,7 @@ Pinout for reference:
 
 .. Note:: This configuration uses the normal accuracy waveform to avoid having to use jumpers. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. For information about high-accuracy mode, See:
 
-`High Accuracy Waveform <../../advanced-setup/motor-board-config.html#using-high-accuracy-waveform-mode>`_
+:ref:`High Accuracy Waveform <advanced-setup/motor-board-config:Using High Accuracy Waveform Mode>`
 
 .. Todo:: Give a link to how to handle the jumper reconfig
 
@@ -333,7 +333,7 @@ Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Ardui
    :alt: Romeo V2
    :scale: 40%
 
-Click here for a complete `Parts Shopping List <./shopping-list.html>`_
+Click here for a complete :doc:`Parts Shopping List </reference/hardware/shopping-list>`.
 
 Configuring Motor Boards
 =========================

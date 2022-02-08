@@ -286,7 +286,7 @@
 <h1>Motor Boards<a class="headerlink" href="#motor-boards" title="Permalink to this headline">¶</a></h1>
 <p>CommandStation-EX is compatible with a wide variety of motor boards, also known as “dual H-bridges” and “motor shields”. We’ve sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.</p>
 <p>If you have trouble finding a particular board from the list, try searching based on it’s name or the type of chip on the board and the terms “H-Bridge” or “Motor Shield”. There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.</p>
-<p><strong>TL;DR</strong> (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the <a class="reference external" href="shopping-list.html">Shopping List</a></p>
+<p><strong>TL;DR</strong> (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the <a class="reference internal" href="shopping-list.html"><span class="doc">Shopping List</span></a>.</p>
 <a class="reference internal image-reference" href="../../_images/deek_robot1_sm.jpg"><img alt="Deek Robot Motor Shield" src="../../_images/deek_robot1_sm.jpg" style="width: 400.0px; height: 304.0px;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -412,7 +412,7 @@
 <p class="admonition-title">Note</p>
 <p>This configuration uses the normal accuracy waveform to avoid having to use jumpers. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. For information about high-accuracy mode, See:</p>
 </div>
-<p><a class="reference external" href="../../advanced-setup/motor-board-config.html#using-high-accuracy-waveform-mode">High Accuracy Waveform</a></p>
+<p><a class="reference internal" href="../../advanced-setup/motor-board-config.html#using-high-accuracy-waveform-mode"><span class="std std-ref">High Accuracy Waveform</span></a></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -543,7 +543,7 @@ Power Source Selection Jumpers need to both be on PWRIN (to the left) and NOT VI
 <p>On the surface, this seems like a great idea, an Aduino and motor controller on one board. It is a very thin surface ;) While we don’t recommend it, an Engineer who reads these notes, may still find a use for it. The V2 uses the ATmega32u4 chip instead of either of the chips used on an Uno or a Mega. It only has 2 interrupts that are usable and it reverses their pin assignments. It uses serial on the chip, not with a UART as on the other boards. It may need a sofware change to accomodate the timer. It also has the same amount of memory as an Uno, which will only run the basic version of DCC++ EX without options. In addition, the serial port uses memory to operate, so you have even less memory free to use than on an Uno.</p>
 <p>Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Arduino Motor Shield. It will only deliver 1.2 to 1.3A instead of 2A, if you add a fan. Very importantly it has NO CURRENT SENSE for either track. The sense outputs are tied to ground. You would have to cut traces and add resistors at the least, or buy current sense boards.</p>
 <a class="reference internal image-reference" href="../../_images/romeo_v2.jpg"><img alt="Romeo V2" src="../../_images/romeo_v2.jpg" style="width: 360.0px; height: 240.0px;" /></a>
-<p>Click here for a complete <a class="reference external" href="./shopping-list.html">Parts Shopping List</a></p>
+<p>Click here for a complete <a class="reference internal" href="shopping-list.html"><span class="doc">Parts Shopping List</span></a>.</p>
 </div>
 </div>
 <div class="section" id="configuring-motor-boards">

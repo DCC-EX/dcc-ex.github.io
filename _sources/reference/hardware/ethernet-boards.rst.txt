@@ -2,7 +2,7 @@
 Ethernet Boards
 ****************
 
-DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the `WiFi Boards Section <../hardware/wifi-boards.html>`_
+DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`.
 
 To use Ethernet instead of WiFi, follow these simple steps:
 

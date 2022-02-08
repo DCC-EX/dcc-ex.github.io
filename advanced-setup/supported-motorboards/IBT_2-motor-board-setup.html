@@ -325,7 +325,7 @@
 <h2>Which Option Should You Choose? (IBT_2)<a class="headerlink" href="#which-option-should-you-choose-ibt-2" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These options both use the “standard accuracy” waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like DCCInspector-EX). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use “high accuracy” mode because you need to free an Arduino pin or some other reason, and you like to solder, please see <a class="reference external" href="../high-accuracy.html">High Accuracy Waveform Mode</a></p>
+<p>These options both use the “standard accuracy” waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like DCCInspector-EX). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use “high accuracy” mode because you need to free an Arduino pin or some other reason, and you like to solder, please see <a class="reference internal" href="../high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a>.</p>
 </div>
 <div class="section" id="upgrade-ibt-2">
 <h3>Upgrade (IBT_2)<a class="headerlink" href="#upgrade-ibt-2" title="Permalink to this headline">¶</a></h3>
@@ -545,7 +545,7 @@
 <div class="section" id="modifying-your-motor-board-definition-to-give-the-correct-current-sense-factor">
 <h3>Modifying Your Motor Board Definition To Give The Correct Current Sense Factor<a class="headerlink" href="#modifying-your-motor-board-definition-to-give-the-correct-current-sense-factor" title="Permalink to this headline">¶</a></h3>
 <p>If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exacly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formulat to calculate it. Everything you need to create your own motor board defintion is here:</p>
-<p><a class="reference external" href="https://dcc-ex.com/advanced-setup/motor-board-config.html#your-board-is-not-in-the-supported-list">Creating a Custom Motor Board Definition</a></p>
+<p><a class="reference internal" href="../motor-board-config.html#your-board-is-not-in-the-supported-list"><span class="std std-ref">Creating a Custom Motor Board Definition</span></a></p>
 </div>
 </div>
 <div class="section" id="using-external-current-sense">

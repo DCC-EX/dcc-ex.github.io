@@ -179,7 +179,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
    "1" = register 1 was changed
    "20" = set to speed 20
    "1" = forward direction
-   "<" = End DCC++ EX command
+   ">" = End DCC++ EX command
 
 **Forget Locos**
 

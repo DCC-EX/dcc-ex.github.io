@@ -12,7 +12,7 @@ This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Co
 
 See Also:
 
-  :doc:`Introduction to EX-RAIL <EX-RAIL-intro>` |
+  :doc:`Introduction to EX-RAIL <EX-RAIL-intro>` 
 
   :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
 
@@ -46,9 +46,9 @@ There are some diagnostic and control commands added to the <tag> language norma
     Example output:
 
   
-``<PAUSE>`` Pause an EX-RAIL Script 
+``</PAUSE>`` Pause an EX-RAIL Script 
 
-``<RESUME>`` Resume an EX-RAIL Script
+``</RESUME>`` Resume an EX-RAIL Script
 
 ``</>`` Displays EX-RAIL running task information
 
@@ -165,61 +165,104 @@ EX-RAIL Functions
 ------------------
 
 ``PAUSE``	E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd
+
 ``RESUME``	Resume all paused tasks, including loco movement
+
 ``RESERVE( block_id )``	Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free
+
 ``FREE( block_id )``	Free previously reserved block
+
 ``START( sequence_id )``	Start a new task to execute a route or sequence
+
 ``SETLOCO( loco )``	Set the loco address for this task
+
 ``SENDLOCO( cab, route )``	Start a new task send a given loco along given route/sequence
+
 ``AUTOSTART``	A task is automatically started at this point during startup
+
 ``DRIVE( analog_pin )``	Not complete, DO NOT USE
+
 ``ROSTER( cab, name, func_map )``	Provide roster info for WiThrottle
 
 Loco DCC Functions
 -------------------
 
 ``ESTOP``	Emergency stop loco
+
 ``FWD( speed )``	Drive loco forward at DCC speed 0-127 (1=ESTOP)
+
 ``REV( speed )``	Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
+
 ``SPEED( speed )``	Drive loco in current direction at DCC speed (0-127)
+
 ``STOP``	Set loco speed to 0 (same as SPEED(0) )
+
 ``FON( func )``	Turn on loco function
+
 ``FOFF( func )``	Turn off loco function
+
 ``INVERT_DIRECTION``	Switches FWD/REV meaning for this loco
 
 Sensor input and Event Handlers 
 --------------------------------
 
 ``AT( sensor_id )``	Wait until sensor is active/triggered
+
 ``ATTIMEOUT( sensor_id, timeout_ms )``	Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag
+
 ``AFTER( sensor_id )``	Waits for sensor to trigger and then go off for 0.5 seconds
+
 ``LATCH( sensor_id )``	Latches a sensor on (Sensors 0-255 only)
+
 ``UNLATCH( sensor_id )``	Remove LATCH on sensor
+
 ``ONCLOSE( turnout_id )``	Event handler for turnout close
+
 ``ONTHROW( turnout_id )``	Event handler for turnout thrown
+
 ``ONACTIVATE( addr, sub_addr )``	Event handler for 2 part DCC accessory packet value 1
+
 ``ONACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 1
+
 ``ONDEACTIVATE( addr, sub_addr )``	Event handler for 2 part DCC accessory packet value 0
+
 ``ONDEACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 0
+
 ``WAITFOR( pin )``	Wait for servo to complete movement
 
 Action Output Functions
 ------------------------
 
 ``SET( pin )``	Set an output pin HIGH
+
 ``RESET( pin )``	Reset output pin (set to LOW)
+
 ``CLOSE( turnout_id )``	Close a defined turnout
+
 ``THROW( id )``	Throw a defined turnout
+
 ``GREEN( signal_id )``	Set a defined signal to GREEN (see SIGNAL)
+
 ``AMBER( signal_id )``	Set a defined signal to Amber. (See SIGNAL)
+
 ``RED( signal_id )``	Set defined signal to Red (See SIGNAL)
+
 ``FADE( pin, value, ms )``	Fade an LED on a servo driver to given value taking given time
+
 ``LCN( msg )``	Send message to LCN Accessory Network
+
 ``SERVO( id, position, profile )``	Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+
 ``SERVO2( id, position, duration )``	Move an animation servo taking duration in ms. Do NOT use for Turnouts
-``XFON( cab, func )	Send DCC function ON to specific cab (eg coach lights) Not for Loco use - use FON instead!
+
+``XFON( cab, func )``	Send DCC function ON to specific cab (eg coach lights) Not for Loco use - use FON instead!
+
 ``XFOFF( cab, func )``	Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
+
 ``ACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 1
+
 ``ACTIVATEL( linear )``	Sends a DCC accessory packet with value 1 to a linear address
+
 ``DEACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 0
+
 ``DEACTIVATEL( addr )``	Sends a DCC accessory packet with value 0 to a linear address

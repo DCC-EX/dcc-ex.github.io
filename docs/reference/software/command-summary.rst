@@ -176,6 +176,8 @@ Diagnostic traces
 
  ``<D WIT ON|OFF>`` Enables WiThrottle diagnostics
 
+ ``<D HAL SHOW>`` Shows configured servo board and GPIO extender board config and used pins
+
 ======================
 Tuning
 ======================

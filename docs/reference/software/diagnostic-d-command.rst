@@ -30,6 +30,7 @@ The following commands turn ON(1) or OFF(0) various diagnostic traces
 ``<D ETHERNET ON|OFF>`` trace Ethernet  conversation between Arduino and Ethernet hardware.
 
 ``<D WIT ON|OFF>`` trace WiThrottle protocol conversation of Engine Driver (or other WiThrottle device).
+``<D HAL SHOW>`` display information about configured HAL devices (servo controllers, GPIO Extenders) including address and pins used
 
 The following commands might help in exceptional circumstances
 ===============================================================

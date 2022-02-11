@@ -29,7 +29,8 @@ This Standalone WiFi configuration works Without the use of any additional hardw
 How it works
 =============
 
-DCC++EX 3.1 and above has a new software implementation logic that in a sense replaces a hardwired DPDT switch and combines multiple DCC++ commands in a sequence to perform the magic dubbed "DriveAway(tm)". It triggers a <R> read the CV1 Short or CV 17 & 18 Long address and CV8 Mfr ID, and CV29 Setup and then returns and automatically loads the Loco# into the throttle. The Command Station then automatically sets ``<1 JOIN>`` command to switch the PROG track to MAIN signal and allows your Engine Driver App to drive it away onto the main line tracks.
+DCC++EX 3.1 and above has a new software implementation logic that in a sense replaces a hardwired DPDT switch and combines multiple DCC++ commands in a sequence to perform the magic dubbed "DriveAway(tm)". It triggers a <R> read the CV1 Short or CV 17 & 18 Long address and CV8 Mfr ID, and CV29 Setup and then returns and automatically loads the Loco# into the throttle. 
+The Command Station then automatically sets ``<1 JOIN>`` command to switch the PROG track to MAIN signal and allows your Engine Driver App to drive it away onto the main line tracks.
 
 Logic Programming Protection;
 If you inadvertently touch or send any Programming command while an Engine is sitting on the PROG track when it's active as a [JOIN] Main line track, the DCC++EX software Automatically kicks back to Program Track Mode before accepting any other commands as safety procedure. 
@@ -46,7 +47,7 @@ Or else undesirable gremlins may appear, you've been forewarned. The proceeding 
 New "Discovered Servers" on WiFi Throttles
 ===========================================
 
-WiThrottles now detect and display both DCC++EX Command Station name and JMRI WiThrottle Server Profile name in the WiFi Throttle Apps.
+WiThrottles now detect and display both DCC++EX Command Station name and JMRI WiThrottle Server Profile name as 'Discoverd Servers' in the WiFi Throttle Apps.
 
 Sample Engine Driver App Discovered Servers:
       “DCC++EX”                 {Direct connect to the Command Station}

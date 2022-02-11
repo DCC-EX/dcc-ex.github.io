@@ -41,7 +41,7 @@ We added many new functions such as:
 * 28 speed step support in addtion to 128
 * Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
 * Created many new commands
-* Developed a new browser based throttle (`WebThrottle-EX <../throttles/ex-webthrottle.html>`_)
+* Developed a new browser based throttle (:doc:`WebThrottle-EX </throttles/ex-webthrottle>`)
 * New "DriveAway" feature to be able to recognize a loco on a siding used as a programming track and drive off of onto the main track
 
 ... and much, much more. 
@@ -63,7 +63,7 @@ We completely re-wrote current sense and ACK detect routines to better protect y
 Why did we do this?
 ====================
 
-First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Railroad Community for low cost and that worked as well or better than anything on the market. You can see our :ref:`Mission Statement <Mission>` on the main page.
+First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Railroad Community for low cost and that worked as well or better than anything on the market. You can see our :ref:`Mission Statement <index:Mission>` on the main page.
 
 Details to Make Engineer's Propellers Spin
 ============================================

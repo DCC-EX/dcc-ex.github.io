@@ -6,7 +6,7 @@ This is a detailed reference. For a summary version, please see :doc:`Command Su
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* `exWebThrottle <../../throttles/ex-webthrottle.html>`_ - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself! 
+* :doc:`exWebThrottle </throttles/ex-webthrottle>` - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!
 
 * `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Cellphone App WiFi Throttle  
 
@@ -385,7 +385,7 @@ Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadc
 Decoder address 0 does not have a corresponding linear address.  This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.
 If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works.  Or use the address/subaddress versions of the commands.
 
-Here is a spreadsheet in .XLSX format to help you: `Decoder Address Decoder Table <../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet>`_
+Here is a spreadsheet in .XLSX format to help you: :ref:`Decoder Address Decoder Table <reference/downloads/documents:Stationary Decoder Address Table (xlsx Spreadsheet)>`
 
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 

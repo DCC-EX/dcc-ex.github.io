@@ -35,7 +35,7 @@ This is our tested and proven configuration
 
 * DCC++EX 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFI - Combo Board
-* Deek Robot L298P Standard Motor Shield (or other `approved motor controller <../../reference/hardware/motor-boards.html>`_)
+* Deek Robot L298P Standard Motor Shield (or other :doc:`approved motor controller </reference/hardware/motor-boards>`)
 * 12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
 * Android Smartphone with Engine Driver v2.28.123 or iOS Smarphone with WiThrottle
@@ -240,7 +240,7 @@ After flashing, the ESP8266 Log will show it uploaded them all successfully and 
 
 - Disconnect the USB cable.
 
-Skip ahead to :ref:`3. Set the switches for run/sketch mode`
+Skip ahead to :ref:`advanced-setup/supported-microcontrollers/wifi-mega:3. Set the switches for run/sketch mode`
 
 With esptool.py
 ^^^^^^^^^^^^^^^^
@@ -283,7 +283,7 @@ AP Mode (the default) makes the Command Station an Access Point. That is a direc
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to setp 5.
 
-If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
+If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
 
 5. Download and Configure the DCC++EX Command Station Software
@@ -401,6 +401,6 @@ Suppliers
 
  https://www.amazon.com/SongHe-Mega2560-ATmega2560-ESP8266-Compatible/dp/B07THDDFSJ
 
- https://usa.banggood.com/Geekcreit-Mega-+WiFi-R3-Module-ATmega2560+ESP8266-32Mb-Memory-USB-TTL-CH340G-p-1205437.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=minha-usg-pc&currency=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=frank&utm_campaign=frank-ssc-usg-all-21LP-0112-01sale&ad_id=490995939324&gclid=Cj0KCQjwl9GCBhDvARIsAFunhsmmtqTacFhEVspUMw3shUU51ed2Akuh65HHr6uYDtXNEvkIbV9LgrwaAuZEEALw_wcB
+ https://usa.banggood.com/Geekcreit-Mega-+WiFi-R3-Module-ATmega2560+ESP8266-32Mb-Memory-USB-TTL-CH340G-p-1205437.html?cur_warehouse=CN
 
  ***TODO:*** show link for external antenna and how to cut the trace to the circuit trace antenna on the board.

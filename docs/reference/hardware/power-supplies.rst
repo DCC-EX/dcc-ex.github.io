@@ -6,22 +6,22 @@ The power supply is one of the most important parts of your setup. You need to s
 
 **What's covered here:**
 
-* :ref:`Do I need two power supplies?`
-* :ref:`Four ways to power the Arduino`
-* :ref:`Powering the Motor Controller`
-* :ref:`Wall Warts`
-* :ref:`Bricks (Laptop Style)`
-* :ref:`Adjustable Power Supplies`
-* :ref:`Cage Power Supplies`
-* :ref:`Dual voltage power supplies`
-* :ref:`Using one power supply with cheap converters to power everything`
-* :ref:`Using Buck Converters`
+* :ref:`reference/hardware/power-supplies:Do I need two power supplies?`
+* :ref:`reference/hardware/power-supplies:Four ways to power the Arduino`
+* :ref:`reference/hardware/power-supplies:Powering the Motor Controller`
+* :ref:`reference/hardware/power-supplies:Wall Warts`
+* :ref:`reference/hardware/power-supplies:Bricks (Laptop Style)`
+* :ref:`reference/hardware/power-supplies:Adjustable Power Supplies`
+* :ref:`reference/hardware/power-supplies:Cage Power Supplies`
+* :ref:`reference/hardware/power-supplies:Dual voltage power supplies`
+* :ref:`reference/hardware/power-supplies:Using one power supply with cheap converters to power everything`
+* :ref:`reference/hardware/power-supplies:Using Buck Converters`
 
 
 Do I need two power supplies?
 ==============================
 
-Well, you at least need two voltages. It is possible to get multiple voltages from one power supply, how to do that is covered below in the :ref:`Using one power supply with cheap converters to power everything`. Both your microcontroller (the Arduino) and the motor controller need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. The voltage requirement to the motor controller does not change based on how you power your Arduino, you need the correct voltage and amperage for your guage and layout.
+Well, you at least need two voltages. It is possible to get multiple voltages from one power supply, how to do that is covered below in the :ref:`reference/hardware/power-supplies:Using one power supply with cheap converters to power everything`. Both your microcontroller (the Arduino) and the motor controller need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. The voltage requirement to the motor controller does not change based on how you power your Arduino, you need the correct voltage and amperage for your guage and layout.
 
 Four ways to power the Arduino
 ----------------------------------
@@ -97,8 +97,7 @@ Bricks (Laptop Style)
    :scale: 25%
    :alt: Samsung brick
 
-https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ref=sr_1_3?dchild=1&keywords=14V+3A+power+supply&qid=1613861442&s=electronics&sr=1-3
-
+https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/
 
 Adjustable Power Supplies
 ==========================
@@ -118,7 +117,7 @@ Adjustable Power Supplies
 |
 
 
-https://www.amazon.com/dp/B07J6RC43S/ref=cm_sw_r_cp_api_glt_fabc_HFY5CW4MH3XJXFXQT4BW
+https://www.amazon.com/dp/B07J6RC43S/
 
 .. image:: ../../_static/images/power/belker_adjustable_45w.jpg
    :align: left
@@ -229,7 +228,7 @@ These come in different sizes. Show here is a 2A and a 6A Version. You can look 
 |
 |
 
-**One example from Amazon**, click to follow the link: `5 to 30V Adjustable regulator converter <https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/ref=pd_vtp_6?pd_rd_w=NMR1C&pf_rd_p=55cbb45e-2534-4809-9135-12f41eecb852&pf_rd_r=696YH3MQ2QHKXXR9VDW0&pd_rd_r=3e7133ca-ea27-4967-8d7e-ea1c40c8381a&pd_rd_wg=GZd2x&pd_rd_i=B07VNDGFT6&psc=1>`_
+**One example from Amazon**, click to follow the link: `5 to 30V Adjustable regulator converter <https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/>`_
 
 
 4 Pack of Buck Regular Converters
@@ -255,5 +254,5 @@ Cheap Buck Converter with Display $5
 
 This is a push button programmable 20W adjustable DC-DC buck converter module with digital display. It is based on LM2596 3A step-down voltage regulator and supports an input of 0~40V DC to an output of 1.25 to 37V with an accuracy of ± 0.05V.
 
-Here is one example sold by DFRobot, click to follow the link: `20W 3A programmable buck converter <https://www.dfrobot.com/product-1552.html?gclid=CjwKCAiAg8OBBhA8EiwAlKw3ks8tC8ywVBKBOQ6dKOSRZZSxoKMphpav7r7WmfW29Nl9uU7Mn7SJzRoCMSUQAvD_BwE>`_
+Here is one example sold by DFRobot, click to follow the link: `20W 3A programmable buck converter <https://www.dfrobot.com/product-1552.html>`_.
 

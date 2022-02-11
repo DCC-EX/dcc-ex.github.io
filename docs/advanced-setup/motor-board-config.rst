@@ -17,13 +17,13 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 
 **Links in This Page**
 
-* :ref:`Configure Using the Installer`
-* :ref:`Configure By Editing the config.h File`
-* :ref:`Your Board is in the Supported List`
-* :ref:`Your Board is NOT in the Supported List`
-* :ref:`Using High Accuracy Waveform Mode`
-* :ref:`Current Sense and Sense Factor`
-* :ref:`Just Buy a Current Sense Board Instead`
+* :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+* :ref:`advanced-setup/motor-board-config:Configure By Editing the config.h File`
+* :ref:`advanced-setup/motor-board-config:Your Board is in the Supported List`
+* :ref:`advanced-setup/motor-board-config:Your Board is NOT in the Supported List`
+* :ref:`advanced-setup/motor-board-config:Using High Accuracy Waveform Mode`
+* :ref:`advanced-setup/motor-board-config:Current Sense and Sense Factor`
+* :ref:`advanced-setup/motor-board-config:Just Buy a Current Sense Board Instead`
 
 Configure Using the Installer
 ==============================
@@ -33,7 +33,7 @@ Tinkerers and even Conductors should be comfortable with this option. If you are
 Configure By Editing the config.h File
 =======================================
 
-Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of `Currently supported boards <../reference/hardware/motor-boards.html>`_
+Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of :doc:`Currently supported boards </reference/hardware/motor-boards>`
 
 Open the config.h file in your editor. If this is the first time configuring your system, you may need to copy the "config.example.h" file and name the copy "config.h".
 
@@ -142,7 +142,7 @@ Using High Accuracy Waveform Mode
 
 You may ask, "Do I need high accuracy waveforms?" and the answer is probably not. But we are engineers, and we love to spend our days trying to eke out every bit of performance from the system, and maintain bragging rights for thinking of something 5% more clever than the other members of our team! Even our "standard" waveform is within the NMRA specification. For purists, or if you find a particular decoder that is not in spec and needs to have tighter timing on the DCC waveform, you can make sure you are using high accuracy mode.
 
-If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see `High Accuracy Waveform Mode <high-accuracy.html>`_.
+If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see :doc:`High Accuracy Waveform Mode </advanced-setup/high-accuracy>`.
 
 
 Current Sense and Sense factor

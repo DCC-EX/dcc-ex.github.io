@@ -109,7 +109,7 @@ To use the default AP mode, you don't have to do anything other than connect an 
 
 That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for DCC++ EX is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. DCC++ EX then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
 
-To see other configuration options you can set in your config.h file, see `WiFi Config Options`_ below.
+To see other configuration options you can set in your config.h file, see :ref:`advanced-setup/wifi-config:WiFi Config Options` below.
 
 You will need to know:
 
@@ -157,7 +157,7 @@ Simply click on that network and connect to it on your mobile device. You will n
 
 Ignore the warning that may pop up telling you that "Internet may not be available". The CS is not connected to the internet, and you are connecting ro the CS directly from your mobile device for the purpose of controlling trains, not surfing the web. Depending on the config and OS of your mobile device, you may still have internet access over mobile data through a cell tower connection. If you wish to use your home network internet (for example, if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
-Once you are connected to the CS with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the `Decoder Test <../reference/software/command-reference.html#decoder-test>`_ section of the Command Reference. 
+Once you are connected to the CS with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the :ref:`Decoder Test <reference/software/command-reference:DECODER TEST>` section of the Command Reference.
 
 .. note:: Your Mobile Throttle function keys are user defined default function keys, not the function keys you used in either JMRI or Rocrail engine roster function keys.
 
@@ -216,16 +216,16 @@ WiFi Config Options
 
 The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual Arduino IDE install, you will see all of these in the file you renamed from "config.example.h" to "config.h".
 
-| :ref:`#define IP_PORT 2560`
-| :ref:`#define ENABLE_WIFI true`
-| :ref:`#define DONT_TOUCH_WIFI_CONF`
-| :ref:`#define WIFI_SSID "Your network name"`
-| :ref:`#define WIFI_PASSWORD "Your network passwd"`
-| :ref:`#define WIFI_HOSTNAME "dccex"`
-| :ref:`#define WIFI_CONNECT_TIMEOUT 14000`
-| :ref:`#define ENABLE_ETHERNET true`
-| :ref:`#define IP_ADDRESS { 192, 168, 1, 200 }`
-| :ref:`#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
+| :ref:`advanced-setup/wifi-config:#define IP_PORT 2560`
+| :ref:`advanced-setup/wifi-config:#define ENABLE_WIFI true`
+| :ref:`advanced-setup/wifi-config:#define DONT_TOUCH_WIFI_CONF`
+| :ref:`advanced-setup/wifi-config:#define WIFI_SSID "Your network name"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_PASSWORD "Your network passwd"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_HOSTNAME "dccex"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_CONNECT_TIMEOUT 14000`
+| :ref:`advanced-setup/wifi-config:#define ENABLE_ETHERNET true`
+| :ref:`advanced-setup/wifi-config:#define IP_ADDRESS { 192, 168, 1, 200 }`
+| :ref:`advanced-setup/wifi-config:#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
 
 #define IP_PORT 2560
 --------------------

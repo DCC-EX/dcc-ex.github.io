@@ -6,13 +6,13 @@ You can connect up to 5 WiFi throttles. For the standard Mega board, we recommen
 
 For more information on how to configure your CS to use the boards below, see :doc:`Wifi Setup <../../get-started/wifi-setup>`
 
-- :ref:`Makerfabs WiFi Shield`.
-- :ref:`Duinopeak WiFi Shield`.
-- :ref:`ESP-01S`.
-- :ref:`WangTongze Board`.
-- :ref:`Mega+WiFi Configuration`. (this link will take you to another page)
-- :ref:`Sparkfun Thing Plus (ESP32)`.
-- :ref:`ESP32_Ant-01 Breakout and Development Board (ESP32)`.
+- :ref:`reference/hardware/wifi-boards:Makerfabs WiFi Shield`.
+- :ref:`reference/hardware/wifi-boards:Duinopeak WiFi Shield`.
+- :ref:`reference/hardware/wifi-boards:ESP-01S`.
+- :ref:`reference/hardware/wifi-boards:WangTongze Board`.
+- :doc:`Mega+WiFi </advanced-setup/supported-microcontrollers/wifi-mega>`. (this link will take you to another page)
+- :ref:`reference/hardware/wifi-boards:Sparkfun Thing Plus (ESP32)`.
+- :ref:`reference/hardware/wifi-boards:ESP32_Ant-01 Breakout and Development Board (ESP32)`.
 
 .. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead. The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
 

@@ -81,7 +81,7 @@ Opening the Serial Monitor always resets the Arduino board. Therefore, you shoul
 Enter Commands to the CS
 -------------------------
 
-There is an entire language that DCC-EX understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the `DCC++ EX Command Reference <https://dcc-ex.com/reference/software/command-reference.html>`_ . Let's just try two commands to make sure everything is working.
+There is an entire language that DCC-EX understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the :doc:`DCC++ EX Command Reference </reference/software/command-reference>`. Let's just try two commands to make sure everything is working.
 
 All DCC-EX commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the motor shield.
 
@@ -115,15 +115,15 @@ You will need to find one that is compatible with your phone. Some phones come w
 
 Here is an adapter:
 
-https://www.amazon.com/Thunderbolt-Compatible-Chromebook-Pixelbook-Microsoft/dp/B07KR45LJW/ref=sr_1_4?dchild=1&keywords=otg+adapter&qid=1625863945&s=electronics&sr=1-4
+https://www.amazon.com/Thunderbolt-Compatible-Chromebook-Pixelbook-Microsoft/dp/B07KR45LJW/
 
 Here is one for Android or MacBook Pro with USB-C with a short pigtail:
 
-https://www.amazon.com/Adapter-JSAUX-Compatible-MacBook-Samsung/dp/B07L749R9R/ref=sr_1_5?dchild=1&keywords=otg+cable&qid=1625863614&sr=8-5
+https://www.amazon.com/Adapter-JSAUX-Compatible-MacBook-Samsung/dp/B07L749R9R/
 
 And one for an iPad or iPhone:
 
-https://www.amazon.com/dp/B07V2CMXQT/ref=redir_mobile_desktop?_encoding=UTF8&aaxitk=7aa803dc4108c96ff75758ce1d6f9e46&hsa_cr_id=1752570960701&pd_rd_plhdr=t&pd_rd_r=486502c7-13e1-40e1-9f35-f52cd9335772&pd_rd_w=vHecY&pd_rd_wg=pxSba&ref_=sbx_be_s_sparkle_mcd_asin_0_title
+https://www.amazon.com/dp/B09KBZDDGL/
 
 Every cell phone OS such as Android or iOS has a program or two that will work as a serial monitor. For Android, here are a few:
 

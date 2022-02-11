@@ -43,11 +43,11 @@ extensions = [
     'sphinxcontrib.spelling',
 ]
 
+autosectionlabel_prefix_document = True
+
 spelling_lang='en_US'
 tokenizer_lang='en_US'
 spelling_word_list_filename = ['spelling_wordlist.txt']
-
-suppress_warnings = ['autosectionlabel.*']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -87,6 +87,13 @@ html_theme_options = {
     'titles_only': True,
     'collapse_navigation': False,
     'navigation_depth': -1 
+}
+
+html_context = {
+    'display_github': True,
+    'github_user': 'DCC-EX',
+    'github_repo': 'dcc-ex.github.io',
+    'github_version': 'sphinx/docs/',
 }
 
 #leave this off to have todos invisible, set to true to render them and make the easy to see

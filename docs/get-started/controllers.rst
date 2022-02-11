@@ -59,14 +59,14 @@ For those who want the power of JMRI to operate a complex layout, you would inst
 Command Language (API)
 ======================
 
-There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and via the JMRI Web Server command language. For an explanation of what these terms mean, and what that means to you, please see `Protocols: WiThrottle, DCC++, and Web Servers Explained <../throttles/protocols.html>`_. DCC++ EX natively understands our own DCC++ API and the WiThrottle API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running JMRI, and use JMRI as the middleware to send commands to DCC++EX. JMRI uses DCC++ commands when speaking to the Command Station.
+There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and via the JMRI Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC++, and Web Servers Explained </throttles/protocols>`. DCC++ EX natively understands our own DCC++ API and the WiThrottle API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running JMRI, and use JMRI as the middleware to send commands to DCC++EX. JMRI uses DCC++ commands when speaking to the Command Station.
 
 Compatible Throttles
 =====================
 
 Here is a list of some of the controllers you can use with DCC++EX. We work closely with developers to help them maintain compatibility with the DCC++EX Command Station. Check back on occasion, as new devices are being added all the time.
 
-For more information on any of these throttles, you can click on their links below or see our `Throttles Page Index <../throttles/index.html>`_.
+For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.
 
 Our WebThrottle-EX (DCC++ | USB/Serial)
 ----------------------------------------
@@ -85,7 +85,7 @@ Here are your connections, just a computer running a chromium-based browser, a U
    :align: center
    :scale: 45%
 
-For operating instructions see `how to use WebThrottle-EX <../throttles/ex-webthrottle.html>`_
+For operating instructions see :doc:`how to use WebThrottle-EX </throttles/ex-webthrottle>`
 
 
 Engine Driver (Android | WiThrottle | WiFi)
@@ -95,7 +95,7 @@ Engine Driver is a throttle app for your phone that can control multiple locos a
 
 The second method is to use JMRI and connect Engine Driver (ED) to the computer running JMRI. That computer would then connect to the CS via a USB cable (normally) or via a Wireless USB Bridge. The computer running JMRI can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full JMRI setup with WiFi with virtually no fuss.
 
-See `Engine Driver Page <../throttles/engine-driver.html>`_
+See :doc:`Engine Driver Page </throttles/engine-driver>`
 
 
 DCCpp CAB (Android | DCC++ | WiFi, BlueTooth)
@@ -103,35 +103,35 @@ DCCpp CAB (Android | DCC++ | WiFi, BlueTooth)
 
 DCCpp CAB is a throttle that natively speaks the <DCC++> command language (API). It can connect via WiFi or Bluetooth! If you don't need software like JMRI running on a computer, DCCpp CAB lets you connect directly to the CS.
 
-See `DCCpp CAB Page <../throttles/dccpp-cab.html>`_
+See :doc:`DCCpp CAB Page </throttles/dccpp-cab>`
 
 WiThrottle (iOS | WiThrottle | WiFi)
 -------------------------------------
 
 WiThrottle is an app for iPhones and iPads. It can connect directly to the CS like Engine Driver does, or connect to JMRI on a computer and then have JMRI connect to the CS via a USB cable.
 
-See `WiThrottle Page <../throttles/withrottle.html>`_
+See :doc:`WiThrottle Page </throttles/withrottle>`
 
 Locontrol (iOS | JMRI Web Server, DCC++ | WiFi)
 ------------------------------------------------
 
 Locontrol is a beautiful and functional throttle that uses the JMRI Web Server to connect. Soon it will be able to connect directly to the CS by using the <DCC++> Command set.
 
-See `Locontrol Page <../throttles/locontrol.html>`_
+See :doc:`Locontrol Page </throttles/locontrol>`
 
 DigiTrainsPro (Android, iOS, Windows | WiThrottle, DCC++ | WiFi)
 -----------------------------------------------------------------
 
 This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to DCC-EX using our command language.
 
-See `DigiTrainsPro Page <../throttles/digitrainspro.html>`_
+See :doc:`DigiTrainsPro Page </throttles/digitrainspro>`
 
 SRCPClient (iOS | WiThrottle, DCC++ | WiFi)
 --------------------------------------------
 
 Operate up to 3 locos from your iOS device. It supports both WiThrottle AND the DCC++ APIs.
 
-See `SRCPClient Page <../throttles/srcpclient.html>`_
+See :doc:`SRCPClient Page </throttles/srcpclient>`
 
 
 JMRI
@@ -164,4 +164,4 @@ The USB Wireless Bridge is a pair of small, inexpensive devices that let you rep
 
 ***TODO:insert diagram here***
 
-For more information about all the throttles, see the `Throttles Section <../throttles/index.html>`_>
+For more information about all the throttles, see the :doc:`Throttles Section </throttles/index>`>

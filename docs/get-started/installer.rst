@@ -15,7 +15,7 @@ Requirements (for installing)
 Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
 ============================================================================
 
-* Download the `DCC-EX Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_ which will automatically determine the version you need and download it
+* Download the :ref:`DCC-EX Installer <download/commandstation:exInstaller>` which will automatically determine the version you need and download it
 * Extract the Installer into its own folder with your favorite unzip program
 * Open File Manager for Windows or a terminal window in Mac OS and Linux and navigate to that folder
 * Windows users run ``exInstaller.exe``
@@ -118,7 +118,7 @@ If you have a 2 or 4 line LCD display connected and check this box, you will see
 
 * **LCD Rows** - The number of horizontal rows or lines on your display
 
-For more information about using displays, see `I2C Displays <../reference/hardware/i2c-displays.html>`_
+For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
 
 OLED CheckBox
 ---------------
@@ -135,7 +135,7 @@ If you have an OLED display connected and check this box, you will see the follo
 
 * **OLED Height (in pixels)** - Enter the height or number of vertical pixels on your display
 
-For more information about using displays, see `I2C Displays <../reference/hardware/i2c-displays.html>`_
+For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
 
 Refresh Ports Button
 ----------------------
@@ -210,7 +210,7 @@ Using exWebThrottle
 
 **Figure 10** - exWebThrottle
 
-Click this link: `exWebThrottle <../throttles/ex-webthrottle.html>`_ to run exWebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/exWebThrottle>`_ to get the latest version to run on your computer.
+Click this link: :doc:`exWebThrottle </throttles/ex-webthrottle>` to run exWebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/exWebThrottle>`_ to get the latest version to run on your computer.
 
 Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
 --------------------------------------------------------------

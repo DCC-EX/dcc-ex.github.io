@@ -4,12 +4,12 @@ Microcontroller Boards
 
 CommandStation-EX currently is designed for Arduino and select microcontollers. Out of the box, it is compatible with the following boards:
 
-* :ref:`Arduino Mega` **[RECOMMENDED]**
-* :ref:`Mega+Wifi` (Tinkerer Level)
-* :ref:`Arduino Uno`
-* :ref:`Arduino Nano` (Tinkerer Level)
-* :ref:`Nano Every` (Tinkerer Level)
-* :ref:`Teensy 3.x & 4.x` (Engineer Level)
+* :ref:`reference/hardware/microcontroller-boards:Arduino Mega` **[RECOMMENDED]**
+* :ref:`reference/hardware/microcontroller-boards:Mega+Wifi` (Tinkerer Level)
+* :ref:`reference/hardware/microcontroller-boards:Arduino Uno`
+* :ref:`reference/hardware/microcontroller-boards:Arduino Nano` (Tinkerer Level)
+* :ref:`reference/hardware/microcontroller-boards:Nano Every` (Tinkerer Level)
+* :ref:`reference/hardware/microcontroller-boards:Teensy 3.x & 4.x` (Engineer Level)
 
 Arduino Mega
 ===============================
@@ -76,9 +76,9 @@ See the detailed section on the :doc:`Teensy <../../advanced-setup/supported-mic
 Will you support other microcontrollers in the future?
 =======================================================
 
-Yes, that is on our :doc:`roadmap <../../roadmap/index>`.
+Yes, that is on our :doc:`roadmap </roadmap/index>`.
 
-Click here for a complete `Shopping List <./shopping-list.html>`_
+Click here for a complete :doc:`Shopping List </reference/hardware/shopping-list>`.
 
 
 Boards that will NOT work
@@ -88,5 +88,5 @@ Boards that will NOT work
 
 **ESP32** - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atmel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.
 
-Click here for a complete `Shopping List <./shopping-list.html>`_
+Click here for a complete :doc:`Shopping List </reference/hardware/shopping-list>`.
 

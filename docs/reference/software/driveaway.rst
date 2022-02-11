@@ -62,7 +62,7 @@ New DCC++EX 4.0 EXRAIL "Roster" Feature
 
 You can now manually enter your ROSTER engine address, names and function keys into your myAutomation.h file and directly pass this Command Stations Engine Roster into your Engine Driver and WiThrottle Apps.  By choosing “DCC++EX” from discovered servers an Engine Driver or WiThrottle becomes Directly connected to the Command Station and the ‘Server Roster’ radial dial now lists the New DCC++EX EXRAIL ’ROSTER’ Engines and Function key layout on the Engine Driver or WiThrottles in addition to the standard Engine Driver ‘default mode’ function key names that come preset up with Engine Driver.
 
-Current JMRI Engine Roster.
+Current JMRI Engine Roster.  
 When choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered servers an Engine Driver or WiThrottle is then connected via a {PC or Pi} JMRI WiThrottle Server to the Command Station and the JMRI Engine Roster & function keys are loaded to your WiFi Throttle App.
 
 Please be sure your JMRI device {Windows, Mac iOS or Raspberry Pi} for JMRI WiThrottle Server is signed onto and connected to the same WiFi SSID name and Password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the JMRI WiThrottle Server IP address: port# displayed into your Engine Driver & WiThrottle App.

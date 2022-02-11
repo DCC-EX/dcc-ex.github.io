@@ -54,17 +54,16 @@ Sample Engine Driver App Discovered Servers:
       “My JMRI Railroad”        {JMRI connected via WiThrottle Server}
 
 Our new multicast Dynamic Network Server (mDNS) enhancement allows us to display the available WiFi server connections to a DCC++EX Command Station. 
-Choosing one allows your WiThrottle App to connect to and load Server Rosters and function keys to your throttle.
+Choosing one allows your WiThrottle App to connect to and load Server Rosters and function keys to your throttle from Either the DCC++EX Command Station, Or from JMRI Engine Roster.
 
 
 New DCC++EX 4.0 EXRAIL "Roster" Feature 
 ========================================
 
-Server 'Roster' list Engines and Function key layout on Engine Driver or WiThrottles.
-When choosing “DCC++EX” from discovered servers an Engine Driver or WiThrottle is Directly connected to the Command Station and the WiFi Throttle function keys can be loaded from either the "Default Mode" which load function names you have previously set up in Engine Driver, or now with the New EX-RAIL "ROSTER" command which allows you to enter all your engine numbers, names and function keys into your myAutomation.h file and then automatically upload and pass the Command Stations Server Roster and function keys into your Engine Driver and WiThrottle Apps.  
+You can now manually enter your ROSTER engine address, names and function keys into your myAutomation.h file and directly pass this Command Stations Engine Roster into your Engine Driver and WiThrottle Apps.  By choosing “DCC++EX” from discovered servers an Engine Driver or WiThrottle becomes Directly connected to the Command Station and the ‘Server Roster’ radial dial now lists the New DCC++EX EXRAIL ’ROSTER’ Engines and Function key layout on the Engine Driver or WiThrottles in addition to the standard Engine Driver ‘default mode’ function key names that come preset up with Engine Driver.
 
 Current JMRI Engine Roster.
-When choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered servers an Engine Driver or WiThrottle is connected via a {PC or Pi} JMRI WiThrottle Server to the Command Station and the JMRI Engine Roster & function keys are loaded to your WiFi Throttle App..
+When choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered servers an Engine Driver or WiThrottle is then connected via a {PC or Pi} JMRI WiThrottle Server to the Command Station and the JMRI Engine Roster & function keys are loaded to your WiFi Throttle App.
 
-Please be sure your JMRI device {Windows, Mac iOS or Raspberry Pi} for JMRI WiThrottle Server is signed onto and connected to the same WiFi SSID name and password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the JMRI WiThrottle Server IP address: port# displayed into your Engine Driver & WiThrottle App.
+Please be sure your JMRI device {Windows, Mac iOS or Raspberry Pi} for JMRI WiThrottle Server is signed onto and connected to the same WiFi SSID name and Password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the JMRI WiThrottle Server IP address: port# displayed into your Engine Driver & WiThrottle App.
 

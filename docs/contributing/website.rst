@@ -143,4 +143,11 @@ Use a figure when including a caption. Sphinx will automatically number the
 figure. Add a ``:name:`` option to be able to refer to the figure in the text
 using ``:numref:`<figure name>```.
 
+Tables
+------
+
+For titled tables use the ``.. table::`` directive, followed by the title.
+Sphinx will automatically number the table. Add a ``:name:`` option to be able
+to refer to the figure in the text using ``:numref:`<table name>```.
+
 *Work in progress*

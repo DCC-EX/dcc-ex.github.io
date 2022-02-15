@@ -341,7 +341,7 @@ The rest of the parameters are as defined for the turnout definition commands.
 &quot;1&quot; = register 1 was changed
 &quot;20&quot; = set to speed 20
 &quot;1&quot; = forward direction
-&quot;&lt;&quot; = End DCC++ EX command
+&quot;&gt;&quot; = End DCC++ EX command
 </pre></div>
 </div>
 <p><strong>Forget Locos</strong></p>
@@ -634,7 +634,7 @@ with an external device, then the device will be operated accordingly.</p></li>
 <li><p>Before Version 3.2.0: Returns: <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">THROWN&gt;</span></code> for each defined DCC Accessory Turnout or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no turnouts have beed defined or saved.</p></li>
 <li><p>After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the <code class="docutils literal notranslate"><span class="pre">THROWN</span></code> state (1=thrown, 0=closed) appended.  For example,
 a servo turnout definition will be listed as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">SERVO</span> <span class="pre">PIN</span> <span class="pre">THROWNPOSITION</span> <span class="pre">CLOSEDPOSITION</span> <span class="pre">PROFILE</span> <span class="pre">THROWN&gt;</span></code> and a DCC turnout
-will be listed as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">DCC</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">THROWN&gt;</span></code>, a VPIN turnout as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">VPIN</span> <span class="pre">PIN</span> <span class="pre">THROWN&gt;</span> <span class="pre">and</span> <span class="pre">an</span> <span class="pre">LCN</span> <span class="pre">turnout</span> <span class="pre">as</span> <span class="pre">``&lt;H</span> <span class="pre">ID</span> <span class="pre">LCN</span> <span class="pre">THROWN&gt;</span></code>.</p></li>
+will be listed as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">DCC</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">THROWN&gt;</span></code>, a VPIN turnout as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">VPIN</span> <span class="pre">PIN</span> <span class="pre">THROWN&gt;</span></code> and an LCN turnout as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">LCN</span> <span class="pre">THROWN&gt;</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the turnout to control.</p>

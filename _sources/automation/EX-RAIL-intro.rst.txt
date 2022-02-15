@@ -312,7 +312,7 @@ When the Command Station is powered up or reset, EX-RAIL starts operating at the
 
 .. code-block:: cpp
 
-   SENDLOCO(3,13) // Start sequence 12 using loco 3
+   SENDLOCO(3,13) // Start sequence 13 using loco 3
    DONE           // This marks the end of the startup process
 
 The sequence can also be started from a serial monitor with the command ``</ START 3 13>``.

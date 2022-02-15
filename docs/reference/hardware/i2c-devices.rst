@@ -90,23 +90,27 @@ will be 0x27.
 
    PCF8574 GPIO Expander Module
 
-.. code-block:: none
+.. table:: I2C Address/Jumper Settings for GPIO Expander (base=0x20)
 
-  Address/Jumper Settings for GPIO Expander (base=0x20)
-  +=========+=====+=====+=====+
-  | Address | A2  | A1  | A0  |
-  +=========+=====+=====+=====+
-  | 0x20    | OFF | OFF | OFF |
-  | 0x21    | OFF | OFF | ON  |
-  | 0x22    | OFF | ON  | OFF |
-  | 0x23    | OFF | ON  | ON  |
-  | 0x24    | ON  | OFF | OFF |
-  | 0x25    | ON  | OFF | ON  |
-  | 0x26    | ON  | ON  | OFF |
-  | 0x27    | ON  | ON  | ON  |
-  +=========+=====+=====+=====+
-
-**Table 1** - I2C Address Setting Examples
+     +---------+-----+-----+-----+
+     | Address | A2  | A1  | A0  |
+     +=========+=====+=====+=====+
+     | 0x20    | OFF | OFF | OFF |
+     +---------+-----+-----+-----+
+     | 0x21    | OFF | OFF | ON  |
+     +---------+-----+-----+-----+
+     | 0x22    | OFF | ON  | OFF |
+     +---------+-----+-----+-----+
+     | 0x23    | OFF | ON  | ON  |
+     +---------+-----+-----+-----+
+     | 0x24    | ON  | OFF | OFF |
+     +---------+-----+-----+-----+
+     | 0x25    | ON  | OFF | ON  |
+     +---------+-----+-----+-----+
+     | 0x26    | ON  | ON  | OFF |
+     +---------+-----+-----+-----+
+     | 0x27    | ON  | ON  | ON  |
+     +---------+-----+-----+-----+
 
 The same address settings apply for the MCP23017 and MCP23008 devices, which also have three address jumpers A2-A0 and use the 
 same address range 0x20-0x27.

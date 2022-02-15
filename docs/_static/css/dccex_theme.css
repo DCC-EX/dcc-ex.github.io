@@ -10,18 +10,6 @@
     width: 60%;
 }
 
-.rst-content table.docutils{
-    width: 50%;
-    margin: 0 25%;
-}
-
-@media screen and (max-width:1400px) {
-    .rst-content table.docutils {
-        width: 100%;
-        margin: 0;
-    }
-}
-
 .intro-table img {
     width: 70%;
     height: auto;

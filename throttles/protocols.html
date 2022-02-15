@@ -1,81 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>WiThrottle Server, Web Server, DCC++ API Explained &mdash; DCC++ EX  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="DCC++ EX Web Throttle" href="ex-webthrottle.html" />
     <link rel="prev" title="Throttles" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
-          
-
-          
             <a href="../index.html">
-          
-
-          
-            
             <img src="../_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -83,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/levels.html">Choose Your Level</a></li>
@@ -211,144 +158,83 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">DCC++ EX</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Throttles</a> &raquo;</li>
-        
       <li>WiThrottle Server, Web Server, DCC++ API Explained</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/throttles/protocols.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="withrottle-server-web-server-dcc-api-explained">
-<h1>WiThrottle Server, Web Server, DCC++ API Explained<a class="headerlink" href="#withrottle-server-web-server-dcc-api-explained" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="withrottle-server-web-server-dcc-api-explained">
+<h1>WiThrottle Server, Web Server, DCC++ API Explained<a class="headerlink" href="#withrottle-server-web-server-dcc-api-explained" title="Permalink to this headline"></a></h1>
 <p>There are several competing standards and ways to connect external software such as Throttles to the DCC++ EX Command Station or to JMRI. These standards are called “protocols” and the definition and instructions for how to implement them is called an API (Application Programming Interface). There is the WiThrottle API using a WiThrottle Server, the JMRI API using a Web Server, and the DCC++ EX API using &lt;DCC++&gt; Commands. You need to know that the language your throttle uses will work with how you want to connect to your Command Station.</p>
-<div class="section" id="the-dcc-api">
-<h2>The DCC++ API<a class="headerlink" href="#the-dcc-api" title="Permalink to this headline">¶</a></h2>
+<section id="the-dcc-api">
+<h2>The DCC++ API<a class="headerlink" href="#the-dcc-api" title="Permalink to this headline"></a></h2>
 <p>The first way to connect to DCC++ EX is to use our DCC++ API. This is the set of commands that tell the Command Station how to control your trains. DCC++EX understands simple command surrounded by brackets like this: “&lt;1 MAIN&gt;”. That command turns your main track power on.</p>
 <p>Since this is just sending characters back and forth across a serial connection, anything that can connect to an Arduino through a USB cable or one of the other serial ports using WiFi of Bluetooth can send DCC++ commands to the CS. This method is fast, direct, and can take advantage of special features that exist only in DCC++ EX. You can even connect using the Arduino Serial Monitor or connect to our WiFi with a terminal program like PuTTY and type DCC++ commands manually. Our WebThrottle-EX, JMRI and CABs like DCCpp CAB and DigiTrainsPro send commands in DCC++ format.</p>
-</div>
-<div class="section" id="the-withrottle-server">
-<h2>The WiThrottle Server<a class="headerlink" href="#the-withrottle-server" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-withrottle-server">
+<h2>The WiThrottle Server<a class="headerlink" href="#the-withrottle-server" title="Permalink to this headline"></a></h2>
 <p>The WiThrottle Protocol is the proprietary protocol developed by Matt Hoffman at <a class="reference external" href="https://www.WiThrottle.com">https://www.WiThrottle.com</a>. Like the DCC++ API, is consists of messages composed of strings of text characters sent across a serial connection that tell the Command Station how to control your layout. The command “PPA1”, for example turns the power on in WiThrottle. It can be confusing, but WiThrottle can refer to the protocol (as in WiThrottle Server or WiThrottle compatible), but it also refers to the iOS throttle App called “WiThrottle” (it stands for WiFi Throttle).</p>
 <p>DCC++ EX allows you to use WiThrottle “servers” built into JMRI and other software and have them connect to your Command Station via a USB or serial connection, but DCC-EX also implements a WiThrottle server in our Command Station software itself. A “server” is just a fancy way of saying that there is software running inside JMRI and DCC++ EX that can understand WiThrottle commands and “serve” or “service” clients that want to connect and send WiThrottle commands. The ability of DCC-EX to natively “speak” WiThrottle means you can directly connect a WiThrottle compatible Throttle (aka CAB) via Wifi or Bluetooth to the CS and run trains. But you can still connect to JMRI WiThrottle instead and connect JMRI to DCC++EX with a USB cable. So DCC++ EX is bi-lingual, we speak DCC++ AND WiThrottle! Apps like Engine Driver and WiThrottle for iOS send commands in the WiThrottle format.</p>
-</div>
-<div class="section" id="the-jmri-web-server">
-<h2>The JMRI WEB Server<a class="headerlink" href="#the-jmri-web-server" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-jmri-web-server">
+<h2>The JMRI WEB Server<a class="headerlink" href="#the-jmri-web-server" title="Permalink to this headline"></a></h2>
 <p>JMRI has two kinds of servers you can connect to built into the JMRI sofware. We already mentioned the WiThrottle server, but JMRI also has a WEB Server. Devices can connect to JMRI and send commands like it would to a WEB page. This is yet another protocol and is supported by throttles like DigiTrainsPro. When connecting using a throttle that uses the WEB Server, you connect your throttle to that via WiFi, and then connect to DCC++EX with a USB or Serial connection.</p>
-</div>
-<div class="section" id="a-note-about-wifi-dropped-connections">
-<h2>A Note about WiFi Dropped Connections<a class="headerlink" href="#a-note-about-wifi-dropped-connections" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="a-note-about-wifi-dropped-connections">
+<h2>A Note about WiFi Dropped Connections<a class="headerlink" href="#a-note-about-wifi-dropped-connections" title="Permalink to this headline"></a></h2>
 <p>Phones and laptop like to think they are “smart” and want to connect you to the strongest signal and to a network that has internet capability. If you use the DCC++ EX Command Station as an Access Point (AP), which doesn’t connect to the internet, and you connect to DCC++ EX with your throttle, your device may disconnect you from the CS without you knowing and without your permission. You should turn off the option to “automatically connect” to your home network. You may even have to “forget” your home network when you are using your wireless device to connect to DCC-EX. If you would rather, you can change settings in your config.h file to connect to your home network as a client instead running as an AP, and then have your throttle devices find the CS by its IP Address on your home network. You can find out more about that in <a class="reference internal" href="../get-started/wifi-setup.html"><span class="doc">Wifi Setup</span></a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ex-webthrottle.html" class="btn btn-neutral float-right" title="DCC++ EX Web Throttle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Throttles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ex-webthrottle.html" class="btn btn-neutral float-right" title="DCC++ EX Web Throttle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
-
-    </p>
+    <p>&#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

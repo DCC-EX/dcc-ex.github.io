@@ -1,81 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Connecting a Servo Module &mdash; DCC++ EX  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Power Supplies" href="power-supplies.html" />
     <link rel="prev" title="I2C GPIO Expander Modules" href="gpio-module.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
-          
-
-          
             <a href="../../index.html">
-          
-
-          
-            
             <img src="../../_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -83,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Choose Your Level</a></li>
@@ -211,79 +158,34 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">DCC++ EX</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html">Reference</a> &raquo;</li>
-        
           <li><a href="index.html">Hardware</a> &raquo;</li>
-        
       <li>Connecting a Servo Module</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/servo-module.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="connecting-a-servo-module">
-<h1>Connecting a Servo Module<a class="headerlink" href="#connecting-a-servo-module" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="connecting-a-servo-module">
+<h1>Connecting a Servo Module<a class="headerlink" href="#connecting-a-servo-module" title="Permalink to this headline"></a></h1>
 <p>To connect a servo module to DCC++EX, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from ebay, Amazon, etc. for a few dollars.</p>
@@ -306,20 +208,20 @@ consume more current than the Arduino is able to supply, and so a separate 5V su
 <p>And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
 servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <a class="reference internal image-reference" href="../../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
-<div class="section" id="using-servos-with-ex-rail">
-<h2>Using Servos with EX-RAIL<a class="headerlink" href="#using-servos-with-ex-rail" title="Permalink to this headline">¶</a></h2>
+<section id="using-servos-with-ex-rail">
+<h2>Using Servos with EX-RAIL<a class="headerlink" href="#using-servos-with-ex-rail" title="Permalink to this headline"></a></h2>
 <p>Defining Turnouts?</p>
-<div class="section" id="controlling-servos-for-turnouts">
-<h3>Controlling Servos for Turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this headline">¶</a></h3>
+<section id="controlling-servos-for-turnouts">
+<h3>Controlling Servos for Turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this headline"></a></h3>
 <p>SERVO_TURNOUT Command</p>
-</div>
-<div class="section" id="controlling-servos-for-animations">
-<h3>Controlling Servos for Animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="controlling-servos-for-animations">
+<h3>Controlling Servos for Animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this headline"></a></h3>
 <p>SERVO Command</p>
-</div>
-</div>
-<div class="section" id="technical-discussion-for-engineers">
-<h2>Technical Discussion for Engineers<a class="headerlink" href="#technical-discussion-for-engineers" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="technical-discussion-for-engineers">
+<h2>Technical Discussion for Engineers<a class="headerlink" href="#technical-discussion-for-engineers" title="Permalink to this headline"></a></h2>
 <p>There are three types of servos, standard or “Positional Rotation”, “Continuous Rotation” and “Linear”</p>
 <p><strong>A Standard, positional rotation servo</strong> allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo</p>
 <p><strong>A Continuous Rotation Servo</strong> can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counterclockwise.</p>
@@ -336,55 +238,38 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <p>Keep a spare slot (we recommend 100) open on your first PCA9685 board so that you can test servo positions with the <cite>&lt;D SERVO …&gt;</cite> command to connect your servos to and get the exact positions you need.</p>
 </div>
 <p>Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to the an external 5V power supply. Do NOT connect this to the 5V power of the Arduino! The ground wire is usually black or brown and connects to a ground pin. The signal pin is typically yellow, orange or white and should be connected to a digital pin of the PCA9685.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="power-supplies.html" class="btn btn-neutral float-right" title="Power Supplies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="gpio-module.html" class="btn btn-neutral float-left" title="I2C GPIO Expander Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="power-supplies.html" class="btn btn-neutral float-right" title="Power Supplies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
-
-    </p>
+    <p>&#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

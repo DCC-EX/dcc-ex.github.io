@@ -1,81 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>DCC++EX HAL Architecture &mdash; DCC++ EX  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Writing a HAL Driver" href="writing-hal-driver.html" />
     <link rel="prev" title="I/O Device Drivers and HAL" href="hal-config.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
-          
-
-          
             <a href="../../index.html">
-          
-
-          
-            
             <img src="../../_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -83,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Choose Your Level</a></li>
@@ -211,85 +158,41 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">DCC++ EX</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html">Reference</a> &raquo;</li>
-        
       <li>DCC++EX HAL Architecture</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/software/hal.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="dcc-ex-hal-architecture">
-<h1>DCC++EX HAL Architecture<a class="headerlink" href="#dcc-ex-hal-architecture" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="dcc-ex-hal-architecture">
+<h1>DCC++EX HAL Architecture<a class="headerlink" href="#dcc-ex-hal-architecture" title="Permalink to this headline"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
 <p>Firstly, an apology.  The document below is mostly based on my activity log while developing the HAL software and other associated modules (I2C etc.).
 Consequently, it is badly structured, random, and mostly extremely technical.  For that, I apologise.</p>
 <p>Now, on to the content.  You have been warned…</p>
-</div>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <p><strong>HAL</strong> = <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer.</p>
 <p>The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from DCC++EX code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.</p>
 <p>The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.</p>
@@ -303,11 +206,11 @@ LED, or a servo moves the railway track points from one position to another.</p>
 The class GPIOBase implements functionality that is common to, and inherited by, the drivers for GPIO input/output modules
 (MCP23017, MCP23008 and PCF8574).  Consequently, the drivers for those modules are relatively simple and just include the
 device-specific commands for reading and writing to the module’s registers.</p>
-</div>
-<div class="section" id="command-reference">
-<h2>Command Reference<a class="headerlink" href="#command-reference" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="revised-turnout-command-list">
-<h3>Revised Turnout Command List<a class="headerlink" href="#revised-turnout-command-list" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="command-reference">
+<h2>Command Reference<a class="headerlink" href="#command-reference" title="Permalink to this headline"></a></h2>
+<section id="revised-turnout-command-list">
+<h3>Revised Turnout Command List<a class="headerlink" href="#revised-turnout-command-list" title="Permalink to this headline"></a></h3>
 <dl class="simple">
 <dt>&lt;T id SERVO vpin activePos inactivePos profile&gt;</dt><dd><p>Define turnout servo (PWM) on specified vpin.
 The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM).
@@ -336,9 +239,9 @@ and 4=Bounce (subject to revision).
 <dt>&lt;T id&gt;</dt><dd><p>Delete nominated turnout</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="hal-programming-interface">
-<h3>HAL Programming Interface<a class="headerlink" href="#hal-programming-interface" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hal-programming-interface">
+<h3>HAL Programming Interface<a class="headerlink" href="#hal-programming-interface" title="Permalink to this headline"></a></h3>
 <p>The interface functions to the HAL are as follows.  Apart from the ‘create’ functions, these functions are generally only called internally
 from within the DCC++ EX software.  The xxxx::create() functions however are required to be added to the user’s myHal.cpp or mySetup.h
 configuration file in order to register the device driver and configure the specified VPINs.</p>
@@ -401,9 +304,9 @@ If the device in question does not support the configureServo operation, the val
 [This is called from the loop() function in CommandStation-EX.ino.]</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="hal-define-symbols">
-<h3>HAL #define Symbols<a class="headerlink" href="#hal-define-symbols" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hal-define-symbols">
+<h3>HAL #define Symbols<a class="headerlink" href="#hal-define-symbols" title="Permalink to this headline"></a></h3>
 <p>The following #define symbols may be defined in the IODevice.h file or the platformio.ini file in order to facilitate fault-finding or to remove the
 HAL from the build.</p>
 <dl class="simple">
@@ -440,9 +343,9 @@ operation (default unless I2C_NO_INTERRUPTS is defined).</p>
 are also used by the serial USB, clock and other components).  It will also slow down the I2C throughput as there will be increased latency between consecutive bytes sent and received.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="mysetup-files">
-<h3>mySetup Files<a class="headerlink" href="#mysetup-files" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mysetup-files">
+<h3>mySetup Files<a class="headerlink" href="#mysetup-files" title="Permalink to this headline"></a></h3>
 <p>There are various ways of configuring I/O and creating turnouts, sensors and other objects when the CS is powered on:</p>
 <p>After using the commands (&lt;S …&gt;, &lt;T …&gt;, &lt;Z …&gt; etc) to define sensors, turnouts and outputs, use the &lt;E&gt; command to
 save them to EEPROM.  Then, when the CS restarts, the definitions are read back from EEPROM and the objects recreated.  This is limited to turnout, sensor and output definitions.</p>
@@ -484,10 +387,10 @@ device can be declared statically so that the compiler allocates the basic RAM r
 </div></blockquote>
 <p>Because the myHal.cpp module is a self-contained C++ module, autocomplete and visual syntax checking will be fully
 functional in editors that support it (e.g. PlatformIO).</p>
-</div>
-</div>
-<div class="section" id="list-of-changes">
-<h2>List of Changes<a class="headerlink" href="#list-of-changes" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="list-of-changes">
+<h2>List of Changes<a class="headerlink" href="#list-of-changes" title="Permalink to this headline"></a></h2>
 <p>The following functional changes have been done in the neil-hal branch to support the implementation of the HAL in DCC++EX,
 and to improve the handling of Displays, Turnouts, Sensors and Outputs.</p>
 <ul>
@@ -696,9 +599,9 @@ The device is configured in myHal.cpp by</p>
 </div></blockquote>
 </li>
 </ul>
-</div>
-<div class="section" id="future-enhancements">
-<h2>Future Enhancements<a class="headerlink" href="#future-enhancements" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="future-enhancements">
+<h2>Future Enhancements<a class="headerlink" href="#future-enhancements" title="Permalink to this headline"></a></h2>
 <ol class="arabic">
 <li><p>HAL: Produce a simple IODevice class template, to help DCC++EX developers/tinkerers who want to implement their own extensions protocols,
 e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.</p>
@@ -774,55 +677,38 @@ state and not, for example, the current position of a servo, which may be any ar
 servo’s range.</p></li>
 </ol>
 <p><em>N McKechnie, 27th August 2021</em></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="writing-hal-driver.html" class="btn btn-neutral float-right" title="Writing a HAL Driver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="hal-config.html" class="btn btn-neutral float-left" title="I/O Device Drivers and HAL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="writing-hal-driver.html" class="btn btn-neutral float-right" title="Writing a HAL Driver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
-
-    </p>
+    <p>&#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -125,4 +125,18 @@ source file, define a target:
 
     Link to the `DCC++EX home page <https://dcc-ex.com/index.html>`_.
 
+Images
+------
+
+Include images with the ``.. image::`` and ``.. figure::`` directives.
+Horizontal positioning using the ``:align:`` option needs a bit of care.
+Where possible e.g. if just presenting a single image, either don't use it, or
+choose ``:align: center``.
+``:align: left`` (or right) allows multiple images to be shown on the same
+line (if the browser window is wide enough), or text to flow around the image.
+But you may have to cancel this behaviour for the next content yourself:
+a single ``|`` adds an additional blank line before the next paragraph in the
+output; before a heading, or if a blank line is not wanted use
+``.. rst-class:: clearer``.
+
 *Work in progress*

@@ -95,8 +95,6 @@ Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware fi
   
    <p><a class="dcclink" href="../../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
 
-|
-
 Using esptool.py (Windows, Mac, Linux)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -192,29 +190,7 @@ NOTE: It may take a few seconds to open while you see a black cmd window
 
    Figure 6 - Flash Tool Button Selections
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
+.. rst-class:: clearer
 
 Setup the files and memory locations in the Flasher Tool
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""

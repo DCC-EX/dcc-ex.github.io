@@ -37,17 +37,7 @@ A "sniffer" is a device (often made with an Arduino) that connects to the track 
    :scale: 24%
    :alt: Example Sniffer Output 3
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+.. rst-class:: clearer
 
 Figure 1: Example outputs of a DCC Sniffer. Click on any of the images to view them full size.
 
@@ -60,7 +50,6 @@ A logic analyzer is a device that connects to the Command Station signal pins an
    :align: center
    :scale: 100%
    :alt: DCC Signal Analyzer output
-   :figclass: align-center
 
    Figure 2: Example Logic Analyzer output
 
@@ -74,29 +63,11 @@ Buy it
 Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` file and upload it to your microcontroller with the Arduino IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
 
 .. figure:: ../../_static/images/tools/iowa_scale_eng_dcc_board.jpg
-   :align: left
+   :align: center
    :scale: 60%
    :alt: Iowa Scale Engineering DCC Sniffer/Decoder Board
-   :figclass: align-left
 
    Figure 3: Iowa Scale Engineering DCC Sniffer/Decoder Board
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 https://www.iascaled.com/store/ARD-DCCSHIELD
 
@@ -117,7 +88,6 @@ You will need to upload our :doc:`DCCInspector-EX <../../download/dcc-inspector-
    :align: center
    :scale: 70%
    :alt: Packet Sniffer Block Diagram
-   :figclass: align-center
 
    Figure 4: DCC Packet Sniffer Block Diagram
 
@@ -148,7 +118,6 @@ With this option, you can connect to anywhere on your track. Wiring can be tempo
    :align: center
    :scale: 90%
    :alt: Minimum recommended circuit
-   :figclass: align-center
 
    Figure 5: Minimum recommended circuit
 
@@ -160,7 +129,6 @@ The circuit above represents the minimal number of components to potentially int
    :align: center
    :scale: 35%
    :alt: Geoff Bunza DCC Interface Schematic
-   :figclass: align-center
 
    Figure 6: Geoff Bunza DCC Interface Schematic
 
@@ -170,7 +138,6 @@ The above is actually a simple circuit to build. To make it easy, Geoff has prov
    :align: center
    :scale: 60%
    :alt: Geoff Bunza DCC Interface Board
-   :figclass: align-center
 
    Figure 7: Geoff Bunza DCC Interface Board
 
@@ -216,7 +183,6 @@ And if you want to get into the development of DCCInspector-EX and why we recomm
    :align: center
    :scale: 60%
    :alt: Neil's DCC-EX Sniffer
-   :figclass: align-center
 
    Figure 8: Neil's DCC-EX Sniffer in a 3D Printed Case
 
@@ -232,25 +198,11 @@ Logic Analyzer/Decoder
 =========================
 
 .. figure:: ../../_static/images/tools/logic_analyzer.jpg
-   :align: left
+   :align: center
    :scale: 50%
    :alt: Logic Analyzer
-   :figclass: align-left
 
    Figure 9: Logic Analyzer
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. Ebay and AliExpress are good sources:
 
@@ -267,7 +219,6 @@ Any set of probes that will connect to the pins that are exposed between the Ard
    :align: center
    :scale: 18%
    :alt: Logic probes
-   :figclass: align-center
 
    Figure 10: Logic Probes
 
@@ -295,7 +246,6 @@ It will look something line this. There will be just 2 files. The "cache" file w
    :align: center
    :scale: 100%
    :alt: Installing the DCC protocol decoder
-   :figclass: align-center
 
    Figure 11: Installing the DCC protocol decoder
 
@@ -358,7 +308,6 @@ for a "0". It then immediately switches and does the same thing on the other tra
    :align: center
    :scale: 35%
    :alt: DCC Waveform
-   :figclass: align-center
 
    Figure 12: DCC Waveform
 
@@ -371,7 +320,6 @@ In order to fully understand how this works, we have to stop thinking in terms o
    :align: center
    :scale: 25%
    :alt: DCC Pulse Train
-   :figclass: align-center
 
    Figure 13: DCC Pulse Train
 
@@ -381,7 +329,6 @@ Now let's see things from a different perspective, both literally and figurative
    :align: center
    :scale: 25%
    :alt: DCC Pulse Train in Perspective
-   :figclass: align-center
 
    Figure 14: DCC Pulse Train in Perspective
 
@@ -391,7 +338,6 @@ If it helps, you can think in the analog/DC world again for the purposes of conn
    :align: center
    :scale: 25%
    :alt: DCC Booster Setup
-   :figclass: align-center
 
    Figure 15: DCC Booster Setup
 
@@ -401,7 +347,6 @@ At any given instant, one rail or the other is at our full 12-24 Volts and the o
    :align: center
    :scale: 25%
    :alt: DCC Phasing Diagram
-   :figclass: align-center
 
    Figure 16: DCC Phasing Diagram
 
@@ -454,7 +399,6 @@ See the thread on the MRH blog here: https://model-railroad-hobbyist.com/node/17
    :align: center
    :scale: 100%
    :alt: 2 Diode Phase Checker
-   :figclass: align-center
 
    Figure 17: 2 Diode Phase Checker
 
@@ -469,8 +413,5 @@ Circuit two
    :align: center
    :scale: 50%
    :alt: Diode Phase Checker
-   :figclass: align-center
 
    Figure 18: Diode Phase Checker
-
-

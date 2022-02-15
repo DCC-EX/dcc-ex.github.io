@@ -21,15 +21,7 @@ Tinkerer Level
    :scale: 50%
    :align: left
 
-|
-|
-|
-|
-|
-|
-|
-|
-   
+.. rst-class:: clearer
 
 The Nano Every is a direct replacement for the Arduino Nano. It runs on 5V and is the same size as a Nano, 45 x18mm. However it is a more powerful board than a standard Nano or Uno. In particular:
 

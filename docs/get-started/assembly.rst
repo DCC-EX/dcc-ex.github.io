@@ -40,6 +40,7 @@ Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 
 
 .. figure:: ../_static/images/motor_shield_vin2.jpg
    :alt: Cut Vin trace on arduino motor shield
+   :align: center
    :scale: 80%
 
    Cutting the Vin trace (click to enlarge)
@@ -53,6 +54,7 @@ In this method, you can just bend the Vin pin so that instead of connecting to t
 
 .. figure:: ../_static/images/motorboards/bend_pin1.jpg
    :alt: Bend out the Vin pin on the arduino motor shield
+   :align: center
    :scale: 50%
 
    Bending out the Pin (click to enlarge)
@@ -76,6 +78,7 @@ Place both boards on the table with the power connector end facing in the same d
 
 .. figure:: ../_static/images/mega_and_motor_shield.png
    :alt: Align Mega and Motor Shield
+   :align: center
    :scale: 100%
 
    Properly orient the boards
@@ -84,6 +87,7 @@ a. Did you remember to cut the trace on the motor shield? If not, see above. Oth
 
 .. figure:: ../_static/images/bent_pins.png
    :alt: bent pins
+   :align: center
    :scale: 75%
 
    Bent pins
@@ -92,6 +96,7 @@ b. Line up the pins on the side of the board closest to the USB with the header 
 
 .. figure:: ../_static/images/seat1.jpg
    :alt: Line up the pins
+   :align: center
    :scale: 75%
 
    Line up left side first
@@ -100,6 +105,7 @@ c. Just align them and start to push them in but don't push them all the way. Us
 
 .. figure:: ../_static/images/seat2.jpg
    :alt: Push the pins partway in
+   :align: center
    :scale: 75%
 
    Get all the pins started
@@ -108,6 +114,7 @@ d. Do the same on the other side. Get all the pins aligned and start to press ge
 
 .. figure:: ../_static/images/seat_reverse1.jpg
    :alt: Line up the other side
+   :align: center
    :scale: 75%
 
    Start the other side
@@ -116,6 +123,7 @@ e. Now, being careful to not bend any pins gently press, using a rocking motion 
 
 .. figure:: ../_static/images/seat_press.jpg
    :alt: Press together
+   :align: center
    :scale: 75%
    
    Gently press the boards together
@@ -124,6 +132,7 @@ f. The boards should be seated. Note the pins are longer than the headers. It is
 
 .. figure:: ../_static/images/seated.jpg
    :alt: Fully seated
+   :align: center
    :scale: 75%
 
    The boards when fully seated
@@ -143,6 +152,7 @@ If you are using a "bench" or metal box type power supply, simply connect the DC
 
 .. figure:: ../_static/images/motor_power2b.jpg
    :alt: Power in to the Motor Shield
+   :align: center
    :scale: 75%
 
    Power in to the Motor Shield
@@ -151,6 +161,7 @@ If you are using a laptop style "brick" power supply or an adapter that plugs in
 
 .. figure:: ../_static/images/motor_power3.jpg
    :alt: Screw Terminal Adapter Power In
+   :align: center
    :scale: 75%
 
    Screw Terminal Adapter to Motor Shield
@@ -164,6 +175,7 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 
 .. figure:: ../_static/images/motor_power2b.jpg
    :alt: Main and Prog Out to track
+   :align: center
    :scale: 75%
 
    Out to Main and Program tracks

@@ -10,12 +10,6 @@
     width: 60%;
 }
 
-.rst-content img {
-    width: 70%;
-    height: auto;
-    margin: 5% 15%;
-}
-
 .rst-content table.docutils{
     width: 50%;
     margin: 0 25%;
@@ -28,6 +22,11 @@
     }
 }
 
+.intro-table img {
+    width: 70%;
+    height: auto;
+    margin: 5% 15%;
+}
 
 .dcclink {
   background-color: lightseagreen;

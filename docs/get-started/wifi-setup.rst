@@ -99,18 +99,20 @@ Turn the board so that the tab end is to the left and the power connectors on th
 Seat the boards
 -----------------
 
-Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (Figure 4). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see Figure 5).
+Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (:numref:`wifi-right-side-pins-aligned`). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see :numref:`wifi-fully-seated-boards`).
 
 
 .. figure:: ../_static/images/wifi_seat2a.jpg
    :alt: Get the right side pins aligned
    :scale: 75%
+   :name: wifi-right-side-pins-aligned
 
    Get the right side pins aligned
 
 .. figure:: ../_static/images/wifi_seat_full.jpg
    :alt: Fully seated boards
    :scale: 75%
+   :name: wifi-fully-seated-boards
 
    Fully seated boards
 
@@ -128,7 +130,7 @@ Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board, a
 Take a second jumper wire and connect it to any one of the Rx pins on the Wifi Board and connect the other end to Tx1 on the mega (pin 18).
 
 .. figure:: ../_static/images/wifi_jumpers2.png
-   :alt: Figure 6 - Install the Jumper wires
+   :alt: Install the Jumper wires
    :scale: 75%
 
    Install the jumper wires
@@ -194,7 +196,7 @@ Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity
    Rx   -----> Tx
 
 
-In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and "level shifters" to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In Figure 10 below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.
+In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and "level shifters" to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In :numref:`esp-01s-adapters` below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.
 
 .. note:: About current requirements: While we at DCC-EX Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.
 
@@ -202,6 +204,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
 .. figure:: ../_static/images/esp-01_adapter.jpg
    :alt: ESP-01s Adapters
    :scale: 75%
+   :name: esp-01s-adapters
 
    ESP-01 Breakout Boards.
 

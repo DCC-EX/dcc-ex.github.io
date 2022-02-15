@@ -128,12 +128,13 @@ e. Now, being careful to not bend any pins gently press, using a rocking motion 
    
    Gently press the boards together
 
-f. The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimeters of the pins between the bottom of the motor board and the top of the headers. Figure 9 shows the boards as they look properly seated. 
+f. The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimeters of the pins between the bottom of the motor board and the top of the headers. :numref:`boards-fully-seated` shows the boards as they look properly seated. 
 
 .. figure:: ../_static/images/seated.jpg
    :alt: Fully seated
    :align: center
    :scale: 75%
+   :name: boards-fully-seated
 
    The boards when fully seated
 

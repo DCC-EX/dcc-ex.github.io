@@ -196,7 +196,7 @@ Setup the files and memory locations in the Flasher Tool
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 - Click on the each file button (the "..." buttons) and find the bin files you extracted.
-- Follow Figure 6 and pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
+- Follow :numref:`flasher-settings-screen` and pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
 - Make sure to check all the file checkboxes to the left of the filled in file names
 - Set the EXACT settings using the radio buttons & baud rate settings: (26M, 40MHz, DIO, 16Mbit-C1, Your COM port selected, and 460800 baud).
 
@@ -204,6 +204,7 @@ Setup the files and memory locations in the Flasher Tool
    :alt: Flasher Settings Screen
    :scale: 80%
    :align: center
+   :name: flasher-settings-screen
 
    Flasher Settings Screen
 

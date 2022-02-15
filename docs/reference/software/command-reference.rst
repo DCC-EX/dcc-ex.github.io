@@ -179,7 +179,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
    "1" = register 1 was changed
    "20" = set to speed 20
    "1" = forward direction
-   "<" = End DCC++ EX command
+   ">" = End DCC++ EX command
 
 **Forget Locos**
 
@@ -473,7 +473,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   * Before Version 3.2.0: Returns: ``<H ID ADDRESS SUBADDRESS THROWN>`` for each defined DCC Accessory Turnout or ``<X>`` if no turnouts have beed defined or saved.  
   * After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the ``THROWN`` state (1=thrown, 0=closed) appended.  For example, 
     a servo turnout definition will be listed as ``<H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>`` and a DCC turnout
-    will be listed as ``<H ID DCC ADDRESS SUBADDRESS THROWN>``, a VPIN turnout as ``<H ID VPIN PIN THROWN> and an LCN turnout as ``<H ID LCN THROWN>``.
+    will be listed as ``<H ID DCC ADDRESS SUBADDRESS THROWN>``, a VPIN turnout as ``<H ID VPIN PIN THROWN>`` and an LCN turnout as ``<H ID LCN THROWN>``.
 
 * ``ID`` : The numeric ID (0-32767) of the turnout to control.  
 

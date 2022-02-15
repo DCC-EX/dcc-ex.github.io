@@ -82,7 +82,7 @@ If you travel to shows, or take your setup to a friend's house, this allows for 
    :alt: AP Mode
    :scale: 50%
 
-   Figure 1: Access Point Mode - Things connect to the WiFi Board
+   Access Point Mode - Things connect to the WiFi Board
 
 Station Mode
 -------------
@@ -93,7 +93,7 @@ Station mode allows you to connect the Command Station to your existing home net
    :alt: Station Mode
    :scale: 50%
 
-   Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP address
+   Station Mode - Things connect to the router and find the WiFi board by its IP address
 
 Images are courtesy of `NodeMCU <https://nodemcu.readthedocs.io/en/latest/modules/wifi/>`_. You can find a great tutorial on WiFi there also.
 

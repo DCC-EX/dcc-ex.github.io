@@ -19,7 +19,7 @@ A Operational Standalone WiFI DCC Command Station
    :scale: 40%
    :align: center
 
-   figure 1 - Mega+WiFi Board
+   Mega+WiFi Board
 
 This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers are at the bottom of this page:
 
@@ -64,7 +64,7 @@ Plug your board into your computer with a USB micro cable to see if it is recogn
    :scale: 100%
    :align: center
 
-   figure 2 - CH340 Recognized 
+   CH340 Recognized 
 
 If you don't see the CH340 with the Mega plugged into USB, download and install the drivers from here:
 
@@ -136,7 +136,7 @@ With the Mega UNPLUGGED (no power connected!), you will set some switches. Use t
    :scale: 50%
    :align: center
 
-   Figure 3 - Important Board Locations
+   Important Board Locations
 
 Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
 
@@ -145,7 +145,7 @@ Note that switch 8 is not connected to anything, you don't need to touch it. Wit
    :scale: 30%
    :align: center
 
-   Figure 4 - Switch Settings for Flashing
+   Switch Settings for Flashing
 
 Use this image to set the serial port switch to **RXD3/TXD3**.
 
@@ -154,7 +154,7 @@ Use this image to set the serial port switch to **RXD3/TXD3**.
    :scale: 100%
    :align: center
 
-   Figure 5 - Switch Setting for Serial Port
+   Switch Setting for Serial Port
 
 
 Your board should be configured follows:
@@ -188,7 +188,7 @@ NOTE: It may take a few seconds to open while you see a black cmd window
    :scale: 80%
    :align: left
 
-   Figure 6 - Flash Tool Button Selections
+   Flash Tool Button Selections
 
 .. rst-class:: clearer
 
@@ -205,7 +205,7 @@ Setup the files and memory locations in the Flasher Tool
    :scale: 80%
    :align: center
 
-   Figure 7 - Flasher Settings Screen
+   Flasher Settings Screen
 
 .. NOTE:: These settings are for the ESP8266EX chip on the Mega+Wifi, you may need different settings to flash an ESP-01s, ESP12, etc.
 
@@ -250,7 +250,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
    :scale: 30%
    :align: center
 
-   Figure 8 - Switch Settings for sketch load/run
+   Switch Settings for sketch load/run
 
 4. Decide if you want AP Mode or Station Mode
 ==============================================

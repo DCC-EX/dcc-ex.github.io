@@ -128,7 +128,7 @@ Here is a visual diagram. R1 (current sense modifier), R2 (diode current limiter
    :alt: IBT_2 Wiring 1
    :scale: 70%
 
-   Figure 1. - Wiring Schematic
+   Wiring Schematic
 
 
 It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins directly on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
@@ -137,7 +137,7 @@ It should look like following. Note we have included the Arduino Mega and have t
    :alt: IBT_2 Wiring 2
    :scale: 25%
 
-   Figure 2. - Wiring visual layout
+   Wiring visual layout
 
 .. Note:: We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.
 
@@ -245,7 +245,7 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
    :alt: IBT_2 Resistors
    :scale: 70%
 
-   Figure 3. - 10k (103) current sense resistors
+   10k (103) current sense resistors
 
 
 The spec sheet of the BTS7960B states that the "expected" (aka nominal) value for the ratio of output current to the current reported at the current sense pin is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the CS pin. If we apply that through our 5k of resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This means that a 3A current can be reported as anything from 1V to 5V on the CS pin. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connected to your Arduino! In other words, **You could destroy the analog input pin on your Arduino**.

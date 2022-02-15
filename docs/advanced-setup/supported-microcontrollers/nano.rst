@@ -20,7 +20,7 @@ The Arduino Nano is an Uno in disguise. It has the same processor, the same spee
    :scale: 60%
    :align: center
    
-   **Figure 1** - Arduino Nano
+   Arduino Nano
 
 
 What You need

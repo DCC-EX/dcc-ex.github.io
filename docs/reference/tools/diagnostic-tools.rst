@@ -51,7 +51,7 @@ A logic analyzer is a device that connects to the Command Station signal pins an
    :scale: 100%
    :alt: DCC Signal Analyzer output
 
-   Figure 2: Example Logic Analyzer output
+   Example Logic Analyzer output
 
 
 DCC Sniffer (PACKET analyzer)
@@ -67,7 +67,7 @@ Well it isn't quite a turnkey solution, but it's close. You need this shield and
    :scale: 60%
    :alt: Iowa Scale Engineering DCC Sniffer/Decoder Board
 
-   Figure 3: Iowa Scale Engineering DCC Sniffer/Decoder Board
+   Iowa Scale Engineering DCC Sniffer/Decoder Board
 
 https://www.iascaled.com/store/ARD-DCCSHIELD
 
@@ -89,7 +89,7 @@ You will need to upload our :doc:`DCCInspector-EX <../../download/dcc-inspector-
    :scale: 70%
    :alt: Packet Sniffer Block Diagram
 
-   Figure 4: DCC Packet Sniffer Block Diagram
+   DCC Packet Sniffer Block Diagram
 
 - **Power From Track** This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track OR from batteries.
 
@@ -119,7 +119,7 @@ With this option, you can connect to anywhere on your track. Wiring can be tempo
    :scale: 90%
    :alt: Minimum recommended circuit
 
-   Figure 5: Minimum recommended circuit
+   Minimum recommended circuit
 
 The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1uF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our DCCInspector-EX sketch uses the pin 13 LED to provide the same function.
 
@@ -130,7 +130,7 @@ The circuit above represents the minimal number of components to potentially int
    :scale: 35%
    :alt: Geoff Bunza DCC Interface Schematic
 
-   Figure 6: Geoff Bunza DCC Interface Schematic
+   Geoff Bunza DCC Interface Schematic
 
 The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like Oshpark) and have them make boards for you. DCC-EX may be selling these, so keep checking back. Here is what the boards look like:
 
@@ -139,7 +139,7 @@ The above is actually a simple circuit to build. To make it easy, Geoff has prov
    :scale: 60%
    :alt: Geoff Bunza DCC Interface Board
 
-   Figure 7: Geoff Bunza DCC Interface Board
+   Geoff Bunza DCC Interface Board
 
 All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the microcontroller and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.
 
@@ -184,7 +184,7 @@ And if you want to get into the development of DCCInspector-EX and why we recomm
    :scale: 60%
    :alt: Neil's DCC-EX Sniffer
 
-   Figure 8: Neil's DCC-EX Sniffer in a 3D Printed Case
+   Neil's DCC-EX Sniffer in a 3D Printed Case
 
 HERE:
 https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/
@@ -202,7 +202,7 @@ Logic Analyzer/Decoder
    :scale: 50%
    :alt: Logic Analyzer
 
-   Figure 9: Logic Analyzer
+   Logic Analyzer
 
 No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. Ebay and AliExpress are good sources:
 
@@ -220,7 +220,7 @@ Any set of probes that will connect to the pins that are exposed between the Ard
    :scale: 18%
    :alt: Logic probes
 
-   Figure 10: Logic Probes
+   Logic Probes
 
 Install PulseView
 --------------------
@@ -247,7 +247,7 @@ It will look something line this. There will be just 2 files. The "cache" file w
    :scale: 100%
    :alt: Installing the DCC protocol decoder
 
-   Figure 11: Installing the DCC protocol decoder
+   Installing the DCC protocol decoder
 
 On Linux::
 
@@ -309,7 +309,7 @@ for a "0". It then immediately switches and does the same thing on the other tra
    :scale: 35%
    :alt: DCC Waveform
 
-   Figure 12: DCC Waveform
+   DCC Waveform
 
 
 But those familiar with how DC and AC voltage works might look at that and see a square wave where there is positive and negative voltage. That isn't what is happening, there is never any negative voltage! Only the current changes direction inside something connected to the track, like the decoder in your loco. There is no "ground", only the voltage present on one rail with respect to the other.
@@ -321,7 +321,7 @@ In order to fully understand how this works, we have to stop thinking in terms o
    :scale: 25%
    :alt: DCC Pulse Train
 
-   Figure 13: DCC Pulse Train
+   DCC Pulse Train
 
 Now let's see things from a different perspective, both literally and figuratively by tilting the track away from you and imagining the pulse train operating like your model train and riding down the track.
 
@@ -330,7 +330,7 @@ Now let's see things from a different perspective, both literally and figurative
    :scale: 25%
    :alt: DCC Pulse Train in Perspective
 
-   Figure 14: DCC Pulse Train in Perspective
+   DCC Pulse Train in Perspective
 
 If it helps, you can think in the analog/DC world again for the purposes of connecting one piece of track in one block to a piece of track in another. Each rail is like a wire connected to our power supply, we have just cut it to length and are connecting to another piece that is connected to a different power supply. Here is the Command Station on the left connected to one section of track and a booster connected to another section of track with the two track sections isolated from each other by a small gap.
 
@@ -339,7 +339,7 @@ If it helps, you can think in the analog/DC world again for the purposes of conn
    :scale: 25%
    :alt: DCC Booster Setup
 
-   Figure 15: DCC Booster Setup
+   DCC Booster Setup
 
 At any given instant, one rail or the other is at our full 12-24 Volts and the other is at zero. If our loco is rolling over the gap from one block or power district to another, we need to make sure that the signal, and therefore votage, is at the same level on both sides. We call this being "in phase". So if there is +15V on Rail A of the first block, we need that same +15V on Rail A of the next block. If not, and rail A on block 1 is at 15V and Rail A on block 2 is at 0V, and the metal wheels of our loco temporarily connect those two rails as they roll over them, we have a short circuit. Thus, if the rails of two blocks are out of phase with each other, then they are always at at a the opposite potential (except for a tiny transition period) and will represent a short circuit when crossing from one to the other.
 
@@ -348,7 +348,7 @@ At any given instant, one rail or the other is at our full 12-24 Volts and the o
    :scale: 25%
    :alt: DCC Phasing Diagram
 
-   Figure 16: DCC Phasing Diagram
+   DCC Phasing Diagram
 
 So how can we check our phase? We can use any of the simple circuits below or a more complicated one listed at the end.
 
@@ -400,7 +400,7 @@ See the thread on the MRH blog here: https://model-railroad-hobbyist.com/node/17
    :scale: 100%
    :alt: 2 Diode Phase Checker
 
-   Figure 17: 2 Diode Phase Checker
+   2 Diode Phase Checker
 
 **Pros** - Just 4 components, small, simple
 
@@ -414,4 +414,4 @@ Circuit two
    :scale: 50%
    :alt: Diode Phase Checker
 
-   Figure 18: Diode Phase Checker
+   Diode Phase Checker

@@ -122,11 +122,11 @@ You will need to know:
 
 Whenever you connect a USB cable and open the serial monitor, you reset the program running on your CS. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
 
-.. image:: ../_static/images/wifi/ap_mode1.jpg
+.. figure:: ../_static/images/wifi/ap_mode1.jpg
    :alt: IP Address
    :scale: 80%
 
-**Figure 1** - Serial Monitor Log (click to enlarge)
+   Serial Monitor Log (click to enlarge)
 
 You will see the line that has ``AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\n``, where 2560 is your port number
 

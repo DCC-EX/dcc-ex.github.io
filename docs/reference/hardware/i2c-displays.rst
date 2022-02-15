@@ -25,20 +25,20 @@ Examples of compatible displays
 Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.
 
 
-.. image:: ../../_static/images/display/lcd_20x4_backpack.jpg
+.. figure:: ../../_static/images/display/lcd_20x4_backpack.jpg
    :alt: 20 x 4 LCD
    :scale: 80%
 
-**Figure 1** - 20 x 4 LCD with backpack
+   20 x 4 LCD with backpack
 
 And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:
 
 
-.. image:: ../../_static/images/display/lcd_16x2_backpack.jpg
+.. figure:: ../../_static/images/display/lcd_16x2_backpack.jpg
    :alt: 16 x 2 LCD
    :scale: 80%
 
-**Figure 2** - 16 x 2 LCD with backpack
+   16 x 2 LCD with backpack
 
 Connecting an LCD Display
 ==========================
@@ -49,11 +49,11 @@ Soldering on the Backpack (if you purchased separate pieces)
 And here is a picture of the board after soldering or if you purchase a board already solderd (or "welded" as some of the Chinese sites call it)
 
 
-.. image:: ../../_static/images/display/lcd_soldered.jpg
+.. figure:: ../../_static/images/display/lcd_soldered.jpg
    :alt: Backpack Soldered to LCD
    :scale: 80%
 
-**Figure 3** - LCD with backpack soldered to the back
+   LCD with backpack soldered to the back
 
 Connecting the Jumper Wires
 ----------------------------
@@ -100,18 +100,18 @@ Connecting an OLED display
 OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO. You will require a Mega. Here are some examples of OLED displays:
 
 
-.. image:: ../../_static/images/display/adafruit_96in_oled_sm.jpg
+.. figure:: ../../_static/images/display/adafruit_96in_oled_sm.jpg
    :alt: Adafruit .96" OLED
    :scale: 80%
 
-**Figure 4** - Adafruit .96" OLED Display
+   Adafruit .96" OLED Display
 
 
-.. image:: ../../_static/images/display/makerfocus_oled_sm.jpg
+.. figure:: ../../_static/images/display/makerfocus_oled_sm.jpg
    :alt: Makerfocus OLED Display
    :scale: 80%
 
-**Figure 5** - Makerfocus 128x32 .91" OLED Display
+   Makerfocus 128x32 .91" OLED Display
 
 Soldering Wires to the Display
 -------------------------------

@@ -180,6 +180,7 @@ In order to connect to your home network, you must open the config.h file in a t
 Look for these lines in the file:
 
 .. code-block:: cpp
+   :caption: Station Mode Configuration
 
    /////////////////////////////////////////////////////////////////////////////////////
    //
@@ -195,8 +196,6 @@ Look for these lines in the file:
    #define WIFI_SSID "Your network name"
    #define WIFI_PASSWORD "Your network passwd"
    #define WIFI_HOSTNAME "dccex"
-
-Figure 2 - Station Mode Configuration
 
 First, make sure that the ``#define ENABLE_WIFI true`` line is not commented out. Two slashes ``//`` in front of a line make it a comment, and not a line of code.
 

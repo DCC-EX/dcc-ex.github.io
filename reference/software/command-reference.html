@@ -802,16 +802,16 @@ servo outputs and I/O extenders, it is the pin number defined for the HAL device
 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.</p>
 <p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFLAG</span></code> : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">0</span><span class="p">:</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">forward</span> <span class="n">operation</span> <span class="p">(</span><span class="n">ACTIVE</span><span class="o">=</span><span class="n">HIGH</span> <span class="o">/</span> <span class="n">INACTIVE</span><span class="o">=</span><span class="n">LOW</span><span class="p">)</span>
-              <span class="mi">1</span> <span class="o">=</span> <span class="n">inverted</span> <span class="n">operation</span> <span class="p">(</span><span class="n">ACTIVE</span><span class="o">=</span><span class="n">LOW</span> <span class="o">/</span> <span class="n">INACTIVE</span><span class="o">=</span><span class="n">HIGH</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
+              1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
 
-<span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="n">restored</span> <span class="n">on</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span> <span class="n">to</span> <span class="n">either</span> <span class="n">ACTIVE</span> <span class="ow">or</span> <span class="n">INACTIVE</span>
-                  <span class="n">depending</span> <span class="n">on</span> <span class="n">state</span> <span class="n">before</span> <span class="n">power</span><span class="o">-</span><span class="n">down</span><span class="o">.</span>
-              <span class="mi">1</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="nb">set</span> <span class="n">on</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span><span class="p">,</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">first</span> <span class="n">created</span><span class="p">,</span>
-                  <span class="n">to</span> <span class="n">either</span> <span class="n">ACTIVE</span> <span class="n">of</span> <span class="n">INACTIVE</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">2</span>
+IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE
+                  depending on state before power-down.
+              1 = state of pin set on power-up, or when first created,
+                  to either ACTIVE of INACTIVE depending on IFLAG, bit 2
 
-<span class="n">IFLAG</span><span class="p">,</span> <span class="n">bit</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">0</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">INACTIVE</span> <span class="n">upon</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">first</span> <span class="n">created</span>
-              <span class="mi">1</span> <span class="o">=</span> <span class="n">state</span> <span class="n">of</span> <span class="n">pin</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">ACTIVE</span> <span class="n">upon</span> <span class="n">power</span><span class="o">-</span><span class="n">up</span> <span class="ow">or</span> <span class="n">when</span> <span class="n">first</span> <span class="n">created</span>
+IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
+              1 = state of pin set to ACTIVE upon power-up or when first created
 </pre></div>
 </div>
 <p>Once all outputs have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper Case “E” command to store their definitions to EEPROM.
@@ -1008,7 +1008,7 @@ analogue read operations.  This command is available from Version 3.2.0.</p></li
 <blockquote>
 <div><p><strong>FORMAT:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;M|P</span> <span class="pre">REGISTER</span> <span class="pre">BYTE1</span> <span class="pre">BYTE2</span> <span class="pre">[BYTE3]</span> <span class="pre">[BYTE4]</span> <span class="pre">[BYTE5]&gt;</span></code></p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``REGISTER:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER&gt;0) the packet
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``REGISTER:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER&gt;0) the packet
 ``BYTE1:``  first hexadecimal byte in the packet
 ``BYTE2:``  second hexadecimal byte in the packet
 ``BYTE3:``  optional third hexadecimal byte in the packet

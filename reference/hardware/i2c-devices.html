@@ -405,7 +405,7 @@ lower than 32kHz.</p>
 <h2>Changing the Clock speed<a class="headerlink" href="#changing-the-clock-speed" title="Permalink to this headline"></a></h2>
 <p>In DCC++EX the I2C clock speed is normally the highest speed supported by all configured devices.
 It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="o">.</span><span class="n">forceClock</span><span class="p">(</span><span class="mi">100000</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="p">.</span><span class="n">forceClock</span><span class="p">(</span><span class="mi">100000</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>(this sets the clock speed to 100kHz.)</p>

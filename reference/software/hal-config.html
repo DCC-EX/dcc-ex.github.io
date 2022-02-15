@@ -252,11 +252,11 @@ Also, if your I2C bus cable is long then a pull-up value closer to the minimum i
 The list of active I2C addresses is shown on the serial output during startup.  An example is shown below, with annotations.
 Note that the address does not necessarily tell you what the device is, since different modules may have the same default
 address.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;*</span> <span class="n">License</span> <span class="n">GPLv3</span> <span class="n">fsf</span><span class="o">.</span><span class="n">org</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="n">dcc</span><span class="o">-</span><span class="n">ex</span><span class="o">.</span><span class="n">com</span> <span class="o">*&gt;</span>
-<span class="o">&lt;*</span> <span class="n">I2C</span> <span class="n">Device</span> <span class="n">found</span> <span class="n">at</span> <span class="n">x20</span> <span class="o">*&gt;</span>    <span class="o">--</span> <span class="n">GPIO</span> <span class="n">Extender</span> <span class="n">device</span>
-<span class="o">&lt;*</span> <span class="n">I2C</span> <span class="n">Device</span> <span class="n">found</span> <span class="n">at</span> <span class="n">x3C</span> <span class="o">*&gt;</span>    <span class="o">--</span> <span class="n">OLED</span> <span class="n">display</span>
-<span class="o">&lt;*</span> <span class="n">I2C</span> <span class="n">Device</span> <span class="n">found</span> <span class="n">at</span> <span class="n">x40</span> <span class="o">*&gt;</span>    <span class="o">--</span> <span class="n">PWM</span> <span class="p">(</span><span class="n">Servo</span><span class="p">)</span> <span class="n">Control</span> <span class="n">Module</span>
-<span class="o">&lt;*</span> <span class="n">I2C</span> <span class="n">Device</span> <span class="n">found</span> <span class="n">at</span> <span class="n">x48</span> <span class="o">*&gt;</span>    <span class="o">--</span> <span class="mi">4</span><span class="o">-</span><span class="n">pin</span> <span class="n">Analogue</span> <span class="n">Input</span> <span class="n">Module</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;* License GPLv3 fsf.org (c) dcc-ex.com *&gt;
+&lt;* I2C Device found at x20 *&gt;    -- GPIO Extender device
+&lt;* I2C Device found at x3C *&gt;    -- OLED display
+&lt;* I2C Device found at x40 *&gt;    -- PWM (Servo) Control Module
+&lt;* I2C Device found at x48 *&gt;    -- 4-pin Analogue Input Module
 </pre></div>
 </div>
 </section>
@@ -273,13 +273,13 @@ When the sensor/switch activates, it usually connects the pin to GND, and the de
 the current stops flowing.  This is just the same as the Arduino digital GPIO pins.</p>
 <p>Two MCP23017 modules are pre-configured, one is address 0x20 and uses VPINs 164-179.  The second is address 0x21 and uses VPINs 180-195.</p>
 <p>An input pin may be configured using the DCC++ EX Sensor commands, as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">S</span> <span class="mi">201</span> <span class="mi">164</span> <span class="mi">1</span><span class="o">&gt;</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 201 164 1&gt;
 </pre></div>
 </div>
 <p>This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pullup.</p>
 <p>When the sensor activates and deactivates, the following messages are sent by DCC++ EX over the serial output:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Q</span> <span class="mi">201</span><span class="o">&gt;</span>         <span class="o">--</span> <span class="n">Activation</span>
-<span class="o">&lt;</span><span class="n">q</span> <span class="mi">201</span><span class="o">&gt;</span>         <span class="o">--</span> <span class="n">Deactivation</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Q 201&gt;         -- Activation
+&lt;q 201&gt;         -- Deactivation
 </pre></div>
 </div>
 </section>
@@ -293,7 +293,7 @@ on the bus.</p>
 of an external 5V power supply, to power the servo motors.  If this power isn’t connected and on, then the servos won’t move.</p>
 <p>Two PCA9685 modules are pre-configured, one is address 0x40 and uses VPINs 100-115.  The second is address 0x41 and uses VPINs 116-131.</p>
 <p>A servo turnout may be configured using the DCC++ EX Turnout commands, as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">T</span> <span class="mi">301</span> <span class="n">SERVO</span> <span class="mi">100</span> <span class="mi">410</span> <span class="mi">205</span> <span class="mi">2</span><span class="o">&gt;</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T 301 SERVO 100 410 205 2&gt;
 </pre></div>
 </div>
 <p>This command associates turnout ID 301 with VPIN 100 (PCA9685 first pin).
@@ -305,8 +305,8 @@ The movement of the turnout is Medium speed (2).  The movement profile may be 0 
 However, I’ve found, with SG90 servos, that 102 to 490 gives a full servo sweep of nearly 180 degrees.
 <em>But use with care, as an attempt to position a servo outside of its range may
 cause damage to the servo gearing, or to any layout components you have connected to the servo!</em></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">T</span> <span class="mi">301</span> <span class="mi">1</span><span class="o">&gt;</span>  <span class="o">--</span> <span class="n">Instructs</span> <span class="n">the</span> <span class="n">turnout</span> <span class="n">to</span> <span class="n">move</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;thrown&#39;</span> <span class="n">position</span><span class="o">.</span>
-<span class="o">&lt;</span><span class="n">T</span> <span class="mi">301</span> <span class="mi">0</span><span class="o">&gt;</span>  <span class="o">--</span> <span class="n">Instructs</span> <span class="n">the</span> <span class="n">turnout</span> <span class="n">to</span> <span class="n">move</span> <span class="n">the</span> <span class="n">the</span> <span class="s1">&#39;closed&#39;</span> <span class="n">position</span><span class="o">.</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T 301 1&gt;  -- Instructs the turnout to move to the &#39;thrown&#39; position.
+&lt;T 301 0&gt;  -- Instructs the turnout to move the the &#39;closed&#39; position.
 </pre></div>
 </div>
 <p>In EX-RAIL, the servo can be controlled directly via the <strong>SERVO(pin,position,profile)</strong> or <strong>SERVO2(pin,position,duration)</strong> commands.</p>

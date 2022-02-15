@@ -139,4 +139,8 @@ a single ``|`` adds an additional blank line before the next paragraph in the
 output; before a heading, or if a blank line is not wanted use
 ``.. rst-class:: clearer``.
 
+Use a figure when including a caption. Sphinx will automatically number the
+figure. Add a ``:name:`` option to be able to refer to the figure in the text
+using ``:numref:`<figure name>```.
+
 *Work in progress*

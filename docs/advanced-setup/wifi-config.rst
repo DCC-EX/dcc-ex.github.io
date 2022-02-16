@@ -179,7 +179,7 @@ Connecting to your Network - Station Mode "STA" (edit config.h)
 In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials, unless you have already entered your credentials earlier via the automated exInstaller. The easiest way to do this, other than the installer, is to use the Arduino IDE and open the project.
 Look for these lines in the file:
 
-.. code-block::
+.. code-block:: cpp
 
    /////////////////////////////////////////////////////////////////////////////////////
    //
@@ -202,7 +202,7 @@ First, make sure that the ``#define ENABLE_WIFI true`` line is not commented out
 
 Next, enter your network information into the ``WIFI_SSID``, ``WIFI_PASSWORD`` and ``WIFI_HOSTNAME`` fields. Here is an example:
 
-.. code-block::
+.. code-block:: cpp
 
    #define WIFI_SSID "JonesFamily"
    #define WIFI_PASSWORD "Secret!2020"
@@ -288,7 +288,7 @@ If you want to run in AP mode
 
 Edit the config.h, change your SSID and password lines back to default. It MUST look like the following. If it is anything else it will try to login with whatever you type there as credentials!
 
-.. code-block::
+.. code-block:: cpp
 
     #define WIFI_SSID "Your network name"
     #define WIFI_PASSWORD "Your network passwd"

@@ -97,7 +97,7 @@ There are some diagnostic and control commands added to the <tag> language norma
       </tr>
       <tr>
         <td class="fitwidth"> &lt;/ KILL task_id&gt;</td>
-        <td>Kills a currently running script task by ID (use </ > to list task IDs)</td>
+        <td>Kills a currently running script task by ID (use &lt;/&gt; to list task IDs)</td>
       </tr>
       <tr>
         <td class="fitwidth"> &lt;/ RESERVE block_id&gt;</td>

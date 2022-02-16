@@ -59,6 +59,9 @@ exclude_patterns = [
     '_build', 'Thumbs.db', '.DS_Store',
 ]
 
+# Set the default for literal blocks and code-block
+highlight_language = 'none'
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -66,9 +69,6 @@ exclude_patterns = [
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
-
-def setup(app):
-    app.add_css_file('css/dccex_theme.css')
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -104,11 +104,12 @@ todo_include_todos = False
 #    'exwebthrottle': 'exwebthrottle/index.html',
 #}
 
-#html_css_files = [
+html_css_files = [
+    'css/dccex_theme.css',
 #    'css/layout.css',
 #    'css/roundslider.min.css',
 #    'css/throttle.css'
-#]
+]
 
 html_js_files = [
     'js/platform.js',

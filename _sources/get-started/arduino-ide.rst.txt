@@ -37,31 +37,31 @@ Run the Arduino IDE
 
 Start the Arduino IDE. You should see something like this:
 
-.. image:: ../_static/images/arduino-ide/arduino_ide.jpg
+.. figure:: ../_static/images/arduino-ide/arduino_ide.jpg
    :alt: Arduino IDE
    :scale: 90%
 
-**Figure 1** - Arduino IDE
+   Arduino IDE
 
 Open the CommandStation-EX Project
 ===================================
 
 Choose "File -> Open" from the menu to open the file manager.
 
-.. image:: ../_static/images/arduino-ide/file_open.jpg
+.. figure:: ../_static/images/arduino-ide/file_open.jpg
    :alt: File Open Menu
    :scale: 90%
 
-**Figure 2** - File Open Menu
+   File Open Menu
 
 Then click on the "CommandStation-EX" sketch folder to open it. Scroll down to the "CommandStation-EX.ino" file (It should have the round, blue Arduino logo on it) and open that file. We also provide example .ino files for those advanced users who want to use optional features like the "User Command Override" feature, high current motor boards, etc. But for now, and for most users, this will be all you need.
 
 
-.. image:: ../_static/images/arduino-ide/commandstation-ex.jpg
+.. figure:: ../_static/images/arduino-ide/commandstation-ex.jpg
    :alt: Find the CommandStation-EX.ino File
    :scale: 90%
 
-**Figure 3** - Find the CommandStation-EX.ino file
+   Find the CommandStation-EX.ino file
 
 Edit the config.h file (optional)
 ===================================
@@ -81,32 +81,32 @@ Connect the computer to the Arduino with the USB cable. Note the 5V coming from 
 
 From the "Tools" menu select the "Board" menu, then "Arduino AVR boards", and then "Arduino Mega or Mega 2560". 
 
-.. image:: ../_static/images/arduino-ide/board_type_mega.jpg
+.. figure:: ../_static/images/arduino-ide/board_type_mega.jpg
    :alt: Select Arduino Mega
    :scale: 90%
 
-**Figure 5** - Select your board type
+   Select your board type
 
 Then select "Processor" and make sure it says "ATMega2560"
 
 Last, select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
-.. image:: ../_static/images/arduino-ide/board_port_mega.jpg
+.. figure:: ../_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port
    :scale: 90%
 
-**Figure 6** - Select the correct COM Port
+   Select the correct COM Port
 
 Upload the software
 ====================
 
 Click on the Upload button near the top left. It is a circle with a right arrow, next to the Compile button that looks like a check mark.
 
-.. image:: ../_static/images/arduino-ide/upload_arrow.jpg
+.. figure:: ../_static/images/arduino-ide/upload_arrow.jpg
    :alt: Upload the CS Software to the Arduino
    :scale: 90%
 
-**Figure 7** - Upload the CS Software to the Arduino
+   Upload the CS Software to the Arduino
 
 The IDE will go through a compile process which will build all the files into an application the Arduino can run, and then upload it. You may see many lines of logging as it finishes its task. When done, it will upload the file to the Arduino which you may see as some lights blinking on the Arduino. Make sure there are no errors in the log window, and that it shows "done uploading" in the status bar and "SUCCESS" and a listing of how much memory is used on the Arduino in the log window.
 
@@ -125,19 +125,19 @@ Use the Serial Monitor to do a quick test
 The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
 
-.. image:: ../_static/images/installer/arduino_ide2.jpg
+.. figure:: ../_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
    :scale: 90%
 
-**Figure 8** - Open the Serial Monitor
+   Open the Serial Monitor
 
 Make sure the baud rate at the lower right of the window is set to "115200". This is the data communication speed, equivalent to 115.2kb/s! Make sure the dropdown next to that says "Both NL & CR". That makes sure you send a 'new line' command and 'carriage return' which the Arduino expects.
 
-.. image:: ../_static/images/installer/serial_monitor.jpg
+.. figure:: ../_static/images/installer/serial_monitor.jpg
    :alt: Serial Monitor
    :scale: 90%
 
-**Figure 9** - Serial Monitor
+   Serial Monitor
 
 You should see log information immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the CS will sense that, the network test will fail, but everything else will be working as it should.
 

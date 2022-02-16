@@ -63,20 +63,8 @@ Wall Warts
 * Wall warts are a good choice for beginners and those not comfortable with mains wiring. You can get a 12V, 3A, relatively small one for around $8 US. 
 
 .. image:: ../../_static/images/12v-3A-wall-wart-sm.jpg
-   :align: left
    :scale: 100%
    :alt: 12V Wall Wart
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 Bricks (Laptop Style)
 =======================
@@ -84,16 +72,12 @@ Bricks (Laptop Style)
 * You can also find plenty of laptop type "brick" power supplies. They come in ranges from 12V to 18V and 3-5 Amps.
 
 .. image:: ../../_static/images/12v-3A-brick.jpg
-   :align: center
    :scale: 100%
    :alt: 12V 3A Brick Power Supply
-
-
 
 * This is a good 14V, 3A unit
 
 .. image:: ../../_static/images/power/samsung_brick.jpg
-   :align: center
    :scale: 25%
    :alt: Samsung brick
 
@@ -105,41 +89,16 @@ Adjustable Power Supplies
 * These have a selector switch to choose the voltage. Be careful to get a model that can deliver the current you need at the voltage you want. Sometimes the maximum output current will vary depending on the voltage selected.
 
 .. image:: ../../_static/images/power/belker_adjustable.jpg
-   :align: left
    :scale: 25%
    :alt: Belker_adjustable wall-wart
-
-|
-|
-|
-|
-|
-|
-
 
 https://www.amazon.com/dp/B07J6RC43S/
 
 .. image:: ../../_static/images/power/belker_adjustable_45w.jpg
-   :align: left
    :scale: 25%
    :alt: Belker_adjustable brick
 
-|
-|
-|
-|
-|
-
-
-
 https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU
-
-
-
-   |
-   |
-   |
-
 
 Cage Power Supplies
 ======================
@@ -147,7 +106,6 @@ Cage Power Supplies
 * The Meanwell LRS-100-15 power supply is a good choice for larger scales. It supplies 15V and 105W (that's 7 amps), so it is plenty for running two channels simutaneously. At only $18, it is an inexpensive and solid option.
 
 .. image:: ../../_static/images/meanwell-lrs100.jpg
-   :align: left
    :scale: 100%
    :alt: Meanwell
 
@@ -163,7 +121,6 @@ With a dual voltage power supply, you can provide 12V for the motor controller a
 * Mean Well Dual Voltage Power Supply (5V and 12V)
 
 .. image:: ../../_static/images/meanwell_rd125A.jpg
-   :align: left
    :scale: 100%
    :alt: Mean Well RD125A Dual voltage power supply
 
@@ -186,7 +143,6 @@ Using one power supply with cheap converters to power everything
 Some options for a power supply are the **Meanwell SP-200-15** or the **ATOS-300-15**. They are 15V, 13A supplies. You can use 15V to the motor controller and use buck converters to step down the 15V to whatever voltages you need.
 
 .. image:: ../../_static/images/power/15v_13A_power_supply.jpg
-   :align: center
    :scale: 50%
    :alt: 15V 20A supply
 
@@ -198,7 +154,6 @@ Using Buck Converters
 The following image shows how to connect buck converters. You start with a power supply with more voltage than the highest voltage you want to convert and with enough current to drive everything you want to power. This example shows a 15V supply that you can connect directly to the input to the motor controller which will in turn power your track. If you need to power 5V and 12V devices, you simply get 2 buck converters, connect them in parallel to the 15V output of your power supply (or to extra 15V outputs on the supply), and adjust each one to the voltage output you want. Then connect the converters to your 5V and 12V bus and connect your devices to the correct bus.
 
 .. image:: ../../_static/images/power/using_buck_converters.jpg
-   :align: center
    :scale: 70%
    :alt: Using Buck Converters
 
@@ -208,25 +163,12 @@ High Power Buck Converters
 These come in different sizes. Show here is a 2A and a 6A Version. You can look for "60W 6A Adjustable Voltage Regulator with Cooling Fan", or "DC to DC 5.5V-30V to 0.5V-30V Power Supply Module". Or just "Buck Boost Voltage Converter". The bigger unit usually comes with a fan. A model number is a **"ZK-DP60"**.
 
 .. image:: ../../_static/images/power/35W_4A_variable_buck_w_display.jpg
-   :align: left
    :scale: 20%
    :alt: 35W 4A 5-24v Buck Power Supply
 
 .. image:: ../../_static/images/power/60W_6A_variable_buck_w_display.jpg
-   :align: left
    :scale: 18%
    :alt: 60W 6A 5-24V Buck Power Supply
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 **One example from Amazon**, click to follow the link: `5 to 30V Adjustable regulator converter <https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/>`_
 
@@ -235,7 +177,6 @@ These come in different sizes. Show here is a 2A and a 6A Version. You can look 
 -----------------------------------
 
 .. image:: ../../_static/images/power/4_pack_buck_converters.jpg
-   :align: center
    :scale: 22%
    :alt: 4 pack of buck converters
 
@@ -248,11 +189,9 @@ Cheap Buck Converter with Display $5
 ---------------------------------------
 
 .. image:: ../../_static/images/power/20W_DC_buck.jpg
-   :align: center
    :scale: 30%
    :alt: 20W DC Buck converter with display
 
 This is a push button programmable 20W adjustable DC-DC buck converter module with digital display. It is based on LM2596 3A step-down voltage regulator and supports an input of 0~40V DC to an output of 1.25 to 37V with an accuracy of ± 0.05V.
 
 Here is one example sold by DFRobot, click to follow the link: `20W 3A programmable buck converter <https://www.dfrobot.com/product-1552.html>`_.
-

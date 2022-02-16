@@ -19,22 +19,22 @@ Create a new tab
 
 First you will need to add a new file, just like the :ref:`config.h file <get-started/arduino-ide:Copy the config.example.h file (or rename it)>`. Create a new tab using the following menu option.
 
-.. image:: /_static/images/arduino-ide/arduino_ide_newtab.jpg
+.. figure:: /_static/images/arduino-ide/arduino_ide_newtab.jpg
    :alt: Arduino IDE New Tab
    :scale: 40%
 
-**Figure 1** - Creating a new tab in the Arduino IDE
+   Creating a new tab in the Arduino IDE
 
 Creating the mySetup.h file
 ===========================
 
 At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``mySetup.h`` (case sensitive, so upper case S in setup) and click ``OK`` to create the new file.
 
-.. image:: /_static/images/arduino-ide/arduino_ide_mysetup.jpg
+.. figure:: /_static/images/arduino-ide/arduino_ide_mysetup.jpg
    :alt: Arduino IDE New Tab
    :scale: 40%
 
-**Figure 2** - Choosing a file name for the new file
+   Choosing a file name for the new file
 
 Adding in the startup commands
 ==============================

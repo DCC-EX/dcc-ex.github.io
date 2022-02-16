@@ -300,8 +300,30 @@ source file, define a target:</p>
 </div>
 <p>Link to the <a class="reference external" href="https://dcc-ex.com/index.html">DCC++EX home page</a>.</p>
 </div>
-<p><em>Work in progress</em></p>
 </section>
+</section>
+<section id="images">
+<h3>Images<a class="headerlink" href="#images" title="Permalink to this headline"></a></h3>
+<p>Include images with the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> and <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">figure::</span></code> directives.
+Horizontal positioning using the <code class="docutils literal notranslate"><span class="pre">:align:</span></code> option needs a bit of care.
+Where possible e.g. if just presenting a single image, either don’t use it, or
+choose <code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">center</span></code>.
+<code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">left</span></code> (or right) allows multiple images to be shown on the same
+line (if the browser window is wide enough), or text to flow around the image.
+But you may have to cancel this behaviour for the next content yourself:
+a single <code class="docutils literal notranslate"><span class="pre">|</span></code> adds an additional blank line before the next paragraph in the
+output; before a heading, or if a blank line is not wanted use
+<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst-class::</span> <span class="pre">clearer</span></code>.</p>
+<p>Use a figure when including a caption. Sphinx will automatically number the
+figure. Add a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option to be able to refer to the figure in the text
+using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;figure</span> <span class="pre">name&gt;`</span></code>.</p>
+</section>
+<section id="tables">
+<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline"></a></h3>
+<p>For titled tables use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">table::</span></code> directive, followed by the title.
+Sphinx will automatically number the table. Add a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option to be able
+to refer to the figure in the text using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;table</span> <span class="pre">name&gt;`</span></code>.</p>
+<p><em>Work in progress</em></p>
 </section>
 </section>
 </section>

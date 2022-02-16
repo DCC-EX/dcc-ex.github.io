@@ -251,24 +251,70 @@ to be selected to 0x3E or 0x3F (default 0x3F).</p>
 currently shown in the right-hand position marked ‘–’ (=OFF).  This means the address is set
 to 0x20.  If we move all three jumpers to the left-hand position (‘+’=ON), then the address
 will be 0x27.</p>
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/pcf8574.jpg"><img alt="PCF8574 GPIO Expander Module" src="../../_images/pcf8574.jpg" style="width: 261.59999999999997px; height: 90.6px;" /></a>
-<p><strong>Figure 1</strong> - PCF8574 GPIO Expander Module</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Address/Jumper Settings for GPIO Expander (base=0x20)
-+=========+=====+=====+=====+
-| Address | A2  | A1  | A0  |
-+=========+=====+=====+=====+
-| 0x20    | OFF | OFF | OFF |
-| 0x21    | OFF | OFF | ON  |
-| 0x22    | OFF | ON  | OFF |
-| 0x23    | OFF | ON  | ON  |
-| 0x24    | ON  | OFF | OFF |
-| 0x25    | ON  | OFF | ON  |
-| 0x26    | ON  | ON  | OFF |
-| 0x27    | ON  | ON  | ON  |
-+=========+=====+=====+=====+
-</pre></div>
-</div>
-<p><strong>Table 1</strong> - I2C Address Setting Examples</p>
+<figcaption>
+<p><span class="caption-number">Figure 69 </span><span class="caption-text">PCF8574 GPIO Expander Module</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">I2C Address/Jumper Settings for GPIO Expander (base=0x20)</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Address</p></th>
+<th class="head"><p>A2</p></th>
+<th class="head"><p>A1</p></th>
+<th class="head"><p>A0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x20</p></td>
+<td><p>OFF</p></td>
+<td><p>OFF</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x21</p></td>
+<td><p>OFF</p></td>
+<td><p>OFF</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>0x22</p></td>
+<td><p>OFF</p></td>
+<td><p>ON</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x23</p></td>
+<td><p>OFF</p></td>
+<td><p>ON</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>0x24</p></td>
+<td><p>ON</p></td>
+<td><p>OFF</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x25</p></td>
+<td><p>ON</p></td>
+<td><p>OFF</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>0x26</p></td>
+<td><p>ON</p></td>
+<td><p>ON</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x27</p></td>
+<td><p>ON</p></td>
+<td><p>ON</p></td>
+<td><p>ON</p></td>
+</tr>
+</tbody>
+</table>
 <p>The same address settings apply for the MCP23017 and MCP23008 devices, which also have three address jumpers A2-A0 and use the
 same address range 0x20-0x27.</p>
 <p>One device notably uses software to configure the I2C address - the VL53L01 Time-Of-Flight sensor.  It is pre-programmed
@@ -296,8 +342,12 @@ onto standard pin headers, and provide a more positive connection than the Dupon
 connectors.  Again, they are available in kit form for crimping onto ribbon cables,
 or they can be found in pre-assembled form.  Note that, while they look very much like the Grove connectors,
 they are a different size and are not interchangeable.</p>
+<figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/connectors.jpg"><img alt="JST-XH, Dupont, and Grove connectors" src="../../_images/connectors.jpg" style="width: 512.0px; height: 384.0px;" /></a>
-<p><strong>Figure 2</strong> - From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.</p>
+<figcaption>
+<p><span class="caption-number">Figure 70 </span><span class="caption-text">From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="connecting-devices">
 <h2>Connecting Devices<a class="headerlink" href="#connecting-devices" title="Permalink to this headline"></a></h2>
@@ -308,34 +358,58 @@ they are a different size and are not interchangeable.</p>
 <li><p>On the Arduino Uno, you may use pins A4 (SDA) and A5 (SCL), or pins D20 (SDA) and D21 (SCL), which are in the same place as on the Mega.
 Bear in mind that, even if you use pins D20 and D21 for I2C, the pins A4 and A5 cannot be used for analogue inputs.</p></li>
 </ul>
+<figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/mega_i2cpins.png"><img alt="Arduino Mega/Uno I2C pins" src="../../_images/mega_i2cpins.png" style="width: 527.2px; height: 243.20000000000002px;" /></a>
-<p><strong>Figure 3</strong> - Arduino Mega/Uno I2C pins</p>
+<figcaption>
+<p><span class="caption-number">Figure 71 </span><span class="caption-text">Arduino Mega/Uno I2C pins</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>Some motor shields come with header pins for the I2C connections, for example the Arduino motor shield and
 the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.</p>
+<figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../../_images/deek_robot.jpg"><img alt="Motor shield I2C pins" src="../../_images/deek_robot.jpg" style="width: 400.0px; height: 400.0px;" /></a>
-<p><strong>Figure 4</strong> - Motor Shield I2C pins</p>
+<figcaption>
+<p><span class="caption-number">Figure 72 </span><span class="caption-text">Motor Shield I2C pins</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-printed 6-inch rack case, with
 one set of I2C pins connected to an OLED display on the front of the case, and one set of I2C pins connected to two external connectors at the
 rear of the case.  The orange wires connect four LEDs (with current-limiting series resistors) that provide panel indications of incoming
 5V and 14V power, and of outgoing DCC power to the Main and Programming tracks.  I’ve also mounted a small self-adhesive aluminium
 heat sink onto the L298P device.</p>
+<figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../../_images/deekrobot_motor_shield.jpg"><img alt="Motor shield I2C pins" src="../../_images/deekrobot_motor_shield.jpg" style="width: 300.8px; height: 272.8px;" /></a>
-<p><strong>Figure 5</strong> - Motor Shield I2C pins</p>
+<figcaption>
+<p><span class="caption-number">Figure 73 </span><span class="caption-text">Motor Shield I2C pins</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>I2C devices are all effectively connected in parallel to the bus.  If you only
 have one device, you can just run a four-wire connecter between the pins on the Arduino, or on
 the motor shield, if you have one, to the device.  Be sure to check that you connect SDA to SDA,
 SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each
 device!</p>
+<figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../../_images/ArduinoMegaOLED.png"><img alt="Arduino Mega with OLED Display" src="../../_images/ArduinoMegaOLED.png" style="width: 451.8px; height: 295.2px;" /></a>
-<p><strong>Figure 6</strong> - Connecting an OLED Display to an Arduino Mega</p>
+<figcaption>
+<p><span class="caption-number">Figure 74 </span><span class="caption-text">Connecting an OLED Display to an Arduino Mega</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../../_images/ArduinoMegaServo.png"><img alt="Arduino Mega with one servo controllers" src="../../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
-<p><strong>Figure 7</strong> - Connecting a PCA9685 Servo Controller to an Arduino Mega</p>
+<figcaption>
+<p><span class="caption-number">Figure 75 </span><span class="caption-text">Connecting a PCA9685 Servo Controller to an Arduino Mega</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>If you have more than one device, then there are a few options open to you.  Some modules
 (PCA9685 and PCF8574 for example) have I2C pins at both ends of the PCB, so you can use one
 set of pins to connect to the Arduino and the other set to connect to another device.  You
 can chain multiple devices, subject to the restrictions described in sections for Cabling and Pull-ups.</p>
+<figure class="align-default" id="id9">
 <a class="reference internal image-reference" href="../../_images/ArduinoMega2xServo.png"><img alt="Arduino Mega with two servo controllers" src="../../_images/ArduinoMega2xServo.png" style="width: 661.5px; height: 409.5px;" /></a>
-<p><strong>Figure 8</strong> - Connecting Two Servo Controllers</p>
+<figcaption>
+<p><span class="caption-number">Figure 76 </span><span class="caption-text">Connecting Two Servo Controllers</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>Alternatively, you can use an I2C hub, which you can purchase
 (<a class="reference external" href="https://www.seeedstudio.com/Grove-I2C-Hub.html">SeeedStudio do one</a>, but check
 that you have compatible connectors - it uses Grove connectors); or you can make one.  You can use a breadboard
@@ -348,12 +422,20 @@ to be plugged in and removed as required.  There is a mixture of pin headers and
 and JST-XH male sockets (which accept female cable connectors, or female Dupont connectors.
 I also have a four-way socket header connected in parallel, into which
 an OLED display is fitted for testing.</p>
+<figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="../../_images/i2chub.jpg"><img alt="Home-brew I2C Passive Hub" src="../../_images/i2chub.jpg" style="width: 384.0px; height: 288.0px;" /></a>
-<p><strong>Figure 9</strong> - Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)</p>
+<figcaption>
+<p><span class="caption-number">Figure 77 </span><span class="caption-text">Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>If you just want a temporary hookup for multiple I2C devices, then you can use a small piece of breadboard.
 The board shown has space for five Dupont connectors in each half row.</p>
+<figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="../../_images/breadboard-hub.jpg"><img alt="Bread-board based I2C Passive Hub" src="../../_images/breadboard-hub.jpg" style="width: 512.0px; height: 384.0px;" /></a>
-<p><strong>Figure 10</strong> - I2C Hub on Breadboard</p>
+<figcaption>
+<p><span class="caption-number">Figure 78 </span><span class="caption-text">I2C Hub on Breadboard</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="pull-ups">
 <h2>Pull-ups<a class="headerlink" href="#pull-ups" title="Permalink to this headline"></a></h2>
@@ -378,10 +460,18 @@ are not being actively addressed.</p>
 thing to do is identify which components on the module PCB are the pull-up resistors.  Many modules have full documentation available
 (including circuit diagram and PCB layout), which will help to identify the pull-ups.  Check the web sites for the suppliers.</p>
 <p>As examples of where to find the pull-up resistors, take a look at the figures below:</p>
+<figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="../../_images/pca9685_pullups.jpg"><img alt="PCA9685 pullup resistors" src="../../_images/pca9685_pullups.jpg" style="width: 329.09999999999997px; height: 133.2px;" /></a>
-<p><strong>Figure 11</strong> - Location of Pull-up Resistors for PCA9685 Module (ringed in red)</p>
+<figcaption>
+<p><span class="caption-number">Figure 79 </span><span class="caption-text">Location of Pull-up Resistors for PCA9685 Module (ringed in red)</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id13">
 <a class="reference internal image-reference" href="../../_images/pcf8574_pullups.jpg"><img alt="PCF8574 pullup resistors" src="../../_images/pcf8574_pullups.jpg" style="width: 436.0px; height: 151.0px;" /></a>
-<p><strong>Figure 12</strong> - Location of Pull-up Resistors for PCF8574 Module (ringed in red)</p>
+<figcaption>
+<p><span class="caption-number">Figure 80 </span><span class="caption-text">Location of Pull-up Resistors for PCF8574 Module (ringed in red)</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>Check the PCB tracks from the SDA and SCL pin connectors; one side of each resistors will be connected to one of these,
 and the other side of both will be connected to the Vcc supply.</p>
 <p><strong>IMPORTANT:  When you desolder the resistors, ensure that you don’t leave any residual

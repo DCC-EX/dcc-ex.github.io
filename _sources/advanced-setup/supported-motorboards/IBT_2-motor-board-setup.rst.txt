@@ -94,7 +94,7 @@ Steps (Upgrade)
 
 3. Move the two wires we just disconnected from the motor shield and connect them to the M+ and M- Screw terminals of the IBT_2. If you will be using power districts or wanting to connect the main and prog tracks together when prog is not in use, keep the polarity of the rails the same with reference to each other. In other words, if you connect + to the left rail, then always keep + on the rail to the left as viewed from a train sitting on the track. We need to keep the phase of the DCC signal in sync between power districts.
 
-4. Option - You may need to connect or solder a 10k or smaller resistor between pin 5 or 6 and ground on the IBT_2 (shown as R1 in Figure 1). There is already a 10k resistor on each chip, which gives us a resistance of 5k when we connect both current sense outputs together. See the notes below for more detail about current sense and a suggestion for using an external current sense board.
+4. Option - You may need to connect or solder a 10k or smaller resistor between pin 5 or 6 and ground on the IBT_2 (shown as R1 in :numref:`ibt2-wiring-schematic`). There is already a 10k resistor on each chip, which gives us a resistance of 5k when we connect both current sense outputs together. See the notes below for more detail about current sense and a suggestion for using an external current sense board.
 
 5. The diagrams below also show an optional diode protection circuit. If you don't test your board first to make sure that the current you will be using does not put more that 5V on your Arduino analog pin, this will keep you from destroying the input. It is a 5 or 5.1 zener diode (1N4733A, 1N5231B, NZX5V1B, BZX55C5V1, etc.). R2 can be whatever you have on hand. We recommend 2k - 10k.
 
@@ -104,31 +104,32 @@ Steps (Upgrade)
 
 Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
 
-+--------------+-----------------------------+
-|  Arduino     |           IBT_2             |
-+==============+=============================+
-| 4 (enable)   | 3,4  (R_EN, L_EN)           |
-+--------------+-----------------------------+
-| 5 (signal 1) | 2 (LPWM)                    |
-+--------------+-----------------------------+
-| 6 (signal 2) | 1 (RPWM)                    |
-+--------------+-----------------------------+
-| A5 (CS MAIN) | 5,6, R1a  (R_IS, L_IS, R1a) |
-+--------------+-----------------------------+
-|     5V       |        7 (Vcc)              |
-+--------------+-----------------------------+
-|     GND      |        GND, R1b             |
-+--------------+-----------------------------+
+.. table:: Wiring diagram
 
-Table 1 - Wiring diagram
+    +--------------+-----------------------------+
+    |  Arduino     |           IBT_2             |
+    +==============+=============================+
+    | 4 (enable)   | 3,4  (R_EN, L_EN)           |
+    +--------------+-----------------------------+
+    | 5 (signal 1) | 2 (LPWM)                    |
+    +--------------+-----------------------------+
+    | 6 (signal 2) | 1 (RPWM)                    |
+    +--------------+-----------------------------+
+    | A5 (CS MAIN) | 5,6, R1a  (R_IS, L_IS, R1a) |
+    +--------------+-----------------------------+
+    |     5V       |        7 (Vcc)              |
+    +--------------+-----------------------------+
+    |     GND      |        GND, R1b             |
+    +--------------+-----------------------------+
 
 Here is a visual diagram. R1 (current sense modifier), R2 (diode current limiter) and D1 (5.1V Zener protection diode) are optional. See current sense notes below. Click to enlarge:
 
 .. figure:: ../../_static/images/motorboards/ibt_wiring.png
    :alt: IBT_2 Wiring 1
    :scale: 70%
+   :name: ibt2-wiring-schematic
 
-   Figure 1. - Wiring Schematic
+   Wiring Schematic
 
 
 It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins directly on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
@@ -137,7 +138,7 @@ It should look like following. Note we have included the Arduino Mega and have t
    :alt: IBT_2 Wiring 2
    :scale: 25%
 
-   Figure 2. - Wiring visual layout
+   Wiring visual layout
 
 .. Note:: We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.
 
@@ -213,11 +214,11 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 fo
 +--------------+-----------------------------+
 |  Arduino     |        IBT_2 PROG           |
 +==============+=============================+
-| 11 (enable)   | 3,4  (R_EN, L_EN)          |
+| 11 (enable)  | 3,4  (R_EN, L_EN)           |
 +--------------+-----------------------------+
-| 12 (signal 1) | 2 (LPWM)                   |
+| 12 (signal 1)| 2 (LPWM)                    |
 +--------------+-----------------------------+
-| 13 (signal 2) | 1 (RPWM)                   |
+| 13 (signal 2)| 1 (RPWM)                    |
 +--------------+-----------------------------+
 | A4 (CS MAIN) | 5,6, R1a  (R_IS, L_IS, R1a) |
 +--------------+-----------------------------+
@@ -238,14 +239,15 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
 
 * Test your board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, to CS output does not produce more than 5V.
 * Use a 5.1V zener diode (D1) and current limiting resistor (R2). This would normally be a 5k Ohm resistor but can be anything from 270 to 10k. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5V the response is no longer linear when using the diode, so you you may want to design your system to output its range between 0 and 4V and use 5V as the over limit setting.
-* Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See Figure 3. When we tie the two CS outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
+* Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See :numref:`ibt2-sense-resistors`. When we tie the two CS outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
 * Put a 5A fuse on each output leg going to your track.
 
 .. figure:: ../../_static/images/motorboards/ibt_2_resistors.jpg
    :alt: IBT_2 Resistors
    :scale: 70%
+   :name: ibt2-sense-resistors
 
-   Figure 3. - 10k (103) current sense resistors
+   10k (103) current sense resistors
 
 
 The spec sheet of the BTS7960B states that the "expected" (aka nominal) value for the ratio of output current to the current reported at the current sense pin is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the CS pin. If we apply that through our 5k of resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This means that a 3A current can be reported as anything from 1V to 5V on the CS pin. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connected to your Arduino! In other words, **You could destroy the analog input pin on your Arduino**.

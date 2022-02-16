@@ -34,27 +34,6 @@ Screenshots
 .. image:: ../_static/images/throttles/withrottle1.png
    :alt: WiThrottle Screenshot 1
    :scale: 90%
-   :align: left
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
 
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section

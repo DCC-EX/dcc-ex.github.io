@@ -64,16 +64,7 @@ Screenshots
    :scale: 30%
    :align: left
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+.. rst-class:: clearer
 
 .. _ed-operation:
 

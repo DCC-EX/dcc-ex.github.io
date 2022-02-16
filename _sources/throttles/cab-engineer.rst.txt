@@ -53,27 +53,7 @@ Screenshots
    :align: left
 
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+.. rst-class:: clearer
 
 .. _ce-operation:
 

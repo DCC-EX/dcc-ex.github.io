@@ -20,7 +20,7 @@ The Arduino Nano is an Uno in disguise. It has the same processor, the same spee
    :scale: 60%
    :align: center
    
-   **Figure 1** - Arduino Nano
+   Arduino Nano
 
 
 What You need
@@ -63,18 +63,7 @@ Using the special Nano Motor Shield
    :scale: 70%
    :align: left
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+.. rst-class:: clearer
 
 The above image shows a Gravitech Nano Motor Shield on the left and a clone from China on the right. The image on the left shows a Nano (separately purchased) plugged into the board. Search "Nano Motor Shield" or "Nano-L298p". And remember to order a Nano from the same source or from someone else.
 
@@ -92,18 +81,13 @@ To use this board, you simple plug the nano into the motor shield (really a carr
 Wiring a Motor Shield
 =====================
 
-
 .. image:: ../../_static/images/tinkerer.png
    :alt: Tinkerer Icon
    :scale: 50%
    :align: left
 
-
 Tinkerer Level
 
-|
-|
-|
 |
 
 You will need jumpers to connect the Nano to the Arduino Motor Shield
@@ -118,9 +102,6 @@ Wiring other Motor Boards
 
 Tinkerer Level
 
-|
-|
-|
 |
 
 As long as you know the pinouts, you can jumper wires to any motor shield you can connect to an Uno or Mega.

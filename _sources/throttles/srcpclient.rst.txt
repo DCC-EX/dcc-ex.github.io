@@ -31,23 +31,6 @@ Screenshots
 .. image:: ../_static/images/throttles/srcpclient1.jpg
    :alt: SrcpClient Screenshot 1
    :scale: 50%
-   :align: left
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
 
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section

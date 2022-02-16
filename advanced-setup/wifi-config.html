@@ -239,7 +239,7 @@
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../_images/WiFi_softap_mode.png"><img alt="AP Mode" src="../_images/WiFi_softap_mode.png" style="width: 400.0px; height: 193.5px;" /></a>
 <figcaption>
-<p><span class="caption-text">Figure 1: Access Point Mode - Things connect to the WiFi Board</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 43 </span><span class="caption-text">Access Point Mode - Things connect to the WiFi Board</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -249,7 +249,7 @@
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/WiFi_station_mode.png"><img alt="Station Mode" src="../_images/WiFi_station_mode.png" style="width: 400.0px; height: 210.0px;" /></a>
 <figcaption>
-<p><span class="caption-text">Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP address</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 44 </span><span class="caption-text">Station Mode - Things connect to the router and find the WiFi board by its IP address</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Images are courtesy of <a class="reference external" href="https://nodemcu.readthedocs.io/en/latest/modules/wifi/">NodeMCU</a>. You can find a great tutorial on WiFi there also.</p>
@@ -273,8 +273,12 @@
 <p>All of this information is displayed in the startup log if you connect the CS to a serial monitor. The IP address and port also appear on the optional LCD or OLED display.</p>
 </div>
 <p>Whenever you connect a USB cable and open the serial monitor, you reset the program running on your CS. It will go through the bootup sequence again and try to connect to a network. If you did not setup a “Station Mode” configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red.</p>
+<figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/ap_mode1.jpg"><img alt="IP Address" src="../_images/ap_mode1.jpg" style="width: 514.4px; height: 404.0px;" /></a>
-<p><strong>Figure 1</strong> - Serial Monitor Log (click to enlarge)</p>
+<figcaption>
+<p><span class="caption-number">Figure 45 </span><span class="caption-text">Serial Monitor Log (click to enlarge)</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>You will see the line that has <code class="docutils literal notranslate"><span class="pre">AT+CIPSERVER=1,2560\r\r\nno</span> <span class="pre">change\r\n\r\nOK\r\n</span></code>, where 2560 is your port number</p>
 <p>Next you will see <code class="docutils literal notranslate"><span class="pre">+CIFSR:APIP,&quot;192.168.4.1&quot;</span></code>, where your IP address is 192.168.4.1.</p>
 <p>APIP here stands for “Access Point IP Address”. Your throttle is assigned an IP address in the same IP range, typically 192.168.4.10 to 15. As your AP is also your DCC-EX CS this time, you connect your throttle to the AP IP.</p>
@@ -322,6 +326,8 @@ You should see a new network that begins with “DCCEX” like this example: <co
 <h2>Connecting to your Network - Station Mode “STA” (edit config.h)<a class="headerlink" href="#connecting-to-your-network-station-mode-sta-edit-config-h" title="Permalink to this headline"></a></h2>
 <p>In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials, unless you have already entered your credentials earlier via the automated exInstaller. The easiest way to do this, other than the installer, is to use the Arduino IDE and open the project.
 Look for these lines in the file:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Station Mode Configuration</span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//</span>
 <span class="c1">// NOTE: Only supported on Arduino Mega</span>
@@ -338,7 +344,7 @@ Look for these lines in the file:</p>
 <span class="cp">#define WIFI_HOSTNAME &quot;dccex&quot;</span>
 </pre></div>
 </div>
-<p>Figure 2 - Station Mode Configuration</p>
+</div>
 <p>First, make sure that the <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">ENABLE_WIFI</span> <span class="pre">true</span></code> line is not commented out. Two slashes <code class="docutils literal notranslate"><span class="pre">//</span></code> in front of a line make it a comment, and not a line of code.</p>
 <p>Next, enter your network information into the <code class="docutils literal notranslate"><span class="pre">WIFI_SSID</span></code>, <code class="docutils literal notranslate"><span class="pre">WIFI_PASSWORD</span></code> and <code class="docutils literal notranslate"><span class="pre">WIFI_HOSTNAME</span></code> fields. Here is an example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define WIFI_SSID &quot;JonesFamily&quot;</span>

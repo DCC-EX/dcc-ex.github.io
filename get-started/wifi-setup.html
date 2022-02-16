@@ -236,28 +236,48 @@
 <section id="id1">
 <h2>Makerfabs ESP8266 WiFi Shield (recommended)<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <p>We like this board here at DCC++ EX. It is simple, inexpensive, easy to use, and it works.</p>
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/wifi_jumpers1.jpg"><img alt="Makerfabs ESP-8266 WiFi Shield" src="../_images/wifi_jumpers1.jpg" style="width: 450.0px; height: 340.5px;" /></a>
-<p><strong>Figure 1</strong> - Makerfabs ESP8266 WiFi Shield</p>
+<figcaption>
+<p><span class="caption-number">Figure 14 </span><span class="caption-text">Makerfabs ESP8266 WiFi Shield</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>Installing the board follows the same procedure in the previous section on assembly. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.</p>
 <section id="remove-the-plastic-jumpers">
 <h3>Remove the plastic jumpers<a class="headerlink" href="#remove-the-plastic-jumpers" title="Permalink to this headline"></a></h3>
 <p>Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.</p>
+<figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/wifi_pins.jpg"><img alt="Remove the plastic jumpers" src="../_images/wifi_pins.jpg" style="width: 450.0px; height: 435.75px;" /></a>
-<p><strong>Figure 2</strong> - Remove the plastic jumpers</p>
+<figcaption>
+<p><span class="caption-number">Figure 15 </span><span class="caption-text">Remove the plastic jumpers</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="align-the-boards">
 <h3>Align the boards<a class="headerlink" href="#align-the-boards" title="Permalink to this headline"></a></h3>
 <p>Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Rx, Tx, 2, 3, 4, 5, 6, 7 pins on the Motor Shield line up with the 0 through 7 pins on the Makerfabs WiFi Board. Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.</p>
+<figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/wifi_seat1.jpg"><img alt="Get the left side pins aligned" src="../_images/wifi_seat1.jpg" style="width: 450.0px; height: 300.0px;" /></a>
-<p><strong>Figure 3</strong> - Get the left side pins aligned</p>
+<figcaption>
+<p><span class="caption-number">Figure 16 </span><span class="caption-text">Get the left side pins aligned</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="seat-the-boards">
 <h3>Seat the boards<a class="headerlink" href="#seat-the-boards" title="Permalink to this headline"></a></h3>
-<p>Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (Figure 4). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see Figure 5).</p>
+<p>Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (<a class="reference internal" href="#wifi-right-side-pins-aligned"><span class="std std-numref">Figure 17</span></a>). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see <a class="reference internal" href="#wifi-fully-seated-boards"><span class="std std-numref">Figure 18</span></a>).</p>
+<figure class="align-default" id="wifi-right-side-pins-aligned">
 <a class="reference internal image-reference" href="../_images/wifi_seat2a.jpg"><img alt="Get the right side pins aligned" src="../_images/wifi_seat2a.jpg" style="width: 450.0px; height: 300.0px;" /></a>
-<p><strong>Figure 4</strong> - Get the right side pins aligned</p>
+<figcaption>
+<p><span class="caption-number">Figure 17 </span><span class="caption-text">Get the right side pins aligned</span><a class="headerlink" href="#wifi-right-side-pins-aligned" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="wifi-fully-seated-boards">
 <a class="reference internal image-reference" href="../_images/wifi_seat_full.jpg"><img alt="Fully seated boards" src="../_images/wifi_seat_full.jpg" style="width: 450.0px; height: 306.0px;" /></a>
-<p><strong>Figure 5</strong> - Fully seated boards</p>
+<figcaption>
+<p><span class="caption-number">Figure 18 </span><span class="caption-text">Fully seated boards</span><a class="headerlink" href="#wifi-fully-seated-boards" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="install-the-jumper-wires">
 <h3>Install the jumper wires<a class="headerlink" href="#install-the-jumper-wires" title="Permalink to this headline"></a></h3>
@@ -266,8 +286,12 @@
 <p>ALL of the pins in the row marked Tx (the row closest to the header) are connected to the Tx pin of the ESP8266. ALL of the pins in the row marked Rx (the row closest to the middle of the board) are connected to the Rx pin on the ESP8266.</p>
 <p>Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board, and connect the other end to the Rx1 pin on the mega (pin 19).</p>
 <p>Take a second jumper wire and connect it to any one of the Rx pins on the Wifi Board and connect the other end to Tx1 on the mega (pin 18).</p>
-<a class="reference internal image-reference" href="../_images/wifi_jumpers2.png"><img alt="Figure 6 - Install the Jumper wires" src="../_images/wifi_jumpers2.png" style="width: 450.0px; height: 317.25px;" /></a>
-<p><strong>Figure 6</strong> - Install the jumper wires</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/wifi_jumpers2.png"><img alt="Install the Jumper wires" src="../_images/wifi_jumpers2.png" style="width: 450.0px; height: 317.25px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 19 </span><span class="caption-text">Install the jumper wires</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The screenprinting on the board may make it hard to see which pins are 18 and 19, they may not be aligned exactly. Count the pins if you need to to make sure that you are using the correct ones.</p>
@@ -281,8 +305,12 @@
 <p class="admonition-title">Note</p>
 <p>This is just a carrier board for an ESP-01 or 01s. You will still need an ESP-01s to place onto this board. See the next section.</p>
 </div>
+<figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/duinopeak.jpg"><img alt="Duinopeak WiFi Board" src="../_images/duinopeak.jpg" style="width: 450.0px; height: 432.75px;" /></a>
-<p><strong>Figure 7</strong> - Duinopeak WiFi Board</p>
+<figcaption>
+<p><span class="caption-number">Figure 20 </span><span class="caption-text">Duinopeak WiFi Board</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <section id="install-the-shield">
 <h3>Install the Shield<a class="headerlink" href="#install-the-shield" title="Permalink to this headline"></a></h3>
 <p>To install this board on your Arduino, follow the same steps as above, with the added step of installing an ESP-01s onto the board:</p>
@@ -297,13 +325,21 @@
 <section id="esp-01-and-esp-01s">
 <h2>ESP-01 and ESP-01s<a class="headerlink" href="#esp-01-and-esp-01s" title="Permalink to this headline"></a></h2>
 <p>This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduno Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-“S”. Since the 01 version has been retired, any new board you get should be the 01s, but either will work.</p>
+<figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/esp-01s_2.jpg"><img alt="ESP-01s" src="../_images/esp-01s_2.jpg" style="width: 300.0px; height: 293.25px;" /></a>
-<p><strong>Figure 8</strong> - ESP-01s</p>
+<figcaption>
+<p><span class="caption-number">Figure 21 </span><span class="caption-text">ESP-01s</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <section id="install-the-module">
 <h3>Install the Module<a class="headerlink" href="#install-the-module" title="Permalink to this headline"></a></h3>
 <p>Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity, the image does not show the motor board already on top of the Mega, but since the headers connect all the pins together vertically, you can find the same pins on the motor board to get the 3.3V and Gnd to power the ESP8266.</p>
+<figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/esp8266_mega.jpg"><img alt="ESP-8266 Wiring to a Mega" src="../_images/esp8266_mega.jpg" style="width: 540.0px; height: 233.25px;" /></a>
-<p><strong>Figure 9</strong> - Wiring an ESP-01s to a Mega</p>
+<figcaption>
+<p><span class="caption-number">Figure 22 </span><span class="caption-text">Wiring an ESP-01s to a Mega</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p><strong>Wiring</strong></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Arduino   ESP8266
 3.3V -----&gt; Vcc
@@ -313,13 +349,17 @@ Tx   -----&gt; Rx
 Rx   -----&gt; Tx
 </pre></div>
 </div>
-<p>In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a “Y” shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called “ESP-01 Breakout Board” or “ESP-01 Breadboard adapter”. Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and “level shifters” to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In Figure 10 below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.</p>
+<p>In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a “Y” shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called “ESP-01 Breakout Board” or “ESP-01 Breadboard adapter”. Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and “level shifters” to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In <a class="reference internal" href="#esp-01s-adapters"><span class="std std-numref">Figure 23</span></a> below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>About current requirements: While we at DCC-EX Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.</p>
 </div>
+<figure class="align-default" id="esp-01s-adapters">
 <a class="reference internal image-reference" href="../_images/esp-01_adapter.jpg"><img alt="ESP-01s Adapters" src="../_images/esp-01_adapter.jpg" style="width: 450.0px; height: 225.0px;" /></a>
-<p><strong>Figure 10</strong> - ESP-01 Breakout Boards.</p>
+<figcaption>
+<p><span class="caption-number">Figure 23 </span><span class="caption-text">ESP-01 Breakout Boards.</span><a class="headerlink" href="#esp-01s-adapters" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don’t need any additional circuitry. However, to be safe, you can use a small <a class="reference external" href="https://www.mouser.com/ProductDetail/SparkFun/BOB-12009?qs=WyAARYrbSnb%252BGYLWggQnjQ%3D%3D&amp;gclid=Cj0KCQiAzZL-BRDnARIsAPCJs73SnsmU-CTIk9V0XE6qjxY2WKlnxI0sLhT_rY5MYTbIOBmHne50Eh4aAm5ZEALw_wcB">level shifter board</a>, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.</p>

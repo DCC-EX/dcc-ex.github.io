@@ -108,7 +108,7 @@ Install python if you don't already have it installed. This quick quide shows yo
 
 https://wiki.python.org/moin/BeginnersGuide/Download
 
-Once you have Python installed, you will need to install etptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:
+Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:
 
 .. code-block::
 
@@ -120,7 +120,7 @@ NOTE:with some Python installations that command may not work and you’ll recei
 | python -m pip install esptool
 | pip2 install esptool
 
-When that is installed, install setup tools:
+If you got an error about setuptools being missing, install setuptools with:
 
 .. code-block::
 
@@ -222,21 +222,21 @@ Skip ahead to :ref:`advanced-setup/supported-microcontrollers/wifi-mega:3. Set t
 With esptool.py
 ^^^^^^^^^^^^^^^^
 
-Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on MacOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. Esptool.py should be in your path and will automatically find your ESP8266 if it is connected. If it does not find your ESP, see the examples for how to select the port.
+Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on MacOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected::
 
+   esptool.py write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
-``esptool.py write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin``
+If it does not find your ESP, see these examples for how to select the port.
 
+Linux/macOS::
 
-Examples with port specified: 
+   esptool.py -p /dev/ttyUSB0 write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1023+1024/user1.2048.new.5.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
-esptool.py -p /dev/ttyUSB0 write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1023+1024/user1.2048.new.5.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
+Windows::
 
-esptool.exe -p COM5 --baud 115200 write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
+   esptool.exe -p COM5 --baud 115200 write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
 If there is an error, press and hold the mode button, then press and release the reset button while still holding down the mode button. Press enter to send the esptool command and let go of the mode button.
-
-
 
 3. Set the switches for run/sketch mode
 ==========================================

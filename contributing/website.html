@@ -188,15 +188,35 @@
 <p>Thank you for your offer to help. Here’s some instructions for how to contribute. You might want to check in with an admin from the DCC++ EX team before working on documentation changes to identify current needs.</p>
 <section id="submission-procedure">
 <h2>Submission Procedure<a class="headerlink" href="#submission-procedure" title="Permalink to this headline"></a></h2>
-<p>We will assume that you have an appropriate text editor and Git installed on your machine. We recommend the free <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code IDE (VSC)</a> and <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> or <a class="reference external" href="https://git-scm.com/downloads">Git Bash (the command line interface in Git)</a>.</p>
+<p>Simple changes to existing pages can be created without installing any tools,
+by using the “Edit on GitHub” link. However, the preview provided on GitHub
+does not fully reflect the final result. The steps listed here provide guidance
+on how to make and preview more complex changes.</p>
+<p>We will assume that you have an appropriate text editor and Git installed on
+your machine. For Windows we recommend the free <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code IDE (VSC)</a> and <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a>
+or <a class="reference external" href="https://git-scm.com/downloads">Git Bash (the command line interface in Git)</a>.</p>
 <ol class="arabic simple">
-<li><p>Clone the <a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx">dcc-ex.github.io</a> website repository, to your local machine. Make sure you’re on the sphinx branch. (<a class="reference external" href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">Cloning a repository in GitHub</a>)</p></li>
-<li><p>Install Python 3.8 (which also installs pip) then use pip to install the required packages <code class="docutils literal notranslate"><span class="pre">`pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">sphinx_rtd_theme</span> <span class="pre">sphinxcontrib-spelling`</span></code></p></li>
-<li><p>Using Git Bash, go to the “website” folder and make a branch using GitHub desktop or this command: <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">your-branch-name`</span></code></p></li>
-<li><p>Open VSC and edit the files in the <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io/docs`</span></code> folder. Save, then Preview your changes by running <code class="docutils literal notranslate"><span class="pre">`make</span> <span class="pre">github`</span></code> from the root of the <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io`</span></code> folder. <em>This must be done from cmd.exe in Windows, not PowerShell</em> Then go to the directory <code class="docutils literal notranslate"><span class="pre">`dcc-ex.github.io/docs/build/html`</span></code> and open <code class="docutils literal notranslate"><span class="pre">`index.html`</span></code> in Chrome or another browser. Note that since 11/23/2020, this is just a local preview - when you push your changes, GitHub will automatically rebuild your website.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">add`</span></code> and <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;MY</span> <span class="pre">CHANGE</span> <span class="pre">DESCRIPTION&quot;`</span></code> often to save changes. If you’re using GitHub Desktop these are combined in the commit button.</p></li>
-<li><p>Push it to GitHub: <code class="docutils literal notranslate"><span class="pre">`git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">{your-name}-changes`</span></code></p></li>
-<li><p>Go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it’s merged in by one of the admins, your changes will go live!</p></li>
+<li><p>Clone the <a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io">dcc-ex.github.io</a>
+website repository, to your local machine. After cloning make sure you’re on
+the sphinx branch. (<a class="reference external" href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">Cloning a repository in GitHub</a>).</p></li>
+<li><p>Install a current version of Python 3 (which also installs pip). The
+Microsoft Store contains Python published by the Python Software Foundation
+for Windows. Then use pip to install the required packages
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">sphinx_rtd_theme</span> <span class="pre">sphinxcontrib-spelling</span></code>.</p></li>
+<li><p>Change location to the “website” folder <code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io</span></code> and make a branch
+using GitHub desktop or this command: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">your-branch-name</span></code>.</p></li>
+<li><p>Edit the files in the <code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io/docs</span></code> folder. Save,
+then check and preview your changes by running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">github</span></code> from the root of the
+<code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io</span></code> folder. <em>This must be done from cmd.exe in Windows, not
+PowerShell</em>. If any warnings are reported, fix these and run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">github</span></code>
+again. Then go to the directory <code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io/docs/_build/html</span></code>
+and open <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in Chrome or another browser.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;MY</span> <span class="pre">CHANGE</span> <span class="pre">DESCRIPTION&quot;</span></code> often to save
+changes. If you’re using GitHub Desktop these are combined in the commit button.</p></li>
+<li><p>Push it to GitHub: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">{your-branch-name}</span></code>.</p></li>
+<li><p>Go to GitHub and issue a pull request for your branch to be pulled into the
+sphinx branch. Once it’s merged in by one of the admins, your changes will
+go live!</p></li>
 </ol>
 </section>
 <section id="standards">

@@ -2,9 +2,9 @@
 
 .. Remove orphan field when the document is added to a toctree
 
-******************************
+*********************************
 Using the "DriveAway(tm)" Feature
-******************************
+*********************************
 
 DCC++EX and Engine Drivers "Request Loco ID" & “Drive Away" 
 

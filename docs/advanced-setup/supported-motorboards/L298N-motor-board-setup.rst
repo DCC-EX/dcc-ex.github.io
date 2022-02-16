@@ -24,5 +24,4 @@ The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are
   :alt: L298N Motor Board
   :scale: 25%
 
-  Figure 1. L298N Motor Board
-  
+  L298N Motor Board

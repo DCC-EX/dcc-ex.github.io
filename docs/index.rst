@@ -5,6 +5,7 @@ Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source 
 
 .. table::
    :align: left
+   :class: intro-table
 
    ==================   ==================   ====================
    |Timer|              |Arrow|              |Binder|

@@ -39,22 +39,22 @@ Run the Arduino IDE
 
 Start the Arduino IDE. You should see something like this:
 
-.. image:: ../../_static/images/arduino-ide/arduino_ide.jpg
+.. figure:: ../../_static/images/arduino-ide/arduino_ide.jpg
    :alt: Arduino IDE
    :scale: 90%
 
-**Figure 1** - Arduino IDE
+   Arduino IDE
 
 Select the Correct COM Port
 ----------------------------
 
 Select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
-.. image:: ../../_static/images/arduino-ide/board_port_mega.jpg
+.. figure:: ../../_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port
    :scale: 90%
 
-**Figure 2** - Select the correct COM Port
+   Select the correct COM Port
 
 Open the Serial Monitor
 ------------------------
@@ -62,19 +62,19 @@ Open the Serial Monitor
 The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
 
-.. image:: ../../_static/images/installer/arduino_ide2.jpg
+.. figure:: ../../_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
    :scale: 90%
 
-**Figure 3** - Open the Serial Monitor
+   Open the Serial Monitor
 
 Make sure the **baud rate at the lower right of the window is set to "115200"**. This is the data communication speed, equivalent to 115.2kb/s! **Make sure the dropdown next to that says "Both NL & CR"**. That makes sure you send a 'new line' command and 'carriage return' which the Arduino expects.
 
-.. image:: ../../_static/images/installer/serial_monitor.jpg
+.. figure:: ../../_static/images/installer/serial_monitor.jpg
    :alt: Serial Monitor
    :scale: 90%
 
-**Figure 4** - Serial Monitor - Note line ending and baud rate settings!
+   Serial Monitor - Note line ending and baud rate settings!
 
 Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the CS will sense that, the network test will fail, but everything else will be working as it should.
 

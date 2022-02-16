@@ -62,6 +62,10 @@ exclude_patterns = [
 # Set the default for literal blocks and code-block
 highlight_language = 'none'
 
+# Automatically number figure captions
+numfig = True
+
+numfig_format = {'figure': 'Figure %s'}
 
 # -- Options for HTML output -------------------------------------------------
 

@@ -91,6 +91,18 @@ Object Definitions
 
 ``ALIAS( name, value )``	Assign names to values. Can go anywhere in the script
 
+This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need. If you want spaces in an alias, you must enclose it in quotes.
+
+Examples:
+
+ALIAS(coal_yard, 1) or ALIAS("coal yard", 1) then instead of PIN_TURNOUT( id, pin [, "COAL YARD"], write it as PIN_TURNOUT(coal_yard, pin [, "description"]) 
+
+2000 milliseconds is 2 seconds, so with ALIAS(slow, 2000), you could set DELAY(slow).
+
+
+
+
+
 ``SIGNAL( red_pin, amber_pin, green_pin )``	Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)
 
 ``TURNOUT( id, addr, sub_addr [, "description"] )``	Define DCC Accessory turnout

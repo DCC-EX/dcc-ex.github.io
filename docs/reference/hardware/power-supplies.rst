@@ -182,7 +182,7 @@ These come in different sizes. Show here is a 2A and a 6A Version. You can look 
 
 These are Input Voltage: DC 4-38V, error ±0.1V. Output Voltage: DC 1.25V to 36V at 5A.
 
-https://www.amazon.com/dp/B079N9BFZC?tag=amz-mkt-chr-us-20&ascsubtag=1ba00-01000-a0049-win10-other-nomod-us000-pcomp-feature-scomp-wm-5&ref=aa_scomp
+https://www.amazon.com/dp/B079N9BFZC
 
 
 Cheap Buck Converter with Display $5

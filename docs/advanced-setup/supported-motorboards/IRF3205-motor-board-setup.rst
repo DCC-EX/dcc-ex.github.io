@@ -395,7 +395,7 @@ TODO: See the PDF file IRF3205_mega_ACS724 in trains folder to include here
    Note that I was able to successfully read several decoders with 0-10A and +/-10A external current sensors, but not the recent model SD70Ace Genesis w/Tsunami2 OEM sound decoder.
    
    Locoduino site shows a method for separating the channels and adding a MAX471.
-   https://forum-locoduino-org.translate.goog/index.php?PHPSESSID=7cbbfc3255ae799160a2b9a6aa42e375&topic=843.msg10416&_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc,elem#msg10416
+   https://forum-locoduino-org.translate.goog/index.php?topic=843.msg10416&_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc,elem#msg10416
    
    I wonder if the 1.5 ohm 3 watt resistor could be added to this setup instead of the MAX471.
    

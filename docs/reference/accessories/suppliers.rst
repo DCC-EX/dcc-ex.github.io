@@ -39,7 +39,7 @@ David Yale
    :scale: 100%
    :align: left
 
-`David's Makerbot Thingverse page <https://www.thingiverse.com/thing:4619514?fbclid=IwAR3-iPhSOXOwbS5HytoKfxdfWuaaSgolslN52x9rp18dW1OhLEbnCUFGRs8>`_
+`David's Makerbot Thingverse page <https://www.thingiverse.com/thing:4619514>`_
 
 .. rst-class:: clearer
 
@@ -50,7 +50,7 @@ David provides the files to make a 3D printed case or can sell an alread made ca
    :scale: 40%
    :align: left
 
-`David's Makerbot Thingverse page <https://www.thingiverse.com/thing:4619514?fbclid=IwAR3-iPhSOXOwbS5HytoKfxdfWuaaSgolslN52x9rp18dW1OhLEbnCUFGRs8>`_
+`David's Makerbot Thingverse page <https://www.thingiverse.com/thing:4619514>`_
 
 .. rst-class:: clearer
 

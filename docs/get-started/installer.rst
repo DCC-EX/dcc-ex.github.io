@@ -15,7 +15,7 @@ Requirements (for installing)
 Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
 ============================================================================
 
-* Download the `DCC-EX Installer <https://dcc-ex.com/download/commandstation.html#exinstaller>`_ which will automatically determine the version you need and download it
+* Download the :ref:`DCC-EX Installer <download/commandstation:exInstaller>` which will automatically determine the version you need and download it
 * Extract the Installer into its own folder with your favorite unzip program
 * Open File Manager for Windows or a terminal window in Mac OS and Linux and navigate to that folder
 * Windows users run ``exInstaller.exe``
@@ -28,11 +28,11 @@ Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
 The Installer Window
 =====================
 
-.. image:: ../_static/images/installer/installer.jpg
+.. figure:: ../_static/images/installer/installer.jpg
    :alt: DCC-EX Installer
    :scale: 75%
 
-**Figure 1** - Installer Window
+   Installer Window
 
 There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
@@ -41,11 +41,11 @@ Choose your options
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
 
-.. image:: ../_static/images/installer/inst_options.jpg
+.. figure:: ../_static/images/installer/inst_options.jpg
    :alt: Options Pane
    :scale: 75%
 
-**Figure 2** - Options Pane
+   Options Pane
 
 1. Select your Command Station Type
 2. Select your Arduino Board Type
@@ -66,11 +66,11 @@ If you have installed a WiFi board, DCC++ EX will scan all the serial ports on y
 If you wish to connect to your home network instead (connect to your router using "Station Mode"), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:
 
 
-.. image:: ../_static/images/installer/wifi.jpg
+.. figure:: ../_static/images/installer/wifi.jpg
    :alt: WiFi Options
    :scale: 90%
 
-**Figure 3** - Wifi Options
+   Wifi Options
 
 * **WiFi SSID** - The name of your home network.\ 
 
@@ -87,11 +87,11 @@ Ethernet Checkbox
 
 If you have an Ethernet shield and check this box, you will see options to change the following settings:
 
-.. image:: ../_static/images/installer/ethernet.jpg
+.. figure:: ../_static/images/installer/ethernet.jpg
    :alt: Ethernet Options
    :scale: 90%
 
-**Figure 4** - Ethernet Options
+   Ethernet Options
 
 * **Host Name** - If your Ethernet Board supports it, this name can be used in addition to the IP address.\ 
 
@@ -106,11 +106,11 @@ LCD Checkbox
 
 If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:
 
-.. image:: ../_static/images/installer/lcd.jpg
+.. figure:: ../_static/images/installer/lcd.jpg
    :alt: LCD Options
    :scale: 90%
 
-**Figure 5** - LCD Options
+   LCD Options
 
 * **LCD Address (in Decimal format)** - This is the address of your display, it is usually 39 (for 0x27) or 63 (for 0x3F)
 
@@ -118,24 +118,24 @@ If you have a 2 or 4 line LCD display connected and check this box, you will see
 
 * **LCD Rows** - The number of horizontal rows or lines on your display
 
-For more information about using displays, see `I2C Displays <../reference/hardware/i2c-displays.html>`_
+For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
 
 OLED CheckBox
 ---------------
 
 If you have an OLED display connected and check this box, you will see the following options you can edit for your display:
 
-.. image:: ../_static/images/installer/oled.jpg
+.. figure:: ../_static/images/installer/oled.jpg
    :alt: OLED Options
    :scale: 90%
 
-**Figure 6** - OLED Options
+   OLED Options
 
 * **OLED Width (in pixels)** - Enter the width or number of horizontal pixels on your display
 
 * **OLED Height (in pixels)** - Enter the height or number of vertical pixels on your display
 
-For more information about using displays, see `I2C Displays <../reference/hardware/i2c-displays.html>`_
+For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
 
 Refresh Ports Button
 ----------------------
@@ -161,29 +161,29 @@ To test with the Arduino Serial Monitor, download the Arduino IDE from the follo
 
 To do a quick test, open the Arduino application:
 
-.. image:: ../_static/images/installer/arduino_ide.jpg
+.. figure:: ../_static/images/installer/arduino_ide.jpg
    :alt: Arduino IDE
    :scale: 100%
 
-**Figure 7** - The Arduino IDE
+   The Arduino IDE
 
 * Select "Tools -> Serial Monitor" from the Arduino IDE menu
 
 
-.. image:: ../_static/images/installer/arduino_ide2.jpg
+.. figure:: ../_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
    :scale: 100%
 
-**Figure 8** - Open the Serial Monitor from the Tools Menu
+   Open the Serial Monitor from the Tools Menu
 
 You will see the following screen:
 
 
-.. image:: ../_static/images/installer/serial_monitor.jpg
+.. figure:: ../_static/images/installer/serial_monitor.jpg
    :alt: Serial Monitor
    :scale: 100%
 
-**Figure 9** - Serial Monitor
+   Serial Monitor
 
 
 * Select "115200" as the baud rate in the dropdown in the lower right
@@ -204,22 +204,21 @@ There are a lot of other commands you can enter here. As a matter of fact, you c
 Using exWebThrottle
 --------------------
 
-.. image:: ../_static/images/installer/exwebthrottle.jpg
+.. figure:: ../_static/images/installer/exwebthrottle.jpg
    :alt: exWebThrottle
    :scale: 100%
 
-**Figure 10** - exWebThrottle
+   exWebThrottle
 
-Click this link: `exWebThrottle <../throttles/ex-webthrottle.html>`_ to run exWebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/exWebThrottle>`_ to get the latest version to run on your computer.
+Click this link: :doc:`exWebThrottle </throttles/ex-webthrottle>` to run exWebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/exWebThrottle>`_ to get the latest version to run on your computer.
 
 Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
 --------------------------------------------------------------
 
-.. image:: ../_static/images/installer/engine_driver.png
+.. figure:: ../_static/images/installer/engine_driver.png
    :alt: Engine Driver
    :scale: 100%
 
-**Figure 11** - Engine Driver
+   Engine Driver
 
 You will need to install Engine Driver on your mobile device and then connect to the CS, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
-

@@ -3,7 +3,7 @@ DCC++ EX Command Summary
 ****************************
 
 **This is a summary, for a detailed command, see...**
-  `Command Reference <command-reference.html>`_
+  :doc:`Command Reference <command-reference>`
 
 ----------------------------
 Power management
@@ -133,7 +133,7 @@ Outputs
 
    IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
                  1 = state of pin set to ACTIVE upon power-up or when first created
-|
+..
 
  ``<Z id 0|1>`` : Sets output ID to either INACTIVE or ACTIVE state  
 
@@ -199,12 +199,12 @@ I/O (HAL) Diagnostics
  ``<D ANOUT vpin value [param2]>``  Write `value` to analogue pin `vpin`, supplying `param2` to the driver.
 
  ``<D ANIN vpin>``  Read and display pin `vpin`'s analogue value.
-  
 
- ==========
- Other
- ==========
+==========
+Other
+==========
+
  ``<U ...>`` Is reserved for user commands (through user filter)
 
  **For a detailed command reference, see...**
-  `Command Reference <command-reference.html>`_
+  :doc:`Command Reference <command-reference>`

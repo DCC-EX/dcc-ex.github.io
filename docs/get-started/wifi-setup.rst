@@ -1,14 +1,14 @@
-***********
-WiFi Setup
-***********
+*********************
+Adding a WiFi Option
+*********************
 
-The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can `skip ahead to the next page <installer.html>`_.
+The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page <installer>`.
 
 .. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12). The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
 
 There are many ways to add WiFi to your Command Station. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
-You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our `Support Page <../support/index.html>`_ if you have a question.
+You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our :doc:`Support Page <../support/index>` if you have a question.
 
 Note that you can click on any of the images to make them larger.
 
@@ -41,7 +41,7 @@ Most boards based on the ESP8266 should work with DCC++ EX. However, with all th
 * `Duinopeak ESP8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
-Fore more boards you may be able to use, see the `WiFi Boards Section <../reference/hardware/wifi-boards.html>`_
+Fore more boards you may be able to use, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`
 
 What you will need (for WiFi)
 ================================
@@ -55,20 +55,20 @@ What you will need (for WiFi)
 Quick links
 ==============
 
-* Jump to :ref:`Makerfabs ESP8266 WiFi Shield (recommended)`
-* Jump to :ref:`Duinopeak ESP8266 WiFi Expansion Board`
-* Jump to :ref:`ESP-01 and ESP-01s`
+* Jump to :ref:`get-started/wifi-setup:Makerfabs ESP8266 WiFi Shield (recommended)`
+* Jump to :ref:`get-started/wifi-setup:Duinopeak ESP8266 WiFi Expansion Board`
+* Jump to :ref:`get-started/wifi-setup:ESP-01 and ESP-01s`
 
 Makerfabs ESP8266 WiFi Shield (recommended)
 ===============================================
 
 We like this board here at DCC++ EX. It is simple, inexpensive, easy to use, and it works.
 
-.. image:: ../_static/images/wifi_jumpers1.jpg
+.. figure:: ../_static/images/wifi_jumpers1.jpg
    :alt: Makerfabs ESP-8266 WiFi Shield
    :scale: 75%
 
-**Figure 1** - Makerfabs ESP8266 WiFi Shield
+   Makerfabs ESP8266 WiFi Shield
 
 Installing the board follows the same procedure in the previous section on assembly. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.
 
@@ -78,11 +78,11 @@ Remove the plastic jumpers
 Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.
 
 
-.. image:: ../_static/images/wifi_pins.jpg
+.. figure:: ../_static/images/wifi_pins.jpg
    :alt: Remove the plastic jumpers
    :scale: 75%
 
-**Figure 2** - Remove the plastic jumpers
+   Remove the plastic jumpers
 
 Align the boards
 ------------------
@@ -90,29 +90,31 @@ Align the boards
 Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Rx, Tx, 2, 3, 4, 5, 6, 7 pins on the Motor Shield line up with the 0 through 7 pins on the Makerfabs WiFi Board. Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.
 
 
-.. image:: ../_static/images/wifi_seat1.jpg
+.. figure:: ../_static/images/wifi_seat1.jpg
    :alt: Get the left side pins aligned
    :scale: 75%
 
-**Figure 3** - Get the left side pins aligned
+   Get the left side pins aligned
 
 Seat the boards
 -----------------
 
-Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (Figure 4). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see Figure 5).
+Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (:numref:`wifi-right-side-pins-aligned`). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see :numref:`wifi-fully-seated-boards`).
 
 
-.. image:: ../_static/images/wifi_seat2a.jpg
+.. figure:: ../_static/images/wifi_seat2a.jpg
    :alt: Get the right side pins aligned
    :scale: 75%
+   :name: wifi-right-side-pins-aligned
 
-**Figure 4** - Get the right side pins aligned
+   Get the right side pins aligned
 
-.. image:: ../_static/images/wifi_seat_full.jpg
+.. figure:: ../_static/images/wifi_seat_full.jpg
    :alt: Fully seated boards
    :scale: 75%
+   :name: wifi-fully-seated-boards
 
-**Figure 5** - Fully seated boards
+   Fully seated boards
 
 Install the jumper wires
 -------------------------
@@ -127,11 +129,11 @@ Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board, a
 
 Take a second jumper wire and connect it to any one of the Rx pins on the Wifi Board and connect the other end to Tx1 on the mega (pin 18).
 
-.. image:: ../_static/images/wifi_jumpers2.png
-   :alt: Figure 6 - Install the Jumper wires
+.. figure:: ../_static/images/wifi_jumpers2.png
+   :alt: Install the Jumper wires
    :scale: 75%
 
-**Figure 6** - Install the jumper wires
+   Install the jumper wires
 
 .. note:: The screenprinting on the board may make it hard to see which pins are 18 and 19, they may not be aligned exactly. Count the pins if you need to to make sure that you are using the correct ones.
 
@@ -142,11 +144,11 @@ This board is designed as an expansion/prototyping board as well as a WiFi board
 
 .. note:: This is just a carrier board for an ESP-01 or 01s. You will still need an ESP-01s to place onto this board. See the next section.
 
-.. image:: ../_static/images/duinopeak.jpg
+.. figure:: ../_static/images/duinopeak.jpg
    :alt: Duinopeak WiFi Board
    :scale: 75%
 
-**Figure 7** - Duinopeak WiFi Board
+   Duinopeak WiFi Board
 
 Install the Shield
 ---------------------
@@ -164,11 +166,11 @@ ESP-01 and ESP-01s
 This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduno Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
 
 
-.. image:: ../_static/images/esp-01s_2.jpg
+.. figure:: ../_static/images/esp-01s_2.jpg
    :alt: ESP-01s
    :scale: 75%
 
-**Figure 8** - ESP-01s
+   ESP-01s
 
 Install the Module
 --------------------
@@ -176,11 +178,11 @@ Install the Module
 Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity, the image does not show the motor board already on top of the Mega, but since the headers connect all the pins together vertically, you can find the same pins on the motor board to get the 3.3V and Gnd to power the ESP8266.
 
 
-.. image:: ../_static/images/esp8266_mega.jpg
+.. figure:: ../_static/images/esp8266_mega.jpg
    :alt: ESP-8266 Wiring to a Mega
    :scale: 75%
 
-**Figure 9** - Wiring an ESP-01s to a Mega
+   Wiring an ESP-01s to a Mega
 
 **Wiring**
 
@@ -194,24 +196,25 @@ Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity
    Rx   -----> Tx
 
 
-In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and "level shifters" to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In Figure 10 below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.
+In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and "level shifters" to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In :numref:`esp-01s-adapters` below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.
 
 .. note:: About current requirements: While we at DCC-EX Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.
 
 
-.. image:: ../_static/images/esp-01_adapter.jpg
+.. figure:: ../_static/images/esp-01_adapter.jpg
    :alt: ESP-01s Adapters
    :scale: 75%
+   :name: esp-01s-adapters
 
-**Figure 10** - ESP-01 Breakout Boards.
+   ESP-01 Breakout Boards.
 
 .. warning:: The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don't need any additional circuitry. However, to be safe, you can use a small `level shifter board <https://www.mouser.com/ProductDetail/SparkFun/BOB-12009?qs=WyAARYrbSnb%252BGYLWggQnjQ%3D%3D&gclid=Cj0KCQiAzZL-BRDnARIsAPCJs73SnsmU-CTIk9V0XE6qjxY2WKlnxI0sLhT_rY5MYTbIOBmHne50Eh4aAm5ZEALw_wcB>`_, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.
 
 Install the Software
 ======================
 
-If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: `WiFi Configuration <../advanced-setup/wifi-config.html>`_
+If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
 
 .. note:: LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
 
-If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to `Command Station Downloads <../download/commandstation.html>`_ to load firmware onto the CS.
+If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads <../download/commandstation>` to load firmware onto the CS.

@@ -39,22 +39,22 @@ Run the Arduino IDE
 
 Start the Arduino IDE. You should see something like this:
 
-.. image:: ../../_static/images/arduino-ide/arduino_ide.jpg
+.. figure:: ../../_static/images/arduino-ide/arduino_ide.jpg
    :alt: Arduino IDE
    :scale: 90%
 
-**Figure 1** - Arduino IDE
+   Arduino IDE
 
 Select the Correct COM Port
 ----------------------------
 
 Select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
-.. image:: ../../_static/images/arduino-ide/board_port_mega.jpg
+.. figure:: ../../_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port
    :scale: 90%
 
-**Figure 2** - Select the correct COM Port
+   Select the correct COM Port
 
 Open the Serial Monitor
 ------------------------
@@ -62,26 +62,26 @@ Open the Serial Monitor
 The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
 
-.. image:: ../../_static/images/installer/arduino_ide2.jpg
+.. figure:: ../../_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
    :scale: 90%
 
-**Figure 3** - Open the Serial Monitor
+   Open the Serial Monitor
 
 Make sure the **baud rate at the lower right of the window is set to "115200"**. This is the data communication speed, equivalent to 115.2kb/s! **Make sure the dropdown next to that says "Both NL & CR"**. That makes sure you send a 'new line' command and 'carriage return' which the Arduino expects.
 
-.. image:: ../../_static/images/installer/serial_monitor.jpg
+.. figure:: ../../_static/images/installer/serial_monitor.jpg
    :alt: Serial Monitor
    :scale: 90%
 
-**Figure 4** - Serial Monitor - Note line ending and baud rate settings!
+   Serial Monitor - Note line ending and baud rate settings!
 
 Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the CS will sense that, the network test will fail, but everything else will be working as it should.
 
 Enter Commands to the CS
 -------------------------
 
-There is an entire language that DCC-EX understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the `DCC++ EX Command Reference <https://dcc-ex.com/reference/software/command-reference.html>`_ . Let's just try two commands to make sure everything is working.
+There is an entire language that DCC-EX understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the :doc:`DCC++ EX Command Reference </reference/software/command-reference>`. Let's just try two commands to make sure everything is working.
 
 All DCC-EX commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the motor shield.
 
@@ -115,15 +115,15 @@ You will need to find one that is compatible with your phone. Some phones come w
 
 Here is an adapter:
 
-https://www.amazon.com/Thunderbolt-Compatible-Chromebook-Pixelbook-Microsoft/dp/B07KR45LJW/ref=sr_1_4?dchild=1&keywords=otg+adapter&qid=1625863945&s=electronics&sr=1-4
+https://www.amazon.com/Thunderbolt-Compatible-Chromebook-Pixelbook-Microsoft/dp/B07KR45LJW/
 
 Here is one for Android or MacBook Pro with USB-C with a short pigtail:
 
-https://www.amazon.com/Adapter-JSAUX-Compatible-MacBook-Samsung/dp/B07L749R9R/ref=sr_1_5?dchild=1&keywords=otg+cable&qid=1625863614&sr=8-5
+https://www.amazon.com/Adapter-JSAUX-Compatible-MacBook-Samsung/dp/B07L749R9R/
 
 And one for an iPad or iPhone:
 
-https://www.amazon.com/dp/B07V2CMXQT/ref=redir_mobile_desktop?_encoding=UTF8&aaxitk=7aa803dc4108c96ff75758ce1d6f9e46&hsa_cr_id=1752570960701&pd_rd_plhdr=t&pd_rd_r=486502c7-13e1-40e1-9f35-f52cd9335772&pd_rd_w=vHecY&pd_rd_wg=pxSba&ref_=sbx_be_s_sparkle_mcd_asin_0_title
+https://www.amazon.com/dp/B09KBZDDGL/
 
 Every cell phone OS such as Android or iOS has a program or two that will work as a serial monitor. For Android, here are a few:
 

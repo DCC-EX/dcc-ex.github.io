@@ -13,7 +13,7 @@ Please visit their website: https://www.withrottle.com
 
 You can find it in the App Store: `WiThrottle <http://itunes.apple.com/app/id344172578>`_
 
-For more information more information about these protocols, see `WiThrottle Server, Web Server, DCC++ API Explained <protocols.html>`_
+For more information more information about these protocols, see :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
 
 .. _withrottle-features:
 
@@ -34,27 +34,6 @@ Screenshots
 .. image:: ../_static/images/throttles/withrottle1.png
    :alt: WiThrottle Screenshot 1
    :scale: 90%
-   :align: left
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
 
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section
@@ -66,7 +45,7 @@ Requirements
 
 * A DCC++ EX Commmand Station (Mega based for WiFi)
 * An iOS Cell Phone or Tablet
-* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi `Wifi Setup <../get-started/wifi-setup.html>`_
+* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup <../get-started/wifi-setup>`
 
 .. _withrottle-operation:
 
@@ -80,7 +59,7 @@ Operation
 Using Wifi
 ------------
 
-To use Wifi, make sure you have a WiFi enabled Command Station as described in the `Wifi Setup <../get-started/wifi-setup.html>`_ section.
+To use Wifi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup <../get-started/wifi-setup>` section.
 
 We have not tested the WiFi implementation yet
 

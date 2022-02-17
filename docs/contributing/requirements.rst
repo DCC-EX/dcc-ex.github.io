@@ -17,8 +17,8 @@ Just go to the Contact Us section, and we will find a way of getting you on boar
 reStructuredText
 ------------------
 
-All documentation is done using reStructuredText, for which you can find information here on the official website: `reStructuredText <https://docutils.sourceforge.io/rst.html>`_ 
-or  `here <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ which is on the Sphinx document builder tool website, which we discuss later on in this chapter.
+All documentation is done using reStructuredText, for which you can find information on the official website: `reStructuredText <https://docutils.sourceforge.io/rst.html>`_
+or the `Sphinx <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ document builder tool website, which we discuss later on in this chapter.
 reStructuredText is a markdown type language, for typesetting documents from websites to pdf or latex documents. Our Website is built upon this technology, so you should make yourself familiar with this by looking through the links provided.
 
 reStructuredText `QuickReference Guide <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_ 
@@ -29,11 +29,11 @@ Git & GitHub
 
 You should have some knowledge about Git and GitHub, as we manage all of our documentation (as well as the development) there. Depending on the editing platform of your choice, you may get all the Git functionality you need. You may want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the DCC++EX documentation GitHub repository (dcc-ex.github.io).
 
-If you don't have Git installed, now is as good a time as any by going `here <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ 
+If you don't have Git installed, now is as good a time as any, follow the instructions in the `Pro Git book <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_
 
-Download GitHub Desktop `here <https://desktop.github.com/>`_ 
+Download `GitHub Desktop <https://desktop.github.com/>`_
 
-Download SourceTree `here <https://www.sourcetreeapp.com/>`_ 
+Download `SourceTree <https://www.sourcetreeapp.com/>`_
 
 Editing
 --------

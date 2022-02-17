@@ -17,13 +17,13 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 
 **Links in This Page**
 
-* :ref:`Configure Using the Installer`
-* :ref:`Configure By Editing the config.h File`
-* :ref:`Your Board is in the Supported List`
-* :ref:`Your Board is NOT in the Supported List`
-* :ref:`Using High Accuracy Waveform Mode`
-* :ref:`Current Sense and Sense Factor`
-* :ref:`Just Buy a Current Sense Board Instead`
+* :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+* :ref:`advanced-setup/motor-board-config:Configure By Editing the config.h File`
+* :ref:`advanced-setup/motor-board-config:Your Board is in the Supported List`
+* :ref:`advanced-setup/motor-board-config:Your Board is NOT in the Supported List`
+* :ref:`advanced-setup/motor-board-config:Using High Accuracy Waveform Mode`
+* :ref:`advanced-setup/motor-board-config:Current Sense and Sense Factor`
+* :ref:`advanced-setup/motor-board-config:Just Buy a Current Sense Board Instead`
 
 Configure Using the Installer
 ==============================
@@ -33,7 +33,7 @@ Tinkerers and even Conductors should be comfortable with this option. If you are
 Configure By Editing the config.h File
 =======================================
 
-Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of `Currently supported boards <../reference/hardware/motor-boards.html>`_
+Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of :doc:`Currently supported boards </reference/hardware/motor-boards>`
 
 Open the config.h file in your editor. If this is the first time configuring your system, you may need to copy the "config.example.h" file and name the copy "config.h".
 
@@ -142,7 +142,7 @@ Using High Accuracy Waveform Mode
 
 You may ask, "Do I need high accuracy waveforms?" and the answer is probably not. But we are engineers, and we love to spend our days trying to eke out every bit of performance from the system, and maintain bragging rights for thinking of something 5% more clever than the other members of our team! Even our "standard" waveform is within the NMRA specification. For purists, or if you find a particular decoder that is not in spec and needs to have tighter timing on the DCC waveform, you can make sure you are using high accuracy mode.
 
-If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see `High Accuracy Waveform Mode <high-accuracy.html>`_.
+If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see :doc:`High Accuracy Waveform Mode </advanced-setup/high-accuracy>`.
 
 
 Current Sense and Sense factor
@@ -183,7 +183,7 @@ Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require 
 How Do I Find Volts per Amp?
 ------------------------------
 
-In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you should use separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the `Advanced Setup Section <../advanced-setup/index.html>`_ for more info.
+In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you should use separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the :doc:`Advanced Setup Section <../advanced-setup/index>` for more info.
 
 Just Buy a Current Sense Board Instead
 ---------------------------------------
@@ -219,4 +219,4 @@ The disadvantage is that you MUST use a bi-directional current sensor, and you n
 
 No matter which method you choose, you are going to have to either select the correct motor board type in your config.h file, or create a motorboard definition to tell DCC++EX which pins you are connecting your current sense board(s) to, and what current sense factor to use to report the current accurately.
 
-For details and instructions on how to connect and configure non-Arduino Motor Shield boards and their clones, see the `Supported Motorboards Setup Notes <../advanced-setup/supported-motorboards/index.html>`_.
+For details and instructions on how to connect and configure non-Arduino Motor Shield boards and their clones, see the :doc:`Supported Motorboards Setup Notes <../advanced-setup/supported-motorboards/index>`.

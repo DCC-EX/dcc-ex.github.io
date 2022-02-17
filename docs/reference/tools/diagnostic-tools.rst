@@ -8,10 +8,10 @@ DCC Diagnostic Tools
 
 There are many tools to help you operate your layout and find issues with your trains and accessories. We will list some of the most helpful tools here including where to buy them assembled or how to build them yourself.
 
-* :ref:`Sniffer vs. Analyzer`
-* :ref:`DCC Sniffer (packet analyzer)`
-* :ref:`Logic Analyzer/Decoder`
-* :ref:`DCC Track Phase Detector`
+* :ref:`reference/tools/diagnostic-tools:Sniffer vs. Analyzer`
+* :ref:`reference/tools/diagnostic-tools:DCC Sniffer (packet analyzer)`
+* :ref:`reference/tools/diagnostic-tools:Logic Analyzer/Decoder`
+* :ref:`reference/tools/diagnostic-tools:DCC Track Phase Detector`
  
 
 Sniffer vs. Analyzer
@@ -20,36 +20,28 @@ Sniffer vs. Analyzer
 Sniffer
 ----------
 
-A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ sketch.
+A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` sketch.
 
-.. image:: ../../_static/images/tools/sniffer_out1.png
-   :align: left
-   :scale: 35%
-   :alt: Example Sniffer Output 1
+.. figure:: /_static/images/pixel.png
 
-.. image:: ../../_static/images/tools/sniffer_out2.jpg
-   :align: left
-   :scale: 50%
-   :alt: Example Sniffer Output 2
+   Example outputs of a DCC Sniffer below. Click on any of the images to view them full size.
 
-.. image:: ../../_static/images/tools/sniffer_out3.png
-   :align: left
-   :scale: 24%
-   :alt: Example Sniffer Output 3
+   .. image:: ../../_static/images/tools/sniffer_out1.png
+      :align: left
+      :scale: 35%
+      :alt: Example Sniffer Output 1
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+   .. image:: ../../_static/images/tools/sniffer_out2.jpg
+      :align: left
+      :scale: 50%
+      :alt: Example Sniffer Output 2
 
-Figure 1: Example outputs of a DCC Sniffer. Click on any of the images to view them full size.
+   .. image:: ../../_static/images/tools/sniffer_out3.png
+      :align: left
+      :scale: 24%
+      :alt: Example Sniffer Output 3
+
+.. rst-class:: clearer
 
 Analyzer
 ---------
@@ -60,9 +52,8 @@ A logic analyzer is a device that connects to the Command Station signal pins an
    :align: center
    :scale: 100%
    :alt: DCC Signal Analyzer output
-   :figclass: align-center
 
-   Figure 2: Example Logic Analyzer output
+   Example Logic Analyzer output
 
 
 DCC Sniffer (PACKET analyzer)
@@ -71,38 +62,20 @@ DCC Sniffer (PACKET analyzer)
 Buy it
 -------
 
-Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_  file and upload it to your microcontroller with the Arduiono IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
+Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` file and upload it to your microcontroller with the Arduino IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
 
 .. figure:: ../../_static/images/tools/iowa_scale_eng_dcc_board.jpg
-   :align: left
+   :align: center
    :scale: 60%
    :alt: Iowa Scale Engineering DCC Sniffer/Decoder Board
-   :figclass: align-left
 
-   Figure 3: Iowa Scale Engineering DCC Sniffer/Decoder Board
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+   Iowa Scale Engineering DCC Sniffer/Decoder Board
 
 https://www.iascaled.com/store/ARD-DCCSHIELD
 
 **It costs about $30 US.**
 
-And since it is a shield, you just stick it on top of an Uno or Mega, upload `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
+And since it is a shield, you just stick it on top of an Uno or Mega, upload :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>`, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
 
 *** Wiring and more info goes here ***
 
@@ -111,15 +84,14 @@ Build It
 
 Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the DCC++EX Command Station instead of to the track.
 
-You will need to upload our `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ software to whatever microcontroller you choose.
+You will need to upload our :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` software to whatever microcontroller you choose.
 
 .. figure:: ../../_static/images/tools/sniffer_block_diag.png
    :align: center
    :scale: 70%
    :alt: Packet Sniffer Block Diagram
-   :figclass: align-center
 
-   Figure 4: DCC Packet Sniffer Block Diagram
+   DCC Packet Sniffer Block Diagram
 
 - **Power From Track** This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track OR from batteries.
 
@@ -133,7 +105,7 @@ DCC Signal Interface
 Connect directly to the Signal output (enable pin) of the Arduino CS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Easy! You don't need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  `DCCInspector-EX <../../download/dcc-inspector-ex.html>`_ download page for which pins to use.
+Easy! You don't need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` download page for which pins to use.
 
 Connect to the track
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -148,9 +120,8 @@ With this option, you can connect to anywhere on your track. Wiring can be tempo
    :align: center
    :scale: 90%
    :alt: Minimum recommended circuit
-   :figclass: align-center
 
-   Figure 5: Minimum recommended circuit
+   Minimum recommended circuit
 
 The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1uF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our DCCInspector-EX sketch uses the pin 13 LED to provide the same function.
 
@@ -160,9 +131,8 @@ The circuit above represents the minimal number of components to potentially int
    :align: center
    :scale: 35%
    :alt: Geoff Bunza DCC Interface Schematic
-   :figclass: align-center
 
-   Figure 6: Geoff Bunza DCC Interface Schematic
+   Geoff Bunza DCC Interface Schematic
 
 The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like Oshpark) and have them make boards for you. DCC-EX may be selling these, so keep checking back. Here is what the boards look like:
 
@@ -170,9 +140,8 @@ The above is actually a simple circuit to build. To make it easy, Geoff has prov
    :align: center
    :scale: 60%
    :alt: Geoff Bunza DCC Interface Board
-   :figclass: align-center
 
-   Figure 7: Geoff Bunza DCC Interface Board
+   Geoff Bunza DCC Interface Board
 
 All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the microcontroller and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.
 
@@ -216,9 +185,8 @@ And if you want to get into the development of DCCInspector-EX and why we recomm
    :align: center
    :scale: 60%
    :alt: Neil's DCC-EX Sniffer
-   :figclass: align-center
 
-   Figure 8: Neil's DCC-EX Sniffer in a 3D Printed Case
+   Neil's DCC-EX Sniffer in a 3D Printed Case
 
 HERE:
 https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/
@@ -232,30 +200,16 @@ Logic Analyzer/Decoder
 =========================
 
 .. figure:: ../../_static/images/tools/logic_analyzer.jpg
-   :align: left
+   :align: center
    :scale: 50%
    :alt: Logic Analyzer
-   :figclass: align-left
 
-   Figure 9: Logic Analyzer
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+   Logic Analyzer
 
 No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. Ebay and AliExpress are good sources:
 
-* `8 Channel 24mHz USB Logic Anayzer ($8-20) <https://www.amazon.com/KeeYees-Analyzer-Device-Channel-Arduino/dp/B07K6HXDH1/ref=pd_lpo_193_t_0/130-6340217-7680634?_encoding=UTF8&pd_rd_i=B07K6HXDH1&pd_rd_r=c23ee4b0-ca9d-4b32-90ab-cdb4c48fe5be&pd_rd_w=gRofP&pd_rd_wg=8hefY&pf_rd_p=7b36d496-f366-4631-94d3-61b87b52511b&pf_rd_r=AD9WHN4F5RT3XHSJVX42&psc=1&refRID=AD9WHN4F5RT3XHSJVX42>`_
-* `Logic Analyzer Probe Setup ($7-18) May come with your analyzer <https://www.amazon.com/10PCS-Grabber-Jumper-Analyzer-Colors/dp/B083PRVPCR/ref=sr_1_4?dchild=1&keywords=logic+probe+with+hooks&qid=1608658759&sr=8-4>`_
+* `8 Channel 24mHz USB Logic Anayzer ($8-20) <https://www.amazon.com/KeeYees-Analyzer-Device-Channel-Arduino/dp/B07K6HXDH1/>`_
+* `Logic Analyzer Probe Setup ($7-18) May come with your analyzer <https://www.amazon.com/10PCS-Grabber-Jumper-Analyzer-Colors/dp/B083PRVPCR/>`_
 * `Sigrok PulseView Sofware (FREE) <https://sigrok.org/wiki/PulseView>`_
 * `DCC Decoder Plugin for PulseView (FREE) <https://github.com/littleyoda/sigrok-DCC-Protocoll/archive/master.zip>`_
 
@@ -267,9 +221,8 @@ Any set of probes that will connect to the pins that are exposed between the Ard
    :align: center
    :scale: 18%
    :alt: Logic probes
-   :figclass: align-center
 
-   Figure 10: Logic Probes
+   Logic Probes
 
 Install PulseView
 --------------------
@@ -295,9 +248,14 @@ It will look something line this. There will be just 2 files. The "cache" file w
    :align: center
    :scale: 100%
    :alt: Installing the DCC protocol decoder
-   :figclass: align-center
 
-   Figure 11: Installing the DCC protocol decoder
+   Installing the DCC protocol decoder
+
+On Linux::
+
+    $ unzip sigrok-DCC-Protocoll-master.zip
+    $ mkdir -p ~/.local/share/libsigrokdecode/decoders
+    $ cp -r sigrok-DCC-Protocoll-master/dcc/ ~/.local/share/libsigrokdecode/decoders/
 
 Download USB Drivers
 ---------------------
@@ -352,9 +310,8 @@ for a "0". It then immediately switches and does the same thing on the other tra
    :align: center
    :scale: 35%
    :alt: DCC Waveform
-   :figclass: align-center
 
-   Figure 12: DCC Waveform
+   DCC Waveform
 
 
 But those familiar with how DC and AC voltage works might look at that and see a square wave where there is positive and negative voltage. That isn't what is happening, there is never any negative voltage! Only the current changes direction inside something connected to the track, like the decoder in your loco. There is no "ground", only the voltage present on one rail with respect to the other.
@@ -365,9 +322,8 @@ In order to fully understand how this works, we have to stop thinking in terms o
    :align: center
    :scale: 25%
    :alt: DCC Pulse Train
-   :figclass: align-center
 
-   Figure 13: DCC Pulse Train
+   DCC Pulse Train
 
 Now let's see things from a different perspective, both literally and figuratively by tilting the track away from you and imagining the pulse train operating like your model train and riding down the track.
 
@@ -375,9 +331,8 @@ Now let's see things from a different perspective, both literally and figurative
    :align: center
    :scale: 25%
    :alt: DCC Pulse Train in Perspective
-   :figclass: align-center
 
-   Figure 14: DCC Pulse Train in Perspective
+   DCC Pulse Train in Perspective
 
 If it helps, you can think in the analog/DC world again for the purposes of connecting one piece of track in one block to a piece of track in another. Each rail is like a wire connected to our power supply, we have just cut it to length and are connecting to another piece that is connected to a different power supply. Here is the Command Station on the left connected to one section of track and a booster connected to another section of track with the two track sections isolated from each other by a small gap.
 
@@ -385,9 +340,8 @@ If it helps, you can think in the analog/DC world again for the purposes of conn
    :align: center
    :scale: 25%
    :alt: DCC Booster Setup
-   :figclass: align-center
 
-   Figure 15: DCC Booster Setup
+   DCC Booster Setup
 
 At any given instant, one rail or the other is at our full 12-24 Volts and the other is at zero. If our loco is rolling over the gap from one block or power district to another, we need to make sure that the signal, and therefore votage, is at the same level on both sides. We call this being "in phase". So if there is +15V on Rail A of the first block, we need that same +15V on Rail A of the next block. If not, and rail A on block 1 is at 15V and Rail A on block 2 is at 0V, and the metal wheels of our loco temporarily connect those two rails as they roll over them, we have a short circuit. Thus, if the rails of two blocks are out of phase with each other, then they are always at at a the opposite potential (except for a tiny transition period) and will represent a short circuit when crossing from one to the other.
 
@@ -395,9 +349,8 @@ At any given instant, one rail or the other is at our full 12-24 Volts and the o
    :align: center
    :scale: 25%
    :alt: DCC Phasing Diagram
-   :figclass: align-center
 
-   Figure 16: DCC Phasing Diagram
+   DCC Phasing Diagram
 
 So how can we check our phase? We can use any of the simple circuits below or a more complicated one listed at the end.
 
@@ -448,9 +401,8 @@ See the thread on the MRH blog here: https://model-railroad-hobbyist.com/node/17
    :align: center
    :scale: 100%
    :alt: 2 Diode Phase Checker
-   :figclass: align-center
 
-   Figure 17: 2 Diode Phase Checker
+   2 Diode Phase Checker
 
 **Pros** - Just 4 components, small, simple
 
@@ -463,8 +415,5 @@ Circuit two
    :align: center
    :scale: 50%
    :alt: Diode Phase Checker
-   :figclass: align-center
 
-   Figure 18: Diode Phase Checker
-
-
+   Diode Phase Checker

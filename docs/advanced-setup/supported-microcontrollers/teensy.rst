@@ -39,23 +39,7 @@ There are even expansion boards to add WiFi and Ethernet. There is a Mega form f
    :scale: 60%
    :align: left
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
+.. rst-class:: clearer
 
 Teensy Specifications
 =======================

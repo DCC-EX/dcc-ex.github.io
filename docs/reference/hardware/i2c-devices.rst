@@ -84,29 +84,33 @@ currently shown in the right-hand position marked '--' (=OFF).  This means the a
 to 0x20.  If we move all three jumpers to the left-hand position ('+'=ON), then the address
 will be 0x27.
 
-.. image:: ../../_static/images/i2c/pcf8574.jpg
+.. figure:: ../../_static/images/i2c/pcf8574.jpg
    :alt: PCF8574 GPIO Expander Module
    :scale: 30%
 
-**Figure 1** - PCF8574 GPIO Expander Module
+   PCF8574 GPIO Expander Module
 
-.. code-block:: none
+.. table:: I2C Address/Jumper Settings for GPIO Expander (base=0x20)
 
-  Address/Jumper Settings for GPIO Expander (base=0x20)
-  +=========+=====+=====+=====+
-  | Address | A2  | A1  | A0  |
-  +=========+=====+=====+=====+
-  | 0x20    | OFF | OFF | OFF |
-  | 0x21    | OFF | OFF | ON  |
-  | 0x22    | OFF | ON  | OFF |
-  | 0x23    | OFF | ON  | ON  |
-  | 0x24    | ON  | OFF | OFF |
-  | 0x25    | ON  | OFF | ON  |
-  | 0x26    | ON  | ON  | OFF |
-  | 0x27    | ON  | ON  | ON  |
-  +=========+=====+=====+=====+
-
-**Table 1** - I2C Address Setting Examples
+     +---------+-----+-----+-----+
+     | Address | A2  | A1  | A0  |
+     +=========+=====+=====+=====+
+     | 0x20    | OFF | OFF | OFF |
+     +---------+-----+-----+-----+
+     | 0x21    | OFF | OFF | ON  |
+     +---------+-----+-----+-----+
+     | 0x22    | OFF | ON  | OFF |
+     +---------+-----+-----+-----+
+     | 0x23    | OFF | ON  | ON  |
+     +---------+-----+-----+-----+
+     | 0x24    | ON  | OFF | OFF |
+     +---------+-----+-----+-----+
+     | 0x25    | ON  | OFF | ON  |
+     +---------+-----+-----+-----+
+     | 0x26    | ON  | ON  | OFF |
+     +---------+-----+-----+-----+
+     | 0x27    | ON  | ON  | ON  |
+     +---------+-----+-----+-----+
 
 The same address settings apply for the MCP23017 and MCP23008 devices, which also have three address jumpers A2-A0 and use the 
 same address range 0x20-0x27.
@@ -142,11 +146,11 @@ connectors.  Again, they are available in kit form for crimping onto ribbon cabl
 or they can be found in pre-assembled form.  Note that, while they look very much like the Grove connectors,
 they are a different size and are not interchangeable.
 
-.. image:: ../../_static/images/i2c/connectors.jpg
-    :alt: JST-XH, Dupont, and Grove connectors
-    :scale: 80%
+.. figure:: ../../_static/images/i2c/connectors.jpg
+   :alt: JST-XH, Dupont, and Grove connectors
+   :scale: 80%
 
-**Figure 2** - From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.
+   From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.
 
 
 Connecting Devices
@@ -161,20 +165,20 @@ The position of the I2C pins depends on what controller module you are using:
 * On the Arduino Uno, you may use pins A4 (SDA) and A5 (SCL), or pins D20 (SDA) and D21 (SCL), which are in the same place as on the Mega.
   Bear in mind that, even if you use pins D20 and D21 for I2C, the pins A4 and A5 cannot be used for analogue inputs.
 
-.. image:: ../../_static/images/i2c/mega_i2cpins.png
+.. figure:: ../../_static/images/i2c/mega_i2cpins.png
    :alt: Arduino Mega/Uno I2C pins
    :scale: 80%
 
-**Figure 3** - Arduino Mega/Uno I2C pins
+   Arduino Mega/Uno I2C pins
 
 Some motor shields come with header pins for the I2C connections, for example the Arduino motor shield and 
 the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.
 
-.. image:: ../../_static/images/i2c/deek_robot.jpg
+.. figure:: ../../_static/images/i2c/deek_robot.jpg
    :alt: Motor shield I2C pins
    :scale: 40%
 
-**Figure 4** - Motor Shield I2C pins
+   Motor Shield I2C pins
 
 The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-printed 6-inch rack case, with
 one set of I2C pins connected to an OLED display on the front of the case, and one set of I2C pins connected to two external connectors at the
@@ -182,11 +186,11 @@ rear of the case.  The orange wires connect four LEDs (with current-limiting ser
 5V and 14V power, and of outgoing DCC power to the Main and Programming tracks.  I've also mounted a small self-adhesive aluminium 
 heat sink onto the L298P device.
 
-.. image:: ../../_static/images/i2c/deekrobot_motor_shield.jpg
+.. figure:: ../../_static/images/i2c/deekrobot_motor_shield.jpg
    :alt: Motor shield I2C pins
    :scale: 40%
 
-**Figure 5** - Motor Shield I2C pins
+   Motor Shield I2C pins
 
 I2C devices are all effectively connected in parallel to the bus.  If you only 
 have one device, you can just run a four-wire connecter between the pins on the Arduino, or on
@@ -194,29 +198,29 @@ the motor shield, if you have one, to the device.  Be sure to check that you con
 SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each
 device!  
 
-.. image:: ../../_static/images/i2c/ArduinoMegaOLED.png
+.. figure:: ../../_static/images/i2c/ArduinoMegaOLED.png
    :alt: Arduino Mega with OLED Display
    :scale: 30%
 
-**Figure 6** - Connecting an OLED Display to an Arduino Mega
+   Connecting an OLED Display to an Arduino Mega
 
 
-.. image:: ../../_static/images/i2c/ArduinoMegaServo.png
+.. figure:: ../../_static/images/i2c/ArduinoMegaServo.png
    :alt: Arduino Mega with one servo controllers
    :scale: 30%
 
-**Figure 7** - Connecting a PCA9685 Servo Controller to an Arduino Mega
+   Connecting a PCA9685 Servo Controller to an Arduino Mega
 
 If you have more than one device, then there are a few options open to you.  Some modules 
 (PCA9685 and PCF8574 for example) have I2C pins at both ends of the PCB, so you can use one 
 set of pins to connect to the Arduino and the other set to connect to another device.  You 
 can chain multiple devices, subject to the restrictions described in sections for Cabling and Pull-ups.
 
-.. image:: ../../_static/images/i2c/ArduinoMega2xServo.png
+.. figure:: ../../_static/images/i2c/ArduinoMega2xServo.png
    :alt: Arduino Mega with two servo controllers
    :scale: 30%
 
-**Figure 8** - Connecting Two Servo Controllers
+   Connecting Two Servo Controllers
 
 Alternatively, you can use an I2C hub, which you can purchase 
 (`SeeedStudio do one <https://www.seeedstudio.com/Grove-I2C-Hub.html>`_, but check
@@ -232,20 +236,20 @@ and JST-XH male sockets (which accept female cable connectors, or female Dupont 
 I also have a four-way socket header connected in parallel, into which
 an OLED display is fitted for testing.
 
-.. image:: ../../_static/images/i2c/i2chub.jpg
+.. figure:: ../../_static/images/i2c/i2chub.jpg
    :alt: Home-brew I2C Passive Hub
    :scale: 60%
 
-**Figure 9** - Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)
+   Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)
 
 If you just want a temporary hookup for multiple I2C devices, then you can use a small piece of breadboard.
 The board shown has space for five Dupont connectors in each half row.
 
-.. image:: ../../_static/images/i2c/breadboard-hub.jpg
+.. figure:: ../../_static/images/i2c/breadboard-hub.jpg
    :alt: Bread-board based I2C Passive Hub
    :scale: 80%
 
-**Figure 10** - I2C Hub on Breadboard
+   I2C Hub on Breadboard
 
 Pull-ups
 ===========
@@ -276,17 +280,17 @@ thing to do is identify which components on the module PCB are the pull-up resis
 
 As examples of where to find the pull-up resistors, take a look at the figures below:
 
-.. image:: ../../_static/images/i2c/pca9685_pullups.jpg
-    :alt: PCA9685 pullup resistors
-    :scale: 30%
+.. figure:: ../../_static/images/i2c/pca9685_pullups.jpg
+   :alt: PCA9685 pullup resistors
+   :scale: 30%
   
-**Figure 11** - Location of Pull-up Resistors for PCA9685 Module (ringed in red)
+   Location of Pull-up Resistors for PCA9685 Module (ringed in red)
 
-.. image:: ../../_static/images/i2c/pcf8574_pullups.jpg
-    :alt: PCF8574 pullup resistors
-    :scale: 50%
+.. figure:: ../../_static/images/i2c/pcf8574_pullups.jpg
+   :alt: PCF8574 pullup resistors
+   :scale: 50%
   
-**Figure 12** - Location of Pull-up Resistors for PCF8574 Module (ringed in red)
+   Location of Pull-up Resistors for PCF8574 Module (ringed in red)
 
 Check the PCB tracks from the SDA and SCL pin connectors; one side of each resistors will be connected to one of these,
 and the other side of both will be connected to the Vcc supply.
@@ -317,7 +321,7 @@ Changing the Clock speed
 In DCC++EX the I2C clock speed is normally the highest speed supported by all configured devices.
 It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:
 
-.. code-block::
+.. code-block:: cpp
 
   I2CManager.forceClock(100000);
 

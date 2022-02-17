@@ -43,6 +43,8 @@ extensions = [
     'sphinxcontrib.spelling',
 ]
 
+autosectionlabel_prefix_document = True
+
 spelling_lang='en_US'
 tokenizer_lang='en_US'
 spelling_word_list_filename = ['spelling_wordlist.txt']
@@ -53,8 +55,17 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = [
+    '_build', 'Thumbs.db', '.DS_Store',
+]
 
+# Set the default for literal blocks and code-block
+highlight_language = 'none'
+
+# Automatically number figure captions
+numfig = True
+
+numfig_format = {'figure': 'Figure %s'}
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -62,9 +73,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
-
-def setup(app):
-    app.add_css_file('css/dccex_theme.css')
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -85,6 +93,13 @@ html_theme_options = {
     'navigation_depth': -1 
 }
 
+html_context = {
+    'display_github': True,
+    'github_user': 'DCC-EX',
+    'github_repo': 'dcc-ex.github.io',
+    'github_version': 'sphinx/docs/',
+}
+
 #leave this off to have todos invisible, set to true to render them and make the easy to see
 #A list of all the todos in the document can be shown in the about page
 todo_include_todos = False
@@ -93,11 +108,12 @@ todo_include_todos = False
 #    'exwebthrottle': 'exwebthrottle/index.html',
 #}
 
-#html_css_files = [
+html_css_files = [
+    'css/dccex_theme.css',
 #    'css/layout.css',
 #    'css/roundslider.min.css',
 #    'css/throttle.css'
-#]
+]
 
 html_js_files = [
     'js/platform.js',

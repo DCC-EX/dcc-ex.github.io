@@ -1,7 +1,7 @@
 DCC++ EX Model Railroading
 ===========================
 
-.. image:: ../../_static/images/icons/v40banner.jpg
+.. image:: ./_static/images/icons/v40banner.jpg
    :alt: v4_0 Release Banner
    :scale: 50%
 

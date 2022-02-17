@@ -19,9 +19,9 @@ What you need
 
 **Hardware**:
 
-- Supported `Arduino board <../reference/hardware/microcontroller-boards.html>`_
-- Supported `motor shield <../reference/hardware/motor-boards.html>`_
-- Compatible `power supply <../reference/hardware/power-supplies.html>`_
+- Supported :doc:`Arduino board </reference/hardware/microcontroller-boards>`
+- Supported :doc:`motor shield </reference/hardware/motor-boards>`
+- Compatible :doc:`power supply </reference/hardware/power-supplies>`
 - Computer running Windows, macOS, or Linux (even a Raspberry Pi)
 - USB Cable from the computer to the Arduino
 - Piece of track to run trains or program on
@@ -29,18 +29,18 @@ What you need
 
 **Optional hardware**:
 
-- Supported `ESP8266 WiFi shield <../reference/hardware/wifi-boards.html>`_
-- Supported `Ethernet shield <../reference/hardware/ethernet-boards.html>`_
+- Supported :doc:`ESP8266 WiFi shield </reference/hardware/wifi-boards>`
+- Supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>`
 
 **Software**:
 
-- See the `Command Station download page <../download/commandstation.html>`_
+- See the :doc:`Command Station download page <../download/commandstation>`
 
 The DCC++ EX installer is recommended for most users as it automatically downloads and installs the required software. 
 
 You'll also need something to control your trains. Because there are several options, we will discuss this following the system setup.
 
-See this `Shopping List <../reference/hardware/shopping-list.html>`_ for everything you need, organized for you in one place.
+See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organized for you in one place.
 
 I'm Ready!
 -----------

@@ -54,24 +54,7 @@ Screenshots
    :scale: 40%
    :align: left
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
+.. rst-class:: clearer
 
 .. _digitrains-requireents:
 

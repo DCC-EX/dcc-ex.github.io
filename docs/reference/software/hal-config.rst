@@ -65,11 +65,11 @@ which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/
 All I2C devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them.
 However, only a device with a matching address will respond.  Each device attached to the bus should have a unique address.
 
-.. image:: ../../_static/images/i2cbus.png
+.. figure:: ../../_static/images/i2cbus.png
    :alt: I2C Bus Topology
    :scale: 20%
 
-**Figure 1** - Example I2C Bus Topology with Arduino Mega and Three I2C modules
+   Example I2C Bus Topology with Arduino Mega and Three I2C modules
 
 Pull-Ups
 --------
@@ -213,20 +213,20 @@ list of files in the Arduino IDE.
 Adding A New Device Configuration File
 ======================================
 
-This will need to be done in the `Arduino-IDE <../get-started/arduino-ide.html>`_, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`Arduino-IDE <../../get-started/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
 
 
 Create a new tab
 ----------------
 
-First you will need to add a new file, just like the `config.h file <../get-started/arduino-ide.html#copy-the-config-example-h-file-or-rename-it>`_. 
+First you will need to add a new file, just like the :ref:`config.h file <get-started/arduino-ide:Copy the config.example.h file (or rename it)>`.
 Create a new tab using the following menu option.
 
-.. image:: ../../_static/images/arduino-ide/arduino_ide_newtab.jpg
+.. figure:: ../../_static/images/arduino-ide/arduino_ide_newtab.jpg
    :alt: Arduino IDE New Tab
    :scale: 40%
 
-**Figure 2** - Creating a new tab in the Arduino IDE
+   Creating a new tab in the Arduino IDE
 
 Creating the myHal.cpp file
 -----------------------------
@@ -234,11 +234,11 @@ Creating the myHal.cpp file
 At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``myHal.cpp``
 and click ``OK`` to create the new file.
 
-.. image:: ../../_static/images/i2c/arduino_ide_myHal.jpg
+.. figure:: ../../_static/images/i2c/arduino_ide_myHal.jpg
    :alt: Arduino IDE New Tab
    :scale: 40%
 
-**Figure 3** - Choosing a file name for the new file, use ``myHal.cpp``
+   Choosing a file name for the new file, use ``myHal.cpp``
 
 Adding in the configuration commands
 ------------------------------------
@@ -259,11 +259,11 @@ played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino
 Connect the DFPlayer's RX to the arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Ardino RX3 (15).  You also need to connect +5V power to VCC, 
 and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up. 
 
-.. image:: ../../_static/images/dfplayer.png
+.. figure:: ../../_static/images/dfplayer.png
    :alt: Arduino Mega with DFplayer
    :scale: 30%
 
-**Figure 4** - Arduino Mega with DFPlayer
+   Arduino Mega with DFPlayer
 
 Copy a few MP3 files to a Micro-SD card.  The order in which you copy them is important, as the first file copied is referenced as file 1, the second as file 2, etc.
 The names of the files are not used, but best keep them below 8 characters (excluding the .mp3 file extension).  Don't include any other files (.txt etc) on the 
@@ -301,7 +301,7 @@ The file contents should now look like:
 Upload the new version of the software
 --------------------------------------
 
-Finally, upload the code to the Arduino as you would do during the standard `Arduino IDE Setup <../get-started/arduino-ide.html#upload-the-software>`_. 
+Finally, upload the code to the Arduino as you would do during the standard :ref:`Arduino IDE Setup <get-started/arduino-ide:Upload the software>`.
 Restart the Command Station and the new device will be configured at startup.  
 
 Checking the Driver

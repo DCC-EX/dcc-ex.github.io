@@ -21,7 +21,7 @@ Diagnosing and Testing
 =============================
 
 #. Remove the Motor Shield ---we are going to test just the Arduino first.
-#. Download and install the most current version of `DCC++ EX Command Station <https://dcc-ex.com/download/commandstation.html#latest-dcc-ex-official-release>`_
+#. Download and install the most current version of :ref:`DCC++ EX Command Station <download/commandstation:Latest DCC++ EX Official Release>`
 #. Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to ``115200 baud`` and make sure you have set ``Both CR & NL`` from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see "DCC-EX" and the software version as well as other log lines that mention WiFi. If you don't see anything in the log, it could be that the software did not upload correctly, less than 7 Volts DC to the Arduino, or be an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.
 
 Testing the Arduino and Base Station code
@@ -64,7 +64,7 @@ With all of the decoder manufacturers creating hardware and the difficulties in 
 
 #. **Current sense issue** - From the Arduino Serial monitor with ``115200 baud`` set and ``Both CR & NL`` selected in the dropdown, put a loco on the MAIN track. Enter the <1> command to turn on power. Then enter the <C> command and check the response. You should see a valid number for current.
 #. Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capabiliy on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.
-#. **Out of spec. decoder (most likely)** - You will need to run a test and then modify a setting or two. Please go to the `<Diagnostic \<D ACK\> <../reference/software/diagnostic-d-ack-command.html>`_. Send us your log.
+#. **Out of spec. decoder (most likely)** - You will need to run a test and then modify a setting or two. Please go to the :doc:`<Diagnostic \<D ACK\> <../reference/software/diagnostic-d-ack-command>`. Send us your log.
 
 ..
 

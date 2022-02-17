@@ -1,6 +1,6 @@
-*********
-Levels
-*********
+******************
+Choose Your Level
+******************
 
 
 We've found that our users tend to identify with one of the following three categories, so we've created different paths to help navigate our DCC-EX system and this website. Don't worry, the paths are integrated and you can "switch a turnout" at any point and take another path! See below if you most identify with being a "Conductor", a "Tinkerer", or an "Engineer".
@@ -40,7 +40,7 @@ An Engineer is a little more versed in computers and/or electronics. They have a
 
 Keep these definitions in mind as you proceed through this website.
 
-To learn more about how to build your own DCC++ EX station, proceed to the `Assembly Page <./assembly.html>`_ or click on the next button below.
+To learn more about how to build your own DCC++ EX station, proceed to the :doc:`Assembly Page <./assembly>` or click on the next button below.
 
 Special Note: We would like to thank Alex Leão of Locontrol who as a personal favor created our modeller levels icons.
 

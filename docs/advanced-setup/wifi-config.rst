@@ -1,6 +1,6 @@
 *******************
 WiFi Configuration
-********************
+*******************
 
 .. image:: ../_static/images/conductor.png
    :alt: Conductor Icon
@@ -11,7 +11,7 @@ Conductor Level (Tinkerer if wiring an ESP instead of using a shield)
 
 |
 
-This page describes the software configuration options for using WiFi to connect your Command Station (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to `WiFi Setup <../get-started/wifi-setup.html>`_.
+This page describes the software configuration options for using WiFi to connect your Command Station (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
 
 As mentioned in the above link, you will need the following to proceed:
 
@@ -29,7 +29,7 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 Wireless Connections
 =====================
 
-As mentioned in `WiFi Setup <../get-started/wifi-setup.html>`_, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
+As mentioned in :doc:`WiFi Setup <../get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
 
 .. todo::
    Add Link above
@@ -78,22 +78,22 @@ If you travel to shows, or take your setup to a friend's house, this allows for 
 
 (Remember you can click on images to enlarge them)
 
-.. figure:: ../_static/images/wifi/Wifi_softap_mode.png
+.. figure:: ../_static/images/wifi/WiFi_softap_mode.png
    :alt: AP Mode
    :scale: 50%
 
-   Figure 1: Access Point Mode - Things connect to the WiFi Board
+   Access Point Mode - Things connect to the WiFi Board
 
 Station Mode
 -------------
 
 Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the CS by finding its IP address on the network. You will have to find what IP address is assigned to the CS (see below). Alternately, you can define a static IP address in your router to assign to the CS.
 
-.. figure:: ../_static/images/wifi/Wifi_station_mode.png
+.. figure:: ../_static/images/wifi/WiFi_station_mode.png
    :alt: Station Mode
    :scale: 50%
 
-   Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP address
+   Station Mode - Things connect to the router and find the WiFi board by its IP address
 
 Images are courtesy of `NodeMCU <https://nodemcu.readthedocs.io/en/latest/modules/wifi/>`_. You can find a great tutorial on WiFi there also.
 
@@ -105,11 +105,11 @@ We will focus on how to connect a Throttle to the Command Station. For info on u
 Default Operation - AP Mode (No Configuration Necessary)
 =========================================================
 
-To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in `WiFi Setup <../get-started/wifi-setup.html>`_. 
+To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup <../get-started/wifi-setup>`. 
 
 That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for DCC++ EX is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. DCC++ EX then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
 
-To see other configuration options you can set in your config.h file, see `WiFi Config Options`_ below.
+To see other configuration options you can set in your config.h file, see :ref:`advanced-setup/wifi-config:WiFi Config Options` below.
 
 You will need to know:
 
@@ -122,11 +122,11 @@ You will need to know:
 
 Whenever you connect a USB cable and open the serial monitor, you reset the program running on your CS. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
 
-.. image:: ../_static/images/wifi/ap_mode1.jpg
+.. figure:: ../_static/images/wifi/ap_mode1.jpg
    :alt: IP Address
    :scale: 80%
 
-**Figure 1** - Serial Monitor Log (click to enlarge)
+   Serial Monitor Log (click to enlarge)
 
 You will see the line that has ``AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\n``, where 2560 is your port number
 
@@ -157,7 +157,7 @@ Simply click on that network and connect to it on your mobile device. You will n
 
 Ignore the warning that may pop up telling you that "Internet may not be available". The CS is not connected to the internet, and you are connecting ro the CS directly from your mobile device for the purpose of controlling trains, not surfing the web. Depending on the config and OS of your mobile device, you may still have internet access over mobile data through a cell tower connection. If you wish to use your home network internet (for example, if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
-Once you are connected to the CS with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the `Decoder Test <../reference/software/command-reference.html#decoder-test>`_ section of the Command Reference. 
+Once you are connected to the CS with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the :ref:`Decoder Test <reference/software/command-reference:DECODER TEST>` section of the Command Reference.
 
 .. note:: Your Mobile Throttle function keys are user defined default function keys, not the function keys you used in either JMRI or Rocrail engine roster function keys.
 
@@ -179,7 +179,8 @@ Connecting to your Network - Station Mode "STA" (edit config.h)
 In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials, unless you have already entered your credentials earlier via the automated exInstaller. The easiest way to do this, other than the installer, is to use the Arduino IDE and open the project.
 Look for these lines in the file:
 
-.. code-block::
+.. code-block:: cpp
+   :caption: Station Mode Configuration
 
    /////////////////////////////////////////////////////////////////////////////////////
    //
@@ -196,13 +197,11 @@ Look for these lines in the file:
    #define WIFI_PASSWORD "Your network passwd"
    #define WIFI_HOSTNAME "dccex"
 
-Figure 2 - Station Mode Configuration
-
 First, make sure that the ``#define ENABLE_WIFI true`` line is not commented out. Two slashes ``//`` in front of a line make it a comment, and not a line of code.
 
 Next, enter your network information into the ``WIFI_SSID``, ``WIFI_PASSWORD`` and ``WIFI_HOSTNAME`` fields. Here is an example:
 
-.. code-block::
+.. code-block:: cpp
 
    #define WIFI_SSID "JonesFamily"
    #define WIFI_PASSWORD "Secret!2020"
@@ -216,16 +215,16 @@ WiFi Config Options
 
 The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual Arduino IDE install, you will see all of these in the file you renamed from "config.example.h" to "config.h".
 
-| :ref:`#define IP_PORT 2560`
-| :ref:`#define ENABLE_WIFI true`
-| :ref:`#define DONT_TOUCH_WIFI_CONF`
-| :ref:`#define WIFI_SSID "Your network name"`
-| :ref:`#define WIFI_PASSWORD "Your network passwd"`
-| :ref:`#define WIFI_HOSTNAME "dccex"`
-| :ref:`#define WIFI_CONNECT_TIMEOUT 14000`
-| :ref:`#define ENABLE_ETHERNET true`
-| :ref:`#define IP_ADDRESS { 192, 168, 1, 200 }`
-| :ref:`#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
+| :ref:`advanced-setup/wifi-config:#define IP_PORT 2560`
+| :ref:`advanced-setup/wifi-config:#define ENABLE_WIFI true`
+| :ref:`advanced-setup/wifi-config:#define DONT_TOUCH_WIFI_CONF`
+| :ref:`advanced-setup/wifi-config:#define WIFI_SSID "Your network name"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_PASSWORD "Your network passwd"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_HOSTNAME "dccex"`
+| :ref:`advanced-setup/wifi-config:#define WIFI_CONNECT_TIMEOUT 14000`
+| :ref:`advanced-setup/wifi-config:#define ENABLE_ETHERNET true`
+| :ref:`advanced-setup/wifi-config:#define IP_ADDRESS { 192, 168, 1, 200 }`
+| :ref:`advanced-setup/wifi-config:#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
 
 #define IP_PORT 2560
 --------------------
@@ -288,7 +287,7 @@ If you want to run in AP mode
 
 Edit the config.h, change your SSID and password lines back to default. It MUST look like the following. If it is anything else it will try to login with whatever you type there as credentials!
 
-.. code-block::
+.. code-block:: cpp
 
     #define WIFI_SSID "Your network name"
     #define WIFI_PASSWORD "Your network passwd"

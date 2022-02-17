@@ -2,11 +2,11 @@
 Diagnostics ``<D ACK>`` Command
 ********************************
 
-- :ref:`<D ACK ON>` - Turn on Loco acknowledgement diagnostics
-- :ref:`<D ACK LIMIT mA>` - Override ACK processing mA pulse size
-- :ref:`<D ACK MIN µS>` - Override ACK processing minimum pulse width
-- :ref:`<D ACK MAX µS>` - Override ACK processing max pulse width
-- :ref:`<D PROGBOOST>` - Override 250mA prog track limit while idle.
+- :ref:`reference/software/diagnostic-d-ack-command:\<D ACK ON\>` - Turn on Loco acknowledgement diagnostics
+- :ref:`reference/software/diagnostic-d-ack-command:\<D ACK LIMIT mA\>` - Override ACK processing mA pulse size
+- :ref:`reference/software/diagnostic-d-ack-command:\<D ACK MIN µS\>` - Override ACK processing minimum pulse width
+- :ref:`reference/software/diagnostic-d-ack-command:\<D ACK MAX µS\>` - Override ACK processing max pulse width
+- :ref:`reference/software/diagnostic-d-ack-command:\<D PROGBOOST\>` - Override 250mA prog track limit while idle.
 
 <D ACK ON>
 ============
@@ -87,7 +87,7 @@ would set the ack limit to 30mA (more sensitive).
 
 would set the limit to 100mA (less sensitive). 
 
-The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the `mySetup.h <../../advanced-setup/startup-config.html>`_ file.
+The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the :doc:`mySetup.h <../../advanced-setup/startup-config>` file.
 
 <D ACK MIN µS>
 ================
@@ -116,4 +116,4 @@ Example 2: You use the <D ACK ON> and <R> commands described above to generate a
 
 When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the CS is reset.
 
-To make these settings permanent, you can use a `mySetup.h file <../../advanced-setup/startup-config.html>`_ with these commands in to run at the startup of the Command Station.
+To make these settings permanent, you can use a :doc:`mySetup.h file <../../advanced-setup/startup-config>` with these commands in to run at the startup of the Command Station.

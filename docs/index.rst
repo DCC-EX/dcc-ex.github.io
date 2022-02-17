@@ -6,7 +6,13 @@ DCC++ EX Model Railroading
    :class: float-left
    :scale: 50%
 
-Tons of new features! EX-RAIL Automation, JMRI and Engine Driver enhaments, and more. See the :doc:`Release Notes </reference/software/release-notes>` and the :doc:`Press release <press/v40-announce>`.
+Tons of new features! 
+* EX-RAIL Automation and accessory control
+* JMRI and Engine Driver enhancements
+* HAL (Hardware Abstraction Layer) to easily add new types of input and output devices
+* Synchronize multiple throttles
+
+And a whole lot more!  See the :doc:`Release Notes </reference/software/release-notes>` and the :doc:`Press release <press/v40-announce>`.
 
 Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.
 

@@ -82,7 +82,7 @@ If you travel to shows, or take your setup to a friend's house, this allows for 
    :alt: AP Mode
    :scale: 50%
 
-   Figure 1: Access Point Mode - Things connect to the WiFi Board
+   Access Point Mode - Things connect to the WiFi Board
 
 Station Mode
 -------------
@@ -93,7 +93,7 @@ Station mode allows you to connect the Command Station to your existing home net
    :alt: Station Mode
    :scale: 50%
 
-   Figure 2: Station Mode - Things connect to the router and find the WiFi board by its IP address
+   Station Mode - Things connect to the router and find the WiFi board by its IP address
 
 Images are courtesy of `NodeMCU <https://nodemcu.readthedocs.io/en/latest/modules/wifi/>`_. You can find a great tutorial on WiFi there also.
 
@@ -122,11 +122,11 @@ You will need to know:
 
 Whenever you connect a USB cable and open the serial monitor, you reset the program running on your CS. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
 
-.. image:: ../_static/images/wifi/ap_mode1.jpg
+.. figure:: ../_static/images/wifi/ap_mode1.jpg
    :alt: IP Address
    :scale: 80%
 
-**Figure 1** - Serial Monitor Log (click to enlarge)
+   Serial Monitor Log (click to enlarge)
 
 You will see the line that has ``AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\n``, where 2560 is your port number
 
@@ -180,6 +180,7 @@ In order to connect to your home network, you must open the config.h file in a t
 Look for these lines in the file:
 
 .. code-block:: cpp
+   :caption: Station Mode Configuration
 
    /////////////////////////////////////////////////////////////////////////////////////
    //
@@ -195,8 +196,6 @@ Look for these lines in the file:
    #define WIFI_SSID "Your network name"
    #define WIFI_PASSWORD "Your network passwd"
    #define WIFI_HOSTNAME "dccex"
-
-Figure 2 - Station Mode Configuration
 
 First, make sure that the ``#define ENABLE_WIFI true`` line is not commented out. Two slashes ``//`` in front of a line make it a comment, and not a line of code.
 

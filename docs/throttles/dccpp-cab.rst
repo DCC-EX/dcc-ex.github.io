@@ -36,22 +36,7 @@ Screenshots
    :scale: 70%
    :align: left
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
+.. rst-class:: clearer
 
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section

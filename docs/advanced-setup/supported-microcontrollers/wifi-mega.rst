@@ -19,7 +19,7 @@ A Operational Standalone WiFI DCC Command Station
    :scale: 40%
    :align: center
 
-   figure 1 - Mega+WiFi Board
+   Mega+WiFi Board
 
 This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers are at the bottom of this page:
 
@@ -64,7 +64,7 @@ Plug your board into your computer with a USB micro cable to see if it is recogn
    :scale: 100%
    :align: center
 
-   figure 2 - CH340 Recognized 
+   CH340 Recognized 
 
 If you don't see the CH340 with the Mega plugged into USB, download and install the drivers from here:
 
@@ -95,8 +95,6 @@ Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware fi
   
    <p><a class="dcclink" href="../../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
 
-|
-
 Using esptool.py (Windows, Mac, Linux)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -110,7 +108,7 @@ Install python if you don't already have it installed. This quick quide shows yo
 
 https://wiki.python.org/moin/BeginnersGuide/Download
 
-Once you have Python installed, you will need to install etptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:
+Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:
 
 .. code-block::
 
@@ -122,7 +120,7 @@ NOTE:with some Python installations that command may not work and you’ll recei
 | python -m pip install esptool
 | pip2 install esptool
 
-When that is installed, install setup tools:
+If you got an error about setuptools being missing, install setuptools with:
 
 .. code-block::
 
@@ -138,7 +136,7 @@ With the Mega UNPLUGGED (no power connected!), you will set some switches. Use t
    :scale: 50%
    :align: center
 
-   Figure 3 - Important Board Locations
+   Important Board Locations
 
 Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
 
@@ -147,7 +145,7 @@ Note that switch 8 is not connected to anything, you don't need to touch it. Wit
    :scale: 30%
    :align: center
 
-   Figure 4 - Switch Settings for Flashing
+   Switch Settings for Flashing
 
 Use this image to set the serial port switch to **RXD3/TXD3**.
 
@@ -156,7 +154,7 @@ Use this image to set the serial port switch to **RXD3/TXD3**.
    :scale: 100%
    :align: center
 
-   Figure 5 - Switch Setting for Serial Port
+   Switch Setting for Serial Port
 
 
 Your board should be configured follows:
@@ -190,37 +188,15 @@ NOTE: It may take a few seconds to open while you see a black cmd window
    :scale: 80%
    :align: left
 
-   Figure 6 - Flash Tool Button Selections
+   Flash Tool Button Selections
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
+.. rst-class:: clearer
 
 Setup the files and memory locations in the Flasher Tool
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 - Click on the each file button (the "..." buttons) and find the bin files you extracted.
-- Follow Figure 6 and pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
+- Follow :numref:`flasher-settings-screen` and pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
 - Make sure to check all the file checkboxes to the left of the filled in file names
 - Set the EXACT settings using the radio buttons & baud rate settings: (26M, 40MHz, DIO, 16Mbit-C1, Your COM port selected, and 460800 baud).
 
@@ -228,8 +204,9 @@ Setup the files and memory locations in the Flasher Tool
    :alt: Flasher Settings Screen
    :scale: 80%
    :align: center
+   :name: flasher-settings-screen
 
-   Figure 7 - Flasher Settings Screen
+   Flasher Settings Screen
 
 .. NOTE:: These settings are for the ESP8266EX chip on the Mega+Wifi, you may need different settings to flash an ESP-01s, ESP12, etc.
 
@@ -245,21 +222,21 @@ Skip ahead to :ref:`advanced-setup/supported-microcontrollers/wifi-mega:3. Set t
 With esptool.py
 ^^^^^^^^^^^^^^^^
 
-Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on MacOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. Esptool.py should be in your path and will automatically find your ESP8266 if it is connected. If it does not find your ESP, see the examples for how to select the port.
+Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on MacOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected::
 
+   esptool.py write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
-``esptool.py write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin``
+If it does not find your ESP, see these examples for how to select the port.
 
+Linux/macOS::
 
-Examples with port specified: 
+   esptool.py -p /dev/ttyUSB0 write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1023+1024/user1.2048.new.5.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
-esptool.py -p /dev/ttyUSB0 write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1023+1024/user1.2048.new.5.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
+Windows::
 
-esptool.exe -p COM5 --baud 115200 write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
+   esptool.exe -p COM5 --baud 115200 write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
 If there is an error, press and hold the mode button, then press and release the reset button while still holding down the mode button. Press enter to send the esptool command and let go of the mode button.
-
-
 
 3. Set the switches for run/sketch mode
 ==========================================
@@ -274,7 +251,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
    :scale: 30%
    :align: center
 
-   Figure 8 - Switch Settings for sketch load/run
+   Switch Settings for sketch load/run
 
 4. Decide if you want AP Mode or Station Mode
 ==============================================

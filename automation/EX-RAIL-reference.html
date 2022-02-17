@@ -149,6 +149,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../site-map/index.html">Site Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../press/index.html">Press</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/about.html">About Us - Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/rewrite.html">What’s New in DCC++ EX?</a></li>
@@ -186,7 +190,7 @@
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX</a> Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX Firmware</a>.</p>
 <p>See Also:</p>
 <blockquote>
-<div><p><a class="reference internal" href="EX-RAIL-intro.html"><span class="doc">Introduction to EX-RAIL</span></a> |</p>
+<div><p><a class="reference internal" href="EX-RAIL-intro.html"><span class="doc">Introduction to EX-RAIL</span></a></p>
 <p><a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a></p>
 </div></blockquote>
 <section id="notes">
@@ -213,8 +217,8 @@ Example output:
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;PAUSE&gt;</span></code> Pause an EX-RAIL Script</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;RESUME&gt;</span></code> Resume an EX-RAIL Script</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/PAUSE&gt;</span></code> Pause an EX-RAIL Script</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/RESUME&gt;</span></code> Resume an EX-RAIL Script</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> Displays EX-RAIL running task information</p>
 <blockquote>
 <div><p>Example output:</p>
@@ -240,6 +244,10 @@ Example output:
 <section id="object-definitions">
 <h3>Object Definitions<a class="headerlink" href="#object-definitions" title="Permalink to this headline"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name,</span> <span class="pre">value</span> <span class="pre">)</span></code>        Assign names to values. Can go anywhere in the script</p>
+<p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need. If you want spaces in an alias, you must enclose it in quotes.</p>
+<p>Examples:</p>
+<p>ALIAS(coal_yard, 1) or ALIAS(“coal yard”, 1) then instead of PIN_TURNOUT( id, pin [, “COAL YARD”], write it as PIN_TURNOUT(coal_yard, pin [, “description”])</p>
+<p>2000 milliseconds is 2 seconds, so with ALIAS(slow, 2000), you could set DELAY(slow).</p>
 <p><code class="docutils literal notranslate"><span class="pre">SIGNAL(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code>     Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)</p>
 <p><code class="docutils literal notranslate"><span class="pre">TURNOUT(</span> <span class="pre">id,</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>     Define DCC Accessory turnout</p>
 <p><code class="docutils literal notranslate"><span class="pre">PIN_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>    Define pin operated turnout</p>
@@ -281,62 +289,62 @@ Example output:
 </section>
 <section id="ex-rail-functions">
 <h3>EX-RAIL Functions<a class="headerlink" href="#ex-rail-functions" title="Permalink to this headline"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">PAUSE</span></code>       E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd
-<code class="docutils literal notranslate"><span class="pre">RESUME</span></code>      Resume all paused tasks, including loco movement
-<code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free
-<code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code>    Free previously reserved block
-<code class="docutils literal notranslate"><span class="pre">START(</span> <span class="pre">sequence_id</span> <span class="pre">)</span></code>        Start a new task to execute a route or sequence
-<code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code>     Set the loco address for this task
-<code class="docutils literal notranslate"><span class="pre">SENDLOCO(</span> <span class="pre">cab,</span> <span class="pre">route</span> <span class="pre">)</span></code>      Start a new task send a given loco along given route/sequence
-<code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code>   A task is automatically started at this point during startup
-<code class="docutils literal notranslate"><span class="pre">DRIVE(</span> <span class="pre">analog_pin</span> <span class="pre">)</span></code> Not complete, DO NOT USE
-<code class="docutils literal notranslate"><span class="pre">ROSTER(</span> <span class="pre">cab,</span> <span class="pre">name,</span> <span class="pre">func_map</span> <span class="pre">)</span></code>       Provide roster info for WiThrottle</p>
+<p><code class="docutils literal notranslate"><span class="pre">PAUSE</span></code>       E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd</p>
+<p><code class="docutils literal notranslate"><span class="pre">RESUME</span></code>      Resume all paused tasks, including loco movement</p>
+<p><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free</p>
+<p><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code>    Free previously reserved block</p>
+<p><code class="docutils literal notranslate"><span class="pre">START(</span> <span class="pre">sequence_id</span> <span class="pre">)</span></code>        Start a new task to execute a route or sequence</p>
+<p><code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code>     Set the loco address for this task</p>
+<p><code class="docutils literal notranslate"><span class="pre">SENDLOCO(</span> <span class="pre">cab,</span> <span class="pre">route</span> <span class="pre">)</span></code>      Start a new task send a given loco along given route/sequence</p>
+<p><code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code>   A task is automatically started at this point during startup</p>
+<p><code class="docutils literal notranslate"><span class="pre">DRIVE(</span> <span class="pre">analog_pin</span> <span class="pre">)</span></code> Not complete, DO NOT USE</p>
+<p><code class="docutils literal notranslate"><span class="pre">ROSTER(</span> <span class="pre">cab,</span> <span class="pre">name,</span> <span class="pre">func_map</span> <span class="pre">)</span></code>       Provide roster info for WiThrottle</p>
 </section>
 <section id="loco-dcc-functions">
 <h3>Loco DCC Functions<a class="headerlink" href="#loco-dcc-functions" title="Permalink to this headline"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code>       Emergency stop loco
-<code class="docutils literal notranslate"><span class="pre">FWD(</span> <span class="pre">speed</span> <span class="pre">)</span></code>        Drive loco forward at DCC speed 0-127 (1=ESTOP)
-<code class="docutils literal notranslate"><span class="pre">REV(</span> <span class="pre">speed</span> <span class="pre">)</span></code>        Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
-<code class="docutils literal notranslate"><span class="pre">SPEED(</span> <span class="pre">speed</span> <span class="pre">)</span></code>      Drive loco in current direction at DCC speed (0-127)
-<code class="docutils literal notranslate"><span class="pre">STOP</span></code>        Set loco speed to 0 (same as SPEED(0) )
-<code class="docutils literal notranslate"><span class="pre">FON(</span> <span class="pre">func</span> <span class="pre">)</span></code> Turn on loco function
-<code class="docutils literal notranslate"><span class="pre">FOFF(</span> <span class="pre">func</span> <span class="pre">)</span></code>        Turn off loco function
-<code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code>    Switches FWD/REV meaning for this loco</p>
+<p><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code>       Emergency stop loco</p>
+<p><code class="docutils literal notranslate"><span class="pre">FWD(</span> <span class="pre">speed</span> <span class="pre">)</span></code>        Drive loco forward at DCC speed 0-127 (1=ESTOP)</p>
+<p><code class="docutils literal notranslate"><span class="pre">REV(</span> <span class="pre">speed</span> <span class="pre">)</span></code>        Drive logo in reverse at DCC speed 0-127 (1=ESTOP)</p>
+<p><code class="docutils literal notranslate"><span class="pre">SPEED(</span> <span class="pre">speed</span> <span class="pre">)</span></code>      Drive loco in current direction at DCC speed (0-127)</p>
+<p><code class="docutils literal notranslate"><span class="pre">STOP</span></code>        Set loco speed to 0 (same as SPEED(0) )</p>
+<p><code class="docutils literal notranslate"><span class="pre">FON(</span> <span class="pre">func</span> <span class="pre">)</span></code> Turn on loco function</p>
+<p><code class="docutils literal notranslate"><span class="pre">FOFF(</span> <span class="pre">func</span> <span class="pre">)</span></code>        Turn off loco function</p>
+<p><code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code>    Switches FWD/REV meaning for this loco</p>
 </section>
 <section id="sensor-input-and-event-handlers">
 <h3>Sensor input and Event Handlers<a class="headerlink" href="#sensor-input-and-event-handlers" title="Permalink to this headline"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>     Wait until sensor is active/triggered
-<code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code>  Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable “timed out” flag
-<code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  Waits for sensor to trigger and then go off for 0.5 seconds
-<code class="docutils literal notranslate"><span class="pre">LATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  Latches a sensor on (Sensors 0-255 only)
-<code class="docutils literal notranslate"><span class="pre">UNLATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>        Remove LATCH on sensor
-<code class="docutils literal notranslate"><span class="pre">ONCLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for turnout close
-<code class="docutils literal notranslate"><span class="pre">ONTHROW(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for turnout thrown
-<code class="docutils literal notranslate"><span class="pre">ONACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>        Event handler for 2 part DCC accessory packet value 1
-<code class="docutils literal notranslate"><span class="pre">ONACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code>       Event handler for linear DCC accessory packet value 1
-<code class="docutils literal notranslate"><span class="pre">ONDEACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>      Event handler for 2 part DCC accessory packet value 0
-<code class="docutils literal notranslate"><span class="pre">ONDEACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code>     Event handler for linear DCC accessory packet value 0
-<code class="docutils literal notranslate"><span class="pre">WAITFOR(</span> <span class="pre">pin</span> <span class="pre">)</span></code>      Wait for servo to complete movement</p>
+<p><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>     Wait until sensor is active/triggered</p>
+<p><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code>  Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable “timed out” flag</p>
+<p><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  Waits for sensor to trigger and then go off for 0.5 seconds</p>
+<p><code class="docutils literal notranslate"><span class="pre">LATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  Latches a sensor on (Sensors 0-255 only)</p>
+<p><code class="docutils literal notranslate"><span class="pre">UNLATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>        Remove LATCH on sensor</p>
+<p><code class="docutils literal notranslate"><span class="pre">ONCLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for turnout close</p>
+<p><code class="docutils literal notranslate"><span class="pre">ONTHROW(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for turnout thrown</p>
+<p><code class="docutils literal notranslate"><span class="pre">ONACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>        Event handler for 2 part DCC accessory packet value 1</p>
+<p><code class="docutils literal notranslate"><span class="pre">ONACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code>       Event handler for linear DCC accessory packet value 1</p>
+<p><code class="docutils literal notranslate"><span class="pre">ONDEACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>      Event handler for 2 part DCC accessory packet value 0</p>
+<p><code class="docutils literal notranslate"><span class="pre">ONDEACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code>     Event handler for linear DCC accessory packet value 0</p>
+<p><code class="docutils literal notranslate"><span class="pre">WAITFOR(</span> <span class="pre">pin</span> <span class="pre">)</span></code>      Wait for servo to complete movement</p>
 </section>
 <section id="action-output-functions">
 <h3>Action Output Functions<a class="headerlink" href="#action-output-functions" title="Permalink to this headline"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">SET(</span> <span class="pre">pin</span> <span class="pre">)</span></code>  Set an output pin HIGH
-<code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">pin</span> <span class="pre">)</span></code>        Reset output pin (set to LOW)
-<code class="docutils literal notranslate"><span class="pre">CLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code> Close a defined turnout
-<code class="docutils literal notranslate"><span class="pre">THROW(</span> <span class="pre">id</span> <span class="pre">)</span></code> Throw a defined turnout
-<code class="docutils literal notranslate"><span class="pre">GREEN(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code>  Set a defined signal to GREEN (see SIGNAL)
-<code class="docutils literal notranslate"><span class="pre">AMBER(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code>  Set a defined signal to Amber. (See SIGNAL)
-<code class="docutils literal notranslate"><span class="pre">RED(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code>    Set defined signal to Red (See SIGNAL)
-<code class="docutils literal notranslate"><span class="pre">FADE(</span> <span class="pre">pin,</span> <span class="pre">value,</span> <span class="pre">ms</span> <span class="pre">)</span></code>      Fade an LED on a servo driver to given value taking given time
-<code class="docutils literal notranslate"><span class="pre">LCN(</span> <span class="pre">msg</span> <span class="pre">)</span></code>  Send message to LCN Accessory Network
-<code class="docutils literal notranslate"><span class="pre">SERVO(</span> <span class="pre">id,</span> <span class="pre">position,</span> <span class="pre">profile</span> <span class="pre">)</span></code>      Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
-<code class="docutils literal notranslate"><span class="pre">SERVO2(</span> <span class="pre">id,</span> <span class="pre">position,</span> <span class="pre">duration</span> <span class="pre">)</span></code>    Move an animation servo taking duration in ms. Do NOT use for Turnouts
-<code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span>&#160;&#160;&#160;&#160; <span class="pre">Send</span> <span class="pre">DCC</span> <span class="pre">function</span> <span class="pre">ON</span> <span class="pre">to</span> <span class="pre">specific</span> <span class="pre">cab</span> <span class="pre">(eg</span> <span class="pre">coach</span> <span class="pre">lights)</span> <span class="pre">Not</span> <span class="pre">for</span> <span class="pre">Loco</span> <span class="pre">use</span> <span class="pre">-</span> <span class="pre">use</span> <span class="pre">FON</span> <span class="pre">instead!</span>
-<span class="pre">``XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code>  Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
-<code class="docutils literal notranslate"><span class="pre">ACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>  Sends a DCC accessory packet with value 1
-<code class="docutils literal notranslate"><span class="pre">ACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code> Sends a DCC accessory packet with value 1 to a linear address
-<code class="docutils literal notranslate"><span class="pre">DEACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>        Sends a DCC accessory packet with value 0
-<code class="docutils literal notranslate"><span class="pre">DEACTIVATEL(</span> <span class="pre">addr</span> <span class="pre">)</span></code> Sends a DCC accessory packet with value 0 to a linear address</p>
+<p><code class="docutils literal notranslate"><span class="pre">SET(</span> <span class="pre">pin</span> <span class="pre">)</span></code>  Set an output pin HIGH</p>
+<p><code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">pin</span> <span class="pre">)</span></code>        Reset output pin (set to LOW)</p>
+<p><code class="docutils literal notranslate"><span class="pre">CLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code> Close a defined turnout</p>
+<p><code class="docutils literal notranslate"><span class="pre">THROW(</span> <span class="pre">id</span> <span class="pre">)</span></code> Throw a defined turnout</p>
+<p><code class="docutils literal notranslate"><span class="pre">GREEN(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code>  Set a defined signal to GREEN (see SIGNAL)</p>
+<p><code class="docutils literal notranslate"><span class="pre">AMBER(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code>  Set a defined signal to Amber. (See SIGNAL)</p>
+<p><code class="docutils literal notranslate"><span class="pre">RED(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code>    Set defined signal to Red (See SIGNAL)</p>
+<p><code class="docutils literal notranslate"><span class="pre">FADE(</span> <span class="pre">pin,</span> <span class="pre">value,</span> <span class="pre">ms</span> <span class="pre">)</span></code>      Fade an LED on a servo driver to given value taking given time</p>
+<p><code class="docutils literal notranslate"><span class="pre">LCN(</span> <span class="pre">msg</span> <span class="pre">)</span></code>  Send message to LCN Accessory Network</p>
+<p><code class="docutils literal notranslate"><span class="pre">SERVO(</span> <span class="pre">id,</span> <span class="pre">position,</span> <span class="pre">profile</span> <span class="pre">)</span></code>      Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)</p>
+<p><code class="docutils literal notranslate"><span class="pre">SERVO2(</span> <span class="pre">id,</span> <span class="pre">position,</span> <span class="pre">duration</span> <span class="pre">)</span></code>    Move an animation servo taking duration in ms. Do NOT use for Turnouts</p>
+<p><code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code>   Send DCC function ON to specific cab (eg coach lights) Not for Loco use - use FON instead!</p>
+<p><code class="docutils literal notranslate"><span class="pre">XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code>  Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!</p>
+<p><code class="docutils literal notranslate"><span class="pre">ACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>  Sends a DCC accessory packet with value 1</p>
+<p><code class="docutils literal notranslate"><span class="pre">ACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code> Sends a DCC accessory packet with value 1 to a linear address</p>
+<p><code class="docutils literal notranslate"><span class="pre">DEACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>        Sends a DCC accessory packet with value 0</p>
+<p><code class="docutils literal notranslate"><span class="pre">DEACTIVATEL(</span> <span class="pre">addr</span> <span class="pre">)</span></code> Sends a DCC accessory packet with value 0 to a linear address</p>
 </section>
 </section>
 </section>

@@ -151,6 +151,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../site-map/index.html">Site Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../press/index.html">Press</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About Us - Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/rewrite.html">What’s New in DCC++ EX?</a></li>
@@ -196,21 +200,38 @@
 </ul>
 <p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX Firmware</a>.</p>
 <p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/DCC-EX">GitHub</a>. If you are new to we suggest you start with the <a class="reference external" href="https://dcc-ex.com">DCC++ EX Webpage</a>.</p>
-<section id="single-letter-commands">
-<h2>SINGLE LETTER COMMANDS<a class="headerlink" href="#single-letter-commands" title="Permalink to this headline"></a></h2>
+<p>Track Power Commands
+Cab Operation Commands
+Accessory Decoder and Turnout Commands
+Sensor Commands
+Output Commands
+Saving to EEPROM Commands
+Programming Commands
+Diagnostic Commands
+WiFi Commands
+User Commands</p>
+<section id="track-power-commands-voltage-and-current">
+<h2>Track Power Commands (Voltage and Current)<a class="headerlink" href="#track-power-commands-voltage-and-current" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> Number Zero: Turn Power <strong>OFF</strong> to tracks (Both Main &amp; Programming)</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;p0&gt; : Power to tracks OFF. (See extended power command below)
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;pX [MAIN|PROG|JOIN]&gt; where &quot;X&quot; is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> Number One: Turn Power <strong>ON</strong> to tracks (Both Main &amp; Programming).</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;p1&gt; : Power to tracks ON. (See extended power command below)
-</pre></div>
+<p>Examples:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> - Turn power to all tracks <strong>on</strong>. RETURNS: &lt;p1&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> - Turn power to all tracks <strong>off</strong>. RETURNS: &lt;p0&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code> - Turns on power just to the MAIN track. RETURNS: &lt;p1 MAIN&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> - Turns off power just to the PROG track. RETURNS: &lt;p0 PROG&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> - Joins both tracks together to be both MAIN (ops) tracks. Any other power command turns it off. RETURNS: &lt;p1 JOIN&gt;</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is “joined” and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
 </div>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In some split motor shield hardware configurations JOIN will not be able to work.</p>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code> Lower case c: Displays the instantaneous current on the MAIN Track</p>
 <blockquote>
 <div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;c &quot;CurrentMAIN&quot; CURRENT C &quot;Milli&quot; &quot;0&quot; MAX_MA &quot;1&quot; TRIP_MA &gt;
@@ -230,97 +251,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">TRIP_MA</span></code> - The overcurrent limit that will trip the software circuit breaker in mA</p></li>
 </ul>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;e nTurnouts nSensors&gt;
-</pre></div>
-</div>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> Lower Case e: Command to <strong>Erase ALL (turnouts, sensors, and outputs)</strong> definitions from EEPROM</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;0&gt; EEPROM Empty
-</pre></div>
-</div>
-<p><em>NOTE:There is NO Un-Delete</em></p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> Upper Case Q : Lists Status of all sensors.</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Q ID&gt; (active) or &lt;q ID&gt; (not active)
-</pre></div>
-</div>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only)</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;r ADDRESS&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
-</pre></div>
-</div>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> Upper Case S : Lists all defined sensors.</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Q ID PIN PULLUP&gt; for each defined sensor or &lt;X&gt; if no sensors defined.
-</pre></div>
-</div>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: DCC++ EX CommandStation Status</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
-Example: &lt;iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab&gt;&lt;H 1 0&gt;&lt;H 2 0&gt;&lt;H 3 0&gt;&lt;H 4 0&gt;&lt;Y 52 0&gt;&lt;q 53&gt;&lt;q 50&gt;
-</pre></div>
-</div>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> Upper Case T : Lists all defined turnouts.</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: One of the following for each defined turnout or &lt;X&gt; if no turnouts defined.
-&lt;H ID DCC ADDRESS SUBADDRESS THROWN&gt;     -- DCC Accessory Turnouts
-&lt;H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN&gt;  -- Servo Turnouts
-&lt;H ID VPIN PIN THROWN&gt;  -- VPIN Turnouts
-&lt;H ID LCN THROWN&gt;  -- LCN Turnouts
-**ID** - ID assigned to the turnout
-**THROWN** - &quot;0&quot; is closed.  &quot;1&quot; is thrown.
-The rest of the parameters are as defined for the turnout definition commands.
-</pre></div>
-</div>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> Plus sign and upper case X : A special case WiFi command for Engineers to force the CS into “WiFi Connected” mode so that it processes commands from a WiFi board. This is for when users override our network startup and enter their own &lt;+COMMAND&gt; AT commands.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> Upper Case Z : Lists all defined output pins</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;Y ID PIN IFLAG STATE&gt; for each defined output pin or &lt;X&gt; if no output pins defined
-</pre></div>
-</div>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code> Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: NONE
-</pre></div>
-</div>
-</div></blockquote>
-</div></blockquote>
-<ul class="simple">
-<li><p>There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).</p></li>
-</ul>
-</section>
-<section id="track-power-commands">
-<h2>Track Power Commands<a class="headerlink" href="#track-power-commands" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;pX [MAIN|PROG|JOIN]&gt; where &quot;X&quot; is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
-</pre></div>
-</div>
-</div></blockquote>
-<p>Examples:</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> - Turn power to all tracks on. RETURNS: &lt;p1&gt;</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> - Turn power to all tracks off. RETURNS: &lt;p0&gt;</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code> - Turns on power just to the MAIN track. RETURNS: &lt;p1 MAIN&gt;</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> - Turns off power just to the PROG track. RETURNS: &lt;p0 PROG&gt;</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> - Joins both tracks together to be both MAIN (ops) tracks. Any other power command turns it off. RETURNS: &lt;p1 JOIN&gt;</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is “joined” and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In some split motor shield hardware configurations JOIN will not be able to work.</p>
-</div>
 </section>
 <section id="engine-decoder-cab-operation-commands">
 <h2>Engine Decoder (CAB) Operation Commands<a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this headline"></a></h2>
@@ -572,9 +502,9 @@ If your decoder does not respond on the expected linear address, try adding and 
 <h4>Defining (Setting up) a Turnout<a class="headerlink" href="#defining-setting-up-a-turnout" title="Permalink to this headline"></a></h4>
 <p>The Turnout commands provide a more flexible and more functional way of operating turnouts.  It requires that the turnout be pre-defined through the <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">...&gt;</span></code> commands, described below.</p>
 <p>Turnouts may be in either of two states:  Closed or Thrown.  The turnout commands below use the values <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">Throw</span></code> or <code class="docutils literal notranslate"><span class="pre">Thrown</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">Close</span></code> or <code class="docutils literal notranslate"><span class="pre">Closed</span></code>.</p>
-<ul class="simple">
-<li><p>Command to define a DCC Accessory Turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code> :</p>
 <ul>
+<li><p>Command to define a DCC Accessory Turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code> :</p>
+<ul class="simple">
 <li><p>Creates a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code>, with specified <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code> if turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> already exists, it is updated (overwritten) with the new specified <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code></p></li>
 <li><p>Example:  <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">23</span> <span class="pre">5</span> <span class="pre">0&gt;</span></code></p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
@@ -582,7 +512,7 @@ If your decoder does not respond on the expected linear address, try adding and 
 </ul>
 </li>
 <li><p>Command to define a DCC Accessory Decoder turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">DCC</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code> :</p>
-<ul>
+<ul class="simple">
 <li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> which operates the DCC Accessory Decoder configured for the <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code>.
 <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> ranges from 0 to 511 and <code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code> ranges from 0 to 3.</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">23</span> <span class="pre">DCC</span> <span class="pre">5</span> <span class="pre">0&gt;</span></code></p></li>
@@ -591,7 +521,7 @@ If your decoder does not respond on the expected linear address, try adding and 
 </ul>
 </li>
 <li><p>Command to define a DCC Accessory Decoder turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">DCC</span> <span class="pre">LINEARADDRESS&gt;</span></code> :</p>
-<ul>
+<ul class="simple">
 <li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> which operates the DCC Accessory Decoder configured for the <code class="docutils literal notranslate"><span class="pre">LINEARADDRESS</span></code>.
 <code class="docutils literal notranslate"><span class="pre">LINEARADDRESS</span></code> ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">23</span> <span class="pre">DCC</span> <span class="pre">44&gt;</span></code> (corresponds to address 11 subaddress 3).</p></li>
@@ -600,7 +530,7 @@ If your decoder does not respond on the expected linear address, try adding and 
 </ul>
 </li>
 <li><p>Command to define a Servo-based turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">SERVO</span> <span class="pre">PIN</span> <span class="pre">THROWNPOSITION</span> <span class="pre">CLOSEDPOSITION</span> <span class="pre">PROFILE&gt;</span></code> :</p>
-<ul>
+<ul class="simple">
 <li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> using the servo output pin <code class="docutils literal notranslate"><span class="pre">PIN</span></code>.  The positions for thrown and closed states are <code class="docutils literal notranslate"><span class="pre">THROWNPOSITION</span></code> and <code class="docutils literal notranslate"><span class="pre">CLOSEDPOSITION</span></code>
 respectively.  For an SG90 servo, positions in the range of 102-490 will give up to 180 degrees motion, but the range of 205-410 (corresponding to
 1.0-2.0 millisecond pulses) is recommended for the SG90.
@@ -611,7 +541,7 @@ The transition between states is defined by <code class="docutils literal notran
 </ul>
 </li>
 <li><p>Command to define a VPIN-based turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">VPIN</span> <span class="pre">PIN&gt;</span></code> :</p>
-<ul>
+<ul class="simple">
 <li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> which operates the output defined by <code class="docutils literal notranslate"><span class="pre">PIN</span></code>.  If <code class="docutils literal notranslate"><span class="pre">PIN</span></code> is in the range of Arduino digital output pins, then
 throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If <code class="docutils literal notranslate"><span class="pre">PIN</span></code> is associated
 with an external device, then the device will be operated accordingly.</p></li>
@@ -622,7 +552,7 @@ with an external device, then the device will be operated accordingly.</p></li>
 </ul>
 </li>
 <li><p>Command to Delete a turnout <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID&gt;</span></code> :</p>
-<ul>
+<ul class="simple">
 <li><p>Deletes the definition of a turnout with this <code class="docutils literal notranslate"><span class="pre">ID</span></code>.</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">25&gt;</span></code> deletes the previously defined turnout number 25.</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. ID does not exist)</p></li>
@@ -632,13 +562,23 @@ with an external device, then the device will be operated accordingly.</p></li>
 <ul>
 <li><p>Lists all defined turnouts.</p></li>
 <li><p>Before Version 3.2.0: Returns: <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">THROWN&gt;</span></code> for each defined DCC Accessory Turnout or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no turnouts have beed defined or saved.</p></li>
-<li><p>After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the <code class="docutils literal notranslate"><span class="pre">THROWN</span></code> state (1=thrown, 0=closed) appended.  For example,
-a servo turnout definition will be listed as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">SERVO</span> <span class="pre">PIN</span> <span class="pre">THROWNPOSITION</span> <span class="pre">CLOSEDPOSITION</span> <span class="pre">PROFILE</span> <span class="pre">THROWN&gt;</span></code> and a DCC turnout
-will be listed as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">DCC</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">THROWN&gt;</span></code>, a VPIN turnout as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">VPIN</span> <span class="pre">PIN</span> <span class="pre">THROWN&gt;</span></code> and an LCN turnout as <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">LCN</span> <span class="pre">THROWN&gt;</span></code>.</p></li>
+<li><p>After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the <code class="docutils literal notranslate"><span class="pre">THROWN</span></code> state (1=thrown, 0=closed) appended.</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>RETURNS: One of the following for each defined turnout or &lt;X&gt; if no turnouts defined.
+&lt;H ID DCC ADDRESS SUBADDRESS THROWN&gt;     – DCC Accessory Turnouts
+&lt;H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN&gt;  – Servo Turnouts
+&lt;H ID VPIN PIN THROWN&gt;  – VPIN Turnouts
+&lt;H ID LCN THROWN&gt;  – LCN Turnouts</p>
+<p>The rest of the parameters are as defined for the turnout definition commands.</p>
+</div></blockquote>
+</li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the turnout to control.</p>
-<ul>
+<ul class="simple">
 <li><p>(NOTE: You pick the ID. IDs are shared between Turnouts, Sensors and Outputs)</p></li>
 </ul>
 </li>
@@ -647,6 +587,7 @@ will be listed as <code class="docutils literal notranslate"><span class="pre">&
 <li><p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For
 servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">THROWN</span></code> - “0” is closed.  “1” is thrown.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">THROWNPOSITION</span></code> : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOSEDPOSITION</span></code> : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PROFILE</span></code> : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).</p></li>
@@ -767,6 +708,14 @@ found to have transitioned from one state to another, one of the following seria
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">ID&gt;</span></code> - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)</p></li>
 </ul>
 <p>Depending on whether the physical sensor is acting as an “event-trigger” or a “detection-sensor,” you may decide to ignore the <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">ID&gt;</span></code> return and only react to <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">ID&gt;</span></code> triggers.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> - List the status of all defined sensors</p></li>
+<li><p>RETURNS: &lt;Q ID&gt; (active) or &lt;q ID&gt; (not active)</p></li>
+</ul>
+<p>Example: The shos Sensor 1 and 1 are tripped or active while 3 and 4 are not.</p>
+<blockquote>
+<div><p>&lt;Q 1&gt;&lt;Q 2&gt;&lt;q 3&gt;&lt;q 4&gt;</p>
+</div></blockquote>
 </section>
 <section id="outputs-dio-pins">
 <h2>OUTPUTS (DIO Pins)<a class="headerlink" href="#outputs-dio-pins" title="Permalink to this headline"></a></h2>
@@ -832,6 +781,24 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 A list of the current states of each output in the form <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">ID</span> <span class="pre">STATE&gt;</span></code> is generated by DCC++ EX CommandStation whenever the <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code>
 status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.</p>
 </section>
+<section id="storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom">
+<h2>Storing and Erasing Turnouts, Sensors and Outputs in EEPROM<a class="headerlink" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;e nTurnouts nSensors&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> Lower Case e: Command to <strong>Erase ALL (turnouts, sensors, and outputs)</strong> definitions from EEPROM</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;0&gt; EEPROM Empty
+</pre></div>
+</div>
+<p><em>NOTE:There is NO Un-Delete</em></p>
+</div></blockquote>
+</div></blockquote>
+</section>
 <section id="engine-decoder-programming-commands">
 <h2>Engine Decoder Programming Commands<a class="headerlink" href="#engine-decoder-programming-commands" title="Permalink to this headline"></a></h2>
 <section id="programming-main-track">
@@ -869,6 +836,16 @@ status command is invoked. This provides an efficient way of initializing the st
 <p class="admonition-title">Note</p>
 <p>By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little “jumps” you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an “ACK” (acnowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.</p>
 </div>
+<section id="read-loco-address-on-programming-track">
+<h4>READ LOCO ADDRESS ON PROGRAMMING TRACK<a class="headerlink" href="#read-loco-address-on-programming-track" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;r ADDRESS&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
+</pre></div>
+</div>
+</div></blockquote>
+<p>Example: &lt;r 3450&gt; shows that Loco with ID 3450 is on the programming track.</p>
+</section>
 <section id="write-loco-address-to-engine-decoder-on-programming-track">
 <h4>WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-loco-address-to-engine-decoder-on-programming-track" title="Permalink to this headline"></a></h4>
 <p>Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track.</p>
@@ -960,13 +937,23 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </section>
 <section id="diagnostics">
 <h2>DIAGNOSTICS<a class="headerlink" href="#diagnostics" title="Permalink to this headline"></a></h2>
+<section id="status">
+<h3>Status<a class="headerlink" href="#status" title="Permalink to this headline"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: DCC++ EX CommandStation Status</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
+Example: &lt;iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab&gt;&lt;H 1 0&gt;&lt;H 2 0&gt;&lt;H 3 0&gt;&lt;H 4 0&gt;&lt;Y 52 0&gt;&lt;q 53&gt;&lt;q 50&gt;
+</pre></div>
+</div>
+</div></blockquote>
+</section>
 <section id="d-commands">
 <h3>“D” Commands<a class="headerlink" href="#d-commands" title="Permalink to this headline"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>1 and 0 and ON and OFF can be used interchangeably in DCC++ EX</p>
 </div>
-<ul class="simple">
+<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Shows cab numbers and speed in reminder table.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Shows remaining RAM.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">1|0&gt;</span></code> Enables ACK diagnostics</p></li>
@@ -984,14 +971,30 @@ The significance of param2 depends on the device type associated with the VPIN. 
 support analogue write operations.  This command is available from Version 3.2.0.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANIN</span> <span class="pre">pin&gt;</span></code> Read the analogue value of the specified pin and display it.  The value will be zero if the pin is not configured or does not support
 analogue read operations.  This command is available from Version 3.2.0.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.</dt><dd><p>example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander:</p>
+<blockquote>
+<div><p>17:00:10.358 -&gt; &lt;* PARSING:D HAL SHOW * &gt;
+17:00:10.358 -&gt; &lt;* Arduino Vpins:2-69 * &gt;
+17:00:10.358 -&gt; &lt;* PCA9685 I2C:x40 Configured on Vpins:100-115 * &gt;
+17:00:10.358 -&gt; &lt;* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE * &gt;
+17:00:10.358 -&gt; &lt;* MCP23017 I2C:x20 Configured on Vpins:164-179 * &gt;
+17:00:10.358 -&gt; &lt;* MCP23017 I2C:x21 Configured on Vpins:180-195 * &gt;</p>
+</div></blockquote>
+</dd>
+</dl>
+</li>
 </ul>
-<p>example: &lt;D ACK ON&gt;</p>
 </section>
 <section id="decoder-test">
 <h3>DECODER TEST<a class="headerlink" href="#decoder-test" title="Permalink to this headline"></a></h3>
-<p>These following commands are detailed above but are worth repeating here. The <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> command will attempt to read the decoder on the service (programming) track and attempt to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn’t moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code> command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> - Reads the address of the decoder and reports the long or short value to the serial monitor</p>
+<p>These following commands are detailed above but are worth repeating here. The <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> command will attempt to read the decoder on the service (programming) track and try to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn’t moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code> command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only)</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;r ADDRESS&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
+</pre></div>
+</div>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;&lt;R&gt;</span></code> - When sent together as shown or one right after the other, this combined command shows the detailed results of what happened when trying to read the Address CV(s) and any response back from the decoder.-</p>
 </section>
 <section id="send-packet-to-the-track">
@@ -1024,7 +1027,7 @@ returns: NONE
 <h2>WiFi “AT Commands<a class="headerlink" href="#wifi-at-commands" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the “+” and the command.</p>
 <p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag (WiFi Connected Mode) to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created and so you can send your own AT commands.</p>
 <p>Examples:</p>
 <blockquote>
 <div><p>&lt;+GMR&gt; - Sends the “AT+GMR” command that prints version information from the WiFi device.

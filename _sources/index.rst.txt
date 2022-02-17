@@ -1,7 +1,19 @@
 DCC++ EX Model Railroading
 ===========================
 
-.. attention:: *17 Feb 2022:* **DCC++EX 4.0 is released!** Use the Download link below...
+.. image:: ./_static/images/icons/v40banner.jpg
+   :alt: v4_0 Release Banner
+   :class: float-left
+   :scale: 50%
+
+The DCC-EX team is pleased to announce the next version of the DCC++EX Command Station. There are tons of new features and enhancements. So many in fact, it takes a separate page to list them all! Be sure to find us on our :doc:`Discord channel </support/index>`. Here are just a few features to whet your appetite.
+
+* EX-RAIL Automation and accessory control
+* JMRI and Engine Driver enhancements
+* HAL (Hardware Abstraction Layer) to easily add new types of input and output devices
+* Synchronize multiple throttles
+
+For a complete list, see the :doc:`Release Notes </reference/software/release-notes>` and the :doc:`Press release <press/v40-announce>`.
 
 Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.
 
@@ -82,13 +94,14 @@ A basic DCC++ EX hardware setup can use easy to find, widely available Arduino b
 * Simpler, modular, faster code with an API Library for developers for easy expansion
 * New direct throttle support from apps like EngineDriver, DCCppCAB
 * Ability to JOIN operations and service track as one "main" track with 2 power districts when not programming
+* DriveAway(tm) feature to place a loco on an isolated siding, read its ID, and drive onto the layout
 * New features and functions in JMRI, like a new current meter
 * Simple address read and set without understanding long/short CVs
 * Function reminders - Function commands are repeated to ensure changes are read by your decoder
 * Ability to run many more locos
 * Emergency Stop commands
 * Forget locos command - Stops reminders for locos no longer on the track
-* Built-in Automation with EX-RAIL!
+* Built-in Automation and accessory control with EX-RAIL!
 * Lively community online, and active feature development
 
 .. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
@@ -111,4 +124,5 @@ Next see the :doc:`Get Started section <get-started/index>` or click next below.
    roadmap/index
    support/index
    site-map/index
+   press/index
    about/index

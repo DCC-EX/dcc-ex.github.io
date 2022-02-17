@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DCC-EX Roadmap &mdash; DCC++ EX  documentation</title>
+  <title>DCC++EX 4.0 Release Announcement &mdash; DCC++ EX  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Support" href="../support/index.html" />
-    <link rel="prev" title="Contact us" href="../contributing/contactus.html" /> 
+    <link rel="next" title="About" href="../about/index.html" />
+    <link rel="prev" title="Press" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -145,14 +145,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributing/contactus.html">Contact us</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/index.html">DCC-EX Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../support/create-ticket.html">Submit a Support Ticket</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../site-map/index.html">Site Map</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../press/index.html">Press</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Press</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DCC++EX 4.0 Release Announcement</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a><ul>
@@ -176,9 +176,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>DCC-EX Roadmap</li>
+          <li><a href="index.html">Press</a> &raquo;</li>
+      <li>DCC++EX 4.0 Release Announcement</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/roadmap/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/press/v40-announce.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -186,85 +187,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="dcc-ex-roadmap">
-<h1>DCC-EX Roadmap<a class="headerlink" href="#dcc-ex-roadmap" title="Permalink to this headline"></a></h1>
-<section id="id1">
-<h2>2022<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
-<section id="software">
-<h3>Software<a class="headerlink" href="#software" title="Permalink to this headline"></a></h3>
-<section id="dcc-ex-command-station">
-<h4>DCC++ EX Command Station<a class="headerlink" href="#dcc-ex-command-station" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li></li>
-<li><p>Add support for an ESP-32 or equivalent to remove resource limitations.</p></li>
-<li><p>Remove need to have any conditional compilation of features. This means the binary can be built and downloaded directly without a compiler or IDE. Customisation can take place through the command language API and mySetup.h file.</p></li>
-<li><p>Program the WiFi solution with our own code that implements a “true” network connection, still has the AT command set, and can handle at least 12 sockets.</p></li>
-<li><p>Upgrade the WiFi option with possible ESP32 containing custom AT firmware with possible Ethernet upgrade and Web Interface for configuration and/or control.</p></li>
-<li><p>OpenMRN on a co-processor?</p></li>
-<li><p>Multiple simultaneous Motor Driver support (beyond the 2 we currently support).</p></li>
-<li><p>Add EX-RAIL “Extended Railroad Automation Instruction Language”. Automate your layout with a simple script.</p></li>
-</ul>
-</section>
-<section id="dccinspector-ex">
-<h4>DCCInspector-EX<a class="headerlink" href="#dccinspector-ex" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li><p>Add other report formatting options</p></li>
-</ul>
-</section>
-<section id="webthrottle-ex">
-<h4>WebThrottle-EX<a class="headerlink" href="#webthrottle-ex" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li><p>Add Turnout support</p></li>
-<li><p>Add capability to use as an installer/updater/configurer for DCC++ EX</p></li>
-</ul>
-</section>
-</section>
-<section id="hardware">
-<h3>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline"></a></h3>
-<section id="new-motor-shield">
-<h4>New Motor shield<a class="headerlink" href="#new-motor-shield" title="Permalink to this headline"></a></h4>
-</section>
-<section id="new-all-in-one-dcc-ex-command-station">
-<h4>New all-in-one DCC-EX Command Station<a class="headerlink" href="#new-all-in-one-dcc-ex-command-station" title="Permalink to this headline"></a></h4>
-<blockquote>
-<div><ul class="simple">
-<li><p>Provide a self-contained, yet expandable custom developed Command Station Features (perhaps revive FireBox)</p></li>
-<li><p>Based on a powerful processor to be chosen from ESP32, Teensy, Xtensa, SAMC21, etc</p></li>
-<li><p>At least 20 GPIO Pins</p></li>
-<li><p>More efficient, higher current capacity Motor Driver chip or independent MOSFETS</p></li>
-<li><p>Dual H-Bridge with sustained current of 5A, peaks to 10</p></li>
-<li><p>Processor should have at least 2 x 12bit ADCs for current sense</p></li>
-<li><p>High-Side current sense with amplifier for measurements down to 10mA on the service track</p></li>
-<li><p>Track voltage reading from a resistor voltage divider</p></li>
-<li><p>One USB with 3 or more additional UARTS (hardware serial ports)</p></li>
-<li><p>Computer Interface using the USB port (USB-C or B. Micro too flimsy)</p></li>
-<li><p>5V Operation through a 5V regulator, 1A output</p></li>
-<li><p>3.3V Operation through a 3.3V regulator, 800 mA output</p></li>
-<li><p>Manufactured in different countries with partners</p></li>
-<li><p>WiFi, Bluetooth onboard</p></li>
-<li><p>Use ESP32 as WiFi and optional Ethernet bridge using AT commands</p></li>
-<li><p>I2C, CAN and SPI onboard</p></li>
-<li><p>Add RailCom support - Combine main and prog RX signals</p></li>
-<li><p>Add Layout Bus support for LCC</p></li>
-<li><p>Work with Smart Hobby to release LCN (Layout Control Nodes)</p></li>
-<li><p>Define footprint or header(s) for options/add-ons/FireBits</p></li>
-<li><p>Accessible reset button</p></li>
-<li><p>Standard interconnect for pluggable expansion options</p></li>
-<li><p>Display?</p></li>
-<li><p>SDCard?</p></li>
-<li><p>Snap on Raspberry Pi to run JMRI?</p></li>
-</ul>
-</div></blockquote>
-</section>
-<section id="firebit-modules">
-<h4>Firebit Modules<a class="headerlink" href="#firebit-modules" title="Permalink to this headline"></a></h4>
-<p>Based on standard interconnect created for the CS, examples would be separate co-processors, boosters, motor controllers, etc.</p>
-</section>
-</section>
-<section id="outreach-partnering-evangelizing">
-<h3>Outreach/Partnering/Evangelizing<a class="headerlink" href="#outreach-partnering-evangelizing" title="Permalink to this headline"></a></h3>
-<p>Work with other manufacturers to get their hardware, accessories, motor shields, etc. to market and to gain support for DCC++ EX. Add more throttles to the list that support DCC++ directly or through JMRI.</p>
-</section>
+  <section id="dcc-ex-4-0-release-announcement">
+<h1>DCC++EX 4.0 Release Announcement<a class="headerlink" href="#dcc-ex-4-0-release-announcement" title="Permalink to this headline"></a></h1>
+<section id="dcc-ex-announces-version-4-0-of-its-dcc-ex-command-station-software-with-ex-rail-automation-and-accessory-control">
+<h2>DCC-EX announces version 4.0 of its DCC++EX Command Station software with EX-RAIL automation and accessory control<a class="headerlink" href="#dcc-ex-announces-version-4-0-of-its-dcc-ex-command-station-software-with-ex-rail-automation-and-accessory-control" title="Permalink to this headline"></a></h2>
+<p><em>Operators can now have a fully automated model railroad or a separate accessory control bus for their entire layout and read CVs up to 8 times faster</em></p>
+<p>February 1, 2022 7am Eastern Standard Time</p>
+<p><strong>Holly Springs, North Carolina USA</strong> – DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of DCC++EX includes the new EX-RAIL <sup>tm</sup> (Extended Railroad Automation Instruction Language) system that revolutionizes the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.</p>
+<p>DCC++EX <sup>tm</sup> with EX-RAIL runs on inexpensive and readily available hardware like the Arduino and Teensy series of microcontrollers and supports standard switches, servos, and accessory boards.</p>
+<p>Concurrent with this rollout, enhancements to the popular JMRI model railroad software and Engine Driver smartphone and tablet app integrate tightly with the new features. Operators can create routes or automation/animation sequences and have them appear as buttons in Engine Driver. Press a button to begin an automation, or drive trains manually and press a button to hand them off to EX-RAIL to run everything unattended. Take back control with another press of a button.</p>
+<p>Users no longer have to search for “sketches” and libraries or learn complicated C++ programming. There is no need to modify the Command Station software and risk bringing the whole system down. The only file that needs to be modified is a myAutomation file where simple commands allow the operator to define their devices and tell them what to do when the conditions they specify are triggered. An engine can be sent out from the yard, triggering turnouts to engage for a specific route. Along the way, all the signals and crossings operate automatically in response to sensors along the track or timings or other conditions specified by the operator.</p>
+<p>Animations that involve a sequence, like operating cranes, arc welders, station operations, trolleys, etc. are simple to script. To make it even easier, EX-RAIL comes with many standard sequences so that an operator just needs to copy them into their script, load the file into their Command Station and connect their devices. For the first time, everything can be run from the Command Station, without the need for separate devices running custom C++ programs scattered all over the layout.</p>
+<p>Interfacing with hardware has never been easier with the new HAL (Hardware Abstraction Layer) feature. Supported hardware such as port expander and servo controller boards are automatically detected. New types of hardware can be added by implementing a driver from a standardized interface without having to write a custom program.</p>
+<p>The new DriveAway <sup>tm</sup> feature allows users to drive an engine onto a siding or other electrically isolated block used as a programming track. The engine can be programmed and then driven back onto the main section of the layout, all without touching the locomotive.</p>
+<p>DCC++EX has enhanced capabilities to read difficult decoders, provide detailed diagnostics to avoid the dreaded “308 Error”,  and when using JMRI with CV values matching what is in the its decoder file, improve performance by a factor of 8x. Reading and writing CVs in general, whether using JMRI or another method, is still significantly faster than before.</p>
+<p>DCC-EX is a global joint effort of a group of developers and engineers located in the US, UK, Sweden, France, Australia, New Zealand, and India. For more information visit their website at <a class="reference external" href="https://www.dcc-ex.com">https://www.dcc-ex.com</a>.</p>
+<div class="line-block">
+<div class="line">Contact info:</div>
+<div class="line">Name: Fred Decker</div>
+<div class="line">Organization: DCC-EX</div>
+<div class="line">Address: 113 Main Street #767, Holly Springs, NC 27540</div>
+<div class="line">Phone: +1 919-285-1576</div>
+</div>
+<p><a class="reference external" href="../_static/documents/press_release_v40.pdf">PDF version of this pressser for download</a></p>
 </section>
 </section>
 
@@ -272,8 +217,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../contributing/contactus.html" class="btn btn-neutral float-left" title="Contact us" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../support/index.html" class="btn btn-neutral float-right" title="Support" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Press" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../about/index.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

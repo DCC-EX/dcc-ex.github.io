@@ -20,22 +20,45 @@ This reference explains the available command structure, and for commands that p
 
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC++ EX Webpage <https://dcc-ex.com>`_.  
 
-SINGLE LETTER COMMANDS
-=======================
 
- ``<0>`` Number Zero: Turn Power **OFF** to tracks (Both Main & Programming)
-  
+Track Power Commands
+Cab Operation Commands
+Accessory Decoder and Turnout Commands
+Sensor Commands
+Output Commands
+Saving to EEPROM Commands
+Programming Commands
+Diagnostic Commands
+WiFi Commands
+User Commands
+
+Track Power Commands (Voltage and Current)
+===========================================
+
+``<0|1 MAIN|PROG|JOIN>`` - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
+
   .. code-block:: none
 
-      RETURNS: <p0> : Power to tracks OFF. (See extended power command below)
+      RETURNS: <pX [MAIN|PROG|JOIN]> where "X" is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
 
- ``<1>`` Number One: Turn Power **ON** to tracks (Both Main & Programming). 
+Examples:
 
-  .. code-block:: none
+``<1>`` - Turn power to all tracks **on**. RETURNS: <p1>
 
-      RETURNS: <p1> : Power to tracks ON. (See extended power command below)
+``<0>`` - Turn power to all tracks **off**. RETURNS: <p0>
 
- ``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
+``<1 MAIN>`` - Turns on power just to the MAIN track. RETURNS: <p1 MAIN>
+
+``<0 PROG>`` - Turns off power just to the PROG track. RETURNS: <p0 PROG>
+
+``<1 JOIN>`` - Joins both tracks together to be both MAIN (ops) tracks. Any other power command turns it off. RETURNS: <p1 JOIN>
+
+
+.. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
+
+.. note:: In some split motor shield hardware configurations JOIN will not be able to work.
+
+``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
 
   .. code-block:: none
 
@@ -55,105 +78,7 @@ SINGLE LETTER COMMANDS
   *  ``MAX_MA`` - The maximum current handling of the motor controller in MilliAmps
   *  ``1`` - number parameter for external software (we use 2 parameters here, 0 and 1)
   *  ``TRIP_MA`` - The overcurrent limit that will trip the software circuit breaker in mA
-  
-
- ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
-
-  .. code-block:: none
-
-      RETURNS: <e nTurnouts nSensors>
-
- ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
-
-  .. code-block:: none
-
-      RETURNS: <0> EEPROM Empty
-
-
-  *NOTE:There is NO Un-Delete*
-
-
- ``<Q>`` Upper Case Q : Lists Status of all sensors.
-
-  .. code-block:: none
-
-      RETURNS: <Q ID> (active) or <q ID> (not active)
-
- ``<R>`` Upper Case R : Read Loco address (programming track only)
-
-  .. code-block:: none
-
-      RETURNS: <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
-
-
- ``<S>`` Upper Case S : Lists all defined sensors. 
-
-  .. code-block:: none
-
-      RETURNS: <Q ID PIN PULLUP> for each defined sensor or <X> if no sensors defined. 
-
- ``<s>`` Lowercase "s": DCC++ EX CommandStation Status
-
-  .. code-block:: none
-
-       RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
-       Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
-
- ``<T>`` Upper Case T : Lists all defined turnouts. 
-
-  .. code-block:: none
-
-      RETURNS: One of the following for each defined turnout or <X> if no turnouts defined.
-      <H ID DCC ADDRESS SUBADDRESS THROWN>     -- DCC Accessory Turnouts
-      <H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>  -- Servo Turnouts
-      <H ID VPIN PIN THROWN>  -- VPIN Turnouts
-      <H ID LCN THROWN>  -- LCN Turnouts
-      **ID** - ID assigned to the turnout
-      **THROWN** - "0" is closed.  "1" is thrown.
-      The rest of the parameters are as defined for the turnout definition commands.
-
- ``<+X>`` Plus sign and upper case X : A special case WiFi command for Engineers to force the CS into "WiFi Connected" mode so that it processes commands from a WiFi board. This is for when users override our network startup and enter their own <+COMMAND> AT commands.
-
- ``<Z>`` Upper Case Z : Lists all defined output pins
-
-  .. code-block:: none
-
-      RETURNS: <Y ID PIN IFLAG STATE> for each defined output pin or <X> if no output pins defined
-
- ``<!>`` Exclamation Point : EMERGENCY STOP - Stops all locos on the track but leaves power on.
-
-  .. code-block:: none
-
-      RETURNS: NONE
-
-* 
-  There are a few other Debugging commands that should only be used by advanced users (Potentially Harmful if not used correctly).
-
-Track Power Commands
-====================
-
-``<0|1 MAIN|PROG|JOIN>`` - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
-
-  .. code-block:: none
-
-      RETURNS: <pX [MAIN|PROG|JOIN]> where "X" is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
-
-Examples:
-
-``<1>`` - Turn power to all tracks on. RETURNS: <p1>
-
-``<0>`` - Turn power to all tracks off. RETURNS: <p0>
-
-``<1 MAIN>`` - Turns on power just to the MAIN track. RETURNS: <p1 MAIN>
-
-``<0 PROG>`` - Turns off power just to the PROG track. RETURNS: <p0 PROG>
-
-``<1 JOIN>`` - Joins both tracks together to be both MAIN (ops) tracks. Any other power command turns it off. RETURNS: <p1 JOIN>
-
-
-.. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
-
-.. note:: In some split motor shield hardware configurations JOIN will not be able to work.  
+    
 
 Engine Decoder (CAB) Operation Commands
 ========================================
@@ -471,9 +396,17 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 
   * Lists all defined turnouts.
   * Before Version 3.2.0: Returns: ``<H ID ADDRESS SUBADDRESS THROWN>`` for each defined DCC Accessory Turnout or ``<X>`` if no turnouts have beed defined or saved.  
-  * After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the ``THROWN`` state (1=thrown, 0=closed) appended.  For example, 
-    a servo turnout definition will be listed as ``<H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>`` and a DCC turnout
-    will be listed as ``<H ID DCC ADDRESS SUBADDRESS THROWN>``, a VPIN turnout as ``<H ID VPIN PIN THROWN>`` and an LCN turnout as ``<H ID LCN THROWN>``.
+  * After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the ``THROWN`` state (1=thrown, 0=closed) appended.
+
+      .. code-block:: none
+
+      RETURNS: One of the following for each defined turnout or <X> if no turnouts defined.
+      <H ID DCC ADDRESS SUBADDRESS THROWN>     -- DCC Accessory Turnouts
+      <H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>  -- Servo Turnouts
+      <H ID VPIN PIN THROWN>  -- VPIN Turnouts
+      <H ID LCN THROWN>  -- LCN Turnouts
+     
+      The rest of the parameters are as defined for the turnout definition commands.
 
 * ``ID`` : The numeric ID (0-32767) of the turnout to control.  
 
@@ -484,6 +417,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 * ``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
   servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
   116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.
+* ``THROWN`` - "0" is closed.  "1" is thrown.
 * ``THROWNPOSITION`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
 * ``CLOSEDPOSITION`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
 * ``PROFILE`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).
@@ -582,7 +516,7 @@ To have this sketch monitor one or more Arduino pins for sensor triggers, first 
 
 * ``<S>`` : Lists all defined sensors  
 
-  * RETURNS: ``<Q ID PIN PULLUP>`` for each defined sensor or ``<X>`` if no sensors defined  
+  * RETURNS: ``<Q ID PIN PULLUP>`` for each defined sensor or ``<X>`` if no sensors defined
 
 ``ID`` : The numeric ID (0-32767) of the sensor
 (You pick the ID & they are shared between Turnouts, Sensors and Outputs)
@@ -606,6 +540,15 @@ found to have transitioned from one state to another, one of the following seria
 * ``<q ID>`` - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)  
 
 Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor," you may decide to ignore the ``<q ID>`` return and only react to ``<Q ID>`` triggers.
+
+* ``<Q>`` - List the status of all defined sensors
+*   
+      RETURNS: <Q ID> (active) or <q ID> (not active)
+
+Example: The shos Sensor 1 and 1 are tripped or active while 3 and 4 are not.
+
+         <Q 1><Q 2><q 3><q 4>
+  
 
 OUTPUTS (DIO Pins)
 =====================
@@ -674,7 +617,25 @@ To change the state of outputs that have been defined use:
 
 When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power. 
 A list of the current states of each output in the form ``<Y ID STATE>`` is generated by DCC++ EX CommandStation whenever the ``<s>`` 
-status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.  
+status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program. 
+
+Storing and Erasing Turnouts, Sensors and Outputs in EEPROM
+=============================================================
+
+ ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
+
+  .. code-block:: none
+
+      RETURNS: <e nTurnouts nSensors>
+
+ ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
+
+  .. code-block:: none
+
+      RETURNS: <0> EEPROM Empty
+
+
+  *NOTE:There is NO Un-Delete*
 
 Engine Decoder Programming Commands
 ======================================
@@ -712,6 +673,18 @@ PROGRAMMING-PROGRAMMING TRACK
 -------------------------------
 
 .. NOTE:: By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little "jumps" you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an "ACK" (acnowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+
+READ LOCO ADDRESS ON PROGRAMMING TRACK
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  ``<R>`` Upper Case R : Read Loco address (programming track only)
+
+  .. code-block:: none
+
+      RETURNS: <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
+
+Example: <r 3450> shows that Loco with ID 3450 is on the programming track.
+
 
 WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -805,6 +778,16 @@ This command is designed to offer faster verification of the value held in a CV 
 DIAGNOSTICS
 ============
 
+Status
+---------
+
+``<s>`` Lowercase "s": DCC++ EX CommandStation Status
+
+  .. code-block:: none
+
+       RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
+       Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
+
 "D" Commands
 -------------
 
@@ -828,20 +811,29 @@ DIAGNOSTICS
 * ``<D ANIN pin>`` Read the analogue value of the specified pin and display it.  The value will be zero if the pin is not configured or does not support
   analogue read operations.  This command is available from Version 3.2.0.
 * ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.
+    example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander: 
 
-example: <D ACK ON>
+      17:00:10.358 -> <* PARSING:D HAL SHOW * >
+      17:00:10.358 -> <* Arduino Vpins:2-69 * >
+      17:00:10.358 -> <* PCA9685 I2C:x40 Configured on Vpins:100-115 * >
+      17:00:10.358 -> <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE * >
+      17:00:10.358 -> <* MCP23017 I2C:x20 Configured on Vpins:164-179 * >
+      17:00:10.358 -> <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
 
 DECODER TEST
 -------------
 
-These following commands are detailed above but are worth repeating here. The ``<R>`` command will attempt to read the decoder on the service (programming) track and attempt to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn't moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the ``<D ACK ON>`` command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.
+These following commands are detailed above but are worth repeating here. The ``<R>`` command will attempt to read the decoder on the service (programming) track and try to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn't moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the ``<D ACK ON>`` command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.
 
-``<R>`` - Reads the address of the decoder and reports the long or short value to the serial monitor
+``<R>`` Upper Case R : Read Loco address (programming track only)
+
+ .. code-block:: none
+
+      RETURNS: <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
 
 ``<D ACK ON><R>`` - When sent together as shown or one right after the other, this combined command shows the detailed results of what happened when trying to read the Address CV(s) and any response back from the decoder.-
 
-
-
+ 
 SEND PACKET TO THE TRACK
 --------------------------
 
@@ -872,7 +864,7 @@ WiFi "AT Commands
 
 Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file <../../advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
 
-``<+X>`` A special command to force the "connected" flag to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created.
+``<+X>`` A special command to force the "connected" flag (WiFi Connected Mode) to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created and so you can send your own AT commands.
 
 Examples:
 

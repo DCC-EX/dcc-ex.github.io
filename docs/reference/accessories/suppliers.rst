@@ -39,7 +39,7 @@ David Yale
    :scale: 100%
    :align: left
 
-`David's Makerbot Thingiverse page <https://www.thingiverse.com/thing:4619514>`_
+`David's Makerbot Thingiverse page <https://www.thingiverse.com/dcyale/designs>`_
 
 .. rst-class:: clearer
 
@@ -50,7 +50,7 @@ David provides the files to make a 3D printed case or can sell an already made c
    :scale: 40%
    :align: left
 
-`David's Makerbot Thingiverse page <https://www.thingiverse.com/thing:4619514>`_
+`David's DCC-EX case designs <https://www.thingiverse.com/thing:4619514>`_
 
 .. rst-class:: clearer
 

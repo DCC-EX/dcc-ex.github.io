@@ -1,6 +1,10 @@
 DCC++ EX Model Railroading
 ===========================
 
+.. image:: ../../_static/images/icons/v40banner.jpg
+   :alt: v4_0 Release Banner
+   :scale: 50%
+
 Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.
 
 .. table::
@@ -80,13 +84,14 @@ A basic DCC++ EX hardware setup can use easy to find, widely available Arduino b
 * Simpler, modular, faster code with an API Library for developers for easy expansion
 * New direct throttle support from apps like EngineDriver, DCCppCAB
 * Ability to JOIN operations and service track as one "main" track with 2 power districts when not programming
+* DriveAway(tm) feature to place a loco on an isolated siding, read its ID, and drive onto the layout
 * New features and functions in JMRI, like a new current meter
 * Simple address read and set without understanding long/short CVs
 * Function reminders - Function commands are repeated to ensure changes are read by your decoder
 * Ability to run many more locos
 * Emergency Stop commands
 * Forget locos command - Stops reminders for locos no longer on the track
-* Built-in Automation with EX-RAIL!
+* Built-in Automation and accessory control with EX-RAIL!
 * Lively community online, and active feature development
 
 .. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.

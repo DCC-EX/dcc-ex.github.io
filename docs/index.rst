@@ -1,6 +1,8 @@
 DCC++ EX Model Railroading
 ===========================
 
+.. attention:: *17 Feb 2022:* **DCC++EX 4.0 is released!** Use the Download link below...
+
 Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.
 
 .. table::

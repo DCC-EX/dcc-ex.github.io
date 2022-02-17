@@ -9,7 +9,7 @@ DCC-EX announces version 4.0 of its DCC++EX Command Station software with EX-RAI
 February 1, 2022 7am Eastern Standard Time
 
 
-**Holly Springs, North Carolina USA** – DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of DCC++EX includes the new EX-RAIL :sup:`tm` (**E**xtended **R**ailroad **A**utomation **I**nstruction **L**anguage) system that revolutionizes the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.
+**Holly Springs, North Carolina USA** – DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of DCC++EX includes the new EX-RAIL :sup:`tm` (Extended Railroad Automation Instruction Language) system that revolutionizes the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.
 
 DCC++EX :sup:`tm` with EX-RAIL runs on inexpensive and readily available hardware like the Arduino and Teensy series of microcontrollers and supports standard switches, servos, and accessory boards.
 
@@ -27,8 +27,10 @@ DCC++EX has enhanced capabilities to read difficult decoders, provide detailed d
 
 DCC-EX is a global joint effort of a group of developers and engineers located in the US, UK, Sweden, France, Australia, New Zealand, and India. For more information visit their website at https://www.dcc-ex.com.
 
-Contact info:
-Name: Fred Decker
-Organization: DCC-EX
-Address: 113 Main Street #767, Holly Springs, NC 27540
-Phone: +1 919-285-1576
+| Contact info:
+| Name: Fred Decker
+| Organization: DCC-EX
+| Address: 113 Main Street #767, Holly Springs, NC 27540
+| Phone: +1 919-285-1576
+
+`PDF version of this pressser for download <../_static/documents/press_release_v40.pdf>`_

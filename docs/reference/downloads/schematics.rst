@@ -10,6 +10,6 @@ Mega+WiFi Board
    :scale: 12%
    :align: left 
 
-.. raw:: html
+.. rst-class:: dcclink
 
-    <a class="dcclink" href="../../_static/images/schematics/mega_wifi1.png">Mega+WiFi</a>
+   `Mega+WiFi </_static/images/schematics/mega_wifi1.png>`_

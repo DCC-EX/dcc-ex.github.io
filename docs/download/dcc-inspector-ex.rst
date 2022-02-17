@@ -9,12 +9,12 @@ DCC Inspector-EX is a packet sniffing tool that can connect directly to the sign
    :scale: 26%
    :align: left   
 
-.. raw:: html
+.. rst-class:: dcclink
 
-   <a class="dcclink" href="https://github.com/DCC-EX/DCCInspector-EX/archive/refs/heads/main.zip">DCCInspector-EX source code Zip file</a>
+   `DCCInspector-EX source code Zip file <https://github.com/DCC-EX/DCCInspector-EX/archive/refs/heads/main.zip>`_
 
 |
 
-.. raw:: html
+.. rst-class:: dcclink
 
-   <a class="dcclink" href="https://github.com/DCC-EX/DCCInspector-EX">DCCInspector-EX Github Repository</a>
+   `DCCInspector-EX Github Repository <https://github.com/DCC-EX/DCCInspector-EX">`_

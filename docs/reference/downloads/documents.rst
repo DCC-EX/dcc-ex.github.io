@@ -12,9 +12,9 @@ With DCC++EX's new linear address function, there is no need to have to convert 
    :scale: 30%
    :align: left
 
-.. raw:: html
+.. rst-class:: dcclink
 
-   <a class="dcclink" href="../../_static/documents/DCCpp-stationary-decoder-addresses.xlsx">Stationary Decoder Address Table</a>
+   `Stationary Decoder Address Table </_static/documents/DCCpp-stationary-decoder-addresses.xlsx>`_
 
 .. rst-class:: clearer
 
@@ -26,9 +26,9 @@ DCC Shortcuts Card
    :scale: 26%
    :align: left
 
-.. raw:: html
+.. rst-class:: dcclink
 
-   <a class="dcclink" href="../../_static/documents/DCC_Shortcuts_Card.pdf">DCC Shortcuts Card</a>
+   `DCC Shortcuts Card </_static/documents/DCC_Shortcuts_Card.pdf>`_
 
 .. rst-class:: clearer
 
@@ -43,9 +43,9 @@ This file provides our custom scripts for JMRI, including custom buttons. You ca
    :scale: 25%
    :align: left
    
-.. raw:: html
+.. rst-class:: dcclink
 
-   <a class="dcclink" href="../../_static/documents/DCCEX_Commands_3.1.py.zip">DCC++ EX Commands JMRI Script</a>
+   `DCC++ EX Commands JMRI Script </_static/documents/DCCEX_Commands_3.1.py.zip>`_
 
 .. rst-class:: clearer
 
@@ -59,6 +59,6 @@ This file provides instruction on how to install our custom scripts in JMRI and 
    :scale: 75%
    :align: left
    
-.. raw:: html
+.. rst-class:: dcclink
 
-   <a class="dcclink" href="../../_static/documents/DCCEX_31_JMRI_Script+Button_Instructions.pdf">DCC++EX + JMRI Custom Buttons Install</a>
+   `DCC++EX + JMRI Custom Buttons Install </_static/documents/DCCEX_31_JMRI_Script+Button_Instructions.pdf>`_

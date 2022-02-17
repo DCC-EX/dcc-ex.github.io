@@ -2,11 +2,16 @@
 Command Station Downloads
 **************************
 
+.. attention:: 
+   *17 Feb 2022:* DCC-EX has released **DCC++EX Ver 4.0!**
+   
+   This is a *major Command Station update,* including the excitement of **EX-RAIL Automation** for trains, track, and scenery, and **HAL (Hardware Abstraction Library)** to make adding external devices, and GPIO so simple! Grab your copy below!
+
 Welcome to the Command Station download page. You have several choices:
 
 * **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the :ref:`download/commandstation:exInstaller` section.
 * If you are a Tinkerer, or you would like to download a zip file and install the firmware using the Arduino IDE, go to the :ref:`download/commandstation:Latest DCC++ EX Official Release` section.
-* To get the latest unreleased development version, go to the :ref:`download/commandstation:Latest DCC++ EX Unreleased Development Version`, including the excitement of **EX-RAIL Automation**!
+* To get the latest unreleased development version, go to the :ref:`download/commandstation:Latest DCC++ EX Unreleased Development Version`.
 * If you are an Engineer or developer, and want to clone the repository onto your computer, go to the :ref:`download/commandstation:CommandStation-EX Repository (project source files)` section.
 * If you're still looking for BaseStation-Classic, go to the :ref:`download/commandstation:Getting BaseStation-Classic` section.
 
@@ -24,7 +29,9 @@ exInstaller
 Latest DCC++ EX Official Release
 ==================================
 
-.. note:: On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for DCC++ EX. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for :doc:`Arduino IDE installation instructions <../get-started/arduino-ide>`.
+.. attention:: *17 Feb 2022:* **DCC++EX 4.0** is released! This now includes **EX-RAIL & HAL**, plus much more...
+
+.. note:: On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for DCC++ EX. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for `Arduino IDE installation instructions <../get-started/arduino-ide.html>`_.
 
 .. raw:: html
 

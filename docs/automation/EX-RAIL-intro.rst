@@ -2,6 +2,10 @@
 Introduction to EX-RAIL Automation
 ***********************************
 
+.. attention::
+   17 Feb 2022: *Now included* in **DCC++EX 4.0!**
+   Available to download and use now!
+
 Introduction
 ==============
 

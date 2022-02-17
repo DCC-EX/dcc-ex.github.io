@@ -811,13 +811,14 @@ Status
 * ``<D ANIN pin>`` Read the analogue value of the specified pin and display it.  The value will be zero if the pin is not configured or does not support
   analogue read operations.  This command is available from Version 3.2.0.
 * ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.
-    example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander:
-      17:00:10.358 -> <* PARSING:D HAL SHOW *>
-      17:00:10.358 -> <* Arduino Vpins:2-69 *>
-      17:00:10.358 -> <* PCA9685 I2C:x40 Configured on Vpins:100-115  *>
-      17:00:10.358 -> <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE *>
-      17:00:10.358 -> <* MCP23017 I2C:x20 Configured on Vpins:164-179  *>
-      17:00:10.358 -> <* MCP23017 I2C:x21 Configured on Vpins:180-195  *>
+    example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander: 
+
+      17:00:10.358 -> <* PARSING:D HAL SHOW * >
+      17:00:10.358 -> <* Arduino Vpins:2-69 * >
+      17:00:10.358 -> <* PCA9685 I2C:x40 Configured on Vpins:100-115 * >
+      17:00:10.358 -> <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE * >
+      17:00:10.358 -> <* MCP23017 I2C:x20 Configured on Vpins:164-179 * >
+      17:00:10.358 -> <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
 
 DECODER TEST
 -------------

@@ -1,39 +1,81 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>I2C Devices &mdash; DCC++ EX  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
+
+  
+  
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="I2C GPIO Expander Modules" href="gpio-module.html" />
     <link rel="prev" title="I2C Displays" href="i2c-displays.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
             <a href="../../index.html">
+          
+
+          
+            
             <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -41,7 +83,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Choose Your Level</a></li>
@@ -162,34 +215,79 @@
 </li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">DCC++ EX</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="../index.html">Reference</a> &raquo;</li>
+        
           <li><a href="index.html">Hardware</a> &raquo;</li>
+        
       <li>I2C Devices</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
+            
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/i2c-devices.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-  <section id="i2c-devices">
-<h1>I2C Devices<a class="headerlink" href="#i2c-devices" title="Permalink to this headline"></a></h1>
+            
+  <div class="section" id="i2c-devices">
+<h1>I2C Devices<a class="headerlink" href="#i2c-devices" title="Permalink to this headline">¶</a></h1>
 <p>With the advent of the Hardware Abstraction Layer (HAL), DCC++EX now has the capability for
 support for new I/O devices to be added without any change to the base software.  By I/O
 devices I mean the things that are controlled through Sensors, Outputs and Turnouts (and
@@ -207,8 +305,8 @@ breaking DCC++EX for other users.  So there are various drivers available for yo
 <p>and others.</p>
 <p>You will have noticed that a lot of the devices above have the name I2C in their description,
 so this section is an introduction to what I2C is and how to use it.</p>
-<section id="what-is-i2c">
-<h2>What is I2C?<a class="headerlink" href="#what-is-i2c" title="Permalink to this headline"></a></h2>
+<div class="section" id="what-is-i2c">
+<h2>What is I2C?<a class="headerlink" href="#what-is-i2c" title="Permalink to this headline">¶</a></h2>
 <p>I2C is a standard introduced by the Philips Semiconductors (now NXP Semiconductors) in the
 early 1980s to provide a mechanism for
 simple and economical communication between integrated circuits within a system, i.e.
@@ -240,9 +338,9 @@ to communicate with, and a Slave device which matches that address will respond.
 then send further data which that Slave may interpret as a command.  Or the Master may wait to allow the Slave to
 send data.  In this way, we can have two-way data flows from Master to Slave, and from Slave to Master.</p>
 <p>For more information about I2C, including a link to the I2C Standard, see <a class="reference external" href="https://www.i2c-bus.org/">https://www.i2c-bus.org/</a>.</p>
-</section>
-<section id="addresses">
-<h2>Addresses<a class="headerlink" href="#addresses" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="addresses">
+<h2>Addresses<a class="headerlink" href="#addresses" title="Permalink to this headline">¶</a></h2>
 <p>Most I2C devices allow the address to be selected by adding or removing (or moving) jumpers.
 In some cases the jumpers are fitted on selector pins on the module, and the jumpers can be readily moved
 to select the address.  For example, the MCP23017 can have address 0x20, 0x21, 0x22, … up to 0x27, by three jumpers.
@@ -255,14 +353,12 @@ to be selected to 0x3E or 0x3F (default 0x3F).</p>
 currently shown in the right-hand position marked ‘–’ (=OFF).  This means the address is set
 to 0x20.  If we move all three jumpers to the left-hand position (‘+’=ON), then the address
 will be 0x27.</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/pcf8574.jpg"><img alt="PCF8574 GPIO Expander Module" src="../../_images/pcf8574.jpg" style="width: 261.59999999999997px; height: 90.6px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 69 </span><span class="caption-text">PCF8574 GPIO Expander Module</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 69 </span><span class="caption-text">PCF8574 GPIO Expander Module</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 <table class="docutils align-default" id="id2">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">I2C Address/Jumper Settings for GPIO Expander (base=0x20)</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">I2C Address/Jumper Settings for GPIO Expander (base=0x20)</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 38%" />
 <col style="width: 21%" />
@@ -326,9 +422,9 @@ with an address of 0x29, which you may use if you only have one TOF device.  But
 of them has to be programmed with a different address.  This is achieved through an additional wire per module, connected to the
 module’s XSHUT pin. By operating the XSHUT pins, the device driver is able to programme one device at a time, while the remaining
 unprogrammed devices are held in the ‘shutdown’ state.  So each device can use any I2C address!</p>
-</section>
-<section id="connector-styles">
-<h2>Connector Styles<a class="headerlink" href="#connector-styles" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="connector-styles">
+<h2>Connector Styles<a class="headerlink" href="#connector-styles" title="Permalink to this headline">¶</a></h2>
 <p>Many I2C devices come with a set of four pins, spaced by 2.5mm, for you to connect to.  In some
 cases, the pins come separately and need to be soldered.  If you’re not happy with soldering,
 then check before buying.</p>
@@ -346,15 +442,13 @@ onto standard pin headers, and provide a more positive connection than the Dupon
 connectors.  Again, they are available in kit form for crimping onto ribbon cables,
 or they can be found in pre-assembled form.  Note that, while they look very much like the Grove connectors,
 they are a different size and are not interchangeable.</p>
-<figure class="align-default" id="id3">
+<div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/connectors.jpg"><img alt="JST-XH, Dupont, and Grove connectors" src="../../_images/connectors.jpg" style="width: 512.0px; height: 384.0px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 70 </span><span class="caption-text">From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="connecting-devices">
-<h2>Connecting Devices<a class="headerlink" href="#connecting-devices" title="Permalink to this headline"></a></h2>
+<p class="caption"><span class="caption-number">Figure 70 </span><span class="caption-text">From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="connecting-devices">
+<h2>Connecting Devices<a class="headerlink" href="#connecting-devices" title="Permalink to this headline">¶</a></h2>
 <p>The position of the I2C pins depends on what controller module you are using:</p>
 <ul class="simple">
 <li><p>On the Arduino Nano, the I2C pins are labelled A4 (SDA) and A5 (SCL).</p></li>
@@ -362,58 +456,46 @@ they are a different size and are not interchangeable.</p>
 <li><p>On the Arduino Uno, you may use pins A4 (SDA) and A5 (SCL), or pins D20 (SDA) and D21 (SCL), which are in the same place as on the Mega.
 Bear in mind that, even if you use pins D20 and D21 for I2C, the pins A4 and A5 cannot be used for analogue inputs.</p></li>
 </ul>
-<figure class="align-default" id="id4">
+<div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/mega_i2cpins.png"><img alt="Arduino Mega/Uno I2C pins" src="../../_images/mega_i2cpins.png" style="width: 527.2px; height: 243.20000000000002px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 71 </span><span class="caption-text">Arduino Mega/Uno I2C pins</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 71 </span><span class="caption-text">Arduino Mega/Uno I2C pins</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
 <p>Some motor shields come with header pins for the I2C connections, for example the Arduino motor shield and
 the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.</p>
-<figure class="align-default" id="id5">
+<div class="figure align-default" id="id5">
 <a class="reference internal image-reference" href="../../_images/deek_robot.jpg"><img alt="Motor shield I2C pins" src="../../_images/deek_robot.jpg" style="width: 400.0px; height: 400.0px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 72 </span><span class="caption-text">Motor Shield I2C pins</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 72 </span><span class="caption-text">Motor Shield I2C pins</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
 <p>The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-printed 6-inch rack case, with
 one set of I2C pins connected to an OLED display on the front of the case, and one set of I2C pins connected to two external connectors at the
 rear of the case.  The orange wires connect four LEDs (with current-limiting series resistors) that provide panel indications of incoming
 5V and 14V power, and of outgoing DCC power to the Main and Programming tracks.  I’ve also mounted a small self-adhesive aluminium
 heat sink onto the L298P device.</p>
-<figure class="align-default" id="id6">
+<div class="figure align-default" id="id6">
 <a class="reference internal image-reference" href="../../_images/deekrobot_motor_shield.jpg"><img alt="Motor shield I2C pins" src="../../_images/deekrobot_motor_shield.jpg" style="width: 300.8px; height: 272.8px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 73 </span><span class="caption-text">Motor Shield I2C pins</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 73 </span><span class="caption-text">Motor Shield I2C pins</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
 <p>I2C devices are all effectively connected in parallel to the bus.  If you only
 have one device, you can just run a four-wire connecter between the pins on the Arduino, or on
 the motor shield, if you have one, to the device.  Be sure to check that you connect SDA to SDA,
 SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each
 device!</p>
-<figure class="align-default" id="id7">
+<div class="figure align-default" id="id7">
 <a class="reference internal image-reference" href="../../_images/ArduinoMegaOLED.png"><img alt="Arduino Mega with OLED Display" src="../../_images/ArduinoMegaOLED.png" style="width: 451.8px; height: 295.2px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 74 </span><span class="caption-text">Connecting an OLED Display to an Arduino Mega</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id8">
+<p class="caption"><span class="caption-number">Figure 74 </span><span class="caption-text">Connecting an OLED Display to an Arduino Mega</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id8">
 <a class="reference internal image-reference" href="../../_images/ArduinoMegaServo.png"><img alt="Arduino Mega with one servo controllers" src="../../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 75 </span><span class="caption-text">Connecting a PCA9685 Servo Controller to an Arduino Mega</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 75 </span><span class="caption-text">Connecting a PCA9685 Servo Controller to an Arduino Mega</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
 <p>If you have more than one device, then there are a few options open to you.  Some modules
 (PCA9685 and PCF8574 for example) have I2C pins at both ends of the PCB, so you can use one
 set of pins to connect to the Arduino and the other set to connect to another device.  You
 can chain multiple devices, subject to the restrictions described in sections for Cabling and Pull-ups.</p>
-<figure class="align-default" id="id9">
+<div class="figure align-default" id="id9">
 <a class="reference internal image-reference" href="../../_images/ArduinoMega2xServo.png"><img alt="Arduino Mega with two servo controllers" src="../../_images/ArduinoMega2xServo.png" style="width: 661.5px; height: 409.5px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 76 </span><span class="caption-text">Connecting Two Servo Controllers</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 76 </span><span class="caption-text">Connecting Two Servo Controllers</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
 <p>Alternatively, you can use an I2C hub, which you can purchase
 (<a class="reference external" href="https://www.seeedstudio.com/Grove-I2C-Hub.html">SeeedStudio do one</a>, but check
 that you have compatible connectors - it uses Grove connectors); or you can make one.  You can use a breadboard
@@ -426,23 +508,19 @@ to be plugged in and removed as required.  There is a mixture of pin headers and
 and JST-XH male sockets (which accept female cable connectors, or female Dupont connectors.
 I also have a four-way socket header connected in parallel, into which
 an OLED display is fitted for testing.</p>
-<figure class="align-default" id="id10">
+<div class="figure align-default" id="id10">
 <a class="reference internal image-reference" href="../../_images/i2chub.jpg"><img alt="Home-brew I2C Passive Hub" src="../../_images/i2chub.jpg" style="width: 384.0px; height: 288.0px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 77 </span><span class="caption-text">Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 77 </span><span class="caption-text">Home-brew I2C Hub, on Vero Stripboard (strips running left-to-right)</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
 <p>If you just want a temporary hookup for multiple I2C devices, then you can use a small piece of breadboard.
 The board shown has space for five Dupont connectors in each half row.</p>
-<figure class="align-default" id="id11">
+<div class="figure align-default" id="id11">
 <a class="reference internal image-reference" href="../../_images/breadboard-hub.jpg"><img alt="Bread-board based I2C Passive Hub" src="../../_images/breadboard-hub.jpg" style="width: 512.0px; height: 384.0px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 78 </span><span class="caption-text">I2C Hub on Breadboard</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="pull-ups">
-<h2>Pull-ups<a class="headerlink" href="#pull-ups" title="Permalink to this headline"></a></h2>
+<p class="caption"><span class="caption-number">Figure 78 </span><span class="caption-text">I2C Hub on Breadboard</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="pull-ups">
+<h2>Pull-ups<a class="headerlink" href="#pull-ups" title="Permalink to this headline">¶</a></h2>
 <p>The I2C bus will not work unless pull-up resistors are connected to the SDA and SCL lines.  However,
 it’s not very often that you will have to install your own pull-up resistors.  Most microcontrollers
 have the capability to enable internal pull-ups, corresponding to around 20-50kOhm.
@@ -457,32 +535,28 @@ may be unable to pull the bus voltage down far enough to be recognised as a LOW 
 In this case, you may need to seek solutions like removing the pull-up resistors from some or all of the modules,
 and/or adding your own fixed pull-up.  Or adding an I2C multipexer, which will disconnect some devices from the SCL/SDA lines when they
 are not being actively addressed.</p>
-</section>
-<section id="removal-of-pull-ups">
-<h2>Removal of Pull-ups<a class="headerlink" href="#removal-of-pull-ups" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="removal-of-pull-ups">
+<h2>Removal of Pull-ups<a class="headerlink" href="#removal-of-pull-ups" title="Permalink to this headline">¶</a></h2>
 <p>If you want to remove the pull-ups from your modules and add your own (single) pull-up resistor to the I2C bus, then the first
 thing to do is identify which components on the module PCB are the pull-up resistors.  Many modules have full documentation available
 (including circuit diagram and PCB layout), which will help to identify the pull-ups.  Check the web sites for the suppliers.</p>
 <p>As examples of where to find the pull-up resistors, take a look at the figures below:</p>
-<figure class="align-default" id="id12">
+<div class="figure align-default" id="id12">
 <a class="reference internal image-reference" href="../../_images/pca9685_pullups.jpg"><img alt="PCA9685 pullup resistors" src="../../_images/pca9685_pullups.jpg" style="width: 329.09999999999997px; height: 133.2px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 79 </span><span class="caption-text">Location of Pull-up Resistors for PCA9685 Module (ringed in red)</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id13">
+<p class="caption"><span class="caption-number">Figure 79 </span><span class="caption-text">Location of Pull-up Resistors for PCA9685 Module (ringed in red)</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id13">
 <a class="reference internal image-reference" href="../../_images/pcf8574_pullups.jpg"><img alt="PCF8574 pullup resistors" src="../../_images/pcf8574_pullups.jpg" style="width: 436.0px; height: 151.0px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 80 </span><span class="caption-text">Location of Pull-up Resistors for PCF8574 Module (ringed in red)</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Figure 80 </span><span class="caption-text">Location of Pull-up Resistors for PCF8574 Module (ringed in red)</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
 <p>Check the PCB tracks from the SDA and SCL pin connectors; one side of each resistors will be connected to one of these,
 and the other side of both will be connected to the Vcc supply.</p>
 <p><strong>IMPORTANT:  When you desolder the resistors, ensure that you don’t leave any residual
 solder forming a connection between the two pads.</strong></p>
-</section>
-<section id="cabling-limits">
-<h2>Cabling Limits<a class="headerlink" href="#cabling-limits" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="cabling-limits">
+<h2>Cabling Limits<a class="headerlink" href="#cabling-limits" title="Permalink to this headline">¶</a></h2>
 <p>The I2C bus spec allows bus operation at various speeds - on the Arduino, speeds of 100kHz and 400kHz are
 generally used.  Some devices are not specified to operate at the higher speed (e.g. PCF8574) although
 my testing hasn’t shown any problems.</p>
@@ -494,47 +568,64 @@ If you need to run with higher capacitance (e.g. for longer cables), then it is 
 clock speed.  On DCC++EX, operation will continue even with I2C speeds of 32kHz or lower, although the
 scan interval for digital inputs, and the refresh time for I2C displays, may be noticably slower at speeds
 lower than 32kHz.</p>
-</section>
-<section id="changing-the-clock-speed">
-<h2>Changing the Clock speed<a class="headerlink" href="#changing-the-clock-speed" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="changing-the-clock-speed">
+<h2>Changing the Clock speed<a class="headerlink" href="#changing-the-clock-speed" title="Permalink to this headline">¶</a></h2>
 <p>In DCC++EX the I2C clock speed is normally the highest speed supported by all configured devices.
 It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="p">.</span><span class="n">forceClock</span><span class="p">(</span><span class="mi">100000</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>(this sets the clock speed to 100kHz.)</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="i2c-displays.html" class="btn btn-neutral float-left" title="I2C Displays" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="gpio-module.html" class="btn btn-neutral float-right" title="I2C GPIO Expander Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="i2c-displays.html" class="btn btn-neutral float-left" title="I2C Displays" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.</p>
-  </div>
+    <p>
+        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

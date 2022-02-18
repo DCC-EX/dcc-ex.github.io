@@ -1,39 +1,81 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Startup Configuration &mdash; DCC++ EX  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
+
+  
+  
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Supported Motorboards Setup Notes" href="supported-motorboards/index.html" />
     <link rel="prev" title="Motor Board Configuration" href="motor-board-config.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
             <a href="../index.html">
+          
+
+          
+            
             <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
           </a>
+
+          
+            
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -41,7 +83,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/levels.html">Choose Your Level</a></li>
@@ -162,61 +215,101 @@
 </li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">DCC++ EX</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="index.html">Advanced Setup</a> &raquo;</li>
+        
       <li>Startup Configuration</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
+            
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/advanced-setup/startup-config.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-  <section id="startup-configuration">
-<h1>Startup Configuration<a class="headerlink" href="#startup-configuration" title="Permalink to this headline"></a></h1>
+            
+  <div class="section" id="startup-configuration">
+<h1>Startup Configuration<a class="headerlink" href="#startup-configuration" title="Permalink to this headline">¶</a></h1>
 <p>Sometimes, you will need to configure your DCC++ EX with settings which are not saved by the Command Station when restarted, for example the <a class="reference internal" href="../reference/software/diagnostic-d-ack-command.html#d-ack-limit-ma"><span class="std std-ref">ACK min</span></a> for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to <cite>2600µS</cite> to be recognised).</p>
 <p>To automatically run commands at start up, a new file can be created called <cite>mySetup.h</cite> to contain these commands.</p>
-<section id="make-sure-you-are-running-the-arduino-ide">
-<h2>Make sure you are running the Arduino IDE<a class="headerlink" href="#make-sure-you-are-running-the-arduino-ide" title="Permalink to this headline"></a></h2>
+<div class="section" id="make-sure-you-are-running-the-arduino-ide">
+<h2>Make sure you are running the Arduino IDE<a class="headerlink" href="#make-sure-you-are-running-the-arduino-ide" title="Permalink to this headline">¶</a></h2>
 <p>This will need to be done in the <a class="reference internal" href="../get-started/arduino-ide.html"><span class="doc">Arduino-IDE</span></a>, so first make sure you have followed these steps to load up the Arduino IDE.</p>
-</section>
-<section id="create-a-new-tab">
-<h2>Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="create-a-new-tab">
+<h2>Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permalink to this headline">¶</a></h2>
 <p>First you will need to add a new file, just like the <a class="reference internal" href="../get-started/arduino-ide.html#copy-the-config-example-h-file-or-rename-it"><span class="std std-ref">config.h file</span></a>. Create a new tab using the following menu option.</p>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/arduino_ide_newtab.jpg"><img alt="Arduino IDE New Tab" src="../_images/arduino_ide_newtab.jpg" style="width: 654.4000000000001px; height: 172.8px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 46 </span><span class="caption-text">Creating a new tab in the Arduino IDE</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="creating-the-mysetup-h-file">
-<h2>Creating the mySetup.h file<a class="headerlink" href="#creating-the-mysetup-h-file" title="Permalink to this headline"></a></h2>
+<p class="caption"><span class="caption-number">Figure 46 </span><span class="caption-text">Creating a new tab in the Arduino IDE</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="creating-the-mysetup-h-file">
+<h2>Creating the mySetup.h file<a class="headerlink" href="#creating-the-mysetup-h-file" title="Permalink to this headline">¶</a></h2>
 <p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.h</span></code> (case sensitive, so upper case S in setup) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file.</p>
-<figure class="align-default" id="id2">
+<div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/arduino_ide_mysetup.jpg"><img alt="Arduino IDE New Tab" src="../_images/arduino_ide_mysetup.jpg" style="width: 503.20000000000005px; height: 161.60000000000002px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 47 </span><span class="caption-text">Choosing a file name for the new file</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="adding-in-the-startup-commands">
-<h2>Adding in the startup commands<a class="headerlink" href="#adding-in-the-startup-commands" title="Permalink to this headline"></a></h2>
+<p class="caption"><span class="caption-number">Figure 47 </span><span class="caption-text">Choosing a file name for the new file</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="adding-in-the-startup-commands">
+<h2>Adding in the startup commands<a class="headerlink" href="#adding-in-the-startup-commands" title="Permalink to this headline">¶</a></h2>
 <p>Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the following command each time your Command Station starts up:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK MIN 2600&gt;
 </pre></div>
@@ -226,9 +319,9 @@
 </pre></div>
 </div>
 <p>Note the upper case word <code class="docutils literal notranslate"><span class="pre">SETUP</span></code> at the start.</p>
-</section>
-<section id="adding-in-more-than-one-startup-command">
-<h2>Adding in more than one startup command<a class="headerlink" href="#adding-in-more-than-one-startup-command" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="adding-in-more-than-one-startup-command">
+<h2>Adding in more than one startup command<a class="headerlink" href="#adding-in-more-than-one-startup-command" title="Permalink to this headline">¶</a></h2>
 <p>If you need to have multiple commands run at start up, you will need to enter each additional command on a new line, so a longer <code class="docutils literal notranslate"><span class="pre">mySetup.h</span></code> file could look like:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SETUP(&quot;&lt;D ACK MAX 9200&gt;&quot;); // Set ACK detection to allow pulses up to 9200uS
 SETUP(&quot;&lt;D ACK LIMIT 60&gt;&quot;); // 60mA is the default
@@ -237,42 +330,59 @@ SETUP(&quot;&lt;D CMD 0&gt;&quot;); // can be set to ON for testing in the seria
 </pre></div>
 </div>
 <p>Here you can add comments on each line, these can be added by using the double forward slash character <code class="docutils literal notranslate"><span class="pre">//</span></code> and then your comments. This makes it easier to remember why you added these start up commands.</p>
-</section>
-<section id="upload-the-new-version-of-the-software">
-<h2>Upload the new version of the software<a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="upload-the-new-version-of-the-software">
+<h2>Upload the new version of the software<a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permalink to this headline">¶</a></h2>
 <p>Finally, upload the code to the Arduino as you would do during the standard <a class="reference internal" href="../get-started/arduino-ide.html#upload-the-software"><span class="std std-ref">Arduino IDE Setup</span></a>. Restart the Command Station and these commands will have run at start up.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="motor-board-config.html" class="btn btn-neutral float-left" title="Motor Board Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="supported-motorboards/index.html" class="btn btn-neutral float-right" title="Supported Motorboards Setup Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="motor-board-config.html" class="btn btn-neutral float-left" title="Motor Board Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.</p>
-  </div>
+    <p>
+        &#169; Copyright 2020, 2021 - Fred Decker, Mani Kumar.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

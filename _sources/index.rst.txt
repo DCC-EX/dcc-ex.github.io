@@ -22,11 +22,11 @@ Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source 
    :class: intro-table
 
    ==================   ==================   ====================
-   |Timer|_             |Arrow|              |Binder|
+   |Timer|_             |Arrow|_             |Binder|_
    ------------------   ------------------   --------------------
    |Get Started|        |Download|           |Reference|
    ------------------   ------------------   --------------------
-   |Lightning|          |Question|           |Puzzle|
+   |Lightning|_         |Question|_          |Puzzle|_
    ------------------   ------------------   --------------------
    |Advanced Setup|     |Support|            |Contribute|
    ==================   ==================   ====================
@@ -36,18 +36,23 @@ Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source 
 .. |Get Started| replace:: :doc:`/get-started/index`
 
 .. |Arrow| image:: ./_static/images/download_bl.png
+.. _Arrow: download/index.html
 .. |Download| replace:: :doc:`Download </download/index>`
 
 .. |Binder| image:: ./_static/images/api_bl.png
+.. _Binder: reference/index.html
 .. |Reference| replace:: :doc:`/reference/index`
 
 .. |Lightning| image:: ./_static/images/advanced_bl.png
+.. _Lightning: advanced-setup/index.html
 .. |Advanced Setup| replace:: :doc:`/advanced-setup/index`
 
 .. |Question| image:: ./_static/images/question_bl.png
+.. _Question: support/index.html
 .. |Support| replace:: :doc:`/support/index`
 
 .. |Puzzle| image:: ./_static/images/puzzle_bl.png
+.. _Puzzle: contributing/index.html
 .. |Contribute| replace:: :doc:`Contribute </contributing/index>`
 
 Mission

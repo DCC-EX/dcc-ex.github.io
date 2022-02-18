@@ -17,7 +17,7 @@ jobs:
           pip3 install sphinx-sitemap
           pip3 install sphinxcontrib-spelling
       - name: Checkout repo
-        uses: actions/checkout@1.0.0
+        uses: actions/checkout@0.5.2
       - name: Build docs
         run: |
           make github

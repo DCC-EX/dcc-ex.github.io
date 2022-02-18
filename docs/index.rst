@@ -32,7 +32,7 @@ Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source 
    ==================   ==================   ====================
 
 .. |Timer| image:: ./_static/images/timer_bl.png
-.. _Timer: replace:: :doc:`/get-started/index`
+.. _Timer: get-started/index.html
 .. |Get Started| replace:: :doc:`/get-started/index`
 
 .. |Arrow| image:: ./_static/images/download_bl.png

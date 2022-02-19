@@ -34,7 +34,7 @@ Cab functions
  
  ``<f cab byte1 [byte2]]>`` legacy functions, see command reference.
  
- ``<#>`` Show number of supported cabs
+ ``<#>`` Show number of supported cabs. Will return either ``<# 20>``, ``<# 30>``, or ``<# 50>``
  
  ``<D SPEED28|SPEED128>`` Switch between 28 and 128 speed steps
 

@@ -371,6 +371,10 @@ User Commands</p>
 &quot;&gt;&quot; = End DCC++ EX command
 </pre></div>
 </div>
+<p><strong>Show number of supported cabs</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> - Will return either <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">20&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">30&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">50&gt;</span></code>. Depending on Arduino used: Uno, Nano, or other (usually Mega) respectively. This is a memory constrained function.</p></li>
+</ul>
 <p><strong>Forget Locos</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[CAB]&gt;</span></code> - (Minus symbol as in “subtract”) Forgets one or all locos. The “CAB” parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">CAB&gt;</span></code> will forget/clear that loco. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> will clear all the locos. This doesn’t do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.</p></li>

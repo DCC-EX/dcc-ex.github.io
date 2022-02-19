@@ -106,6 +106,10 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
    "1" = forward direction
    ">" = End DCC++ EX command
 
+**Show number of supported cabs**
+
+* ``<#>`` - Will return either ``<# 20>``, ``<# 30>``, or ``<# 50>``. Depending on Arduino used: Uno, Nano, or other (usually Mega) respectively. This is a memory constrained function.
+
 **Forget Locos**
 
 * ``<- [CAB]>`` - (Minus symbol as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.

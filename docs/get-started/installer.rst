@@ -5,7 +5,7 @@ Install using the Automated Installer
 Requirements (for installing)
 ==============================
 
-* Windows/Linux/MacOS Computer
+* Windows/Linux/macOS Computer
 * DCC-EX Compatible motor shield / motor controller board
 * DCC-EX Compatible Microcontroller (Arduino Mega/Uno)
 * USB cable to connect your computer to the Microcontroller

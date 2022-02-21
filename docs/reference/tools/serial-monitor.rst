@@ -103,10 +103,10 @@ Connect with a Cell Phone
 * An "On The Go" Cable (aka. OTG Cable)
 * The USB Cable for your Arduino
 
-.. NOTE:: You can also use BlueTooth if you have a BlueTooth board attached to your CS and make a small modification to the sketch (CS Software). We will cover how to do that in a **Project** tutorial
+.. NOTE:: You can also use Bluetooth if you have a Bluetooth board attached to your CS and make a small modification to the sketch (CS Software). We will cover how to do that in a **Project** tutorial
 
 .. todo::
-   show how to use bluetooth. There is bluetooth serial monitor by CSA and Android bluetooth serial monitor by Rupak Poddar
+   show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar
 
 OTG Cable
 -----------

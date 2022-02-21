@@ -2,7 +2,7 @@
 Adding a WiFi Option
 *********************
 
-The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, elimating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page <installer>`.
+The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page <installer>`.
 
 .. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12). The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
 
@@ -163,7 +163,7 @@ To install this board on your Arduino, follow the same steps as above, with the 
 ESP-01 and ESP-01s
 =====================
 
-This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduno Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
+This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
 
 
 .. figure:: ../_static/images/esp-01s_2.jpg

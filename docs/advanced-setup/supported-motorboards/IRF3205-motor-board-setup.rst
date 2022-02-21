@@ -99,7 +99,7 @@ Steps (Upgrade IRF3205)
 
 3. Move the two wires we just disconnected from the motor shield and connect one to each of the "Motor1" screw terminals of the IRF3205 board. TODO: Add image.
 
-4. NOTE: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use the ``<1 JOIN>`` command to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "Driveaway" feature. For more detail, see :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Keeping your tracks in phase` below.
+4. NOTE: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use the ``<1 JOIN>`` command to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "DriveAway" feature. For more detail, see :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Keeping your tracks in phase` below.
 
 5. Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. "CS" in the table means "Current Sense":
 
@@ -191,13 +191,13 @@ Steps (Replace IRF3205)
 -------------------------
 
 1. Make sure all power supplies are disconnected from your Arduino and the IRF3205 motor board.
-2. Option - TODO: fnd curent sense / fuses! See the notes below for more detail about current sense and a suggestion for using an external current sense board.
+2. Option - TODO: fnd current sense / fuses! See the notes below for more detail about current sense and a suggestion for using an external current sense board.
 3. Select your IRF3205 board in the config.h file. ***TODO: fnd need to add this type***
 4. Upload the new sketch to your Arduino Mega
 
 Connect wires of the proper gauge (TODO: see gauge) from the "MOTOR1" screw terminals of the IRF3205 board to your MAIN track and connect 2 more wires from the "MOTOR2" terminals to your PROG track. 
 
-.. NOTE:: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use <1 JOIN> to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "Driveaway" feature. TODO: fnd finish this. How do know phase?
+.. NOTE:: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use <1 JOIN> to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "DriveAway" feature. TODO: fnd finish this. How do know phase?
 
 Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. "CS" in the table means "Current Sense":
 
@@ -268,7 +268,7 @@ Remove the last line and replace it with this. To be sure of your spelling, you 
      new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
 
 This will us pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to note explaining high accuracy).
-Upload the sketch to your arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
+Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
 
 
 ***TODO: organize the above and add pictures***
@@ -279,12 +279,12 @@ Upload the sketch to your arduino. If you need help on how to upload a sketch, s
 Important Notes on Current Sensing
 ===================================
 
-.. WARNING:: You MUST have current sensing if you want to read or write settings to locos on a programming track (PROG). You also must have current sensing in order to have the Command Station software detect an overload and cut power to the MAIN track. Alternately, you can use fuses for MAIN. If the fuses blow, the Command Station will still think there is power to the track, and you will recieve no notification in the log. Also, make sure you don't apply more than 5V to the Arduino Analog pin. Ensure that your calculation for what voltage the current sense board will report at the maximum current will not be more than 5V for a 5V Arduino or 3.3V for a Command Station using a 3.3V board (like a Teensy or Feather).
+.. WARNING:: You MUST have current sensing if you want to read or write settings to locos on a programming track (PROG). You also must have current sensing in order to have the Command Station software detect an overload and cut power to the MAIN track. Alternately, you can use fuses for MAIN. If the fuses blow, the Command Station will still think there is power to the track, and you will receive no notification in the log. Also, make sure you don't apply more than 5V to the Arduino Analog pin. Ensure that your calculation for what voltage the current sense board will report at the maximum current will not be more than 5V for a 5V Arduino or 3.3V for a Command Station using a 3.3V board (like a Teensy or Feather).
 
 Please do the following to verify you won't damage the Arduino, your layout, or yourself:
 
 * Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the output going to pin A3 of the CS does not produce more than 5V.
-* Consider using a 5V zener diode and current limiting resistor to clamp the voltage on the analog pin. This would normally be a 270 Ohm resistor.
+* Consider using a 5V Zener diode and current limiting resistor to clamp the voltage on the analog pin. This would normally be a 270 Ohm resistor.
 * Put a 5A fuse on each output leg going to your track.
 
 Using Other External Current Sense Boards
@@ -313,7 +313,7 @@ The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
 If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section <../motor-board-config>`
 
-For the Engineers, the defintions and implementation for motor board control are in the following files:
+For the Engineers, the definitions and implementation for motor board control are in the following files:
 
   **MotorDrivers.h**  - Contains the definitions for all the currently supported motor boards
   **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller

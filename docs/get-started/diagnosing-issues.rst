@@ -35,7 +35,7 @@ Testing the DCC signal
 
 Now the fun part -- we are going to test the generation of the DCC signal itself.  
 
-The easiest way to do this is using a Multi-meter that can read AC votage. You can measure that 12V DC is going INTO the Motor Shield, but you have to use the **AC setting** to measure the bipolar square wave signal. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on our input voltage and a few other factors. An N-Scale track with 12V DC input to the motor shield is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, motor shield, or config.h settings.
+The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12V DC is going INTO the Motor Shield, but you have to use the **AC setting** to measure the bipolar square wave signal. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on our input voltage and a few other factors. An N-Scale track with 12V DC input to the motor shield is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, motor shield, or config.h settings.
 
 
 Testing the Motor Shield
@@ -63,7 +63,7 @@ Loco Programming Issues (-1 or JMRI 308 error)
 With all of the decoder manufacturers creating hardware and the difficulties in properly interpreting the NMRA standard, we have found that quite a few decoders are wildly outside the specification. That presents a few challenges. If you can't read CVs or program your loco or you see "Error 308" in your JMRI log, it could be one of the following:
 
 #. **Current sense issue** - From the Arduino Serial monitor with ``115200 baud`` set and ``Both CR & NL`` selected in the dropdown, put a loco on the MAIN track. Enter the <1> command to turn on power. Then enter the <C> command and check the response. You should see a valid number for current.
-#. Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capabiliy on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.
+#. Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capability on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.
 #. **Out of spec. decoder (most likely)** - You will need to run a test and then modify a setting or two. Please go to the :doc:`<Diagnostic \<D ACK\> <../reference/software/diagnostic-d-ack-command>`. Send us your log.
 
 ..

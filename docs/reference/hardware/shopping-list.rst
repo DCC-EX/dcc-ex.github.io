@@ -22,7 +22,7 @@ CS Hardware
 
 .. note:: You may use your own computer instead of the Raspberry Pi. However, the image software below saves you installing software on your computer and does a lot more. See: "My Computer vs. Raspberry Pi" <insert link here> 
 
-You can check Amazon, Ebay, AliExpress, Banggood, Adafruit, Sparkfun and others for all the above
+You can check Amazon, eBay, AliExpress, Banggood, Adafruit, SparkFun and others for all the above
 
 Software
 =========
@@ -50,7 +50,7 @@ This can be a little confusing, so let explain it a different way:
 
     2. A computer running JMRI. JMRI connects via the USB cable to the CS and you control your trains with the Throttles built into JMRI. You can also use the WiThrottle server built into JMRI to connect any WiThrottle compatible controller (such as the Engine Driver mobile app) via WiFi to JMRI and control your layout that way. 
     
-    3. A Raspberry Pi as a computer. You can do any of the things mentioned in 1 and 2 above. With Steve Todd's image burned to an SDCard and installed in the Rasperry Pi, JMRI, the WiThrottle Server with networking, and more is installed and running when you boot. You still need a USB cable to connect the Pi to the CS.
+    3. A Raspberry Pi as a computer. You can do any of the things mentioned in 1 and 2 above. With Steve Todd's image burned to an SDCard and installed in the Raspberry Pi, JMRI, the WiThrottle Server with networking, and more is installed and running when you boot. You still need a USB cable to connect the Pi to the CS.
 
     4. If you install an ESP8266 WiFi Shield, you don't need a computer or a Pi if you don't want it once you upload the software to the Arduino. You can connect directly to the CS via WiFi using any WiThrottle compatible controller such as Engine Driver running on a WiFi device like your mobile phone.
 

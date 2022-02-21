@@ -186,12 +186,12 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 
 Connect the 2.5mm barrel connector from your separate 7-9V DC power supply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the "Vin" and "Gnd" pins on the Arduino.
 
-.. note:: There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run exWebThrottle or JMRI. There is also a way to use a 5V power supply. Please read :doc:`Power Supplies </reference/hardware/power-supplies>` to help you find what will work best for you).
+.. note:: There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run WebThrottle-EX or JMRI. There is also a way to use a 5V power supply. Please read :doc:`Power Supplies </reference/hardware/power-supplies>` to help you find what will work best for you).
 
 6. Install the optional WiFi board
 ===================================
 
-You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.
+You can connect a controller like JMRI or our WebThrottle-EX by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.
 
 :doc:`WiFi Setup </get-started/wifi-setup>`
 

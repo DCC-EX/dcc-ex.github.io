@@ -1,6 +1,6 @@
 Tx
 Makerfabs
-exWebThrottle
+WebThrottle-EX
 iOS
 macOS
 DCC

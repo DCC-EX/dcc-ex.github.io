@@ -40,7 +40,7 @@ You have an option for how you would like to run WebThrottle-Ex, from the cloud 
 Try it now (Run from the cloud)
 =================================
 
-Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run exWebThrottle in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run WebThrottle-EX in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
 .. rst-class:: dcclink
 

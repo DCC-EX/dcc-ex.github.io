@@ -6,7 +6,7 @@ This is a detailed reference. For a summary version, please see :doc:`Command Su
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* :doc:`exWebThrottle </throttles/ex-webthrottle>` - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!
+* :doc:`WebThrottle-EX </throttles/ex-webthrottle>` - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!
 
 * `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Cellphone App WiFi Throttle  
 

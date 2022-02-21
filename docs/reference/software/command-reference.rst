@@ -404,11 +404,11 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 
       .. code-block:: none
 
-      RETURNS: One of the following for each defined turnout or <X> if no turnouts defined.
-      <H ID DCC ADDRESS SUBADDRESS THROWN>     -- DCC Accessory Turnouts
-      <H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>  -- Servo Turnouts
-      <H ID VPIN PIN THROWN>  -- VPIN Turnouts
-      <H ID LCN THROWN>  -- LCN Turnouts
+          RETURNS: One of the following for each defined turnout or <X> if no turnouts defined.
+          <H ID DCC ADDRESS SUBADDRESS THROWN>     -- DCC Accessory Turnouts
+          <H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>  -- Servo Turnouts
+          <H ID VPIN PIN THROWN>  -- VPIN Turnouts
+          <H ID LCN THROWN>  -- LCN Turnouts
      
       The rest of the parameters are as defined for the turnout definition commands.
 
@@ -549,7 +549,7 @@ Depending on whether the physical sensor is acting as an "event-trigger" or a "d
 *   
       RETURNS: <Q ID> (active) or <q ID> (not active)
 
-Example: The shos Sensor 1 and 1 are tripped or active while 3 and 4 are not.
+Example: This shows sensors 1 and 2 are tripped or active while 3 and 4 are not.
 
          <Q 1><Q 2><q 3><q 4>
   
@@ -861,7 +861,7 @@ Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register
 
    returns: NONE
 
-WiFi "AT Commands
+WiFi AT Commands
 ==================
 
 ``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the "+" and the command.
@@ -885,6 +885,6 @@ For more detail follow these links:
 User Commands
 ==============
 
- ``<U>`` Is reserved for user commands.
+``<U>`` Is reserved for user commands.
 
- This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`
+This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`

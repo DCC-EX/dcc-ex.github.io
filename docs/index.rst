@@ -5,7 +5,7 @@ DCC++ EX Model Railroading
    :alt: v4_0 Release Banner
    :class: float-left
    :scale: 50%
-   :target: download/index.html
+   :target: download/commandstation.html
 
 The DCC-EX team is pleased to announce the next version of the DCC++EX Command Station. There are tons of new features and enhancements. So many in fact, it takes a separate page to list them all! Be sure to find us on our :doc:`Discord channel </support/index>`. Here are just a few features to whet your appetite.
 

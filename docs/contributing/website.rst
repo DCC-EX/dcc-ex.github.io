@@ -148,6 +148,24 @@ source file, define a target:
 
     Link to the `DCC++EX home page <https://dcc-ex.com/index.html>`_.
 
+Downloads
+^^^^^^^^^
+
+Download buttons are created using the ``dcclink`` class, added using the
+``.. rst-class::`` directive:
+
+.. admonition:: Example
+
+    ::
+
+        .. rst-class:: dcclink
+
+           `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+
+    .. rst-class:: dcclink
+
+       `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+
 Images
 ------
 

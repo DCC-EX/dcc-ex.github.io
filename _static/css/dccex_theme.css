@@ -16,7 +16,7 @@
     margin: 5% 15%;
 }
 
-.dcclink {
+.dcclink a {
   background-color: lightseagreen;
   box-shadow: 0 2px 0 darkslategray;
   color: white;
@@ -27,16 +27,16 @@
   border-radius: 5px;
 }
 
-.dcclink:visited {
-    color: whitesmoke
+.dcclink a:visited {
+  color: whitesmoke
 }
 
-.dcclink:hover {
+.dcclink a:hover {
   background-color: darkslategrey;
   cursor: pointer;
 }
 
-.dcclink:active {
+.dcclink a:active {
   box-shadow: none;
   top: 5px;
 }

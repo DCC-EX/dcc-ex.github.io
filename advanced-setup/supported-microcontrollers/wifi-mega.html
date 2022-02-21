@@ -295,9 +295,9 @@
 </div>
 <div class="section" id="a-operational-standalone-wifi-dcc-command-station">
 <h2>A Operational Standalone WiFI DCC Command Station<a class="headerlink" href="#a-operational-standalone-wifi-dcc-command-station" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/mega_wifi.png"><img alt="Mega WiFi" src="../../_images/mega_wifi.png" style="width: 384.40000000000003px; height: 308.40000000000003px;" /></a>
-<p class="caption"><span class="caption-number">Figure 52 </span><span class="caption-text">Mega+WiFi Board</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 52 </span><span class="caption-text">Mega+WiFi Board</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers are at the bottom of this page:</p>
 <ul class="simple">
@@ -336,9 +336,9 @@
 <div class="section" id="plug-in-and-test-your-mega">
 <h3>1. Plug in and test your Mega<a class="headerlink" href="#plug-in-and-test-your-mega" title="Permalink to this headline">¶</a></h3>
 <p>Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for “CH340” or “CH341”.</p>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/ch340_driver.png"><img alt="CH340 Recognized" src="../../_images/ch340_driver.png" style="width: 261.0px; height: 95.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 53 </span><span class="caption-text">CH340 Recognized</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 53 </span><span class="caption-text">CH340 Recognized</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>If you don’t see the CH340 with the Mega plugged into USB, download and install the drivers from here:</p>
 <p><a class="reference external" href="http://www.wch-ic.com/downloads/CH341SER_ZIP.html">http://www.wch-ic.com/downloads/CH341SER_ZIP.html</a></p>
@@ -352,11 +352,14 @@
 <div class="section" id="using-the-flash-download-tool-windows">
 <h4>Using the Flash Download Tool (Windows)<a class="headerlink" href="#using-the-flash-download-tool-windows" title="Permalink to this headline">¶</a></h4>
 <p>Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware files by clicking on the buttons below. Unzip them wherever you like:</p>
-<p><a class="dcclink" href="../../_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p><p><a class="dcclink" href="../../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p></div>
+<p class="dcclink"><a class="reference external" href="/_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p>
+<p class="dcclink"><a class="reference external" href="/_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
+</div>
 <div class="section" id="using-esptool-py-windows-mac-linux">
 <h4>Using esptool.py (Windows, Mac, Linux)<a class="headerlink" href="#using-esptool-py-windows-mac-linux" title="Permalink to this headline">¶</a></h4>
 <p>Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button below:</p>
-<p><a class="dcclink" href="../../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p><p>Install python if you don’t already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don’t:</p>
+<p class="dcclink"><a class="reference external" href="/_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
+<p>Install python if you don’t already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don’t:</p>
 <p><a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide/Download">https://wiki.python.org/moin/BeginnersGuide/Download</a></p>
 <p>Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install esptool
@@ -377,19 +380,19 @@
 <div class="section" id="set-the-switches-on-your-mega-for-flashing">
 <h3>3. Set the switches on your Mega for flashing<a class="headerlink" href="#set-the-switches-on-your-mega-for-flashing" title="Permalink to this headline">¶</a></h3>
 <p>With the Mega UNPLUGGED (no power connected!), you will set some switches. Use the following diagram to see the locations on the board. You can click on any picture to enlarge it.</p>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/mega_wifi1.png"><img alt="Mega WiFi Switch Locations" src="../../_images/mega_wifi1.png" style="width: 500.0px; height: 336.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 54 </span><span class="caption-text">Important Board Locations</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 54 </span><span class="caption-text">Important Board Locations</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>Note that switch 8 is not connected to anything, you don’t need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, <strong>ON is up in this picture. Switches 5,6, and 7 are on</strong>.</p>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/mega_wifi_sw_flash.png"><img alt="Switches in flash mode" src="../../_images/mega_wifi_sw_flash.png" style="width: 169.5px; height: 205.2px;" /></a>
-<p class="caption"><span class="caption-number">Figure 55 </span><span class="caption-text">Switch Settings for Flashing</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 55 </span><span class="caption-text">Switch Settings for Flashing</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <p>Use this image to set the serial port switch to <strong>RXD3/TXD3</strong>.</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/mega_wifi_sw_serial_cw.png"><img alt="Switch setting for Serial Port" src="../../_images/mega_wifi_sw_serial_cw.png" style="width: 116.0px; height: 119.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 56 </span><span class="caption-text">Switch Setting for Serial Port</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 56 </span><span class="caption-text">Switch Setting for Serial Port</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>Your board should be configured follows:</p>
 <blockquote>
@@ -413,9 +416,9 @@
 <li><p>Press [ESP8266 Download Tool] button</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/download_tool_dev_mode.jpg"><img alt="Flasher Tool Buttons" class="align-left" src="../../_images/download_tool_dev_mode.jpg" style="width: 228.8px; height: 218.4px;" /></a>
-<div class="figure align-left" id="id6">
+<div class="figure align-left" id="id7">
 <a class="reference internal image-reference" href="../../_images/download_tool_esp8266.jpg"><img alt="Flasher Tool Buttons 2" src="../../_images/download_tool_esp8266.jpg" style="width: 228.8px; height: 434.40000000000003px;" /></a>
-<p class="caption"><span class="caption-number">Figure 57 </span><span class="caption-text">Flash Tool Button Selections</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 57 </span><span class="caption-text">Flash Tool Button Selections</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="clearer section" id="setup-the-files-and-memory-locations-in-the-flasher-tool">
@@ -470,9 +473,9 @@
 - dip switches 5,6,7 OFF and 1,2,3,4 ON
 - (Leave the TX/RX slide Pin on RxD3 TxD3)
 - re-connect the USB cable</p>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id8">
 <a class="reference internal image-reference" href="../../_images/mega_wifi_sw_run.png"><img alt="Switches in flash mode" src="../../_images/mega_wifi_sw_run.png" style="width: 169.5px; height: 205.2px;" /></a>
-<p class="caption"><span class="caption-number">Figure 59 </span><span class="caption-text">Switch Settings for sketch load/run</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 59 </span><span class="caption-text">Switch Settings for sketch load/run</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="decide-if-you-want-ap-mode-or-station-mode">

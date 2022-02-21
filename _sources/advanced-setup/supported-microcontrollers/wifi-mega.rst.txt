@@ -86,23 +86,22 @@ Using the Flash Download Tool (Windows)
 
 Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware files by clicking on the buttons below. Unzip them wherever you like:
 
-.. raw:: html
+.. rst-class:: dcclink
 
-   <p><a class="dcclink" href="../../_static/files/esp8266/flash_download_tool_v3.8.5.zip">Flash Download tool</a></p>
+   `Flash Download tool </_static/files/esp8266/flash_download_tool_v3.8.5.zip>`_
   
-
-.. raw:: html
+.. rst-class:: dcclink
   
-   <p><a class="dcclink" href="../../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
+   `ESP8266 Firmware Zipped </_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip>`_
 
 Using esptool.py (Windows, Mac, Linux)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button below:
 
-.. raw:: html
+.. rst-class:: dcclink
    
-   <p><a class="dcclink" href="../../_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
+   `ESP8266 Firmware Zipped </_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip>`_
 
 Install python if you don't already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don't:
 

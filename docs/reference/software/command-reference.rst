@@ -73,8 +73,8 @@ Examples:
   * ``CurrentMAIN`` - Static text for software like JMRI
   *  ``CURRENT`` - Current in MilliAmps
   *  ``C`` - Designator to signify this is a current meter (V would be for voltage)
-  *  ``Milli`` - Unit of measure for external sofware with a meter like JMRI (Milli, Kilo, etc.)
-  *  ``0`` - numbered parameter for external sofware (1,2,3, etc.)
+  *  ``Milli`` - Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.)
+  *  ``0`` - numbered parameter for external software (1,2,3, etc.)
   *  ``MAX_MA`` - The maximum current handling of the motor controller in MilliAmps
   *  ``1`` - number parameter for external software (we use 2 parameters here, 0 and 1)
   *  ``TRIP_MA`` - The overcurrent limit that will trip the software circuit breaker in mA

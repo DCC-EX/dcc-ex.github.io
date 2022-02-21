@@ -46,7 +46,7 @@ Screenshots
 Requirements
 =============
 
-* A DCC++ EX Commmand Station (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)
+* A DCC++ EX Command Station (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)
 * An Android Cell Phone or Tablet
 * A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup Page <../get-started/wifi-setup>`
 * An HC-06 Board if you want to connect using Bluetooth
@@ -72,7 +72,7 @@ We have not tested the WiFi implementation yet
 Using Bluetooth
 ----------------
 
-The Bluetooth connection requires an Android device with Bluetooth capability and a Bluetooth board attached to the Command Station. The setup is similar to how we use a WiFi Sheild or an ESP-01s board. It is just a different method to create a wireless serial connection to the CS from another device.
+The Bluetooth connection requires an Android device with Bluetooth capability and a Bluetooth board attached to the Command Station. The setup is similar to how we use a WiFi Shield or an ESP-01s board. It is just a different method to create a wireless serial connection to the CS from another device.
 
 You will need one of these inexpensive HC-06 boards.
 

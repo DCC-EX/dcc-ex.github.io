@@ -16,11 +16,11 @@ To begin, let's define a few terms:
 
 **SEQUENCE** - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 
-**ROUTE** - A SEQUENCE that is made visible to EngineDriver with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. 
+**ROUTE** - A SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.
 
-**AUTOMATION** - A SEQUENCE that is made visible to EngineDriver so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence. 
+**AUTOMATION** - A SEQUENCE that is made visible to a throttle so that a user can hand over a loco and let EX-RAIL drive the train away, following each step listed in the sequence.
 
-Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with throttles that support it (Engine Driver, EX-WebThrottle) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. "Automations" can appear on a "handoff" button that will supply or handoff the Loco ID to EX-RAIL where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in Engine driver that runs an AUTOMATION to take it on a journey around the layout.
+Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with :doc:`throttles </throttles/index>` that support it (:doc:`/throttles/engine-driver`, :doc:`WebThrottle-EX </throttles/ex-webthrottle>`) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. "Automations" can appear on a "handoff" button that will supply or handoff the Loco ID to EX-RAIL where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in the throttle that runs an AUTOMATION to take it on a journey around the layout.
 
 .. sidebar:: A note from the Author
 
@@ -41,10 +41,10 @@ Most people wanting to do animations or run trains through an automated route wi
 Things You Can Do With EX-RAIL
 ====================================
 
-- Create "Routes" which set multiple turnouts and signals at the press of a button in EngineDriver (other WiThrottle-compatible throttles are available)
-- Animate accessories such as lights, crossings, or cranes using "Sequences"
+- Create "Routes" which set multiple turnouts and signals at the press of a button in WebThrottle-EX or EngineDriver (other WiThrottle-compatible throttles are available)
 - Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up "Automations"
 - Drive trains manually, and hand a train over to an Automation
+- Animate accessories such as lights, crossings, or cranes
 - Intercept turnout changes to automatically adjust signals or other turnouts
 - Turn on the coffee pot when the train reaches the station
 
@@ -74,17 +74,15 @@ EX-RAIL automation is *much* (perhaps 2 orders of magnitude) more time efficient
 The Automation Process
 =======================
 
-All routes, automations, etc step through a list of simple keywords until they reach a ``DONE`` keyword. 
+Once started, all sequences step through a list of simple keywords until they reach a ``DONE`` keyword.
+
+There can be a startup sequence (keywords at the beginning of the script), which if present is automatically executed, as are any sequences that contain an ``AUTOSTART``.
+
+Multiple concurrent sequences are supported.
 
 For a full list of keywords, see :doc:`EX-RAIL-summary`.
 
-Automation scripts are added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino, and adding in the scripts as follows:
-
-.. code-block:: cpp
-
-   EXRAIL
-     ... your scripts
-   ENDEXRAIL
+The script containing your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
 
 Connecting your Arduino and pressing the Upload button in the usual way will save the file and upload your script into the Command Station.
 
@@ -107,7 +105,7 @@ Enter the file name "myAutomation.h" (This is case sensitive)
    :align: center
    :scale: 100%
 
-And type your script in, starting with EXRAIL and ending with ENDEXRAIL. 
+And type your script in.
 
 .. image:: ../_static/images/ex-rail/setup4.jpg
    :alt:  Setup Example file
@@ -118,10 +116,10 @@ And type your script in, starting with EXRAIL and ending with ENDEXRAIL.
 Some Simple Examples  
 ======================
 
-Example 1: Creating Routes for Engine Driver
+Example 1: Creating Routes for a Throttle
 ---------------------------------------------
 
-A typical Route might be used to set a sequence of turnouts in response to a single button in Engine Driver, or a pushbutton on a fascia panel near a yard.
+A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like
 
 .. code-block:: cpp
@@ -142,7 +140,7 @@ Or add comments
 .. code-block:: cpp
 
  // This is my coal yard to engine shed route
-   ROUTE(1,"Coal Yard exit")     // appears in Engine Driver
+   ROUTE(1,"Coal Yard exit")     // appears in the throttle
      THROW(1)   // throw turnout onto coal yard siding
      CLOSE(7)   // close turnout for engine shed
      DONE    // that's all folks!
@@ -235,7 +233,7 @@ Start with something as simple as a single loop of track with a station and a se
    :align: center
    :scale: 100%
 
-Using an ``AUTOMATION`` keyword means that this automation will appear in EngineDriver so you can drive the train manually, and then hand it over to the automation at the press of a button.
+Using an ``AUTOMATION`` keyword means that this automation will appear in the throttle so you can drive the train manually, and then hand it over to the automation at the press of a button.
 
 \* Technically, an automation can independently run multiple locos along the same path through the layout, but this is discussed later...
 
@@ -252,7 +250,7 @@ Using an ``AUTOMATION`` keyword means that this automation will appear in Engine
 
 The instructions are followed in sequence by the loco given to it; the ``AT`` command just leaves the loco running until that sensor is detected.
 
-Notice that this automation does not specify the loco address. If you drive a loco with EngineDriver and then hand it over to this automation, then the automation will run with the loco you last drove.
+Notice that this automation does not specify the loco address. If you drive a loco with the throttle and then hand it over to this automation, then the automation will run with the loco you last drove.
 
 Example 5: Signals in a train script
 -------------------------------------
@@ -310,7 +308,7 @@ Notice that the sensors at A and B are near the ends of the track (allowing for 
       FOLLOW(13) // follows sequence 13 again… forever
 
 
-Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the EngineDriver app.
+Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the throttle.
 
 When the Command Station is powered up or reset, EX-RAIL starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:
 
@@ -444,7 +442,7 @@ Starting the system is tricky, because we need to place the trains in a suitable
 
 .. warning:: This EX-RAIL version isn’t ready to handle locos randomly placed on the layout after a power down!
 
-For a known set of locos, the easiest way is to define the startup process at the beginning of ROUTES. E.g. for two engines, one at each station.
+For a known set of locos, the easiest way is to define the startup process at the beginning of the script. E.g. for two engines, one at each station.
 
 .. code-block:: cpp
 
@@ -453,7 +451,7 @@ For a known set of locos, the easiest way is to define the startup process at th
  RESERVE(3) // and another in block 3
  SENDLOCO(3,12) // send Loco DCC addr 3 on to route 12
  SENDLOCO(17,34) // send loco DCC addr 17 to route 34
- DONE // don’t drop through to the first route definition that follows in the script file
+ DONE // don’t drop through to the first sequence definition that follows in the script file
 
 .. hint:: Some interesting points about the startup:
 
@@ -464,9 +462,9 @@ For a known set of locos, the easiest way is to define the startup process at th
 Drive Away feature
 ==================
 
-EX-RAIL can switch a track section between programming and mainline automatically.
+EX-RAIL can switch a track section between programming and mainline.
 
-Here for example is a startup route that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (ie 3 leds) on the control panel connected where signal 27 would be.
+Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
 
 .. code-block:: cpp
 
@@ -488,22 +486,23 @@ The READ_LOCO reads the loco address from the PROG track and the current route t
 
 Sounds
 ======
+
 You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn.
 
 Sensors
 ========
 
--  DCC++EX allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-5)``.
+- DCC++EX allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-5)``.
 
--  Magnetic/Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.
+- Magnetic/Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.
 
--  Handling sensors in the automation is made easy because EX-RAIL throws away the concept of interrupts (“oh… sensor 5 has been detected… which loco was that and whatever do I do now?”) and instead has the route scripts work on the basis of “do nothing, maintain speed until sensor 5 triggers, and then carry on in the script”.
+- Handling sensors in the automation is made easy because EX-RAIL throws away the concept of interrupts (“oh… sensor 5 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 5 triggers, and then carry on in the script”.
 
 - Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. 
 
 - Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(5) LATCH(5)`` for example effectively latches the sensor 5 on when detected once.
 
-- Sensor polling by JMRI is independent of this, and may continue if <S> commands are used.
+- Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.
 
 
 Outputs
@@ -515,17 +514,16 @@ Outputs
 Sequence Numbers
 ================
 
-- All ROUTE / AUTOMATION / SEQUENCE  ids are limited to 1- 32767 
+- All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
 - 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script. 
 
 Various techniques
 ===================
 
-
 Defining names for any ID numbers
 ----------------------------------
 
-Use the ``ALIAS()`` command in your script file. This must come *BEFORE* the ``EXRAIL`` command.
+Use the ``ALIAS()`` command in the startup sequence of your script. This must come *BEFORE* the name is used.
 
 Alias names:
 
@@ -534,30 +532,27 @@ Alias names:
 - **May then** also contain numbers.
 - **Must not** contain spaces or special characters.
    
-  For example:
+For example:
 
 .. code-block:: cpp
 
    ALIAS(COAL_YARD_TURNOUT,19) 
    ALIAS(COAL_YARD_SIGNAL_3,27) 
-      EXRAIL
-         ROUTE(1,"Coal yard exit") 
-            THROW(COAL_YARD_TURNOUT)
-            GREEN(COAL_YARD_SIGNAL_3)
 
-- Including sub-files
+   ROUTE(1,"Coal yard exit")
+      THROW(COAL_YARD_TURNOUT)
+      GREEN(COAL_YARD_SIGNAL_3)
+
+Including sub-files
+--------------------
   
-  For example:
+For example:
    
 .. code-block:: cpp
 
-   EXRAIL
-      ROUTE(1,"Coal yard exit") 
-         THROW(19)
-         GREEN(27)
-         DONE
-      #include "myFireEngineLights.h"
-      #include "myShuttle.h"
-
-
-
+   ROUTE(1,"Coal yard exit")
+      THROW(19)
+      GREEN(27)
+      DONE
+   #include "myFireEngineLights.h"
+   #include "myShuttle.h"

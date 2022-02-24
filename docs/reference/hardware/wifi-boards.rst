@@ -11,7 +11,7 @@ For more information on how to configure your CS to use the boards below, see :d
 - :ref:`reference/hardware/wifi-boards:ESP-01S`.
 - :ref:`reference/hardware/wifi-boards:WangTongze Board`.
 - :doc:`Mega+WiFi </advanced-setup/supported-microcontrollers/wifi-mega>`. (this link will take you to another page)
-- :ref:`reference/hardware/wifi-boards:Sparkfun Thing Plus (ESP32)`.
+- :ref:`reference/hardware/wifi-boards:SparkFun Thing Plus (ESP32)`.
 - :ref:`reference/hardware/wifi-boards:ESP32_Ant-01 Breakout and Development Board (ESP32)`.
 
 .. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead. The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
@@ -71,7 +71,7 @@ Buy the one that looks like this:
    :alt: ESP8266 Breakout Board
    :scale: 25%
 
-We have used the ones that look like the one below just as well, but you have to make sure to wire power to 3.3V NOT 5V and there is no voltage regulation and NO LEVEL SHIFTERS. The GPIO pins on the ESP8266 appear to be 5V tolerant, but there is not guarantee it won't shorten its life to have a 5V signal on the Tx pin. Several testt versions are running fine like this after a year, but if you are going to buy a board to stick this into instead of wiring it directly, then why not buy one with the extra circuitry? 
+We have used the ones that look like the one below just as well, but you have to make sure to wire power to 3.3V NOT 5V and there is no voltage regulation and NO LEVEL SHIFTERS. The GPIO pins on the ESP8266 appear to be 5V tolerant, but there is not guarantee it won't shorten its life to have a 5V signal on the Tx pin. Several test versions are running fine like this after a year, but if you are going to buy a board to stick this into instead of wiring it directly, then why not buy one with the extra circuitry? 
 
 .. image:: ../../_static/images/esp_breakout1.jpg
    :alt: ESP8266 Breakout Board
@@ -132,15 +132,15 @@ The bottom line is that we don't recommend this board because you would have to 
 Here is a link to the `Video and info from Wang Tongze himself <https://www.youtube.com/watch?v=LJcYgR479Vw>`_
 
 
-Sparkfun Thing Plus (ESP32)
+SparkFun Thing Plus (ESP32)
 =============================
 
 Tinkerer Level
 
-This is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. The board is relatively expensive, but Sparkfun has quality products and top notch support. Detailed installation instructions can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html
+This is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. The board is relatively expensive, but SparkFun has quality products and top notch support. Detailed installation instructions can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html
 
 .. image:: ../../_static/images/wifi/sparkfun_thing_plus.jpg
-   :alt: Sparkfun Thing Plus
+   :alt: SparkFun Thing Plus
    :scale: 40%
 
 https://www.sparkfun.com/products/17381
@@ -155,7 +155,7 @@ Tinkerer Level
    :alt: ESP32 dev board
    :scale: 65%
 
-Like the Sparkfun board, this board is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. It is half the price of the Sparkfun board and comes with an antenna. Detailed instructions on intallation can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html
+Like the SparkFun board, this board is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. It is half the price of the SparkFun board and comes with an antenna. Detailed instructions on installation can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html
 
 https://www.ezsbc.com/product/wifi01u/
 

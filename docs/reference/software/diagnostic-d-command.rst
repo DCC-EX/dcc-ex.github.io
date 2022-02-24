@@ -9,7 +9,7 @@ These commands either enable diagnostics or allow settings to be changed. There 
 
 These commands can be entered directly via the USB serial console or through a Wifi connection to the command station with a tool such as Telnet or Putty. JMRI includes the DCC++ traffic monitor which lets you insert DCC++ serial commands as well. (links required)
 
-Speed Step Configuation
+Speed Step Configuration
 ========================
 
 ``<D SPEED28|SPEED128>`` By default, the CS sends speed commands in 128 steps. You can change to 28 speed steps and back again with this command. If speed steps are set to 28, you can still use 128 speed step locos, they will just have a resolution of 28 steps also instead of 128.

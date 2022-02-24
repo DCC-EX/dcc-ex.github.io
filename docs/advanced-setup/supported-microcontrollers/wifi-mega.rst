@@ -11,7 +11,7 @@ Tinkerer Level
 
 |
 
-A Operational Standalone WiFI DCC Command Station
+A Operational Standalone WiFi DCC Command Station
 ==================================================
 
 .. figure:: ../../_static/images/mega_wifi.png
@@ -21,7 +21,7 @@ A Operational Standalone WiFI DCC Command Station
 
    Mega+WiFi Board
 
-This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers are at the bottom of this page:
+This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some suppliers are at the bottom of this page:
 
 * Wemos
 * RobotDyn
@@ -34,11 +34,11 @@ What You Will Need
 This is our tested and proven configuration
 
 * DCC++EX 3.0.6 or greater
-* ATMega2560 + ESP8266 WiFI - Combo Board
+* ATMega2560 + ESP8266 WiFi - Combo Board
 * Deek Robot L298P Standard Motor Shield (or other :doc:`approved motor controller </reference/hardware/motor-boards>`)
 * 12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
-* Android Smartphone with Engine Driver v2.28.123 or iOS Smarphone with WiThrottle
+* Android Smartphone with Engine Driver v2.28.123 or iOS Smartphone with WiThrottle
 * USB-A male to Micro USB-B cable
 * You will also need software provided in the links below and a toothpick or small jewellers screwdriver to be able to flip small switches.
 
@@ -74,12 +74,12 @@ Once you can see your computer recognizes your board, **remember the port**. For
 
 **Unplug the Mega.**
 
-For more detail on how to install the correct CH340 drivers for your OS, you can see this `Sparkfun Tutorial <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+For more detail on how to install the correct CH340 drivers for your OS, you can see this `SparkFun Tutorial <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
 2. Download and install the flash download tool
 ------------------------------------------------
 
-There are two tools you can use to flash the firmware, one is the **"Expressif Flash Download tool"** for Windows and the other is a Python script called **esptool** that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.
+There are two tools you can use to flash the firmware, one is the **"Espressif Flash Download tool"** for Windows and the other is a Python script called **esptool** that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.
 
 Using the Flash Download Tool (Windows)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -103,11 +103,11 @@ Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button b
    
    `ESP8266 Firmware Zipped </_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip>`_
 
-Install python if you don't already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don't:
+Install python if you don't already have it installed. This quick guide shows you how to check if you already have Python and how to install it if you don't:
 
 https://wiki.python.org/moin/BeginnersGuide/Download
 
-Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:
+Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a macOS) to find and install it from the web:
 
 .. code-block::
 
@@ -160,7 +160,7 @@ Your board should be configured follows:
 
  -  set dip switches **5,6,7 ON** (1,2,3,4 OFF)
  -  set Serial Port (TX/RX) Slide Pin to **RXD3 & TXD3**
- -  Connect Mega+WiFI board to your computer with the USB cable
+ -  Connect Mega+WiFi board to your computer with the USB cable
  -  press the **Mode button**
 
 4. Flash the Firmware
@@ -221,7 +221,7 @@ Skip ahead to :ref:`advanced-setup/supported-microcontrollers/wifi-mega:3. Set t
 With esptool.py
 ^^^^^^^^^^^^^^^^
 
-Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on MacOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected::
+Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on macOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected::
 
    esptool.py write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
@@ -257,7 +257,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 
 AP Mode (the default) makes the Command Station an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the CS so your Throttles can find it on your network.
 
-If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to setp 5.
+If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to step 5.
 
 If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
@@ -320,7 +320,7 @@ After the Arduino IDE uploads DCC-EX sketch, make sure the serial port switch is
 If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi board by Either a USB cable, or for Standalone Operations (no USB) you can use a 7-9vdc power supply in the Arduino 2.1mm female barrel jack.
 
 - When powered on through a USB cable, check the Arduino IDE Tools > Serial Monitor.
-- It should show the ATMega2560 & ESP8266 WiFI communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new DCC++EX Command Station.
+- It should show the ATMega2560 & ESP8266 WiFi communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new DCC++EX Command Station.
 - You should see `++ Wifi Setup CONNECTED ++`
 
 8. Connect your Phone as a Controller (Throttle)
@@ -332,11 +332,11 @@ If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi
 
 .. NOTE:: You MUST either forget your local network or turn off "auto-reconnect" for that connection when using AP Mode. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.
 
-- Start your Smart Phone (Andriod) Engine Driver App Or (Apple iOs) WiTHrottlle App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.
+- Start your Smart Phone (Android) Engine Driver App Or (Apple iOS) WiThrottle App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.
 
 If the Engine driver fails to connect the first time with the Command Station just press the Mega's red Reset button and try the IP/Port connection again.
 
-You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone WiFI Command Station Via your home router.
+You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone WiFi Command Station Via your home router.
 
 .. Note:: This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.
 
@@ -349,7 +349,7 @@ There a few things to try if you experience issues connecting or staying connect
 
 2. Make sure the little slide switch is set to Tx/Rx 3
 
-3. Make sure you forget your local network if using AP mode or set your home network to not automatically reconned.
+3. Make sure you forget your local network if using AP mode or set your home network to not automatically reconnect.
 
 4. Try changing the WiFi Channel in your config.h file to another channel and uploading the firmware again.
 
@@ -363,12 +363,12 @@ https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined
 
 Fernando Koyanagi's excellent site including a video. Just be careful not to use his settings since he used an older version of the firmware: https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/
 
-The Expressif ESP8266 page (The manufacturer of the chip): https://www.espressif.com/en/products/socs/esp8266/
+The Espressif ESP8266 page (The manufacturer of the chip): https://www.espressif.com/en/products/socs/esp8266/
 
-Expressif detailed instructions on using the esptool
+Espressif detailed instructions on using the esptool
 https://github.com/espressif/esptool#installation--dependencies
 
-**Enjoy your New DCC++EX MEGA + WiFI On-Board Command Station!**
+**Enjoy your New DCC++EX MEGA + WiFi On-Board Command Station!**
 
 Suppliers
 ==========

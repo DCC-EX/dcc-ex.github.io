@@ -22,7 +22,7 @@ Place a second engine on the programming track and repeat the steps as many time
 Where it's used
 ================
 
-An Arduino Mega DCC++EX + WiFi enabled Command Station in Standalone Operations mode Directly WiFi connected with Engine Driver WiFi Throttles utilizing the new standalone WiThrottle Server feature imbedded in DCC++EX Command Station. 
+An Arduino Mega DCC++EX + WiFi enabled Command Station in Standalone Operations mode Directly WiFi connected with Engine Driver WiFi Throttles utilizing the new standalone WiThrottle Server feature embedded in DCC++EX Command Station. 
 
 Setup a Arduino Mega DCC++EX CS + ESP 8266 WiFi MakerFab Shield or a ESP01 WiFi board in either Access Point AP mode or Station STA (client) mode through a shared Router for a Command Station (CS) Standalone Operations configuration. Then the Engine Driver and Command Station both sign on to the common SSID name and Password to share the common WiFi signal and channel. 
 
@@ -48,7 +48,7 @@ Or else undesirable gremlins may appear, you've been forewarned. The proceeding 
 New "Discovered Servers" on WiFi Throttles
 ===========================================
 
-WiThrottles now detect and display both DCC++EX Command Station name and JMRI WiThrottle Server Profile name as 'Discoverd Servers' in the WiFi Throttle Apps.
+WiThrottles now detect and display both DCC++EX Command Station name and JMRI WiThrottle Server Profile name as 'Discovered Servers' in the WiFi Throttle Apps.
 
 Sample Engine Driver App Discovered Servers:
       “DCC++EX”                 {Direct connect to the Command Station}

@@ -121,7 +121,7 @@ DCCAccessoryDecoder::create(firstVpin, 4, addr, subaddr);  *--- OR ---*  DCCAcce
 The remainder of the functions below are intended for use within the DCC++ EX software only, and are not usually required by users.
 
 IODevice::write(vpin, 1); IODevice::write(vpin, 0);
-  Set/reset the state of a digital pin (local Arduino, remote GPIO extender, servo, DCC Accessor Decoder, or other output device).
+  Set/reset the state of a digital pin (local Arduino, remote GPIO extender, servo, DCC Accessory Decoder, or other output device).
   The vpin will be implicitly switched into output mode by this call.
   If the device in question does not support the write operation, the call will be ignored.
 
@@ -149,8 +149,8 @@ int value = IODevice::readAnalogue(vpin);
   The vpin will be implicitly switched into input mode by this call.
   If the device in question does not support the readAnalogue operation, the value returned will be zero.
 
-bool ok = IODevice::configureInput(1, pullup);
-  Configure a digital input pin for pullup or no pullup (default is that pullups are enabled).
+bool ok = IODevice::configureInput(1, pull-up);
+  Configure a digital input pin for pull-up or no pull-up (default is that pull-ups are enabled).
   If the device in question does not support the configureInput operation, the value returned will be false.
 	
 bool ok = IODevice::configureServo(activePosition, inactivePosition, profile[, initialState]);
@@ -179,7 +179,7 @@ DIAG_LOOPTIMES
 
 IO_NO_HAL
   Removes the bulk of the HAL code.  The only parts that remain are those that are required to interface to the 
-  Arduino’s input and output pins.  This symbol is automatically defined if the code is being compiled for an Arduino Uno or Arduino Nano target, to reduce the memory footprint.  In this mode, inputs pullups are enabled and inputs are inverted (i.e. 5V=inactive and 0V=active).
+  Arduino’s input and output pins.  This symbol is automatically defined if the code is being compiled for an Arduino Uno or Arduino Nano target, to reduce the memory footprint.  In this mode, inputs pull-ups are enabled and inputs are inverted (i.e. 5V=inactive and 0V=active).
 
 IO_SWITCH_OFF_SERVO
   When a transition between states has completed on a PCA9685 (e.g. a servo movement), the servo motor will be 
@@ -270,7 +270,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 - HAL: Create new *IODevice class* as the abstract base class for all I/O devices such as GPIO Extenders, remote I/O, 
   DCC Accessories and (for completeness) Arduino I/O pins.  The base class/subclass model allows the CS code to 
   communicate directly with the base class, without having to be tailored for functionality implemented in specific 
-  subclasses.  Specific implemenations of the interface, to support different hardware devices, can be easily 
+  subclasses.  Specific implementations of the interface, to support different hardware devices, can be easily 
   *‘plugged in’ as desired at compile time*, by adding an include file (``#include "xxx.h"``) and one line to the 
   user’s ‘mySetup’ file (``xxx::create(firstVpin, nPins, ...);``) before building the software.  *This enables a 
   wide selection of hardware to be supported, without unwanted or unused device drivers taking valuable space in the 
@@ -340,7 +340,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   be removed, as feedback received indicates that there is no benefit in switching pull-ups off, and some FLASH and RAM can be released by removing the code.
 - Displays: Make display scroll mode 1 the default (scroll by page).   If there are more messages than the screen can hold, 
   then the screen alternates between displaying the first four lines, and displaying the remaining lines.  Previous behaviour 
-  (cycle through the messsages, always displaying four lines) can be reinstated by adding “#define SCROLLMODE 0” in the config.h file.
+  (cycle through the messages, always displaying four lines) can be reinstated by adding “#define SCROLLMODE 0” in the config.h file.
 - Sensors/Turnouts/Outputs: Improve EEPROM handling so that when EEPROM writes are turned off, they stay off.  When turnout 
   state changes, only write one byte to EEPROM instead of rewriting the entire EEPROM.
 - HAL: Adjust the existing LCN handling to fit alongside the use of VPINs:
@@ -385,7 +385,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   3.  On subsequent entries to the program’s loop function, the program tests the completion status of the request block.  
       If it is still busy, then other loop functions may be allowed to run.
   4.  When the operation completes, the status of the request block is updated to show it is no longer busy.
-  5.  At the next loop entry of the program, the test for competion status shows that the request block is no longer busy.  
+  5.  At the next loop entry of the program, the test for competition status shows that the request block is no longer busy.  
       The program may then retrieve the success/failure status, and any data that has been received, for further processing.  
 
   When necessary, the operation may be repeated by requeueing the original request block (either unchanged or with different parameters or data).
@@ -414,7 +414,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   on the Nano and Uno of the neil-hal branch to 27,724 bytes, 560 bytes less than the current master branch (28,284 at 10th May 2021).  
   The symbol IO_NO_HAL is automatically defined for the Uno and Nano, but not for other architectures which are less limited by FLASH size.
 - HAL: Add hook for optional myHal.cpp file.  The existing mySetup.h hook provides a place for system-specific initialisation 
-  that is to be permamently built into the CS, but is limited to specific directives and commands (e.g. SETUP("S 1 28 1"); 
+  that is to be permanently built into the CS, but is limited to specific directives and commands (e.g. SETUP("S 1 28 1"); 
   to define a sensor).  For example, library #includes cannot be added to enable optional features.  The myHal.cpp, however 
   is expected to be a syntactically complete C++ module which may include #includes directives, and should have a definition 
   of a function halSetup().  When included in the build, the halSetup() function will be called during the startup of the CS, 
@@ -458,7 +458,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   where triggerPin and echoPin are the Arduino pins connected to the corresponding pins on the sensor, and onThreshold and
   offThreshold are the distances (in centimetres) at which the vpin is to be set to 1 or 0 respectively (onThreshold < offThreshold).
 	
-- HAL: New function IODevice::readAnalogue(vpin) added to support analogue inputs on the arduino pins and on external 
+- HAL: New function IODevice::readAnalogue(vpin) added to support analogue inputs on the Arduino pins and on external 
   I2C analogue input modules.  Driver for ADS1113 and ADS1114 (both single input) and ADS1115 (4-input) added as class ADS111x.
   The device is configured in myHal.cpp by
    
@@ -482,15 +482,15 @@ Future Enhancements
     .. code-block:: none
 
         _begin	Initialise serial line.
-        _loop	State machine to read incoming characters and decode rudimentary data messsages.
+        _loop	State machine to read incoming characters and decode rudimentary data messages.
         _read	Return current state from received data messages.
         _write	Send simple messages over serial line
 
-2.  HAL: Remove the ability to switch off pull-ups for inputs?  Initially the IODevice class was implemented with pullups switched 
+2.  HAL: Remove the ability to switch off pull-ups for inputs?  Initially the IODevice class was implemented with pull-ups switched 
     permanently on for input pins.  On the PCF8574 they have to be on anyway, because of the way the chip works.  
-    So I added them, but @UKBloke asked why anyone wouldn’t want pullups enabled?  Most, if not all, sensors operate by 
+    So I added them, but @UKBloke asked why anyone wouldn’t want pull-ups enabled?  Most, if not all, sensors operate by 
     pulling a pin down to earth.  Look at pushbuttons, microswitches, relays, hall effect sensors, and others.  So supplying a 
-    pullup, and inverting (0V=active=true, 5V=inactive=false), would seem to be the standard.  Pull-up+inversion is now default if not 
+    pull-up, and inverting (0V=active=true, 5V=inactive=false), would seem to be the standard.  Pull-up+inversion is now default if not 
     configured otherwise.
 3.  I2C: The overall capacitance of an I2C bus is limited in the specification to 400pF.  Above this, the slew rate 
     of the clock and data signals is too slow to achieve the expected performance.  Capacitance increases with bus length, 
@@ -498,10 +498,10 @@ Future Enhancements
     same I2C address for two devices causes a conflict.  PROPOSAL: A bus multiplexer provides the capability to switch, 
     under I2C control, one or more separate bus segments to be connected to the bus controller.  When a bus segment is not 
     connected, its devices will not respond, and the capacitance of the bus segment does not contribute to the overall I2C 
-    bus capacitance.  Suppport for a bus multiplexer could readily be added in the I2CManager, by extending the I2C address 
+    bus capacitance.  Support for a bus multiplexer could readily be added in the I2CManager, by extending the I2C address 
     field for each device to 16 bits (instead of 8 bits).  The low bits would contain the I2C address of the destination 
-    device.  The high bits would contain a selecter for the multiplexer (1-8, as up to 8 multiplexers may be present), 
-    and a sub-bus number (0-7) to be selected on the multipexer.  A value of zero for the multiplexer and sub-bus number 
+    device.  The high bits would contain a selector for the multiplexer (1-8, as up to 8 multiplexers may be present), 
+    and a sub-bus number (0-7) to be selected on the multiplexer.  A value of zero for the multiplexer and sub-bus number 
     would indicate that the device in question is connected to the primary bus and is not affected by the state of the 
     multiplexer.  The impact on I2C traffic is minimal;  two additional bytes need to be sent if an I2C request requires 
     to switch to a different sub-bus and the affect on the code is just the changes above to the I2C handling.
@@ -533,7 +533,7 @@ Future Enhancements
     alternative way of creating these objects where the configuration parameters are held only in FLASH, thereby reducing 
     the RAM requirements.  This would be relatively straightforward if all objects were to be statically created, but 
     the need to support both dynamically create objects and statically created objects would complicate the code 
-    signficantly.  To be explored.
+    significantly.  To be explored.
 7.  HAL, Turnouts:  EEPROM is currently optionally used for storing definitions of Turnouts, Sensors and Outputs.  
     In addition, if a turnout or output definition has been saved to EEPROM then the state of the turnout 
     (closed/thrown) or output will be updated in EEPROM each time it is changed.  This allows the turnout/output 

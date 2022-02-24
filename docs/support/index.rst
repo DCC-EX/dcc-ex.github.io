@@ -17,4 +17,4 @@ The next best way to get our attention is to fill out a support ticket:
 
 You can also send an email to support@dcc-ex.com. We try to follow FaceBook and JMRI groups, but there are just too many separate groups to see and respond to all the messages.
 
-Lastly, you can find us on Trainboard. `DCC++ EX Trainboard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
+Lastly, you can find us on TrainBoard. `DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_

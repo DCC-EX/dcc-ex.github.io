@@ -12,6 +12,6 @@ You can also find us on Facebook in the "DCC++ and Arduino Model Railroading" pr
 
 https://www.facebook.com/groups/1406785379394934/
 
-and on Trainboard Here:
+and on TrainBoard Here:
 
 https://www.trainboard.com/highball/index.php?forums/dcc.177/

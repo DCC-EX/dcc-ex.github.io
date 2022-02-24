@@ -30,7 +30,7 @@ Currently, DigitTrainsPro works with DCC-EX through JMRI. You use JMRI's Web Ser
 Features
 ==========
 
-* Runs on Android, IOS, Widnows 10 Desktop, Tablet and Mobile.
+* Runs on Android, IOS, Windows 10 Desktop, Tablet and Mobile.
 * Connects to JMRI using their Web Server or *soon* will be able to connect directly to DCC++ EX
 * Attractive User Interface
 * Plays Station Loudspeaker Sounds
@@ -61,7 +61,7 @@ Screenshots
 Requirements
 =============
 
-* An Android, IOS, Widnows 10 (Desktop, Tablet and Mobile) device
+* An Android, IOS, Windows 10 (Desktop, Tablet and Mobile) device
 * Command Station (WiFi if you want to connect directly)
 * JMRI (If you want to connect through the JMRI WEB Server)
 

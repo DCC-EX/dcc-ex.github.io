@@ -13,7 +13,7 @@ Notes
 
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
 
-- It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once.
+- It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once. Only sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script.
 
 - All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
 
@@ -68,7 +68,7 @@ There are some diagnostic and control commands added to the <tag> language norma
     <body>
     <table>
       <tr>
-          <th>EX-RAIL Functions</th>
+          <th>DCC++ EX Commands</th>
           <th>Description</th>
       </tr>
       <tr>

@@ -665,14 +665,13 @@ with an external device, then the device will be operated accordingly.</p></li>
 <li><p>Before Version 3.2.0: Returns: <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">THROWN&gt;</span></code> for each defined DCC Accessory Turnout or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no turnouts have beed defined or saved.</p></li>
 <li><p>After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the <code class="docutils literal notranslate"><span class="pre">THROWN</span></code> state (1=thrown, 0=closed) appended.</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: One of the following for each defined turnout or &lt;X&gt; if no turnouts defined.
+&lt;H ID DCC ADDRESS SUBADDRESS THROWN&gt;     -- DCC Accessory Turnouts
+&lt;H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN&gt;  -- Servo Turnouts
+&lt;H ID VPIN PIN THROWN&gt;  -- VPIN Turnouts
+&lt;H ID LCN THROWN&gt;  -- LCN Turnouts
 </pre></div>
 </div>
-<p>RETURNS: One of the following for each defined turnout or &lt;X&gt; if no turnouts defined.
-&lt;H ID DCC ADDRESS SUBADDRESS THROWN&gt;     – DCC Accessory Turnouts
-&lt;H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN&gt;  – Servo Turnouts
-&lt;H ID VPIN PIN THROWN&gt;  – VPIN Turnouts
-&lt;H ID LCN THROWN&gt;  – LCN Turnouts</p>
 <p>The rest of the parameters are as defined for the turnout definition commands.</p>
 </div></blockquote>
 </li>
@@ -813,7 +812,7 @@ found to have transitioned from one state to another, one of the following seria
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> - List the status of all defined sensors</p></li>
 <li><p>RETURNS: &lt;Q ID&gt; (active) or &lt;q ID&gt; (not active)</p></li>
 </ul>
-<p>Example: The shos Sensor 1 and 1 are tripped or active while 3 and 4 are not.</p>
+<p>Example: This shows sensors 1 and 2 are tripped or active while 3 and 4 are not.</p>
 <blockquote>
 <div><p>&lt;Q 1&gt;&lt;Q 2&gt;&lt;q 3&gt;&lt;q 4&gt;</p>
 </div></blockquote>
@@ -1125,7 +1124,7 @@ returns: NONE
 </div>
 </div>
 <div class="section" id="wifi-at-commands">
-<h2>WiFi “AT Commands<a class="headerlink" href="#wifi-at-commands" title="Permalink to this headline">¶</a></h2>
+<h2>WiFi AT Commands<a class="headerlink" href="#wifi-at-commands" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the “+” and the command.</p>
 <p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag (WiFi Connected Mode) to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created and so you can send your own AT commands.</p>
@@ -1140,10 +1139,8 @@ returns: NONE
 </div>
 <div class="section" id="user-commands">
 <h2>User Commands<a class="headerlink" href="#user-commands" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">&lt;U&gt;</span></code> Is reserved for user commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;U&gt;</span></code> Is reserved for user commands.</p>
 <p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="command-summary.html"><span class="doc">Command Summary</span></a></p>
-</div></blockquote>
 </div>
 </div>
 

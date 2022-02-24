@@ -22,15 +22,15 @@ You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/M
 
 
 :ref:`Track Power Commands`
-Cab Operation Commands
-Accessory Decoder and Turnout Commands
-Sensor Commands
-Output Commands
-Saving to EEPROM Commands
-Programming Commands
-Diagnostic Commands
-WiFi Commands
-User Commands
+:ref:`Engine Decoder (CAB) Operation Commands`
+:ref:`Stationary Accessory Decoder & Turnout Commands`
+:ref:`Sensor Commands (Inputs)`
+:ref:`Output Commands (DIO Pins)`
+:ref:`Storing and Erasing Turnouts, Sensors and Outputs in EEPROM`
+:ref:`Engine Decoder Programming Commands`
+:ref:`Diagnostic Commands`
+:ref:`WiFi "AT" Commands`
+:ref:`User Commands`
 
 Track Power Commands
 =============================
@@ -296,8 +296,8 @@ RETURNS: NONE
 * CAB Functions do not get stored in the DCC++ EX CommandStation
 * Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on. 
 
-STATIONARY ACCESSORY DECODERS & TURNOUTS
-------------------------------------------
+STATIONARY ACCESSORY DECODER & TURNOUT COMMANDS
+-------------------------------------------------
 
 DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
 
@@ -781,8 +781,8 @@ This command is designed to offer faster verification of the value held in a CV 
 * ``BIT:`` Reports the bit in the CV byte that was verified
 * ``BITVALUE:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 
 
-DIAGNOSTICS
-============
+DIAGNOSTIC COMMANDS
+=====================
 
 Status
 ---------
@@ -863,7 +863,7 @@ Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register
 
    returns: NONE
 
-WiFi "AT Commands
+WiFi "AT" Commands
 ==================
 
 ``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the "+" and the command.

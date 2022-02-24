@@ -295,7 +295,7 @@
 </ul>
 <div class="section" id="d-ack-on">
 <h2>&lt;D ACK ON&gt;<a class="headerlink" href="#d-ack-on" title="Permalink to this headline">¶</a></h2>
-<p>If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands folowed by pressing “send”:</p>
+<p>If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands followed by pressing “send”:</p>
 <div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></div>
@@ -322,17 +322,17 @@ Callback(145)
 </pre></div>
 </div>
 <p>Your output may show different formatting with respect to linefeeds. Here the decoder reports that bits 7, 4 and 0 are <strong>NOT</strong> Zero. That gives the value of <code class="docutils literal notranslate"><span class="pre">10010001</span> <span class="pre">=</span> <span class="pre">145</span></code> which is the manufacturer ID for Zimo. That value is checked in the <code class="docutils literal notranslate"><span class="pre">VB</span></code> line. For a successful read, the result of the verify bit and verify byte commands have to match, otherwise the value can not be read. If you have problems reading decoders, you can compare the received values with the expected values. The format is:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>OPERATION cv=n bit=b NO-ACK/OK after WAITTIME mS max=INTERNALVAL / CURRENT mA pulse= PULSELENGTH uS
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>OPERATION cv=n bit=b NO-ACK/OK after WAITTIME mS max=INTERNALVAL / CURRENT mA pulse= PULSELENGTH µS
 </pre></div>
 </div>
-<p>The CURRENT should be over 60mA for a successful ACK and the length should be 6000uS +-1000uS but because of Decoder variations from the standard, DCC-EX has some extra pulse length margin.</p>
+<p>The CURRENT should be over 60mA for a successful ACK and the length should be 6000µS +-1000µS but because of Decoder variations from the standard, DCC-EX has some extra pulse length margin.</p>
 <p>In this example, we are checking CV 8, which is the manufacturer ID for your decoder. We then check each of the 8 “bits” in the “byte” that holds the value in that CV.</p>
 <p>The first test, <code class="docutils literal notranslate"><span class="pre">ACK-BASELINE</span></code> gets a baseline reading of the current on your programming track with the loco just sitting there.</p>
 <p>Since most bits will be 0, we check that first to save time. <code class="docutils literal notranslate"><span class="pre">V0</span></code> means <code class="docutils literal notranslate"><span class="pre">Verify</span> <span class="pre">zero</span></code>. If do not get a zero, we then try to verify a 1 - <code class="docutils literal notranslate"><span class="pre">V1</span></code> means “Verify one”. If we don’t get either, we display an error. A bit must be either a 0 or a 1 so the test will fail, but the data returned can help us see why.</p>
 <p>If we succeed on the first bit, we check each of the remaining 7 bits. <code class="docutils literal notranslate"><span class="pre">NO-ACK</span></code> means we did not see the bit value we were testing for, <code class="docutils literal notranslate"><span class="pre">ACK-OK</span></code> tells us we received an ACK. After each bit test, we show how long it took to receive the ACK (or the timeout value if we detected none), the Arduino raw pin reading being sent by your motor controller’s current sense circuit, and what that translates to in milliAmps. Finally, we report the duration of the ACK Pulse, if detected.</p>
 <p>We do one final test at the end to <code class="docutils literal notranslate"><span class="pre">Verify</span> <span class="pre">Byte</span></code>, you see that as <code class="docutils literal notranslate"><span class="pre">VB</span></code>. This does a double-check to see if the byte contains what we found by checking it one bit at a time. The must match for a successful read.</p>
 <p>Other than when using the “decoder address test”, <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> with no parameters, you need to enter CV read commands with all 3 parameters. The format is <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">CV</span> <span class="pre">x</span> <span class="pre">y&gt;</span></code> where R stands for read and CV is the CV number you want to check. The X and Y values can be anything, but must be entered. They are an advanced feature for programmers whose software can work with DCC-EX (like JMRI). So you would enter <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">8</span> <span class="pre">55</span> <span class="pre">55&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">8</span> <span class="pre">1</span> <span class="pre">1&gt;</span></code> to try and read CV 8. The response is <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CV</span> <span class="pre">x</span> <span class="pre">y&gt;</span></code> where “x” and “y” are whatever numbers you entered after the CV value.</p>
-<p>To turn off the ack diagnoistics use any parameter that is not “ON” or “LIMIT”.</p>
+<p>To turn off the ack diagnostics use any parameter that is not “ON” or “LIMIT”.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK NOPE&gt;, &lt;D ACK OFF&gt;, etc.
 </pre></div>
 </div>
@@ -362,7 +362,7 @@ Callback(145)
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK MIN 3300&gt;
 </pre></div>
 </div>
-<p>Example 2: You use the &lt;D ACK ON&gt; and &lt;R&gt; commands described above to generate a test log from a loco on your programming track. You see that some of the ACK pulses are longer than 8500 µS. The longet one is 10350 µS. Pick a setting a little bit higher than your highest reading like this:</p>
+<p>Example 2: You use the &lt;D ACK ON&gt; and &lt;R&gt; commands described above to generate a test log from a loco on your programming track. You see that some of the ACK pulses are longer than 8500 µS. The longest one is 10350 µS. Pick a setting a little bit higher than your highest reading like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK MIN 10500&gt;
 </pre></div>
 </div>

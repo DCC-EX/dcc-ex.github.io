@@ -476,7 +476,7 @@ heat sink onto the L298P device.</p>
 <p class="caption"><span class="caption-number">Figure 73 </span><span class="caption-text">Motor Shield I2C pins</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>I2C devices are all effectively connected in parallel to the bus.  If you only
-have one device, you can just run a four-wire connecter between the pins on the Arduino, or on
+have one device, you can just run a four-wire connector between the pins on the Arduino, or on
 the motor shield, if you have one, to the device.  Be sure to check that you connect SDA to SDA,
 SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each
 device!</p>
@@ -524,7 +524,7 @@ The board shown has space for five Dupont connectors in each half row.</p>
 <p>The I2C bus will not work unless pull-up resistors are connected to the SDA and SCL lines.  However,
 it’s not very often that you will have to install your own pull-up resistors.  Most microcontrollers
 have the capability to enable internal pull-ups, corresponding to around 20-50kOhm.
-And most I2C device modules (<em>but not the bare I2C chips</em>), contain 10kOhm pullup resistors.</p>
+And most I2C device modules (<em>but not the bare I2C chips</em>), contain 10kOhm pull-up resistors.</p>
 <p>The ideal pull-up resistor value for I2C is around 1.7kOhm (at 5V, 400kHz clock), in order to be able
 to use long cables and high speeds.  With shorter cables (&lt;1-2m) an internal or module pull-up will
 generally be sufficient.</p>
@@ -533,7 +533,7 @@ So two modules give an equivalent pull-up of 5kOhm, and five modules gives an eq
 the pull-up value is, strictly, too low, and some devices, if they only just satisfy the I2C specification,
 may be unable to pull the bus voltage down far enough to be recognised as a LOW state.
 In this case, you may need to seek solutions like removing the pull-up resistors from some or all of the modules,
-and/or adding your own fixed pull-up.  Or adding an I2C multipexer, which will disconnect some devices from the SCL/SDA lines when they
+and/or adding your own fixed pull-up.  Or adding an I2C multiplexer, which will disconnect some devices from the SCL/SDA lines when they
 are not being actively addressed.</p>
 </div>
 <div class="section" id="removal-of-pull-ups">
@@ -543,11 +543,11 @@ thing to do is identify which components on the module PCB are the pull-up resis
 (including circuit diagram and PCB layout), which will help to identify the pull-ups.  Check the web sites for the suppliers.</p>
 <p>As examples of where to find the pull-up resistors, take a look at the figures below:</p>
 <div class="figure align-default" id="id12">
-<a class="reference internal image-reference" href="../../_images/pca9685_pullups.jpg"><img alt="PCA9685 pullup resistors" src="../../_images/pca9685_pullups.jpg" style="width: 329.09999999999997px; height: 133.2px;" /></a>
+<a class="reference internal image-reference" href="../../_images/pca9685_pullups.jpg"><img alt="PCA9685 pull-up resistors" src="../../_images/pca9685_pullups.jpg" style="width: 329.09999999999997px; height: 133.2px;" /></a>
 <p class="caption"><span class="caption-number">Figure 79 </span><span class="caption-text">Location of Pull-up Resistors for PCA9685 Module (ringed in red)</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="id13">
-<a class="reference internal image-reference" href="../../_images/pcf8574_pullups.jpg"><img alt="PCF8574 pullup resistors" src="../../_images/pcf8574_pullups.jpg" style="width: 436.0px; height: 151.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/pcf8574_pullups.jpg"><img alt="PCF8574 pull-up resistors" src="../../_images/pcf8574_pullups.jpg" style="width: 436.0px; height: 151.0px;" /></a>
 <p class="caption"><span class="caption-number">Figure 80 </span><span class="caption-text">Location of Pull-up Resistors for PCF8574 Module (ringed in red)</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 <p>Check the PCB tracks from the SDA and SCL pin connectors; one side of each resistors will be connected to one of these,
@@ -566,7 +566,7 @@ pull-up value, the time taken for the bus wire to be pulled up from LOW to HIGH 
 With a higher pull-up value (e.g. 10kOhm), the maximum permitted capacitance will be lower.
 If you need to run with higher capacitance (e.g. for longer cables), then it is possible to reduce the I2C
 clock speed.  On DCC++EX, operation will continue even with I2C speeds of 32kHz or lower, although the
-scan interval for digital inputs, and the refresh time for I2C displays, may be noticably slower at speeds
+scan interval for digital inputs, and the refresh time for I2C displays, may be noticeably slower at speeds
 lower than 32kHz.</p>
 </div>
 <div class="section" id="changing-the-clock-speed">

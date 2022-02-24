@@ -73,7 +73,7 @@ There are some diagnostic and control commands added to the <tag> language norma
 ROUTES, AUTOMATIONS, & SEQUENCES
 ==================================
 
-EX-RAIL provides many commands to allow you to create routes that locomotives to follow that may involve turnouts, signals, etc. that can be automatically set to react whent the loco trips a sensor.
+EX-RAIL provides many commands to allow you to create routes that locomotives to follow that may involve turnouts, signals, etc. that can be automatically set to react when the loco trips a sensor.
 
 Script Definition Terms
 ------------------------

@@ -96,7 +96,7 @@ Steps (Upgrade)
 
 4. Option - You may need to connect or solder a 10k or smaller resistor between pin 5 or 6 and ground on the IBT_2 (shown as R1 in :numref:`ibt2-wiring-schematic`). There is already a 10k resistor on each chip, which gives us a resistance of 5k when we connect both current sense outputs together. See the notes below for more detail about current sense and a suggestion for using an external current sense board.
 
-5. The diagrams below also show an optional diode protection circuit. If you don't test your board first to make sure that the current you will be using does not put more that 5V on your Arduino analog pin, this will keep you from destroying the input. It is a 5 or 5.1 zener diode (1N4733A, 1N5231B, NZX5V1B, BZX55C5V1, etc.). R2 can be whatever you have on hand. We recommend 2k - 10k.
+5. The diagrams below also show an optional diode protection circuit. If you don't test your board first to make sure that the current you will be using does not put more that 5V on your Arduino analog pin, this will keep you from destroying the input. It is a 5 or 5.1 Zener diode (1N4733A, 1N5231B, NZX5V1B, BZX55C5V1, etc.). R2 can be whatever you have on hand. We recommend 2k - 10k.
 
 6. Select your IBT_2 board in the config.h file.
 
@@ -163,7 +163,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 ``#define MOTOR_SHIELD_TYPE IBT_2_WITH_ARDUINO``
 
-Upload the sketch to your arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
+Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
 
 Please see :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)`.
 
@@ -238,7 +238,7 @@ Important Notes on Current Sensing (IBT_2)
 Please do the following to ensure you won't damage the Arduino, your layout, or yourself:
 
 * Test your board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, to CS output does not produce more than 5V.
-* Use a 5.1V zener diode (D1) and current limiting resistor (R2). This would normally be a 5k Ohm resistor but can be anything from 270 to 10k. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5V the response is no longer linear when using the diode, so you you may want to design your system to output its range between 0 and 4V and use 5V as the over limit setting.
+* Use a 5.1V Zener diode (D1) and current limiting resistor (R2). This would normally be a 5k Ohm resistor but can be anything from 270 to 10k. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5V the response is no longer linear when using the diode, so you you may want to design your system to output its range between 0 and 4V and use 5V as the over limit setting.
 * Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See :numref:`ibt2-sense-resistors`. When we tie the two CS outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
 * Put a 5A fuse on each output leg going to your track.
 
@@ -257,7 +257,7 @@ The spec sheet of the BTS7960B states that the "expected" (aka nominal) value fo
 Modifying Your Motor Board Definition To Give The Correct Current Sense Factor
 ---------------------------------------------------------------------------------
 
-If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exacly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formulat to calculate it. Everything you need to create your own motor board defintion is here:
+If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exactly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formula to calculate it. Everything you need to create your own motor board definition is here:
 
 :ref:`Creating a Custom Motor Board Definition <advanced-setup/motor-board-config:Your board is NOT in the Supported List>`
 
@@ -310,7 +310,7 @@ The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
 If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section <../motor-board-config>`
 
-For the Engineers, the defintions and implementation for motor board control are in the following files:
+For the Engineers, the definitions and implementation for motor board control are in the following files:
 
   **MotorDrivers.h**  - Contains the definitions for all the currently supported motor boards
   **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller
@@ -335,7 +335,7 @@ Below is the Handson Technology datasheet, recommended reading for Tinkerers and
    TODO: this has to go somewhere:
    There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)` section.
 
-   Also, mention "high accuracy mode" and include the circtuit for that.
+   Also, mention "high accuracy mode" and include the circuit for that.
 
 
 Updated June 30, 2021

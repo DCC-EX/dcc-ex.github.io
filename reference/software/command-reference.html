@@ -289,11 +289,11 @@
 <p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="command-summary.html"><span class="doc">Command Summary</span></a></p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../throttles/ex-webthrottle.html"><span class="doc">exWebThrottle</span></a> - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!</p></li>
+<li><p><a class="reference internal" href="../../throttles/ex-webthrottle.html"><span class="doc">WebThrottle-EX</span></a> - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!</p></li>
 <li><p><a class="reference external" href="https://enginedriver.mstevetodd.com/">Engine Driver</a> - Cellphone App WiFi Throttle</p></li>
 <li><p><a class="reference external" href="http://www.jmri.org/">JMRI (Java Model Railroad Interface)</a></p></li>
 <li><p>A serial console, like the Arduino Serial Monitor or PuTTY</p></li>
-<li><p><a class="reference external" href="https://github.com/DccPlusPlus/Controller">Gregg Bermann’s DCC++ Controller Software</a></p></li>
+<li><p><a class="reference external" href="https://github.com/DccPlusPlus/Controller">Gregg Berman’s DCC++ Controller Software</a></p></li>
 </ul>
 <p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX Firmware</a>.</p>
 <p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/DCC-EX">GitHub</a>. If you are new to we suggest you start with the <a class="reference external" href="https://dcc-ex.com">DCC++ EX Webpage</a>.</p>
@@ -341,8 +341,8 @@ User Commands</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">CurrentMAIN</span></code> - Static text for software like JMRI</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CURRENT</span></code> - Current in MilliAmps</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> - Designator to signify this is a current meter (V would be for voltage)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Milli</span></code> - Unit of measure for external sofware with a meter like JMRI (Milli, Kilo, etc.)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - numbered parameter for external sofware (1,2,3, etc.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Milli</span></code> - Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - numbered parameter for external software (1,2,3, etc.)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">MAX_MA</span></code> - The maximum current handling of the motor controller in MilliAmps</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - number parameter for external software (we use 2 parameters here, 0 and 1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">TRIP_MA</span></code> - The overcurrent limit that will trip the software circuit breaker in mA</p></li>
@@ -412,7 +412,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 <h4>To set functions <strong>F0-F68</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">0|1&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> = (upper case F) This command is for a CAB function ie: Lights, horn, bell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> = (upper case F) This command is for a CAB function i.e.: Lights, horn, bell</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code>  : the short (1-127) or long (128-10293) address of the engine decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">FUNC</span></code> : the CAB function number (0-28) whose function is defined by your decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">0|1</span></code> : a value of 0 to set the function OFF and 1 to set the function ON</p></li>
@@ -430,7 +430,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 <h4>To set functions <strong>F0-F4</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">CAB</span> <span class="pre">BYTE1</span> <span class="pre">[BYTE2]&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB function ie: Lights, horn, bell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB function i.e.: Lights, horn, bell</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">BYTE1</span></code> :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16</p>
 <ul>
@@ -459,7 +459,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 <p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">3265</span> <span class="pre">144&gt;</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC++ EX command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function i.e.: Lights, horn, bell</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">3265</span></code> = CAB: the short (1-127) or long (128-10293) address of the engine decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">144</span></code> = Turn on headlight</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC++ EX command</p></li>
@@ -687,7 +687,7 @@ with an external device, then the device will be operated accordingly.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code> : the subaddress of a DCC accessory decoder controlling a turnout (0-3)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For
 servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.</p></li>
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">THROWN</span></code> - “0” is closed.  “1” is thrown.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">THROWNPOSITION</span></code> : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOSEDPOSITION</span></code> : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.</p></li>
@@ -730,7 +730,7 @@ You would send the following command to the DCC++ EX CommandStation:
 </div></blockquote>
 <p>If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.
 Consequently, when the DCC++ EX CommandStation is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
-This is intended so that the servos don’t perform a sweep on power-on whem their physical position does not match initial position in the CommandStation.</p>
+This is intended so that the servos don’t perform a sweep on power-on when their physical position does not match initial position in the CommandStation.</p>
 </div>
 <div class="section" id="controlling-a-defined-turnout">
 <h4>Controlling a Defined Turnout<a class="headerlink" href="#controlling-a-defined-turnout" title="Permalink to this headline">¶</a></h4>
@@ -796,7 +796,7 @@ but the default parameters protect against contact bounces for up to 20 millisec
 (You pick the ID &amp; they are shared between Turnouts, Sensors and Outputs)</p>
 <p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For
 servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.</p>
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.</p>
 <p><code class="docutils literal notranslate"><span class="pre">PULLUP</span></code> : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don’t use internal pull-up resistor for PIN (ACTIVE=HIGH).</p>
 <p>Once all sensors have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command if you want those new definitions updated in the EEPROM.
@@ -829,8 +829,8 @@ However, the default behavior can be modified so that any pin can be forced to b
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">IFLAG&gt;</span></code> : Creates a new output ID, with specified PIN and IFLAG values.</p>
 <ul>
-<li><p>if output ID already exists, it is updated with specificed PIN and IFLAG.</p></li>
-<li><p>Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specifcied (see below).</p></li>
+<li><p>if output ID already exists, it is updated with specified PIN and IFLAG.</p></li>
+<li><p>Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specified (see below).</p></li>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory).</p></li>
 </ul>
 </li>
@@ -922,7 +922,7 @@ status command is invoked. This provides an efficient way of initializing the st
 <li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">CAB</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">VALUE&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : the number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : the bit number of the Configurarion Variable register to write (0-7)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : the bit number of the Configuration Variable register to write (0-7)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : the value of the bit to be written (0-1)</p>
 <ul>
 <li><p>RETURNS: NONE</p></li>
@@ -988,7 +988,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </div>
 <div class="section" id="read-configuration-variable-byte-from-engine-decoder-on-programming-track">
 <h4>READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#read-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
-<p>If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programing track.</p>
+<p>If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programming track.</p>
 <p>Read CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">CV</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
@@ -1002,7 +1002,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </ul>
 <p>Read Engine address format is simply: <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">ADDRESS&gt;</span></code> when successul and <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">-1&gt;</span></code> if it is not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">ADDRESS&gt;</span></code> when successful and <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">-1&gt;</span></code> if it is not.</p></li>
 </ul>
 <p><strong>IMPORTANT: If the loco is on a consist, the address returned will be the consist address</strong></p>
 <div class="admonition note">
@@ -1060,7 +1060,7 @@ Example: &lt;iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab&gt;&lt;H 1
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">1|0&gt;</span></code> Enables ACK diagnostics</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">1|0&gt;</span></code> Enables Command Parser diagnostics</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">1|0&gt;</span></code> Enables Wifi diagnostics</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIT</span> <span class="pre">0|1&gt;</span></code> Enables Withrottle diagnostics</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIT</span> <span class="pre">0|1&gt;</span></code> Enables WiThrottle diagnostics</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TEST|NORMAL&gt;</span></code> DCC Signal Diagnostics (See <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues">Diagnosing Issues</a>** for more help)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SPEED28|SPEED128</span></code> Switch between 28 and 128 speed steps</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">pin</span> <span class="pre">pos</span> <span class="pre">profile&gt;</span></code> Set servo on VPIN <code class="docutils literal notranslate"><span class="pre">pin</span></code> to position <code class="docutils literal notranslate"><span class="pre">pos</span></code>, moving according to profile <code class="docutils literal notranslate"><span class="pre">profile</span></code>.
@@ -1108,7 +1108,7 @@ analogue read operations.  This command is available from Version 3.2.0.</p></li
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;M&gt;</span></code> Command writes a packet the MAIN track</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;P&gt;</span></code> Command writes a packet to the PROG track</div>
 </div>
-<p>Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register driving the selected track</p>
+<p>Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track</p>
 <blockquote>
 <div><p><strong>FORMAT:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;M|P</span> <span class="pre">REGISTER</span> <span class="pre">BYTE1</span> <span class="pre">BYTE2</span> <span class="pre">[BYTE3]</span> <span class="pre">[BYTE4]</span> <span class="pre">[BYTE5]&gt;</span></code></p>
 </div></blockquote>
@@ -1126,7 +1126,7 @@ returns: NONE
 </div>
 <div class="section" id="wifi-at-commands">
 <h2>WiFi “AT Commands<a class="headerlink" href="#wifi-at-commands" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the “+” and the command.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the “+” and the command.</p>
 <p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag (WiFi Connected Mode) to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created and so you can send your own AT commands.</p>
 <p>Examples:</p>
@@ -1136,7 +1136,7 @@ returns: NONE
 </div></blockquote>
 <p>For more detail follow these links:</p>
 <p><a class="reference internal" href="../../advanced-setup/wifi-config.html"><span class="doc">DCC-EX WiFi Configuration</span></a></p>
-<p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf">Expressif AT Command Set PDF File (Exressif makes the ESP8266)</a></p>
+<p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf">Espressif AT Command Set PDF File (Exressif makes the ESP8266)</a></p>
 </div>
 <div class="section" id="user-commands">
 <h2>User Commands<a class="headerlink" href="#user-commands" title="Permalink to this headline">¶</a></h2>

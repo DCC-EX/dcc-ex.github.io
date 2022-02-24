@@ -43,7 +43,7 @@ Screenshots
 Requirements
 =============
 
-* A DCC++ EX Commmand Station (Mega based for WiFi)
+* A DCC++ EX Command Station (Mega based for WiFi)
 * An iOS Cell Phone or Tablet
 * A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup <../get-started/wifi-setup>`
 

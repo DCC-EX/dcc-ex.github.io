@@ -5,7 +5,7 @@ Install using the Automated Installer
 Requirements (for installing)
 ==============================
 
-* Windows/Linux/MacOS Computer
+* Windows/Linux/macOS Computer
 * DCC-EX Compatible motor shield / motor controller board
 * DCC-EX Compatible Microcontroller (Arduino Mega/Uno)
 * USB cable to connect your computer to the Microcontroller
@@ -201,16 +201,16 @@ This is the "status" command and reports your version, types of boards you are u
 
 There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC++ EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands.
 
-Using exWebThrottle
+Using WebThrottle-EX
 --------------------
 
 .. figure:: ../_static/images/installer/exwebthrottle.jpg
-   :alt: exWebThrottle
+   :alt: WebThrottle-EX
    :scale: 100%
 
-   exWebThrottle
+   WebThrottle-EX
 
-Click this link: :doc:`exWebThrottle </throttles/ex-webthrottle>` to run exWebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/exWebThrottle>`_ to get the latest version to run on your computer.
+Click this link: :doc:`WebThrottle-EX </throttles/ex-webthrottle>` to run WebThrottle-EX hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
 
 Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
 --------------------------------------------------------------

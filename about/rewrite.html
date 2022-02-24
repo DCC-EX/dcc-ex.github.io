@@ -302,12 +302,12 @@
 <li><p>User add-on functions (intercept commands to route to your own routines)</p></li>
 <li><p>Much simpler Function (F0-28) command</p></li>
 <li><p>EX-RAIL Automation and/or accessory control</p></li>
-<li><p>HAL - Hardware abstratction layer to make adding new types of hardware simple</p></li>
+<li><p>HAL - Hardware abstraction layer to make adding new types of hardware simple</p></li>
 <li><p>Extended functions up to 68</p></li>
 <li><p>Better turnout handling</p></li>
 <li><p>Servo support</p></li>
 <li><p>Built-in WiThrottle Server to directly support WiThrottle based throttles</p></li>
-<li><p>Bult-in support for the LCN node based accessory bus</p></li>
+<li><p>Built-in support for the LCN node based accessory bus</p></li>
 <li><p>Support for more motor controllers</p></li>
 <li><p>Easy to create motor definition for motor controllers not in our current list</p></li>
 <li><p>LCD and OLED display support</p></li>
@@ -317,7 +317,7 @@
 <li><p>ARM Cortex M0 and M4 support</p></li>
 <li><p>New DCC++ EX features added to JMRI like a current monitor display</p></li>
 <li><p>Custom add-ons for Engine Driver including Routes and Automations on buttons</p></li>
-<li><p>28 speed step support in addtion to 128</p></li>
+<li><p>28 speed step support in addition to 128</p></li>
 <li><p>Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window</p></li>
 <li><p>Created many new commands</p></li>
 <li><p>Developed a new browser based throttle (<a class="reference internal" href="../throttles/ex-webthrottle.html"><span class="doc">WebThrottle-EX</span></a>)</p></li>
@@ -331,7 +331,7 @@
 <p>We started with the DCC Signal Generation code, what we call the “Waveform Generator”. We got together as a team and looked at how we could make it better. It soon became clear that rather than make piecemeal changes, the entire concept of how the signal could be generated, and how to use timers and interrupts, would need to be re-imagined. This not only sped things up considerably, but allowed us to allow you to connect some shields right on top of your Command Station board without jumpers!</p>
 <p>Next we focused on packet generation. We looked at the complexities of reading and maintaining code that was using binary math, multiple “registers” to hold train data, and doing bit shifting everywhere to build bytes and stuff them into data packets. The new method gets rid of the old registers and simplifies the whole structure for building packets. Things like start and stop bits and preamble bits are static pieces of information. So being able to just insert them where they need to go saves time and processor bandwidth.</p>
 <p>We created an internal API for how modules communicated with each other, so the code is more modular and each unit is dedicated to its specific task.</p>
-<p>We completely re-wrote current sense and ACK detect routines to better protect your trains and make programming more accurate. There are complete diagnosicts to allow you to see see exactly why a particular decoder is not reading or writing, and we provide settings you can add to your configuration to get it to work in most cases.</p>
+<p>We completely re-wrote current sense and ACK detect routines to better protect your trains and make programming more accurate. There are complete diagnostics to allow you to see see exactly why a particular decoder is not reading or writing, and we provide settings you can add to your configuration to get it to work in most cases.</p>
 </div>
 <div class="section" id="why-did-we-do-this">
 <h2>Why did we do this?<a class="headerlink" href="#why-did-we-do-this" title="Permalink to this headline">¶</a></h2>
@@ -344,9 +344,9 @@
 <p>Next, the Waveform Generator needed 2 timers and interrupts, one for the Main track signal and one for the Programming track. The Uno only has 3 timers. So 2 of them were already tied up for sending the DCC signal. Since the programming track sits idle most of the time, and both signals were always being generated to the input of the motor board, processing power was being wasted that could be put to use for something else. In addition, because of the way the Arduino is designed, we were forced to use jumpers to connect pins on the Arduino to those on the motor board. Our new design eliminates the need for jumpers!</p>
 <p>The packet generation routine was complex, hard to maintain, and limited us with regard to the hardware we could run on and new features we could implement (like the Railcom cut-out). We replaced the slow DigitalRead() and DigitalWrite() routines with a fast write library. The packet generation is now streamlined, fast (which allows us to be able to use only 1 timer to create signals for 2 tracks), and much easier to read.</p>
 <p>We made a huge effort to streamline the code and optimize it for microcontrollers to use the limited memory we have available in the most efficient manner. The code is now object oriented and utilizes classes for readability and reusability. We eliminated almost all use of strings.</p>
-<p>The 3 most requested features were: 1. More reliable CV read and writes, 2. Better accessory control, 3. Automation. Some have requested a Railcom cut-out. We haven’t limited ourselves to just these features, but we put a lot of time into redesigning things to accomodate them.</p>
+<p>The 3 most requested features were: 1. More reliable CV read and writes, 2. Better accessory control, 3. Automation. Some have requested a Railcom cut-out. We haven’t limited ourselves to just these features, but we put a lot of time into redesigning things to accommodate them.</p>
 <p>The current detection routines are completely different. One key difference is all current readings are in milliAmps (mA) instead of meaningless pin readings. So if you want to set your overload protection to kick in at 3 Amps, you just enter 3000 for 3000mA instead of looking up a value from a table.</p>
-<p>We continue to test all the motorboard and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason CV reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an “ACK” (acknowledgement from the train that it received a command). So we now check immedately after we send a command instead of waiting for a dozen or more packets. This means we don’t miss an ACK while this is happening, and we jump out of sending uneccessary packets as soon as we get one. We also use our knowledge of CVs and the probability of what a CV may contain, so save time by skipping ahead if our first guess is correct. You will appreciate how much faster we can read CVs now!</p>
+<p>We continue to test all the motorboard and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason CV reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an “ACK” (acknowledgement from the train that it received a command). So we now check immediately after we send a command instead of waiting for a dozen or more packets. This means we don’t miss an ACK while this is happening, and we jump out of sending unnecessary packets as soon as we get one. We also use our knowledge of CVs and the probability of what a CV may contain, so save time by skipping ahead if our first guess is correct. You will appreciate how much faster we can read CVs now!</p>
 <p>There are now full diagnostics for trying to determine why a particular decoder may not be reading or writing correctly and new commands to adjust parameters to deal with decoders that are not in compliance with NMRA specifications. We use resolution down to the microsecond.</p>
 <p>We not only are working on a RailCom cutout within the Command Station, but are developing a way of reading the RailCom data and reporting it.</p>
 </div>
@@ -356,7 +356,7 @@
 </div>
 <div class="section" id="the-bottom-line">
 <h2>The bottom line<a class="headerlink" href="#the-bottom-line" title="Permalink to this headline">¶</a></h2>
-<p>So while maintaining proper deference to Gregg Berman’s original concept of an inexpensive Command Station based on the Arduino platform, we don’t want to do a disservice to DCC++ EX or developers like Chris Harlow (UkBloke), Harald Barth, Neil McKechnie, Dave Cutting, and others, who brought a new vision to the project, and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible, Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcments…</p>
+<p>So while maintaining proper deference to Gregg Berman’s original concept of an inexpensive Command Station based on the Arduino platform, we don’t want to do a disservice to DCC++ EX or developers like Chris Harlow (UkBloke), Harald Barth, Neil McKechnie, Dave Cutting, and others, who brought a new vision to the project, and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible, Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcements…</p>
 </div>
 <div class="section" id="thanks">
 <h2>Thanks<a class="headerlink" href="#thanks" title="Permalink to this headline">¶</a></h2>

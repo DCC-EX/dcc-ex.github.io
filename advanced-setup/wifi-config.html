@@ -408,7 +408,7 @@ You should see a new network that begins with “DCCEX” like this example: <co
 <li><p>IP Address - Normally 192.168.4.1</p></li>
 <li><p>Port Number - 2560</p></li>
 <li><p>Server Name - DCCEX_123456 where the last 6 characters are unique to your WiFi device</p></li>
-<li><p>Server Password - PASS_123456 where the last 6 charaters are the same as above</p></li>
+<li><p>Server Password - PASS_123456 where the last 6 characters are the same as above</p></li>
 </ul>
 <p><strong>All this information appears in the startup log when connected using a serial monitor, in case you forget.</strong></p>
 <div class="admonition note">
@@ -511,7 +511,7 @@ If you don’t change this setting and start up in AP mode instead, the default 
 <h2>Resetting Network Settings<a class="headerlink" href="#resetting-network-settings" title="Permalink to this headline">¶</a></h2>
 <p>Once you enter a network SSID and password, the CS will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.</p>
 <div class="section" id="clearing-the-esp-wifi-ssid-settings">
-<h3>Clearing the ESP-WiFI SSID Settings<a class="headerlink" href="#clearing-the-esp-wifi-ssid-settings" title="Permalink to this headline">¶</a></h3>
+<h3>Clearing the ESP-WiFi SSID Settings<a class="headerlink" href="#clearing-the-esp-wifi-ssid-settings" title="Permalink to this headline">¶</a></h3>
 <p>Open your serial monitor and wait until the CS has gone through the startup sequence. Then in the command textbox enter <code class="docutils literal notranslate"><span class="pre">&lt;+RESTORE&gt;</span></code> and press “SEND”.</p>
 <p>You will then see an “Ok” message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the CS had WiFi credentials in it, then as soon as your CS restarts, it will load and save those settings again. So…</p>
 </div>
@@ -564,7 +564,7 @@ If you don’t change this setting and start up in AP mode instead, the default 
 </div>
 <div class="section" id="create-a-static-ip-for-your-cs-in-ap-mode">
 <h3>Create a Static IP for your CS in AP Mode<a class="headerlink" href="#create-a-static-ip-for-your-cs-in-ap-mode" title="Permalink to this headline">¶</a></h3>
-<p>You are stil going to have to go into your router, find the MAC address for your WiFi board (or find it in the serial monitor log) and then assign a static IP address (sometimes called “reserved” IP address) to that MAC. That should be all you need, as the DHCP server on your network will assign that IP to your CS when the CS asks for one.</p>
+<p>You are still going to have to go into your router, find the MAC address for your WiFi board (or find it in the serial monitor log) and then assign a static IP address (sometimes called “reserved” IP address) to that MAC. That should be all you need, as the DHCP server on your network will assign that IP to your CS when the CS asks for one.</p>
 <p>You can try these commands also. You must have a recent version of the firmware to support _DEF commands. If they don’t work, try entering them without this suffix (Example: &lt;+CIPAP&gt; instead of &lt;+CIPAP_DEF&gt;)</p>
 <ol class="arabic simple">
 <li><p>Forget your network settings by entering &lt;+RESTORE&gt;</p></li>

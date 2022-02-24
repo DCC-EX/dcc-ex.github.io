@@ -321,7 +321,7 @@
 <h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
 <h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this headline">¶</a></h3>
-<p>And here is a picture of the board after soldering or if you purchase a board already solderd (or “welded” as some of the Chinese sites call it)</p>
+<p>And here is a picture of the board after soldering or if you purchase a board already soldered (or “welded” as some of the Chinese sites call it)</p>
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/lcd_soldered.jpg"><img alt="Backpack Soldered to LCD" src="../../_images/lcd_soldered.jpg" style="width: 400.0px; height: 400.0px;" /></a>
 <p class="caption"><span class="caption-number">Figure 66 </span><span class="caption-text">LCD with backpack soldered to the back</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
@@ -352,12 +352,12 @@
 <ol class="arabic simple">
 <li><p>Open the Arduino IDE</p></li>
 <li><p>Open the CommandStation-EX project</p></li>
-<li><p>Open the config.h file (If you haven’t renambed config.example.h to config.h do this now)</p></li>
+<li><p>Open the config.h file (If you haven’t renamed config.example.h to config.h do this now)</p></li>
 <li><p>Find the line that says: <code class="docutils literal notranslate"><span class="pre">//</span> <span class="pre">define</span> <span class="pre">LCD_DRIVER</span> <span class="pre">for</span> <span class="pre">I2C</span> <span class="pre">LCD</span> <span class="pre">address</span> <span class="pre">0x3f,16</span> <span class="pre">cols,</span> <span class="pre">2</span> <span class="pre">rows</span>
 <span class="pre">#define</span> <span class="pre">LCD_DRIVER</span>&#160; <span class="pre">0x3F,16,2</span></code></p></li>
 <li><p>make sure to uncomment this line if it has 2 slashes in front of it by removing them.</p></li>
 <li><p>Find the 4 characters that start with <code class="docutils literal notranslate"><span class="pre">0x</span></code> and add the address for your I2C backpack after it. We default to 3F, but your display may be 27. The text would read <code class="docutils literal notranslate"><span class="pre">0x27</span></code> if that was the case.</p></li>
-<li><p>In the next field, enter the number of columns in your dispay. The default is 16. If you have a 20 row display, enter that instead.</p></li>
+<li><p>In the next field, enter the number of columns in your display. The default is 16. If you have a 20 row display, enter that instead.</p></li>
 <li><p>In the last field, enter the number of rows in your display. We default to a 2 line display. If you have a 4 line display, change this to 4.</p></li>
 <li><p>Save the file</p></li>
 <li><p>Make sure to connect the Arduino to your computer with the USB cable and click the upload button to compile and upload the updated Command Station sketch.</p></li>

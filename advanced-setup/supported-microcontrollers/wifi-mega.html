@@ -294,12 +294,12 @@
 <div class="line"><br /></div>
 </div>
 <div class="section" id="a-operational-standalone-wifi-dcc-command-station">
-<h2>A Operational Standalone WiFI DCC Command Station<a class="headerlink" href="#a-operational-standalone-wifi-dcc-command-station" title="Permalink to this headline">¶</a></h2>
+<h2>A Operational Standalone WiFi DCC Command Station<a class="headerlink" href="#a-operational-standalone-wifi-dcc-command-station" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/mega_wifi.png"><img alt="Mega WiFi" src="../../_images/mega_wifi.png" style="width: 384.40000000000003px; height: 308.40000000000003px;" /></a>
 <p class="caption"><span class="caption-number">Figure 52 </span><span class="caption-text">Mega+WiFi Board</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<p>This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some supplers are at the bottom of this page:</p>
+<p>This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some suppliers are at the bottom of this page:</p>
 <ul class="simple">
 <li><p>Wemos</p></li>
 <li><p>RobotDyn</p></li>
@@ -310,11 +310,11 @@
 <p>This is our tested and proven configuration</p>
 <ul class="simple">
 <li><p>DCC++EX 3.0.6 or greater</p></li>
-<li><p>ATMega2560 + ESP8266 WiFI - Combo Board</p></li>
+<li><p>ATMega2560 + ESP8266 WiFi - Combo Board</p></li>
 <li><p>Deek Robot L298P Standard Motor Shield (or other <a class="reference internal" href="../../reference/hardware/motor-boards.html"><span class="doc">approved motor controller</span></a>)</p></li>
 <li><p>12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*</p></li>
 <li><p>7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug</p></li>
-<li><p>Android Smartphone with Engine Driver v2.28.123 or iOS Smarphone with WiThrottle</p></li>
+<li><p>Android Smartphone with Engine Driver v2.28.123 or iOS Smartphone with WiThrottle</p></li>
 <li><p>USB-A male to Micro USB-B cable</p></li>
 <li><p>You will also need software provided in the links below and a toothpick or small jewellers screwdriver to be able to flip small switches.</p></li>
 </ul>
@@ -344,11 +344,11 @@
 <p><a class="reference external" href="http://www.wch-ic.com/downloads/CH341SER_ZIP.html">http://www.wch-ic.com/downloads/CH341SER_ZIP.html</a></p>
 <p>Once you can see your computer recognizes your board, <strong>remember the port</strong>. For a PC running windows, it will be something like “COM24” as in the picture above. For a Mac, it will be something like “/dev/cu.wchusbserial*****”, and for Linux it will look like “/dev/ttyUSBx”. Write it down.</p>
 <p><strong>Unplug the Mega.</strong></p>
-<p>For more detail on how to install the correct CH340 drivers for your OS, you can see this <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">Sparkfun Tutorial</a></p>
+<p>For more detail on how to install the correct CH340 drivers for your OS, you can see this <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">SparkFun Tutorial</a></p>
 </div>
 <div class="section" id="download-and-install-the-flash-download-tool">
 <h3>2. Download and install the flash download tool<a class="headerlink" href="#download-and-install-the-flash-download-tool" title="Permalink to this headline">¶</a></h3>
-<p>There are two tools you can use to flash the firmware, one is the <strong>“Expressif Flash Download tool”</strong> for Windows and the other is a Python script called <strong>esptool</strong> that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.</p>
+<p>There are two tools you can use to flash the firmware, one is the <strong>“Espressif Flash Download tool”</strong> for Windows and the other is a Python script called <strong>esptool</strong> that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.</p>
 <div class="section" id="using-the-flash-download-tool-windows">
 <h4>Using the Flash Download Tool (Windows)<a class="headerlink" href="#using-the-flash-download-tool-windows" title="Permalink to this headline">¶</a></h4>
 <p>Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware files by clicking on the buttons below. Unzip them wherever you like:</p>
@@ -359,9 +359,9 @@
 <h4>Using esptool.py (Windows, Mac, Linux)<a class="headerlink" href="#using-esptool-py-windows-mac-linux" title="Permalink to this headline">¶</a></h4>
 <p>Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button below:</p>
 <p class="dcclink"><a class="reference external" href="/_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
-<p>Install python if you don’t already have it installed. This quick quide shows you how to check if you already have Python and how to install it if you don’t:</p>
+<p>Install python if you don’t already have it installed. This quick guide shows you how to check if you already have Python and how to install it if you don’t:</p>
 <p><a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide/Download">https://wiki.python.org/moin/BeginnersGuide/Download</a></p>
-<p>Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a MacOS) to find and install it from the web:</p>
+<p>Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a macOS) to find and install it from the web:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install esptool
 </pre></div>
 </div>
@@ -399,7 +399,7 @@
 <div><ul class="simple">
 <li><p>set dip switches <strong>5,6,7 ON</strong> (1,2,3,4 OFF)</p></li>
 <li><p>set Serial Port (TX/RX) Slide Pin to <strong>RXD3 &amp; TXD3</strong></p></li>
-<li><p>Connect Mega+WiFI board to your computer with the USB cable</p></li>
+<li><p>Connect Mega+WiFi board to your computer with the USB cable</p></li>
 <li><p>press the <strong>Mode button</strong></p></li>
 </ul>
 </div></blockquote>
@@ -450,7 +450,7 @@
 </div>
 <div class="section" id="with-esptool-py">
 <h4>With esptool.py<a class="headerlink" href="#with-esptool-py" title="Permalink to this headline">¶</a></h4>
-<p>Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type “cmd” and click OK, or run “terminal” on MacOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected:</p>
+<p>Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type “cmd” and click OK, or run “terminal” on macOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>esptool.py write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 </pre></div>
 </div>
@@ -481,7 +481,7 @@
 <div class="section" id="decide-if-you-want-ap-mode-or-station-mode">
 <h2>4. Decide if you want AP Mode or Station Mode<a class="headerlink" href="#decide-if-you-want-ap-mode-or-station-mode" title="Permalink to this headline">¶</a></h2>
 <p>AP Mode (the default) makes the Command Station an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the CS so your Throttles can find it on your network.</p>
-<p>If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to setp 5.</p>
+<p>If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to step 5.</p>
 <p>If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the <a class="reference internal" href="#short-version-of-network-setup"><span class="std std-ref">Short Version of Network Setup</span></a> below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.</p>
 </div>
 <div class="section" id="download-and-configure-the-dcc-ex-command-station-software">
@@ -535,7 +535,7 @@
 <p>If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi board by Either a USB cable, or for Standalone Operations (no USB) you can use a 7-9vdc power supply in the Arduino 2.1mm female barrel jack.</p>
 <ul class="simple">
 <li><p>When powered on through a USB cable, check the Arduino IDE Tools &gt; Serial Monitor.</p></li>
-<li><p>It should show the ATMega2560 &amp; ESP8266 WiFI communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new DCC++EX Command Station.</p></li>
+<li><p>It should show the ATMega2560 &amp; ESP8266 WiFi communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new DCC++EX Command Station.</p></li>
 <li><p>You should see <cite>++ Wifi Setup CONNECTED ++</cite></p></li>
 </ul>
 </div>
@@ -550,10 +550,10 @@
 <p>You MUST either forget your local network or turn off “auto-reconnect” for that connection when using AP Mode. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.</p>
 </div>
 <ul class="simple">
-<li><p>Start your Smart Phone (Andriod) Engine Driver App Or (Apple iOs) WiTHrottlle App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.</p></li>
+<li><p>Start your Smart Phone (Android) Engine Driver App Or (Apple iOS) WiThrottle App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.</p></li>
 </ul>
 <p>If the Engine driver fails to connect the first time with the Command Station just press the Mega’s red Reset button and try the IP/Port connection again.</p>
-<p>You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone WiFI Command Station Via your home router.</p>
+<p>You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone WiFi Command Station Via your home router.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.</p>
@@ -565,7 +565,7 @@
 <ol class="arabic simple">
 <li><p>Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an “AT” command. You will see “OK” on a line where it finds your WiFi board on serial port 3 and failure if it does not.</p></li>
 <li><p>Make sure the little slide switch is set to Tx/Rx 3</p></li>
-<li><p>Make sure you forget your local network if using AP mode or set your home network to not automatically reconned.</p></li>
+<li><p>Make sure you forget your local network if using AP mode or set your home network to not automatically reconnect.</p></li>
 <li><p>Try changing the WiFi Channel in your config.h file to another channel and uploading the firmware again.</p></li>
 </ol>
 </div>
@@ -575,10 +575,10 @@
 <p>Detailed tutorial and analysis by DCC-EX team member Neil McKechnie (NeilMc):
 <a class="reference external" href="https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined-mega-8266-board/">https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined-mega-8266-board/</a></p>
 <p>Fernando Koyanagi’s excellent site including a video. Just be careful not to use his settings since he used an older version of the firmware: <a class="reference external" href="https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/">https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/</a></p>
-<p>The Expressif ESP8266 page (The manufacturer of the chip): <a class="reference external" href="https://www.espressif.com/en/products/socs/esp8266/">https://www.espressif.com/en/products/socs/esp8266/</a></p>
-<p>Expressif detailed instructions on using the esptool
+<p>The Espressif ESP8266 page (The manufacturer of the chip): <a class="reference external" href="https://www.espressif.com/en/products/socs/esp8266/">https://www.espressif.com/en/products/socs/esp8266/</a></p>
+<p>Espressif detailed instructions on using the esptool
 <a class="reference external" href="https://github.com/espressif/esptool#installation--dependencies">https://github.com/espressif/esptool#installation–dependencies</a></p>
-<p><strong>Enjoy your New DCC++EX MEGA + WiFI On-Board Command Station!</strong></p>
+<p><strong>Enjoy your New DCC++EX MEGA + WiFi On-Board Command Station!</strong></p>
 </div>
 <div class="section" id="suppliers">
 <h2>Suppliers<a class="headerlink" href="#suppliers" title="Permalink to this headline">¶</a></h2>

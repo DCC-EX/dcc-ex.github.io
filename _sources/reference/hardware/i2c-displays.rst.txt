@@ -46,7 +46,7 @@ Connecting an LCD Display
 Soldering on the Backpack (if you purchased separate pieces)
 -------------------------------------------------------------
 
-And here is a picture of the board after soldering or if you purchase a board already solderd (or "welded" as some of the Chinese sites call it)
+And here is a picture of the board after soldering or if you purchase a board already soldered (or "welded" as some of the Chinese sites call it)
 
 
 .. figure:: ../../_static/images/display/lcd_soldered.jpg
@@ -84,12 +84,12 @@ To upload the new sketch on your Command Station
 
 #. Open the Arduino IDE
 #. Open the CommandStation-EX project
-#. Open the config.h file (If you haven't renambed config.example.h to config.h do this now)
+#. Open the config.h file (If you haven't renamed config.example.h to config.h do this now)
 #. Find the line that says: ``// define LCD_DRIVER for I2C LCD address 0x3f,16 cols, 2 rows
    #define LCD_DRIVER  0x3F,16,2`` 
 #. make sure to uncomment this line if it has 2 slashes in front of it by removing them.
 #. Find the 4 characters that start with ``0x`` and add the address for your I2C backpack after it. We default to 3F, but your display may be 27. The text would read ``0x27`` if that was the case.
-#. In the next field, enter the number of columns in your dispay. The default is 16. If you have a 20 row display, enter that instead.
+#. In the next field, enter the number of columns in your display. The default is 16. If you have a 20 row display, enter that instead.
 #. In the last field, enter the number of rows in your display. We default to a 2 line display. If you have a 4 line display, change this to 4.
 #. Save the file
 #. Make sure to connect the Arduino to your computer with the USB cable and click the upload button to compile and upload the updated Command Station sketch.

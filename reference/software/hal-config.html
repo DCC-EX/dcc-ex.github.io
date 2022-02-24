@@ -287,7 +287,7 @@
   <div class="section" id="i-o-device-drivers-and-hal">
 <h1>I/O Device Drivers and HAL<a class="headerlink" href="#i-o-device-drivers-and-hal" title="Permalink to this headline">¶</a></h1>
 <p>The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may
-outgrow the built-in capabilities and want to access more output pins than the arduino has available.  Or you may wish to attach servos to the controller
+outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.</p>
 <p>DCC++ EX, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a
 piece of software called the <strong>HAL</strong> or <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer.
@@ -308,7 +308,7 @@ DCC++ EX does not need to know what type of device it is, or what low-level comm
 It just sends an instruction for the pin to be set on or off.
 If you want to reposition a servo, the same function is called, but with a VPIN number that identifies a pin
 on a servo controller module; consequently, a command is sent to the servo control module to move the servo to the appropriate position.</p>
-<p>The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command <cite>&lt;S 2 40 1&gt;</cite> command (id=2, pin=40, pullup=enabled).
+<p>The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command <cite>&lt;S 2 40 1&gt;</cite> command (id=2, pin=40, pull-up=enabled).
 When pin 40 is connected to 0V (ground), a message <cite>&lt;Q 2&gt;</cite> is generated, and when it is disconnected, <cite>&lt;q 2&gt;</cite> is generated.  But if you have an MCP23017
 GPIO Extender module connected up, and you replace the pin number 40 with 164 (the number of the first pin on the MCP23017),
 then you will get the messages when the MCP23017 pin is connected to 0V or disconnected.</p>
@@ -379,7 +379,7 @@ the current stops flowing.  This is just the same as the Arduino digital GPIO pi
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 201 164 1&gt;
 </pre></div>
 </div>
-<p>This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pullup.</p>
+<p>This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pull-up.</p>
 <p>When the sensor activates and deactivates, the following messages are sent by DCC++ EX over the serial output:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Q 201&gt;         -- Activation
 &lt;q 201&gt;         -- Deactivation
@@ -483,8 +483,8 @@ and click <code class="docutils literal notranslate"><span class="pre">OK</span>
 </pre></div>
 </div>
 <p>Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be
-played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3.
-Connect the DFPlayer’s RX to the arduino TX3 (14) via a 1kOhm resistor, and DFPlayer’s TX direct to the Ardino RX3 (15).  You also need to connect +5V power to VCC,
+played from a Micro-SD card (up to 32GB).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3.
+Connect the DFPlayer’s RX to the Arduino TX3 (14) via a 1kOhm resistor, and DFPlayer’s TX direct to the Arduino RX3 (15).  You also need to connect +5V power to VCC,
 and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that’s the hardware set up.</p>
 <div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/dfplayer.png"><img alt="Arduino Mega with DFplayer" src="../../_images/dfplayer.png" style="width: 497.7px; height: 387.9px;" /></a>

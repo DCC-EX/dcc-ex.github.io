@@ -6,7 +6,7 @@ This is a detailed reference. For a summary version, please see :doc:`Command Su
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* :doc:`exWebThrottle </throttles/ex-webthrottle>` - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!
+* :doc:`WebThrottle-EX </throttles/ex-webthrottle>` - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!
 
 * `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Cellphone App WiFi Throttle  
 
@@ -14,7 +14,7 @@ This is a detailed reference. For a summary version, please see :doc:`Command Su
 
 * A serial console, like the Arduino Serial Monitor or PuTTY
 
-* `Gregg Bermann's DCC++ Controller Software <https://github.com/DccPlusPlus/Controller>`_
+* `Gregg Berman's DCC++ Controller Software <https://github.com/DccPlusPlus/Controller>`_
 
 This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
@@ -73,8 +73,8 @@ Examples:
   * ``CurrentMAIN`` - Static text for software like JMRI
   *  ``CURRENT`` - Current in MilliAmps
   *  ``C`` - Designator to signify this is a current meter (V would be for voltage)
-  *  ``Milli`` - Unit of measure for external sofware with a meter like JMRI (Milli, Kilo, etc.)
-  *  ``0`` - numbered parameter for external sofware (1,2,3, etc.)
+  *  ``Milli`` - Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.)
+  *  ``0`` - numbered parameter for external software (1,2,3, etc.)
   *  ``MAX_MA`` - The maximum current handling of the motor controller in MilliAmps
   *  ``1`` - number parameter for external software (we use 2 parameters here, 0 and 1)
   *  ``TRIP_MA`` - The overcurrent limit that will trip the software circuit breaker in mA
@@ -153,7 +153,7 @@ To set functions **F0-F68** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
 
 
 * ``<`` = Begin DCC++ EX command
-* ``F`` = (upper case F) This command is for a CAB function ie: Lights, horn, bell  
+* ``F`` = (upper case F) This command is for a CAB function i.e.: Lights, horn, bell  
 * ``CAB``  : the short (1-127) or long (128-10293) address of the engine decoder
 * ``FUNC`` : the CAB function number (0-28) whose function is defined by your decoder
 * ``0|1`` : a value of 0 to set the function OFF and 1 to set the function ON
@@ -172,7 +172,7 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
 
 
 * ``<`` = Begin DCC++ EX command
-* ``f`` = (lower case f) This command is for a CAB function ie: Lights, horn, bell  
+* ``f`` = (lower case f) This command is for a CAB function i.e.: Lights, horn, bell  
 * ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder
 * ``BYTE1`` :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16
 
@@ -201,7 +201,7 @@ To make BYTE1 add the values of what you want ON together, the ones that you wan
 Breakdown for this example ``<f 3265 144>``
 
 * ``<`` = Begin DCC++ EX command
-* ``f`` = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell
+* ``f`` = (lower case f) This command is for a CAB,s function i.e.: Lights, horn, bell
 * ``3265`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder
 * ``144`` = Turn on headlight
 * ``>`` = End DCC++ EX command  
@@ -420,7 +420,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 * ``SUBADDRESS`` : the subaddress of a DCC accessory decoder controlling a turnout (0-3)
 * ``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
   servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-  116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.
+  116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.
 * ``THROWN`` - "0" is closed.  "1" is thrown.
 * ``THROWNPOSITION`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
 * ``CLOSEDPOSITION`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
@@ -456,7 +456,7 @@ You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in th
 
 If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.  
 Consequently, when the DCC++ EX CommandStation is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
-This is intended so that the servos don't perform a sweep on power-on whem their physical position does not match initial position in the CommandStation.
+This is intended so that the servos don't perform a sweep on power-on when their physical position does not match initial position in the CommandStation.
 
 
 Controlling a Defined Turnout
@@ -527,7 +527,7 @@ To have this sketch monitor one or more Arduino pins for sensor triggers, first 
 
 ``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
 servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for thesecond MCP23017 module.
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.
 
 ``PULLUP`` : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don't use internal pull-up resistor for PIN (ACTIVE=HIGH).
 
@@ -569,8 +569,8 @@ To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outpu
 
 * ``<Z ID PIN IFLAG>`` : Creates a new output ID, with specified PIN and IFLAG values.  
 
-  * if output ID already exists, it is updated with specificed PIN and IFLAG.  
-  * Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specifcied (see below).  
+  * if output ID already exists, it is updated with specified PIN and IFLAG.  
+  * Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specified (see below).  
   * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory).  
 
 * ``<Z ID>`` : Deletes definition of output ID  
@@ -668,7 +668,7 @@ Writes, without any verification, a single bit within a Configuration Variable B
 * Write CV BIT Format is: ``<b CAB CV BIT VALUE>``
 * ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder  
 * ``CV`` : the number of the Configuration Variable memory location in the decoder to write to (1-1024)  
-* ``BIT`` : the bit number of the Configurarion Variable register to write (0-7)  
+* ``BIT`` : the bit number of the Configuration Variable register to write (0-7)  
 * ``VALUE`` : the value of the bit to be written (0-1)  
 
   * RETURNS: NONE
@@ -733,7 +733,7 @@ Writes, and then verifies, a Configuration Variable BIT to the decoder of an eng
 READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programing track.
+If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programming track.
 
 
 Read CV BYTE Format is: ``<R CV CALLBACKNUM CALLBACKSUB>``  
@@ -747,7 +747,7 @@ Read CV BYTE Format is: ``<R CV CALLBACKNUM CALLBACKSUB>``
 
 Read Engine address format is simply: ``<R>``
 
-* ``RETURNS:`` ``<r ADDRESS>`` when successul and ``<r -1>`` if it is not.
+* ``RETURNS:`` ``<r ADDRESS>`` when successful and ``<r -1>`` if it is not.
 
 **IMPORTANT: If the loco is on a consist, the address returned will be the consist address**
 
@@ -802,7 +802,7 @@ Status
 * ``<D ACK 1|0>`` Enables ACK diagnostics
 * ``<D CMD 1|0>`` Enables Command Parser diagnostics
 * ``<D WIFI 1|0>`` Enables Wifi diagnostics
-* ``<D WIT 0|1>`` Enables Withrottle diagnostics
+* ``<D WIT 0|1>`` Enables WiThrottle diagnostics
 * ``<D TEST|NORMAL>`` DCC Signal Diagnostics (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
 * ``<D SPEED28|SPEED128`` Switch between 28 and 128 speed steps
 * ``<D SERVO pin pos profile>`` Set servo on VPIN ``pin`` to position ``pos``, moving according to profile ``profile``.  
@@ -846,7 +846,7 @@ SEND PACKET TO THE TRACK
 | ``<M>`` Command writes a packet the MAIN track
 | ``<P>`` Command writes a packet to the PROG track
 
-Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register driving the selected track
+Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track
 
   **FORMAT:** ``<M|P REGISTER BYTE1 BYTE2 [BYTE3] [BYTE4] [BYTE5]>``
 
@@ -864,7 +864,7 @@ Writes a DCC packet of two, three, four, or five hexidecimal bytes to a register
 WiFi "AT Commands
 ==================
 
-``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space betwen the "+" and the command.
+``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the "+" and the command.
 
 Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file <../../advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
 
@@ -879,7 +879,7 @@ For more detail follow these links:
 
 :doc:`DCC-EX WiFi Configuration <../../advanced-setup/wifi-config>`
 
-`Expressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
+`Espressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
 
 
 User Commands

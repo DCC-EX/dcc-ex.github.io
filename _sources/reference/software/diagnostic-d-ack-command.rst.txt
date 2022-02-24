@@ -11,7 +11,7 @@ Diagnostics ``<D ACK>`` Command
 <D ACK ON>
 ============
 
-If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands folowed by pressing "send":
+If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands followed by pressing "send":
 
 | ``<D ACK ON>`` 
 | ``<R>``
@@ -45,9 +45,9 @@ Your output may show different formatting with respect to linefeeds. Here the de
 
 .. code-block:: none
 
-   OPERATION cv=n bit=b NO-ACK/OK after WAITTIME mS max=INTERNALVAL / CURRENT mA pulse= PULSELENGTH uS
+   OPERATION cv=n bit=b NO-ACK/OK after WAITTIME mS max=INTERNALVAL / CURRENT mA pulse= PULSELENGTH µS
 
-The CURRENT should be over 60mA for a successful ACK and the length should be 6000uS +-1000uS but because of Decoder variations from the standard, DCC-EX has some extra pulse length margin.
+The CURRENT should be over 60mA for a successful ACK and the length should be 6000µS +-1000µS but because of Decoder variations from the standard, DCC-EX has some extra pulse length margin.
 
 In this example, we are checking CV 8, which is the manufacturer ID for your decoder. We then check each of the 8 "bits" in the "byte" that holds the value in that CV.
 
@@ -61,7 +61,7 @@ We do one final test at the end to ``Verify Byte``, you see that as ``VB``. This
 
 Other than when using the "decoder address test", ``<R>`` with no parameters, you need to enter CV read commands with all 3 parameters. The format is ``<R CV x y>`` where R stands for read and CV is the CV number you want to check. The X and Y values can be anything, but must be entered. They are an advanced feature for programmers whose software can work with DCC-EX (like JMRI). So you would enter ``<R 8 55 55>`` or ``R 8 1 1>`` to try and read CV 8. The response is ``<r CV x y>`` where "x" and "y" are whatever numbers you entered after the CV value.
 
-To turn off the ack diagnoistics use any parameter that is not "ON" or "LIMIT".
+To turn off the ack diagnostics use any parameter that is not "ON" or "LIMIT".
 
 .. code-block:: none
 
@@ -103,7 +103,7 @@ Example 1: You use the <D ACK ON> and <R> commands described above to generate a
 
    <D ACK MIN 3300>
 
-Example 2: You use the <D ACK ON> and <R> commands described above to generate a test log from a loco on your programming track. You see that some of the ACK pulses are longer than 8500 µS. The longet one is 10350 µS. Pick a setting a little bit higher than your highest reading like this:
+Example 2: You use the <D ACK ON> and <R> commands described above to generate a test log from a loco on your programming track. You see that some of the ACK pulses are longer than 8500 µS. The longest one is 10350 µS. Pick a setting a little bit higher than your highest reading like this:
 
 .. code-block:: none
 

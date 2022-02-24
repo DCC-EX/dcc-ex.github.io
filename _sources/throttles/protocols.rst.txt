@@ -21,7 +21,7 @@ DCC++ EX allows you to use WiThrottle "servers" built into JMRI and other softwa
 The JMRI WEB Server
 ====================
 
-JMRI has two kinds of servers you can connect to built into the JMRI sofware. We already mentioned the WiThrottle server, but JMRI also has a WEB Server. Devices can connect to JMRI and send commands like it would to a WEB page. This is yet another protocol and is supported by throttles like DigiTrainsPro. When connecting using a throttle that uses the WEB Server, you connect your throttle to that via WiFi, and then connect to DCC++EX with a USB or Serial connection.
+JMRI has two kinds of servers you can connect to built into the JMRI software. We already mentioned the WiThrottle server, but JMRI also has a WEB Server. Devices can connect to JMRI and send commands like it would to a WEB page. This is yet another protocol and is supported by throttles like DigiTrainsPro. When connecting using a throttle that uses the WEB Server, you connect your throttle to that via WiFi, and then connect to DCC++EX with a USB or Serial connection.
 
 A Note about WiFi Dropped Connections
 =======================================

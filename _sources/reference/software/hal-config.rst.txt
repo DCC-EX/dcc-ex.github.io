@@ -3,7 +3,7 @@ I/O Device Drivers and HAL
 **************************
 
 The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may 
-outgrow the built-in capabilities and want to access more output pins than the arduino has available.  Or you may wish to attach servos to the controller
+outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.  
 
 DCC++ EX, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
@@ -29,7 +29,7 @@ It just sends an instruction for the pin to be set on or off.
 If you want to reposition a servo, the same function is called, but with a VPIN number that identifies a pin
 on a servo controller module; consequently, a command is sent to the servo control module to move the servo to the appropriate position.
 
-The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command `<S 2 40 1>` command (id=2, pin=40, pullup=enabled). 
+The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command `<S 2 40 1>` command (id=2, pin=40, pull-up=enabled). 
 When pin 40 is connected to 0V (ground), a message `<Q 2>` is generated, and when it is disconnected, `<q 2>` is generated.  But if you have an MCP23017
 GPIO Extender module connected up, and you replace the pin number 40 with 164 (the number of the first pin on the MCP23017), 
 then you will get the messages when the MCP23017 pin is connected to 0V or disconnected.
@@ -120,7 +120,7 @@ An input pin may be configured using the DCC++ EX Sensor commands, as follows:
 
 	<S 201 164 1>  
 
-This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pullup.
+This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pull-up.
 
 When the sensor activates and deactivates, the following messages are sent by DCC++ EX over the serial output:
 
@@ -255,8 +255,8 @@ Within the new file that has been created, you can add in the definitions of new
 	}
 
 Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be 
-played from a Micro-SD card (up to 32Gb).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3.
-Connect the DFPlayer's RX to the arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Ardino RX3 (15).  You also need to connect +5V power to VCC, 
+played from a Micro-SD card (up to 32GB).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3.
+Connect the DFPlayer's RX to the Arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Arduino RX3 (15).  You also need to connect +5V power to VCC, 
 and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up. 
 
 .. figure:: ../../_static/images/dfplayer.png

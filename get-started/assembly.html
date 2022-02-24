@@ -316,16 +316,16 @@
 <h3>Cutting the Trace<a class="headerlink" href="#cutting-the-trace" title="Permalink to this headline">¶</a></h3>
 <p>Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.</p>
 <div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/motor_shield_vin2.jpg"><img alt="Cut Vin trace on arduino motor shield" src="../_images/motor_shield_vin2.jpg" style="width: 275.2px; height: 362.40000000000003px;" /></a>
+<a class="reference internal image-reference" href="../_images/motor_shield_vin2.jpg"><img alt="Cut Vin trace on Arduino motor shield" src="../_images/motor_shield_vin2.jpg" style="width: 275.2px; height: 362.40000000000003px;" /></a>
 <p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Cutting the Vin trace (click to enlarge)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.</p>
 </div>
 <div class="section" id="bending-out-or-cutting-the-vin-pin">
 <h3>Bending out or Cutting the Vin Pin<a class="headerlink" href="#bending-out-or-cutting-the-vin-pin" title="Permalink to this headline">¶</a></h3>
-<p>In this method, you can just bend the Vin pin so that instead of connecting to the header in the Aduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.</p>
+<p>In this method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.</p>
 <div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="../_images/bend_pin1.jpg"><img alt="Bend out the Vin pin on the arduino motor shield" src="../_images/bend_pin1.jpg" style="width: 340.0px; height: 220.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/bend_pin1.jpg"><img alt="Bend out the Vin pin on the Arduino motor shield" src="../_images/bend_pin1.jpg" style="width: 340.0px; height: 220.0px;" /></a>
 <p class="caption"><span class="caption-number">Figure 3 </span><span class="caption-text">Bending out the Pin (click to enlarge)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -430,12 +430,12 @@
 <p>Connect the 2.5mm barrel connector from your separate 7-9V DC power supply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the “Vin” and “Gnd” pins on the Arduino.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run exWebThrottle or JMRI. There is also a way to use a 5V power supply. Please read <a class="reference internal" href="../reference/hardware/power-supplies.html"><span class="doc">Power Supplies</span></a> to help you find what will work best for you).</p>
+<p>There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run WebThrottle-EX or JMRI. There is also a way to use a 5V power supply. Please read <a class="reference internal" href="../reference/hardware/power-supplies.html"><span class="doc">Power Supplies</span></a> to help you find what will work best for you).</p>
 </div>
 </div>
 <div class="section" id="install-the-optional-wifi-board">
 <h2>6. Install the optional WiFi board<a class="headerlink" href="#install-the-optional-wifi-board" title="Permalink to this headline">¶</a></h2>
-<p>You can connect a controller like JMRI or our exWebThrottle by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.</p>
+<p>You can connect a controller like JMRI or our WebThrottle-EX by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.</p>
 <p><a class="reference internal" href="wifi-setup.html"><span class="doc">WiFi Setup</span></a></p>
 </div>
 <div class="section" id="load-firmware-on-your-command-station">
@@ -445,13 +445,13 @@
 </div>
 <div class="section" id="locos-can-t-respond-to-throttle-commands-on-the-programming-track">
 <h2>Locos Can’t Respond to Throttle Commands on the Programming Track!<a class="headerlink" href="#locos-can-t-respond-to-throttle-commands-on-the-programming-track" title="Permalink to this headline">¶</a></h2>
-<p>We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. <strong>THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK</strong> This is by design and part of the NMRA specification. There is such a thing as “Programming on Main”, where you can adjust things like sounds, throttle curves, speed matching, etc, but you can’t get acknowledgment back from the loco on the main track. That is usally fine beause you will know if a setting like a sound change “took” or not. We will have a section on programming on main. <strong>*TODO: Write the POM*</strong> help.</p>
+<p>We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. <strong>THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK</strong> This is by design and part of the NMRA specification. There is such a thing as “Programming on Main”, where you can adjust things like sounds, throttle curves, speed matching, etc, but you can’t get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change “took” or not. We will have a section on programming on main. <strong>*TODO: Write the POM*</strong> help.</p>
 </div>
 <div class="section" id="technical-notes">
 <h2>TECHNICAL NOTES<a class="headerlink" href="#technical-notes" title="Permalink to this headline">¶</a></h2>
 <p><strong>Wire Gauge</strong> - The Arduino motor controller can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
 <p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20V? Can’t you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14V (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.</p>
-<p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it direcly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield. For more information, see <a class="reference internal" href="../reference/hardware/power-supplies.html"><span class="doc">Power Supplies</span></a></p>
+<p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it directly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield. For more information, see <a class="reference internal" href="../reference/hardware/power-supplies.html"><span class="doc">Power Supplies</span></a></p>
 </div>
 </div>
 

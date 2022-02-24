@@ -371,7 +371,7 @@
 <li><p>Make sure all power supplies are disconnected from your Arduino, The Motor Shield, and the IRF3205 motor board.</p></li>
 <li><p>Disconnect the wires coming out of output A of the Arduino Motor Shield that normally connects to your MAIN track.</p></li>
 <li><p>Move the two wires we just disconnected from the motor shield and connect one to each of the “Motor1” screw terminals of the IRF3205 board. TODO: Add image.</p></li>
-<li><p>NOTE: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use the <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> command to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the “Driveaway” feature. For more detail, see <a class="reference internal" href="#keeping-your-tracks-in-phase"><span class="std std-ref">Keeping Your tracks in Phase</span></a> below.</p></li>
+<li><p>NOTE: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use the <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> command to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the “DriveAway” feature. For more detail, see <a class="reference internal" href="#keeping-your-tracks-in-phase"><span class="std std-ref">Keeping Your tracks in Phase</span></a> below.</p></li>
 <li><p>Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. “CS” in the table means “Current Sense”:</p></li>
 </ol>
 <table class="docutils align-default">
@@ -464,14 +464,14 @@
 <h3>Steps (Replace IRF3205)<a class="headerlink" href="#steps-replace-irf3205" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Make sure all power supplies are disconnected from your Arduino and the IRF3205 motor board.</p></li>
-<li><p>Option - TODO: fnd curent sense / fuses! See the notes below for more detail about current sense and a suggestion for using an external current sense board.</p></li>
+<li><p>Option - TODO: fnd current sense / fuses! See the notes below for more detail about current sense and a suggestion for using an external current sense board.</p></li>
 <li><p>Select your IRF3205 board in the config.h file. <strong>*TODO: fnd need to add this type*</strong></p></li>
 <li><p>Upload the new sketch to your Arduino Mega</p></li>
 </ol>
 <p>Connect wires of the proper gauge (TODO: see gauge) from the “MOTOR1” screw terminals of the IRF3205 board to your MAIN track and connect 2 more wires from the “MOTOR2” terminals to your PROG track.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use &lt;1 JOIN&gt; to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the “Driveaway” feature. TODO: fnd finish this. How do know phase?</p>
+<p>It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use &lt;1 JOIN&gt; to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the “DriveAway” feature. TODO: fnd finish this. How do know phase?</p>
 </div>
 <p>Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. “CS” in the table means “Current Sense”:</p>
 <table class="docutils align-default">
@@ -545,7 +545,7 @@
 </pre></div>
 </div>
 <p>This will us pin 3 for Enable and 12 for signal, which will use the “High Accuracy” waveform. You could use other pins that line up together if you like and use “Standard” accuracy (TODO: Link to note explaining high accuracy).
-Upload the sketch to your arduino. If you need help on how to upload a sketch, see <a class="reference internal" href="../../get-started/index.html"><span class="doc">Getting Started</span></a></p>
+Upload the sketch to your Arduino. If you need help on how to upload a sketch, see <a class="reference internal" href="../../get-started/index.html"><span class="doc">Getting Started</span></a></p>
 <p><strong>*TODO: organize the above and add pictures*</strong></p>
 <p><strong>*TODO: Finish this section*</strong></p>
 </div>
@@ -554,12 +554,12 @@ Upload the sketch to your arduino. If you need help on how to upload a sketch, s
 <h2>Important Notes on Current Sensing<a class="headerlink" href="#important-notes-on-current-sensing" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>You MUST have current sensing if you want to read or write settings to locos on a programming track (PROG). You also must have current sensing in order to have the Command Station software detect an overload and cut power to the MAIN track. Alternately, you can use fuses for MAIN. If the fuses blow, the Command Station will still think there is power to the track, and you will recieve no notification in the log. Also, make sure you don’t apply more than 5V to the Arduino Analog pin. Ensure that your calculation for what voltage the current sense board will report at the maximum current will not be more than 5V for a 5V Arduino or 3.3V for a Command Station using a 3.3V board (like a Teensy or Feather).</p>
+<p>You MUST have current sensing if you want to read or write settings to locos on a programming track (PROG). You also must have current sensing in order to have the Command Station software detect an overload and cut power to the MAIN track. Alternately, you can use fuses for MAIN. If the fuses blow, the Command Station will still think there is power to the track, and you will receive no notification in the log. Also, make sure you don’t apply more than 5V to the Arduino Analog pin. Ensure that your calculation for what voltage the current sense board will report at the maximum current will not be more than 5V for a 5V Arduino or 3.3V for a Command Station using a 3.3V board (like a Teensy or Feather).</p>
 </div>
 <p>Please do the following to verify you won’t damage the Arduino, your layout, or yourself:</p>
 <ul class="simple">
 <li><p>Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the output going to pin A3 of the CS does not produce more than 5V.</p></li>
-<li><p>Consider using a 5V zener diode and current limiting resistor to clamp the voltage on the analog pin. This would normally be a 270 Ohm resistor.</p></li>
+<li><p>Consider using a 5V Zener diode and current limiting resistor to clamp the voltage on the analog pin. This would normally be a 270 Ohm resistor.</p></li>
 <li><p>Put a 5A fuse on each output leg going to your track.</p></li>
 </ul>
 <div class="section" id="using-other-external-current-sense-boards">
@@ -580,7 +580,7 @@ Upload the sketch to your arduino. If you need help on how to upload a sketch, s
 <p><code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MOTOR_SHIELD_TYPE</span> <span class="pre">[Motor</span> <span class="pre">Board</span> <span class="pre">Type]</span></code></p>
 <p>The default is “STANDARD_MOTOR_SHIELD” For Arduino and clone shields.</p>
 <p>If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the <a class="reference internal" href="../motor-board-config.html"><span class="doc">Motor Board Config Section</span></a></p>
-<p>For the Engineers, the defintions and implementation for motor board control are in the following files:</p>
+<p>For the Engineers, the definitions and implementation for motor board control are in the following files:</p>
 <blockquote>
 <div><p><strong>MotorDrivers.h</strong>  - Contains the definitions for all the currently supported motor boards
 <strong>MotorDriver.h</strong> - Creates the “MotorDriver” C++ class that defines the data type for a motor controller

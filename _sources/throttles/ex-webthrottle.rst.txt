@@ -2,7 +2,7 @@
 DCC++ EX Web Throttle
 **********************
 
-This is a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Commmand Station directly through the USB port of a computer.
+This is a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Command Station directly through the USB port of a computer.
 
 For a video on how to install and use WebThrottle-EX click below.
 
@@ -40,7 +40,7 @@ You have an option for how you would like to run WebThrottle-Ex, from the cloud 
 Try it now (Run from the cloud)
 =================================
 
-Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run exWebThrottle in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run WebThrottle-EX in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
 .. rst-class:: dcclink
 
@@ -63,7 +63,7 @@ This will install all the files to run locally on your machine. You won't need a
 Operation
 ==========
 
-To use the program, you can either click on the "Serial" dropodown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
+To use the program, you can either click on the "Serial" dropdown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
 
 Next, click on the "Connect DCC++ EX" button. 
 
@@ -85,7 +85,7 @@ You should then be connected to the Command Station (CS) and should see the resp
 
 
 
-Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any DCC++ API command in this way. You should see <iDCC++...> returned in the log window with your version, type of arduino, type of motor shield, and some other information.
+Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any DCC++ API command in this way. You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
 
 
 .. raw:: html
@@ -144,7 +144,7 @@ License
 
 Copyright 2020 DCC-EX
 
-Licensed under the GNU open source licese.
+Licensed under the GNU open source license.
 
 Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR

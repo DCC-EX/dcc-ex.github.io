@@ -162,7 +162,7 @@ Diagnostic traces
 
  ``<D CABS>`` Shows cab numbers and speed in reminder table
 
- ``<D RAM>`` Shows remaining RAM
+ ``<D RAM>`` Shows remaining RAM (Free Memory)
 
  ``<D ACK ON|OFF>`` Enables ACK diagnostics
 

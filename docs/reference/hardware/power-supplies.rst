@@ -16,6 +16,7 @@ The power supply is one of the most important parts of your setup. You need to s
 * :ref:`reference/hardware/power-supplies:Dual voltage power supplies`
 * :ref:`reference/hardware/power-supplies:Using one power supply with cheap converters to power everything`
 * :ref:`reference/hardware/power-supplies:Using Buck Converters`
+* :ref:`reference/hardware/power-supplies:Using Diodes to Reduce Voltage`
 
 
 Do I need two power supplies?
@@ -48,6 +49,10 @@ N and Z scale layouts should run at at about 12V-14V to avoid damage to the moto
 
 Most larger scales will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
 
+Be aware that the motor controller you use will affect the actual voltage at the track. If you use the Arduino Motor Shield or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligable voltage drop so 12V in will give you 12V at the track.
+
+If you have a power supply you wish to use, but it has an output voltage that is a few volts higher than you need, use either the diode or buck converter method listed below to reduce the voltage.
+
 Amperage
 ^^^^^^^^^
 
@@ -69,7 +74,7 @@ Wall Warts
 Bricks (Laptop Style)
 =======================
 
-* You can also find plenty of laptop type "brick" power supplies. They come in ranges from 12V to 18V and 3-5 Amps.
+* You can also find plenty of laptop type "brick" power supplies. They come in ranges from 12V to 19.5V and 3-5 Amps.
 
 .. image:: ../../_static/images/12v-3A-brick.jpg
    :scale: 100%
@@ -82,6 +87,8 @@ Bricks (Laptop Style)
    :alt: Samsung brick
 
 https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/
+
+Since many people have old laptop power supplies that can be 18-19.5V DC, you can use the diode or buck converter method listed below to reduce the voltage.
 
 Adjustable Power Supplies
 ==========================
@@ -129,7 +136,7 @@ With a dual voltage power supply, you can provide 12V for the motor controller a
 .. warning:: For the Meanwell RD125A, you will need to do your own mains wiring. If you don't have experience with this get a friend who does or hire an electrician to do it for you. **MAINS POWER IS DANGEROUS!**
 
 Using one power supply with cheap converters to power everything 
-====================================================================
+=====================================================================
 
 **Tinkerers and Engineers**
 
@@ -195,3 +202,17 @@ Cheap Buck Converter with Display $5
 This is a push button programmable 20W adjustable DC-DC buck converter module with digital display. It is based on LM2596 3A step-down voltage regulator and supports an input of 0~40V DC to an output of 1.25 to 37V with an accuracy of ± 0.05V.
 
 Here is one example sold by DFRobot, click to follow the link: `20W 3A programmable buck converter <https://www.dfrobot.com/product-1552.html>`_.
+
+Using Diodes to Reduce Voltage
+===============================
+
+If you are like us and save your old power adapters when you recycle old equipment, you may have old wall warts or power supplies laying around that are perfectly fine, but have too high a voltage. You can use diodes to easily step the voltage down to a usable level if you only need to drop a few volts. Silicon diodes drop .6 - .7 volts across them in a ciruit at our currents. We can take advantage of this property to create a very inexpensive voltage step down circuit. Be careful to use the correct type of diode with the correct current rating. LEDs and signal diodes like a Schottky won't work for this. Diodes in the 1N5400 series will work perfectly for up to 3A. Simply connect however many diodes you need in series to drop the voltage. For example, a 6A1 diode will drop 0.7V. Putting 5 in series beteen the positive wire of the power supply and the input to the motor driver will therefor reduce an 18V power supply to 14.5V (18 - 3.5). If you use an Arduino Motor Shield or other L298 based motor driver with an additional 2V voltage drop, that will give you 12.7 at the track. Work out the math to provide the voltage your track needs.
+
+Needed:
+
+5 6A1 Diodes (1N5401 can work also)
+1 circuit board (needed to help with cooling)
+
+
+Note that the voltage drop is not linear with diodes. We are assuming that you are operating with less than 3A of current. The voltage drop in each diode goes up with current. So if you tried to use higher current diodes to go over 3A and/or tried to use a lot more diodes to drop more voltage, your voltage could vary too much with the current used, in addition to generating a lot of heat. Do not use more than 4 or 5 diodes, rather use buck converters as shown above, they are much more efficient. For example, a lot of laptops use a 19 volt power supply. If you try to drop that to 14.6, that would take 7 diodes. The voltage could vary between 12.7 and 14.8 Volts depending on what was using current on the track. With more locos on the track, you could see all of them slow a bit. In addition, each diode would be wasting over 2 watts of power, times 7 that is 14 Watts of heat!
+

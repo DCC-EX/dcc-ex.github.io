@@ -16,6 +16,19 @@
     margin: 5% 15%;
 }
 
+.command-table thead th {
+  text-align: center;
+}
+
+.command-table tbody td {
+  white-space: normal;
+}
+
+.command-table .category {
+  display: block;
+  text-align: center;
+}
+
 .dcclink a {
   background-color: lightseagreen;
   box-shadow: 0 2px 0 darkslategray;

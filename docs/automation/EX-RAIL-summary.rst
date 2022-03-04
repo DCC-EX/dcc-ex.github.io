@@ -7,7 +7,7 @@ Notes
 ========
 
 
-- *AUTOMATION(n)*, *ROUTE(n)* and *SEQUENCE(n)* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
+- *AUTOMATION*, *ROUTE* and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.
 

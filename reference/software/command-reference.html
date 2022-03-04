@@ -297,18 +297,21 @@
 </ul>
 <p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX Firmware</a>.</p>
 <p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/DCC-EX">GitHub</a>. If you are new to we suggest you start with the <a class="reference external" href="https://dcc-ex.com">DCC++ EX Webpage</a>.</p>
-<p>Track Power Commands
-Cab Operation Commands
-Accessory Decoder and Turnout Commands
-Sensor Commands
-Output Commands
-Saving to EEPROM Commands
-Programming Commands
-Diagnostic Commands
-WiFi Commands
-User Commands</p>
-<div class="section" id="track-power-commands-voltage-and-current">
-<h2>Track Power Commands (Voltage and Current)<a class="headerlink" href="#track-power-commands-voltage-and-current" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#track-power-commands"><span class="std std-ref">Track Power Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#engine-decoder-cab-operation-commands"><span class="std std-ref">Engine Decoder (CAB) Operation Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#stationary-accessory-decoder-turnout-commands"><span class="std std-ref">Stationary Accessory Decoder &amp; Turnout Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#sensors-input-commands"><span class="std std-ref">Sensors (Input) Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#outputs-dio-pin-commands"><span class="std std-ref">Outputs (DIO Pin) Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom"><span class="std std-ref">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</span></a></p></li>
+<li><p><a class="reference internal" href="#engine-decoder-programming-commands"><span class="std std-ref">Engine Decoder Programming Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#diagnostic-commands"><span class="std std-ref">Diagnostic Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#wifi-at-commands"><span class="std std-ref">WiFi “AT” Commands</span></a></p></li>
+<li><p><a class="reference internal" href="#user-commands"><span class="std std-ref">User Commands</span></a></p></li>
+</ul>
+<div class="section" id="track-power-commands">
+<h2>Track Power Commands<a class="headerlink" href="#track-power-commands" title="Permalink to this headline">¶</a></h2>
+<p>The following commands provide control over power to the MAIN and PROG tracks (voltage), as well as monitoring the current used.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
 <blockquote>
 <div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;pX [MAIN|PROG|JOIN]&gt; where &quot;X&quot; is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
@@ -373,7 +376,7 @@ User Commands</p>
 </div>
 <p><strong>Show number of supported cabs</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> - Will return either <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">20&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">30&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">50&gt;</span></code>. Depending on Arduino used: Uno, Nano, or other (usually Mega) respectively. This is a memory constrained function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> - Will return either <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">20&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">30&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">50&gt;</span></code>. Depending on Arduino used: Uno, Nano, or other (usually Mega) respectively. This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. This can be adjusted knowing that each new slot will take approximately 8k of memory. The <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> command will display the amount of free memory and the “Forget Locos” command (<code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[CAB])</span></code> will aid in making more room in memory by removing slots for locos no longer in operation.</p></li>
 </ul>
 <p><strong>Forget Locos</strong></p>
 <ul class="simple">
@@ -558,8 +561,8 @@ settings in the same group and will not, for example, unset F2 because you chang
 </ul>
 </div>
 </div>
-<div class="section" id="stationary-accessory-decoders-turnouts">
-<h3>STATIONARY ACCESSORY DECODERS &amp; TURNOUTS<a class="headerlink" href="#stationary-accessory-decoders-turnouts" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="stationary-accessory-decoder-turnout-commands">
+<h3>Stationary Accessory Decoder &amp; Turnout Commands<a class="headerlink" href="#stationary-accessory-decoder-turnout-commands" title="Permalink to this headline">¶</a></h3>
 <p>DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).</p>
 <p>All decoders that are not in an engine are accessory decoders including turnouts.</p>
 <p>Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:</p>
@@ -760,8 +763,8 @@ DCC++ EX should return <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 </div>
-<div class="section" id="sensors-inputs">
-<h2>SENSORS (Inputs)<a class="headerlink" href="#sensors-inputs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sensors-input-commands">
+<h2>Sensors (Input) Commands<a class="headerlink" href="#sensors-input-commands" title="Permalink to this headline">¶</a></h2>
 <p>DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O extenders
 and other devices.
 Physical sensors can be of any type (infrared, magnetic, mechanical…).  They may be configured to pull-up or not.
@@ -817,8 +820,8 @@ found to have transitioned from one state to another, one of the following seria
 <div><p>&lt;Q 1&gt;&lt;Q 2&gt;&lt;q 3&gt;&lt;q 4&gt;</p>
 </div></blockquote>
 </div>
-<div class="section" id="outputs-dio-pins">
-<h2>OUTPUTS (DIO Pins)<a class="headerlink" href="#outputs-dio-pins" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="outputs-dio-pin-commands">
+<h2>Outputs (DIO Pin) Commands<a class="headerlink" href="#outputs-dio-pin-commands" title="Permalink to this headline">¶</a></h2>
 <p>DCC++ EX CommandStation supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated.
 The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</p>
 <p>Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
@@ -1035,8 +1038,8 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </div>
 </div>
 </div>
-<div class="section" id="diagnostics">
-<h2>DIAGNOSTICS<a class="headerlink" href="#diagnostics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="diagnostic-commands">
+<h2>Diagnostic Commands<a class="headerlink" href="#diagnostic-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="status">
 <h3>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: DCC++ EX CommandStation Status</p>
@@ -1124,7 +1127,7 @@ returns: NONE
 </div>
 </div>
 <div class="section" id="wifi-at-commands">
-<h2>WiFi AT Commands<a class="headerlink" href="#wifi-at-commands" title="Permalink to this headline">¶</a></h2>
+<h2>WiFi “AT” Commands<a class="headerlink" href="#wifi-at-commands" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the “+” and the command.</p>
 <p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag (WiFi Connected Mode) to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created and so you can send your own AT commands.</p>

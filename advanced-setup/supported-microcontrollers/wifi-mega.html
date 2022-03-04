@@ -297,7 +297,7 @@
 <h2>A Operational Standalone WiFi DCC Command Station<a class="headerlink" href="#a-operational-standalone-wifi-dcc-command-station" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/mega_wifi.png"><img alt="Mega WiFi" src="../../_images/mega_wifi.png" style="width: 384.40000000000003px; height: 308.40000000000003px;" /></a>
-<p class="caption"><span class="caption-number">Figure 52 </span><span class="caption-text">Mega+WiFi Board</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 53 </span><span class="caption-text">Mega+WiFi Board</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some suppliers are at the bottom of this page:</p>
 <ul class="simple">
@@ -338,7 +338,7 @@
 <p>Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for “CH340” or “CH341”.</p>
 <div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/ch340_driver.png"><img alt="CH340 Recognized" src="../../_images/ch340_driver.png" style="width: 261.0px; height: 95.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 53 </span><span class="caption-text">CH340 Recognized</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 54 </span><span class="caption-text">CH340 Recognized</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>If you don’t see the CH340 with the Mega plugged into USB, download and install the drivers from here:</p>
 <p><a class="reference external" href="http://www.wch-ic.com/downloads/CH341SER_ZIP.html">http://www.wch-ic.com/downloads/CH341SER_ZIP.html</a></p>
@@ -382,17 +382,17 @@
 <p>With the Mega UNPLUGGED (no power connected!), you will set some switches. Use the following diagram to see the locations on the board. You can click on any picture to enlarge it.</p>
 <div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/mega_wifi1.png"><img alt="Mega WiFi Switch Locations" src="../../_images/mega_wifi1.png" style="width: 500.0px; height: 336.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 54 </span><span class="caption-text">Important Board Locations</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 55 </span><span class="caption-text">Important Board Locations</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>Note that switch 8 is not connected to anything, you don’t need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, <strong>ON is up in this picture. Switches 5,6, and 7 are on</strong>.</p>
 <div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/mega_wifi_sw_flash.png"><img alt="Switches in flash mode" src="../../_images/mega_wifi_sw_flash.png" style="width: 169.5px; height: 205.2px;" /></a>
-<p class="caption"><span class="caption-number">Figure 55 </span><span class="caption-text">Switch Settings for Flashing</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 56 </span><span class="caption-text">Switch Settings for Flashing</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <p>Use this image to set the serial port switch to <strong>RXD3/TXD3</strong>.</p>
 <div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/mega_wifi_sw_serial_cw.png"><img alt="Switch setting for Serial Port" src="../../_images/mega_wifi_sw_serial_cw.png" style="width: 116.0px; height: 119.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 56 </span><span class="caption-text">Switch Setting for Serial Port</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 57 </span><span class="caption-text">Switch Setting for Serial Port</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>Your board should be configured follows:</p>
 <blockquote>
@@ -418,20 +418,20 @@
 <a class="reference internal image-reference" href="../../_images/download_tool_dev_mode.jpg"><img alt="Flasher Tool Buttons" class="align-left" src="../../_images/download_tool_dev_mode.jpg" style="width: 228.8px; height: 218.4px;" /></a>
 <div class="figure align-left" id="id7">
 <a class="reference internal image-reference" href="../../_images/download_tool_esp8266.jpg"><img alt="Flasher Tool Buttons 2" src="../../_images/download_tool_esp8266.jpg" style="width: 228.8px; height: 434.40000000000003px;" /></a>
-<p class="caption"><span class="caption-number">Figure 57 </span><span class="caption-text">Flash Tool Button Selections</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 58 </span><span class="caption-text">Flash Tool Button Selections</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="clearer section" id="setup-the-files-and-memory-locations-in-the-flasher-tool">
 <h5>Setup the files and memory locations in the Flasher Tool<a class="headerlink" href="#setup-the-files-and-memory-locations-in-the-flasher-tool" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>Click on the each file button (the “…” buttons) and find the bin files you extracted.</p></li>
-<li><p>Follow <a class="reference internal" href="#flasher-settings-screen"><span class="std std-numref">Figure 58</span></a> and pay close attention setting up the Exact <cite>*.bin</cite> Files &amp; locations 0xYYYYYYYY</p></li>
+<li><p>Follow <a class="reference internal" href="#flasher-settings-screen"><span class="std std-numref">Figure 59</span></a> and pay close attention setting up the Exact <cite>*.bin</cite> Files &amp; locations 0xYYYYYYYY</p></li>
 <li><p>Make sure to check all the file checkboxes to the left of the filled in file names</p></li>
 <li><p>Set the EXACT settings using the radio buttons &amp; baud rate settings: (26M, 40MHz, DIO, 16Mbit-C1, Your COM port selected, and 460800 baud).</p></li>
 </ul>
 <div class="figure align-center" id="flasher-settings-screen">
 <a class="reference internal image-reference" href="../../_images/flasher_1.png"><img alt="Flasher Settings Screen" src="../../_images/flasher_1.png" style="width: 352.0px; height: 542.4px;" /></a>
-<p class="caption"><span class="caption-number">Figure 58 </span><span class="caption-text">Flasher Settings Screen</span><a class="headerlink" href="#flasher-settings-screen" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 59 </span><span class="caption-text">Flasher Settings Screen</span><a class="headerlink" href="#flasher-settings-screen" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -475,7 +475,7 @@
 - re-connect the USB cable</p>
 <div class="figure align-center" id="id8">
 <a class="reference internal image-reference" href="../../_images/mega_wifi_sw_run.png"><img alt="Switches in flash mode" src="../../_images/mega_wifi_sw_run.png" style="width: 169.5px; height: 205.2px;" /></a>
-<p class="caption"><span class="caption-number">Figure 59 </span><span class="caption-text">Switch Settings for sketch load/run</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 60 </span><span class="caption-text">Switch Settings for sketch load/run</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="decide-if-you-want-ap-mode-or-station-mode">

@@ -21,19 +21,21 @@ This reference explains the available command structure, and for commands that p
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC++ EX Webpage <https://dcc-ex.com>`_.  
 
 
-Track Power Commands
-Cab Operation Commands
-Accessory Decoder and Turnout Commands
-Sensor Commands
-Output Commands
-Saving to EEPROM Commands
-Programming Commands
-Diagnostic Commands
-WiFi Commands
-User Commands
+* :ref:`reference/software/command-reference:Track Power Commands`
+* :ref:`reference/software/command-reference:Engine Decoder (CAB) Operation Commands`
+* :ref:`reference/software/command-reference:Stationary Accessory Decoder & Turnout Commands`
+* :ref:`reference/software/command-reference:Sensors (Input) Commands`
+* :ref:`reference/software/command-reference:Outputs (DIO Pin) Commands`
+* :ref:`reference/software/command-reference:Storing and Erasing Turnouts, Sensors and Outputs in EEPROM`
+* :ref:`reference/software/command-reference:Engine Decoder Programming Commands`
+* :ref:`reference/software/command-reference:Diagnostic Commands`
+* :ref:`reference/software/command-reference:WiFi "AT" Commands`
+* :ref:`reference/software/command-reference:User Commands`
 
-Track Power Commands (Voltage and Current)
-===========================================
+Track Power Commands
+=============================
+
+The following commands provide control over power to the MAIN and PROG tracks (voltage), as well as monitoring the current used.
 
 ``<0|1 MAIN|PROG|JOIN>`` - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
 
@@ -108,7 +110,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 
 **Show number of supported cabs**
 
-* ``<#>`` - Will return either ``<# 20>``, ``<# 30>``, or ``<# 50>``. Depending on Arduino used: Uno, Nano, or other (usually Mega) respectively. This is a memory constrained function.
+* ``<#>`` - Will return either ``<# 20>``, ``<# 30>``, or ``<# 50>``. Depending on Arduino used: Uno, Nano, or other (usually Mega) respectively. This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. This can be adjusted knowing that each new slot will take approximately 8k of memory. The ``<D RAM>`` command will display the amount of free memory and the "Forget Locos" command (``<- [CAB])`` will aid in making more room in memory by removing slots for locos no longer in operation.
 
 **Forget Locos**
 
@@ -294,8 +296,8 @@ RETURNS: NONE
 * CAB Functions do not get stored in the DCC++ EX CommandStation
 * Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on. 
 
-STATIONARY ACCESSORY DECODERS & TURNOUTS
-------------------------------------------
+Stationary Accessory Decoder & Turnout Commands
+-------------------------------------------------
 
 DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
 
@@ -489,8 +491,8 @@ Controlling a Defined Turnout
        NOTE: The ``<T>`` command by itself with no parameters will list all turnout definitions and their directions
 
 
-SENSORS (Inputs)
-=================
+Sensors (Input) Commands
+=========================
 
 DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O extenders
 and other devices. 
@@ -554,8 +556,8 @@ Example: This shows sensors 1 and 2 are tripped or active while 3 and 4 are not.
          <Q 1><Q 2><q 3><q 4>
   
 
-OUTPUTS (DIO Pins)
-=====================
+Outputs (DIO Pin) Commands
+===========================
 
 DCC++ EX CommandStation supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. 
 The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.  
@@ -779,8 +781,8 @@ This command is designed to offer faster verification of the value held in a CV 
 * ``BIT:`` Reports the bit in the CV byte that was verified
 * ``BITVALUE:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 
 
-DIAGNOSTICS
-============
+Diagnostic Commands
+=====================
 
 Status
 ---------
@@ -861,7 +863,7 @@ Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register
 
    returns: NONE
 
-WiFi AT Commands
+WiFi "AT" Commands
 ==================
 
 ``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the "+" and the command.

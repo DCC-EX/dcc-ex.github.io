@@ -72,9 +72,9 @@ You will need to unsolder the current sense (CS) pins on the L298N chip that are
 
 2. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the CS leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
 
-3. Solder the CS leg of the chip you unsoldered to the top of the resistor. You should be able to carefully bend the leg to meet the top resistor lead as the resistor stands vertically. You are basically inserting a resistor into the space where you cut the leg of the chip. Solder the wire fairly close to the end of the resistor. Repeat on the other side. Do not trim the top resistor lead yet.
+3. Solder the leg of the chip you unsoldered to the top of the resistor. You should be able to carefully bend the leg to meet the top resistor lead as the resistor stands vertically. You are basically inserting a resistor into the space where you cut the leg of the chip. Solder the wire fairly close to the end of the resistor. You may need a small piece of hookup wire to reach between the connections. Repeat on the other side. Do not trim the top resistor lead yet.
 
-4. Measure a jumper wire long enough to connect to the top of resistor A and reach over push into pin A0 on the Arduino. Solder one end of the jumper to the top of resistor A above where you soldered the chip's CS leg. Trim off any remaining resistor lead to remove any sharp points. Repeat for the resistor on side B making sure the male dupont end of the jumper can reach pin A1 on the Arduino.
+4. Measure a jumper wire long enough to connect from the top of resistor A and reach over push into pin A0 on the Arduino. Solder one end of the jumper to the top of resistor A above where you soldered the chip's CS leg. Trim off any remaining resistor lead. Repeat for the resistor on side B making sure the male dupont end of the jumper can reach pin A1 on the Arduino.
 
 5. If you haven't already, plug the male end of the A jumper into pin A0 on the Arduino and the male end of the B jumper to pin A1 on the Arduino.
 

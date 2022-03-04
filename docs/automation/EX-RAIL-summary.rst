@@ -247,7 +247,7 @@ Automations, Routes and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> JOIN</td>
-        <td>Joins PROG and MAIN track outputs to send the same MAIN DCC signal on bothe tracks</td>
+        <td>Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks</td>
       </tr>
       <tr>
         <td class="fitwidth"> UNJOIN</td>

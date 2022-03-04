@@ -163,7 +163,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 ``#define MOTOR_SHIELD_TYPE IBT_2_WITH_ARDUINO``
 
-Upload the sketch to your arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
+Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
 
 Please see :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)`.
 
@@ -257,7 +257,7 @@ The spec sheet of the BTS7960B states that the "expected" (aka nominal) value fo
 Modifying Your Motor Board Definition To Give The Correct Current Sense Factor
 ---------------------------------------------------------------------------------
 
-If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exacly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formulat to calculate it. Everything you need to create your own motor board defintion is here:
+If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exactly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formula to calculate it. Everything you need to create your own motor board definition is here:
 
 :ref:`Creating a Custom Motor Board Definition <advanced-setup/motor-board-config:Your board is NOT in the Supported List>`
 
@@ -310,7 +310,7 @@ The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
 If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section <../motor-board-config>`
 
-For the Engineers, the defintions and implementation for motor board control are in the following files:
+For the Engineers, the definitions and implementation for motor board control are in the following files:
 
   **MotorDrivers.h**  - Contains the definitions for all the currently supported motor boards
   **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller
@@ -335,7 +335,7 @@ Below is the Handson Technology datasheet, recommended reading for Tinkerers and
    TODO: this has to go somewhere:
    There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)` section.
 
-   Also, mention "high accuracy mode" and include the circtuit for that.
+   Also, mention "high accuracy mode" and include the circuit for that.
 
 
 Updated June 30, 2021

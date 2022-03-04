@@ -6,7 +6,7 @@ Suppose you have a particular device you want to use with DCC++EX,
 but there isn't a driver for it.  Well, you could ask for one, and 
 we may well write one for you.  Or you could write it yourself.
 
-The HAL framwork is designed to be extendable by the creation
+The HAL framework is designed to be extendable by the creation
 of device drivers, without needing to modify the base DCC++EX 
 software or the HAL itself.  
 

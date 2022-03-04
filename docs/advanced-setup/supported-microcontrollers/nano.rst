@@ -33,8 +33,8 @@ What You need
 * 5V 1A Power Supply with Mini-USB for Arduino and Micro-USB for clones
 * 12-14.5V 3-5A Power Supply for the motor shield
 * Barrel Connector to Screw Terminal Adapter if using the Nano Motor Shield
-* Wire of the approrate gauge for hookup
-* Computer to load the software (Windows, Mac, Linux, Rasperry Pi)
+* Wire of the appropriate gauge for hookup
+* Computer to load the software (Windows, Mac, Linux, Raspberry Pi)
 
 Software
 ========
@@ -67,11 +67,11 @@ Using the special Nano Motor Shield
 
 The above image shows a Gravitech Nano Motor Shield on the left and a clone from China on the right. The image on the left shows a Nano (separately purchased) plugged into the board. Search "Nano Motor Shield" or "Nano-L298p". And remember to order a Nano from the same source or from someone else.
 
-The Gravitech is available from RobotShop and direct from Gravitech for $29 US plus shipping. The Chinese clone costs beteen $9 and $18 (shipping included) from sources like AliExpress, eBay, Amazon, etc.
+The Gravitech is available from RobotShop and direct from Gravitech for $29 US plus shipping. The Chinese clone costs between $9 and $18 (shipping included) from sources like AliExpress, eBay, Amazon, etc.
 
 .. NOTE:: There is a slight difference in the brand name Gravitech board and the board from the Chinese suppliers. There is a reset button on the Chinese board for one. We will post more information when we can test them side-by-side.
 
-To use this board, you simple plug the nano into the motor shield (really a carrier board), upload the software and wire it to your track. It is just as easy as Using a Mega and an Arduino Motor shield.
+To use this board, you simple plug the Nano into the motor shield (really a carrier board), upload the software and wire it to your track. It is just as easy as Using a Mega and an Arduino Motor shield.
 
 
 ***TODO: Finish the above and the below sections***

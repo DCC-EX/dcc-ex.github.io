@@ -23,12 +23,12 @@ We added many new functions such as:
 * User add-on functions (intercept commands to route to your own routines)
 * Much simpler Function (F0-28) command
 * EX-RAIL Automation and/or accessory control
-* HAL - Hardware abstratction layer to make adding new types of hardware simple
+* HAL - Hardware abstraction layer to make adding new types of hardware simple
 * Extended functions up to 68
 * Better turnout handling
 * Servo support
 * Built-in WiThrottle Server to directly support WiThrottle based throttles
-* Bult-in support for the LCN node based accessory bus
+* Built-in support for the LCN node based accessory bus
 * Support for more motor controllers
 * Easy to create motor definition for motor controllers not in our current list
 * LCD and OLED display support
@@ -38,7 +38,7 @@ We added many new functions such as:
 * ARM Cortex M0 and M4 support
 * New DCC++ EX features added to JMRI like a current monitor display
 * Custom add-ons for Engine Driver including Routes and Automations on buttons
-* 28 speed step support in addtion to 128
+* 28 speed step support in addition to 128
 * Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
 * Created many new commands
 * Developed a new browser based throttle (:doc:`WebThrottle-EX </throttles/ex-webthrottle>`)
@@ -57,7 +57,7 @@ Next we focused on packet generation. We looked at the complexities of reading a
 
 We created an internal API for how modules communicated with each other, so the code is more modular and each unit is dedicated to its specific task.
 
-We completely re-wrote current sense and ACK detect routines to better protect your trains and make programming more accurate. There are complete diagnosicts to allow you to see see exactly why a particular decoder is not reading or writing, and we provide settings you can add to your configuration to get it to work in most cases.
+We completely re-wrote current sense and ACK detect routines to better protect your trains and make programming more accurate. There are complete diagnostics to allow you to see see exactly why a particular decoder is not reading or writing, and we provide settings you can add to your configuration to get it to work in most cases.
 
 
 Why did we do this?
@@ -81,11 +81,11 @@ The packet generation routine was complex, hard to maintain, and limited us with
 
 We made a huge effort to streamline the code and optimize it for microcontrollers to use the limited memory we have available in the most efficient manner. The code is now object oriented and utilizes classes for readability and reusability. We eliminated almost all use of strings.
 
-The 3 most requested features were: 1. More reliable CV read and writes, 2. Better accessory control, 3. Automation. Some have requested a Railcom cut-out. We haven't limited ourselves to just these features, but we put a lot of time into redesigning things to accomodate them. 
+The 3 most requested features were: 1. More reliable CV read and writes, 2. Better accessory control, 3. Automation. Some have requested a Railcom cut-out. We haven't limited ourselves to just these features, but we put a lot of time into redesigning things to accommodate them. 
 
 The current detection routines are completely different. One key difference is all current readings are in milliAmps (mA) instead of meaningless pin readings. So if you want to set your overload protection to kick in at 3 Amps, you just enter 3000 for 3000mA instead of looking up a value from a table.
 
-We continue to test all the motorboard and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason CV reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an "ACK" (acknowledgement from the train that it received a command). So we now check immedately after we send a command instead of waiting for a dozen or more packets. This means we don't miss an ACK while this is happening, and we jump out of sending uneccessary packets as soon as we get one. We also use our knowledge of CVs and the probability of what a CV may contain, so save time by skipping ahead if our first guess is correct. You will appreciate how much faster we can read CVs now!
+We continue to test all the motorboard and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason CV reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an "ACK" (acknowledgement from the train that it received a command). So we now check immediately after we send a command instead of waiting for a dozen or more packets. This means we don't miss an ACK while this is happening, and we jump out of sending unnecessary packets as soon as we get one. We also use our knowledge of CVs and the probability of what a CV may contain, so save time by skipping ahead if our first guess is correct. You will appreciate how much faster we can read CVs now!
 
 There are now full diagnostics for trying to determine why a particular decoder may not be reading or writing correctly and new commands to adjust parameters to deal with decoders that are not in compliance with NMRA specifications. We use resolution down to the microsecond.
 
@@ -99,7 +99,7 @@ EX-RAIL (Extended Railroad Automation Interface for Layouts) brings new capabili
 The bottom line
 =================
 
-So while maintaining proper deference to Gregg Berman's original concept of an inexpensive Command Station based on the Arduino platform, we don't want to do a disservice to DCC++ EX or developers like Chris Harlow (UkBloke), Harald Barth, Neil McKechnie, Dave Cutting, and others, who brought a new vision to the project, and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible, Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcments...
+So while maintaining proper deference to Gregg Berman's original concept of an inexpensive Command Station based on the Arduino platform, we don't want to do a disservice to DCC++ EX or developers like Chris Harlow (UkBloke), Harald Barth, Neil McKechnie, Dave Cutting, and others, who brought a new vision to the project, and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible, Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcements...
 
 Thanks
 =======

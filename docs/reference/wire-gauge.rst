@@ -5,7 +5,7 @@ Wire Gauge Information
 Why is Wire Size Important?
 ============================
 
-Voltage, current, and resistance to that current are all interrelated and described by the Ohm's law formula, Voltage = Current * Resistace (V=IR). The thinner the wire, the more resistance it has. As you can see from the formula, if your wire had a .5 Ohm resistance and there was 5 Amps flowing through it, you would lose... we're waiting. Get out your calculator... Yes, 2.5 Volts. If you only started with say, 12V, that would leave you with only 9.5 to run your trains. And that lost energy is wasted as heat. This is an exaggerated example, but you get the idea.
+Voltage, current, and resistance to that current are all interrelated and described by the Ohm's law formula, Voltage = Current * Resistance (V=IR). The thinner the wire, the more resistance it has. As you can see from the formula, if your wire had a .5 Ohm resistance and there was 5 Amps flowing through it, you would lose... we're waiting. Get out your calculator... Yes, 2.5 Volts. If you only started with say, 12V, that would leave you with only 9.5 to run your trains. And that lost energy is wasted as heat. This is an exaggerated example, but you get the idea.
 
 There can be a lot of wiring on a complicated layout, here are the main areas that require wiring, they are often different wire sizes.
 
@@ -70,7 +70,7 @@ Here are some examples of the electrical specifications of a few sizes of wire:
 | 28    | 0.0126 | 0.3200 | 0.080  | 64.9   | 212.872 |   1.4  | 0.226| 170 kHz |
 +-------+--------+--------+--------+--------+---------+--------+------+---------+
 
-You can see from the above table, for example, that 14 gauge wire can handle a 5Amp current, and 22 guage wire would be good for feeders. But don't trust this table, especially if you are using higher currents and have a large layout. Voltage, current, length of wire and the fact that these numbers are for 50/60 cycle house current instead of our ~8kHz DCC, mean that the more current you are going to use, the more you will need to know. Find more information in the following resources:
+You can see from the above table, for example, that 14 gauge wire can handle a 5Amp current, and 22 gauge wire would be good for feeders. But don't trust this table, especially if you are using higher currents and have a large layout. Voltage, current, length of wire and the fact that these numbers are for 50/60 cycle house current instead of our ~8kHz DCC, mean that the more current you are going to use, the more you will need to know. Find more information in the following resources:
 
 https://dccwiki.com/Wire_Sizes_and_Spacing
 
@@ -95,6 +95,6 @@ If you have a small to medium sized layout you could usually power your locos, t
 
 **2. Voltage and current needs** - If you take the power requirements of your accessories off your main track, and power them from a separate supply, you can either run with less Amps or run more locos.
 
-**3. Bi-Directional Communication** - The DCC standard provides no way for accessories or locos to talk back to the CS using the signal on the track. DCC++ EX *does* have this capability by using the GPIO pins as outputs to accessories and inputs from sensors instead of having decoders on your accessories. You can power your accessories with another power supply. There are also everal bus structures and accessory control systems, like LCN, that allow not only a separate power system, but 2-way communication system with dedicated microcontrollers that handle turnouts, sensors, lights and other accessories. DCC++ EX can work directly with some of those systems with a simple software switch to hand off commands.
+**3. Bi-Directional Communication** - The DCC standard provides no way for accessories or locos to talk back to the CS using the signal on the track. DCC++ EX *does* have this capability by using the GPIO pins as outputs to accessories and inputs from sensors instead of having decoders on your accessories. You can power your accessories with another power supply. There are also several bus structures and accessory control systems, like LCN, that allow not only a separate power system, but 2-way communication system with dedicated microcontrollers that handle turnouts, sensors, lights and other accessories. DCC++ EX can work directly with some of those systems with a simple software switch to hand off commands.
 
 

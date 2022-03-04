@@ -17,7 +17,6 @@ Notes
 
 - All IDs used in commands and functions will be numbers, or use a ALIAS name for a number if configured.
 
-|
 
 Command Summary
 ==================
@@ -35,7 +34,33 @@ There are some diagnostic and control commands added to the <tag> language norma
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
- 
+
+    table {
+      border: 1px solid #E0E0E0;
+      font-size: 14px;
+     }
+
+    th, td {
+      border: 1px solid #E0E0E0;
+      padding-left: 10px;
+      padding-top: 8px;
+      padding-bottom: 4px;
+      padding-right: 20px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #E0E0E0;
+    }
+    tr:nth-child(odd) {
+      background-color: #F3F6F6;
+    }
+    td.fitwidth {
+        width: 1px;
+        white-space: nowrap;
+    }
+    td.center {
+        text-align: center;
+    } 
     </style>
     </head>
     <body>

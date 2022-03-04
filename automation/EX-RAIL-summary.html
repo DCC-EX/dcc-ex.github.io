@@ -295,9 +295,6 @@
 <li><p>It’s OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so <code class="docutils literal notranslate"><span class="pre">AT(35)</span> <span class="pre">LATCH(35)</span></code> for example, effectively latches sensor 35 on when detected once. Only sensors with ID’s 0 to 255 may be LATCHED/UNLATCHED in your script.</p></li>
 <li><p>All IDs used in commands and functions will be numbers, or use a ALIAS name for a number if configured.</p></li>
 </ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </div>
 <div class="section" id="command-summary">
 <h2>Command Summary<a class="headerlink" href="#command-summary" title="Permalink to this headline">¶</a></h2>
@@ -310,6 +307,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
+table {
+  border: 1px solid #E0E0E0;
+  font-size: 14px;
+ }
+
+th, td {
+  border: 1px solid #E0E0E0;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  padding-right: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #E0E0E0;
+}
+tr:nth-child(odd) {
+  background-color: #F3F6F6;
+}
+td.fitwidth {
+    width: 1px;
+    white-space: nowrap;
+}
+td.center {
+    text-align: center;
+}
 </style>
 </head>
 <body>

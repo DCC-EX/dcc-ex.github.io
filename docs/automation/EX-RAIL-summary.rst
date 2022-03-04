@@ -17,7 +17,6 @@ Notes
 
 - All IDs used in commands and functions will be numbers, or use a ALIAS name for a number if configured.
 
-|
 
 Command Summary
 ==================
@@ -35,7 +34,7 @@ There are some diagnostic and control commands added to the <tag> language norma
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    
+
     table {
       border: 1px solid #E0E0E0;
       font-size: 14px;

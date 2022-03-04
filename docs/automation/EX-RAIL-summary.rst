@@ -7,7 +7,7 @@ Notes
 ========
 
 
-- *ROUTE*, *AUTOMATION* and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
+- *AUTOMATION(n)*, *ROUTE(n)* and *SEQUENCE(n)* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.
 
@@ -15,7 +15,7 @@ Notes
 
 - It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once. Only sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script.
 
-- All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
+- All IDs used in commands and functions will be numbers, or use a ALIAS name for a number if configured.
 
 |
 
@@ -26,7 +26,7 @@ Command Summary
 Diagnostics & Control
 -----------------------
 
-There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. 
+There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands < > through both the Arduino IDE Serial Monitor and the JMRI Send DCC++ Command pane.
 
 .. raw:: html
 
@@ -36,33 +36,6 @@ There are some diagnostic and control commands added to the <tag> language norma
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
  
-    table {
-      border: 1px solid #E0E0E0;
-      font-size: 14px;
-
-     }
-
-    th, td {
-      border: 1px solid #E0E0E0;
-      padding-left: 10px;
-      padding-top: 8px;
-      padding-bottom: 4px;
-      padding-right: 20px;
-    }
-
-    tr:nth-child(even) {
-      background-color: #E0E0E0;
-    }
-    tr:nth-child(odd) {
-      background-color: #F3F6F6;
-    }
-    td.fitwidth {
-        width: 1px;
-        white-space: nowrap;
-    }
-    td.center {
-        text-align: center;
-    }
     </style>
     </head>
     <body>
@@ -76,24 +49,20 @@ There are some diagnostic and control commands added to the <tag> language norma
         <td>Turns on/off diagnostic traces for EX-RAIL events</td>
       </tr>
       <tr>
-        <td class="fitwidth"> &lt;PAUSE&gt;</td>
+        <td class="fitwidth"> &lt;/ PAUSE&gt;</td>
         <td>Pauses all automation - all locos E-STOP</td>
       </tr>
       <tr>
-        <td class="fitwidth"> &lt;RESUME&gt;</td>
+        <td class="fitwidth"> &lt;/ RESUME&gt;</td>
         <td>Resumes all automation - all locos are restarted at the speed when paused</td>
-      </tr>
-      <tr>
-        <td class="fitwidth"> &lt;/&gt;</td>
-        <td>Displays EX-RAIL running task information</td>
-      </tr>
-      <tr>
-        <td class="fitwidth"> &lt;/ ROUTES&gt;</td>
-        <td>Returns the Routes & Automations control list in WiThrottle format. JMRI integration only!</td>
       </tr>
       <tr>
         <td class="fitwidth"> &lt;/ START [loco_addr] route_id&gt;</td>
         <td>Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence</td>
+      </tr>
+      <tr>
+        <td class="fitwidth"> &lt;/&gt;</td>
+        <td>Displays EX-RAIL running task information</td>
       </tr>
       <tr>
         <td class="fitwidth"> &lt;/ KILL task_id&gt;</td>
@@ -115,13 +84,17 @@ There are some diagnostic and control commands added to the <tag> language norma
         <td class="fitwidth"> &lt;/ UNLATCH sensor_id&gt;</td>
         <td>Unlock sensor, returning to current external state</td>
       </tr>
+      <tr>
+        <td class="fitwidth"> &lt;/ ROUTES&gt;</td>
+        <td><b> *Under Construction*</b> Returns the Routes & Automations control list in WiThrottle format. JMRI integration only!</td>
+      </tr>
     </table>
     </body>
     </html>
 
 |
 
-Routes, Automations, and Sequences
+Automations, Routes and Sequences
 ----------------------------------
 
 .. raw:: html
@@ -143,15 +116,15 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> EXRAIL</td>
-        <td>No longer required (does nothing)</td>
+        <td>Deprecated No longer required (does nothing)</td>
       </tr>
       <tr>
         <td class="fitwidth"> AUTOMATION( id, "description" )</td>
-        <td>Start of an Automation Sequence which WiThrottles can send a train along</td>
+        <td>Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.  </td>
       </tr>
       <tr>
         <td class="fitwidth"> ROUTE( id, "description" )</td>
-        <td>Start of a Route Sequence settable in WiThrottle</td>
+        <td>Start of a Route Sequence and creates a WiThrottles {Set} button to manual drive the train along</td>
       </tr>
       <tr>
         <td class="fitwidth"> SEQUENCE( id )</td>
@@ -159,11 +132,11 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> ENDTASK or DONE</td>
-        <td> Completes a Sequence/Route/Animation/Event handler, etc.</td>
+        <td> Completes a Animation/Routes/Sequence Event handler, etc.</td>
       </tr>
       <tr>
         <td class="fitwidth"> ENDEXRAIL</td>
-        <td>No longer required (does nothing)</td>
+        <td>Deprecated No longer required (does nothing)</td>
       </tr>
 
       <tr>
@@ -176,7 +149,7 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> SIGNAL( red_pin, amber_pin, green_pin )</td>
-        <td> Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)</td>
+        <td> Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colors)</td>
       </tr>
       <tr>
         <td class="fitwidth"> TURNOUT( id, addr, sub_addr [, "description"] )</td>
@@ -274,15 +247,15 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> JOIN</td>
-        <td>Joins PROG and MAIN track outputs to send the same MAIN DCC signal</td>
+        <td>Joins PROG and MAIN track outputs to send the same MAIN DCC signal on bothe tracks</td>
       </tr>
       <tr>
         <td class="fitwidth"> UNJOIN</td>
-        <td>Disconnect prog track from main</td>
+        <td>Disconnect Prog track from Main DCC signal</td>
       </tr>
       <tr>
         <td class="fitwidth"> READ_LOCO</td>
-        <td>Read loco ID from prog track</td>
+        <td>Read loco ID from Prog track</td>
       </tr>
       <tr>
         <td class="fitwidth"> POM( cv, value )</td>
@@ -290,11 +263,11 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> LCD( row, msg )</td>
-        <td>Write message on LCD/OLED if fitted</td>
+        <td>Write message on a LCD/OLED screen if one is declared and used</td>
       </tr>
       <tr>
         <td class="fitwidth"> PRINT( msg )</td>
-        <td>Print diagnostic message to Serial Monitor</td>
+        <td>Print diagnostic message to the IDE Serial Monitor and JMRI DCC++ Traffic Monitor</td>
       </tr>
       <tr>
         <td class="fitwidth"> SERIAL( msg )</td>
@@ -306,7 +279,7 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> SERIAL2( msg )</td>
-        <td>Wri1tes direct to Seria2</td>
+        <td>Writes direct to Serial2</td>
       </tr>
       <tr>
         <td class="fitwidth"> SERIAL3( msg )</td>
@@ -350,14 +323,13 @@ Routes, Automations, and Sequences
         <td>A task is automatically started at this point during startup</td>
       </tr>
       <tr>
-        <td class="fitwidth"> DRIVE( analog_pin )</td>
-        <td><b>Not complete, DO NOT USE</b></td>
+        <td class="fitwidth"> ROSTER( cab, name, func_map )</td>
+        <td>Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps</td>
       </tr>
       <tr>
-        <td class="fitwidth"> ROSTER( cab, name, func_map )</td>
-        <td>Provide roster info for WiThrottle</td>
+        <td class="fitwidth"> DRIVE( analog_pin )</td>
+        <td><b> *Under Construction* </b> Not complete, DO NOT USE</td>
       </tr>
-
       <tr>
         <td class="center"><b> — Loco DCC functions —</b></td>
         <td> </td>
@@ -394,9 +366,8 @@ Routes, Automations, and Sequences
         <td class="fitwidth"> INVERT_DIRECTION</td>
         <td>Switches FWD/REV meaning for this loco</td>
       </tr>
-
       <tr>
-        <td class="center"><b> — Sensor input and event handlers —</b></td>
+        <td class="center"><b> — Sensor input & event handlers —</b></td>
         <td> </td>
       </tr>
       <tr>
@@ -453,7 +424,7 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> SET( pin )</td>
-        <td>Set an output pin HIGH</td>
+        <td>Set an output pin (set to HIGH)</td>
       </tr>
       <tr>
         <td class="fitwidth"> RESET( pin )</td>
@@ -481,7 +452,7 @@ Routes, Automations, and Sequences
       </tr>
       <tr>
         <td class="fitwidth"> FADE( pin, value, ms )</td>
-        <td>Fade an LED on a servo driver to given value taking given time</td>
+        <td>Fade an LED on a servo driver to given value and taking a given time</td>
       </tr>
       <tr>
         <td class="fitwidth"> LCN( msg )</td>

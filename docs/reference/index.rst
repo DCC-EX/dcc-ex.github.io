@@ -5,7 +5,7 @@ Reference
 Videos
 ========
 
-* Please visit our Youtube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_
+* Please visit our YouTube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_
 
 Command Station
 ================

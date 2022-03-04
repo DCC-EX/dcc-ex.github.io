@@ -18,7 +18,7 @@ As mentioned in the above link, you will need the following to proceed:
 * A DCC++ EX Command Station with Motor Controller
 * A WiFi board (for Bluetooth configuration, click **here**)
   
-.. todo:: link item above to bluetooth
+.. todo:: link item above to Bluetooth
 
 For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_.
 
@@ -166,7 +166,7 @@ Once you are connected to the CS with your cell phone, you can run your WiFi Thr
 * IP Address - Normally 192.168.4.1
 * Port Number - 2560
 * Server Name - DCCEX_123456 where the last 6 characters are unique to your WiFi device
-* Server Password - PASS_123456 where the last 6 charaters are the same as above
+* Server Password - PASS_123456 where the last 6 characters are the same as above
 
 **All this information appears in the startup log when connected using a serial monitor, in case you forget.**
 
@@ -275,7 +275,7 @@ Resetting Network Settings
 
 Once you enter a network SSID and password, the CS will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.
 
-Clearing the ESP-WiFI SSID Settings
+Clearing the ESP-WiFi SSID Settings
 ------------------------------------
 
 Open your serial monitor and wait until the CS has gone through the startup sequence. Then in the command textbox enter ``<+RESTORE>`` and press "SEND".
@@ -335,7 +335,7 @@ Temporarily Log Into A Different Network
 Create a Static IP for your CS in AP Mode
 ------------------------------------------
 
-You are stil going to have to go into your router, find the MAC address for your WiFi board (or find it in the serial monitor log) and then assign a static IP address (sometimes called "reserved" IP address) to that MAC. That should be all you need, as the DHCP server on your network will assign that IP to your CS when the CS asks for one.
+You are still going to have to go into your router, find the MAC address for your WiFi board (or find it in the serial monitor log) and then assign a static IP address (sometimes called "reserved" IP address) to that MAC. That should be all you need, as the DHCP server on your network will assign that IP to your CS when the CS asks for one.
 
 You can try these commands also. You must have a recent version of the firmware to support _DEF commands. If they don't work, try entering them without this suffix (Example: <+CIPAP> instead of <+CIPAP_DEF>)
 

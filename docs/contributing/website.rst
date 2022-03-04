@@ -129,9 +129,9 @@ To show link text instead of the URL:
 
     ::
 
-        `Trainboard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_
+        `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_
 
-    `Trainboard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_
+    `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_
 
 For better accessibility, and generally clearer content, use `strong link text <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#accessibility>`_.
 

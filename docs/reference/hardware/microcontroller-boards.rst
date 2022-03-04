@@ -2,7 +2,7 @@
 Microcontroller Boards
 ***********************
 
-CommandStation-EX currently is designed for Arduino and select microcontollers. Out of the box, it is compatible with the following boards:
+CommandStation-EX currently is designed for Arduino and select microcontrollers. Out of the box, it is compatible with the following boards:
 
 * :ref:`reference/hardware/microcontroller-boards:Arduino Mega` **[RECOMMENDED]**
 * :ref:`reference/hardware/microcontroller-boards:Mega+Wifi` (Tinkerer Level)
@@ -27,7 +27,7 @@ Why do we recommend the Mega?
    :alt: Arduino Mega Microcontroller
    :scale: 75%
 
-Note that if the size of the regular Mega board is an issue, there are condensed Mega clones that are only 52mm long! They don't take shields, so you will need to use headers and jumper wires, but they will fit in a very small box. Look for boards by the name "Arduino Mega 2560 PRO Embedded" or "Mini MEGA 2560 Pro Micro" or just "Mega Pro 2560". Be careful to get the correct one for what you are trying to do because they can come in 3.3V versions or 5V versions and have a micro-usb port (which you probably want) or just pins to a TTL serial port, and come with header pins you have to solder or not. Remember it must be a 2560 not a 328.
+Note that if the size of the regular Mega board is an issue, there are condensed Mega clones that are only 52mm long! They don't take shields, so you will need to use headers and jumper wires, but they will fit in a very small box. Look for boards by the name "Arduino Mega 2560 PRO Embedded" or "Mini MEGA 2560 Pro Micro" or just "Mega Pro 2560". Be careful to get the correct one for what you are trying to do because they can come in 3.3V versions or 5V versions and have a Micro-USB port (which you probably want) or just pins to a TTL serial port, and come with header pins you have to solder or not. Remember it must be a 2560 not a 328.
 
 .. image:: ../../_static/images/microcontrollers/mega_pro2.jpg
    :alt: Mega Pro Micro
@@ -41,7 +41,7 @@ If you already have an Uno, or will use JMRI to control your trains, then by all
 Arduino Nano
 =====================
 
-The Arduino nano shares the same processor with the Arduino Uno, so we support it. The nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There *is* a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.
+The Arduino Nano shares the same processor with the Arduino Uno, so we support it. The Nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There *is* a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.
 
 See our section on :doc:`Using a Nano <../../advanced-setup/supported-microcontrollers/nano>`
 
@@ -50,7 +50,7 @@ Mega+WiFi
 
 **Tinkerer level**
 
-Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you ok with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
+Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
 
 See our section on Using the :doc:`WiFi+Mega Page <../../advanced-setup/supported-microcontrollers/wifi-mega>`
 
@@ -84,9 +84,9 @@ Click here for a complete :doc:`Shopping List </reference/hardware/shopping-list
 Boards that will NOT work
 ==========================
 
-**WAVGAT Uno clone** - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called "Logic Green". It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen corretly and compile skethes. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a CS with more testing and some code changes, but we will leave that to someone else to attempt. Megas and Mega clones offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.
+**WAVGAT Uno clone** - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called "Logic Green". It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen correctly and compile sketches. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a CS with more testing and some code changes, but we will leave that to someone else to attempt. Megas and Mega clones offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.
 
-**ESP32** - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Expressif. We currently support only the Atmel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.
+**ESP32** - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Espressif. We currently support only the Atmel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.
 
 Click here for a complete :doc:`Shopping List </reference/hardware/shopping-list>`.
 

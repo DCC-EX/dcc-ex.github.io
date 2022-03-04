@@ -89,7 +89,7 @@ Now enter ``<s>`` (lowercase). You should see status information for your Comman
 
 Turn off the power to the track by sending ``<0>`` to the CS. That is a "zero".
 
-There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver, Etheret debugging,  and more. Read the documentation and experiment!
+There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver, Ethernet debugging,  and more. Read the documentation and experiment!
 
 If you run into trouble, remember to send us a log by cutting and pasting the text from the Serial Monitor window to our support channel in Discord or one of the other methods of contacting us mentioned here: https://dcc-ex.com/support/index.html.
 
@@ -103,10 +103,10 @@ Connect with a Cell Phone
 * An "On The Go" Cable (aka. OTG Cable)
 * The USB Cable for your Arduino
 
-.. NOTE:: You can also use BlueTooth if you have a BlueTooth board attached to your CS and make a small modification to the sketch (CS Software). We will cover how to do that in a **Project** tutorial
+.. NOTE:: You can also use Bluetooth if you have a Bluetooth board attached to your CS and make a small modification to the sketch (CS Software). We will cover how to do that in a **Project** tutorial
 
 .. todo::
-   show how to use bluetooth. There is blutooth serial monitor by CSA and Android bluetooth serial monitor by Rupak Poddar
+   show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar
 
 OTG Cable
 -----------

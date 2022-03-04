@@ -165,7 +165,7 @@ Run your trains!
 
 **Now run WebThrottle-EX** directly from our :doc:`WebThrottle-EX web page </throttles/ex-webthrottle>`. As described on that page, ensure that you are using Chrome version 89 or above. Note that you can run the throttle from your browser, and/or install it locally from its own menu.
 
-You can also download our WebThrottle-EX found at `WebThrottle-EX on GitHub <https://github.com/DCC-EX/exWebThrottle>`_ and run it in your browser. Again, make sure you are using a Chrome based browser version 89 or above.
+You can also download our WebThrottle-EX found at `WebThrottle-EX on GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ and run it in your browser. Again, make sure you are using a Chrome based browser version 89 or above.
 
 The rest of the instructions show you how to use WebThrottle-EX. You should be able to find the CS by its serial port and enable it, turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!
 

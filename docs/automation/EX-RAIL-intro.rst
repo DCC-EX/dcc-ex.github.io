@@ -26,7 +26,7 @@ Most people wanting to do animations or run trains through an automated route wi
 
    My original aim was to see if I could create an automated layout with lots going on, that didn’t just run around in circles. Having looked at JMRI (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.
 
-   Some of the automation techniques I read about, using jython scripts in   JRMI, seem to require extensive programming skills and complex table configurations which appeared awkward to me, despite my years of programming in dozens of languages.
+   Some of the automation techniques I read about, using Jython scripts in JRMI, seem to require extensive programming skills and complex table configurations which appeared awkward to me, despite my years of programming in dozens of languages.
 
    It seemed to me that basing an automation on block occupancy detection leaves a lot of complex technical problems to be solved… and wanting to be cheap, I didn’t want to invest in a range of block occupancy detectors, or ABC braking modules, which are all very well on circular layouts, but not good at complex crossings or single line operations with passing places. Also, I didn’t want the automation to be an obvious cycle of movements… some random timings and decisions need to be introduced so that two trains don’t always arrive at the same place in the same order, nor go on the same journey in a predictable cycle.
 
@@ -338,7 +338,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <automation/EX-RAIL-summary:Routes, Automations, and Sequences>`
+Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <automation/EX-RAIL-summary:Automations, Routes and Sequences>`
 
 .. code-block:: cpp
 

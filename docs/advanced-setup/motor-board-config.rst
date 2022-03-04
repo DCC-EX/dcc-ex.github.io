@@ -164,7 +164,7 @@ The Arduino has an ADC (Analog to Digital Converter) that reads this analog volt
 
   senseFactor = ((5/1024)/Board Volts/Amp)*1000
 
-The Arduno analog pin can go from 0 to 5V, and has 1024 possible levels, so we divide 5 by 1024, then divide by the V/A figure from the motor board current sense output, then multiply it by 1000 to make the number easier to work with. From our example of the Arduino motor shield above and its published 1.65V/A, we can compute the senseFactor as follows:
+The Arduino analog pin can go from 0 to 5V, and has 1024 possible levels, so we divide 5 by 1024, then divide by the V/A figure from the motor board current sense output, then multiply it by 1000 to make the number easier to work with. From our example of the Arduino motor shield above and its published 1.65V/A, we can compute the senseFactor as follows:
 
 .. code-block:: cpp
 

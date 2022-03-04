@@ -8,7 +8,7 @@ To connect a servo module to DCC++EX, you first need to get a module, based on t
    :alt: PCA9685 Servo Module
    :scale: 40%
 
-These are widely available from ebay, Amazon, etc. for a few dollars.
+These are widely available from eBay, Amazon, etc. for a few dollars.
 
 Note the pin connectors along the left side of the module - these are where you connect to the
 Arduino.  
@@ -75,11 +75,11 @@ There are three types of servos, standard or "Positional Rotation", "Continuous 
 
 **A Continuous Rotation Servo** can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counterclockwise.
 
-**Linear Servos** use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its postion along a straight line, forward and back in a similar way by giving it a postion.
+**Linear Servos** use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its position along a straight line, forward and back in a similar way by giving it a position.
 
-Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechansim (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.
+Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechanism (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.
 
-For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds. The duration of the pulses are between 544 and 2400 milliseconds representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multipy by 4096. That gives us a range of 111 to 491.
+For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds. The duration of the pulses are between 544 and 2400 milliseconds representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multiply by 4096. That gives us a range of 111 to 491.
 
 Another way to look at this is that with our 12bit ADC, which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can't represent the value 4096 in 12 bits.
 

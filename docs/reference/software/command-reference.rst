@@ -863,7 +863,7 @@ Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register
 
    returns: NONE
 
-WiFi AT Commands
+WiFi "AT" Commands
 ==================
 
 ``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the "+" and the command.

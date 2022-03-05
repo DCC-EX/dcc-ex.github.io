@@ -50,7 +50,7 @@ You can have the command references for DCC++ EX shown through the Script Output
    
 .. rst-class:: dcclink
 
-   `DCC++EX + JMRI Custom Buttons Install </_static/documents/DCCEX_31_JMRI_Script+Button_Instructions.pdf>`_
+   `DCC++EX + JMRI Custom Buttons SetUp </_static/documents/DCCEX_31_JMRI_Script+Button_Instructions.pdf>`_
 
 .. rst-class:: clearer
 
@@ -67,7 +67,7 @@ For a more extensive overview of setting up DCC++EX with JMRI DecoderPro please 
    
 .. rst-class:: dcclink
 
- `DCC++EX 3.1 & JMRI DecoderPro 2.24 Getting Started Guide.pdf version 1.0  </_static/documents/DCCEX_3.1_and_JMRI_Decoder_Pro_4.24-_Getting_Started_Guide-1.pdf>`_
+ `DCC++EX 3.1 & JMRI DecoderPro 2.24 Getting Started Guide.pdf version 1.0  </_static/documents/DCCEX_3.1_and_JMRI_Decoder_Pro_4.24-_Getting_Started_Guide-1.pdf>>`_
 
 .. rst-class:: clearer
 
@@ -78,6 +78,7 @@ Other Documentation
 
 DCC Shortcuts Card
 ===================
+DCC Manufacture Decoder Identificaton
 
 .. image:: ../../_static/documents/dcc_shortcuts_card_thumbnail.png
    :alt: DCC Shortcuts Card Thumbnail

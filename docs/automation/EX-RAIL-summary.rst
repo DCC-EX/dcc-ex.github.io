@@ -7,7 +7,7 @@ Notes
 ========
 
 
-- *ROUTE*, *AUTOMATION* and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
+- *AUTOMATION*, *ROUTE* and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.
 
@@ -15,9 +15,8 @@ Notes
 
 - It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once. Only sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script.
 
-- All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
+- All IDs used in commands and functions will be numbers, or use a ALIAS name for a number if configured.
 
-|
 
 Command Summary
 ==================
@@ -28,7 +27,7 @@ Command Summary
 Diagnostics & Control
 -----------------------
 
-There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. 
+There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands < > through both the Arduino IDE Serial Monitor and the JMRI Send DCC++ Command pane.
 
 .. list-table::
     :widths: auto
@@ -61,7 +60,8 @@ There are some diagnostic and control commands added to the <tag> language norma
       -  Unlock sensor, returning to current external state
 
 
-Routes, Automations, and Sequences
+
+Automations, Routes and Sequences
 ----------------------------------
 
 .. list-table::

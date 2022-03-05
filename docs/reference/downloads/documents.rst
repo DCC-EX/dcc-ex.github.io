@@ -68,7 +68,7 @@ For a more extensive overview of setting up DCC++EX with JMRI DecoderPro please 
    
 .. rst-class:: dcclink
 
- `DCC++EX 3.1 & JMRI DecoderPro 2.24 Getting Started Guide.pdf version 1.0  </_static/documents/DCCEX_3.1_and_JMRI_Decoder_Pro_4.24-_Getting_Started_Guide-1.pdf>>`_
+  `DCC++EX 3.1 & JMRI DecoderPro 2.24 Getting Started Guide.pdf version 1.0  </_static/documents/DCCEX_3.1_and_JMRI_Decoder_Pro_4.24-_Getting_Started_Guide-1.pdf>>`_
 
 .. rst-class:: clearer
 
@@ -106,7 +106,3 @@ With DCC++EX's new linear address function, there is no need to have to convert 
 .. rst-class:: dcclink
 
    `Stationary Decoder Address Table </_static/documents/DCCpp-stationary-decoder-addresses.xlsx>`_
-
-.. rst-class:: clearer
-
-

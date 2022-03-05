@@ -61,13 +61,13 @@ Comprehensive DCC++EX & JMRI Getting Started Guide PDF
 For a more extensive overview of setting up DCC++EX with JMRI DecoderPro please download and review the 
 
 .. image:: ../../_static/images/icons/pdf_logo_sm.png
-   :alt: DCC++EX JMRI Getting Started Guide
+   :alt: DCC++EX & JMRI Getting Started Guide
    :scale: 75%
    :align: left
    
 .. rst-class:: dcclink
 
- `DCC++EX 3.1 & JMRI DecoderPro 2.24 Getting Started Guide.pdf version 1.0  </static/documents/DCCEX_3.1_and_JMRI_Decoder_Pro_4.24-_Getting_Started_Guide-1.pdf>`_
+ `DCC++EX 3.1 & JMRI DecoderPro 2.24 Getting Started Guide.pdf version 1.0  </_static/documents/DCCEX_3.1_and_JMRI_Decoder_Pro_4.24-_Getting_Started_Guide-1.pdf>`_
 
 .. rst-class:: clearer
 

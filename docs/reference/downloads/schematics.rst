@@ -14,21 +14,66 @@ Mega+WiFi Board
 
    `Mega+WiFi </_static/images/schematics/mega_wifi1.png>`_
 
+|
+|
+|
+|
+|
+
 Makerfabs WiFi Shield
 ======================
 
 .. image:: ../../_static/images/schematics/makerfabs_wifi_shield_schematic_v1.png
    :alt: Makerfabs WiFi Shield Schematic Thumbnail
-   :scale: 20%
+   :scale: 22%
    :align: left 
 
 .. rst-class:: dcclink
 
-   `Makerfabs WiFi Shield Schematic PNG Format </_static/images/schematics/makerfabs_wifi_shield_schematic_v1a_wifi1.png>`_
+   `Makerfabs WiFi Shield PNG Format </_static/images/schematics/makerfabs_wifi_shield_schematic_v1a_wifi1.png>`_
 
 .. rst-class:: dcclink
 
-   `Makerfabs WiFi Shield Schematic PDF Format </_static/images/schematics/makerfabs_wifi_shield_schematic_v1a_wifi1.pdf>`_
+   `Makerfabs WiFi Shield PDF Format </_static/images/schematics/makerfabs_wifi_shield_schematic_v1a_wifi1.pdf>`_
+
+|
+|
+|
+|
+|
+
+Arduino Motor Shield
+======================
+
+.. image:: ../../_static/images/schematics/arduino_motor_shield.png
+   :alt: Arduino Motor Shield Schematic Thumbnail
+   :scale: 22%
+   :align: left 
+
+.. rst-class:: dcclink
+
+   `Makerfabs WiFi Shield PNG Format </_static/images/schematics/arduino_motor_shield.png>`_
+
+
+|
+|
+|
+|
+|
+
+IBT_2 Motor Driver
+======================
+
+.. image:: ../../_static/images/schematics/IBT_2_schematic.jpg
+   :alt: IBT_Motor Driver Schematic Thumbnail
+   :scale: 22%
+   :align: left 
+
+.. rst-class:: dcclink
+
+   `Makerfabs WiFi Shield PNG Format </_static/images/schematics/IBT_2_schematic.jpg>`_
+
+
 
 
 

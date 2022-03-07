@@ -24,11 +24,11 @@ Makerfabs WiFi Shield
 
 .. rst-class:: dcclink
 
-   `Makerfabs WiFi Shield Schematic PNG Format</_static/images/schematics/megmakerfabs_wifi_shield_schematic_v1a_wifi1.png>`_
+   `Makerfabs WiFi Shield Schematic PNG Format </_static/images/schematics/makerfabs_wifi_shield_schematic_v1a_wifi1.png>`_
 
 .. rst-class:: dcclink
 
-   `Makerfabs WiFi Shield Schematic PDF Format</_static/images/schematics/megmakerfabs_wifi_shield_schematic_v1a_wifi1.pdf>`_
+   `Makerfabs WiFi Shield Schematic PDF Format </_static/images/schematics/makerfabs_wifi_shield_schematic_v1a_wifi1.pdf>`_
 
 
 

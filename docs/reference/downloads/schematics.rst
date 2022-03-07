@@ -47,12 +47,12 @@ Arduino Motor Shield
 
 .. image:: ../../_static/images/schematics/arduino_motor_shield.png
    :alt: Arduino Motor Shield Schematic Thumbnail
-   :scale: 22%
+   :scale: 20%
    :align: left 
 
 .. rst-class:: dcclink
 
-   `Makerfabs WiFi Shield PNG Format </_static/images/schematics/arduino_motor_shield.png>`_
+   `Arduino Motor Shield PNG Format </_static/images/schematics/arduino_motor_shield.png>`_
 
 
 |
@@ -71,7 +71,7 @@ IBT_2 Motor Driver
 
 .. rst-class:: dcclink
 
-   `Makerfabs WiFi Shield PNG Format </_static/images/schematics/IBT_2_schematic.jpg>`_
+   `IBT_2 Motor Driver JPG Format </_static/images/schematics/IBT_2_schematic.jpg>`_
 
 
 

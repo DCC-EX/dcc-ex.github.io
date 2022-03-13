@@ -10,6 +10,18 @@
     width: 60%;
 }
 
+.rst-content table.docutils th {
+  background-color: #F3F6F6;
+}
+
+.rst-content table.docutils td {
+  background-color: #F3F6F6;
+}
+
+.rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+  background-color: #E0E0E0;
+}
+
 .intro-table img {
     width: 70%;
     height: auto;

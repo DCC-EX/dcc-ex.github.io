@@ -28,6 +28,10 @@
     margin: 5% 15%;
 }
 
+#ex-rail-command-summary .wy-table-responsive {
+  overflow: visible;
+}
+
 .command-table thead th {
   text-align: center;
 }

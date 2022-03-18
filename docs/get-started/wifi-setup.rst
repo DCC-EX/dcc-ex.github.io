@@ -6,7 +6,7 @@ The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIREC
 
 .. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12). The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
 
-There are many ways to add WiFi to your Command Station. We will cover three methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
+There are many ways to add WiFi to your Command Station. We will cover a four methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
 You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our :doc:`Support Page <../support/index>` if you have a question.
 
@@ -58,6 +58,7 @@ Quick links
 * Jump to :ref:`get-started/wifi-setup:Makerfabs ESP8266 WiFi Shield (recommended)`
 * Jump to :ref:`get-started/wifi-setup:Duinopeak ESP8266 WiFi Expansion Board`
 * Jump to :ref:`get-started/wifi-setup:ESP-01 and ESP-01s`
+* Jump to :ref:`get-started/wifi-setup:Mega+WiFi Combo Board`
 
 Makerfabs ESP8266 WiFi Shield (recommended)
 ===============================================
@@ -218,3 +219,17 @@ If you already have the CS software running and are just adding WiFi, there is n
 .. note:: LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
 
 If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads <../download/commandstation>` to load firmware onto the CS.
+
+.. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and lookingat the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ .Skip to the "The ESP-01S - The Wifi Connection" section
+   
+Mega+WiFi Combo Board
+=======================
+
+.. figure:: ../../_static/images/mega_wifi.png
+   :alt: Mega WiFi
+   :scale: 40%
+   :align: center
+
+The Mega+WiFi is a board from China that combines an Arduino Mega design with an on-board ESP8266 WiFi chip. The advantage of this configuration is that with WiFI on the same board with the Microntroller, you only need two boards. Your "stack" will have just the Mega+WiFi board with the Motor Shield on top. The disadvantage is that you will have to "flash" (upload new firmware) to the ESP chip on the board. This requires a computer, downloading a flash tool and a zipped data file, setting some switches, connecting the Mega+WiFi to the computer with a USB cable, and uploading the new firmware. A Conductor should be able to follow the instructions, but Tinkerers may feel more comfortable. It takes about 15-20 minutes from start to finish (read, download, unzip, flash, done). Click on the link below for detailed instructions on exactly how to configure and use a Mega+WiFi board.
+
+`Mega+WiFi Setup and Configuration <../advanced-setup/supported=micrrocontrollers/wifi-mega>`

@@ -89,12 +89,16 @@ Automations, Routes and Sequences
       -  Assign names to values. Can go anywhere in the script
     * -  SIGNAL( red_pin, amber_pin, green_pin )
       -  Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colors)
+    * -  SIGNALH(redpin, amberpin, greenpin)
+      -  Same as signal but for active-HIGH LEDs
     * -  TURNOUT( id, addr, sub_addr [, "description"] )
       -  Define DCC Accessory turnout
     * -  PIN_TURNOUT( id, pin [, "description"] )
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
       -  Define a servo turnout
+    * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
+      -  Define a servo signal
     * -  :category:`--- Flow control functions ---`
       -
     * -  CALL( route )
@@ -201,6 +205,10 @@ Automations, Routes and Sequences
       -  Wait until sensor is active/triggered
     * -  ATTIMEOUT( sensor_id, timeout_ms )
       -  Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag
+    * -  ATGTE( analogpin, value)
+      -  waits for analog pin to reach value
+    * -  ATLT (analogpin,value)
+      -  waits for analog pin to go below value
     * -  AFTER( sensor_id )
       -  Waits for sensor to trigger and then go off for 0.5 seconds
     * -  LATCH( sensor_id )

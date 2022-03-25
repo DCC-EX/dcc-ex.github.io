@@ -103,11 +103,13 @@ Example 1: You use the <D ACK ON> and <R> commands described above to generate a
 
    <D ACK MIN 3300>
 
-Example 2: You use the <D ACK ON> and <R> commands described above to generate a test log from a loco on your programming track. You see that some of the ACK pulses are longer than 8500 µS. The longest one is 10350 µS. Pick a setting a little bit higher than your highest reading like this:
+Example 2: You use the <D ACK ON> and <R> commands described above to generate a test log from a loco on your programming track. 
+You see that some of the ACK pulses are longer than 8500 µS. The longest one is 10350 µS. 
+Pick a setting a little bit higher than your highest reading like this:
 
 .. code-block:: none
 
-   <D ACK MIN 10500>
+   <D ACK MAX 10500>
 
 <D PROGBOOST>
 ===============

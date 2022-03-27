@@ -5,6 +5,7 @@ _build
 .idea
 *.xml
 *.iml
+.vscode
 
 # Compiled source #
 ###################

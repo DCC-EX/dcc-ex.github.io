@@ -105,11 +105,15 @@ ALIAS(coal_yard, 1) or ALIAS("coal yard", 1) then instead of PIN_TURNOUT( id, pi
 
 ``SIGNAL( red_pin, amber_pin, green_pin )``	Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)
 
+``SIGNALH( redpin, amberpin, greenpin )`` Same as SIGNAL but for active-HIGH LEDs
+
 ``TURNOUT( id, addr, sub_addr [, "description"] )``	Define DCC Accessory turnout
 
 ``PIN_TURNOUT( id, pin [, "description"] )``	Define pin operated turnout
 
 ``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout
+
+``SERVO_SIGNAL( vpin, redpos, amberpos, greenpos )`` Define a servo signal
 
 Flow Control Functions
 ------------------------
@@ -221,6 +225,10 @@ Sensor input and Event Handlers
 ``AT( sensor_id )``	Wait until sensor is active/triggered
 
 ``ATTIMEOUT( sensor_id, timeout_ms )``	Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag
+
+``ATGTE( analogpin, value )``  Waits for analog pin to reach value
+
+``ATLT ( analogpin, value )`` Waits for analog pin to go below value
 
 ``AFTER( sensor_id )``	Waits for sensor to trigger and then go off for 0.5 seconds
 

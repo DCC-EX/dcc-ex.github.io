@@ -1,5 +1,4 @@
 {
-  "restructuredtext.confPath": "${workspaceFolder}\\docs",
-  "esbonio.sphinx.confDir": "c:\\Users\\Fred\\Documents\\PlatformIO\\Projects\\dcc-ex.github.io\\docs",
+  "esbonio.sphinx.confDir": "${workspaceFolder}\\docs",
   "esbonio.server.enabled": true
 }

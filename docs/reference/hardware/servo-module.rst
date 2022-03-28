@@ -68,7 +68,8 @@ As per the EX-RAIL reference, turnouts are defined with the following syntax:
 
    SERVO_TURNOUT(id, pin, active_angle, inactive_angle, profile [, "description"])
 
-The valid paramaters are:
+The valid parameters are:
+
 - id = Unique ID within the CommandStation (note these are shared across turnouts, sensors, and outputs).
 - pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
 - active_angle = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
@@ -96,7 +97,8 @@ As per the EX-RAIL reference, these are defined with the following syntax:
    SERVO(vpin, position, profile)
    SERVO2(vpin, position, duration)
 
-The valid paramaters are:
+The valid parameters are:
+
 - vpin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
 - position = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
 - profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce.

@@ -1,4 +1,3 @@
-**************************
 Mega+WiFi Configuration
 **************************
 
@@ -21,7 +20,7 @@ A Operational Standalone WiFi DCC Command Station
 
    Mega+WiFi Board
 
-This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brands. Links to some suppliers are at the bottom of this page:
+This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brand names though the board itself can also be unmarked. Links to some suppliers are at the bottom of this page:
 
 * Wemos
 * RobotDyn
@@ -367,6 +366,15 @@ The Espressif ESP8266 page (The manufacturer of the chip): https://www.espressif
 
 Espressif detailed instructions on using the esptool
 https://github.com/espressif/esptool#installation--dependencies
+
+The Mega+WiFi Schematic diagram. Click on it to enlarge:
+
+.. figure:: ../../_static/images/schematics/mega_wifi1.png
+   :alt: Mega WiFi Schematic
+   :scale: 20%
+   :align: center
+
+   Mega+WiFi Schematic
 
 **Enjoy your New DCC++EX MEGA + WiFi On-Board Command Station!**
 

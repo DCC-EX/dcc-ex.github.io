@@ -202,6 +202,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../site-map/index.html">Site Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../donate/index.html">Donate to Our Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../press/index.html">Press</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
 </ul>
@@ -345,9 +346,11 @@ Example output:
 <p>ALIAS(coal_yard, 1) or ALIAS(“coal yard”, 1) then instead of PIN_TURNOUT( id, pin [, “COAL YARD”], write it as PIN_TURNOUT(coal_yard, pin [, “description”])</p>
 <p>2000 milliseconds is 2 seconds, so with ALIAS(slow, 2000), you could set DELAY(slow).</p>
 <p><code class="docutils literal notranslate"><span class="pre">SIGNAL(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code>     Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)</p>
+<p><code class="docutils literal notranslate"><span class="pre">SIGNALH(</span> <span class="pre">redpin,</span> <span class="pre">amberpin,</span> <span class="pre">greenpin</span> <span class="pre">)</span></code> Same as SIGNAL but for active-HIGH LEDs</p>
 <p><code class="docutils literal notranslate"><span class="pre">TURNOUT(</span> <span class="pre">id,</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>     Define DCC Accessory turnout</p>
 <p><code class="docutils literal notranslate"><span class="pre">PIN_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>    Define pin operated turnout</p>
 <p><code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin,</span> <span class="pre">active_angle,</span> <span class="pre">inactive_angle,</span> <span class="pre">profile</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>   Define a servo turnout</p>
+<p><code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(</span> <span class="pre">vpin,</span> <span class="pre">redpos,</span> <span class="pre">amberpos,</span> <span class="pre">greenpos</span> <span class="pre">)</span></code> Define a servo signal</p>
 </div>
 <div class="section" id="flow-control-functions">
 <h3>Flow Control Functions<a class="headerlink" href="#flow-control-functions" title="Permalink to this headline">¶</a></h3>
@@ -411,6 +414,8 @@ Example output:
 <h3>Sensor input and Event Handlers<a class="headerlink" href="#sensor-input-and-event-handlers" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>     Wait until sensor is active/triggered</p>
 <p><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code>  Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable “timed out” flag</p>
+<p><code class="docutils literal notranslate"><span class="pre">ATGTE(</span> <span class="pre">analogpin,</span> <span class="pre">value</span> <span class="pre">)</span></code>  Waits for analog pin to reach value</p>
+<p><code class="docutils literal notranslate"><span class="pre">ATLT</span> <span class="pre">(</span> <span class="pre">analogpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> Waits for analog pin to go below value</p>
 <p><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  Waits for sensor to trigger and then go off for 0.5 seconds</p>
 <p><code class="docutils literal notranslate"><span class="pre">LATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  Latches a sensor on (Sensors 0-255 only)</p>
 <p><code class="docutils literal notranslate"><span class="pre">UNLATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>        Remove LATCH on sensor</p>

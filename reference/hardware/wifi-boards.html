@@ -204,6 +204,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../site-map/index.html">Site Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../donate/index.html">Donate to Our Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../press/index.html">Press</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
 </ul>
@@ -349,7 +350,7 @@
 <p>There is another version where the “more” in “more info” is spelled “moer” and “Arduino” is spelled “Arbuino”. This board has the wrong transistors soldered onto it in the level shifter circuit. Get out your cell phone, take a picture of your board and zoom in on the section of the board you see here:</p>
 <div class="figure align-default" id="id1">
 <a class="with-shadow reference internal image-reference" href="../../_images/wangtongze_transistors.png"><img alt="Wangongze level shifter transistors" class="with-shadow" src="../../_images/wangtongze_transistors.png" style="width: 378.59999999999997px; height: 276.9px;" /></a>
-<p class="caption"><span class="caption-number">Figure 62 </span><span class="caption-text">WiFi board level shifting transistors should be J1Y (click the image to enlarge)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 63 </span><span class="caption-text">WiFi board level shifting transistors should be J1Y (click the image to enlarge)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>If these 2 transistors are labelled “JIY” you are lucky and the board with work with no modifications. If they are labelled “J3Y”, you have two choices to get this to work:</p>
 <blockquote>
@@ -358,12 +359,12 @@
 </ol>
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/wangtongze_jumpered.jpg"><img alt="Wangtongze Jumpering to the debug header" src="../../_images/wangtongze_jumpered.jpg" style="width: 436.8px; height: 317.7px;" /></a>
-<p class="caption"><span class="caption-number">Figure 63 </span><span class="caption-text">Using Jumpers Directly to the Debug Header</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 64 </span><span class="caption-text">Using Jumpers Directly to the Debug Header</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>And here is a voltage divider with just two resistors you can use as a signal level shifter circuit:</p>
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/esp_level_shifter.png"><img alt="" src="../../_images/esp_level_shifter.png" style="width: 368.2px; height: 287.7px;" /></a>
-<p class="caption"><span class="caption-number">Figure 64 </span><span class="caption-text">Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 65 </span><span class="caption-text">Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p><strong>Engineer way</strong> - You can buy the correct surface mount transistors and replace two of them using a magnifier as we did when we had nothing better to do that day, but that’s a lot of trouble to go through unless this is the only board you can find. If they are labelled “J3Y”, you can order “J1Y” replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.</p></li>

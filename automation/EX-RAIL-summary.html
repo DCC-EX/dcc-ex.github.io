@@ -204,6 +204,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../site-map/index.html">Site Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../donate/index.html">Donate to Our Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../press/index.html">Press</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
 </ul>
@@ -383,14 +384,20 @@
 <tr class="row-odd"><td><p>SIGNAL( red_pin, amber_pin, green_pin )</p></td>
 <td><p>Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colors)</p></td>
 </tr>
-<tr class="row-even"><td><p>TURNOUT( id, addr, sub_addr [, “description”] )</p></td>
+<tr class="row-even"><td><p>SIGNALH(redpin, amberpin, greenpin)</p></td>
+<td><p>Same as signal but for active-HIGH LEDs</p></td>
+</tr>
+<tr class="row-odd"><td><p>TURNOUT( id, addr, sub_addr [, “description”] )</p></td>
 <td><p>Define DCC Accessory turnout</p></td>
 </tr>
-<tr class="row-odd"><td><p>PIN_TURNOUT( id, pin [, “description”] )</p></td>
+<tr class="row-even"><td><p>PIN_TURNOUT( id, pin [, “description”] )</p></td>
 <td><p>Define pin operated turnout</p></td>
 </tr>
-<tr class="row-even"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
+<tr class="row-odd"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
 <td><p>Define a servo turnout</p></td>
+</tr>
+<tr class="row-even"><td><p>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</p></td>
+<td><p>Define a servo signal</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong class="category">— Flow control functions —</strong></p></td>
 <td></td>
@@ -550,6 +557,12 @@
 </tr>
 <tr class="row-odd"><td><p>ATTIMEOUT( sensor_id, timeout_ms )</p></td>
 <td><p>Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable “timed out” flag</p></td>
+</tr>
+<tr class="row-even"><td><p>ATGTE( analogpin, value)</p></td>
+<td><p>waits for analog pin to reach value</p></td>
+</tr>
+<tr class="row-odd"><td><p>ATLT (analogpin,value)</p></td>
+<td><p>waits for analog pin to go below value</p></td>
 </tr>
 <tr class="row-even"><td><p>AFTER( sensor_id )</p></td>
 <td><p>Waits for sensor to trigger and then go off for 0.5 seconds</p></td>

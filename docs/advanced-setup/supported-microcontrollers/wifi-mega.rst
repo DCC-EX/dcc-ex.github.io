@@ -369,7 +369,7 @@ https://github.com/espressif/esptool#installation--dependencies
 
 The Mega+WiFi Schematic diagram. Click on it to enlarge:
 
-.. figure:: ../../_static/images/mega_wifi1.png
+.. figure:: ../../_static/images/schematics/mega_wifi1.png
    :alt: Mega WiFi Schematic
    :scale: 20%
    :align: center

@@ -7,6 +7,12 @@ DCC++ EX Model Railroading
    :scale: 50%
    :target: download/commandstation.html
 
+.. image:: ./_static/images/icons/donate_button_blue.png
+   :alt: Donate Button
+   :class: float-right
+   :scale: 50%
+   :target: donate/index.html
+
 The DCC-EX team is pleased to announce the next version of the DCC++EX Command Station. There are tons of new features and enhancements. So many in fact, it takes a separate page to list them all! Be sure to find us on our :doc:`Discord channel </support/index>`. Here are just a few features to whet your appetite.
 
 * EX-RAIL Automation and accessory control
@@ -131,5 +137,6 @@ Next see the :doc:`Get Started section <get-started/index>` or click next below.
    roadmap/index
    support/index
    site-map/index
+   donate/index
    press/index
    about/index

@@ -1,4 +1,3 @@
-*********************
 Adding a WiFi Option
 *********************
 
@@ -225,7 +224,7 @@ If you are setting up your Command Station for the first time, or are making cha
 Mega+WiFi Combo Board
 =======================
 
-.. figure:: ../../_static/images/mega_wifi.png
+.. figure:: ../_static/images/mega_wifi.png
    :alt: Mega WiFi
    :scale: 40%
    :align: center

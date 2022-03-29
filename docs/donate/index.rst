@@ -1,5 +1,5 @@
 Donate to Our Project
-*********************
+**********************
 
 How We Use Donations
 ======================
@@ -19,13 +19,15 @@ Or choose user @FNDecker in your PayPal App
 
 .. rst-class:: dcclink
 
-  `Venmo <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+  `Venmo <https://venmo.com/fndecker>`_
 
 Or choose user @FNDecker in your Venmo App
 
 .. rst-class:: dcclink
 
-  `Patreon <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+  `Patreon <https://patreon.com/dccex>`_
+
+Our Patreon name is "dccex"
 
 By Mail: You may send checks made out to DCC-EX to:
 DCC-EX

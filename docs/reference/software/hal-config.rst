@@ -189,15 +189,21 @@ There are also drivers included with DCC++ EX for the following modules:
 Notes on the PCA9555/TCA9555 I2C GPIO Extenders
 -----------------------------------------------
 
-The PCA9555 is made by Texas Instruments and NXP, the TCA9555 only by Texas Instruments.
-Using these GPIO extenders is almost the same as the the MCP23017. However there are a few differences. 
+The PCA9555 is made by Texas Instruments and NXP, the TCA9555 by Texas Instruments alone, and using these GPIO extenders is similar to the the MCP23017 with a few key differences.
 
-The PCA9555 & TCA9555 have always an internal pull-up resistor for ports configured as an input, and the INT pin is always enabled and wil trigger on a rising & falling edge of an input port.
-Both PCA9555 & TCA9555 can work with 3.3v & 5V
+The PCA/TCA9555 has an always-on internal pull-up resistor for ports configured as an input, and the INT pin is always enabled, meaning it will always trigger on the rising and falling edge of an input port. The PCA/TCA9555 will work with either 3.3v or 5V.
 
 When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.
 
-Two MCP23017 modules have been pre-defined in the CS with I2C address 0x20 and 0x21. It is save to add a PCA9555 or TCA9555 from I2C address 0x22 and up in the myHall.cpp file. See the myHal.cpp_example.txt for an example.
+The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I2C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.
+
+If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:
+
+.. code-block:: cpp
+  MCP23017::create(164, 16, 0x20);
+  MCP23017::create(180, 16, 0x21);
+
+See the myHal.cpp_example.txt for an example.
 
 An input pin may be configured using the DCC++ EX Sensor commands, as follows:
 

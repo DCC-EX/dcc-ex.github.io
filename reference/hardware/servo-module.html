@@ -313,14 +313,60 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <a class="reference internal image-reference" href="../../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
 <div class="section" id="using-servos-with-ex-rail">
 <h2>Using Servos with EX-RAIL<a class="headerlink" href="#using-servos-with-ex-rail" title="Permalink to this headline">¶</a></h2>
-<p>Defining Turnouts?</p>
+<p>EX-RAIL supports two methods of controlling servos:</p>
+<ul class="simple">
+<li><p>Turnouts via the SERVO_TURNOUT directive</p></li>
+<li><p>Animations via the SERVO or SERVO2 directives</p></li>
+</ul>
 <div class="section" id="controlling-servos-for-turnouts">
 <h3>Controlling Servos for Turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this headline">¶</a></h3>
-<p>SERVO_TURNOUT Command</p>
+<p>The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in WiThrottle apps, Engine Driver, and JMRI in addition to being defined as a turnout within the CommandStation.</p>
+<p>As per the EX-RAIL reference, turnouts are defined with the following syntax:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">pin</span><span class="p">,</span> <span class="n">active_angle</span><span class="p">,</span> <span class="n">inactive_angle</span><span class="p">,</span> <span class="n">profile</span> <span class="p">[,</span> <span class="s">&quot;description&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The valid parameters are:</p>
+<ul class="simple">
+<li><p>id = Unique ID within the CommandStation (note these are shared across turnouts, sensors, and outputs).</p></li>
+<li><p>pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
+<li><p>active_angle = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).</p></li>
+<li><p>inactive_angle = The angle to which the servo will move when the turnout is closed (refer below for further detailed information).</p></li>
+<li><p>profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce (note we don’t recommend Bounce for a turnout definition).</p></li>
+<li><p>description = A human-friendly description of the turnout that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes “”.</p></li>
+</ul>
+<p>An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="n">Slow</span><span class="p">,</span> <span class="s">&quot;Example slow turnout definition&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="controlling-servos-for-animations">
 <h3>Controlling Servos for Animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this headline">¶</a></h3>
-<p>SERVO Command</p>
+<p>The SERVO and SERVO2 directives allow for servos to be used in various automations within EX-RAIL.</p>
+<p>Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, Engine Driver, or JMRI, but are instead actions designed to be used within EX-RAIL automations.</p>
+<p>As per the EX-RAIL reference, these are defined with the following syntax:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">profile</span><span class="p">)</span>
+<span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The valid parameters are:</p>
+<ul class="simple">
+<li><p>vpin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
+<li><p>position = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).</p></li>
+<li><p>profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce.</p></li>
+<li><p>duration = The time (in ms) for the servo to be actively rotating.</p></li>
+</ul>
+<p>As an example, consider a lineside worker that needs to be moved away from the track when a train approaches, which is controlled by an infrared sensor.</p>
+<p>The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a sensor attached to VPin 164 (first pin on the first MCP23017):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="n">Fast</span><span class="p">)</span>
+<span class="n">DONE</span>
+
+<span class="n">AFTER</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Slow</span><span class="p">)</span>
+<span class="n">DONE</span>
+</pre></div>
+</div>
+<p>This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).</p>
 </div>
 </div>
 <div class="section" id="technical-discussion-for-engineers">

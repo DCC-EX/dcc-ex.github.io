@@ -179,11 +179,37 @@ There are also drivers included with DCC++ EX for the following modules:
 
 * PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I2C).
 * MCP23008 - Another 8-channel GPIO extender module.
+* PCA/TCA9555 - Another 16-channel GPIO extender module (see notes below).
 * DFPlayer - MP3 Media player with microSD card holder.  You can play different sounds from the player by activating or de-activating
   output VPINs from within DCC++ EX.
 * ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.
 * VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
 * HC-SR04 - Ultrasound 'sonar' range sensor.  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
+
+Notes on the PCA9555/TCA9555 I2C GPIO Extenders
+-----------------------------------------------
+
+The PCA9555 is made by Texas Instruments and NXP, the TCA9555 only by Texas Instruments.
+Using these GPIO extenders is almost the same as the the MCP23017. However there are a few differences. 
+
+The PCA9555 & TCA9555 have always an internal pull-up resistor for ports configured as an input, and the INT pin is always enabled and wil trigger on a rising & falling edge of an input port.
+Both PCA9555 & TCA9555 can work with 3.3v & 5V
+
+When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.
+
+Two MCP23017 modules have been pre-defined in the CS with I2C address 0x20 and 0x21. It is save to add a PCA9555 or TCA9555 from I2C address 0x22 and up in the myHall.cpp file. See the myHal.cpp_example.txt for an example.
+
+An input pin may be configured using the DCC++ EX Sensor commands, as follows:
+
+.. code-block:: 
+  <S 801 211 1> or <S 801 211 0>
+
+Note: the 1 or 0 at the and of the command is to enable/disable the pull-up resistor, but it is not functional for the PCA/TCA as a pull-up resistor is always enable for an input port.
+
+An output port may be configured using the DCC++ EX Output commands, as follows:
+
+.. code-block:: 
+  <Z 901 196 0>
 
 Adding a New Device
 ===================

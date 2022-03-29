@@ -29,6 +29,10 @@ Or choose user @FNDecker in your Venmo App
 
 Our Patreon name is "dccex"
 
+.. raw:: html
+
+   <iframe src="https://github.com/sponsors/DCC-EX/card" title="Sponsor DCC-EX" height="225" width="600" style="border: 0;"></iframe>
+
 By Mail: You may send checks made out to DCC-EX to:
 DCC-EX
 PO Box 674

@@ -197,23 +197,17 @@ When used for inputs (sensors or switches), the sensor/switch is usually connect
 
 The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I2C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.
 
-If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code.
-
-Search for and locate:
+If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:
 
 .. code-block:: cpp
+
   MCP23017::create(164, 16, 0x20);
   MCP23017::create(180, 16, 0x21);
-
-Add "//" to comment them out:
-
-.. code-block:: cpp
-  //MCP23017::create(164, 16, 0x20);
-  //MCP23017::create(180, 16, 0x21);
 
 To configure an input pin using the DCC++ EX Sensor commands, use the <S> command:
 
 .. code-block:: 
+
   <S 801 211 1> or <S 801 211 0>
 
 As per the notes above, the 0 or 1 for the pull-up is redundant as this is always on, but the <S> command requires the parameter to be set.
@@ -221,6 +215,7 @@ As per the notes above, the 0 or 1 for the pull-up is redundant as this is alway
 An output port may be configured using the DCC++ EX Output commands, as follows:
 
 .. code-block:: 
+  
   <Z 901 196 0>
 
 Adding a New Device

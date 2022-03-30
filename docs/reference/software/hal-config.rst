@@ -195,22 +195,28 @@ The PCA/TCA9555 has an always-on internal pull-up resistor for ports configured 
 
 When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.
 
-The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I2C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.
+The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I2C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.
 
-If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:
+If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code.
+
+Search for and locate:
 
 .. code-block:: cpp
   MCP23017::create(164, 16, 0x20);
   MCP23017::create(180, 16, 0x21);
 
-See the myHal.cpp_example.txt for an example.
+Add "//" to comment them out:
 
-An input pin may be configured using the DCC++ EX Sensor commands, as follows:
+.. code-block:: cpp
+  //MCP23017::create(164, 16, 0x20);
+  //MCP23017::create(180, 16, 0x21);
+
+To configure an input pin using the DCC++ EX Sensor commands, use the <S> command:
 
 .. code-block:: 
   <S 801 211 1> or <S 801 211 0>
 
-Note: the 1 or 0 at the and of the command is to enable/disable the pull-up resistor, but it is not functional for the PCA/TCA as a pull-up resistor is always enable for an input port.
+As per the notes above, the 0 or 1 for the pull-up is redundant as this is always on, but the <S> command requires the parameter to be set.
 
 An output port may be configured using the DCC++ EX Output commands, as follows:
 

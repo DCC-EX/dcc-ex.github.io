@@ -8,5 +8,5 @@ The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Q
 
    <!--iframe src="https://script.google.com/macros/s/AKfycbxiOJLhGbZRN3GWe_KIDe361733KvJU-DHajl6xBQPEMxiityA/exec"   class="is-fullwidth" height="800" width="100%" style="border:0;">
        </iframe-->
-   <iframe src="https://script.google.com/macros/s/AKfycbz-ilHLncOOBEF2RmycGvL3pkUyleGY4SSzVHTbd5yFYXRnVmb5Syih8Wi4holKqAWL/exec" class="is-fullwidth" height="800" width="100%" style="border:0;">
+   <iframe src="https://script.google.com/macros/s/AKfycbzNqS22HRZmBxocymegEw0maOg2FmnY01wpSt0HkcBoXSyWlpTAKiBPx25YF4EOkJNI/exec" class="is-fullwidth" height="800" width="100%" style="border:0;">
    </iframe>

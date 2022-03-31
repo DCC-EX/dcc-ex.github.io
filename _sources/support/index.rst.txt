@@ -11,6 +11,7 @@ The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Q
 
 The next best way to get our attention is to fill out a support ticket:
 
+
 .. toctree::
 
     create-ticket

@@ -140,3 +140,4 @@ Next see the :doc:`Get Started section <get-started/index>` or click next below.
    donate/index
    press/index
    about/index
+   test

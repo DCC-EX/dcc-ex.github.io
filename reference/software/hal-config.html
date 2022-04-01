@@ -425,12 +425,34 @@ PCA9685 to do exactly this.</p>
 <ul class="simple">
 <li><p>PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I2C).</p></li>
 <li><p>MCP23008 - Another 8-channel GPIO extender module.</p></li>
+<li><p>PCA/TCA9555 - Another 16-channel GPIO extender module (see notes below).</p></li>
 <li><p>DFPlayer - MP3 Media player with microSD card holder.  You can play different sounds from the player by activating or de-activating
 output VPINs from within DCC++ EX.</p></li>
 <li><p>ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.</p></li>
 <li><p>VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.</p></li>
 <li><p>HC-SR04 - Ultrasound ‘sonar’ range sensor.  Its VPIN activates when a reflecting object is within a defined distance of the sensor.</p></li>
 </ul>
+<div class="section" id="notes-on-the-pca9555-tca9555-i2c-gpio-extenders">
+<h3>Notes on the PCA9555/TCA9555 I2C GPIO Extenders<a class="headerlink" href="#notes-on-the-pca9555-tca9555-i2c-gpio-extenders" title="Permalink to this headline">¶</a></h3>
+<p>The PCA9555 is made by Texas Instruments and NXP, the TCA9555 by Texas Instruments alone, and using these GPIO extenders is similar to the the MCP23017 with a few key differences.</p>
+<p>The PCA/TCA9555 has an always-on internal pull-up resistor for ports configured as an input, and the INT pin is always enabled, meaning it will always trigger on the rising and falling edge of an input port. The PCA/TCA9555 will work with either 3.3v or 5V.</p>
+<p>When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.</p>
+<p>The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I2C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.</p>
+<p>If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">);</span>
+<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To configure an input pin using the DCC++ EX Sensor commands, use the &lt;S&gt; command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 801 211 1&gt; or &lt;S 801 211 0&gt;
+</pre></div>
+</div>
+<p>As per the notes above, the 0 or 1 for the pull-up is redundant as this is always on, but the &lt;S&gt; command requires the parameter to be set.</p>
+<p>An output port may be configured using the DCC++ EX Output commands, as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 901 196 0&gt;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="adding-a-new-device">
 <h2>Adding a New Device<a class="headerlink" href="#adding-a-new-device" title="Permalink to this headline">¶</a></h2>

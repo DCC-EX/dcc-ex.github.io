@@ -11,15 +11,17 @@ The table below is a growing list of multifunction decoders we've had reasons to
 * Model - The specific model or part number of the decoder.
 * Type:
 
-  * MF - Multifunction.
-  * ACC - Accessory.
-  * MFS - Multifunction with sound.
-  * SND - Sound only.
+  * Multifunction.
+  * Multifunction with sound.
+  * Accessory.
+  * Sound only.
 * Firmware - The specific version of firmware on the decoder when tested.
 * Connector:
 
-  * NEM561.
+  * NEM651.
   * NEM652.
+  * 21MTC.
+  * PLUX8/12/16/22.
   * N/A (bare wires).
 * ACK Settings - Specific settings to enable correct ACK behaviour for service mode programming.
 * Rating:
@@ -32,11 +34,10 @@ The table below is a growing list of multifunction decoders we've had reasons to
 
 Note to manufacturers: This list is not designed in any way to disparage manufacturers, and is simply a factual observation of what the DCC++ EX team have noted while helping people get up and running with various DCC decoders.
 
-+-------+-------+------+----------+-----------+--------------+--------------+--------+----------+
-| Brand | Model | Type | Firmware | Connector | Capabilities | ACK Settings | Rating | Comments |
-+=======+=======+======+==========+===========+==============+==============+========+==========+
-|       |       |      |          |           |              |              |        |          |
-+-------+-------+------+----------+-----------+--------------+--------------+--------+----------+
-|       |       |      |          |           |              |              |        |          |
-+-------+-------+------+----------+-----------+--------------+--------------+--------+----------+
-
++-------+-------+------+----------+-----------+--------------+--------+----------+
+| Brand | Model | Type | Firmware | Connector | ACK Settings | Rating | Comments |
++=======+=======+======+==========+===========+==============+========+==========+
+|       |       |      |          |           |              |        |          |
++-------+-------+------+----------+-----------+--------------+--------+----------+
+|       |       |      |          |           |              |        |          |
++-------+-------+------+----------+-----------+--------------+--------+----------+

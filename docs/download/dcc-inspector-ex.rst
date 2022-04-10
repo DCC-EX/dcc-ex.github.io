@@ -17,4 +17,4 @@ DCC Inspector-EX is a packet sniffing tool that can connect directly to the sign
 
 .. rst-class:: dcclink
 
-   `DCCInspector-EX Github Repository <https://github.com/DCC-EX/DCCInspector-EX">`_
+   `DCCInspector-EX Github Repository <https://github.com/DCC-EX/DCCInspector-EX>`_

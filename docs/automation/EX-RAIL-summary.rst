@@ -249,6 +249,8 @@ Automations, Routes and Sequences
       -  Fade an LED on a servo driver to given value and taking a given time
     * -  LCN( msg )
       -  Send message to LCN Accessory Network
+    * -  MOVETT( vpin, steps, activity )
+      -  Move a turntable the number of steps relative to home, and perform the activity (refer Turntable-EX documentation)
     * -  SERVO( id, position, profile )
       -  Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
     * -  SERVO2( id, position, duration )

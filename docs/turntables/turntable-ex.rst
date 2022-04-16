@@ -135,17 +135,53 @@ Insert the Nano into the prototype shield socket, taking care to ensure the USB 
 
 <Insert image here>
 
-3. Connect the hall effect sensor
+3. Connect the stepper controller and motor
 ---------------------------------
 
+Firstly, note that the ULN2003 controller will have four pins marked "IN1" through "IN4", as well as a pair of pins with "+" and "-". There is a likely a jumper installed across two pins beside these that is unmarked, leave this in place.
 
+Now, you will need four of the female to female Dupont wires and connect these from the ULN2003 pins to the Arduino prototype shield as below:
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * - ULN2003 Pin
+      - Arduino Pin
+    * - IN1
+      - 8
+    * - IN2
+      - 9
+    * - IN3
+      - 10
+    * - IN4
+      - 11
+
+Insert the stepper motor connector into the recepticle on the ULN2003 controller. Note that it will only go in one way, so check the orientation and simply plug it in.
 
 <Insert image here>
 
-4. Connect the stepper controller and motor
+1. Connect the hall effect sensor
 -------------------------------------------
 
+The hall effect sensor has three pins, and likely only two of these pins are marked, the left with "-" and right with "S". The middle pin is likely to be unmarked, and will be the 5V pin. There are probably many different varieties of sensors and designs out there, but both that I have (from different suppliers) are marked identically.
 
+Use three of the Dupont wires and connect these from the hall effect sensor to the Arduino prototype shield as below:
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * - Hall Effect Pin
+      - Arduino Pin
+    * - \- (Left)
+      - Pin 2 ground
+    * - Unmarked (middle)
+      - Pin 2 5V
+    * - S (Right)
+      - Pin 2
 
 <Insert image here>
 
@@ -155,6 +191,11 @@ Insert the Nano into the prototype shield socket, taking care to ensure the USB 
 
 
 <Insert image here>
+
+6. Power connection
+-------------------
+
+
 
 Testing and tuning
 ==================

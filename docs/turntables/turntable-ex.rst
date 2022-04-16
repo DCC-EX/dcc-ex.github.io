@@ -25,9 +25,26 @@ What you need for Turntable-EX
 
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
 * A supported stepper motor controller and stepper motor
-* A dual relay board (or similar) if you wish to use the phase switching capability
 * A hall effect (or similar) sensor for homing
+* A dual relay board (or similar) if you wish to use the phase switching capability
 * A turntable capable of being driven by a stepper motor
+
+.. image:: ../_static/images/turntable-ex/nano-v3.png
+  :alt: Nano V3
+  :scale: 50%
+
+.. image:: ../_static/images/turntable-ex/uln2003-28byj-48.png
+  :alt: ULN2003/28BYJ-48 Stepper combo
+  :scale: 50%
+
+.. image:: ../_static/images/turntable-ex/hall-effect.png
+  :alt: Hall Effect sensor
+  :scale: 50%
+
+.. image:: ../_static/images/turntable-ex/dual-relay.png
+  :alt: Dual Relay
+  :scale: 50%
+
 
 Supported stepper controllers and motors
 =========================================
@@ -73,12 +90,16 @@ In order to prevent short circuits, the DCC signal to the tracks on the bridge n
 * Use a mechanical method to switch the phase based on the physical position of the turntable
 * Use Turntable-EX and EX-RAIL position definitions to reverse or maintain the phase as appropriate for each position
 
-The critical aspect when using Turntable-EX and EX-RAIL to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity.
+The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
+
+INSERT IMAGES HERE - animated gif perhaps?
 
 Automation with EX-RAIL
 =======================
 
 MOVETT(vpin, steps, activity)
+
+DONE before first ROUTE, if a position is preferred on startup, make it explicit.
 
 Test and tune
 =============

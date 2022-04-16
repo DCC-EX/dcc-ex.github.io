@@ -27,7 +27,10 @@ What you need for Turntable-EX
 * A supported stepper motor controller and stepper motor
 * A hall effect (or similar) sensor for homing
 * A dual relay board (or similar) if you wish to use the phase switching capability
+* A suitable power supply - note that your chosen stepper controller/motor will dictate this, see note below
 * A turntable capable of being driven by a stepper motor
+* A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
+* Dupont type wires to connect the components, male to female or female to female as required
 
 .. image:: ../_static/images/turntable-ex/nano-v3.png
   :alt: Nano V3
@@ -39,12 +42,30 @@ What you need for Turntable-EX
 
 .. image:: ../_static/images/turntable-ex/hall-effect.png
   :alt: Hall Effect sensor
-  :scale: 50%
+  :scale: 40%
 
 .. image:: ../_static/images/turntable-ex/dual-relay.png
   :alt: Dual Relay
-  :scale: 50%
+  :scale: 40%
 
+.. image:: ../_static/images/turntable-ex/nano-shield1.png
+  :alt: Nano Prototype Shield
+  :scale: 40%
+
+.. image:: ../_static/images/turntable-ex/dupont.png
+  :alt: Dupont male to female
+  :scale: 30%
+
+Power supplies
+--------------
+
+Choosing the right power supply for your Arduino and stepper motor is important to get right.
+
+If you are using the default ULN2003/28BYJ-48 it is technically possible to power the controller and stepper directly from the 5V output on an Arduino, however this is not recommended.
+
+Given that this combo requires 5V, you can use a single, regulated 5V DC power supply rated for at least 500mA to power both the Arduino and the ULN2003/28BYJ-48.
+
+For other steppers such as the NEMA17 that require 12V DC, you will need either two separate power supplies, or a DC-DC converter to provide a lower voltage to the Arduino. Note that the NEMA17 steppers have a considerably higher current rating, so the power supply will need to be rated at 1.5A or higher.
 
 Supported stepper controllers and motors
 =========================================
@@ -60,14 +81,14 @@ The complete list of supported stepper controllers and motors:
 * TMC2208/NEMA17
 * ULN2003/28BYJ-48
 
-If you have a need to use a different controller, some minor code updates will be required unless it is "pin compatible" with one of the existing controllers.
+If you have a need to use a different controller, some minor code updates will be required unless it is "pin compatible" with one of the existing controllers, in which case you can simply select the appropriate compatible driver.
 
 How does it work?
 =================
 
 If you're not familiar with stepper motors then you only need a very high level understanding of how they work in order to use Turntable-EX successfully on your layout, as the concept is very simple.
 
-Very simply, a stepper motor is able to be rotated one step at a time, which translates to degrees of movement around a circle. For example, the ubiquitous 28BYJ-48 stepper motor referred to here takes 2048 steps to make a full 360 degree rotation.
+Very simply, a stepper motor is able to be rotated one step at a time, which translates to degrees of movement around a circle. For example, the ubiquitous 28BYJ-48 stepper motor referred to here takes 2048 steps to make a full 360 degree rotation. The higher the number of steps in a single rotation, the easier it will be to get perfect alignment between the turntable and your layout.
 
 In Turntable-EX, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.
 
@@ -94,6 +115,58 @@ The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to co
 
 INSERT IMAGES HERE - animated gif perhaps?
 
+Getting started
+===============
+
+Assembly
+--------
+
+For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with an Arduino Nano V3, a standard 3 pin Arduio compatible hall effect sensor, and a dual relay board. We will also assume a prototype shield is available.
+
+1. BEFORE you start
+-------------------
+
+Visually check all components for any obvious damage, paying particular attention to pins on the Arduino to make sure they are straight.
+
+2. Insert the Nano into the shield
+----------------------------------
+
+Insert the Nano into the prototype shield socket, taking care to ensure the USB socket is located at the same end as the DC power jack, and that all pins are straight and aligned correctly with the female headers.
+
+<Insert image here>
+
+3. Connect the hall effect sensor
+---------------------------------
+
+
+
+<Insert image here>
+
+4. Connect the stepper controller and motor
+-------------------------------------------
+
+
+
+<Insert image here>
+
+5. Connect the dual relay board
+-------------------------------
+
+
+
+<Insert image here>
+
+Testing and tuning
+==================
+
+Like most other devices within DCC++ EX, there is a diagnostic command available to test that Turntable-EX is working correctly and, more importantly, help you fine tune the correct step numbers for that perfect alignment with your layout at each position.
+
+.. code-block:: 
+
+  <D TT vpin steps activity>
+
+
+
 Automation with EX-RAIL
 =======================
 
@@ -101,7 +174,3 @@ MOVETT(vpin, steps, activity)
 
 DONE before first ROUTE, if a position is preferred on startup, make it explicit.
 
-Test and tune
-=============
-
-<D TT vpin steps activity>

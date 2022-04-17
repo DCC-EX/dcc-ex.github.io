@@ -1,4 +1,3 @@
-**************************
 Connecting a Servo Module
 **************************
 
@@ -102,7 +101,7 @@ The valid parameters are:
 - vpin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
 - position = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
 - profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce.
-- duration = The time (in ms) for the servo to be actively rotating.
+- duration = The time (in milliseconds (ms)) for the servo to be actively rotating.
 
 As an example, consider a lineside worker that needs to be moved away from the track when a train approaches, which is controlled by an infrared sensor.
 
@@ -134,11 +133,11 @@ There are three types of servos, standard or "Positional Rotation", "Continuous 
 
 Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechanism (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.
 
-For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds. The duration of the pulses are between 544 and 2400 milliseconds representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multiply by 4096. That gives us a range of 111 to 491.
+For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds (ms). The duration of the pulses are between 544 and 2400 microseconds (µs) representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multiply by 4096. That gives us a range of 111 to 491.
 
-Another way to look at this is that with our 12bit ADC, which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can't represent the value 4096 in 12 bits.
+Another way to look at this is that with our 12bit ADC (Analog to Digital Converter), which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can't represent the value 4096 in 12 bits.
 
-.. note:: It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000ms, which maps to 205-410, and 500 to 2400ms, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with "<T id SERVO vpin thrownPos closedPos profile>".
+.. note:: It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000µs, which maps to 205-410, and 500 to 2400µs, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with "<T id SERVO vpin thrownPos closedPos profile>".
 
 .. tip:: Keep a spare slot (we recommend 100) open on your first PCA9685 board so that you can test servo positions with the `<D SERVO ...>` command to connect your servos to and get the exact positions you need.
 

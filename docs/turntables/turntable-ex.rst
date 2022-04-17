@@ -23,7 +23,7 @@ The integration includes:
 What you need for Turntable-EX
 ==============================
 
-* A DCC++ EX command station running version 4.0.2 or later of CommandStation-EX
+* A DCC++ EX command station running version 4.0.2 or later of CommandStation-EX (this includes the Beta version of the Turntable-EX device driver)
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
 * A supported stepper motor controller and stepper motor
 * A hall effect (or similar) sensor for homing
@@ -128,7 +128,7 @@ INSERT IMAGES HERE - animated gif perhaps?
 I'm Ready!
 ----------
 
-Click the "next" button below to choose your path, and then move ahead to how to assemble your Command Station.
+Click the "next" button to get started assembling Turntable-EX.
 
 .. toctree::
     :hidden:

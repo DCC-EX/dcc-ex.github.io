@@ -122,13 +122,15 @@ At the time of writing, there is no installer for Turntable-EX like there is for
 
 The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/get-started/arduino-ide` page.
 
-While following that process, you will need some ammendments to cater for Turntable-EX:
+While following that process, you will need to make some ammendments to cater for Turntable-EX:
 
 * The software is available on the `Turntable-EX download page <https://github.com/DCC-EX/Turntable-EX/releases>`
 * References to CommandStation-EX are substituted with Turntable-EX (eg. your folder name needs to be called Turntable-EX)
 * You will need to set the board type to "Nano" and set the correct Processor type (typically ATMega328P)
 
-8. Connect Turntable-EX to your CommandStation
+<TO DO: Add the ability to test the basic Turntable-EX functions here via serial console>
+
+1. Connect Turntable-EX to your CommandStation
 ----------------------------------------------
 
 To control Turntable-EX from your CommandStation, you will need a connection to the I2C (SDA, SCL) pins.
@@ -154,3 +156,12 @@ Connect these pins to your CommandStation as shown in the table below, noting th
       - A5 (SCL)
     * - Any spare ground
       - A4 GND
+
+Now you're ready!
+=================
+
+At this point, you should now have a fully assembled Turntable-EX with the software loaded and a default configuration.
+
+In addition, Turntable-EX should be connected to your CommandStation ready to test, tune your turntable positions, and configure EX-RAIL ready for use on your layout.
+
+Click the "next" button to get cracking!

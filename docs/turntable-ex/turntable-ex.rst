@@ -1,6 +1,6 @@
-*****************
-Turntable-EX
-*****************
+**************************
+Turntable-EX Overview
+**************************
 
 Turntable-EX is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper controller and motor to spin the turntable bridge.
 
@@ -58,7 +58,7 @@ What you need for Turntable-EX
   :scale: 30%
 
 Power supplies
---------------
+______________
 
 Choosing the right power supply for your Arduino and stepper motor is important to get right.
 
@@ -101,15 +101,17 @@ The command used to move to these positions simply sends the number of steps to 
 
 That's pretty much as simple as it gets. These step positions are defined in myAutomation.h (part of EX-RAIL), which will be described in further detail below.
 
+*Note on the home position*: It's recommended that the home position does not align with a specific layout connection track to ensure that each time Turntable-EX powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
+
 Controlling the turntable
--------------------------
+_________________________
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
 Refer to the Configure and Control page for more details on this.
 
 Important! Phase (or polarity) switching
-----------------------------------------
+________________________________________
 
 An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.
 
@@ -126,12 +128,6 @@ The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to co
 INSERT IMAGES HERE - animated gif perhaps?
 
 I'm Ready!
-----------
+==========
 
 Click the "next" button to get started assembling Turntable-EX.
-
-.. toctree::
-    :hidden:
-
-    get-started
-    configure

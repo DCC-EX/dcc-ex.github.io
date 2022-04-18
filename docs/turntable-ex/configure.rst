@@ -205,11 +205,88 @@ Advertising positions to Engine Driver and WiThrottle applications
 
 Now that you have defined all of your turntable positions with appropriate phase/polarity switching, it's time to get these advertised to Engine Driver and WiThrottle applications.
 
+The method to advertise these is to use EX-RAIL's ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the Engine Driver and WiThrottle Routes sections.
 
+If this is your first experience with EX-RAIL and the "myAutomation.h" file, familiarise yourself with EX-RAIL by reading through :ref:`automation/ex-rail-intro:introduction to ex-rail automation`.
+
+Pay particular attention to the various mentions of ROUTE and the associated examples.
+
+To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process:
+
+.. code-block:: cpp
+
+  ROUTE(1, "Turntable position 1")
+    MOVETT(600, 56, Turn_PNorm)
+    DONE
+
+  ROUTE(2, "Turntable position 2")
+    MOVETT(600, 111, Turn_PNorm)
+    DONE
+
+  ROUTE(3, "Turntable position 3")
+    MOVETT(600, 167, Turn_PNorm)
+    DONE
+
+  ROUTE(4, "Turntable position 4")
+    MOVETT(600, 1056, Turn_PRev)
+    DONE
+  
+  ROUTE(5, "Turntable position 5")
+    MOVETT(600, 1111, Turn_PRev)
+    DONE
+
+  ROUTE(6, "Turntable position 6")
+    MOVETT(600, 1167, Turn_PRev)
+    DONE
+
+  ROUTE(7, "Home turntable")
+    MOVETT(600, 0, Home)
+    DONE
+
+That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`automation/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
+
+There is one "catch" with the above "myAutomation.h" example. When your CommandStation starts up and EX-RAIL starts, it will automatically execute everything in "myAutomation.h" up until the first "DONE" statement it encounters.
+
+In this scenario, that means on startup, the turntable will automatically move to position 1.
+
+If you wish to leave the turntable at the home position on startup, you can simply add "DONE" on its own line at the beginning of the file prior to the first ROUTE:
+
+.. code-block:: cpp
+
+  // Prevent the turntable moving from home on startup
+  DONE
+
+  // Now the positions can be defined without the turntable moving automatically on startup
+  ROUTE(1, "Turntable position 1")
+    MOVETT(600, 56, Turn_PNorm)
+    DONE
+
+In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by adding the appropriate "MOVETT()" command instead:
+
+.. code-block:: cpp
+
+  // This will move the turntable to position 6 on startup
+  MOVETT(600, 1167, Turn_PRev)
+  DONE
+
+  // Now the positions can be defined
+  ROUTE(1, "Turntable position 1")
+    MOVETT(600, 56, Turn_PNorm)
+    DONE
+
+Alternatively, you could simply define the desired position as the first ROUTE function.
+
+.. code-block:: cpp
+
+  ROUTE(6, "Turntable position 6")
+    MOVETT(600, 1167, Turn_PRev)
+    DONE
+
+  ROUTE(1, "Turntable position 1")
+    MOVETT(600, 56, Turn_PNorm)
+    DONE
 
 Automation with EX-RAIL
 =======================
 
-MOVETT(vpin, steps, activity)
-
-DONE before first ROUTE, if a position is preferred on startup, make it explicit.
+<TO DO: Provide further automation examples here including WAITFOR()>

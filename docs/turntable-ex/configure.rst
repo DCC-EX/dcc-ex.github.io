@@ -32,8 +32,8 @@ For the diagnostic command, "activity" needs to be defined as a number, whereas 
       - EX-RAIL activity
       - Description
     * - 0
-      - Turn_PNormal
-      - Turn to the desired step position, maintain phase/polarity
+      - Turn
+      - Turn to the desired step position
     * - 1
       - Turn_PInvert
       - Turn to the desired step position, invert the phase/polarity
@@ -46,7 +46,7 @@ A quick example to demonstrate the difference, with both commands below rotating
 .. code-block:: 
 
   <D TT 600 100 1>
-  MOVETT(600, 100, Turn_PRev)
+  MOVETT(600, 100, Turn_PInvert)
 
 Testing Turntable-EX
 ====================
@@ -229,9 +229,9 @@ To define the required turntable positions in the example six position turntable
       FREE(reserve_id) \
       DONE
   
-  TURNTABLE_EX(TT_Route1, Turntable, 600, 56, Turn_PNormal, "Position 1")
-  TURNTABLE_EX(TT_Route2, Turntable, 600, 111, Turn_PNormal, "Position 2")
-  TURNTABLE_EX(TT_Route3, Turntable, 600, 167, Turn_PNormal, "Position 3")
+  TURNTABLE_EX(TT_Route1, Turntable, 600, 56, Turn, "Position 1")
+  TURNTABLE_EX(TT_Route2, Turntable, 600, 111, Turn, "Position 2")
+  TURNTABLE_EX(TT_Route3, Turntable, 600, 167, Turn, "Position 3")
   TURNTABLE_EX(TT_Route4, Turntable, 600, 1056, Turn_PInvert, "Position 4")
   TURNTABLE_EX(TT_Route5, Turntable, 600, 1111, Turn_PInvert, "Position 5")
   TURNTABLE_EX(TT_Route6, Turntable, 600, 1167, Turn_PInvert, "Position 6")
@@ -261,7 +261,7 @@ If you wish to leave the turntable at the home position on startup, you can simp
 
   // Now the positions can be defined without the turntable moving automatically on startup
   ROUTE(1, "Turntable position 1")
-    MOVETT(600, 56, Turn_PNorm)
+    MOVETT(600, 56, Turn)
     DONE
 
 In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by adding the appropriate "MOVETT()" command instead:
@@ -269,12 +269,12 @@ In a similar manner, if you prefer the turntable starts at some other position, 
 .. code-block:: cpp
 
   // This will move the turntable to position 6 on startup
-  MOVETT(600, 1167, Turn_PRev)
+  MOVETT(600, 1167, Turn_PInvert)
   DONE
 
   // Now the positions can be defined
   ROUTE(1, "Turntable position 1")
-    MOVETT(600, 56, Turn_PNorm)
+    MOVETT(600, 56, Turn_PInvert)
     DONE
 
 Alternatively, you could simply define the desired position as the first ROUTE function.
@@ -282,11 +282,11 @@ Alternatively, you could simply define the desired position as the first ROUTE f
 .. code-block:: cpp
 
   ROUTE(6, "Turntable position 6")
-    MOVETT(600, 1167, Turn_PRev)
+    MOVETT(600, 1167, Turn_PInvert)
     DONE
 
   ROUTE(1, "Turntable position 1")
-    MOVETT(600, 56, Turn_PNorm)
+    MOVETT(600, 56, Turn_PInvert)
     DONE
 
 Automation with EX-RAIL

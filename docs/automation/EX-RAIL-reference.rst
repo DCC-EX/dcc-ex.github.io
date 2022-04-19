@@ -148,11 +148,11 @@ Flow Control Functions
 
 ``IFTIMEOUT``	Tests if "timed out" flag has been set by an ATTIMEOUT sensor reading attempt
 
-``IFRED( signal_id )``  Test if signal is red
+``IFRED( signal_id )`` Test if signal is red
 
-``IFAMBER( signal_id )``  Test if signal is amber
+``IFAMBER( signal_id )`` Test if signal is amber
 
-``IFGREEN( signal_id )``  Test if signal is green
+``IFGREEN( signal_id )`` Test if signal is green
 
 ``ELSE``	Provides alternative logic to any IF related command returning False
 

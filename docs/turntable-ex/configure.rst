@@ -32,11 +32,11 @@ For the diagnostic command, "activity" needs to be defined as a number, whereas 
       - EX-RAIL activity
       - Description
     * - 0
-      - Turn_PNorm
+      - Turn_PNormal
       - Turn to the desired step position, maintain phase/polarity
     * - 1
-      - Turn_PRev
-      - Turn to the desired step position, reverse the phase/polarity
+      - Turn_PInvert
+      - Turn to the desired step position, invert the phase/polarity
     * - 2
       - Home
       - Activate the homing process, ignore the provided step position
@@ -221,6 +221,22 @@ To define the required turntable positions in the example six position turntable
 
 .. code-block:: cpp
 
+  #define TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc)
+    ROUTE(route_id, desc) \
+      RESERVE(reserve_id) \
+      MOVETT(vpin, steps, activit) \
+      WAITFOR(vpin) \
+      FREE(reserve_id) \
+      DONE
+  
+  TURNTABLE_EX(TT_Route1, Turntable, 600, 56, Turn_PNormal, "Position 1")
+  TURNTABLE_EX(TT_Route2, Turntable, 600, 111, Turn_PNormal, "Position 2")
+  TURNTABLE_EX(TT_Route3, Turntable, 600, 167, Turn_PNormal, "Position 3")
+  TURNTABLE_EX(TT_Route4, Turntable, 600, 1056, Turn_PInvert, "Position 4")
+  TURNTABLE_EX(TT_Route5, Turntable, 600, 1111, Turn_PInvert, "Position 5")
+  TURNTABLE_EX(TT_Route6, Turntable, 600, 1167, Turn_PInvert, "Position 6")
+  TURNTABLE_EX(TT_Route7, Turntable, 600, 0, Home, "Home turntable")
+
   ALIAS(Turntable, 255)
   ALIAS(TT_Route1, 1234)
   ALIAS(TT_Route2, 1234)
@@ -229,55 +245,6 @@ To define the required turntable positions in the example six position turntable
   ALIAS(TT_Route5, 1234)
   ALIAS(TT_Route6, 1234)
   ALIAS(TT_Route7, 1234)
-
-  ROUTE(TT_Route1, "Turntable position 1")
-    RESERVE(Turntable)
-    MOVETT(600, 56, Turn_PNorm)
-    WAITFOR(600)
-    FREE(Turntable)
-    DONE
-
-  ROUTE(TT_Route2, "Turntable position 2")
-    RESERVE(Turntable)
-    MOVETT(600, 111, Turn_PNorm)
-    WAITFOR(600)
-    FREE(Turntable)
-    DONE
-
-  ROUTE(TT_Route3, "Turntable position 3")
-    RESERVE(Turntable)
-    MOVETT(600, 167, Turn_PNorm)
-    WAITFOR(600)
-    FREE(Turntable)
-    DONE
-
-  ROUTE(TT_Route4, "Turntable position 4")
-    RESERVE(Turntable)
-    MOVETT(600, 1056, Turn_PRev)
-    WAITFOR(600)
-    FREE(Turntable)
-    DONE
-  
-  ROUTE(TT_Route5, "Turntable position 5")
-    RESERVE(Turntable)
-    MOVETT(600, 1111, Turn_PRev)
-    WAITFOR(600)
-    FREE(Turntable)
-    DONE
-
-  ROUTE(TT_Route6, "Turntable position 6")
-    RESERVE(Turntable)
-    MOVETT(600, 1167, Turn_PRev)
-    WAITFOR(600)
-    FREE(Turntable)
-    DONE
-
-  ROUTE(TT_Route7, "Home turntable")
-    RESERVE(Turntable)
-    MOVETT(600, 0, Home)
-    WAITFOR(600)
-    FREE(Turntable)
-    DONE
 
 That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`automation/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
 

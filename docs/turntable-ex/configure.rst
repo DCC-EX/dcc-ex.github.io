@@ -211,36 +211,72 @@ If this is your first experience with EX-RAIL and the "myAutomation.h" file, fam
 
 Pay particular attention to the various mentions of ROUTE and the associated examples.
 
+There are two highly recommended additions to using just these ROUTEs:
+1. Utilise EX-RAIL's virtual RESERVE() and FREE() functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.
+2. Utilise aliases to make things human friendly, and we have also provided 30 pre-defined aliases for the ROUTE IDs to ensure there will be no conflicts, as all IDs must be unique.
+
 To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process:
+
+<TO DO HERE: Set up a sample myTurntable-EX.h to refer to, and identify 30 unique IDs with aliases to include>
 
 .. code-block:: cpp
 
-  ROUTE(1, "Turntable position 1")
+  ALIAS(Turntable, 255)
+  ALIAS(TT_Route1, 1234)
+  ALIAS(TT_Route2, 1234)
+  ALIAS(TT_Route3, 1234)
+  ALIAS(TT_Route4, 1234)
+  ALIAS(TT_Route5, 1234)
+  ALIAS(TT_Route6, 1234)
+  ALIAS(TT_Route7, 1234)
+
+  ROUTE(TT_Route1, "Turntable position 1")
+    RESERVE(Turntable)
     MOVETT(600, 56, Turn_PNorm)
+    WAITFOR(600)
+    FREE(Turntable)
     DONE
 
-  ROUTE(2, "Turntable position 2")
+  ROUTE(TT_Route2, "Turntable position 2")
+    RESERVE(Turntable)
     MOVETT(600, 111, Turn_PNorm)
+    WAITFOR(600)
+    FREE(Turntable)
     DONE
 
-  ROUTE(3, "Turntable position 3")
+  ROUTE(TT_Route3, "Turntable position 3")
+    RESERVE(Turntable)
     MOVETT(600, 167, Turn_PNorm)
+    WAITFOR(600)
+    FREE(Turntable)
     DONE
 
-  ROUTE(4, "Turntable position 4")
+  ROUTE(TT_Route4, "Turntable position 4")
+    RESERVE(Turntable)
     MOVETT(600, 1056, Turn_PRev)
+    WAITFOR(600)
+    FREE(Turntable)
     DONE
   
-  ROUTE(5, "Turntable position 5")
+  ROUTE(TT_Route5, "Turntable position 5")
+    RESERVE(Turntable)
     MOVETT(600, 1111, Turn_PRev)
+    WAITFOR(600)
+    FREE(Turntable)
     DONE
 
-  ROUTE(6, "Turntable position 6")
+  ROUTE(TT_Route6, "Turntable position 6")
+    RESERVE(Turntable)
     MOVETT(600, 1167, Turn_PRev)
+    WAITFOR(600)
+    FREE(Turntable)
     DONE
 
-  ROUTE(7, "Home turntable")
+  ROUTE(TT_Route7, "Home turntable")
+    RESERVE(Turntable)
     MOVETT(600, 0, Home)
+    WAITFOR(600)
+    FREE(Turntable)
     DONE
 
 That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`automation/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.

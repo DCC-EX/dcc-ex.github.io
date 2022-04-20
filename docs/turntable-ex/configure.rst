@@ -221,7 +221,7 @@ To define the required turntable positions in the example six position turntable
 
 .. code-block:: cpp
 
-  #define TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc)
+  #define TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc) \
     ROUTE(route_id, desc) \
       RESERVE(reserve_id) \
       MOVETT(vpin, steps, activit) \

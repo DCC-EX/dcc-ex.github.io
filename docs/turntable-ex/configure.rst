@@ -36,17 +36,19 @@ For the diagnostic command, "activity" needs to be defined as a number, whereas 
       - Turn to the desired step position
     * - 1
       - Turn_PInvert
-      - Turn to the desired step position, invert the phase/polarity
+      - Turn to the desired step position and invert the phase/polarity
     * - 2
       - Home
       - Activate the homing process, ignore the provided step position
 
-A quick example to demonstrate the difference, with both commands below rotating to step position 100, and both reversing the phase/polarity of the bridge track:
+Here's a quick example to demonstrate the difference between the diagnostic and EX-RAIL commands, with both commands below rotating to step position 100, and both inverting the phase/polarity of the bridge track:
 
 .. code-block:: 
 
   <D TT 600 100 1>
   MOVETT(600, 100, Turn_PInvert)
+
+Note with the phase/polarity inversion, this activity must be defined for every position that requires the phase to be inverted compared with the surrounding tracks. If it is not defined, the relays will be deactivated, resulting in no phase/polarity inversion.
 
 Testing Turntable-EX
 ====================
@@ -221,6 +223,13 @@ To define the required turntable positions in the example six position turntable
 
 .. code-block:: cpp
 
+  // For Conductor level users who wish to just use Turntable-EX, you don't need to understand this
+  // and can move to defining the turntable positions below. You must, however, ensure this remains
+  // before any position definitions or you will get compile errors when uploading.
+  //
+  // Definition of the TURNTABLE_EX macro to correctly create the ROUTEs required for each position.
+  // This includes RESERVE()/FREE() to protect any automation activities.
+  //
   #define TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc) \
     ROUTE(route_id, desc) \
       RESERVE(reserve_id) \
@@ -229,22 +238,34 @@ To define the required turntable positions in the example six position turntable
       FREE(reserve_id) \
       DONE
   
-  TURNTABLE_EX(TT_Route1, Turntable, 600, 56, Turn, "Position 1")
-  TURNTABLE_EX(TT_Route2, Turntable, 600, 111, Turn, "Position 2")
-  TURNTABLE_EX(TT_Route3, Turntable, 600, 167, Turn, "Position 3")
-  TURNTABLE_EX(TT_Route4, Turntable, 600, 1056, Turn_PInvert, "Position 4")
-  TURNTABLE_EX(TT_Route5, Turntable, 600, 1111, Turn_PInvert, "Position 5")
-  TURNTABLE_EX(TT_Route6, Turntable, 600, 1167, Turn_PInvert, "Position 6")
-  TURNTABLE_EX(TT_Route7, Turntable, 600, 0, Home, "Home turntable")
-
+  // Define your turntable positions here:
+  //
+  // TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc)
+  //
+  // route_id = A unique number for each defined route, the route is what appears in throttles
+  // reserve_id = A unique reservation number (0 - 255) to ensure nothing interferes with automation
+  // vpin = The Vpin defined for the Turntable-EX device driver, default is 600
+  // steps = The target step position
+  // activity = The activity performed for this ROUTE (Note do not enclose in quotes "")
+  // desc = Description that will appear in throttles (Must use quotes "")
+  //
+  TURNTABLE_EX(TTRoute1, Turntable, 600, 56, Turn, "Position 1")
+  TURNTABLE_EX(TTRoute2, Turntable, 600, 111, Turn, "Position 2")
+  TURNTABLE_EX(TTRoute3, Turntable, 600, 167, Turn, "Position 3")
+  TURNTABLE_EX(TTRoute4, Turntable, 600, 1056, Turn_PInvert, "Position 4")
+  TURNTABLE_EX(TTRoute5, Turntable, 600, 1111, Turn_PInvert, "Position 5")
+  TURNTABLE_EX(TTRoute6, Turntable, 600, 1167, Turn_PInvert, "Position 6")
+  TURNTABLE_EX(TTRoute7, Turntable, 600, 0, Home, "Home turntable")
+  
+  // Pre-defined aliases to ensure unique IDs are used.
   ALIAS(Turntable, 255)
-  ALIAS(TT_Route1, 1234)
-  ALIAS(TT_Route2, 1234)
-  ALIAS(TT_Route3, 1234)
-  ALIAS(TT_Route4, 1234)
-  ALIAS(TT_Route5, 1234)
-  ALIAS(TT_Route6, 1234)
-  ALIAS(TT_Route7, 1234)
+  ALIAS(TTRoute1, 5179)
+  ALIAS(TTRoute2, 5180)
+  ALIAS(TTRoute3, 5181)
+  ALIAS(TTRoute4, 5182)
+  ALIAS(TTRoute5, 5183)
+  ALIAS(TTRoute6, 5184)
+  ALIAS(TTRoute7, 5185)
 
 That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`automation/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
 
@@ -259,37 +280,13 @@ If you wish to leave the turntable at the home position on startup, you can simp
   // Prevent the turntable moving from home on startup
   DONE
 
-  // Now the positions can be defined without the turntable moving automatically on startup
-  ROUTE(1, "Turntable position 1")
-    MOVETT(600, 56, Turn)
-    DONE
+  #define TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc) \
+    ...
 
-In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by adding the appropriate "MOVETT()" command instead:
+In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by simply calling the MOVETT() command at the beginning of the file and specifiying the correct steps and activity to perform:
 
 .. code-block:: cpp
 
-  // This will move the turntable to position 6 on startup
-  MOVETT(600, 1167, Turn_PInvert)
+  // This will move the turntable to position 3 on startup:
+  MOVETT(600, 167, Turn)
   DONE
-
-  // Now the positions can be defined
-  ROUTE(1, "Turntable position 1")
-    MOVETT(600, 56, Turn_PInvert)
-    DONE
-
-Alternatively, you could simply define the desired position as the first ROUTE function.
-
-.. code-block:: cpp
-
-  ROUTE(6, "Turntable position 6")
-    MOVETT(600, 1167, Turn_PInvert)
-    DONE
-
-  ROUTE(1, "Turntable position 1")
-    MOVETT(600, 56, Turn_PInvert)
-    DONE
-
-Automation with EX-RAIL
-=======================
-
-<TO DO: Provide further automation examples here including WAITFOR()>

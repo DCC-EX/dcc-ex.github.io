@@ -4,7 +4,7 @@ Turntable-EX Overview
 
 Turntable-EX is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper controller and motor to spin the turntable bridge.
 
-The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our Getting Started guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
+The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`get-started/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
 
 The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper controller and motor combination that are readily available.
 

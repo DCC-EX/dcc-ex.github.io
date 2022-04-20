@@ -404,7 +404,7 @@ You can also control the DFPlayer through EX-RAIL, using commands like the follo
 
   RESET(1000)           // Stop player
 
-  SERVO(1000,4,10)      // Start playing 4th sound at volume level 10
-  SERVO(1001,20)        // Set volume level to 20
+  SERVO(1000,4,Instant)      // Start playing 4th sound at volume level 10
+  SERVO(1001,20,Instant)        // Set volume level to 20
   
-
+Note: As per the standard SERVO commands, the last parameter is the name of a servo profile, not a number.

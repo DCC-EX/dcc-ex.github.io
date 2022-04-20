@@ -103,6 +103,8 @@ Automations, Routes and Sequences
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
       -  Define a servo turnout
+    * -  VIRTUAL_TURNOUT( id [, "description"] )
+      -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
       -  Define a servo signal
     * -  :category:`--- Flow control functions ---`

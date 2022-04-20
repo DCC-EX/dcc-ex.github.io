@@ -556,3 +556,38 @@ For example:
       DONE
    #include "myFireEngineLights.h"
    #include "myShuttle.h"
+
+Realistic turnout sequeunces
+-----------------------------
+
+Let's say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:
+
+1. An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to JMRI. 
+2. A virtual turnout. This turnout will have an ID and description, will show up in throttles and JMRI, but has no hardware or electronics associated with it. 
+
+Once these are defined, you can then use EX-RAIL's ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EX-RAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.
+
+For example:
+
+.. code-block:: cpp
+
+   SERVO_TURNOUT(101, 121, 133, 456, HIDDEN)    // Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.
+   VIRTUAL_TURNOUT(9101,"Coal yard exit")       // Define the virtual turnout, which will be visible to throttles/JMRI.
+
+   ONTHROW(9101)                                // When throwing the virtual turnout:
+   RED(MainlineSignal)                          // Set a red signal.
+   DELAY(5000)                                  // Wait for the signalman to move to the turnout lever.
+   THROW(101)                                   // Throw the real turnout.
+   DELAY(7500)                                  // Wait again for the signalman to move to the other signal lever.
+   GREEN(ShuntingSignal)                        // Set a green signal.
+   DONE
+
+   ONCLOSE(9101)                                // When closing the virtual turnout:
+   GREEN(MainlineSignal)                        // Set a green signal.
+   DELAY(5000)                                  // Wait for the signalman to move to the turnout lever.
+   CLOSE(101)                                   // Close the real turnout.
+   DELAY(7500)                                  // Wait again for the signalman to move to the other signal lever.
+   RED(ShuntingSignal)                          // Set a red signal.
+   DONE
+
+A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.

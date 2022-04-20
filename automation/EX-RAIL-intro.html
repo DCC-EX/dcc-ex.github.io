@@ -714,6 +714,37 @@ number. So now our route looks like this:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="realistic-turnout-sequeunces">
+<h3>Realistic turnout sequeunces<a class="headerlink" href="#realistic-turnout-sequeunces" title="Permalink to this headline">¶</a></h3>
+<p>Let’s say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:</p>
+<ol class="arabic simple">
+<li><p>An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to JMRI.</p></li>
+<li><p>A virtual turnout. This turnout will have an ID and description, will show up in throttles and JMRI, but has no hardware or electronics associated with it.</p></li>
+</ol>
+<p>Once these are defined, you can then use EX-RAIL’s ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EX-RAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.</p>
+<p>For example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">456</span><span class="p">,</span> <span class="n">HIDDEN</span><span class="p">)</span>    <span class="c1">// Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.</span>
+<span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">9101</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>       <span class="c1">// Define the virtual turnout, which will be visible to throttles/JMRI.</span>
+
+<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span>                                <span class="c1">// When throwing the virtual turnout:</span>
+<span class="n">RED</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span>                          <span class="c1">// Set a red signal.</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>                                  <span class="c1">// Wait for the signalman to move to the turnout lever.</span>
+<span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                                   <span class="c1">// Throw the real turnout.</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span>                                  <span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span>                        <span class="c1">// Set a green signal.</span>
+<span class="n">DONE</span>
+
+<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span>                                <span class="c1">// When closing the virtual turnout:</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span>                        <span class="c1">// Set a green signal.</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>                                  <span class="c1">// Wait for the signalman to move to the turnout lever.</span>
+<span class="n">CLOSE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                                   <span class="c1">// Close the real turnout.</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span>                                  <span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
+<span class="n">RED</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span>                          <span class="c1">// Set a red signal.</span>
+<span class="n">DONE</span>
+</pre></div>
+</div>
+<p>A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.</p>
+</div>
 </div>
 </div>
 

@@ -342,6 +342,15 @@
 <tr class="row-even"><td><p>&lt;/ ROUTES&gt;</p></td>
 <td><p><strong>*Under Construction*</strong> Returns the Routes &amp; Automations control list in WiThrottle format. JMRI integration only!</p></td>
 </tr>
+<tr class="row-odd"><td><p>&lt;/ RED signal_id&gt;</p></td>
+<td><p>Set the specified signal red</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;/ AMBER signal_id&gt;</p></td>
+<td><p>Set the specified signal amber</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;/ GREEN signal_id&gt;</p></td>
+<td><p>Set the specified signal green</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -396,56 +405,68 @@
 <tr class="row-odd"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
 <td><p>Define a servo turnout</p></td>
 </tr>
-<tr class="row-even"><td><p>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</p></td>
+<tr class="row-even"><td><p>VIRTUAL_TURNOUT( id [, “description”] )</p></td>
+<td><p>Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</p></td>
 <td><p>Define a servo signal</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong class="category">— Flow control functions —</strong></p></td>
+<tr class="row-even"><td><p><strong class="category">— Flow control functions —</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>CALL( route )</p></td>
+<tr class="row-odd"><td><p>CALL( route )</p></td>
 <td><p>Branch to a separate sequence expecting a RETURN</p></td>
 </tr>
-<tr class="row-odd"><td><p>FOLLOW( route )</p></td>
+<tr class="row-even"><td><p>FOLLOW( route )</p></td>
 <td><p>Branch or Follow a numbered sequence (think of “GOTO”)</p></td>
 </tr>
-<tr class="row-even"><td><p>RETURN</p></td>
+<tr class="row-odd"><td><p>RETURN</p></td>
 <td><p>Return to caller (see CALL)</p></td>
 </tr>
-<tr class="row-odd"><td><p>DELAY( delay )</p></td>
+<tr class="row-even"><td><p>DELAY( delay )</p></td>
 <td><p>Delay a number of milliseconds</p></td>
 </tr>
-<tr class="row-even"><td><p>DELAYMINS( delay )</p></td>
+<tr class="row-odd"><td><p>DELAYMINS( delay )</p></td>
 <td><p>Delay a number of minutes</p></td>
 </tr>
-<tr class="row-odd"><td><p>DELAYRANDOM( min_delay, max_delay )</p></td>
+<tr class="row-even"><td><p>DELAYRANDOM( min_delay, max_delay )</p></td>
 <td><p>Delay a random time between min and max milliseconds</p></td>
 </tr>
-<tr class="row-even"><td><p>IF( sensor_id )</p></td>
+<tr class="row-odd"><td><p>IF( sensor_id )</p></td>
 <td><p>If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF</p></td>
 </tr>
-<tr class="row-odd"><td><p>IFNOT( sensor_id )</p></td>
+<tr class="row-even"><td><p>IFNOT( sensor_id )</p></td>
 <td><p>If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF</p></td>
 </tr>
-<tr class="row-even"><td><p>IFCLOSED( turnout_id )</p></td>
+<tr class="row-odd"><td><p>IFCLOSED( turnout_id )</p></td>
 <td><p>Check if turnout is closed</p></td>
 </tr>
-<tr class="row-odd"><td><p>IFGTE( sensor_id, value )</p></td>
+<tr class="row-even"><td><p>IFGTE( sensor_id, value )</p></td>
 <td><p>Test if analog pin reading is greater than or equal to value (&gt;=)</p></td>
 </tr>
-<tr class="row-even"><td><p>IFLT( sensor_id, value )</p></td>
+<tr class="row-odd"><td><p>IFLT( sensor_id, value )</p></td>
 <td><p>Test if analog pin reading is less than value (&lt;)</p></td>
 </tr>
-<tr class="row-odd"><td><p>IFRANDOM( percent )</p></td>
+<tr class="row-even"><td><p>IFRANDOM( percent )</p></td>
 <td><p>Runs commands in IF block a random percentage of the time</p></td>
 </tr>
-<tr class="row-even"><td><p>IFTHROWN( turnout_id )</p></td>
+<tr class="row-odd"><td><p>IFTHROWN( turnout_id )</p></td>
 <td><p>Test if turnout is thrown</p></td>
 </tr>
-<tr class="row-odd"><td><p>IFRESERVE( block )</p></td>
+<tr class="row-even"><td><p>IFRESERVE( block )</p></td>
 <td><p>If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p></td>
 </tr>
-<tr class="row-even"><td><p>IFTIMEOUT</p></td>
+<tr class="row-odd"><td><p>IFTIMEOUT</p></td>
 <td><p>Tests if “timed out” flag has been set by an ATTIMEOUT sensor reading attempt</p></td>
+</tr>
+<tr class="row-even"><td><p>IFRED( signal_id )</p></td>
+<td><p>Tests if signal is red</p></td>
+</tr>
+<tr class="row-odd"><td><p>IFAMBER( signal_id )</p></td>
+<td><p>Tests if signal is amber</p></td>
+</tr>
+<tr class="row-even"><td><p>IFGREEN( signal_id )</p></td>
+<td><p>Tests if signal is green</p></td>
 </tr>
 <tr class="row-odd"><td><p>ELSE</p></td>
 <td><p>Provides alternative logic to any IF related command returning False</p></td>

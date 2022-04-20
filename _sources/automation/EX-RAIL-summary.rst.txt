@@ -58,6 +58,12 @@ There are some diagnostic and control commands added to the <tag> language norma
       -  Unlock sensor, returning to current external state
     * -  </ ROUTES>
       -  ***Under Construction*** Returns the Routes & Automations control list in WiThrottle format. JMRI integration only!
+    * -  </ RED signal_id>
+      -  Set the specified signal red
+    * -  </ AMBER signal_id>
+      -  Set the specified signal amber
+    * -  </ GREEN signal_id>
+      -  Set the specified signal green
 
 Automations, Routes and Sequences
 ----------------------------------
@@ -97,6 +103,8 @@ Automations, Routes and Sequences
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
       -  Define a servo turnout
+    * -  VIRTUAL_TURNOUT( id [, "description"] )
+      -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
       -  Define a servo signal
     * -  :category:`--- Flow control functions ---`
@@ -131,6 +139,12 @@ Automations, Routes and Sequences
       -  If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
     * -  IFTIMEOUT
       -  Tests if "timed out" flag has been set by an ATTIMEOUT sensor reading attempt
+    * -  IFRED( signal_id )
+      -  Tests if signal is red
+    * -  IFAMBER( signal_id )
+      -  Tests if signal is amber
+    * -  IFGREEN( signal_id )
+      -  Tests if signal is green
     * -  ELSE
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF

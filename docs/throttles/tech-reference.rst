@@ -132,5 +132,5 @@ __________________
 * ``<f cab func1 func2>`` - Use ``<F cab function 1/0>`` instead.
 * ``<t  slot cab speed dir>`` - Just drop the slot number .
 * ``<T commands>`` - other than ``<T id 0/1>``.
-* ``<s>``
-* ``<c>``
+* ``<s>`` - This may need to change in the future to support new features.
+* ``<c>`` - This may need to change in the future to support new features.

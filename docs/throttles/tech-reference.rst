@@ -122,7 +122,7 @@ Obtaining throttle status
 
 ``<t cabid>`` - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
 
-Example respnse:
+Example response:
 
 * ``<l cabid slot speedbyte functionMap>`` - Note that a slot of -1 indicates that the cab is not in the reminders table and this comand will not reserve a slot until such time as the cab is throttled.
 

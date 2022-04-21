@@ -11,21 +11,53 @@ Release 4.0.2 provides a number of additional throttle information commands that
 
 These commands are new and do not overlap with the existing commands (which are probably due to be obsoleted as they are over complex and unfit for purpose).
 
+Throttle command summary:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All throttle specific commands are summarised here, refer below for elaboration on the details with examples.
+
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Command
+    - Response
+    - Description
+  * - ``<JT>``
+    - ``<jT ID1 ID2 ID3 ...>``
+    - Returns the defined turnout IDs.
+  * - ``<JT ID>``
+    - ``<jT ID state "[description]">``
+    - Returns the ID, state, and description of the specified turnout ID.
+  * - ``<JA>``
+    - ``<jA ID1 ID2 ID3 ...>``
+    - Returns the defined automation and route IDs.
+  * - ``<JA ID>``
+    - ``<jA ID type "[description]">``
+    - Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID.
+  * - ``<JR>``
+    - ``<jR ID1 ID2 ID3 ...>``
+    - Returns the defined roster entry IDs.
+  * - ``<JR ID>``
+    - ``<jR ID "description" "function1/function2/function3/...">``
+    - Returns the ID, description, and function map of the specified roster entry ID.
+  * - ``<t cabid>``
+    - ``<l cabid slot speedbyte functionMap>``
+    - Requests a deliberate update of cab speed/functions in the same format as the cab broadcast.
+
 Turnouts
 ~~~~~~~~~
 
-The conventional turnout definition commands and the ```<H>``` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.
+The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.
 
-Turnout commands
-^^^^^^^^^^^^^^^^^^
-
-**<JT>** - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.
+``<JT>`` - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.
 
 Example response:
 
 * ``<jT 1 17 22 19>`` - Turnout IDS 1, 17, 22, and 19 are defined.
 
-**<JT 17>** - Returns the description for turnout ID 17, and the status of T=thrown or C=closed.
+``<JT 17>`` - Returns the description for turnout ID 17, and the status of T=thrown or C=closed.
 
 Example responses:
 
@@ -44,13 +76,13 @@ Automations/Routes
 
 A throttle needs to know which EX-RAIL Automations and Routes it can show the user.
 
-**<JA>** - Returns a list of Automations/Routes.
+``<JA>`` - Returns a list of Automations/Routes.
 
 Example response:
 
 * ``<jA 13 16 23>`` - Indicates route/automation ids 13, 16, and 23 are defined.
 
-**<JA 13>** - Returns information for route/automation ID 13 including the description, and if it is a route (R) or automation (A).
+``<JA 13>`` - Returns information for route/automation ID 13 including the description, and if it is a route (R) or automation (A).
 
 Example responses:
 
@@ -72,14 +104,14 @@ An **AUTOMATION** is a handoff of the last accessed loco ID to an EX-RAIL AUTOMA
 Roster Information
 ^^^^^^^^^^^^^^^^^^^
 
-**<JR>** - Requests a list of cab IDs from the roster.
+``<JR>`` - Requests a list of cab IDs from the roster.
 
 Example responses:
 
 * ``<jR 3 200 6336>`` - Returns the roster entry IDs 3, 200, and 6336 are defined.
 * ``<jR>`` - Indicates no roster entries are defined.
 
-**<JR 200>** - Returns the roster name function map for roster ID 200.
+``<JR 200>`` - Returns the roster name function map for roster ID 200.
 
 Example response:
 
@@ -88,7 +120,7 @@ Example response:
 Obtaining throttle status
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**<t cabid>** - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
+``<t cabid>`` - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
 
 Example respnse:
 

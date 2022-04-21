@@ -21,7 +21,9 @@ Turnout commands
 
 **<JT>** - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.
 
-Example response: ``<jT 1 17 22 19>`` - Turnout IDS 1, 17, 22, and 19 are defined.
+Example response:
+
+* ``<jT 1 17 22 19>`` - Turnout IDS 1, 17, 22, and 19 are defined.
 
 **<JT 17>** - Returns the description for turnout ID 17, and the status of T=thrown or C=closed.
 
@@ -35,6 +37,7 @@ Example responses:
 .. note:: It is still the throttles responsibility to monitor the status broadcasts. Also note that turnouts marked in EX-RAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
 
 .. note:: *Note from the author:* The existing broadcast is messy and needs cleaning up, however, I'm not keen on dynamically created/deleted turnouts so I have no intention of providing a command that indicates the turnout list has been updated since the throttle started.
+  - Chris Harlow
 
 Automations/Routes
 ^^^^^^^^^^^^^^^^^^^
@@ -43,7 +46,9 @@ A throttle needs to know which EX-RAIL Automations and Routes it can show the us
 
 **<JA>** - Returns a list of Automations/Routes.
 
-Example response: ``<jA 13 16 23>`` - Indicates route/automation ids 13, 16, and 23 are defined.
+Example response:
+
+* ``<jA 13 16 23>`` - Indicates route/automation ids 13, 16, and 23 are defined.
 
 **<JA 13>** - Returns information for route/automation ID 13 including the description, and if it is a route (R) or automation (A).
 
@@ -53,36 +58,47 @@ Example responses:
 * ``<jA 13 A "description">`` - Returns the description for ID 13, and that it is an automation.
 * ``<jA 13 X>`` - Indicates ID 13 is not found.
 
-Whats the difference: 
-  A Route is just a call to an EXRAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EXRAIL function... but its not expecting to know the loco.  
-  Thus a route can be triggered by sending in for example ```</START 13>```. 
+What's the difference?
++++++++++++++++++++++++
 
-  An Automation is a handoff of the last accessed loco id to an EXRAIL AUTOMATION which would typically drive the loco away.
-  Thus an Automation expects a start command with a cab id
-  e.g. ```</START 13 3>```
+A **ROUTE** is just a call to an EX-RAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EX-RAIL function, but is not expecting to know the loco ID.
 
+* A route can be triggered by sending, for example, ``</START 13>``. 
 
-  Roster Information:
-  The ```<JR>``` command requests a list of cab ids from the roster.
-  e.g. responding ```<jR 3 200 6336>```
-  or <jR> for none. 
+An **AUTOMATION** is a handoff of the last accessed loco ID to an EX-RAIL AUTOMATION which would typically drive the loco away.
 
-  Each Roster entry had a name and function map obtained by:
-  ```<JR 200>```  reply like ```<jR 200 "Thomas" "whistle/*bell/squeal/panic">
-  
-  Refer to EXRAIL ROSTER command for function map format.
+* An automation expects a start command with a cab ID, for example ``</START 13 3>``.
 
+Roster Information
+^^^^^^^^^^^^^^^^^^^
 
-Obtaining throttle status.
-```<t cabid>```  Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
-    ```<l cabid slot speedbyte functionMap>```
-    Note that a slot of -1 indicates that the cab is not in the reminders table and this comand will not reserve a slot until such time as the cab is throttled.
+**<JR>** - Requests a list of cab IDs from the roster.
 
+Example responses:
 
-COMMANDS TO AVOID
+* ``<jR 3 200 6336>`` - Returns the roster entry IDs 3, 200, and 6336 are defined.
+* ``<jR>`` - Indicates no roster entries are defined.
 
-```<f cab func1 func2>```     Use ```<F cab function 1/0>```
-```<t  slot cab speed dir>``` Just drop the slot number 
-```<T commands>``` other than ```<T id 0/1>```
-```<s>```
-```<c>```
+**<JR 200>** - Returns the roster name function map for roster ID 200.
+
+Example response:
+
+* ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">`` - Returns the defined description "Thomas" with each defined function's name. Refer to the EX-RAIL ROSTER command for function map format.
+
+Obtaining throttle status
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**<t cabid>** - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
+
+Example respnse:
+
+* ``<l cabid slot speedbyte functionMap>`` - Note that a slot of -1 indicates that the cab is not in the reminders table and this comand will not reserve a slot until such time as the cab is throttled.
+
+Commands to avoid
+__________________
+
+* ``<f cab func1 func2>`` - Use ``<F cab function 1/0>`` instead.
+* ``<t  slot cab speed dir>`` - Just drop the slot number .
+* ``<T commands>`` - other than ``<T id 0/1>``.
+* ``<s>``
+* ``<c>``

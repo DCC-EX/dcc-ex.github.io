@@ -26,7 +26,7 @@ What you need for Turntable-EX
 * A DCC++ EX command station running version 4.0.2 or later of CommandStation-EX (this includes the Beta version of the Turntable-EX device driver)
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
 * A supported stepper motor controller and stepper motor
-* A hall effect (or similar) sensor for homing
+* A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent)
 * A dual relay board (or similar) if you wish to use the phase switching capability
 * A suitable power supply - note that your chosen stepper controller/motor will dictate this, see note below
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version

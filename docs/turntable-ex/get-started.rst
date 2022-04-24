@@ -12,7 +12,15 @@ We will also assume a prototyping shield is available that provides regulated 5V
 1. BEFORE you start
 ^^^^^^^^^^^^^^^^^^^
 
-Visually check all components for any obvious damage, paying particular attention to pins on the Arduino to make sure they are straight.
+Gather all your components and visually check them all for any obvious damage, paying particular attention to pins on the Arduino to make sure they are straight.
+
+.. image:: ../_static/images/turntable-ex/components.png
+  :alt: Components
+  :scale: 50%
+
+.. image:: ../_static/images/turntable-ex/check-pins.png
+  :alt: Nano Pins
+  :scale: 50%
 
 2. Insert the Nano into the shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -21,14 +29,28 @@ Insert the Nano into the prototype shield socket, taking care to ensure the USB 
 
 The various pin numbers may also be printed on the prototyping shield to confirm the correct orientation.
 
-<Insert image here>
+.. image:: ../_static/images/turntable-ex/insert-nano.png
+  :alt: Insert Nano
+  :scale: 50%
 
-3. Connect the stepper controller and motor
+.. image:: ../_static/images/turntable-ex/nano-inserted.png
+  :alt: Nano Inserted
+  :scale: 50%
+
+At this point, it's a good idea to take careful note of the various pin markings on your prototype shield as it's critical that these are correct when connecting the various components.
+
+With the shield used in these assembly photos, you will note that each of the Nano GPIO pins has three pins associated with it marked "G" for ground, "V" for 5V, and "S" for signal, with this last pin being the actual Nano GPIO pin.
+
+.. image:: ../_static/images/turntable-ex/proto-shield-pins.png
+  :alt: Prototype Shield Pins
+  :scale: 50%
+
+1. Connect the stepper controller and motor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Firstly, note that the ULN2003 controller will have four pins marked "IN1" through "IN4", as well as a pair of pins with "+" and "-". There is a likely a jumper installed across two pins beside these that is unmarked, leave this in place.
 
-Now, you will need six of the female to female Dupont wires and connect these from the ULN2003 pins to the Arduino prototype shield as below:
+You will need to connect six of the female to female Dupont wires from the ULN2003 pins to the Arduino prototype shield as below:
 
 .. list-table::
     :widths: auto
@@ -38,23 +60,35 @@ Now, you will need six of the female to female Dupont wires and connect these fr
     * - ULN2003 Pin
       - Arduino Pin
     * - IN1
-      - 8
+      - 8 S
     * - IN2
-      - 9
+      - 9 S
     * - IN3
-      - 10
+      - 10 S
     * - IN4
-      - 11
+      - 11 S
     * - \+
-      - Pin 8 5V
+      - 8 V
     * - \-
-      - Pin 8 GND
+      - 8 G
   
-<Insert image here>
+.. image:: ../_static/images/turntable-ex/uln2003-pins.png
+  :alt: ULN2003 Pins
+  :scale: 40%
+
+.. image:: ../_static/images/turntable-ex/shield-uln2003-pins.png
+  :alt: Shield to ULN2003 pins
+  :scale: 50%
 
 Insert the stepper motor connector into the recepticle on the ULN2003 controller. Note that it will only go in one way, so check the orientation and simply plug it in.
 
-<Insert image here>
+.. image:: ../_static/images/turntable-ex/28byj-48-connector1.png
+  :alt: 28BYJ-48 Connector
+  :scale: 50%
+
+.. image:: ../_static/images/turntable-ex/28byj-48-connector2.png
+  :alt: 28BYJ-48 Connector
+  :scale: 50%
 
 4. Connect the hall effect sensor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,13 +105,19 @@ Use three of the Dupont wires and connect these from the hall effect sensor to t
     * - Hall Effect Pin
       - Arduino Pin
     * - \- (Left)
-      - Pin 2 ground
+      - 2 G
     * - Unmarked (middle)
-      - Pin 2 5V
+      - 2 V
     * - S (Right)
-      - Pin 2
+      - 2 S
 
-<Insert image here>
+.. image:: ../_static/images/turntable-ex/hall-effect-pins.png
+  :alt: Hall Effect Pins
+  :scale: 50%
+
+.. image:: ../_static/images/turntable-ex/hall-effect-shield.png
+  :alt: Hall Effect to Shield
+  :scale: 50%
 
 5. Connect the dual relay board
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -94,15 +134,21 @@ Use four Dupont wires to connect the other four pins as below:
     * - Dual Relay Pin
       - Arduino Pin
     * - VCC
-      - Pin 3 5V
+      - 3 V
     * - GND
-      - Pin 3 GND
+      - 3 G
     * - IN1
-      - 3
+      - 3 S
     * - IN2
-      - 4
+      - 4 S
 
-<Insert image here>
+.. image:: ../_static/images/turntable-ex/dual-relay-pins.png
+  :alt: Dual Relay Pins
+  :scale: 50%
+
+.. image:: ../_static/images/turntable-ex/dual-relay-shield-pins.png
+  :alt: Dual Relay to Shield Pins
+  :scale: 50%
 
 6. Connect power and test
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -111,9 +157,21 @@ At this point, it should be safe to plug in the power supply to the DC power jac
 
 When the power supply is turned on, the power LEDs on the Arduino Nano and dual relay board should be lit. Note there is likely no power LED on the ULN2003 stepper controller, and testing of this will require loading the Turntable-EX software on to the Nano.
 
+Note that for the purposes of this photo, it was simply plugged in to the USB port on a laptop due to not having a suitable power supply handy, and this is not the recommended way to power Turntable-EX.
+
+.. image:: ../_static/images/turntable-ex/power-on.png
+  :alt: Powered On
+  :scale: 50%
+
 To validate the hall effect sensor is connected correctly, put a magnet in close proximity (within a millimetre or so) of the sensor IC, and the onboard LED should light up.
 
-<Insert images here>
+.. image:: ../_static/images/turntable-ex/hall-effect-inactive.png
+  :alt: Hall Effect Inactive
+  :scale: 50%
+
+.. image:: ../_static/images/turntable-ex/hall-effect-active.png
+  :alt: Hall Effect Active
+  :scale: 50%
 
 7. Load the Turntable-EX software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -126,6 +126,13 @@ Example response:
 
 * ``<l cabid slot speedbyte functionMap>`` - Note that a slot of -1 indicates that the cab is not in the reminders table and this comand will not reserve a slot until such time as the cab is throttled.
 
+Where:
+
+* cabid = Loco's DCC address
+* slot = Position in the reminders table (for the convenience of slot managers later)
+* speedbyte = The DCC packet speed bye including the direction bit (NOT the same as the DCC++ speed)
+* functionmap = Binary map of which functions are ON ( 1=F0, 2=F1, 3=F0&F1   etc.)
+
 Commands to avoid
 __________________
 

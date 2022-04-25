@@ -5,7 +5,7 @@ Getting started
 Assembly
 ________
 
-For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with an Arduino Nano V3, a standard 3 pin Arduio compatible hall effect sensor, and a dual relay board.
+For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with an Arduino Nano V3, a standard 3 pin Arduino compatible hall effect sensor, and a dual relay board.
 
 We will also assume a prototyping shield is available that provides regulated 5V power sufficient for driving the ULN2003/28BYJ-48 stepper combo, and that there is a power supply with a suitable DC power plug to suit the prototyping shield.
 
@@ -60,17 +60,17 @@ You will need to connect six of the female to female Dupont wires from the ULN20
     * - ULN2003 Pin
       - Arduino Pin
     * - IN1
-      - 8 S
+      - A0 S
     * - IN2
-      - 9 S
+      - A1 S
     * - IN3
-      - 10 S
+      - A2 S
     * - IN4
-      - 11 S
+      - A3 S
     * - \+
-      - 8 V
+      - A0 V
     * - \-
-      - 8 G
+      - A0 G
   
 .. image:: ../_static/images/turntable-ex/uln2003-pins.png
   :alt: ULN2003 Pins
@@ -105,11 +105,11 @@ Use three of the Dupont wires and connect these from the hall effect sensor to t
     * - Hall Effect Pin
       - Arduino Pin
     * - \- (Left)
-      - 2 G
+      - 5 G
     * - Unmarked (middle)
-      - 2 V
+      - 5 V
     * - S (Right)
-      - 2 S
+      - 5 S
 
 .. image:: ../_static/images/turntable-ex/hall-effect-pins.png
   :alt: Hall Effect Pins
@@ -155,9 +155,7 @@ Use four Dupont wires to connect the other four pins as below:
 
 At this point, it should be safe to plug in the power supply to the DC power jack on the prototyping shield.
 
-When the power supply is turned on, the power LEDs on the Arduino Nano and dual relay board should be lit. Note there is likely no power LED on the ULN2003 stepper controller, and testing of this will require loading the Turntable-EX software on to the Nano.
-
-Note that for the purposes of this photo, it was simply plugged in to the USB port on a laptop due to not having a suitable power supply handy, and this is not the recommended way to power Turntable-EX.
+When the power supply is turned on, the power LEDs on the Arduino Nano and dual relay board should be lit. Note there is likely no power LED on the ULN2003 stepper controller, and testing of this will require loading the Turntable-EX software on to the Nano in step 7 below.
 
 .. image:: ../_static/images/turntable-ex/power-on.png
   :alt: Powered On
@@ -182,11 +180,11 @@ The process here is the same as installing CommandStation-EX via the Arduino IDE
 
 While following that process, you will need to make some ammendments to cater for Turntable-EX:
 
-* The software is available on the `Turntable-EX download page <https://github.com/DCC-EX/Turntable-EX/releases>`
-* References to CommandStation-EX are substituted with Turntable-EX (eg. your folder name needs to be called Turntable-EX)
-* You will need to set the board type to "Nano" and set the correct Processor type (typically ATMega328P)
+* See the :ref:`download/turntable-ex:turntable-ex` download page to obtain the Turntable-EX software.
+* References to CommandStation-EX are substituted with Turntable-EX (eg. your folder name needs to be called Turntable-EX).
+* You will need to set the board type to "Nano" and set the correct Processor type (typically ATMega328P).
 
-Once the software is loaded successfully on to Turntable-EX, the stepper motor should automatically start rotating in an attempt to find its "home" position, which will be activated when the magnet at the end of one end of the turntable comes in to close proximity to the hall effect sensor.
+Once the software is loaded successfully on to Turntable-EX, the stepper motor should automatically start rotating in an attempt to find its "home" position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.
 
 If you don't have the magnet installed at this point, or if it is too far from the sensor, Turntable-EX will rotate two full turns prior to flagging that homing has failed, and will then cease turning.
 
@@ -194,9 +192,7 @@ If your testing of the hall effect sensor in step 6 above succeeded, then the is
 
 At this point, you can power off Turntable-EX and remove the USB cable from your PC as it is no longer required for normal operation, as all commands will be issued by the CommandStation.
 
-<TO DO: Add the ability to test the basic Turntable-EX functions here via serial console>
-
-1. Add the Turntable-EX device driver to CommandStation-EX
+8. Add the Turntable-EX device driver to CommandStation-EX
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Before you will be able to test or use Turntable-EX, you need to configure the CommandStation to load the appropriate device driver.
@@ -265,8 +261,7 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
     // Note that the I2C address is defined in the Turntable-EX code, and 0x60 is the default.
   
     TurntableEX::create(600, 1, 0x60);
-
-}
+  }
 
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
 
@@ -300,11 +295,23 @@ Connect these pins to your CommandStation as shown in the table below, noting th
     * - CommandStation Pin
       - Arduino Nano Pin
     * - 20 (SDA)
-      - A4 (SDA)
+      - A4 S (SDA)
     * - 21 (SCL)
-      - A5 (SCL)
+      - A5 S (SCL)
     * - Any spare ground
-      - A4 GND
+      - A4 G
+  
+.. image:: ../_static/images/turntable-ex/nano-i2c.png
+  :alt: Nano I2C pins
+  :scale: 40%
+
+.. image:: ../_static/images/turntable-ex/commandstation-i2c.png
+  :alt: Nano I2C pins
+  :scale: 40%
+
+.. image:: ../_static/images/turntable-ex/commandstation-gnd.png
+  :alt: Nano I2C pins
+  :scale: 40%
 
 Now you're ready!
 =================

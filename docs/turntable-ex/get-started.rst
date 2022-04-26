@@ -9,6 +9,12 @@ For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with a
 
 We will also assume a prototyping shield is available that provides regulated 5V power sufficient for driving the ULN2003/28BYJ-48 stepper combo, and that there is a power supply with a suitable DC power plug to suit the prototyping shield.
 
+Throughout the assembly process, you can refer to this Fritzing diagram to help validate your connections are correct (open this image in a new tab or window and zoom in to see the detail):
+
+.. image:: ../_static/images/turntable-ex/assembly.png
+  :alt: Fritzing Diagram
+  :scale: 20%
+
 1. BEFORE you start
 ^^^^^^^^^^^^^^^^^^^
 

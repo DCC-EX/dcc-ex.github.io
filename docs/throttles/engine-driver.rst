@@ -43,7 +43,7 @@ Features
 * Create and edit consists (software-defined)
 * You can also control layout power, turnouts, routes, and access JMRI web panels and windows.
 
-  : :doc:`Drive Away' & 'Discovered Servers' <../reference/software/driveaway>`.
+  : :doc:`Drive Away' & 'Discovered Servers' <../automation/driveaway>`.
 
 .. _ed-screenshots:
 

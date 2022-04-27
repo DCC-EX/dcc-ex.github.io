@@ -62,7 +62,8 @@ Sample WiFi Throttle App "Discovered Servers"
       
 Our new multicast Dynamic Network Server (mDNS) enhancement allows us to display the available WiFi Server connections to a DCC++EX Command Station. 
 Choosing one allows your WiFi Throttle App to connect to and load Server Rosters and function keys to your throttle from Either the DCC++EX Command Station, Or from JMRI Engine Roster.
-.. image:: ../../_static/images/jmri/Engine Driver Dicovered Servers.jpg
+
+.. image:: ../../_static/images/jmri/Engine_Driver_Dicovered_Servers.jpg
    :alt: Engine Driver Discovered Servers
    :scale: 25%
    :align: left
@@ -85,17 +86,17 @@ Sample Roster entry in myAutomation.h file
   ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
   ROSTER(  70,"3M 70","Lights/Bell/*Horn/Coupler/F4/F5/Fx6/F7/Mute")
 
-// Legacy Analog DC Engines, Note; Functions F0-F3 & 'Mute' Sounds are available via Engine Driver v2.32+ 'Preferences > Loco Sounds'
+// Legacy Analog DC Engines, Note; Functions F1-F3 & 'Mute' Sounds are available via Engine Driver v2.32+ 'Preferences > Loco Sounds'
   ROSTER(1,"CAB 1","")    // Analog DC Engine with no F-Keys 'See Engine Driver for F-keys'
   ROSTER(2,"CAB 2","")    // Analog DC Engine with no F-Keys
   ROSTER(667, "NH 667","")// Analog DC Engine with no F-Keys
 
-.. image:: ../../_static/images/jmri/Engine Driver DCC++EX Server Roster.jpg
+.. image:: ../../_static/images/jmri/Engine_Driver_DCC++EX_Server_Roster.jpg
    :alt: Engine Driver DCC++EX Server Roster
    :scale: 25%
    :align: left
 
-.. image:: ../../_static/images/jmri/ED & DCC++EX with DC & DCC Throttles.jpg
+.. image:: ../../_static/images/jmri/ED_&_DCC++EX_with_DC_&_DCC_Throttles.jpg
    :alt: ED & DCC++EX with DC & DCC Throttles
    :scale: 25%
    :align: left
@@ -107,12 +108,12 @@ By choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered se
 
 Please be sure your JMRI device {Windows, Mac iOS or Raspberry Pi} for JMRI WiThrottle Server is signed on and connected to the same WiFi SSID Name and Password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the JMRI WiThrottle Server IP address: port# displayed into your Engine Driver & WiThrottle Apps.
 
-.. image:: ../../_static/images/jmri/Engine Driver JMRI Server Roster.jpg
+.. image:: ../../_static/images/jmri/Engine_Driver_JMRI_Server_Roster.jpg
    :alt: Engine Driver JMRI Server Roster
    :scale: 25%
    :align: left
 
-.. image:: ../../_static/images/jmri/Engine Driver & DCC++EX.jpg
+.. image:: ../../_static/images/jmri/Engine_Driver_&_DCC++EX.jpg
    :alt: Engine Driver & DCC++EX
    :scale: 25%
    :align: left

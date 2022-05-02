@@ -16,7 +16,7 @@ The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are
 * It is in a much smaller form factor
 * It isn't a shield so you have to jumper wires to connect it to your CS
 * It doesn't have current sense, so you are going to have to use one of the solutions below
-* It stands vertically on the board with a big heat sink for better controlling
+* It stands vertically on the board with a big heat sink for better cooling
 
 .. figure:: ../../_static/images/motorboards/l298_board2.jpg
   :alt: L298N Motor Board
@@ -38,6 +38,7 @@ You may wonder why one would go through the trouble of using this board when the
 The disadvantage of this board:
 
 * It does not come with current sense. You will need to add it.
+* It does not have much more current output than the Arduino Motor Shield
 
 
 L298N for MAIN and PROG with Current Sense
@@ -68,6 +69,7 @@ You will need to unsolder the current sense (CS) pins on the L298N chip that are
   :alt: L298N Motor Driver Pinout
   :scale: 50%
 
+
 1. Lift each leg and bend them carfully upward to provide space for a resistor.
 
 2. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the CS leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
@@ -90,16 +92,18 @@ Your first choice, the easy way, is to create a new motor board definition that 
 Your second choice is to make a small inverter circuit (using 1 FET, IC, or transistor) to connect to the standard signal pin on the Command Station, and split it into two signals connect to the two pins on the L298N board. The advantage of this method is you use just one pin and get the high accuracy DCC waveform. The downside is that you have to solder together a circuit with 2 or 3 parts.
 
 
-Using 2 signal pins
-~~~~~~~~~~~~~~~~~~~~~~~
+Using 2 signal pins (Avoids soldering a transitor inverter)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This method uses 2 pins on the Arduino for signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform.
+This method uses 2 pins on the Arduino for DCC signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform. The advantage of this method is that you don't have to wire a transistor and 2 resistors to create an inverter circuit. The disadvantage is you use an extra pin for each track output and you get the standard accuracy waveform. See :doc:`High Accuracy Waveform Mode</advanced-setup/high-accuracy>` to see if you really need it.
 
 To wire the board, connect the pins according to the following diagram. A table is included as well. This pin usage allows the use of a ribbon cable to make things cleaner:
 
 .. figure:: ../../_static/images/motorboards/l298_wiring_2inputs_2tracks.png
   :alt: L298N Motor driver wiring diagram
   :scale: 60%
+
+  L298N 2 signal pin, 2 track wiring diagram
 
 .. table:: 2 Signal Pin Wiring diagram
 
@@ -150,20 +154,15 @@ Save the file and then upload the entire sketch into the Command Station using t
 Using One Signal Pin With an Inverter circuit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This method uses 1 pin on the Arduino and the standard motorboard definition. It uses the high accuracy DCC waveform.
+This method uses 1 signal pin on the Arduino for each track and uses the standard motorboard definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don't have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.
 
-Make the following Inverter circuit
+Make the following Inverter circuit (You need 2 if you want MAIN and PROG):
 
-.. todo:: finish
+.. figure:: ../../_static/images/motorboards/inverter1.jpg
+  :alt: Transistor inverter circuit
+  :scale: 60%
 
 Then wire the L298N to the Arduino with jumper wires according to the following table:
-
-13
-12
-A0
-11
-13
-A1
 
 To wire the board, connect the pins as follows:
 
@@ -193,31 +192,18 @@ To wire the board, connect the pins as follows:
     |     GND       |    GND                      |
     +---------------+-----------------------------+
 
-Once wired correctly, edit the config.h file and replace the following line:
-
-.. code:: none
-   
-   #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
-
-with this:
-
-.. code:: none
-   
-   #define MY_L298N_BOARD F("MY_L298N_BOARD"),\
-      new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 4.88, 2000, UNUSED_PIN), \
-      new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 4.88, 2000, UNUSED_PIN)
+Once wired correctly, make sure your config.h file is configured for a STANDARD_MOTOR_SHIELD. If you have not already uploaded the CommandStation-EX sketch to your Command Station, you can make sure this line is in your config.h:
 
       #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
 
-Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</get-started/arduino-ide>`
-
+Save the file if you needed to add this line and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</get-started/arduino-ide>`
 
 Method 2: Using An External Current Sense Board
 -------------------------------------------------
 
 Coming Soon
 
-.. todo:: finish this
+.. todo:: finish this page
 
 L298N for PROG and High Current IBT_2 for MAIN
 ================================================

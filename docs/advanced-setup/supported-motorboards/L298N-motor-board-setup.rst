@@ -194,7 +194,7 @@ To wire the board, connect the pins as follows:
 
 Once wired correctly, make sure your config.h file is configured for a STANDARD_MOTOR_SHIELD. If you have not already uploaded the CommandStation-EX sketch to your Command Station, you can make sure this line is in your config.h:
 
-      #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
+      #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 
 Save the file if you needed to add this line and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</get-started/arduino-ide>`
 

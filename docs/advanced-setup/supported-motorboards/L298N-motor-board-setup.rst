@@ -59,15 +59,21 @@ This is easier than it sounds and takes about 15 minutes. To do this yourself, y
 
 .. Note:: If you will only be using this board for the programming track and another board like the IBT_2 for your MAIN track, you only need one resistor and can follow the instructions for just the B side of the procedure.
 
-You will need to unsolder the current sense (CS) pins on the L298N chip that are connected to ground and insert a resistor between the lifted leg and ground on each side. Here is how:
+You can either cut or lift legs on the L298 chip and insert resistors, or cut a trace on the back of the board and insert the resistors there. 
 
 1. Remove all jumpers, there are 3!
 
-2. Unsolder the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output CS A for MAIN. Pin 15 to the right is CS output B for PROG.
+2. Choose how you will insert your current sense resistors from the following two options:
 
 .. figure:: ../../_static/images/motorboards/l298_board4.jpg
-  :alt: L298N Motor Driver Pinout
+  :alt: L298N lift legs to solder CS resistors
   :scale: 50%
+
+.. figure:: ../../_static/images/motorboards/l298nbackmodify.png
+  :alt: L298N cut traces to install CS resistors
+  :scale: 50%
+
+3. Unsolder the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output CS A for MAIN. Pin 15 to the right is CS output B for PROG.
 
 
 1. Lift each leg and bend them carfully upward to provide space for a resistor.

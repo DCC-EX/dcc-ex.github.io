@@ -1,4 +1,3 @@
-************************
 L298N Motor Board Setup
 ************************
 
@@ -69,27 +68,51 @@ You can either cut or lift legs on the L298 chip and insert resistors, or cut a 
   :alt: L298N lift legs to solder CS resistors
   :scale: 50%
 
+  Lift or cut chip legs on front
+
+or...
+
 .. figure:: ../../_static/images/motorboards/l298nbackmodify.png
   :alt: L298N cut traces to install CS resistors
-  :scale: 50%
+  :scale: 45%
 
-3. Unsolder the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output CS A for MAIN. Pin 15 to the right is CS output B for PROG.
+  Cut traces and solder on back
 
+Lifting Or Cutting Chip Legs Option
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Lift each leg and bend them carfully upward to provide space for a resistor.
+1. Remove all jumpers, there are 3!
 
-2. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the CS leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
+2. Unsolder or cut the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output CS A for MAIN. Pin 15 to the right is CS output B for PROG.
 
-3. Solder the leg of the chip you unsoldered to the top of the resistor. You should be able to carefully bend the leg to meet the top resistor lead as the resistor stands vertically. You are basically inserting a resistor into the space where you cut the leg of the chip. Solder the wire fairly close to the end of the resistor. You may need a small piece of hookup wire to reach between the connections. Repeat on the other side. Do not trim the top resistor lead yet.
+3. Lift each leg and bend them carfully upward to provide space for a resistor.
 
-4. Measure a jumper wire long enough to connect from the top of resistor A and reach over push into pin A0 on the Arduino. Solder one end of the jumper to the top of resistor A above where you soldered the chip's CS leg. Trim off any remaining resistor lead. Repeat for the resistor on side B making sure the male dupont end of the jumper can reach pin A1 on the Arduino.
+4. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the CS leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
 
-5. If you haven't already, plug the male end of the A jumper into pin A0 on the Arduino and the male end of the B jumper to pin A1 on the Arduino.
+5. Solder the leg of the chip you unsoldered to the top of the resistor. You should be able to carefully bend the leg to meet the top resistor lead as the resistor stands vertically. You are basically inserting a resistor into the space where you cut the leg of the chip. Solder the wire fairly close to the end of the resistor. You may need a small piece of hookup wire to reach between the connections. Repeat on the other side. Do not trim the top resistor lead yet.
 
-6. Configure the board in your Command Station in the next step.
+6. Measure a jumper wire long enough to connect from the top of resistor A and reach over push into pin A0 on the Arduino. Solder one end of the jumper to the top of resistor A above where you soldered the chip's CS leg. Trim off any remaining resistor lead. Repeat for the resistor on side B making sure the male dupont end of the jumper can reach pin A1 on the Arduino.
+
+7. If you haven't already, plug the male end of the A jumper into pin A0 on the Arduino and the male end of the B jumper to pin A1 on the Arduino.
+
+8. Configure the board in your Command Station in the next step.
+
+Cutting Traces and Soldering on the Back Option
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Using a razor blade or x-acto knife, carefully cut the ground pads where marked with white lines.
+
+2. Using the blade, carefully scratch the conformal coating off the back of the circuit board where marked with yellow rectangles to expose the bare copper underneath. Be careful, you just want to scrape away the protective layer, you do not want to cut through the copper here.
+
+3. Using an Ohmmeter, test for continuity between the newly exposed pads and the leg of the L298N chip on the other side that is soldered to the same pad. Make sure you have an open circuit (infinite resistance). If not, scrape a little more to widen the gap where you cut the trace, being careful not to cut too deep.
+
+4. Trim the leads of your resistor to fit with one leg soldered to the solder joint of the current sense pin of the L298 and the other lead to the exposed ground pad you scraped clean as shown in the picture.
+
+5. If you are using both sides of the L298 board for your MAIN and PROG tracks, repeat the process for the other side.
+
 
 Configuring the Board in DCC++EX
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 You have two choices regarding how to wire and configure the L298N motor driver board to the command station. Unlike the Arduino Motor Shield, this board has separate direction inputs which is where we apply the DCC signal. 
 
@@ -99,7 +122,7 @@ Your second choice is to make a small inverter circuit (using 1 FET, IC, or tran
 
 
 Using 2 signal pins (Avoids soldering a transitor inverter)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method uses 2 pins on the Arduino for DCC signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform. The advantage of this method is that you don't have to wire a transistor and 2 resistors to create an inverter circuit. The disadvantage is you use an extra pin for each track output and you get the standard accuracy waveform. See :doc:`High Accuracy Waveform Mode</advanced-setup/high-accuracy>` to see if you really need it.
 
@@ -158,7 +181,7 @@ Save the file and then upload the entire sketch into the Command Station using t
 
 
 Using One Signal Pin With an Inverter circuit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method uses 1 signal pin on the Arduino for each track and uses the standard motorboard definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don't have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.
 

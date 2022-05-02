@@ -97,7 +97,7 @@ Using 2 signal pins (Avoids soldering a transitor inverter)
 
 This method uses 2 pins on the Arduino for DCC signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform. The advantage of this method is that you don't have to wire a transistor and 2 resistors to create an inverter circuit. The disadvantage is you use an extra pin for each track output and you get the standard accuracy waveform. See :doc:`High Accuracy Waveform Mode</advanced-setup/high-accuracy>` to see if you really need it.
 
-To wire the board, connect the pins according to the following diagram. A table is included as well. This pin usage allows the use of a ribbon cable to make things cleaner:
+To wire the board, connect the pins according to the following diagram. A table is included as well. This pin usage, with all the pins lined up between boards, allows the use of a ribbon cable to make things a bit more neat:
 
 .. figure:: ../../_static/images/motorboards/l298_wiring_2inputs_2tracks.png
   :alt: L298N Motor driver wiring diagram

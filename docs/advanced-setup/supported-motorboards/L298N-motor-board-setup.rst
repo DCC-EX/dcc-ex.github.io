@@ -95,9 +95,9 @@ Using 2 signal pins
 
 This method uses 2 pins on the Arduino for signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform.
 
-To wire the board, connect the pins according to the following diagram. A table is included as well:
+To wire the board, connect the pins according to the following diagram. A table is included as well. This pin usage allows the use of a ribbon cable to make things cleaner:
 
-.. figure:: ../../_static/images/motorboards/l28_wiring_2inputs_2tracks.png
+.. figure:: ../../_static/images/motorboards/l298_wiring_2inputs_2tracks.png
   :alt: L298N Motor driver wiring diagram
   :scale: 40%
 
@@ -145,7 +145,7 @@ with this:
    
    #define MY_L298N_BOARD F("MY_L298N_BOARD"),\
       new MotorDriver(7, 6, 5, UNUSED_PIN, A0, 4.88, 2000, UNUSED_PIN), \
-      new MotorDriver(2, 4, 3, UNUSED_PIN, A1, 4.88, 2000, UNUSED_PIN)
+      new MotorDriver(2, 4, 3git, UNUSED_PIN, A1, 4.88, 2000, UNUSED_PIN)
 
       #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
 

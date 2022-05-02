@@ -99,26 +99,26 @@ To wire the board, connect the pins according to the following diagram. A table 
 
 .. figure:: ../../_static/images/motorboards/l298_wiring_2inputs_2tracks.png
   :alt: L298N Motor driver wiring diagram
-  :scale: 40%
+  :scale: 60%
 
 .. table:: 2 Signal Pin Wiring diagram
 
     +---------------+-----------------------------+
     |  Arduino      |           L298N             |
     +===============+=============================+
-    | 2 (enable A)  | ENA                         |
+    | 7 (enable A)  | ENA                         |
     +---------------+-----------------------------+
-    | 4 (signal A1) | IN4                         |
+    | 6 (signal A1) | IN1                         |
     +---------------+-----------------------------+
-    | 6 (signal A2) | IN3                         |
+    | 5 (signal A2) | IN2                         |
     +---------------+-----------------------------+
     | A0 (CS MAIN)  | CS A                        |
     +---------------+-----------------------------+
-    | 3 (enable B)  | ENB                         |
+    | 2 (enable B)  | ENB                         |
     +---------------+-----------------------------+
-    | 5 (signal B1) | IN2                         |
+    | 4 (signal B1) | IN3                         |
     +---------------+-----------------------------+
-    | 7 (signal B2) | IN1                         |
+    | 3 (signal B2) | IN4                         |
     +---------------+-----------------------------+
     | A1 (CS PROG)  | CS B                        |
     +---------------+-----------------------------+
@@ -127,11 +127,6 @@ To wire the board, connect the pins according to the following diagram. A table 
     |     GND       |    GND                      |
     +---------------+-----------------------------+
 
-.. figure:: ../../_static/images/motorboards/l298n_pinout.png
-  :alt: L298N Motor Driver Pinout
-  :scale: 35%
-
-  L298N Motor Driver Pinout
 
 Once wired correctly, edit the config.h file and replace the following line:
 
@@ -145,7 +140,7 @@ with this:
    
    #define MY_L298N_BOARD F("MY_L298N_BOARD"),\
       new MotorDriver(7, 6, 5, UNUSED_PIN, A0, 4.88, 2000, UNUSED_PIN), \
-      new MotorDriver(2, 4, 3git, UNUSED_PIN, A1, 4.88, 2000, UNUSED_PIN)
+      new MotorDriver(2, 4, 3, UNUSED_PIN, A1, 4.88, 2000, UNUSED_PIN)
 
       #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
 

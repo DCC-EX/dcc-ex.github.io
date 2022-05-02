@@ -1,34 +1,57 @@
-**************************
-Turntable-EX Overview
-**************************
+*****************************
+Turntable-EX (Beta) Overview
+*****************************
 
-Turntable-EX is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper controller and motor to spin the turntable bridge.
+.. image:: ../_static/images/conductor.png
+  :alt: Conductor Level
+  :scale: 40%
+  :align: right
+
+What is Turntable-EX?
+======================
+
+Turntable-EX is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks.
 
 The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`get-started/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
 
-The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper controller and motor combination that are readily available.
+The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
-Using other pre-defined stepper controllers and motors should also be achievable at the Conductor level, but may enter into Tinkerer territory depending on the specific hardware.
+.. sidebar:: Supported stepper drivers and motors
 
-To make full use of Turntable-EX, you will need some understanding of EX-RAIL automation, but we'll share the details and some examples to help with this.
+  .. image:: ../_static/images/conductor.png
+    :alt: Conductor Level
+    :scale: 40%
+    :align: left
+  
+  .. image:: ../_static/images/tinkerer.png
+    :alt: Tinkerer Level
+    :scale: 40%
+    :align: right
 
-The integration includes:
+  Using other pre-defined, supported stepper drivers and motors should also be achievable at the Conductor level, but may enter into Tinkerer territory depending on the specific hardware.
+
+To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL<automation/ex-rail-intro:introduction to ex-rail automation>` automation, but we'll share the details and some examples to help with this.
+
+Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
+
+The Turntable-EX integration includes:
 
 * I2C device driver
 * EX-RAIL automation support
 * Debug/test command (handy for tuning step positions)
-* Out-of-the-box support for several common stepper controllers
+* Out-of-the-box support for several common stepper drivers and motors
 * DCC signal phase switching to align bridge track phase with layout phase
+* An LED and accessory output to control turntable specific automations (eg. flashing warning light)
 
 What you need for Turntable-EX
-==============================
+===============================
 
-* A DCC++ EX command station running version 4.0.2 or later of CommandStation-EX (this includes the Beta version of the Turntable-EX device driver)
+* A DCC++ EX CommandStation running version X.X.X or later of CommandStation-EX (this includes the Beta version of the Turntable-EX device driver)
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
-* A supported stepper motor controller and stepper motor
+* A supported stepper motor driver and stepper motor (see list below)
 * A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent)
 * A dual relay board (or similar) if you wish to use the phase switching capability
-* A suitable power supply - note that your chosen stepper controller/motor will dictate this, see note below
+* A suitable power supply - note that your chosen stepper driver/motor will dictate this, see note below
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
 * Dupont type wires to connect the components, male to female or female to female as required
 * A USB cable to connect the Arduino to a PC to load the software
@@ -58,11 +81,11 @@ What you need for Turntable-EX
   :scale: 30%
 
 Power supplies
-______________
+_______________
 
 Choosing the right power supply for your Arduino and stepper motor is important to get right.
 
-If you are using the default ULN2003/28BYJ-48 it is technically possible to power the controller and stepper directly from the 5V output on an Arduino, however this is not recommended.
+If you are using the default ULN2003/28BYJ-48 it is technically possible to power the driver and stepper directly from the 5V output on an Arduino, however this is not recommended and should be avoided.
 
 Given that this combo requires 5V, you can use a single, regulated 5V DC power supply rated for at least 500mA to power both the Arduino and the ULN2003/28BYJ-48.
 
@@ -70,64 +93,82 @@ Note that if you use the right Arduino Nano prototyping shield, it will likely h
 
 For other steppers such as the NEMA17 that require 12V DC, you will need either two separate power supplies, or a DC-DC converter to provide a lower voltage to the Arduino. Note that the NEMA17 steppers have a considerably higher current rating, so the power supply will need to be rated at 1.5A or higher.
 
-Supported stepper controllers and motors
+Supported stepper drivers and motors
 =========================================
 
-The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48 stepper controller and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.
+The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.
 
-However, it is very easy to use one of several other common stepper controllers if you require more torque, or if you prefer to use a NEMA17 or other stepper motor.
+.. sidebar:: Unsupported stepper drivers and motors
 
-The complete list of supported stepper controllers and motors:
+  .. image:: ../_static/images/tinkerer.png
+    :alt: Tinkerer Level
+    :scale: 40%
+    :align: left
+
+  If you have a need to use a different driver, these should be relatively straight forward to configure in a similar manner to how additional motor drivers are configured for use with CommandStation-EX.
+
+However, it is very easy to use one of several other common stepper drivers if you require more torque, or if you prefer to use a NEMA17 or other stepper motor.
+
+The complete list of supported stepper drivers and motors:
 
 * ULN2003/28BYJ-48 (Default)
 * A4988/NEMA17
 * DRV8825/NEMA17
-* TMC2208/NEMA17
-
-If you have a need to use a different controller, some minor code updates will be required unless it is "pin compatible" with one of the existing controllers, in which case you can simply select the appropriate compatible driver.
 
 How does it work?
-=================
+==================
+
+.. sidebar:: Full step, half step, and other modes
+
+  Stepper motor drivers typically support more than one mode for driving stepper motors. This simply means that they can be turned less than one complete step, allowing more granular control of positioning, resulting in higher precision, and much smoother operation. For example, the DRV8825 can drive 1/32 of a step, talk about smooooth!
 
 If you're not familiar with stepper motors then you only need a very high level understanding of how they work in order to use Turntable-EX successfully on your layout, as the concept is very simple.
 
-Very simply, a stepper motor is able to be rotated one step at a time, which translates to degrees of movement around a circle. For example, the ubiquitous 28BYJ-48 stepper motor referred to here takes 2048 steps to make a full 360 degree rotation. The higher the number of steps in a single rotation, the easier it will be to get perfect alignment between the turntable and your layout.
+Very simply, a stepper motor is able to be rotated one step at a time, which translates to degrees of movement around a circle. For example, the ubiquitous 28BYJ-48 stepper motor referred to here takes 2048 steps to make a full 360 degree rotation. The higher the number of steps in a single rotation, the easier it will be to get perfect alignment between the turntable and your layout, and this also typically translates to smoother rotation.
+
+.. note:: 
+
+  You don't actually need to know the number of steps required to make a full rotation as this is calculated by Turntable-EX the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`turntable-ex/get-started:automatic calibration`.
 
 In Turntable-EX, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.
 
 Once the home position is determined, the various positions on your layout are defined as the number of steps from this home position.
 
-The command used to move to these positions simply sends the number of steps to Turntable-EX, which calculates the steps required in order to move the least number of steps to the desired position.
+The command used to move to these positions simply sends the number of steps to Turntable-EX, which calculates the steps required in order to move the least number of steps to the desired position, meaning it will rotate either clockwise or counter clockwise depending which is the shortest distance.
 
-That's pretty much as simple as it gets. These step positions are defined in myAutomation.h (part of EX-RAIL), which will be described in further detail below.
+That's pretty much as simple as it gets. These step positions are defined in myAutomation.h (part of EX-RAIL), which will be described in further detail below, including how to ensure these are advertised to WiThrottle applications.
 
-*Note on the home position*: It's recommended that the home position does not align with a specific layout connection track to ensure that each time Turntable-EX powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
+.. tip:: 
+
+  It's recommended that the home position does not align with a specific layout connection track to ensure that each time Turntable-EX powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
 
 Controlling the turntable
-_________________________
+__________________________
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
-Refer to the Configure and Control page for more details on this.
+Refer to the :ref:`turntable-ex/configure:testing, tuning, and control` page for more details on this.
 
 Important! Phase (or polarity) switching
-________________________________________
+_________________________________________
 
 An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.
 
-If your locomotive drives on to the turntable bridge track, and the DCC phase (or polarity) is not aligned with the surrounding layout tracks, then you will cause a short circuit. The CommandStation should cut power in that scenario, but the desired behaviour is simply to drive onto the turntable with no interruption.
+.. danger:: 
+
+  If your locomotive drives on to the turntable bridge track, and the DCC phase (or polarity) is not aligned with the surrounding layout tracks, then you will cause a short circuit. The CommandStation should cut power in that scenario, but the desired behaviour is simply to drive onto the turntable with no interruption.
 
 In order to prevent short circuits, the DCC signal to the tracks on the bridge need to be reversed when rotated to certain positions. There are three options to achieve this:
 
 * Use an auto-reverser that automatically reverses the phase when a short circuit is detected (the Digitrax AR1 is a commonly used option here)
 * Use a mechanical method to switch the phase based on the physical position of the turntable
-* Use Turntable-EX and EX-RAIL position definitions to reverse or maintain the phase as appropriate for each position
+* Use Turntable-EX and EX-RAIL position definitions to reverse or maintain the phase as appropriate for each position using a dual relay board (or similar)
 
 The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
 
 INSERT IMAGES HERE - animated gif perhaps?
 
 I'm Ready!
-==========
+===========
 
 Click the "next" button to get started assembling Turntable-EX.

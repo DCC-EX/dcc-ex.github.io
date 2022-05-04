@@ -70,6 +70,16 @@ Use draw.io to keep compatibility and allow group collaboration on the same docu
 
 --- to be done graphviz to be added ---
 
+Hidden Pages (Not ready for release)
+------------------------------------
+
+Use the ``:orphan:`` tag with a comment below it saying "Remove orphan field when the document is added to a toctree". This will allow us to easily search for the word "orphan" to find incomplete pages and avoids triggering an error that there are pages without an entry in a toctree
+
+Hidden comments
+----------------
+
+You can hide notes or searchable placeholders by putting placing the text on a line with a space above and below and preceding it with two period and a space, ex: ".. This is a hidden comment"
+
 
 Summary
 ---------

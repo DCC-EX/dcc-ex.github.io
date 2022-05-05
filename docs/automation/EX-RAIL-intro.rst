@@ -80,7 +80,7 @@ There can be a startup sequence (keywords at the beginning of the script), which
 
 Multiple concurrent sequences are supported.
 
-For a full list of keywords, see :doc:`EX-RAIL-summary`.
+For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/automation/EX-RAIL-reference`.
 
 The script containing your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
 
@@ -117,7 +117,7 @@ Some Simple Examples
 ======================
 
 Example 1: Creating Routes for a Throttle
----------------------------------------------
+__________________________________________
 
 A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like
@@ -162,7 +162,7 @@ Of course, you may want to add signals, and time delays
 
 
 Example 2: Automating Signals with Turnouts
-----------------------------------------------
+____________________________________________
 
 By intercepting a turnout change command, it's easy to automatically adjust signals or 
 automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE`` keyword to detect a particular turnout change:
@@ -194,7 +194,7 @@ Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMR
 
 A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
  
-See the :doc:`Reference <EX-RAIL-summary>` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
+See the :doc:`/automation/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 
 Defining Signals
@@ -206,7 +206,7 @@ Signals can now simply be a decoration to be switched by the route process; they
 
 
 Example 3: Automating various non-track items 
------------------------------------------------
+______________________________________________
 
 This normally takes place in a timed loop, for example alternate flashing of a fire engine's lights. To do this use a SEQUENCE.
 
@@ -224,7 +224,7 @@ This normally takes place in a timed loop, for example alternate flashing of a f
 Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using ``START(66)``.
 
 Example 4: Automating a train (simple loop)
---------------------------------------------
+____________________________________________
 
 Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.
 
@@ -253,7 +253,7 @@ The instructions are followed in sequence by the loco given to it; the ``AT`` co
 Notice that this automation does not specify the loco address. If you drive a loco with the throttle and then hand it over to this automation, then the automation will run with the loco you last drove.
 
 Example 5: Signals in a train script
--------------------------------------
+_____________________________________
 
 Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
 
@@ -273,7 +273,7 @@ Adding a station signal to the loop script is extremely simple, but it does requ
       FOLLOW(4)  // and continue to follow the automation
 
 Example 6: Single line shuttle
--------------------------------
+_______________________________
 
 Consider a single line, shuttling between stations A and B.
 
@@ -327,7 +327,7 @@ Although the above is trivial, the routes are designed to be independent of the 
 The example above assumes that loco 3 is sitting on the track and pointing in the right direction. A bit later you will see how to script an automatic process to take whatever loco is placed on the programming track, and send it on its way to join in the fun!
 
 Example 7: Running multiple inter-connected trains
----------------------------------------------------
+___________________________________________________
 
 So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout
@@ -460,7 +460,7 @@ For a known set of locos, the easiest way is to define the startup process at th
 
 
 Drive Away feature
-==================
+===================
 
 EX-RAIL can switch a track section between programming and mainline.
 
@@ -485,7 +485,7 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
 Sounds
-======
+=======
 
 You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn.
 
@@ -512,7 +512,7 @@ Outputs
 - SIGNAL definitions are just groups of 3 Output pins that can be more easily managed.
 
 Sequence Numbers
-================
+=================
 
 - All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
 - 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script. 
@@ -520,10 +520,12 @@ Sequence Numbers
 Various techniques
 ===================
 
-Defining names for any ID numbers
-----------------------------------
+Below are some tips and techniques you can implement to get the most out of EX-RAIL.
 
-Use the ``ALIAS()`` command in the startup sequence of your script. This must come *BEFORE* the name is used.
+Defining names for any ID numbers (aliases)
+____________________________________________
+
+Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.
 
 Alias names:
 
@@ -531,23 +533,48 @@ Alias names:
 - **Must start** with letters A-Z or underscore _ .
 - **May then** also contain numbers.
 - **Must not** contain spaces or special characters.
+- *May not* define a number, allowing EX-RAIL to generate them automatically.
    
 For example:
 
 .. code-block:: cpp
 
-   ALIAS(COAL_YARD_TURNOUT,19) 
-   ALIAS(COAL_YARD_SIGNAL_3,27) 
+   ALIAS(COAL_YARD_TURNOUT,19)
+   ALIAS(COAL_YARD_SIGNAL_3,27)
+
+   ROUTE(1,"Coal yard exit")
+      THROW(COAL_YARD_TURNOUT)
+      GREEN(COAL_YARD_SIGNAL_3)
+   
+   // As above with auto generated IDs
+   ALIAS(COAL_YARD_TURNOUT)
+   ALIAS(COAL_YARD_SIGNAL_3)
 
    ROUTE(1,"Coal yard exit")
       THROW(COAL_YARD_TURNOUT)
       GREEN(COAL_YARD_SIGNAL_3)
 
 Including sub-files
---------------------
-  
+____________________
+
+If you find your myAutomation.h file becoming quite lengthy and cumbersome to scroll through and keep track of, you can break your items up into multiple smaller files, and include those in your myAutomation.h file instead.
+
+There are some rules that apply in this scenario:
+
+* Anything that needs to be done when the CommandStation starts must be defined first.
+* Any custom macros/commands must be defined before they are used (see :ref:`automation/ex-rail-intro:make your own ex-rail macro or command`) below.
+* The files are included in the order defined, so if an item in one file depends on another file's item, make sure they included in the correct order.
+
+Some suggestions to get the most out of this:
+
+* Define everything that needs to happen on startup directly in myAutomation.h, before any other includes.
+* Have a specific file for your custom macros or commands (eg. myMacros.h) and include this before other includes.
+* Have a specific file for all your aliases (eg. myAliases.h).
+* Group other items logically according to their purpose, eg. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.
+* Remember the rules and ensure these are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.
+
 For example:
-   
+
 .. code-block:: cpp
 
    ROUTE(1,"Coal yard exit")
@@ -558,7 +585,7 @@ For example:
    #include "myShuttle.h"
 
 Realistic turnout sequeunces
------------------------------
+_____________________________
 
 Let's say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:
 
@@ -591,3 +618,7 @@ For example:
    DONE
 
 A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.
+
+Make your own EX-RAIL macro or command
+_______________________________________
+

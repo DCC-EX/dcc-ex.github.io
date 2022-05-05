@@ -1,12 +1,8 @@
-:orphan:
-
-.. Remove orphan field when the document is added to a toctree
-
 ****************************
-DCC++ EX Command Reference
+EX-RAIL Command Reference
 ****************************
 
-This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
+This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
@@ -20,17 +16,13 @@ Notes
 ========
 
 
-- *ROUTE*, *AUTOMATION* and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
-
-- Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.
-
+- *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
+- Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion (as virtual pins).
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
-
 - It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once.
-
 - All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
+- Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.
 
-|
 
 DIAGNOSTICS AND CONTROL
 =======================
@@ -39,7 +31,7 @@ There are some diagnostic and control commands added to the <tag> language norma
 
 ``<D EXRAIL ON|OFF>`` Turns diagnostic traces for EX-RAIL events
 
-  .. code-block:: none
+  .. code-block::
 
     When the CS is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled)
 
@@ -76,7 +68,7 @@ ROUTES, AUTOMATIONS, & SEQUENCES
 EX-RAIL provides many commands to allow you to create routes that locomotives to follow that may involve turnouts, signals, etc. that can be automatically set to react when the loco trips a sensor.
 
 Script Definition Terms
-------------------------
+________________________
 
 ``AUTOMATION( id, "description" )>``	Start of an Automation Sequence which WiThrottles can send a train along
 
@@ -87,7 +79,7 @@ Script Definition Terms
 ``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, etc.
 
 Object Definitions
--------------------
+___________________
 
 ``ALIAS( name, value )``	Assign names to values. Can go anywhere in the script
 
@@ -98,10 +90,6 @@ Examples:
 ALIAS(coal_yard, 1) or ALIAS("coal yard", 1) then instead of PIN_TURNOUT( id, pin [, "COAL YARD"], write it as PIN_TURNOUT(coal_yard, pin [, "description"]) 
 
 2000 milliseconds is 2 seconds, so with ALIAS(slow, 2000), you could set DELAY(slow).
-
-
-
-
 
 ``SIGNAL( red_pin, amber_pin, green_pin )``	Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)
 
@@ -116,7 +104,7 @@ ALIAS(coal_yard, 1) or ALIAS("coal yard", 1) then instead of PIN_TURNOUT( id, pi
 ``SERVO_SIGNAL( vpin, redpos, amberpos, greenpos )`` Define a servo signal
 
 Flow Control Functions
-------------------------
+_______________________
 
 ``CALL( route )``	Branch to a separate sequence expecting a RETURN
 
@@ -159,7 +147,7 @@ Flow Control Functions
 ``ENDIF``	Required to end an IF/IFNOT/etc (Used in all IF.. functions)
 
 Command Station Functions
---------------------------
+__________________________
 
 ``POWEROFF``	Power off track
 
@@ -184,7 +172,7 @@ Command Station Functions
 ``SERIAL3( msg )``	Writes direct to Serial3
 
 EX-RAIL Functions
-------------------
+__________________
 
 ``PAUSE``	E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd
 
@@ -207,7 +195,7 @@ EX-RAIL Functions
 ``ROSTER( cab, name, func_map )``	Provide roster info for WiThrottle
 
 Loco DCC Functions
--------------------
+___________________
 
 ``ESTOP``	Emergency stop loco
 
@@ -226,7 +214,7 @@ Loco DCC Functions
 ``INVERT_DIRECTION``	Switches FWD/REV meaning for this loco
 
 Sensor input and Event Handlers 
---------------------------------
+________________________________
 
 ``AT( sensor_id )``	Wait until sensor is active/triggered
 
@@ -257,7 +245,7 @@ Sensor input and Event Handlers
 ``WAITFOR( pin )``	Wait for servo to complete movement
 
 Action Output Functions
-------------------------
+________________________
 
 ``SET( pin )``	Set an output pin HIGH
 

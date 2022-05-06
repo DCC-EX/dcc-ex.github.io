@@ -145,20 +145,34 @@ Defining a pin turnout with aliases:
 Signals
 ^^^^^^^^
 
-``SIGNAL( red_pin, amber_pin, green_pin )``	Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)
+``SIGNAL( red_pin, amber_pin, green_pin )``	Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights.
 
-``SIGNALH( redpin, amberpin, greenpin )`` Same as SIGNAL but for active-HIGH LEDs
+``SIGNALH( red_pin, amber_pin, green_pin )`` As above to define a pin based signal, but with active high pins instead.
+
+For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (eg. RED/GREEN), set the unused colour's pin to 0.
+
+``SERVO_SIGNAL( vpin, red_pos, amber_pos, green_pos )`` Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT.
+
+Signal examples:
+
+.. code-block:: cpp
+
+  SIGNAL(25, 26, 27)                // Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.
+  SIGNALH(164 ,0, 165)              // Active high red/green signal using the first two pins of the first MCP23017 I/O expander module.
+  SERVO_SIGNAL(101, 100, 250, 400)  // Servo based signal using the second available servo connection of the first PCA9685 servo module.
+
+  GREEN(77)                         // Sets our active low signal to green.
+  GREEN(93)                         // Sets our active high signal to green.
+  GREEN(101)                        // Sets our servo based signal to green.
 
 Turnouts
 ^^^^^^^^^
 
-``TURNOUT( id, addr, sub_addr [, "description"] )``	Define DCC Accessory turnout
+``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions.
 
-``PIN_TURNOUT( id, pin [, "description"] )``	Define pin operated turnout
+``PIN_TURNOUT( id, pin [, "description"] )``	Define a pin operated turnout
 
 ``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout
-
-``SERVO_SIGNAL( vpin, redpos, amberpos, greenpos )`` Define a servo signal
 
 ``VIRTUAL_TURNOUT( id [, "description"] )``
 

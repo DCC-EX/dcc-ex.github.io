@@ -74,8 +74,6 @@ __________________________________
       -  Description
     * -  :category:`--- Script Definition Items ---`
       -
-    * -  EXRAIL
-      -  Deprecated No longer required (does nothing)
     * -  AUTOMATION( id, "description" )
       -  Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
     * -  ROUTE( id, "description" )
@@ -84,8 +82,6 @@ __________________________________
       -  A general purpose Sequence for scenic animations, etc.
     * -  ENDTASK or DONE
       -  Completes a Animation/Routes/Sequence Event handler, etc.
-    * -  ENDEXRAIL
-      -  Deprecated No longer required (does nothing)
     * -  :category:`--- Object definitions ---`
       -
     * -  ALIAS( name, value )

@@ -17,7 +17,7 @@ Notes
 
 
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
-- Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion (as virtual pins).
+- Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion (as virtual pins or vpins).
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
 - It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once.
 - All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
@@ -29,6 +29,9 @@ DIAGNOSTICS AND CONTROL
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet.
 
+EXRAIL
+_______
+
 ``<D EXRAIL ON|OFF>`` Turns diagnostic traces for EX-RAIL events
 
   .. code-block::
@@ -39,9 +42,15 @@ There are some diagnostic and control commands added to the <tag> language norma
 
 **NEED EXAMPLE OUTPUT HERE**
   
+PAUSE/RESUME
+_____________
+
 ``</PAUSE>`` Pauses **ALL** EX-RAIL automation activities, including sending an E-STOP to all locos.
 
 ``</RESUME>`` Resumes **ALL** EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.
+
+Task info
+__________
 
 ``</>`` Displays EX-RAIL running task information
 
@@ -49,19 +58,31 @@ There are some diagnostic and control commands added to the <tag> language norma
 
 **NEED EXAMPLE OUTPUT HERE**
 
+ROUTES
+_______
+
 ``</ ROUTES>``	Returns the Routes & Automations control list in WiThrottle format. JMRI integration only! **Really?**
 
   Example output:
 
 **NEED EXAMPLE OUTPUT HERE**
 
+START/KILL
+___________
+
 ``</ START [loco_addr] route_id>``	Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
 
 ``</ KILL task_id>``	Kills a currently running script task by ID (use to list task IDs)
 
+RESERVE/FREE
+_____________
+
 ``</ RESERVE block_id>``	Manually reserves a virtual track Block, valid IDs are in the range 0 - 255.
 
 ``</ FREE block_id>``	Manually frees a virtual track Block, valid IDs are in the range 0 - 255.
+
+LATCH/UNLATCH
+______________
 
 ``</ LATCH sensor_id>``	Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 255.
 
@@ -87,9 +108,18 @@ ________________________
 Object Definitions
 ___________________
 
+Aliases
+^^^^^^^^
+
 ``ALIAS( name[, value] )``	Assign names to values. Can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias text.
 
 This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
+
+If you simply need a unique identifier for an object such as a turnout, route, automation, or sequence, you don't even need to provide an ID, and EX-RAIL will generate one automatically.
+
+However, IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
+
+Alias naming rules:
 
 - **Should be** reasonably short but descriptive.
 - **Must start** with letters A-Z or underscore _ .
@@ -98,13 +128,29 @@ This is a simple substitution that lets you have readable names for things in yo
 
 Examples:
 
-ALIAS(coal_yard, 1) or ALIAS("coal yard", 1) then instead of PIN_TURNOUT( id, pin [, "COAL YARD"], write it as PIN_TURNOUT(coal_yard, pin [, "description"]) 
+Defining a pin turnout without an alias:
 
-2000 milliseconds is 2 seconds, so with ALIAS(slow, 2000), you could set DELAY(slow).
+.. code-block:: cpp
+
+  PIN_TURNOUT(1, 25, "Coal Yard")
+
+Defining a pin turnout with aliases:
+
+.. code-block:: cpp
+  
+  ALIAS(COAL_YARD)
+  ALIAS(COAL_YARD_PIN, 25)
+  PIN_TURNOUT(COAL_YARD, COAL_YARD_PIN, "Coal Yard")
+
+Signals
+^^^^^^^^
 
 ``SIGNAL( red_pin, amber_pin, green_pin )``	Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)
 
 ``SIGNALH( redpin, amberpin, greenpin )`` Same as SIGNAL but for active-HIGH LEDs
+
+Turnouts
+^^^^^^^^^
 
 ``TURNOUT( id, addr, sub_addr [, "description"] )``	Define DCC Accessory turnout
 
@@ -113,6 +159,8 @@ ALIAS(coal_yard, 1) or ALIAS("coal yard", 1) then instead of PIN_TURNOUT( id, pi
 ``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout
 
 ``SERVO_SIGNAL( vpin, redpos, amberpos, greenpos )`` Define a servo signal
+
+``VIRTUAL_TURNOUT( id [, "description"] )``
 
 Flow Control Functions
 _______________________

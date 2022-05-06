@@ -533,7 +533,6 @@ Alias names:
 - **Must start** with letters A-Z or underscore _ .
 - **May then** also contain numbers.
 - **Must not** contain spaces or special characters.
-- *May not* define a number, allowing EX-RAIL to generate them automatically.
    
 For example:
 

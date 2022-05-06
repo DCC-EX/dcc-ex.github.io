@@ -1,6 +1,6 @@
-****************************
+**************************
 EX-RAIL Command Reference
-****************************
+**************************
 
 This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
 
@@ -13,7 +13,7 @@ See Also:
   :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
 
 Notes
-========
+======
 
 
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
@@ -25,7 +25,7 @@ Notes
 
 
 DIAGNOSTICS AND CONTROL
-=======================
+========================
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet.
 
@@ -37,33 +37,39 @@ There are some diagnostic and control commands added to the <tag> language norma
 
     Example output:
 
+**NEED EXAMPLE OUTPUT HERE**
   
-``</PAUSE>`` Pause an EX-RAIL Script 
+``</PAUSE>`` Pauses **ALL** EX-RAIL automation activities, including sending an E-STOP to all locos.
 
-``</RESUME>`` Resume an EX-RAIL Script
+``</RESUME>`` Resumes **ALL** EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.
 
 ``</>`` Displays EX-RAIL running task information
 
    Example output:
 
-``</ ROUTES>``	Returns the Routes & Automations control list in WiThrottle format. JMRI integration only!
+**NEED EXAMPLE OUTPUT HERE**
+
+``</ ROUTES>``	Returns the Routes & Automations control list in WiThrottle format. JMRI integration only! **Really?**
+
+  Example output:
+
+**NEED EXAMPLE OUTPUT HERE**
 
 ``</ START [loco_addr] route_id>``	Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
 
 ``</ KILL task_id>``	Kills a currently running script task by ID (use to list task IDs)
 
-``</ RESERVE block_id>``	Manually reserves a virtual track Block
+``</ RESERVE block_id>``	Manually reserves a virtual track Block, valid IDs are in the range 0 - 255.
 
-``</ FREE block_id>``	Manually frees a virtual track Block
+``</ FREE block_id>``	Manually frees a virtual track Block, valid IDs are in the range 0 - 255.
 
-``</ LATCH sensor_id>``	Lock sensor ON, preventing external influence
+``</ LATCH sensor_id>``	Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 255.
 
-``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state
-
+``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
 
 ROUTES, AUTOMATIONS, & SEQUENCES
-==================================
+=================================
 
 EX-RAIL provides many commands to allow you to create routes that locomotives to follow that may involve turnouts, signals, etc. that can be automatically set to react when the loco trips a sensor.
 
@@ -81,9 +87,14 @@ ________________________
 Object Definitions
 ___________________
 
-``ALIAS( name, value )``	Assign names to values. Can go anywhere in the script
+``ALIAS( name[, value] )``	Assign names to values. Can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias text.
 
-This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need. If you want spaces in an alias, you must enclose it in quotes.
+This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
+
+- **Should be** reasonably short but descriptive.
+- **Must start** with letters A-Z or underscore _ .
+- **May then** also contain numbers.
+- **Must not** contain spaces or special characters.
 
 Examples:
 

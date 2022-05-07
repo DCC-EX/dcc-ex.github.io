@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Engine Driver &mdash; DCC++ EX  documentation</title>
+  <title>Using the “DriveAway(tm)” Feature &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -45,9 +45,7 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="WiThrottle" href="withrottle.html" />
-    <link rel="prev" title="DCC++ EX Web Throttle" href="ex-webthrottle.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,7 +93,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/levels.html">Choose Your Level</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/assembly.html">Assembling the Command Station</a></li>
@@ -126,10 +124,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/high-accuracy.html">High Accuracy Waveform Mode</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Throttles</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Throttles</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Engine Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="engine-driver.html">Engine Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="withrottle.html">WiThrottle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dccpp-cab.html">DCCpp CAB</a></li>
 <li class="toctree-l2"><a class="reference internal" href="locontrol.html">Locontrol</a></li>
@@ -263,16 +261,14 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="index.html">Throttles</a> &raquo;</li>
-        
-      <li>Engine Driver</li>
+      <li>Using the “DriveAway(tm)” Feature</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/throttles/engine-driver.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/throttles/driveaway.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -286,57 +282,80 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="engine-driver">
-<h1>Engine Driver<a class="headerlink" href="#engine-driver" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="../_images/engine_driver_logo.png"><img alt="Android Logo" class="align-left" src="../_images/engine_driver_logo.png" style="width: 103.2px; height: 102.6px;" /></a>
-<p><strong>Engine Driver</strong> is an Android App that uses the WiThrottle Protocol to either connect directly to the DCC++ EX Command Station or connect to the JMRI WiThrottle Server via WiFi. If you connect Engine Driver to JMRI, you connect to the computer running JMRI via WiFi and connect the JMRI computer to the Command Station using a USB cable. If you connect Engine Driver directly to DCC++ EX, you will to add a WiFi option to your DCC++ EX Command Station as explained here: <a class="reference internal" href="../get-started/wifi-setup.html"><span class="doc">WiFi Setup</span></a>.</p>
-<div class="section" id="platforms">
-<span id="ed-platforms"></span><h2>Platforms<a class="headerlink" href="#platforms" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/icon_android.png"><img alt="Android Logo" class="align-left" src="../_images/icon_android.png" style="width: 76.8px; height: 76.8px;" /></a>
-<p>Please visit the Engine Driver Website: <a class="reference external" href="https://enginedriver.mstevetodd.com/">https://enginedriver.mstevetodd.com/</a></p>
-<p><a class="reference external" href="https://play.google.com/store/apps/details?id=jmri.enginedriver">Get Cab Engineer from the Google Play Store</a></p>
+  <div class="section" id="using-the-driveaway-tm-feature">
+<h1>Using the “DriveAway(tm)” Feature<a class="headerlink" href="#using-the-driveaway-tm-feature" title="Permalink to this headline">¶</a></h1>
+<p>DCC++EX and Engine Drivers “Request Loco ID” &amp; “Drive Away”</p>
+<p>A new feature enhancement with a Arduino Mega 2560 +WiFi enabled DCC++EX Command Station directly connected to an Engine Driver Throttle on an Android smartphone.</p>
+<p>Place a DCC Engine on a programming track spur or siding, use Engine Driver WiFi Throttle “Request Loco ID” to automatically acquire &amp; load the loco# into the Engine Driver Throttle, then just throttle-up and “Drive Away” onto the main line tracks.</p>
+<div class="section" id="how-to-use-it">
+<h2>How to Use It<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline">¶</a></h2>
+<p>Place any DCC Engine onto a insulated Programming track setup as spur or siding connected with dual plastic joiners to the Main layout track. On Engine Driver WiFi Throttle, touch “Select” loco as normal, choose “Request Loco ID” radio dial and press “Request Loco” button, it automatically acquires &amp; loads the loco# into the Engine Driver WiFi Throttle, then sets and Joins the Programming track as a Mainline DCC signal, then you just throttle-up and “Drive Away” onto the main line tracks.</p>
+<p>Place a second engine on the programming track and repeat the steps as many times as you would like.
+This is a New DCC WiFi Throttle client feature only found in DCC++EX &amp; Engine Driver WiFi App.</p>
+</div>
+<div class="section" id="where-it-s-used">
+<h2>Where it’s used<a class="headerlink" href="#where-it-s-used" title="Permalink to this headline">¶</a></h2>
+<p>An Arduino Mega DCC++EX + WiFi enabled Command Station in Standalone Operations mode Directly WiFi connected with Engine Driver WiFi Throttles utilizing the new standalone WiThrottle Server feature embedded in DCC++EX Command Station.</p>
+<p>Setup an Arduino Mega DCC++EX CS + ESP 8266 WiFi MakerFab Shield or a ESP01 WiFi board in either Access Point AP mode or Station STA (client) mode through a shared Router for a Command Station (CS) Standalone Operations configuration. Then the Engine Driver and Command Station both sign on to the common SSID Name and Password to share the common WiFi signal and channel.</p>
+<p>This Standalone WiFi configuration works Without the use of any additional PC, Mac or PI hardware or third party software controller’s like JMRI or Rocrail interfaces.</p>
+</div>
+<div class="section" id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>DCC++EX 3.1 and above has a new software implementation logic that in a sense replaces a hardwired DPDT switch and combines multiple DCC++ commands in a sequence to perform the magic dubbed “DriveAway(tm)”. It triggers a &lt;R&gt; read the CV1 Short or CV 17 &amp; 18 Long address and CV8 Mfr ID, and CV29 Setup and then returns and automatically loads the Loco# into the WiFi throttle.
+The Command Station then automatically sets <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> command to switch the PROG track to MAIN DCC signal and allows your Engine Driver App to drive it away onto the main line tracks.</p>
+<p>Logic Programming Protection;
+If you inadvertently touch or send any Programming command while an Engine is sitting on the PROG track when it’s active as a [JOIN] Main line track, the DCC++EX software Automatically kicks back to Program Track Mode before accepting any other commands as safety procedure.</p>
+</div>
+<div class="section" id="caution-wiring-prog-main">
+<h2>Caution: Wiring Prog &amp; Main<a class="headerlink" href="#caution-wiring-prog-main" title="Permalink to this headline">¶</a></h2>
+<p>Please be sure “Both” Programming Track rails are Insulated with dual plastic joiners from the Main line and that both the wiring for CAB A Main and CAB B Prog positive leads are connected on the right rail and the negative leads are connected on the other rails to synchronize the phase of the DCC signal.
+Or else undesirable gremlins may appear, you’ve been forewarned.
+The proceeding is a public service announcement and the DCC++EX team makes no expressed or implied guarantees if the user fails his or her due diligence.</p>
+</div>
+<div class="section" id="new-discovered-servers-on-wifi-throttles">
+<h2>New “Discovered Servers” on WiFi Throttles<a class="headerlink" href="#new-discovered-servers-on-wifi-throttles" title="Permalink to this headline">¶</a></h2>
+<p>WiFi Throttles now detect and display both DCC++EX Command Station name and JMRI WiThrottle Server Profile names as ‘Discovered Servers’ in the WiFi Throttle Apps.</p>
+<div class="section" id="sample-wifi-throttle-app-discovered-servers">
+<h3>Sample WiFi Throttle App “Discovered Servers”<a class="headerlink" href="#sample-wifi-throttle-app-discovered-servers" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
+<div><p>“DCC++EX”                 {Direct WiFi connected to the Command Station}</p>
+<p>“My JMRI Railroad”        {JMRI WiFI connected via WiThrottle Server on a PC or Mac}</p>
+<p>“RPi JMRI Railroad”       {JMRI WiFI connected via WiThrottle Server on Raspberry Pi}</p>
+</div></blockquote>
+<p>Our new multicast Dynamic Network Server (mDNS) enhancement allows us to display the available WiFi Server connections to a DCC++EX Command Station.
+Choosing one allows your WiFi Throttle App to connect to and load Server Rosters and function keys to your throttle from Either the DCC++EX Command Station, Or from JMRI Engine Roster.</p>
+<a class="reference internal image-reference" href="../_images/engine_driver_discovered_servers.png"><img alt="Engine Driver Discovered Servers" class="align-left" src="../_images/engine_driver_discovered_servers.png" style="width: 200.0px; height: 320.0px;" /></a>
 </div>
-<div class="section" id="features">
-<span id="ed-features"></span><h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>New ‘Request Loco ID’ &amp; ‘Drive Away’ feature from a Program track onto Mainline track with DCC++EX</p></li>
-<li><p>New ‘Discover Server’ Detect, Select &amp; Connect to WiFi enabled Command Stations</p></li>
-<li><p>New  DCC++EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons</p></li>
-<li><p>New ‘Roster Server’ download Engine ID’s &amp; function keys from the Command Station</p></li>
-<li><p>New ‘Virtual Engine Sounds’ {Bell, Horn, Short Horn, Mute} for motor only engines on first two throttles</p></li>
-<li><p>Speed and direction control</p></li>
-<li><p>Up to 29 DCC functions</p></li>
-<li><p>One to six locomotives or consists</p></li>
-<li><p>Create and edit consists (software-defined)</p></li>
-<li><p>You can also control layout power, turnouts, routes, and access JMRI web panels and windows.</p></li>
-</ul>
-<p><a class="reference internal" href="driveaway.html#using-the-driveaway-tm-feature"><span class="std std-ref">Using the “DriveAway(tm)” Feature</span></a></p>
 </div>
-<div class="section" id="screenshots">
-<span id="ed-screenshots"></span><h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/ed1.png"><img alt="Engine Driver Main Screen" class="align-left" src="../_images/ed1.png" style="width: 131.4px; height: 240.0px;" /></a>
-<a class="reference internal image-reference" href="../_images/ed2.png"><img alt="Engine Driver 2" class="align-left" src="../_images/ed2.png" style="width: 131.4px; height: 240.0px;" /></a>
-<a class="reference internal image-reference" href="../_images/ed3.png"><img alt="Engine Driver 3" class="align-left" src="../_images/ed3.png" style="width: 131.4px; height: 240.0px;" /></a>
-<a class="reference internal image-reference" href="../_images/ed4.png"><img alt="Engine Driver 4" class="align-left" src="../_images/ed4.png" style="width: 131.4px; height: 240.0px;" /></a>
+<div class="section" id="new-dcc-ex-4-0-exrail-roster-feature">
+<h2>New DCC++EX 4.0 EXRAIL “Roster” Feature<a class="headerlink" href="#new-dcc-ex-4-0-exrail-roster-feature" title="Permalink to this headline">¶</a></h2>
+<p>You can now manually enter your ROSTER engine address, names and function keys into your myAutomation.h file and directly pass this Command Stations Engine Roster into your Engine Driver and WiThrottle Apps.
+By choosing “DCC++EX” from discovered servers an Engine Driver or WiThrottle becomes Directly connected to the Command Station and the “Server Roster” radial dial now lists the New DCC++EX EXRAIL “ROSTER” Engines and Function key layout on the Engine Driver or WiThrottles in addition to the standard preset Engine Driver “default mode” function key names.</p>
+<p>Sample Roster entry in myAutomation.h file</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// New EXRAIL 4.0 Engine Server Roster Entries.</span>
+<span class="c1">// The JMRI counter part would be the Roster Screen and the LABLES tab where you define a function key name</span>
+
+<span class="c1">// EXRAIL Defined Engine ROSTER(dcc_address,&quot;name/F1/*F2/etc&quot;) // Use asterisk* for function keys that are unlatched i.e. Horn &amp; Whistle</span>
+  <span class="n">ROSTER</span><span class="p">(</span><span class="mi">1204</span><span class="p">,</span><span class="s">&quot;RG 1204&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/Coupler/Steam/Dim Lght/Fx6/Sql Brake/Mute/StartUp/ShutDown/////Switching Shunting&quot;</span><span class="p">)</span>
+  <span class="n">ROSTER</span><span class="p">(</span><span class="mi">1224</span><span class="p">,</span><span class="s">&quot;PE 1224&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span> <span class="c1">// Motor Only DCC Decoder, Use the Virtual Sound Decoder in Engine Driver Loco Sounds</span>
+  <span class="n">ROSTER</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;PE 1225&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute&quot;</span><span class="p">)</span>
+  <span class="n">ROSTER</span><span class="p">(</span>  <span class="mi">70</span><span class="p">,</span><span class="s">&quot;3M 70&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Horn/Coupler/F4/F5/Fx6/F7/Mute&quot;</span><span class="p">)</span>
+
+<span class="c1">// Legacy Analog DC Engines, Note; Functions F1-F3 &amp; &#39;Mute&#39; Sounds are available via Engine Driver v2.32+ &#39;Preferences &gt; Loco Sounds&#39;</span>
+  <span class="n">ROSTER</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;CAB 1&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span>    <span class="c1">// Analog DC Engine with no F-Keys &#39;See Engine Driver for F-keys&#39;</span>
+  <span class="n">ROSTER</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;CAB 2&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span>    <span class="c1">// Analog DC Engine with no F-Keys</span>
+  <span class="n">ROSTER</span><span class="p">(</span><span class="mi">667</span><span class="p">,</span> <span class="s">&quot;NH 667&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="c1">// Analog DC Engine with no F-Keys</span>
+</pre></div>
 </div>
-<div class="clearer section" id="operation">
-<span id="ed-operation"></span><h2>Operation<a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/engine_driver_dcc-ex_server_roster.png"><img alt="Engine Driver DCC++EX Server Roster" class="align-left" src="../_images/engine_driver_dcc-ex_server_roster.png" style="width: 200.0px; height: 320.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/ed_and_dcc-ex_with_dc_and_dcc_throttles.png"><img alt="ED &amp; DCC++EX with DC &amp; DCC Throttles" class="align-left" src="../_images/ed_and_dcc-ex_with_dc_and_dcc_throttles.png" style="width: 200.0px; height: 320.0px;" /></a>
 </div>
-<div class="section" id="using-a-bluetooth-controller">
-<h2>Using a Bluetooth Controller<a class="headerlink" href="#using-a-bluetooth-controller" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/bt_controller1.jpg"><img alt="Bluetooth Lanyard Controller" class="align-center" src="../_images/bt_controller1.jpg" style="width: 200.0px; height: 200.0px;" /></a>
-<p><a class="reference external" href="https://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119">Wireless Bluetooth Gamepad/Joystick Controller</a></p>
-<p>This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. You can use these as a start and customize them for your own use:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>From Steve: I set speedsteps to 10, change amount to 1, repeat delay to 9999, horizontal switching layout, throttle web view. I acquire loco/consist using my phone, then dim &amp; lock and put phone in my holster. Then I can “bump” the joystick up and down 3,2,1,0,-1,-2,-3, easily keeping track of the current “notch”. 1 is coupling speed, 2 is switching/yard speed, 3 is mainline. If I’m at home, I put the Conductor view in the web and I have my work for each location.</p>
-</div>
-<a class="reference internal image-reference" href="../_images/ed_conductor_view1.png"><img alt="Engine Driver Conductor View" class="align-center" src="../_images/ed_conductor_view1.png" style="width: 162.0px; height: 351.0px;" /></a>
-<p>And here is another Bluetooth controller that provides extra function buttons and you can hold by placing your finger in the ring.</p>
-<a class="reference internal image-reference" href="../_images/bt_controller2.jpg"><img alt="Ring Shape Hand Controller" class="align-center" src="../_images/bt_controller2.jpg" style="width: 306.0px; height: 306.0px;" /></a>
-<p><a class="reference external" href="https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&amp;selectedSellerId=101036302">https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&amp;selectedSellerId=101036302</a></p>
+<div class="section" id="current-jmri-engine-rosters">
+<h2>Current JMRI Engine Rosters<a class="headerlink" href="#current-jmri-engine-rosters" title="Permalink to this headline">¶</a></h2>
+<p>By choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered servers an Engine Driver or WiThrottle is then connected via a {PC, Mac or Pi} JMRI WiThrottle Server to the DCC++EX Command Station and the JMRI Engine Roster &amp; function keys are loaded to your WiFi Throttle App.</p>
+<p>Please be sure your JMRI device {Windows, Mac iOS or Raspberry Pi} for JMRI WiThrottle Server is signed on and connected to the same WiFi SSID Name and Password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the JMRI WiThrottle Server IP address: port# displayed into your Engine Driver &amp; WiThrottle Apps.</p>
+<a class="reference internal image-reference" href="../_images/engine_driver_jmri_server_roster.png"><img alt="Engine Driver JMRI Server Roster" class="align-left" src="../_images/engine_driver_jmri_server_roster.png" style="width: 200.0px; height: 320.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/engine_driver_and_dcc-ex.png"><img alt="Engine Driver &amp; DCC++EX" class="align-left" src="../_images/engine_driver_and_dcc-ex.png" style="width: 200.0px; height: 320.0px;" /></a>
 </div>
 </div>
 
@@ -345,10 +364,6 @@
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="withrottle.html" class="btn btn-neutral float-right" title="WiThrottle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="ex-webthrottle.html" class="btn btn-neutral float-left" title="DCC++ EX Web Throttle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 

@@ -46,7 +46,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reference" href="../reference/index.html" />
+    <link rel="next" title="EX-RAIL Command Reference" href="EX-RAIL-reference.html" />
     <link rel="prev" title="Introduction to EX-RAIL Automation" href="EX-RAIL-intro.html" /> 
 </head>
 
@@ -143,6 +143,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Automation (EX-RAIL)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
@@ -291,11 +292,12 @@
 <div class="section" id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><em>AUTOMATION</em>, <em>ROUTE</em> and <em>SEQUENCE</em> use the same ID number space, so a <code class="docutils literal notranslate"><span class="pre">FOLLOW(n)</span></code> command can be used for any of them.</p></li>
+<li><p><em>AUTOMATION</em>, <em>ROUTE</em>, and <em>SEQUENCE</em> use the same ID number space, so a <code class="docutils literal notranslate"><span class="pre">FOLLOW(n)</span></code> command can be used for any of them.</p></li>
 <li><p>Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.</p></li>
 <li><p>Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.</p></li>
 <li><p>It’s OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so <code class="docutils literal notranslate"><span class="pre">AT(35)</span> <span class="pre">LATCH(35)</span></code> for example, effectively latches sensor 35 on when detected once. Only sensors with ID’s 0 to 255 may be LATCHED/UNLATCHED in your script.</p></li>
-<li><p>All IDs used in commands and functions will be numbers, or use a ALIAS name for a number if configured.</p></li>
+<li><p>All IDs used in commands and functions will be numbers, or an ALIAS name if configured.</p></li>
+<li><p>Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.</p></li>
 </ul>
 </div>
 <div class="section" id="command-summary">
@@ -367,23 +369,17 @@
 <tr class="row-even"><td><p><strong class="category">— Script Definition Items —</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>EXRAIL</p></td>
-<td><p>Deprecated No longer required (does nothing)</p></td>
-</tr>
-<tr class="row-even"><td><p>AUTOMATION( id, “description” )</p></td>
+<tr class="row-odd"><td><p>AUTOMATION( id, “description” )</p></td>
 <td><p>Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.</p></td>
 </tr>
-<tr class="row-odd"><td><p>ROUTE( id, “description” )</p></td>
+<tr class="row-even"><td><p>ROUTE( id, “description” )</p></td>
 <td><p>Start of a Route Sequence and creates a WiThrottles {Set} button to manual drive the train along</p></td>
 </tr>
-<tr class="row-even"><td><p>SEQUENCE( id )</p></td>
+<tr class="row-odd"><td><p>SEQUENCE( id )</p></td>
 <td><p>A general purpose Sequence for scenic animations, etc.</p></td>
 </tr>
-<tr class="row-odd"><td><p>ENDTASK or DONE</p></td>
+<tr class="row-even"><td><p>ENDTASK or DONE</p></td>
 <td><p>Completes a Animation/Routes/Sequence Event handler, etc.</p></td>
-</tr>
-<tr class="row-even"><td><p>ENDEXRAIL</p></td>
-<td><p>Deprecated No longer required (does nothing)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong class="category">— Object definitions —</strong></p></td>
 <td></td>
@@ -404,7 +400,7 @@
 <td><p>Define pin operated turnout</p></td>
 </tr>
 <tr class="row-odd"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
-<td><p>Define a servo turnout</p></td>
+<td><p>Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts!)</p></td>
 </tr>
 <tr class="row-even"><td><p>VIRTUAL_TURNOUT( id [, “description”] )</p></td>
 <td><p>Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.</p></td>
@@ -478,23 +474,29 @@
 <tr class="row-odd"><td><p><strong class="category">— Command Station functions —</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>POWEROFF</p></td>
+<tr class="row-even"><td><p>POWERON</p></td>
+<td><p>Power on track, will UNJOIN programming from main</p></td>
+</tr>
+<tr class="row-odd"><td><p>POWEROFF</p></td>
 <td><p>Power off track</p></td>
 </tr>
-<tr class="row-odd"><td><p>JOIN</p></td>
+<tr class="row-even"><td><p>JOIN</p></td>
 <td><p>Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks</p></td>
 </tr>
-<tr class="row-even"><td><p>UNJOIN</p></td>
+<tr class="row-odd"><td><p>UNJOIN</p></td>
 <td><p>Disconnect Prog track from Main DCC signal</p></td>
 </tr>
-<tr class="row-odd"><td><p>READ_LOCO</p></td>
+<tr class="row-even"><td><p>READ_LOCO</p></td>
 <td><p>Read loco ID from Prog track</p></td>
 </tr>
-<tr class="row-even"><td><p>POM( cv, value )</p></td>
+<tr class="row-odd"><td><p>POM( cv, value )</p></td>
 <td><p>Program CV value on main</p></td>
 </tr>
-<tr class="row-odd"><td><p>LCD( row, msg )</p></td>
+<tr class="row-even"><td><p>LCD( row, msg )</p></td>
 <td><p>Write message on a LCD/OLED screen if one is declared and used</p></td>
+</tr>
+<tr class="row-odd"><td><p>BROADCAST ( msg )</p></td>
+<td><p>Broadcasts the specified text to all connected throttles/JMRI, over both serial and WiFi</p></td>
 </tr>
 <tr class="row-even"><td><p>PRINT( msg )</p></td>
 <td><p>Print diagnostic message to the IDE Serial Monitor and JMRI DCC++ Traffic Monitor</p></td>
@@ -647,7 +649,7 @@
 <td><p>Send message to LCN Accessory Network</p></td>
 </tr>
 <tr class="row-even"><td><p>SERVO( vpin, position, profile )</p></td>
-<td><p>Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)</p></td>
+<td><p>Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow, or Bounce)</p></td>
 </tr>
 <tr class="row-odd"><td><p>SERVO2( vpin, position, duration )</p></td>
 <td><p>Move an animation servo taking duration in ms. Do NOT use for Turnouts</p></td>
@@ -682,7 +684,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../reference/index.html" class="btn btn-neutral float-right" title="Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="EX-RAIL-reference.html" class="btn btn-neutral float-right" title="EX-RAIL Command Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="EX-RAIL-intro.html" class="btn btn-neutral float-left" title="Introduction to EX-RAIL Automation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

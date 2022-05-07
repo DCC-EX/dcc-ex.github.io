@@ -143,6 +143,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Automation (EX-RAIL)</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to EX-RAIL Automation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
@@ -350,8 +351,12 @@ that can easily be used to describe sequential actions to automatically take pla
 <h2>The Automation Process<a class="headerlink" href="#the-automation-process" title="Permalink to this headline">¶</a></h2>
 <p>Once started, all sequences step through a list of simple keywords until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.</p>
 <p>There can be a startup sequence (keywords at the beginning of the script), which if present is automatically executed, as are any sequences that contain an <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword is executed on startup. If you don’t wish anything to happen at startup, simply add the keyword <code class="docutils literal notranslate"><span class="pre">DONE</span></code> as the first line.</p>
+</div>
 <p>Multiple concurrent sequences are supported.</p>
-<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a>.</p>
+<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a>, and for further detailed information, see the <a class="reference internal" href="EX-RAIL-reference.html"><span class="doc">EX-RAIL Command Reference</span></a>.</p>
 <p>The script containing your sequences is added to your Command Station by creating a file called “myAutomation.h” in the same folder as CommandStation-EX.ino.</p>
 <p>Connecting your Arduino and pressing the Upload button in the usual way will save the file and upload your script into the Command Station.</p>
 <p>To create the myAutomation.h file in the Arduino IDE, use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).</p>
@@ -427,7 +432,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <p>You may, however, find it more convenient to define turnouts using EX-RAIL commands, which may appear anywhere in the ‘myAutomation.h’ file, even after they are referenced in an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code>, <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code>, <code class="docutils literal notranslate"><span class="pre">THROW</span></code> or <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts defined in ‘myAutomation.h’ will still be visible to WiThrottle and JMRI in the normal way.</p>
 <p>A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a “throw” or “close” (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.</p>
-<p>See the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">Reference</span></a> page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
+<p>See the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
 </div>
 <div class="section" id="defining-signals">
 <h2>Defining Signals<a class="headerlink" href="#defining-signals" title="Permalink to this headline">¶</a></h2>
@@ -700,9 +705,10 @@ number. So now our route looks like this:</p>
 </div>
 <div class="section" id="various-techniques">
 <h2>Various techniques<a class="headerlink" href="#various-techniques" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="defining-names-for-any-id-numbers">
-<h3>Defining names for any ID numbers<a class="headerlink" href="#defining-names-for-any-id-numbers" title="Permalink to this headline">¶</a></h3>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">ALIAS()</span></code> command in the startup sequence of your script. This must come <em>BEFORE</em> the name is used.</p>
+<p>Below are some tips and techniques you can implement to get the most out of EX-RAIL.</p>
+<div class="section" id="defining-names-for-any-id-numbers-aliases">
+<h3>Defining names for any ID numbers (aliases)<a class="headerlink" href="#defining-names-for-any-id-numbers-aliases" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">ALIAS()</span></code> command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.</p>
 <p>Alias names:</p>
 <ul class="simple">
 <li><p><strong>Should be</strong> reasonably short but descriptive.</p></li>
@@ -717,11 +723,34 @@ number. So now our route looks like this:</p>
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
    <span class="n">THROW</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
    <span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
+
+<span class="c1">// As above with auto generated IDs</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
+
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
+   <span class="n">THROW</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
+   <span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="including-sub-files">
 <h3>Including sub-files<a class="headerlink" href="#including-sub-files" title="Permalink to this headline">¶</a></h3>
+<p>If you find your myAutomation.h file becoming quite lengthy and cumbersome to scroll through and keep track of, you can break your items up into multiple smaller files, and include those in your myAutomation.h file instead.</p>
+<p>There are some rules that apply in this scenario:</p>
+<ul class="simple">
+<li><p>Anything that needs to be done when the CommandStation starts must be defined first.</p></li>
+<li><p>Any custom macros/commands must be defined before they are used (see <a class="reference internal" href="#make-your-own-ex-rail-macro-or-command"><span class="std std-ref">Make your own EX-RAIL macro or command</span></a>) below.</p></li>
+<li><p>The files are included in the order defined, so if an item in one file depends on another file’s item, make sure they included in the correct order.</p></li>
+</ul>
+<p>Some suggestions to get the most out of this:</p>
+<ul class="simple">
+<li><p>Define everything that needs to happen on startup directly in myAutomation.h, before any other includes.</p></li>
+<li><p>Have a specific file for your custom macros or commands (eg. myMacros.h) and include this before other includes.</p></li>
+<li><p>Have a specific file for all your aliases (eg. myAliases.h).</p></li>
+<li><p>Group other items logically according to their purpose, eg. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.</p></li>
+<li><p>Remember the rules and ensure files are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.</p></li>
+</ul>
 <p>For example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
    <span class="n">THROW</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span>
@@ -762,6 +791,59 @@ number. So now our route looks like this:</p>
 </pre></div>
 </div>
 <p>A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.</p>
+</div>
+<div class="section" id="make-your-own-ex-rail-macro-or-command">
+<h3>Make your own EX-RAIL macro or command<a class="headerlink" href="#make-your-own-ex-rail-macro-or-command" title="Permalink to this headline">¶</a></h3>
+<p>One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.</p>
+<p>To do this, you’re actually making use of some C++ code in addition to the clever programming in DCC++ EX.</p>
+<p>The way to implement this is as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MYMACRO(parameter1, parameter2, parameter3, ...) \</span>
+<span class="cp">COMMAND(parameter1) \</span>
+<span class="cp">COMMAND(parameter2) \</span>
+<span class="cp">COMMAND(parameter3) \</span>
+<span class="cp">DONE</span>
+</pre></div>
+</div>
+<p>Firstly, note the “#define”. This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.</p>
+<p>The entire macro needs to be on a single line, hence the addition of the backslash “\” at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line.</p>
+<p>Here’s an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#define PULSE 25                                      // Define a pulse time of 25ms to activate the coil
+
+#define ROKUHANTURNOUT(t, p1, p2, desc, ali) \        // Define the macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
+PIN_TURNOUT(t, 0, desc) \                             // Define a pin turnout
+ALIAS(ali, t) \                                       // Define an alias
+DONE \
+ONCLOSE(t) \                                          // Setting the direction pin and sending the pulse for the CLOSE command
+SET(p1) \
+SET(p2)DELAY(PULSE)RESET(p2) \
+DONE \
+ONTHROW(t) \                                          // Resetting the direction pin and sending the pulse for the THROW command
+RESET(p1) \
+SET(p2)DELAY(PULSE)RESET(p2) \
+DONE
+
+ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &quot;Yard entrance&quot; turnout with turnout ID 5 using MCP23017 pins 168/176, and create alias YD_E
+</pre></div>
+</div>
+<p>Typically, you would define a pin turnout with the PIN_TURNOUT command, however in this example we need a CLOSE or THROW sent to these turnouts to do more than just set a pin high or low, hence the need for the macro.</p>
+<p>Here’s the line by line explanation:</p>
+<ul class="simple">
+<li><p>A pulse time of 25ms reliably switches the turnouts.</p></li>
+<li><p>Define the ROKUHANTURNOUT macro, providing parameters for the turnout ID, direction pin, enable or pulse pin, a description, and an alias name.</p></li>
+<li><p>Create a PIN_TURNOUT that is advertised to WiThrottles using the provided turnout ID and description, with the pin set to 0 as this is not used.</p></li>
+<li><p>Create the provided alias for the turnout ID.</p></li>
+<li><p>The first DONE is required because we need to separate the turnout and alias definitions from the ONCLOSE and ONTHROW actions.</p></li>
+<li><p>Define what happens when a CLOSE command is sent to that turnout ID.</p></li>
+<li><p>Setting the direction pin high will result in closing the turnout.</p></li>
+<li><p>Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually close the turnout.</p></li>
+<li><p>The DONE is required to tell EX-RAIL not to proceed any further.</p></li>
+<li><p>Define what happens when a THROW command is sent to that turnout ID.</p></li>
+<li><p>Resetting the direction pin will result in throwing the turnout.</p></li>
+<li><p>Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually throw the turnout.</p></li>
+<li><p>The DONE is required to tell EX-RAIL not to proceed any further.</p></li>
+<li><p>Finally, use the macro to create the “Yard entrance” turnout with turnout ID 105, pins 168/176 on an MCP23017 I/O expander, and an alias of YD_E that can be referred to in other sequences.</p></li>
+</ul>
+<p>This technique can be used in many different ways limited only by your imagination to have EX-RAIL perform many different actions and automations.</p>
 </div>
 </div>
 </div>

@@ -7,15 +7,12 @@ Notes
 ========
 
 
-- *AUTOMATION*, *ROUTE* and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
-
+- *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.
-
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
-
 - It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once. Only sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script.
-
-- All IDs used in commands and functions will be numbers, or use a ALIAS name for a number if configured.
+- All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
+- Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.
 
 
 Command Summary
@@ -25,7 +22,7 @@ Command Summary
    :class: category
 
 Diagnostics & Control
------------------------
+______________________
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands < > through both the Arduino IDE Serial Monitor and the JMRI Send DCC++ Command pane.
 
@@ -66,7 +63,7 @@ There are some diagnostic and control commands added to the <tag> language norma
       -  Set the specified signal green
 
 Automations, Routes and Sequences
-----------------------------------
+__________________________________
 
 .. list-table::
     :widths: auto
@@ -77,8 +74,6 @@ Automations, Routes and Sequences
       -  Description
     * -  :category:`--- Script Definition Items ---`
       -
-    * -  EXRAIL
-      -  Deprecated No longer required (does nothing)
     * -  AUTOMATION( id, "description" )
       -  Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
     * -  ROUTE( id, "description" )
@@ -87,8 +82,6 @@ Automations, Routes and Sequences
       -  A general purpose Sequence for scenic animations, etc.
     * -  ENDTASK or DONE
       -  Completes a Animation/Routes/Sequence Event handler, etc.
-    * -  ENDEXRAIL
-      -  Deprecated No longer required (does nothing)
     * -  :category:`--- Object definitions ---`
       -
     * -  ALIAS( name, value )
@@ -102,7 +95,7 @@ Automations, Routes and Sequences
     * -  PIN_TURNOUT( id, pin [, "description"] )
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
-      -  Define a servo turnout
+      -  Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts!)
     * -  VIRTUAL_TURNOUT( id [, "description"] )
       -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
@@ -151,6 +144,8 @@ Automations, Routes and Sequences
       -  Required to end an IF/IFNOT/etc (Used in all IF.. functions)
     * -  :category:`--- Command Station functions ---`
       -
+    * -  POWERON
+      -  Power on track, will UNJOIN programming from main
     * -  POWEROFF
       -  Power off track
     * -  JOIN
@@ -163,6 +158,8 @@ Automations, Routes and Sequences
       -  Program CV value on main
     * -  LCD( row, msg )
       -  Write message on a LCD/OLED screen if one is declared and used
+    * -  BROADCAST ( msg )
+      -  Broadcasts the specified text to all connected throttles/JMRI, over both serial and WiFi
     * -  PRINT( msg )
       -  Print diagnostic message to the IDE Serial Monitor and JMRI DCC++ Traffic Monitor
     * -  SERIAL( msg )
@@ -264,7 +261,7 @@ Automations, Routes and Sequences
     * -  LCN( msg )
       -  Send message to LCN Accessory Network
     * -  SERVO( vpin, position, profile )
-      -  Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+      -  Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow, or Bounce)
     * -  SERVO2( vpin, position, duration )
       -  Move an animation servo taking duration in ms. Do NOT use for Turnouts
     * -  XFON( cab, func )

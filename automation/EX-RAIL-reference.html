@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>DCC++ EX Command Reference &mdash; DCC++ EX  documentation</title>
+  <title>EX-RAIL Command Reference &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -45,7 +45,9 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reference" href="../reference/index.html" />
+    <link rel="prev" title="EX-RAIL Command Summary" href="EX-RAIL-summary.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,7 +95,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/levels.html">Choose Your Level</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../get-started/assembly.html">Assembling the Command Station</a></li>
@@ -138,9 +140,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Automation (EX-RAIL)</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Automation (EX-RAIL)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">EX-RAIL Command Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
@@ -261,7 +264,9 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>DCC++ EX Command Reference</li>
+          <li><a href="index.html">Automation (EX-RAIL)</a> &raquo;</li>
+        
+      <li>EX-RAIL Command Reference</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -282,31 +287,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dcc-ex-command-reference">
-<h1>DCC++ EX Command Reference<a class="headerlink" href="#dcc-ex-command-reference" title="Permalink to this headline">¶</a></h1>
-<p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a></p>
+  <div class="section" id="ex-rail-command-reference">
+<h1>EX-RAIL Command Reference<a class="headerlink" href="#ex-rail-command-reference" title="Permalink to this headline">¶</a></h1>
+<p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a>.</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX</a> Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">CommandStation-EX Firmware</a>.</p>
 <p>See Also:</p>
-<blockquote>
-<div><p><a class="reference internal" href="EX-RAIL-intro.html"><span class="doc">Introduction to EX-RAIL</span></a></p>
-<p><a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a></p>
-</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference internal" href="EX-RAIL-intro.html"><span class="doc">Introduction to EX-RAIL</span></a></p></li>
+<li><p><a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a></p></li>
+</ul>
 <div class="section" id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><em>ROUTE</em>, <em>AUTOMATION</em> and <em>SEQUENCE</em> use the same ID number space, so a <code class="docutils literal notranslate"><span class="pre">FOLLOW(n)</span></code> command can be used for any of them.</p></li>
-<li><p>Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.</p></li>
+<li><p><em>AUTOMATION</em>, <em>ROUTE</em>, and <em>SEQUENCE</em> use the same ID number space, so a <code class="docutils literal notranslate"><span class="pre">FOLLOW(n)</span></code> command can be used for any of them.</p></li>
+<li><p>Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion (as virtual pins or vpins).</p></li>
 <li><p>Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.</p></li>
 <li><p>It’s OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so <code class="docutils literal notranslate"><span class="pre">AT(35)</span> <span class="pre">LATCH(35)</span></code> for example, effectively latches sensor 35 on when detected once.</p></li>
 <li><p>All IDs used in commands and functions will be numbers, or an ALIAS name if configured.</p></li>
+<li><p>Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.</p></li>
 </ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </div>
 <div class="section" id="diagnostics-and-control">
 <h2>DIAGNOSTICS AND CONTROL<a class="headerlink" href="#diagnostics-and-control" title="Permalink to this headline">¶</a></h2>
 <p>There are some diagnostic and control commands added to the &lt;tag&gt; language normally used to control the Command Station over USB, WiFi or Ethernet.</p>
+<div class="section" id="exrail">
+<h3>EXRAIL<a class="headerlink" href="#exrail" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EXRAIL</span> <span class="pre">ON|OFF&gt;</span></code> Turns diagnostic traces for EX-RAIL events</p>
 <blockquote>
 <div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>When the CS is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled)
@@ -315,58 +320,148 @@ Example output:
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/PAUSE&gt;</span></code> Pause an EX-RAIL Script</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/RESUME&gt;</span></code> Resume an EX-RAIL Script</p>
+<p><strong>NEED EXAMPLE OUTPUT HERE</strong></p>
+</div>
+<div class="section" id="pause-resume">
+<h3>PAUSE/RESUME<a class="headerlink" href="#pause-resume" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/PAUSE&gt;</span></code> Pauses <strong>ALL</strong> EX-RAIL automation activities, including sending an E-STOP to all locos.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/RESUME&gt;</span></code> Resumes <strong>ALL</strong> EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.</p>
+</div>
+<div class="section" id="task-info">
+<h3>Task info<a class="headerlink" href="#task-info" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> Displays EX-RAIL running task information</p>
 <blockquote>
 <div><p>Example output:</p>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">ROUTES&gt;</span></code>  Returns the Routes &amp; Automations control list in WiThrottle format. JMRI integration only!</p>
+<p><strong>NEED EXAMPLE OUTPUT HERE</strong></p>
+</div>
+<div class="section" id="routes">
+<h3>ROUTES<a class="headerlink" href="#routes" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">ROUTES&gt;</span></code>  Returns the Routes &amp; Automations control list in WiThrottle format. JMRI integration only! <strong>Really?</strong></p>
+<blockquote>
+<div><p>Example output:</p>
+</div></blockquote>
+<p><strong>NEED EXAMPLE OUTPUT HERE</strong></p>
+</div>
+<div class="section" id="start-kill">
+<h3>START/KILL<a class="headerlink" href="#start-kill" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">START</span> <span class="pre">[loco_addr]</span> <span class="pre">route_id&gt;</span></code>      Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">KILL</span> <span class="pre">task_id&gt;</span></code>    Kills a currently running script task by ID (use to list task IDs)</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESERVE</span> <span class="pre">block_id&gt;</span></code>        Manually reserves a virtual track Block</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">FREE</span> <span class="pre">block_id&gt;</span></code>   Manually frees a virtual track Block</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">LATCH</span> <span class="pre">sensor_id&gt;</span></code> Lock sensor ON, preventing external influence</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">UNLATCH</span> <span class="pre">sensor_id&gt;</span></code>       Unlock sensor, returning to current external state</p>
+</div>
+<div class="section" id="reserve-free">
+<h3>RESERVE/FREE<a class="headerlink" href="#reserve-free" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESERVE</span> <span class="pre">block_id&gt;</span></code>        Manually reserves a virtual track Block, valid IDs are in the range 0 - 255.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">FREE</span> <span class="pre">block_id&gt;</span></code>   Manually frees a virtual track Block, valid IDs are in the range 0 - 255.</p>
+</div>
+<div class="section" id="latch-unlatch">
+<h3>LATCH/UNLATCH<a class="headerlink" href="#latch-unlatch" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">LATCH</span> <span class="pre">sensor_id&gt;</span></code> Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 255.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">UNLATCH</span> <span class="pre">sensor_id&gt;</span></code>       Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.</p>
+</div>
 </div>
 <div class="section" id="routes-automations-sequences">
 <h2>ROUTES, AUTOMATIONS, &amp; SEQUENCES<a class="headerlink" href="#routes-automations-sequences" title="Permalink to this headline">¶</a></h2>
 <p>EX-RAIL provides many commands to allow you to create routes that locomotives to follow that may involve turnouts, signals, etc. that can be automatically set to react when the loco trips a sensor.</p>
 <div class="section" id="script-definition-terms">
 <h3>Script Definition Terms<a class="headerlink" href="#script-definition-terms" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">AUTOMATION(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)&gt;</span></code>    Start of an Automation Sequence which WiThrottles can send a train along</p>
-<p><code class="docutils literal notranslate"><span class="pre">ROUTE(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code>  Start of a Route Sequence settable in WiThrottle</p>
-<p><code class="docutils literal notranslate"><span class="pre">SEQUENCE(</span> <span class="pre">id</span> <span class="pre">)</span></code>      A general purpose Sequence for scenic animations, etc.</p>
-<p><code class="docutils literal notranslate"><span class="pre">ENDTASK</span></code> or <code class="docutils literal notranslate"><span class="pre">DONE</span></code> Completes a Sequence/Route/Animation/Event handler, etc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">AUTOMATION(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code>     Define an automation sequence that is advertised to WiThrottles to send a train along. See <a class="reference internal" href="EX-RAIL-intro.html#example-4-automating-a-train-simple-loop"><span class="std std-ref">Example 4: Automating a train (simple loop)</span></a> for a simple example.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ROUTE(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code>  Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts and signals to allow a train to be driven through a specific route on the layout. See <a class="reference internal" href="EX-RAIL-intro.html#example-1-creating-routes-for-a-throttle"><span class="std std-ref">Example 1: Creating Routes for a Throttle</span></a> for various examples.</p>
+<p><code class="docutils literal notranslate"><span class="pre">SEQUENCE(</span> <span class="pre">id</span> <span class="pre">)</span></code>      A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See <a class="reference internal" href="EX-RAIL-intro.html#example-3-automating-various-non-track-items"><span class="std std-ref">Example 3: Automating various non-track items</span></a>, <a class="reference internal" href="EX-RAIL-intro.html#example-6-single-line-shuttle"><span class="std std-ref">Example 6: Single line shuttle</span></a>, and <a class="reference internal" href="EX-RAIL-intro.html#example-7-running-multiple-inter-connected-trains"><span class="std std-ref">Example 7: Running multiple inter-connected trains</span></a> for further examples.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ENDTASK</span></code> or <code class="docutils literal notranslate"><span class="pre">DONE</span></code> Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the previous examples.</p>
 </div>
 <div class="section" id="object-definitions">
 <h3>Object Definitions<a class="headerlink" href="#object-definitions" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name,</span> <span class="pre">value</span> <span class="pre">)</span></code>        Assign names to values. Can go anywhere in the script</p>
-<p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need. If you want spaces in an alias, you must enclose it in quotes.</p>
+<div class="section" id="aliases">
+<h4>Aliases<a class="headerlink" href="#aliases" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code>      Assign names to values. Can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias text.</p>
+<p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
+<p>If you simply need a unique identifier for an object such as a turnout, route, automation, or sequence, you don’t even need to provide an ID, and EX-RAIL will generate one automatically.</p>
+<p>However, IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.</p>
+<p>Alias naming rules:</p>
+<ul class="simple">
+<li><p><strong>Should be</strong> reasonably short but descriptive.</p></li>
+<li><p><strong>Must start</strong> with letters A-Z or underscore _ .</p></li>
+<li><p><strong>May then</strong> also contain numbers.</p></li>
+<li><p><strong>Must not</strong> contain spaces or special characters.</p></li>
+</ul>
 <p>Examples:</p>
-<p>ALIAS(coal_yard, 1) or ALIAS(“coal yard”, 1) then instead of PIN_TURNOUT( id, pin [, “COAL YARD”], write it as PIN_TURNOUT(coal_yard, pin [, “description”])</p>
-<p>2000 milliseconds is 2 seconds, so with ALIAS(slow, 2000), you could set DELAY(slow).</p>
-<p><code class="docutils literal notranslate"><span class="pre">SIGNAL(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code>     Define a signal (RED/AMBER/GREEN commands always use the red_pin as the signal_id)</p>
-<p><code class="docutils literal notranslate"><span class="pre">SIGNALH(</span> <span class="pre">redpin,</span> <span class="pre">amberpin,</span> <span class="pre">greenpin</span> <span class="pre">)</span></code> Same as SIGNAL but for active-HIGH LEDs</p>
-<p><code class="docutils literal notranslate"><span class="pre">TURNOUT(</span> <span class="pre">id,</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>     Define DCC Accessory turnout</p>
-<p><code class="docutils literal notranslate"><span class="pre">PIN_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>    Define pin operated turnout</p>
-<p><code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin,</span> <span class="pre">active_angle,</span> <span class="pre">inactive_angle,</span> <span class="pre">profile</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>   Define a servo turnout</p>
-<p><code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(</span> <span class="pre">vpin,</span> <span class="pre">redpos,</span> <span class="pre">amberpos,</span> <span class="pre">greenpos</span> <span class="pre">)</span></code> Define a servo signal</p>
+<p>Defining a pin turnout without an alias:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Defining a pin turnout with aliases:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_PIN</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">,</span> <span class="n">COAL_YARD_PIN</span><span class="p">,</span> <span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this simple example, aliases seem like overkill, however consider the case where you need to have the “Coal Yard” turnout closed or thrown in various different automation sequences, and you will soon see why it’s easier to understand you’re throwing the COAL_YARD turnout rather than turnout ID 12345.</p>
+</div>
+<div class="section" id="signals">
+<h4>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">SIGNAL(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code>     Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights.</p>
+<p><code class="docutils literal notranslate"><span class="pre">SIGNALH(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code> As above to define a pin based signal, but with active high pins instead.</p>
+<p>For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (eg. RED/GREEN), set the unused colour’s pin to 0.</p>
+<p><code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(</span> <span class="pre">vpin,</span> <span class="pre">red_pos,</span> <span class="pre">amber_pos,</span> <span class="pre">green_pos</span> <span class="pre">)</span></code> Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT.</p>
+<p>Signal examples:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">)</span>                <span class="c1">// Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.</span>
+<span class="n">SIGNALH</span><span class="p">(</span><span class="mi">164</span> <span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">165</span><span class="p">)</span>              <span class="c1">// Active high red/green signal using the first two pins of an MCP23017 I/O expander module.</span>
+<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>  <span class="c1">// Servo based signal using the first PCA9685 servo module.</span>
+
+<span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>                         <span class="c1">// Sets our active low signal to green.</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>                         <span class="c1">// Sets our active high signal to green.</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                        <span class="c1">// Sets our servo based signal to green.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="turnouts">
+<h4>Turnouts<a class="headerlink" href="#turnouts" title="Permalink to this headline">¶</a></h4>
+<p>All the below turnout definitions will define turnouts that are advertised to WiThrottle apps, Engine Driver, and JMRI, unless the HIDDEN keyword is used.</p>
+<p>“description” is an optional parameter, and must be enclosed in quotes “”. If you don’t wish this turnout to be advertised to throttles, then substitute the word HIDDEN (with no “”) instead of the description.</p>
+<p><code class="docutils literal notranslate"><span class="pre">TURNOUT(</span> <span class="pre">id,</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>     Define a DCC accessory turnout. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the <a class="reference internal" href="../reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet"><span class="std std-ref">Stationary Decoder Address Table (xlsx Spreadsheet)</span></a> for help on these conversions.</p>
+<p><code class="docutils literal notranslate"><span class="pre">PIN_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>    Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.</p>
+<p><code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin,</span> <span class="pre">active_angle,</span> <span class="pre">inactive_angle,</span> <span class="pre">profile</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>   Define a servo turnout. “active_angle” is for THROW, “inactive_angle” is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don’t recommend Bounce for turnouts!). Refer to <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> for more information.</p>
+<p><code class="docutils literal notranslate"><span class="pre">VIRTUAL_TURNOUT(</span> <span class="pre">id</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to <a class="reference internal" href="EX-RAIL-intro.html#realistic-turnout-sequeunces"><span class="std std-ref">Realistic turnout sequeunces</span></a>.</p>
+<p>Examples:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>                  <span class="c1">// DCC accessory turnout at linear address 101.</span>
+<span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="s">&quot;Switching Yard&quot;</span><span class="p">)</span>           <span class="c1">// Pin turnout on an MCP23017 I/O expander module.</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Slow</span><span class="p">,</span> <span class="n">HIDDEN</span><span class="p">)</span>   <span class="c1">// A servo turnout on a PCA9685 servo module that is hidden from throttles.</span>
+<span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">103</span><span class="p">,</span> <span class="s">&quot;Lumber Yard&quot;</span><span class="p">)</span>               <span class="c1">// A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="flow-control-functions">
 <h3>Flow Control Functions<a class="headerlink" href="#flow-control-functions" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">CALL(</span> <span class="pre">route</span> <span class="pre">)</span></code>       Branch to a separate sequence expecting a RETURN</p>
+<p><code class="docutils literal notranslate"><span class="pre">RETURN</span></code>      Return to caller</p>
+<p>A very simple example using CALL with RETURN:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define SIMPLE_EXAMPLE_NEEDED</span>
+</pre></div>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">FOLLOW(</span> <span class="pre">route</span> <span class="pre">)</span></code>     Branch or Follow a numbered sequence (think of “GOTO”)</p>
-<p><code class="docutils literal notranslate"><span class="pre">RETURN</span></code>      Return to caller (see CALL)</p>
 <p><code class="docutils literal notranslate"><span class="pre">DELAY(</span> <span class="pre">delay</span> <span class="pre">)</span></code>      Delay a number of milliseconds</p>
 <p><code class="docutils literal notranslate"><span class="pre">DELAYMINS(</span> <span class="pre">delay</span> <span class="pre">)</span></code>  Delay a number of minutes</p>
-<p><code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(</span> <span class="pre">min_delay,</span> <span class="pre">max_delay</span> <span class="pre">)</span></code> Delay a random time between min and max milliseconds</p>
+<p>Delay examples:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>      <span class="c1">// When turnout 102 closed, wait 2 seconds, then set signal 101 green.</span>
+  <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+  <span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+  <span class="n">DONE</span>
+
+<span class="n">AT</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>           <span class="c1">// When sensor 123 is activated, set signal 102 red, wait 1 minute, then set signal 102 green.</span>
+  <span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+  <span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+  <span class="n">DONE</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(</span> <span class="pre">min_delay,</span> <span class="pre">max_delay</span> <span class="pre">)</span></code> Delay a random time between min and max milliseconds, see <a class="reference internal" href="EX-RAIL-intro.html#example-7-running-multiple-inter-connected-trains"><span class="std std-ref">Example 7: Running multiple inter-connected trains</span></a> for good examples.</p>
 <p><code class="docutils literal notranslate"><span class="pre">IF(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>     If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFNOT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF</p>
-<p><code class="docutils literal notranslate"><span class="pre">IFCLOSED(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>      Check if turnout is closed</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFGTE(</span> <span class="pre">sensor_id,</span> <span class="pre">value</span> <span class="pre">)</span></code>   Test if analog pin reading is greater than or equal to value (&gt;=)</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFLT(</span> <span class="pre">sensor_id,</span> <span class="pre">value</span> <span class="pre">)</span></code>    Test if analog pin reading is less than value (&lt;)</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFRANDOM(</span> <span class="pre">percent</span> <span class="pre">)</span></code> Runs commands in IF block a random percentage of the time</p>
+<p><code class="docutils literal notranslate"><span class="pre">IFCLOSED(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>      Check if turnout is closed</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFTHROWN(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>      Test if turnout is thrown</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code>  If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFTIMEOUT</span></code>   Tests if “timed out” flag has been set by an ATTIMEOUT sensor reading attempt</p>
@@ -378,12 +473,14 @@ Example output:
 </div>
 <div class="section" id="command-station-functions">
 <h3>Command Station Functions<a class="headerlink" href="#command-station-functions" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> Power on track and UNJOIN</p>
 <p><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code>    Power off track</p>
 <p><code class="docutils literal notranslate"><span class="pre">JOIN</span></code>        Joins PROG and MAIN track outputs to send the same MAIN DCC signal</p>
 <p><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code>      Disconnect prog track from main</p>
 <p><code class="docutils literal notranslate"><span class="pre">READ_LOCO</span></code>   Read loco ID from prog track</p>
 <p><code class="docutils literal notranslate"><span class="pre">POM(</span> <span class="pre">cv,</span> <span class="pre">value</span> <span class="pre">)</span></code>    Program CV value on main</p>
 <p><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">msg</span> <span class="pre">)</span></code>     Write message on LCD/OLED if fitted</p>
+<p><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">msg</span> <span class="pre">)</span></code> Broadcast to all throttles/JMRI on serial and WiFi</p>
 <p><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">msg</span> <span class="pre">)</span></code>        Print diagnostic message to Serial Monitor</p>
 <p><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">msg</span> <span class="pre">)</span></code>       Writes direct to Serial (Serial0/USB)</p>
 <p><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">msg</span> <span class="pre">)</span></code>      Writes direct to Serial1</p>
@@ -423,8 +520,8 @@ Example output:
 <p><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  Waits for sensor to trigger and then go off for 0.5 seconds</p>
 <p><code class="docutils literal notranslate"><span class="pre">LATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  Latches a sensor on (Sensors 0-255 only)</p>
 <p><code class="docutils literal notranslate"><span class="pre">UNLATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>        Remove LATCH on sensor</p>
-<p><code class="docutils literal notranslate"><span class="pre">ONCLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for turnout close</p>
-<p><code class="docutils literal notranslate"><span class="pre">ONTHROW(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for turnout thrown</p>
+<p><code class="docutils literal notranslate"><span class="pre">ONCLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for turnout close. Note that there can be only one defined ONCLOSE event for a specific turnout.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ONTHROW(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for turnout thrown. Note that there can be only one defined ONCLOSE event for a specific turnout.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ONACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>        Event handler for 2 part DCC accessory packet value 1</p>
 <p><code class="docutils literal notranslate"><span class="pre">ONACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code>       Event handler for linear DCC accessory packet value 1</p>
 <p><code class="docutils literal notranslate"><span class="pre">ONDEACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>      Event handler for 2 part DCC accessory packet value 0</p>
@@ -459,6 +556,10 @@ Example output:
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../reference/index.html" class="btn btn-neutral float-right" title="Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="EX-RAIL-summary.html" class="btn btn-neutral float-left" title="EX-RAIL Command Summary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

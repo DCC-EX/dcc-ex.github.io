@@ -9,3 +9,4 @@ Welcome to the home for DCC-EX Automation, **EX-RAIL** is the "**EX**\tended **R
 
     EX-RAIL-intro
     EX-RAIL-summary
+    EX-RAIL-reference

@@ -706,6 +706,15 @@ WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK
 
 Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track  
 
+* Write CV BYTE Format is: ``<W CV VALUE>``
+* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  
+* ``VALUE`` : The value to be written to the Configuration Variable memory location (0-255).
+
+  * ``RETURNS:`` ``<r CV Value>``
+  * ``CV:`` The number of the Configuration Variable memory location written to.
+  * ``Value:`` Is a number from 0-255 as read from the CV, or -1 if verification read fails.
+
+**Deprecated old format below, please use the new, brief <W CV VALUE> command instead**
 
 * Write CV BYTE Format is: ``<W CV VALUE CALLBACKNUM CALLBACKSUB>``
 * ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  

@@ -961,6 +961,18 @@ ADDRESS: The loco address to be written (1-10239).</p>
 <h4>WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-cv-byte-to-engine-decoder-on-programming-track" title="Permalink to this headline">¶</a></h4>
 <p>Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track</p>
 <ul class="simple">
+<li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">CV</span> <span class="pre">VALUE&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value to be written to the Configuration Variable memory location (0-255).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CV</span> <span class="pre">Value&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV:</span></code> The number of the Configuration Variable memory location written to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Value:</span></code> Is a number from 0-255 as read from the CV, or -1 if verification read fails.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Deprecated old format below, please use the new, brief &lt;W CV VALUE&gt; command instead</strong></p>
+<ul class="simple">
 <li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">CV</span> <span class="pre">VALUE</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value to be written to the Configuration Variable memory location (0-255).</p></li>

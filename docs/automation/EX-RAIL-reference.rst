@@ -8,9 +8,8 @@ This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Co
 
 See Also:
 
-  :doc:`Introduction to EX-RAIL <EX-RAIL-intro>` 
-
-  :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
+- :doc:`Introduction to EX-RAIL <EX-RAIL-intro>` 
+- :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
 
 Notes
 ======
@@ -97,13 +96,13 @@ EX-RAIL provides many commands to allow you to create routes that locomotives to
 Script Definition Terms
 ________________________
 
-``AUTOMATION( id, "description" )>``	Start of an Automation Sequence which WiThrottles can send a train along
+``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`automation/ex-rail-intro:example 4: automating a train (simple loop)` for a simple example.
 
-``ROUTE( id, "description" )``	Start of a Route Sequence settable in WiThrottle
+``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts and signals to allow a train to be driven through a specific route on the layout. See :ref:`automation/ex-rail-intro:example 1: creating routes for a throttle` for various examples.
 
-``SEQUENCE( id )``	A general purpose Sequence for scenic animations, etc.
+``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`automation/ex-rail-intro:example 3: automating various non-track items`, :ref:`automation/ex-rail-intro:example 6: single line shuttle`, and :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains` for further examples.
 
-``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, etc.
+``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the previous examples.
 
 Object Definitions
 ___________________
@@ -142,6 +141,8 @@ Defining a pin turnout with aliases:
   ALIAS(COAL_YARD_PIN, 25)
   PIN_TURNOUT(COAL_YARD, COAL_YARD_PIN, "Coal Yard")
 
+In this simple example, aliases seem like overkill, however consider the case where you need to have the "Coal Yard" turnout closed or thrown in various different automation sequences, and you will soon see why it's easier to understand you're throwing the COAL_YARD turnout rather than turnout ID 12345.
+
 Signals
 ^^^^^^^^
 
@@ -158,23 +159,36 @@ Signal examples:
 .. code-block:: cpp
 
   SIGNAL(25, 26, 27)                // Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.
-  SIGNALH(164 ,0, 165)              // Active high red/green signal using the first two pins of the first MCP23017 I/O expander module.
-  SERVO_SIGNAL(101, 100, 250, 400)  // Servo based signal using the second available servo connection of the first PCA9685 servo module.
+  SIGNALH(164 ,0, 165)              // Active high red/green signal using the first two pins of an MCP23017 I/O expander module.
+  SERVO_SIGNAL(101, 100, 250, 400)  // Servo based signal using the first PCA9685 servo module.
 
-  GREEN(77)                         // Sets our active low signal to green.
-  GREEN(93)                         // Sets our active high signal to green.
+  GREEN(25)                         // Sets our active low signal to green.
+  GREEN(164)                         // Sets our active high signal to green.
   GREEN(101)                        // Sets our servo based signal to green.
 
 Turnouts
 ^^^^^^^^^
 
+All the below turnout definitions will define turnouts that are advertised to WiThrottle apps, Engine Driver, and JMRI, unless the HIDDEN keyword is used.
+
+"description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turnout to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
+
 ``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions.
 
-``PIN_TURNOUT( id, pin [, "description"] )``	Define a pin operated turnout
+``PIN_TURNOUT( id, pin [, "description"] )``	Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.
 
-``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout
+``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout. "active_angle" is for THROW, "inactive_angle" is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don't recommend Bounce for turnouts!). Refer to :doc:`/reference/hardware/servo-module` for more information.
 
-``VIRTUAL_TURNOUT( id [, "description"] )``
+``VIRTUAL_TURNOUT( id [, "description"] )`` Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to :ref:`automation/ex-rail-intro:realistic turnout sequeunces`.
+
+Examples:
+
+.. code-block:: cpp
+
+  TURNOUT(100, 26, 0, "Coal Yard")                  // DCC accessory turnout at linear address 101.
+  PIN_TURNOUT(101, 164, "Switching Yard")           // Pin turnout on an MCP23017 I/O expander module.
+  SERVO_TURNOUT(102, 102, 400, 100, Slow, HIDDEN)   // A servo turnout on a PCA9685 servo module that is hidden from throttles.
+  VIRTUAL_TURNOUT(103, "Lumber Yard")               // A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.
 
 Flow Control Functions
 _______________________
@@ -222,6 +236,8 @@ _______________________
 Command Station Functions
 __________________________
 
+``POWERON`` Power on track and UNJOIN
+
 ``POWEROFF``	Power off track
 
 ``JOIN``	Joins PROG and MAIN track outputs to send the same MAIN DCC signal
@@ -233,6 +249,8 @@ __________________________
 ``POM( cv, value )``	Program CV value on main
 
 ``LCD( row, msg )``	Write message on LCD/OLED if fitted
+
+``BROADCAST( msg )`` Broadcast to all throttles/JMRI on serial and WiFi
 
 ``PRINT( msg )``	Print diagnostic message to Serial Monitor
 

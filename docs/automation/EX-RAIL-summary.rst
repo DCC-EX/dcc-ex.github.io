@@ -95,7 +95,7 @@ __________________________________
     * -  PIN_TURNOUT( id, pin [, "description"] )
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
-      -  Define a servo turnout
+      -  Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts!)
     * -  VIRTUAL_TURNOUT( id [, "description"] )
       -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
@@ -144,6 +144,8 @@ __________________________________
       -  Required to end an IF/IFNOT/etc (Used in all IF.. functions)
     * -  :category:`--- Command Station functions ---`
       -
+    * -  POWERON
+      -  Power on track, will UNJOIN programming from main
     * -  POWEROFF
       -  Power off track
     * -  JOIN
@@ -156,6 +158,8 @@ __________________________________
       -  Program CV value on main
     * -  LCD( row, msg )
       -  Write message on a LCD/OLED screen if one is declared and used
+    * -  BROADCAST ( msg )
+      -  Broadcasts the specified text to all connected throttles/JMRI, over both serial and WiFi
     * -  PRINT( msg )
       -  Print diagnostic message to the IDE Serial Monitor and JMRI DCC++ Traffic Monitor
     * -  SERIAL( msg )
@@ -257,7 +261,7 @@ __________________________________
     * -  LCN( msg )
       -  Send message to LCN Accessory Network
     * -  SERVO( vpin, position, profile )
-      -  Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+      -  Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow, or Bounce)
     * -  SERVO2( vpin, position, duration )
       -  Move an animation servo taking duration in ms. Do NOT use for Turnouts
     * -  XFON( cab, func )

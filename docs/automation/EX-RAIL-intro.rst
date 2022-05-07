@@ -78,6 +78,10 @@ Once started, all sequences step through a list of simple keywords until they re
 
 There can be a startup sequence (keywords at the beginning of the script), which if present is automatically executed, as are any sequences that contain an ``AUTOSTART``.
 
+.. note:: 
+
+   There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first ``DONE`` keyword is executed on startup. If you don't wish anything to happen at startup, simply add the keyword ``DONE`` as the first line.
+
 Multiple concurrent sequences are supported.
 
 For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/automation/EX-RAIL-reference`.
@@ -570,7 +574,7 @@ Some suggestions to get the most out of this:
 * Have a specific file for your custom macros or commands (eg. myMacros.h) and include this before other includes.
 * Have a specific file for all your aliases (eg. myAliases.h).
 * Group other items logically according to their purpose, eg. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.
-* Remember the rules and ensure these are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.
+* Remember the rules and ensure files are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.
 
 For example:
 

@@ -1,10 +1,8 @@
 :orphan:
 
-.. Remove orphan field when the document is added to a toctree
-
-*********************************
+**********************************
 Using the "DriveAway(tm)" Feature
-*********************************
+**********************************
 
 DCC++EX and Engine Drivers "Request Loco ID" & “Drive Away" 
 
@@ -38,14 +36,12 @@ The Command Station then automatically sets ``<1 JOIN>`` command to switch the P
 Logic Programming Protection;
 If you inadvertently touch or send any Programming command while an Engine is sitting on the PROG track when it's active as a [JOIN] Main line track, the DCC++EX software Automatically kicks back to Program Track Mode before accepting any other commands as safety procedure. 
 
-
 Caution: Wiring Prog & Main
 ==============================
 
 Please be sure "Both" Programming Track rails are Insulated with dual plastic joiners from the Main line and that both the wiring for CAB A Main and CAB B Prog positive leads are connected on the right rail and the negative leads are connected on the other rails to synchronize the phase of the DCC signal. 
 Or else undesirable gremlins may appear, you've been forewarned.
 The proceeding is a public service announcement and the DCC++EX team makes no expressed or implied guarantees if the user fails his or her due diligence.
-
 
 New "Discovered Servers" on WiFi Throttles
 ===========================================
@@ -63,6 +59,11 @@ Sample WiFi Throttle App "Discovered Servers"
 Our new multicast Dynamic Network Server (mDNS) enhancement allows us to display the available WiFi Server connections to a DCC++EX Command Station. 
 Choosing one allows your WiFi Throttle App to connect to and load Server Rosters and function keys to your throttle from Either the DCC++EX Command Station, Or from JMRI Engine Roster.
 
+.. image:: ../_static/images/jmri/engine_driver_discovered_servers.png
+  :alt: Engine Driver Discovered Servers
+  :scale: 25%
+  :align: left
+
 
 New DCC++EX 4.0 EXRAIL "Roster" Feature 
 ========================================
@@ -70,9 +71,47 @@ New DCC++EX 4.0 EXRAIL "Roster" Feature
 You can now manually enter your ROSTER engine address, names and function keys into your myAutomation.h file and directly pass this Command Stations Engine Roster into your Engine Driver and WiThrottle Apps.  
 By choosing “DCC++EX” from discovered servers an Engine Driver or WiThrottle becomes Directly connected to the Command Station and the "Server Roster" radial dial now lists the New DCC++EX EXRAIL "ROSTER" Engines and Function key layout on the Engine Driver or WiThrottles in addition to the standard preset Engine Driver "default mode" function key names.
 
+Sample Roster entry in myAutomation.h file
+
+.. code-block:: cpp
+
+  // New EXRAIL 4.0 Engine Server Roster Entries. 
+  // The JMRI counter part would be the Roster Screen and the LABLES tab where you define a function key name
+
+  // EXRAIL Defined Engine ROSTER(dcc_address,"name/F1/*F2/etc") // Use asterisk* for function keys that are unlatched i.e. Horn & Whistle
+    ROSTER(1204,"RG 1204","Lights/Bell/*Whistle/Coupler/Steam/Dim Lght/Fx6/Sql Brake/Mute/StartUp/ShutDown/////Switching Shunting")
+    ROSTER(1224,"PE 1224","") // Motor Only DCC Decoder, Use the Virtual Sound Decoder in Engine Driver Loco Sounds
+    ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
+    ROSTER(  70,"3M 70","Lights/Bell/*Horn/Coupler/F4/F5/Fx6/F7/Mute")
+
+  // Legacy Analog DC Engines, Note; Functions F1-F3 & 'Mute' Sounds are available via Engine Driver v2.32+ 'Preferences > Loco Sounds'
+    ROSTER(1,"CAB 1","")    // Analog DC Engine with no F-Keys 'See Engine Driver for F-keys'
+    ROSTER(2,"CAB 2","")    // Analog DC Engine with no F-Keys
+    ROSTER(667, "NH 667","")// Analog DC Engine with no F-Keys
+
+.. image:: ../_static/images/jmri/engine_driver_dcc-ex_server_roster.png
+  :alt: Engine Driver DCC++EX Server Roster
+  :scale: 25%
+  :align: left
+
+.. image:: ../_static/images/jmri/ed_and_dcc-ex_with_dc_and_dcc_throttles.png
+  :alt: ED & DCC++EX with DC & DCC Throttles
+  :scale: 25%
+  :align: left
+
 Current JMRI Engine Rosters
 ===========================
   
 By choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered servers an Engine Driver or WiThrottle is then connected via a {PC, Mac or Pi} JMRI WiThrottle Server to the DCC++EX Command Station and the JMRI Engine Roster & function keys are loaded to your WiFi Throttle App.
 
 Please be sure your JMRI device {Windows, Mac iOS or Raspberry Pi} for JMRI WiThrottle Server is signed on and connected to the same WiFi SSID Name and Password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the JMRI WiThrottle Server IP address: port# displayed into your Engine Driver & WiThrottle Apps.
+
+.. image:: ../_static/images/jmri/engine_driver_jmri_server_roster.png
+  :alt: Engine Driver JMRI Server Roster
+  :scale: 25%
+  :align: left
+
+.. image:: ../_static/images/jmri/engine_driver_and_dcc-ex.png
+  :alt: Engine Driver & DCC++EX
+  :scale: 25%
+  :align: left

@@ -187,12 +187,12 @@ Automations, Routes and Sequences
       -  Start a new task to execute a route or sequence
     * -  SETLOCO( loco )
       -  Set the loco address for this task
-    * -  SENDLOCO( cab, route )
+    * -  SENDLOCO( loco, route )
       -  Start a new task send a given loco along given route/sequence
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
-    * -  ROSTER( cab, name, func_map )
-      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps
+    * -  ROSTER( loco, name, func_map )
+      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`automation/ex-rail-intro:roster entries` for examples
     * -  DRIVE( analog_pin )
       -  ***Under Construction*** Not complete, DO NOT USE
     * -  :category:`--- Loco DCC functions ---`

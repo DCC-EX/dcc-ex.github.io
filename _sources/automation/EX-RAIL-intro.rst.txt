@@ -484,6 +484,31 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
+Roster entries
+===============
+
+EX-RAIL has a ROSTER() function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts and routes.
+
+The functions can simply be listed as "F" numbers, or you can provide a text description of the function. Prefacing the function with a "*" indicates it is momentary, meaning it is only activated while holding that function button down.
+
+A very simple roster entry for a loco with ID 1506 called "HUSA" with three functions of light, bell, and momentary horn would look like this:
+
+.. code-block:: cpp
+   
+   ROSTER(1506, "HUSA", "Light/Bell/*Horn")
+
+A more complex example with generic functions for the same loco (note the momentary F2 for horn):
+
+.. code-block:: cpp
+
+   ROSTER(1506, "HUSA", "F0/F1/*F2/F3/F4/F5/F6/F7/F8/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
+
+The same again, with more text functions defined to represent a number of different sounds:
+
+.. code-block:: cpp
+
+   ROSTER(1506, "HUSA", "Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
+
 Sounds
 ======
 

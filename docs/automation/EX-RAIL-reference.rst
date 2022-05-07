@@ -195,27 +195,49 @@ _______________________
 
 ``CALL( route )``	Branch to a separate sequence expecting a RETURN
 
-``FOLLOW( route )``	Branch or Follow a numbered sequence (think of "GOTO")
+``RETURN``	Return to caller
 
-``RETURN``	Return to caller (see CALL)
+A very simple example using CALL with RETURN:
+
+.. code-block:: cpp
+
+  #define SIMPLE_EXAMPLE_NEEDED
+  
+
+``FOLLOW( route )``	Branch or Follow a numbered sequence (think of "GOTO")
 
 ``DELAY( delay )``	Delay a number of milliseconds
 
 ``DELAYMINS( delay )``	Delay a number of minutes
 
-``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds
+Delay examples:
+
+.. code-block:: cpp
+
+  ONCLOSE(102)      // When turnout 102 closed, wait 2 seconds, then set signal 101 green.
+    DELAY(2000)
+    GREEN(101)
+    DONE
+
+  AT(123)           // When sensor 123 is activated, set signal 102 red, wait 1 minute, then set signal 102 green.
+    RED(102)
+    DELAYMINS(1)
+    GREEN(102)
+    DONE
+
+``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains` for good examples.
 
 ``IF( sensor_id )``	If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF
 
 ``IFNOT( sensor_id )``	If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF
-
-``IFCLOSED( turnout_id )``	Check if turnout is closed
 
 ``IFGTE( sensor_id, value )``	Test if analog pin reading is greater than or equal to value (>=)
 
 ``IFLT( sensor_id, value )``	Test if analog pin reading is less than value (<)
 
 ``IFRANDOM( percent )``	Runs commands in IF block a random percentage of the time
+
+``IFCLOSED( turnout_id )``	Check if turnout is closed
 
 ``IFTHROWN( turnout_id )``	Test if turnout is thrown
 
@@ -321,9 +343,9 @@ ________________________________
 
 ``UNLATCH( sensor_id )``	Remove LATCH on sensor
 
-``ONCLOSE( turnout_id )``	Event handler for turnout close
+``ONCLOSE( turnout_id )``	Event handler for turnout close. Note that there can be only one defined ONCLOSE event for a specific turnout.
 
-``ONTHROW( turnout_id )``	Event handler for turnout thrown
+``ONTHROW( turnout_id )``	Event handler for turnout thrown. Note that there can be only one defined ONCLOSE event for a specific turnout.
 
 ``ONACTIVATE( addr, sub_addr )``	Event handler for 2 part DCC accessory packet value 1
 

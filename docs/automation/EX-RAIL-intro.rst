@@ -625,3 +625,62 @@ A virtual turnout may be used in any circumstance where the turnout process is h
 Make your own EX-RAIL macro or command
 _______________________________________
 
+One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.
+
+To do this, you're actually making use of some C++ code in addition to the clever programming in DCC++ EX.
+
+The way to implement this is as follows:
+
+.. code-block:: cpp
+
+   #define MYMACRO(parameter1, parameter2, parameter3, ...) \
+   COMMAND(parameter1) \
+   COMMAND(parameter2) \
+   COMMAND(parameter3) \
+   DONE
+
+Firstly, note the "#define". This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.
+
+The entire macro needs to be on a single line, hence the addition of the backslash "\\" at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line.
+
+Here's an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.
+
+.. code-block:: cpp
+
+   #define PULSE 25                                      // Define a pulse time of 25ms to activate the coil
+
+   #define ROKUHANTURNOUT(t, p1, p2, desc, ali) \        // Define the macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
+   PIN_TURNOUT(t, 0, desc) \                             // Define a pin turnout
+   ALIAS(ali, t) \                                       // Define an alias
+   DONE \
+   ONCLOSE(t) \                                          // Setting the direction pin and sending the pulse for the CLOSE command
+   SET(p1) \
+   SET(p2)DELAY(PULSE)RESET(p2) \
+   DONE \
+   ONTHROW(t) \                                          // Resetting the direction pin and sending the pulse for the THROW command
+   RESET(p1) \
+   SET(p2)DELAY(PULSE)RESET(p2) \
+   DONE
+
+   ROKUHANTURNOUT(105, 168, 176, "Yard entrance", YD_E)  // Define the "Yard entrance" turnout with turnout ID 5 using MCP23017 pins 168/176, and create alias YD_E
+
+Typically, you would define a pin turnout with the PIN_TURNOUT command, however in this example we need a CLOSE or THROW sent to these turnouts to do more than just set a pin high or low, hence the need for the macro.
+
+Here's the line by line explanation:
+
+* A pulse time of 25ms reliably switches the turnouts.
+* Define the ROKUHANTURNOUT macro, providing parameters for the turnout ID, direction pin, enable or pulse pin, a description, and an alias name.
+* Create a PIN_TURNOUT that is advertised to WiThrottles using the provided turnout ID and description, with the pin set to 0 as this is not used.
+* Create the provided alias for the turnout ID.
+* The first DONE is required because we need to separate the turnout and alias definitions from the ONCLOSE and ONTHROW actions.
+* Define what happens when a CLOSE command is sent to that turnout ID.
+* Setting the direction pin high will result in closing the turnout.
+* Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually close the turnout.
+* The DONE is required to tell EX-RAIL not to proceed any further.
+* Define what happens when a THROW command is sent to that turnout ID.
+* Resetting the direction pin will result in throwing the turnout.
+* Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually throw the turnout.
+* The DONE is required to tell EX-RAIL not to proceed any further.
+* Finally, use the macro to create the "Yard entrance" turnout with turnout ID 105, pins 168/176 on an MCP23017 I/O expander, and an alias of YD_E that can be referred to in other sequences.
+
+This technique can be used in many different ways limited only by your imagination to have EX-RAIL perform many different actions and automations.

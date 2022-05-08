@@ -2,18 +2,12 @@
 Getting started
 ****************
 
-.. image:: ../_static/images/conductor.png
+.. image:: ../_static/images/conductor-level.png
   :alt: Conductor Level
-  :scale: 40%
-  :align: right
+  :scale: 50%
 
 Assembly
 =========
-
-.. image:: ../_static/images/conductor.png
-  :alt: Conductor Level
-  :scale: 40%
-  :align: left
 
 For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with an Arduino Nano V3, a standard 3 pin Arduino compatible hall effect sensor, and a dual relay board.
 
@@ -102,6 +96,8 @@ Summary table of all connections required during assembly:
       - A4
       - A4 G or I2C GND
 
+Of course for the Tinkerers and Engineers, if you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
+
 1. BEFORE you start
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -151,7 +147,7 @@ You will need to connect six of the female to female Dupont wires from the ULN20
     :class: command-table
 
     * - ULN2003 Pin
-      - Arduino Pin
+      - Nano Shield Pin
     * - IN1
       - A0 S
     * - IN2
@@ -196,7 +192,7 @@ Use three of the Dupont wires and connect these from the hall effect sensor to t
     :class: command-table
 
     * - Hall Effect Pin
-      - Arduino Pin
+      - Nano Shield Pin
     * - \- (Left)
       - 5 G
     * - Unmarked (middle)
@@ -225,7 +221,7 @@ Use four Dupont wires to connect the other four pins as below:
     :class: command-table
 
     * - Dual Relay Pin
-      - Arduino Pin
+      - Nano Shield Pin
     * - VCC
       - 3 V
     * - GND
@@ -269,7 +265,7 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
 
 .. tip:: 
 
-  Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly.
+  Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
 At the time of writing, there is no installer for Turntable-EX like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
 
@@ -418,7 +414,7 @@ Connect these pins to your CommandStation as shown in the table below, noting th
     :class: command-table
 
     * - CommandStation Pin
-      - Arduino Nano Pin
+      - Nano Shield Pin
     * - 20 (SDA)
       - A4 S (SDA)
     * - 21 (SCL)

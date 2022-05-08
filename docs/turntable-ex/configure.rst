@@ -2,10 +2,9 @@
 Testing, Tuning, and Control
 *****************************
 
-.. image:: ../_static/images/conductor.png
+.. image:: ../_static/images/conductor-level.png
   :alt: Conductor Level
-  :scale: 40%
-  :align: right
+  :scale: 50%
 
 Turntable-EX commands
 ======================
@@ -26,7 +25,7 @@ This is the EX-RAIL command to be included in myAutomation.h:
 
 For both of these commands, "vpin" is as defined in your "myHal.cpp" file, and "steps" is the number of steps from the home position, not the number of steps the turntable has to travel.
 
-For the diagnostic command, "activity" needs to be defined as a number, whereas for the EX-RAIL command, this is defined as text based on the table below. Sound confusing? The reason for using text in the EX-RAIL command is to make your automation sequences more "human-friendly" when reading what they do later.
+For the diagnostic command, "activity" needs to be defined as a number, whereas for the EX-RAIL command, this is defined as text based on the table below. Sound confusing? The reason for using text in the EX-RAIL command is to make your automation sequences more "human-friendly" when reading what they do later. It's much easier for us humans to remember words rather than numbers.
 
 .. list-table::
     :widths: auto
@@ -74,7 +73,7 @@ Here's a quick example to demonstrate the difference between the diagnostic and 
   <D TT 600 100 1>
   MOVETT(600, 100, Turn_PInvert)
 
-Note with the phase/polarity inversion, this activity must be defined for every position that requires the phase to be inverted compared with the surrounding tracks. If it is not defined, the relays will be deactivated, resulting in no phase/polarity inversion.
+Note with the phase/polarity inversion, this activity must be defined for every position that requires the phase to be inverted compared with the surrounding tracks. If it is not defined, the relays will be deactivated, resulting in no phase/polarity inversion. The examples below will help clarify this.
 
 Testing Turntable-EX
 =====================
@@ -158,7 +157,7 @@ The simplest way to devise the approximate number of steps for each turntable po
 
 For the 28BYJ-48 stepper motor with its 2048 steps in a single 360 degree rotation (in full step mode), this gives each step ~0.18 degrees of movement (360/2048 = 0.1758).
 
-Therefore, to determine the number of steps required to turn a certain degrees, use the formula "steps = degrees/degrees per step". To turn 10 degrees requires ~56 steps (10 / 0.18 = 55.5556).
+Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula "steps = degrees/degrees per step". To turn 10 degrees requires ~56 steps (10 / 0.18 = 55.5556).
 
 In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.
 

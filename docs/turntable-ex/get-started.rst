@@ -37,7 +37,7 @@ Throughout the assembly process, you can refer to this Fritzing diagram to help 
 
 .. image:: ../_static/images/turntable-ex/assembly.png
   :alt: Fritzing Diagram
-  :scale: 30%
+  :scale: 25%
   :align: left
 
 Connection summary
@@ -52,38 +52,55 @@ Summary table of all connections required during assembly:
 
     * - Device Pin
       - Arduino Pin
+      - Nano Shield Pin
     * - ULN2003 IN1
+      - A0
       - A0 S
     * - ULN2003 IN2
+      - A1
       - A1 S
     * - ULN2003 IN3
+      - A2
       - A2 S
     * - ULN2003 IN4
+      - A3
       - A3 S
     * - ULN2003 \+
+      - A0
       - A0 V
     * - ULN2003 \-
+      - A0
       - A0 G
     * - Hall effect \- (Left)
+      - 5
       - 5 G
     * - Hall effect Unmarked (middle)
+      - 5
       - 5 V
     * - Hall effect S (Right)
+      - 5
       - 5 S
     * - Dual relay VCC
+      - 3
       - 3 V
     * - Dual relay GND
+      - 3
       - 3 G
     * - Dual relay IN1
+      - 3
       - 3 S
     * - Dual relay IN2
+      - 4
       - 4 S
     * - CommandStation 20 (SDA)
-      - A4 S (SDA)
+      - A4
+      - A4 S or SDA
     * - CommandStation 21 (SCL)
-      - A5 S (SCL)
+      - A5
+      - A5 S or SCL
     * - CommandStation GND
-      - A4 G
+      - A4
+      - A4 G or I2C GND
 
 1. BEFORE you start
 ^^^^^^^^^^^^^^^^^^^^

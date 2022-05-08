@@ -193,18 +193,65 @@ Examples:
 Flow Control Functions
 _______________________
 
-``CALL( route )``	Branch to a separate sequence expecting a RETURN
+``CALL( route )``	Branch to a separate sequence, which will need to RETURN when complete.
 
-``RETURN``	Return to caller
+``RETURN``	Return to the calling sequence when completed (no DONE required).
 
-A very simple example using CALL with RETURN:
+Say, for example, you have an AUTOMATION you initiate the sends a train through your layout with multiple station stops, and you want to do the same things at each station.
+
+You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:
 
 .. code-block:: cpp
 
-  #define SIMPLE_EXAMPLE_NEEDED
-  
+  AUTOMATION(21, "Station loop")    // Our station loop sequence
+    FWD(30)
+    AT(101)                         // At station 1 entrance sensor, call our sequence
+    CALL(22)
+    AT(102)                         // At station 2 entrance sensor, call our sequence
+    CALL(22)
+    AT(103)                         // At station 3 entrance sensor, call our sequence
+    CALL(22)
+    AT(104)                         // At station 4 entrance sensor, call our sequence
+    CALL(22)
+    FOLLOW(21)                      // Keep looping through the stations (see FOLLOW command reference below)
 
-``FOLLOW( route )``	Branch or Follow a numbered sequence (think of "GOTO")
+  SEQUENCE(22, "Station sequence")  // Our station sequence
+    FON(F2)                         // Blow the horn
+    FON(F3)                         // Break squeal
+    STOP                            // Stop at the station
+    FON(F4)                         // Let out a hiss from the air breaks for a second
+    DELAY(1000)
+    FOFF(F4)
+    DELAYRANDOM(2000, 10000)        // Wait between 2 and 10 seconds for passengers
+    FON(F2)                         // Blow the horn again
+    FWD(30)                         // On our way to the next station
+    RETURN                          // Return to the calling sequence
+
+``FOLLOW( route )``	Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.
+
+For example:
+
+.. code-block:: cpp
+
+  AUTOMATION(23, "Choose your own adventure") // This let's someone control the sequence by throwing a turnout (or not)
+    FWD(30)
+    AFTER(105)
+    IFTHROWN(106)
+      FOLLOW(24)
+    ELSE
+      FOLLOW(25)
+    ENDIF
+    DONE
+
+  SEQUENCE(24, "Adventure 1")                 // Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated
+    AFTER(106)
+    FON(F2)
+    FON(F3)
+    STOP
+    DONE
+
+  SEQUENCE(25, "Adventure 2")                 // If we don't throw the turnout, let's do our station loop from the example above
+    FOLLOW(21)
 
 ``DELAY( delay )``	Delay a number of milliseconds
 

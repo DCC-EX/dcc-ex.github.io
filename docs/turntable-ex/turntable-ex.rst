@@ -1,6 +1,6 @@
-*****************************
-Turntable-EX (Beta) Overview
-*****************************
+****************
+Overview (Beta)
+****************
 
 .. image:: ../_static/images/conductor.png
   :alt: Conductor Level
@@ -166,7 +166,35 @@ In order to prevent short circuits, the DCC signal to the tracks on the bridge n
 
 The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
 
-INSERT IMAGES HERE - animated gif perhaps?
+Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the motor shield are connected to the same rail all the way along.
+
+If we do not invert or reverse the phase, when it rotates 180 degrees, there will be an obvious issue!
+
+.. image:: ../_static/images/turntable-ex/0degree-phase.png
+  :alt: No rotation
+  :scale: 45%
+
+.. image:: ../_static/images/turntable-ex/90degree-no-phase-change.png
+  :alt: 90 degrees
+  :scale: 45%
+
+.. image:: ../_static/images/turntable-ex/180degree-no-phase-change.png
+  :alt: 180 degrees
+  :scale: 45%
+
+Now consider inverting or reversing the phase when performing that 180 degree turn, and the result is just like the starting point, with all tracks in DCC phase alignment.
+
+.. image:: ../_static/images/turntable-ex/0degree-phase.png
+  :alt: No rotation
+  :scale: 45%
+
+.. image:: ../_static/images/turntable-ex/90degree-phase-change.png
+  :alt: 90 degrees
+  :scale: 45%
+
+.. image:: ../_static/images/turntable-ex/0degree-phase.png
+  :alt: 180 degrees
+  :scale: 45%
 
 I'm Ready!
 ===========

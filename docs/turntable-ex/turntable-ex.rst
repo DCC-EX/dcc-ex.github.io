@@ -10,6 +10,10 @@ Overview (Beta)
 What is Turntable-EX?
 ======================
 
+.. note:: 
+
+  Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.
+
 Turntable-EX is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks.
 
 The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`get-started/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).

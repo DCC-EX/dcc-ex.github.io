@@ -60,25 +60,25 @@ Summary table of all connections required during assembly:
       - A3
       - A3 S
     * - ULN2003 \+
-      - A0
+      - 5V
       - A0 V
     * - ULN2003 \-
-      - A0
+      - GND
       - A0 G
     * - Hall effect \- (Left)
-      - 5
+      - GND
       - 5 G
     * - Hall effect Unmarked (middle)
-      - 5
+      - 5V
       - 5 V
     * - Hall effect S (Right)
       - 5
       - 5 S
     * - Dual relay VCC
-      - 3
+      - 5V
       - 3 V
     * - Dual relay GND
-      - 3
+      - GND
       - 3 G
     * - Dual relay IN1
       - 3
@@ -93,7 +93,7 @@ Summary table of all connections required during assembly:
       - A5
       - A5 S or SCL
     * - CommandStation GND
-      - A4
+      - GND
       - A4 G or I2C GND
 
 Of course for the Tinkerers and Engineers, if you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
@@ -270,6 +270,8 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
 At the time of writing, there is no installer for Turntable-EX like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
 
 The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/get-started/arduino-ide` page.
+
+Also, ensure you follow the section to :ref:`get-started/arduino-ide:copy the config.example.h file (or rename it)` to create your own "config.h" file for Turntable-EX.
 
 While following that process, you will need to make some ammendments to cater for Turntable-EX:
 

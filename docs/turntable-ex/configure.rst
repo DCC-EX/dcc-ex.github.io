@@ -155,13 +155,15 @@ At this point, you should either have a layout you're fitting Turntable-EX into,
 
 The simplest way to devise the approximate number of steps for each turntable position is to calculate these based on the degrees each step will turn.
 
-For the 28BYJ-48 stepper motor with its 2048 steps in a single 360 degree rotation (in full step mode), this gives each step ~0.18 degrees of movement (360/2048 = 0.1758).
+For the default Turntable-EX configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).
 
-Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula "steps = degrees/degrees per step". To turn 10 degrees requires ~56 steps (10 / 0.18 = 55.5556).
+Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula "steps = degrees/degrees per step". To turn 10 degrees requires ~114 steps (10 / 0.088 = 113.64).
 
 In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.
 
-<Insert diagram here>
+.. image:: ../_static/images/turntable-ex/six-pos-example-degrees.png
+  :alt: Six Postion Example
+  :scale: 50%
 
 Therefore, using our formula, the starting point for each position will be:
 
@@ -172,27 +174,25 @@ Therefore, using our formula, the starting point for each position will be:
 
     * - Position
       - Degrees from home
-      - Steps
+      - Steps from home
     * - 1
       - 10
-      - 56
+      - 114
     * - 2
       - 20
-      - 111
+      - 227
     * - 3
       - 30
-      - 167
+      - 341
     * - 4
       - 190
-      - 1056
+      - 2159
     * - 5
       - 200
-      - 1111
+      - 2273
     * - 6
       - 210
-      - 1167
-
-<Insert diagram here>
+      - 2386
 
 Determine phase switching
 __________________________
@@ -201,8 +201,6 @@ Assuming your layout tracks are wired correctly as per :ref:`turntable-ex/turnta
 
 In the provided example, positions 1, 2, and 3 would match the surrounding track polarity, with positions 4 through 6 requiring the phase/polarity to be switched.
 
-<Insert diagram here>
-
 Example tuning commands
 ________________________
 
@@ -210,14 +208,16 @@ To validate the above calculated positions, the following six diagnostic command
 
 .. code-block:: 
 
-  <D TT 600 56 0>
-  <D TT 600 111 0>
-  <D TT 600 167 0>
-  <D TT 600 1056 1>
-  <D TT 600 1111 1>
-  <D TT 600 1167 1>
+  <D TT 600 114 0>
+  <D TT 600 227 0>
+  <D TT 600 341 0>
+  <D TT 600 2159 1>
+  <D TT 600 2273 1>
+  <D TT 600 2386 1>
 
 If you find any of these positions are slightly out of alignment, simply adjust the step count as appropriate to compensate.
+
+Note that the last three positions all invert the DCC phase or polarity, which should ensure that the bridge track maintains the same phase/polarity as the connecting layout tracks, meaning no short circuits.
 
 Apply to your layout
 _____________________
@@ -238,10 +238,11 @@ If this is your first experience with EX-RAIL and the "myAutomation.h" file, fam
 Pay particular attention to the various mentions of ROUTE and the associated examples.
 
 There are two highly recommended additions to using just these ROUTEs:
+
 1. Utilise EX-RAIL's virtual RESERVE() and FREE() functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.
 2. Utilise aliases to make things human friendly, and we have also provided 30 pre-defined aliases for the ROUTE IDs to ensure there will be no conflicts, as all IDs must be unique.
 
-To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process:
+To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process.
 
 .. tip:: 
 
@@ -250,74 +251,27 @@ To define the required turntable positions in the example six position turntable
     :scale: 40%
     :align: left
   
-  To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point.
-
-.. code-block:: cpp
-
-  // For Conductor level users who wish to just use Turntable-EX, you don't need to understand this
-  // and can move to defining the turntable positions below. You must, however, ensure this remains
-  // before any position definitions or you will get compile errors when uploading.
-  //
-  // Definition of the TURNTABLE_EX macro to correctly create the ROUTEs required for each position.
-  // This includes RESERVE()/FREE() to protect any automation activities.
-  //
-  #define TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc) \
-    ROUTE(route_id, desc) \
-      RESERVE(reserve_id) \
-      MOVETT(vpin, steps, activity) \
-      WAITFOR(vpin) \
-      FREE(reserve_id) \
-      DONE
-  
-  // Define your turntable positions here:
-  //
-  // TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc)
-  //
-  // route_id = A unique number for each defined route, the route is what appears in throttles
-  // reserve_id = A unique reservation number (0 - 255) to ensure nothing interferes with automation
-  // vpin = The Vpin defined for the Turntable-EX device driver, default is 600
-  // steps = The target step position
-  // activity = The activity performed for this ROUTE (Note do not enclose in quotes "")
-  // desc = Description that will appear in throttles (Must use quotes "")
-  //
-  TURNTABLE_EX(TTRoute1, Turntable, 600, 56, Turn, "Position 1")
-  TURNTABLE_EX(TTRoute2, Turntable, 600, 111, Turn, "Position 2")
-  TURNTABLE_EX(TTRoute3, Turntable, 600, 167, Turn, "Position 3")
-  TURNTABLE_EX(TTRoute4, Turntable, 600, 1056, Turn_PInvert, "Position 4")
-  TURNTABLE_EX(TTRoute5, Turntable, 600, 1111, Turn_PInvert, "Position 5")
-  TURNTABLE_EX(TTRoute6, Turntable, 600, 1167, Turn_PInvert, "Position 6")
-  TURNTABLE_EX(TTRoute7, Turntable, 600, 0, Home, "Home turntable")
-  
-  // Pre-defined aliases to ensure unique IDs are used.
-  ALIAS(Turntable, 255)
-  ALIAS(TTRoute1, 5179)
-  ALIAS(TTRoute2, 5180)
-  ALIAS(TTRoute3, 5181)
-  ALIAS(TTRoute4, 5182)
-  ALIAS(TTRoute5, 5183)
-  ALIAS(TTRoute6, 5184)
-  ALIAS(TTRoute7, 5185)
+  To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
 
 That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`automation/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
+
+My turntable moves on startup!
+_______________________________
 
 There is one "catch" with the above "myAutomation.h" example. When your CommandStation starts up and EX-RAIL starts, it will automatically execute everything in "myAutomation.h" up until the first "DONE" statement it encounters.
 
 In this scenario, that means on startup, the turntable will automatically move to position 1.
 
-If you wish to leave the turntable at the home position on startup, you can simply add "DONE" on its own line at the beginning of the file prior to the first ROUTE:
+If you wish to leave the turntable at the home position on startup, you can simply comment out the first MOVETT() command:
 
 .. code-block:: cpp
 
-  // Prevent the turntable moving from home on startup
-  DONE
+  MOVETT(600, 114, Turn)        <<== This line here    
+  // MOVETT(600, 114 Turn)      <<== Becomes this, add // to comment lines out
 
-  #define TURNTABLE_EX(route_id, reserve_id, vpin, steps, activity, desc) \
-    ...
-
-In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by simply calling the MOVETT() command at the beginning of the file and specifiying the correct steps and activity to perform:
+In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by simply changing the steps in that same MOVETT() command:
 
 .. code-block:: cpp
 
-  // This will move the turntable to position 3 on startup:
-  MOVETT(600, 167, Turn)
-  DONE
+  MOVETT(600, 167, Turn)            // Default moves to position one, edit this line to look like the below
+  MOVETT(600, 2386, Turn_PInvert)   // Move instead to position six, note the required DCC phase inversion to prevent a short circuit

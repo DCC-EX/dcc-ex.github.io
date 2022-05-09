@@ -2,10 +2,9 @@
 Troubleshooting Turntable-EX
 *****************************
 
-.. image:: ../_static/images/conductor.png
+.. image:: ../_static/images/conductor-level.png
   :alt: Conductor Level
-  :scale: 40%
-  :align: right
+  :scale: 50%
 
 Troubleshooting common Turntable-EX issues
 ===========================================

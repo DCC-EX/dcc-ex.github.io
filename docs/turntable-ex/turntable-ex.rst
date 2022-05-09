@@ -46,6 +46,14 @@ The Turntable-EX integration includes:
 * DCC signal phase switching to align bridge track phase with layout phase
 * An LED and accessory output to control turntable specific automations (eg. flashing warning light)
 
+.. note:: 
+
+  Credit where credit is due!
+  
+  **AccelStepper.h credit:** This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. A slightly modified version of this library is included with the Turntable-EX software (sans example sketches), and more details can be found on the official `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page. Modification comments are included within the library.
+
+  **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of Turntable-EX. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_.
+
 What you need for Turntable-EX
 ===============================
 

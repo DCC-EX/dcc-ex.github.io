@@ -31,15 +31,30 @@ There are some diagnostic and control commands added to the <tag> language norma
 EXRAIL
 _______
 
-``<D EXRAIL ON|OFF>`` Turns diagnostic traces for EX-RAIL events
+``<D EXRAIL ON|OFF>`` When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).
 
-  .. code-block::
+Example output from :ref:`automation/ex-rail-intro:example 6: single line shuttle` running SEQUENCE(13) with loco ID 18:
 
-    When the CS is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled)
+.. code-block:: 
 
-    Example output:
-
-**NEED EXAMPLE OUTPUT HERE**
+  <D EXRAIL ON>
+  <p1 MAIN>
+  PPA1
+  <1 18 0 178 0>
+  <* EXRAIL Sensor 42 hit *>
+  <* EXRAIL Sensor 42 hit *>
+  <* EXRAIL drive 18 0 1 *>
+  <1 18 0 128 0>
+  <* EXRAIL drive 18 20 0 *>
+  <1 18 0 20 0>
+  <* EXRAIL Sensor 41 hit *>
+  <* EXRAIL Sensor 41 hit *>
+  <* EXRAIL drive 18 0 0 *>
+  <1 18 0 0 0>
+  <* EXRAIL begin(13) *>
+  <* EXRAIL begin(13) *>
+  <* EXRAIL drive 18 50 1 *>
+  <1 18 0 178 0>
   
 PAUSE/RESUME
 _____________
@@ -53,18 +68,29 @@ __________
 
 ``</>`` Displays EX-RAIL running task information
 
-   Example output:
+Example outputs also using :ref:`automation/ex-rail-intro:example 6: single line shuttle`:
 
-**NEED EXAMPLE OUTPUT HERE**
+* Leaving right side of the shuttle sequence with speed 50F (forward):
+
+.. code-block:: 
+  
+  </>
+  <1 18 0 178 0>
+  <* EXRAIL STATUS
+  ID=0,PC=12,LOCO=0 ,SPEED=0F
+  ID=1,PC=12,LOCO=18 ,SPEED=50F *>
 
 ROUTES
 _______
 
-``</ ROUTES>``	Returns the Routes & Automations control list in WiThrottle format. JMRI integration only! **Really?**
+``</ ROUTES>``	Returns the Routes & Automations control list in WiThrottle format.
 
-  Example output:
+Example output:
 
-**NEED EXAMPLE OUTPUT HERE**
+.. code-block:: 
+
+  </ROUTES PRT]\[Routes}|{Route]\[Set}|{2]\[Handoff}|{4
+  PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]\[A5}|{Example 5: Round in circles}|{4>
 
 START/KILL
 ___________

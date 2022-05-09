@@ -826,7 +826,9 @@ Status
 * ``<D ANIN pin>`` Read the analogue value of the specified pin and display it.  The value will be zero if the pin is not configured or does not support
   analogue read operations.  This command is available from Version 3.2.0.
 * ``<D HAL SHOW>`` List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.
-    example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander: 
+    Example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander: 
+
+    .. code-block:: 
 
       17:00:10.358 -> <* PARSING:D HAL SHOW * >
       17:00:10.358 -> <* Arduino Vpins:2-69 * >
@@ -840,14 +842,36 @@ DECODER TEST
 
 These following commands are detailed above but are worth repeating here. The ``<R>`` command will attempt to read the decoder on the service (programming) track and try to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn't moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the ``<D ACK ON>`` command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.
 
-``<R>`` Upper Case R : Read Loco address (programming track only)
+``<R>`` Upper Case R : Read Loco address (programming track only). Returns:
 
- .. code-block:: none
+ .. code-block::
 
-      RETURNS: <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
+      <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
 
-``<D ACK ON><R>`` - When sent together as shown or one right after the other, this combined command shows the detailed results of what happened when trying to read the Address CV(s) and any response back from the decoder.-
+``<D ACK ON><R>`` - When sent together as shown or one right after the other, this combined command shows the detailed results of what happened when trying to read the Address CV(s) and any response back from the decoder.
 
+ACK Tuning Commands
+^^^^^^^^^^^^^^^^^^^^
+
+To help define the correct ACK parameters required for different decoders, there are several diagnostic commands available, with defaults based on the NMRA standard for ACK responses during service mode programming.
+
+To quote the relevant section from NMRA S 9.2.3:
+
+.. note:: 
+
+  45 Basic Acknowledgment
+  
+  Basic acknowledgment is defined by the Digital Decoder providing an increased load (positive-delta) on the programming track of at least 60 mA for 6 ms +/-1 ms. It is permissible to provide this increased load by applying power to the motor or other similar device controlled by the Digital Decoder.
+
+``<D ACK LIMIT mA>`` Use this command to override the minimum milliamps (mA) required to detect the ACK pulse, eg. ``<D ACK LIMIT 30>`` means a minimum 30mA pulse would be accepted.
+ 
+``<D ACK MIN uS>`` Use this command to override the minimum amount of time in microseconds (uS) the pulse needs to be active for, eg. ``<D ACK MIN 2000>`` means a pulse of 2ms or more would be accepted.
+
+``<D ACK MAX uS>`` As above, however overriding the maximum amount of time for a pulse, eg. ``<D ACK MAX 20000>`` means a pulse up to 20ms would be accepted.
+
+``<D ACK RETRY x>`` When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
+
+``<D PROGBOOST>``  By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
  
 SEND PACKET TO THE TRACK
 --------------------------

@@ -427,7 +427,30 @@ ________________________________
 
 ``UNLATCH( sensor_id )``	Remove LATCH on sensor.
 
-LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also allow AT/AFTER triggers to be used.
+LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
+
+In this example, LATCH/UNLATCH is used to toggle between two different activities each time the ROUTE is selected in a WiThrottle:
+
+.. code-block::
+
+  TURNOUT(17, 30, 1, "Bay to Shed") // DCC turnout with linear address 117
+
+  ALIAS(BayExitStarter, 107)        // Starter Signal with Route board
+  ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
+
+  ROUTE(11, "Bay to Shed")
+    IFNOT(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is not active, do these
+      THROW(17)
+      DELAY(20)
+      ACTIVATEL(BayExitStarter)
+      LATCH(ROUTE_TOGGLE)           // LATCH ROUTE_TOGGLE
+    ELSE                            // Next time ROUTE activated, this will happen instead
+      DEACTIVATEL(BayExitStarter)
+      DELAY(20)
+      CLOSE(17)
+      UNLATCH(ROUTE_TOGGLE)         // UNLATCH ROUTE_TOGGLE to clear the state
+    ENDIF
+  DONE
 
 ``ONCLOSE( turnout_id )``	Event handler for turnout close. Note that there can be only one defined ONCLOSE event for a specific turnout.
 

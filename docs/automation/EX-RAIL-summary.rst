@@ -4,7 +4,7 @@ EX-RAIL Command Summary
 
 
 Notes
-========
+======
 
 
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
@@ -14,6 +14,16 @@ Notes
 - All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
 - Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.
 
+.. note:: 
+
+  There are four uses of ID numbers in EX-RAIL:
+
+  - AUTOMATION, ROUTE, and SEQUENCE IDs
+  - Turnout IDs
+  - Pin IDs - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O extender modules, and virtual pins that have no physical presence
+  - Virtual block IDs as used in RESERVE/FREE
+
+  Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
 Command Summary
 ==================

@@ -855,6 +855,16 @@ ACK Tuning Commands
 
 To help define the correct ACK parameters required for different decoders, there are several diagnostic commands available, with defaults based on the NMRA standard for ACK responses during service mode programming.
 
+.. note:: 
+  
+  The basic ACK defaults have changed as of CommandStation-EX version 4.1.0 to:
+  
+  - LIMIT 50mA
+  - MIN 2000 uS
+  - MAX 20000uS
+
+  If you still need to override these and need to do so permanently, the commands can be added to "mySetup.h" as per :ref:`advanced-setup/startup-config:adding in the startup commands`.
+
 To quote the relevant section from NMRA S 9.2.3:
 
 .. note:: 

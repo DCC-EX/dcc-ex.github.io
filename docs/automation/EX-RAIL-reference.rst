@@ -464,7 +464,37 @@ In this example, LATCH/UNLATCH is used to toggle between two different activitie
 
 ``ONDEACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 0
 
-``WAITFOR( pin )``	Wait for servo to complete movement
+All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
+
+``WAITFOR( pin )``	The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.
+
+A couple of examples:
+
+.. code-block:: cpp
+
+  // First example defines a servo turnout for the coal yard and a signal for the main line.
+  TURNOUT(100, 26, 0, "Coal Yard")
+  SIGNAL(25, 26, 27)
+
+  // When our turnout is closed, the main line is open, so the signal is green.
+  ONCLOSE(100)
+    GREEN(25)
+  DONE
+
+  // When our turnout is closed, the main line is interrupted, so the signal is red.
+  ONTHROW(100)
+    RED(25)
+  DONE
+
+  // This example triggers an automation sequence when a DCC accessory decoder is activated, including waiting for SERVO motions to complete.
+  ONACTIVATEL(100)            // Activating DCC accessory decoder with linear address 100 commences the sequence.
+    SERVO(101, 400, Slow)     // Move the first servo and wait.
+    WAITFOR(101)
+    SERVO(102, 300, Medium)   // Move the second servo and wait.
+    WAITFOR(102)
+    SET(165)                  // Activate a Vpin to turn an LED on.
+    SET(166)                  // Activate a second Vpin to turn a second LED on.
+  DONE
 
 Action Output Functions
 ________________________

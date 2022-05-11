@@ -439,16 +439,16 @@ In this example, LATCH/UNLATCH is used to toggle between two different activitie
   ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
 
   ROUTE(11, "Bay to Shed")
-    IFNOT(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is not active, do these
+    IF(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is not active, do these
       THROW(17)
       DELAY(20)
-      ACTIVATEL(BayExitStarter)
-      LATCH(ROUTE_TOGGLE)           // LATCH ROUTE_TOGGLE
-    ELSE                            // Next time ROUTE activated, this will happen instead
       DEACTIVATEL(BayExitStarter)
+      UNLATCH(ROUTE_TOGGLE)           // LATCH ROUTE_TOGGLE
+    ELSE                            // Next time ROUTE activated, this will happen instead
+      ACTIVATEL(BayExitStarter)
       DELAY(20)
       CLOSE(17)
-      UNLATCH(ROUTE_TOGGLE)         // UNLATCH ROUTE_TOGGLE to clear the state
+      LATCH(ROUTE_TOGGLE)         // UNLATCH ROUTE_TOGGLE to clear the state
     ENDIF
   DONE
 

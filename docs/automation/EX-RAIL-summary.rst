@@ -155,7 +155,7 @@ __________________________________
     * -  :category:`--- Command Station functions ---`
       -
     * -  POWERON
-      -  Power on track, will UNJOIN programming from main
+      -  Power on track, will UNJOIN programming from main (not implemented yet)
     * -  POWEROFF
       -  Power off track
     * -  JOIN

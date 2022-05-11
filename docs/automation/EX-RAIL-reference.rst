@@ -342,7 +342,7 @@ Delay examples:
 Command Station Functions
 __________________________
 
-``POWERON`` Power on track and UNJOIN
+``POWERON`` Power on track and UNJOIN (not yet implemented)
 
 ``POWEROFF``	Power off track
 

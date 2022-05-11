@@ -13,7 +13,7 @@ What is Turntable-EX?
 
   Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.
 
-  For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the [Regression Testing process](https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md), and then submit your test results using the [Beta Test Results](https://github.com/DCC-EX/Turntable-EX/issues/new/choose) issue template.
+  For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the `Regression Testing process <https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md>`_, and then submit your test results using the `Beta Test Results <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_ issue template.
 
 Turntable-EX is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks.
 

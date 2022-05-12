@@ -22,6 +22,16 @@ Notes
 - All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
 - Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.
 
+.. note:: 
+
+  There are four uses of ID numbers in EX-RAIL:
+
+  - AUTOMATION, ROUTE, and SEQUENCE IDs
+  - Turnout IDs
+  - Pin IDs - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O extender modules, and virtual pins that have no physical presence
+  - Virtual block IDs as used in RESERVE/FREE
+
+  Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
 DIAGNOSTICS AND CONTROL
 ========================
@@ -31,15 +41,30 @@ There are some diagnostic and control commands added to the <tag> language norma
 EXRAIL
 _______
 
-``<D EXRAIL ON|OFF>`` Turns diagnostic traces for EX-RAIL events
+``<D EXRAIL ON|OFF>`` When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).
 
-  .. code-block::
+Example output from :ref:`automation/ex-rail-intro:example 6: single line shuttle` running SEQUENCE(13) with loco ID 18:
 
-    When the CS is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled)
+.. code-block:: 
 
-    Example output:
-
-**NEED EXAMPLE OUTPUT HERE**
+  <D EXRAIL ON>
+  <p1 MAIN>
+  PPA1
+  <1 18 0 178 0>
+  <* EXRAIL Sensor 42 hit *>
+  <* EXRAIL Sensor 42 hit *>
+  <* EXRAIL drive 18 0 1 *>
+  <1 18 0 128 0>
+  <* EXRAIL drive 18 20 0 *>
+  <1 18 0 20 0>
+  <* EXRAIL Sensor 41 hit *>
+  <* EXRAIL Sensor 41 hit *>
+  <* EXRAIL drive 18 0 0 *>
+  <1 18 0 0 0>
+  <* EXRAIL begin(13) *>
+  <* EXRAIL begin(13) *>
+  <* EXRAIL drive 18 50 1 *>
+  <1 18 0 178 0>
   
 PAUSE/RESUME
 _____________
@@ -53,18 +78,29 @@ __________
 
 ``</>`` Displays EX-RAIL running task information
 
-   Example output:
+Example outputs also using :ref:`automation/ex-rail-intro:example 6: single line shuttle`:
 
-**NEED EXAMPLE OUTPUT HERE**
+* Leaving right side of the shuttle sequence with speed 50F (forward):
+
+.. code-block:: 
+  
+  </>
+  <1 18 0 178 0>
+  <* EXRAIL STATUS
+  ID=0,PC=12,LOCO=0 ,SPEED=0F
+  ID=1,PC=12,LOCO=18 ,SPEED=50F *>
 
 ROUTES
 _______
 
-``</ ROUTES>``	Returns the Routes & Automations control list in WiThrottle format. JMRI integration only! **Really?**
+``</ ROUTES>``	Returns the Routes & Automations control list in WiThrottle format.
 
-  Example output:
+Example output:
 
-**NEED EXAMPLE OUTPUT HERE**
+.. code-block:: 
+
+  </ROUTES PRT]\[Routes}|{Route]\[Set}|{2]\[Handoff}|{4
+  PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]\[A5}|{Example 5: Round in circles}|{4>
 
 START/KILL
 ___________
@@ -87,6 +123,7 @@ ______________
 
 ``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
+Refer to the LATCH/UNLATCH commands below for further details.
 
 ROUTES, AUTOMATIONS, & SEQUENCES
 =================================
@@ -193,18 +230,65 @@ Examples:
 Flow Control Functions
 _______________________
 
-``CALL( route )``	Branch to a separate sequence expecting a RETURN
+``CALL( route )``	Branch to a separate sequence, which will need to RETURN when complete.
 
-``RETURN``	Return to caller
+``RETURN``	Return to the calling sequence when completed (no DONE required).
 
-A very simple example using CALL with RETURN:
+Say, for example, you have an AUTOMATION you initiate the sends a train through your layout with multiple station stops, and you want to do the same things at each station.
+
+You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:
 
 .. code-block:: cpp
 
-  #define SIMPLE_EXAMPLE_NEEDED
-  
+  AUTOMATION(21, "Station loop")    // Our station loop sequence
+    FWD(30)
+    AT(101)                         // At station 1 entrance sensor, call our sequence
+    CALL(22)
+    AT(102)                         // At station 2 entrance sensor, call our sequence
+    CALL(22)
+    AT(103)                         // At station 3 entrance sensor, call our sequence
+    CALL(22)
+    AT(104)                         // At station 4 entrance sensor, call our sequence
+    CALL(22)
+    FOLLOW(21)                      // Keep looping through the stations (see FOLLOW command reference below)
 
-``FOLLOW( route )``	Branch or Follow a numbered sequence (think of "GOTO")
+  SEQUENCE(22, "Station sequence")  // Our station sequence
+    FON(F2)                         // Blow the horn
+    FON(F3)                         // Break squeal
+    STOP                            // Stop at the station
+    FON(F4)                         // Let out a hiss from the air breaks for a second
+    DELAY(1000)
+    FOFF(F4)
+    DELAYRANDOM(2000, 10000)        // Wait between 2 and 10 seconds for passengers
+    FON(F2)                         // Blow the horn again
+    FWD(30)                         // On our way to the next station
+    RETURN                          // Return to the calling sequence
+
+``FOLLOW( route )``	Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.
+
+For example:
+
+.. code-block:: cpp
+
+  AUTOMATION(23, "Choose your own adventure") // This let's someone control the sequence by throwing a turnout (or not)
+    FWD(30)
+    AFTER(105)
+    IFTHROWN(106)
+      FOLLOW(24)
+    ELSE
+      FOLLOW(25)
+    ENDIF
+    DONE
+
+  SEQUENCE(24, "Adventure 1")                 // Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated
+    AFTER(106)
+    FON(F2)
+    FON(F3)
+    STOP
+    DONE
+
+  SEQUENCE(25, "Adventure 2")                 // If we don't throw the turnout, let's do our station loop from the example above
+    FOLLOW(21)
 
 ``DELAY( delay )``	Delay a number of milliseconds
 
@@ -258,7 +342,7 @@ Delay examples:
 Command Station Functions
 __________________________
 
-``POWERON`` Power on track and UNJOIN
+``POWERON`` Power on track and UNJOIN (not yet implemented)
 
 ``POWEROFF``	Power off track
 
@@ -339,9 +423,34 @@ ________________________________
 
 ``AFTER( sensor_id )``	Waits for sensor to trigger and then go off for 0.5 seconds
 
-``LATCH( sensor_id )``	Latches a sensor on (Sensors 0-255 only)
+``LATCH( sensor_id )``	Latches a sensor on (Sensors 0-255 only).
 
-``UNLATCH( sensor_id )``	Remove LATCH on sensor
+``UNLATCH( sensor_id )``	Remove LATCH on sensor.
+
+LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
+
+In this example, LATCH/UNLATCH is used to toggle between two different activities each time the ROUTE is selected in a WiThrottle:
+
+.. code-block::
+
+  TURNOUT(17, 30, 1, "Bay to Shed") // DCC turnout with linear address 117
+
+  ALIAS(BayExitStarter, 107)        // Starter Signal with Route board
+  ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
+
+  ROUTE(11, "Bay to Shed")
+    IF(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is not active, do these
+      THROW(17)
+      DELAY(20)
+      DEACTIVATEL(BayExitStarter)
+      UNLATCH(ROUTE_TOGGLE)           // LATCH ROUTE_TOGGLE
+    ELSE                            // Next time ROUTE activated, this will happen instead
+      ACTIVATEL(BayExitStarter)
+      DELAY(20)
+      CLOSE(17)
+      LATCH(ROUTE_TOGGLE)         // UNLATCH ROUTE_TOGGLE to clear the state
+    ENDIF
+  DONE
 
 ``ONCLOSE( turnout_id )``	Event handler for turnout close. Note that there can be only one defined ONCLOSE event for a specific turnout.
 
@@ -355,7 +464,37 @@ ________________________________
 
 ``ONDEACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 0
 
-``WAITFOR( pin )``	Wait for servo to complete movement
+All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
+
+``WAITFOR( pin )``	The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.
+
+A couple of examples:
+
+.. code-block:: cpp
+
+  // First example defines a servo turnout for the coal yard and a signal for the main line.
+  TURNOUT(100, 26, 0, "Coal Yard")
+  SIGNAL(25, 26, 27)
+
+  // When our turnout is closed, the main line is open, so the signal is green.
+  ONCLOSE(100)
+    GREEN(25)
+  DONE
+
+  // When our turnout is closed, the main line is interrupted, so the signal is red.
+  ONTHROW(100)
+    RED(25)
+  DONE
+
+  // This example triggers an automation sequence when a DCC accessory decoder is activated, including waiting for SERVO motions to complete.
+  ONACTIVATEL(100)            // Activating DCC accessory decoder with linear address 100 commences the sequence.
+    SERVO(101, 400, Slow)     // Move the first servo and wait.
+    WAITFOR(101)
+    SERVO(102, 300, Medium)   // Move the second servo and wait.
+    WAITFOR(102)
+    SET(165)                  // Activate a Vpin to turn an LED on.
+    SET(166)                  // Activate a second Vpin to turn a second LED on.
+  DONE
 
 Action Output Functions
 ________________________

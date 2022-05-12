@@ -73,7 +73,11 @@ Controlling Brightness
 
 The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:
 
-***TODO: Add image***
+.. figure:: ../../_static/images/display/lcd_backpack_backlight_brightness_resistor.jpg
+   :alt: Backpack with Resistor to reduce backlight brightness
+   :scale: 80%
+
+   LCD backpack with resistor to reduce backlight brightness
 
 
 Upload the sketch to your CS

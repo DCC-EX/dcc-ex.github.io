@@ -1,4 +1,3 @@
-*************************
 About Us - Meet the Team
 *************************
 
@@ -24,14 +23,19 @@ Project Lead
 CommandStation-EX
 ==================
 
-Developers
+Lead Developer
 
 * Chris Harlow - Bournemouth, UK (UKBloke)
+
+Developers
+
 * Harald Barth - Stockholm, Sweden (Haba)
 * Dave Cutting - Logan, Utah, USA (Dave Cutting/ David Cutting)
 * Neil McKechnie -  Worcestershire, UK
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Gregor Baues - Île-de-France, France (grbba)
+* Herb Morton - Kingwood Texas, USA (Ash++)
+* Peter Cole - Brisbane QLD Australia (peteGSX)
 
 
 WebThrottle-EX
@@ -62,16 +66,16 @@ Developers
 
 LCN / LCOS (Layout Control)
 ============================
+
 Rob Simonds - Reno, Nevada, USA (RobinS)
 Jack Reagan - Cape Girardeau, Missouri (Marada1)
-
 
 Installer Software
 ===================
 
 Lead Developer
 
-* Anthony W - Dayton, Ohio, USA (Dex, Dex++)
+* Anthony W - Dayton, Ohio, USA (coDex)
 
 Website
 ========
@@ -85,21 +89,29 @@ Developers
 
 * Dave Cutting - Logan, Utah, USA (Dave Cutting/ David Cutting)
 
+Hardware / Electronics
+=========================
+
+* Harald Barth - Stockholm, Sweden (Haba)
+* Paul Antoine, Western Australia
+* Neil McKechnie -  Worcestershire, UK
+* Fred Decker - Holly Springs NC, USA
+* Herb Morton - Kingwood Texas, USA (Ash++)
+* Paul Antoine, Western Australia (Paul Antoine)
+
+
 Documentation / Management
 ===========================
 
 * Roger Beschizza - Dorset, UK (Roger Beschizza)
 * Keith Ledbetter - Chicago, Illinois, USA (Keith Ledbetter)
 * Kevin Smith - Rochester Hills, Michigan - USA (KC Smith)
+* Peter Cole - Brisbane QLD Australia (peteGSX)
+* Colin Grabham, Condobolin NSW Straya (Kebbin)
+* Paul Antoine, Western Australia (Paul Antoine)
 
 Testing / Research / Support
 =============================
-
-Team Lead
-
-* Larry Dribin - (H0Guy, LarryD)
-
-Team
 
 * Kevin Smith - Rochester Hills, Michigan USA (KC Smith)
 * Scott Eric Catalano - Western Pennsylvania, USA (PilotinControl)
@@ -110,7 +122,9 @@ Team
 * Herb Morton - Kingwood Texas, USA (Ash++)
 * Travis Farmer - Farmington Maine, USA (travis_farmer)
 * Jack Reagan - Cape Girardeau, Missouri, USA (Marada1)
+* Larry Dribin - (H0Guy, LarryD)
 * Henk Kruisbrink - UK (Henkk)
+* Colin Grabham, Condobolin NSW Straya (Kebbin)
 
 
     

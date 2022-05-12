@@ -1,4 +1,3 @@
-**************************
 Connecting a Servo Module
 **************************
 
@@ -52,18 +51,73 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 Using Servos with EX-RAIL
 ==========================
 
-Defining Turnouts?
+EX-RAIL supports two methods of controlling servos:
+
+- Turnouts via the SERVO_TURNOUT directive
+- Animations via the SERVO or SERVO2 directives
 
 Controlling Servos for Turnouts
 ---------------------------------
 
-SERVO_TURNOUT Command
+The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in WiThrottle apps, Engine Driver, and JMRI in addition to being defined as a turnout within the CommandStation.
+
+As per the EX-RAIL reference, turnouts are defined with the following syntax:
+
+.. code-block:: cpp
+
+   SERVO_TURNOUT(id, pin, active_angle, inactive_angle, profile [, "description"])
+
+The valid parameters are:
+
+- id = Unique ID within the CommandStation (note these are shared across turnouts, sensors, and outputs).
+- pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
+- active_angle = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
+- inactive_angle = The angle to which the servo will move when the turnout is closed (refer below for further detailed information).
+- profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout definition).
+- description = A human-friendly description of the turnout that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes "".
+
+An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:
+
+.. code-block:: cpp
+
+   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
 
 Controlling Servos for Animations
 ----------------------------------
 
-SERVO Command
+The SERVO and SERVO2 directives allow for servos to be used in various automations within EX-RAIL.
 
+Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, Engine Driver, or JMRI, but are instead actions designed to be used within EX-RAIL automations.
+
+As per the EX-RAIL reference, these are defined with the following syntax:
+
+.. code-block:: cpp
+
+   SERVO(vpin, position, profile)
+   SERVO2(vpin, position, duration)
+
+The valid parameters are:
+
+- vpin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
+- position = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
+- profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce.
+- duration = The time (in milliseconds (ms)) for the servo to be actively rotating.
+
+As an example, consider a lineside worker that needs to be moved away from the track when a train approaches, which is controlled by an infrared sensor.
+
+The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a sensor attached to VPin 164 (first pin on the first MCP23017):
+
+.. code-block:: cpp
+
+   AT(164)
+   SERVO(101, 400, Fast)
+   DONE
+
+   AFTER(164)
+   SERVO(101, 100, Slow)
+   DONE
+
+This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
 
 Technical Discussion for Engineers
 ====================================
@@ -79,11 +133,11 @@ There are three types of servos, standard or "Positional Rotation", "Continuous 
 
 Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechanism (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.
 
-For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds. The duration of the pulses are between 544 and 2400 milliseconds representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multiply by 4096. That gives us a range of 111 to 491.
+For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds (ms). The duration of the pulses are between 544 and 2400 microseconds (µs) representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multiply by 4096. That gives us a range of 111 to 491.
 
-Another way to look at this is that with our 12bit ADC, which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can't represent the value 4096 in 12 bits.
+Another way to look at this is that with our 12bit ADC (Analog to Digital Converter), which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can't represent the value 4096 in 12 bits.
 
-.. note:: It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000ms, which maps to 205-410, and 500 to 2400ms, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with "<T id SERVO vpin thrownPos closedPos profile>".
+.. note:: It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000µs, which maps to 205-410, and 500 to 2400µs, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with "<T id SERVO vpin thrownPos closedPos profile>".
 
 .. tip:: Keep a spare slot (we recommend 100) open on your first PCA9685 board so that you can test servo positions with the `<D SERVO ...>` command to connect your servos to and get the exact positions you need.
 

@@ -179,12 +179,45 @@ There are also drivers included with DCC++ EX for the following modules:
 
 * PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I2C).
 * MCP23008 - Another 8-channel GPIO extender module.
+* PCA/TCA9555 - Another 16-channel GPIO extender module (see notes below).
 * DFPlayer - MP3 Media player with microSD card holder.  You can play different sounds from the player by activating or de-activating
   output VPINs from within DCC++ EX.
 * ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.
 * VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
 * HC-SR04 - Ultrasound 'sonar' range sensor.  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
 * Turntable-EX - Integrated, stepper motor based turntable controller, refer to :doc:`/turntable-ex/index`.
+
+Notes on the PCA9555/TCA9555 I2C GPIO Extenders
+-----------------------------------------------
+
+The PCA9555 is made by Texas Instruments and NXP, the TCA9555 by Texas Instruments alone, and using these GPIO extenders is similar to the the MCP23017 with a few key differences.
+
+The PCA/TCA9555 has an always-on internal pull-up resistor for ports configured as an input, and the INT pin is always enabled, meaning it will always trigger on the rising and falling edge of an input port. The PCA/TCA9555 will work with either 3.3v or 5V.
+
+When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.
+
+The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I2C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.
+
+If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:
+
+.. code-block:: cpp
+
+  MCP23017::create(164, 16, 0x20);
+  MCP23017::create(180, 16, 0x21);
+
+To configure an input pin using the DCC++ EX Sensor commands, use the <S> command:
+
+.. code-block:: 
+
+  <S 801 211 1> or <S 801 211 0>
+
+As per the notes above, the 0 or 1 for the pull-up is redundant as this is always on, but the <S> command requires the parameter to be set.
+
+An output port may be configured using the DCC++ EX Output commands, as follows:
+
+.. code-block:: 
+  
+  <Z 901 196 0>
 
 Adding a New Device
 ===================
@@ -372,7 +405,7 @@ You can also control the DFPlayer through EX-RAIL, using commands like the follo
 
   RESET(1000)           // Stop player
 
-  SERVO(1000,4,10)      // Start playing 4th sound at volume level 10
-  SERVO(1001,20)        // Set volume level to 20
+  SERVO(1000,4,Instant)      // Start playing 4th sound at volume level 10
+  SERVO(1001,20,Instant)        // Set volume level to 20
   
-
+Note: As per the standard SERVO commands, the last parameter is the name of a servo profile, not a number.

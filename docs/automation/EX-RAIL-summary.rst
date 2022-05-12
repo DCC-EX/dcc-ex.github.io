@@ -7,15 +7,12 @@ Notes
 ========
 
 
-- *AUTOMATION*, *ROUTE* and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
-
+- *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.
-
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
-
 - It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the scripts. If a sensor is latched by the script, it can only be unlatched by the script… so ``AT(35) LATCH(35)`` for example, effectively latches sensor 35 on when detected once. Only sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script.
-
-- All IDs used in commands and functions will be numbers, or use a ALIAS name for a number if configured.
+- All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
+- Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.
 
 
 Command Summary
@@ -25,7 +22,7 @@ Command Summary
    :class: category
 
 Diagnostics & Control
------------------------
+______________________
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands < > through both the Arduino IDE Serial Monitor and the JMRI Send DCC++ Command pane.
 
@@ -58,9 +55,15 @@ There are some diagnostic and control commands added to the <tag> language norma
       -  Unlock sensor, returning to current external state
     * -  </ ROUTES>
       -  ***Under Construction*** Returns the Routes & Automations control list in WiThrottle format. JMRI integration only!
+    * -  </ RED signal_id>
+      -  Set the specified signal red
+    * -  </ AMBER signal_id>
+      -  Set the specified signal amber
+    * -  </ GREEN signal_id>
+      -  Set the specified signal green
 
 Automations, Routes and Sequences
-----------------------------------
+__________________________________
 
 .. list-table::
     :widths: auto
@@ -71,8 +74,6 @@ Automations, Routes and Sequences
       -  Description
     * -  :category:`--- Script Definition Items ---`
       -
-    * -  EXRAIL
-      -  Deprecated No longer required (does nothing)
     * -  AUTOMATION( id, "description" )
       -  Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
     * -  ROUTE( id, "description" )
@@ -81,8 +82,6 @@ Automations, Routes and Sequences
       -  A general purpose Sequence for scenic animations, etc.
     * -  ENDTASK or DONE
       -  Completes a Animation/Routes/Sequence Event handler, etc.
-    * -  ENDEXRAIL
-      -  Deprecated No longer required (does nothing)
     * -  :category:`--- Object definitions ---`
       -
     * -  ALIAS( name, value )
@@ -96,7 +95,9 @@ Automations, Routes and Sequences
     * -  PIN_TURNOUT( id, pin [, "description"] )
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
-      -  Define a servo turnout
+      -  Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts!)
+    * -  VIRTUAL_TURNOUT( id [, "description"] )
+      -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
       -  Define a servo signal
     * -  :category:`--- Flow control functions ---`
@@ -131,12 +132,20 @@ Automations, Routes and Sequences
       -  If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
     * -  IFTIMEOUT
       -  Tests if "timed out" flag has been set by an ATTIMEOUT sensor reading attempt
+    * -  IFRED( signal_id )
+      -  Tests if signal is red
+    * -  IFAMBER( signal_id )
+      -  Tests if signal is amber
+    * -  IFGREEN( signal_id )
+      -  Tests if signal is green
     * -  ELSE
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
       -  Required to end an IF/IFNOT/etc (Used in all IF.. functions)
     * -  :category:`--- Command Station functions ---`
       -
+    * -  POWERON
+      -  Power on track, will UNJOIN programming from main
     * -  POWEROFF
       -  Power off track
     * -  JOIN
@@ -149,6 +158,8 @@ Automations, Routes and Sequences
       -  Program CV value on main
     * -  LCD( row, msg )
       -  Write message on a LCD/OLED screen if one is declared and used
+    * -  BROADCAST ( msg )
+      -  Broadcasts the specified text to all connected throttles/JMRI, over both serial and WiFi
     * -  PRINT( msg )
       -  Print diagnostic message to the IDE Serial Monitor and JMRI DCC++ Traffic Monitor
     * -  SERIAL( msg )
@@ -173,12 +184,12 @@ Automations, Routes and Sequences
       -  Start a new task to execute a route or sequence
     * -  SETLOCO( loco )
       -  Set the loco address for this task
-    * -  SENDLOCO( cab, route )
+    * -  SENDLOCO( loco, route )
       -  Start a new task send a given loco along given route/sequence
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
-    * -  ROSTER( cab, name, func_map )
-      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps
+    * -  ROSTER( loco, name, func_map )
+      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`automation/ex-rail-intro:roster entries` for examples
     * -  DRIVE( analog_pin )
       -  ***Under Construction*** Not complete, DO NOT USE
     * -  :category:`--- Loco DCC functions ---`

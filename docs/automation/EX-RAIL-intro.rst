@@ -78,9 +78,13 @@ Once started, all sequences step through a list of simple keywords until they re
 
 There can be a startup sequence (keywords at the beginning of the script), which if present is automatically executed, as are any sequences that contain an ``AUTOSTART``.
 
+.. note:: 
+
+   There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first ``DONE`` keyword is executed on startup. If you don't wish anything to happen at startup, simply add the keyword ``DONE`` as the first line.
+
 Multiple concurrent sequences are supported.
 
-For a full list of keywords, see :doc:`EX-RAIL-summary`.
+For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/automation/EX-RAIL-reference`.
 
 The script containing your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
 
@@ -117,7 +121,7 @@ Some Simple Examples
 ======================
 
 Example 1: Creating Routes for a Throttle
----------------------------------------------
+__________________________________________
 
 A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like
@@ -162,7 +166,7 @@ Of course, you may want to add signals, and time delays
 
 
 Example 2: Automating Signals with Turnouts
-----------------------------------------------
+____________________________________________
 
 By intercepting a turnout change command, it's easy to automatically adjust signals or 
 automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE`` keyword to detect a particular turnout change:
@@ -194,7 +198,7 @@ Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMR
 
 A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
  
-See the :doc:`Reference <EX-RAIL-summary>` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
+See the :doc:`/automation/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 
 Defining Signals
@@ -206,7 +210,7 @@ Signals can now simply be a decoration to be switched by the route process; they
 
 
 Example 3: Automating various non-track items 
------------------------------------------------
+______________________________________________
 
 This normally takes place in a timed loop, for example alternate flashing of a fire engine's lights. To do this use a SEQUENCE.
 
@@ -224,7 +228,7 @@ This normally takes place in a timed loop, for example alternate flashing of a f
 Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using ``START(66)``.
 
 Example 4: Automating a train (simple loop)
---------------------------------------------
+____________________________________________
 
 Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.
 
@@ -253,7 +257,7 @@ The instructions are followed in sequence by the loco given to it; the ``AT`` co
 Notice that this automation does not specify the loco address. If you drive a loco with the throttle and then hand it over to this automation, then the automation will run with the loco you last drove.
 
 Example 5: Signals in a train script
--------------------------------------
+_____________________________________
 
 Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
 
@@ -273,7 +277,7 @@ Adding a station signal to the loop script is extremely simple, but it does requ
       FOLLOW(4)  // and continue to follow the automation
 
 Example 6: Single line shuttle
--------------------------------
+_______________________________
 
 Consider a single line, shuttling between stations A and B.
 
@@ -327,7 +331,7 @@ Although the above is trivial, the routes are designed to be independent of the 
 The example above assumes that loco 3 is sitting on the track and pointing in the right direction. A bit later you will see how to script an automatic process to take whatever loco is placed on the programming track, and send it on its way to join in the fun!
 
 Example 7: Running multiple inter-connected trains
----------------------------------------------------
+___________________________________________________
 
 So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout
@@ -460,7 +464,7 @@ For a known set of locos, the easiest way is to define the startup process at th
 
 
 Drive Away feature
-==================
+===================
 
 EX-RAIL can switch a track section between programming and mainline.
 
@@ -484,8 +488,33 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
+Roster entries
+===============
+
+EX-RAIL has a ROSTER() function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts and routes.
+
+The functions can simply be listed as "F" numbers, or you can provide a text description of the function. Prefacing the function with a "*" indicates it is momentary, meaning it is only activated while holding that function button down.
+
+A very simple roster entry for a loco with ID 1506 called "HUSA" with three functions of light, bell, and momentary horn would look like this:
+
+.. code-block:: cpp
+   
+   ROSTER(1506, "HUSA", "Light/Bell/*Horn")
+
+A more complex example with generic functions for the same loco (note the momentary F2 for horn):
+
+.. code-block:: cpp
+
+   ROSTER(1506, "HUSA", "F0/F1/*F2/F3/F4/F5/F6/F7/F8/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
+
+The same again, with more text functions defined to represent a number of different sounds:
+
+.. code-block:: cpp
+
+   ROSTER(1506, "HUSA", "Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
+
 Sounds
-======
+=======
 
 You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn.
 
@@ -512,7 +541,7 @@ Outputs
 - SIGNAL definitions are just groups of 3 Output pins that can be more easily managed.
 
 Sequence Numbers
-================
+=================
 
 - All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
 - 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script. 
@@ -520,10 +549,12 @@ Sequence Numbers
 Various techniques
 ===================
 
-Defining names for any ID numbers
-----------------------------------
+Below are some tips and techniques you can implement to get the most out of EX-RAIL.
 
-Use the ``ALIAS()`` command in the startup sequence of your script. This must come *BEFORE* the name is used.
+Defining names for any ID numbers (aliases)
+____________________________________________
+
+Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.
 
 Alias names:
 
@@ -536,18 +567,42 @@ For example:
 
 .. code-block:: cpp
 
-   ALIAS(COAL_YARD_TURNOUT,19) 
-   ALIAS(COAL_YARD_SIGNAL_3,27) 
+   ALIAS(COAL_YARD_TURNOUT,19)
+   ALIAS(COAL_YARD_SIGNAL_3,27)
+
+   ROUTE(1,"Coal yard exit")
+      THROW(COAL_YARD_TURNOUT)
+      GREEN(COAL_YARD_SIGNAL_3)
+   
+   // As above with auto generated IDs
+   ALIAS(COAL_YARD_TURNOUT)
+   ALIAS(COAL_YARD_SIGNAL_3)
 
    ROUTE(1,"Coal yard exit")
       THROW(COAL_YARD_TURNOUT)
       GREEN(COAL_YARD_SIGNAL_3)
 
 Including sub-files
---------------------
-  
+____________________
+
+If you find your myAutomation.h file becoming quite lengthy and cumbersome to scroll through and keep track of, you can break your items up into multiple smaller files, and include those in your myAutomation.h file instead.
+
+There are some rules that apply in this scenario:
+
+* Anything that needs to be done when the CommandStation starts must be defined first.
+* Any custom macros/commands must be defined before they are used (see :ref:`automation/ex-rail-intro:make your own ex-rail macro or command`) below.
+* The files are included in the order defined, so if an item in one file depends on another file's item, make sure they included in the correct order.
+
+Some suggestions to get the most out of this:
+
+* Define everything that needs to happen on startup directly in myAutomation.h, before any other includes.
+* Have a specific file for your custom macros or commands (eg. myMacros.h) and include this before other includes.
+* Have a specific file for all your aliases (eg. myAliases.h).
+* Group other items logically according to their purpose, eg. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.
+* Remember the rules and ensure files are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.
+
 For example:
-   
+
 .. code-block:: cpp
 
    ROUTE(1,"Coal yard exit")
@@ -556,3 +611,101 @@ For example:
       DONE
    #include "myFireEngineLights.h"
    #include "myShuttle.h"
+
+Realistic turnout sequeunces
+_____________________________
+
+Let's say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:
+
+1. An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to JMRI. 
+2. A virtual turnout. This turnout will have an ID and description, will show up in throttles and JMRI, but has no hardware or electronics associated with it. 
+
+Once these are defined, you can then use EX-RAIL's ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EX-RAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.
+
+For example:
+
+.. code-block:: cpp
+
+   SERVO_TURNOUT(101, 121, 133, 456, HIDDEN)    // Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.
+   VIRTUAL_TURNOUT(9101,"Coal yard exit")       // Define the virtual turnout, which will be visible to throttles/JMRI.
+
+   ONTHROW(9101)                                // When throwing the virtual turnout:
+   RED(MainlineSignal)                          // Set a red signal.
+   DELAY(5000)                                  // Wait for the signalman to move to the turnout lever.
+   THROW(101)                                   // Throw the real turnout.
+   DELAY(7500)                                  // Wait again for the signalman to move to the other signal lever.
+   GREEN(ShuntingSignal)                        // Set a green signal.
+   DONE
+
+   ONCLOSE(9101)                                // When closing the virtual turnout:
+   GREEN(MainlineSignal)                        // Set a green signal.
+   DELAY(5000)                                  // Wait for the signalman to move to the turnout lever.
+   CLOSE(101)                                   // Close the real turnout.
+   DELAY(7500)                                  // Wait again for the signalman to move to the other signal lever.
+   RED(ShuntingSignal)                          // Set a red signal.
+   DONE
+
+A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.
+
+Make your own EX-RAIL macro or command
+_______________________________________
+
+One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.
+
+To do this, you're actually making use of some C++ code in addition to the clever programming in DCC++ EX.
+
+The way to implement this is as follows:
+
+.. code-block:: cpp
+
+   #define MYMACRO(parameter1, parameter2, parameter3, ...) \
+   COMMAND(parameter1) \
+   COMMAND(parameter2) \
+   COMMAND(parameter3) \
+   DONE
+
+Firstly, note the "#define". This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.
+
+The entire macro needs to be on a single line, hence the addition of the backslash "\\" at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line.
+
+Here's an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.
+
+.. code-block::
+
+   #define PULSE 25                                      // Define a pulse time of 25ms to activate the coil
+
+   #define ROKUHANTURNOUT(t, p1, p2, desc, ali) \        // Define the macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
+   PIN_TURNOUT(t, 0, desc) \                             // Define a pin turnout
+   ALIAS(ali, t) \                                       // Define an alias
+   DONE \
+   ONCLOSE(t) \                                          // Setting the direction pin and sending the pulse for the CLOSE command
+   SET(p1) \
+   SET(p2)DELAY(PULSE)RESET(p2) \
+   DONE \
+   ONTHROW(t) \                                          // Resetting the direction pin and sending the pulse for the THROW command
+   RESET(p1) \
+   SET(p2)DELAY(PULSE)RESET(p2) \
+   DONE
+
+   ROKUHANTURNOUT(105, 168, 176, "Yard entrance", YD_E)  // Define the "Yard entrance" turnout with turnout ID 5 using MCP23017 pins 168/176, and create alias YD_E
+
+Typically, you would define a pin turnout with the PIN_TURNOUT command, however in this example we need a CLOSE or THROW sent to these turnouts to do more than just set a pin high or low, hence the need for the macro.
+
+Here's the line by line explanation:
+
+* A pulse time of 25ms reliably switches the turnouts.
+* Define the ROKUHANTURNOUT macro, providing parameters for the turnout ID, direction pin, enable or pulse pin, a description, and an alias name.
+* Create a PIN_TURNOUT that is advertised to WiThrottles using the provided turnout ID and description, with the pin set to 0 as this is not used.
+* Create the provided alias for the turnout ID.
+* The first DONE is required because we need to separate the turnout and alias definitions from the ONCLOSE and ONTHROW actions.
+* Define what happens when a CLOSE command is sent to that turnout ID.
+* Setting the direction pin high will result in closing the turnout.
+* Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually close the turnout.
+* The DONE is required to tell EX-RAIL not to proceed any further.
+* Define what happens when a THROW command is sent to that turnout ID.
+* Resetting the direction pin will result in throwing the turnout.
+* Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually throw the turnout.
+* The DONE is required to tell EX-RAIL not to proceed any further.
+* Finally, use the macro to create the "Yard entrance" turnout with turnout ID 105, pins 168/176 on an MCP23017 I/O expander, and an alias of YD_E that can be referred to in other sequences.
+
+This technique can be used in many different ways limited only by your imagination to have EX-RAIL perform many different actions and automations.

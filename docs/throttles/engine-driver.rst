@@ -32,12 +32,18 @@ Please visit the Engine Driver Website: https://enginedriver.mstevetodd.com/
 
 Features
 ==========
-
+* New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with DCC++EX 
+* New 'Discover Server' Detect, Select & Connect to WiFi enabled Command Stations
+* New  DCC++EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons
+* New 'Roster Server' download Engine ID's & function keys from the Command Station
+* New 'Virtual Engine Sounds' {Bell, Horn, Short Horn, Mute} for motor only engines on first two throttles
 * Speed and direction control
 * Up to 29 DCC functions
 * One to six locomotives or consists 
 * Create and edit consists (software-defined)
 * You can also control layout power, turnouts, routes, and access JMRI web panels and windows.
+
+:ref:`throttles/driveaway:using the "driveaway(tm)" feature`
 
 .. _ed-screenshots:
 

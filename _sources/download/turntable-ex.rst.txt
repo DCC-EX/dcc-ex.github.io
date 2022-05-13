@@ -6,4 +6,4 @@ Turntable-EX is a fully integrated turntable controller, using an Arduino microc
 
 .. rst-class:: dcclink
 
-   `Turntable-EX Github Repository <https://github.com/DCC-EX/Turntable-EX">`_
+   `Turntable-EX Github Repository <https://github.com/DCC-EX/Turntable-EX/releases>`_

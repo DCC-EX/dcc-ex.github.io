@@ -11,7 +11,7 @@ Assembly
 
 For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with an Arduino Nano V3, a standard 3 pin Arduino compatible hall effect sensor, and a dual relay board.
 
-.. sidebar:: 
+.. sidebar:: Use prototype or strip boards
 
   .. image:: ../_static/images/tinkerer.png
     :alt: Tinkerer Level

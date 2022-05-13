@@ -13,16 +13,6 @@ For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with a
 
 .. sidebar:: 
 
-  .. image:: ../_static/images/tinkerer.png
-    :alt: Tinkerer Level
-    :scale: 40%
-    :align: left
-
-  .. image:: ../_static/images/engineer.png
-    :alt: Engineer Level
-    :scale: 40%
-    :align: right
-
   For the Tinkerers and Engineers, a much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.
 
 We will also assume a prototyping shield is available that provides regulated 5V power sufficient for driving the ULN2003/28BYJ-48 stepper combo, and that there is a power supply with a suitable DC power plug to suit the prototyping shield.

@@ -54,7 +54,7 @@ Programming track
 
  ``<W  cv value >``
 
- ``<W  cv value callbacknum callbacksub>`` Legacy version.
+ ``<W  cv value callbacknum callbacksub>`` **Deprecated, please use <W cv value> instead**
 
  ``<B cv bit 0|1>`` Write bit to cv.
 
@@ -62,7 +62,7 @@ Programming track
 
  ``<R cv>`` Read CV BYTE (pending implementation)
 
- ``<R cv callbacknum callbacksub>`` Read CV BYTE (pending legacy) 
+ ``<R cv callbacknum callbacksub>`` Read CV BYTE **Deprecated, please use <V cv value> instead**
 
  ``<V cv value>`` Verify/Read of cv with guessed value
 
@@ -166,7 +166,7 @@ Diagnostic traces
 
  ``<D ACK ON|OFF>`` Enables ACK diagnostics
 
- ``<D CMD ON|OFF>`` Enables Command Parser diagnostics
+  ``<D CMD ON|OFF>`` Enables Command Parser diagnostics
 
  ``<D ETHERNET ON|OFF>`` Enables Ethernet diagnostics
 
@@ -187,6 +187,8 @@ Tuning
  ``<D ACK MIN uS>`` Override ACK processing minimum pulse width
  
  ``<D ACK MAX uS>`` Override ACK processing max pulse width
+
+ ``<D ACK RETRY x>`` Adjust ACK retries to number x (default is 2)
 
  ``<D PROGBOOST>``  Override 250mA prog track limit while idle.
 

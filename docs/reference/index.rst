@@ -39,6 +39,7 @@ Accessories
 .. toctree::
     :maxdepth: 2
 
+    accessories/decoder-list
     accessories/suppliers
 
 Downloads

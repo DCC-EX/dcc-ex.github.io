@@ -146,6 +146,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../turntable-ex/index.html">Turntable-EX (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
@@ -169,6 +176,7 @@
 <li class="toctree-l2"><a class="reference internal" href="command-summary.html">DCC++ EX Command Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../accessories/decoder-list.html">List of Tested Decoders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
@@ -187,6 +195,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../download/commandstation.html">Command Station Downloads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/turntable-ex.html">Turntable-EX</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Projects</a><ul>
@@ -1090,15 +1099,15 @@ support analogue write operations.  This command is available from Version 3.2.0
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANIN</span> <span class="pre">pin&gt;</span></code> Read the analogue value of the specified pin and display it.  The value will be zero if the pin is not configured or does not support
 analogue read operations.  This command is available from Version 3.2.0.</p></li>
 <li><dl>
-<dt><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.</dt><dd><p>example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander:</p>
-<blockquote>
-<div><p>17:00:10.358 -&gt; &lt;* PARSING:D HAL SHOW * &gt;
+<dt><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> List the configured I/O drivers in the Hardware Abstraction Layer (HAL).  This command is available from Version 3.2.0.</dt><dd><p>Example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>17:00:10.358 -&gt; &lt;* PARSING:D HAL SHOW * &gt;
 17:00:10.358 -&gt; &lt;* Arduino Vpins:2-69 * &gt;
 17:00:10.358 -&gt; &lt;* PCA9685 I2C:x40 Configured on Vpins:100-115 * &gt;
 17:00:10.358 -&gt; &lt;* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE * &gt;
 17:00:10.358 -&gt; &lt;* MCP23017 I2C:x20 Configured on Vpins:164-179 * &gt;
-17:00:10.358 -&gt; &lt;* MCP23017 I2C:x21 Configured on Vpins:180-195 * &gt;</p>
-</div></blockquote>
+17:00:10.358 -&gt; &lt;* MCP23017 I2C:x21 Configured on Vpins:180-195 * &gt;
+</pre></div>
+</div>
 </dd>
 </dl>
 </li>
@@ -1107,13 +1116,39 @@ analogue read operations.  This command is available from Version 3.2.0.</p></li
 <div class="section" id="decoder-test">
 <h3>DECODER TEST<a class="headerlink" href="#decoder-test" title="Permalink to this headline">¶</a></h3>
 <p>These following commands are detailed above but are worth repeating here. The <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> command will attempt to read the decoder on the service (programming) track and try to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn’t moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code> command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only)</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only). Returns:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;r ADDRESS&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;r ADDRESS&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;&lt;R&gt;</span></code> - When sent together as shown or one right after the other, this combined command shows the detailed results of what happened when trying to read the Address CV(s) and any response back from the decoder.-</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;&lt;R&gt;</span></code> - When sent together as shown or one right after the other, this combined command shows the detailed results of what happened when trying to read the Address CV(s) and any response back from the decoder.</p>
+<div class="section" id="ack-tuning-commands">
+<h4>ACK Tuning Commands<a class="headerlink" href="#ack-tuning-commands" title="Permalink to this headline">¶</a></h4>
+<p>To help define the correct ACK parameters required for different decoders, there are several diagnostic commands available, with defaults based on the NMRA standard for ACK responses during service mode programming.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The basic ACK defaults have changed as of CommandStation-EX version 4.1.0 to:</p>
+<ul class="simple">
+<li><p>LIMIT 50mA</p></li>
+<li><p>MIN 2000 uS</p></li>
+<li><p>MAX 20000uS</p></li>
+</ul>
+<p>If you still need to override these and need to do so permanently, the commands can be added to “mySetup.h” as per <a class="reference internal" href="../../advanced-setup/startup-config.html#adding-in-the-startup-commands"><span class="std std-ref">Adding in the startup commands</span></a>.</p>
+<p>Note with decoders that are equipped with “keep alives” or capacitors, it can be beneficial to turn the power on with <cite>&lt;1&gt;</cite> or <cite>&lt;1 PROG&gt;</cite> to charge the capacitors prior to programming, which can increase the reliability of the ACK, especially when attemping to read the full sheet.</p>
+</div>
+<p>To quote the relevant section from NMRA S 9.2.3:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>45 Basic Acknowledgment</p>
+<p>Basic acknowledgment is defined by the Digital Decoder providing an increased load (positive-delta) on the programming track of at least 60 mA for 6 ms +/-1 ms. It is permissible to provide this increased load by applying power to the motor or other similar device controlled by the Digital Decoder.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code> Use this command to override the minimum milliamps (mA) required to detect the ACK pulse, eg. <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">30&gt;</span></code> means a minimum 30mA pulse would be accepted.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code> Use this command to override the minimum amount of time in microseconds (uS) the pulse needs to be active for, eg. <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">2000&gt;</span></code> means a pulse of 2ms or more would be accepted.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">uS&gt;</span></code> As above, however overriding the maximum amount of time for a pulse, eg. <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">20000&gt;</span></code> means a pulse up to 20ms would be accepted.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code> When reading/writing CVs, the program will try again upon failure.  The default is <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">2&gt;</span></code>, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">2&gt;</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code>  By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.</p>
+</div>
 </div>
 <div class="section" id="send-packet-to-the-track">
 <h3>SEND PACKET TO THE TRACK<a class="headerlink" href="#send-packet-to-the-track" title="Permalink to this headline">¶</a></h3>

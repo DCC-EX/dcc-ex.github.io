@@ -146,6 +146,13 @@
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../turntable-ex/index.html">Turntable-EX (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../reference/hardware/index.html">Hardware</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
@@ -169,6 +176,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/software/command-summary.html">DCC++ EX Command Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/decoder-list.html">List of Tested Decoders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Downloads</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../reference/downloads/documents.html">Documents</a></li>
@@ -187,6 +195,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../download/commandstation.html">Command Station Downloads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../download/esp8266.html">ESP8266 Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/turntable-ex.html">Turntable-EX</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a><ul>
@@ -299,6 +308,17 @@
 <li><p>All IDs used in commands and functions will be numbers, or an ALIAS name if configured.</p></li>
 <li><p>Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are four uses of ID numbers in EX-RAIL:</p>
+<ul class="simple">
+<li><p>AUTOMATION, ROUTE, and SEQUENCE IDs</p></li>
+<li><p>Turnout IDs</p></li>
+<li><p>Pin IDs - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O extender modules, and virtual pins that have no physical presence</p></li>
+<li><p>Virtual block IDs as used in RESERVE/FREE</p></li>
+</ul>
+<p>Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.</p>
+</div>
 </div>
 <div class="section" id="command-summary">
 <h2>Command Summary<a class="headerlink" href="#command-summary" title="Permalink to this headline">¶</a></h2>
@@ -475,7 +495,7 @@
 <td></td>
 </tr>
 <tr class="row-even"><td><p>POWERON</p></td>
-<td><p>Power on track, will UNJOIN programming from main</p></td>
+<td><p>Power on track, will UNJOIN programming from main (not implemented yet)</p></td>
 </tr>
 <tr class="row-odd"><td><p>POWEROFF</p></td>
 <td><p>Power off track</p></td>
@@ -648,28 +668,31 @@
 <tr class="row-odd"><td><p>LCN( msg )</p></td>
 <td><p>Send message to LCN Accessory Network</p></td>
 </tr>
-<tr class="row-even"><td><p>SERVO( vpin, position, profile )</p></td>
-<td><p>Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow, or Bounce)</p></td>
+<tr class="row-even"><td><p>MOVETT( vpin, steps, activity )</p></td>
+<td><p>Move a turntable the number of steps relative to home, and perform the activity (refer Turntable-EX documentation)</p></td>
 </tr>
-<tr class="row-odd"><td><p>SERVO2( vpin, position, duration )</p></td>
+<tr class="row-odd"><td><p>SERVO( id, position, profile )</p></td>
+<td><p>Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)</p></td>
+</tr>
+<tr class="row-even"><td><p>SERVO2( id, position, duration )</p></td>
 <td><p>Move an animation servo taking duration in ms. Do NOT use for Turnouts</p></td>
 </tr>
-<tr class="row-even"><td><p>XFON( cab, func )</p></td>
+<tr class="row-odd"><td><p>XFON( cab, func )</p></td>
 <td><p>Send DCC function ON to specific cab (eg coach lights) <strong>Not for Loco use - use FON instead!</strong></p></td>
 </tr>
-<tr class="row-odd"><td><p>XFOFF( cab, func )</p></td>
+<tr class="row-even"><td><p>XFOFF( cab, func )</p></td>
 <td><p>Send DCC function OFF to specific cab (eg coach lights) <strong>Not for Loco use - use FON instead!</strong></p></td>
 </tr>
-<tr class="row-even"><td><p>ACTIVATE( addr, sub_addr )</p></td>
+<tr class="row-odd"><td><p>ACTIVATE( addr, sub_addr )</p></td>
 <td><p>Sends a DCC accessory packet with value 1</p></td>
 </tr>
-<tr class="row-odd"><td><p>ACTIVATEL( linear )</p></td>
+<tr class="row-even"><td><p>ACTIVATEL( linear )</p></td>
 <td><p>Sends a DCC accessory packet with value 1 to a linear address</p></td>
 </tr>
-<tr class="row-even"><td><p>DEACTIVATE( addr, sub_addr )</p></td>
+<tr class="row-odd"><td><p>DEACTIVATE( addr, sub_addr )</p></td>
 <td><p>Sends a DCC accessory packet with value 0</p></td>
 </tr>
-<tr class="row-odd"><td><p>DEACTIVATEL( addr )</p></td>
+<tr class="row-even"><td><p>DEACTIVATEL( addr )</p></td>
 <td><p>Sends a DCC accessory packet with value 0 to a linear address</p></td>
 </tr>
 </tbody>

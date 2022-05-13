@@ -185,6 +185,7 @@ There are also drivers included with DCC++ EX for the following modules:
 * ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.
 * VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
 * HC-SR04 - Ultrasound 'sonar' range sensor.  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
+* Turntable-EX - Integrated, stepper motor based turntable controller, refer to :doc:`/turntable-ex/index`.
 
 Notes on the PCA9555/TCA9555 I2C GPIO Extenders
 -----------------------------------------------

@@ -146,6 +146,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../turntable-ex/index.html">Turntable-EX (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
@@ -169,6 +176,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">DCC++ EX Command Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../accessories/decoder-list.html">List of Tested Decoders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
@@ -187,6 +195,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../download/commandstation.html">Command Station Downloads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/turntable-ex.html">Turntable-EX</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Projects</a><ul>
@@ -407,7 +416,9 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Shows cab numbers and speed in reminder table</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Shows remaining RAM (Free Memory)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON|OFF&gt;</span></code> Enables ACK diagnostics</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">ON|OFF&gt;</span></code> Enables Command Parser diagnostics</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">ON|OFF&gt;</span></code> Enables Command Parser diagnostics</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ETHERNET</span> <span class="pre">ON|OFF&gt;</span></code> Enables Ethernet diagnostics</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">LCN</span> <span class="pre">ON|OFF&gt;</span></code> Enables LCN interface diagnostics</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">ON|OFF&gt;</span></code> Enables WiFi diagnostics</p>
@@ -420,6 +431,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code> Override ACK processing mA pulse size</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code> Override ACK processing minimum pulse width</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">uS&gt;</span></code> Override ACK processing max pulse width</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code> Adjust ACK retries to number x (default is 2)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code>  Override 250mA prog track limit while idle.</p>
 </div></blockquote>
 </div>

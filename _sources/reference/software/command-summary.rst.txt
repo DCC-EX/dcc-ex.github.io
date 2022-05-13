@@ -166,7 +166,7 @@ Diagnostic traces
 
  ``<D ACK ON|OFF>`` Enables ACK diagnostics
 
- ``<D CMD ON|OFF>`` Enables Command Parser diagnostics
+  ``<D CMD ON|OFF>`` Enables Command Parser diagnostics
 
  ``<D ETHERNET ON|OFF>`` Enables Ethernet diagnostics
 
@@ -187,6 +187,8 @@ Tuning
  ``<D ACK MIN uS>`` Override ACK processing minimum pulse width
  
  ``<D ACK MAX uS>`` Override ACK processing max pulse width
+
+ ``<D ACK RETRY x>`` Adjust ACK retries to number x (default is 2)
 
  ``<D PROGBOOST>``  Override 250mA prog track limit while idle.
 

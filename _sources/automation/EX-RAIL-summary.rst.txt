@@ -4,7 +4,7 @@ EX-RAIL Command Summary
 
 
 Notes
-========
+======
 
 
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
@@ -14,6 +14,16 @@ Notes
 - All IDs used in commands and functions will be numbers, or an ALIAS name if configured.
 - Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255.
 
+.. note:: 
+
+  There are four uses of ID numbers in EX-RAIL:
+
+  - AUTOMATION, ROUTE, and SEQUENCE IDs
+  - Turnout IDs
+  - Pin IDs - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O extender modules, and virtual pins that have no physical presence
+  - Virtual block IDs as used in RESERVE/FREE
+
+  Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
 Command Summary
 ==================
@@ -145,7 +155,7 @@ __________________________________
     * -  :category:`--- Command Station functions ---`
       -
     * -  POWERON
-      -  Power on track, will UNJOIN programming from main
+      -  Power on track, will UNJOIN programming from main (not implemented yet)
     * -  POWEROFF
       -  Power off track
     * -  JOIN
@@ -260,9 +270,11 @@ __________________________________
       -  Fade an LED on a servo driver to given value and taking a given time
     * -  LCN( msg )
       -  Send message to LCN Accessory Network
-    * -  SERVO( vpin, position, profile )
-      -  Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow, or Bounce)
-    * -  SERVO2( vpin, position, duration )
+    * -  MOVETT( vpin, steps, activity )
+      -  Move a turntable the number of steps relative to home, and perform the activity (refer Turntable-EX documentation)
+    * -  SERVO( id, position, profile )
+      -  Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+    * -  SERVO2( id, position, duration )
       -  Move an animation servo taking duration in ms. Do NOT use for Turnouts
     * -  XFON( cab, func )
       -  Send DCC function ON to specific cab (eg coach lights) **Not for Loco use - use FON instead!**

@@ -23,16 +23,6 @@ The out-of-the-box example configuration should allow a Conductor level user to 
 
 .. sidebar:: Supported stepper drivers and motors
 
-  .. image:: ../_static/images/conductor.png
-    :alt: Conductor Level
-    :scale: 40%
-    :align: left
-  
-  .. image:: ../_static/images/tinkerer.png
-    :alt: Tinkerer Level
-    :scale: 40%
-    :align: right
-
   Using other pre-defined, supported stepper drivers and motors should also be achievable at the Conductor level, but may enter into Tinkerer territory depending on the specific hardware.
 
 To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL<automation/ex-rail-intro:introduction to ex-rail automation>` automation, but we'll share the details and some examples to help with this.

@@ -147,16 +147,15 @@ ___________________
 Aliases
 ^^^^^^^^
 
-``ALIAS( name[, value] )``	Assign names to values. Can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias text.
+``ALIAS( name[, value] )``	Assign names to values. These can go anywhere in the script. If a value is not assigned, a unique ID will be generated automatically based on the provided name.
 
 This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
 
-If you simply need a unique identifier for an object such as a turnout, route, automation, or sequence, you don't even need to provide an ID, and EX-RAIL will generate one automatically.
-
-However, IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
+If you simply need a unique identifier for an object such as a turnout, route, automation, or sequence, you don't even need to provide an ID, and EX-RAIL will generate one automatically. However, IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
 
 Alias naming rules:
 
+- **Must not** be an existing EX-RAIL command name or other reserved word.
 - **Should be** reasonably short but descriptive.
 - **Must start** with letters A-Z or underscore _ .
 - **May then** also contain numbers.

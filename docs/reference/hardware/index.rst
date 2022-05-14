@@ -12,6 +12,9 @@ Hardware
     i2c-displays
     i2c-devices
     gpio-module
+    i2c-gpio-expander-mcp23008
+    i2c-gpio-expander-mcp23017
+    i2c-gpio-expander-pcf8574
     servo-module
     power-supplies
     accessory-controllers

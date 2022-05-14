@@ -657,6 +657,8 @@ One of the cunning features of EX-RAIL is enabling users to define macros, or wh
 
 To do this, you're actually making use of some C++ code in addition to the clever programming in DCC++ EX.
 
+(Yes, we just called ourselves cunning and clever. Our talent is superceded only by our modesty ;) )
+
 The way to implement this is as follows:
 
 .. code-block:: cpp
@@ -669,7 +671,7 @@ The way to implement this is as follows:
 
 Firstly, note the "#define". This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.
 
-The entire macro needs to be on a single line, hence the addition of the backslash "\\" at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line.
+The entire macro needs to be on a single line, hence the addition of the backslash "\\" at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line while allowing things to be more readable for us humans.
 
 Here's an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.
 

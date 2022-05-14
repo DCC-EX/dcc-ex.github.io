@@ -1,5 +1,6 @@
+*******************************************
 DCC++ EX Model Railroading |donate_button|
-============================================
+*******************************************
 
 .. image:: ./_static/images/icons/v40banner.jpg
    :alt: v4_0 Release Banner
@@ -63,14 +64,14 @@ Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source 
 .. |Contribute| replace:: :doc:`Contribute </contributing/index>`
 
 Mission
-#######
+=========
 
 Our mission is to make the world of digital model railroading universally accessible.
 
 To achieve that, DCC++ EX provides the model railroad community with a complete, open source DCC (Digital Command Control) system - one that is simple, affordable, and expandable, to control model trains and accessories. Further, it is our goal that this project be organized, documented, and maintained so that it can continue far into the future.
 
 What is DCC++ EX?
-#################
+==================
 
 DCC++ EX is the organization developing and maintaining several products that together represent a fully open source DCC system. Currently, this includes the following:
 

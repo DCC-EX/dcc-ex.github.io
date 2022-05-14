@@ -807,6 +807,7 @@ number. So now our route looks like this:</p>
 <h3>Make your own EX-RAIL macro or command<a class="headerlink" href="#make-your-own-ex-rail-macro-or-command" title="Permalink to this headline">¶</a></h3>
 <p>One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.</p>
 <p>To do this, you’re actually making use of some C++ code in addition to the clever programming in DCC++ EX.</p>
+<p>(Yes, we just called ourselves cunning and clever. Our talent is superceded only by our modesty ;) )</p>
 <p>The way to implement this is as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MYMACRO(parameter1, parameter2, parameter3, ...) \</span>
 <span class="cp">COMMAND(parameter1) \</span>
@@ -816,7 +817,7 @@ number. So now our route looks like this:</p>
 </pre></div>
 </div>
 <p>Firstly, note the “#define”. This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.</p>
-<p>The entire macro needs to be on a single line, hence the addition of the backslash “\” at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line.</p>
+<p>The entire macro needs to be on a single line, hence the addition of the backslash “\” at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line while allowing things to be more readable for us humans.</p>
 <p>Here’s an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#define PULSE 25                                      // Define a pulse time of 25ms to activate the coil
 

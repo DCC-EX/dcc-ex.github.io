@@ -1,10 +1,11 @@
+************
 Get Started
-===========
+************
 
 This page is intended to get you started with DCC++ EX by helping you in building your hardware setup, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
 
 The Components of a Full System
--------------------------------
+================================
 
 - **Command Station** - An Arduino with a motor driver board and the DCC-EX uploadable firmware
 - **Controller** - A Throttle/Cab such as WebThrottle-EX, JMRI, Engine Driver, etc
@@ -15,7 +16,7 @@ The Components of a Full System
 
 
 What you need
--------------
+==============
 
 **Hardware**:
 
@@ -43,7 +44,7 @@ You'll also need something to control your trains. Because there are several opt
 See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organized for you in one place.
 
 I'm Ready!
------------
+===========
 
 Click the "next" button below to choose your path, and then move ahead to how to assemble your Command Station.
 

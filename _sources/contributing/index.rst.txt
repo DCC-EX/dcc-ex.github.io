@@ -1,5 +1,6 @@
+*************
 Contributing
-============
+*************
 
 Thank you for your interest to help! 
 

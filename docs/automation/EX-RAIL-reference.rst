@@ -159,6 +159,7 @@ To put this another way, if you connect an LED to pin 23 and want to turn it on 
 
 Alias naming rules:
 
+- **Must not** be an existing EX-RAIL command name or other reserved word.
 - **Should be** reasonably short but descriptive.
 - **Must start** with letters A-Z, a-z, or underscore _ (case sensitive!).
 - **May then** also contain numbers.

@@ -556,10 +556,13 @@ ____________________________________________
 
 Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.
 
+Refer to :ref:`automation/ex-rail-reference:aliases` for more information.
+
 Alias names:
 
+- **Must not** be an existing EX-RAIL command name or other reserved word.
 - **Should be** reasonably short but descriptive.
-- **Must start** with letters A-Z or underscore _ .
+- **Must start** with letters A-Z/a-z or underscore _ .
 - **May then** also contain numbers.
 - **Must not** contain spaces or special characters.
    

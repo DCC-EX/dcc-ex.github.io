@@ -94,7 +94,7 @@ __________________________________
       -  Completes a Animation/Routes/Sequence Event handler, etc.
     * -  :category:`--- Object definitions ---`
       -
-    * -  ALIAS( name, value )
+    * -  ALIAS( name[, value ])
       -  Assign names to values. Can go anywhere in the script
     * -  SIGNAL( red_pin, amber_pin, green_pin )
       -  Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colors)

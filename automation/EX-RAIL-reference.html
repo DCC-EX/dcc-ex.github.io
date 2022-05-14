@@ -415,12 +415,12 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <h3>Object Definitions<a class="headerlink" href="#object-definitions" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="aliases">
 <h4>Aliases<a class="headerlink" href="#aliases" title="Permalink to this headline">¶</a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code>      Assign names to values. Can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias text.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code>      Assign names to values. These can go anywhere in the script. If a value is not assigned, a unique ID will be generated automatically based on the provided name.</p>
 <p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
-<p>If you simply need a unique identifier for an object such as a turnout, route, automation, or sequence, you don’t even need to provide an ID, and EX-RAIL will generate one automatically.</p>
-<p>However, IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.</p>
+<p>If you simply need a unique identifier for an object such as a turnout, route, automation, or sequence, you don’t even need to provide an ID, and EX-RAIL will generate one automatically. However, IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.</p>
 <p>Alias naming rules:</p>
 <ul class="simple">
+<li><p><strong>Must not</strong> be an existing EX-RAIL command name or other reserved word.</p></li>
 <li><p><strong>Should be</strong> reasonably short but descriptive.</p></li>
 <li><p><strong>Must start</strong> with letters A-Z or underscore _ .</p></li>
 <li><p><strong>May then</strong> also contain numbers.</p></li>

@@ -15,7 +15,7 @@ What is Turntable-EX?
 
   For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the `Regression Testing process <https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md>`_, and then submit your test results using the `Beta Test Results <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_ issue template.
 
-Turntable-EX is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks.
+Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.
 
 The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`get-started/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
 
@@ -41,11 +41,12 @@ Essentially, if you have setup your own CommandStation, the expectation is that 
 
 The Turntable-EX integration includes:
 
+* Support for an Arduino Nano or Uno
 * I2C device driver
 * EX-RAIL automation support
 * Debug/test command (handy for tuning step positions)
 * Out-of-the-box support for several common stepper drivers and motors
-* DCC signal phase switching to align bridge track phase with layout phase
+* DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn't do this already)
 * An LED and accessory output to control turntable specific automations (eg. flashing warning light)
 
 .. note:: 
@@ -63,11 +64,11 @@ What you need for Turntable-EX
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
 * A supported stepper motor driver and stepper motor (see list below)
 * A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent)
-* A dual relay board (or similar) if you wish to use the phase switching capability
 * A suitable power supply - note that your chosen stepper driver/motor will dictate this, see note below
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
 * Dupont type wires to connect the components, male to female or female to female as required
 * A USB cable to connect the Arduino to a PC to load the software
+* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`turntable-ex/turntable-ex:important! phase (or polarity) switching`)
 
 .. image:: ../_static/images/turntable-ex/nano-v3.png
   :alt: Nano V3
@@ -164,6 +165,14 @@ Refer to the :ref:`turntable-ex/configure:testing, tuning, and control` page for
 
 Important! Phase (or polarity) switching
 _________________________________________
+
+.. note:: 
+
+  This section of our documentation on phase or polarity switching is currently a bit confusing. The "keep it simple" approach didn't quite translate to this section of the documentation unfortunately. We're reviewing the phase switching options at the moment and should have this updated very soon.
+
+  In the meantime, for those looking to convert existing turntables, most have an existing central wiper ring (or similar) with gaps 180 degrees apart to provide the bridge track power and automatically reverse the polarity. This will continue to work with Turntable-EX, meaning the dual relay board is not required.
+
+  **We still recommend you read on as getting the phase/polarity right when the turntable is rotating is important.**
 
 An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.
 

@@ -306,7 +306,7 @@
 <p>Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.</p>
 <p>For those who wish to help us with Beta testing, you’re encouraged to follow the testing processes outlined in the <a class="reference external" href="https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md">Regression Testing process</a>, and then submit your test results using the <a class="reference external" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose">Beta Test Results</a> issue template.</p>
 </div>
-<p>Turntable-EX is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks.</p>
+<p>Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.</p>
 <p>The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our <a class="reference internal" href="../get-started/levels.html#choose-your-level"><span class="std std-ref">Choose Your Level</span></a> guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).</p>
 <p>The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.</p>
 <div class="sidebar">
@@ -319,11 +319,12 @@
 <p>Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).</p>
 <p>The Turntable-EX integration includes:</p>
 <ul class="simple">
+<li><p>Support for an Arduino Nano or Uno</p></li>
 <li><p>I2C device driver</p></li>
 <li><p>EX-RAIL automation support</p></li>
 <li><p>Debug/test command (handy for tuning step positions)</p></li>
 <li><p>Out-of-the-box support for several common stepper drivers and motors</p></li>
-<li><p>DCC signal phase switching to align bridge track phase with layout phase</p></li>
+<li><p>DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn’t do this already)</p></li>
 <li><p>An LED and accessory output to control turntable specific automations (eg. flashing warning light)</p></li>
 </ul>
 <div class="admonition note">
@@ -340,11 +341,11 @@
 <li><p>An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)</p></li>
 <li><p>A supported stepper motor driver and stepper motor (see list below)</p></li>
 <li><p>A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent)</p></li>
-<li><p>A dual relay board (or similar) if you wish to use the phase switching capability</p></li>
 <li><p>A suitable power supply - note that your chosen stepper driver/motor will dictate this, see note below</p></li>
 <li><p>A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version</p></li>
 <li><p>Dupont type wires to connect the components, male to female or female to female as required</p></li>
 <li><p>A USB cable to connect the Arduino to a PC to load the software</p></li>
+<li><p><em>Optional:</em> A dual relay board (or similar) if you wish to use the phase switching capability (see <a class="reference internal" href="#important-phase-or-polarity-switching"><span class="std std-ref">Important! Phase (or polarity) switching</span></a>)</p></li>
 </ul>
 <a class="reference internal image-reference" href="../_images/nano-v3.png"><img alt="Nano V3" src="../_images/nano-v3.png" style="width: 181.5px; height: 132.5px;" /></a>
 <a class="reference internal image-reference" href="../_images/uln2003-28byj-48.png"><img alt="ULN2003/28BYJ-48 Stepper combo" src="../_images/uln2003-28byj-48.png" style="width: 200.0px; height: 87.5px;" /></a>
@@ -404,6 +405,12 @@
 </div>
 <div class="section" id="important-phase-or-polarity-switching">
 <h3>Important! Phase (or polarity) switching<a class="headerlink" href="#important-phase-or-polarity-switching" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section of our documentation on phase or polarity switching is currently a bit confusing. The “keep it simple” approach didn’t quite translate to this section of the documentation unfortunately. We’re reviewing the phase switching options at the moment and should have this updated very soon.</p>
+<p>In the meantime, for those looking to convert existing turntables, most have an existing central wiper ring (or similar) with gaps 180 degrees apart to provide the bridge track power and automatically reverse the polarity. This will continue to work with Turntable-EX, meaning the dual relay board is not required.</p>
+<p><strong>We still recommend you read on as getting the phase/polarity right when the turntable is rotating is important.</strong></p>
+</div>
 <p>An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>

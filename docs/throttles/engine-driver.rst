@@ -106,6 +106,7 @@ This is the one Steve Todd uses himself on a lanyard. It leaves both hands free 
 `Wireless Bluetooth Gamepad/Joystick Controller <https://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119>`_
 
 |
+
 And here is another Bluetooth controller that provides extra function buttons and you can hold by placing your finger in the ring.
 
 .. image:: ../_static/images/throttles/bt_controller2.jpg
@@ -129,3 +130,5 @@ And here is another Bluetooth controller that provides extra function buttons an
 Footnotes
 ---------
 .. [#] the Web server is required if you want to show the Loco images in Engine Deiver.
+
+* The WiThrottle Protocol is the proprietary protocol developed by Matt Hoffman at https://www.WiThrottle.com

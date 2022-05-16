@@ -88,15 +88,15 @@ Screenshots
 Operation
 ===========
 
+https://enginedriver.mstevetodd.com/operation
+
+https://enginedriver.mstevetodd.com/videos
 
 .. TODO:: Give some setup tutorial here. Need a video to match since ED is the top used software
 
-Footnotes
----------
-.. [#] the Web server is required if you want to show the Loco images in Engine Deiver.
-
 Using a Bluetooth Controller
 =============================
+This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. You can use these as a start and customize them for your own use:
 
 .. image:: ../_static/images/throttles/bt_controller1.jpg
    :alt: Bluetooth Lanyard Controller
@@ -105,7 +105,17 @@ Using a Bluetooth Controller
 
 `Wireless Bluetooth Gamepad/Joystick Controller <https://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119>`_
 
-This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. You can use these as a start and customize them for your own use:
+|
+And here is another Bluetooth controller that provides extra function buttons and you can hold by placing your finger in the ring.
+
+.. image:: ../_static/images/throttles/bt_controller2.jpg
+   :alt: Ring Shape Hand Controller
+   :scale: 50%
+   :align: center
+   
+`Walmart <https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&selectedSellerId=101036302>`_
+
+`AliExpress <https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20220515220821&isPremium=y&SearchText=%22r1%22+bluetooth+game+controller&spm=a2g0o.productlist.1000002.0>`_
 
 .. Note:: From Steve: I set speedsteps to 10, change amount to 1, repeat delay to 9999, horizontal switching layout, throttle web view. I acquire loco/consist using my phone, then dim & lock and put phone in my holster. Then I can "bump" the joystick up and down 3,2,1,0,-1,-2,-3, easily keeping track of the current "notch". 1 is coupling speed, 2 is switching/yard speed, 3 is mainline. If I'm at home, I put the Conductor view in the web and I have my work for each location.
 
@@ -114,11 +124,8 @@ This is the one Steve Todd uses himself on a lanyard. It leaves both hands free 
    :scale: 15%
    :align: center
 
-And here is another Bluetooth controller that provides extra function buttons and you can hold by placing your finger in the ring.
+====
 
-.. image:: ../_static/images/throttles/bt_controller2.jpg
-   :alt: Ring Shape Hand Controller
-   :scale: 50%
-   :align: center
-   
-https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&selectedSellerId=101036302
+Footnotes
+---------
+.. [#] the Web server is required if you want to show the Loco images in Engine Deiver.

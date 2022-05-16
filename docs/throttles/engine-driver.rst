@@ -7,7 +7,11 @@ Engine Driver
    :scale: 60%
    :align: left
 
-**Engine Driver** is an Android App that uses the WiThrottle Protocol to either connect directly to the DCC++ EX Command Station or connect to the JMRI WiThrottle Server via WiFi. If you connect Engine Driver to JMRI, you connect to the computer running JMRI via WiFi and connect the JMRI computer to the Command Station using a USB cable. If you connect Engine Driver directly to DCC++ EX, you will to add a WiFi option to your DCC++ EX Command Station as explained here: :doc:`WiFi Setup <../get-started/wifi-setup>`.
+**Engine Driver** (ED) is an Android App that uses the WiThrottle Protocol to either connect directly to the DCC++ EX Command Station or connect to the JMRI WiThrottle Server via WiFi. 
+
+If you wish to connect Engine Driver to JMRI, you need to start the wiThrottle Server and (optionally [#]_) the Web Server in JMRI on the computer running JMRI. The JMRI computer must be connected to the DCC++ EX Command Station using a USB cable. 
+
+If you wish to connect Engine Driver directly to DCC++ EX, you need to add a WiFi option to your DCC++ EX Command Station as explained here: :doc:`WiFi Setup <../get-started/wifi-setup>`.
 
 .. _ed-platforms:
 
@@ -22,7 +26,7 @@ Platforms
 
 Please visit the Engine Driver Website: https://enginedriver.mstevetodd.com/
 
-`Get Cab Engineer from the Google Play Store <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_
+`Get 'Engine Driver Throttle' from the Google Play Store <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_
 
    .. raw:: html
       
@@ -30,18 +34,25 @@ Please visit the Engine Driver Website: https://enginedriver.mstevetodd.com/
 
 .. _ed-features:
 
-Features
-==========
-* New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with DCC++EX 
-* New 'Discover Server' Detect, Select & Connect to WiFi enabled Command Stations
-* New  DCC++EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons
-* New 'Roster Server' download Engine ID's & function keys from the Command Station
-* New 'Virtual Engine Sounds' {Bell, Horn, Short Horn, Mute} for motor only engines on first two throttles
+Standard Features (all wiThrottle servers)
+==========================================
+* Control one to six locomotives or consists
 * Speed and direction control
 * Up to 29 DCC functions
-* One to six locomotives or consists 
 * Create and edit consists (software-defined)
-* You can also control layout power, turnouts, routes, and access JMRI web panels and windows.
+* Control layout power, turnouts, routes, and access JMRI web panels and windows
+* 'Discover Server' Detect, Select & Connect to WiFi enabled Command Stations
+* 'Roster Server' download Engine ID's & function keys from the Command Station
+* 'Virtual Engine Sounds' {Bell, Horn, Short Horn, Mute} for motor only decoders, on first two throttles
+* Able to use inexpensive bluetooth gamepads for tactile control
+* Multiple theme, colours and throttle layout options 
+
+DCC++ Specific or advantageous Features
+=======================================
+* DCC++EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons
+* Able to select local images for roster locos
+* New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with DCC++EX
+
 
 :ref:`throttles/driveaway:using the "driveaway(tm)" feature`
 
@@ -79,6 +90,10 @@ Operation
 
 
 .. TODO:: Give some setup tutorial here. Need a video to match since ED is the top used software
+
+Footnotes
+---------
+.. [#] the Web server is required if you want to show the Loco images in Engine Deiver.
 
 Using a Bluetooth Controller
 =============================

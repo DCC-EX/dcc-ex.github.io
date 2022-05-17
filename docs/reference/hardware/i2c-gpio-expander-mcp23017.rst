@@ -2,10 +2,9 @@
 MCP23017 I²C GPIO expander
 ***************************
 
-The MCP23017 chip is a port expander with virtually identical ports
-compared to the standard Ports on an Arduino. It brings you 16
-General Purpose Input/Output pins (GPIO) using an I²C interface as well as comprehensive interrupt
-control.
+The MCP23017 chip is a port expander with virtually identical ports compared 
+to the standard Ports on an Arduino. It brings you 16 General Purpose Input/Output 
+pins (GPIO) using an I²C interface as well as comprehensive interrupt control.
 
 .. sidebar:: On this page
 
@@ -38,34 +37,25 @@ external hardware).
     :class: no-scaled-link
 
 
-Each module has an address associated with
-it, which is generally either 0x20, 0x21, 0x22 or 0x23. By default, the
-module is usually 0x20. The address will only need to be changed if you
-have more than one module, in which case the second one will have to be
-set to address 0x21, usually by moving jumpers on the module or by
-soldering across pads on the circuit board. Refer to the documentation
+Each module has an address associated with 
+it, which will be in the range from 0x20 to 0x27. By default, the
+module is usually 0x20. The address **must** be changed to prevent conflicts with the
+pre-defined MCP23017 modules, usually by moving jumpers on the module or 
+by soldering across pads on the circuit board. Refer to the documentation
 for your own board for details.
 
-When used for inputs (sensors or switches), the sensor/switch is usually
-connected between the nominated pin and the GND (ground) signal. When
-the sensor/switch activates, it connects the pin to GND, and the device
-detects a small current flow. When the sensor/switch deactivates, the
-current stops flowing. This behaviour is the same as with the Arduino
-digital GPIO pins
+.. seealso:: The address settings can be found in the :ref:`address table`.
 
-Setup of the module
---------------------
+Expander wiring examples
+-------------------------
+In DCC-EX, two MCP23017 modules are pre-configured: 
 
-In DCC-EX, two MCP23017 modules are pre-configured, one is address 0x20
-and uses VPINs 164-179. The second is address 0x21 and uses
-VPINs 180-195.
+   #. Address **0x20** configured with VPINs **164-179** 
+   #. Address **0x21** configured with VPINs **180-195**
 
-This diagram also shows an infra-red sensor (3-pin device) connected to
-GPIO 0 of the MCP23017, and a push-button (2-pin) connected to GPIO1.
-
-Also generally available is the MCP23017 in IC form (28-pin DIL
-package). This can be mounted on a breadboard for use, as shown below,
-or on stripboard if you want a more permanent solution.
+Both diagrams show an infra-red sensor (3-pin device) connected to
+GPIO 0 of the MCP23017, and a push-button (2-pin) connected to GPIO 1.
+In these examples the MCP23017 is connected to an Arduino Mega.
 
 .. image:: ../../_static/images/i2c/ArduinoMega_MCP23017.png
     :alt: Diagram: Arduino Mega, MCP23017 Expansion Board with IR-Sensor and Push-button
@@ -74,6 +64,13 @@ or on stripboard if you want a more permanent solution.
 .. image:: ../../_static/images/i2c/ArduinoMega_MCP23017_breadboard.png
     :alt: Diagram: Arduino Mega, MCP23017 IC with IR-Sensor and Push-button
     :height: 400px
+
+When used for inputs (sensors or switches), the sensor/switch is usually
+connected between the nominated pin and the GND (ground) signal. When
+the sensor/switch activates, it connects the pin to GND, and the device
+detects a small current flow. When the sensor/switch deactivates, the
+current stops flowing. This behaviour is the same as with the Arduino
+digital GPIO pins
 
 Setup and use in EXRAIL
 ------------------------
@@ -122,11 +119,33 @@ MCP23017, third pin).
 
 .. code-block:: C
    
-   THROW(26) // Throw the turnout with ID 26
-   CLOSE(26) // Close the turnout with ID 26
+   THROW(26) // Throw the turnout with ID:26 | vPIN:166
+   CLOSE(26) // Close the turnout with ID:26 | vPIN:166
 
-**Important note:** Please take in account that the pin stays high, therefor not
-suitable for all turnout drivers!!
+.. warning:: Please take in account that the pin stays high, therefor not suitable for all turnout drivers!!
+
+.. 
+   .. code-block:: C
+      
+      /**********************************************
+      * HOW TO SETUP A DUAL COIL TURNOUT WITH PULSE *
+      **********************************************/
+      VIRTUAL_TURNOUT(2233,"description")
+      ONTHROW(2233) // THROW Turnout
+         SET(166) 
+         DELAY(150) // pulse length 150ms
+         UNSET(166) 
+      DONE
+
+      ONCLOSE(2233)
+         SET(167) 
+         DELAY(150) // pulse length 150ms
+         UNSET(167)
+      DONE
+
+
+ .. 
+    .. see-also:: EX-RAIL cookbook example 
 
 Setup signals
 ~~~~~~~~~~~~~~~~~~
@@ -230,6 +249,8 @@ can be reached by defining the modules in a file named myHal.cpp.
 Besides the following example, there is an example file available in the
 DCC-EX direcory, named myHAL.cpp_example.txt.
 
+. NOTE:: To prevent conflicts with pre-configured I²C modules, the address must be above 0#21
+
 .. code-block:: C
 
    #include "IODevice.h" // Always required when defining I/O
@@ -245,7 +266,7 @@ DCC-EX direcory, named myHAL.cpp_example.txt.
    //                    │    │  I2C address of module=0x20
    //                    │    │   │
    //                    V    V   V
-   MCP23017 gpioModule5(330, 16, 0x20);
+   MCP23017 gpioModule3(330, 16, 0x2);
    // ======================================================
    // Every module needs its own unique reference
    //                     reference number
@@ -284,6 +305,9 @@ DCC-EX direcory, named myHAL.cpp_example.txt.
    Output::create(305, 305, 1);
    }
 
+
+.. _address table:
+
 I²C Address table
 ------------------
 
@@ -304,9 +328,8 @@ Specifications & Features
 
 - 16-bit remote bidirectional I/O port
    - I/O pins default to input
-- Up to 8 devices on the bus
-- Configurable interrupt output pins:
-   - Configurable as 
+- Up to 8 devices on the bus (max. 128 additional GOPIO pins)
+- Interrupt output pins, configurable as:
       - Active-high,
       - Active-low
       - Open-drain
@@ -324,10 +347,10 @@ Specifications & Features
 
 IC Packages & Pin Out
 ----------------------
-- 28-pin SPDIP, 300 mil Body
-- 28-pin SOIC, Wide, 7.50 mm Body
-- 28-pin SSOP, 5.30 mm Body
-- 28-pin QFN, 6 x 6 mm Body 
+- 28-pin SOIC, Wide, 7.50mm body
+- 28-pin SPDIP, 300 mil body
+- 28-pin SSOP, 5.30mm body
+- 28-pin QFN, 6mm x 6mm body 
 
 
 .. image:: ../../_static/images/i2c/mcp23017_packages.png

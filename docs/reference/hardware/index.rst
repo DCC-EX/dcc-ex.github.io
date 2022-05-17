@@ -15,6 +15,7 @@ Hardware
     i2c-gpio-expander-mcp23008
     i2c-gpio-expander-mcp23017
     i2c-gpio-expander-pcf8574
+    i2c-pwm-servo-board-pca9685
     servo-module
     power-supplies
     accessory-controllers

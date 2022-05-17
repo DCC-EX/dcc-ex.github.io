@@ -420,7 +420,7 @@
 <li><p>Current state of engine functions (as known by commands issued since power on) is stored by the CommandStation</p></li>
 <li><p>All functions within a group get set all at once per NMRA DCC standards.</p></li>
 <li><p>Using the new F command, the command station knows about the previous
-settings in the same group and will not, for example, unset F2 because you change F1. If however, you have never set F2, then changing F1 WILL unset F2.</p></li>
+settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2.</p></li>
 </ul>
 <p><strong>CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">1|0&gt;</span></code></p>
 <div class="section" id="to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1">
@@ -563,11 +563,25 @@ settings in the same group and will not, for example, unset F2 because you chang
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC++ EX command</p></li>
 </ul>
-</div>
-<div class="section" id="returns-none">
-<h4>RETURNS: NONE<a class="headerlink" href="#returns-none" title="Permalink to this headline">¶</a></h4>
+<p><strong>RETURNS:</strong> &lt;l CAB SLOT SPEED/DIR FUNC&gt;</p>
+<p>Where:</p>
 <ul class="simple">
-<li><p>CAB Functions do not have a Return</p></li>
+<li><p>CAB is the loco DCC address/CAB ID.</p></li>
+<li><p>SLOT is the slot assignment for the CAB.</p></li>
+<li><p>SPEED/DIR is the 8 bit speed byte:</p>
+<ul>
+<li><p>Bit 7 provides the direction (1 = Fwd, 0 = Rev).</p></li>
+<li><p>Bits 0 to 6 provide the speed (0 - 128).</p></li>
+</ul>
+</li>
+<li><p>FUNC is the bit pattern for the functions that are set.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Strictly speaking, this is not a response, it’s a broadcast of status and can arise when any throttle is changed by someone else. Thus there is no guarantee that you will get the message if your throttle command changed nothing, nor that the next message you receive will be from your most recent throttle command.</p>
+</div>
+<p>Other notes:</p>
+<ul class="simple">
 <li><p>CAB Functions do not get stored in the DCC++ EX CommandStation</p></li>
 <li><p>Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on.</p></li>
 </ul>

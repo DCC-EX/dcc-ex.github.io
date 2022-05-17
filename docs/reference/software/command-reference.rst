@@ -39,7 +39,7 @@ The following commands provide control over power to the MAIN and PROG tracks (v
 
 ``<0|1 MAIN|PROG|JOIN>`` - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together
 
-  .. code-block:: none
+  .. code-block::
 
       RETURNS: <pX [MAIN|PROG|JOIN]> where "X" is 0 for off and 1 for on. MAIN, PROG and JOIN are returned when you invoke commands on just one track.
 
@@ -62,7 +62,7 @@ Examples:
 
 ``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
 
-  .. code-block:: none
+  .. code-block::
 
       RETURNS: <c "CurrentMAIN" CURRENT C "Milli" "0" MAX_MA "1" TRIP_MA >
       
@@ -98,7 +98,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 * ``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
 * ``>`` = I am the end of this command
 
-.. code-block:: none
+.. code-block::
 
    RETURNS: "<T 1 20 1>" if the command was successful, meaning :
    "<" = Begin DCC++ EX command
@@ -116,7 +116,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 
 * ``<- [CAB]>`` - (Minus symbol as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
 
-.. code-block:: none
+.. code-block::
 
    RETURNS: NONE
 
@@ -129,12 +129,12 @@ Examples:
 
 * ``<!>`` - Emergency Stop ALL TRAINS.  (But leaves power to the track turned on)
 
-.. code-block:: none
+.. code-block::
 
        RETURNS: NONE
 
 CAB FUNCTIONS
---------------
+______________
 
 There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC++ EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
 
@@ -146,7 +146,7 @@ There are two formats for setting CAB functions, the DCC++ Classic legacy method
 * Current state of engine functions (as known by commands issued since power on) is stored by the CommandStation  
 * All functions within a group get set all at once per NMRA DCC standards.
 * Using the new F command, the command station knows about the previous
-  settings in the same group and will not, for example, unset F2 because you change F1. If however, you have never set F2, then changing F1 WILL unset F2.     
+  settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2.     
 
 **CAB Functions format** is ``<F CAB FUNC 1|0>``
 
@@ -269,7 +269,6 @@ To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 * ``<`` = Begin DCC++ EX command
 * ``f`` = (lower case f) This command is for a CAB function.
 * ``BYTE1:`` 223
@@ -288,16 +287,30 @@ To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 
 * ``>`` = End DCC++ EX command  
 
-RETURNS: NONE
-^^^^^^^^^^^^^^^
+**RETURNS:** <l CAB SLOT SPEED/DIR FUNC>
 
+Where:
 
-* CAB Functions do not have a Return
+* CAB is the loco DCC address/CAB ID.
+* SLOT is the slot assignment for the CAB.
+* SPEED/DIR is the 8 bit speed byte:
+
+  * Bit 7 provides the direction (1 = Fwd, 0 = Rev).
+  * Bits 0 to 6 provide the speed (0 - 128).
+
+* FUNC is the bit pattern for the functions that are set.
+
+.. note:: 
+
+  Strictly speaking, this is not a response, it's a broadcast of status and can arise when any throttle is changed by someone else. Thus there is no guarantee that you will get the message if your throttle command changed nothing, nor that the next message you receive will be from your most recent throttle command.
+
+Other notes:
+
 * CAB Functions do not get stored in the DCC++ EX CommandStation
 * Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on. 
 
 Stationary Accessory Decoder & Turnout Commands
--------------------------------------------------
+________________________________________________
 
 DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
 
@@ -321,7 +334,7 @@ Here is a spreadsheet in .XLSX format to help you: :ref:`Decoder Address Decoder
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 
 Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * ``<`` = Begin DCC++ EX command
 * ``a`` (lower case a) this command is for a Accessory Decoder
@@ -330,7 +343,7 @@ Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
 * ``>`` = End DCC++ EX command
 
 Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * ``<`` = Begin DCC++ EX command
 * ``a`` (lower case a) this command is for a Accessory Decoder
@@ -404,7 +417,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   * Before Version 3.2.0: Returns: ``<H ID ADDRESS SUBADDRESS THROWN>`` for each defined DCC Accessory Turnout or ``<X>`` if no turnouts have beed defined or saved.  
   * After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the ``THROWN`` state (1=thrown, 0=closed) appended.
 
-      .. code-block:: none
+      .. code-block::
 
           RETURNS: One of the following for each defined turnout or <X> if no turnouts defined.
           <H ID DCC ADDRESS SUBADDRESS THROWN>     -- DCC Accessory Turnouts
@@ -630,13 +643,13 @@ Storing and Erasing Turnouts, Sensors and Outputs in EEPROM
 
  ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
 
-  .. code-block:: none
+  .. code-block::
 
       RETURNS: <e nTurnouts nSensors>
 
  ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
 
-  .. code-block:: none
+  .. code-block::
 
       RETURNS: <0> EEPROM Empty
 
@@ -647,7 +660,7 @@ Engine Decoder Programming Commands
 ======================================
 
 PROGRAMMING-MAIN TRACK
------------------------
+_______________________
 
 WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -676,7 +689,7 @@ Writes, without any verification, a single bit within a Configuration Variable B
   * RETURNS: NONE
 
 PROGRAMMING-PROGRAMMING TRACK
--------------------------------
+______________________________
 
 .. NOTE:: By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little "jumps" you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an "ACK" (acnowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
@@ -685,7 +698,7 @@ READ LOCO ADDRESS ON PROGRAMMING TRACK
 
   ``<R>`` Upper Case R : Read Loco address (programming track only)
 
-  .. code-block:: none
+  .. code-block::
 
       RETURNS: <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
 
@@ -794,17 +807,17 @@ Diagnostic Commands
 =====================
 
 Status
----------
+_______
 
 ``<s>`` Lowercase "s": DCC++ EX CommandStation Status
 
-  .. code-block:: none
+  .. code-block::
 
        RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
        Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
 
 "D" Commands
--------------
+_____________
 
 .. Note:: 1 and 0 and ON and OFF can be used interchangeably in DCC++ EX
 
@@ -838,7 +851,7 @@ Status
       17:00:10.358 -> <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
 
 DECODER TEST
--------------
+_____________
 
 These following commands are detailed above but are worth repeating here. The ``<R>`` command will attempt to read the decoder on the service (programming) track and try to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn't moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the ``<D ACK ON>`` command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.
 
@@ -886,7 +899,7 @@ To quote the relevant section from NMRA S 9.2.3:
 ``<D PROGBOOST>``  By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
  
 SEND PACKET TO THE TRACK
---------------------------
+_________________________
 
 .. Warning:: THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER
 

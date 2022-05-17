@@ -78,12 +78,13 @@ DCC++ EX is the organization developing and maintaining several products that to
 * **CommandStation-EX** - the latest take on the DCC++ command station for controlling your model railroad. DCC-EX runs on Arduino boards, and includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.
 * **WebThrottle-EX** - a simple web based controller for your DCC++ and DCC-EX command station.
 * **Installer-EX** - an installer that takes care of downloading and installing DCC++ or DCC-EX firmware onto your hardware setup.
+* **Turntable-EX (Beta)** - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection.
 * **BaseStation-Classic** - the original DCC++ software, packaged in a stable release. No active development, bug fixes only.
 
 A basic DCC++ EX hardware setup can use easy to find, widely available Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:
 
 * simultaneous control of multiple locomotives
-* 2 and 4 byte locomotive addressing
+* 1 and 2 byte locomotive addressing
 * 28 and 128 throttle speed steps
 * Activate/de-activate all accessory function addresses 0-2048
 * Control of all cab functions F0-F28 and F29-F68

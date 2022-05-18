@@ -96,7 +96,7 @@ https://enginedriver.mstevetodd.com/videos
 
 Using a Bluetooth Controller
 =============================
-This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. You can use these as a start and customize them for your own use:
+This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. His prefered settings are listed in the note bwlow. You can use these as a start and customize them for your own use:
 
 .. image:: ../_static/images/throttles/bt_controller1.jpg
    :alt: Bluetooth Lanyard Controller

@@ -57,11 +57,11 @@ package). This can be mounted on a breadboard for use, as shown below,
 or on stripboard if you want a more permanent solution.
 
 .. image:: ../../_static/images/i2c/ArduinoMega_MCP23008_expander_board.png
-    :alt: Diagram: Arduino Uno, MCP23008 Expander board with IR-Sensor and Push-button
+    :alt: Diagram: Arduino Mega, MCP23008 Expander board with IR-Sensor and Push-button
     :height: 320px
 
 .. image:: ../../_static/images/i2c/ArduinoMega_MCP23008_bread_board.png
-    :alt: Diagram: Arduino Uno, MCP23008 IC on Bread Board with IR-Sensor and Push-button
+    :alt: Diagram: Arduino Mega, MCP23008 IC on Bread Board with IR-Sensor and Push-button
     :height: 280px
 
 When used for inputs (sensors or switches), the sensor/switch is usually
@@ -76,7 +76,7 @@ GPIO use in EXRAIL
 
 MCP23008 modules are NOT pre-configured in DCC-EX and therefor they **must** be defined and configured in myHal.cpp (tinkerer level).  
 
-.. seealso:: :ref:`configuring expanders via myHal.cpp`
+.. seealso:: :ref:`configuring mcp23008 via myHal.cpp`
 
 Inputs in EX-RAIL
 ~~~~~~~~~~~~~~~~~~
@@ -269,10 +269,10 @@ sent by DCC++ EX over the serial output:
    <H 3230 0> -- Deactivation
 
 
-.. _configuring expanders via myHal.cpp:
+.. _configuring mcp23008 via myHal.cpp:
 
-Configuring a module and setup GPIO in **myHAL.cpp**
------------------------------------------------------
+Configure and setup MCP23008 GPIO modules in **myHal.cpp**
+-----------------------------------------------------------
 
 Setup and configure MCP23008 modules is done in the file *myHal.cpp*.
 If the file is not present in the Commandstation-EX folder, create the file 

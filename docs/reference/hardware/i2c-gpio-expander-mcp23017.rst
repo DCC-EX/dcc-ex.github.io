@@ -172,6 +172,7 @@ to vPIN 198, 199, 200. The second command defines a 2 aspect signal (Red and Gre
 The first value equals RED and is always the ID of the defined signal.
 
 .. code-block:: C
+
    GREEN(198) // Set defined signal green
    AMBER(198) // Set defined signal to amber
    RED(198)   // Set defined signal to red
@@ -265,10 +266,10 @@ sent by DCC++ EX over the serial output:
    <H 3198 1> -- Activation
    <H 3198 0> -- Deactivation
 
-.. _configuring expanders via myHal.cpp:
+.. _configuring mcp23017 via myHal.cpp:
 
-Configuring a module and setup GPIO in **myHAL.cpp**
------------------------------------------------------
+Configure and setup MCP23017 GPIO modules in **myHAL.cpp**
+-----------------------------------------------------------
 
 Setup and configure extra MCP23017 modules is done in the file *myHal.cpp*.
 If the file is not present in the Commandstation-EX folder, create the file 

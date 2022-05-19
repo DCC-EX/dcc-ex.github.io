@@ -321,18 +321,41 @@ reStructuredText is a markdown type language, for typesetting documents from web
 </div>
 <div class="section" id="editing">
 <h3>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h3>
-<p>You will also need to choose a text editor. Yes, any text editor will do, even the most simple one, but they will not provide editing help. We suggest you use the free VSC (Visual Studio Code) which provides additional components that will make your editing easier with syntax highlighting, text snippets, and live preview of the rendering of the file, as well as integration with GitHub. Using a simple text editor will require you handling the Git integration yourself.</p>
-<p>Download VSC <a class="reference external" href="https://code.visualstudio.com/download">here</a></p>
-<p>Install the following extensions:
-rst</p>
+<p>You will also need to choose a text editor. Yes, any text editor will do, even the most simple one, but they will not provide editing help. We suggest you use the free VSCode (Visual Studio Code) which provides additional components that will make your editing easier with syntax highlighting, text snippets, and live preview of the rendering of the file, as well as integration with GitHub. Using a simple text editor will require you handling the Git integration yourself.</p>
+<p>Download VSCode <a class="reference external" href="https://code.visualstudio.com/download">here</a></p>
+<p>Install the following extensions:</p>
+<ul class="simple">
+<li><p>reStructuredText by LeXtudio Inc.</p></li>
+<li><p>reStructuredText Syntax highlighting by Trond Snekvik.</p></li>
+</ul>
 <p>The final website will be rendered from the rst text files using Sphinx, which you also need to install with some options which you’ll find in the next paragraph.</p>
+<div class="section" id="vscode-rst-warnings">
+<h4>VSCode rst warnings<a class="headerlink" href="#vscode-rst-warnings" title="Permalink to this headline">¶</a></h4>
+<p>Note you will likely encounter various syntax warnings in VSCode using the recommended extensions, and these should simply be ignored.</p>
+<p>To ignore these, navigate to Settings in VSCode (&lt;Ctrl + ,&gt;), enter “restructured” in the search bar, and click on “Edit in settings.json”.</p>
+<p>Add this section:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;restructuredtext.linter.doc8.extraArgs&quot;: [
+    &quot;--ignore D001&quot;,
+    &quot;--ignore D002&quot;,
+    &quot;--ignore D004&quot;
+]
+</pre></div>
+</div>
+<p>Save and close the settings, and the irrelevant warnings should no longer bother you.</p>
+</div>
 </div>
 <div class="section" id="id2">
 <h3>Sphinx<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Sphinx is a transformation tool, taking rst formatted documents and turning them into a static html website, PDF, or LaTex documents.</p>
-<p>Sphinx needs Python v3, so if you don’t have python installed, it’s time to do this now.
-Install python how-to —TODO: to be done —</p>
-<p>Once this is done you should also add the following extension to VSC — to be done — in order to enable the live preview of the documentation you write.</p>
+<p>Sphinx needs Python v3, so if you don’t have python installed, it’s time to do this now.</p>
+<p>The simplest way to install Python on Windows is via the Microsoft Store. Install the latest version of Python 3 available.</p>
+<div class="section" id="live-preveiew">
+<h4>Live preveiew<a class="headerlink" href="#live-preveiew" title="Permalink to this headline">¶</a></h4>
+<p>The reStructuredText extension installed with VSCode allows live previewing of the web pages.</p>
+<p>When installing you will be prompted to choose the preview method, with the “Esbonio language server” being the better option of the two, albeit more resource intensive as it will generate the preview every time you save.</p>
+<p>Note, however, that the Esbonio server will only generate live previews of the pages you are actively editing, and therefore it will not give you a complete updated view of the entire website.</p>
+<p>Refer to the <a class="reference internal" href="website.html"><span class="doc">Documentation</span></a> contributing page for more info on generating reliable local previews.</p>
+</div>
 </div>
 <div class="section" id="images">
 <h3>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>

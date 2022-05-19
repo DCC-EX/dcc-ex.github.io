@@ -45,7 +45,7 @@ MCP23017 modules, usually by moving jumpers on the module or
 by soldering across pads on the circuit board. Refer to the documentation
 for your own board for details.
 
-.. seealso:: The address settings can be found in the :ref:`address table`.
+.. seealso:: The address settings can be found in the :ref:`MCP23017 address table`.
 
 Expander wiring examples
 -------------------------
@@ -341,7 +341,7 @@ In the next example, we will add a third MCP23017 module with address 0x22 wih v
    Output::create(203, 203, 1);
    }
 
-.. _address table:
+.. _MCP23017 address table:
 
 I²C Address table
 ------------------

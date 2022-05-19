@@ -44,7 +44,7 @@ predefined MCP23017 modules, usually by moving jumpers on the module or
 by soldering across pads on the circuit board. Refer to the documentation
 for your own board for details.
 
-.. seealso:: The address settings can be found in the :ref:`address table`.
+.. seealso:: The address settings can be found in the :ref:`MCP23008 address table`.
 
 Expander wiring examples
 -------------------------
@@ -52,7 +52,7 @@ Expander wiring examples
 This diagram shows an infra-red sensor (3-pin device) connected to
 GPIO 0 of the MCP23008, and a push-button (2-pin) connected to GPIO1.
 
-Also generally available is the MCP23008 in IC form (28-pin DIL
+Also generally available is the MCP23008 in IC form (18-pin DIL
 package). This can be mounted on a breadboard for use, as shown below,
 or on stripboard if you want a more permanent solution.
 
@@ -344,7 +344,7 @@ In the next example, we will add a MCP23008 module with address 0x24 wih vpins 2
    Output::create(235, 235, 1);
    }
 
-.. _address table:
+.. _MCP23008 address table:
 
 I²C address table
 ------------------

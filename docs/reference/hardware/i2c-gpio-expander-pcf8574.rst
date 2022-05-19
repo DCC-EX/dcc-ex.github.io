@@ -42,7 +42,7 @@ predefined MCP23017 modules, usually by moving jumpers on the module or
 by soldering across pads on the circuit board. Refer to the documentation
 for your own board for details.
 
-.. seealso:: The address settings can be found in the :ref:`address table`.
+.. seealso:: The address settings can be found in the :ref:`PCF8574 address table`.
 
 Expander wiring examples
 -------------------------
@@ -50,17 +50,17 @@ Expander wiring examples
 This diagram shows an infra-red sensor (3-pin device) connected to
 GPIO 0 of the PCF8574, and a push-button (2-pin) connected to GPIO1.
 
-Also generally available is the PCF8574 in IC form (28-pin DIL
+Also generally available is the PCF8574 in IC form (16-pin DIL
 package). This can be mounted on a breadboard for use, as shown below,
 or on stripboard if you want a more permanent solution.
 
 .. image:: ../../_static/images/i2c/ArduinoMega_PCF8574_expander_board.png
     :alt: Diagram: Arduino Mega, PCF8574 Expander board with IR-Sensor and Push-button
-    :height: 320px
+    :height: 250px
 
 .. image:: ../../_static/images/i2c/ArduinoMega_PCF8574_bread_board.png
     :alt: Diagram: Arduino Mega, PCF8574 IC on Bread Board with IR-Sensor and Push-button
-    :height: 280px
+    :height: 250px
 
 When used for inputs (sensors or switches), the sensor/switch is usually
 connected between the nominated pin and the GND (ground) signal. When
@@ -342,7 +342,7 @@ In the next example, we will add a PCF8574 module with address 0x24 wih vpins 22
    Output::create(235, 235, 1);
    }
 
-.. _address table:
+.. _PCF8574 address table:
 
 I²C address table
 ------------------
@@ -399,5 +399,8 @@ IC Packages & Pin Out
 Datasheet 
 ---------
 
-Microchip:
-https://ww1.microchip.com/downloads/en/DeviceDoc/PCF8574-MCP23S08-Data-Sheet-20001919F.pdf
+NXP:
+https://www.nxp.com/docs/en/data-sheet/PCF8574_PCF8574A.pdf
+
+Texas Instruments:
+https://www.ti.com/lit/ds/symlink/pcf8574.pdf

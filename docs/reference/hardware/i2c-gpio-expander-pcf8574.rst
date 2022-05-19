@@ -9,11 +9,11 @@ control.
 .. sidebar:: On this page
 
    .. contents:: 
-      :depth: 2
+      :depth: 3
       :local:
    
 PCF8574 Expander modules
--------------------------
+=========================
 
 The PCF8574 is an extender module that has 8 pins for general purpose
 I/O (GPIO). Like the Arduino input/output pins on the Arduino, you can
@@ -45,7 +45,7 @@ for your own board for details.
 .. seealso:: The address settings can be found in the :ref:`PCF8574 address table`.
 
 Expander wiring examples
--------------------------
+_________________________
 
 This diagram shows an infra-red sensor (3-pin device) connected to
 GPIO 0 of the PCF8574, and a push-button (2-pin) connected to GPIO1.
@@ -70,14 +70,14 @@ current stops flowing. This behaviour is the same as with the Arduino
 digital GPIO pins
 
 GPIO use in EXRAIL
--------------------
+___________________
 
 PCF8574 modules are NOT pre-configured in DCC-EX and therefor they **must** be defined and configured in myHal.cpp (tinkerer level).  
 
 .. seealso:: :ref:`configuring PCF8574 via myHal.cpp`
 
 Inputs in EX-RAIL
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 An sensor or switch may be connected at vPIN164 (PCF8574 first pin). That
 can be utilized in EXRAIL as follows:
 
@@ -100,7 +100,7 @@ can be utilized in EXRAIL as follows:
    ENDIF
 
 Outputs in EX-RAIL
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 An output may be connected at vPIN165 (PCF8574 second pin). That can be
 utilized in EXRAIL as follows:
 
@@ -110,7 +110,7 @@ utilized in EXRAIL as follows:
    RESET(231) // Zero an output pin
 
 Turnouts in EX-RAIL
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 If a pin is used as Turnout, it needs to be setup in EXRAIL as follows:
 
 .. code-block:: C
@@ -159,7 +159,7 @@ turnout were the ID is equal to the vPin.
    Output::create(235, 235, 1);
 
 Signals in EX-RAIL
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 A set of 2 or 3 pins can be used as signal. Setup in EXRAIL as follows:
 
 .. code-block:: C
@@ -178,17 +178,15 @@ The first value equals RED and is always the ID of the defined signal.
    RED(230)   // Set defined signal to red
 
 Setup with Serial Monitor or JMRI console
------------------------------------------- 
+__________________________________________
 The Serial Monitor in the Arduino IDE can be used to setup, test and configure I/O 
 connected to the DCC-EX Command Station. 
 
 This can also be achieved from within JMRI. There is a tool called JMRI console. In 
 the next section where it states "serial monitor" you may also read "JMRI console".
  
-
-
 Setup inputs in serial monitor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 An input pin may be configured using the DCC++ EX Sensor commands, as
 follows:
 
@@ -209,7 +207,7 @@ sent by DCC++ EX over the serial output:
    <q 2028> // Deactivation
 
 Setup outputs in serial monitor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
 An output pin may be configured using the DCC++ EX Output commands, as
 follows:
@@ -237,7 +235,7 @@ sent by DCC++ EX over the serial output
    <Y 2030 0> -- Deactivated
 
 Setup turnouts in serial monitor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. 
    Output::create(230, 230, 0);
    Output::create(231, 231, 0);
@@ -269,8 +267,8 @@ sent by DCC++ EX over the serial output:
 
 .. _configuring PCF8574 via myHal.cpp:
 
-Configure and setup PCF8574 GPIO modules in **myHal.cpp**
-----------------------------------------------------------
+Configure the modules in **myHal.cpp**
+________________________________________________
 
 Setup and configure PCF8574 modules is done in the file *myHal.cpp*.
 If the file is not present in the Commandstation-EX folder, create the file 
@@ -345,7 +343,7 @@ In the next example, we will add a PCF8574 module with address 0x24 wih vpins 22
 .. _PCF8574 address table:
 
 I²C address table
-------------------
+__________________
 
 ======= === === === ========
 PCF8574             PCF8574A
@@ -361,7 +359,7 @@ Address A2  A1  A0  Address
 ======= === === === ========
 
 Specifications & Features
---------------------------
+__________________________
 
 - 8-bit remote bidirectional I/O port
    - I/O pins default to input
@@ -384,7 +382,7 @@ Specifications & Features
 
 
 IC Packages & Pin Out
-----------------------
+______________________
 - 18-pin SPDIP, 300 mil Body
 - 18-pin SOIC, Wide, 7.50 mm Body
 - 20-pin SSOP, 5.30 mm Body
@@ -397,7 +395,7 @@ IC Packages & Pin Out
     
 
 Datasheet 
----------
+__________
 
 NXP:
 https://www.nxp.com/docs/en/data-sheet/PCF8574_PCF8574A.pdf

@@ -9,11 +9,11 @@ pins (GPIO) using an I²C interface as well as comprehensive interrupt control.
 .. sidebar:: On this page
 
    .. contents:: 
-      :depth: 2
+      :depth: 3
       :local:
    
 MCP23017 Expander modules
--------------------------
+==========================
 
 The MCP23017 is an extender module that has 16 pins for general purpose
 I/O (GPIO). Like the Arduino input/output pins on the Arduino, you can
@@ -48,8 +48,7 @@ for your own board for details.
 .. seealso:: The address settings can be found in the :ref:`MCP23017 address table`.
 
 Expander wiring examples
--------------------------
-
+_________________________
 
 Both diagrams show an infra-red sensor (3-pin device) connected to
 GPIO 0 of the MCP23017, and a push-button (2-pin) connected to GPIO 1.
@@ -71,12 +70,12 @@ current stops flowing. This behaviour is the same as with the Arduino
 digital GPIO pins
 
 GPIO use in EXRAIL
--------------------
+___________________
 As long as the predefined MCP23017 boards are used, there is no extra setup
 needed to use them as sensor/input or output within EXRAIL.
 
 Inputs in EX-RAIL
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 An sensor or switch may be connected at vPIN164 (MCP23017 first pin). That
 can be utilized in EXRAIL as follows:
 
@@ -100,7 +99,7 @@ can be utilized in EXRAIL as follows:
 
 
 Outputs in EX-RAIL
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 An output may be connected at vPIN165 (MCP23017 second pin). That can be
 utilized in EXRAIL as follows:
 
@@ -110,7 +109,7 @@ utilized in EXRAIL as follows:
    RESET(199) // Zero an output pin
 
 Turnouts in EX-RAIL
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 If a pin is used as Turnout, it needs to be setup in EXRAIL as follows:
 
 .. code-block:: C
@@ -159,7 +158,7 @@ turnout were the ID is equal to the vPin.
 
 
 Signals in EX-RAIL
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 A set of 2 or 3 pins can be used as signal. Setup in EXRAIL as follows:
 
 .. code-block:: C
@@ -179,7 +178,7 @@ The first value equals RED and is always the ID of the defined signal.
 
 
 Setup with Serial Monitor or JMRI console
------------------------------------------- 
+___________________________________________ 
 The Serial Monitor in the Arduino IDE can be used to setup, test and configure I/O 
 connected to the DCC-EX Command Station. 
 
@@ -188,7 +187,7 @@ the next section where it states "serial monitor" you may also read "JMRI consol
 
 
 Setup inputs in serial monitor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 An input pin may be configured using the DCC++ EX Sensor commands, as
 follows:
 
@@ -209,7 +208,7 @@ sent by DCC++ EX over the serial output:
    <q 1096> // Deactivation
 
 Setup outputs in serial monitor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An output pin may be configured using the DCC++ EX Output commands, as
 follows:
@@ -237,7 +236,7 @@ sent by DCC++ EX over the serial output:
    <Y 1098 0> -- Deactivated
 
 Setup turnouts in serial monitor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. 
    Output::create(198, 198, 0);
    Output::create(199, 199, 0);
@@ -268,8 +267,8 @@ sent by DCC++ EX over the serial output:
 
 .. _configuring mcp23017 via myHal.cpp:
 
-Configure and setup MCP23017 GPIO modules in **myHAL.cpp**
------------------------------------------------------------
+Configure the modules in **myHAL.cpp**
+________________________________________________
 
 Setup and configure extra MCP23017 modules is done in the file *myHal.cpp*.
 If the file is not present in the Commandstation-EX folder, create the file 
@@ -344,7 +343,7 @@ In the next example, we will add a third MCP23017 module with address 0x22 wih v
 .. _MCP23017 address table:
 
 I²C Address table
-------------------
+___________________
 
 ======= === === ===
 Address A2  A1  A0
@@ -359,7 +358,7 @@ Address A2  A1  A0
 ======= === === ===
 
 Specifications & Features
---------------------------
+___________________________
 
 - 16-bit remote bidirectional I/O port
    - I/O pins default to input
@@ -381,7 +380,7 @@ Specifications & Features
 
 
 IC Packages & Pin Out
-----------------------
+_______________________
 - 28-pin SOIC, Wide, 7.50mm body
 - 28-pin SPDIP, 300 mil body
 - 28-pin SSOP, 5.30mm body
@@ -394,7 +393,7 @@ IC Packages & Pin Out
     
 
 Datasheet 
----------
+___________
 
 Microchip:
 https://ww1.microchip.com/downloads/en/devicedoc/20001952c.pdf

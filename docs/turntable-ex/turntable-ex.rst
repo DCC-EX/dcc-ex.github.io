@@ -249,7 +249,11 @@ If the turntable continues to rotate beyond the 225 degree point, the phase will
   :alt: Rotated 180 degrees
   :scale: 100%
 
-The above outlines how the default automatic phase switching works with Turntable-EX, and this behaviour is configurable. Refer to ...
+The above outlines how the default automatic phase switching works with Turntable-EX, and this behaviour is configurable.
+
+If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in :ref:`get-started/assembly:7. load firmware on your command station`, and the configuration parameter is outlined here: :ref:`turntable-ex/configure:phase_switch_angle`.
+
+If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in :ref:`turntable-ex/test-and-tune:manual phase switching`.
 
 Time to assemble
 =================

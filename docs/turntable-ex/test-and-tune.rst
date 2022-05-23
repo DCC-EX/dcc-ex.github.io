@@ -271,3 +271,46 @@ In a similar manner, if you prefer the turntable starts at some other position, 
 
   MOVETT(600, 167, Turn)            // Default moves to position one, edit this line to look like the below
   MOVETT(600, 2386, Turn)           // Move instead to position six
+
+Manual phase switching
+=======================
+
+So far, all the examples, testing, and tuning have relied on automatic phase switching.
+
+There may be times where manual phase switching is required, whether due to awkward track wiring, layouts that have tracks at angles that make it hard to determine the correct angles at which to automatically switch the phase, or (in an upcoming release) when traversers are used rather than traditional turntables, that don't actually required phase switching at all.
+
+To enable manual phase switching, you must edit "config.h" and set :ref:`turntable-ex/configure:phase_switching` to "MANUAL".
+
+Once this has been done, you must explicitly define the phase switching to occur as a part of the diagnostic or EX-RAIL command for every step position that requires an inverted phase.
+
+.. note:: 
+
+  The phase switch command (1 for the diagnostic command, Turn_PInvert for EX-RAIL) does not continue to invert the phase each time that command is sent, the command simply tells Turntable-EX whether or not to activate the phase inversion relays.
+
+  Therefore, for every position that requires the phase to be inverted, you must send the invert command (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn command (0/Turn).
+
+To use our example from above, the commands in :ref:`turntable-ex/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
+
+.. code-block:: 
+
+  <D TT 600 114 0>
+  <D TT 600 227 0>
+  <D TT 600 341 0>
+  <D TT 600 2159 1>
+  <D TT 600 2273 1>
+  <D TT 600 2386 1>
+
+The EX-RAIL equivalent to the above would be:
+
+.. code-block:: cpp
+
+  MOVETT(600, 114, Turn)
+  MOVETT(600, 227, Turn)
+  MOVETT(600, 341, Turn)
+  MOVETT(600, 2159, Turn_PInvert)
+  MOVETT(600, 2273, Turn_PInvert)
+  MOVETT(600, 2386, Turn_PInvert)
+
+.. danger:: 
+
+  If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in short circuit when a locomotive attempts to enter or exit the turntable bridge track.

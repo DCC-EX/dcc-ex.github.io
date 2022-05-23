@@ -273,6 +273,8 @@ The process here is the same as installing CommandStation-EX via the Arduino IDE
 
 Also, ensure you follow the section to :ref:`get-started/arduino-ide:copy the config.example.h file (or rename it)` to create your own "config.h" file for Turntable-EX.
 
+If you need to make adjustments to config.h, refer to :doc:`/turntable-ex/configure`.
+
 While following that process, you will need to make some ammendments to cater for Turntable-EX:
 
 * See the :ref:`download/turntable-ex:turntable-ex` download page to obtain the Turntable-EX software.

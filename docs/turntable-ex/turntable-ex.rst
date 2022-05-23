@@ -13,6 +13,8 @@ What is Turntable-EX?
 
   Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.
 
+  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the Turntable-EX view of the `DCC++ EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
+  
   For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the `Regression Testing process <https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md>`_, and then submit your test results using the `Beta Test Results <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_ issue template.
 
 Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.
@@ -121,6 +123,8 @@ The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48
 
   If you have a need to use a different driver, these should be relatively straight forward to configure in a similar manner to how additional motor drivers are configured for use with CommandStation-EX.
 
+  Refer to :ref:`turntable-ex/configure:defining custom stepper drivers` for more details.
+
 However, it is very easy to use one of several other common stepper drivers if you require more torque, or if you prefer to use a NEMA17 or other stepper motor.
 
 The complete list of supported stepper drivers and motors:
@@ -176,7 +180,7 @@ In order to prevent short circuits, the phase (or polarity) of the bridge track 
 
 * Use an auto-reverser that automatically reverses the phase when a short circuit is detected (the Digitrax AR1 is a commonly used option here)
 * Use a mechanical method to switch the phase based on the physical position of the turntable
-* Use Turntable-EX and to automatically (or manually) invert the phase as appropriate
+* Use Turntable-EX to automatically (or manually) invert the phase as appropriate
 
 The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
 
@@ -223,7 +227,7 @@ The yellow dashed line represents the 45/225 degree trigger points to invert and
 
 The surrounding layout tracks have been wired so that each opposing track is wired the same.
 
-To start, with the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.
+To start, the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.
 
 .. image:: ../_static/images/turntable-ex/auto-phase-switch-start.png
   :alt: Aligned with first track
@@ -237,7 +241,7 @@ As this will trigger the turntable to rotate beyond our 45 degree trigger point,
   :alt: Rotate beyond 45 degrees
   :scale: 100%
 
-Once the turntable reaches the correction position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.
+Once the turntable reaches the correct position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.
 
 .. image:: ../_static/images/turntable-ex/auto-phase-switch-end.png
   :alt: Rotated 180 degrees

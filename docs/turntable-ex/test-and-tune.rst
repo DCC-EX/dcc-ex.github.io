@@ -313,4 +313,4 @@ The EX-RAIL equivalent to the above would be:
 
 .. danger:: 
 
-  If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in short circuit when a locomotive attempts to enter or exit the turntable bridge track.
+  If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in a short circuit when a locomotive attempts to enter or exit the turntable bridge track.

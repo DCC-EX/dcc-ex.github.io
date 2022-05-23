@@ -176,7 +176,7 @@ In order to prevent short circuits, the phase (or polarity) of the bridge track 
 
 * Use an auto-reverser that automatically reverses the phase when a short circuit is detected (the Digitrax AR1 is a commonly used option here)
 * Use a mechanical method to switch the phase based on the physical position of the turntable
-* Use Turntable-EX and to automatically (or manually) invert the phase as appropriate
+* Use Turntable-EX to automatically (or manually) invert the phase as appropriate
 
 The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
 
@@ -223,7 +223,7 @@ The yellow dashed line represents the 45/225 degree trigger points to invert and
 
 The surrounding layout tracks have been wired so that each opposing track is wired the same.
 
-To start, with the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.
+To start, the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.
 
 .. image:: ../_static/images/turntable-ex/auto-phase-switch-start.png
   :alt: Aligned with first track

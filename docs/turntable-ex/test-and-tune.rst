@@ -166,7 +166,7 @@ In this example, for simplicity, we will devise the steps required for a six pos
 
 .. image:: ../_static/images/turntable-ex/six-pos-example-degrees.png
   :alt: Six Postion Example
-  :scale: 50%
+  :scale: 70%
 
 Therefore, using our formula, the starting point for each position will be:
 

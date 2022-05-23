@@ -99,7 +99,7 @@ can be utilized in EXRAIL as follows:
 
 
 Outputs in EX-RAIL
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 An output may be connected at vPIN165 (MCP23017 second pin). That can be
 utilized in EXRAIL as follows:
 
@@ -109,7 +109,7 @@ utilized in EXRAIL as follows:
    RESET(199) // Zero an output pin
 
 Turnouts in EX-RAIL
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 If a pin is used as Turnout, it needs to be setup in EXRAIL as follows:
 
 .. code-block:: C

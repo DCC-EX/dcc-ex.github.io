@@ -40,7 +40,7 @@ For the diagnostic command, "activity" needs to be defined as a number, whereas 
       - Turn to the desired step position
     * - 1
       - Turn_PInvert
-      - Turn to the desired step position and invert the phase/polarity
+      - Turn to the desired step position and invert the phase/polarity (required for manual phase switching only)
     * - 2
       - Home
       - Activate the homing process, ignores the provided step position
@@ -66,14 +66,12 @@ For the diagnostic command, "activity" needs to be defined as a number, whereas 
       - Acc_Off
       - Turns the accessory output off, ignores the provided step position
 
-Here's a quick example to demonstrate the difference between the diagnostic and EX-RAIL commands, with both commands below rotating to step position 100, and both inverting the phase/polarity of the bridge track:
+Here's a quick example to demonstrate the difference between the diagnostic and EX-RAIL commands, with both commands below rotating to step position 100:
 
 .. code-block:: 
 
-  <D TT 600 100 1>
-  MOVETT(600, 100, Turn_PInvert)
-
-Note with the phase/polarity inversion, this activity must be defined for every position that requires the phase to be inverted compared with the surrounding tracks. If it is not defined, the relays will be deactivated, resulting in no phase/polarity inversion. The examples below will help clarify this.
+  <D TT 600 100 0>
+  MOVETT(600, 100, Turn)
 
 Testing Turntable-EX
 =====================
@@ -95,35 +93,44 @@ If there is an "OFFLINE" at the end of the Turntable-EX line, it indicates somet
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 
+.. note:: 
+
+  For all testing and tuning below, it is assumed that the default option for automatic phase switching is enabled, and that the default ULN2003/28BYJ-48 stepper driver and motor combination is in use in half step mode, which is ~4096 steps per revolution.
+
+  For automatic phase switching, this should translate to ~512 steps for the 45 degree phase switch trigger point, and ~2560 steps for the 225 degree revert trigger point.
+
 This command should rotate the turntable 100 steps only:
 
 .. code-block:: 
 
   <D TT 600 100 0>
 
-This command should rotate the turntable a further 500 steps (the difference between the existing 100 steps and target 600 steps) only:
+This command should rotate the turntable a further 500 steps and active the phase inversion relays:
+
+ - 500 is the difference between the existing 100 steps and target 600 steps
+ - 600 steps is greater than the ~512 step/45 degree trigger position for phase inversion
 
 .. code-block:: 
 
   <D TT 600 600 0>
 
-This next command should rotate the turntable in the reverse direction by 300 steps:
+This next command should rotate the turntable in the reverse direction by 300 steps and deactivate the phase inversion relays:
+
+- 300 is the difference between the existing 600 steps and target 300 steps, with the reverse direction being the shortest path there
+- 300 steps is less than the ~512 step/45 degree trigger position for phase inversion
 
 .. code-block:: 
 
   <D TT 600 300 0>
 
-This command should rotate the turntable again in the reverse direction, however should also activate both phase switching relays:
+This command should rotate the turntable again in the reverse direction, and should also activate the phase inversion relays:
+
+- 2000 steps is greater than the ~512 step/45 degree trigger position for phase inversion
+- It is also less than the ~2560 step/225 degree trigger position to revert the inversion
 
 .. code-block:: 
   
   <D TT 600 2000 1>
-
-This command should rotate the the turntable further in the reverse direction, and deactivate the phase switching relays:
-
-.. code-block::
-
-  <D TT 600 1500 0>
 
 Finally, this command will cause the turntable to once again find its home position:
 
@@ -142,11 +149,7 @@ Tuning your turntable positions
 
   To determine your starting positions, you will need the full turn step count as recorded in :ref:`turntable-ex/get-started:automatic calibration`.
 
-To tune your turntable positions, there are two aspects to consider.
-
-First will be the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).
-
-Second will be the phase or polarity required for the bridge track to match the connecting layout tracks, as described in the :ref:`turntable-ex/turntable-ex:important! phase (or polarity) switching` section.
+To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).
 
 Determine the positions
 ________________________
@@ -194,13 +197,6 @@ Therefore, using our formula, the starting point for each position will be:
       - 210
       - 2386
 
-Determine phase switching
-__________________________
-
-Assuming your layout tracks are wired correctly as per :ref:`turntable-ex/turntable-ex:important! phase (or polarity) switching`, each of the positions determined above will need to have the phase set correctly.
-
-In the provided example, positions 1, 2, and 3 would match the surrounding track polarity, with positions 4 through 6 requiring the phase/polarity to be switched.
-
 Example tuning commands
 ________________________
 
@@ -211,18 +207,18 @@ To validate the above calculated positions, the following six diagnostic command
   <D TT 600 114 0>
   <D TT 600 227 0>
   <D TT 600 341 0>
-  <D TT 600 2159 1>
-  <D TT 600 2273 1>
-  <D TT 600 2386 1>
+  <D TT 600 2159 0>
+  <D TT 600 2273 0>
+  <D TT 600 2386 0>
 
 If you find any of these positions are slightly out of alignment, simply adjust the step count as appropriate to compensate.
 
-Note that the last three positions all invert the DCC phase or polarity, which should ensure that the bridge track maintains the same phase/polarity as the connecting layout tracks, meaning no short circuits.
+Note that due to the automatic phase inversion, the last three positions will automatically active the phase inversion relays due to being within the 45 to 225 degree angles that activates phase inversion.
 
 Apply to your layout
 _____________________
 
-At this point, you should be able to apply the above calculations to your own layout and come up with the step count and phase/polarity settings required for each position.
+At this point, you should be able to apply the above calculations to your own layout and come up with the step count required for each position.
 
 Use appropriate diagnostic commands to test and tune each position for that perfect alignment, and providing your layout is functional, you should be able to drive a locomotive on and off your turntable in each position.
 
@@ -274,4 +270,4 @@ In a similar manner, if you prefer the turntable starts at some other position, 
 .. code-block:: cpp
 
   MOVETT(600, 167, Turn)            // Default moves to position one, edit this line to look like the below
-  MOVETT(600, 2386, Turn_PInvert)   // Move instead to position six, note the required DCC phase inversion to prevent a short circuit
+  MOVETT(600, 2386, Turn)           // Move instead to position six

@@ -161,7 +161,7 @@ __________________________
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
-Refer to the :ref:`turntable-ex/configure:testing, tuning, and control` page for more details on this.
+Refer to the :ref:`turntable-ex/test-and-tune:testing, tuning, and control` page for more details on this.
 
 Important! Phase (or polarity) switching
 _________________________________________
@@ -210,24 +210,48 @@ Now consider inverting or reversing the phase when performing that 180 degree tu
   :alt: 180 degrees
   :scale: 45%
 
-How does Turntable-EX help with this?
+How does this work with Turntable-EX?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Turntable-EX supports automatic phase switching by default, but can also be controlled manually by both EX-RAIL and diagnostic commands.
 
+With the default automatic phase switching, once the turntable rotates 45 degrees away from the home position, it will automatically invert the DCC phase, with the phase then reverting 180 degrees later once the turntable rotates to 225 degrees from the home position.
+
+In the diagrams below, the "home" end of the turntable bridge is indicated by the bright green sleeper, with the "home" position of 0 degrees being located at the top of the diagram. The surrounding layout tracks are separated by 10 degrees.
+
+The yellow dashed line represents the 45/225 degree trigger points to invert and revert the phase switching, with the light yellow shaded area representing the 180 degrees in which the phase will be inverted.
+
+The surrounding layout tracks have been wired so that each opposing track is wired the same.
+
+To start, with the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.
 
 .. image:: ../_static/images/turntable-ex/auto-phase-switch-start.png
-  :alt: No rotation
-  :scale: 60%
+  :alt: Aligned with first track
+  :scale: 100%
+
+Next, we've sent a command for the turntable to rotate 180 degrees, which requires our phase to be inverted in order to prevent a short circuit.
+
+As this will trigger the turntable to rotate beyond our 45 degree trigger point, the phase will automatically be inverted.
 
 .. image:: ../_static/images/turntable-ex/auto-phase-switch-trigger.png
-  :alt: 90 degrees
-  :scale: 60%
+  :alt: Rotate beyond 45 degrees
+  :scale: 100%
 
-.. image:: ../_static/images/turntable-ex/auto-phase-switch-start.png
-  :alt: 180 degrees
-  :scale: 60%
+Once the turntable reaches the correction position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.
 
-I'm Ready!
-===========
+.. image:: ../_static/images/turntable-ex/auto-phase-switch-end.png
+  :alt: Rotated 180 degrees
+  :scale: 100%
 
-Click the "next" button to get started assembling Turntable-EX.
+If the turntable continues to rotate beyond the 225 degree point, the phase will revert again.
+
+.. image:: ../_static/images/turntable-ex/auto-phase-switch-revert.png
+  :alt: Rotated 180 degrees
+  :scale: 100%
+
+The above outlines how the default automatic phase switching works with Turntable-EX, and this behaviour is configurable. Refer to ...
+
+Time to assemble
+=================
+
+Now that you have a general overview of Turntable-EX's features and capabilities, click the "next" button to get started on assembly.

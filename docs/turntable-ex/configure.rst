@@ -1,277 +1,159 @@
-*****************************
-Testing, Tuning, and Control
-*****************************
+**********************
+Configuration options
+**********************
 
-.. image:: ../_static/images/conductor-level.png
-  :alt: Conductor Level
+.. image:: ../_static/images/tinkerer-level.png
+  :alt: Tinkerer Level
   :scale: 50%
 
-Turntable-EX commands
-======================
+Turntable-EX has a number of different configuration options available to customise the behaviour to suit your needs.
 
-Before proceeding with testing or any configuration, it's important to understand the two commands available for controlling Turntable-EX.
+Configuration changes are made by editing the "config.h" file.
 
-This is a debug or diagnostic command that can be executed via the serial terminal of the CommandStation:
+The various configuration options are outlined below, and all are declared on their own line using the "#define" directive (eg. #define I2C_ADDRESS 0x60).
 
-.. code-block:: 
+Standard configuration options
+===============================
 
-  <D TT vpin steps activity>
+I2C_ADDRESS
+____________
 
-This is the EX-RAIL command to be included in myAutomation.h:
+`Default: 0x60`
 
-.. code-block:: cpp
+This is the address that Turntable-EX will occupy on the I2C bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known I2C devices.
 
-  MOVETT(vpin, steps, activity)
+If you need to change this for any reason, ensure that the I2C address in "myHal.cpp" in the CommmandStation-EX software is also changed to the same value.
 
-For both of these commands, "vpin" is as defined in your "myHal.cpp" file, and "steps" is the number of steps from the home position, not the number of steps the turntable has to travel.
+Multiple instances of Turntable-EX can be controlled by the same CommandStation by ensuring each has its own unique I2C address.
 
-For the diagnostic command, "activity" needs to be defined as a number, whereas for the EX-RAIL command, this is defined as text based on the table below. Sound confusing? The reason for using text in the EX-RAIL command is to make your automation sequences more "human-friendly" when reading what they do later. It's much easier for us humans to remember words rather than numbers.
+HOME_SENSOR_ACTIVE_STATE
+_________________________
 
-.. list-table::
-    :widths: auto
-    :header-rows: 1
-    :class: command-table
+`Default: LOW`
 
-    * - Diagnostic activity
-      - EX-RAIL activity
-      - Description
-    * - 0
-      - Turn
-      - Turn to the desired step position
-    * - 1
-      - Turn_PInvert
-      - Turn to the desired step position and invert the phase/polarity
-    * - 2
-      - Home
-      - Activate the homing process, ignores the provided step position
-    * - 3
-      - Calibrate
-      - Activate the automatic calibration process, ignores the provided step position
-    * - 4
-      - LED_On
-      - Turns the LED on, ignores the provided step position
-    * - 5
-      - LED_Slow
-      - Sets the LED to a slow blink, ignores the provided step position
-    * - 6
-      - LED_Fast
-      - Sets the LED to a fast blink, ignores the provided step position
-    * - 7
-      - LED_Off
-      - Turns the LED off, ignores the provided step position
-    * - 8
-      - Acc_On
-      - Turns the accessory output on, ignores the provided step position
-    * - 9
-      - Acc_Off
-      - Turns the accessory output off, ignores the provided step position
+`Valid values: LOW, HIGH`
 
-Here's a quick example to demonstrate the difference between the diagnostic and EX-RAIL commands, with both commands below rotating to step position 100, and both inverting the phase/polarity of the bridge track:
+This is the state that the homing sensor reports to Turntable-EX when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.
 
-.. code-block:: 
+RELAY_ACTIVE_STATE
+___________________
 
-  <D TT 600 100 1>
-  MOVETT(600, 100, Turn_PInvert)
+`Default: HIGH`
 
-Note with the phase/polarity inversion, this activity must be defined for every position that requires the phase to be inverted compared with the surrounding tracks. If it is not defined, the relays will be deactivated, resulting in no phase/polarity inversion. The examples below will help clarify this.
+`Valid values: HIGH, LOW`
 
-Testing Turntable-EX
-=====================
+This is the state that the phase inversion relays need to be set to in order to activate, or invert the phase. Use HIGH for relays that require 5V to activate, and LOW for those that require the input to be grounded to activate.
 
-Firstly, power on Turntable-EX, followed by your CommandStation. By powering these on in that order, you will ensure that Turntable-EX is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as "OFFLINE", and commands will fail.
+PHASE_SWITCHING
+________________
 
-Referring again to :ref:`reference/software/hal-config:adding a new device`, skip ahead to :ref:`reference/software/hal-config:checking the driver`, and the output you're looking for to validate the Turntable-EX device driver is loaded and connected successfully is below:
+`Default: AUTO`
 
-.. code-block:: 
+`Valid values: AUTO, MANUAL`
 
-  <D HAL SHOW><* Arduino Vpins:2-69 *>
-  <* PCA9685 I2C:x40 Configured on Vpins:100-115  *>
-  <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE *>
-  <* MCP23017 I2C:x20 Configured on Vpins:164-179 OFFLINE *>
-  <* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *>
-  <* TurntableEX I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, Turntable-EX is connected!
+When set to AUTO, phase switching happens automatically as the turntable rotates. The point at which phase inversion happens is determined by the PHASE_SWITCH_ANGLE (see below), and it will automatically revert 180 degrees later.
 
-If there is an "OFFLINE" at the end of the Turntable-EX line, it indicates something is not quite right. Refer to :ref:`turntable-ex/troubleshooting:turntable-ex showing as offline with \<d hal show\>`.
+PHASE_SWITCH_ANGLE
+___________________
 
-At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
+`Default: 45`
 
-This command should rotate the turntable 100 steps only:
+`Valid values: 0 - 179`
 
-.. code-block:: 
+This is the angle in degrees that the turntable needs to rotate away from the home position in order to trigger DCC phase inversion by activating the phase inversion relays. Once the turntable rotates a further 180 degrees, the phase will revert by deactiving the phase inversion relays.
 
-  <D TT 600 100 0>
+STEPPER_DRIVER
+_______________
 
-This command should rotate the turntable a further 500 steps (the difference between the existing 100 steps and target 600 steps) only:
+`Default: ULN2003_HALF_CW`
 
-.. code-block:: 
+`Valid values:`
 
-  <D TT 600 600 0>
+- ULN2003_HALF_CW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a clockwise rotation
+- ULN2003_HALF_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a counter-clockwise rotation
+- ULN2003_FULL_CW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a clockwise rotation
+- ULN2003_FULL_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a counter-clockwise rotation
+- TWO_WIRE - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor
+- TWO_WIRE_INV - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor, with the driver's enable pin inverted
 
-This next command should rotate the turntable in the reverse direction by 300 steps:
+While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to :ref:`turntable-ex/configure:defining custom stepper drivers`.
 
-.. code-block:: 
-
-  <D TT 600 300 0>
-
-This command should rotate the turntable again in the reverse direction, however should also activate both phase switching relays:
-
-.. code-block:: 
-  
-  <D TT 600 2000 1>
-
-This command should rotate the the turntable further in the reverse direction, and deactivate the phase switching relays:
-
-.. code-block::
-
-  <D TT 600 1500 0>
-
-Finally, this command will cause the turntable to once again find its home position:
-
-.. code-block:: 
-  
-  <D TT 600 0 2>
-
-<TO DO: Add a video demonstrating these tests>
-
-Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting Turntable-EX to good use.
-
-Tuning your turntable positions
-================================
-
-.. tip:: 
-
-  To determine your starting positions, you will need the full turn step count as recorded in :ref:`turntable-ex/get-started:automatic calibration`.
-
-To tune your turntable positions, there are two aspects to consider.
-
-First will be the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).
-
-Second will be the phase or polarity required for the bridge track to match the connecting layout tracks, as described in the :ref:`turntable-ex/turntable-ex:important! phase (or polarity) switching` section.
-
-Determine the positions
-________________________
-
-At this point, you should either have a layout you're fitting Turntable-EX into, or a layout design that you're working to, with the various turntable connection tracks defined.
-
-The simplest way to devise the approximate number of steps for each turntable position is to calculate these based on the degrees each step will turn.
-
-For the default Turntable-EX configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).
-
-Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula "steps = degrees/degrees per step". To turn 10 degrees requires ~114 steps (10 / 0.088 = 113.64).
-
-In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.
-
-.. image:: ../_static/images/turntable-ex/six-pos-example-degrees.png
-  :alt: Six Postion Example
-  :scale: 50%
-
-Therefore, using our formula, the starting point for each position will be:
-
-.. list-table::
-    :widths: auto
-    :header-rows: 1
-    :class: command-table
-
-    * - Position
-      - Degrees from home
-      - Steps from home
-    * - 1
-      - 10
-      - 114
-    * - 2
-      - 20
-      - 227
-    * - 3
-      - 30
-      - 341
-    * - 4
-      - 190
-      - 2159
-    * - 5
-      - 200
-      - 2273
-    * - 6
-      - 210
-      - 2386
-
-Determine phase switching
-__________________________
-
-Assuming your layout tracks are wired correctly as per :ref:`turntable-ex/turntable-ex:important! phase (or polarity) switching`, each of the positions determined above will need to have the phase set correctly.
-
-In the provided example, positions 1, 2, and 3 would match the surrounding track polarity, with positions 4 through 6 requiring the phase/polarity to be switched.
-
-Example tuning commands
-________________________
-
-To validate the above calculated positions, the following six diagnostic commands should be executed in the serial terminal of the CommandStation, which will allow you to visually inspect the alignment with your layout tracks and adjust accordingly:
-
-.. code-block:: 
-
-  <D TT 600 114 0>
-  <D TT 600 227 0>
-  <D TT 600 341 0>
-  <D TT 600 2159 1>
-  <D TT 600 2273 1>
-  <D TT 600 2386 1>
-
-If you find any of these positions are slightly out of alignment, simply adjust the step count as appropriate to compensate.
-
-Note that the last three positions all invert the DCC phase or polarity, which should ensure that the bridge track maintains the same phase/polarity as the connecting layout tracks, meaning no short circuits.
-
-Apply to your layout
+DISABLE_OUTPUTS_IDLE
 _____________________
 
-At this point, you should be able to apply the above calculations to your own layout and come up with the step count and phase/polarity settings required for each position.
+When defined, this option will ensure that the stepper driver outputs are disabled when the stepper stops rotating. This can prevent stepper drivers and motors from becoming warm during idle time.
 
-Use appropriate diagnostic commands to test and tune each position for that perfect alignment, and providing your layout is functional, you should be able to drive a locomotive on and off your turntable in each position.
+To disable this option, simply comment the line out by adding "//" before the "#define".
 
-Advertising positions to Engine Driver and WiThrottle applications
-===================================================================
+STEPPER_MAX_SPEED
+__________________
 
-Now that you have defined all of your turntable positions with appropriate phase/polarity switching, it's time to get these advertised to Engine Driver and WiThrottle applications.
+`Default: 200`
 
-The method to advertise these is to use EX-RAIL's ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the Engine Driver and WiThrottle Routes sections.
+`Valid values: 1 - 1000`
 
-If this is your first experience with EX-RAIL and the "myAutomation.h" file, familiarise yourself with EX-RAIL by reading through :ref:`automation/ex-rail-intro:introduction to ex-rail automation`.
+This is the maximum speed that the turntable will rotate at, in steps per second.
 
-Pay particular attention to the various mentions of ROUTE and the associated examples.
+STEPPER_ACCELERATION
+_____________________
 
-There are two highly recommended additions to using just these ROUTEs:
+`Default: 25`
 
-1. Utilise EX-RAIL's virtual RESERVE() and FREE() functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.
-2. Utilise aliases to make things human friendly, and we have also provided 30 pre-defined aliases for the ROUTE IDs to ensure there will be no conflicts, as all IDs must be unique.
+`Valid values: > 0`
 
-To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process.
+The acceleration rate of the turntable, which is defined as steps per second, per second. This is what gives Turntable-EX a more prototypical acceleration/decceleration rate when rotating.
 
-.. tip:: 
+LED_FAST
+_________
 
-  .. image:: ../_static/images/conductor.png
-    :alt: Conductor Level
-    :scale: 40%
-    :align: left
-  
-  To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
+`Default: 100`
 
-That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`automation/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
+`Valid values: 0 to long time`
 
-My turntable moves on startup!
-_______________________________
+This is the time in milliseconds that the LED is on and off when the set to a fast blink. With the default, it will be on for 100ms, then off for 100ms.
 
-There is one "catch" with the above "myAutomation.h" example. When your CommandStation starts up and EX-RAIL starts, it will automatically execute everything in "myAutomation.h" up until the first "DONE" statement it encounters.
+LED_SLOW
+_________
 
-In this scenario, that means on startup, the turntable will automatically move to position 1.
+`Default: 500`
 
-If you wish to leave the turntable at the home position on startup, you can simply comment out the first MOVETT() command:
+`Valid values: 0 to long time`
 
-.. code-block:: cpp
+This is the time in milliseconds that the LED is on and off when the set to a slow blink. With the default, it will be on for 500ms, then off for 500ms.
 
-  MOVETT(600, 114, Turn)        <<== This line here    
-  // MOVETT(600, 114 Turn)      <<== Becomes this, add // to comment lines out
+Advanced configuration options
+===============================
 
-In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by simply changing the steps in that same MOVETT() command:
+DEBUG
+______
 
-.. code-block:: cpp
+If debug level output is requested as part of a support ticket or when troubleshooting in general, uncomment this line by removing the "//" from in front of "#define".
 
-  MOVETT(600, 167, Turn)            // Default moves to position one, edit this line to look like the below
-  MOVETT(600, 2386, Turn_PInvert)   // Move instead to position six, note the required DCC phase inversion to prevent a short circuit
+SANITY_STEPS
+_____________
+
+`Default: 10000`
+
+`Valid values: 1 to 65535`
+
+This is the maximum number of steps the stepper motor will move during homing and calibration before flagging a failure.
+
+If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.
+
+HOME_SENSITIVITY
+_________________
+
+`Default: 150`
+
+`Valid values: 1 to 65535`
+
+This is the minimum number of steps required for the turntable to rotate away from the homing sensor before it deactivates, which is used during the calibration sequence.
+
+If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.
+
+Defining custom stepper drivers
+================================
+
+These need to have a valid AccelStepper() entry defined.
+
+Further info to be added here.

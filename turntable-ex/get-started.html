@@ -46,7 +46,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Testing, Tuning, and Control" href="configure.html" />
+    <link rel="next" title="Testing, Tuning, and Control" href="test-and-tune.html" />
     <link rel="prev" title="Overview" href="turntable-ex.html" /> 
 </head>
 
@@ -149,7 +149,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Turntable-EX (Beta)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="turntable-ex.html">Overview</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configure.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
 </li>
@@ -513,6 +514,7 @@
 <p>At the time of writing, there is no installer for Turntable-EX like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.</p>
 <p>The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the <a class="reference internal" href="../get-started/arduino-ide.html"><span class="doc">Install using the Arduino IDE</span></a> page.</p>
 <p>Also, ensure you follow the section to <a class="reference internal" href="../get-started/arduino-ide.html#copy-the-config-example-h-file-or-rename-it"><span class="std std-ref">Copy the config.example.h file (or rename it)</span></a> to create your own “config.h” file for Turntable-EX.</p>
+<p>If you need to make adjustments to config.h, refer to <a class="reference internal" href="configure.html"><span class="doc">Configuration options</span></a>.</p>
 <p>While following that process, you will need to make some ammendments to cater for Turntable-EX:</p>
 <ul class="simple">
 <li><p>See the <a class="reference internal" href="../download/turntable-ex.html#turntable-ex"><span class="std std-ref">Turntable-EX</span></a> download page to obtain the Turntable-EX software.</p></li>
@@ -526,10 +528,10 @@
 <h5>Automatic calibration<a class="headerlink" href="#automatic-calibration" title="Permalink to this headline">¶</a></h5>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the <a class="reference internal" href="configure.html#turntable-ex-commands"><span class="std std-ref">Turntable-EX commands</span></a> section.</p>
+<p>If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the <a class="reference internal" href="test-and-tune.html#turntable-ex-commands"><span class="std std-ref">Turntable-EX commands</span></a> section.</p>
 </div>
 <p>When Turntable-EX is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.</p>
-<p>Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in <a class="reference internal" href="configure.html#tuning-your-turntable-positions"><span class="std std-ref">Tuning your turntable positions</span></a>.</p>
+<p>Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in <a class="reference internal" href="test-and-tune.html#tuning-your-turntable-positions"><span class="std std-ref">Tuning your turntable positions</span></a>.</p>
 <p>The output in the serial console should look similar to the below:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Homing started
 Turntable homed successfully
@@ -661,7 +663,7 @@ Turntable homed successfully
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="configure.html" class="btn btn-neutral float-right" title="Testing, Tuning, and Control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="test-and-tune.html" class="btn btn-neutral float-right" title="Testing, Tuning, and Control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="turntable-ex.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

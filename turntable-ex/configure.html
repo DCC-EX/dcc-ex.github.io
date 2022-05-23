@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Testing, Tuning, and Control &mdash; DCC++ EX  documentation</title>
+  <title>Configuration options &mdash; DCC++ EX  documentation</title>
   
 
   
@@ -47,7 +47,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Troubleshooting Turntable-EX" href="troubleshooting.html" />
-    <link rel="prev" title="Getting started" href="get-started.html" /> 
+    <link rel="prev" title="Testing, Tuning, and Control" href="test-and-tune.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -149,7 +149,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Turntable-EX (Beta)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get-started.html">Getting started</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
 </li>
@@ -275,7 +276,7 @@
         
           <li><a href="index.html">Turntable-EX (Beta)</a> &raquo;</li>
         
-      <li>Testing, Tuning, and Control</li>
+      <li>Configuration options</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -296,231 +297,114 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="testing-tuning-and-control">
-<h1>Testing, Tuning, and Control<a class="headerlink" href="#testing-tuning-and-control" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="../_images/conductor-level.png"><img alt="Conductor Level" src="../_images/conductor-level.png" style="width: 140.0px; height: 44.5px;" /></a>
-<div class="section" id="turntable-ex-commands">
-<h2>Turntable-EX commands<a class="headerlink" href="#turntable-ex-commands" title="Permalink to this headline">¶</a></h2>
-<p>Before proceeding with testing or any configuration, it’s important to understand the two commands available for controlling Turntable-EX.</p>
-<p>This is a debug or diagnostic command that can be executed via the serial terminal of the CommandStation:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT vpin steps activity&gt;
-</pre></div>
+  <div class="section" id="configuration-options">
+<h1>Configuration options<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/tinkerer-level.png"><img alt="Tinkerer Level" src="../_images/tinkerer-level.png" style="width: 140.0px; height: 49.0px;" /></a>
+<p>Turntable-EX has a number of different configuration options available to customise the behaviour to suit your needs.</p>
+<p>Configuration changes are made by editing the “config.h” file.</p>
+<p>The various configuration options are outlined below, and all are declared on their own line using the “#define” directive (eg. #define I2C_ADDRESS 0x60).</p>
+<div class="section" id="standard-configuration-options">
+<h2>Standard configuration options<a class="headerlink" href="#standard-configuration-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="i2c-address">
+<h3>I2C_ADDRESS<a class="headerlink" href="#i2c-address" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 0x60</cite></p>
+<p>This is the address that Turntable-EX will occupy on the I2C bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known I2C devices.</p>
+<p>If you need to change this for any reason, ensure that the I2C address in “myHal.cpp” in the CommmandStation-EX software is also changed to the same value.</p>
+<p>Multiple instances of Turntable-EX can be controlled by the same CommandStation by ensuring each has its own unique I2C address.</p>
 </div>
-<p>This is the EX-RAIL command to be included in myAutomation.h:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">activity</span><span class="p">)</span>
-</pre></div>
+<div class="section" id="home-sensor-active-state">
+<h3>HOME_SENSOR_ACTIVE_STATE<a class="headerlink" href="#home-sensor-active-state" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: LOW</cite></p>
+<p><cite>Valid values: LOW, HIGH</cite></p>
+<p>This is the state that the homing sensor reports to Turntable-EX when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.</p>
 </div>
-<p>For both of these commands, “vpin” is as defined in your “myHal.cpp” file, and “steps” is the number of steps from the home position, not the number of steps the turntable has to travel.</p>
-<p>For the diagnostic command, “activity” needs to be defined as a number, whereas for the EX-RAIL command, this is defined as text based on the table below. Sound confusing? The reason for using text in the EX-RAIL command is to make your automation sequences more “human-friendly” when reading what they do later. It’s much easier for us humans to remember words rather than numbers.</p>
-<table class="colwidths-auto command-table docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Diagnostic activity</p></th>
-<th class="head"><p>EX-RAIL activity</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>Turn</p></td>
-<td><p>Turn to the desired step position</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>Turn_PInvert</p></td>
-<td><p>Turn to the desired step position and invert the phase/polarity</p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p>Home</p></td>
-<td><p>Activate the homing process, ignores the provided step position</p></td>
-</tr>
-<tr class="row-odd"><td><p>3</p></td>
-<td><p>Calibrate</p></td>
-<td><p>Activate the automatic calibration process, ignores the provided step position</p></td>
-</tr>
-<tr class="row-even"><td><p>4</p></td>
-<td><p>LED_On</p></td>
-<td><p>Turns the LED on, ignores the provided step position</p></td>
-</tr>
-<tr class="row-odd"><td><p>5</p></td>
-<td><p>LED_Slow</p></td>
-<td><p>Sets the LED to a slow blink, ignores the provided step position</p></td>
-</tr>
-<tr class="row-even"><td><p>6</p></td>
-<td><p>LED_Fast</p></td>
-<td><p>Sets the LED to a fast blink, ignores the provided step position</p></td>
-</tr>
-<tr class="row-odd"><td><p>7</p></td>
-<td><p>LED_Off</p></td>
-<td><p>Turns the LED off, ignores the provided step position</p></td>
-</tr>
-<tr class="row-even"><td><p>8</p></td>
-<td><p>Acc_On</p></td>
-<td><p>Turns the accessory output on, ignores the provided step position</p></td>
-</tr>
-<tr class="row-odd"><td><p>9</p></td>
-<td><p>Acc_Off</p></td>
-<td><p>Turns the accessory output off, ignores the provided step position</p></td>
-</tr>
-</tbody>
-</table>
-<p>Here’s a quick example to demonstrate the difference between the diagnostic and EX-RAIL commands, with both commands below rotating to step position 100, and both inverting the phase/polarity of the bridge track:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 100 1&gt;
-MOVETT(600, 100, Turn_PInvert)
-</pre></div>
+<div class="section" id="relay-active-state">
+<h3>RELAY_ACTIVE_STATE<a class="headerlink" href="#relay-active-state" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: HIGH</cite></p>
+<p><cite>Valid values: HIGH, LOW</cite></p>
+<p>This is the state that the phase inversion relays need to be set to in order to activate, or invert the phase. Use HIGH for relays that require 5V to activate, and LOW for those that require the input to be grounded to activate.</p>
 </div>
-<p>Note with the phase/polarity inversion, this activity must be defined for every position that requires the phase to be inverted compared with the surrounding tracks. If it is not defined, the relays will be deactivated, resulting in no phase/polarity inversion. The examples below will help clarify this.</p>
+<div class="section" id="phase-switching">
+<h3>PHASE_SWITCHING<a class="headerlink" href="#phase-switching" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: AUTO</cite></p>
+<p><cite>Valid values: AUTO, MANUAL</cite></p>
+<p>When set to AUTO, phase switching happens automatically as the turntable rotates. The point at which phase inversion happens is determined by the PHASE_SWITCH_ANGLE (see below), and it will automatically revert 180 degrees later.</p>
 </div>
-<div class="section" id="testing-turntable-ex">
-<h2>Testing Turntable-EX<a class="headerlink" href="#testing-turntable-ex" title="Permalink to this headline">¶</a></h2>
-<p>Firstly, power on Turntable-EX, followed by your CommandStation. By powering these on in that order, you will ensure that Turntable-EX is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as “OFFLINE”, and commands will fail.</p>
-<p>Referring again to <a class="reference internal" href="../reference/software/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a>, skip ahead to <a class="reference internal" href="../reference/software/hal-config.html#checking-the-driver"><span class="std std-ref">Checking the Driver</span></a>, and the output you’re looking for to validate the Turntable-EX device driver is loaded and connected successfully is below:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D HAL SHOW&gt;&lt;* Arduino Vpins:2-69 *&gt;
-&lt;* PCA9685 I2C:x40 Configured on Vpins:100-115  *&gt;
-&lt;* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE *&gt;
-&lt;* MCP23017 I2C:x20 Configured on Vpins:164-179 OFFLINE *&gt;
-&lt;* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *&gt;
-&lt;* TurntableEX I2C:x60 Configured on Vpins:600-600  *&gt;          &lt;&lt;== This is the important line, Turntable-EX is connected!
-</pre></div>
+<div class="section" id="phase-switch-angle">
+<h3>PHASE_SWITCH_ANGLE<a class="headerlink" href="#phase-switch-angle" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 45</cite></p>
+<p><cite>Valid values: 0 - 179</cite></p>
+<p>This is the angle in degrees that the turntable needs to rotate away from the home position in order to trigger DCC phase inversion by activating the phase inversion relays. Once the turntable rotates a further 180 degrees, the phase will revert by deactiving the phase inversion relays.</p>
 </div>
-<p>If there is an “OFFLINE” at the end of the Turntable-EX line, it indicates something is not quite right. Refer to <a class="reference internal" href="troubleshooting.html#turntable-ex-showing-as-offline-with-d-hal-show"><span class="std std-ref">Turntable-EX showing as offline with &lt;D HAL SHOW&gt;</span></a>.</p>
-<p>At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.</p>
-<p>This command should rotate the turntable 100 steps only:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 100 0&gt;
-</pre></div>
+<div class="section" id="stepper-driver">
+<h3>STEPPER_DRIVER<a class="headerlink" href="#stepper-driver" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: ULN2003_HALF_CW</cite></p>
+<p><cite>Valid values:</cite></p>
+<ul class="simple">
+<li><p>ULN2003_HALF_CW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a clockwise rotation</p></li>
+<li><p>ULN2003_HALF_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a counter-clockwise rotation</p></li>
+<li><p>ULN2003_FULL_CW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a clockwise rotation</p></li>
+<li><p>ULN2003_FULL_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a counter-clockwise rotation</p></li>
+<li><p>TWO_WIRE - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor</p></li>
+<li><p>TWO_WIRE_INV - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor, with the driver’s enable pin inverted</p></li>
+</ul>
+<p>While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to <a class="reference internal" href="#defining-custom-stepper-drivers"><span class="std std-ref">Defining custom stepper drivers</span></a>.</p>
 </div>
-<p>This command should rotate the turntable a further 500 steps (the difference between the existing 100 steps and target 600 steps) only:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 600 0&gt;
-</pre></div>
+<div class="section" id="disable-outputs-idle">
+<h3>DISABLE_OUTPUTS_IDLE<a class="headerlink" href="#disable-outputs-idle" title="Permalink to this headline">¶</a></h3>
+<p>When defined, this option will ensure that the stepper driver outputs are disabled when the stepper stops rotating. This can prevent stepper drivers and motors from becoming warm during idle time.</p>
+<p>To disable this option, simply comment the line out by adding “//” before the “#define”.</p>
 </div>
-<p>This next command should rotate the turntable in the reverse direction by 300 steps:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 300 0&gt;
-</pre></div>
+<div class="section" id="stepper-max-speed">
+<h3>STEPPER_MAX_SPEED<a class="headerlink" href="#stepper-max-speed" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 200</cite></p>
+<p><cite>Valid values: 1 - 1000</cite></p>
+<p>This is the maximum speed that the turntable will rotate at, in steps per second.</p>
 </div>
-<p>This command should rotate the turntable again in the reverse direction, however should also activate both phase switching relays:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 2000 1&gt;
-</pre></div>
+<div class="section" id="stepper-acceleration">
+<h3>STEPPER_ACCELERATION<a class="headerlink" href="#stepper-acceleration" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 25</cite></p>
+<p><cite>Valid values: &gt; 0</cite></p>
+<p>The acceleration rate of the turntable, which is defined as steps per second, per second. This is what gives Turntable-EX a more prototypical acceleration/decceleration rate when rotating.</p>
 </div>
-<p>This command should rotate the the turntable further in the reverse direction, and deactivate the phase switching relays:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 1500 0&gt;
-</pre></div>
+<div class="section" id="led-fast">
+<h3>LED_FAST<a class="headerlink" href="#led-fast" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 100</cite></p>
+<p><cite>Valid values: 0 to long time</cite></p>
+<p>This is the time in milliseconds that the LED is on and off when the set to a fast blink. With the default, it will be on for 100ms, then off for 100ms.</p>
 </div>
-<p>Finally, this command will cause the turntable to once again find its home position:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 0 2&gt;
-</pre></div>
-</div>
-<p>&lt;TO DO: Add a video demonstrating these tests&gt;</p>
-<p>Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting Turntable-EX to good use.</p>
-</div>
-<div class="section" id="tuning-your-turntable-positions">
-<h2>Tuning your turntable positions<a class="headerlink" href="#tuning-your-turntable-positions" title="Permalink to this headline">¶</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To determine your starting positions, you will need the full turn step count as recorded in <a class="reference internal" href="get-started.html#automatic-calibration"><span class="std std-ref">Automatic calibration</span></a>.</p>
-</div>
-<p>To tune your turntable positions, there are two aspects to consider.</p>
-<p>First will be the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).</p>
-<p>Second will be the phase or polarity required for the bridge track to match the connecting layout tracks, as described in the <a class="reference internal" href="turntable-ex.html#important-phase-or-polarity-switching"><span class="std std-ref">Important! Phase (or polarity) switching</span></a> section.</p>
-<div class="section" id="determine-the-positions">
-<h3>Determine the positions<a class="headerlink" href="#determine-the-positions" title="Permalink to this headline">¶</a></h3>
-<p>At this point, you should either have a layout you’re fitting Turntable-EX into, or a layout design that you’re working to, with the various turntable connection tracks defined.</p>
-<p>The simplest way to devise the approximate number of steps for each turntable position is to calculate these based on the degrees each step will turn.</p>
-<p>For the default Turntable-EX configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).</p>
-<p>Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula “steps = degrees/degrees per step”. To turn 10 degrees requires ~114 steps (10 / 0.088 = 113.64).</p>
-<p>In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.</p>
-<a class="reference internal image-reference" href="../_images/six-pos-example-degrees.png"><img alt="Six Postion Example" src="../_images/six-pos-example-degrees.png" style="width: 312.0px; height: 244.5px;" /></a>
-<p>Therefore, using our formula, the starting point for each position will be:</p>
-<table class="colwidths-auto command-table docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Position</p></th>
-<th class="head"><p>Degrees from home</p></th>
-<th class="head"><p>Steps from home</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>10</p></td>
-<td><p>114</p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>20</p></td>
-<td><p>227</p></td>
-</tr>
-<tr class="row-even"><td><p>3</p></td>
-<td><p>30</p></td>
-<td><p>341</p></td>
-</tr>
-<tr class="row-odd"><td><p>4</p></td>
-<td><p>190</p></td>
-<td><p>2159</p></td>
-</tr>
-<tr class="row-even"><td><p>5</p></td>
-<td><p>200</p></td>
-<td><p>2273</p></td>
-</tr>
-<tr class="row-odd"><td><p>6</p></td>
-<td><p>210</p></td>
-<td><p>2386</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="determine-phase-switching">
-<h3>Determine phase switching<a class="headerlink" href="#determine-phase-switching" title="Permalink to this headline">¶</a></h3>
-<p>Assuming your layout tracks are wired correctly as per <a class="reference internal" href="turntable-ex.html#important-phase-or-polarity-switching"><span class="std std-ref">Important! Phase (or polarity) switching</span></a>, each of the positions determined above will need to have the phase set correctly.</p>
-<p>In the provided example, positions 1, 2, and 3 would match the surrounding track polarity, with positions 4 through 6 requiring the phase/polarity to be switched.</p>
-</div>
-<div class="section" id="example-tuning-commands">
-<h3>Example tuning commands<a class="headerlink" href="#example-tuning-commands" title="Permalink to this headline">¶</a></h3>
-<p>To validate the above calculated positions, the following six diagnostic commands should be executed in the serial terminal of the CommandStation, which will allow you to visually inspect the alignment with your layout tracks and adjust accordingly:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 114 0&gt;
-&lt;D TT 600 227 0&gt;
-&lt;D TT 600 341 0&gt;
-&lt;D TT 600 2159 1&gt;
-&lt;D TT 600 2273 1&gt;
-&lt;D TT 600 2386 1&gt;
-</pre></div>
-</div>
-<p>If you find any of these positions are slightly out of alignment, simply adjust the step count as appropriate to compensate.</p>
-<p>Note that the last three positions all invert the DCC phase or polarity, which should ensure that the bridge track maintains the same phase/polarity as the connecting layout tracks, meaning no short circuits.</p>
-</div>
-<div class="section" id="apply-to-your-layout">
-<h3>Apply to your layout<a class="headerlink" href="#apply-to-your-layout" title="Permalink to this headline">¶</a></h3>
-<p>At this point, you should be able to apply the above calculations to your own layout and come up with the step count and phase/polarity settings required for each position.</p>
-<p>Use appropriate diagnostic commands to test and tune each position for that perfect alignment, and providing your layout is functional, you should be able to drive a locomotive on and off your turntable in each position.</p>
+<div class="section" id="led-slow">
+<h3>LED_SLOW<a class="headerlink" href="#led-slow" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 500</cite></p>
+<p><cite>Valid values: 0 to long time</cite></p>
+<p>This is the time in milliseconds that the LED is on and off when the set to a slow blink. With the default, it will be on for 500ms, then off for 500ms.</p>
 </div>
 </div>
-<div class="section" id="advertising-positions-to-engine-driver-and-withrottle-applications">
-<h2>Advertising positions to Engine Driver and WiThrottle applications<a class="headerlink" href="#advertising-positions-to-engine-driver-and-withrottle-applications" title="Permalink to this headline">¶</a></h2>
-<p>Now that you have defined all of your turntable positions with appropriate phase/polarity switching, it’s time to get these advertised to Engine Driver and WiThrottle applications.</p>
-<p>The method to advertise these is to use EX-RAIL’s ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the Engine Driver and WiThrottle Routes sections.</p>
-<p>If this is your first experience with EX-RAIL and the “myAutomation.h” file, familiarise yourself with EX-RAIL by reading through <a class="reference internal" href="../automation/EX-RAIL-intro.html#introduction-to-ex-rail-automation"><span class="std std-ref">Introduction to EX-RAIL Automation</span></a>.</p>
-<p>Pay particular attention to the various mentions of ROUTE and the associated examples.</p>
-<p>There are two highly recommended additions to using just these ROUTEs:</p>
-<ol class="arabic simple">
-<li><p>Utilise EX-RAIL’s virtual RESERVE() and FREE() functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.</p></li>
-<li><p>Utilise aliases to make things human friendly, and we have also provided 30 pre-defined aliases for the ROUTE IDs to ensure there will be no conflicts, as all IDs must be unique.</p></li>
-</ol>
-<p>To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your “myAutomation.h” file. Note that we recommend adding an additional ROUTE to activate the homing process.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<a class="reference internal image-reference" href="../_images/conductor.png"><img alt="Conductor Level" class="align-left" src="../_images/conductor.png" style="width: 48.0px; height: 35.6px;" /></a>
-<p>To make this as simple as possible, we have included “myTurntable-EX.example.h” with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to “myAutomation.h” and use it.</p>
+<div class="section" id="advanced-configuration-options">
+<h2>Advanced configuration options<a class="headerlink" href="#advanced-configuration-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="debug">
+<h3>DEBUG<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h3>
+<p>If debug level output is requested as part of a support ticket or when troubleshooting in general, uncomment this line by removing the “//” from in front of “#define”.</p>
 </div>
-<p>That’s it! Once you have created “myAutomation.h” and uploaded it to your CommandStation as per the process on the <a class="reference internal" href="../automation/EX-RAIL-intro.html#introduction-to-ex-rail-automation"><span class="std std-ref">Introduction to EX-RAIL Automation</span></a> page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.</p>
-<div class="section" id="my-turntable-moves-on-startup">
-<h3>My turntable moves on startup!<a class="headerlink" href="#my-turntable-moves-on-startup" title="Permalink to this headline">¶</a></h3>
-<p>There is one “catch” with the above “myAutomation.h” example. When your CommandStation starts up and EX-RAIL starts, it will automatically execute everything in “myAutomation.h” up until the first “DONE” statement it encounters.</p>
-<p>In this scenario, that means on startup, the turntable will automatically move to position 1.</p>
-<p>If you wish to leave the turntable at the home position on startup, you can simply comment out the first MOVETT() command:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="n">Turn</span><span class="p">)</span>        <span class="o">&lt;&lt;==</span> <span class="n">This</span> <span class="n">line</span> <span class="n">here</span>
-<span class="c1">// MOVETT(600, 114 Turn)      &lt;&lt;== Becomes this, add // to comment lines out</span>
-</pre></div>
+<div class="section" id="sanity-steps">
+<h3>SANITY_STEPS<a class="headerlink" href="#sanity-steps" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 10000</cite></p>
+<p><cite>Valid values: 1 to 65535</cite></p>
+<p>This is the maximum number of steps the stepper motor will move during homing and calibration before flagging a failure.</p>
+<p>If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.</p>
 </div>
-<p>In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by simply changing the steps in that same MOVETT() command:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="n">Turn</span><span class="p">)</span>            <span class="c1">// Default moves to position one, edit this line to look like the below</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">2386</span><span class="p">,</span> <span class="n">Turn_PInvert</span><span class="p">)</span>   <span class="c1">// Move instead to position six, note the required DCC phase inversion to prevent a short circuit</span>
-</pre></div>
+<div class="section" id="home-sensitivity">
+<h3>HOME_SENSITIVITY<a class="headerlink" href="#home-sensitivity" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 150</cite></p>
+<p><cite>Valid values: 1 to 65535</cite></p>
+<p>This is the minimum number of steps required for the turntable to rotate away from the homing sensor before it deactivates, which is used during the calibration sequence.</p>
+<p>If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.</p>
 </div>
 </div>
+<div class="section" id="defining-custom-stepper-drivers">
+<h2>Defining custom stepper drivers<a class="headerlink" href="#defining-custom-stepper-drivers" title="Permalink to this headline">¶</a></h2>
+<p>These need to have a valid AccelStepper() entry defined.</p>
+<p>Further info to be added here.</p>
 </div>
 </div>
 
@@ -531,7 +415,7 @@ MOVETT(600, 100, Turn_PInvert)
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting Turntable-EX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="get-started.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="test-and-tune.html" class="btn btn-neutral float-left" title="Testing, Tuning, and Control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

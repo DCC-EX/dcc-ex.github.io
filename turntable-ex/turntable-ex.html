@@ -149,7 +149,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Turntable-EX (Beta)</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get-started.html">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configure.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
 </li>
@@ -324,7 +325,7 @@
 <li><p>EX-RAIL automation support</p></li>
 <li><p>Debug/test command (handy for tuning step positions)</p></li>
 <li><p>Out-of-the-box support for several common stepper drivers and motors</p></li>
-<li><p>DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn’t do this already)</p></li>
+<li><p>Automatic or manual DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn’t do this already)</p></li>
 <li><p>An LED and accessory output to control turntable specific automations (eg. flashing warning light)</p></li>
 </ul>
 <div class="admonition note">
@@ -401,26 +402,20 @@
 <div class="section" id="controlling-the-turntable">
 <h3>Controlling the turntable<a class="headerlink" href="#controlling-the-turntable" title="Permalink to this headline">¶</a></h3>
 <p>To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.</p>
-<p>Refer to the <a class="reference internal" href="configure.html#testing-tuning-and-control"><span class="std std-ref">Testing, Tuning, and Control</span></a> page for more details on this.</p>
+<p>Refer to the <a class="reference internal" href="test-and-tune.html#testing-tuning-and-control"><span class="std std-ref">Testing, Tuning, and Control</span></a> page for more details on this.</p>
 </div>
 <div class="section" id="important-phase-or-polarity-switching">
 <h3>Important! Phase (or polarity) switching<a class="headerlink" href="#important-phase-or-polarity-switching" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This section of our documentation on phase or polarity switching is currently a bit confusing. The “keep it simple” approach didn’t quite translate to this section of the documentation unfortunately. We’re reviewing the phase switching options at the moment and should have this updated very soon.</p>
-<p>In the meantime, for those looking to convert existing turntables, most have an existing central wiper ring (or similar) with gaps 180 degrees apart to provide the bridge track power and automatically reverse the polarity. This will continue to work with Turntable-EX, meaning the dual relay board is not required.</p>
-<p><strong>We still recommend you read on as getting the phase/polarity right when the turntable is rotating is important.</strong></p>
-</div>
 <p>An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>If your locomotive drives on to the turntable bridge track, and the DCC phase (or polarity) is not aligned with the surrounding layout tracks, then you will cause a short circuit. The CommandStation should cut power in that scenario, but the desired behaviour is simply to drive onto the turntable with no interruption.</p>
 </div>
-<p>In order to prevent short circuits, the DCC signal to the tracks on the bridge need to be reversed when rotated to certain positions. There are three options to achieve this:</p>
+<p>In order to prevent short circuits, the phase (or polarity) of the bridge track will need to be inverted when rotating to ensure it remains in alignment with the surrounding tracks. There are three options to achieve this:</p>
 <ul class="simple">
 <li><p>Use an auto-reverser that automatically reverses the phase when a short circuit is detected (the Digitrax AR1 is a commonly used option here)</p></li>
 <li><p>Use a mechanical method to switch the phase based on the physical position of the turntable</p></li>
-<li><p>Use Turntable-EX and EX-RAIL position definitions to reverse or maintain the phase as appropriate for each position using a dual relay board (or similar)</p></li>
+<li><p>Use Turntable-EX and to automatically (or manually) invert the phase as appropriate</p></li>
 </ul>
 <p>The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.</p>
 <p>Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the motor shield are connected to the same rail all the way along.</p>
@@ -431,12 +426,32 @@
 <p>Now consider inverting or reversing the phase when performing that 180 degree turn, and the result is just like the starting point, with all tracks in DCC phase alignment.</p>
 <a class="reference internal image-reference" href="../_images/0degree-phase.png"><img alt="No rotation" src="../_images/0degree-phase.png" style="width: 337.5px; height: 190.8px;" /></a>
 <a class="reference internal image-reference" href="../_images/90degree-phase-change.png"><img alt="90 degrees" src="../_images/90degree-phase-change.png" style="width: 339.3px; height: 198.9px;" /></a>
-<a class="reference internal image-reference" href="../_images/0degree-phase.png"><img alt="180 degrees" src="../_images/0degree-phase.png" style="width: 337.5px; height: 190.8px;" /></a>
+<a class="reference internal image-reference" href="../_images/180degree-phase-change.png"><img alt="180 degrees" src="../_images/180degree-phase-change.png" style="width: 337.5px; height: 190.8px;" /></a>
+<div class="section" id="how-does-this-work-with-turntable-ex">
+<h4>How does this work with Turntable-EX?<a class="headerlink" href="#how-does-this-work-with-turntable-ex" title="Permalink to this headline">¶</a></h4>
+<p>Turntable-EX supports automatic phase switching by default, but can also be controlled manually by both EX-RAIL and diagnostic commands.</p>
+<p>With the default automatic phase switching, once the turntable rotates 45 degrees away from the home position, it will automatically invert the DCC phase, with the phase then reverting 180 degrees later once the turntable rotates to 225 degrees from the home position.</p>
+<p>In the diagrams below, the “home” end of the turntable bridge is indicated by the bright green sleeper, with the “home” position of 0 degrees being located at the top of the diagram. The surrounding layout tracks are separated by 10 degrees.</p>
+<p>The yellow dashed line represents the 45/225 degree trigger points to invert and revert the phase switching, with the light yellow shaded area representing the 180 degrees in which the phase will be inverted.</p>
+<p>The surrounding layout tracks have been wired so that each opposing track is wired the same.</p>
+<p>To start, with the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.</p>
+<a class="reference internal image-reference" href="../_images/auto-phase-switch-start.png"><img alt="Aligned with first track" src="../_images/auto-phase-switch-start.png" style="width: 467.0px; height: 523.0px;" /></a>
+<p>Next, we’ve sent a command for the turntable to rotate 180 degrees, which requires our phase to be inverted in order to prevent a short circuit.</p>
+<p>As this will trigger the turntable to rotate beyond our 45 degree trigger point, the phase will automatically be inverted.</p>
+<a class="reference internal image-reference" href="../_images/auto-phase-switch-trigger.png"><img alt="Rotate beyond 45 degrees" src="../_images/auto-phase-switch-trigger.png" style="width: 467.0px; height: 523.0px;" /></a>
+<p>Once the turntable reaches the correction position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.</p>
+<a class="reference internal image-reference" href="../_images/auto-phase-switch-end.png"><img alt="Rotated 180 degrees" src="../_images/auto-phase-switch-end.png" style="width: 467.0px; height: 523.0px;" /></a>
+<p>If the turntable continues to rotate beyond the 225 degree point, the phase will revert again.</p>
+<a class="reference internal image-reference" href="../_images/auto-phase-switch-revert.png"><img alt="Rotated 180 degrees" src="../_images/auto-phase-switch-revert.png" style="width: 467.0px; height: 523.0px;" /></a>
+<p>The above outlines how the default automatic phase switching works with Turntable-EX, and this behaviour is configurable.</p>
+<p>If you find that the default 45/225 degree angles aren’t right for your layout, then this can be modified in “config.h” which is created in <a class="reference internal" href="../get-started/assembly.html#load-firmware-on-your-command-station"><span class="std std-ref">7. Load firmware on your Command Station</span></a>, and the configuration parameter is outlined here: <a class="reference internal" href="configure.html#phase-switch-angle"><span class="std std-ref">PHASE_SWITCH_ANGLE</span></a>.</p>
+<p>If you have a layout that requires more control over when phase switching does and doesn’t happen, you can configure manual phase switching, as outlined in <a class="reference internal" href="test-and-tune.html#manual-phase-switching"><span class="std std-ref">Manual phase switching</span></a>.</p>
 </div>
 </div>
-<div class="section" id="i-m-ready">
-<h2>I’m Ready!<a class="headerlink" href="#i-m-ready" title="Permalink to this headline">¶</a></h2>
-<p>Click the “next” button to get started assembling Turntable-EX.</p>
+</div>
+<div class="section" id="time-to-assemble">
+<h2>Time to assemble<a class="headerlink" href="#time-to-assemble" title="Permalink to this headline">¶</a></h2>
+<p>Now that you have a general overview of Turntable-EX’s features and capabilities, click the “next” button to get started on assembly.</p>
 </div>
 </div>
 

@@ -166,7 +166,7 @@ In this example, for simplicity, we will devise the steps required for a six pos
 
 .. image:: ../_static/images/turntable-ex/six-pos-example-degrees.png
   :alt: Six Postion Example
-  :scale: 50%
+  :scale: 70%
 
 Therefore, using our formula, the starting point for each position will be:
 
@@ -313,4 +313,4 @@ The EX-RAIL equivalent to the above would be:
 
 .. danger:: 
 
-  If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in short circuit when a locomotive attempts to enter or exit the turntable bridge track.
+  If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in a short circuit when a locomotive attempts to enter or exit the turntable bridge track.

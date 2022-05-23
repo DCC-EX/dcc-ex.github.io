@@ -127,12 +127,14 @@ Advanced configuration options
 DEBUG
 ______
 
+`Default: Disabled`
+
 If debug level output is requested as part of a support ticket or when troubleshooting in general, uncomment this line by removing the "//" from in front of "#define".
 
 SANITY_STEPS
 _____________
 
-`Default: 10000`
+`Default: 10000 (Disabled)`
 
 `Valid values: 1 to 65535`
 
@@ -143,7 +145,7 @@ If you have a stepper driver/motor combination that is configured for a large nu
 HOME_SENSITIVITY
 _________________
 
-`Default: 150`
+`Default: 150 (Disabled)`
 
 `Valid values: 1 to 65535`
 
@@ -151,9 +153,47 @@ This is the minimum number of steps required for the turntable to rotate away fr
 
 If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.
 
+FULL_STEP_COUNT
+________________
+
+`Default: 4096 (Disabled)`
+
+`Valid values: 1 to 65535`
+
+If for some reason the automatic calibration sequence is not recording the correct number of steps required for a full 360 degree rotation, or if there is some other requirement to override this value, then uncomment this line and define the desired number of steps.
+
 Defining custom stepper drivers
 ================================
 
-These need to have a valid AccelStepper() entry defined.
+.. note:: 
 
-Further info to be added here.
+  We have chosen a few common stepper driver/motor combinations to be on the supported driver/motor list, and there are a large number of other options on the market, many of which are touted to be "pin compatible" with drivers that are already supported.
+
+  If you're reading this section because your driver/motor combination is not explicitly supported, we encourage you to see if it is compatible with a supported combination prior to defining a custom entry, and to share that information with the team.
+
+  Over time, we expect to build a more complete list of drivers and motors that are compatible with what we have tested.
+
+If you have a need to use a stepper driver and motor combination that isn't on the supported list and isn't "pin-compatible" with an existing supported driver/motor combination, you may need to define a custom entry in "config.h" to allow Turntable-EX to work correctly.
+
+To do this, you will need to add a valid AccelStepper() definition with the appropriate parameters provided, and this entry needs to be  defined as your `STEPPER_DRIVER` option.
+
+The list of parameters required are documented on the `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page.
+
+**Note:** There has been a slight modification to the AccelStepper library included with Turntable-EX. If you have a need to invert the enable option, then provide this as the last parameter. The modified library sets the enable pin (if defined) when the stepper object is instantiated, and if it needs to be inverted, this happens at the same time. We do not call the setEnablePin() or setPinsInverted() functions at any point. You can see this in use in the "standard_steppers.h" file as defined for the "TWO_WIRE_INV" driver option.
+
+To add this to "config.h", add your new definition **before** the `STEPPER_DRIVER` line, and update `STEPPER_DRIVER` to use your definition, and ensure all standard options are commented out:
+
+.. code-block:: cpp
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  //  Define the stepper controller in use according to those available below, refer to the
+  //  documentation for further details on which to select for your application.
+  //
+  #define MY_STEPPER_DRIVER AccelStepper(Type, Pin1, Pin2, Pin3, Pin4, Enable, Invert)
+  #define STEPPER_DRIVER MY_STEPPER_DRIVER
+  // #define STEPPER_DRIVER ULN2003_HALF_CW
+  // #define STEPPER_DRIVER ULN2003_HALF_CCW
+  // #define STEPPER_DRIVER ULN2003_FULL_CW
+  // #define STEPPER_DRIVER ULN2003_FULL_CCW
+  // #define STEPPER_DRIVER TWO_WIRE
+  // #define STEPPER_DRIVER TWO_WIRE_INV

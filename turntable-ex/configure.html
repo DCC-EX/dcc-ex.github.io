@@ -384,27 +384,57 @@
 <h2>Advanced configuration options<a class="headerlink" href="#advanced-configuration-options" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="debug">
 <h3>DEBUG<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: Disabled</cite></p>
 <p>If debug level output is requested as part of a support ticket or when troubleshooting in general, uncomment this line by removing the “//” from in front of “#define”.</p>
 </div>
 <div class="section" id="sanity-steps">
 <h3>SANITY_STEPS<a class="headerlink" href="#sanity-steps" title="Permalink to this headline">¶</a></h3>
-<p><cite>Default: 10000</cite></p>
+<p><cite>Default: 10000 (Disabled)</cite></p>
 <p><cite>Valid values: 1 to 65535</cite></p>
 <p>This is the maximum number of steps the stepper motor will move during homing and calibration before flagging a failure.</p>
 <p>If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.</p>
 </div>
 <div class="section" id="home-sensitivity">
 <h3>HOME_SENSITIVITY<a class="headerlink" href="#home-sensitivity" title="Permalink to this headline">¶</a></h3>
-<p><cite>Default: 150</cite></p>
+<p><cite>Default: 150 (Disabled)</cite></p>
 <p><cite>Valid values: 1 to 65535</cite></p>
 <p>This is the minimum number of steps required for the turntable to rotate away from the homing sensor before it deactivates, which is used during the calibration sequence.</p>
 <p>If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.</p>
 </div>
+<div class="section" id="full-step-count">
+<h3>FULL_STEP_COUNT<a class="headerlink" href="#full-step-count" title="Permalink to this headline">¶</a></h3>
+<p><cite>Default: 4096 (Disabled)</cite></p>
+<p><cite>Valid values: 1 to 65535</cite></p>
+<p>If for some reason the automatic calibration sequence is not recording the correct number of steps required for a full 360 degree rotation, or if there is some other requirement to override this value, then uncomment this line and define the desired number of steps.</p>
+</div>
 </div>
 <div class="section" id="defining-custom-stepper-drivers">
 <h2>Defining custom stepper drivers<a class="headerlink" href="#defining-custom-stepper-drivers" title="Permalink to this headline">¶</a></h2>
-<p>These need to have a valid AccelStepper() entry defined.</p>
-<p>Further info to be added here.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have chosen a few common stepper driver/motor combinations to be on the supported driver/motor list, and there are a large number of other options on the market, many of which are touted to be “pin compatible” with drivers that are already supported.</p>
+<p>If you’re reading this section because your driver/motor combination is not explicitly supported, we encourage you to see if it is compatible with a supported combination prior to defining a custom entry, and to share that information with the team.</p>
+<p>Over time, we expect to build a more complete list of drivers and motors that are compatible with what we have tested.</p>
+</div>
+<p>If you have a need to use a stepper driver and motor combination that isn’t on the supported list and isn’t “pin-compatible” with an existing supported driver/motor combination, you may need to define a custom entry in “config.h” to allow Turntable-EX to work correctly.</p>
+<p>To do this, you will need to add a valid AccelStepper() definition with the appropriate parameters provided, and this entry needs to be  defined as your <cite>STEPPER_DRIVER</cite> option.</p>
+<p>The list of parameters required are documented on the <a class="reference external" href="http://www.airspayce.com/mikem/arduino/AccelStepper/">AccelStepper</a> web page.</p>
+<p><strong>Note:</strong> There has been a slight modification to the AccelStepper library included with Turntable-EX. If you have a need to invert the enable option, then provide this as the last parameter. The modified library sets the enable pin (if defined) when the stepper object is instantiated, and if it needs to be inverted, this happens at the same time. We do not call the setEnablePin() or setPinsInverted() functions at any point. You can see this in use in the “standard_steppers.h” file as defined for the “TWO_WIRE_INV” driver option.</p>
+<p>To add this to “config.h”, add your new definition <strong>before</strong> the <cite>STEPPER_DRIVER</cite> line, and update <cite>STEPPER_DRIVER</cite> to use your definition, and ensure all standard options are commented out:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">//  Define the stepper controller in use according to those available below, refer to the</span>
+<span class="c1">//  documentation for further details on which to select for your application.</span>
+<span class="c1">//</span>
+<span class="cp">#define MY_STEPPER_DRIVER AccelStepper(Type, Pin1, Pin2, Pin3, Pin4, Enable, Invert)</span>
+<span class="cp">#define STEPPER_DRIVER MY_STEPPER_DRIVER</span>
+<span class="c1">// #define STEPPER_DRIVER ULN2003_HALF_CW</span>
+<span class="c1">// #define STEPPER_DRIVER ULN2003_HALF_CCW</span>
+<span class="c1">// #define STEPPER_DRIVER ULN2003_FULL_CW</span>
+<span class="c1">// #define STEPPER_DRIVER ULN2003_FULL_CCW</span>
+<span class="c1">// #define STEPPER_DRIVER TWO_WIRE</span>
+<span class="c1">// #define STEPPER_DRIVER TWO_WIRE_INV</span>
+</pre></div>
+</div>
 </div>
 </div>
 

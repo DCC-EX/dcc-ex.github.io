@@ -305,6 +305,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.</p>
+<p>For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the Turntable-EX view of the <a class="reference external" href="https://github.com/orgs/DCC-EX/projects/7/views/1">DCC++ EX GitHub project</a>.</p>
 <p>For those who wish to help us with Beta testing, you’re encouraged to follow the testing processes outlined in the <a class="reference external" href="https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md">Regression Testing process</a>, and then submit your test results using the <a class="reference external" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose">Beta Test Results</a> issue template.</p>
 </div>
 <p>Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.</p>
@@ -370,6 +371,7 @@
 <p class="sidebar-title">Unsupported stepper drivers and motors</p>
 <a class="reference internal image-reference" href="../_images/tinkerer.png"><img alt="Tinkerer Level" class="align-left" src="../_images/tinkerer.png" style="width: 48.0px; height: 39.2px;" /></a>
 <p>If you have a need to use a different driver, these should be relatively straight forward to configure in a similar manner to how additional motor drivers are configured for use with CommandStation-EX.</p>
+<p>Refer to <a class="reference internal" href="configure.html#defining-custom-stepper-drivers"><span class="std std-ref">Defining custom stepper drivers</span></a> for more details.</p>
 </div>
 <p>However, it is very easy to use one of several other common stepper drivers if you require more torque, or if you prefer to use a NEMA17 or other stepper motor.</p>
 <p>The complete list of supported stepper drivers and motors:</p>
@@ -415,7 +417,7 @@
 <ul class="simple">
 <li><p>Use an auto-reverser that automatically reverses the phase when a short circuit is detected (the Digitrax AR1 is a commonly used option here)</p></li>
 <li><p>Use a mechanical method to switch the phase based on the physical position of the turntable</p></li>
-<li><p>Use Turntable-EX and to automatically (or manually) invert the phase as appropriate</p></li>
+<li><p>Use Turntable-EX to automatically (or manually) invert the phase as appropriate</p></li>
 </ul>
 <p>The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.</p>
 <p>Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the motor shield are connected to the same rail all the way along.</p>
@@ -434,12 +436,12 @@
 <p>In the diagrams below, the “home” end of the turntable bridge is indicated by the bright green sleeper, with the “home” position of 0 degrees being located at the top of the diagram. The surrounding layout tracks are separated by 10 degrees.</p>
 <p>The yellow dashed line represents the 45/225 degree trigger points to invert and revert the phase switching, with the light yellow shaded area representing the 180 degrees in which the phase will be inverted.</p>
 <p>The surrounding layout tracks have been wired so that each opposing track is wired the same.</p>
-<p>To start, with the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.</p>
+<p>To start, the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.</p>
 <a class="reference internal image-reference" href="../_images/auto-phase-switch-start.png"><img alt="Aligned with first track" src="../_images/auto-phase-switch-start.png" style="width: 467.0px; height: 523.0px;" /></a>
 <p>Next, we’ve sent a command for the turntable to rotate 180 degrees, which requires our phase to be inverted in order to prevent a short circuit.</p>
 <p>As this will trigger the turntable to rotate beyond our 45 degree trigger point, the phase will automatically be inverted.</p>
 <a class="reference internal image-reference" href="../_images/auto-phase-switch-trigger.png"><img alt="Rotate beyond 45 degrees" src="../_images/auto-phase-switch-trigger.png" style="width: 467.0px; height: 523.0px;" /></a>
-<p>Once the turntable reaches the correction position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.</p>
+<p>Once the turntable reaches the correct position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.</p>
 <a class="reference internal image-reference" href="../_images/auto-phase-switch-end.png"><img alt="Rotated 180 degrees" src="../_images/auto-phase-switch-end.png" style="width: 467.0px; height: 523.0px;" /></a>
 <p>If the turntable continues to rotate beyond the 225 degree point, the phase will revert again.</p>
 <a class="reference internal image-reference" href="../_images/auto-phase-switch-revert.png"><img alt="Rotated 180 degrees" src="../_images/auto-phase-switch-revert.png" style="width: 467.0px; height: 523.0px;" /></a>

@@ -439,7 +439,7 @@ MOVETT(600, 100, Turn)
 <p>For the default Turntable-EX configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).</p>
 <p>Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula “steps = degrees/degrees per step”. To turn 10 degrees requires ~114 steps (10 / 0.088 = 113.64).</p>
 <p>In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.</p>
-<a class="reference internal image-reference" href="../_images/six-pos-example-degrees.png"><img alt="Six Postion Example" src="../_images/six-pos-example-degrees.png" style="width: 312.0px; height: 244.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/six-pos-example-degrees.png"><img alt="Six Postion Example" src="../_images/six-pos-example-degrees.png" style="width: 436.79999999999995px; height: 342.29999999999995px;" /></a>
 <p>Therefore, using our formula, the starting point for each position will be:</p>
 <table class="colwidths-auto command-table docutils align-default">
 <thead>
@@ -561,7 +561,7 @@ MOVETT(600, 100, Turn)
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in short circuit when a locomotive attempts to enter or exit the turntable bridge track.</p>
+<p>If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in a short circuit when a locomotive attempts to enter or exit the turntable bridge track.</p>
 </div>
 </div>
 </div>

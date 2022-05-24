@@ -162,6 +162,8 @@ ________________
 
 If for some reason the automatic calibration sequence is not recording the correct number of steps required for a full 360 degree rotation, or if there is some other requirement to override this value, then uncomment this line and define the desired number of steps.
 
+If you enable this option, the calibration sequence will never run automatically even if the step count is not recorded in EEPROM, and while you can manually initiate the calibration command which will perform the sequence and store the step count in EEPROM, this setting will always override that on startup.
+
 Defining custom stepper drivers
 ================================
 

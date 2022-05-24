@@ -677,7 +677,7 @@ The transition between states is defined by <code class="docutils literal notran
 throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If <code class="docutils literal notranslate"><span class="pre">PIN</span></code> is associated
 with an external device, then the device will be operated accordingly.</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">25</span> <span class="pre">VPIN</span> <span class="pre">30&gt;</span></code> defines a turnout that operates Arduino digital output pin D30.</p></li>
-<li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">26</span> <span class="pre">VPIN</span> <span class="pre">164&gt;</span></code> defines a turnout that operates the first pin on the first MCP23017 GPIO Extender (if present).</p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">26</span> <span class="pre">VPIN</span> <span class="pre">164&gt;</span></code> defines a turnout that operates the first pin on the first MCP23017 GPIO expander (if present).</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
 <li><p>This command is available from Version 3.2.0.</p></li>
 </ul>
@@ -715,8 +715,8 @@ with an external device, then the device will be operated accordingly.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> :  the primary address of a DCC accessory decoder controlling a turnout (0-511)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code> : the subaddress of a DCC accessory decoder controlling a turnout (0-3)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For
-servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.</p></li>
+servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">THROWN</span></code> - “0” is closed.  “1” is thrown.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">THROWNPOSITION</span></code> : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CLOSEDPOSITION</span></code> : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.</p></li>
@@ -792,7 +792,7 @@ DCC++ EX should return <code class="docutils literal notranslate"><span class="p
 </div>
 <div class="section" id="sensors-input-commands">
 <h2>Sensors (Input) Commands<a class="headerlink" href="#sensors-input-commands" title="Permalink to this headline">¶</a></h2>
-<p>DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O extenders
+<p>DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
 and other devices.
 Physical sensors can be of any type (infrared, magnetic, mechanical…).  They may be configured to pull-up or not.
 When configured for pull-up, the input is connected (within the CS) to
@@ -823,9 +823,8 @@ but the default parameters protect against contact bounces for up to 20 millisec
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the sensor
 (You pick the ID &amp; they are shared between Turnouts, Sensors and Outputs)</p>
-<p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For
-servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.</p>
+<p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the input to be controlled by the sensor object.  For Arduino input pins, this is the same as the digital pin number.  For
+servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p>
 <p><code class="docutils literal notranslate"><span class="pre">PULLUP</span></code> : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don’t use internal pull-up resistor for PIN (ACTIVE=HIGH).</p>
 <p>Once all sensors have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command if you want those new definitions updated in the EEPROM.
@@ -877,8 +876,8 @@ However, the default behavior can be modified so that any pin can be forced to b
 <p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the output
 (You pick the ID &amp; they are shared between Turnouts, Sensors and Outputs)</p>
 <p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For
-servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.</p>
+servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p>
 <p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFLAG</span></code> : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)

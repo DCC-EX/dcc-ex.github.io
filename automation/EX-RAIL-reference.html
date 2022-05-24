@@ -619,16 +619,16 @@ ALIAS(BayExitStarter, 107)        // Starter Signal with Route board
 ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
 
 ROUTE(11, &quot;Bay to Shed&quot;)
-  IF(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is not active, do these
-    THROW(17)
-    DELAY(20)
+  IF(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is active, reset the route
     DEACTIVATEL(BayExitStarter)
-    UNLATCH(ROUTE_TOGGLE)           // LATCH ROUTE_TOGGLE
-  ELSE                            // Next time ROUTE activated, this will happen instead
-    ACTIVATEL(BayExitStarter)
     DELAY(20)
     CLOSE(17)
-    LATCH(ROUTE_TOGGLE)         // UNLATCH ROUTE_TOGGLE to clear the state
+    UNLATCH(ROUTE_TOGGLE)           // UNLATCH (Clear) ROUTE_TOGGLE
+  ELSE                            // LATCH is not active, so set route and LATCH
+    THROW(17)
+    DELAY(20)
+    ACTIVATEL(BayExitStarter)
+    LATCH(ROUTE_TOGGLE)         // LATCH ROUTE_TOGGLE to indicate route set
   ENDIF
 DONE
 </pre></div>

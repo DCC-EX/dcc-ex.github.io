@@ -84,7 +84,7 @@ ____________________________________________________________
   * - Symptoms
     - Common Causes
   * - CommandStation-EX software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp
-    - The version of CommandStation-EX is too old, upgrade to X.X.X
+    - The version of CommandStation-EX is incorrect, you need the "add-turntable-controller" branch of `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_
 
 Turntable-EX showing as offline with <D HAL SHOW>
 __________________________________________________

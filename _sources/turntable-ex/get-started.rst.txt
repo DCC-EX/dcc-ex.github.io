@@ -294,6 +294,8 @@ Automatic calibration
 
   If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`turntable-ex/test-and-tune:turntable-ex commands` section.
 
+  Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`turntable-ex/configure:full_step_count`.
+
 When Turntable-EX is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.
 
 Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`turntable-ex/test-and-tune:tuning your turntable positions`.
@@ -316,6 +318,14 @@ You can now safely power off Turntable-EX and remove the USB cable from your PC 
 8. Add the Turntable-EX device driver to CommandStation-EX
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+
+  As mentioned previously, your CommandStation needs to be running the "add-turntable-controller" branch of `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_.
+
+  This will display in the serial console of your CommandStation as version 4.0.2.
+  
+  If the "myHal.cpp_example.txt" is missing the lines referred to below, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of CommandStation-EX.
+
 Before you will be able to test or use Turntable-EX, you need to configure the CommandStation-EX software to load the appropriate device driver.
 
 This requires creating or editing the myHal.cpp file in the CommandStation-EX code and uploading it to your CommandStation.
@@ -325,10 +335,6 @@ This requires creating or editing the myHal.cpp file in the CommandStation-EX co
   It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the :doc:`/reference/software/hal-config` page. However, if that page is more information than you require at this point, then follow the steps below to add the required Turntable-EX device driver and device.
 
 Before continuing, refer to the file "myHal.cpp_example.txt" included with the CommandStation-EX software, and note the following.
-
-.. note:: 
-
-  If the "myHal.cpp_example.txt" is missing the below lines, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using a version of CommandStation-EX prior to X.X.X.
 
 At the top of the file there are a number of lines beginning with "#include":
 

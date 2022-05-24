@@ -316,6 +316,14 @@ You can now safely power off Turntable-EX and remove the USB cable from your PC 
 8. Add the Turntable-EX device driver to CommandStation-EX
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+
+  As mentioned previously, your CommandStation needs to be running the "add-turntable-controller" branch of `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_.
+
+  This will display in the serial console of your CommandStation as version 4.0.2.
+  
+  If the "myHal.cpp_example.txt" is missing the lines referred to below, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of CommandStation-EX.
+
 Before you will be able to test or use Turntable-EX, you need to configure the CommandStation-EX software to load the appropriate device driver.
 
 This requires creating or editing the myHal.cpp file in the CommandStation-EX code and uploading it to your CommandStation.
@@ -325,10 +333,6 @@ This requires creating or editing the myHal.cpp file in the CommandStation-EX co
   It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the :doc:`/reference/software/hal-config` page. However, if that page is more information than you require at this point, then follow the steps below to add the required Turntable-EX device driver and device.
 
 Before continuing, refer to the file "myHal.cpp_example.txt" included with the CommandStation-EX software, and note the following.
-
-.. note:: 
-
-  If the "myHal.cpp_example.txt" is missing the below lines, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using a version of CommandStation-EX prior to X.X.X.
 
 At the top of the file there are a number of lines beginning with "#include":
 

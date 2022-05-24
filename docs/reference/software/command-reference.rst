@@ -401,7 +401,7 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
     throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If ``PIN`` is associated 
     with an external device, then the device will be operated accordingly.
   * Example: ``<T 25 VPIN 30>`` defines a turnout that operates Arduino digital output pin D30.  
-  * Example: ``<T 26 VPIN 164>`` defines a turnout that operates the first pin on the first MCP23017 GPIO Extender (if present).
+  * Example: ``<T 26 VPIN 164>`` defines a turnout that operates the first pin on the first MCP23017 GPIO expander (if present).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
   * This command is available from Version 3.2.0.
   
@@ -434,8 +434,8 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
 * ``ADDRESS`` :  the primary address of a DCC accessory decoder controlling a turnout (0-511)
 * ``SUBADDRESS`` : the subaddress of a DCC accessory decoder controlling a turnout (0-3)
 * ``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
-  servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-  116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.
+  servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
+  116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 * ``THROWN`` - "0" is closed.  "1" is thrown.
 * ``THROWNPOSITION`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
 * ``CLOSEDPOSITION`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
@@ -507,7 +507,7 @@ Controlling a Defined Turnout
 Sensors (Input) Commands
 =========================
 
-DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O extenders
+DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
 and other devices. 
 Physical sensors can be of any type (infrared, magnetic, mechanical...).  They may be configured to pull-up or not.  
 When configured for pull-up, the input is connected (within the CS) to 
@@ -540,9 +540,8 @@ To have this sketch monitor one or more Arduino pins for sensor triggers, first 
 ``ID`` : The numeric ID (0-32767) of the sensor
 (You pick the ID & they are shared between Turnouts, Sensors and Outputs)
 
-``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
-servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.
+``PIN`` : the pin number of the input to be controlled by the sensor object.  For Arduino input pins, this is the same as the digital pin number.  For 
+servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 
 ``PULLUP`` : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don't use internal pull-up resistor for PIN (ACTIVE=HIGH).
 
@@ -600,8 +599,8 @@ To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outpu
 (You pick the ID & they are shared between Turnouts, Sensors and Outputs)
 
 ``PIN`` : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For 
-servo outputs and I/O extenders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO Extender module, and 180-195 for the second MCP23017 module.
+servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
+116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 
 ``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)
 

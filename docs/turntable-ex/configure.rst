@@ -162,7 +162,9 @@ ________________
 
 If for some reason the automatic calibration sequence is not recording the correct number of steps required for a full 360 degree rotation, or if there is some other requirement to override this value, then uncomment this line and define the desired number of steps.
 
-If you enable this option, the calibration sequence will never run automatically even if the step count is not recorded in EEPROM, and while you can manually initiate the calibration command which will perform the sequence and store the step count in EEPROM, this setting will always override that on startup.
+If you enable this option, the calibration sequence will never run automatically even if the step count is not recorded in EEPROM, and this setting will always override that on startup.
+
+You can initiate the calibration command manually while this option is enabled, it will perform the calibration sequence and record the calibrated step count in EEPROM, and that setting will take effect whilst Turntable-EX is running. However, the calibrated value in EEPROM will be overridden at the next startup unless this option is disabled.
 
 Defining custom stepper drivers
 ================================

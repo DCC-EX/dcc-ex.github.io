@@ -6,23 +6,23 @@ Introduction to EX-RAIL Automation
    17 Feb 2022: *Now included* in **DCC++EX 4.0!**
    Available to download and use now!
 
-* :ref:`Introduction`
-* :ref:`Things You Can Do With EX-RAIL`
-* :ref:`What You Don't Need`
-* :ref:`How It Works`
-* :ref:`The Automation Process`
-* :ref:`Some Simple Examples`
-* :ref:`Definining Turnouts`
-* :ref:`Defining Signals`
-* :ref:`Starting the system`
-* :ref:`Drive-Away Feature`
-* :ref:`Roster Entries`
-* :ref:`Sounds`
-* :ref:`Sensors`
-* :ref:`Outputs`
-* :ref:`Sequence Numbers`
-* :ref:`Tips and Techniques`
-* :ref:`Why Can't I Put a Script on an SDCard?`
+* :ref:`automation/EX-RAIL-intro:Introduction`
+* :ref:`automation/EX-RAIL-intro:Things You Can Do With EX-RAIL`
+* :ref:`automation/EX-RAIL-intro:What You Don't Need`
+* :ref:`automation/EX-RAIL-intro:How It Works`
+* :ref:`automation/EX-RAIL-intro:The Automation Process`
+* :ref:`automation/EX-RAIL-intro:Some Simple Examples`
+* :ref:`automation/EX-RAIL-intro:Defining Turnouts`
+* :ref:`automation/EX-RAIL-intro:Defining Signals`
+* :ref:`automation/EX-RAIL-intro:Starting the system`
+* :ref:`automation/EX-RAIL-intro:Drive-Away Feature`
+* :ref:`automation/EX-RAIL-intro:Roster Entries`
+* :ref:`automation/EX-RAIL-intro:Sounds`
+* :ref:`automation/EX-RAIL-intro:Sensors`
+* :ref:`automation/EX-RAIL-intro:Outputs`
+* :ref:`automation/EX-RAIL-intro:Sequence Numbers`
+* :ref:`automation/EX-RAIL-intro:Tips and Techniques`
+* :ref:`automation/EX-RAIL-intro:Why Can't I Put a Script on an SDCard?`
 
 
 Introduction
@@ -482,7 +482,7 @@ For a known set of locos, the easiest way is to define the startup process at th
  * Signals default to RED on power up, and get turned GREEN when a route clears them.
 
 
-Drive Away feature
+Drive-Away feature
 ===================
 
 EX-RAIL can switch a track section between programming and mainline.
@@ -734,20 +734,24 @@ Here's the line by line explanation:
 
 This technique can be used in many different ways limited only by your imagination to have EX-RAIL perform many different actions and automations.
 
-Why Can't I Put a Script on an SDCard
+Why Can't I Put a Script on an SDCard?
 =======================================
 
 From time to time, we are asked why we can't put automation scripts (the contents of a myAutomation.h file) on an SDCard or load it into EEPROM storage on the Arduino. This is not possible, and as you will see in the last paragraph of this section, would not provide much of a benefit. For you Engineers and advanced Tinkerers:
 
-1) Being able to read an SD card on the arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don't have enough free memory on an Arduino to hold that code. The same problems exist for using EEPROM.
-|
-2) myAutomation.h is actually generating compiled code as an integral part of the CS. To have this file loaded separately at run time would require that the CS contained all the code necessary to read the file and interpret the contents. This would be a significant additional code burden on the CS (>1000 lines of code) and also require huge amounts of precious RAM to store the interpreted version of the file because it cannot be written into flash memory at run time.
-|
-3) By compiling the code on your pc, you have the advantage of the vast majority of syntax errors being detected by the compiler (albeit somewhat opaquely) rather than having to move the SDCard to the CS before discovering an issue.
-|   
+1) Being able to read an SD card on the arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don't have enough free memory on an Arduino to hold that code. The same problems exist for using EEPROM.   
+
+
+2) myAutomation.h is actually generating compiled code as an integral part of the CS. To have this file loaded separately at run time would require that the CS contained all the code necessary to read the file and interpret the contents. This would be a significant additional code burden on the CS (>1000 lines of code) and also require huge amounts of precious RAM to store the interpreted version of the file because it cannot be written into flash memory at run time.   
+
+
+3) By compiling the code on your pc, you have the advantage of the vast majority of syntax errors being detected by the compiler (albeit somewhat opaquely) rather than having to move the SDCard to the CS before discovering an issue.   
+
+
 4) The current implementation requires no additional PC code/tool download or installation. If you are able to setup your CS, you already have everything you need to add your myAutomation.
-|
-1) To implement an SD card solution requires a user to have access to the CS, which could involve climbing under their layout, opening the CS case if you have one, dismounting the motor shield to get access to the SDCard slot, potentially damaging the CS, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the CS.
+
+
+5) To implement an SD card solution requires a user to have access to the CS, which could involve climbing under their layout, opening the CS case if you have one, dismounting the motor shield to get access to the SDCard slot, potentially damaging the CS, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the CS.
 
 In contrast... with the current system: One takes the end of the USB cable that has been thoughtfully left connected to the CS and plugs it into ones laptop. The Arduino IDE (or suitable alternative) is opened and the myAutomation.h files is edited. A SINGLE CLICK on the upload button is sufficient to save the file, check it for errors, upload to the CS and restart the CS. 
 

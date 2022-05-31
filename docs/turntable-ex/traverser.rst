@@ -15,20 +15,24 @@ The primary difference from the standard full rotation turntable mode is the add
 
 The home sensor takes on an additional purpose in this mode, so in addition to flagging the home position, it also operates as a limit sensor.
 
-From here on in, we will simply refer to all variations as traversers.
+From here on in, for simplicity, we will refer to all variations of horizontal/vertical travers or limited rotation turntables as traversers.
+
+.. note::
+
+  This page is seriously lacking in images and diagrams which are coming soon.
 
 What you need for traverser mode
 _________________________________
 
 The same components outlined in :ref:`turntable-ex/turntable-ex:what you need for turntable-ex` apply in traverser mode, with two likely exceptions:
 
-1. Home and limit sensors: Given the need for positive stops at each of traverser travel, be it vertical, horizontal, or restricting rotation within an arc for limited rotation turntables, micro switches are likely a better choice for these.
+1. Home and limit sensors: Given the need for positive stops at each end's limit of travel, be it vertical, horizontal, or restricting rotation within an arc for limited rotation turntables, micro switches are likely a better choice for these.
 
   .. image:: ../_static/images/turntable-ex/micro-switch.png
     :alt: Micro switch
     :scale: 20%
 
-2. Dual relay board: With horizontal and vertical traversers, locomotives do not rotate, so it is therefore unlikely any DCC phase switching will be required. Limited rotation turntables are also unlikely to require phase inversion as locomotives will be unable to be rotated 180 degrees.
+2. Dual relay board: With horizontal and vertical traversers, locomotives do not rotate, so it is therefore unlikely any DCC phase switching will be required. Limited rotation turntables are also unlikely to require phase inversion as locomotives will be unable to be rotated 180 degrees. The dual relay board should not be required.
 
 Considerations - turntable vs. traverser
 =========================================
@@ -62,7 +66,7 @@ Refer to the connection summary below, which makes the assumption that DCC phase
 
 If using micro switches for the home and limit sensors, the best way is to connect the common terminal of the switch to ground, and the normally open (NO) terminal to the Arduino's pin. This allows the default "config.h" setting for `HOME_SENSOR_ACTIVE_STATE` and `LIMIT_SENSOR_ACTIVE_STATE` to remain unchanged as "LOW".
 
-It is recommended not to physically connect the stepper motor to the traverser until such time as you have validated the correct rotational direction of the stepper motor, and that the HOME and LIMIT sensors are connected correctly and functional.
+It is recommended not to fully assemble the traverser with the stepper motor until such time as you have validated the correct rotational direction of the stepper motor, and that the HOME and LIMIT sensors are connected correctly and functional.
 
 Traverser mode connection summary
 __________________________________
@@ -98,13 +102,13 @@ Summary table of all connections required during assembly:
     * - Home sensor common
       - GND
       - 2 G
-    * - Home sensor NO
+    * - Home sensor normally open (NO)
       - 2
       - 2 S
     * - Limit sensor common
       - GND
       - 5 G
-    * - Limit sensor NO
+    * - Limit sensor normally open (NO)
       - 5
       - 5 S
     * - CommandStation 20 (SDA)
@@ -135,9 +139,19 @@ Edit "config.h", add "//" at the beginning of the `#define TURNTABLE_EX_MODE TUR
   // #define TURNTABLE_EX_MODE TURNTABLE                      <<== After adding //
   #define TURNTABLE_EX_MODE TRAVERSER                         <<== After removing //
 
-At this point, you can continue to load the software onto the Arduino.
+If you need to make any other adjustments to cater for using different stepper driver/motor combinations, this is the time to do so also.
 
-Once the software is loading, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.
+.. tip:: 
+
+  If you are using a mechanism that results in anything other than a 1:1 gear ratio (eg. using a lead screw), you may need to consider updating the `SANITY_STEPS` setting in "config.h".
+
+  This setting defaults to 10000 steps and is used to prevent a stepper turning indefinitely when attempting to find HOME or LIMIT. If the gear ratio results in a step count greater than 10000, the calibration sequence will fail to complete, and updating this setting to a sufficently high step count will solve that issue.
+
+  Refer to :ref:`turntable-ex/configure:sanity_steps`.
+
+Once "config.h" is updated, you can continue to load the software onto the Arduino.
+
+Once the software is loaded and Turntable-EX starts, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.
 
 Sensor testing mode
 ____________________
@@ -176,19 +190,47 @@ Once this message is displayed, you can test the HOME and LIMIT sensors by manua
   Limit sensor ACTIVATED
   Limit sensor DEACTIVATED
 
-When sensor testing is complete, you can add the "//" back in front of the `#define SENSOR_TESTING` line in "config.h" to disable SENSOR_TESTING mode, and revert to normal Turntable-EX operations.
+If the sensors report an inverted status (ie. ACIVATED when they are DEACTIVATED), then you likely need to review `HOME_SENSOR_ACTIVE_STATE` and `LIMIT_SENSOR_ACTIVE_STATE` in "config.h". If the sensors connect to ground when activated, they must be set to `LOW`, if they connect to 5V they must be set to `HIGH`.
+
+If activating HOME activates LIMIT or vice versa, then swap the Arduino pin connections. HOME connects to pin 5, LIMIT connects to pin 2.
+
+When sensor testing is complete, you can add the "//" back in front of the `#define SENSOR_TESTING` line in "config.h" to disable SENSOR_TESTING mode, and re-load the software to revert to normal Turntable-EX operations.
 
 Automatic calibration
 ______________________
 
-In traverser mode, the calibration sequence has three phases that ensures the calculated step count is reached prior to activating the limit sensor, ensuring this is a safeguard against moving too far.
+Once you know the normal direction of your stepper and have confirmed both HOME and LIMIT sensors work correctly, you can finish assembling your traverser with the stepper and proceed with the automatic calibration.
+
+.. note:: 
+
+  Remember! The HOME sensor must be activated when the stepper rotates in the default/forward direction, and the LIMIT sensor must be activated when the stepper rotates in the reverse direction.
+
+In traverser mode, the calibration sequence has an additional phase that ensures the calculated step count is reached prior to activating the LIMIT sensor, ensuring this is a safeguard against moving too far.
+
+When starting up for the first time, you should see output in the serial console similar to the below. Note the full turn step count once calibration has completed.
 
 .. code-block:: 
 
+  License GPLv3 fsf.org (c) dcc-ex.com
+  Turntable-EX version 0.4.0-Beta
+  Available at I2C address 0x60
+  Turntable-EX in TRAVERSER mode
+  Turntable-EX has not been calibrated yet                                <<== Indicates calibration required
+  Manual phase switching enabled
+  Calibrating...
   Homing started
   Turntable homed successfully
   CALIBRATION: Phase 1, homing...
   Turntable already homed
   CALIBRATION: Phase 2, finding limit switch...
-  CALIBRATION: Phase 3, counting limit steps...
-  CALIBRATION: Completed, storing full turn step count: 2501                    <<== Step count to record
+  CALIBRATION: Phase 3, counting limit steps...                           <<== Third phase to ensure full step count is reached prior to limit sensor
+  CALIBRATION: Completed, storing full turn step count: 2508              <<== Step count to record
+  Turntable-EX has been calibrated for 2508 steps per revolution
+  Manual phase switching enabled
+  Homing started
+  Turntable homed successfully
+
+Traverser mode is ready!
+=========================
+
+Now that you have enabled traverser mode in Turntable-EX, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to :doc:`/turntable-ex/test-and-tune` as the tuning steps and control commands are the same in both turntable and traverser modes.

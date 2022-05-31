@@ -2,8 +2,8 @@
 Configuration options
 **********************
 
-.. image:: ../_static/images/tinkerer-level.png
-  :alt: Tinkerer Level
+.. image:: ../_static/images/conductor-level.png
+  :alt: Conductor Level
   :scale: 50%
 
 Turntable-EX has a number of different configuration options available to customise the behaviour to suit your needs.
@@ -159,6 +159,10 @@ This is the time in milliseconds that the LED is on and off when the set to a sl
 Advanced configuration options
 ===============================
 
+.. image:: ../_static/images/tinkerer-level.png
+  :alt: Tinkerer Level
+  :scale: 50%
+
 DEBUG
 ______
 
@@ -204,14 +208,22 @@ You can initiate the calibration command manually while this option is enabled, 
 DEBOUNCE_DELAY
 _______________
 
-`Default: 10 (Disabled)`
+`Default: 10 (Disabled)` - TRAVERSER mode
+
+`Default: 0 (Disabled)` - TURNTABLE mode
 
 `Valid values: 0 to 50` (any higher and you will compromise the response time of the limit sensors)
 
 When using mechanical switches as HOME and LIMIT sensors, it is often necessary to "debounce" these switches to mask out the noise when they activate/deactivate. If using mechanical switches, it is advised to enable SENSOR_TESTING mode to validate the HOME and LIMIT switch operation, and this option may be tuned if necessary.
 
+Note that in turntable mode, a hall effect or similar sensor is typically used which does not require debouncing, and therefore the default in turntable mode is to set this delay to 0.
+
 Defining custom stepper drivers
 ================================
+
+.. image:: ../_static/images/tinkerer-level.png
+  :alt: Tinkerer Level
+  :scale: 50%
 
 .. note:: 
 

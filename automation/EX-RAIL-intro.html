@@ -306,6 +306,25 @@
 <p>17 Feb 2022: <em>Now included</em> in <strong>DCC++EX 4.0!</strong>
 Available to download and use now!</p>
 </div>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction"><span class="std std-ref">Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="#things-you-can-do-with-ex-rail"><span class="std std-ref">Things You Can Do With EX-RAIL</span></a></p></li>
+<li><p><a class="reference internal" href="#what-you-don-t-need"><span class="std std-ref">What You Don’t Need</span></a></p></li>
+<li><p><a class="reference internal" href="#how-it-works"><span class="std std-ref">How It Works</span></a></p></li>
+<li><p><a class="reference internal" href="#the-automation-process"><span class="std std-ref">The Automation Process</span></a></p></li>
+<li><p><a class="reference internal" href="#some-simple-examples"><span class="std std-ref">Some Simple Examples</span></a></p></li>
+<li><p><a class="reference internal" href="#defining-turnouts"><span class="std std-ref">Defining Turnouts</span></a></p></li>
+<li><p><a class="reference internal" href="#defining-signals"><span class="std std-ref">Defining Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#starting-the-system"><span class="std std-ref">Starting the system</span></a></p></li>
+<li><p><a class="reference internal" href="#drive-away-feature"><span class="std std-ref">Drive-Away feature</span></a></p></li>
+<li><p><a class="reference internal" href="#roster-entries"><span class="std std-ref">Roster entries</span></a></p></li>
+<li><p><a class="reference internal" href="#sounds"><span class="std std-ref">Sounds</span></a></p></li>
+<li><p><a class="reference internal" href="#sensors"><span class="std std-ref">Sensors</span></a></p></li>
+<li><p><a class="reference internal" href="#outputs"><span class="std std-ref">Outputs</span></a></p></li>
+<li><p><a class="reference internal" href="#sequence-numbers"><span class="std std-ref">Sequence Numbers</span></a></p></li>
+<li><p><a class="reference internal" href="#tips-and-techniques"><span class="std std-ref">Tips and Techniques</span></a></p></li>
+<li><p><a class="reference internal" href="#why-can-t-i-put-a-script-on-an-sdcard"><span class="std std-ref">Why Can’t I Put a Script on an SDCard?</span></a></p></li>
+</ul>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <p>EX-RAIL is an “<strong>EX</strong>tended <strong>R</strong>ailroad <strong>A</strong>utomation <strong>I</strong>nstruction <strong>L</strong>anguage”
@@ -649,7 +668,7 @@ number. So now our route looks like this:</p>
 </div>
 </div>
 <div class="section" id="drive-away-feature">
-<h2>Drive Away feature<a class="headerlink" href="#drive-away-feature" title="Permalink to this heading">¶</a></h2>
+<h2>Drive-Away feature<a class="headerlink" href="#drive-away-feature" title="Permalink to this heading">¶</a></h2>
 <p>EX-RAIL can switch a track section between programming and mainline.</p>
 <p>Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
@@ -715,8 +734,8 @@ number. So now our route looks like this:</p>
 <li><p>0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script.</p></li>
 </ul>
 </div>
-<div class="section" id="various-techniques">
-<h2>Various techniques<a class="headerlink" href="#various-techniques" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="tips-and-techniques">
+<h2>Tips and Techniques<a class="headerlink" href="#tips-and-techniques" title="Permalink to this heading">¶</a></h2>
 <p>Below are some tips and techniques you can implement to get the most out of EX-RAIL.</p>
 <div class="section" id="defining-names-for-any-id-numbers-aliases">
 <h3>Defining names for any ID numbers (aliases)<a class="headerlink" href="#defining-names-for-any-id-numbers-aliases" title="Permalink to this heading">¶</a></h3>
@@ -860,6 +879,19 @@ ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &q
 </ul>
 <p>This technique can be used in many different ways limited only by your imagination to have EX-RAIL perform many different actions and automations.</p>
 </div>
+</div>
+<div class="section" id="why-can-t-i-put-a-script-on-an-sdcard">
+<h2>Why Can’t I Put a Script on an SDCard?<a class="headerlink" href="#why-can-t-i-put-a-script-on-an-sdcard" title="Permalink to this heading">¶</a></h2>
+<p>From time to time, we are asked why we can’t put automation scripts (the contents of a myAutomation.h file) on an SDCard or load it into EEPROM storage on the Arduino. This is not possible, and as you will see in the last paragraph of this section, would not provide much of a benefit. For you Engineers and advanced Tinkerers:</p>
+<ol class="arabic simple">
+<li><p>Being able to read an SD card on the arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don’t have enough free memory on an Arduino to hold that code. The same problems exist for using EEPROM.</p></li>
+<li><p>myAutomation.h is actually generating compiled code as an integral part of the CS. To have this file loaded separately at run time would require that the CS contained all the code necessary to read the file and interpret the contents. This would be a significant additional code burden on the CS (&gt;1000 lines of code) and also require huge amounts of precious RAM to store the interpreted version of the file because it cannot be written into flash memory at run time.</p></li>
+<li><p>By compiling the code on your pc, you have the advantage of the vast majority of syntax errors being detected by the compiler (albeit somewhat opaquely) rather than having to move the SDCard to the CS before discovering an issue.</p></li>
+<li><p>The current implementation requires no additional PC code/tool download or installation. If you are able to setup your CS, you already have everything you need to add your myAutomation.</p></li>
+<li><p>To implement an SD card solution requires a user to have access to the CS, which could involve climbing under their layout, opening the CS case if you have one, dismounting the motor shield to get access to the SDCard slot, potentially damaging the CS, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the CS.</p></li>
+</ol>
+<p>In contrast… with the current system: One takes the end of the USB cable that has been thoughtfully left connected to the CS and plugs it into ones laptop. The Arduino IDE (or suitable alternative) is opened and the myAutomation.h files is edited. A SINGLE CLICK on the upload button is sufficient to save the file, check it for errors, upload to the CS and restart the CS.</p>
+<p>As more powerful processors become available and affordable, we may find other ways to handle saving settings and adding automations, but the current method, as you can see, is efficient, easy to use, and fast.</p>
 </div>
 </div>
 

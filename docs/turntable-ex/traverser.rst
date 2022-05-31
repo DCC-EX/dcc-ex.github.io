@@ -15,6 +15,8 @@ The primary difference from the standard full rotation turntable mode is the add
 
 The home sensor takes on an additional purpose in this mode, so in addition to flagging the home position, it also operates as a limit sensor.
 
+From here on in, we will simply refer to all variations as traversers.
+
 What you need for traverser mode
 _________________________________
 
@@ -28,27 +30,153 @@ The same components outlined in :ref:`turntable-ex/turntable-ex:what you need fo
 
 2. Dual relay board: With horizontal and vertical traversers, locomotives do not rotate, so it is therefore unlikely any DCC phase switching will be required. Limited rotation turntables are also unlikely to require phase inversion as locomotives will be unable to be rotated 180 degrees.
 
+Considerations - turntable vs. traverser
+=========================================
+
+In turntable mode, if the home sensor fails or is not adjusted correctly, the worst that will happen is that the turntable will not home, and will not be able to automatically calibrate the steps per rotation. There is no risk of damage if the turntable continues to rotate while attempting to home.
+
+In traverser mode, however, there is risk of physical damage if a stepper motor attempts to drive the traverser beyond the physical limits. Depending on the physical construction, it may damage traverser components, or it may cause the stepper motor to fail. If it causes excess current consumption by the stepper motor, the stepper driver may also overheat and cause electrical damage.
+
+**Therefore, it's imperative that care is taken to ensure the stepper motor rotates in the correct direction, and both home and limit sensors are functional and connected in the right order.**
+
+.. danger:: 
+
+  While the software is designed to cause the stepper to halt when a sensor is activated to prevent damage, the software cannot know if the sensors are not operational, nor if they are connected to the incorrect Arduino pins.
+
+When determining which sensor needs to be located at each limit position of the traverser, you need to take the rotational direction of the stepper motor into account:
+
+*The* **HOME** *sensor must be activated when the traverser reaches the desired end point with the stepper rotating in the default direction. If using the default configuration, this would be clockwise with the UNL2003/28BYJ-48, and should be clockwise for A4988/DRV8825 and NEMA17 combinations.*
+
+*The* **LIMIT** *sensor must be activated when the traverser reaches the desired end point with the stepper rotating in the reverse direction.*
+
+You will need to take these considerations into account, and ensure the sensors are connected in the correct order.
+
+For a method to test and validate this, see :ref:`turntable-ex/traverser:sensor testing mode` below.
+
 Assembly
 =========
 
+General assembly is as per the :doc:`/turntable-ex/get-started` page, with the aforementioned limit sensor being connected to the Arduino's pin 2.
 
+Refer to the connection summary below, which makes the assumption that DCC phase switching is not required.
+
+If using micro switches for the home and limit sensors, the best way is to connect the common terminal of the switch to ground, and the normally open (NO) terminal to the Arduino's pin. This allows the default "config.h" setting for `HOME_SENSOR_ACTIVE_STATE` and `LIMIT_SENSOR_ACTIVE_STATE` to remain unchanged as "LOW".
+
+It is recommended not to physically connect the stepper motor to the traverser until such time as you have validated the correct rotational direction of the stepper motor, and that the HOME and LIMIT sensors are connected correctly and functional.
+
+Traverser mode connection summary
+__________________________________
+
+Summary table of all connections required during assembly:
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * - Device Pin
+      - Arduino Pin
+      - Nano Shield Pin
+    * - ULN2003 IN1
+      - A0
+      - A0 S
+    * - ULN2003 IN2
+      - A1
+      - A1 S
+    * - ULN2003 IN3
+      - A2
+      - A2 S
+    * - ULN2003 IN4
+      - A3
+      - A3 S
+    * - ULN2003 \+
+      - 5V
+      - A0 V
+    * - ULN2003 \-
+      - GND
+      - A0 G
+    * - Home sensor common
+      - GND
+      - 2 G
+    * - Home sensor NO
+      - 2
+      - 2 S
+    * - Limit sensor common
+      - GND
+      - 5 G
+    * - Limit sensor NO
+      - 5
+      - 5 S
+    * - CommandStation 20 (SDA)
+      - A4
+      - A4 S or SDA
+    * - CommandStation 21 (SCL)
+      - A5
+      - A5 S or SCL
+    * - CommandStation GND
+      - GND
+      - A4 G or I2C GND
+
+Loading Turntable-EX for traverser mode
+========================================
+
+Prepare to load the software as per :ref:`turntable-ex/get-started:7. load the turntable-ex software`, and ensure "config.h" has been created by copying or renaming "config.example.h".
+
+Edit "config.h", add "//" at the beginning of the `#define TURNTABLE_EX_MODE TURNTABLE` line, and remove the "//" from the beginning of the `#define TURNTABLE_EX_MODE TRAVERSER`:
+
+.. code-block:: cpp
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  //  Define the mode for Turntable-EX.
+  //  TURNTABLE : Use this for normal, 360 degree rotation turntables (Default).
+  //  TRAVERSER : Use this for vertical or horizontal traversers, or turntables that do
+  //              do not rotate a full 360 degrees.
+  // 
+  // #define TURNTABLE_EX_MODE TURNTABLE                      <<== After adding //
+  #define TURNTABLE_EX_MODE TRAVERSER                         <<== After removing //
+
+At this point, you can continue to load the software onto the Arduino.
+
+Once the software is loading, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.
 
 Sensor testing mode
-====================
+____________________
 
-As part of introducing the traverser feature, an additional option has been enabled that disables all Turntable-EX operations and simply reports the state changes of the HOME and LIMIT sensors in the serial console.
+Prior to proceeding any further, it is recommended to validate the HOME and LIMIT sensors operate correctly, and that they are connected to the correct pins of the Arduino. A new SENSOR_TESTING mode has been added to allow the sensors to be tested, with all other Turntable-EX functionality disabled.
 
-It is highly recommended that this feature is enabled, and both HOME and LIMIT sensors are tested prior to enabling TRAVERSER mode, especially when using mechanical switches that require proper adjustment and alignment to prevent mechanical damage from the stepper motor attempting to drive traversers or turntable bridges beyond physical boundaries.
+To enable SENSOR_TESTING mode, you will need to edit "config.h" again, and this time remove the "//" from the beginning of the `#define SENSOR_TESTING`` line (Refer to :ref:`turntable-ex/configure:sensor_testing` to enable sensor testing mode.):
 
-Refer to :ref:`turntable-ex/configure:sensor_testing` to enable sensor testing mode.
+.. code-block:: cpp
 
-Considerations
-===============
+  /////////////////////////////////////////////////////////////////////////////////////
+  //  Enable sensor testing only, prevents all Turntable-EX operations.
+  //  Uncomment this line to disable all normal Turntable-EX operations in order to test
+  //  and validate that homing and limit sensors activate and deactivate correctly.
+  // 
+  #define SENSOR_TESTING                                      <<== After removing //
 
-Home sensor - normal/forward direction triggers home sensor.
+Once enabled, load the Turntable-EX software again, and once Turntable-EX starts you should see this displayed in the serial console:
 
-Limit sensor - reverse direction triggers limit sensor.
+.. code-block:: 
 
+  License GPLv3 fsf.org (c) dcc-ex.com
+  Turntable-EX version 0.4.0-Beta
+  Available at I2C address 0x60
+  Turntable-EX in TRAVERSER mode
+  SENSOR TESTING ENABLED, Turntable-EX operations disabled        <<== This message confirms sensor testing is enabled
+  Home/limit switch current state: 1/1
+  Debounce delay: 10
+
+Once this message is displayed, you can test the HOME and LIMIT sensors by manually triggering, and you should see the state changes reflected in the serial console as below:
+
+.. code-block:: 
+
+  Home sensor ACTIVATED
+  Home sensor DEACTIVATED
+  Limit sensor ACTIVATED
+  Limit sensor DEACTIVATED
+
+When sensor testing is complete, you can add the "//" back in front of the `#define SENSOR_TESTING` line in "config.h" to disable SENSOR_TESTING mode, and revert to normal Turntable-EX operations.
 
 Automatic calibration
 ______________________

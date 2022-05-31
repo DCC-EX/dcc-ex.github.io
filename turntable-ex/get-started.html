@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="turntable-ex.html">Overview</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,10 +300,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="getting-started">
-<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/conductor-level.png"><img alt="Conductor Level" src="../_images/conductor-level.png" style="width: 140.0px; height: 44.5px;" /></a>
 <div class="section" id="assembly">
-<h2>Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">¶</a></h2>
+<h2>Assembly<a class="headerlink" href="#assembly" title="Permalink to this heading">¶</a></h2>
 <p>For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with an Arduino Nano V3, a standard 3 pin Arduino compatible hall effect sensor, and a dual relay board.</p>
 <div class="sidebar">
 <p class="sidebar-title">Use prototype or strip boards</p>
@@ -313,7 +315,7 @@
 <p>Throughout the assembly process, you can refer to this Fritzing diagram to help validate your connections are correct (open this image in a new tab or window and zoom in to see the detail):</p>
 <a class="reference internal image-reference" href="../_images/assembly.png"><img alt="Fritzing Diagram" class="align-left" src="../_images/assembly.png" style="width: 511.5px; height: 368.25px;" /></a>
 <div class="section" id="connection-summary">
-<h3>Connection summary<a class="headerlink" href="#connection-summary" title="Permalink to this headline">¶</a></h3>
+<h3>Connection summary<a class="headerlink" href="#connection-summary" title="Permalink to this heading">¶</a></h3>
 <p>Summary table of all connections required during assembly:</p>
 <table class="colwidths-auto command-table docutils align-default">
 <thead>
@@ -391,13 +393,13 @@
 </table>
 <p>Of course for the Tinkerers and Engineers, if you’re not using a Nano or a prototyping shield, adapt the details as suits your configuration.</p>
 <div class="section" id="before-you-start">
-<h4>1. BEFORE you start<a class="headerlink" href="#before-you-start" title="Permalink to this headline">¶</a></h4>
+<h4>1. BEFORE you start<a class="headerlink" href="#before-you-start" title="Permalink to this heading">¶</a></h4>
 <p>Gather all your components and visually check them all for any obvious damage, paying particular attention to pins on the Arduino to make sure they are straight.</p>
 <a class="reference internal image-reference" href="../_images/components.png"><img alt="Components" src="../_images/components.png" style="width: 400.0px; height: 300.0px;" /></a>
 <a class="reference internal image-reference" href="../_images/check-pins.png"><img alt="Nano Pins" src="../_images/check-pins.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
 <div class="section" id="insert-the-nano-into-the-shield">
-<h4>2. Insert the Nano into the shield<a class="headerlink" href="#insert-the-nano-into-the-shield" title="Permalink to this headline">¶</a></h4>
+<h4>2. Insert the Nano into the shield<a class="headerlink" href="#insert-the-nano-into-the-shield" title="Permalink to this heading">¶</a></h4>
 <p>Insert the Nano into the prototype shield socket, taking care to ensure the USB socket is located at the same end as the DC power jack, and that all pins are straight and aligned correctly with the female headers.</p>
 <p>The various pin numbers may also be printed on the prototyping shield to confirm the correct orientation.</p>
 <a class="reference internal image-reference" href="../_images/insert-nano.png"><img alt="Insert Nano" src="../_images/insert-nano.png" style="width: 400.0px; height: 300.0px;" /></a>
@@ -407,7 +409,7 @@
 <a class="reference internal image-reference" href="../_images/proto-shield-pins.png"><img alt="Prototype Shield Pins" src="../_images/proto-shield-pins.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
 <div class="section" id="connect-the-stepper-controller-and-motor">
-<h4>3. Connect the stepper controller and motor<a class="headerlink" href="#connect-the-stepper-controller-and-motor" title="Permalink to this headline">¶</a></h4>
+<h4>3. Connect the stepper controller and motor<a class="headerlink" href="#connect-the-stepper-controller-and-motor" title="Permalink to this heading">¶</a></h4>
 <p>Firstly, note that the ULN2003 controller will have four pins marked “IN1” through “IN4”, as well as a pair of pins with “+” and “-“. There is a likely a jumper installed across two pins beside these that is unmarked, leave this in place.</p>
 <p>You will need to connect six of the female to female Dupont wires from the ULN2003 pins to the Arduino prototype shield as below:</p>
 <table class="colwidths-auto command-table docutils align-default">
@@ -444,7 +446,7 @@
 <a class="reference internal image-reference" href="../_images/28byj-48-connector2.png"><img alt="28BYJ-48 Connector" src="../_images/28byj-48-connector2.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
 <div class="section" id="connect-the-hall-effect-sensor">
-<h4>4. Connect the hall effect sensor<a class="headerlink" href="#connect-the-hall-effect-sensor" title="Permalink to this headline">¶</a></h4>
+<h4>4. Connect the hall effect sensor<a class="headerlink" href="#connect-the-hall-effect-sensor" title="Permalink to this heading">¶</a></h4>
 <p>The hall effect sensor has three pins, and likely only two of these pins are marked, the left with “-” and right with “S”. The middle pin is likely to be unmarked, and will be the 5V pin. There are probably many different varieties of sensors and designs out there, but both that I have (from different suppliers) are marked identically.</p>
 <p>Use three of the Dupont wires and connect these from the hall effect sensor to the Arduino prototype shield as below:</p>
 <table class="colwidths-auto command-table docutils align-default">
@@ -469,7 +471,7 @@
 <a class="reference internal image-reference" href="../_images/hall-effect-shield.png"><img alt="Hall Effect to Shield" src="../_images/hall-effect-shield.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
 <div class="section" id="connect-the-dual-relay-board">
-<h4>5. Connect the dual relay board<a class="headerlink" href="#connect-the-dual-relay-board" title="Permalink to this headline">¶</a></h4>
+<h4>5. Connect the dual relay board<a class="headerlink" href="#connect-the-dual-relay-board" title="Permalink to this heading">¶</a></h4>
 <p>Note there should be six pins on the dual relay board marked “VCC”, “GND”, “IN1”, “IN2”, “COM”, and “GND”. The “COM” and “GND” pins should have a jumper installed to connect these together. Leave this in place.</p>
 <p>Use four Dupont wires to connect the other four pins as below:</p>
 <table class="colwidths-auto command-table docutils align-default">
@@ -497,7 +499,7 @@
 <a class="reference internal image-reference" href="../_images/dual-relay-shield-pins.png"><img alt="Dual Relay to Shield Pins" src="../_images/dual-relay-shield-pins.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
 <div class="section" id="connect-power-and-test">
-<h4>6. Connect power and test<a class="headerlink" href="#connect-power-and-test" title="Permalink to this headline">¶</a></h4>
+<h4>6. Connect power and test<a class="headerlink" href="#connect-power-and-test" title="Permalink to this heading">¶</a></h4>
 <p>At this point, it should be safe to plug in the power supply to the DC power jack on the prototyping shield.</p>
 <p>When the power supply is turned on, the power LEDs on the Arduino Nano and dual relay board should be lit. Note there is likely no power LED on the ULN2003 stepper controller, and testing of this will require loading the Turntable-EX software on to the Nano in step 7 below.</p>
 <a class="reference internal image-reference" href="../_images/power-on.png"><img alt="Powered On" src="../_images/power-on.png" style="width: 400.0px; height: 300.0px;" /></a>
@@ -506,7 +508,7 @@
 <a class="reference internal image-reference" href="../_images/hall-effect-active.png"><img alt="Hall Effect Active" src="../_images/hall-effect-active.png" style="width: 400.0px; height: 300.0px;" /></a>
 </div>
 <div class="section" id="load-the-turntable-ex-software">
-<h4>7. Load the Turntable-EX software<a class="headerlink" href="#load-the-turntable-ex-software" title="Permalink to this headline">¶</a></h4>
+<h4>7. Load the Turntable-EX software<a class="headerlink" href="#load-the-turntable-ex-software" title="Permalink to this heading">¶</a></h4>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.</p>
@@ -525,7 +527,7 @@
 <p>If you don’t have the magnet installed at this point, or if it is too far from the sensor, Turntable-EX will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.</p>
 <p>If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See <a class="reference internal" href="troubleshooting.html#troubleshooting-turntable-ex"><span class="std std-ref">Troubleshooting Turntable-EX</span></a> for further assistance if required.</p>
 <div class="section" id="automatic-calibration">
-<h5>Automatic calibration<a class="headerlink" href="#automatic-calibration" title="Permalink to this headline">¶</a></h5>
+<h5>Automatic calibration<a class="headerlink" href="#automatic-calibration" title="Permalink to this heading">¶</a></h5>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the <a class="reference internal" href="test-and-tune.html#turntable-ex-commands"><span class="std std-ref">Turntable-EX commands</span></a> section.</p>
@@ -547,7 +549,7 @@ Turntable homed successfully
 </div>
 </div>
 <div class="section" id="add-the-turntable-ex-device-driver-to-commandstation-ex">
-<h4>8. Add the Turntable-EX device driver to CommandStation-EX<a class="headerlink" href="#add-the-turntable-ex-device-driver-to-commandstation-ex" title="Permalink to this headline">¶</a></h4>
+<h4>8. Add the Turntable-EX device driver to CommandStation-EX<a class="headerlink" href="#add-the-turntable-ex-device-driver-to-commandstation-ex" title="Permalink to this heading">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As mentioned previously, your CommandStation needs to be running the “add-turntable-controller” branch of <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller">CommandStation-EX</a>.</p>
@@ -619,7 +621,7 @@ Turntable homed successfully
 <p>Note there is no point in checking the driver at this stage as Turntable-EX is not connected, and will show as “OFFLINE”.</p>
 </div>
 <div class="section" id="connect-turntable-ex-to-your-commandstation">
-<h4>9. Connect Turntable-EX to your CommandStation<a class="headerlink" href="#connect-turntable-ex-to-your-commandstation" title="Permalink to this headline">¶</a></h4>
+<h4>9. Connect Turntable-EX to your CommandStation<a class="headerlink" href="#connect-turntable-ex-to-your-commandstation" title="Permalink to this heading">¶</a></h4>
 <p>To control Turntable-EX from your CommandStation, you will need a connection to the I2C (SDA, SCL) pins.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -653,7 +655,7 @@ Turntable homed successfully
 </div>
 </div>
 <div class="section" id="now-you-re-ready">
-<h2>Now you’re ready!<a class="headerlink" href="#now-you-re-ready" title="Permalink to this headline">¶</a></h2>
+<h2>Now you’re ready!<a class="headerlink" href="#now-you-re-ready" title="Permalink to this heading">¶</a></h2>
 <p>At this point, you should have a fully assembled Turntable-EX with the software loaded, a default configuration, and the device driver installed and configured in your CommandStation.</p>
 <p>In addition, Turntable-EX should be connected to your CommandStation ready to test, tune your turntable positions, and configure EX-RAIL ready for use on your layout.</p>
 <p>Click the “next” button to get cracking!</p>

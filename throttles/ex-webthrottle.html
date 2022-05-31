@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,13 +300,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="dcc-ex-web-throttle">
-<h1>DCC++ EX Web Throttle<a class="headerlink" href="#dcc-ex-web-throttle" title="Permalink to this headline">¶</a></h1>
+<h1>DCC++ EX Web Throttle<a class="headerlink" href="#dcc-ex-web-throttle" title="Permalink to this heading">¶</a></h1>
 <p>This is a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Command Station directly through the USB port of a computer.</p>
 <p>For a video on how to install and use WebThrottle-EX click below.</p>
 <blockquote>
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/BkgsEOjxWaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
 <div class="section" id="what-you-need-to-run-webthrottle-ex">
-<h2>What you need to run WebThrottle-EX<a class="headerlink" href="#what-you-need-to-run-webthrottle-ex" title="Permalink to this headline">¶</a></h2>
+<h2>What you need to run WebThrottle-EX<a class="headerlink" href="#what-you-need-to-run-webthrottle-ex" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Chromium-Based Browser version 89 or above (March 2021)
 (Chrome, Opera, Edge)</p></li>
@@ -317,7 +319,7 @@
 </ul>
 </div>
 <div class="section" id="getting-started">
-<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h2>
 <p>Make sure you are using Chrome version 89 or above (check the menu, help, about screen).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -326,17 +328,17 @@
 <p>To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.</p>
 </div>
 <div class="section" id="run-or-install-webthrottle-ex">
-<h2>Run or Install WebThrottle-EX<a class="headerlink" href="#run-or-install-webthrottle-ex" title="Permalink to this headline">¶</a></h2>
+<h2>Run or Install WebThrottle-EX<a class="headerlink" href="#run-or-install-webthrottle-ex" title="Permalink to this heading">¶</a></h2>
 <p>You have an option for how you would like to run WebThrottle-Ex, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.</p>
 </div>
 <div class="section" id="try-it-now-run-from-the-cloud">
-<h2>Try it now (Run from the cloud)<a class="headerlink" href="#try-it-now-run-from-the-cloud" title="Permalink to this headline">¶</a></h2>
+<h2>Try it now (Run from the cloud)<a class="headerlink" href="#try-it-now-run-from-the-cloud" title="Permalink to this heading">¶</a></h2>
 <p>Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don’t have to have any hardware. Please read the requirements above for what you need in order to run WebThrottle-EX in your browser. If you want to remember the link to run the throttle, it is <a class="reference external" href="https://dcc-ex.github.io/WebThrottle-EX">https://dcc-ex.github.io/WebThrottle-EX</a>.</p>
 <p class="dcclink"><a class="reference external" href="https://DCC-EX.github.io/WebThrottle-EX">Try It Now</a></p>
 <p>WebThrottle-EX is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the WT-EX settings panel (click the 3 line “hamburger menu” at the top left), you will find a “Settings” menu. Click on “Apps” and then select “Install as an App”. You can now work offline and always find WebThrottle-EX with your other Apps!</p>
 </div>
 <div class="section" id="download">
-<h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this heading">¶</a></h2>
 <p>This will install all the files to run locally on your machine. You won’t need an internet connection to run the software. Just download the latest zip file from the link below and extract it to any folder you have run permission on. Then click on the index.html file to launch the throttle in your browser. Create a shortcut to it on your desktop so you can launch it more easily.</p>
 <p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/WebThrottle-EX/releases">Download</a></p>
 <div class="admonition note">
@@ -345,7 +347,7 @@
 </div>
 </div>
 <div class="section" id="operation">
-<h2>Operation<a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h2>
+<h2>Operation<a class="headerlink" href="#operation" title="Permalink to this heading">¶</a></h2>
 <p>To use the program, you can either click on the “Serial” dropdown button and select “Emulator” to run in emulator mode or after making sure your hardware is properly connected, select “Serial”.</p>
 <p>Next, click on the “Connect DCC++ EX” button.</p>
 <p>If you are in “emulator mode”, you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as “Arduino Mega 2560 (COM3)”. Your com port may vary. Click on your board to select it and then click the “Connect DCC++ EX” button.</p>
@@ -367,12 +369,12 @@
 </div>
 </div>
 <div class="section" id="going-further-developing">
-<h2>Going Further / Developing<a class="headerlink" href="#going-further-developing" title="Permalink to this headline">¶</a></h2>
+<h2>Going Further / Developing<a class="headerlink" href="#going-further-developing" title="Permalink to this heading">¶</a></h2>
 <p>If you want to really delve into how this works and help us improve it with your comments or your development skills, please contact us.</p>
 <p>To load the Chrome DevTools to look at logging and be able to manually enter “write” commands for testing, click on the Menu (the 3 vertical dots in the upper right hand corner of the Chrome Window), then select “more tools” and then “Developer Tools”. Or you can just hit “Ctrl-Shift-I”.</p>
 </div>
 <div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Permalink to this heading">¶</a></h2>
 <p>Copyright 2020 DCC-EX</p>
 <p>Licensed under the GNU open source license.</p>
 <p>Unless required by applicable law or agreed to in writing, software distributed

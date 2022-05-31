@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,9 +300,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="install-using-the-automated-installer">
-<h1>Install using the Automated Installer<a class="headerlink" href="#install-using-the-automated-installer" title="Permalink to this headline">¶</a></h1>
+<h1>Install using the Automated Installer<a class="headerlink" href="#install-using-the-automated-installer" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="requirements-for-installing">
-<h2>Requirements (for installing)<a class="headerlink" href="#requirements-for-installing" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements (for installing)<a class="headerlink" href="#requirements-for-installing" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Windows/Linux/macOS Computer</p></li>
 <li><p>DCC-EX Compatible motor shield / motor controller board</p></li>
@@ -313,7 +315,7 @@
 </div>
 </div>
 <div class="section" id="instructions-for-windows-mac-os-x-and-linux-including-the-raspberry-pi">
-<h2>Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi<a class="headerlink" href="#instructions-for-windows-mac-os-x-and-linux-including-the-raspberry-pi" title="Permalink to this headline">¶</a></h2>
+<h2>Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi<a class="headerlink" href="#instructions-for-windows-mac-os-x-and-linux-including-the-raspberry-pi" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Download the <a class="reference internal" href="../download/commandstation.html#exinstaller"><span class="std std-ref">DCC-EX Installer</span></a> which will automatically determine the version you need and download it</p></li>
 <li><p>Extract the Installer into its own folder with your favorite unzip program</p></li>
@@ -327,7 +329,7 @@
 </div>
 </div>
 <div class="section" id="the-installer-window">
-<h2>The Installer Window<a class="headerlink" href="#the-installer-window" title="Permalink to this headline">¶</a></h2>
+<h2>The Installer Window<a class="headerlink" href="#the-installer-window" title="Permalink to this heading">¶</a></h2>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/installer.jpg"><img alt="DCC-EX Installer" src="../_images/installer.jpg" style="width: 595.5px; height: 362.25px;" /></a>
 <p class="caption"><span class="caption-number">Figure 24 </span><span class="caption-text">Installer Window</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
@@ -335,7 +337,7 @@
 <p>There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.</p>
 </div>
 <div class="section" id="choose-your-options">
-<h2>Choose your options<a class="headerlink" href="#choose-your-options" title="Permalink to this headline">¶</a></h2>
+<h2>Choose your options<a class="headerlink" href="#choose-your-options" title="Permalink to this heading">¶</a></h2>
 <p>In the left side options pane, use the dropdown selector boxes to choose the following options:</p>
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/inst_options.jpg"><img alt="Options Pane" src="../_images/inst_options.jpg" style="width: 332.25px; height: 393.0px;" /></a>
@@ -352,7 +354,7 @@
 <li><p>Press the “Compile and Upload” button</p></li>
 </ol>
 <div class="section" id="wifi-checkbox">
-<h3>WiFi Checkbox<a class="headerlink" href="#wifi-checkbox" title="Permalink to this headline">¶</a></h3>
+<h3>WiFi Checkbox<a class="headerlink" href="#wifi-checkbox" title="Permalink to this heading">¶</a></h3>
 <p>MAKE SURE THIS BOX IS CHECKED - If you want WiFi, this box <strong>must</strong> be checked. If you don’t want WiFi, you can leave it checked anyway so that if you add WiFi later, you won’t have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. If you aren’t using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren’t going to use WiFi, unchecking the box will free about 10kb of progmem and about 2kb of RAM.</p>
 <p>If you have installed a WiFi board, DCC++ EX will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), this will set up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like “DCC-EX-xxxxxx”, where the “xxxxxx” are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.</p>
 <p>If you wish to connect to your home network instead (connect to your router using “Station Mode”), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:</p>
@@ -369,7 +371,7 @@
 </ul>
 </div>
 <div class="section" id="ethernet-checkbox">
-<h3>Ethernet Checkbox<a class="headerlink" href="#ethernet-checkbox" title="Permalink to this headline">¶</a></h3>
+<h3>Ethernet Checkbox<a class="headerlink" href="#ethernet-checkbox" title="Permalink to this heading">¶</a></h3>
 <p>If you have an Ethernet shield and check this box, you will see options to change the following settings:</p>
 <div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/ethernet.jpg"><img alt="Ethernet Options" src="../_images/ethernet.jpg" style="width: 269.1px; height: 295.2px;" /></a>
@@ -383,7 +385,7 @@
 </ul>
 </div>
 <div class="section" id="lcd-checkbox">
-<h3>LCD Checkbox<a class="headerlink" href="#lcd-checkbox" title="Permalink to this headline">¶</a></h3>
+<h3>LCD Checkbox<a class="headerlink" href="#lcd-checkbox" title="Permalink to this heading">¶</a></h3>
 <p>If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:</p>
 <div class="figure align-default" id="id5">
 <a class="reference internal image-reference" href="../_images/lcd.jpg"><img alt="LCD Options" src="../_images/lcd.jpg" style="width: 286.2px; height: 191.70000000000002px;" /></a>
@@ -397,7 +399,7 @@
 <p>For more information about using displays, see <a class="reference internal" href="../reference/hardware/i2c-displays.html"><span class="doc">I2C Displays</span></a></p>
 </div>
 <div class="section" id="oled-checkbox">
-<h3>OLED CheckBox<a class="headerlink" href="#oled-checkbox" title="Permalink to this headline">¶</a></h3>
+<h3>OLED CheckBox<a class="headerlink" href="#oled-checkbox" title="Permalink to this heading">¶</a></h3>
 <p>If you have an OLED display connected and check this box, you will see the following options you can edit for your display:</p>
 <div class="figure align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/oled.jpg"><img alt="OLED Options" src="../_images/oled.jpg" style="width: 285.3px; height: 148.5px;" /></a>
@@ -410,22 +412,22 @@
 <p>For more information about using displays, see <a class="reference internal" href="../reference/hardware/i2c-displays.html"><span class="doc">I2C Displays</span></a></p>
 </div>
 <div class="section" id="refresh-ports-button">
-<h3>Refresh Ports Button<a class="headerlink" href="#refresh-ports-button" title="Permalink to this headline">¶</a></h3>
+<h3>Refresh Ports Button<a class="headerlink" href="#refresh-ports-button" title="Permalink to this heading">¶</a></h3>
 <p>This button allows you to refresh the serial ports in case you didn’t have the Arduino connected when you opened the program, or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.</p>
 </div>
 <div class="section" id="compile-and-upload-button">
-<h3>Compile and Upload Button<a class="headerlink" href="#compile-and-upload-button" title="Permalink to this headline">¶</a></h3>
+<h3>Compile and Upload Button<a class="headerlink" href="#compile-and-upload-button" title="Permalink to this heading">¶</a></h3>
 <p>Once you have configured your options, press this button to compile all the source code and upload it to your Command Station.</p>
 </div>
 </div>
 <div class="section" id="test-your-setup">
-<h2>Test your setup<a class="headerlink" href="#test-your-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Test your setup<a class="headerlink" href="#test-your-setup" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.</p>
 </div>
 <div class="section" id="using-the-arduino-ide-serial-monitor">
-<h3>Using the Arduino IDE Serial Monitor<a class="headerlink" href="#using-the-arduino-ide-serial-monitor" title="Permalink to this headline">¶</a></h3>
+<h3>Using the Arduino IDE Serial Monitor<a class="headerlink" href="#using-the-arduino-ide-serial-monitor" title="Permalink to this heading">¶</a></h3>
 <p>To test with the Arduino Serial Monitor, download the Arduino IDE from the following link and install it on your computer.</p>
 <p><a class="reference external" href="https://www.arduino.cc/en/Main/software">Download the Arduino IDE</a></p>
 <p>To do a quick test, open the Arduino application:</p>
@@ -458,7 +460,7 @@
 <p>There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki">DCC++ EX Wiki</a> for a list of commands.</p>
 </div>
 <div class="section" id="using-webthrottle-ex">
-<h3>Using WebThrottle-EX<a class="headerlink" href="#using-webthrottle-ex" title="Permalink to this headline">¶</a></h3>
+<h3>Using WebThrottle-EX<a class="headerlink" href="#using-webthrottle-ex" title="Permalink to this heading">¶</a></h3>
 <div class="figure align-default" id="id10">
 <a class="reference internal image-reference" href="../_images/exwebthrottle.jpg"><img alt="WebThrottle-EX" src="../_images/exwebthrottle.jpg" style="width: 600.0px; height: 439.0px;" /></a>
 <p class="caption"><span class="caption-number">Figure 33 </span><span class="caption-text">WebThrottle-EX</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
@@ -466,7 +468,7 @@
 <p>Click this link: <a class="reference internal" href="../throttles/ex-webthrottle.html"><span class="doc">WebThrottle-EX</span></a> to run WebThrottle-EX hosted on our site, or visit <a class="reference external" href="https://github.com/DCC-EX/WebThrottle-EX">GitHub</a> to get the latest version to run on your computer.</p>
 </div>
 <div class="section" id="using-engine-driver-or-other-withrottle-cab-requires-wifi">
-<h3>Using Engine Driver (or other WiThrottle Cab) - Requires WiFi<a class="headerlink" href="#using-engine-driver-or-other-withrottle-cab-requires-wifi" title="Permalink to this headline">¶</a></h3>
+<h3>Using Engine Driver (or other WiThrottle Cab) - Requires WiFi<a class="headerlink" href="#using-engine-driver-or-other-withrottle-cab-requires-wifi" title="Permalink to this heading">¶</a></h3>
 <div class="figure align-default" id="id11">
 <a class="reference internal image-reference" href="../_images/engine_driver.png"><img alt="Engine Driver" src="../_images/engine_driver.png" style="width: 157.0px; height: 321.0px;" /></a>
 <p class="caption"><span class="caption-number">Figure 34 </span><span class="caption-text">Engine Driver</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>

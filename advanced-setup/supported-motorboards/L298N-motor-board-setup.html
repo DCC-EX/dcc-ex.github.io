@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="l298n-motor-board-setup">
-<h1>L298N Motor Board Setup<a class="headerlink" href="#l298n-motor-board-setup" title="Permalink to this headline">¶</a></h1>
+<h1>L298N Motor Board Setup<a class="headerlink" href="#l298n-motor-board-setup" title="Permalink to this heading">¶</a></h1>
 <a class="reference internal image-reference" href="../../_images/tinkerer.png"><img alt="Tinkerer Icon" class="align-left" src="../../_images/tinkerer.png" style="width: 60.0px; height: 49.0px;" /></a>
 <p>Tinkerer Level</p>
 <div class="line-block">
@@ -318,7 +320,7 @@
 <p class="caption"><span class="caption-number">Figure 48 </span><span class="caption-text">L298N Motor Board</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="when-is-the-l298n-a-good-option">
-<h2>When is the L298N a Good Option?<a class="headerlink" href="#when-is-the-l298n-a-good-option" title="Permalink to this headline">¶</a></h2>
+<h2>When is the L298N a Good Option?<a class="headerlink" href="#when-is-the-l298n-a-good-option" title="Permalink to this heading">¶</a></h2>
 <p>You may wonder why one would go through the trouble of using this board when the Arduino / Deek-Robot Motor Shield already has what we need and is a recommended option. The answer is you may want to use this board because:</p>
 <ul class="simple">
 <li><p>You already have one in your parts box</p></li>
@@ -334,10 +336,10 @@
 </ul>
 </div>
 <div class="section" id="l298n-for-main-and-prog-with-current-sense">
-<h2>L298N for MAIN and PROG with Current Sense<a class="headerlink" href="#l298n-for-main-and-prog-with-current-sense" title="Permalink to this headline">¶</a></h2>
+<h2>L298N for MAIN and PROG with Current Sense<a class="headerlink" href="#l298n-for-main-and-prog-with-current-sense" title="Permalink to this heading">¶</a></h2>
 <p>You will need to have currense sense in order to program locos on the programming (service) track. In addition, current sense is necessary to provide short-circuit detection for each track. There are two methods to add current sensing to this board, the first method requires cutting two leads on the IC and soldering in current sense resistors. The other method is to use an external current sense board to measure the current going into the board.</p>
 <div class="section" id="method-1-adding-current-sense-resistors">
-<h3>Method 1: Adding Current Sense Resistors<a class="headerlink" href="#method-1-adding-current-sense-resistors" title="Permalink to this headline">¶</a></h3>
+<h3>Method 1: Adding Current Sense Resistors<a class="headerlink" href="#method-1-adding-current-sense-resistors" title="Permalink to this heading">¶</a></h3>
 <p>This is easier than it sounds and takes about 15 minutes. To do this yourself, you will need:</p>
 <ul class="simple">
 <li><p>2 One Ohm, 3 Watt Power Resistors</p></li>
@@ -365,7 +367,7 @@
 <p class="caption"><span class="caption-number">Figure 50 </span><span class="caption-text">Cut traces and solder on back</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="lifting-or-cutting-chip-legs-option">
-<h4>Lifting Or Cutting Chip Legs Option<a class="headerlink" href="#lifting-or-cutting-chip-legs-option" title="Permalink to this headline">¶</a></h4>
+<h4>Lifting Or Cutting Chip Legs Option<a class="headerlink" href="#lifting-or-cutting-chip-legs-option" title="Permalink to this heading">¶</a></h4>
 <ol class="arabic simple">
 <li><p>Remove all jumpers, there are 3!</p></li>
 <li><p>Unsolder or cut the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output CS A for MAIN. Pin 15 to the right is CS output B for PROG.</p></li>
@@ -378,7 +380,7 @@
 </ol>
 </div>
 <div class="section" id="cutting-traces-and-soldering-on-the-back-option">
-<h4>Cutting Traces and Soldering on the Back Option<a class="headerlink" href="#cutting-traces-and-soldering-on-the-back-option" title="Permalink to this headline">¶</a></h4>
+<h4>Cutting Traces and Soldering on the Back Option<a class="headerlink" href="#cutting-traces-and-soldering-on-the-back-option" title="Permalink to this heading">¶</a></h4>
 <ol class="arabic simple">
 <li><p>Using a razor blade or x-acto knife, carefully cut the ground pads where marked with white lines.</p></li>
 <li><p>Using the blade, carefully scratch the conformal coating off the back of the circuit board where marked with yellow rectangles to expose the bare copper underneath. Be careful, you just want to scrape away the protective layer, you do not want to cut through the copper here.</p></li>
@@ -389,12 +391,12 @@
 </div>
 </div>
 <div class="section" id="configuring-the-board-in-dcc-ex">
-<h3>Configuring the Board in DCC++EX<a class="headerlink" href="#configuring-the-board-in-dcc-ex" title="Permalink to this headline">¶</a></h3>
+<h3>Configuring the Board in DCC++EX<a class="headerlink" href="#configuring-the-board-in-dcc-ex" title="Permalink to this heading">¶</a></h3>
 <p>You have two choices regarding how to wire and configure the L298N motor driver board to the command station. Unlike the Arduino Motor Shield, this board has separate direction inputs which is where we apply the DCC signal.</p>
 <p>Your first choice, the easy way, is to create a new motor board definition that uses the proper pins. This requires you to edit the config.h file, cut and paste the motor board definition below, upload the sketch with the new settings, and connect wires from the L298N board to the correct pins on the Arduino. The only disadvantage to this method is that is uses an extra pin (though there are plenty of spare pins on a Mega), and it uses the standard accuracy waveform. Standard accuracy is fine for almost all cases, but you can read more on the <a class="reference internal" href="../high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a></p>
 <p>Your second choice is to make a small inverter circuit (using 1 FET, IC, or transistor) to connect to the standard signal pin on the Command Station, and split it into two signals connect to the two pins on the L298N board. The advantage of this method is you use just one pin and get the high accuracy DCC waveform. The downside is that you have to solder together a circuit with 2 or 3 parts.</p>
 <div class="section" id="using-2-signal-pins-avoids-soldering-a-transitor-inverter">
-<h4>Using 2 signal pins (Avoids soldering a transitor inverter)<a class="headerlink" href="#using-2-signal-pins-avoids-soldering-a-transitor-inverter" title="Permalink to this headline">¶</a></h4>
+<h4>Using 2 signal pins (Avoids soldering a transitor inverter)<a class="headerlink" href="#using-2-signal-pins-avoids-soldering-a-transitor-inverter" title="Permalink to this heading">¶</a></h4>
 <p>This method uses 2 pins on the Arduino for DCC signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform. The advantage of this method is that you don’t have to wire a transistor and 2 resistors to create an inverter circuit. The disadvantage is you use an extra pin for each track output and you get the standard accuracy waveform. See <a class="reference internal" href="../high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a> to see if you really need it.</p>
 <p>To wire the board, connect the pins according to the following diagram. A table is included as well. This pin usage, with all the pins lined up between boards, allows the use of a ribbon cable to make things a bit more neat:</p>
 <div class="figure align-default" id="id5">
@@ -460,7 +462,7 @@
 <p>Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in <a class="reference internal" href="../../get-started/arduino-ide.html"><span class="doc">Installing Using the Arduino IDE</span></a></p>
 </div>
 <div class="section" id="using-one-signal-pin-with-an-inverter-circuit">
-<h4>Using One Signal Pin With an Inverter circuit<a class="headerlink" href="#using-one-signal-pin-with-an-inverter-circuit" title="Permalink to this headline">¶</a></h4>
+<h4>Using One Signal Pin With an Inverter circuit<a class="headerlink" href="#using-one-signal-pin-with-an-inverter-circuit" title="Permalink to this heading">¶</a></h4>
 <p>This method uses 1 signal pin on the Arduino for each track and uses the standard motorboard definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don’t have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.</p>
 <p>Make the following Inverter circuit (You need 2 if you want MAIN and PROG):</p>
 <div class="figure align-default">
@@ -520,12 +522,12 @@
 </div>
 </div>
 <div class="section" id="method-2-using-an-external-current-sense-board">
-<h3>Method 2: Using An External Current Sense Board<a class="headerlink" href="#method-2-using-an-external-current-sense-board" title="Permalink to this headline">¶</a></h3>
+<h3>Method 2: Using An External Current Sense Board<a class="headerlink" href="#method-2-using-an-external-current-sense-board" title="Permalink to this heading">¶</a></h3>
 <p>Coming Soon</p>
 </div>
 </div>
 <div class="section" id="l298n-for-prog-and-high-current-ibt-2-for-main">
-<h2>L298N for PROG and High Current IBT_2 for MAIN<a class="headerlink" href="#l298n-for-prog-and-high-current-ibt-2-for-main" title="Permalink to this headline">¶</a></h2>
+<h2>L298N for PROG and High Current IBT_2 for MAIN<a class="headerlink" href="#l298n-for-prog-and-high-current-ibt-2-for-main" title="Permalink to this heading">¶</a></h2>
 </div>
 </div>
 

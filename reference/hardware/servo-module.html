@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="connecting-a-servo-module">
-<h1>Connecting a Servo Module<a class="headerlink" href="#connecting-a-servo-module" title="Permalink to this headline">¶</a></h1>
+<h1>Connecting a Servo Module<a class="headerlink" href="#connecting-a-servo-module" title="Permalink to this heading">¶</a></h1>
 <p>To connect a servo module to DCC++EX, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
@@ -324,14 +326,14 @@ consume more current than the Arduino is able to supply, and so a separate 5V su
 servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <a class="reference internal image-reference" href="../../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
 <div class="section" id="using-servos-with-ex-rail">
-<h2>Using Servos with EX-RAIL<a class="headerlink" href="#using-servos-with-ex-rail" title="Permalink to this headline">¶</a></h2>
+<h2>Using Servos with EX-RAIL<a class="headerlink" href="#using-servos-with-ex-rail" title="Permalink to this heading">¶</a></h2>
 <p>EX-RAIL supports two methods of controlling servos:</p>
 <ul class="simple">
 <li><p>Turnouts via the SERVO_TURNOUT directive</p></li>
 <li><p>Animations via the SERVO or SERVO2 directives</p></li>
 </ul>
 <div class="section" id="controlling-servos-for-turnouts">
-<h3>Controlling Servos for Turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this headline">¶</a></h3>
+<h3>Controlling Servos for Turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this heading">¶</a></h3>
 <p>The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in WiThrottle apps, Engine Driver, and JMRI in addition to being defined as a turnout within the CommandStation.</p>
 <p>As per the EX-RAIL reference, turnouts are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">pin</span><span class="p">,</span> <span class="n">active_angle</span><span class="p">,</span> <span class="n">inactive_angle</span><span class="p">,</span> <span class="n">profile</span> <span class="p">[,</span> <span class="s">&quot;description&quot;</span><span class="p">])</span>
@@ -352,7 +354,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 </div>
 </div>
 <div class="section" id="controlling-servos-for-animations">
-<h3>Controlling Servos for Animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this headline">¶</a></h3>
+<h3>Controlling Servos for Animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this heading">¶</a></h3>
 <p>The SERVO and SERVO2 directives allow for servos to be used in various automations within EX-RAIL.</p>
 <p>Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, Engine Driver, or JMRI, but are instead actions designed to be used within EX-RAIL automations.</p>
 <p>As per the EX-RAIL reference, these are defined with the following syntax:</p>
@@ -382,7 +384,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 </div>
 </div>
 <div class="section" id="technical-discussion-for-engineers">
-<h2>Technical Discussion for Engineers<a class="headerlink" href="#technical-discussion-for-engineers" title="Permalink to this headline">¶</a></h2>
+<h2>Technical Discussion for Engineers<a class="headerlink" href="#technical-discussion-for-engineers" title="Permalink to this heading">¶</a></h2>
 <p>There are three types of servos, standard or “Positional Rotation”, “Continuous Rotation” and “Linear”</p>
 <p><strong>A Standard, positional rotation servo</strong> allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo</p>
 <p><strong>A Continuous Rotation Servo</strong> can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counterclockwise.</p>

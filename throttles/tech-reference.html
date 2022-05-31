@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,14 +300,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="technical-reference-for-throttle-developers">
-<h1>Technical Reference for Throttle Developers<a class="headerlink" href="#technical-reference-for-throttle-developers" title="Permalink to this headline">¶</a></h1>
+<h1>Technical Reference for Throttle Developers<a class="headerlink" href="#technical-reference-for-throttle-developers" title="Permalink to this heading">¶</a></h1>
 <p>This page is intended to capture relevant information to assist those who develop throttles compatible with DCC++ EX.</p>
 <div class="section" id="additional-throttle-commands">
-<h2>Additional throttle commands<a class="headerlink" href="#additional-throttle-commands" title="Permalink to this headline">¶</a></h2>
+<h2>Additional throttle commands<a class="headerlink" href="#additional-throttle-commands" title="Permalink to this heading">¶</a></h2>
 <p>Release 4.0.2 provides a number of additional throttle information commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation, and roster features which are already found in the Withrottle implementations.</p>
 <p>These commands are new and do not overlap with the existing commands (which are probably due to be obsoleted as they are over complex and unfit for purpose).</p>
 <div class="section" id="throttle-command-summary">
-<h3>Throttle command summary:<a class="headerlink" href="#throttle-command-summary" title="Permalink to this headline">¶</a></h3>
+<h3>Throttle command summary:<a class="headerlink" href="#throttle-command-summary" title="Permalink to this heading">¶</a></h3>
 <p>All throttle specific commands are summarised here, refer below for elaboration on the details with examples.</p>
 <table class="colwidths-auto command-table docutils align-default">
 <thead>
@@ -347,7 +349,7 @@
 </table>
 </div>
 <div class="section" id="turnouts">
-<h3>Turnouts<a class="headerlink" href="#turnouts" title="Permalink to this headline">¶</a></h3>
+<h3>Turnouts<a class="headerlink" href="#turnouts" title="Permalink to this heading">¶</a></h3>
 <p>The conventional turnout definition commands and the <code class="docutils literal notranslate"><span class="pre">&lt;H&gt;</span></code> responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.</p>
 <p>Example response:</p>
@@ -372,7 +374,7 @@
 - Chris Harlow</p>
 </div>
 <div class="section" id="automations-routes">
-<h4>Automations/Routes<a class="headerlink" href="#automations-routes" title="Permalink to this headline">¶</a></h4>
+<h4>Automations/Routes<a class="headerlink" href="#automations-routes" title="Permalink to this heading">¶</a></h4>
 <p>A throttle needs to know which EX-RAIL Automations and Routes it can show the user.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code> - Returns a list of Automations/Routes.</p>
 <p>Example response:</p>
@@ -387,7 +389,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">13</span> <span class="pre">X&gt;</span></code> - Indicates ID 13 is not found.</p></li>
 </ul>
 <div class="section" id="what-s-the-difference">
-<h5>What’s the difference?<a class="headerlink" href="#what-s-the-difference" title="Permalink to this headline">¶</a></h5>
+<h5>What’s the difference?<a class="headerlink" href="#what-s-the-difference" title="Permalink to this heading">¶</a></h5>
 <p>A <strong>ROUTE</strong> is just a call to an EX-RAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EX-RAIL function, but is not expecting to know the loco ID.</p>
 <ul class="simple">
 <li><p>A route can be triggered by sending, for example, <code class="docutils literal notranslate"><span class="pre">&lt;/START</span> <span class="pre">13&gt;</span></code>.</p></li>
@@ -399,7 +401,7 @@
 </div>
 </div>
 <div class="section" id="roster-information">
-<h4>Roster Information<a class="headerlink" href="#roster-information" title="Permalink to this headline">¶</a></h4>
+<h4>Roster Information<a class="headerlink" href="#roster-information" title="Permalink to this heading">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code> - Requests a list of cab IDs from the roster.</p>
 <p>Example responses:</p>
 <ul class="simple">
@@ -413,7 +415,7 @@
 </ul>
 </div>
 <div class="section" id="obtaining-throttle-status">
-<h4>Obtaining throttle status<a class="headerlink" href="#obtaining-throttle-status" title="Permalink to this headline">¶</a></h4>
+<h4>Obtaining throttle status<a class="headerlink" href="#obtaining-throttle-status" title="Permalink to this heading">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.</p>
 <p>Example response:</p>
 <ul class="simple">
@@ -430,7 +432,7 @@
 </div>
 </div>
 <div class="section" id="commands-to-avoid">
-<h2>Commands to avoid<a class="headerlink" href="#commands-to-avoid" title="Permalink to this headline">¶</a></h2>
+<h2>Commands to avoid<a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">func1</span> <span class="pre">func2&gt;</span></code> - Use <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1/0&gt;</span></code> instead.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span>&#160; <span class="pre">slot</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - Just drop the slot number .</p></li>

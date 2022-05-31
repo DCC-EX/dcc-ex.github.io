@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ethernet-boards">
-<h1>Ethernet Boards<a class="headerlink" href="#ethernet-boards" title="Permalink to this headline">¶</a></h1>
+<h1>Ethernet Boards<a class="headerlink" href="#ethernet-boards" title="Permalink to this heading">¶</a></h1>
 <p>DCC-EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the <a class="reference internal" href="wifi-boards.html"><span class="doc">WiFi Boards Section</span></a>.</p>
 <p>To use Ethernet instead of WiFi, follow these simple steps:</p>
 <ul class="simple">
@@ -316,22 +318,22 @@
 <li><p><a class="reference internal" href="#nano-ethernet-shield"><span class="std std-ref">Nano Ethernet Shield</span></a></p></li>
 </ul>
 <div class="section" id="arduino-network-shield-2">
-<h2>Arduino Network Shield 2<a class="headerlink" href="#arduino-network-shield-2" title="Permalink to this headline">¶</a></h2>
+<h2>Arduino Network Shield 2<a class="headerlink" href="#arduino-network-shield-2" title="Permalink to this heading">¶</a></h2>
 <p>There have been different revisions for the Arduino Network Shields, the main difference is the version of the WiFi chip on the board. The “2” board uses the Wiznet W5500, other versions used the older W5100 chip. The only supported chip currently is the W5500, but the other boards may work as well. The W5500 can handle 8 simultaneous socket connections while the W5100 can handle 4. These boards provide a network (IP) stack capable of both TCP and UDP. This board also has an SDCard which can be used for your own custom features or for storing settings with a possible future version of DCC++ EX</p>
 <a class="reference internal image-reference" href="../../_images/arduino_ethernet_shield_2.jpg"><img alt="Arduino Ethernet Shield 2" src="../../_images/arduino_ethernet_shield_2.jpg" style="width: 425.0px; height: 425.0px;" /></a>
 </div>
 <div class="section" id="wiznet-wiz850io">
-<h2>Wiznet WIZ850IO<a class="headerlink" href="#wiznet-wiz850io" title="Permalink to this headline">¶</a></h2>
+<h2>Wiznet WIZ850IO<a class="headerlink" href="#wiznet-wiz850io" title="Permalink to this heading">¶</a></h2>
 <p>This is a micro Ethernet board no bigger than the RJ45 connector it is attached to.  You have to wire this with jumpers or solder it to a prototyping PCB.</p>
 <a class="reference internal image-reference" href="../../_images/WIZ850IO.png"><img alt="WIZ850IO Ethernet Adapter" src="../../_images/WIZ850IO.png" style="width: 160.0px; height: 160.0px;" /></a>
 </div>
 <div class="section" id="sunfounder-ethernet-shield">
-<h2>Sunfounder Ethernet Shield<a class="headerlink" href="#sunfounder-ethernet-shield" title="Permalink to this headline">¶</a></h2>
+<h2>Sunfounder Ethernet Shield<a class="headerlink" href="#sunfounder-ethernet-shield" title="Permalink to this heading">¶</a></h2>
 <p>This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500.</p>
 <a class="reference internal image-reference" href="../../_images/sunfounder_ethernet_shield.jpg"><img alt="Sunfounder Ethernet Shield" src="../../_images/sunfounder_ethernet_shield.jpg" style="width: 375.0px; height: 375.0px;" /></a>
 </div>
 <div class="section" id="nano-ethernet-shield">
-<h2>Nano Ethernet Shield<a class="headerlink" href="#nano-ethernet-shield" title="Permalink to this headline">¶</a></h2>
+<h2>Nano Ethernet Shield<a class="headerlink" href="#nano-ethernet-shield" title="Permalink to this heading">¶</a></h2>
 <p>This board actually works with an Arduino Nano, you can plug your Nano directly onto this board or create a stack with the matching motor shield. This board will work with an Uno or Mega also, but you have to connect it with jumpers.</p>
 <a class="reference internal image-reference" href="../../_images/nano_ethernet_shield.jpg"><img alt="Sunfounder Ethernet Shield" src="../../_images/nano_ethernet_shield.jpg" style="width: 250.0px; height: 250.0px;" /></a>
 </div>

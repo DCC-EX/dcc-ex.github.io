@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,10 +300,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/conductor-level.png"><img alt="Conductor Level" src="../_images/conductor-level.png" style="width: 140.0px; height: 44.5px;" /></a>
 <div class="section" id="what-is-turntable-ex">
-<h2>What is Turntable-EX?<a class="headerlink" href="#what-is-turntable-ex" title="Permalink to this headline">¶</a></h2>
+<h2>What is Turntable-EX?<a class="headerlink" href="#what-is-turntable-ex" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.</p>
@@ -326,6 +328,7 @@
 <li><p>EX-RAIL automation support</p></li>
 <li><p>Debug/test command (handy for tuning step positions)</p></li>
 <li><p>Out-of-the-box support for several common stepper drivers and motors</p></li>
+<li><p>Traverser mode for horizontal/vertical traversers, and turntables that cannot rotate a full 360 degrees</p></li>
 <li><p>Automatic or manual DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn’t do this already)</p></li>
 <li><p>An LED and accessory output to control turntable specific automations (eg. flashing warning light)</p></li>
 </ul>
@@ -337,7 +340,7 @@
 </div>
 </div>
 <div class="section" id="what-you-need-for-turntable-ex">
-<h2>What you need for Turntable-EX<a class="headerlink" href="#what-you-need-for-turntable-ex" title="Permalink to this headline">¶</a></h2>
+<h2>What you need for Turntable-EX<a class="headerlink" href="#what-you-need-for-turntable-ex" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>A DCC++ EX CommandStation running the “add-turntable-controller” branch of <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller">CommandStation-EX</a> (this displays as version 4.0.2)</p></li>
 <li><p>An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)</p></li>
@@ -349,6 +352,10 @@
 <li><p>A USB cable to connect the Arduino to a PC to load the software</p></li>
 <li><p><em>Optional:</em> A dual relay board (or similar) if you wish to use the phase switching capability (see <a class="reference internal" href="#important-phase-or-polarity-switching"><span class="std std-ref">Important! Phase (or polarity) switching</span></a>)</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you wish to make use of the traverser feature, there is further information on what is required to enable this on the <a class="reference internal" href="traverser.html"><span class="doc">Traversers and Limited Rotation Turntables</span></a> page.</p>
+</div>
 <a class="reference internal image-reference" href="../_images/nano-v3.png"><img alt="Nano V3" src="../_images/nano-v3.png" style="width: 181.5px; height: 132.5px;" /></a>
 <a class="reference internal image-reference" href="../_images/uln2003-28byj-48.png"><img alt="ULN2003/28BYJ-48 Stepper combo" src="../_images/uln2003-28byj-48.png" style="width: 200.0px; height: 87.5px;" /></a>
 <a class="reference internal image-reference" href="../_images/hall-effect.png"><img alt="Hall Effect sensor" src="../_images/hall-effect.png" style="width: 160.0px; height: 88.0px;" /></a>
@@ -356,7 +363,7 @@
 <a class="reference internal image-reference" href="../_images/nano-shield1.png"><img alt="Nano Prototype Shield" src="../_images/nano-shield1.png" style="width: 160.0px; height: 125.2px;" /></a>
 <a class="reference internal image-reference" href="../_images/dupont.png"><img alt="Dupont male to female" src="../_images/dupont.png" style="width: 142.2px; height: 97.2px;" /></a>
 <div class="section" id="power-supplies">
-<h3>Power supplies<a class="headerlink" href="#power-supplies" title="Permalink to this headline">¶</a></h3>
+<h3>Power supplies<a class="headerlink" href="#power-supplies" title="Permalink to this heading">¶</a></h3>
 <p>Choosing the right power supply for your Arduino and stepper motor is important to get right.</p>
 <p>If you are using the default ULN2003/28BYJ-48 it is technically possible to power the driver and stepper directly from the 5V output on an Arduino, however this is not recommended and should be avoided.</p>
 <p>Given that this combo requires 5V, you can use a single, regulated 5V DC power supply rated for at least 500mA to power both the Arduino and the ULN2003/28BYJ-48.</p>
@@ -365,7 +372,7 @@
 </div>
 </div>
 <div class="section" id="supported-stepper-drivers-and-motors">
-<h2>Supported stepper drivers and motors<a class="headerlink" href="#supported-stepper-drivers-and-motors" title="Permalink to this headline">¶</a></h2>
+<h2>Supported stepper drivers and motors<a class="headerlink" href="#supported-stepper-drivers-and-motors" title="Permalink to this heading">¶</a></h2>
 <p>The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.</p>
 <div class="sidebar">
 <p class="sidebar-title">Unsupported stepper drivers and motors</p>
@@ -382,7 +389,7 @@
 </ul>
 </div>
 <div class="section" id="how-does-it-work">
-<h2>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline">¶</a></h2>
+<h2>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this heading">¶</a></h2>
 <div class="sidebar">
 <p class="sidebar-title">Full step, half step, and other modes</p>
 <p>Stepper motor drivers typically support more than one mode for driving stepper motors. This simply means that they can be turned less than one complete step, allowing more granular control of positioning, resulting in higher precision, and much smoother operation. For example, the DRV8825 can drive 1/32 of a step, talk about smooooth!</p>
@@ -402,12 +409,12 @@
 <p>It’s recommended that the home position does not align with a specific layout connection track to ensure that each time Turntable-EX powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.</p>
 </div>
 <div class="section" id="controlling-the-turntable">
-<h3>Controlling the turntable<a class="headerlink" href="#controlling-the-turntable" title="Permalink to this headline">¶</a></h3>
+<h3>Controlling the turntable<a class="headerlink" href="#controlling-the-turntable" title="Permalink to this heading">¶</a></h3>
 <p>To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.</p>
 <p>Refer to the <a class="reference internal" href="test-and-tune.html#testing-tuning-and-control"><span class="std std-ref">Testing, Tuning, and Control</span></a> page for more details on this.</p>
 </div>
 <div class="section" id="important-phase-or-polarity-switching">
-<h3>Important! Phase (or polarity) switching<a class="headerlink" href="#important-phase-or-polarity-switching" title="Permalink to this headline">¶</a></h3>
+<h3>Important! Phase (or polarity) switching<a class="headerlink" href="#important-phase-or-polarity-switching" title="Permalink to this heading">¶</a></h3>
 <p>An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -430,7 +437,7 @@
 <a class="reference internal image-reference" href="../_images/90degree-phase-change.png"><img alt="90 degrees" src="../_images/90degree-phase-change.png" style="width: 339.3px; height: 198.9px;" /></a>
 <a class="reference internal image-reference" href="../_images/180degree-phase-change.png"><img alt="180 degrees" src="../_images/180degree-phase-change.png" style="width: 337.5px; height: 190.8px;" /></a>
 <div class="section" id="how-does-this-work-with-turntable-ex">
-<h4>How does this work with Turntable-EX?<a class="headerlink" href="#how-does-this-work-with-turntable-ex" title="Permalink to this headline">¶</a></h4>
+<h4>How does this work with Turntable-EX?<a class="headerlink" href="#how-does-this-work-with-turntable-ex" title="Permalink to this heading">¶</a></h4>
 <p>Turntable-EX supports automatic phase switching by default, but can also be controlled manually by both EX-RAIL and diagnostic commands.</p>
 <p>With the default automatic phase switching, once the turntable rotates 45 degrees away from the home position, it will automatically invert the DCC phase, with the phase then reverting 180 degrees later once the turntable rotates to 225 degrees from the home position.</p>
 <p>In the diagrams below, the “home” end of the turntable bridge is indicated by the bright green sleeper, with the “home” position of 0 degrees being located at the top of the diagram. The surrounding layout tracks are separated by 10 degrees.</p>
@@ -452,7 +459,7 @@
 </div>
 </div>
 <div class="section" id="time-to-assemble">
-<h2>Time to assemble<a class="headerlink" href="#time-to-assemble" title="Permalink to this headline">¶</a></h2>
+<h2>Time to assemble<a class="headerlink" href="#time-to-assemble" title="Permalink to this heading">¶</a></h2>
 <p>Now that you have a general overview of Turntable-EX’s features and capabilities, click the “next” button to get started on assembly.</p>
 </div>
 </div>

@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,7 +300,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="adding-a-wifi-option">
-<h1>Adding a WiFi Option<a class="headerlink" href="#adding-a-wifi-option" title="Permalink to this headline">¶</a></h1>
+<h1>Adding a WiFi Option<a class="headerlink" href="#adding-a-wifi-option" title="Permalink to this heading">¶</a></h1>
 <p>The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can <a class="reference internal" href="installer.html"><span class="doc">skip ahead to the next page</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -311,14 +313,14 @@
 <blockquote>
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
 <div class="section" id="why-use-wifi">
-<h2>Why Use WiFi?<a class="headerlink" href="#why-use-wifi" title="Permalink to this headline">¶</a></h2>
+<h2>Why Use WiFi?<a class="headerlink" href="#why-use-wifi" title="Permalink to this heading">¶</a></h2>
 <p><strong>BEFORE you purchase a Wifi card, please consider whether you actually need it:</strong></p>
 <p>With the base Command Station (CS) consisting of just an Arduino Mega and an Arduino Motor Shield (no WiFi board), you must use a USB cable to connect to a computer to run JMRI or our WebThrottle-EX, or to connect to another controller. The controller (aka Throttle) is what sends commands to the CS to run your trains and control your accessories.</p>
 <p>If you intend to run trains from a PC or Raspberry Pi, either by entering &lt;DCC++&gt; commands, by using WebThrottle-EX, JMRI, Rocrail, or similar, then YOU DO NOT NEED WiFi ON THE CS. Save yourself some money, and a lot of hassle, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between JMRI and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a JMRI setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.</p>
 <p>If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY Engine Driver (or other WiThrottle-protocol devices) connected directly to the CS, then you will need Wifi, and will have to budget some setup and learning time.</p>
 </div>
 <div class="section" id="compatible-boards">
-<h2>Compatible Boards<a class="headerlink" href="#compatible-boards" title="Permalink to this headline">¶</a></h2>
+<h2>Compatible Boards<a class="headerlink" href="#compatible-boards" title="Permalink to this heading">¶</a></h2>
 <p>Most boards based on the ESP8266 should work with DCC++ EX. However, with all the variations and software versions out there, we’ve compiled this list of known tested, working hardware. We will add more over time.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></p></li>
@@ -328,7 +330,7 @@
 <p>Fore more boards you may be able to use, see the <a class="reference internal" href="../reference/hardware/wifi-boards.html"><span class="doc">WiFi Boards Section</span></a></p>
 </div>
 <div class="section" id="what-you-will-need-for-wifi">
-<h2>What you will need (for WiFi)<a class="headerlink" href="#what-you-will-need-for-wifi" title="Permalink to this headline">¶</a></h2>
+<h2>What you will need (for WiFi)<a class="headerlink" href="#what-you-will-need-for-wifi" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>A Command Station (CS) made from a <strong>Mega</strong> and an Arduino Motor Shield</p></li>
 <li><p>One of the above WiFi boards</p></li>
@@ -340,7 +342,7 @@
 </div>
 </div>
 <div class="section" id="quick-links">
-<h2>Quick links<a class="headerlink" href="#quick-links" title="Permalink to this headline">¶</a></h2>
+<h2>Quick links<a class="headerlink" href="#quick-links" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Jump to <a class="reference internal" href="#id1"><span class="std std-ref">Makerfabs ESP8266 WiFi Shield (recommended)</span></a></p></li>
 <li><p>Jump to <a class="reference internal" href="#duinopeak-esp8266-wifi-expansion-board"><span class="std std-ref">Duinopeak ESP8266 WiFi Expansion Board</span></a></p></li>
@@ -349,7 +351,7 @@
 </ul>
 </div>
 <div class="section" id="id1">
-<h2>Makerfabs ESP8266 WiFi Shield (recommended)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>Makerfabs ESP8266 WiFi Shield (recommended)<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>We like this board here at DCC++ EX. It is simple, inexpensive, easy to use, and it works.</p>
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/wifi_jumpers1.jpg"><img alt="Makerfabs ESP-8266 WiFi Shield" src="../_images/wifi_jumpers1.jpg" style="width: 450.0px; height: 340.5px;" /></a>
@@ -357,7 +359,7 @@
 </div>
 <p>Installing the board follows the same procedure in the previous section on assembly. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.</p>
 <div class="section" id="remove-the-plastic-jumpers">
-<h3>Remove the plastic jumpers<a class="headerlink" href="#remove-the-plastic-jumpers" title="Permalink to this headline">¶</a></h3>
+<h3>Remove the plastic jumpers<a class="headerlink" href="#remove-the-plastic-jumpers" title="Permalink to this heading">¶</a></h3>
 <p>Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.</p>
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/wifi_pins.jpg"><img alt="Remove the plastic jumpers" src="../_images/wifi_pins.jpg" style="width: 450.0px; height: 435.75px;" /></a>
@@ -365,7 +367,7 @@
 </div>
 </div>
 <div class="section" id="align-the-boards">
-<h3>Align the boards<a class="headerlink" href="#align-the-boards" title="Permalink to this headline">¶</a></h3>
+<h3>Align the boards<a class="headerlink" href="#align-the-boards" title="Permalink to this heading">¶</a></h3>
 <p>Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Rx, Tx, 2, 3, 4, 5, 6, 7 pins on the Motor Shield line up with the 0 through 7 pins on the Makerfabs WiFi Board. Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.</p>
 <div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/wifi_seat1.jpg"><img alt="Get the left side pins aligned" src="../_images/wifi_seat1.jpg" style="width: 450.0px; height: 300.0px;" /></a>
@@ -373,7 +375,7 @@
 </div>
 </div>
 <div class="section" id="seat-the-boards">
-<h3>Seat the boards<a class="headerlink" href="#seat-the-boards" title="Permalink to this headline">¶</a></h3>
+<h3>Seat the boards<a class="headerlink" href="#seat-the-boards" title="Permalink to this heading">¶</a></h3>
 <p>Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (<a class="reference internal" href="#wifi-right-side-pins-aligned"><span class="std std-numref">Figure 17</span></a>). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see <a class="reference internal" href="#wifi-fully-seated-boards"><span class="std std-numref">Figure 18</span></a>).</p>
 <div class="figure align-default" id="wifi-right-side-pins-aligned">
 <a class="reference internal image-reference" href="../_images/wifi_seat2a.jpg"><img alt="Get the right side pins aligned" src="../_images/wifi_seat2a.jpg" style="width: 450.0px; height: 300.0px;" /></a>
@@ -385,7 +387,7 @@
 </div>
 </div>
 <div class="section" id="install-the-jumper-wires">
-<h3>Install the jumper wires<a class="headerlink" href="#install-the-jumper-wires" title="Permalink to this headline">¶</a></h3>
+<h3>Install the jumper wires<a class="headerlink" href="#install-the-jumper-wires" title="Permalink to this heading">¶</a></h3>
 <p>We now need to connect The Transmit (Tx) and Receive (Rx) pins on the ESP8266 to the Rx and Tx pins for Serial1 on the Mega. The Mega has one serial port connected to the USB port, and then 3 extra ones we can access from pins on the board. You can think of Tx as “talking” and Rx as “listening”. That will help you remember that if one thing is talking, the other has to use its ears to listen. So we must connect the Tx of the WiFi board to Rx1 on the Mega and the Rx pin on the WiFi Board to Tx1 on the Mega.</p>
 <p>There are three rows of pins on the Makerfabs WiFi shield. The middle pins each connect to one of the first 8 pins on the header. Pin 0 goes to header pin 0, pin 1 goes to header pin 1, and so on. We aren’t going to need those. With the plastic jumpers removed, nothing will be connected to any of those pins on the WiFi Board, and therefore not connected down to the Mega through the Motor Shield.</p>
 <p>ALL of the pins in the row marked Tx (the row closest to the header) are connected to the Tx pin of the ESP8266. ALL of the pins in the row marked Rx (the row closest to the middle of the board) are connected to the Rx pin on the ESP8266.</p>
@@ -402,7 +404,7 @@
 </div>
 </div>
 <div class="section" id="duinopeak-esp8266-wifi-expansion-board">
-<h2>Duinopeak ESP8266 WiFi Expansion Board<a class="headerlink" href="#duinopeak-esp8266-wifi-expansion-board" title="Permalink to this headline">¶</a></h2>
+<h2>Duinopeak ESP8266 WiFi Expansion Board<a class="headerlink" href="#duinopeak-esp8266-wifi-expansion-board" title="Permalink to this heading">¶</a></h2>
 <p>This board is designed as an expansion/prototyping board as well as a WiFi board. Tinkerers that want the extra space on the board to solder your experiments can have a party on the PCB! The only caveat with this board is that it cannot easily be connected in “passthrough mode” if you needed to use the Arduino to test a direct connection to the onboard ESP8266. It does not like the USB cable connected at the same time as a signal is on the Tx/Rx pins. This is a minor issue and does not affect normal operation since you won’t have anything connected to the USB port.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -413,7 +415,7 @@
 <p class="caption"><span class="caption-number">Figure 20 </span><span class="caption-text">Duinopeak WiFi Board</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="install-the-shield">
-<h3>Install the Shield<a class="headerlink" href="#install-the-shield" title="Permalink to this headline">¶</a></h3>
+<h3>Install the Shield<a class="headerlink" href="#install-the-shield" title="Permalink to this heading">¶</a></h3>
 <p>To install this board on your Arduino, follow the same steps as above, with the added step of installing an ESP-01s onto the board:</p>
 <ul class="simple">
 <li><p>Remove or place the plastic pin jumpers to the side</p></li>
@@ -424,14 +426,14 @@
 </div>
 </div>
 <div class="section" id="esp-01-and-esp-01s">
-<h2>ESP-01 and ESP-01s<a class="headerlink" href="#esp-01-and-esp-01s" title="Permalink to this headline">¶</a></h2>
+<h2>ESP-01 and ESP-01s<a class="headerlink" href="#esp-01-and-esp-01s" title="Permalink to this heading">¶</a></h2>
 <p>This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-“S”. Since the 01 version has been retired, any new board you get should be the 01s, but either will work.</p>
 <div class="figure align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/esp-01s_2.jpg"><img alt="ESP-01s" src="../_images/esp-01s_2.jpg" style="width: 300.0px; height: 293.25px;" /></a>
 <p class="caption"><span class="caption-number">Figure 21 </span><span class="caption-text">ESP-01s</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="install-the-module">
-<h3>Install the Module<a class="headerlink" href="#install-the-module" title="Permalink to this headline">¶</a></h3>
+<h3>Install the Module<a class="headerlink" href="#install-the-module" title="Permalink to this heading">¶</a></h3>
 <p>Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity, the image does not show the motor board already on top of the Mega, but since the headers connect all the pins together vertically, you can find the same pins on the motor board to get the 3.3V and Gnd to power the ESP8266.</p>
 <div class="figure align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/esp8266_mega.jpg"><img alt="ESP-8266 Wiring to a Mega" src="../_images/esp8266_mega.jpg" style="width: 540.0px; height: 233.25px;" /></a>
@@ -462,7 +464,7 @@ Rx   -----&gt; Tx
 </div>
 </div>
 <div class="section" id="install-the-software">
-<h2>Install the Software<a class="headerlink" href="#install-the-software" title="Permalink to this headline">¶</a></h2>
+<h2>Install the Software<a class="headerlink" href="#install-the-software" title="Permalink to this heading">¶</a></h2>
 <p>If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: <a class="reference internal" href="../advanced-setup/wifi-config.html"><span class="doc">WiFi Configuration</span></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -475,7 +477,7 @@ Rx   -----&gt; Tx
 </div>
 </div>
 <div class="section" id="mega-wifi-combo-board">
-<h2>Mega+WiFi Combo Board<a class="headerlink" href="#mega-wifi-combo-board" title="Permalink to this headline">¶</a></h2>
+<h2>Mega+WiFi Combo Board<a class="headerlink" href="#mega-wifi-combo-board" title="Permalink to this heading">¶</a></h2>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../_images/mega_wifi.png"><img alt="Mega WiFi" src="../_images/mega_wifi.png" style="width: 384.40000000000003px; height: 308.40000000000003px;" /></a>
 </div>

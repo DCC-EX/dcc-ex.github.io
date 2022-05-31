@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,13 +300,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="engine-driver">
-<h1>Engine Driver<a class="headerlink" href="#engine-driver" title="Permalink to this headline">¶</a></h1>
+<h1>Engine Driver<a class="headerlink" href="#engine-driver" title="Permalink to this heading">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/engine_driver_logo.png"><img alt="Android Logo" class="align-left" src="../_images/engine_driver_logo.png" style="width: 103.2px; height: 102.6px;" /></a>
 <p><strong>Engine Driver</strong> (ED) is an Android App that uses the WiThrottle<sup>TM</sup> Protocol to either connect directly to the DCC++ EX Command Station or connect to the JMRI WiThrottle Server via WiFi.</p>
 <p>If you wish to connect Engine Driver to JMRI, you need to start the wiThrottle Server and (optionally <a class="footnote-reference brackets" href="#id3" id="id1">1</a>) the Web Server in JMRI on the computer running JMRI. The JMRI computer must be connected to the DCC++ EX Command Station using a USB cable.</p>
 <p>If you wish to connect Engine Driver directly to DCC++ EX, you need to add a WiFi option to your DCC++ EX Command Station as explained here: <a class="reference internal" href="../get-started/wifi-setup.html"><span class="doc">WiFi Setup</span></a>.</p>
 <div class="section" id="platforms">
-<span id="ed-platforms"></span><h2>Platforms<a class="headerlink" href="#platforms" title="Permalink to this headline">¶</a></h2>
+<span id="ed-platforms"></span><h2>Platforms<a class="headerlink" href="#platforms" title="Permalink to this heading">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/icon_android.png"><img alt="Android Logo" class="align-left" src="../_images/icon_android.png" style="width: 76.8px; height: 76.8px;" /></a>
 <p>Please visit the Engine Driver Website: <a class="reference external" href="https://enginedriver.mstevetodd.com/">https://enginedriver.mstevetodd.com/</a></p>
 <p><a class="reference external" href="https://play.google.com/store/apps/details?id=jmri.enginedriver">Get ‘Engine Driver Throttle’ from the Google Play Store</a></p>
@@ -312,7 +314,7 @@
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
 </div>
 <div class="section" id="standard-features-all-withrottle-servers">
-<span id="ed-features"></span><h2>Standard Features (all wiThrottle servers)<a class="headerlink" href="#standard-features-all-withrottle-servers" title="Permalink to this headline">¶</a></h2>
+<span id="ed-features"></span><h2>Standard Features (all wiThrottle servers)<a class="headerlink" href="#standard-features-all-withrottle-servers" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Control one to six locomotives or consists</p></li>
 <li><p>Speed and direction control</p></li>
@@ -327,7 +329,7 @@
 </ul>
 </div>
 <div class="section" id="dcc-specific-or-advantageous-features">
-<h2>DCC++ Specific or advantageous Features<a class="headerlink" href="#dcc-specific-or-advantageous-features" title="Permalink to this headline">¶</a></h2>
+<h2>DCC++ Specific or advantageous Features<a class="headerlink" href="#dcc-specific-or-advantageous-features" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>DCC++EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons</p></li>
 <li><p>Able to select local images for roster locos</p></li>
@@ -336,19 +338,19 @@
 <p><a class="reference internal" href="driveaway.html#using-the-driveaway-tm-feature"><span class="std std-ref">Using the “DriveAway(tm)” Feature</span></a></p>
 </div>
 <div class="section" id="screenshots">
-<span id="ed-screenshots"></span><h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h2>
+<span id="ed-screenshots"></span><h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this heading">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/ed1.png"><img alt="Engine Driver Main Screen" class="align-left" src="../_images/ed1.png" style="width: 131.4px; height: 240.0px;" /></a>
 <a class="reference internal image-reference" href="../_images/ed2.png"><img alt="Engine Driver 2" class="align-left" src="../_images/ed2.png" style="width: 131.4px; height: 240.0px;" /></a>
 <a class="reference internal image-reference" href="../_images/ed3.png"><img alt="Engine Driver 3" class="align-left" src="../_images/ed3.png" style="width: 131.4px; height: 240.0px;" /></a>
 <a class="reference internal image-reference" href="../_images/ed4.png"><img alt="Engine Driver 4" class="align-left" src="../_images/ed4.png" style="width: 131.4px; height: 240.0px;" /></a>
 </div>
 <div class="clearer section" id="operation">
-<span id="ed-operation"></span><h2>Operation<a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h2>
+<span id="ed-operation"></span><h2>Operation<a class="headerlink" href="#operation" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference external" href="https://enginedriver.mstevetodd.com/operation">https://enginedriver.mstevetodd.com/operation</a></p>
 <p><a class="reference external" href="https://enginedriver.mstevetodd.com/videos">https://enginedriver.mstevetodd.com/videos</a></p>
 </div>
 <div class="section" id="using-a-bluetooth-controller">
-<h2>Using a Bluetooth Controller<a class="headerlink" href="#using-a-bluetooth-controller" title="Permalink to this headline">¶</a></h2>
+<h2>Using a Bluetooth Controller<a class="headerlink" href="#using-a-bluetooth-controller" title="Permalink to this heading">¶</a></h2>
 <p>This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. You can use these as a start and customize them for your own use:</p>
 <a class="reference internal image-reference" href="../_images/bt_controller1.jpg"><img alt="Bluetooth Lanyard Controller" class="align-center" src="../_images/bt_controller1.jpg" style="width: 188.5px; height: 158.0px;" /></a>
 <p><a class="reference external" href="https://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119">Wireless Bluetooth Gamepad/Joystick Controller</a></p>
@@ -366,7 +368,7 @@
 <a class="reference internal image-reference" href="../_images/ed_conductor_view1.png"><img alt="Engine Driver Conductor View" class="align-center" src="../_images/ed_conductor_view1.png" style="width: 162.0px; height: 351.0px;" /></a>
 <hr class="docutils" />
 <div class="section" id="footnotes">
-<h3>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h3>
+<h3>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">¶</a></h3>
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>the Web server is required if you want to show the Loco images in Engine Deiver.</p>

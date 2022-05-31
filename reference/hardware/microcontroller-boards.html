@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="microcontroller-boards">
-<h1>Microcontroller Boards<a class="headerlink" href="#microcontroller-boards" title="Permalink to this headline">¶</a></h1>
+<h1>Microcontroller Boards<a class="headerlink" href="#microcontroller-boards" title="Permalink to this heading">¶</a></h1>
 <p>CommandStation-EX currently is designed for Arduino and select microcontrollers. Out of the box, it is compatible with the following boards:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#arduino-mega"><span class="std std-ref">Arduino Mega</span></a> <strong>[RECOMMENDED]</strong></p></li>
@@ -311,9 +313,9 @@
 <li><p><a class="reference internal" href="#teensy-3-x-4-x"><span class="std std-ref">Teensy 3.x &amp; 4.x</span></a> (Engineer Level)</p></li>
 </ul>
 <div class="section" id="arduino-mega">
-<h2>Arduino Mega<a class="headerlink" href="#arduino-mega" title="Permalink to this headline">¶</a></h2>
+<h2>Arduino Mega<a class="headerlink" href="#arduino-mega" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="why-do-we-recommend-the-mega">
-<h3>Why do we recommend the Mega?<a class="headerlink" href="#why-do-we-recommend-the-mega" title="Permalink to this headline">¶</a></h3>
+<h3>Why do we recommend the Mega?<a class="headerlink" href="#why-do-we-recommend-the-mega" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>When compiled, our code just barely squeezes onto an Arduino Uno. <strong>A mega allows you to add more features</strong> like networking and displays because it has more memory.</p></li>
 <li><p>The Mega has many more GPIOs (General Purpose Input/Outputs) available to you for constructing control panels and controlling turnouts, signals and other accessories.</p></li>
@@ -327,39 +329,39 @@
 </div>
 </div>
 <div class="section" id="arduino-uno">
-<h2>Arduino Uno<a class="headerlink" href="#arduino-uno" title="Permalink to this headline">¶</a></h2>
+<h2>Arduino Uno<a class="headerlink" href="#arduino-uno" title="Permalink to this heading">¶</a></h2>
 <p>If you already have an Uno, or will use JMRI to control your trains, then by all means use an Uno. Just remember that you can’t have WiFi, Ethernet or a few other options due to memory limitations. But as a Command Station connected to JMRI with a USB cable it works great.</p>
 </div>
 <div class="section" id="arduino-nano">
-<h2>Arduino Nano<a class="headerlink" href="#arduino-nano" title="Permalink to this headline">¶</a></h2>
+<h2>Arduino Nano<a class="headerlink" href="#arduino-nano" title="Permalink to this heading">¶</a></h2>
 <p>The Arduino Nano shares the same processor with the Arduino Uno, so we support it. The Nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There <em>is</em> a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.</p>
 <p>See our section on <a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano.html"><span class="doc">Using a Nano</span></a></p>
 </div>
 <div class="section" id="mega-wifi">
-<h2>Mega+WiFi<a class="headerlink" href="#mega-wifi" title="Permalink to this headline">¶</a></h2>
+<h2>Mega+WiFi<a class="headerlink" href="#mega-wifi" title="Permalink to this heading">¶</a></h2>
 <p><strong>Tinkerer level</strong></p>
 <p>Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn’t involve any soldering or jumper wiring.</p>
 <p>See our section on Using the <a class="reference internal" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html"><span class="doc">WiFi+Mega Page</span></a></p>
 </div>
 <div class="section" id="nano-every">
-<h2>Nano Every<a class="headerlink" href="#nano-every" title="Permalink to this headline">¶</a></h2>
+<h2>Nano Every<a class="headerlink" href="#nano-every" title="Permalink to this heading">¶</a></h2>
 <p><strong>Tinkerer level</strong></p>
 <p>The Nano Every is an updated Nano. It uses a completely different processor family than the Uno and Nano. S</p>
 <p>See the detailed section on the <a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano-every.html"><span class="doc">Nano Every</span></a></p>
 </div>
 <div class="section" id="teensy-3-x-4-x">
-<h2>Teensy 3.x &amp; 4.x<a class="headerlink" href="#teensy-3-x-4-x" title="Permalink to this headline">¶</a></h2>
+<h2>Teensy 3.x &amp; 4.x<a class="headerlink" href="#teensy-3-x-4-x" title="Permalink to this heading">¶</a></h2>
 <p><strong>Engineer level</strong></p>
 <p>The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons.</p>
 <p>See the detailed section on the <a class="reference internal" href="../../advanced-setup/supported-microcontrollers/teensy.html"><span class="doc">Teensy</span></a></p>
 </div>
 <div class="section" id="will-you-support-other-microcontrollers-in-the-future">
-<h2>Will you support other microcontrollers in the future?<a class="headerlink" href="#will-you-support-other-microcontrollers-in-the-future" title="Permalink to this headline">¶</a></h2>
+<h2>Will you support other microcontrollers in the future?<a class="headerlink" href="#will-you-support-other-microcontrollers-in-the-future" title="Permalink to this heading">¶</a></h2>
 <p>Yes, that is on our <a class="reference internal" href="../../roadmap/index.html"><span class="doc">roadmap</span></a>.</p>
 <p>Click here for a complete <a class="reference internal" href="shopping-list.html"><span class="doc">Shopping List</span></a>.</p>
 </div>
 <div class="section" id="boards-that-will-not-work">
-<h2>Boards that will NOT work<a class="headerlink" href="#boards-that-will-not-work" title="Permalink to this headline">¶</a></h2>
+<h2>Boards that will NOT work<a class="headerlink" href="#boards-that-will-not-work" title="Permalink to this heading">¶</a></h2>
 <p><strong>WAVGAT Uno clone</strong> - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called “Logic Green”. It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen correctly and compile sketches. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a CS with more testing and some code changes, but we will leave that to someone else to attempt. Megas and Mega clones offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.</p>
 <p><strong>ESP32</strong> - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Espressif. We currently support only the Atmel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.</p>
 <p>Click here for a complete <a class="reference internal" href="shopping-list.html"><span class="doc">Shopping List</span></a>.</p>

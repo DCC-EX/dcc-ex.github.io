@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,13 +300,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="dcc-ex-command-summary">
-<h1>DCC++ EX Command Summary<a class="headerlink" href="#dcc-ex-command-summary" title="Permalink to this headline">¶</a></h1>
+<h1>DCC++ EX Command Summary<a class="headerlink" href="#dcc-ex-command-summary" title="Permalink to this heading">¶</a></h1>
 <dl class="simple">
 <dt><strong>This is a summary, for a detailed command, see…</strong></dt><dd><p><a class="reference internal" href="command-reference.html"><span class="doc">Command Reference</span></a></p>
 </dd>
 </dl>
 <div class="section" id="power-management">
-<h2>Power management<a class="headerlink" href="#power-management" title="Permalink to this headline">¶</a></h2>
+<h2>Power management<a class="headerlink" href="#power-management" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">[MAIN</span> <span class="pre">|</span> <span class="pre">PROG]</span> <span class="pre">&gt;</span></code> Power Off</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">[MAIN</span> <span class="pre">|</span> <span class="pre">PROG</span> <span class="pre">|</span> <span class="pre">JOIN]</span> <span class="pre">&gt;</span></code> Power On</p>
@@ -314,7 +316,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="cab-functions">
-<h2>Cab functions<a class="headerlink" href="#cab-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Cab functions<a class="headerlink" href="#cab-functions" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code> EMERGENCY STOP</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">[ignored]</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">1|0&gt;</span></code>  Throttle speed&lt;127 direction 1=forward</p>
@@ -329,7 +331,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="programming-track">
-<h2>Programming track<a class="headerlink" href="#programming-track" title="Permalink to this headline">¶</a></h2>
+<h2>Programming track<a class="headerlink" href="#programming-track" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Read Loco address (programming track only)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cab&gt;</span></code> write cab address to loco on prog track</p>
@@ -345,14 +347,14 @@
 </div></blockquote>
 </div>
 <div class="section" id="dcc-accessories">
-<h2>DCC Accessories<a class="headerlink" href="#dcc-accessories" title="Permalink to this headline">¶</a></h2>
+<h2>DCC Accessories<a class="headerlink" href="#dcc-accessories" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">linear_address</span> <span class="pre">1|0&gt;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">addr</span> <span class="pre">subaddr</span> <span class="pre">1|0&gt;</span></code></p>
 </div></blockquote>
 </div>
 <div class="section" id="turnouts">
-<h2>Turnouts<a class="headerlink" href="#turnouts" title="Permalink to this headline">¶</a></h2>
+<h2>Turnouts<a class="headerlink" href="#turnouts" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code> Define DCC turnout (deprecated)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code> Define DCC turnout</p>
@@ -365,7 +367,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="sensors">
-<h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
+<h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> Lists Status of all sensors.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> Lists definition all defined sensors.</p>
@@ -374,7 +376,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="outputs">
-<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> Lists all defined output pins</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">iflag&gt;</span></code> : Creates a new output ID, with specified PIN and IFLAG values.</p>
@@ -397,7 +399,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </div>
 <div class="section" id="eeprom-management">
-<h2>EEPROM management<a class="headerlink" href="#eeprom-management" title="Permalink to this headline">¶</a></h2>
+<h2>EEPROM management<a class="headerlink" href="#eeprom-management" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Store definitions to EEPROM</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> Erase ALL (turnouts, sensors, and outputs) from EEPROM</p>
@@ -405,14 +407,14 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </div>
 <div class="section" id="wifi-control">
-<h2>WiFi Control<a class="headerlink" href="#wifi-control" title="Permalink to this headline">¶</a></h2>
+<h2>WiFi Control<a class="headerlink" href="#wifi-control" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code> Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> Force the CS into “WiFi Connected” mode</p>
 </div></blockquote>
 </div>
 <div class="section" id="diagnostic-traces">
-<h2>Diagnostic traces<a class="headerlink" href="#diagnostic-traces" title="Permalink to this headline">¶</a></h2>
+<h2>Diagnostic traces<a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Shows cab numbers and speed in reminder table</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Shows remaining RAM (Free Memory)</p>
@@ -427,7 +429,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> Shows configured servo board and GPIO extender board config and used pins</p>
 </div></blockquote>
 <div class="section" id="tuning">
-<h3>Tuning<a class="headerlink" href="#tuning" title="Permalink to this headline">¶</a></h3>
+<h3>Tuning<a class="headerlink" href="#tuning" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code> Override ACK processing mA pulse size</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code> Override ACK processing minimum pulse width</p>
@@ -437,7 +439,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </div>
 <div class="section" id="i-o-hal-diagnostics">
-<h3>I/O (HAL) Diagnostics<a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this headline">¶</a></h3>
+<h3>I/O (HAL) Diagnostics<a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> List HAL devices and allocated VPINs</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code> Set servo position to <cite>value</cite> on pin <cite>vpin</cite>.</p>
@@ -446,7 +448,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </div>
 <div class="section" id="other">
-<h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;U</span> <span class="pre">...&gt;</span></code> Is reserved for user commands (through user filter)</p>
 <dl class="simple">

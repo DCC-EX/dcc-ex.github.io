@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,13 +300,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="dccpp-cab">
-<h1>DCCpp CAB<a class="headerlink" href="#dccpp-cab" title="Permalink to this headline">¶</a></h1>
+<h1>DCCpp CAB<a class="headerlink" href="#dccpp-cab" title="Permalink to this heading">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/icon_android.png"><img alt="Android Logo" class="align-left" src="../_images/icon_android.png" style="width: 76.8px; height: 76.8px;" /></a>
 <p>This is an Android App (with plans for iOS) from Spain. One of the major benefits of DCCpp CAB is that it speaks the &lt;DCC++&gt; Application Programming language (API) natively (see our <a class="reference internal" href="../reference/software/command-reference.html"><span class="doc">Command Reference</span></a>). This means it is fast and can take advantage of some features that exist in the DCC++ EX Command Station not implemented in other APIs. Another benefit is that this throttle can use Bluetooth instead of Wifi if you choose! There are several advantages to using Bluetooth, the main one being that Uno and Nano users can use a wireless throttle!</p>
 <p>You can find it in the Play Store: <a class="reference external" href="https://play.google.com/store/apps/details?id=com.infotronikblog.dcc_cab">DCCpp CAB App</a></p>
 <p>And the website here: <a class="reference external" href="http://lamaquetade.infotronikblog.com/dccpp-android-cab/">DCCpp Android Cab Infotrokik Blog</a></p>
 <div class="section" id="features">
-<span id="dccpp-features"></span><h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<span id="dccpp-features"></span><h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Speaks the &lt;DCC++&gt; Command Language natively</p></li>
 <li><p>Connect via WiFi <em>or</em> Bluetooth</p></li>
@@ -313,12 +315,12 @@
 </ul>
 </div>
 <div class="section" id="screenshots">
-<h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h2>
+<h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this heading">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/dccpp2.jpg"><img alt="Dccpp CAB Screenshot 2" class="align-left" src="../_images/dccpp2.jpg" style="width: 161.7px; height: 350.0px;" /></a>
 <a class="reference internal image-reference" href="../_images/dccpp3.jpg"><img alt="Dccpp CAB Screenshot 3" class="align-left" src="../_images/dccpp3.jpg" style="width: 161.7px; height: 350.0px;" /></a>
 </div>
 <div class="clearer section" id="requirements">
-<span id="dccpp-requirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<span id="dccpp-requirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>A DCC++ EX Command Station (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)</p></li>
 <li><p>An Android Cell Phone or Tablet</p></li>
@@ -327,19 +329,19 @@
 </ul>
 </div>
 <div class="section" id="operation">
-<span id="dccpp-operation"></span><h2>Operation<a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h2>
+<span id="dccpp-operation"></span><h2>Operation<a class="headerlink" href="#operation" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A Mega is required for using the WiFi connection, but an Uno or Nano will work with the Bluetooth connection.</p>
 </div>
 <div class="section" id="using-wifi">
-<h3>Using Wifi<a class="headerlink" href="#using-wifi" title="Permalink to this headline">¶</a></h3>
+<h3>Using Wifi<a class="headerlink" href="#using-wifi" title="Permalink to this heading">¶</a></h3>
 <p>To use Wifi, make sure you have a WiFi enabled Command Station as described in the <a class="reference internal" href="../get-started/wifi-setup.html"><span class="doc">Wifi Setup</span></a> section.</p>
 <p>We have not tested the WiFi implementation yet</p>
 <p><strong>*insert tutorial here*</strong></p>
 </div>
 <div class="section" id="using-bluetooth">
-<h3>Using Bluetooth<a class="headerlink" href="#using-bluetooth" title="Permalink to this headline">¶</a></h3>
+<h3>Using Bluetooth<a class="headerlink" href="#using-bluetooth" title="Permalink to this heading">¶</a></h3>
 <p>The Bluetooth connection requires an Android device with Bluetooth capability and a Bluetooth board attached to the Command Station. The setup is similar to how we use a WiFi Shield or an ESP-01s board. It is just a different method to create a wireless serial connection to the CS from another device.</p>
 <p>You will need one of these inexpensive HC-06 boards.</p>
 <p><strong>*insert tutorial here*</strong></p>

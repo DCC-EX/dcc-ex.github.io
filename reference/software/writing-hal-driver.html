@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,7 +300,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="writing-a-hal-driver">
-<h1>Writing a HAL Driver<a class="headerlink" href="#writing-a-hal-driver" title="Permalink to this headline">¶</a></h1>
+<h1>Writing a HAL Driver<a class="headerlink" href="#writing-a-hal-driver" title="Permalink to this heading">¶</a></h1>
 <p>Suppose you have a particular device you want to use with DCC++EX,
 but there isn’t a driver for it.  Well, you could ask for one, and
 we may well write one for you.  Or you could write it yourself.</p>
@@ -378,7 +380,7 @@ then a default will be used instead.</p>
 <p>Take a look at some of the existing HAL drivers, they vary in complexity but
 you will see a few different ways of handling devices.</p>
 <div class="section" id="performance">
-<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h2>
+<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this heading">¶</a></h2>
 <p>One thing to be aware of is the time that the functions you write will take to execute.
 If you have a _read() function that polls a device, waits for a calculation to be performed
 and then reads a result, it may, for example, take some milliseconds to complete.

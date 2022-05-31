@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,7 +300,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="command-station-downloads">
-<h1>Command Station Downloads<a class="headerlink" href="#command-station-downloads" title="Permalink to this headline">¶</a></h1>
+<h1>Command Station Downloads<a class="headerlink" href="#command-station-downloads" title="Permalink to this heading">¶</a></h1>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><em>17 Feb 2022:</em> DCC-EX has released <strong>DCC++EX Ver 4.0!</strong></p>
@@ -313,7 +315,7 @@
 <li><p>If you’re still looking for BaseStation-Classic, go to the <a class="reference internal" href="#getting-basestation-classic"><span class="std std-ref">Getting BaseStation-Classic</span></a> section.</p></li>
 </ul>
 <div class="section" id="exinstaller">
-<h2>exInstaller<a class="headerlink" href="#exinstaller" title="Permalink to this headline">¶</a></h2>
+<h2>exInstaller<a class="headerlink" href="#exinstaller" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Clicking on the link below will automatically find the correct version for your Computer and Operating system (Windows, Mac, Linux) and download it. After unzipping the files to a folder on your computer and running the “exInstaller” program, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic, and options, such as your Arduino type and motor shield type. It will automatically upload the software to your Arduino or other supported board. Click here for <a class="reference internal" href="../get-started/installer.html"><span class="doc">exInstaller installation instructions</span></a>. If you have an issue with the web page getting you the correct version, click on the <a class="reference internal" href="#latest-dcc-ex-official-release"><span class="std std-ref">Latest DCC++ EX Official Release</span></a> button in the next section to manually download the correct version.</p>
@@ -323,7 +325,7 @@
 </div>
 </div>
 <div class="section" id="latest-dcc-ex-official-release">
-<h2>Latest DCC++ EX Official Release<a class="headerlink" href="#latest-dcc-ex-official-release" title="Permalink to this headline">¶</a></h2>
+<h2>Latest DCC++ EX Official Release<a class="headerlink" href="#latest-dcc-ex-official-release" title="Permalink to this heading">¶</a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><em>17 Feb 2022:</em> <strong>DCC++EX 4.0</strong> is released! This now includes <strong>EX-RAIL &amp; HAL</strong>, plus much more…</p>
@@ -338,7 +340,7 @@
 </div>
 </div>
 <div class="section" id="latest-dcc-ex-unreleased-development-version">
-<h2>Latest DCC++ EX Unreleased Development Version<a class="headerlink" href="#latest-dcc-ex-unreleased-development-version" title="Permalink to this headline">¶</a></h2>
+<h2>Latest DCC++ EX Unreleased Development Version<a class="headerlink" href="#latest-dcc-ex-unreleased-development-version" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The link below will download the latest <em>unreleased</em> development version in zip file format. Please open the zip file, go into the “CommandStation-EX-master” folder, and unzip all the files in that folder into your “CommandStation-EX” sketch folder. Make sure you <strong>DO NOT</strong> just unzip the entire zip file, since it will have the incorrect folder name. The Arduino IDE requires that the folder name and the .ino file inside that folder match names exactly, i.e.: “CommandStation-EX” not “CommandStation-EX-master”.</p>
@@ -353,7 +355,7 @@
 </div>
 </div>
 <div class="section" id="commandstation-ex-repository-project-source-files">
-<h2>CommandStation-EX Repository (project source files)<a class="headerlink" href="#commandstation-ex-repository-project-source-files" title="Permalink to this headline">¶</a></h2>
+<h2>CommandStation-EX Repository (project source files)<a class="headerlink" href="#commandstation-ex-repository-project-source-files" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The link below will take you the the CommandStation-EX GitHub repository, where you can clone the project to your computer. Click on the green button to get a clone link or to download the zip file. We have made sure that you can still use the Arduino IDE if you like, but we recommend developers use the PlatformIO development environment. See the <a class="reference internal" href="../contributing/index.html"><span class="doc">Contributing Page</span></a> for more information.</p>
@@ -364,7 +366,7 @@
 </div>
 </div>
 <div class="section" id="getting-basestation-classic">
-<h2>Getting BaseStation-Classic<a class="headerlink" href="#getting-basestation-classic" title="Permalink to this headline">¶</a></h2>
+<h2>Getting BaseStation-Classic<a class="headerlink" href="#getting-basestation-classic" title="Permalink to this heading">¶</a></h2>
 <p>The installer will allow you to install BaseStation-Classic. We recommend using the newer CommandStation-EX. If you are looking for the original source for the project (with some minor bug fixes and improvements), see the links below.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

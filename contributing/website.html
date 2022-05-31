@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,10 +300,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="documentation">
-<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">¶</a></h1>
 <p>Thank you for your offer to help. Here’s some instructions for how to contribute. You might want to check in with an admin from the DCC++ EX team before working on documentation changes to identify current needs.</p>
 <div class="section" id="submission-procedure">
-<h2>Submission Procedure<a class="headerlink" href="#submission-procedure" title="Permalink to this headline">¶</a></h2>
+<h2>Submission Procedure<a class="headerlink" href="#submission-procedure" title="Permalink to this heading">¶</a></h2>
 <p>Simple changes to existing pages can be created without installing any tools,
 by using the “Edit on GitHub” link. However, the preview provided on GitHub
 does not fully reflect the final result. The steps listed here provide guidance
@@ -334,9 +336,9 @@ go live!</p></li>
 </ol>
 </div>
 <div class="section" id="standards">
-<h2>Standards<a class="headerlink" href="#standards" title="Permalink to this headline">¶</a></h2>
+<h2>Standards<a class="headerlink" href="#standards" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="headings">
-<h3>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
+<h3>Headings<a class="headerlink" href="#headings" title="Permalink to this heading">¶</a></h3>
 <ul>
 <li><p>Main Headings have asterisks above and below them:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">*************</span>
@@ -373,7 +375,7 @@ go live!</p></li>
 <p>All heading underlines and overlines must be at least as long as the text of the heading, however it’s recommended to make them one character longer.</p>
 </div>
 <div class="section" id="user-level-logos">
-<h3>User level logos<a class="headerlink" href="#user-level-logos" title="Permalink to this headline">¶</a></h3>
+<h3>User level logos<a class="headerlink" href="#user-level-logos" title="Permalink to this heading">¶</a></h3>
 <p>On our <a class="reference internal" href="../get-started/levels.html"><span class="doc">Choose Your Level</span></a> page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.</p>
 <p>There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.</p>
 <p>Graphic logos for callouts/panels:</p>
@@ -387,9 +389,9 @@ go live!</p></li>
 <p>Refer to <a class="reference internal" href="#images"><span class="std std-ref">Images</span></a> below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX <a class="reference internal" href="../turntable-ex/turntable-ex.html"><span class="doc">Overview</span></a> page.</p>
 </div>
 <div class="section" id="links">
-<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h3>
 <div class="section" id="internal">
-<h4>Internal<a class="headerlink" href="#internal" title="Permalink to this headline">¶</a></h4>
+<h4>Internal<a class="headerlink" href="#internal" title="Permalink to this heading">¶</a></h4>
 <p>Sphinx cross-references are used for internal links. This ensures they are
 correct and by default will use the destination heading text as the link text.</p>
 <p>To link to a page use <code class="docutils literal notranslate"><span class="pre">:doc:</span></code>:</p>
@@ -425,7 +427,7 @@ even when referring to headings in the same source file.</p>
 </div>
 </div>
 <div class="section" id="external">
-<h4>External<a class="headerlink" href="#external" title="Permalink to this headline">¶</a></h4>
+<h4>External<a class="headerlink" href="#external" title="Permalink to this heading">¶</a></h4>
 <p>For URLs that are shown, just use the URL:</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
@@ -456,7 +458,7 @@ source file, define a target:</p>
 </div>
 </div>
 <div class="section" id="downloads">
-<h4>Downloads<a class="headerlink" href="#downloads" title="Permalink to this headline">¶</a></h4>
+<h4>Downloads<a class="headerlink" href="#downloads" title="Permalink to this heading">¶</a></h4>
 <p>Download buttons are created using the <code class="docutils literal notranslate"><span class="pre">dcclink</span></code> class, added using the
 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst-class::</span></code> directive:</p>
 <div class="admonition-example admonition">
@@ -471,7 +473,7 @@ source file, define a target:</p>
 </div>
 </div>
 <div class="section" id="images">
-<h3>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
+<h3>Images<a class="headerlink" href="#images" title="Permalink to this heading">¶</a></h3>
 <p>Include images with the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> and <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">figure::</span></code> directives.
 Horizontal positioning using the <code class="docutils literal notranslate"><span class="pre">:align:</span></code> option needs a bit of care.
 Where possible e.g. if just presenting a single image, either don’t use it, or
@@ -487,7 +489,7 @@ figure. Add a <code class="docutils literal notranslate"><span class="pre">:name
 using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;figure</span> <span class="pre">name&gt;`</span></code>.</p>
 </div>
 <div class="section" id="tables">
-<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h3>
 <p>For titled tables use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">table::</span></code> directive, followed by the title.
 Sphinx will automatically number the table. Add a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option to be able
 to refer to the figure in the text using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;table</span> <span class="pre">name&gt;`</span></code>.</p>

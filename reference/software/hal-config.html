@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,7 +300,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="i-o-device-drivers-and-hal">
-<h1>I/O Device Drivers and HAL<a class="headerlink" href="#i-o-device-drivers-and-hal" title="Permalink to this headline">¶</a></h1>
+<h1>I/O Device Drivers and HAL<a class="headerlink" href="#i-o-device-drivers-and-hal" title="Permalink to this heading">¶</a></h1>
 <p>The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may
 outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.</p>
@@ -338,7 +340,7 @@ only for the Arduino digital input and output functions and analogue input funct
 It is theoretically possible to create an ‘on-line only’ version of DCC++ EX which excludes the loco programming functions and
 therefore frees up FLASH on the Uno and Nano to allow the full HAL to operate, but this is not currently supported.</p>
 <div class="section" id="catching-the-i2c-bus">
-<h2>Catching the I2C Bus<a class="headerlink" href="#catching-the-i2c-bus" title="Permalink to this headline">¶</a></h2>
+<h2>Catching the I2C Bus<a class="headerlink" href="#catching-the-i2c-bus" title="Permalink to this heading">¶</a></h2>
 <p>Many of the external modules are connected to the Arduino via the I2C (Inter Integrated Circuit) interface.
 This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts).
 Your motor shield may have convenient connectors for I2C devices; for example, the DeekRobot shield has two sets of
@@ -353,7 +355,7 @@ However, only a device with a matching address will respond.  Each device attach
 <p class="caption"><span class="caption-number">Figure 85 </span><span class="caption-text">Example I2C Bus Topology with Arduino Mega and Three I2C modules</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="pull-ups">
-<h3>Pull-Ups<a class="headerlink" href="#pull-ups" title="Permalink to this headline">¶</a></h3>
+<h3>Pull-Ups<a class="headerlink" href="#pull-ups" title="Permalink to this heading">¶</a></h3>
 <p>The I2C bus requires pull-up resistors in order for it to operate.  However, most I2C modules contain
 10kOhm pull-up resistors built in, and the Arduino also has built-in pull-up resistors which are sufficient for
 installations with short bus cables, so you don’t have to be concerned about this unless you’re
@@ -363,7 +365,7 @@ pull-up resistors from one or more of them since the minimum permitted pull-up i
 Also, if your I2C bus cable is long then a pull-up value closer to the minimum is desirable.</p>
 </div>
 <div class="section" id="identifying-what-devices-are-connected">
-<h3>Identifying What Devices Are Connected<a class="headerlink" href="#identifying-what-devices-are-connected" title="Permalink to this headline">¶</a></h3>
+<h3>Identifying What Devices Are Connected<a class="headerlink" href="#identifying-what-devices-are-connected" title="Permalink to this heading">¶</a></h3>
 <p>During the startup phase of DCC++ EX, the I2C bus is queried to identify what (if any) devices are connected.
 The list of active I2C addresses is shown on the serial output during startup.  An example is shown below, with annotations.
 Note that the address does not necessarily tell you what the device is, since different modules may have the same default
@@ -378,7 +380,7 @@ address.</p>
 </div>
 </div>
 <div class="section" id="mcp23017-modules">
-<h2>MCP23017 Modules<a class="headerlink" href="#mcp23017-modules" title="Permalink to this headline">¶</a></h2>
+<h2>MCP23017 Modules<a class="headerlink" href="#mcp23017-modules" title="Permalink to this heading">¶</a></h2>
 <p>The MCP23017 GPIO Extender module has 16 input/output pins.  Like the Arduino input/output pins, you can access any of these in input mode (as a sensor input)
 or output mode (driving a digital output and illuminating an LED or switching some external hardware).  Each module has an address associated with it, which
 is generally either 0x20, 0x21, 0x22 or 0x23.  By default, the module is usually 0x20.  The address will only need to be changed if you have more
@@ -400,7 +402,7 @@ the current stops flowing.  This is just the same as the Arduino digital GPIO pi
 </div>
 </div>
 <div class="section" id="pca9685-modules">
-<h2>PCA9685 Modules<a class="headerlink" href="#pca9685-modules" title="Permalink to this headline">¶</a></h2>
+<h2>PCA9685 Modules<a class="headerlink" href="#pca9685-modules" title="Permalink to this heading">¶</a></h2>
 <p>The PCA9685 PWM (servo) controller module has 16 input/output pins.  In addition, next to each PWM pin is a +5V and a GND pin, so that a servo connector may
 be directly plugged onto the group of three pins.  Even better, the pins are usually colour-coded to match the colours of the servo cables!</p>
 <p>Like the MCP23017 module, each PCA9685 has an address.  The default address is 0x40, and may be changed, for example to 0x41, 0x42 or 0x43 for the second, third and fourth module
@@ -432,7 +434,7 @@ to different brightness levels.  the EX-RAIL automation has a command <strong>FA
 PCA9685 to do exactly this.</p>
 </div>
 <div class="section" id="other-drivers">
-<h2>Other Drivers<a class="headerlink" href="#other-drivers" title="Permalink to this headline">¶</a></h2>
+<h2>Other Drivers<a class="headerlink" href="#other-drivers" title="Permalink to this heading">¶</a></h2>
 <p>There are also drivers included with DCC++ EX for the following modules:</p>
 <ul class="simple">
 <li><p>PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I2C).</p></li>
@@ -446,7 +448,7 @@ output VPINs from within DCC++ EX.</p></li>
 <li><p>Turntable-EX - Integrated, stepper motor based turntable controller, refer to <a class="reference internal" href="../../turntable-ex/index.html"><span class="doc">Turntable-EX (Beta)</span></a>.</p></li>
 </ul>
 <div class="section" id="notes-on-the-pca9555-tca9555-i2c-gpio-extenders">
-<h3>Notes on the PCA9555/TCA9555 I2C GPIO Extenders<a class="headerlink" href="#notes-on-the-pca9555-tca9555-i2c-gpio-extenders" title="Permalink to this headline">¶</a></h3>
+<h3>Notes on the PCA9555/TCA9555 I2C GPIO Extenders<a class="headerlink" href="#notes-on-the-pca9555-tca9555-i2c-gpio-extenders" title="Permalink to this heading">¶</a></h3>
 <p>The PCA9555 is made by Texas Instruments and NXP, the TCA9555 by Texas Instruments alone, and using these GPIO extenders is similar to the the MCP23017 with a few key differences.</p>
 <p>The PCA/TCA9555 has an always-on internal pull-up resistor for ports configured as an input, and the INT pin is always enabled, meaning it will always trigger on the rising and falling edge of an input port. The PCA/TCA9555 will work with either 3.3v or 5V.</p>
 <p>When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.</p>
@@ -468,7 +470,7 @@ output VPINs from within DCC++ EX.</p></li>
 </div>
 </div>
 <div class="section" id="adding-a-new-device">
-<h2>Adding a New Device<a class="headerlink" href="#adding-a-new-device" title="Permalink to this headline">¶</a></h2>
+<h2>Adding a New Device<a class="headerlink" href="#adding-a-new-device" title="Permalink to this heading">¶</a></h2>
 <p>If you want to add a device that is not handled by DCC++ EX ‘out-of-the-box’, then you will need to create a device
 configuration file, with details of the device driver and how to access the device.</p>
 <p>DCC++ EX already has a few useful device drivers for different types of sensors, and new ones are appearing regularly.  The
@@ -487,10 +489,10 @@ In fact, the file can have any name you like.  You could use <code class="docuti
 list of files in the Arduino IDE.</p>
 </div>
 <div class="section" id="adding-a-new-device-configuration-file">
-<h2>Adding A New Device Configuration File<a class="headerlink" href="#adding-a-new-device-configuration-file" title="Permalink to this headline">¶</a></h2>
+<h2>Adding A New Device Configuration File<a class="headerlink" href="#adding-a-new-device-configuration-file" title="Permalink to this heading">¶</a></h2>
 <p>This will need to be done in the <a class="reference internal" href="../../get-started/arduino-ide.html"><span class="doc">Arduino-IDE</span></a>, so first make sure you have followed these steps to load up the Arduino IDE.</p>
 <div class="section" id="create-a-new-tab">
-<h3>Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permalink to this headline">¶</a></h3>
+<h3>Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permalink to this heading">¶</a></h3>
 <p>First you will need to add a new file, just like the <a class="reference internal" href="../../get-started/arduino-ide.html#copy-the-config-example-h-file-or-rename-it"><span class="std std-ref">config.h file</span></a>.
 Create a new tab using the following menu option.</p>
 <div class="figure align-default" id="id2">
@@ -499,7 +501,7 @@ Create a new tab using the following menu option.</p>
 </div>
 </div>
 <div class="section" id="creating-the-myhal-cpp-file">
-<h3>Creating the myHal.cpp file<a class="headerlink" href="#creating-the-myhal-cpp-file" title="Permalink to this headline">¶</a></h3>
+<h3>Creating the myHal.cpp file<a class="headerlink" href="#creating-the-myhal-cpp-file" title="Permalink to this heading">¶</a></h3>
 <p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code>
 and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file.</p>
 <div class="figure align-default" id="id3">
@@ -508,7 +510,7 @@ and click <code class="docutils literal notranslate"><span class="pre">OK</span>
 </div>
 </div>
 <div class="section" id="adding-in-the-configuration-commands">
-<h3>Adding in the configuration commands<a class="headerlink" href="#adding-in-the-configuration-commands" title="Permalink to this headline">¶</a></h3>
+<h3>Adding in the configuration commands<a class="headerlink" href="#adding-in-the-configuration-commands" title="Permalink to this heading">¶</a></h3>
 <p>Within the new file that has been created, you can add in the definitions of new devices.  But first you need to add the following lines:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
 
@@ -552,12 +554,12 @@ with it.  Save the file.</p>
 </div>
 </div>
 <div class="section" id="upload-the-new-version-of-the-software">
-<h3>Upload the new version of the software<a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permalink to this headline">¶</a></h3>
+<h3>Upload the new version of the software<a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permalink to this heading">¶</a></h3>
 <p>Finally, upload the code to the Arduino as you would do during the standard <a class="reference internal" href="../../get-started/arduino-ide.html#upload-the-software"><span class="std std-ref">Arduino IDE Setup</span></a>.
 Restart the Command Station and the new device will be configured at startup.</p>
 </div>
 <div class="section" id="checking-the-driver">
-<h3>Checking the Driver<a class="headerlink" href="#checking-the-driver" title="Permalink to this headline">¶</a></h3>
+<h3>Checking the Driver<a class="headerlink" href="#checking-the-driver" title="Permalink to this heading">¶</a></h3>
 <p>Start the Arduino IDE’s serial monitor program, and set its speed to 115200 baud.  If you enter the following command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D HAL SHOW&gt;
 </pre></div>
@@ -573,7 +575,7 @@ Restart the Command Station and the new device will be configured at startup.</p
 </div>
 </div>
 <div class="section" id="using-the-device">
-<h3>Using the Device<a class="headerlink" href="#using-the-device" title="Permalink to this headline">¶</a></h3>
+<h3>Using the Device<a class="headerlink" href="#using-the-device" title="Permalink to this heading">¶</a></h3>
 <p>The five VPINs, 1000 to 1004, allow the first five MP3 files on the Micro-SD card to be played directly.  You just need to
 write to the pins as if they were real digital output pins on the Arduino.  For example, set up
 some outputs using the Arduino IDE’s serial monitor program, by entering the following commands:</p>

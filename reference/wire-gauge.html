@@ -37,6 +37,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,9 +300,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wire-gauge-information">
-<h1>Wire Gauge Information<a class="headerlink" href="#wire-gauge-information" title="Permalink to this headline">¶</a></h1>
+<h1>Wire Gauge Information<a class="headerlink" href="#wire-gauge-information" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="why-is-wire-size-important">
-<h2>Why is Wire Size Important?<a class="headerlink" href="#why-is-wire-size-important" title="Permalink to this headline">¶</a></h2>
+<h2>Why is Wire Size Important?<a class="headerlink" href="#why-is-wire-size-important" title="Permalink to this heading">¶</a></h2>
 <p>Voltage, current, and resistance to that current are all interrelated and described by the Ohm’s law formula, Voltage = Current * Resistance (V=IR). The thinner the wire, the more resistance it has. As you can see from the formula, if your wire had a .5 Ohm resistance and there was 5 Amps flowing through it, you would lose… we’re waiting. Get out your calculator… Yes, 2.5 Volts. If you only started with say, 12V, that would leave you with only 9.5 to run your trains. And that lost energy is wasted as heat. This is an exaggerated example, but you get the idea.</p>
 <p>There can be a lot of wiring on a complicated layout, here are the main areas that require wiring, they are often different wire sizes.</p>
 <ul class="simple">
@@ -310,7 +312,7 @@
 </ul>
 </div>
 <div class="section" id="main-dcc-bus">
-<h2>Main DCC Bus<a class="headerlink" href="#main-dcc-bus" title="Permalink to this headline">¶</a></h2>
+<h2>Main DCC Bus<a class="headerlink" href="#main-dcc-bus" title="Permalink to this heading">¶</a></h2>
 <p>The main bus provides a low resistance, high current capable path for the voltage and current to your track. It may power several locos and all your lights, servos, switches and other accessories. Optionally, you may want to have a separate bus for accessory control and reserve the main bus just for your locos. More on that later.</p>
 <a class="reference internal image-reference" href="../_images/thumb_up.png"><img alt="thumbs-up icon" class="align-left" src="../_images/thumb_up.png" style="width: 50.0px; height: 51.0px;" /></a>
 <p><strong>Rule of Thumb:</strong> 14 gauge (2.08mm<sup>2</sup>) solid core wire for main bus up to 100ft (30m) for HO.  24 gauge (.205mm<sup>2</sup>) stranded wire for short feeder wires from the bus to short sections of track around the layout.</p>
@@ -321,11 +323,11 @@
 <p>Our general rules are based on 2 to 5 Amps of current maximum. Most model railroaders will be well within this range, most never going above 2 Amps. If you need more than 5 Amps, then you need separate power districts to distribute the load around the track. For example, you have have a motor or a lot of lights connected to one part of the track in its district. Breaking the track up into power districts ensures that there probably won’t me more than few locos in any district in a given time.</p>
 </div>
 <div class="section" id="feeders">
-<h2>Feeders<a class="headerlink" href="#feeders" title="Permalink to this headline">¶</a></h2>
+<h2>Feeders<a class="headerlink" href="#feeders" title="Permalink to this heading">¶</a></h2>
 <p>Feeder wires a smaller, more manageable wires that you run from the main bus to the tracks. You will need feeders every few feet on larger scales and on every track for N and Z scales. The wires can be smaller because they are only a few inches long and the current is distributed between feeders.</p>
 </div>
 <div class="section" id="current">
-<h2>Current<a class="headerlink" href="#current" title="Permalink to this headline">¶</a></h2>
+<h2>Current<a class="headerlink" href="#current" title="Permalink to this heading">¶</a></h2>
 <p>If you want to compute how much current you are actually going to use, you will have to refer to some tables. You may need a different size wire. For example to only carry 2 Amps, your bus wire can be 18 gauge. To handle more than 5A, you would need larger wire.</p>
 <p>Here are some examples of the electrical specifications of a few sizes of wire:</p>
 <table class="docutils align-default">
@@ -474,7 +476,7 @@ skin ef.</p></th>
 <p>Read all the above and you will be a DCC-EX Engineer!</p>
 </div>
 <div class="section" id="accessory-bus">
-<h2>Accessory Bus<a class="headerlink" href="#accessory-bus" title="Permalink to this headline">¶</a></h2>
+<h2>Accessory Bus<a class="headerlink" href="#accessory-bus" title="Permalink to this heading">¶</a></h2>
 <p>If you have a small to medium sized layout you could usually power your locos, turnouts, and other accessories and lighting all from the power from the tracks. But there are a few reasons why you may want to expand your system to have a separate bus for accessories.</p>
 <p><strong>1. Efficiency</strong> - The Command station already has a lot to do if you are running a lot of locos. While you could run 10, 20… even 50 trains or more, each train can get only so many commands per second. If you are running in a club situation and If you add a lot of accessories, you could find a short delay before a train responds to something like an emergency stop.</p>
 <p><strong>2. Voltage and current needs</strong> - If you take the power requirements of your accessories off your main track, and power them from a separate supply, you can either run with less Amps or run more locos.</p>

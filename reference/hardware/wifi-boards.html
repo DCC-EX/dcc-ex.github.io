@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wifi-boards">
-<h1>WiFi Boards<a class="headerlink" href="#wifi-boards" title="Permalink to this headline">¶</a></h1>
+<h1>WiFi Boards<a class="headerlink" href="#wifi-boards" title="Permalink to this heading">¶</a></h1>
 <p>You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the <a class="reference internal" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html"><span class="doc">Mega+WiFi page</span></a></p>
 <p>For more information on how to configure your CS to use the boards below, see <a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">Wifi Setup</span></a></p>
 <ul class="simple">
@@ -317,7 +319,7 @@
 <p>This is NOT to make a connection to JMRI. Use a USB cable instead. The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.</p>
 </div>
 <div class="section" id="makerfabs-wifi-shield">
-<h2>Makerfabs WiFi Shield<a class="headerlink" href="#makerfabs-wifi-shield" title="Permalink to this headline">¶</a></h2>
+<h2>Makerfabs WiFi Shield<a class="headerlink" href="#makerfabs-wifi-shield" title="Permalink to this heading">¶</a></h2>
 <p>Conductor Friendly</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP-8266 WiFi Shield (recommended)</a></p></li>
@@ -326,7 +328,7 @@
 <p><a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">Installation Instructions for WiFi</span></a></p>
 </div>
 <div class="section" id="duinopeak-wifi-shield">
-<h2>Duinopeak WiFi Shield<a class="headerlink" href="#duinopeak-wifi-shield" title="Permalink to this headline">¶</a></h2>
+<h2>Duinopeak WiFi Shield<a class="headerlink" href="#duinopeak-wifi-shield" title="Permalink to this heading">¶</a></h2>
 <p>Tinkerer</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN">Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s)</a></p></li>
@@ -337,7 +339,7 @@
 <p>See the ESP-01S in the next section below that must be installed on this board</p>
 </div>
 <div class="section" id="esp-01s">
-<h2>ESP-01S<a class="headerlink" href="#esp-01s" title="Permalink to this headline">¶</a></h2>
+<h2>ESP-01S<a class="headerlink" href="#esp-01s" title="Permalink to this heading">¶</a></h2>
 <p>Tinkerer Level</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.amzn.com/B00O34AGSU/">ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers)</a></p></li>
@@ -353,7 +355,7 @@
 <p><a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">Installation Instructions</span></a></p>
 </div>
 <div class="section" id="wangtongze-board">
-<h2>WangTongze Board<a class="headerlink" href="#wangtongze-board" title="Permalink to this headline">¶</a></h2>
+<h2>WangTongze Board<a class="headerlink" href="#wangtongze-board" title="Permalink to this heading">¶</a></h2>
 <p>AKA: Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board</p>
 <p>Tinkerer to Engineer Level</p>
 <a class="reference internal image-reference" href="../../_images/wangtongze_wifi_board.jpg"><img alt="ESP-01S" src="../../_images/wangtongze_wifi_board.jpg" style="width: 450.59999999999997px; height: 357.59999999999997px;" /></a>
@@ -386,14 +388,14 @@
 <p>Here is a link to the <a class="reference external" href="https://www.youtube.com/watch?v=LJcYgR479Vw">Video and info from Wang Tongze himself</a></p>
 </div>
 <div class="section" id="sparkfun-thing-plus-esp32">
-<h2>SparkFun Thing Plus (ESP32)<a class="headerlink" href="#sparkfun-thing-plus-esp32" title="Permalink to this headline">¶</a></h2>
+<h2>SparkFun Thing Plus (ESP32)<a class="headerlink" href="#sparkfun-thing-plus-esp32" title="Permalink to this heading">¶</a></h2>
 <p>Tinkerer Level</p>
 <p>This is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. The board is relatively expensive, but SparkFun has quality products and top notch support. Detailed installation instructions can be found at: <a class="reference external" href="https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html">https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html</a></p>
 <a class="reference internal image-reference" href="../../_images/sparkfun_thing_plus.jpg"><img alt="SparkFun Thing Plus" src="../../_images/sparkfun_thing_plus.jpg" style="width: 240.0px; height: 240.0px;" /></a>
 <p><a class="reference external" href="https://www.sparkfun.com/products/17381">https://www.sparkfun.com/products/17381</a></p>
 </div>
 <div class="section" id="esp32-ant-01-breakout-and-development-board-esp32">
-<h2>ESP32_Ant-01 Breakout and Development Board (ESP32)<a class="headerlink" href="#esp32-ant-01-breakout-and-development-board-esp32" title="Permalink to this headline">¶</a></h2>
+<h2>ESP32_Ant-01 Breakout and Development Board (ESP32)<a class="headerlink" href="#esp32-ant-01-breakout-and-development-board-esp32" title="Permalink to this heading">¶</a></h2>
 <p>Tinkerer Level</p>
 <a class="reference internal image-reference" href="../../_images/esp32_dev_board.jpg"><img alt="ESP32 dev board" src="../../_images/esp32_dev_board.jpg" style="width: 97.5px; height: 195.0px;" /></a>
 <p>Like the SparkFun board, this board is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. It is half the price of the SparkFun board and comes with an antenna. Detailed instructions on installation can be found at: <a class="reference external" href="https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html">https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html</a></p>

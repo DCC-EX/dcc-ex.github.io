@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="i2c-displays">
-<h1>I2C Displays<a class="headerlink" href="#i2c-displays" title="Permalink to this headline">¶</a></h1>
+<h1>I2C Displays<a class="headerlink" href="#i2c-displays" title="Permalink to this heading">¶</a></h1>
 <p>DCC++ EX is designed to accommodate a display. You don’t need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.</p>
 <a class="reference internal image-reference" href="../../_images/I2C_LCD_Display_wired.jpg"><img alt="Example: 4 line I2C Display" src="../../_images/I2C_LCD_Display_wired.jpg" style="width: 512.0px; height: 331.20000000000005px;" /></a>
 <p>We currently support LCDs based on the PCF8574 backpack:</p>
@@ -318,7 +320,7 @@
 <p>You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!</p>
 </div>
 <div class="section" id="examples-of-compatible-displays">
-<h2>Examples of compatible displays<a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this headline">¶</a></h2>
+<h2>Examples of compatible displays<a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this heading">¶</a></h2>
 <p>Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/lcd_20x4_backpack.jpg"><img alt="20 x 4 LCD" src="../../_images/lcd_20x4_backpack.jpg" style="width: 320.0px; height: 291.2px;" /></a>
@@ -331,9 +333,9 @@
 </div>
 </div>
 <div class="section" id="connecting-an-lcd-display">
-<h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this headline">¶</a></h2>
+<h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
-<h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this headline">¶</a></h3>
+<h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this heading">¶</a></h3>
 <p>And here is a picture of the board after soldering or if you purchase a board already soldered (or “welded” as some of the Chinese sites call it)</p>
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/lcd_soldered.jpg"><img alt="Backpack Soldered to LCD" src="../../_images/lcd_soldered.jpg" style="width: 400.0px; height: 400.0px;" /></a>
@@ -341,7 +343,7 @@
 </div>
 </div>
 <div class="section" id="connecting-the-jumper-wires">
-<h3>Connecting the Jumper Wires<a class="headerlink" href="#connecting-the-jumper-wires" title="Permalink to this headline">¶</a></h3>
+<h3>Connecting the Jumper Wires<a class="headerlink" href="#connecting-the-jumper-wires" title="Permalink to this heading">¶</a></h3>
 <p>To connect the Display to the CS, you will need 4 male to female jumper wires:</p>
 <ol class="arabic simple">
 <li><p>Connect a wire from +5V on the Motor Shield or WiFi Board to Vcc on the backpack</p></li>
@@ -355,12 +357,12 @@
 </div>
 </div>
 <div class="section" id="controlling-brightness">
-<h3>Controlling Brightness<a class="headerlink" href="#controlling-brightness" title="Permalink to this headline">¶</a></h3>
+<h3>Controlling Brightness<a class="headerlink" href="#controlling-brightness" title="Permalink to this heading">¶</a></h3>
 <p>The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:</p>
 <p><strong>*TODO: Add image*</strong></p>
 </div>
 <div class="section" id="upload-the-sketch-to-your-cs">
-<h3>Upload the sketch to your CS<a class="headerlink" href="#upload-the-sketch-to-your-cs" title="Permalink to this headline">¶</a></h3>
+<h3>Upload the sketch to your CS<a class="headerlink" href="#upload-the-sketch-to-your-cs" title="Permalink to this heading">¶</a></h3>
 <p>To upload the new sketch on your Command Station</p>
 <ol class="arabic simple">
 <li><p>Open the Arduino IDE</p></li>
@@ -378,7 +380,7 @@
 </div>
 </div>
 <div class="section" id="connecting-an-oled-display">
-<h2>Connecting an OLED display<a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this headline">¶</a></h2>
+<h2>Connecting an OLED display<a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this heading">¶</a></h2>
 <p>OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won’t work with an UNO. You will require a Mega. Here are some examples of OLED displays:</p>
 <div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/adafruit_96in_oled_sm.jpg"><img alt="Adafruit .96&quot; OLED" src="../../_images/adafruit_96in_oled_sm.jpg" style="width: 160.0px; height: 153.60000000000002px;" /></a>
@@ -389,19 +391,19 @@
 <p class="caption"><span class="caption-number">Figure 72 </span><span class="caption-text">Makerfocus 128x32 .91” OLED Display</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="soldering-wires-to-the-display">
-<h3>Soldering Wires to the Display<a class="headerlink" href="#soldering-wires-to-the-display" title="Permalink to this headline">¶</a></h3>
+<h3>Soldering Wires to the Display<a class="headerlink" href="#soldering-wires-to-the-display" title="Permalink to this heading">¶</a></h3>
 <p>For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.</p>
 </div>
 <div class="section" id="connecting-jumper-wires-to-the-cs">
-<h3>Connecting Jumper Wires to the CS<a class="headerlink" href="#connecting-jumper-wires-to-the-cs" title="Permalink to this headline">¶</a></h3>
+<h3>Connecting Jumper Wires to the CS<a class="headerlink" href="#connecting-jumper-wires-to-the-cs" title="Permalink to this heading">¶</a></h3>
 <p>** Not Finished. Coming soon! **</p>
 </div>
 <div class="section" id="installing-the-software-oled">
-<h3>Installing the Software (OLED)<a class="headerlink" href="#installing-the-software-oled" title="Permalink to this headline">¶</a></h3>
+<h3>Installing the Software (OLED)<a class="headerlink" href="#installing-the-software-oled" title="Permalink to this heading">¶</a></h3>
 <p>** Not Finished. Coming soon! **</p>
 </div>
 <div class="section" id="changing-the-i2c-address">
-<h3>Changing the I2C Address<a class="headerlink" href="#changing-the-i2c-address" title="Permalink to this headline">¶</a></h3>
+<h3>Changing the I2C Address<a class="headerlink" href="#changing-the-i2c-address" title="Permalink to this heading">¶</a></h3>
 <p>If you have other I2C devices, like an I2C bus to control turnouts or other accessories, you may need to change the address of your I2C display to avoid a conflict. The display should have instructions available for how to do this.</p>
 <p>** Not Finished. Coming soon! **</p>
 </div>

@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="i2c-gpio-expander-modules">
-<h1>I2C GPIO Expander Modules<a class="headerlink" href="#i2c-gpio-expander-modules" title="Permalink to this headline">¶</a></h1>
+<h1>I2C GPIO Expander Modules<a class="headerlink" href="#i2c-gpio-expander-modules" title="Permalink to this heading">¶</a></h1>
 <p>GPIO Expander modules, as the name implies, expand the number of General Purpose Input/Output
 pins that you can use for interacting with your railway layout components.</p>
 <p>GPIO pins, in input mode, can be connected to sensors (such as Block Occupancy Detectors, Hall Effect magnetic sensors,
@@ -345,7 +347,7 @@ the input pin is switched to LOW level and a message <cite>&lt;Q 165&gt;</cite> 
 pin is active.  When the switch is released, the input pin is pulled back to HIGH and a message
 <cite>&lt;q 165&gt;</cite> is generated to indicate that the pin is inactive.</p>
 <div class="section" id="interrupts">
-<h2>Interrupts<a class="headerlink" href="#interrupts" title="Permalink to this headline">¶</a></h2>
+<h2>Interrupts<a class="headerlink" href="#interrupts" title="Permalink to this heading">¶</a></h2>
 <p>Many I2C GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
 expander chip to notify the microcontroller that one or more inputs have changed state.</p>
 <p>DCC++EX supports the use of these pins.  On controllers with INTA and INTB, the two pins should be connected together

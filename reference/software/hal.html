@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -298,20 +300,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="dcc-ex-hal-architecture">
-<h1>DCC++EX HAL Architecture<a class="headerlink" href="#dcc-ex-hal-architecture" title="Permalink to this headline">¶</a></h1>
+<h1>DCC++EX HAL Architecture<a class="headerlink" href="#dcc-ex-hal-architecture" title="Permalink to this heading">¶</a></h1>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>17 Feb 2022: <em>Now included</em> in <strong>DCC++EX 4.0!</strong>
 Available to download and use now!</p>
 </div>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <p>Firstly, an apology.  The document below is mostly based on my activity log while developing the HAL software and other associated modules (I2C etc.).
 Consequently, it is badly structured, random, and mostly extremely technical.  For that, I apologise.</p>
 <p>Now, on to the content.  You have been warned…</p>
 </div>
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p><strong>HAL</strong> = <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer.</p>
 <p>The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from DCC++EX code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.</p>
 <p>The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.</p>
@@ -327,9 +329,9 @@ The class GPIOBase implements functionality that is common to, and inherited by,
 device-specific commands for reading and writing to the module’s registers.</p>
 </div>
 <div class="section" id="command-reference">
-<h2>Command Reference<a class="headerlink" href="#command-reference" title="Permalink to this headline">¶</a></h2>
+<h2>Command Reference<a class="headerlink" href="#command-reference" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="revised-turnout-command-list">
-<h3>Revised Turnout Command List<a class="headerlink" href="#revised-turnout-command-list" title="Permalink to this headline">¶</a></h3>
+<h3>Revised Turnout Command List<a class="headerlink" href="#revised-turnout-command-list" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>&lt;T id SERVO vpin activePos inactivePos profile&gt;</dt><dd><p>Define turnout servo (PWM) on specified vpin.
 The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM).
@@ -360,7 +362,7 @@ and 4=Bounce (subject to revision).
 </dl>
 </div>
 <div class="section" id="hal-programming-interface">
-<h3>HAL Programming Interface<a class="headerlink" href="#hal-programming-interface" title="Permalink to this headline">¶</a></h3>
+<h3>HAL Programming Interface<a class="headerlink" href="#hal-programming-interface" title="Permalink to this heading">¶</a></h3>
 <p>The interface functions to the HAL are as follows.  Apart from the ‘create’ functions, these functions are generally only called internally
 from within the DCC++ EX software.  The xxxx::create() functions however are required to be added to the user’s myHal.cpp or mySetup.h
 configuration file in order to register the device driver and configure the specified VPINs.</p>
@@ -425,7 +427,7 @@ If the device in question does not support the configureServo operation, the val
 </dl>
 </div>
 <div class="section" id="hal-define-symbols">
-<h3>HAL #define Symbols<a class="headerlink" href="#hal-define-symbols" title="Permalink to this headline">¶</a></h3>
+<h3>HAL #define Symbols<a class="headerlink" href="#hal-define-symbols" title="Permalink to this heading">¶</a></h3>
 <p>The following #define symbols may be defined in the IODevice.h file or the platformio.ini file in order to facilitate fault-finding or to remove the
 HAL from the build.</p>
 <dl class="simple">
@@ -464,7 +466,7 @@ are also used by the serial USB, clock and other components).  It will also slow
 </dl>
 </div>
 <div class="section" id="mysetup-files">
-<h3>mySetup Files<a class="headerlink" href="#mysetup-files" title="Permalink to this headline">¶</a></h3>
+<h3>mySetup Files<a class="headerlink" href="#mysetup-files" title="Permalink to this heading">¶</a></h3>
 <p>There are various ways of configuring I/O and creating turnouts, sensors and other objects when the CS is powered on:</p>
 <p>After using the commands (&lt;S …&gt;, &lt;T …&gt;, &lt;Z …&gt; etc) to define sensors, turnouts and outputs, use the &lt;E&gt; command to
 save them to EEPROM.  Then, when the CS restarts, the definitions are read back from EEPROM and the objects recreated.  This is limited to turnout, sensor and output definitions.</p>
@@ -509,7 +511,7 @@ functional in editors that support it (e.g. PlatformIO).</p>
 </div>
 </div>
 <div class="section" id="list-of-changes">
-<h2>List of Changes<a class="headerlink" href="#list-of-changes" title="Permalink to this headline">¶</a></h2>
+<h2>List of Changes<a class="headerlink" href="#list-of-changes" title="Permalink to this heading">¶</a></h2>
 <p>The following functional changes have been done in the neil-hal branch to support the implementation of the HAL in DCC++EX,
 and to improve the handling of Displays, Turnouts, Sensors and Outputs.</p>
 <ul>
@@ -720,7 +722,7 @@ The device is configured in myHal.cpp by</p>
 </ul>
 </div>
 <div class="section" id="future-enhancements">
-<h2>Future Enhancements<a class="headerlink" href="#future-enhancements" title="Permalink to this headline">¶</a></h2>
+<h2>Future Enhancements<a class="headerlink" href="#future-enhancements" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic">
 <li><p>HAL: Produce a simple IODevice class template, to help DCC++EX developers/tinkerers who want to implement their own extensions protocols,
 e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.</p>

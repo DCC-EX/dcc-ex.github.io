@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="arduino-nano-setup">
-<h1>Arduino Nano Setup<a class="headerlink" href="#arduino-nano-setup" title="Permalink to this headline">¶</a></h1>
+<h1>Arduino Nano Setup<a class="headerlink" href="#arduino-nano-setup" title="Permalink to this heading">¶</a></h1>
 <a class="reference internal image-reference" href="../../_images/tinkerer.png"><img alt="Conductor Icon" class="align-left" src="../../_images/tinkerer.png" style="width: 60.0px; height: 49.0px;" /></a>
 <p>Tinkerer Level</p>
 <div class="line-block">
@@ -316,7 +318,7 @@
 <p class="caption"><span class="caption-number">Figure 64 </span><span class="caption-text">Arduino Nano</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="what-you-need">
-<h2>What You need<a class="headerlink" href="#what-you-need" title="Permalink to this headline">¶</a></h2>
+<h2>What You need<a class="headerlink" href="#what-you-need" title="Permalink to this heading">¶</a></h2>
 <p><strong>Hardware</strong></p>
 <ul class="simple">
 <li><p>Arduino Nano (or clone)</p></li>
@@ -329,14 +331,14 @@
 </ul>
 </div>
 <div class="section" id="software">
-<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<h2>Software<a class="headerlink" href="#software" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>See <a class="reference internal" href="../../download/commandstation.html"><span class="doc">Command Station Download Page</span></a></p></li>
 <li><p>A Controller (aka Throttle or CAB). More on this below.</p></li>
 </ul>
 </div>
 <div class="section" id="optional-hardware">
-<h2>Optional Hardware<a class="headerlink" href="#optional-hardware" title="Permalink to this headline">¶</a></h2>
+<h2>Optional Hardware<a class="headerlink" href="#optional-hardware" title="Permalink to this heading">¶</a></h2>
 <p>Supported <a class="reference internal" href="../../reference/hardware/wifi-boards.html"><span class="doc">ESP8266 WiFi Option</span></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -344,7 +346,7 @@
 </div>
 </div>
 <div class="section" id="using-the-special-nano-motor-shield">
-<h2>Using the special Nano Motor Shield<a class="headerlink" href="#using-the-special-nano-motor-shield" title="Permalink to this headline">¶</a></h2>
+<h2>Using the special Nano Motor Shield<a class="headerlink" href="#using-the-special-nano-motor-shield" title="Permalink to this heading">¶</a></h2>
 <a class="reference internal image-reference" href="../../_images/nano_gravitech.jpg"><img alt="Gravitech Nano Motor Shield" class="align-left" src="../../_images/nano_gravitech.jpg" style="width: 270.0px; height: 270.0px;" /></a>
 <a class="reference internal image-reference" href="../../_images/nano_cheap_motor_shield.jpg"><img alt="Nano Motor Shield Clone" class="align-left" src="../../_images/nano_cheap_motor_shield.jpg" style="width: 239.39999999999998px; height: 239.39999999999998px;" /></a>
 <p class="clearer">The above image shows a Gravitech Nano Motor Shield on the left and a clone from China on the right. The image on the left shows a Nano (separately purchased) plugged into the board. Search “Nano Motor Shield” or “Nano-L298p”. And remember to order a Nano from the same source or from someone else.</p>
@@ -359,7 +361,7 @@
 <strong>*TODO: Show all the other Nano sized terminal boards and the ethernet board*</strong></p>
 </div>
 <div class="section" id="wiring-a-motor-shield">
-<h2>Wiring a Motor Shield<a class="headerlink" href="#wiring-a-motor-shield" title="Permalink to this headline">¶</a></h2>
+<h2>Wiring a Motor Shield<a class="headerlink" href="#wiring-a-motor-shield" title="Permalink to this heading">¶</a></h2>
 <a class="reference internal image-reference" href="../../_images/tinkerer.png"><img alt="Tinkerer Icon" class="align-left" src="../../_images/tinkerer.png" style="width: 60.0px; height: 49.0px;" /></a>
 <p>Tinkerer Level</p>
 <div class="line-block">
@@ -368,7 +370,7 @@
 <p>You will need jumpers to connect the Nano to the Arduino Motor Shield</p>
 </div>
 <div class="section" id="wiring-other-motor-boards">
-<h2>Wiring other Motor Boards<a class="headerlink" href="#wiring-other-motor-boards" title="Permalink to this headline">¶</a></h2>
+<h2>Wiring other Motor Boards<a class="headerlink" href="#wiring-other-motor-boards" title="Permalink to this heading">¶</a></h2>
 <a class="reference internal image-reference" href="../../_images/tinkerer.png"><img alt="Tinkerer Icon" class="align-left" src="../../_images/tinkerer.png" style="width: 60.0px; height: 49.0px;" /></a>
 <p>Tinkerer Level</p>
 <div class="line-block">

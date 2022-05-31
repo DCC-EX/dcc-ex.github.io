@@ -37,6 +37,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
@@ -150,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
 </ul>
@@ -300,7 +302,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="dcc-diagnostic-tools">
-<h1>DCC Diagnostic Tools<a class="headerlink" href="#dcc-diagnostic-tools" title="Permalink to this headline">¶</a></h1>
+<h1>DCC Diagnostic Tools<a class="headerlink" href="#dcc-diagnostic-tools" title="Permalink to this heading">¶</a></h1>
 <p><strong>*Work in Progress. More detail and pictures soon!*</strong></p>
 <p><strong>LEVEL: Engineers or Serious Tinkerers</strong></p>
 <p>There are many tools to help you operate your layout and find issues with your trains and accessories. We will list some of the most helpful tools here including where to buy them assembled or how to build them yourself.</p>
@@ -311,9 +313,9 @@
 <li><p><a class="reference internal" href="#dcc-track-phase-detector"><span class="std std-ref">DCC Track Phase Detector</span></a></p></li>
 </ul>
 <div class="section" id="sniffer-vs-analyzer">
-<h2>Sniffer vs. Analyzer<a class="headerlink" href="#sniffer-vs-analyzer" title="Permalink to this headline">¶</a></h2>
+<h2>Sniffer vs. Analyzer<a class="headerlink" href="#sniffer-vs-analyzer" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="sniffer">
-<h3>Sniffer<a class="headerlink" href="#sniffer" title="Permalink to this headline">¶</a></h3>
+<h3>Sniffer<a class="headerlink" href="#sniffer" title="Permalink to this heading">¶</a></h3>
 <p>A “sniffer” is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a “PACKET analyzer” which shouldn’t be confused with “LOGIC analyzer” in the next section. We recommend using our <a class="reference internal" href="../../download/dcc-inspector-ex.html"><span class="doc">DCCInspector-EX</span></a> sketch.</p>
 <div class="figure align-default" id="id2">
 <img alt="../../_images/pixel.png" src="../../_images/pixel.png" />
@@ -326,7 +328,7 @@
 </div>
 </div>
 <div class="clearer section" id="analyzer">
-<h3>Analyzer<a class="headerlink" href="#analyzer" title="Permalink to this headline">¶</a></h3>
+<h3>Analyzer<a class="headerlink" href="#analyzer" title="Permalink to this heading">¶</a></h3>
 <p>A logic analyzer is a device that connects to the Command Station signal pins and to a computer via a USB connection and uses software to capture the DCC waveform for a set period of time. The software can also decode the packets and display them along with the waveform. The display looks similar that what would appear on an oscilloscope. Since it captures the waveform, it can let you see details about the signal that may be causing issues like irregular pulses.</p>
 <div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/dccpp_ex_acc_packet.jpg"><img alt="DCC Signal Analyzer output" src="../../_images/dccpp_ex_acc_packet.jpg" style="width: 405.0px; height: 131.0px;" /></a>
@@ -335,9 +337,9 @@
 </div>
 </div>
 <div class="section" id="dcc-sniffer-packet-analyzer">
-<h2>DCC Sniffer (PACKET analyzer)<a class="headerlink" href="#dcc-sniffer-packet-analyzer" title="Permalink to this headline">¶</a></h2>
+<h2>DCC Sniffer (PACKET analyzer)<a class="headerlink" href="#dcc-sniffer-packet-analyzer" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="buy-it">
-<h3>Buy it<a class="headerlink" href="#buy-it" title="Permalink to this headline">¶</a></h3>
+<h3>Buy it<a class="headerlink" href="#buy-it" title="Permalink to this heading">¶</a></h3>
 <p>Well it isn’t quite a turnkey solution, but it’s close. You need this shield and an Arduino Uno or Mega and then to download our free <a class="reference internal" href="../../download/dcc-inspector-ex.html"><span class="doc">DCCInspector-EX</span></a> file and upload it to your microcontroller with the Arduino IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.</p>
 <div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/iowa_scale_eng_dcc_board.jpg"><img alt="Iowa Scale Engineering DCC Sniffer/Decoder Board" src="../../_images/iowa_scale_eng_dcc_board.jpg" style="width: 300.0px; height: 300.0px;" /></a>
@@ -349,7 +351,7 @@
 <p><strong>* Wiring and more info goes here *</strong></p>
 </div>
 <div class="section" id="build-it">
-<h3>Build It<a class="headerlink" href="#build-it" title="Permalink to this headline">¶</a></h3>
+<h3>Build It<a class="headerlink" href="#build-it" title="Permalink to this heading">¶</a></h3>
 <p>Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don’t even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the DCC++EX Command Station instead of to the track.</p>
 <p>You will need to upload our <a class="reference internal" href="../../download/dcc-inspector-ex.html"><span class="doc">DCCInspector-EX</span></a> software to whatever microcontroller you choose.</p>
 <div class="figure align-center" id="id5">
@@ -362,13 +364,13 @@
 <li><p><strong>Microcontroller Decoder</strong> This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with the DCCInspector-EX sketch.</p></li>
 </ul>
 <div class="section" id="dcc-signal-interface">
-<h4>DCC Signal Interface<a class="headerlink" href="#dcc-signal-interface" title="Permalink to this headline">¶</a></h4>
+<h4>DCC Signal Interface<a class="headerlink" href="#dcc-signal-interface" title="Permalink to this heading">¶</a></h4>
 <div class="section" id="connect-directly-to-the-signal-output-enable-pin-of-the-arduino-cs">
-<h5>Connect directly to the Signal output (enable pin) of the Arduino CS<a class="headerlink" href="#connect-directly-to-the-signal-output-enable-pin-of-the-arduino-cs" title="Permalink to this headline">¶</a></h5>
+<h5>Connect directly to the Signal output (enable pin) of the Arduino CS<a class="headerlink" href="#connect-directly-to-the-signal-output-enable-pin-of-the-arduino-cs" title="Permalink to this heading">¶</a></h5>
 <p>Easy! You don’t need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy’s) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  <a class="reference internal" href="../../download/dcc-inspector-ex.html"><span class="doc">DCCInspector-EX</span></a> download page for which pins to use.</p>
 </div>
 <div class="section" id="connect-to-the-track">
-<h5>Connect to the track<a class="headerlink" href="#connect-to-the-track" title="Permalink to this headline">¶</a></h5>
+<h5>Connect to the track<a class="headerlink" href="#connect-to-the-track" title="Permalink to this heading">¶</a></h5>
 <p>With this option, you can connect to anywhere on your track. Wiring can be temporary with alligator clips. In order to connect directly to the track, we need something that can isolate the track voltage from your sniffer, rectify the DCC signal so we just get the positive (or negative) going pulses, and level shift the track voltage to a safe 5 Volts to connect to an Arduino. It turns out a diode, a resistor and an optoisolator (aka optocoupler) are all you need for the job! However, to do it right, we do recommend a few other components.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -426,7 +428,7 @@
 </div>
 </div>
 <div class="section" id="logic-analyzer-decoder">
-<h2>Logic Analyzer/Decoder<a class="headerlink" href="#logic-analyzer-decoder" title="Permalink to this headline">¶</a></h2>
+<h2>Logic Analyzer/Decoder<a class="headerlink" href="#logic-analyzer-decoder" title="Permalink to this heading">¶</a></h2>
 <div class="figure align-center" id="id10">
 <a class="reference internal image-reference" href="../../_images/logic_analyzer.jpg"><img alt="Logic Analyzer" src="../../_images/logic_analyzer.jpg" style="width: 300.0px; height: 220.5px;" /></a>
 <p class="caption"><span class="caption-number">Figure 97 </span><span class="caption-text">Logic Analyzer</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
@@ -448,12 +450,12 @@
 <p class="caption"><span class="caption-number">Figure 98 </span><span class="caption-text">Logic Probes</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="install-pulseview">
-<h3>Install PulseView<a class="headerlink" href="#install-pulseview" title="Permalink to this headline">¶</a></h3>
+<h3>Install PulseView<a class="headerlink" href="#install-pulseview" title="Permalink to this heading">¶</a></h3>
 <p>Since the install instructions are particular for your operating system, we will just refer you to the SigRok page where you can follow their detailed instructions:</p>
 <p><a class="reference external" href="https://sigrok.org/doc/pulseview/0.4.1/manual.html#installation">SigRok PulseView Installation Instructions</a></p>
 </div>
 <div class="section" id="install-the-plugin">
-<h3>Install the Plugin<a class="headerlink" href="#install-the-plugin" title="Permalink to this headline">¶</a></h3>
+<h3>Install the Plugin<a class="headerlink" href="#install-the-plugin" title="Permalink to this heading">¶</a></h3>
 <p>Download the plugin from the link above and unzip it. Then install it in the user protocol decoder folder. This folder is NOT the main Sigrok folder where the factory installed decoders are. Here is that folder in Windows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Program Files (x86)\sigrok\PulseView\share\libsigrokdecode\decoders
 </pre></div>
@@ -475,12 +477,12 @@ $ cp -r sigrok-DCC-Protocoll-master/dcc/ ~/.local/share/libsigrokdecode/decoders
 </div>
 </div>
 <div class="section" id="download-usb-drivers">
-<h3>Download USB Drivers<a class="headerlink" href="#download-usb-drivers" title="Permalink to this headline">¶</a></h3>
+<h3>Download USB Drivers<a class="headerlink" href="#download-usb-drivers" title="Permalink to this heading">¶</a></h3>
 <p>These device need USB drivers from Saleae. Download and install the 1.x drivers from here:</p>
 <p><a class="reference external" href="https://support.saleae.com/logic-software/legacy-software/older-software-releases">USB Analyzer Drivers Download</a></p>
 </div>
 <div class="section" id="connect-the-analyzer">
-<h3>Connect the Analyzer<a class="headerlink" href="#connect-the-analyzer" title="Permalink to this headline">¶</a></h3>
+<h3>Connect the Analyzer<a class="headerlink" href="#connect-the-analyzer" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Connect a jumper wire into a probe if you haven’t already and then connect that into pin 0 or 1 on the logic analyzer</p></li>
 <li><p>Connect a jumper wire into a probe and connect the other end of the jumper into the GND pin on the analyzer</p></li>
@@ -490,7 +492,7 @@ $ cp -r sigrok-DCC-Protocoll-master/dcc/ ~/.local/share/libsigrokdecode/decoders
 </ul>
 </div>
 <div class="section" id="capture-the-samples-in-pulseview">
-<h3>Capture the samples in PulseView<a class="headerlink" href="#capture-the-samples-in-pulseview" title="Permalink to this headline">¶</a></h3>
+<h3>Capture the samples in PulseView<a class="headerlink" href="#capture-the-samples-in-pulseview" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Open the PulseView software</p></li>
 <li><p>Click on the “select device” dropdown and select the Saleae Analyzer</p></li>
@@ -509,10 +511,10 @@ $ cp -r sigrok-DCC-Protocoll-master/dcc/ ~/.local/share/libsigrokdecode/decoders
 </div>
 </div>
 <div class="section" id="dcc-track-phase-detector">
-<h2>DCC Track Phase Detector<a class="headerlink" href="#dcc-track-phase-detector" title="Permalink to this headline">¶</a></h2>
+<h2>DCC Track Phase Detector<a class="headerlink" href="#dcc-track-phase-detector" title="Permalink to this heading">¶</a></h2>
 <p>If you aren’t using boosters or don’t have isolated track sections/blocks, then you usually won’t have to worry about the phase of your DCC Signal so you can skip this section. But if you do use boosters, this is am important tool to add to your arsenal. And the best part, is anyone can make one!</p>
 <div class="section" id="why-is-phase-important">
-<h3>Why is Phase Important?<a class="headerlink" href="#why-is-phase-important" title="Permalink to this headline">¶</a></h3>
+<h3>Why is Phase Important?<a class="headerlink" href="#why-is-phase-important" title="Permalink to this heading">¶</a></h3>
 <p>The short answer is that if one block is out of phase with another and your loco bridges the gap, you will have a dangerous short circuit! Let’s look at this situation in a bit more detail for the Engineers.</p>
 <p>The DCC Signal energizes one track with a short voltage pulse (58us) for a “1” and a long one (116us)
 for a “0”. It then immediately switches and does the same thing on the other track. The “pulse train” looks a bit like this and is the way most people first “see” the DCC Waveform:</p>
@@ -544,7 +546,7 @@ for a “0”. It then immediately switches and does the same thing on the other
 <p>So how can we check our phase? We can use any of the simple circuits below or a more complicated one listed at the end.</p>
 </div>
 <div class="section" id="using-a-digital-multimeter-dmm">
-<h3>Using a Digital Multimeter (DMM)<a class="headerlink" href="#using-a-digital-multimeter-dmm" title="Permalink to this headline">¶</a></h3>
+<h3>Using a Digital Multimeter (DMM)<a class="headerlink" href="#using-a-digital-multimeter-dmm" title="Permalink to this heading">¶</a></h3>
 <p>This is pretty easy. Set your DMM to AC Volts (important, NOT DC) in a range above your track voltage. For example, if your track voltage is 15 Volts, your meter may need to be set to the 20 volt range. Then follow these steps noting that unless you have a very expensive “TRUE RMS” Meter. we will just get an indication that there is a DCC signal is on the track, but the voltage will be off by a few volts.</p>
 <div class="line-block">
 <div class="line">1. Put one probe on Rail A of the known block and the other prob on Rail B. For our expected voltage of a 15 Volt supply, depending on your meter, it should read anywhere from 12-28 Volts AC. If not, you have a power issue or a Motor Driver issue.</div>
@@ -576,7 +578,7 @@ for a “0”. It then immediately switches and does the same thing on the other
 <p><strong>Cons</strong> - Unwieldy, you can’t see it easily from across a large layout</p>
 </div>
 <div class="section" id="circuit-one">
-<h3>Circuit One<a class="headerlink" href="#circuit-one" title="Permalink to this headline">¶</a></h3>
+<h3>Circuit One<a class="headerlink" href="#circuit-one" title="Permalink to this heading">¶</a></h3>
 <p>Comprised of just 2 diodes and two resistors, this circuit is designed to connect to BOTH rails of a known good block and connect a probe to ONE rail at a time on the block under test. If your green LED lights, you are in phase with the rail on the other side connected to the green wire. If your red LED lights, you are in phase with the other side rail connected to the red wire.</p>
 <p>Note that during construction, the red wire is actually attached to the green LED and the green wire is attached to the red LED. You need to connect it this way to get the correctly colored LED to light.</p>
 <p><strong>Circuit Operation</strong> - The circuit works by only having a diode forward biased when the rail the probe end is attached to is out of phase with the corresponding rail on the known working block. With the red lead on Rail A of the known block and green lead on Rail B, when the probe is connected to Rail A on the opposite block, the red LED should light to indicate it is connected to the correct rail. The diode is reversed biased when the known Rail A is HIGH and the rail under test is LOW, so it blocks any current. But on the next half cycle when the known Rail A goes LOW and the test rail goes HIGH, the diode is forward biased and lights. In this way, the LEDs are only lit half the time, but do to our persistence of vision, and the approximately 8kHz frequency, we will just see a lit LED.</p>
@@ -590,7 +592,7 @@ for a “0”. It then immediately switches and does the same thing on the other
 <p><strong>Cons</strong> -</p>
 </div>
 <div class="section" id="circuit-two">
-<h3>Circuit two<a class="headerlink" href="#circuit-two" title="Permalink to this headline">¶</a></h3>
+<h3>Circuit two<a class="headerlink" href="#circuit-two" title="Permalink to this heading">¶</a></h3>
 <div class="figure align-center" id="id19">
 <a class="reference internal image-reference" href="../../_images/dcc_phase_checker2.png"><img alt="Diode Phase Checker" src="../../_images/dcc_phase_checker2.png" style="width: 248.0px; height: 316.5px;" /></a>
 <p class="caption"><span class="caption-number">Figure 106 </span><span class="caption-text">Diode Phase Checker</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>

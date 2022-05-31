@@ -48,6 +48,7 @@ The Turntable-EX integration includes:
 * EX-RAIL automation support
 * Debug/test command (handy for tuning step positions)
 * Out-of-the-box support for several common stepper drivers and motors
+* Traverser mode for horizontal/vertical traversers, and turntables that cannot rotate a full 360 degrees
 * Automatic or manual DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn't do this already)
 * An LED and accessory output to control turntable specific automations (eg. flashing warning light)
 
@@ -71,6 +72,10 @@ What you need for Turntable-EX
 * Dupont type wires to connect the components, male to female or female to female as required
 * A USB cable to connect the Arduino to a PC to load the software
 * *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`turntable-ex/turntable-ex:important! phase (or polarity) switching`)
+
+.. note:: 
+
+  If you wish to make use of the traverser feature, there is further information on what is required to enable this on the :doc:`/turntable-ex/traverser` page.
 
 .. image:: ../_static/images/turntable-ex/nano-v3.png
   :alt: Nano V3

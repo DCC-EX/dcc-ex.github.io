@@ -2,8 +2,8 @@
 Configuration options
 **********************
 
-.. image:: ../_static/images/tinkerer-level.png
-  :alt: Tinkerer Level
+.. image:: ../_static/images/conductor-level.png
+  :alt: Conductor Level
   :scale: 50%
 
 Turntable-EX has a number of different configuration options available to customise the behaviour to suit your needs.
@@ -26,6 +26,28 @@ If you need to change this for any reason, ensure that the I2C address in "myHal
 
 Multiple instances of Turntable-EX can be controlled by the same CommandStation by ensuring each has its own unique I2C address.
 
+TURNTABLE_EX_MODE
+__________________
+
+`Default: TURNTABLE`
+
+`Valid values: TURNTABLE, TRAVERSER`
+
+This option can be used to enable support for horizontal or vertical traversers, as well as limited rotation turntables that cannot rotate a full 360 degrees.
+
+Be sure to read the documentation carefully and ensure both home and limit sensors are functioning correctly.
+
+SENSOR_TESTING
+_______________
+
+`Default: disabled`
+
+To enable sensor testing, uncomment this line by removing the "//" from in front of "#define".
+
+When sensor testing is enabled, all Turntable-EX operations are disabled. The state changes of HOME and LIMIT sensors are printed to the serial console when activated/deactivated, and no other activity is possible.
+
+This is ideal for ensuring sensors are functional prior to enabling TRAVERSER mode.
+
 HOME_SENSOR_ACTIVE_STATE
 _________________________
 
@@ -34,6 +56,17 @@ _________________________
 `Valid values: LOW, HIGH`
 
 This is the state that the homing sensor reports to Turntable-EX when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.
+
+LIMIT_SENSOR_ACTIVE_STATE
+_________________________
+
+`Default: LOW`
+
+`Valid values: LOW, HIGH`
+
+This is the state that the limit sensor reports to Turntable-EX when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.
+
+The limit sensor is only used when Turntable-EX is set to TRAVERSER mode.
 
 RELAY_ACTIVE_STATE
 ___________________
@@ -81,6 +114,8 @@ While the pre-defined stepper driver/motor combinations above will likely be suf
 DISABLE_OUTPUTS_IDLE
 _____________________
 
+`Default: enabled`
+
 When defined, this option will ensure that the stepper driver outputs are disabled when the stepper stops rotating. This can prevent stepper drivers and motors from becoming warm during idle time.
 
 To disable this option, simply comment the line out by adding "//" before the "#define".
@@ -124,6 +159,10 @@ This is the time in milliseconds that the LED is on and off when the set to a sl
 Advanced configuration options
 ===============================
 
+.. image:: ../_static/images/tinkerer-level.png
+  :alt: Tinkerer Level
+  :scale: 50%
+
 DEBUG
 ______
 
@@ -166,8 +205,25 @@ If you enable this option, the calibration sequence will never run automatically
 
 You can initiate the calibration command manually while this option is enabled, it will perform the calibration sequence and record the calibrated step count in EEPROM, and that setting will take effect whilst Turntable-EX is running. However, the calibrated value in EEPROM will be overridden at the next startup unless this option is disabled.
 
+DEBOUNCE_DELAY
+_______________
+
+`Default: 10 (Disabled)` - TRAVERSER mode
+
+`Default: 0 (Disabled)` - TURNTABLE mode
+
+`Valid values: 0 to 50` (any higher and you will compromise the response time of the limit sensors)
+
+When using mechanical switches as HOME and LIMIT sensors, it is often necessary to "debounce" these switches to mask out the noise when they activate/deactivate. If using mechanical switches, it is advised to enable SENSOR_TESTING mode to validate the HOME and LIMIT switch operation, and this option may be tuned if necessary.
+
+Note that in turntable mode, a hall effect or similar sensor is typically used which does not require debouncing, and therefore the default in turntable mode is to set this delay to 0.
+
 Defining custom stepper drivers
 ================================
+
+.. image:: ../_static/images/tinkerer-level.png
+  :alt: Tinkerer Level
+  :scale: 50%
 
 .. note:: 
 

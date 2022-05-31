@@ -89,8 +89,8 @@ To upload the new sketch on your Command Station
    #define LCD_DRIVER  0x3F,16,2`` 
 #. make sure to uncomment this line if it has 2 slashes in front of it by removing them.
 #. Find the 4 characters that start with ``0x`` and add the address for your I2C backpack after it. We default to 3F, but your display may be 27. The text would read ``0x27`` if that was the case.
-#. In the next field, enter the number of columns in your display. The default is 16. If you have a 20 row display, enter that instead.
-#. In the last field, enter the number of rows in your display. We default to a 2 line display. If you have a 4 line display, change this to 4.
+#. In the next field, enter the number of columns in your display. The default is 16. If you have a 20 column display, enter that instead.
+#. In the last field, enter the number of rows in your display. We default to a 2 row display. If you have a 4 row display, change this to 4.
 #. Save the file
 #. Make sure to connect the Arduino to your computer with the USB cable and click the upload button to compile and upload the updated Command Station sketch.
 

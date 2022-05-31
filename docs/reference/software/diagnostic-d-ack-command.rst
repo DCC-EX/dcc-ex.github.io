@@ -118,4 +118,7 @@ Pick a setting a little bit higher than your highest reading like this:
 
 When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the CS is reset.
 
-To make these settings permanent, you can use a :doc:`mySetup.h file <../../advanced-setup/startup-config>` with these commands in to run at the startup of the Command Station.
+Making the Changes Permanent
+=============================
+
+To make these settings permanent, you can create a :doc:`Startup Configuration <../../advanced-setup/startup-config>` by adding or editing an existing *mySetup.h*. You simply add the appropriate commands in the correct format and upload the Command Station software again. Click on the link in this paragraph for detailed instructions.

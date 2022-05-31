@@ -1,11 +1,11 @@
-***************
+**************
 Documentation
-***************
+**************
 
 Thank you for your offer to help. Here's some instructions for how to contribute. You might want to check in with an admin from the DCC++ EX team before working on documentation changes to identify current needs.
 
 Submission Procedure
-======================
+=====================
 
 Simple changes to existing pages can be created without installing any tools,
 by using the "Edit on GitHub" link. However, the preview provided on GitHub
@@ -13,13 +13,13 @@ does not fully reflect the final result. The steps listed here provide guidance
 on how to make and preview more complex changes.
 
 We will assume that you have an appropriate text editor and Git installed on
-your machine. For Windows we recommend the free `Visual Studio Code IDE (VSC)
+your machine. For Windows we recommend the free `Visual Studio Code IDE (VSCode)
 <https://code.visualstudio.com/>`_ and `GitHub Desktop <https://desktop.github.com/>`_
 or `Git Bash (the command line interface in Git) <https://git-scm.com/downloads>`_.
 
 1. Clone the `dcc-ex.github.io <https://github.com/DCC-EX/dcc-ex.github.io>`_
    website repository, to your local machine. After cloning make sure you're on
-   the sphinx branch. (`Cloning a repository in GitHub
+   the "sphinx" branch. (`Cloning a repository in GitHub
    <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository>`_).
 
 2. Install a current version of Python 3 (which also installs pip). The
@@ -52,21 +52,88 @@ Standards
 .. highlight:: rst
 
 Headings
---------
+_________
 
-* Main Headings have asterisks above and below them
-* Subheadings are underlined with equals signs
-* The next level is underlined with underscores
-* And the next level is underlined with carets
-* The last one we use is underlined with tildes
+* Main Headings have asterisks above and below them:
 
-All heading underlines and overlines must be at least as long as the text of the heading
+  .. code-block:: 
+
+    *************
+    Main Heading
+    *************
+
+* Subheadings are underlined with equals signs:
+
+  .. code-block:: 
+
+    Subheading
+    ===========
+
+* The next level is underlined with underscores:
+
+  .. code-block:: 
+
+    Next level
+    ___________
+
+* And the next level is underlined with carets:
+
+  .. code-block:: 
+
+    Next level
+    ^^^^^^^^^^^
+
+* The last one we use is underlined with tildes:
+
+  .. code-block:: 
+
+    Last level
+    ~~~~~~~~~~~
+
+All heading underlines and overlines must be at least as long as the text of the heading, however it's recommended to make them one character longer.
+
+User level logos
+_________________
+
+On our :doc:`/get-started/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
+
+There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.
+
+Graphic logos for callouts/panels:
+
+.. image:: ../_static/images/conductor.png
+    :alt: Conductor Level
+    :scale: 40%
+  
+.. image:: ../_static/images/tinkerer.png
+    :alt: Tinkerer Level
+    :scale: 40%
+
+.. image:: ../_static/images/engineer.png
+    :alt: Tinkerer Level
+    :scale: 40%
+
+Graphic and text logos for page headings:
+
+.. image:: ../_static/images/conductor-level.png
+    :alt: Conductor Level
+    :scale: 40%
+  
+.. image:: ../_static/images/tinkerer-level.png
+    :alt: Tinkerer Level
+    :scale: 40%
+
+.. image:: ../_static/images/engineer-level.png
+    :alt: Tinkerer Level
+    :scale: 40%
+
+Refer to :ref:`contributing/website:images` below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX :doc:`/turntable-ex/turntable-ex` page.
 
 Links
------
+______
 
 Internal
-^^^^^^^^
+^^^^^^^^^
 
 Sphinx cross-references are used for internal links. This ensures they are
 correct and by default will use the destination heading text as the link text.
@@ -75,11 +142,11 @@ To link to a page use ``:doc:``:
 
 .. admonition:: Example
 
-    ::
-
-        :doc:`/reference/hardware/motor-boards`
+  ::
 
     :doc:`/reference/hardware/motor-boards`
+
+  :doc:`/reference/hardware/motor-boards`
 
 The document name is a relative or absolute (within the documentation) file
 path, without the .rst suffix.
@@ -90,11 +157,11 @@ references:
 
 .. admonition:: Example
 
-    ::
-
-        :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+  ::
 
     :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+
+  :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
 
 The reference is the full name of the document (the absolute path without
 a leading /), a colon, and the section heading. The full name must be used
@@ -104,14 +171,14 @@ Alternative text can be used for the link:
 
 .. admonition:: Example
 
-    ::
-
-        :ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
+  ::
 
     :ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
 
+  :ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
+
 External
-^^^^^^^^
+^^^^^^^^^
 
 For URLs that are shown, just use the URL:
 
@@ -149,7 +216,7 @@ source file, define a target:
     Link to the `DCC++EX home page <https://dcc-ex.com/index.html>`_.
 
 Downloads
-^^^^^^^^^
+^^^^^^^^^^
 
 Download buttons are created using the ``dcclink`` class, added using the
 ``.. rst-class::`` directive:
@@ -167,7 +234,7 @@ Download buttons are created using the ``dcclink`` class, added using the
        `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
 
 Images
-------
+_______
 
 Include images with the ``.. image::`` and ``.. figure::`` directives.
 Horizontal positioning using the ``:align:`` option needs a bit of care.
@@ -185,7 +252,7 @@ figure. Add a ``:name:`` option to be able to refer to the figure in the text
 using ``:numref:`<figure name>```.
 
 Tables
-------
+_______
 
 For titled tables use the ``.. table::`` directive, followed by the title.
 Sphinx will automatically number the table. Add a ``:name:`` option to be able

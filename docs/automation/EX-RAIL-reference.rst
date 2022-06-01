@@ -299,6 +299,8 @@ For example:
 
 ``DELAYMINS( delay )``	Delay a number of minutes
 
+``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains` for good examples.
+
 Delay examples:
 
 .. code-block:: cpp
@@ -314,21 +316,66 @@ Delay examples:
     GREEN(102)
     DONE
 
-``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains` for good examples.
+Conditional statements
+^^^^^^^^^^^^^^^^^^^^^^^
 
-``IF( sensor_id )``	If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF
+There are a number of conditional statements available to influence flow control based on the states of sensors, signals, turnouts.
 
-``IFNOT( sensor_id )``	If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF
+All conditional activities must be terminated with an ENDIF statement.
 
-``IFGTE( sensor_id, value )``	Test if analog pin reading is greater than or equal to value (>=)
+If a conditional statement is part of an automation sequence, the sequence still needs to be terminated with a DONE statement.
+
+``IF( sensor_id )``	If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.
+
+``IFNOT( sensor_id )``	If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.
+
+The IFGTE() and IFLT() commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega??) or an analog input from an I/O expander module??. Valid values are 0 - 1023??.
+
+``IFGTE( sensor_id, value )``	Test if analog pin reading is greater than or equal to value (>=).
 
 ``IFLT( sensor_id, value )``	Test if analog pin reading is less than value (<)
 
-``IFRANDOM( percent )``	Runs commands in IF block a random percentage of the time
+Sensor examples:
 
-``IFCLOSED( turnout_id )``	Check if turnout is closed
+.. code-block:: cpp
 
-``IFTHROWN( turnout_id )``	Test if turnout is thrown
+  IF(25)          // If sensor on the CS pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout.
+    RED(101)
+    DELAY(10)
+    CLOSE(200)
+  ENDIF
+
+  IFNOT(26)       // If sensor on the CS pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
+    GREEN(102)
+  ELSE
+    RED(102)
+  ENDIF
+
+  IFGTE(A2, 512)  // If reading the analog input from a photoelectric light sensor exceeds 512, it's bright enough to turn the street lights off.
+    RESET(164)
+  ENDIF
+
+  IFLT(A3, 10)   // If current sensing from an analog occupancy detector had dropped below the threshold, turn off our mimic panel light, otherwise turn it on.
+    RESET(165)
+  ELSE
+    SET(165)
+  ENDIF
+
+``IFRANDOM( percent )``	Runs commands in IF block a random percentage of the time. This is handy for more realism by enabling automations that don't have to run on a schedule.
+
+.. code-block:: cpp
+
+  .. AT(165)     // When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.
+    IFRANDOM(50)
+      SET(166)
+      DELAYMINS(1)
+      RESET(166)
+    ENDIF
+    DONE
+
+``IFCLOSED( turnout_id )``	Check if a turnout is closed.
+
+``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
 
 ``IFRESERVE( block )``	If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
 
@@ -347,7 +394,7 @@ Delay examples:
 Command Station Functions
 __________________________
 
-``POWERON`` Power on track and UNJOIN (not yet implemented)
+``POWERON`` Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of CommandStation-EX
 
 ``POWEROFF``	Power off track
 

@@ -83,14 +83,20 @@ html_logo = "./_static/images/logo.png"
 
 html_favicon = "./_static/images/favicon.ico"
 
+# Added commented out lines below for 'titles_only' and 'navigation_depth'.
+# If we wish to have the menu expand to lower levels than just page titles,
+# uncomment these lines and comment the other option out to enable this in
+# the menu.
 html_theme_options = {
     'style_nav_header_background': 'white',
     'logo_only': True,
     # Toc options
     'includehidden': True,
+    # 'titles_only': False,
     'titles_only': True,
     'collapse_navigation': False,
-    'navigation_depth': -1 
+    # 'navigation_depth': 3
+    'navigation_depth': -1
 }
 
 html_context = {

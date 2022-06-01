@@ -2,6 +2,12 @@
 EX-RAIL Command Reference
 **************************
 
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 3
+    :local:
+
 This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
@@ -33,7 +39,7 @@ Notes
 
   Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
-DIAGNOSTICS AND CONTROL
+Diagnostics and control
 ========================
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet.
@@ -125,8 +131,8 @@ ______________
 
 Refer to the LATCH/UNLATCH commands below for further details.
 
-ROUTES, AUTOMATIONS, & SEQUENCES
-=================================
+Routes, automations, and sequences
+===================================
 
 EX-RAIL provides many commands to allow you to create routes that locomotives to follow that may involve turnouts, signals, etc. that can be automatically set to react when the loco trips a sensor.
 
@@ -319,21 +325,26 @@ Delay examples:
 Conditional statements
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-There are a number of conditional statements available to influence flow control based on the states of sensors, signals, turnouts.
+There is quite a variety of conditional statements available to influence flow control based on the states of sensors, signals, turnouts.
 
 All conditional activities must be terminated with an ENDIF statement.
 
 If a conditional statement is part of an automation sequence, the sequence still needs to be terminated with a DONE statement.
 
+Sensor conditions
+~~~~~~~~~~~~~~~~~~
+
 ``IF( sensor_id )``	If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
 ``IFNOT( sensor_id )``	If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
-The IFGTE() and IFLT() commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega??) or an analog input from an I/O expander module??. Valid values are 0 - 1023??.
+The IFGTE() and IFLT() commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
 
 ``IFGTE( sensor_id, value )``	Test if analog pin reading is greater than or equal to value (>=).
 
-``IFLT( sensor_id, value )``	Test if analog pin reading is less than value (<)
+``IFLT( sensor_id, value )``	Test if analog pin reading is less than value (<).
+
+``IFTIMEOUT``	Tests if "timed out" flag has been set by an ATTIMEOUT() sensor reading attempt (see :ref:`automation/ex-rail-reference:sensor input and event handlers` below).
 
 Sensor examples:
 
@@ -361,6 +372,33 @@ Sensor examples:
     SET(165)
   ENDIF
 
+Turnout and block reservation conditionals
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``IFCLOSED( turnout_id )``	Check if a turnout is closed.
+
+``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
+
+``IFRESERVE( block )``	If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
+
+Signal conditionals
+~~~~~~~~~~~~~~~~~~~~
+
+``IFRED( signal_id )`` Test if signal is red.
+
+``IFAMBER( signal_id )`` Test if signal is amber.
+
+``IFGREEN( signal_id )`` Test if signal is green.
+
+Signal examples:
+
+``ELSE``	Provides alternative logic to any IF related command returning False
+
+``ENDIF``	Required to end an IF/IFNOT/etc (Used in all IF.. functions)
+
+Other conditionals
+~~~~~~~~~~~~~~~~~~~
+
 ``IFRANDOM( percent )``	Runs commands in IF block a random percentage of the time. This is handy for more realism by enabling automations that don't have to run on a schedule.
 
 .. code-block:: cpp
@@ -372,24 +410,6 @@ Sensor examples:
       RESET(166)
     ENDIF
     DONE
-
-``IFCLOSED( turnout_id )``	Check if a turnout is closed.
-
-``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
-
-``IFRESERVE( block )``	If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
-
-``IFTIMEOUT``	Tests if "timed out" flag has been set by an ATTIMEOUT sensor reading attempt
-
-``IFRED( signal_id )`` Test if signal is red
-
-``IFAMBER( signal_id )`` Test if signal is amber
-
-``IFGREEN( signal_id )`` Test if signal is green
-
-``ELSE``	Provides alternative logic to any IF related command returning False
-
-``ENDIF``	Required to end an IF/IFNOT/etc (Used in all IF.. functions)
 
 Command Station Functions
 __________________________

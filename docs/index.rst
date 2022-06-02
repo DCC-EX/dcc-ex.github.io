@@ -136,6 +136,7 @@ Next see the :doc:`Get Started section <get-started/index>` or click next below.
    reference/index
    download/index
    projects/index
+   developer-reference/index
    contributing/index
    roadmap/index
    support/index

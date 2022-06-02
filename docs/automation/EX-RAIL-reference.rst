@@ -20,7 +20,6 @@ See Also:
 Notes
 ======
 
-
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion (as virtual pins or vpins).
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
@@ -34,7 +33,7 @@ Notes
 
   - AUTOMATION, ROUTE, and SEQUENCE IDs
   - Turnout IDs
-  - Pin IDs - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O extender modules, and virtual pins that have no physical presence
+  - Pin IDs - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O expander modules, and virtual pins that have no physical presence
   - Virtual block IDs as used in RESERVE/FREE
 
   Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
@@ -147,6 +146,19 @@ ________________________
 
 ``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the previous examples.
 
+Conditional statements
+=======================
+
+There is quite a variety of conditional statements available to influence activities based on the states of sensors, signals, turnouts, and other items.
+
+All conditional activities must be terminated with an `ENDIF` statement, and may optionally include an `ELSE` statement.
+
+If a conditional statement is part of an automation sequence, the sequence still needs to be terminated with a DONE statement.
+
+``ELSE``	Provides alternative logic to any IF related command returning False.
+
+``ENDIF``	Required to end an IF/IFNOT/etc (Used in all IF.. functions).
+
 Aliases
 ========
 
@@ -217,17 +229,8 @@ Signal examples:
 
 ``IFGREEN( signal_id )`` Test if signal is green.
 
-Signal examples:
-
-``ELSE``	Provides alternative logic to any IF related command returning False
-
-``ENDIF``	Required to end an IF/IFNOT/etc (Used in all IF.. functions)
-
 Turnouts
 =========
-
-Object definitions
-___________________
 
 All the below turnout definitions will define turnouts that are advertised to WiThrottle apps, Engine Driver, and JMRI, unless the HIDDEN keyword is used.
 
@@ -254,21 +257,92 @@ Examples:
 
 ``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
 
+``ONCLOSE( turnout_id )``	Event handler for when a turnout is sent a close command. Note that there can be only one defined ONCLOSE event for a specific turnout.
 
+``ONTHROW( turnout_id )``	Event handler for when a turnout is sent a throw command. Note that there can be only one defined ONTHROW event for a specific turnout.
 
+Sensors
+========
 
+``IF( sensor_id )``	If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
+``IFNOT( sensor_id )``	If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
+The IFGTE() and IFLT() commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
 
+``IFGTE( sensor_id, value )``	Test if analog pin reading is greater than or equal to value (>=).
 
+``IFLT( sensor_id, value )``	Test if analog pin reading is less than value (<).
 
+``IFTIMEOUT``	Tests if "timed out" flag has been set by an ATTIMEOUT() sensor reading attempt.
 
+``AT( sensor_id )``	Wait until sensor is active/triggered
 
+``ATTIMEOUT( sensor_id, timeout_ms )``	Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag
 
+``ATGTE( analogpin, value )``  Waits for analog pin to reach value
 
+``ATLT ( analogpin, value )`` Waits for analog pin to go below value
+
+``AFTER( sensor_id )``	Waits for sensor to trigger and then go off for 0.5 seconds
+
+Sensor examples:
+
+.. code-block:: cpp
+
+  IF(25)          // If sensor on the CS pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout.
+    RED(101)
+    DELAY(10)
+    CLOSE(200)
+  ENDIF
+
+  IFNOT(26)       // If sensor on the CS pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
+    GREEN(102)
+  ELSE
+    RED(102)
+  ENDIF
+
+  IFGTE(A2, 512)  // If reading the analog input from a photoelectric light sensor exceeds 512, it's bright enough to turn the street lights off.
+    RESET(164)
+  ENDIF
+
+  IFLT(A3, 10)   // If current sensing from an analog occupancy detector had dropped below the threshold, turn off our mimic panel light, otherwise turn it on.
+    RESET(165)
+  ELSE
+    SET(165)
+  ENDIF
+
+``LATCH( sensor_id )``	Latches a sensor on (Sensors 0-255 only).
+
+``UNLATCH( sensor_id )``	Remove LATCH on sensor.
+
+LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
+
+In this example, LATCH/UNLATCH is used to toggle between two different activities each time the ROUTE is selected in a WiThrottle:
+
+.. code-block::
+
+  TURNOUT(17, 30, 1, "Bay to Shed") // DCC turnout with linear address 117
+
+  ALIAS(BayExitStarter, 107)        // Starter Signal with Route board
+  ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
+
+  ROUTE(11, "Bay to Shed")
+    IF(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is active, reset the route
+      DEACTIVATEL(BayExitStarter)
+      DELAY(20)
+      CLOSE(17)
+      UNLATCH(ROUTE_TOGGLE)           // UNLATCH (Clear) ROUTE_TOGGLE
+    ELSE                            // LATCH is not active, so set route and LATCH
+      THROW(17)
+      DELAY(20)
+      ACTIVATEL(BayExitStarter)
+      LATCH(ROUTE_TOGGLE)         // LATCH ROUTE_TOGGLE to indicate route set
+    ENDIF
+  DONE
 
 Flow Control Functions
-_______________________
+=======================
 
 ``CALL( route )``	Branch to a separate sequence, which will need to RETURN when complete.
 
@@ -351,70 +425,11 @@ Delay examples:
     GREEN(102)
     DONE
 
-Conditional statements
-^^^^^^^^^^^^^^^^^^^^^^^
-
-There is quite a variety of conditional statements available to influence flow control based on the states of sensors, signals, turnouts.
-
-All conditional activities must be terminated with an ENDIF statement.
-
-If a conditional statement is part of an automation sequence, the sequence still needs to be terminated with a DONE statement.
-
-Sensor conditions
-~~~~~~~~~~~~~~~~~~
-
-``IF( sensor_id )``	If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.
-
-``IFNOT( sensor_id )``	If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.
-
-The IFGTE() and IFLT() commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
-
-``IFGTE( sensor_id, value )``	Test if analog pin reading is greater than or equal to value (>=).
-
-``IFLT( sensor_id, value )``	Test if analog pin reading is less than value (<).
-
-``IFTIMEOUT``	Tests if "timed out" flag has been set by an ATTIMEOUT() sensor reading attempt (see :ref:`automation/ex-rail-reference:sensor input and event handlers` below).
-
-Sensor examples:
-
-.. code-block:: cpp
-
-  IF(25)          // If sensor on the CS pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout.
-    RED(101)
-    DELAY(10)
-    CLOSE(200)
-  ENDIF
-
-  IFNOT(26)       // If sensor on the CS pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
-    GREEN(102)
-  ELSE
-    RED(102)
-  ENDIF
-
-  IFGTE(A2, 512)  // If reading the analog input from a photoelectric light sensor exceeds 512, it's bright enough to turn the street lights off.
-    RESET(164)
-  ENDIF
-
-  IFLT(A3, 10)   // If current sensing from an analog occupancy detector had dropped below the threshold, turn off our mimic panel light, otherwise turn it on.
-    RESET(165)
-  ELSE
-    SET(165)
-  ENDIF
-
-Blocks
-=======
-
-``IFRESERVE( block )``	If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
-
-
-Other conditionals
-~~~~~~~~~~~~~~~~~~~
-
 ``IFRANDOM( percent )``	Runs commands in IF block a random percentage of the time. This is handy for more realism by enabling automations that don't have to run on a schedule.
 
 .. code-block:: cpp
 
-  .. AT(165)     // When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.
+  AT(165)           // When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.
     IFRANDOM(50)
       SET(166)
       DELAYMINS(1)
@@ -422,8 +437,17 @@ Other conditionals
     ENDIF
     DONE
 
+Blocks
+=======
+
+``RESERVE( block_id )``	Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free
+
+``FREE( block_id )``	Free previously reserved block
+
+``IFRESERVE( block )``	If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
+
 Command Station Functions
-__________________________
+==========================
 
 ``POWERON`` Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of CommandStation-EX
 
@@ -452,15 +476,11 @@ __________________________
 ``SERIAL3( msg )``	Writes direct to Serial3
 
 EX-RAIL Functions
-__________________
+==================
 
 ``PAUSE``	E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd
 
 ``RESUME``	Resume all paused tasks, including loco movement
-
-``RESERVE( block_id )``	Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free
-
-``FREE( block_id )``	Free previously reserved block
 
 ``START( sequence_id )``	Start a new task to execute a route or sequence
 
@@ -475,7 +495,7 @@ __________________
 ``ROSTER( cab, name, func_map )``	Provide roster info for WiThrottle
 
 Loco DCC Functions
-___________________
+===================
 
 ``ESTOP``	Emergency stop loco
 
@@ -493,51 +513,8 @@ ___________________
 
 ``INVERT_DIRECTION``	Switches FWD/REV meaning for this loco
 
-Sensor input and Event Handlers 
-________________________________
-
-``AT( sensor_id )``	Wait until sensor is active/triggered
-
-``ATTIMEOUT( sensor_id, timeout_ms )``	Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag
-
-``ATGTE( analogpin, value )``  Waits for analog pin to reach value
-
-``ATLT ( analogpin, value )`` Waits for analog pin to go below value
-
-``AFTER( sensor_id )``	Waits for sensor to trigger and then go off for 0.5 seconds
-
-``LATCH( sensor_id )``	Latches a sensor on (Sensors 0-255 only).
-
-``UNLATCH( sensor_id )``	Remove LATCH on sensor.
-
-LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
-
-In this example, LATCH/UNLATCH is used to toggle between two different activities each time the ROUTE is selected in a WiThrottle:
-
-.. code-block::
-
-  TURNOUT(17, 30, 1, "Bay to Shed") // DCC turnout with linear address 117
-
-  ALIAS(BayExitStarter, 107)        // Starter Signal with Route board
-  ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
-
-  ROUTE(11, "Bay to Shed")
-    IF(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is active, reset the route
-      DEACTIVATEL(BayExitStarter)
-      DELAY(20)
-      CLOSE(17)
-      UNLATCH(ROUTE_TOGGLE)           // UNLATCH (Clear) ROUTE_TOGGLE
-    ELSE                            // LATCH is not active, so set route and LATCH
-      THROW(17)
-      DELAY(20)
-      ACTIVATEL(BayExitStarter)
-      LATCH(ROUTE_TOGGLE)         // LATCH ROUTE_TOGGLE to indicate route set
-    ENDIF
-  DONE
-
-``ONCLOSE( turnout_id )``	Event handler for turnout close. Note that there can be only one defined ONCLOSE event for a specific turnout.
-
-``ONTHROW( turnout_id )``	Event handler for turnout thrown. Note that there can be only one defined ONCLOSE event for a specific turnout.
+DCC Accessory decoder commands
+===============================
 
 ``ONACTIVATE( addr, sub_addr )``	Event handler for 2 part DCC accessory packet value 1
 
@@ -547,7 +524,44 @@ In this example, LATCH/UNLATCH is used to toggle between two different activitie
 
 ``ONDEACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 0
 
+``ACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 1
+
+``ACTIVATEL( linear )``	Sends a DCC accessory packet with value 1 to a linear address
+
+``DEACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 0
+
+``DEACTIVATEL( addr )``	Sends a DCC accessory packet with value 0 to a linear address
+
+``XFON( cab, func )``	Send DCC function ON to specific cab (eg coach lights) Not for Loco use - use FON instead!
+
+``XFOFF( cab, func )``	Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
+
 All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
+
+Output and servo commands
+==========================
+
+``SET( pin )``	Set an output pin HIGH
+
+``RESET( pin )``	Reset output pin (set to LOW)
+
+``CLOSE( turnout_id )``	Close a defined turnout
+
+``THROW( id )``	Throw a defined turnout
+
+``GREEN( signal_id )``	Set a defined signal to GREEN (see SIGNAL)
+
+``AMBER( signal_id )``	Set a defined signal to Amber. (See SIGNAL)
+
+``RED( signal_id )``	Set defined signal to Red (See SIGNAL)
+
+``FADE( pin, value, ms )``	Fade an LED on a servo driver to given value taking given time
+
+``LCN( msg )``	Send message to LCN Accessory Network
+
+``SERVO( id, position, profile )``	Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+
+``SERVO2( id, position, duration )``	Move an animation servo taking duration in ms. Do NOT use for Turnouts
 
 ``WAITFOR( pin )``	The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.
 
@@ -578,40 +592,3 @@ A couple of examples:
     SET(165)                  // Activate a Vpin to turn an LED on.
     SET(166)                  // Activate a second Vpin to turn a second LED on.
   DONE
-
-Action Output Functions
-________________________
-
-``SET( pin )``	Set an output pin HIGH
-
-``RESET( pin )``	Reset output pin (set to LOW)
-
-``CLOSE( turnout_id )``	Close a defined turnout
-
-``THROW( id )``	Throw a defined turnout
-
-``GREEN( signal_id )``	Set a defined signal to GREEN (see SIGNAL)
-
-``AMBER( signal_id )``	Set a defined signal to Amber. (See SIGNAL)
-
-``RED( signal_id )``	Set defined signal to Red (See SIGNAL)
-
-``FADE( pin, value, ms )``	Fade an LED on a servo driver to given value taking given time
-
-``LCN( msg )``	Send message to LCN Accessory Network
-
-``SERVO( id, position, profile )``	Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
-
-``SERVO2( id, position, duration )``	Move an animation servo taking duration in ms. Do NOT use for Turnouts
-
-``XFON( cab, func )``	Send DCC function ON to specific cab (eg coach lights) Not for Loco use - use FON instead!
-
-``XFOFF( cab, func )``	Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
-
-``ACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 1
-
-``ACTIVATEL( linear )``	Sends a DCC accessory packet with value 1 to a linear address
-
-``DEACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 0
-
-``DEACTIVATEL( addr )``	Sends a DCC accessory packet with value 0 to a linear address

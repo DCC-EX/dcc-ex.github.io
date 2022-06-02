@@ -5,7 +5,7 @@ EX-RAIL Command Reference
 .. sidebar:: On this page
 
   .. contents:: 
-    :depth: 3
+    :depth: 1
     :local:
 
 This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
@@ -38,10 +38,12 @@ Notes
 
   Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
-Diagnostics and control
-========================
+Interactive diagnostics and control
+====================================
 
-There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet.
+There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi, or Ethernet.
+
+These can be used in the same manner as other CommandStation directives to interact with EX-RAIL sequences and objects once they have been defined in myAutomation.h and are uploaded to the CommandStation.
 
 EXRAIL
 _______
@@ -128,15 +130,17 @@ ______________
 
 ``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
-Refer to the LATCH/UNLATCH commands below for further details.
+Refer to the LATCH/UNLATCH commands in the :ref:`automation/ex-rail-reference:sensors` section below for further details.
 
 Routes, automations, and sequences
 ===================================
 
-EX-RAIL provides many commands to allow you to create routes that locomotives to follow that may involve turnouts, signals, etc. that can be automatically set to react when the loco trips a sensor.
+EX-RAIL provides many commands to allow you to create automated sequences and routes that locomotives can follow that may involve turnouts, signals, etc. that can be automatically set to react when the loco trips a sensor.
 
 Script Definition Terms
 ________________________
+
+There are three options to define these automation sequences:
 
 ``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`automation/ex-rail-intro:example 4: automating a train (simple loop)` for a simple example.
 
@@ -144,7 +148,7 @@ ________________________
 
 ``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`automation/ex-rail-intro:example 3: automating various non-track items`, :ref:`automation/ex-rail-intro:example 6: single line shuttle`, and :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains` for further examples.
 
-``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the previous examples.
+``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the EX-RAIL documentation.
 
 Conditional statements
 =======================
@@ -211,6 +215,12 @@ For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined
 
 ``SERVO_SIGNAL( vpin, red_pos, amber_pos, green_pos )`` Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT.
 
+``IFRED( signal_id )`` Test if signal is red.
+
+``IFAMBER( signal_id )`` Test if signal is amber.
+
+``IFGREEN( signal_id )`` Test if signal is green.
+
 Signal examples:
 
 .. code-block:: cpp
@@ -222,12 +232,6 @@ Signal examples:
   GREEN(25)                         // Sets our active low signal to green.
   GREEN(164)                         // Sets our active high signal to green.
   GREEN(101)                        // Sets our servo based signal to green.
-
-``IFRED( signal_id )`` Test if signal is red.
-
-``IFAMBER( signal_id )`` Test if signal is amber.
-
-``IFGREEN( signal_id )`` Test if signal is green.
 
 Turnouts
 =========
@@ -244,6 +248,14 @@ All the below turnout definitions will define turnouts that are advertised to Wi
 
 ``VIRTUAL_TURNOUT( id [, "description"] )`` Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to :ref:`automation/ex-rail-intro:realistic turnout sequeunces`.
 
+``IFCLOSED( turnout_id )``	Test if a turnout is closed.
+
+``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
+
+``ONCLOSE( turnout_id )``	Event handler for when a turnout is sent a close command. Note that there can be only one defined ONCLOSE event for a specific turnout.
+
+``ONTHROW( turnout_id )``	Event handler for when a turnout is sent a throw command. Note that there can be only one defined ONTHROW event for a specific turnout.
+
 Examples:
 
 .. code-block:: cpp
@@ -253,43 +265,39 @@ Examples:
   SERVO_TURNOUT(102, 102, 400, 100, Slow, HIDDEN)   // A servo turnout on a PCA9685 servo module that is hidden from throttles.
   VIRTUAL_TURNOUT(103, "Lumber Yard")               // A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.
 
-``IFCLOSED( turnout_id )``	Check if a turnout is closed.
-
-``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
-
-``ONCLOSE( turnout_id )``	Event handler for when a turnout is sent a close command. Note that there can be only one defined ONCLOSE event for a specific turnout.
-
-``ONTHROW( turnout_id )``	Event handler for when a turnout is sent a throw command. Note that there can be only one defined ONTHROW event for a specific turnout.
-
 Sensors
 ========
+
+``AT( sensor_id )`` An event handler that defines what to do when a sensor is active/triggered.
+
+``AFTER( sensor_id )``	An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.
+
+``ATTIMEOUT( sensor_id, timeout_ms )``	A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable "timed out" flag.
 
 ``IF( sensor_id )``	If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
 ``IFNOT( sensor_id )``	If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
-The IFGTE() and IFLT() commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
-
-``IFGTE( sensor_id, value )``	Test if analog pin reading is greater than or equal to value (>=).
-
-``IFLT( sensor_id, value )``	Test if analog pin reading is less than value (<).
-
 ``IFTIMEOUT``	Tests if "timed out" flag has been set by an ATTIMEOUT() sensor reading attempt.
 
-``AT( sensor_id )``	Wait until sensor is active/triggered. This can make use of negative logic to cater for active high sensors:
+Note that with the sensor commands `IF()`, `IFNOT()`, `IFTIMEOUT()`, `AT()`, `ATTIMEOUT()`, and `AFTER()`, you can use negative values to enable the use of active HIGH sensors.
+
+For example:
 
 .. code-block:: cpp
 
   AT(40)        // Wait for pin 40 to go low.
   AT(-40)       // Wait for pin 40 to go high.
 
-``ATTIMEOUT( sensor_id, timeout_ms )``	Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag
+``ATGTE( analogpin, value )``  Waits for an analog pin to reach the specified value.
 
-``ATGTE( analogpin, value )``  Waits for analog pin to reach value
+``ATLT ( analogpin, value )`` Waits for an analog pin to go below the specified value.
 
-``ATLT ( analogpin, value )`` Waits for analog pin to go below value
+``IFGTE( sensor_id, value )``	Test if analog pin reading is greater than or equal to value (>=).
 
-``AFTER( sensor_id )``	Waits for sensor to trigger and then go off for 0.5 seconds
+``IFLT( sensor_id, value )``	Test if analog pin reading is less than value (<).
+
+All the `IFGTE()`, `IFLT()`, `ATGTE()`and `ATLT()` commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
 
 Sensor examples:
 
@@ -317,11 +325,11 @@ Sensor examples:
     SET(165)
   ENDIF
 
+LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
+
 ``LATCH( sensor_id )``	Latches a sensor on (Sensors 0-255 only).
 
 ``UNLATCH( sensor_id )``	Remove LATCH on sensor.
-
-LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
 
 In this example, LATCH/UNLATCH is used to toggle between two different activities each time the ROUTE is selected in a WiThrottle:
 
@@ -344,6 +352,61 @@ In this example, LATCH/UNLATCH is used to toggle between two different activitie
       ACTIVATEL(BayExitStarter)
       LATCH(ROUTE_TOGGLE)         // LATCH ROUTE_TOGGLE to indicate route set
     ENDIF
+  DONE
+
+Output and servo commands
+==========================
+
+``SET( pin )``	Set an output pin HIGH
+
+``RESET( pin )``	Reset output pin (set to LOW)
+
+``CLOSE( turnout_id )``	Close a defined turnout
+
+``THROW( id )``	Throw a defined turnout
+
+``GREEN( signal_id )``	Set a defined signal to GREEN (see SIGNAL)
+
+``AMBER( signal_id )``	Set a defined signal to Amber. (See SIGNAL)
+
+``RED( signal_id )``	Set defined signal to Red (See SIGNAL)
+
+``FADE( pin, value, ms )``	Fade an LED on a servo driver to given value taking given time
+
+``LCN( msg )``	Send message to LCN Accessory Network
+
+``SERVO( id, position, profile )``	Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+
+``SERVO2( id, position, duration )``	Move an animation servo taking duration in ms. Do NOT use for Turnouts
+
+``WAITFOR( pin )``	The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.
+
+A couple of examples:
+
+.. code-block:: cpp
+
+  // First example defines a servo turnout for the coal yard and a signal for the main line.
+  TURNOUT(100, 26, 0, "Coal Yard")
+  SIGNAL(25, 26, 27)
+
+  // When our turnout is closed, the main line is open, so the signal is green.
+  ONCLOSE(100)
+    GREEN(25)
+  DONE
+
+  // When our turnout is closed, the main line is interrupted, so the signal is red.
+  ONTHROW(100)
+    RED(25)
+  DONE
+
+  // This example triggers an automation sequence when a DCC accessory decoder is activated, including waiting for SERVO motions to complete.
+  ONACTIVATEL(100)            // Activating DCC accessory decoder with linear address 100 commences the sequence.
+    SERVO(101, 400, Slow)     // Move the first servo and wait.
+    WAITFOR(101)
+    SERVO(102, 300, Medium)   // Move the second servo and wait.
+    WAITFOR(102)
+    SET(165)                  // Activate a Vpin to turn an LED on.
+    SET(166)                  // Activate a second Vpin to turn a second LED on.
   DONE
 
 Flow Control Functions
@@ -542,58 +605,3 @@ DCC Accessory decoder commands
 ``XFOFF( cab, func )``	Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
 
 All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
-
-Output and servo commands
-==========================
-
-``SET( pin )``	Set an output pin HIGH
-
-``RESET( pin )``	Reset output pin (set to LOW)
-
-``CLOSE( turnout_id )``	Close a defined turnout
-
-``THROW( id )``	Throw a defined turnout
-
-``GREEN( signal_id )``	Set a defined signal to GREEN (see SIGNAL)
-
-``AMBER( signal_id )``	Set a defined signal to Amber. (See SIGNAL)
-
-``RED( signal_id )``	Set defined signal to Red (See SIGNAL)
-
-``FADE( pin, value, ms )``	Fade an LED on a servo driver to given value taking given time
-
-``LCN( msg )``	Send message to LCN Accessory Network
-
-``SERVO( id, position, profile )``	Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
-
-``SERVO2( id, position, duration )``	Move an animation servo taking duration in ms. Do NOT use for Turnouts
-
-``WAITFOR( pin )``	The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.
-
-A couple of examples:
-
-.. code-block:: cpp
-
-  // First example defines a servo turnout for the coal yard and a signal for the main line.
-  TURNOUT(100, 26, 0, "Coal Yard")
-  SIGNAL(25, 26, 27)
-
-  // When our turnout is closed, the main line is open, so the signal is green.
-  ONCLOSE(100)
-    GREEN(25)
-  DONE
-
-  // When our turnout is closed, the main line is interrupted, so the signal is red.
-  ONTHROW(100)
-    RED(25)
-  DONE
-
-  // This example triggers an automation sequence when a DCC accessory decoder is activated, including waiting for SERVO motions to complete.
-  ONACTIVATEL(100)            // Activating DCC accessory decoder with linear address 100 commences the sequence.
-    SERVO(101, 400, Slow)     // Move the first servo and wait.
-    WAITFOR(101)
-    SERVO(102, 300, Medium)   // Move the second servo and wait.
-    WAITFOR(102)
-    SET(165)                  // Activate a Vpin to turn an LED on.
-    SET(166)                  // Activate a second Vpin to turn a second LED on.
-  DONE

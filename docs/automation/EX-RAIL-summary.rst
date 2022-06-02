@@ -125,9 +125,9 @@ __________________________________
     * -  DELAYRANDOM( min_delay, max_delay )
       -  Delay a random time between min and max milliseconds
     * -  IF( sensor_id )
-      -  If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF
+      -  If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors
     * -  IFNOT( sensor_id )
-      -  If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF
+      -  If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors
     * -  IFCLOSED( turnout_id )
       -  Check if turnout is closed
     * -  IFGTE( sensor_id, value )
@@ -223,15 +223,15 @@ __________________________________
     * -  :category:`--- Sensor input & event handlers ---`
       -
     * -  AT( sensor_id )
-      -  Wait until sensor is active/triggered
+      -  Wait until sensor is active/triggered, use negative values for active HIGH sensors
     * -  ATTIMEOUT( sensor_id, timeout_ms )
-      -  Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag
+      -  Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors
     * -  ATGTE( analogpin, value)
       -  waits for analog pin to reach value
     * -  ATLT (analogpin,value)
       -  waits for analog pin to go below value
     * -  AFTER( sensor_id )
-      -  Waits for sensor to trigger and then go off for 0.5 seconds
+      -  Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
     * -  LATCH( sensor_id )
       -  Latches a sensor on (Sensors 0-255 only)
     * -  UNLATCH( sensor_id )

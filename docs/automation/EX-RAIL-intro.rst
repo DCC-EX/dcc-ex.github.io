@@ -9,7 +9,7 @@ Introduction to EX-RAIL Automation
 .. sidebar:: On this page
 
    .. contents:: 
-      :depth: 3
+      :depth: 1
       :local:
 
 Introduction

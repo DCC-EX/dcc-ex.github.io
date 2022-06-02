@@ -6,6 +6,12 @@ Traversers and Limited Rotation Turntables
   :alt: Tinkerer Level
   :scale: 50%
 
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
+
 Overview
 =========
 

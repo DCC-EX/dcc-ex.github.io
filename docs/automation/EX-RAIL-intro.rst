@@ -6,24 +6,11 @@ Introduction to EX-RAIL Automation
    17 Feb 2022: *Now included* in **DCC++EX 4.0!**
    Available to download and use now!
 
-* :ref:`automation/EX-RAIL-intro:Introduction`
-* :ref:`automation/EX-RAIL-intro:Things You Can Do With EX-RAIL`
-* :ref:`automation/EX-RAIL-intro:What You Don't Need`
-* :ref:`automation/EX-RAIL-intro:How It Works`
-* :ref:`automation/EX-RAIL-intro:The Automation Process`
-* :ref:`automation/EX-RAIL-intro:Some Simple Examples`
-* :ref:`automation/EX-RAIL-intro:Defining Turnouts`
-* :ref:`automation/EX-RAIL-intro:Defining Signals`
-* :ref:`automation/EX-RAIL-intro:Starting the system`
-* :ref:`automation/EX-RAIL-intro:Drive-Away Feature`
-* :ref:`automation/EX-RAIL-intro:Roster Entries`
-* :ref:`automation/EX-RAIL-intro:Sounds`
-* :ref:`automation/EX-RAIL-intro:Sensors`
-* :ref:`automation/EX-RAIL-intro:Outputs`
-* :ref:`automation/EX-RAIL-intro:Sequence Numbers`
-* :ref:`automation/EX-RAIL-intro:Tips and Techniques`
-* :ref:`automation/EX-RAIL-intro:Why Can't I Put a Script on an SDCard?`
+.. sidebar:: On this page
 
+   .. contents:: 
+      :depth: 1
+      :local:
 
 Introduction
 ==============
@@ -41,6 +28,16 @@ To begin, let's define a few terms:
 
 Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with :doc:`throttles </throttles/index>` that support it (:doc:`/throttles/engine-driver`, :doc:`WebThrottle-EX </throttles/ex-webthrottle>`) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. "Automations" can appear on a "handoff" button that will supply or handoff the Loco ID to EX-RAIL where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in the throttle that runs an AUTOMATION to take it on a journey around the layout.
 
+Things You Can Do With EX-RAIL
+====================================
+
+- Create "Routes" which set multiple turnouts and signals at the press of a button in WebThrottle-EX or EngineDriver (other WiThrottle-compatible throttles are available)
+- Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up "Automations"
+- Drive trains manually, and hand a train over to an Automation
+- Animate accessories such as lights, crossings, or cranes
+- Intercept turnout changes to automatically adjust signals or other turnouts
+- Turn on the coffee pot when the train reaches the station
+
 .. sidebar:: A note from the Author
 
    My original aim was to see if I could create an automated layout with lots going on, that didn’t just run around in circles. Having looked at JMRI (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.
@@ -54,18 +51,6 @@ Most people wanting to do animations or run trains through an automated route wi
    Because the original DCC++ used a software design inappropriate for internal automation, I had to start by rewriting the entire Command Station code and this became DCC-EX, so automation has been in the plan from the start.
 
    - Chris Harlow
-
-
-
-Things You Can Do With EX-RAIL
-====================================
-
-- Create "Routes" which set multiple turnouts and signals at the press of a button in WebThrottle-EX or EngineDriver (other WiThrottle-compatible throttles are available)
-- Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up "Automations"
-- Drive trains manually, and hand a train over to an Automation
-- Animate accessories such as lights, crossings, or cranes
-- Intercept turnout changes to automatically adjust signals or other turnouts
-- Turn on the coffee pot when the train reaches the station
 
 What You Don't Need
 ====================

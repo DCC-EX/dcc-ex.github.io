@@ -276,7 +276,12 @@ The IFGTE() and IFLT() commands read the analog value from an analog input pin (
 
 ``IFTIMEOUT``	Tests if "timed out" flag has been set by an ATTIMEOUT() sensor reading attempt.
 
-``AT( sensor_id )``	Wait until sensor is active/triggered
+``AT( sensor_id )``	Wait until sensor is active/triggered. This can make use of negative logic to cater for active high sensors:
+
+.. code-block:: cpp
+
+  AT(40)        // Wait for pin 40 to go low.
+  AT(-40)       // Wait for pin 40 to go high.
 
 ``ATTIMEOUT( sensor_id, timeout_ms )``	Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag
 

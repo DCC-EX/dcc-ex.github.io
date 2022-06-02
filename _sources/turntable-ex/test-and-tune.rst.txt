@@ -6,6 +6,12 @@ Testing, Tuning, and Control
   :alt: Conductor Level
   :scale: 50%
 
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
+
 Turntable-EX commands
 ======================
 

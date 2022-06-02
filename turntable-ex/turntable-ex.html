@@ -302,25 +302,46 @@
   <div class="section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/conductor-level.png"><img alt="Conductor Level" src="../_images/conductor-level.png" style="width: 140.0px; height: 44.5px;" /></a>
+<div class="sidebar">
+<p class="sidebar-title">On this page</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#what-is-turntable-ex" id="id1">What is Turntable-EX?</a></p></li>
+<li><p><a class="reference internal" href="#what-you-need-for-turntable-ex" id="id2">What you need for Turntable-EX</a></p>
+<ul>
+<li><p><a class="reference internal" href="#power-supplies" id="id3">Power supplies</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#supported-stepper-drivers-and-motors" id="id4">Supported stepper drivers and motors</a></p></li>
+<li><p><a class="reference internal" href="#how-does-it-work" id="id5">How does it work?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#controlling-the-turntable" id="id6">Controlling the turntable</a></p></li>
+<li><p><a class="reference internal" href="#important-phase-or-polarity-switching" id="id7">Important! Phase (or polarity) switching</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#time-to-assemble" id="id8">Time to assemble</a></p></li>
+</ul>
+</div>
+</div>
 <div class="section" id="what-is-turntable-ex">
-<h2>What is Turntable-EX?<a class="headerlink" href="#what-is-turntable-ex" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">What is Turntable-EX?</a><a class="headerlink" href="#what-is-turntable-ex" title="Permalink to this heading">¶</a></h2>
+<p>Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.</p>
+<p>The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our <a class="reference internal" href="../get-started/levels.html#choose-your-level"><span class="std std-ref">Choose Your Level</span></a> guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).</p>
+<p>The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.</p>
+<p>To make full use of Turntable-EX, you will need a basic understanding of <a class="reference internal" href="../automation/EX-RAIL-intro.html#introduction-to-ex-rail-automation"><span class="std std-ref">EX-RAIL</span></a> automation, but we’ll share the details and some examples to help with this.</p>
+<p>Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.</p>
 <p>For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the Turntable-EX view of the <a class="reference external" href="https://github.com/orgs/DCC-EX/projects/7/views/1">DCC++ EX GitHub project</a>.</p>
 <p>For those who wish to help us with Beta testing, you’re encouraged to follow the testing processes outlined in the <a class="reference external" href="https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md">Regression Testing process</a>, and then submit your test results using the <a class="reference external" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose">Beta Test Results</a> issue template.</p>
 </div>
-<p>Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.</p>
-<p>The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our <a class="reference internal" href="../get-started/levels.html#choose-your-level"><span class="std std-ref">Choose Your Level</span></a> guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).</p>
-<p>The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.</p>
 <div class="sidebar">
 <p class="sidebar-title">Supported stepper drivers and motors</p>
 <a class="reference internal image-reference" href="../_images/conductor.png"><img alt="Conductor Level" class="align-left" src="../_images/conductor.png" style="width: 48.0px; height: 35.6px;" /></a>
 <a class="reference internal image-reference" href="../_images/tinkerer.png"><img alt="Tinkerer Level" class="align-right" src="../_images/tinkerer.png" style="width: 48.0px; height: 39.2px;" /></a>
 <p>Using other pre-defined, supported stepper drivers and motors should also be achievable at the Conductor level, but may enter into Tinkerer territory depending on the specific hardware.</p>
 </div>
-<p>To make full use of Turntable-EX, you will need a basic understanding of <a class="reference internal" href="../automation/EX-RAIL-intro.html#introduction-to-ex-rail-automation"><span class="std std-ref">EX-RAIL</span></a> automation, but we’ll share the details and some examples to help with this.</p>
-<p>Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).</p>
 <p>The Turntable-EX integration includes:</p>
 <ul class="simple">
 <li><p>Support for an Arduino Nano or Uno</p></li>
@@ -340,7 +361,7 @@
 </div>
 </div>
 <div class="section" id="what-you-need-for-turntable-ex">
-<h2>What you need for Turntable-EX<a class="headerlink" href="#what-you-need-for-turntable-ex" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">What you need for Turntable-EX</a><a class="headerlink" href="#what-you-need-for-turntable-ex" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>A DCC++ EX CommandStation running the “add-turntable-controller” branch of <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller">CommandStation-EX</a> (this displays as version 4.0.2)</p></li>
 <li><p>An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)</p></li>
@@ -363,7 +384,7 @@
 <a class="reference internal image-reference" href="../_images/nano-shield1.png"><img alt="Nano Prototype Shield" src="../_images/nano-shield1.png" style="width: 160.0px; height: 125.2px;" /></a>
 <a class="reference internal image-reference" href="../_images/dupont.png"><img alt="Dupont male to female" src="../_images/dupont.png" style="width: 142.2px; height: 97.2px;" /></a>
 <div class="section" id="power-supplies">
-<h3>Power supplies<a class="headerlink" href="#power-supplies" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">Power supplies</a><a class="headerlink" href="#power-supplies" title="Permalink to this heading">¶</a></h3>
 <p>Choosing the right power supply for your Arduino and stepper motor is important to get right.</p>
 <p>If you are using the default ULN2003/28BYJ-48 it is technically possible to power the driver and stepper directly from the 5V output on an Arduino, however this is not recommended and should be avoided.</p>
 <p>Given that this combo requires 5V, you can use a single, regulated 5V DC power supply rated for at least 500mA to power both the Arduino and the ULN2003/28BYJ-48.</p>
@@ -372,7 +393,7 @@
 </div>
 </div>
 <div class="section" id="supported-stepper-drivers-and-motors">
-<h2>Supported stepper drivers and motors<a class="headerlink" href="#supported-stepper-drivers-and-motors" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Supported stepper drivers and motors</a><a class="headerlink" href="#supported-stepper-drivers-and-motors" title="Permalink to this heading">¶</a></h2>
 <p>The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.</p>
 <div class="sidebar">
 <p class="sidebar-title">Unsupported stepper drivers and motors</p>
@@ -389,7 +410,7 @@
 </ul>
 </div>
 <div class="section" id="how-does-it-work">
-<h2>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">How does it work?</a><a class="headerlink" href="#how-does-it-work" title="Permalink to this heading">¶</a></h2>
 <div class="sidebar">
 <p class="sidebar-title">Full step, half step, and other modes</p>
 <p>Stepper motor drivers typically support more than one mode for driving stepper motors. This simply means that they can be turned less than one complete step, allowing more granular control of positioning, resulting in higher precision, and much smoother operation. For example, the DRV8825 can drive 1/32 of a step, talk about smooooth!</p>
@@ -409,12 +430,12 @@
 <p>It’s recommended that the home position does not align with a specific layout connection track to ensure that each time Turntable-EX powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.</p>
 </div>
 <div class="section" id="controlling-the-turntable">
-<h3>Controlling the turntable<a class="headerlink" href="#controlling-the-turntable" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Controlling the turntable</a><a class="headerlink" href="#controlling-the-turntable" title="Permalink to this heading">¶</a></h3>
 <p>To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.</p>
 <p>Refer to the <a class="reference internal" href="test-and-tune.html#testing-tuning-and-control"><span class="std std-ref">Testing, Tuning, and Control</span></a> page for more details on this.</p>
 </div>
 <div class="section" id="important-phase-or-polarity-switching">
-<h3>Important! Phase (or polarity) switching<a class="headerlink" href="#important-phase-or-polarity-switching" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">Important! Phase (or polarity) switching</a><a class="headerlink" href="#important-phase-or-polarity-switching" title="Permalink to this heading">¶</a></h3>
 <p>An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -459,7 +480,7 @@
 </div>
 </div>
 <div class="section" id="time-to-assemble">
-<h2>Time to assemble<a class="headerlink" href="#time-to-assemble" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Time to assemble</a><a class="headerlink" href="#time-to-assemble" title="Permalink to this heading">¶</a></h2>
 <p>Now that you have a general overview of Turntable-EX’s features and capabilities, click the “next” button to get started on assembly.</p>
 </div>
 </div>

@@ -25,22 +25,22 @@ All throttle specific commands are summarised here, refer below for elaboration 
     - Response
     - Description
   * - ``<JT>``
-    - ``<jT ID1 ID2 ID3 ...>``
+    - ``<jT id1 id2 id3 ...>``
     - Returns the defined turnout IDs.
-  * - ``<JT ID>``
-    - ``<jT ID state "[description]">``
+  * - ``<JT id>``
+    - ``<jT id state "[description]">``
     - Returns the ID, state, and description of the specified turnout ID.
   * - ``<JA>``
-    - ``<jA ID1 ID2 ID3 ...>``
+    - ``<jA id1 id2 id3 ...>``
     - Returns the defined automation and route IDs.
-  * - ``<JA ID>``
-    - ``<jA ID type "[description]">``
+  * - ``<JA id>``
+    - ``<jA id type "[description]">``
     - Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID.
   * - ``<JR>``
-    - ``<jR ID1 ID2 ID3 ...>``
+    - ``<jR id1 id2 id3 ...>``
     - Returns the defined roster entry IDs.
-  * - ``<JR ID>``
-    - ``<jR ID "description" "function1/function2/function3/...">``
+  * - ``<JR id>``
+    - ``<jR id "description" "function1/function2/function3/...">``
     - Returns the ID, description, and function map of the specified roster entry ID.
   * - ``<t cabid>``
     - ``<l cabid slot speedbyte functionMap>``

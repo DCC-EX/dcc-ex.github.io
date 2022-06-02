@@ -6,6 +6,12 @@ Getting started
   :alt: Conductor Level
   :scale: 50%
 
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
+
 Assembly
 =========
 
@@ -99,7 +105,7 @@ Summary table of all connections required during assembly:
 Of course for the Tinkerers and Engineers, if you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
 
 1. BEFORE you start
-^^^^^^^^^^^^^^^^^^^^
+____________________
 
 Gather all your components and visually check them all for any obvious damage, paying particular attention to pins on the Arduino to make sure they are straight.
 
@@ -112,7 +118,7 @@ Gather all your components and visually check them all for any obvious damage, p
   :scale: 50%
 
 2. Insert the Nano into the shield
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+___________________________________
 
 Insert the Nano into the prototype shield socket, taking care to ensure the USB socket is located at the same end as the DC power jack, and that all pins are straight and aligned correctly with the female headers.
 
@@ -135,7 +141,7 @@ With the shield used in these assembly photos, you will note that each of the Na
   :scale: 50%
 
 3. Connect the stepper controller and motor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+____________________________________________
 
 Firstly, note that the ULN2003 controller will have four pins marked "IN1" through "IN4", as well as a pair of pins with "+" and "-". There is a likely a jumper installed across two pins beside these that is unmarked, leave this in place.
 
@@ -180,7 +186,7 @@ Insert the stepper motor connector into the recepticle on the ULN2003 controller
   :scale: 50%
 
 4. Connect the hall effect sensor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+__________________________________
 
 The hall effect sensor has three pins, and likely only two of these pins are marked, the left with "-" and right with "S". The middle pin is likely to be unmarked, and will be the 5V pin. There are probably many different varieties of sensors and designs out there, but both that I have (from different suppliers) are marked identically.
 
@@ -209,7 +215,7 @@ Use three of the Dupont wires and connect these from the hall effect sensor to t
   :scale: 50%
 
 5. Connect the dual relay board
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+________________________________
 
 Note there should be six pins on the dual relay board marked "VCC", "GND", "IN1", "IN2", "COM", and "GND". The "COM" and "GND" pins should have a jumper installed to connect these together. Leave this in place.
 
@@ -240,7 +246,7 @@ Use four Dupont wires to connect the other four pins as below:
   :scale: 50%
 
 6. Connect power and test
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+__________________________
 
 At this point, it should be safe to plug in the power supply to the DC power jack on the prototyping shield.
 
@@ -261,7 +267,7 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
   :scale: 50%
 
 7. Load the Turntable-EX software
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+__________________________________
 
 .. tip:: 
 
@@ -288,7 +294,7 @@ If you don't have the magnet installed at this point, or if it is too far from t
 If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`turntable-ex/troubleshooting:troubleshooting turntable-ex` for further assistance if required.
 
 Automatic calibration
-""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
 
@@ -316,7 +322,7 @@ At this point, the full turn step count is written to the Arduino's EEPROM so th
 You can now safely power off Turntable-EX and remove the USB cable from your PC as it is no longer required for normal operation, and all further commands will be issued by the CommandStation.
 
 8. Add the Turntable-EX device driver to CommandStation-EX
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+___________________________________________________________
 
 .. note:: 
 
@@ -404,7 +410,7 @@ Follow the rest of the directions for :ref:`reference/software/hal-config:adding
 Note there is no point in checking the driver at this stage as Turntable-EX is not connected, and will show as "OFFLINE".
 
 9. Connect Turntable-EX to your CommandStation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_______________________________________________
 
 To control Turntable-EX from your CommandStation, you will need a connection to the I2C (SDA, SCL) pins.
 

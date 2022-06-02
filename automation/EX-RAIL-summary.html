@@ -453,10 +453,10 @@
 <td><p>Delay a random time between min and max milliseconds</p></td>
 </tr>
 <tr class="row-odd"><td><p>IF( sensor_id )</p></td>
-<td><p>If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF</p></td>
+<td><p>If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors</p></td>
 </tr>
 <tr class="row-even"><td><p>IFNOT( sensor_id )</p></td>
-<td><p>If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF</p></td>
+<td><p>If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors</p></td>
 </tr>
 <tr class="row-odd"><td><p>IFCLOSED( turnout_id )</p></td>
 <td><p>Check if turnout is closed</p></td>
@@ -600,10 +600,10 @@
 <td></td>
 </tr>
 <tr class="row-even"><td><p>AT( sensor_id )</p></td>
-<td><p>Wait until sensor is active/triggered</p></td>
+<td><p>Wait until sensor is active/triggered, use negative values for active HIGH sensors</p></td>
 </tr>
 <tr class="row-odd"><td><p>ATTIMEOUT( sensor_id, timeout_ms )</p></td>
-<td><p>Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable “timed out” flag</p></td>
+<td><p>Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable “timed out” flag, use negative values for active HIGH sensors</p></td>
 </tr>
 <tr class="row-even"><td><p>ATGTE( analogpin, value)</p></td>
 <td><p>waits for analog pin to reach value</p></td>
@@ -612,7 +612,7 @@
 <td><p>waits for analog pin to go below value</p></td>
 </tr>
 <tr class="row-even"><td><p>AFTER( sensor_id )</p></td>
-<td><p>Waits for sensor to trigger and then go off for 0.5 seconds</p></td>
+<td><p>Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors</p></td>
 </tr>
 <tr class="row-odd"><td><p>LATCH( sensor_id )</p></td>
 <td><p>Latches a sensor on (Sensors 0-255 only)</p></td>

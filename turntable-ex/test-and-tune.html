@@ -302,8 +302,30 @@
   <div class="section" id="testing-tuning-and-control">
 <h1>Testing, Tuning, and Control<a class="headerlink" href="#testing-tuning-and-control" title="Permalink to this heading">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/conductor-level.png"><img alt="Conductor Level" src="../_images/conductor-level.png" style="width: 140.0px; height: 44.5px;" /></a>
+<div class="sidebar">
+<p class="sidebar-title">On this page</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#turntable-ex-commands" id="id1">Turntable-EX commands</a></p></li>
+<li><p><a class="reference internal" href="#testing-turntable-ex" id="id2">Testing Turntable-EX</a></p></li>
+<li><p><a class="reference internal" href="#tuning-your-turntable-positions" id="id3">Tuning your turntable positions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#determine-the-positions" id="id4">Determine the positions</a></p></li>
+<li><p><a class="reference internal" href="#example-tuning-commands" id="id5">Example tuning commands</a></p></li>
+<li><p><a class="reference internal" href="#apply-to-your-layout" id="id6">Apply to your layout</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#advertising-positions-to-engine-driver-and-withrottle-applications" id="id7">Advertising positions to Engine Driver and WiThrottle applications</a></p>
+<ul>
+<li><p><a class="reference internal" href="#my-turntable-moves-on-startup" id="id8">My turntable moves on startup!</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manual-phase-switching" id="id9">Manual phase switching</a></p></li>
+</ul>
+</div>
+</div>
 <div class="section" id="turntable-ex-commands">
-<h2>Turntable-EX commands<a class="headerlink" href="#turntable-ex-commands" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Turntable-EX commands</a><a class="headerlink" href="#turntable-ex-commands" title="Permalink to this heading">¶</a></h2>
 <p>Before proceeding with testing or any configuration, it’s important to understand the two commands available for controlling Turntable-EX.</p>
 <p>This is a debug or diagnostic command that can be executed via the serial terminal of the CommandStation:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT vpin steps activity&gt;
@@ -372,7 +394,7 @@ MOVETT(600, 100, Turn)
 </div>
 </div>
 <div class="section" id="testing-turntable-ex">
-<h2>Testing Turntable-EX<a class="headerlink" href="#testing-turntable-ex" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Testing Turntable-EX</a><a class="headerlink" href="#testing-turntable-ex" title="Permalink to this heading">¶</a></h2>
 <p>Firstly, power on Turntable-EX, followed by your CommandStation. By powering these on in that order, you will ensure that Turntable-EX is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as “OFFLINE”, and commands will fail.</p>
 <p>Referring again to <a class="reference internal" href="../reference/software/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a>, skip ahead to <a class="reference internal" href="../reference/software/hal-config.html#checking-the-driver"><span class="std std-ref">Checking the Driver</span></a>, and the output you’re looking for to validate the Turntable-EX device driver is loaded and connected successfully is below:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D HAL SHOW&gt;&lt;* Arduino Vpins:2-69 *&gt;
@@ -428,14 +450,14 @@ MOVETT(600, 100, Turn)
 <p>Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting Turntable-EX to good use.</p>
 </div>
 <div class="section" id="tuning-your-turntable-positions">
-<h2>Tuning your turntable positions<a class="headerlink" href="#tuning-your-turntable-positions" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Tuning your turntable positions</a><a class="headerlink" href="#tuning-your-turntable-positions" title="Permalink to this heading">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To determine your starting positions, you will need the full turn step count as recorded in <a class="reference internal" href="get-started.html#automatic-calibration"><span class="std std-ref">Automatic calibration</span></a>.</p>
 </div>
 <p>To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).</p>
 <div class="section" id="determine-the-positions">
-<h3>Determine the positions<a class="headerlink" href="#determine-the-positions" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Determine the positions</a><a class="headerlink" href="#determine-the-positions" title="Permalink to this heading">¶</a></h3>
 <p>At this point, you should either have a layout you’re fitting Turntable-EX into, or a layout design that you’re working to, with the various turntable connection tracks defined.</p>
 <p>The simplest way to devise the approximate number of steps for each turntable position is to calculate these based on the degrees each step will turn.</p>
 <p>For the default Turntable-EX configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).</p>
@@ -479,7 +501,7 @@ MOVETT(600, 100, Turn)
 </table>
 </div>
 <div class="section" id="example-tuning-commands">
-<h3>Example tuning commands<a class="headerlink" href="#example-tuning-commands" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Example tuning commands</a><a class="headerlink" href="#example-tuning-commands" title="Permalink to this heading">¶</a></h3>
 <p>To validate the above calculated positions, the following six diagnostic commands should be executed in the serial terminal of the CommandStation, which will allow you to visually inspect the alignment with your layout tracks and adjust accordingly:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 114 0&gt;
 &lt;D TT 600 227 0&gt;
@@ -493,13 +515,13 @@ MOVETT(600, 100, Turn)
 <p>Note that due to the automatic phase inversion, the last three positions will automatically active the phase inversion relays due to being within the 45 to 225 degree angles that activates phase inversion.</p>
 </div>
 <div class="section" id="apply-to-your-layout">
-<h3>Apply to your layout<a class="headerlink" href="#apply-to-your-layout" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Apply to your layout</a><a class="headerlink" href="#apply-to-your-layout" title="Permalink to this heading">¶</a></h3>
 <p>At this point, you should be able to apply the above calculations to your own layout and come up with the step count required for each position.</p>
 <p>Use appropriate diagnostic commands to test and tune each position for that perfect alignment, and providing your layout is functional, you should be able to drive a locomotive on and off your turntable in each position.</p>
 </div>
 </div>
 <div class="section" id="advertising-positions-to-engine-driver-and-withrottle-applications">
-<h2>Advertising positions to Engine Driver and WiThrottle applications<a class="headerlink" href="#advertising-positions-to-engine-driver-and-withrottle-applications" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Advertising positions to Engine Driver and WiThrottle applications</a><a class="headerlink" href="#advertising-positions-to-engine-driver-and-withrottle-applications" title="Permalink to this heading">¶</a></h2>
 <p>Now that you have defined all of your turntable positions with appropriate phase/polarity switching, it’s time to get these advertised to Engine Driver and WiThrottle applications.</p>
 <p>The method to advertise these is to use EX-RAIL’s ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the Engine Driver and WiThrottle Routes sections.</p>
 <p>If this is your first experience with EX-RAIL and the “myAutomation.h” file, familiarise yourself with EX-RAIL by reading through <a class="reference internal" href="../automation/EX-RAIL-intro.html#introduction-to-ex-rail-automation"><span class="std std-ref">Introduction to EX-RAIL Automation</span></a>.</p>
@@ -517,7 +539,7 @@ MOVETT(600, 100, Turn)
 </div>
 <p>That’s it! Once you have created “myAutomation.h” and uploaded it to your CommandStation as per the process on the <a class="reference internal" href="../automation/EX-RAIL-intro.html#introduction-to-ex-rail-automation"><span class="std std-ref">Introduction to EX-RAIL Automation</span></a> page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.</p>
 <div class="section" id="my-turntable-moves-on-startup">
-<h3>My turntable moves on startup!<a class="headerlink" href="#my-turntable-moves-on-startup" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">My turntable moves on startup!</a><a class="headerlink" href="#my-turntable-moves-on-startup" title="Permalink to this heading">¶</a></h3>
 <p>There is one “catch” with the above “myAutomation.h” example. When your CommandStation starts up and EX-RAIL starts, it will automatically execute everything in “myAutomation.h” up until the first “DONE” statement it encounters.</p>
 <p>In this scenario, that means on startup, the turntable will automatically move to position 1.</p>
 <p>If you wish to leave the turntable at the home position on startup, you can simply comment out the first MOVETT() command:</p>
@@ -533,7 +555,7 @@ MOVETT(600, 100, Turn)
 </div>
 </div>
 <div class="section" id="manual-phase-switching">
-<h2>Manual phase switching<a class="headerlink" href="#manual-phase-switching" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">Manual phase switching</a><a class="headerlink" href="#manual-phase-switching" title="Permalink to this heading">¶</a></h2>
 <p>So far, all the examples, testing, and tuning have relied on automatic phase switching.</p>
 <p>There may be times where manual phase switching is required, whether due to awkward track wiring, layouts that have tracks at angles that make it hard to determine the correct angles at which to automatically switch the phase, or (in an upcoming release) when traversers are used rather than traditional turntables, that don’t actually required phase switching at all.</p>
 <p>To enable manual phase switching, you must edit “config.h” and set <a class="reference internal" href="configure.html#phase-switching"><span class="std std-ref">PHASE_SWITCHING</span></a> to “MANUAL”.</p>

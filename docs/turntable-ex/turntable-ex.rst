@@ -6,22 +6,32 @@ Overview
   :alt: Conductor Level
   :scale: 50%
 
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
+
 What is Turntable-EX?
 ======================
-
-.. note:: 
-
-  Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.
-
-  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the Turntable-EX view of the `DCC++ EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
-  
-  For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the `Regression Testing process <https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md>`_, and then submit your test results using the `Beta Test Results <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_ issue template.
 
 Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.
 
 The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`get-started/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
 
 The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
+
+To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL<automation/ex-rail-intro:introduction to ex-rail automation>` automation, but we'll share the details and some examples to help with this.
+
+Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
+
+.. note::
+
+  Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.
+
+  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the Turntable-EX view of the `DCC++ EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
+  
+  For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the `Regression Testing process <https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md>`_, and then submit your test results using the `Beta Test Results <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_ issue template.
 
 .. sidebar:: Supported stepper drivers and motors
 
@@ -36,10 +46,6 @@ The out-of-the-box example configuration should allow a Conductor level user to 
     :align: right
 
   Using other pre-defined, supported stepper drivers and motors should also be achievable at the Conductor level, but may enter into Tinkerer territory depending on the specific hardware.
-
-To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL<automation/ex-rail-intro:introduction to ex-rail automation>` automation, but we'll share the details and some examples to help with this.
-
-Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
 
 The Turntable-EX integration includes:
 

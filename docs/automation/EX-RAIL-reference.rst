@@ -147,11 +147,8 @@ ________________________
 
 ``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the previous examples.
 
-Object Definitions
-___________________
-
 Aliases
-^^^^^^^^
+========
 
 ``ALIAS( name[, value] )``	Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias "name" text.
 
@@ -192,7 +189,7 @@ Note that you could have used the command `ALIAS(COAL_YARD, 1)` in the example a
 In this simple example, aliases seem like overkill, however consider the case where you need to have the "Coal Yard" turnout closed or thrown in various different automation sequences, and you will soon see why it's easier to understand you're throwing the COAL_YARD turnout rather than turnout ID 12345.
 
 Signals
-^^^^^^^^
+========
 
 ``SIGNAL( red_pin, amber_pin, green_pin )``	Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights.
 
@@ -214,8 +211,23 @@ Signal examples:
   GREEN(164)                         // Sets our active high signal to green.
   GREEN(101)                        // Sets our servo based signal to green.
 
+``IFRED( signal_id )`` Test if signal is red.
+
+``IFAMBER( signal_id )`` Test if signal is amber.
+
+``IFGREEN( signal_id )`` Test if signal is green.
+
+Signal examples:
+
+``ELSE``	Provides alternative logic to any IF related command returning False
+
+``ENDIF``	Required to end an IF/IFNOT/etc (Used in all IF.. functions)
+
 Turnouts
-^^^^^^^^^
+=========
+
+Object definitions
+___________________
 
 All the below turnout definitions will define turnouts that are advertised to WiThrottle apps, Engine Driver, and JMRI, unless the HIDDEN keyword is used.
 
@@ -237,6 +249,23 @@ Examples:
   PIN_TURNOUT(101, 164, "Switching Yard")           // Pin turnout on an MCP23017 I/O expander module.
   SERVO_TURNOUT(102, 102, 400, 100, Slow, HIDDEN)   // A servo turnout on a PCA9685 servo module that is hidden from throttles.
   VIRTUAL_TURNOUT(103, "Lumber Yard")               // A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.
+
+``IFCLOSED( turnout_id )``	Check if a turnout is closed.
+
+``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Flow Control Functions
 _______________________
@@ -372,29 +401,11 @@ Sensor examples:
     SET(165)
   ENDIF
 
-Turnout and block reservation conditionals
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``IFCLOSED( turnout_id )``	Check if a turnout is closed.
-
-``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
+Blocks
+=======
 
 ``IFRESERVE( block )``	If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
 
-Signal conditionals
-~~~~~~~~~~~~~~~~~~~~
-
-``IFRED( signal_id )`` Test if signal is red.
-
-``IFAMBER( signal_id )`` Test if signal is amber.
-
-``IFGREEN( signal_id )`` Test if signal is green.
-
-Signal examples:
-
-``ELSE``	Provides alternative logic to any IF related command returning False
-
-``ENDIF``	Required to end an IF/IFNOT/etc (Used in all IF.. functions)
 
 Other conditionals
 ~~~~~~~~~~~~~~~~~~~

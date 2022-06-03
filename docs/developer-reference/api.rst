@@ -14,12 +14,19 @@ API syntax documentation
 
 This API syntax page defines the current defined syntax used by API commands. These have resulted from a mix of legacy inheritance from the original DCC++ code, in addition to newer commands.
 
+Parameter parsing sequence
+===========================
+
+1. The first level of parsing is to obtain the one character, case sensitive OPCODE which may be preceeded by any number of blanks or "<" characters.
+
+2. The second level of parsing takes each space/blank separated parameter and turns it into an integer. There are no decimal point inputs. A prefix "-" may he used. 
+
 1. General Message Format
 ==========================
 
 A DCC++EX API message consists of a leading "<" symbol, a single character OPCODE, zero to n parameters separated by spaces, and a terminating ">" symbol:
 
-``<OPCODE Param1  Param2   …   ParamX>``
+``<OPCODE Param1 Param2 … ParamX>``
 
 Messages cannot be nested, and a second "<" inside a message constitutes a syntax error.
 
@@ -38,12 +45,12 @@ Examples for valid formats for a <p1> return message:
 2. OPCODE Format
 =================
 
-OPCODEs are single characters following immediately the leading "<" symbol or separated from it by one or more spaces. In other words: The first non-blank character after the leading "<" symbol is the OPCODE.
+OPCODEs are single, case sensitive characters immediately following the leading "<" symbol, or separated from it by one or more spaces. In other words: The first non-blank character after the leading "<" symbol is the OPCODE.
 
 2.1. Reserved OPCODEs
 ______________________
 
-"*" is reserved OPCODE for comment lines. The entire content of the message up to the closing ">" symbol is a comment and does not have to follow any rules
+"*" is a reserved OPCODE for comment lines. The entire content of the message up to the closing ">" symbol is a comment and does not have to follow any rules.
 
 3. General Parameter Format
 ============================
@@ -87,3 +94,14 @@ optional "-" symbol to indicate a negative value, followed by at least one digit
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 A string parameter is sequence of characters starting and ending with a ‘”’ symbol. Between these symbols, any character, including "*" and Space, is acceptable, except for the ‘”’ itself.
+
+5. Input collectors
+====================
+
+The input collectors must monitor the serial ports on a byte by byte basis, look for "< >" (as per the OPCODE format above), and ignore anything outside that before passing commands in for parsing.
+
+The WiFi or ethernet collectors work on a per-transmission basis, and the first byte of input determines whether the transmitted block gets sent for parsing as a command or WiThrottle.
+
+6. Responses
+=============
+

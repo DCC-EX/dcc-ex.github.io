@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../developer-reference/index.html">Developer and API reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../developer-reference/tech-reference.html">Technical Reference for Throttle Developers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../developer-reference/api.html">API syntax documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developer-reference/api.html">CommandStation-EX API Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a><ul>
@@ -305,11 +305,25 @@
             
   <div class="section" id="wifi-configuration">
 <h1>WiFi Configuration<a class="headerlink" href="#wifi-configuration" title="Permalink to this heading">¶</a></h1>
-<a class="reference internal image-reference" href="../_images/conductor.png"><img alt="Conductor Icon" class="align-left" src="../_images/conductor.png" style="width: 60.0px; height: 44.5px;" /></a>
-<p>Conductor Level (Tinkerer if wiring an ESP instead of using a shield)</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="sidebar">
+<p class="sidebar-title">On this page</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#wireless-connections" id="id9">Wireless Connections</a></p></li>
+<li><p><a class="reference internal" href="#connection-type-direct-to-command-station-or-through-jmri" id="id10">Connection Type: Direct to Command Station or through JMRI</a></p></li>
+<li><p><a class="reference internal" href="#what-s-a-withrottle-server" id="id11">What’s a “WiThrottle Server”?</a></p></li>
+<li><p><a class="reference internal" href="#access-point-mode-vs-station-mode" id="id12">Access Point Mode vs. Station Mode</a></p></li>
+<li><p><a class="reference internal" href="#default-operation-ap-mode-no-configuration-necessary" id="id13">Default Operation - AP Mode (No Configuration Necessary)</a></p></li>
+<li><p><a class="reference internal" href="#connecting-to-your-network-station-mode-sta-edit-config-h" id="id14">Connecting to your Network - Station Mode “STA” (edit config.h)</a></p></li>
+<li><p><a class="reference internal" href="#wifi-config-options" id="id15">WiFi Config Options</a></p></li>
+<li><p><a class="reference internal" href="#resetting-network-settings" id="id16">Resetting Network Settings</a></p></li>
+<li><p><a class="reference internal" href="#disabling-wifi" id="id17">Disabling WiFi</a></p></li>
+<li><p><a class="reference internal" href="#network-startup-sequence" id="id18">Network Startup sequence</a></p></li>
+<li><p><a class="reference internal" href="#tips-and-tricks" id="id19">Tips and Tricks</a></p></li>
+</ul>
 </div>
+</div>
+<a class="reference internal image-reference" href="../_images/conductor-level.png"><img alt="Conductor Icon" src="../_images/conductor-level.png" style="width: 140.0px; height: 44.5px;" /></a>
 <p>This page describes the software configuration options for using WiFi to connect your Command Station (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to <a class="reference internal" href="../get-started/wifi-setup.html"><span class="doc">WiFi Setup</span></a>.</p>
 <p>As mentioned in the above link, you will need the following to proceed:</p>
 <ul class="simple">
@@ -319,8 +333,13 @@
 <p>For a video, click <a class="reference external" href="https://www.youtube.com/watch?v=N6TWR7fIl0A&amp;t=5s">Setting up WiFi</a>.</p>
 <blockquote>
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<a class="reference internal image-reference" href="../_images/tinkerer.png"><img alt="Tinkerer Icon" class="align-left" src="../_images/tinkerer.png" style="width: 36.0px; height: 29.4px;" /></a>
+<p>If using a separate ESP instead of a shield, this becomes tinkerer level.</p>
+</div>
 <div class="section" id="wireless-connections">
-<h2>Wireless Connections<a class="headerlink" href="#wireless-connections" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">Wireless Connections</a><a class="headerlink" href="#wireless-connections" title="Permalink to this heading">¶</a></h2>
 <p>As mentioned in <a class="reference internal" href="../get-started/wifi-setup.html"><span class="doc">WiFi Setup</span></a>, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in <strong>HC-12 page coming</strong>.</p>
 <p>That said, there are two main wireless technologies that let you send commands to your CS and control your trains:</p>
 <ul class="simple">
@@ -330,7 +349,7 @@
 <p>Your particular controller hardware (a separate controller or your cell phone) may be able to use either or both depending on the controller you choose. This tutorial covers WiFi configuration, for Bluetooth click <strong>here</strong>.</p>
 </div>
 <div class="section" id="connection-type-direct-to-command-station-or-through-jmri">
-<h2>Connection Type: Direct to Command Station or through JMRI<a class="headerlink" href="#connection-type-direct-to-command-station-or-through-jmri" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">Connection Type: Direct to Command Station or through JMRI</a><a class="headerlink" href="#connection-type-direct-to-command-station-or-through-jmri" title="Permalink to this heading">¶</a></h2>
 <p>Everything on this page seems to come in twos! You have two options for connecting your controller to your CS depending on its capabilities and your preferences:</p>
 <ul class="simple">
 <li><p>Connect directly to DCC++ EX using WiFi or Bluetooth (JMRI not required but optional)</p></li>
@@ -340,12 +359,12 @@
 <p>For example, Engine Driver uses the WiThrottle protocol, so it can connect either directly to the CS via WiFi, or indirectly through the JMRI computer that has WiFi and its own WiThrottle Server. DCCpp CAB can connect directly to DCC++ EX via WiFi or Bluetooth, and sends native &lt;DCC++&gt; commands.</p>
 </div>
 <div class="section" id="what-s-a-withrottle-server">
-<h2>What’s a “WiThrottle Server”?<a class="headerlink" href="#what-s-a-withrottle-server" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id11">What’s a “WiThrottle Server”?</a><a class="headerlink" href="#what-s-a-withrottle-server" title="Permalink to this heading">¶</a></h2>
 <p>WiThrottle stands for “WiFi Throttle”, and a “WiThrottle Server” is just software running on your JMRI computer or on the DCC-EX Command Station. It’s called a “Server” because it allows you to connect to it and it “serves”, or services, requests from another application. That application is called a “Client”. So your throttle in this case is the client.</p>
 <p>WiThrottle itself is a standard for how WiFi throttles can communicate with Command Stations, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that any device that is WiThrottle compatible should work with DCC++ EX. Also, any device that sends &lt;DCC++&gt; commands should work with DCC++ EX.</p>
 </div>
 <div class="section" id="access-point-mode-vs-station-mode">
-<h2>Access Point Mode vs. Station Mode<a class="headerlink" href="#access-point-mode-vs-station-mode" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">Access Point Mode vs. Station Mode</a><a class="headerlink" href="#access-point-mode-vs-station-mode" title="Permalink to this heading">¶</a></h2>
 <p>There are two ways to configure the WiFi board connected to DCC++ EX: “Access Point Mode” (aka “AP MODE”), and “Station Mode”. We often abbreviate the latter to “STA”. You will also see people refer to it as “Client Mode”.</p>
 <div class="section" id="ap-mode">
 <h3>AP Mode<a class="headerlink" href="#ap-mode" title="Permalink to this heading">¶</a></h3>
@@ -373,7 +392,7 @@
 </div>
 </div>
 <div class="section" id="default-operation-ap-mode-no-configuration-necessary">
-<h2>Default Operation - AP Mode (No Configuration Necessary)<a class="headerlink" href="#default-operation-ap-mode-no-configuration-necessary" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id13">Default Operation - AP Mode (No Configuration Necessary)</a><a class="headerlink" href="#default-operation-ap-mode-no-configuration-necessary" title="Permalink to this heading">¶</a></h2>
 <p>To use the default AP mode, you don’t have to do anything other than connect an ESP8266 board as described in <a class="reference internal" href="../get-started/wifi-setup.html"><span class="doc">WiFi Setup</span></a>.</p>
 <p>That’s it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for DCC++ EX is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. DCC++ EX then accepts commands from WiFi throttles in either WiThrottle or &lt;DCC++&gt; format.</p>
 <p>To see other configuration options you can set in your config.h file, see <a class="reference internal" href="#wifi-config-options"><span class="std std-ref">WiFi Config Options</span></a> below.</p>
@@ -437,7 +456,7 @@ You should see a new network that begins with “DCCEX” like this example: <co
 </div>
 </div>
 <div class="section" id="connecting-to-your-network-station-mode-sta-edit-config-h">
-<h2>Connecting to your Network - Station Mode “STA” (edit config.h)<a class="headerlink" href="#connecting-to-your-network-station-mode-sta-edit-config-h" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">Connecting to your Network - Station Mode “STA” (edit config.h)</a><a class="headerlink" href="#connecting-to-your-network-station-mode-sta-edit-config-h" title="Permalink to this heading">¶</a></h2>
 <p>In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials, unless you have already entered your credentials earlier via the automated exInstaller. The easiest way to do this, other than the installer, is to use the Arduino IDE and open the project.
 Look for these lines in the file:</p>
 <div class="literal-block-wrapper docutils container" id="id8">
@@ -469,7 +488,7 @@ Look for these lines in the file:</p>
 <p>Save your config.h file and upload the sketch to your CS.</p>
 </div>
 <div class="section" id="wifi-config-options">
-<h2>WiFi Config Options<a class="headerlink" href="#wifi-config-options" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">WiFi Config Options</a><a class="headerlink" href="#wifi-config-options" title="Permalink to this heading">¶</a></h2>
 <p>The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual Arduino IDE install, you will see all of these in the file you renamed from “config.example.h” to “config.h”.</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="#define-ip-port-2560"><span class="std std-ref">#define IP_PORT 2560</span></a></div>
@@ -520,6 +539,7 @@ If you don’t change this setting and start up in AP mode instead, the default 
 <div class="section" id="define-ip-address-192-168-1-200">
 <h3>#define IP_ADDRESS { 192, 168, 1, 200 }<a class="headerlink" href="#define-ip-address-192-168-1-200" title="Permalink to this heading">¶</a></h3>
 <p><strong>Default: commented out</strong> - Uncomment this line if you wish to use a static IP address, otherwise the CS will use DHCP to automatically assign an IP address from your router. If you use a static IP, you will also have to configure this IP in your router.</p>
+<p><strong>Note</strong> - this is only valid when using Ethernet, and does not apply to WiFi.</p>
 </div>
 <div class="section" id="define-mac-address-0xde-0xad-0xbe-0xef-0xfe-0xef">
 <h3>#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }<a class="headerlink" href="#define-mac-address-0xde-0xad-0xbe-0xef-0xfe-0xef" title="Permalink to this heading">¶</a></h3>
@@ -527,7 +547,7 @@ If you don’t change this setting and start up in AP mode instead, the default 
 </div>
 </div>
 <div class="section" id="resetting-network-settings">
-<h2>Resetting Network Settings<a class="headerlink" href="#resetting-network-settings" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Resetting Network Settings</a><a class="headerlink" href="#resetting-network-settings" title="Permalink to this heading">¶</a></h2>
 <p>Once you enter a network SSID and password, the CS will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.</p>
 <div class="section" id="clearing-the-esp-wifi-ssid-settings">
 <h3>Clearing the ESP-WiFi SSID Settings<a class="headerlink" href="#clearing-the-esp-wifi-ssid-settings" title="Permalink to this heading">¶</a></h3>
@@ -549,11 +569,11 @@ If you don’t change this setting and start up in AP mode instead, the default 
 </div>
 </div>
 <div class="section" id="disabling-wifi">
-<h2>Disabling WiFi<a class="headerlink" href="#disabling-wifi" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Disabling WiFi</a><a class="headerlink" href="#disabling-wifi" title="Permalink to this heading">¶</a></h2>
 <p>Edit the config.h file. Comment out the line <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">WIFI_ENABLE</span> <span class="pre">true</span></code> by adding two forward slash marks (<code class="docutils literal notranslate"><span class="pre">//</span></code>) in front of the line. Then upload the project back to the CS.</p>
 </div>
 <div class="section" id="network-startup-sequence">
-<h2>Network Startup sequence<a class="headerlink" href="#network-startup-sequence" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">Network Startup sequence</a><a class="headerlink" href="#network-startup-sequence" title="Permalink to this heading">¶</a></h2>
 <p>For reference, it may be helpful to know the sequence the Command Station uses to try and establish a network connection. The following provides the flow of this sequence.</p>
 <ol class="arabic simple">
 <li><p>Check for a WiFi Device - Scan serial ports 1, 2, and 3 in order to look for WiFi. If no response, abort network setup and start the Command Station without WiFi.</p></li>
@@ -564,7 +584,7 @@ If you don’t change this setting and start up in AP mode instead, the default 
 </ol>
 </div>
 <div class="section" id="tips-and-tricks">
-<h2>Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">Tips and Tricks</a><a class="headerlink" href="#tips-and-tricks" title="Permalink to this heading">¶</a></h2>
 <p>There are circumstances where you may want to make temporary changes to your network, such as when you take your layout to a show. The following are some handy things you can do.</p>
 <div class="admonition-remember admonition">
 <p class="admonition-title">Remember…</p>

@@ -1,6 +1,6 @@
-*************************
-API syntax documentation
-*************************
+********************************
+CommandStation-EX API Reference
+********************************
 
 .. image:: ../_static/images/engineer-level.png
   :alt: Engineer Level
@@ -12,6 +12,17 @@ API syntax documentation
     :depth: 1
     :local:
 
+.. list-table:: 
+  :widths: auto
+  :stub-columns: 1
+
+  * - Document status
+    - Draft
+  * - Document version
+    - 0.1
+  * - Last update
+    - 5th June 2022
+
 This page documents the API syntax and usage for CommandStation-EX.
 
 The current API has resulted from a mix of new commands and commands inherited from the original DCC++ code base, and therefore there are some noted exceptions to the syntax, however all new commands and responses must conform to the correct syntax.
@@ -20,8 +31,8 @@ If you are looking for information on the WiThrottle protocol, you will find tha
 
 For detailed information on the various commands and responses available with DCC++ EX, refer to the :doc:`/reference/software/command-reference` page.
 
-Serial port and WiFi/Ethernet monitoring
-=========================================
+1. Serial port and WiFi/Ethernet monitoring
+============================================
 
 The input collectors must monitor the serial ports on a byte by byte basis, look for a beginning "<" with ending ">", and ignore anything outside that before passing commands in for parsing.
 
@@ -29,8 +40,8 @@ The WiFI or ethernet collectors work on a per-transmission basis and the first b
 
 **Any input received that a throttle does not understand must be discarded and ignored.**
 
-General API command usage and responses
-========================================
+2. General API command usage and responses
+===========================================
 
 API commands are sent using the message format outlined below, with responses conforming to the same format.
 

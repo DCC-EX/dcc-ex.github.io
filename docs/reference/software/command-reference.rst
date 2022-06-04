@@ -2,6 +2,12 @@
 DCC++ EX Command Reference
 ****************************
 
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 1
+    :local:
+
 This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`
 
 `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
@@ -19,18 +25,6 @@ This is a detailed reference. For a summary version, please see :doc:`Command Su
 This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC++ EX Webpage <https://dcc-ex.com>`_.  
-
-
-* :ref:`reference/software/command-reference:Track Power Commands`
-* :ref:`reference/software/command-reference:Engine Decoder (CAB) Operation Commands`
-* :ref:`reference/software/command-reference:Stationary Accessory Decoder & Turnout Commands`
-* :ref:`reference/software/command-reference:Sensors (Input) Commands`
-* :ref:`reference/software/command-reference:Outputs (DIO Pin) Commands`
-* :ref:`reference/software/command-reference:Storing and Erasing Turnouts, Sensors and Outputs in EEPROM`
-* :ref:`reference/software/command-reference:Engine Decoder Programming Commands`
-* :ref:`reference/software/command-reference:Diagnostic Commands`
-* :ref:`reference/software/command-reference:WiFi "AT" Commands`
-* :ref:`reference/software/command-reference:User Commands`
 
 Track Power Commands
 =============================
@@ -945,5 +939,3 @@ User Commands
 ==============
 
 ``<U>`` Is reserved for user commands.
-
-This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`

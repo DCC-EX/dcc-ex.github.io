@@ -19,9 +19,9 @@ CommandStation-EX API Reference
   * - Document status
     - Draft
   * - Document version
-    - 0.1
+    - 0.2
   * - Last update
-    - 5th June 2022
+    - 6th June 2022
 
 This page documents the API syntax and usage for CommandStation-EX.
 
@@ -94,31 +94,31 @@ A DCC++EX API message consists of a leading ``<`` symbol, a single character OPC
 
 Messages cannot be nested, and a second ``<`` inside a message constitutes a syntax error.
 
-5. Error responses
-===================
+5. Error and empty responses
+=============================
 
 A command sent that is invalid or returns an error has a response of ``<X>``.
+
+This same response will be sent if a command has no response.
 
 Memory limitations prohibit more detailed error messages.
 
 6. Parameter values
 ====================
 
-Parameters containing ``a-z``, ``A-Z``, or ``_`` are hashed to create integers. Thus a command like ``<D WIFI ON>`` is internally identical to ``<D wifi on>``.
-
-The translation of parameters from text to integer is base10 unless noted in :ref:`developer-reference/api:a.1. parameter values`.
-
 There are three types of parameters in use:
 
 6.1. Keyword
 _____________
 
-These are a consecutive sequence of non-blank characters consisting of ``a-z``, ``A-Z``, or ``_``, eg. "JOIN", "WIFI", "ON".
+These are a consecutive sequence of one or more non-blank characters consisting of ``a-z``, ``A-Z``, or ``_``, eg. "JOIN", "WIFI", "ON".
+
+Keyword parameters are internally hashed to created integers.
 
 6.2. Numeric
 _____________
 
-These are a consective sequence of digits, with an optional leading ``-`` to indicate a negative value. Unless noted in :ref:`developer-reference/api:a.1. parameter values`, these numbers are base10.
+These are a consective sequence of one or more digits, with an optional leading ``-`` to indicate a negative value. Unless noted in :ref:`developer-reference/api:a.1. parameter values`, these numbers are base10.
 
 6.3. String
 ____________
@@ -162,3 +162,13 @@ Using our syntax standard, "J" is the OPCODE, and "T" is the parameter.
 The response for this command will look something like ``<jT 1 17>``.
 
 Using our parsing sequence, we obtain the OPCODE "j", with the subsequent parameters being "T", "1", and "17".
+
+Appendix C. Further information
+================================
+
+C.1. Keyword parameters are not case sensitive
+_______________________________________________
+
+Unlike OPCODES, keyword parameters are not case sensitive.
+
+As noted, parameters containing ``a-z``, ``A-Z``, or ``_`` are hashed to create integers which results in commands such as ``<D WIFI ON>`` being treated identically to ``<D wifi on>``.

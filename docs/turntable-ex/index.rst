@@ -11,5 +11,6 @@ Welcome to the home of Turntable-EX, a fully integrated turntable controller for
   get-started
   test-and-tune
   traverser
+  layout-wiring
   configure
   troubleshooting

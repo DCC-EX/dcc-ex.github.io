@@ -16,4 +16,5 @@ For an overview of throttles and how to choose one, please read the :doc:`Gettin
     cab-engineer
     digitrainspro
     srcpclient
+    minithrottle
     streamdeck

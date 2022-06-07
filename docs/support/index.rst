@@ -8,8 +8,6 @@ The best way to reach us is on our `Discord server <https://discord.gg/y2sB4Fp>`
 
    `Join our Discord Server <https://discord.gg/y2sB4Fp>`_
 
-|
-
 .. raw:: html
 
     <center><iframe src="https://ptb.discordapp.com/widget?id=713189617066836079&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></center><br>

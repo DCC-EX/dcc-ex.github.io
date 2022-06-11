@@ -48,7 +48,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Configuration options" href="configure.html" />
-    <link rel="prev" title="Testing, Tuning, and Control" href="test-and-tune.html" /> 
+    <link rel="prev" title="Layout Connections and Wiring" href="layout-wiring.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -151,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="turntable-ex.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get-started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-wiring.html">Layout Connections and Wiring</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Traversers and Limited Rotation Turntables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configure.html">Configuration options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting Turntable-EX</a></li>
@@ -311,39 +312,31 @@
 <p class="sidebar-title">On this page</p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#overview" id="id1">Overview</a></p>
-<ul>
-<li><p><a class="reference internal" href="#what-you-need-for-traverser-mode" id="id2">What you need for traverser mode</a></p></li>
-</ul>
-</li>
+<li><p><a class="reference internal" href="#overview" id="id2">Overview</a></p></li>
 <li><p><a class="reference internal" href="#considerations-turntable-vs-traverser" id="id3">Considerations - turntable vs. traverser</a></p></li>
-<li><p><a class="reference internal" href="#assembly" id="id4">Assembly</a></p>
-<ul>
-<li><p><a class="reference internal" href="#traverser-mode-connection-summary" id="id5">Traverser mode connection summary</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#loading-turntable-ex-for-traverser-mode" id="id6">Loading Turntable-EX for traverser mode</a></p>
-<ul>
-<li><p><a class="reference internal" href="#sensor-testing-mode" id="id7">Sensor testing mode</a></p></li>
-<li><p><a class="reference internal" href="#automatic-calibration" id="id8">Automatic calibration</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#traverser-mode-is-ready" id="id9">Traverser mode is ready!</a></p></li>
+<li><p><a class="reference internal" href="#assembly" id="id4">Assembly</a></p></li>
+<li><p><a class="reference internal" href="#loading-turntable-ex-for-traverser-mode" id="id5">Loading Turntable-EX for traverser mode</a></p></li>
+<li><p><a class="reference internal" href="#traverser-mode-is-ready" id="id6">Traverser mode is ready!</a></p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="overview">
-<h2><a class="toc-backref" href="#id1">Overview</a><a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Overview</a><a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>Turntable-EX has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.</p>
 <p>The primary difference from the standard full rotation turntable mode is the addition of a limit sensor to indicate when the traverser or limited rotation turntable reaches the end of its range of movement.</p>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../_images/heljan-traverser.jpg"><img alt="Heljan Traverser" src="../_images/heljan-traverser.jpg" style="width: 400.0px; height: 233.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 65 </span><span class="caption-text">A horizontal traverser by Heljan</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 <p>The home sensor takes on an additional purpose in this mode, so in addition to flagging the home position, it also operates as a limit sensor.</p>
 <p>From here on in, for simplicity, we will refer to all variations of horizontal/vertical travers or limited rotation turntables as traversers.</p>
+<p>You will note we’ve rated the traverser feature as Tinkerer level. This is primarily due to the additional complexity of ensuring the mechanical aspects of the traverser are taken into consideration such as the home and limit sensors.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This page is seriously lacking in images and diagrams which are coming soon.</p>
+<p>This page has been written as an addendum to the general Turntable-EX documentation and focuses on the changes required to enable traverser mode. Please ensure you are familiar with the other existing documentation also.</p>
 </div>
 <div class="section" id="what-you-need-for-traverser-mode">
-<h3><a class="toc-backref" href="#id2">What you need for traverser mode</a><a class="headerlink" href="#what-you-need-for-traverser-mode" title="Permalink to this heading">¶</a></h3>
+<h3>What you need for traverser mode<a class="headerlink" href="#what-you-need-for-traverser-mode" title="Permalink to this heading">¶</a></h3>
 <p>The same components outlined in <a class="reference internal" href="turntable-ex.html#what-you-need-for-turntable-ex"><span class="std std-ref">What you need for Turntable-EX</span></a> apply in traverser mode, with two likely exceptions:</p>
 <ol class="arabic simple">
 <li><p>Home and limit sensors: Given the need for positive stops at each end’s limit of travel, be it vertical, horizontal, or restricting rotation within an arc for limited rotation turntables, micro switches are likely a better choice for these.</p></li>
@@ -378,8 +371,9 @@
 <p>If using micro switches for the home and limit sensors, the best way is to connect the common terminal of the switch to ground, and the normally open (NO) terminal to the Arduino’s pin. This allows the default “config.h” setting for <cite>HOME_SENSOR_ACTIVE_STATE</cite> and <cite>LIMIT_SENSOR_ACTIVE_STATE</cite> to remain unchanged as “LOW”.</p>
 <p>It is recommended not to fully assemble the traverser with the stepper motor until such time as you have validated the correct rotational direction of the stepper motor, and that the HOME and LIMIT sensors are connected correctly and functional.</p>
 <div class="section" id="traverser-mode-connection-summary">
-<h3><a class="toc-backref" href="#id5">Traverser mode connection summary</a><a class="headerlink" href="#traverser-mode-connection-summary" title="Permalink to this heading">¶</a></h3>
+<h3>Traverser mode connection summary<a class="headerlink" href="#traverser-mode-connection-summary" title="Permalink to this heading">¶</a></h3>
 <p>Summary table of all connections required during assembly:</p>
+<a class="reference internal image-reference" href="../_images/traverser-assembly.png"><img alt="Traverser Assembly Fritzing" class="align-right" src="../_images/traverser-assembly.png" style="width: 665.6999999999999px; height: 457.8px;" /></a>
 <table class="colwidths-auto command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Device Pin</p></th>
@@ -445,7 +439,7 @@
 </div>
 </div>
 <div class="section" id="loading-turntable-ex-for-traverser-mode">
-<h2><a class="toc-backref" href="#id6">Loading Turntable-EX for traverser mode</a><a class="headerlink" href="#loading-turntable-ex-for-traverser-mode" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Loading Turntable-EX for traverser mode</a><a class="headerlink" href="#loading-turntable-ex-for-traverser-mode" title="Permalink to this heading">¶</a></h2>
 <p>Prepare to load the software as per <a class="reference internal" href="get-started.html#load-the-turntable-ex-software"><span class="std std-ref">7. Load the Turntable-EX software</span></a>, and ensure “config.h” has been created by copying or renaming “config.example.h”.</p>
 <p>Edit “config.h”, add “//” at the beginning of the <cite>#define TURNTABLE_EX_MODE TURNTABLE</cite> line, and remove the “//” from the beginning of the <cite>#define TURNTABLE_EX_MODE TRAVERSER</cite>:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
@@ -468,7 +462,7 @@
 <p>Once “config.h” is updated, you can continue to load the software onto the Arduino.</p>
 <p>Once the software is loaded and Turntable-EX starts, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.</p>
 <div class="section" id="sensor-testing-mode">
-<h3><a class="toc-backref" href="#id7">Sensor testing mode</a><a class="headerlink" href="#sensor-testing-mode" title="Permalink to this heading">¶</a></h3>
+<h3>Sensor testing mode<a class="headerlink" href="#sensor-testing-mode" title="Permalink to this heading">¶</a></h3>
 <p>Prior to proceeding any further, it is recommended to validate the HOME and LIMIT sensors operate correctly, and that they are connected to the correct pins of the Arduino. A new SENSOR_TESTING mode has been added to allow the sensors to be tested, with all other Turntable-EX functionality disabled.</p>
 <p>To enable SENSOR_TESTING mode, you will need to edit “config.h” again, and this time remove the “//” from the beginning of the <cite>#define SENSOR_TESTING`</cite> line (Refer to <a class="reference internal" href="configure.html#sensor-testing"><span class="std std-ref">SENSOR_TESTING</span></a> to enable sensor testing mode.):</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
@@ -501,7 +495,7 @@ Limit sensor DEACTIVATED
 <p>When sensor testing is complete, you can add the “//” back in front of the <cite>#define SENSOR_TESTING</cite> line in “config.h” to disable SENSOR_TESTING mode, and re-load the software to revert to normal Turntable-EX operations.</p>
 </div>
 <div class="section" id="automatic-calibration">
-<h3><a class="toc-backref" href="#id8">Automatic calibration</a><a class="headerlink" href="#automatic-calibration" title="Permalink to this heading">¶</a></h3>
+<h3>Automatic calibration<a class="headerlink" href="#automatic-calibration" title="Permalink to this heading">¶</a></h3>
 <p>Once you know the normal direction of your stepper and have confirmed both HOME and LIMIT sensors work correctly, you can finish assembling your traverser with the stepper and proceed with the automatic calibration.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -532,7 +526,7 @@ Turntable homed successfully
 </div>
 </div>
 <div class="section" id="traverser-mode-is-ready">
-<h2><a class="toc-backref" href="#id9">Traverser mode is ready!</a><a class="headerlink" href="#traverser-mode-is-ready" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Traverser mode is ready!</a><a class="headerlink" href="#traverser-mode-is-ready" title="Permalink to this heading">¶</a></h2>
 <p>Now that you have enabled traverser mode in Turntable-EX, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to <a class="reference internal" href="test-and-tune.html"><span class="doc">Testing, Tuning, and Control</span></a> as the tuning steps and control commands are the same in both turntable and traverser modes.</p>
 </div>
 </div>
@@ -544,7 +538,7 @@ Turntable homed successfully
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="configure.html" class="btn btn-neutral float-right" title="Configuration options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="test-and-tune.html" class="btn btn-neutral float-left" title="Testing, Tuning, and Control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="layout-wiring.html" class="btn btn-neutral float-left" title="Layout Connections and Wiring" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

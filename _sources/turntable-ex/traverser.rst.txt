@@ -9,7 +9,7 @@ Traversers and Limited Rotation Turntables
 .. sidebar:: On this page
 
   .. contents:: 
-    :depth: 2
+    :depth: 1
     :local:
 
 Overview
@@ -19,13 +19,22 @@ Turntable-EX has the ability to cater for both horizontal and vertical traverser
 
 The primary difference from the standard full rotation turntable mode is the addition of a limit sensor to indicate when the traverser or limited rotation turntable reaches the end of its range of movement.
 
+.. figure:: ../_static/images/turntable-ex/heljan-traverser.jpg
+  :alt: Heljan Traverser
+  :scale: 50%
+  :align: right
+  
+  A horizontal traverser by Heljan
+
 The home sensor takes on an additional purpose in this mode, so in addition to flagging the home position, it also operates as a limit sensor.
 
 From here on in, for simplicity, we will refer to all variations of horizontal/vertical travers or limited rotation turntables as traversers.
 
-.. note::
+You will note we've rated the traverser feature as Tinkerer level. This is primarily due to the additional complexity of ensuring the mechanical aspects of the traverser are taken into consideration such as the home and limit sensors.
 
-  This page is seriously lacking in images and diagrams which are coming soon.
+.. note:: 
+
+  This page has been written as an addendum to the general Turntable-EX documentation and focuses on the changes required to enable traverser mode. Please ensure you are familiar with the other existing documentation also.
 
 What you need for traverser mode
 _________________________________
@@ -78,6 +87,11 @@ Traverser mode connection summary
 __________________________________
 
 Summary table of all connections required during assembly:
+
+.. image:: ../_static/images/turntable-ex/traverser-assembly.png
+  :alt: Traverser Assembly Fritzing
+  :scale: 30%
+  :align: right
 
 .. list-table::
     :widths: auto

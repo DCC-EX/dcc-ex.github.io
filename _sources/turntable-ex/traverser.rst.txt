@@ -146,6 +146,8 @@ Loading Turntable-EX for traverser mode
 
 Prepare to load the software as per :ref:`turntable-ex/get-started:7. load the turntable-ex software`, and ensure "config.h" has been created by copying or renaming "config.example.h".
 
+There is also an example "config.traverser.h" file included with the software that can be renamed to "config.h" instead.
+
 Edit "config.h", add "//" at the beginning of the `#define TURNTABLE_EX_MODE TURNTABLE` line, and remove the "//" from the beginning of the `#define TURNTABLE_EX_MODE TRAVERSER`:
 
 .. code-block:: cpp

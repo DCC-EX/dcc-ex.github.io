@@ -273,21 +273,39 @@ __________________________________
 
   Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
-  Further to this, note that you will need two separate folders, one containing the CommandStation-EX software as per  :doc:`/get-started/arduino-ide`, and an additional folder containing the Turntable-EX software. The Turntable-EX software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
+  Further to this, note that you will need to end up with two separate folders; one containing the CommandStation-EX software as per  :doc:`/get-started/arduino-ide`, and an additional folder containing the Turntable-EX software. The Turntable-EX software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
 
 At the time of writing, there is no installer for Turntable-EX like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
 
+As noted in the tip above, you should have a Turntable-EX folder alongside the CommandStation-EX folder, and neither should reside in the other (the CommandStation-EX software is required in the next step):
+
+.. image:: ../_static/images/turntable-ex/two-folders.png
+  :alt: Two folders
+  :scale: 60%
+
 The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/get-started/arduino-ide` page.
 
-Also, ensure you follow the section to :ref:`get-started/arduino-ide:copy the config.example.h file (or rename it)` to create your own "config.h" file for Turntable-EX.
+When you get to the point of opening the sketch, ensure you open the Turntable-EX sketch:
 
-If you need to make adjustments to config.h, refer to :doc:`/turntable-ex/configure`.
+.. image:: ../_static/images/turntable-ex/open-turntable-ex-sketch.png
+  :alt: Open Turntable-EX sketch
+  :scale: 60%
 
-While following that process, you will need to make some ammendments to cater for Turntable-EX:
+Use Windows Explorer to either copy or rename "config.example.h" to "config.h".
 
-* See the :ref:`download/turntable-ex:turntable-ex` download page to obtain the Turntable-EX software.
-* References to CommandStation-EX are substituted with Turntable-EX (eg. your folder name needs to be called Turntable-EX).
-* You will need to set the board type to "Nano" and set the correct Processor type (typically ATMega328P).
+If you need to make adjustments to config.h, refer to the :doc:`/turntable-ex/configure`.
+
+Set the board type to "Nano" and set the correct Processor type (typically ATMega328P):
+
+.. image:: ../_static/images/turntable-ex/select-nano.png
+  :alt: Select Nano
+  :scale: 60%
+
+After any adjustments are made and "config.h" has been created, the software can be uploaded to the Arduino with the upload button:
+
+.. image:: ../_static/images/arduino-ide/upload_arrow.jpg
+  :alt: Upload
+  :scale: 70%
 
 Once the software is loaded successfully on to Turntable-EX, the stepper motor should automatically start rotating in an attempt to find its "home" position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.
 
@@ -333,6 +351,8 @@ ___________________________________________________________
   This will display in the serial console of your CommandStation as version 4.0.2.
   
   If the "myHal.cpp_example.txt" is missing the lines referred to below, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of CommandStation-EX.
+
+  The zip file containing the correct version of CommandStation-EX should also be attached to the Turntable-EX release.
 
 Before you will be able to test or use Turntable-EX, you need to configure the CommandStation-EX software to load the appropriate device driver.
 

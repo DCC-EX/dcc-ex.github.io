@@ -441,6 +441,7 @@
 <div class="section" id="loading-turntable-ex-for-traverser-mode">
 <h2><a class="toc-backref" href="#id5">Loading Turntable-EX for traverser mode</a><a class="headerlink" href="#loading-turntable-ex-for-traverser-mode" title="Permalink to this heading">¶</a></h2>
 <p>Prepare to load the software as per <a class="reference internal" href="get-started.html#load-the-turntable-ex-software"><span class="std std-ref">7. Load the Turntable-EX software</span></a>, and ensure “config.h” has been created by copying or renaming “config.example.h”.</p>
+<p>There is also an example “config.traverser.h” file included with the software that can be renamed to “config.h” instead.</p>
 <p>Edit “config.h”, add “//” at the beginning of the <cite>#define TURNTABLE_EX_MODE TURNTABLE</cite> line, and remove the “//” from the beginning of the <cite>#define TURNTABLE_EX_MODE TRAVERSER</cite>:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Define the mode for Turntable-EX.</span>

@@ -309,6 +309,21 @@
             
   <div class="section" id="i2c-devices">
 <h1>I2C Devices<a class="headerlink" href="#i2c-devices" title="Permalink to this heading">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">On this page</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#what-is-i2c" id="id14">What is I2C?</a></p></li>
+<li><p><a class="reference internal" href="#addresses" id="id15">Addresses</a></p></li>
+<li><p><a class="reference internal" href="#connector-styles" id="id16">Connector Styles</a></p></li>
+<li><p><a class="reference internal" href="#connecting-devices" id="id17">Connecting Devices</a></p></li>
+<li><p><a class="reference internal" href="#pull-ups" id="id18">Pull-ups</a></p></li>
+<li><p><a class="reference internal" href="#removal-of-pull-ups" id="id19">Removal of Pull-ups</a></p></li>
+<li><p><a class="reference internal" href="#cabling-limits" id="id20">Cabling Limits</a></p></li>
+<li><p><a class="reference internal" href="#changing-the-clock-speed" id="id21">Changing the Clock speed</a></p></li>
+</ul>
+</div>
+</div>
 <p>With the advent of the Hardware Abstraction Layer (HAL), DCC++EX now has the capability for
 support for new I/O devices to be added without any change to the base software.  By I/O
 devices I mean the things that are controlled through Sensors, Outputs and Turnouts (and
@@ -327,7 +342,7 @@ breaking DCC++EX for other users.  So there are various drivers available for yo
 <p>You will have noticed that a lot of the devices above have the name I2C in their description,
 so this section is an introduction to what I2C is and how to use it.</p>
 <div class="section" id="what-is-i2c">
-<h2>What is I2C?<a class="headerlink" href="#what-is-i2c" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">What is I2C?</a><a class="headerlink" href="#what-is-i2c" title="Permalink to this heading">¶</a></h2>
 <p>I2C is a standard introduced by the Philips Semiconductors (now NXP Semiconductors) in the
 early 1980s to provide a mechanism for
 simple and economical communication between integrated circuits within a system, i.e.
@@ -361,7 +376,7 @@ send data.  In this way, we can have two-way data flows from Master to Slave, an
 <p>For more information about I2C, including a link to the I2C Standard, see <a class="reference external" href="https://www.i2c-bus.org/">https://www.i2c-bus.org/</a>.</p>
 </div>
 <div class="section" id="addresses">
-<h2>Addresses<a class="headerlink" href="#addresses" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">Addresses</a><a class="headerlink" href="#addresses" title="Permalink to this heading">¶</a></h2>
 <p>Most I2C devices allow the address to be selected by adding or removing (or moving) jumpers.
 In some cases the jumpers are fitted on selector pins on the module, and the jumpers can be readily moved
 to select the address.  For example, the MCP23017 can have address 0x20, 0x21, 0x22, … up to 0x27, by three jumpers.
@@ -445,7 +460,7 @@ module’s XSHUT pin. By operating the XSHUT pins, the device driver is able to 
 unprogrammed devices are held in the ‘shutdown’ state.  So each device can use any I2C address!</p>
 </div>
 <div class="section" id="connector-styles">
-<h2>Connector Styles<a class="headerlink" href="#connector-styles" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Connector Styles</a><a class="headerlink" href="#connector-styles" title="Permalink to this heading">¶</a></h2>
 <p>Many I2C devices come with a set of four pins, spaced by 2.5mm, for you to connect to.  In some
 cases, the pins come separately and need to be soldered.  If you’re not happy with soldering,
 then check before buying.</p>
@@ -469,7 +484,7 @@ they are a different size and are not interchangeable.</p>
 </div>
 </div>
 <div class="section" id="connecting-devices">
-<h2>Connecting Devices<a class="headerlink" href="#connecting-devices" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Connecting Devices</a><a class="headerlink" href="#connecting-devices" title="Permalink to this heading">¶</a></h2>
 <p>The position of the I2C pins depends on what controller module you are using:</p>
 <ul class="simple">
 <li><p>On the Arduino Nano, the I2C pins are labelled A4 (SDA) and A5 (SCL).</p></li>
@@ -541,7 +556,7 @@ The board shown has space for five Dupont connectors in each half row.</p>
 </div>
 </div>
 <div class="section" id="pull-ups">
-<h2>Pull-ups<a class="headerlink" href="#pull-ups" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">Pull-ups</a><a class="headerlink" href="#pull-ups" title="Permalink to this heading">¶</a></h2>
 <p>The I2C bus will not work unless pull-up resistors are connected to the SDA and SCL lines.  However,
 it’s not very often that you will have to install your own pull-up resistors.  Most microcontrollers
 have the capability to enable internal pull-ups, corresponding to around 20-50kOhm.
@@ -558,7 +573,7 @@ and/or adding your own fixed pull-up.  Or adding an I2C multiplexer, which will 
 are not being actively addressed.</p>
 </div>
 <div class="section" id="removal-of-pull-ups">
-<h2>Removal of Pull-ups<a class="headerlink" href="#removal-of-pull-ups" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">Removal of Pull-ups</a><a class="headerlink" href="#removal-of-pull-ups" title="Permalink to this heading">¶</a></h2>
 <p>If you want to remove the pull-ups from your modules and add your own (single) pull-up resistor to the I2C bus, then the first
 thing to do is identify which components on the module PCB are the pull-up resistors.  Many modules have full documentation available
 (including circuit diagram and PCB layout), which will help to identify the pull-ups.  Check the web sites for the suppliers.</p>
@@ -577,7 +592,7 @@ and the other side of both will be connected to the Vcc supply.</p>
 solder forming a connection between the two pads.</strong></p>
 </div>
 <div class="section" id="cabling-limits">
-<h2>Cabling Limits<a class="headerlink" href="#cabling-limits" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id20">Cabling Limits</a><a class="headerlink" href="#cabling-limits" title="Permalink to this heading">¶</a></h2>
 <p>The I2C bus spec allows bus operation at various speeds - on the Arduino, speeds of 100kHz and 400kHz are
 generally used.  Some devices are not specified to operate at the higher speed (e.g. PCF8574) although
 my testing hasn’t shown any problems.</p>
@@ -591,7 +606,7 @@ scan interval for digital inputs, and the refresh time for I2C displays, may be 
 lower than 32kHz.</p>
 </div>
 <div class="section" id="changing-the-clock-speed">
-<h2>Changing the Clock speed<a class="headerlink" href="#changing-the-clock-speed" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id21">Changing the Clock speed</a><a class="headerlink" href="#changing-the-clock-speed" title="Permalink to this heading">¶</a></h2>
 <p>In DCC++EX the I2C clock speed is normally the highest speed supported by all configured devices.
 It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="p">.</span><span class="n">forceClock</span><span class="p">(</span><span class="mi">100000</span><span class="p">);</span>

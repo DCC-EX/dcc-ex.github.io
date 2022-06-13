@@ -309,6 +309,16 @@
             
   <div class="section" id="i2c-displays">
 <h1>I2C Displays<a class="headerlink" href="#i2c-displays" title="Permalink to this heading">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">On this page</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#examples-of-compatible-displays" id="id6">Examples of compatible displays</a></p></li>
+<li><p><a class="reference internal" href="#connecting-an-lcd-display" id="id7">Connecting an LCD Display</a></p></li>
+<li><p><a class="reference internal" href="#connecting-an-oled-display" id="id8">Connecting an OLED display</a></p></li>
+</ul>
+</div>
+</div>
 <p>DCC++ EX is designed to accommodate a display. You don’t need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.</p>
 <a class="reference internal image-reference" href="../../_images/I2C_LCD_Display_wired.jpg"><img alt="Example: 4 line I2C Display" src="../../_images/I2C_LCD_Display_wired.jpg" style="width: 512.0px; height: 331.20000000000005px;" /></a>
 <p>We currently support LCDs based on the PCF8574 backpack:</p>
@@ -326,7 +336,7 @@
 <p>You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!</p>
 </div>
 <div class="section" id="examples-of-compatible-displays">
-<h2>Examples of compatible displays<a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Examples of compatible displays</a><a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this heading">¶</a></h2>
 <p>Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/lcd_20x4_backpack.jpg"><img alt="20 x 4 LCD" src="../../_images/lcd_20x4_backpack.jpg" style="width: 320.0px; height: 291.2px;" /></a>
@@ -339,7 +349,7 @@
 </div>
 </div>
 <div class="section" id="connecting-an-lcd-display">
-<h2>Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Connecting an LCD Display</a><a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
 <h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this heading">¶</a></h3>
 <p>And here is a picture of the board after soldering or if you purchase a board already soldered (or “welded” as some of the Chinese sites call it)</p>
@@ -386,7 +396,7 @@
 </div>
 </div>
 <div class="section" id="connecting-an-oled-display">
-<h2>Connecting an OLED display<a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Connecting an OLED display</a><a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this heading">¶</a></h2>
 <p>OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won’t work with an UNO. You will require a Mega. Here are some examples of OLED displays:</p>
 <div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/adafruit_96in_oled_sm.jpg"><img alt="Adafruit .96&quot; OLED" src="../../_images/adafruit_96in_oled_sm.jpg" style="width: 160.0px; height: 153.60000000000002px;" /></a>

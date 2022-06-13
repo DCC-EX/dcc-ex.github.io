@@ -2,6 +2,12 @@
 I2C Displays
 *************
 
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 1
+    :local:
+
 DCC++ EX is designed to accommodate a display. You don't need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.
 
 .. image:: ../../_static/images/display/I2C_LCD_Display_wired.jpg
@@ -44,7 +50,7 @@ Connecting an LCD Display
 ==========================
 
 Soldering on the Backpack (if you purchased separate pieces)
--------------------------------------------------------------
+_____________________________________________________________
 
 And here is a picture of the board after soldering or if you purchase a board already soldered (or "welded" as some of the Chinese sites call it)
 
@@ -56,7 +62,7 @@ And here is a picture of the board after soldering or if you purchase a board al
    LCD with backpack soldered to the back
 
 Connecting the Jumper Wires
-----------------------------
+____________________________
 
 To connect the Display to the CS, you will need 4 male to female jumper wires:
 
@@ -69,7 +75,7 @@ To connect the Display to the CS, you will need 4 male to female jumper wires:
 
 
 Controlling Brightness
------------------------
+_______________________
 
 The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:
 
@@ -77,7 +83,7 @@ The LCD displays are usually very bright. We remove the jumper on the side of th
 
 
 Upload the sketch to your CS
---------------------------------
+_____________________________
 
 To upload the new sketch on your Command Station
 
@@ -95,7 +101,7 @@ To upload the new sketch on your Command Station
 #. Make sure to connect the Arduino to your computer with the USB cable and click the upload button to compile and upload the updated Command Station sketch.
 
 Connecting an OLED display
-============================
+===========================
 
 OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO. You will require a Mega. Here are some examples of OLED displays:
 
@@ -114,22 +120,22 @@ OLED displays come in more varieties than LCD displays. The library to run them 
    Makerfocus 128x32 .91" OLED Display
 
 Soldering Wires to the Display
--------------------------------
+_______________________________
 
 For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.
 
 Connecting Jumper Wires to the CS
------------------------------------
+__________________________________
 
 ** Not Finished. Coming soon! **
 
 Installing the Software (OLED)
-------------------------------
+_______________________________
 
 ** Not Finished. Coming soon! **
 
 Changing the I2C Address
-------------------------
+_________________________
 
 If you have other I2C devices, like an I2C bus to control turnouts or other accessories, you may need to change the address of your I2C display to avoid a conflict. The display should have instructions available for how to do this.
 

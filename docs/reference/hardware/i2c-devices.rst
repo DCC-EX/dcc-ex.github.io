@@ -1,6 +1,12 @@
-***********
+************
 I2C Devices
-***********
+************
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 1
+    :local:
 
 With the advent of the Hardware Abstraction Layer (HAL), DCC++EX now has the capability for
 support for new I/O devices to be added without any change to the base software.  By I/O
@@ -68,7 +74,7 @@ send data.  In this way, we can have two-way data flows from Master to Slave, an
 For more information about I2C, including a link to the I2C Standard, see `<https://www.i2c-bus.org/>`_.
 
 Addresses
-===========
+==========
 
 Most I2C devices allow the address to be selected by adding or removing (or moving) jumpers.
 In some cases the jumpers are fitted on selector pins on the module, and the jumpers can be readily moved
@@ -122,7 +128,7 @@ module's XSHUT pin. By operating the XSHUT pins, the device driver is able to pr
 unprogrammed devices are held in the 'shutdown' state.  So each device can use any I2C address!
 
 Connector Styles
-================
+=================
 
 Many I2C devices come with a set of four pins, spaced by 2.5mm, for you to connect to.  In some
 cases, the pins come separately and need to be soldered.  If you're not happy with soldering,
@@ -252,7 +258,7 @@ The board shown has space for five Dupont connectors in each half row.
    I2C Hub on Breadboard
 
 Pull-ups
-===========
+=========
 
 The I2C bus will not work unless pull-up resistors are connected to the SDA and SCL lines.  However, 
 it's not very often that you will have to install your own pull-up resistors.  Most microcontrollers
@@ -272,7 +278,7 @@ and/or adding your own fixed pull-up.  Or adding an I2C multiplexer, which will 
 are not being actively addressed.
 
 Removal of Pull-ups
-===================
+====================
 
 If you want to remove the pull-ups from your modules and add your own (single) pull-up resistor to the I2C bus, then the first 
 thing to do is identify which components on the module PCB are the pull-up resistors.  Many modules have full documentation available
@@ -316,7 +322,7 @@ scan interval for digital inputs, and the refresh time for I2C displays, may be 
 lower than 32kHz.
 
 Changing the Clock speed
-========================
+=========================
 
 In DCC++EX the I2C clock speed is normally the highest speed supported by all configured devices.
 It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:

@@ -70,7 +70,7 @@ pin is active.  When the switch is released, the input pin is pulled back to HIG
 `<q 165>` is generated to indicate that the pin is inactive.
 
 Interrupts
-==========
+===========
 
 Many I2C GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
 expander chip to notify the microcontroller that one or more inputs have changed state.

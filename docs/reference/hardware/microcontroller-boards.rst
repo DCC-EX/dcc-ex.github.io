@@ -2,20 +2,23 @@
 Microcontroller Boards
 ***********************
 
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 1
+    :local:
+
 CommandStation-EX currently is designed for Arduino and select microcontrollers. Out of the box, it is compatible with the following boards:
 
-* :ref:`reference/hardware/microcontroller-boards:Arduino Mega` **[RECOMMENDED]**
-* :ref:`reference/hardware/microcontroller-boards:Mega+Wifi` (Tinkerer Level)
-* :ref:`reference/hardware/microcontroller-boards:Arduino Uno`
-* :ref:`reference/hardware/microcontroller-boards:Arduino Nano` (Tinkerer Level)
-* :ref:`reference/hardware/microcontroller-boards:Nano Every` (Tinkerer Level)
-* :ref:`reference/hardware/microcontroller-boards:Teensy 3.x & 4.x` (Engineer Level)
-
 Arduino Mega
-===============================
+=============
+
+.. image:: ../../_static/images/conductor-level.png
+  :alt: Conductor Level
+  :scale: 50%
 
 Why do we recommend the Mega?
-------------------------------
+______________________________
 
 * When compiled, our code just barely squeezes onto an Arduino Uno. **A mega allows you to add more features** like networking and displays because it has more memory.
 * The Mega has many more GPIOs (General Purpose Input/Outputs) available to you for constructing control panels and controlling turnouts, signals and other accessories.
@@ -34,21 +37,31 @@ Note that if the size of the regular Mega board is an issue, there are condensed
    :scale: 35%
 
 Arduino Uno
-=============
+============
+
+.. image:: ../../_static/images/conductor-level.png
+  :alt: Conductor Level
+  :scale: 50%
 
 If you already have an Uno, or will use JMRI to control your trains, then by all means use an Uno. Just remember that you can't have WiFi, Ethernet or a few other options due to memory limitations. But as a Command Station connected to JMRI with a USB cable it works great.
 
 Arduino Nano
-=====================
+=============
+
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer Level
+  :scale: 50%
 
 The Arduino Nano shares the same processor with the Arduino Uno, so we support it. The Nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There *is* a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.
 
 See our section on :doc:`Using a Nano <../../advanced-setup/supported-microcontrollers/nano>`
 
 Mega+WiFi
-==============
+==========
 
-**Tinkerer level**
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer Level
+  :scale: 50%
 
 Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
 
@@ -57,7 +70,9 @@ See our section on Using the :doc:`WiFi+Mega Page <../../advanced-setup/supporte
 Nano Every
 ===========
 
-**Tinkerer level**
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer Level
+  :scale: 50%
 
 The Nano Every is an updated Nano. It uses a completely different processor family than the Uno and Nano. S
 
@@ -66,7 +81,9 @@ See the detailed section on the :doc:`Nano Every <../../advanced-setup/supported
 Teensy 3.x & 4.x
 =================
 
-**Engineer level**
+.. image:: ../../_static/images/engineer-level.png
+  :alt: Engineer Level
+  :scale: 50%
 
 The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons. 
 

@@ -1,8 +1,17 @@
-********
-Support
-********
+****************
+Getting support
+****************
 
-The best way to reach us is on our `Discord server <https://discord.gg/y2sB4Fp>`_. Usually there is always a team member online to help with your issue, and if not you'll get a response within a few hours.
+There are several different ways to get help and support for DCC++ EX which are outlined on this page.
+
+Preferred option: Discord
+==========================
+
+The best way to reach us is on our Discord server. Usually there is always a team member online to help with your issue, and if not you'll get a response within a few hours.
+
+Discord allows for live chatting rather than just a back and forth offline support process, so you can join a live conversation with the DCC++ EX team members and other DCC++ EX users.
+
+This is a great way not just to get support, but also to share ideas and feedback and maybe even get some inspiration for that new layout or automation idea that's tickling the back of your mind.
 
 .. rst-class:: dcclink
 
@@ -12,13 +21,21 @@ The best way to reach us is on our `Discord server <https://discord.gg/y2sB4Fp>`
 
     <center><iframe src="https://ptb.discordapp.com/widget?id=713189617066836079&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></center><br>
 
+Raise a support ticket
+=======================
 
 The next best way to get our attention is to fill out a support ticket:
 
-.. toctree::
+.. raw:: html
 
-    create-ticket
+   <iframe src="https://script.google.com/macros/s/AKfycbwrvH5KvFRGjfAFitQpVuZWTJJz46SbGNjQzu7kR63zFfUdu7w946arC2y6X203-y_J/exec"   class="is-fullwidth" height="800" width="100%" style="border:0;">
+    </iframe>
 
-You can also send an email to support@dcc-ex.com. We try to follow FaceBook and JMRI groups, but there are just too many separate groups to see and respond to all the messages.
+You can also send an email to support@dcc-ex.com.
 
-Lastly, you can find us on TrainBoard. `DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
+Other options
+==============
+
+We try to follow FaceBook and JMRI groups, but there are just too many separate groups to see and respond to all the messages.
+
+You can also find us on TrainBoard. `DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_

@@ -11,7 +11,7 @@ The following sections describe what else you need for participating in the diff
 Development, planning, and support processes
 _____________________________________________
 
-There is a repository within the DCC++ EX GitHub organisation where are are slowly building out our project and support process documentation.
+There is a repository within the DCC++ EX GitHub organisation where we are slowly building out our project and support process documentation.
 
 This repository will contain the various workflows, templates, and testing items we will use to ensure we release quality code with as few bugs (or "hidden features") as possible, and to ensure code is consistent across an internationally dispersed team.
 

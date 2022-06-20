@@ -2,6 +2,53 @@
 Documentation
 **************
 
+If you concentrate on documentation, no additional hardware requirements exist. Keep reading on, but be reassured if you don't feel comfortable with the following don't worry, we will find a way to have you contributing by other means.
+Just go to the Contact Us section, and we will find a way of getting you on board, or help you out getting things set up.
+
+
+Live preveiew
+==============
+
+
+
+
+
+reStructuredText
+_________________
+
+All documentation is done using reStructuredText, for which you can find information on the official website: `reStructuredText <https://docutils.sourceforge.io/rst.html>`_
+or the `Sphinx <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ document builder tool website, which we discuss later on in this chapter.
+reStructuredText is a markdown type language, for typesetting documents from websites to PDF or LaTeX documents. Our Website is built upon this technology, so you should make yourself familiar with this by looking through the links provided.
+
+reStructuredText `QuickReference Guide <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_ 
+
+
+
+Images
+_______
+
+We typically like compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
+
+Graphs & Schemas
+_________________
+
+Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
+
+--- to be done graphviz to be added ---
+
+Hidden Pages (Not ready for release)
+_____________________________________
+
+Use the ``:orphan:`` tag with a comment below it saying "Remove orphan field when the document is added to a toctree". This will allow us to easily search for the word "orphan" to find incomplete pages and avoids triggering an error that there are pages without an entry in a toctree
+
+Hidden comments
+________________
+
+You can hide notes or searchable placeholders by putting placing the text on a line with a space above and below and preceding it with two period and a space, ex: ".. This is a hidden comment"
+
+
+
+
 Thank you for your offer to help. Here's some instructions for how to contribute. You might want to check in with an admin from the DCC++ EX team before working on documentation changes to identify current needs.
 
 Submission Procedure

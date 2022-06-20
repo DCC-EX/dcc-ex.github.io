@@ -1,8 +1,8 @@
-****************
-Getting support
-****************
+****************************
+Contact and getting support
+****************************
 
-There are several different ways to get help and support for DCC++ EX which are outlined on this page.
+There are several different ways to get in contact with the team, and for help and support for DCC++ EX.
 
 Preferred option: Discord
 ==========================
@@ -12,6 +12,8 @@ The best way to reach us is on our Discord server. Usually there is always a tea
 Discord allows for live chatting rather than just a back and forth offline support process, so you can join a live conversation with the DCC++ EX team members and other DCC++ EX users.
 
 This is a great way not just to get support, but also to share ideas and feedback and maybe even get some inspiration for that new layout or automation idea that's tickling the back of your mind.
+
+For those who wish to contribute to the project, this is by far the best option for working with the team, as we can also include you in our private development conversations.
 
 .. rst-class:: dcclink
 
@@ -38,4 +40,10 @@ Other options
 
 We try to follow FaceBook and JMRI groups, but there are just too many separate groups to see and respond to all the messages.
 
-You can also find us on TrainBoard. `DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
+You can find us on Facebook here:
+
+`DCC++ and Arduino Model Railroading <https://www.facebook.com/groups/1406785379394934/>`_
+
+You can also find us on TrainBoard:
+
+`DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_

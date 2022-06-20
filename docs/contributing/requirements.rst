@@ -1,3 +1,5 @@
+:orphan:
+
 *************
 Requirements
 *************
@@ -34,58 +36,7 @@ Download `GitHub Desktop <https://desktop.github.com/>`_
 
 Download `SourceTree <https://www.sourcetreeapp.com/>`_
 
-Editing
-________
 
-You will also need to choose a text editor. Yes, any text editor will do, even the most simple one, but they will not provide editing help. We suggest you use the free VSCode (Visual Studio Code) which provides additional components that will make your editing easier with syntax highlighting, text snippets, and live preview of the rendering of the file, as well as integration with GitHub. Using a simple text editor will require you handling the Git integration yourself.
-
-Download VSCode `here <https://code.visualstudio.com/download>`_
-
-Install the following extensions:
-
-* reStructuredText by LeXtudio Inc.
-* reStructuredText Syntax highlighting by Trond Snekvik.
-
-The final website will be rendered from the rst text files using Sphinx, which you also need to install with some options which you'll find in the next paragraph.
-
-VSCode rst warnings
-^^^^^^^^^^^^^^^^^^^^
-
-Note you will likely encounter various syntax warnings in VSCode using the recommended extensions, and these should simply be ignored.
-
-To ignore these, navigate to Settings in VSCode (<Ctrl + ,>), enter "restructured" in the search bar, and click on "Edit in settings.json".
-
-Add this section:
-
-.. code-block:: 
-
-  "restructuredtext.linter.doc8.extraArgs": [ 
-      "--ignore D001", 
-      "--ignore D002", 
-      "--ignore D004"
-  ]
-
-Save and close the settings, and the irrelevant warnings should no longer bother you.
-
-Sphinx
-_______
-
-Sphinx is a transformation tool, taking rst formatted documents and turning them into a static html website, PDF, or LaTex documents.
-
-Sphinx needs Python v3, so if you don't have python installed, it's time to do this now.
-
-The simplest way to install Python on Windows is via the Microsoft Store. Install the latest version of Python 3 available.
-
-Live preveiew
-^^^^^^^^^^^^^^
-
-The reStructuredText extension installed with VSCode allows live previewing of the web pages.
-
-When installing you will be prompted to choose the preview method, with the "Esbonio language server" being the better option of the two, albeit more resource intensive as it will generate the preview every time you save.
-
-Note, however, that the Esbonio server will only generate live previews of the pages you are actively editing, and therefore it will not give you a complete updated view of the entire website.
-
-Refer to the :doc:`/contributing/website` contributing page for more info on generating reliable local previews.
 
 Images
 _______

@@ -5,7 +5,7 @@ Recommended software
 .. sidebar:: On this page
 
    .. contents:: 
-      :depth: 1
+      :depth: 2
       :local:
 
 On this page we will outline the software we recommend for project contributions, including both development and documentation.
@@ -112,12 +112,12 @@ Note, however, that the Esbonio server will only generate live previews of the p
 
 Once you've installed the extensions above, it is recommended you close then reopen VSCode, and upon reopening VSCode, you should be prompted in the bottom right hand corner to install the Esbonion language server. It is recommended you do so now.
 
-Refer to the :doc:`/contributing/website` contributing page for more info on generating reliable local previews.
+Refer to the :doc:`/contributing/website` contribution page for more info on generating reliable local previews.
 
 Recommended configuration options
 __________________________________
 
-Once VSCode is installed and you open it for the first time, it is recommended you update the default spacing for code indents as we standardise this to two spaces across our code base (including documentation).
+Once VSCode is installed, it is recommended you update the default spacing for code indents as we standardise this to two spaces across our code base (including documentation).
 
 To do this:
 
@@ -125,7 +125,7 @@ To do this:
 2. Locate "Editor: Tab size" (should be about the fourth item down).
 3. Set this to "2", and close the "Settings" tab which will auto-save the change.
 
-In addition to the above, if you are contributing to documentation and are using the recommended extensions, you should ignore certain warnings that are irrelevant.
+In addition to the above, if you are contributing to documentation and are using the recommended extensions, you should ignore certain reStructuredText syntax warnings that are irrelevant.
 
 To configure these:
 

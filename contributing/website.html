@@ -47,8 +47,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Development" href="development.html" />
-    <link rel="prev" title="Requirements" href="requirements.html" /> 
+    <link rel="next" title="DCC-EX Roadmap" href="../roadmap/index.html" />
+    <link rel="prev" title="Development" href="development.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -212,17 +212,15 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributing</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github.html">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html">Recommended software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development.html">Development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contactus.html">Contact us</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../roadmap/index.html">DCC-EX Roadmap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../support/create-ticket.html">Submit a Support Ticket</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Contact and support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../site-map/index.html">Site Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../donate/index.html">Donate to Our Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../press/index.html">Press</a><ul>
@@ -307,44 +305,149 @@
             
   <div class="section" id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">¶</a></h1>
-<p>Thank you for your offer to help. Here’s some instructions for how to contribute. You might want to check in with an admin from the DCC++ EX team before working on documentation changes to identify current needs.</p>
-<div class="section" id="submission-procedure">
-<h2>Submission Procedure<a class="headerlink" href="#submission-procedure" title="Permalink to this heading">¶</a></h2>
-<p>Simple changes to existing pages can be created without installing any tools,
-by using the “Edit on GitHub” link. However, the preview provided on GitHub
-does not fully reflect the final result. The steps listed here provide guidance
-on how to make and preview more complex changes.</p>
-<p>We will assume that you have an appropriate text editor and Git installed on
-your machine. For Windows we recommend the free <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code IDE (VSCode)</a> and <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a>
-or <a class="reference external" href="https://git-scm.com/downloads">Git Bash (the command line interface in Git)</a>.</p>
-<ol class="arabic simple">
-<li><p>Clone the <a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io">dcc-ex.github.io</a>
-website repository, to your local machine. After cloning make sure you’re on
-the “sphinx” branch. (<a class="reference external" href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">Cloning a repository in GitHub</a>).</p></li>
-<li><p>Install a current version of Python 3 (which also installs pip). The
-Microsoft Store contains Python published by the Python Software Foundation
-for Windows. Then use pip to install the required packages
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">sphinx_rtd_theme</span> <span class="pre">sphinxcontrib-spelling</span></code>.</p></li>
-<li><p>Change location to the “website” folder <code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io</span></code> and make a branch
-using GitHub desktop or this command: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">your-branch-name</span></code>.</p></li>
-<li><p>Edit the files in the <code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io/docs</span></code> folder. Save,
-then check and preview your changes by running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">github</span></code> from the root of the
-<code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io</span></code> folder. <em>This must be done from cmd.exe in Windows, not
-PowerShell</em>. If any warnings are reported, fix these and run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">github</span></code>
-again. Then go to the directory <code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io/docs/_build/html</span></code>
-and open <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in Chrome or another browser.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;MY</span> <span class="pre">CHANGE</span> <span class="pre">DESCRIPTION&quot;</span></code> often to save
-changes. If you’re using GitHub Desktop these are combined in the commit button.</p></li>
-<li><p>Push it to GitHub: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">{your-branch-name}</span></code>.</p></li>
-<li><p>Go to GitHub and issue a pull request for your branch to be pulled into the
-sphinx branch. Once it’s merged in by one of the admins, your changes will
-go live!</p></li>
-</ol>
+<div class="sidebar">
+<p class="sidebar-title">On this page</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#github-pages-sphinx-and-restructuredtext" id="id1">GitHub Pages, sphinx, and reStructuredText</a></p>
+<ul>
+<li><p><a class="reference internal" href="#github-repository-and-the-sphinx-branch" id="id2">GitHub repository and the sphinx branch</a></p></li>
+<li><p><a class="reference internal" href="#cloning-the-repository" id="id3">Cloning the repository</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#live-previews" id="id4">Live previews</a></p>
+<ul>
+<li><p><a class="reference internal" href="#esbonio-language-server" id="id5">Esbonio Language server</a></p></li>
+<li><p><a class="reference internal" href="#sphinx-build" id="id6">Sphinx build</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#images" id="id7">Images</a></p>
+<ul>
+<li><p><a class="reference internal" href="#image-types" id="id8">Image types</a></p></li>
+<li><p><a class="reference internal" href="#graphs-schemas" id="id9">Graphs &amp; Schemas</a></p></li>
+<li><p><a class="reference internal" href="#svg-images" id="id10">SVG images</a></p></li>
+<li><p><a class="reference internal" href="#hidden-pages" id="id11">Hidden Pages</a></p></li>
+<li><p><a class="reference internal" href="#hidden-comments" id="id12">Hidden comments</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#submission-procedure" id="id13">Submission Procedure</a></p></li>
+<li><p><a class="reference internal" href="#restructuredtext-standards" id="id14">reStructuredText standards</a></p>
+<ul>
+<li><p><a class="reference internal" href="#headings" id="id15">Headings</a></p></li>
+<li><p><a class="reference internal" href="#user-level-logos" id="id16">User level logos</a></p></li>
+<li><p><a class="reference internal" href="#links" id="id17">Links</a></p></li>
+<li><p><a class="reference internal" href="#including-images" id="id18">Including images</a></p></li>
+<li><p><a class="reference internal" href="#tables" id="id19">Tables</a></p></li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="section" id="standards">
-<h2>Standards<a class="headerlink" href="#standards" title="Permalink to this heading">¶</a></h2>
+</div>
+<p>This page aims to provide the information required to help people contribute to our documentation.</p>
+<p>If what is outlined in this page is too involved, and you simply wish to provide some content that we can add, clarify, or update, then simply get in touch with us via the <a class="reference internal" href="../support/index.html"><span class="doc">Contact and support</span></a> page and we can help you out.</p>
+<div class="section" id="github-pages-sphinx-and-restructuredtext">
+<h2><a class="toc-backref" href="#id1">GitHub Pages, sphinx, and reStructuredText</a><a class="headerlink" href="#github-pages-sphinx-and-restructuredtext" title="Permalink to this heading">¶</a></h2>
+<p>Our website is hosted courtesy of <a class="reference external" href="https://pages.github.com/">GitHub Pages</a>, is written in <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a>, with the HTML being generated by <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">Sphinx</a>.</p>
+<p>reStructuredText is a markdown type language for typesetting documents from websites to PDF or LaTeX documents. Our Website is built upon this technology, so you should make yourself familiar with this by looking through the links provided.</p>
+<p>There’s a handy <a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">reStructuredText QuickReference Guide</a> here.</p>
+<p>If you haven’t done so already, make sure you are familiar with how we use <a class="reference internal" href="github.html"><span class="doc">GitHub</span></a> and are familiar with our <a class="reference internal" href="software.html"><span class="doc">Recommended software</span></a>.</p>
+<div class="section" id="github-repository-and-the-sphinx-branch">
+<h3><a class="toc-backref" href="#id2">GitHub repository and the sphinx branch</a><a class="headerlink" href="#github-repository-and-the-sphinx-branch" title="Permalink to this heading">¶</a></h3>
+<p>In order for GitHub pages to function correctly and automatically publish updated content, the content must be located in a specific repository named after the GitHub organisation, and therefore our website repository is <a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io">dcc-ex.github.io</a>.</p>
+<p>In addition to this, rather than using the main or master branch, the default branch is called “sphinx”, so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.</p>
+</div>
+<div class="section" id="cloning-the-repository">
+<h3><a class="toc-backref" href="#id3">Cloning the repository</a><a class="headerlink" href="#cloning-the-repository" title="Permalink to this heading">¶</a></h3>
+<p>For this section, we are assuming that you are using VSCode with Git installed, allowing the built-in functionality for Git management in VSCode to work.</p>
+<p>To clone the documentation repository, and ensure you are on the correct branch, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>In VSCode, either click on the Source Control icon in the left pane, or press &lt;Ctrl&gt; + &lt;Shift&gt; + “g” + “g” (Yes, press “g” twice).</p></li>
+<li><p>Click the “Clone Repository” button.</p></li>
+<li><p>Enter the documentation repository URL “<a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io">https://github.com/DCC-EX/dcc-ex.github.io</a>” then press &lt;Enter&gt;.</p></li>
+<li><p>Select the appropriate folder on your hard drive to clone it to, then click “Select Repository Location”.</p></li>
+<li><p>The clone will take a minute or two to complete depending on the speed of your computer and internet connection.</p></li>
+<li><p>Once complete, click “Open”.</p></li>
+<li><p>At the bottom of the window, ensure that the branch “sphinx” is listed beside the Source Control icon.</p></li>
+<li><p>When you’re ready to start editing, click the Source Control or press &lt;Ctrl&gt; + &lt;Shift&gt; +”g” + “g” again.</p></li>
+<li><p>Click the three dots “…” beside “SOURCE CONTROL” in bold text and select “Checkout to”.</p></li>
+<li><p>Enter a new name for your branch, then click “Create new branch”.</p></li>
+</ol>
+<p>At this point, any editing you do will be on a new branch linked to the parent “sphinx” branch.</p>
+<p>While editing, be sure to save often, stage and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.</p>
+</div>
+</div>
+<div class="section" id="live-previews">
+<h2><a class="toc-backref" href="#id4">Live previews</a><a class="headerlink" href="#live-previews" title="Permalink to this heading">¶</a></h2>
+<p>Providing you followed the installation guide for VSCode on the <a class="reference internal" href="software.html"><span class="doc">Recommended software</span></a> page accurately, there are two methods available for generating live previews as you are editing the reStructuredText code.</p>
+<div class="section" id="esbonio-language-server">
+<h3><a class="toc-backref" href="#id5">Esbonio Language server</a><a class="headerlink" href="#esbonio-language-server" title="Permalink to this heading">¶</a></h3>
+<p>The first option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.</p>
+<p>To view the preview, press &lt;Ctrl&gt; + &lt;Shift&gt; + “r” and it will open the live preview in a new tab in VSCode. In addition to this method, you can also press &lt;Ctrl&gt; + “k” followed immediately by &lt;Ctrl&gt; + “r” which will generate the live preview in a split pane within VSCode. Every time you save the page you are working on, the live preview will automatically update.</p>
+<p>The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process in the next section to ensure the entire website is still able to be built successfully after any updates.</p>
+</div>
+<div class="section" id="sphinx-build">
+<h3><a class="toc-backref" href="#id6">Sphinx build</a><a class="headerlink" href="#sphinx-build" title="Permalink to this heading">¶</a></h3>
+<p>To refresh the entire website while editing, it is necessary to run the equivalent commands that the GitHub publishing workflow runs to ensure no issues have been introduced.</p>
+<p>To build the website using Sphinx, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Open a command prompt.</p></li>
+<li><p>Change to the directory where the “dcc-ex.github.io” repository has been cloned.</p></li>
+<li><p>Run the command “make clean”, review the output and ensure no errors are reported.</p></li>
+<li><p>Run the command “make github”, and likewise review the output for errors.</p></li>
+<li><p>If any errors have been generated, these must be resolved prior to submitting a pull request.</p></li>
+</ol>
+<p>Once the build of the website completes successfully, preview it locally by opening the main “index.html” file locally in a web browser.</p>
+<p>This file can be found in the “docs\_build\html” folder within the “dcc-ex.github.io” folder.</p>
+</div>
+</div>
+<div class="section" id="images">
+<h2><a class="toc-backref" href="#id7">Images</a><a class="headerlink" href="#images" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="image-types">
+<h3><a class="toc-backref" href="#id8">Image types</a><a class="headerlink" href="#image-types" title="Permalink to this heading">¶</a></h3>
+<p>We typically prefer compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.</p>
+</div>
+<div class="section" id="graphs-schemas">
+<h3><a class="toc-backref" href="#id9">Graphs &amp; Schemas</a><a class="headerlink" href="#graphs-schemas" title="Permalink to this heading">¶</a></h3>
+<p>Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.</p>
+</div>
+<div class="section" id="svg-images">
+<h3><a class="toc-backref" href="#id10">SVG images</a><a class="headerlink" href="#svg-images" title="Permalink to this heading">¶</a></h3>
+<p>We are currently experimenting with using SVG images to provide contextual links to be embedded within the images so users can be linked directly to relevant documentation. For example, a Fritzing diagram of a CommandStation connected to some peripherals can be given context, and clicking on the relavant component can take you directly to that documentation page.</p>
+<p>The best open source software to use for this is <a class="reference external" href="https://inkscape.org/">Inkscape</a>.</p>
+<p>Including SVG images within reStructuredText is a little more complex than a simple bitmap image, and will require some CSS to be used in addition to including the file. This section will be updated with further details when available.</p>
+<p>To include the SVG file, use the <code class="docutils literal notranslate"><span class="pre">raw::</span> <span class="pre">html</span></code> directive:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. raw:: html
+  :file: ../_static/images/image.svg
+</pre></div>
+</div>
+</div>
+<div class="section" id="hidden-pages">
+<h3><a class="toc-backref" href="#id11">Hidden Pages</a><a class="headerlink" href="#hidden-pages" title="Permalink to this heading">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">:orphan:</span></code> tag with a comment below it saying “Remove orphan field when the document is added to a toctree”. This will allow us to easily search for the word “orphan” to find incomplete pages and avoids triggering an error that there are pages without an entry in a toctree</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>:orphan:
+Remove orphan field above when the document is added to a toctree.
+</pre></div>
+</div>
+</div>
+<div class="section" id="hidden-comments">
+<h3><a class="toc-backref" href="#id12">Hidden comments</a><a class="headerlink" href="#hidden-comments" title="Permalink to this heading">¶</a></h3>
+<p>You can hide notes or searchable placeholders by putting placing the text on a line with a space above and below and preceding it with two period and a space, ex: “.. This is a hidden comment”</p>
+</div>
+</div>
+<div class="section" id="submission-procedure">
+<h2><a class="toc-backref" href="#id13">Submission Procedure</a><a class="headerlink" href="#submission-procedure" title="Permalink to this heading">¶</a></h2>
+<p>Once you are finished editing and are ready to have your updates published you will need to submit a pull request for one of the team members to approve and review.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember to perform a <a class="reference internal" href="#sphinx-build"><span class="std std-ref">Sphinx build</span></a> prior to submitting any pull requests.</p>
+</div>
+<p>At this piont, go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it’s merged in by one of the admins, your changes will go live!</p>
+</div>
+<div class="section" id="restructuredtext-standards">
+<h2><a class="toc-backref" href="#id14">reStructuredText standards</a><a class="headerlink" href="#restructuredtext-standards" title="Permalink to this heading">¶</a></h2>
+<p>Please ensure to follow the standards below when creating or updating documentation to ensure the look and feel of the website remains consistent.</p>
 <div class="section" id="headings">
-<h3>Headings<a class="headerlink" href="#headings" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">Headings</a><a class="headerlink" href="#headings" title="Permalink to this heading">¶</a></h3>
 <ul>
 <li><p>Main Headings have asterisks above and below them:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">*************</span>
@@ -381,7 +484,7 @@ go live!</p></li>
 <p>All heading underlines and overlines must be at least as long as the text of the heading, however it’s recommended to make them one character longer.</p>
 </div>
 <div class="section" id="user-level-logos">
-<h3>User level logos<a class="headerlink" href="#user-level-logos" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">User level logos</a><a class="headerlink" href="#user-level-logos" title="Permalink to this heading">¶</a></h3>
 <p>On our <a class="reference internal" href="../get-started/levels.html"><span class="doc">Choose Your Level</span></a> page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.</p>
 <p>There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.</p>
 <p>Graphic logos for callouts/panels:</p>
@@ -392,10 +495,16 @@ go live!</p></li>
 <a class="reference internal image-reference" href="../_images/conductor-level.png"><img alt="Conductor Level" src="../_images/conductor-level.png" style="width: 112.0px; height: 35.6px;" /></a>
 <a class="reference internal image-reference" href="../_images/tinkerer-level.png"><img alt="Tinkerer Level" src="../_images/tinkerer-level.png" style="width: 112.0px; height: 39.2px;" /></a>
 <a class="reference internal image-reference" href="../_images/engineer-level.png"><img alt="Tinkerer Level" src="../_images/engineer-level.png" style="width: 112.0px; height: 37.2px;" /></a>
+<p>Here’s an example for a Conductor level page heading graphic:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> ../_static/images/conductor-level.png
+  <span class="nc">:alt:</span> <span class="nf">Conductor Level</span>
+  <span class="nc">:scale:</span> <span class="nf">40%</span>
+</pre></div>
+</div>
 <p>Refer to <a class="reference internal" href="#images"><span class="std std-ref">Images</span></a> below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX <a class="reference internal" href="../turntable-ex/turntable-ex.html"><span class="doc">Overview</span></a> page.</p>
 </div>
 <div class="section" id="links">
-<h3>Links<a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">Links</a><a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h3>
 <div class="section" id="internal">
 <h4>Internal<a class="headerlink" href="#internal" title="Permalink to this heading">¶</a></h4>
 <p>Sphinx cross-references are used for internal links. This ensures they are
@@ -478,24 +587,16 @@ source file, define a target:</p>
 </div>
 </div>
 </div>
-<div class="section" id="images">
-<h3>Images<a class="headerlink" href="#images" title="Permalink to this heading">¶</a></h3>
-<p>Include images with the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> and <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">figure::</span></code> directives.
-Horizontal positioning using the <code class="docutils literal notranslate"><span class="pre">:align:</span></code> option needs a bit of care.
-Where possible e.g. if just presenting a single image, either don’t use it, or
-choose <code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">center</span></code>.
-<code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">left</span></code> (or right) allows multiple images to be shown on the same
-line (if the browser window is wide enough), or text to flow around the image.
-But you may have to cancel this behaviour for the next content yourself:
-a single <code class="docutils literal notranslate"><span class="pre">|</span></code> adds an additional blank line before the next paragraph in the
-output; before a heading, or if a blank line is not wanted use
-<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst-class::</span> <span class="pre">clearer</span></code>.</p>
-<p>Use a figure when including a caption. Sphinx will automatically number the
-figure. Add a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option to be able to refer to the figure in the text
-using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;figure</span> <span class="pre">name&gt;`</span></code>.</p>
+<div class="section" id="including-images">
+<h3><a class="toc-backref" href="#id18">Including images</a><a class="headerlink" href="#including-images" title="Permalink to this heading">¶</a></h3>
+<p>Include images with the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> and <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">figure::</span></code> directives. Horizontal positioning using the <code class="docutils literal notranslate"><span class="pre">:align:</span></code> option needs a bit of care.</p>
+<p>Where possible e.g. if just presenting a single image, either don’t use it, or choose <code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">center</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">left</span></code> (or right) allows multiple images to be shown on the same line (if the browser window is wide enough), or text to flow around the image. You may have to cancel this behaviour for the next content yourself.</p>
+<p>A single <code class="docutils literal notranslate"><span class="pre">|</span></code> adds an additional blank line before the next paragraph in the output; before a heading, or if a blank line is not wanted use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst-class::</span> <span class="pre">clearer</span></code>.</p>
+<p>Use a figure when including a caption. Sphinx will automatically number the figure. Add a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option to be able to refer to the figure in the text using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;figure</span> <span class="pre">name&gt;`</span></code>.</p>
 </div>
 <div class="section" id="tables">
-<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">Tables</a><a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h3>
 <p>For titled tables use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">table::</span></code> directive, followed by the title.
 Sphinx will automatically number the table. Add a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option to be able
 to refer to the figure in the text using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;table</span> <span class="pre">name&gt;`</span></code>.</p>
@@ -510,8 +611,8 @@ to refer to the figure in the text using <code class="docutils literal notransla
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="development.html" class="btn btn-neutral float-right" title="Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="requirements.html" class="btn btn-neutral float-left" title="Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../roadmap/index.html" class="btn btn-neutral float-right" title="DCC-EX Roadmap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="development.html" class="btn btn-neutral float-left" title="Development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -28,6 +28,10 @@ To do this, open a command prompt and run the following two commands, where ``us
   git config --global user.name <user>
   git config --global user.email <email>
 
+.. tip:: 
+
+  If using our :ref:`contributing/software:recommended editor (vscode)`, once you've installed a Git client, you can do all of your repository work (branches, forks, etc.) directly in VSCode.
+
 Other handy Git software
 _________________________
 

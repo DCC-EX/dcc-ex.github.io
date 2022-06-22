@@ -326,18 +326,22 @@
 <li><p><a class="reference internal" href="#image-types" id="id8">Image types</a></p></li>
 <li><p><a class="reference internal" href="#graphs-schemas" id="id9">Graphs &amp; Schemas</a></p></li>
 <li><p><a class="reference internal" href="#svg-images" id="id10">SVG images</a></p></li>
-<li><p><a class="reference internal" href="#hidden-pages" id="id11">Hidden Pages</a></p></li>
-<li><p><a class="reference internal" href="#hidden-comments" id="id12">Hidden comments</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#submission-procedure" id="id13">Submission Procedure</a></p></li>
-<li><p><a class="reference internal" href="#restructuredtext-standards" id="id14">reStructuredText standards</a></p>
+<li><p><a class="reference internal" href="#hiding-pages-and-comments" id="id11">Hiding pages and comments</a></p>
 <ul>
-<li><p><a class="reference internal" href="#headings" id="id15">Headings</a></p></li>
-<li><p><a class="reference internal" href="#user-level-logos" id="id16">User level logos</a></p></li>
-<li><p><a class="reference internal" href="#links" id="id17">Links</a></p></li>
-<li><p><a class="reference internal" href="#including-images" id="id18">Including images</a></p></li>
-<li><p><a class="reference internal" href="#tables" id="id19">Tables</a></p></li>
+<li><p><a class="reference internal" href="#hidden-pages" id="id12">Hidden Pages</a></p></li>
+<li><p><a class="reference internal" href="#hidden-comments" id="id13">Hidden comments</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#submission-procedure" id="id14">Submission Procedure</a></p></li>
+<li><p><a class="reference internal" href="#restructuredtext-standards" id="id15">reStructuredText standards</a></p>
+<ul>
+<li><p><a class="reference internal" href="#headings" id="id16">Headings</a></p></li>
+<li><p><a class="reference internal" href="#user-level-logos" id="id17">User level logos</a></p></li>
+<li><p><a class="reference internal" href="#links" id="id18">Links</a></p></li>
+<li><p><a class="reference internal" href="#including-images" id="id19">Including images</a></p></li>
+<li><p><a class="reference internal" href="#tables" id="id20">Tables</a></p></li>
 </ul>
 </li>
 </ul>
@@ -421,21 +425,26 @@
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="hiding-pages-and-comments">
+<h2><a class="toc-backref" href="#id11">Hiding pages and comments</a><a class="headerlink" href="#hiding-pages-and-comments" title="Permalink to this heading">¶</a></h2>
+<p>If there is a need to hide a page from the toctree, or a need for a specific comment on a page that isn’t part of the published content, use the techniques below.</p>
 <div class="section" id="hidden-pages">
-<h3><a class="toc-backref" href="#id11">Hidden Pages</a><a class="headerlink" href="#hidden-pages" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">Hidden Pages</a><a class="headerlink" href="#hidden-pages" title="Permalink to this heading">¶</a></h3>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">:orphan:</span></code> tag with a comment below it saying “Remove orphan field when the document is added to a toctree”. This will allow us to easily search for the word “orphan” to find incomplete pages and avoids triggering an error that there are pages without an entry in a toctree</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>:orphan:
 Remove orphan field above when the document is added to a toctree.
 </pre></div>
 </div>
+<p>This is a handy tip for pages that are a long time in the making and aren’t quite ready for publishing, or for pages that provide context in one specific scenario and could be confusing or misleading if included directly in a toctree.</p>
 </div>
 <div class="section" id="hidden-comments">
-<h3><a class="toc-backref" href="#id12">Hidden comments</a><a class="headerlink" href="#hidden-comments" title="Permalink to this heading">¶</a></h3>
-<p>You can hide notes or searchable placeholders by putting placing the text on a line with a space above and below and preceding it with two period and a space, ex: “.. This is a hidden comment”</p>
+<h3><a class="toc-backref" href="#id13">Hidden comments</a><a class="headerlink" href="#hidden-comments" title="Permalink to this heading">¶</a></h3>
+<p>You can hide notes or searchable placeholders by putting placing the text on a line with a space above and below and preceding it with two period and a space, for example <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">hidden</span> <span class="pre">comment</span></code>.</p>
 </div>
 </div>
 <div class="section" id="submission-procedure">
-<h2><a class="toc-backref" href="#id13">Submission Procedure</a><a class="headerlink" href="#submission-procedure" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">Submission Procedure</a><a class="headerlink" href="#submission-procedure" title="Permalink to this heading">¶</a></h2>
 <p>Once you are finished editing and are ready to have your updates published you will need to submit a pull request for one of the team members to approve and review.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -444,10 +453,10 @@ Remove orphan field above when the document is added to a toctree.
 <p>At this piont, go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it’s merged in by one of the admins, your changes will go live!</p>
 </div>
 <div class="section" id="restructuredtext-standards">
-<h2><a class="toc-backref" href="#id14">reStructuredText standards</a><a class="headerlink" href="#restructuredtext-standards" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">reStructuredText standards</a><a class="headerlink" href="#restructuredtext-standards" title="Permalink to this heading">¶</a></h2>
 <p>Please ensure to follow the standards below when creating or updating documentation to ensure the look and feel of the website remains consistent.</p>
 <div class="section" id="headings">
-<h3><a class="toc-backref" href="#id15">Headings</a><a class="headerlink" href="#headings" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">Headings</a><a class="headerlink" href="#headings" title="Permalink to this heading">¶</a></h3>
 <ul>
 <li><p>Main Headings have asterisks above and below them:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">*************</span>
@@ -484,7 +493,7 @@ Remove orphan field above when the document is added to a toctree.
 <p>All heading underlines and overlines must be at least as long as the text of the heading, however it’s recommended to make them one character longer.</p>
 </div>
 <div class="section" id="user-level-logos">
-<h3><a class="toc-backref" href="#id16">User level logos</a><a class="headerlink" href="#user-level-logos" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">User level logos</a><a class="headerlink" href="#user-level-logos" title="Permalink to this heading">¶</a></h3>
 <p>On our <a class="reference internal" href="../get-started/levels.html"><span class="doc">Choose Your Level</span></a> page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.</p>
 <p>There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.</p>
 <p>Graphic logos for callouts/panels:</p>
@@ -504,7 +513,7 @@ Remove orphan field above when the document is added to a toctree.
 <p>Refer to <a class="reference internal" href="#images"><span class="std std-ref">Images</span></a> below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX <a class="reference internal" href="../turntable-ex/turntable-ex.html"><span class="doc">Overview</span></a> page.</p>
 </div>
 <div class="section" id="links">
-<h3><a class="toc-backref" href="#id17">Links</a><a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">Links</a><a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h3>
 <div class="section" id="internal">
 <h4>Internal<a class="headerlink" href="#internal" title="Permalink to this heading">¶</a></h4>
 <p>Sphinx cross-references are used for internal links. This ensures they are
@@ -588,7 +597,7 @@ source file, define a target:</p>
 </div>
 </div>
 <div class="section" id="including-images">
-<h3><a class="toc-backref" href="#id18">Including images</a><a class="headerlink" href="#including-images" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">Including images</a><a class="headerlink" href="#including-images" title="Permalink to this heading">¶</a></h3>
 <p>Include images with the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> and <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">figure::</span></code> directives. Horizontal positioning using the <code class="docutils literal notranslate"><span class="pre">:align:</span></code> option needs a bit of care.</p>
 <p>Where possible e.g. if just presenting a single image, either don’t use it, or choose <code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">center</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">left</span></code> (or right) allows multiple images to be shown on the same line (if the browser window is wide enough), or text to flow around the image. You may have to cancel this behaviour for the next content yourself.</p>
@@ -596,11 +605,92 @@ source file, define a target:</p>
 <p>Use a figure when including a caption. Sphinx will automatically number the figure. Add a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option to be able to refer to the figure in the text using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;figure</span> <span class="pre">name&gt;`</span></code>.</p>
 </div>
 <div class="section" id="tables">
-<h3><a class="toc-backref" href="#id19">Tables</a><a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h3>
-<p>For titled tables use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">table::</span></code> directive, followed by the title.
-Sphinx will automatically number the table. Add a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option to be able
-to refer to the figure in the text using <code class="docutils literal notranslate"><span class="pre">:numref:`&lt;table</span> <span class="pre">name&gt;`</span></code>.</p>
-<p><em>Work in progress</em></p>
+<h3><a class="toc-backref" href="#id20">Tables</a><a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h3>
+<p>There are two recommended table types to use within our website.</p>
+<p>The recommended option for tables that have CSS controlled formatting and are relatively easy to update, use the <code class="docutils literal notranslate"><span class="pre">list-table</span></code> reStructuredText directive.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
+  <span class="nc">:widths:</span> <span class="nf">auto</span>
+  <span class="nc">:header-rows:</span> <span class="nf">1</span>
+  <span class="nc">:class:</span> <span class="nf">command-table</span>
+
+  <span class="m">*</span> - Heading 1
+    <span class="m">-</span> Heading 2
+    <span class="m">-</span> Heading 3
+  <span class="m">*</span> - Row 1 column 1
+    <span class="m">-</span> Row 1 column 2
+    <span class="m">-</span> Row 1 column 3
+  <span class="m">*</span> - Row 2 column 1
+    <span class="m">-</span> Row 2 column 2
+    <span class="m">-</span> Row 2 column 3
+  <span class="m">*</span> - Row 3 column 1
+    <span class="m">-</span> Row 3 column 2
+    <span class="m">-</span> Row 3 column 3
+</pre></div>
+</div>
+<p>This will render a table like this:</p>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Heading 1</p></th>
+<th class="head"><p>Heading 2</p></th>
+<th class="head"><p>Heading 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Row 1 column 1</p></td>
+<td><p>Row 1 column 2</p></td>
+<td><p>Row 1 column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Row 2 column 1</p></td>
+<td><p>Row 2 column 2</p></td>
+<td><p>Row 2 column 3</p></td>
+</tr>
+<tr class="row-even"><td><p>Row 3 column 1</p></td>
+<td><p>Row 3 column 2</p></td>
+<td><p>Row 3 column 3</p></td>
+</tr>
+</tbody>
+</table>
+<p>Alternatively, for simple tables that don’t require specific formatting and aren’t updated often, you can use the simple markdown style.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>+----------------+----------------+----------------+
+<span class="o">|</span> Heading 1      | Heading 2      | Heading 3      |
++================+================+================+
+<span class="o">|</span> Row 1 column 1 | Row 1 column 2 | Row 1 column 3 |
++----------------+----------------+----------------+
+<span class="o">|</span> Row 2 column 1 | Row 2 column 2 | Row 2 column 3 |
++----------------+----------------+----------------+
+<span class="o">|</span> Row 3 column 1 | Row 3 column 2 | Row 3 column 3 |
++----------------+----------------+----------------+
+</pre></div>
+</div>
+<p>This will render a table like this:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Heading 1</p></th>
+<th class="head"><p>Heading 2</p></th>
+<th class="head"><p>Heading 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Row 1 column 1</p></td>
+<td><p>Row 1 column 2</p></td>
+<td><p>Row 1 column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Row 2 column 1</p></td>
+<td><p>Row 2 column 2</p></td>
+<td><p>Row 2 column 3</p></td>
+</tr>
+<tr class="row-even"><td><p>Row 3 column 1</p></td>
+<td><p>Row 3 column 2</p></td>
+<td><p>Row 3 column 3</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note that while these tables look very similar, adding and editing the markdown style table becomes quite cumbersome compared with <code class="docutils literal notranslate"><span class="pre">list-table</span></code>.</p>
 </div>
 </div>
 </div>

@@ -19,10 +19,11 @@ Code contribution process
 
 When contributing any code to any of our repositories, no matter if you're a direct DCC++ EX team member or an external contributor, we ask that you abide by Git best practice which is to:
 
-1. Create a branch for all new features, bug fixes, or other updates; please don't work directly on main/master branches.
-2. Save and commit your work regularly and push commits to GitHub.
-3. Test your changes.
-4. When you believe your code is ready, submit a pull request for the team to review.
+1. Create a fork of the appropriate repository (only required for external contributors, team members skip this step).
+2. Create a branch for all new features, bug fixes, or other updates; please don't work directly on main/master branches.
+3. Save and commit your work regularly and push commits to GitHub.
+4. Test your changes.
+5. When you believe your code is ready, submit a pull request for the team to review.
 
 GitHub account
 ===============

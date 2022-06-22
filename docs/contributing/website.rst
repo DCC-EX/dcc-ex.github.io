@@ -112,6 +112,11 @@ To include the SVG file, use the ``raw:: html`` directive:
   .. raw:: html
     :file: ../_static/images/image.svg
 
+Hiding pages and comments
+==========================
+
+If there is a need to hide a page from the toctree, or a need for a specific comment on a page that isn't part of the published content, use the techniques below.
+
 Hidden Pages
 _____________
 
@@ -122,10 +127,12 @@ Use the ``:orphan:`` tag with a comment below it saying "Remove orphan field whe
   :orphan:
   Remove orphan field above when the document is added to a toctree.
 
+This is a handy tip for pages that are a long time in the making and aren't quite ready for publishing, or for pages that provide context in one specific scenario and could be confusing or misleading if included directly in a toctree.
+
 Hidden comments
 ________________
 
-You can hide notes or searchable placeholders by putting placing the text on a line with a space above and below and preceding it with two period and a space, ex: ".. This is a hidden comment"
+You can hide notes or searchable placeholders by putting placing the text on a line with a space above and below and preceding it with two period and a space, for example ``.. This is a hidden comment``.
 
 Submission Procedure
 =====================
@@ -351,8 +358,74 @@ Use a figure when including a caption. Sphinx will automatically number the figu
 Tables
 _______
 
-For titled tables use the ``.. table::`` directive, followed by the title.
-Sphinx will automatically number the table. Add a ``:name:`` option to be able
-to refer to the figure in the text using ``:numref:`<table name>```.
+There are two recommended table types to use within our website.
 
-*Work in progress*
+The recommended option for tables that have CSS controlled formatting and are relatively easy to update, use the ``list-table`` reStructuredText directive.
+
+.. code-block:: 
+
+  .. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * - Heading 1
+      - Heading 2
+      - Heading 3
+    * - Row 1 column 1
+      - Row 1 column 2
+      - Row 1 column 3
+    * - Row 2 column 1
+      - Row 2 column 2
+      - Row 2 column 3
+    * - Row 3 column 1
+      - Row 3 column 2
+      - Row 3 column 3
+
+This will render a table like this:
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * - Heading 1
+      - Heading 2
+      - Heading 3
+    * - Row 1 column 1
+      - Row 1 column 2
+      - Row 1 column 3
+    * - Row 2 column 1
+      - Row 2 column 2
+      - Row 2 column 3
+    * - Row 3 column 1
+      - Row 3 column 2
+      - Row 3 column 3
+
+Alternatively, for simple tables that don't require specific formatting and aren't updated often, you can use the simple markdown style.
+
+.. code-block:: 
+
+  +----------------+----------------+----------------+
+  | Heading 1      | Heading 2      | Heading 3      |
+  +================+================+================+
+  | Row 1 column 1 | Row 1 column 2 | Row 1 column 3 |
+  +----------------+----------------+----------------+
+  | Row 2 column 1 | Row 2 column 2 | Row 2 column 3 |
+  +----------------+----------------+----------------+
+  | Row 3 column 1 | Row 3 column 2 | Row 3 column 3 |
+  +----------------+----------------+----------------+
+
+This will render a table like this:
+
++----------------+----------------+----------------+
+| Heading 1      | Heading 2      | Heading 3      |
++================+================+================+
+| Row 1 column 1 | Row 1 column 2 | Row 1 column 3 |
++----------------+----------------+----------------+
+| Row 2 column 1 | Row 2 column 2 | Row 2 column 3 |
++----------------+----------------+----------------+
+| Row 3 column 1 | Row 3 column 2 | Row 3 column 3 |
++----------------+----------------+----------------+
+
+Note that while these tables look very similar, adding and editing the markdown style table becomes quite cumbersome compared with ``list-table``.

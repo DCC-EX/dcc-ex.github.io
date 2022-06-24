@@ -19,9 +19,9 @@ CommandStation-EX API Reference
   * - Document status
     - Draft
   * - Document version
-    - 0.2
+    - 0.3
   * - Last update
-    - 6th June 2022
+    - 24th June 2022
 
 This page documents the API syntax and usage for CommandStation-EX.
 
@@ -97,9 +97,7 @@ Messages cannot be nested, and a second ``<`` inside a message constitutes a syn
 5. Error and empty responses
 =============================
 
-A command sent that is invalid or returns an error has a response of ``<X>``.
-
-This same response will be sent if a command has no response.
+A command sent that is invalid has a response of ``<X>``.
 
 Memory limitations prohibit more detailed error messages.
 
@@ -111,9 +109,11 @@ There are three types of parameters in use:
 6.1. Keyword
 _____________
 
-These are a consecutive sequence of one or more non-blank characters consisting of ``a-z``, ``A-Z``, or ``_``, eg. "JOIN", "WIFI", "ON".
+These are a consecutive sequence of one or more non-blank characters consisting of ``a-z``, ``A-Z``, ``0-9``, or ``_``, eg. "JOIN", "WIFI", "ON", "SPEED28".
 
-Keyword parameters are internally hashed to created integers.
+Keyword parameters are internally hashed to created integers and may start with any of these characters. The CommandStation-EX code does not differentiate between keywords and numbers internally.
+
+For example, a keyword of "3RAIL" would be valid if it were to be implemented.
 
 6.2. Numeric
 _____________

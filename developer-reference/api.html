@@ -328,10 +328,10 @@
 <td><p>Draft</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p>Document version</p></th>
-<td><p>0.2</p></td>
+<td><p>0.3</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p>Last update</p></th>
-<td><p>6th June 2022</p></td>
+<td><p>24th June 2022</p></td>
 </tr>
 </tbody>
 </table>
@@ -388,8 +388,7 @@
 </div>
 <div class="section" id="error-and-empty-responses">
 <h2><a class="toc-backref" href="#id5">5. Error and empty responses</a><a class="headerlink" href="#error-and-empty-responses" title="Permalink to this heading">¶</a></h2>
-<p>A command sent that is invalid or returns an error has a response of <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code>.</p>
-<p>This same response will be sent if a command has no response.</p>
+<p>A command sent that is invalid has a response of <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code>.</p>
 <p>Memory limitations prohibit more detailed error messages.</p>
 </div>
 <div class="section" id="parameter-values">
@@ -397,8 +396,9 @@
 <p>There are three types of parameters in use:</p>
 <div class="section" id="keyword">
 <h3>6.1. Keyword<a class="headerlink" href="#keyword" title="Permalink to this heading">¶</a></h3>
-<p>These are a consecutive sequence of one or more non-blank characters consisting of <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>, or <code class="docutils literal notranslate"><span class="pre">_</span></code>, eg. “JOIN”, “WIFI”, “ON”.</p>
-<p>Keyword parameters are internally hashed to created integers.</p>
+<p>These are a consecutive sequence of one or more non-blank characters consisting of <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>, <code class="docutils literal notranslate"><span class="pre">0-9</span></code>, or <code class="docutils literal notranslate"><span class="pre">_</span></code>, eg. “JOIN”, “WIFI”, “ON”, “SPEED28”.</p>
+<p>Keyword parameters are internally hashed to created integers and may start with any of these characters. The CommandStation-EX code does not differentiate between keywords and numbers internally.</p>
+<p>For example, a keyword of “3RAIL” would be valid if it were to be implemented.</p>
 </div>
 <div class="section" id="numeric">
 <h3>6.2. Numeric<a class="headerlink" href="#numeric" title="Permalink to this heading">¶</a></h3>

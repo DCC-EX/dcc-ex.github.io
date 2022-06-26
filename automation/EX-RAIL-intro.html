@@ -850,17 +850,24 @@ number. So now our route looks like this:</p>
 <p>Firstly, note the “#define”. This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.</p>
 <p>The entire macro needs to be on a single line, hence the addition of the backslash “\” at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line while allowing things to be more readable for us humans.</p>
 <p>Here’s an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#define PULSE 25                                      // Define a pulse time of 25ms to activate the coil
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Define a pulse time of 25ms to activate the coil
+#define PULSE 2
 
-#define ROKUHANTURNOUT(t, p1, p2, desc, ali) \        // Define the macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
-PIN_TURNOUT(t, 0, desc) \                             // Define a pin turnout
-ALIAS(ali, t) \                                       // Define an alias
+// Define a macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
+// This macro:
+// Defines a pin turnout
+// Defines an alias
+// Sets the direction pin and sends the pulse for the CLOSE command
+// Resets the direction pin and sends the pulse for the THROW command
+#define ROKUHANTURNOUT(t, p1, p2, desc, ali) \
+PIN_TURNOUT(t, 0, desc) \
+ALIAS(ali, t) \
 DONE \
-ONCLOSE(t) \                                          // Setting the direction pin and sending the pulse for the CLOSE command
+ONCLOSE(t) \
 SET(p1) \
 SET(p2)DELAY(PULSE)RESET(p2) \
 DONE \
-ONTHROW(t) \                                          // Resetting the direction pin and sending the pulse for the THROW command
+ONTHROW(t) \
 RESET(p1) \
 SET(p2)DELAY(PULSE)RESET(p2) \
 DONE

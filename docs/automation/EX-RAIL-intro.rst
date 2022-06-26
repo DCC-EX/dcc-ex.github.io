@@ -681,22 +681,29 @@ Here's an example for driving single coil Rokuhan turnouts that require the coil
 
 .. code-block::
 
-   #define PULSE 25                                      // Define a pulse time of 25ms to activate the coil
+  // Define a pulse time of 25ms to activate the coil
+  #define PULSE 2
 
-   #define ROKUHANTURNOUT(t, p1, p2, desc, ali) \        // Define the macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
-   PIN_TURNOUT(t, 0, desc) \                             // Define a pin turnout
-   ALIAS(ali, t) \                                       // Define an alias
-   DONE \
-   ONCLOSE(t) \                                          // Setting the direction pin and sending the pulse for the CLOSE command
-   SET(p1) \
-   SET(p2)DELAY(PULSE)RESET(p2) \
-   DONE \
-   ONTHROW(t) \                                          // Resetting the direction pin and sending the pulse for the THROW command
-   RESET(p1) \
-   SET(p2)DELAY(PULSE)RESET(p2) \
-   DONE
+  // Define a macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
+  // This macro:
+  // Defines a pin turnout
+  // Defines an alias
+  // Sets the direction pin and sends the pulse for the CLOSE command
+  // Resets the direction pin and sends the pulse for the THROW command
+  #define ROKUHANTURNOUT(t, p1, p2, desc, ali) \
+  PIN_TURNOUT(t, 0, desc) \
+  ALIAS(ali, t) \
+  DONE \
+  ONCLOSE(t) \
+  SET(p1) \
+  SET(p2)DELAY(PULSE)RESET(p2) \
+  DONE \
+  ONTHROW(t) \
+  RESET(p1) \
+  SET(p2)DELAY(PULSE)RESET(p2) \
+  DONE
 
-   ROKUHANTURNOUT(105, 168, 176, "Yard entrance", YD_E)  // Define the "Yard entrance" turnout with turnout ID 5 using MCP23017 pins 168/176, and create alias YD_E
+  ROKUHANTURNOUT(105, 168, 176, "Yard entrance", YD_E)  // Define the "Yard entrance" turnout with turnout ID 5 using MCP23017 pins 168/176, and create alias YD_E
 
 Typically, you would define a pin turnout with the PIN_TURNOUT command, however in this example we need a CLOSE or THROW sent to these turnouts to do more than just set a pin high or low, hence the need for the macro.
 

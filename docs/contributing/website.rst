@@ -91,10 +91,14 @@ ____________
 
 We typically prefer compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
 
-Graphs & Schemas
-_________________
+Drawing and saving graphs and schemas
+______________________________________
 
 Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
+
+Images, diagrams, and any other artefacts created by draw.io that aren't published on the website should still be committed to the documentation repository in GitHub to ensure other contributors can use these.
+
+An `image-artefacts <https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx/image-artefacts/>`_ directory has been created in the documentation repository for this purpose. Any draw.io artefacts can be saved here and will not be published as part of the website build.
 
 SVG images
 ___________

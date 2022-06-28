@@ -70,15 +70,12 @@
   top: 5px;
 }
 
-svg .big-picture-legend {
-  width: 40%;
-  height: 40%;
+#big-picture-legend {
+  width: 30%;
+  height: 30%;
 }
 
-svg .big-picture {
-  width: 75%;
-  height: 75%;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
+#big-picture {
+  width: 100%;
+  height: 100%;
 }

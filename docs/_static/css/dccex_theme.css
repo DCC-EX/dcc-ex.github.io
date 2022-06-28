@@ -1,9 +1,9 @@
 .clearer {
-    clear: both;
+  clear: both;
 }
 
 .wy-nav-content {
-    max-width: none
+  max-width: none;
 }
 
 .wy-side-nav-search>a img.logo {
@@ -23,9 +23,9 @@
 }
 
 .intro-table img {
-    width: 70%;
-    height: auto;
-    margin: 5% 15%;
+  width: 70%;
+  height: auto;
+  margin: 5% 15%;
 }
 
 #ex-rail-command-summary .wy-table-responsive {
@@ -70,7 +70,15 @@
   top: 5px;
 }
 
-.svg {
-  width: 10%;
-  height: 10%;
+svg .big-picture-legend {
+  width: 40%;
+  height: 40%;
+}
+
+svg .big-picture {
+  width: 75%;
+  height: 75%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }

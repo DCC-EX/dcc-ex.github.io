@@ -7,5 +7,8 @@ Putting it all together - the Big Picture
   :scale: 100%
 
 .. raw:: html
+  :file: ../_static/images/big-picture/rmft-legend.svg
+
+.. raw:: html
   :file: ../_static/images/big-picture/RMFT-stage1.svg
 

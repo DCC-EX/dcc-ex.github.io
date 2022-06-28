@@ -94,7 +94,7 @@ We typically prefer compressed PNG files, but can take JPG as well. The resoluti
 Drawing and saving graphs and schemas
 ______________________________________
 
-Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
+Use `draw.io <https://app.diagrams.net/>`_ to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
 
 Images, diagrams, and any other artefacts created by draw.io that aren't published on the website should still be committed to the documentation repository in GitHub to ensure other contributors can use these.
 
@@ -105,7 +105,7 @@ ___________
 
 We are currently experimenting with using SVG images to provide contextual links to be embedded within the images so users can be linked directly to relevant documentation. For example, a Fritzing diagram of a CommandStation connected to some peripherals can be given context, and clicking on the relavant component can take you directly to that documentation page.
 
-The best open source software to use for this is `Inkscape <https://inkscape.org/>`_.
+The simplest options for generating SVG images are `draw.io <https://app.diagrams.net/>`_ or `Inkscape <https://inkscape.org/>`_.
 
 Including SVG images within reStructuredText is a little more complex than a simple bitmap image, and will require some CSS to be used in addition to including the file. This section will be updated with further details when available.
 
@@ -115,6 +115,28 @@ To include the SVG file, use the ``raw:: html`` directive:
 
   .. raw:: html
     :file: ../_static/images/image.svg
+
+CSS for SVG images
+^^^^^^^^^^^^^^^^^^^
+
+If you need to control the rendering or responsiveness of SVG images, this is done via CSS.
+
+The simplest option here is to ensure the ``<svg>`` tag has an "id" entry to map to the CSS theme, for example:
+
+.. code-block:: 
+
+  <svg id="svg-css-entry">...</svg>
+
+To then ensure the SVG only occupies 50% of the page, this is added to the CSS theme:
+
+.. code-block:: 
+
+  #svg-css-entry {
+    width: 50%;
+    height: 50%;
+  }
+
+Going any further into the details and options of controlling SVGs via CSS is beyond the scope of this documentation, and beyond the knowledge of the author! The Internet or your local, friendly CSS guru are your best options to understand what is possible.
 
 Hiding pages and comments
 ==========================

@@ -9,11 +9,13 @@ From WiThrottle's very own Peter Akers (flash62au on our Discord server), comes 
 * 3x4 keyboard
 * OLED Display
 
+Files for a 3D printed case are also available.
+
 For a video on how to do this, click below:
 
-.. raw:: html
+  .. raw:: html
       
-    <iframe width="336" height="189" src="https://www.youtube.com/watch?v=RKnhfBCP_SQ&t=264s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="336" height="189" src="https://www.youtube.com/embed/S2UfglFeOH8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Features
 ==========

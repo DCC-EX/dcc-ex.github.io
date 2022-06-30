@@ -17,4 +17,5 @@ For an overview of throttles and how to choose one, please read the :doc:`Gettin
     digitrainspro
     srcpclient
     minithrottle
+    witcontroller
     streamdeck

@@ -35,4 +35,29 @@ NOTE: This is a Project and is therefore a work in progress and open source. New
 
 Source code and instructions can be found on GitHub here: https://github.com/flash62au/WiTcontroller
 
+Images
+========
+
+Here is a connection diagram drawn in Frizing showing how to wire the parts together:
+
+.. image:: ../_static/images/throttles/witcontroller_connect.png
+   :alt: WiTcontroller connection diagram
+   :scale: 50%
+   :align: left
+
+Here are pictures showing parts placement inside the case:
+
+.. image:: ../_static/images/throttles/witcontroller1.jpg
+   :alt: WiTcontroller assembly
+   :scale: 50%
+   :align: left
+
+.. image:: ../_static/images/throttles/witcontroller2.jpg
+   :alt: WitController in case
+   :scale: 50%
+   :align: left
+
+
+
+
 

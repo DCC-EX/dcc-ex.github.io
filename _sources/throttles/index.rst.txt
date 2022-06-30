@@ -18,4 +18,5 @@ For an overview of throttles and how to choose one, please read the :doc:`Gettin
     srcpclient
     minithrottle
     witcontroller
+    uwt50
     streamdeck

@@ -43,7 +43,7 @@ Here is a connection diagram drawn in Frizing showing how to wire the parts toge
 .. image:: ../_static/images/throttles/witcontroller_connect.png
    :alt: WiTcontroller connection diagram
    :scale: 10%
-   :align: left
+   :align: center
 
 Here are pictures showing parts placement inside the case:
 

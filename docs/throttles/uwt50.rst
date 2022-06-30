@@ -6,27 +6,45 @@ Train Control Systems (TCS) makes a nice line of physical hardware based control
 
 .. image:: ../_static/images/throttles/uwt50_a.png
    :alt: UTW-50 Throttle
-   :scale: 50%
+   :scale: 70%
    :align: left
+
+|
+
+On the first screen, press the menu button:
 
 .. image:: ../_static/images/throttles/uwt50_1.jpg
    :alt: WiTcontroller connection diagram
-   :scale: 50%
+   :scale: 30%
    :align: left
+
+|
+
+From the main menu scroll down or press 6 for Network Options:
 
 .. image:: ../_static/images/throttles/uwt50_2.jpg
    :alt: WiTcontroller connection diagram
-   :scale: 50%
+   :scale: 30%
    :align: left
+
+|
+
+From the Network Options menu, select 2 for Saved Networks:
 
 .. image:: ../_static/images/throttles/uwt50_3.jpg
    :alt: WiTcontroller connection diagram
-   :scale: 50%
+   :scale: 30%
    :align: left
+
+Scroll through the list and select the one that begins with DCCEX:
+
+|
 
 .. image:: ../_static/images/throttles/uwt50_4.jpg
    :alt: WiTcontroller connection diagram
-   :scale: 50%
+   :scale: 30%
    :align: left
 
-   https://tcsdcc.com/mini-throttle
+|
+   
+Visit the TCS website here: https://tcsdcc.com/mini-throttle

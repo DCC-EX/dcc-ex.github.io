@@ -116,6 +116,7 @@ todo_include_todos = False
 
 html_css_files = [
     'css/dccex_theme.css',
+    'css/big_picture_theme.css',
 #    'css/layout.css',
 #    'css/roundslider.min.css',
 #    'css/throttle.css'

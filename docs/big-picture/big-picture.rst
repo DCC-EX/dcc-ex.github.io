@@ -18,6 +18,17 @@ This is the complete layout we will build up to in stages:
   :alt: RMFT Complete
   :class: max-responsive-png
 
+These are the various concepts and components we will cover:
+
+* Turnouts (including double turnouts)
+* Sensors
+* Signals
+* Virtual blocks
+* Double and single slips
+* Turntables and traversers
+* Automated continuous running
+* Automated routing and switching
+
 Building blocks
 ================
 

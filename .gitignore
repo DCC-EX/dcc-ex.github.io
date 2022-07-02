@@ -47,5 +47,5 @@ Thumbs.db
 
 # Draw.io backup files #
 ########################
-*.bkp
-*.dtmp
+.bkp
+.dtmp

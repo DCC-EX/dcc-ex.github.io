@@ -107,6 +107,10 @@ We are currently experimenting with using SVG images to provide contextual links
 
 The simplest options for generating SVG images are `draw.io <https://app.diagrams.net/>`_ or `Inkscape <https://inkscape.org/>`_.
 
+.. tip:: 
+
+  Note that draw.io's native format is XML, with SVG as an export format, whereas Inkscape is a native SVG editor. There are some idosyncrasies as a result, refer to the CSS section below.
+
 Including SVG images within reStructuredText is a little more complex than a simple bitmap image, and will require some CSS to be used in addition to including the file. This section will be updated with further details when available.
 
 To include the SVG file, use the ``raw:: html`` directive:
@@ -119,9 +123,42 @@ To include the SVG file, use the ``raw:: html`` directive:
 CSS for SVG images
 ^^^^^^^^^^^^^^^^^^^
 
-If you need to control the rendering or responsiveness of SVG images, this is done via CSS.
+SVG images can be effectively controlled by CSS, and the implementation of this is controlled via the overall "svg" CSS directive and/or standard CSS classes and IDs.
 
-The simplest option here is to ensure the ``<svg>`` tag has an "id" entry to map to the CSS theme, for example:
+Given Inkscape is a native SVG editor, you can define the SVG ID relatively simply in the editor itself by using the built-in XML editor.
+
+Draw.io,however, has no way to do this, meaning you need to edit the exported SVG by hand to set the SVG ID.
+
+To cater for this, we've incorporated the generic behaviour of SVG images to be responsive by including the overall "svg" CSS directive in our CSS theme (dccex_theme.css):
+
+.. code-block:: 
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+This will ensure your SVG image's size is no larger than the width of the web browser's content window, and will scale up and down with the size of the browser window.
+
+If you have a need to override this behaviour, you can either set the SVG image's ID tag as per the below, or you can implement a reStructuredText container element with an associated class.
+
+.. code-block:: 
+
+  .. container:: svg-override
+
+    .. raw:: html
+      :file: ../_static/images/image.svg
+
+You would then need to add an appropriate CSS class to the theme:
+
+.. code-block:: 
+
+  .svg-override {
+    width: 50%;
+    height: 50%;
+  }
+
+If your SVG image contains an ID tag, you can simply use this "id" entry to map to the CSS theme, for example:
 
 .. code-block:: 
 

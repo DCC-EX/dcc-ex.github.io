@@ -16,7 +16,7 @@ This is the complete layout we will build up to in stages:
 
 .. image:: ../_static/images/big-picture/rmft-complete.png
   :alt: RMFT Complete
-  :class: max-responsive-png
+  :class: responsive-image
 
 These are the various concepts and components we will cover:
 
@@ -29,10 +29,12 @@ These are the various concepts and components we will cover:
 * Automated continuous running
 * Automated routing and switching
 
-Building blocks
-================
+Building blocks and stages
+===========================
 
 We'll present this information by starting with a simple loop with a single siding and station, and then proceed to add extra features and complexity a step at a time until we reach the complete layout pictured above.
+
+At each stage, we will outline how to implement each variation of the objects in use (eg. a servo based turnout, a pin based turnout, and a DCC controlled turnout) as well as outlining how the various objects can potentially interact with each other, and how to build an EX-RAIL automation sequence to take advantage of the features.
 
 How to read the diagrams
 =========================

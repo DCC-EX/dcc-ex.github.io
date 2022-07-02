@@ -69,3 +69,13 @@
   box-shadow: none;
   top: 5px;
 }
+
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}

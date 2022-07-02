@@ -132,6 +132,7 @@ Next see the :doc:`Get Started section <get-started/index>` or click next below.
    advanced-setup/index
    throttles/index
    automation/index
+   big-picture/index
    turntable-ex/index
    reference/index
    download/index

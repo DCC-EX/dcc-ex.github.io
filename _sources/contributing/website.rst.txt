@@ -91,17 +91,25 @@ ____________
 
 We typically prefer compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
 
-Graphs & Schemas
-_________________
+Drawing and saving graphs and schemas
+______________________________________
 
-Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
+Use `draw.io <https://app.diagrams.net/>`_ to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
+
+Images, diagrams, and any other artefacts created by draw.io that aren't published on the website should still be committed to the documentation repository in GitHub to ensure other contributors can use these.
+
+An `image-artefacts <https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx/image-artefacts/>`_ directory has been created in the documentation repository for this purpose. Any draw.io artefacts can be saved here and will not be published as part of the website build.
 
 SVG images
 ___________
 
 We are currently experimenting with using SVG images to provide contextual links to be embedded within the images so users can be linked directly to relevant documentation. For example, a Fritzing diagram of a CommandStation connected to some peripherals can be given context, and clicking on the relavant component can take you directly to that documentation page.
 
-The best open source software to use for this is `Inkscape <https://inkscape.org/>`_.
+The simplest options for generating SVG images are `draw.io <https://app.diagrams.net/>`_ or `Inkscape <https://inkscape.org/>`_.
+
+.. tip:: 
+
+  Note that draw.io's native format is XML, with SVG as an export format, whereas Inkscape is a native SVG editor. There are some idosyncrasies as a result, refer to the CSS section below.
 
 Including SVG images within reStructuredText is a little more complex than a simple bitmap image, and will require some CSS to be used in addition to including the file. This section will be updated with further details when available.
 
@@ -111,6 +119,61 @@ To include the SVG file, use the ``raw:: html`` directive:
 
   .. raw:: html
     :file: ../_static/images/image.svg
+
+CSS for SVG images
+^^^^^^^^^^^^^^^^^^^
+
+SVG images can be effectively controlled by CSS, and the implementation of this is controlled via the overall "svg" CSS directive and/or standard CSS classes and IDs.
+
+Given Inkscape is a native SVG editor, you can define the SVG ID relatively simply in the editor itself by using the built-in XML editor.
+
+Draw.io,however, has no way to do this, meaning you need to edit the exported SVG by hand to set the SVG ID.
+
+To cater for this, we've incorporated the generic behaviour of SVG images to be responsive by including the overall "svg" CSS directive in our CSS theme (dccex_theme.css):
+
+.. code-block:: 
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+This will ensure your SVG image's size is no larger than the width of the web browser's content window, and will scale up and down with the size of the browser window.
+
+If you have a need to override this behaviour, you can either set the SVG image's ID tag as per the below, or you can implement a reStructuredText container element with an associated class.
+
+.. code-block:: 
+
+  .. container:: svg-override
+
+    .. raw:: html
+      :file: ../_static/images/image.svg
+
+You would then need to add an appropriate CSS class to the theme:
+
+.. code-block:: 
+
+  .svg-override {
+    width: 50%;
+    height: 50%;
+  }
+
+If your SVG image contains an ID tag, you can simply use this "id" entry to map to the CSS theme, for example:
+
+.. code-block:: 
+
+  <svg id="svg-css-entry">...</svg>
+
+To then ensure the SVG only occupies 50% of the page, this is added to the CSS theme:
+
+.. code-block:: 
+
+  #svg-css-entry {
+    width: 50%;
+    height: 50%;
+  }
+
+Going any further into the details and options of controlling SVGs via CSS is beyond the scope of this documentation, and beyond the knowledge of the author! The Internet or your local, friendly CSS guru are your best options to understand what is possible.
 
 Hiding pages and comments
 ==========================

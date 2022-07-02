@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Putting it all together - the Big Picture &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/platform.js"></script>
+        <script src="../_static/js/extra.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Stage 1" href="stage1.html" />
+    <link rel="prev" title="The Big Picture" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/levels.html">Choose Your Level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/assembly.html">Assembling the Command Station</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/wifi-setup.html">Adding a WiFi Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/installer.html">Install using the Automated Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/teensy.html">Teensy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/high-accuracy.html">High Accuracy Waveform Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/engine-driver.html">Engine Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/withrottle.html">WiThrottle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/dccpp-cab.html">DCCpp CAB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/locontrol.html">Locontrol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/digitrainspro.html">DigiTrainsPro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/srcpclient.html">SRCP Client for iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/uwt50.html">TCS UWT-50 (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../automation/index.html">Automation (EX-RAIL)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Big Picture</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Putting it all together - the Big Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stage1.html">Stage 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../turntable-ex/index.html">Turntable-EX (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/motor-boards.html">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/shopping-list.html">Shopping List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/hal.html">DCC++EX HAL Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/writing-hal-driver.html">Writing a HAL Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/release-notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/command-summary.html">DCC++ EX Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/wire-gauge.html">Wire Gauge Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Software Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download/commandstation.html">Command Station Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/esp8266.html">ESP8266 Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/turntable-ex.html">Turntable-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth DCC++EX Command Station</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-reference/index.html">Developer and API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer-reference/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developer-reference/api.html">CommandStation-EX API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/github.html">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/software.html">Recommended software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/website.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/index.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Contact and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../site-map/index.html">Site Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../donate/index.html">Donate to Our Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../press/index.html">Press</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/rewrite.html">What’s New in DCC++ EX?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">The Big Picture</a> &raquo;</li>
+        
+      <li>Putting it all together - the Big Picture</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/big-picture/big-picture.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="putting-it-all-together-the-big-picture">
+<h1>Putting it all together - the Big Picture<a class="headerlink" href="#putting-it-all-together-the-big-picture" title="Permalink to this heading">¶</a></h1>
+<p>A common topic that arises in Discord conversations is the question “How does it all fit together?”.</p>
+<p>We have a great core product (CommandStation-EX) with great features such as built-in automation (EX-RAIL) along with many integration options (JMRI, WiThrottle, Engine Driver), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (Turntable-EX). However, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?</p>
+<p>This brand new section of our website is aimed to answer just that!</p>
+<p>Over the coming weeks and months we will build this section out with diagrams, information, and EX-RAIL examples to demonstrate how our fictional layout can be configured, controlled, and automated with CommandStation-EX and various other supported components and features.</p>
+<p>We call our demonstration layout “Railway Modeller’s Fictional Trains” (or RMFT for short) as it is completely fictional, and will only exist on this website for instructional purposes. The layout isn’t designed to be an engaging, fun operations layout, rather to simply cram as many features in as possible to a relatively small layout to demonstrate the capabilities of DCC++ EX and how to make use of them in the context of a complete layout.</p>
+<p>This is the complete layout we will build up to in stages:</p>
+<img alt="RMFT Complete" class="responsive-image" src="../_images/rmft-complete.png" />
+<p>These are the various concepts and components we will cover:</p>
+<ul class="simple">
+<li><p>Turnouts (including double turnouts)</p></li>
+<li><p>Sensors</p></li>
+<li><p>Signals</p></li>
+<li><p>Virtual blocks</p></li>
+<li><p>Reversing loops</p></li>
+<li><p>Double and single slips</p></li>
+<li><p>Turntables and traversers</p></li>
+<li><p>Automated continuous running</p></li>
+<li><p>Automated routing and switching</p></li>
+</ul>
+<div class="section" id="building-blocks-and-stages">
+<h2>Building blocks and stages<a class="headerlink" href="#building-blocks-and-stages" title="Permalink to this heading">¶</a></h2>
+<p>We’ll present this information by starting with a simple loop with a single siding and station, and then proceed to add extra features and complexity a step at a time until we reach the complete layout pictured above.</p>
+<p>At each stage, we will outline how to implement each variation of the objects in use (eg. a servo based turnout, a pin based turnout, and a DCC controlled turnout) as well as outlining how the various objects can potentially interact with each other, and how to build an EX-RAIL automation sequence to take advantage of the features.</p>
+</div>
+<div class="section" id="how-to-read-the-diagrams">
+<h2>How to read the diagrams<a class="headerlink" href="#how-to-read-the-diagrams" title="Permalink to this heading">¶</a></h2>
+<p>Our diagrams will be created in such a way that you’ll be able to click on the various items and be taken automatically to the correct page or section of the documentation that provides the software and hardware configuration of that element, along with various options depending on the supported hardware options available, and any EX-RAIL automation examples.</p>
+<p>We will be using specific colour coded boxes and labels to identify track side buildings, sensors, signals, virtual blocks, and turnouts as outlined below:</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Do not edit this file with editors other than diagrams.net -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="372px" height="466px" viewBox="-0.5 -0.5 372 466" content="&lt;mxfile host=&quot;Electron&quot; modified=&quot;2022-07-02T20:55:21.623Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/19.0.3 Chrome/102.0.5005.63 Electron/19.0.3 Safari/537.36&quot; etag=&quot;eBfvg5qwmp0k6hkBUrzF&quot; version=&quot;19.0.3&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;Az_92jOX6P9qZQW1vSpa&quot; name=&quot;Page-1&quot;&gt;7Zpbc6IwGIZ/jZc7E47qpajtXmy7Bzvbdu9SiJAaiRtD1f76DRoUSGrRxdOMjtMxX0gg78P7hYQ2rO54fsvgJLqjASINEwTzhtVrmKZhm2Yj/YJgsYq0gbMKhAwH8qBNYIDfkQwCGU1wgKaFAzmlhONJMejTOEY+L8QgY3RWPGxISfGsExgiJTDwIVGjjzjgkYwabntT8RXhMJKnbpnNVcUYZgfLkUwjGNBZLmT1G1aXUcpXv8bzLiKpeJkuq3Y3H9SuL4yhmFdpwDCYdf6ISw37N3ct1nsdw/svspc3SBI5YHmxfJEpwGgSByjtxGhY3izCHA0m0E9rZ4K5iEV8TGT1EBPSpYSyZVvLtZtuqyniU87oCOVqLMO2HDutGSHuR7L5WqNlXzTmuRbD5UfEQwKnKVWw7jcjIzT1VFmyMSLG0TwXkjLdIjpGnC3EIbLWlsTkLduSxVmOvytjUQ591gzKWy5cd7yhIn5IMDtAMhVIXoJJgOPw/2AV1C6omjEBW5CW8IDlZztqBVbah/S80crKcjSaG3xnkk6RpKshaRyTpGF/7jcUiAQki5TxiIY0hqS/iXobyKnem2O+UTqRNF8R5wupLEw4LblUI7sOZRk9gG1D62az13TBjn6c0oT5aItYlkz3kIWIbxNVapgKt/WmYIhAjt+Kmb12xpaCeBBPDQXzIZxaEavGhzuDrj/NGhp3No9qTueSzWm8QAOZOmYAuP3OTc3mtKua0zgrc6r5d4DDyzJnBdD1m3NdPpk53Us257DlI9/XMXtpObZT98zpVDUnOCtzqvnXI6OTmPNTE1YAWr8JLfPUJmxelAnrtJRb0VLNs3KUmjQfWHzm0139vrHBiX2j2uYhYTFN+FRBIUbIS3oXMkxMY1RKRzIECQ5jUfSFbkjEvVQv7EPSkRVjHARLA+oAF01ZL+MaiK530bJU2G4rSI2WjumhrJXNnTmovzHjCUxbeoT6oyvcfeFq5jk93INNdOq+qFgniDnqynRPproFxJGZqtuoAxRPKbsy3ZOpbsfmyEzVzbYHBkXqxQFK07DcJr8S3pOw7tXHoQA/sffn74/Pg599+HT/iyTe2Ptb5f0UioNO+qIvZZJKiP0i2KLkpXUcAA5AQ/1mitHzusoTqr1N6E+f+nM6OhoZs1jlxYE8ww+KxZV89PjrgBKd1WJHNjJzbwxL/ZTvBqWj1WpI6WhJej3q/eGrCbuHGfI5prEI06H4I9z+lr5xvtp7H3vblf29+1O0KG7eba/uiM1/CFj9fw==&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);"><defs/><g><g id="cell-ri0wAZeiggEFM8rDjmaN-1"><rect x="9" y="21" width="160" height="40" rx="6" ry="6" fill="none" stroke="none" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="9" y="21" width="160" height="40" rx="6" ry="6" fill="none" stroke="none" pointer-events="all"/><path d="M 10.75 22.21 C 10.75 22.21 10.75 22.21 10.75 22.21 M 10.75 22.21 C 10.75 22.21 10.75 22.21 10.75 22.21 M 13.51 31.24 C 16.21 29.12 17.91 27.21 19.41 24.44 M 13.51 31.24 C 15.6 28.85 17.32 26.58 19.41 24.44 M 13.64 43.28 C 18.32 39.09 24.5 33.66 30.04 24.41 M 13.64 43.28 C 17.16 38.56 20.48 34.39 30.04 24.41 M 11.8 57.58 C 20.82 49.38 28.85 35.92 40.67 24.37 M 11.8 57.58 C 20.69 47.97 29.55 37.4 40.67 24.37 M 16.53 64.34 C 22.8 58.32 29.41 49.57 50.64 25.1 M 16.53 64.34 C 26.32 52.23 38.6 39.25 50.64 25.1 M 27.16 64.31 C 32.32 55.07 40.03 50.46 61.27 25.06 M 27.16 64.31 C 37.26 54.13 44.92 43.59 61.27 25.06 M 37.79 64.27 C 47.11 51.73 55.7 40.81 71.9 25.03 M 37.79 64.27 C 50.79 50.39 62.03 35.1 71.9 25.03 M 48.42 64.24 C 59.13 51.05 74.17 35.62 82.53 24.99 M 48.42 64.24 C 59.8 50.69 71.46 36.99 82.53 24.99 M 59.05 64.2 C 69.05 52.31 79.62 38.64 93.16 24.96 M 59.05 64.2 C 72.36 50.1 83.87 34.59 93.16 24.96 M 69.68 64.17 C 80.12 55.63 88.14 42.48 103.79 24.92 M 69.68 64.17 C 79.5 52.78 87.32 42.73 103.79 24.92 M 80.31 64.13 C 87.75 57.38 94.15 47.67 114.43 24.89 M 80.31 64.13 C 91.02 53.42 100.17 41.91 114.43 24.89 M 90.94 64.1 C 98.51 56.29 106.14 48.53 125.06 24.85 M 90.94 64.1 C 102.61 51.51 112.65 38.35 125.06 24.85 M 100.91 64.82 C 111.72 53.62 120.15 40.88 135.69 24.82 M 100.91 64.82 C 111.85 53.06 122.55 39.92 135.69 24.82 M 111.54 64.78 C 119.83 54.99 129.29 44.29 146.32 24.78 M 111.54 64.78 C 123.31 50.13 136.13 35.03 146.32 24.78 M 122.17 64.75 C 130.94 56.81 136.71 47.37 156.95 24.75 M 122.17 64.75 C 131.56 53.28 141.46 41.66 156.95 24.75 M 132.8 64.72 C 143.85 53.64 155.26 39 168.89 23.21 M 132.8 64.72 C 139.43 56.19 147.62 47.01 168.89 23.21 M 143.43 64.68 C 151.11 53.5 159.09 47.21 172.96 30.72 M 143.43 64.68 C 153.3 53.33 164.93 40.77 172.96 30.72 M 154.06 64.65 C 159.75 54.96 168.63 49.36 173.09 42.76 M 154.06 64.65 C 159.12 59.23 163.63 53.81 173.09 42.76" fill="none" stroke="#000000" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><path d="M 10.75 22.21 C 10.75 22.21 10.75 22.21 10.75 22.21 M 10.75 22.21 C 10.75 22.21 10.75 22.21 10.75 22.21 M 13.51 31.24 C 16.21 29.12 17.91 27.21 19.41 24.44 M 13.51 31.24 C 15.6 28.85 17.32 26.58 19.41 24.44 M 13.64 43.28 C 18.32 39.09 24.5 33.66 30.04 24.41 M 13.64 43.28 C 17.16 38.56 20.48 34.39 30.04 24.41 M 11.8 57.58 C 20.82 49.38 28.85 35.92 40.67 24.37 M 11.8 57.58 C 20.69 47.97 29.55 37.4 40.67 24.37 M 16.53 64.34 C 22.8 58.32 29.41 49.57 50.64 25.1 M 16.53 64.34 C 26.32 52.23 38.6 39.25 50.64 25.1 M 27.16 64.31 C 32.32 55.07 40.03 50.46 61.27 25.06 M 27.16 64.31 C 37.26 54.13 44.92 43.59 61.27 25.06 M 37.79 64.27 C 47.11 51.73 55.7 40.81 71.9 25.03 M 37.79 64.27 C 50.79 50.39 62.03 35.1 71.9 25.03 M 48.42 64.24 C 59.13 51.05 74.17 35.62 82.53 24.99 M 48.42 64.24 C 59.8 50.69 71.46 36.99 82.53 24.99 M 59.05 64.2 C 69.05 52.31 79.62 38.64 93.16 24.96 M 59.05 64.2 C 72.36 50.1 83.87 34.59 93.16 24.96 M 69.68 64.17 C 80.12 55.63 88.14 42.48 103.79 24.92 M 69.68 64.17 C 79.5 52.78 87.32 42.73 103.79 24.92 M 80.31 64.13 C 87.75 57.38 94.15 47.67 114.43 24.89 M 80.31 64.13 C 91.02 53.42 100.17 41.91 114.43 24.89 M 90.94 64.1 C 98.51 56.29 106.14 48.53 125.06 24.85 M 90.94 64.1 C 102.61 51.51 112.65 38.35 125.06 24.85 M 100.91 64.82 C 111.72 53.62 120.15 40.88 135.69 24.82 M 100.91 64.82 C 111.85 53.06 122.55 39.92 135.69 24.82 M 111.54 64.78 C 119.83 54.99 129.29 44.29 146.32 24.78 M 111.54 64.78 C 123.31 50.13 136.13 35.03 146.32 24.78 M 122.17 64.75 C 130.94 56.81 136.71 47.37 156.95 24.75 M 122.17 64.75 C 131.56 53.28 141.46 41.66 156.95 24.75 M 132.8 64.72 C 143.85 53.64 155.26 39 168.89 23.21 M 132.8 64.72 C 139.43 56.19 147.62 47.01 168.89 23.21 M 143.43 64.68 C 151.11 53.5 159.09 47.21 172.96 30.72 M 143.43 64.68 C 153.3 53.33 164.93 40.77 172.96 30.72 M 154.06 64.65 C 159.75 54.96 168.63 49.36 173.09 42.76 M 154.06 64.65 C 159.12 59.23 163.63 53.81 173.09 42.76" fill="none" stroke="#647687" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/><path d="M 15 21 M 15 21 C 55.02 18.91 95.79 20.38 163 21 M 15 21 C 62.02 22.25 109.8 21.5 163 21 M 163 21 C 168.48 19.29 169.53 21.56 169 27 M 163 21 C 165.05 21.15 167.62 22.65 169 27 M 169 27 C 167.31 37.32 169.74 47.04 169 55 M 169 27 C 168.56 33.47 170.01 38.63 169 55 M 169 55 C 170.28 60.96 166.23 62.59 163 61 M 169 55 C 169.42 60.18 168.88 61.81 163 61 M 163 61 C 110.58 59.13 58.57 58.97 15 61 M 163 61 C 133.25 61.11 100.92 62.42 15 61 M 15 61 C 10.32 62.44 10.6 58.58 9 55 M 15 61 C 10.24 63.05 9.36 59.41 9 55 M 9 55 C 7.35 48.72 9.04 42.57 9 27 M 9 55 C 8.33 44.21 9.15 35.41 9 27 M 9 27 C 7.51 23.11 10.64 22.99 15 21 M 9 27 C 10.09 22.22 9.75 21.46 15 21" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><path d="M 15 21 M 15 21 C 55.02 18.91 95.79 20.38 163 21 M 15 21 C 62.02 22.25 109.8 21.5 163 21 M 163 21 C 168.48 19.29 169.53 21.56 169 27 M 163 21 C 165.05 21.15 167.62 22.65 169 27 M 169 27 C 167.31 37.32 169.74 47.04 169 55 M 169 27 C 168.56 33.47 170.01 38.63 169 55 M 169 55 C 170.28 60.96 166.23 62.59 163 61 M 169 55 C 169.42 60.18 168.88 61.81 163 61 M 163 61 C 110.58 59.13 58.57 58.97 15 61 M 163 61 C 133.25 61.11 100.92 62.42 15 61 M 15 61 C 10.32 62.44 10.6 58.58 9 55 M 15 61 C 10.24 63.05 9.36 59.41 9 55 M 9 55 C 7.35 48.72 9.04 42.57 9 27 M 9 55 C 8.33 44.21 9.15 35.41 9 27 M 9 27 C 7.51 23.11 10.64 22.99 15 21 M 9 27 C 10.09 22.22 9.75 21.46 15 21" fill="none" stroke="#314354" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/></g><g id="cell-ri0wAZeiggEFM8rDjmaN-2"><rect x="19" y="1" width="110" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="19" y="1" width="110" height="40" rx="6" ry="6" fill="#647687" stroke="#314354" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 21px; margin-left: 20px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">Building</div></div></div></foreignObject><text x="74" y="26" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle" font-weight="bold">Building</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-14"><path d="M 79 121 L 180.76 121" fill="none" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 186.76 121 L 178.76 125 L 180.76 121 L 178.76 117 Z" fill="#2d7600" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/></g><g id="cell-ri0wAZeiggEFM8rDjmaN-3"><rect x="9" y="101" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="9" y="101" width="70" height="40" rx="6" ry="6" fill="#60a917" stroke="#2d7600" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 121px; margin-left: 10px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sns1</div></div></div></foreignObject><text x="44" y="126" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sns1</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-15"><path d="M 79 201 L 180.76 201" fill="none" stroke="#006eaf" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 186.76 201 L 178.76 205 L 180.76 201 L 178.76 197 Z" fill="#006eaf" stroke="#006eaf" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/></g><g id="cell-ri0wAZeiggEFM8rDjmaN-4"><rect x="9" y="181" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="9" y="181" width="70" height="40" rx="6" ry="6" fill="#1ba1e2" stroke="#006eaf" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 201px; margin-left: 10px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sig1</div></div></div></foreignObject><text x="44" y="206" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sig1</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-16"><path d="M 79 281 L 180.76 281" fill="none" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 186.76 281 L 178.76 285 L 180.76 281 L 178.76 277 Z" fill="#b85450" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/></g><g id="cell-ri0wAZeiggEFM8rDjmaN-5"><rect x="9" y="261" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="9" y="261" width="70" height="40" rx="6" ry="6" fill="#f8cecc" stroke="#b85450" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 281px; margin-left: 10px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Blk1</div></div></div></foreignObject><text x="44" y="286" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="18px" text-anchor="middle">Blk1</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-17"><path d="M 79 361 L 134 361 L 180.76 360.57" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 186.76 360.52 L 178.8 364.59 L 180.76 360.57 L 178.73 356.59 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/></g><g id="cell-ri0wAZeiggEFM8rDjmaN-6"><rect x="9" y="341" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="9" y="341" width="70" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 361px; margin-left: 10px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Trn1</div></div></div></foreignObject><text x="44" y="366" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Trn1</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-7"><rect x="189" y="340" width="180" height="41" fill="none" stroke="none" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="189" y="340" width="180" height="41" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 361px; margin-left: 190px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Turnouts</div></div></div></foreignObject><text x="279" y="366" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Turnouts</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-10"><rect x="189" y="261" width="180" height="40" fill="none" stroke="none" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="189" y="261" width="180" height="40" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 281px; margin-left: 190px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Virtual Blocks</div></div></div></foreignObject><text x="279" y="286" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Virtual Blocks</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-11"><rect x="189" y="181" width="180" height="40" fill="none" stroke="none" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="189" y="181" width="180" height="40" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 201px; margin-left: 190px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Signals</div></div></div></foreignObject><text x="279" y="206" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Signals</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-12"><rect x="189" y="101" width="180" height="40" fill="none" stroke="none" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="189" y="101" width="180" height="40" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 121px; margin-left: 190px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sensors</div></div></div></foreignObject><text x="279" y="126" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sensors</text></switch></g></g><g id="cell-ri0wAZeiggEFM8rDjmaN-13"><rect x="189" y="21" width="180" height="40" fill="none" stroke="none" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="189" y="21" width="180" height="40" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 41px; margin-left: 190px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Trackside Buildings</div></div></div></foreignObject><text x="279" y="46" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Trackside Buildings</text></switch></g></g><g id="cell-XrzYOWYSQEaXNRluBmBq-1"><path d="M 9 441 L 177.03 441" fill="none" stroke="#001dbc" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 184.53 441 L 174.53 446 L 177.03 441 L 174.53 436 Z" fill="#001dbc" stroke="#001dbc" stroke-width="4" stroke-miterlimit="10" pointer-events="all"/></g><g id="cell-XrzYOWYSQEaXNRluBmBq-2"><rect x="189" y="421" width="180" height="41" fill="none" stroke="none" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="189" y="421" width="180" height="41" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 442px; margin-left: 190px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Direction of Travel</div></div></div></foreignObject><text x="279" y="447" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Direction of Travel</text></switch></g></g></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Text is not SVG - cannot display</text></a></switch></svg></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="stage1.html" class="btn btn-neutral float-right" title="Stage 1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="The Big Picture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

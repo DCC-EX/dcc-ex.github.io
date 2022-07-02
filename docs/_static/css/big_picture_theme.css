@@ -3,12 +3,17 @@
   height: auto;
 }
 
-#big-picture-legend {
-  width: 30%;
-  height: 30%;
+svg {
+  max-width: 100%;
+  height: auto;
 }
 
-#big-picture {
+.big-picture-legend {
+  width: 5%;
+  height: 5%;
+}
+
+.big-picture {
   width: 100%;
   height: 100%;
 }

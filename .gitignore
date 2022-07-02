@@ -44,3 +44,8 @@ Thumbs.db
 # Editor backup files #
 #######################
 *~
+
+# Draw.io backup files #
+########################
+*.bkp
+*.dtmp

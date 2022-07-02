@@ -4,7 +4,7 @@ Putting it all together - the Big Picture
 
 A common topic that arises in Discord conversations is the question "How does it all fit together?".
 
-We have a great core product (CommandStation-EX) with great features such as built-in automation (EX-RAIL) along with many integration options (JMRI, WiThrottle, Engine Driver), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (Turntable-EX), however, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?
+We have a great core product (CommandStation-EX) with great features such as built-in automation (EX-RAIL) along with many integration options (JMRI, WiThrottle, Engine Driver), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (Turntable-EX). However, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?
 
 This brand new section of our website is aimed to answer just that!
 
@@ -24,6 +24,7 @@ These are the various concepts and components we will cover:
 * Sensors
 * Signals
 * Virtual blocks
+* Reversing loops
 * Double and single slips
 * Turntables and traversers
 * Automated continuous running

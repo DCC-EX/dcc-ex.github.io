@@ -4,7 +4,7 @@ Stage 1
 
 Stage 1 of our RMFT layout is a simple loop including a single siding for a station.
 
-This allows for continuous running for up to three trains with automated switching for entering and exiting the station siding.
+This allows for continuous running of up to three trains with automated switching for entering and exiting the station siding.
 
 .. raw:: html
   :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
@@ -29,9 +29,24 @@ Six sensors are used in this first stage, which allows us to have up to three tr
 Signals
 ========
 
-This is a section for signal details.
+Three sensors have been used in this first stage to indicate whether or not a train can enter either the station siding or proceed beyond turnout 1 on the main track, to indicate whether a train can exit the station siding, or if a train can proceed beyond turnout 2 on the main track.
 
 Virtual blocks
 ===============
 
-This is a section for virtual block details.
+We've divided the layout into three virtual blocks, allowing for up to three trains to coexist safely on the layout.
+
+Block 1
+________
+
+Block 1 consists of the majority of the layout, allowing a train to run from turnout 2 all the way to turnout 1 uninterrupted.
+
+Block 2
+________
+
+Block 2 consists of the section of the main track between turnouts 1 and 2, providing for a section to hold one train, allow a train on the station siding to exit safely, and also prevent a train running around the main track from entering this block.
+
+Block 3
+________
+
+Block 3 is for our station siding, ensuring no other trains can enter this block while it is occupied.

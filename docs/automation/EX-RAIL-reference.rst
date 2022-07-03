@@ -435,14 +435,14 @@ You could write a very long AUTOMATION sequence to do this, or you could write t
     FOLLOW(21)                      // Keep looping through the stations (see FOLLOW command reference below)
 
   SEQUENCE(22, "Station sequence")  // Our station sequence
-    FON(F2)                         // Blow the horn
-    FON(F3)                         // Break squeal
+    FON(2)                         // Blow the horn
+    FON(3)                         // Break squeal
     STOP                            // Stop at the station
-    FON(F4)                         // Let out a hiss from the air breaks for a second
+    FON(4)                         // Let out a hiss from the air breaks for a second
     DELAY(1000)
-    FOFF(F4)
+    FOFF(4)
     DELAYRANDOM(2000, 10000)        // Wait between 2 and 10 seconds for passengers
-    FON(F2)                         // Blow the horn again
+    FON(2)                         // Blow the horn again
     FWD(30)                         // On our way to the next station
     RETURN                          // Return to the calling sequence
 
@@ -464,8 +464,8 @@ For example:
 
   SEQUENCE(24, "Adventure 1")                 // Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated
     AFTER(106)
-    FON(F2)
-    FON(F3)
+    FON(2)
+    FON(3)
     STOP
     DONE
 

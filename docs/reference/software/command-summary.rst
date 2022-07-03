@@ -1,13 +1,18 @@
-****************************
+*************************
 DCC++ EX Command Summary
-****************************
+*************************
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 1
+    :local:
 
 **This is a summary, for a detailed command, see...**
   :doc:`Command Reference <command-reference>`
 
-----------------------------
 Power management
-----------------------------
+=================
 
  ``<0 [MAIN | PROG] >`` Power Off  
  
@@ -19,10 +24,8 @@ Power management
 
  ``<D RESET>``  Re-boot the command Station
 
-
-----------------------------
 Cab functions
-----------------------------
+==============
 
  ``<!>`` EMERGENCY STOP 
  
@@ -44,9 +47,8 @@ Cab functions
 
  ``<b cab cv bit value>`` Write CV bit on main track
 
-----------------------------
 Programming track
-----------------------------
+==================
 
  ``<R>`` Read Loco address (programming track only)
 
@@ -70,17 +72,15 @@ Programming track
 
  ``<P ignored hex1 hex2 [hex3 [hex4 [hex5]]]>`` Writes a DCC packet to the PROG track
 
-----------------------------
 DCC Accessories
-----------------------------
+================
 
  ``<a linear_address 1|0>``
 
  ``<a addr subaddr 1|0>``
 
-----------------------------
 Turnouts
-----------------------------
+=========
 
  ``<T id address subaddress>`` Define DCC turnout (deprecated)
 
@@ -98,10 +98,8 @@ Turnouts
 
  ``<T id 0|1|C|T>`` Throw (1 or T) or close(0 or C) a defined turnout 
  
-
-----------------------------
 Sensors
-----------------------------
+========
  
  ``<Q>`` Lists Status of all sensors.
 
@@ -111,11 +109,8 @@ Sensors
 
  ``<S id>`` : Deletes definition of sensor ID  
 
-
-
-----------------------------
 Outputs
-----------------------------
+========
  
  ``<Z>`` Lists all defined output pins
 
@@ -139,26 +134,22 @@ Outputs
 
  ``<Z id>`` : Deletes definition of output ID  
 
-----------------------------
 EEPROM management
-----------------------------
+==================
  ``<E>`` Store definitions to EEPROM
  
  ``<e>`` Erase ALL (turnouts, sensors, and outputs) from EEPROM 
  
  ``<D EEPROM>`` Diagnostic dump eeprom contents
 
-----------------------------
 WiFi Control
-----------------------------
+=============
  ``<+command>`` Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
 
  ``<+X>`` Force the CS into "WiFi Connected" mode
 
-
-----------------------------
 Diagnostic traces
-----------------------------
+==================
 
  ``<D CABS>`` Shows cab numbers and speed in reminder table
 
@@ -178,9 +169,8 @@ Diagnostic traces
 
  ``<D HAL SHOW>`` Shows configured servo board and GPIO extender board config and used pins
 
-======================
 Tuning
-======================
+=======
 
  ``<D ACK LIMIT mA>`` Override ACK processing mA pulse size
  
@@ -192,9 +182,8 @@ Tuning
 
  ``<D PROGBOOST>``  Override 250mA prog track limit while idle.
 
-=====================
 I/O (HAL) Diagnostics
-=====================
+======================
 
  ``<D HAL SHOW>`` List HAL devices and allocated VPINs
 
@@ -204,9 +193,8 @@ I/O (HAL) Diagnostics
 
  ``<D ANIN vpin>``  Read and display pin `vpin`'s analogue value.
 
-==========
 Other
-==========
+======
 
  ``<U ...>`` Is reserved for user commands (through user filter)
 

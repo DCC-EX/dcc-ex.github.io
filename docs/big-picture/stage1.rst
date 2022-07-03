@@ -9,17 +9,15 @@ This allows for continuous running of up to three trains with automated switchin
 .. raw:: html
   :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
 
-Station
-========
-
-In this particular stage, there's nothing specific for the station here, however some advanced concepts might be to trigger an automated sound recording of arrivals and departures based on triggering sensor 3.
-
-This would likely make use of the EX-RAIL ``AT()`` command.
-
 Turnouts
 =========
 
-Two turnouts are used in this first stage of our RMFT layout.
+Two turnouts are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
+
+Turnout definitions
+____________________
+
+We will define turnout 1 with an ID of 100, and turnout 2 with an ID of 101.
 
 Sensors
 ========
@@ -50,3 +48,10 @@ Block 3
 ________
 
 Block 3 is for our station siding, ensuring no other trains can enter this block while it is occupied.
+
+Station
+========
+
+In this particular stage, there's nothing specific for the station here, however some advanced concepts might be to trigger an automated sound recording of arrivals and departures based on triggering sensor 3.
+
+This would likely make use of the EX-RAIL ``AT()`` command.

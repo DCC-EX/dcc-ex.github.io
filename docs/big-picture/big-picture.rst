@@ -30,6 +30,13 @@ These are the various concepts and components we will cover:
 * Automated continuous running
 * Automated routing and switching
 
+Recommended reading
+====================
+
+Throughout these pages we will be using EX-RAIL functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EX-RAIL, so it would be best to read through the :doc:`/automation/EX-RAIL-intro` page prior to going any further.
+
+We will also be outlining the equivalent DCC++ EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-reference` where necessary.
+
 Building blocks and stages
 ===========================
 
@@ -46,3 +53,16 @@ We will be using specific colour coded boxes and labels to identify track side b
 
 .. raw:: html
   :file: ../_static/images/big-picture/rmft-legend.drawio.svg
+
+Object ID ranges
+=================
+
+Throughout this exercise, we will be defining turnouts, sensors, and signals, and for consistency will be using IDs in these ranges for each type of object:
+
+* Turnouts - 100 to 199
+* Sensors - 200 to 299
+* Signals - 300 to 399
+
+This way, the various possible variations of each type of object will be defined with the same ID, meaning the same EX-RAIL sequences will apply, no matter how the objects are defined.
+
+For further information on IDs used in EX-RAIL, refer to the :ref:`automation/ex-rail-reference:notes` section of the EX-RAIL reference page.

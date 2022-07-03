@@ -1,6 +1,6 @@
-****************************
+***************************
 DCC++ EX Command Reference
-****************************
+***************************
 
 .. sidebar:: On this page
 
@@ -27,7 +27,7 @@ This reference explains the available command structure, and for commands that p
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC++ EX Webpage <https://dcc-ex.com>`_.  
 
 Track Power Commands
-=============================
+=====================
 
 The following commands provide control over power to the MAIN and PROG tracks (voltage), as well as monitoring the current used.
 
@@ -634,11 +634,11 @@ status command is invoked. This provides an efficient way of initializing the st
 Storing and Erasing Turnouts, Sensors and Outputs in EEPROM
 =============================================================
 
- ``<E>`` Upper case E : Command to **Store** definitions to EEPROM
+ ``<E>`` Upper case E : Command to **Store** definitions to EEPROM, returns the number of stored turnouts, sensors, and outputs.
 
   .. code-block::
 
-      RETURNS: <e nTurnouts nSensors>
+      RETURNS: <e nTurnouts nSensors nOutputs>
 
  ``<e>`` Lower Case e: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
 

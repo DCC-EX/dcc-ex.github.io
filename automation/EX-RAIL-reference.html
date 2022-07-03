@@ -656,14 +656,14 @@ DONE
   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>                      <span class="c1">// Keep looping through the stations (see FOLLOW command reference below)</span>
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="s">&quot;Station sequence&quot;</span><span class="p">)</span>  <span class="c1">// Our station sequence</span>
-  <span class="n">FON</span><span class="p">(</span><span class="n">F2</span><span class="p">)</span>                         <span class="c1">// Blow the horn</span>
-  <span class="n">FON</span><span class="p">(</span><span class="n">F3</span><span class="p">)</span>                         <span class="c1">// Break squeal</span>
+  <span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                         <span class="c1">// Blow the horn</span>
+  <span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>                         <span class="c1">// Break squeal</span>
   <span class="n">STOP</span>                            <span class="c1">// Stop at the station</span>
-  <span class="n">FON</span><span class="p">(</span><span class="n">F4</span><span class="p">)</span>                         <span class="c1">// Let out a hiss from the air breaks for a second</span>
+  <span class="n">FON</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>                         <span class="c1">// Let out a hiss from the air breaks for a second</span>
   <span class="n">DELAY</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-  <span class="n">FOFF</span><span class="p">(</span><span class="n">F4</span><span class="p">)</span>
+  <span class="n">FOFF</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
   <span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>        <span class="c1">// Wait between 2 and 10 seconds for passengers</span>
-  <span class="n">FON</span><span class="p">(</span><span class="n">F2</span><span class="p">)</span>                         <span class="c1">// Blow the horn again</span>
+  <span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                         <span class="c1">// Blow the horn again</span>
   <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>                         <span class="c1">// On our way to the next station</span>
   <span class="n">RETURN</span>                          <span class="c1">// Return to the calling sequence</span>
 </pre></div>
@@ -682,8 +682,8 @@ DONE
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="s">&quot;Adventure 1&quot;</span><span class="p">)</span>                 <span class="c1">// Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated</span>
   <span class="n">AFTER</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span>
-  <span class="n">FON</span><span class="p">(</span><span class="n">F2</span><span class="p">)</span>
-  <span class="n">FON</span><span class="p">(</span><span class="n">F3</span><span class="p">)</span>
+  <span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
   <span class="n">STOP</span>
   <span class="n">DONE</span>
 

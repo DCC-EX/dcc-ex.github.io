@@ -66,3 +66,10 @@ Throughout this exercise, we will be defining turnouts, sensors, and signals, an
 This way, the various possible variations of each type of object will be defined with the same ID, meaning the same EX-RAIL sequences will apply, no matter how the objects are defined.
 
 For further information on IDs used in EX-RAIL, refer to the :ref:`automation/ex-rail-reference:notes` section of the EX-RAIL reference page.
+
+DCC addresses
+______________
+
+Further to the above, for DCC controlled turnouts, these will commence at the linear DCC address 101, which start at an address of 26, with a sub address of 0.
+
+For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`.

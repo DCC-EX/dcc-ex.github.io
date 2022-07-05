@@ -31,12 +31,15 @@ Therefore, the DCC++ EX command to define these in the serial console is as foll
   <T 100 DCC 26 0>
   <T 101 DCC 26 1>
 
-In EX-RAIL, we would add these lines to myAutomation.h:
+In EX-RAIL, we would add these lines to myAutomation.h, with aliases defined:
 
 .. code-block:: 
 
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  
   TURNOUT(100, 26, 0, "Station entry")
-  TURNOUT(101, 26, 0, "Station exit")
+  TURNOUT(101, 26, 1, "Station exit")
 
 Pin turnouts
 ^^^^^^^^^^^^^
@@ -54,8 +57,11 @@ In EX-RAIL, we would add these lines to myAutomation.h:
 
 .. code-block:: 
 
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+
   PIN_TURNOUT(100, 22, "Station entry")
-  PIN_TURNOUT(100, 23, "Station exit")
+  PIN_TURNOUT(101, 23, "Station exit")
 
 If we were instead to use an MCP23017 I/O expander, we would use Vpins instead of direct pins on the Mega2560, and we would start these at the first I/O expander's 164 Vpin ID.
 
@@ -64,12 +70,15 @@ To define these in the serial console:
 .. code-block:: 
 
   <T 100 VPIN 164>
-  <T 100 VPIN 165>
+  <T 101 VPIN 165>
 
 And again, in myAutomation.h for EX-RAIL:
 
 .. code-block:: 
 
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  
   PIN_TURNOUT(100, 164, "Station entry")
   PIN_TURNOUT(101, 165, "Station exit")
 
@@ -91,6 +100,9 @@ Again, in myAutomation.h this becomes:
 
 .. code-block:: 
 
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  
   SERVO_TURNOUT(100, 100, 400, 100, Slow, "Station entry")
   SERVO_TURNOUT(101, 101, 400, 100, Slow, "Station exit")
 
@@ -228,4 +240,59 @@ Station
 
 In this particular stage, there's nothing specific for the station here, however some advanced concepts might be to trigger an automated sound recording of arrivals and departures based on triggering sensor 3.
 
-This would likely make use of the EX-RAIL ``AT()`` command.
+This would likely make use of the EX-RAIL ``AT()`` or ``AFTER()`` commands.
+
+Automations
+============
+
+Here we'll demonstrate three ways to implement automation on this layout.
+
+Manual control with routes
+___________________________
+
+Firstly, if you still wish to be the driver of the trains, but have some automation related to the turnouts and signals, then we make use of EX-RAIL's ``ROUTE()`` directive. In this scenario, we don't need to implement our virtual blocks, as it will be up to you as the driver to ensure your trains don't collide! We also don't need to use the sensors, and will set our signals based on the choice of routes.
+
+Further to this, we can ensure our two turnouts operate concurrently by using the ``ONCLOSE()`` and ``ONTHROW()`` directives.
+
+Putting all the variations above together gives us these variations of myAutomation.h:
+
+.. code-block:: 
+
+  // myAutomation.h for simple ROUTEs with pin turnouts and signals directly connected to the Mega2560.
+
+  // Define our aliases:
+  ALIAS(TRN1, 100)               // Turnout 1
+  ALIAS(TRN2, 101)               // Turnout 2
+  ALIAS(SIG1_TRN1_APP, 30)       // Signal 1, approaching turnout 1
+  ALIAS(SIG2_TRN2_GO, 33)        // Signal 2, proceed beyond turnout 2
+  ALIAS(SIG3_STN_EX, 36)         // Signal 3, exit the station siding
+
+  // Define our objects:
+  PIN_TURNOUT(100, 22, "Station entry")
+  PIN_TURNOUT(101, 23, "Station exit")
+  SIGNAL(SIG1_TRN1_APP, 31, 32)
+  SIGNAL(SIG2_TRN2_GO, 34, 35)
+  SIGNAL(SIG3_STN_EX, 37, 38)
+
+  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  DONE
+
+  // Define our ROUTEs:
+  ROUTE(0, "Main track")        // Select this route to just use the main track
+    IFTHROWN(TRN1)
+      RED(SIG1_TRN1_APP)
+      DELAY(2000)
+      CLOSE(TRN1)
+    ENDIF
+    IF THROWN(TRN2
+      CLOSE(TRN2)
+    ENDIF
+
+
+"Hand off" control with sequences
+__________________________________
+
+
+
+Full automation
+________________

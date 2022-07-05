@@ -73,3 +73,10 @@ ______________
 Further to the above, for DCC controlled turnouts, these will commence at the linear DCC address 101, which start at an address of 26, with a sub address of 0.
 
 For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`.
+
+Sensors
+========
+
+For simplicity, we will use infrared obstacle avoidance/proximity sensors throughout these exercise, which produce and active low output when activated.
+
+If you use different sensors that simply provide an active low or high output, then there should be no change required to the various automation sequences provided, except using a negative "-" for the sensor pin ID if the sensors are active high instead of active low.

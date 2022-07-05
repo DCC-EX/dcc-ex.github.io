@@ -128,39 +128,67 @@ Signals
 
 Three signals have been used in this first stage to indicate whether or not a train can enter either the station siding or proceed beyond turnout 1 on the main track, to indicate whether a train can exit the station siding, or if a train can proceed beyond turnout 2 on the main track.
 
-Again, like our sensors, we don't need to explicitly define any signal objects to work with EX-RAIL, so we will again map these by defining aliases:
+Pin based signals
+__________________
 
-To use the next three pins on our Mega2560:
+To use pin based signals, we require three pins per signal, and therefore nine pins in total, but we will only define an alias for the red pin given that it is the "control" pin for each signal. 
+
+To define pin based signals directly on the Mega2560 with aliases for the control pins:
 
 .. code-block:: 
 
   ALIAS(SIG1_TRN1_APP, 30)       // Signal 1, approaching turnout 1
-  ALIAS(SIG2_TRN2_GO, 31)        // Signal 2, proceed beyond turnout 2
-  ALIAS(SIG3_STN_EX, 32)         // Signal 3, exit the station siding
+  ALIAS(SIG2_TRN2_GO, 33)        // Signal 2, proceed beyond turnout 2
+  ALIAS(SIG3_STN_EX, 36)         // Signal 3, exit the station siding
 
-Moving these again to our first MCP23017 I/O expander, these would start at Vpin 172:
+  SIGNAL(SIG1_TRN1_APP, 31, 32)
+  SIGNAL(SIG2_TRN2_GO, 34, 35)
+  SIGNAL(SIG3_STN_EX, 37, 38)
+
+Moving these again to an MCP23017 I/O expander, these would start at Vpin 172, however this also overlaps to a second I/O expander by one pin:
 
 .. code-block:: 
 
   ALIAS(SIG1_TRN1_APP, 172)      // Signal 1, approaching turnout 1
-  ALIAS(SIG2_TRN2_GO, 173)       // Signal 2, proceed beyond turnout 2
-  ALIAS(SIG3_STN_EX, 174)        // Signal 3, exit the station siding
+  ALIAS(SIG2_TRN2_GO, 175)       // Signal 2, proceed beyond turnout 2
+  ALIAS(SIG3_STN_EX, 178)        // Signal 3, exit the station siding
+
+  SIGNAL(SIG1_TRN1_APP, 173, 174)
+  SIGNAL(SIG2_TRN2_GO, 176, 177)
+  SIGNAL(SIG3_STN_EX, 179, 180)
+
+Servo based signals
+____________________
+
+To define servo based signals, these only require one Vpin per signal along with specifying the servo angle for the red, amber, and green positions.
+
+Allowing for servo based turnouts being used, we will start our signals from the third available Vpin on our PCA9685 servo module. We will make the assumption that red requires a servo angle of 100, amber 250, and green 400:
+
+.. code-block:: 
+
+  ALIAS(SIG1_TRN1_APP, 102)       // Signal 1, approaching turnout 1
+  ALIAS(SIG2_TRN2_GO, 103)        // Signal 2, proceed beyond turnout 2
+  ALIAS(SIG3_STN_EX, 104)         // Signal 3, exit the station siding
+
+  SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
+  SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
+  SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
 
 Virtual blocks
 ===============
 
-We've divided the layout into three virtual blocks, allowing for up to three trains to coexist safely on the layout.
+We've divided the layout into four virtual blocks, allowing for up to three trains to coexist safely on the layout.
 
 Block 1
 ________
 
-Block 1 consists of the majority of the layout, allowing a train to run from turnout 2 all the way to turnout 1 uninterrupted.
+Block 1 is the approach to turnout 1, and prevents a train entering either the station siding or the main track between turnouts 1 and 2 if they are occupied.
 
 We will use ID 0 for this, with an alias:
 
 .. code-block:: 
 
-  ALIAS(BLK_MAIN, 0)
+  ALIAS(BLK1_TRN1_APP, 0)
 
 Block 2
 ________
@@ -171,7 +199,7 @@ We will use ID 1 for this, with an alias:
 
 .. code-block:: 
 
-  ALIAS(BLK_MAIN_HOLD, 1)
+  ALIAS(BLK2_MAIN_HOLD, 1)
 
 Block 3
 ________
@@ -182,7 +210,18 @@ We will use ID 2 for this, with an alias:
 
 .. code-block:: 
 
-  ALIAS(BLK_STN, 2)
+  ALIAS(BLK3_STN, 2)
+
+Block 4
+________
+
+Block 4 is the exit beyond turnout 2, and can hold a train while block 1 is occupied. Once block 1 is free, a train can run uninterrupted from block 4 back to block 1.
+
+We will use ID 3 for this, with an alias:
+
+.. code-block:: 
+
+  ALIAS(BLK4_TRN2_EX, 3)
 
 Station
 ========

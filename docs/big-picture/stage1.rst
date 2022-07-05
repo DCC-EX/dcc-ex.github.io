@@ -38,8 +38,8 @@ In EX-RAIL, we would add these lines to myAutomation.h, with aliases defined:
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
   
-  TURNOUT(100, 26, 0, "Station entry")
-  TURNOUT(101, 26, 1, "Station exit")
+  TURNOUT(TRN1, 26, 0, "Station entry")
+  TURNOUT(TRN2, 26, 1, "Station exit")
 
 Pin turnouts
 ^^^^^^^^^^^^^
@@ -60,8 +60,8 @@ In EX-RAIL, we would add these lines to myAutomation.h:
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
 
-  PIN_TURNOUT(100, 22, "Station entry")
-  PIN_TURNOUT(101, 23, "Station exit")
+  PIN_TURNOUT(TRN1, 22, "Station entry")
+  PIN_TURNOUT(TRN2, 23, "Station exit")
 
 If we were instead to use an MCP23017 I/O expander, we would use Vpins instead of direct pins on the Mega2560, and we would start these at the first I/O expander's 164 Vpin ID.
 
@@ -79,8 +79,8 @@ And again, in myAutomation.h for EX-RAIL:
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
   
-  PIN_TURNOUT(100, 164, "Station entry")
-  PIN_TURNOUT(101, 165, "Station exit")
+  PIN_TURNOUT(TRN1, 164, "Station entry")
+  PIN_TURNOUT(TRN2, 165, "Station exit")
 
 Servo turnouts
 ^^^^^^^^^^^^^^^
@@ -103,8 +103,8 @@ Again, in myAutomation.h this becomes:
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
   
-  SERVO_TURNOUT(100, 100, 400, 100, Slow, "Station entry")
-  SERVO_TURNOUT(101, 101, 400, 100, Slow, "Station exit")
+  SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
+  SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
 
 Sensors
 ========
@@ -268,8 +268,8 @@ Putting all the variations above together gives us these variations of myAutomat
   ALIAS(SIG3_STN_EX, 36)         // Signal 3, exit the station siding
 
   // Define our objects:
-  PIN_TURNOUT(100, 22, "Station entry")
-  PIN_TURNOUT(101, 23, "Station exit")
+  PIN_TURNOUT(TRN1, 22, "Station entry")
+  PIN_TURNOUT(TRN2, 23, "Station exit")
   SIGNAL(SIG1_TRN1_APP, 31, 32)
   SIGNAL(SIG2_TRN2_GO, 34, 35)
   SIGNAL(SIG3_STN_EX, 37, 38)
@@ -279,15 +279,23 @@ Putting all the variations above together gives us these variations of myAutomat
 
   // Define our ROUTEs:
   ROUTE(0, "Main track")        // Select this route to just use the main track
-    IFTHROWN(TRN1)
-      RED(SIG1_TRN1_APP)
+    RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
+    IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
+      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
       DELAY(2000)
-      CLOSE(TRN1)
+      RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
+      CLOSE(TRN1)               // Close turnout 1
     ENDIF
-    IF THROWN(TRN2
-      CLOSE(TRN2)
+    IF THROWN(TRN2)             // If turnout 2 is thrown, do these:
+      AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
+      CLOSE(TRN2)               // Close turnout 2
     ENDIF
-
+    GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+    GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
 
 "Hand off" control with sequences
 __________________________________

@@ -304,7 +304,7 @@ Pin based turnouts and signals - Mega2560 direct I/O pins
       DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       CLOSE(TRN1)               // Close turnout 1
     ENDIF
-    IF THROWN(TRN2)             // If turnout 2 is thrown, do these:
+    IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
@@ -324,7 +324,7 @@ Pin based turnouts and signals - Mega2560 direct I/O pins
       DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       THROW(TRN1)               // Throw turnout 1
     ENDIF
-    IF CLOSED(TRN2)             // If turnout 2 is closed, do these:
+    IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2
@@ -369,7 +369,7 @@ Pin based turnouts and signals - MCP23017 I/O expander Vpins
       DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       CLOSE(TRN1)               // Close turnout 1
     ENDIF
-    IF THROWN(TRN2)             // If turnout 2 is thrown, do these:
+    IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
@@ -389,7 +389,7 @@ Pin based turnouts and signals - MCP23017 I/O expander Vpins
       DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       THROW(TRN1)               // Throw turnout 1
     ENDIF
-    IF CLOSED(TRN2)             // If turnout 2 is closed, do these:
+    IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2
@@ -432,7 +432,7 @@ Servo based turnouts and signals with PCA9685 servo module
       DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       CLOSE(TRN1)               // Close turnout 1
     ENDIF
-    IF THROWN(TRN2)             // If turnout 2 is thrown, do these:
+    IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
@@ -452,7 +452,7 @@ Servo based turnouts and signals with PCA9685 servo module
       DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       THROW(TRN1)               // Throw turnout 1
     ENDIF
-    IF CLOSED(TRN2)             // If turnout 2 is closed, do these:
+    IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2

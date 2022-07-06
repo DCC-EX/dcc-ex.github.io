@@ -14,6 +14,18 @@ This allows for automated running of up to three trains including automated swit
 
 We'll cover off the various aspects required to get up and running with stage 1 including object definitions, the various hardware options you can use, and how you can apply automation techniques to the layout.
 
+What to expect to learn from stage 1
+=====================================
+
+At the end of stage 1, we expect you will learn the following:
+
+* How to define turnout and signal objects.
+* How to reference sensors.
+* How, why, and when to effectively use aliases.
+* How an object ID is different to the physical object it represents.
+* How to define a ROUTE for layout automation while still controlling the trains.
+* How to define a fully automated SEQUENCE so the trains run automatically.
+
 .. raw:: html
   :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
 
@@ -250,15 +262,10 @@ In this particular stage, there's nothing specific for the station here, however
 
 This would likely make use of the EX-RAIL ``AT()`` or ``AFTER()`` commands.
 
-Automation
-===========
-
-Here we'll demonstrate two ways to leverage EX-RAIL's automation capabilities on this layout.
-
 Manual train control with automated routes
-___________________________________________
+===========================================
 
-Firstly, if you still wish to be the driver of the trains, but have some automation related to the turnouts and signals, then we make use of EX-RAIL's ``ROUTE()`` directive. In this scenario, we don't need to implement our virtual blocks, as it will be up to you as the driver to ensure your trains don't collide! We also don't need to use the sensors, and will set our signals based on the choice of routes.
+If you still wish to be the driver of the trains, but have some automation related to the turnouts and signals, then we make use of EX-RAIL's ``ROUTE()`` directive. In this scenario, we don't need to implement our virtual blocks, as it will be up to you as the driver to ensure your trains don't collide! We also don't need to use the sensors, and will set our signals based on the choice of routes.
 
 Further to this, we can ensure our two turnouts operate concurrently by using the ``ONCLOSE()`` and ``ONTHROW()`` directives.
 
@@ -270,8 +277,8 @@ Note that you can mix and match all the above I/O methods together, so you can u
 
 For simplicity, we will outline the stage 1 options using the same hardware types otherwise we'll wear out the scroll button out on your mouse.
 
-Pin based turnouts and signals - Mega2560 direct I/O pins
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ROUTEs with turnouts/signals on Mega2560 direct I/O pins
+_________________________________________________________
 
 .. code-block:: 
 
@@ -335,8 +342,8 @@ Pin based turnouts and signals - Mega2560 direct I/O pins
     GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
   DONE
 
-Pin based turnouts and signals - MCP23017 I/O expander Vpins
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins
+____________________________________________________________
 
 .. code-block:: 
 
@@ -400,8 +407,8 @@ Pin based turnouts and signals - MCP23017 I/O expander Vpins
     GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
   DONE
 
-Servo based turnouts and signals with PCA9685 servo module
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ROUTEs with servo based turnouts/signals on a PCA9685 servo module
+___________________________________________________________________
 
 .. code-block:: 
 
@@ -423,7 +430,7 @@ Servo based turnouts and signals with PCA9685 servo module
   DONE
 
   // Define our ROUTEs:
-  ROUTE(0, "Main track")        // Select this route to just use the main track
+  ROUTE(1, "Main track")        // Select this route to just use the main track
     RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
     IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
       AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
@@ -443,7 +450,7 @@ Servo based turnouts and signals with PCA9685 servo module
     GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
   DONE
 
-  ROUTE(1, "Station siding")    // Select this route to use the station siding
+  ROUTE(2, "Station siding")    // Select this route to use the station siding
     RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
     IFCLOSED(TRN1)              // If turnout 1 is closed, do these:
       AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
@@ -463,8 +470,124 @@ Servo based turnouts and signals with PCA9685 servo module
     GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
   DONE
 
-"Hand off" control for full automation
-_______________________________________
+Full automation with the "hand off" feature
+============================================
 
-Now we can display the full automation capabilities by setting our layout up for fully automated control of your trains.
+Now it's time to display the full automation capabilities by setting our layout up for fully automated control of your trains.
 
+You will note that these are largely based on :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
+
+Pin based turnouts and signals on Mega2560 direct I/O pins
+__________________________________________________________
+
+.. code-block:: 
+
+  // myAutomation.h for SEQUENCEs with pin turnouts, sensors, and signals directly connected to the Mega2560.
+
+  // Define our aliases:
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  ALIAS(SNS1_TRN1_APP, 24)
+  ALIAS(SNS2_MAIN_TRN1_EX, 25)
+  ALIAS(SNS3_STN_TRN1_EX, 26)
+  ALIAS(SNS4_MAIN_TRN2_APP, 27)
+  ALIAS(SNS5_STN_TRN2_APP, 28)
+  ALIAS(SNS6_TRN2_EX, 29)
+  ALIAS(SIG1_TRN1_APP, 30)
+  ALIAS(SIG2_TRN2_GO, 33)
+  ALIAS(SIG3_STN_EX, 36)
+
+  // Define our objects:
+  PIN_TURNOUT(TRN1, 22, "Station entry")
+  PIN_TURNOUT(TRN2, 23, "Station exit")
+  SIGNAL(SIG1_TRN1_APP, 31, 32)
+  SIGNAL(SIG2_TRN2_GO, 34, 35)
+  SIGNAL(SIG3_STN_EX, 37, 38)
+
+  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  DONE
+
+  SEQUENCE(1)
+    DELAYRANDOM(10000, 20000)
+    RESERVE(BLK2_MAIN_HOLD)
+    FOLLOW(2)
+
+  SEQUENCE(2)
+
+    FOLLOW(3)
+  
+  SEQUENCE(3)
+
+    FOLLOW(4)
+  
+  SEQUENCE(4)
+
+    FOLLOW(1)
+
+Pin based turnouts and signals on MCP23017 I/O expander Vpins
+_____________________________________________________________
+
+.. code-block:: 
+
+  // myAutomation.h for SEQUENCEs with pin based turnouts, sensors, and signals via MCP23017 I/O expander Vpins.
+
+  // Define our aliases:
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  ALIAS(SNS1_TRN1_APP, 166)
+  ALIAS(SNS2_MAIN_TRN1_EX, 167)
+  ALIAS(SNS3_STN_TRN1_EX, 168)
+  ALIAS(SNS4_MAIN_TRN2_APP, 169)
+  ALIAS(SNS5_STN_TRN2_APP, 170)
+  ALIAS(SNS6_TRN2_EX, 171)
+  ALIAS(SIG1_TRN1_APP, 172)
+  ALIAS(SIG2_TRN2_GO, 175)
+  ALIAS(SIG3_STN_EX, 178)
+
+  // Define our objects:
+  PIN_TURNOUT(TRN1, 22, "Station entry")
+  PIN_TURNOUT(TRN2, 23, "Station exit")
+  SIGNAL(SIG1_TRN1_APP, 173, 174)
+  SIGNAL(SIG2_TRN2_GO, 176, 177)
+  SIGNAL(SIG3_STN_EX, 179, 180)
+
+  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  DONE
+
+Servo based turnouts and signals with a PCA9685 servo module
+_____________________________________________________________
+
+.. code-block:: 
+
+  // myAutomation.h for simple ROUTEs with servo based turnouts and signals, and sensors directly connected to the Mega2560.
+
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  ALIAS(SNS1_TRN1_APP, 24)
+  ALIAS(SNS2_MAIN_TRN1_EX, 25)
+  ALIAS(SNS3_STN_TRN1_EX, 26)
+  ALIAS(SNS4_MAIN_TRN2_APP, 27)
+  ALIAS(SNS5_STN_TRN2_APP, 28)
+  ALIAS(SNS6_TRN2_EX, 29)
+  ALIAS(SIG1_TRN1_APP, 102)
+  ALIAS(SIG2_TRN2_GO, 103)
+  ALIAS(SIG3_STN_EX, 104)
+  
+  SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
+  SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
+  SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
+  SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
+  SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
+
+  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  DONE
+
+Learnings from stage 1
+=======================
+
+No doubt, as you've ready through this fairly lengthy stage 1 page, you've already noted a number of commonalities between all variations of myAutomation.h, regardless of the way we have defined the various objects, and hopefully you've picked up a few tips and techniques to help you on your DCC++ EX and EX-RAIL journing.
+
+The main things at this point that we'd like to call to your attenion are:
+
+* Using aliases helps your brain along. Most of us aren't geared to remember that turnout ID 100 is the station siding entrance turnout, so defining aliases makes these numbers easier to digest and work with when referring to them in myAutomation.h.
+* You can expand your I/O devices as you need. The Mega2560 provides easily for 42 available I/O pins (A2 to A15, and 22 to 49), but when you exceed this limit, you can very easily expand this using I/O expanders such as the MCP23017. This means you don't need to have all these devices up front and can start with just the Mega2560.

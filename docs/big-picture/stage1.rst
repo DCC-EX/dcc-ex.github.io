@@ -2,9 +2,17 @@
 Stage 1
 ********
 
+.. sidebar:: On this page
+
+   .. contents:: 
+      :depth: 1
+      :local:
+
 Stage 1 of our RMFT layout is a simple loop including a single siding for a station.
 
 This allows for automated running of up to three trains including automated switching for entering and exiting the station siding.
+
+We'll cover off the various aspects required to get up and running with stage 1 including object definitions, the various hardware options you can use, and how you can apply automation techniques to the layout.
 
 .. raw:: html
   :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
@@ -242,30 +250,39 @@ In this particular stage, there's nothing specific for the station here, however
 
 This would likely make use of the EX-RAIL ``AT()`` or ``AFTER()`` commands.
 
-Automations
-============
+Automation
+===========
 
-Here we'll demonstrate three ways to implement automation on this layout.
+Here we'll demonstrate two ways to leverage EX-RAIL's automation capabilities on this layout.
 
-Manual control with routes
-___________________________
+Manual train control with automated routes
+___________________________________________
 
 Firstly, if you still wish to be the driver of the trains, but have some automation related to the turnouts and signals, then we make use of EX-RAIL's ``ROUTE()`` directive. In this scenario, we don't need to implement our virtual blocks, as it will be up to you as the driver to ensure your trains don't collide! We also don't need to use the sensors, and will set our signals based on the choice of routes.
 
 Further to this, we can ensure our two turnouts operate concurrently by using the ``ONCLOSE()`` and ``ONTHROW()`` directives.
 
-Putting all the variations above together gives us these variations of myAutomation.h:
+The two routes below will be advertised to WiThrottle applicaions and Engine Driver, so you can simply select them from the ROUTE menu.
+
+Putting all the variations above together gives us several variations of myAutomation.h.
+
+Note that you can mix and match all the above I/O methods together, so you can use direct I/O pins on the Mega2560 while using MCP23017 I/O expanders, PCA9685 servo modules, and any other supported I/O options, which provides a myriad of possibilities to expand the I/O capabilities of your CommandStation.
+
+For simplicity, we will outline the stage 1 options using the same hardware types otherwise we'll wear out the scroll button out on your mouse.
+
+Pin based turnouts and signals - Mega2560 direct I/O pins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: 
 
   // myAutomation.h for simple ROUTEs with pin turnouts and signals directly connected to the Mega2560.
 
   // Define our aliases:
-  ALIAS(TRN1, 100)               // Turnout 1
-  ALIAS(TRN2, 101)               // Turnout 2
-  ALIAS(SIG1_TRN1_APP, 30)       // Signal 1, approaching turnout 1
-  ALIAS(SIG2_TRN2_GO, 33)        // Signal 2, proceed beyond turnout 2
-  ALIAS(SIG3_STN_EX, 36)         // Signal 3, exit the station siding
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  ALIAS(SIG1_TRN1_APP, 30)
+  ALIAS(SIG2_TRN2_GO, 33)
+  ALIAS(SIG3_STN_EX, 36)
 
   // Define our objects:
   PIN_TURNOUT(TRN1, 22, "Station entry")
@@ -296,11 +313,158 @@ Putting all the variations above together gives us these variations of myAutomat
     ENDIF
     GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
     GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
+  DONE
 
-"Hand off" control with sequences
-__________________________________
+  ROUTE(1, "Station siding")    // Select this route to use the station siding
+    RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
+    IFCLOSED(TRN1)              // If turnout 1 is closed, do these:
+      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
+      THROW(TRN1)               // Throw turnout 1
+    ENDIF
+    IF CLOSED(TRN2)             // If turnout 2 is closed, do these:
+      AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
+      THROW(TRN2)               // Throw turnout 2
+    ENDIF
+    GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+    GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
+  DONE
 
+Pin based turnouts and signals - MCP23017 I/O expander Vpins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. code-block:: 
 
-Full automation
-________________
+  // myAutomation.h for simple ROUTEs with pin based turnouts and signals via MCP23017 I/O expander Vpins.
+
+  // Define our aliases:
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  ALIAS(SIG1_TRN1_APP, 172)
+  ALIAS(SIG2_TRN2_GO, 175)
+  ALIAS(SIG3_STN_EX, 178)
+
+  // Define our objects:
+  PIN_TURNOUT(TRN1, 22, "Station entry")
+  PIN_TURNOUT(TRN2, 23, "Station exit")
+  SIGNAL(SIG1_TRN1_APP, 173, 174)
+  SIGNAL(SIG2_TRN2_GO, 176, 177)
+  SIGNAL(SIG3_STN_EX, 179, 180)
+
+  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  DONE
+
+  // Define our ROUTEs:
+  ROUTE(0, "Main track")        // Select this route to just use the main track
+    RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
+    IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
+      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
+      CLOSE(TRN1)               // Close turnout 1
+    ENDIF
+    IF THROWN(TRN2)             // If turnout 2 is thrown, do these:
+      AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
+      CLOSE(TRN2)               // Close turnout 2
+    ENDIF
+    GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+    GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
+  DONE
+
+  ROUTE(1, "Station siding")    // Select this route to use the station siding
+    RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
+    IFCLOSED(TRN1)              // If turnout 1 is closed, do these:
+      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
+      THROW(TRN1)               // Throw turnout 1
+    ENDIF
+    IF CLOSED(TRN2)             // If turnout 2 is closed, do these:
+      AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
+      THROW(TRN2)               // Throw turnout 2
+    ENDIF
+    GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+    GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
+  DONE
+
+Servo based turnouts and signals with PCA9685 servo module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: 
+
+  // myAutomation.h for simple ROUTEs with servo based turnouts and signals.
+
+  ALIAS(TRN1, 100)
+  ALIAS(TRN2, 101)
+  ALIAS(SIG1_TRN1_APP, 102)
+  ALIAS(SIG2_TRN2_GO, 103)
+  ALIAS(SIG3_STN_EX, 104)
+  
+  SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
+  SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
+  SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
+  SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
+  SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
+
+  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  DONE
+
+  // Define our ROUTEs:
+  ROUTE(0, "Main track")        // Select this route to just use the main track
+    RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
+    IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
+      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
+      CLOSE(TRN1)               // Close turnout 1
+    ENDIF
+    IF THROWN(TRN2)             // If turnout 2 is thrown, do these:
+      AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
+      CLOSE(TRN2)               // Close turnout 2
+    ENDIF
+    GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+    GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
+  DONE
+
+  ROUTE(1, "Station siding")    // Select this route to use the station siding
+    RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
+    IFCLOSED(TRN1)              // If turnout 1 is closed, do these:
+      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
+      THROW(TRN1)               // Throw turnout 1
+    ENDIF
+    IF CLOSED(TRN2)             // If turnout 2 is closed, do these:
+      AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2
+      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
+      THROW(TRN2)               // Throw turnout 2
+    ENDIF
+    GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+    GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
+  DONE
+
+"Hand off" control for full automation
+_______________________________________
+
+Now we can display the full automation capabilities by setting our layout up for fully automated control of your trains.
+

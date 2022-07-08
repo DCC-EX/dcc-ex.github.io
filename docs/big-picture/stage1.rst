@@ -23,8 +23,8 @@ At the end of stage 1, we expect you will learn the following:
 * How to reference sensors.
 * How, why, and when to effectively use aliases.
 * How an object ID is different to the physical object it represents.
-* How to define a ROUTE for layout automation while still controlling the trains.
-* How to define a fully automated SEQUENCE so the trains run automatically.
+* How to enable layout automation while still manually controlling the trains.
+* How to enable a fully automated layout including train control.
 
 .. raw:: html
   :file: ../_static/images/big-picture/rmft-stage1.drawio.svg

@@ -2,6 +2,12 @@
 Putting it all together - the Big Picture
 ******************************************
 
+.. sidebar:: On this page
+
+   .. contents:: 
+      :depth: 1
+      :local:
+
 A common topic that arises in Discord conversations is the question "How does it all fit together?".
 
 We have a great core product (CommandStation-EX) with great features such as built-in automation (EX-RAIL) along with many integration options (JMRI, WiThrottle, Engine Driver), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (Turntable-EX). However, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?
@@ -36,6 +42,13 @@ Recommended reading
 Throughout these pages we will be using EX-RAIL functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EX-RAIL, so it would be best to read through the :doc:`/automation/EX-RAIL-intro` page prior to going any further.
 
 We will also be outlining the equivalent DCC++ EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-reference` where necessary.
+
+Tuning servo positions
+_______________________
+
+An important item to note when configuring servo based turnouts and signals is that the angles provided are going to be unique to your layout, and possibly even be unique to each particular turnout or signal, depending on how they are mounted and physically connected.
+
+We provide some handy documentation on how to evaluate the correct angles on our :doc:`/reference/hardware/servo-module` page.
 
 Building blocks and stages
 ===========================
@@ -77,6 +90,6 @@ For help understanding linear vs. address/sub address formatting of DCC accessor
 Sensors
 ========
 
-For simplicity, we will use infrared obstacle avoidance/proximity sensors throughout these exercise, which produce and active low output when activated.
+For simplicity, we will use infrared obstacle avoidance/proximity sensors throughout these exercises, which produce an active low output when activated.
 
 If you use different sensors that simply provide an active low or high output, then there should be no change required to the various automation sequences provided, except using a negative "-" for the sensor pin ID if the sensors are active high instead of active low.

@@ -19,12 +19,12 @@ What to expect to learn from stage 1
 
 At the end of stage 1, we expect you will learn the following:
 
-* How to define turnout and signal objects.
+* How to define the different types of turnout and signal objects.
 * How to reference sensors.
 * How, why, and when to effectively use aliases.
-* How an object ID is different to the physical object it represents.
+* How an object ID is different to the pin or configuration used by the physical object it represents.
 * How to enable layout automation while still manually controlling the trains.
-* How to enable a fully automated layout including train control.
+* How to enable a fully automated layout.
 * What hardware can be used, and how to connect the components.
 
 .. raw:: html
@@ -215,33 +215,33 @@ ________
 
 Block 1 is the approach to turnout 1, and prevents a train entering either the station siding or the main track between turnouts 1 and 2 if they are occupied.
 
-We will use ID 0 for this, with an alias:
+We will use ID 1 for this, with an alias:
 
 .. code-block:: 
 
-  ALIAS(BLK1_TRN1_APP, 0)
+  ALIAS(BLK1_TRN1_APP, 1)
 
 Block 2
 ________
 
 Block 2 consists of the section of the main track between turnouts 1 and 2, providing for a section to hold one train, allow a train on the station siding to exit safely, and also prevent a train running around the main track from entering this block.
 
-We will use ID 1 for this, with an alias:
+We will use ID 2 for this, with an alias:
 
 .. code-block:: 
 
-  ALIAS(BLK2_MAIN_HOLD, 1)
+  ALIAS(BLK2_MAIN_HOLD, 2)
 
 Block 3
 ________
 
 Block 3 is for our station siding, ensuring no other trains can enter this block while it is occupied.
 
-We will use ID 2 for this, with an alias:
+We will use ID 3 for this, with an alias:
 
 .. code-block:: 
 
-  ALIAS(BLK3_STN, 2)
+  ALIAS(BLK3_STN, 3)
 
 Block 4
 ________
@@ -250,11 +250,11 @@ Block 4 is the exit beyond turnout 2, and can hold a train while block 1 is occu
 
 Note that block 4 on the diagram continues all the way to the beginning of block 1
 
-We will use ID 3 for this, with an alias:
+We will use ID 4 for this, with an alias:
 
 .. code-block:: 
 
-  ALIAS(BLK4_TRN2_EX, 3)
+  ALIAS(BLK4_TRN2_EX, 4)
 
 Station
 ========

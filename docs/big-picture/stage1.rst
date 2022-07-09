@@ -25,6 +25,7 @@ At the end of stage 1, we expect you will learn the following:
 * How an object ID is different to the physical object it represents.
 * How to enable layout automation while still manually controlling the trains.
 * How to enable a fully automated layout including train control.
+* What hardware can be used, and how to connect the components.
 
 .. raw:: html
   :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
@@ -129,7 +130,7 @@ Again, in myAutomation.h this becomes:
 Sensors
 ========
 
-Six sensors are used in this first stage, which allows us to have up to three trains controlled by EX-RAIL automation. The sensors are placed at the beginning and end of each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.
+Five sensors are used in this first stage, which allows us to have up to three trains controlled by EX-RAIL automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.
 
 We don't need to explicitly define any sensor objects to work with EX-RAIL, so we will simply map these by defining EX-RAIL aliases.
 
@@ -139,10 +140,9 @@ To use pins directly on our Mega2560, we would start at pin 24:
 
   ALIAS(SNS1_TRN1_APP, 24)       // Sensor 1, approaching turnout 1
   ALIAS(SNS2_MAIN_TRN1_EX, 25)   // Sensor 2, on the main track exiting turnout 1
-  ALIAS(SNS3_STN_TRN1_EX, 26)    // Sensor 3, on the station siding exiting turnout 1
+  ALIAS(SNS3_STN, 26)            // Sensor 3, at our station stop
   ALIAS(SNS4_MAIN_TRN2_APP, 27)  // Sensor 4, on the main track approaching turnout 2
   ALIAS(SNS5_STN_TRN2_APP, 28)   // Sensor 5, on the station siding approaching turnout 2
-  ALIAS(SNS6_TRN2_EX, 29)        // Sensor 6, exiting turnout 2
 
 Moving these to our first MCP23017 I/O expander, these would start at Vpin 166:
 
@@ -150,10 +150,9 @@ Moving these to our first MCP23017 I/O expander, these would start at Vpin 166:
 
   ALIAS(SNS1_TRN1_APP, 166)       // Sensor 1, approaching turnout 1
   ALIAS(SNS2_MAIN_TRN1_EX, 167)   // Sensor 2, on the main track exiting turnout 1
-  ALIAS(SNS3_STN_TRN1_EX, 168)    // Sensor 3, on the station siding exiting turnout 1
+  ALIAS(SNS3_STN, 168)            // Sensor 3, at our station stop
   ALIAS(SNS4_MAIN_TRN2_APP, 169)  // Sensor 4, on the main track approaching turnout 2
   ALIAS(SNS5_STN_TRN2_APP, 170)   // Sensor 5, on the station siding approaching turnout 2
-  ALIAS(SNS6_TRN2_EX, 171)        // Sensor 6, exiting turnout 2
 
 Signals
 ========
@@ -249,6 +248,8 @@ ________
 
 Block 4 is the exit beyond turnout 2, and can hold a train while block 1 is occupied. Once block 1 is free, a train can run uninterrupted from block 4 back to block 1.
 
+Note that block 4 on the diagram continues all the way to the beginning of block 1
+
 We will use ID 3 for this, with an alias:
 
 .. code-block:: 
@@ -308,15 +309,15 @@ _________________________________________________________
       AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       CLOSE(TRN1)               // Close turnout 1
+      DELAY(2000)               // Wait 2 seconds for the turnout to close
     ENDIF
     IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
       CLOSE(TRN2)               // Close turnout 2
+      DELAY(2000)               // Wait 2 seconds for the turnout to close
     ENDIF
     GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
     GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
@@ -328,15 +329,15 @@ _________________________________________________________
       AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       THROW(TRN1)               // Throw turnout 1
+      DELAY(2000)               // Wait 2 seconds for the turnout to throw
     ENDIF
     IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
       THROW(TRN2)               // Throw turnout 2
+      DELAY(2000)               // Wait 2 seconds for the turnout to throw
     ENDIF
     GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
     GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
@@ -373,15 +374,15 @@ ____________________________________________________________
       AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       CLOSE(TRN1)               // Close turnout 1
+      DELAY(2000)               // Wait 2 seconds for the turnout to close
     ENDIF
     IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
       CLOSE(TRN2)               // Close turnout 2
+      DELAY(2000)               // Wait 2 seconds for the turnout to close
     ENDIF
     GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
     GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
@@ -393,15 +394,15 @@ ____________________________________________________________
       AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       THROW(TRN1)               // Throw turnout 1
+      DELAY(2000)               // Wait 2 seconds for the turnout to throw
     ENDIF
     IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
       THROW(TRN2)               // Throw turnout 2
+      DELAY(2000)               // Wait 2 seconds for the turnout to throw
     ENDIF
     GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
     GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
@@ -436,15 +437,15 @@ ___________________________________________________________________
       AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       CLOSE(TRN1)               // Close turnout 1
+      DELAY(2000)               // Wait 2 seconds for the turnout to close
     ENDIF
     IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
       CLOSE(TRN2)               // Close turnout 2
+      DELAY(2000)               // Wait 2 seconds for the turnout to close
     ENDIF
     GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
     GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
@@ -456,26 +457,32 @@ ___________________________________________________________________
       AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 1
       THROW(TRN1)               // Throw turnout 1
+      DELAY(2000)               // Wait 2 seconds for the turnout to throw
     ENDIF
     IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
       AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
       DELAY(2000)
       RED(SIG2_TRN2_GO)         // Set signal 2 red while we throw turnout 2
-      DELAY(2000)               // Wait 2 seconds in case there's a train crossing turnout 2
       THROW(TRN2)               // Throw turnout 2
+      DELAY(2000)               // Wait 2 seconds for the turnout to throw
     ENDIF
     GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
     GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
   DONE
 
-Full automation with the "hand off" feature
-============================================
+Fully automated layout
+=======================
 
 Now it's time to display the full automation capabilities by setting our layout up for fully automated control of your trains.
 
-You will note that these are largely based on :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
+You will note that these are somewhat similar to :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
+
+To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that EX-RAIL has no way of knowing where a train is on the layout when first starting.
+
+* Train 1 in block 1, between sensor 1 and turnout 1.
+* Train 2 in block 2, between sensors 2 and 4.
+* Train 3 in block 4, after turnout 2.
 
 Pin based turnouts and signals on Mega2560 direct I/O pins
 __________________________________________________________
@@ -489,14 +496,20 @@ __________________________________________________________
   ALIAS(TRN2, 101)
   ALIAS(SNS1_TRN1_APP, 24)
   ALIAS(SNS2_MAIN_TRN1_EX, 25)
-  ALIAS(SNS3_STN_TRN1_EX, 26)
+  ALIAS(SNS3_STN, 26)
   ALIAS(SNS4_MAIN_TRN2_APP, 27)
   ALIAS(SNS5_STN_TRN2_APP, 28)
   ALIAS(SNS6_TRN2_EX, 29)
   ALIAS(SIG1_TRN1_APP, 30)
   ALIAS(SIG2_TRN2_GO, 33)
   ALIAS(SIG3_STN_EX, 36)
-
+  ALIAS(BLK1_EXIT, 1)
+  ALIAS(BLK1_BLK2, 2)
+  ALIAS(BLK2_BLK4, 3)
+  ALIAS(BLK3_BLK4, 4)
+  ALIAS(BLK4_BLK1, 5)
+  ALIAS(CHOOSE_BLK2, 60)
+  
   // Define our objects:
   PIN_TURNOUT(TRN1, 22, "Station entry")
   PIN_TURNOUT(TRN2, 23, "Station exit")
@@ -504,25 +517,107 @@ __________________________________________________________
   SIGNAL(SIG2_TRN2_GO, 34, 35)
   SIGNAL(SIG3_STN_EX, 37, 38)
 
+  // Start up with turnouts closed and signals red
+  CLOSE(TRN1)
+  CLOSE(TRN2)
+  RED(SIG1_TRN1_APP)
+  RED(SIG2_TRN2_GO)
+  RED(SIG3_STN_EX)
+
+  // Send three locos around our layout:
+  RESERVE(BLK1_TRN1_APP)
+  RESERVE(BLK2_MAIN_HOLD)
+  RESERVE(BLK4_TRN2_EX)
+  SENDLOCO(1, BLK1_EXIT)
+  SENDLOCO(2, BLK2_BLK4)
+  SENDLOCO(3, BLK4_BLK1)
+
   // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
   DONE
 
-  SEQUENCE(1)
-    DELAYRANDOM(10000, 20000)
+  AUTOMATION(BLK1_EXIT, "Start in block 1")
+    IF(CHOOSE_BLK2)
+      UNLATCH(CHOOSE_BLK2)
+      FOLLOW(BLK1_BLK2)
+    ELSE
+      LATCH(CHOOSE_BLK2)
+      FOLLOW(BLK1_BLK3)
+    ENDIF
+
+  SEQUENCE(BLK1_BLK2)
     RESERVE(BLK2_MAIN_HOLD)
-    FOLLOW(2)
+    IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
+      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
+      CLOSE(TRN1)               // Close turnout 1
+      DELAY(2000)               // Wait 2 seconds for the turnout to close fully
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(20)
+    AFTER(SNS2_MAIN_TRN1_EX)
+    FREE(BLK1_TRN1_APP)
+    FOLLOW(BLK2_BLK4)
 
-  SEQUENCE(2)
+  SEQUENCE(BLK1_BLK3)
+    RESERVE(BLK3_STN)
+    IFCLOSED(TRN1)
+      AMBER(SIG1_TRN1_APP)
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)
+      THROW(TRN1)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(10)
+    AT(SNS3_STN_TRN1_EX)
+    STOP
+    FREE(BLK1_TRN1_APP)
+    DELAYRANDOM(10000, 15000)
+    FWD(10)
+    AT(SNS5_STN_TRN2_APP)
+    FOLLOW(BLK3_BLK4)
 
-    FOLLOW(3)
+  SEQUENCE(BLK2_BLK4)
+    RESERVE(BLK4_TRN2_EX)
+    IFTHROWN(TRN2)
+      AMBER(SIG2_TRN2_GO)
+      AMBER(SIG3_STN_EX)
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+      CLOSE(TRN2)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG2_TRN2_GO)
+    FWD(20)
+    AFTER(SNS4_MAIN_TRN2_APP)
+    FREE(BLK2_MAIN_HOLD)
+    FOLLOW(BLK4_BLK1)
   
-  SEQUENCE(3)
-
-    FOLLOW(4)
+  SEQUENCE(BLK3_BLK4)
+    RESERVE(BLK4_TRN2_EX)
+    IFCLOSED(TRN2)
+      AMBER(SIG2_TRN2_GO)
+      AMBER(SIG3_STN_EX)
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+      THROW(TRN2)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG3_STN_EX)
+    FWD(20)
+    AFTER(SNS5_STN_TRN2_APP)
+    FREE(BLK3_STN)
+    FOLLOW(BLK4_BLK1)
   
-  SEQUENCE(4)
-
-    FOLLOW(1)
+  SEQUENCE(BLK4_BLK1)
+    RESERVE(BLK1_TRN1_APP)
+    FWD(30)
+    AFTER(SNS1_TRN1_APP)
+    FREE(BLK4_TRN2_EX)
+    FOLLOW(BLK1_EXIT)
 
 Pin based turnouts and signals on MCP23017 I/O expander Vpins
 _____________________________________________________________

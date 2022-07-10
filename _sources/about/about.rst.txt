@@ -68,8 +68,8 @@ Developers
 LCN / LCOS (Layout Control)
 ============================
 
-Rob Simonds - Reno, Nevada, USA (RobinS)
-Jack Reagan - Cape Girardeau, Missouri (Marada1)
+* Rob Simonds - Reno, Nevada, USA (RobinS)
+* Jack Reagan - Cape Girardeau, Missouri (Marada1)
 
 Installer Software
 ===================
@@ -126,7 +126,3 @@ Testing / Research / Support
 * Larry Dribin - (H0Guy, LarryD)
 * Henk Kruisbrink - UK (Henkk)
 * Colin Grabham, Condobolin NSW Straya (Kebbin)
-
-
-    
-

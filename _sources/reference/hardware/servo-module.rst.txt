@@ -52,13 +52,14 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 Using Servos with EX-RAIL
 ==========================
 
-EX-RAIL supports two methods of controlling servos:
+EX-RAIL supports three methods of controlling servos:
 
-- Turnouts via the SERVO_TURNOUT directive
-- Animations via the SERVO or SERVO2 directives
+* Turnouts via the SERVO_TURNOUT directive
+* Signals via the SERVO_SIGNAL directive
+* Animations via the SERVO or SERVO2 directives
 
-Controlling Servos for Turnouts
----------------------------------
+Controlling servos for turnouts
+________________________________
 
 The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in WiThrottle apps, Engine Driver, and JMRI in addition to being defined as a turnout within the CommandStation.
 
@@ -83,8 +84,27 @@ An example definition for a servo connected to the second control pins of the fi
 
    SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
 
-Controlling Servos for Animations
-----------------------------------
+Controlling servos for signals
+_______________________________
+
+The SERVO_SIGNAL directive defines a servo based signal in EX-RAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.
+
+Similar to pin based signals, servo signals are controlled by the ID of the red pin only.
+
+Unlike servo based turnouts, there is no ID or description (they don't appear in throttles), and they use the "Bounce" profile with no other options available at the present time:
+
+.. code-block:: 
+
+   SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
+
+A simple example using the thrid control pins of the first PCA9685 connected to the CommandStation would be:
+
+.. code-block:: 
+
+   SERVO_SIGNAL(102, 400, 250, 100)
+
+Controlling servos for animations
+__________________________________
 
 The SERVO and SERVO2 directives allow for servos to be used in various automations within EX-RAIL.
 

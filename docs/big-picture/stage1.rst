@@ -8,11 +8,15 @@ Stage 1
       :depth: 1
       :local:
 
-Stage 1 of our RMFT layout is a simple loop including a single siding for a station.
+.. image:: ../_static/images/conductor-level.png
+  :alt: Conductor Level
+  :scale: 50%
 
-This allows for automated running of up to three trains including automated switching for entering and exiting the station siding.
+Stage 1 of our RMFT layout is a simple loop including a single siding for a station, which allows for automated running of up to three trains including automated switching for entering and exiting the station siding.
 
-We'll cover off the various aspects required to get up and running with stage 1 including object definitions, the various hardware options you can use, and how you can apply automation techniques to the layout.
+To accomplish this, the layout will be broken up into four virtual blocks with five sensors in use to detect the position of our trains as they enter and exit the blocks, and three signals that will be controlled by automation to indicate when it is safe to proceed.
+
+Below, we'll cover off the various aspects required to get up and running with stage 1 including object definitions, the various hardware options you can use, and how you can apply automation techniques to the layout.
 
 What to expect to learn from stage 1
 =====================================
@@ -25,10 +29,23 @@ At the end of stage 1, we expect you will learn the following:
 * How an object ID is different to the pin or configuration used by the physical object it represents.
 * How to enable layout automation while still manually controlling the trains.
 * How to enable a fully automated layout.
-* What hardware can be used, and how to connect the components.
+* What hardware can be used, and how to connect the components (Fritzing diagrams for this will be published soon).
 
 .. raw:: html
   :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
+
+Aliases
+========
+
+As mentioned already, we will be defining aliases throughout these pages to put human-friendly labels on our various objects.
+
+By doing so, it becomes easier to refer to things in various different sequences or contexts when referring to a name than it is to remember a specific pin or turnout ID.
+
+This also means if there is a need to change a pin or object ID, you can simply update the single alias reference, meaning you don't need to dig through all your sequences, routes, and so forth to edit them individually.
+
+Further more, you can make radical changes such as moving from pin turnouts to servo turnouts, and only need to edit the defined objects and alias. Again, all your existing sequences, routes, etc. should remain unchanged.
+
+For more information on aliases, refer to :ref:`automation/ex-rail-reference:aliases`.
 
 Turnouts
 =========
@@ -107,6 +124,12 @@ Servo turnouts
 ^^^^^^^^^^^^^^^
 
 Finally, to define these same turnouts as servo based turnouts, these would be connected to a PCA9685 servo module, and our first module starts at Vpin ID 100.
+
+.. tip:: 
+
+  Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts, so be sure you read the blurb on :ref:`big-picture/big-picture:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
+
+  Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
 Throughout these pages, we will assume that the thrown servo position is 400, the closed servo position is 100, and we will use the "Slow" profile.
 
@@ -192,6 +215,12 @@ Servo based signals
 ____________________
 
 To define servo based signals, these only require one Vpin per signal along with specifying the servo angle for the red, amber, and green positions.
+
+.. tip:: 
+
+  Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on :ref:`big-picture/big-picture:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
+
+  Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
 Allowing for servo based turnouts being used, we will start our signals from the third available Vpin on our PCA9685 servo module. We will make the assumption that red requires a servo angle of 100, amber 250, and green 400:
 
@@ -484,6 +513,200 @@ To setup for these fully automated sequences, we need to ensure our trains are p
 * Train 2 in block 2, between sensors 2 and 4.
 * Train 3 in block 4, after turnout 2.
 
+Virtual block logic
+____________________
+
+As mentioned in the introduction, we can enable fully automated running of up to three trains on this layout by breaking it into four virtual blocks.
+
+.. note:: 
+
+  Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to :ref:`automation/ex-rail-reference:blocks`.
+
+When reading through the sections below on the logic, it helps to keep in mind the perspective of the engineer driving the train, rather than thinking of the complete layout. As the engineer, you need to ask yourself the question "what needs to be in place for me to safely drive this train to the next part of the layout?"
+
+The automation is accomplished by defining six separate sequences that map out how trains can move safely from one block to the next, and we also use LATCH() as a technique to alternate between trains stopping at the station or continuing on the main track.
+
+Startup sequence
+^^^^^^^^^^^^^^^^^
+
+When the CommandStation and EX-RAIL starts, everything defined before the first ``DONE`` command executes automatically.
+
+Given we are starting with three trains on the layout occupying virtual blocks 1, 2, and 4, we need to ensure our layout starts up in a manner that is safe for the automation to commence running these trains correctly.
+
+Therefore, we ensure both our turnouts are closed and set all our signals to red so these objects are all in a known state to start with.
+
+Next, we place a RESERVE() on each block a train occupies, which will prevent any sequence from driving another train into that block.
+
+Once these activities have been done, we can tell our trains to start following the appropriate sequence, which will let them start on their fully automated journey safely.
+
+.. code-block:: 
+
+  // Start up with turnouts closed and signals red
+  CLOSE(TRN1)
+  CLOSE(TRN2)
+  RED(SIG1_TRN1_APP)
+  RED(SIG2_TRN2_GO)
+  RED(SIG3_STN_EX)
+
+  // Send three locos around our layout:
+  RESERVE(BLK1_TRN1_APP)
+  RESERVE(BLK2_MAIN_HOLD)
+  RESERVE(BLK4_TRN2_EX)
+  SENDLOCO(1, BLK1_EXIT)
+  SENDLOCO(2, BLK2_BLK4)
+  SENDLOCO(3, BLK4_BLK1)
+
+  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  DONE
+
+Exiting block 1
+^^^^^^^^^^^^^^^^
+
+In order to safely exit block 1, the first decision to be made is if the train will go straight through to continue on the main track, or if it will switch on to the station siding.
+
+Using the LATCH() command gives us a way to automatically alternate between the main track and the station siding. LATCH() simply sets the state of a pin (either real or virtual) which can then be tested by an IF() statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on LATCH() can be found in the :ref:`automation/ex-rail-reference:sensors` section of the EX-RAIL reference.
+
+When our CommandStation starts up, virtual pin 60 will not be set, and therefore evaluating the IF() statement ``IF(CHOOSE_BLK2)`` will return false, with our logic then latching this virtual pin, meaning the next time this sequence is called, ``IF(CHOOSE_BLK2)`` will return true.
+
+This logic allows us to follow our block 1 to block 3 logic (false) to switch onto the station siding, or follow our block 1 to block 2 logic (true) to continue on the main track.
+
+On startup, we are sending train 1 on this sequence, which means with our IF() returning false on startup, train 1 will first attempt to move from block 1 to block 3, which means switching to our station siding.
+
+.. code-block:: 
+
+  // Sequence to exit block 1, and choose whether to go to the station or continue on main
+  SEQUENCE(BLK1_EXIT)
+    IF(CHOOSE_BLK2)
+      UNLATCH(CHOOSE_BLK2)
+      FOLLOW(BLK1_BLK2)
+    ELSE
+      LATCH(CHOOSE_BLK2)
+      FOLLOW(BLK1_BLK3)
+    ENDIF
+
+Moving from block 1 to block 2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To safely move from block 1 to block 2, the first thing we need to know is if it's safe to do so.
+
+In EX-RAIL, this is accomplished by using the RESERVE() command which says if the block is free, we can reserve it. If it is not free, the reserve cannot be completed, and the train will stop until the block is freed, in which case the sequence can continue.
+
+So, providing a reserve can be placed on block 2, we can then test to see if turnout 1 is thrown. If so, the turnout needs to be closed, but in order to do so safely we set the approach signal amber for 2 seconds ``AMBER(SIG1_TRN1_APP)``, then set the signal red ``RED(SIG1_TRN1_APP)`` before closing the turnout ``CLOSE(TRN2)``, and waiting a further 2 seconds to ensure the turnout is fully closed.
+
+Once the turnout is closed, or if it already was, we set our signal green ``GREEN(SIG1_TRN1_APP)`` and tell the train to proceed at speed 20.
+
+Then, after the train has not only activated sensor 2, but has passed over it completely, then allowing it to deactivate for 0.5 seconds ``AFTER(SNS2_MAIN_TRN1_EX)``, the reservation on block 1 can be released ``FREE(BLK1_TRN1_APP)``, meaning the next train needing to enter block 1 can do so.
+
+.. code-block:: 
+
+  // Sequence to go from block 1 to block 2
+  SEQUENCE(BLK1_BLK2)
+    RESERVE(BLK2_MAIN_HOLD)
+    IFTHROWN(TRN1)
+      AMBER(SIG1_TRN1_APP)
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)
+      CLOSE(TRN1)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(20)
+    AFTER(SNS2_MAIN_TRN1_EX)
+    FREE(BLK1_TRN1_APP)
+    FOLLOW(BLK2_BLK4)
+
+Moving from block 1 to block 3
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. code-block:: 
+
+  // Sequence to go from block 1 to block 3
+  SEQUENCE(BLK1_BLK3)
+    RESERVE(BLK3_STN)
+    IFCLOSED(TRN1)
+      AMBER(SIG1_TRN1_APP)
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)
+      THROW(TRN1)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(10)
+    AT(SNS3_STN_TRN1_EX)
+    STOP
+    FREE(BLK1_TRN1_APP)
+    DELAYRANDOM(10000, 15000)
+    FWD(10)
+    AT(SNS5_STN_TRN2_APP)
+    FOLLOW(BLK3_BLK4)
+
+Moving from block 2 to block 4
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. code-block:: 
+
+  // Sequence to go from block 2 to block 4
+  SEQUENCE(BLK2_BLK4)
+    RESERVE(BLK4_TRN2_EX)
+    IFTHROWN(TRN2)
+      AMBER(SIG2_TRN2_GO)
+      AMBER(SIG3_STN_EX)
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+      CLOSE(TRN2)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG2_TRN2_GO)
+    FWD(20)
+    AFTER(SNS4_MAIN_TRN2_APP)
+    FREE(BLK2_MAIN_HOLD)
+    FOLLOW(BLK4_BLK1)
+
+Moving from block 3 to block 4
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. code-block:: 
+
+  // Sequence to go from block 3 to block 4
+  SEQUENCE(BLK3_BLK4)
+    RESERVE(BLK4_TRN2_EX)
+    IFCLOSED(TRN2)
+      AMBER(SIG2_TRN2_GO)
+      AMBER(SIG3_STN_EX)
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+      THROW(TRN2)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG3_STN_EX)
+    FWD(20)
+    AFTER(SNS5_STN_TRN2_APP)
+    FREE(BLK3_STN)
+    FOLLOW(BLK4_BLK1)
+
+Moving from block 4 to block 1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. code-block:: 
+
+  // Sequence to move from block 4 back to block 1
+  SEQUENCE(BLK4_BLK1)
+    RESERVE(BLK1_TRN1_APP)
+    FWD(30)
+    AFTER(SNS1_TRN1_APP)
+    FREE(BLK4_TRN2_EX)
+    FOLLOW(BLK1_EXIT)
+
 Pin based turnouts and signals on Mega2560 direct I/O pins
 __________________________________________________________
 
@@ -499,15 +722,19 @@ __________________________________________________________
   ALIAS(SNS3_STN, 26)
   ALIAS(SNS4_MAIN_TRN2_APP, 27)
   ALIAS(SNS5_STN_TRN2_APP, 28)
-  ALIAS(SNS6_TRN2_EX, 29)
   ALIAS(SIG1_TRN1_APP, 30)
   ALIAS(SIG2_TRN2_GO, 33)
   ALIAS(SIG3_STN_EX, 36)
+  ALIAS(BLK1_TRN1_APP, 1)
+  ALIAS(BLK2_MAIN_HOLD, 2)
+  ALIAS(BLK3_STN, 3)
+  ALIAS(BLK4_TRN2_EX, 4)
   ALIAS(BLK1_EXIT, 1)
   ALIAS(BLK1_BLK2, 2)
-  ALIAS(BLK2_BLK4, 3)
-  ALIAS(BLK3_BLK4, 4)
-  ALIAS(BLK4_BLK1, 5)
+  ALIAS(BLK1_BLK3, 3)
+  ALIAS(BLK2_BLK4, 4)
+  ALIAS(BLK3_BLK4, 5)
+  ALIAS(BLK4_BLK1, 6)
   ALIAS(CHOOSE_BLK2, 60)
   
   // Define our objects:
@@ -535,7 +762,8 @@ __________________________________________________________
   // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
   DONE
 
-  AUTOMATION(BLK1_EXIT, "Start in block 1")
+  // Sequence to exit block 1, and choose whether to go to the station or continue on main
+  SEQUENCE(BLK1_EXIT)
     IF(CHOOSE_BLK2)
       UNLATCH(CHOOSE_BLK2)
       FOLLOW(BLK1_BLK2)
@@ -544,14 +772,15 @@ __________________________________________________________
       FOLLOW(BLK1_BLK3)
     ENDIF
 
+  // Sequence to go from block 1 to block 2
   SEQUENCE(BLK1_BLK2)
     RESERVE(BLK2_MAIN_HOLD)
-    IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
-      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+    IFTHROWN(TRN1)
+      AMBER(SIG1_TRN1_APP)
       DELAY(2000)
-      RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
-      CLOSE(TRN1)               // Close turnout 1
-      DELAY(2000)               // Wait 2 seconds for the turnout to close fully
+      RED(SIG1_TRN1_APP)
+      CLOSE(TRN1)
+      DELAY(2000)
     ENDIF
     GREEN(SIG1_TRN1_APP)
     FWD(20)
@@ -559,6 +788,7 @@ __________________________________________________________
     FREE(BLK1_TRN1_APP)
     FOLLOW(BLK2_BLK4)
 
+  // Sequence to go from block 1 to block 3
   SEQUENCE(BLK1_BLK3)
     RESERVE(BLK3_STN)
     IFCLOSED(TRN1)
@@ -578,6 +808,7 @@ __________________________________________________________
     AT(SNS5_STN_TRN2_APP)
     FOLLOW(BLK3_BLK4)
 
+  // Sequence to go from block 2 to block 4
   SEQUENCE(BLK2_BLK4)
     RESERVE(BLK4_TRN2_EX)
     IFTHROWN(TRN2)
@@ -595,6 +826,7 @@ __________________________________________________________
     FREE(BLK2_MAIN_HOLD)
     FOLLOW(BLK4_BLK1)
   
+  // Sequence to go from block 3 to block 4
   SEQUENCE(BLK3_BLK4)
     RESERVE(BLK4_TRN2_EX)
     IFCLOSED(TRN2)
@@ -612,6 +844,7 @@ __________________________________________________________
     FREE(BLK3_STN)
     FOLLOW(BLK4_BLK1)
   
+  // Sequence to move from block 4 back to block 1
   SEQUENCE(BLK4_BLK1)
     RESERVE(BLK1_TRN1_APP)
     FWD(30)
@@ -631,13 +864,24 @@ _____________________________________________________________
   ALIAS(TRN2, 101)
   ALIAS(SNS1_TRN1_APP, 166)
   ALIAS(SNS2_MAIN_TRN1_EX, 167)
-  ALIAS(SNS3_STN_TRN1_EX, 168)
+  ALIAS(SNS3_STN, 168)
   ALIAS(SNS4_MAIN_TRN2_APP, 169)
   ALIAS(SNS5_STN_TRN2_APP, 170)
   ALIAS(SNS6_TRN2_EX, 171)
   ALIAS(SIG1_TRN1_APP, 172)
   ALIAS(SIG2_TRN2_GO, 175)
   ALIAS(SIG3_STN_EX, 178)
+  ALIAS(BLK1_TRN1_APP, 1)
+  ALIAS(BLK2_MAIN_HOLD, 2)
+  ALIAS(BLK3_STN, 3)
+  ALIAS(BLK4_TRN2_EX, 4)
+  ALIAS(BLK1_EXIT, 1)
+  ALIAS(BLK1_BLK2, 2)
+  ALIAS(BLK1_BLK3, 3)
+  ALIAS(BLK2_BLK4, 4)
+  ALIAS(BLK3_BLK4, 5)
+  ALIAS(BLK4_BLK1, 6)
+  ALIAS(CHOOSE_BLK2, 60)
 
   // Define our objects:
   PIN_TURNOUT(TRN1, 22, "Station entry")
@@ -646,8 +890,113 @@ _____________________________________________________________
   SIGNAL(SIG2_TRN2_GO, 176, 177)
   SIGNAL(SIG3_STN_EX, 179, 180)
 
+  // Start up with turnouts closed and signals red
+  CLOSE(TRN1)
+  CLOSE(TRN2)
+  RED(SIG1_TRN1_APP)
+  RED(SIG2_TRN2_GO)
+  RED(SIG3_STN_EX)
+
+  // Send three locos around our layout:
+  RESERVE(BLK1_TRN1_APP)
+  RESERVE(BLK2_MAIN_HOLD)
+  RESERVE(BLK4_TRN2_EX)
+  SENDLOCO(1, BLK1_EXIT)
+  SENDLOCO(2, BLK2_BLK4)
+  SENDLOCO(3, BLK4_BLK1)
+
   // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
   DONE
+
+  // Sequence to exit block 1, and choose whether to go to the station or continue on main
+  SEQUENCE(BLK1_EXIT)
+    IF(CHOOSE_BLK2)
+      UNLATCH(CHOOSE_BLK2)
+      FOLLOW(BLK1_BLK2)
+    ELSE
+      LATCH(CHOOSE_BLK2)
+      FOLLOW(BLK1_BLK3)
+    ENDIF
+
+  // Sequence to go from block 1 to block 2
+  SEQUENCE(BLK1_BLK2)
+    RESERVE(BLK2_MAIN_HOLD)
+    IFTHROWN(TRN1)
+      AMBER(SIG1_TRN1_APP)
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)
+      CLOSE(TRN1)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(20)
+    AFTER(SNS2_MAIN_TRN1_EX)
+    FREE(BLK1_TRN1_APP)
+    FOLLOW(BLK2_BLK4)
+
+  // Sequence to go from block 1 to block 3
+  SEQUENCE(BLK1_BLK3)
+    RESERVE(BLK3_STN)
+    IFCLOSED(TRN1)
+      AMBER(SIG1_TRN1_APP)
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)
+      THROW(TRN1)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(10)
+    AT(SNS3_STN_TRN1_EX)
+    STOP
+    FREE(BLK1_TRN1_APP)
+    DELAYRANDOM(10000, 15000)
+    FWD(10)
+    AT(SNS5_STN_TRN2_APP)
+    FOLLOW(BLK3_BLK4)
+
+  // Sequence to go from block 2 to block 4
+  SEQUENCE(BLK2_BLK4)
+    RESERVE(BLK4_TRN2_EX)
+    IFTHROWN(TRN2)
+      AMBER(SIG2_TRN2_GO)
+      AMBER(SIG3_STN_EX)
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+      CLOSE(TRN2)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG2_TRN2_GO)
+    FWD(20)
+    AFTER(SNS4_MAIN_TRN2_APP)
+    FREE(BLK2_MAIN_HOLD)
+    FOLLOW(BLK4_BLK1)
+  
+  // Sequence to go from block 3 to block 4
+  SEQUENCE(BLK3_BLK4)
+    RESERVE(BLK4_TRN2_EX)
+    IFCLOSED(TRN2)
+      AMBER(SIG2_TRN2_GO)
+      AMBER(SIG3_STN_EX)
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+      THROW(TRN2)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG3_STN_EX)
+    FWD(20)
+    AFTER(SNS5_STN_TRN2_APP)
+    FREE(BLK3_STN)
+    FOLLOW(BLK4_BLK1)
+  
+  // Sequence to move from block 4 back to block 1
+  SEQUENCE(BLK4_BLK1)
+    RESERVE(BLK1_TRN1_APP)
+    FWD(30)
+    AFTER(SNS1_TRN1_APP)
+    FREE(BLK4_TRN2_EX)
+    FOLLOW(BLK1_EXIT)
 
 Servo based turnouts and signals with a PCA9685 servo module
 _____________________________________________________________
@@ -660,13 +1009,24 @@ _____________________________________________________________
   ALIAS(TRN2, 101)
   ALIAS(SNS1_TRN1_APP, 24)
   ALIAS(SNS2_MAIN_TRN1_EX, 25)
-  ALIAS(SNS3_STN_TRN1_EX, 26)
+  ALIAS(SNS3_STN, 26)
   ALIAS(SNS4_MAIN_TRN2_APP, 27)
   ALIAS(SNS5_STN_TRN2_APP, 28)
   ALIAS(SNS6_TRN2_EX, 29)
   ALIAS(SIG1_TRN1_APP, 102)
   ALIAS(SIG2_TRN2_GO, 103)
   ALIAS(SIG3_STN_EX, 104)
+  ALIAS(BLK1_TRN1_APP, 1)
+  ALIAS(BLK2_MAIN_HOLD, 2)
+  ALIAS(BLK3_STN, 3)
+  ALIAS(BLK4_TRN2_EX, 4)
+  ALIAS(BLK1_EXIT, 1)
+  ALIAS(BLK1_BLK2, 2)
+  ALIAS(BLK1_BLK3, 3)
+  ALIAS(BLK2_BLK4, 4)
+  ALIAS(BLK3_BLK4, 5)
+  ALIAS(BLK4_BLK1, 6)
+  ALIAS(CHOOSE_BLK2, 60)
   
   SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
   SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
@@ -674,8 +1034,113 @@ _____________________________________________________________
   SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
   SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
 
+  // Start up with turnouts closed and signals red
+  CLOSE(TRN1)
+  CLOSE(TRN2)
+  RED(SIG1_TRN1_APP)
+  RED(SIG2_TRN2_GO)
+  RED(SIG3_STN_EX)
+
+  // Send three locos around our layout:
+  RESERVE(BLK1_TRN1_APP)
+  RESERVE(BLK2_MAIN_HOLD)
+  RESERVE(BLK4_TRN2_EX)
+  SENDLOCO(1, BLK1_EXIT)
+  SENDLOCO(2, BLK2_BLK4)
+  SENDLOCO(3, BLK4_BLK1)
+
   // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
   DONE
+
+  // Sequence to exit block 1, and choose whether to go to the station or continue on main
+  SEQUENCE(BLK1_EXIT)
+    IF(CHOOSE_BLK2)
+      UNLATCH(CHOOSE_BLK2)
+      FOLLOW(BLK1_BLK2)
+    ELSE
+      LATCH(CHOOSE_BLK2)
+      FOLLOW(BLK1_BLK3)
+    ENDIF
+
+  // Sequence to go from block 1 to block 2
+  SEQUENCE(BLK1_BLK2)
+    RESERVE(BLK2_MAIN_HOLD)
+    IFTHROWN(TRN1)
+      AMBER(SIG1_TRN1_APP)
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)
+      CLOSE(TRN1)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(20)
+    AFTER(SNS2_MAIN_TRN1_EX)
+    FREE(BLK1_TRN1_APP)
+    FOLLOW(BLK2_BLK4)
+
+  // Sequence to go from block 1 to block 3
+  SEQUENCE(BLK1_BLK3)
+    RESERVE(BLK3_STN)
+    IFCLOSED(TRN1)
+      AMBER(SIG1_TRN1_APP)
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)
+      THROW(TRN1)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(10)
+    AT(SNS3_STN_TRN1_EX)
+    STOP
+    FREE(BLK1_TRN1_APP)
+    DELAYRANDOM(10000, 15000)
+    FWD(10)
+    AT(SNS5_STN_TRN2_APP)
+    FOLLOW(BLK3_BLK4)
+
+  // Sequence to go from block 2 to block 4
+  SEQUENCE(BLK2_BLK4)
+    RESERVE(BLK4_TRN2_EX)
+    IFTHROWN(TRN2)
+      AMBER(SIG2_TRN2_GO)
+      AMBER(SIG3_STN_EX)
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+      CLOSE(TRN2)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG2_TRN2_GO)
+    FWD(20)
+    AFTER(SNS4_MAIN_TRN2_APP)
+    FREE(BLK2_MAIN_HOLD)
+    FOLLOW(BLK4_BLK1)
+  
+  // Sequence to go from block 3 to block 4
+  SEQUENCE(BLK3_BLK4)
+    RESERVE(BLK4_TRN2_EX)
+    IFCLOSED(TRN2)
+      AMBER(SIG2_TRN2_GO)
+      AMBER(SIG3_STN_EX)
+      DELAY(2000)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+      THROW(TRN2)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG3_STN_EX)
+    FWD(20)
+    AFTER(SNS5_STN_TRN2_APP)
+    FREE(BLK3_STN)
+    FOLLOW(BLK4_BLK1)
+  
+  // Sequence to move from block 4 back to block 1
+  SEQUENCE(BLK4_BLK1)
+    RESERVE(BLK1_TRN1_APP)
+    FWD(30)
+    AFTER(SNS1_TRN1_APP)
+    FREE(BLK4_TRN2_EX)
+    FOLLOW(BLK1_EXIT)
 
 Learnings from stage 1
 =======================

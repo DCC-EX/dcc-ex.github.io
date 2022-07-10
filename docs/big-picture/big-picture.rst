@@ -12,7 +12,7 @@ Putting it all together - the Big Picture
   :alt: Conductor Level
   :scale: 50%
 
-A common topic that arises in Discord conversations is the question "How does it all fit together?".
+A common topic that arises in Discord conversations is the question "How does it all fit together?"
 
 We have a great core product (CommandStation-EX) with great features such as built-in automation (EX-RAIL) along with many integration options (JMRI, WiThrottle, Engine Driver), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (Turntable-EX). However, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?
 
@@ -93,6 +93,25 @@ Sensor types
 For simplicity, we will use infrared obstacle avoidance/proximity sensors throughout these exercises, which produce an active low output when activated.
 
 If you use different sensors that simply provide an active low or high output, then there should be no change required to the various automation sequences provided, except using a negative "-" for the sensor pin ID if the sensors are active high instead of active low.
+
+.. note:: 
+
+  When defining aliases for sensors, you cannot specify a negative number for these, and therefore to use an alias with an active high sensor, you need to add the negative in front of the alias name when referring to it in sequences and routes instead.
+
+  This is invalid:
+
+  .. code-block:: 
+
+    ALIAS(SNS1, -22)
+
+  Instead, these use cases are valid:
+
+  .. code-block:: 
+
+    ALIAS(SNS1, 22)
+
+    AT(-SNS1)         // When activie high sensor 1 is triggered
+    IF(-SNS1)         // If activie high sensor 1 is triggered
 
 Locomotive addresses in use
 ============================

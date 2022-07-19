@@ -2,6 +2,12 @@
 Motor Boards
 *************
 
+.. sidebar:: On this page
+
+   .. contents:: 
+      :depth: 2
+      :local:
+
 CommandStation-EX is compatible with a wide variety of motor boards, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.
 
 If you have trouble finding a particular board from the list, try searching based on it's name or the type of chip on the board and the terms "H-Bridge" or "Motor Shield". There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.
@@ -19,10 +25,11 @@ What is a Motor Controller?
 
 A motor controller (aka shield, aka board) is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (PWM) signal would be applied to a motor with the PWM pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the PWM pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polar square wave. In this way, we use the 5V DC (or 3.3V) microcontroller output to switch the voltage from separate 12-18V DC power supply connected to the motor controller, and create a pulse train signal of 1's and 0's that a mobile decoder can interpret as commands.
 
-Boards currently supported
-===========================
+Current list of boards
+=======================
 
-**Easy to use boards**
+Easy to use boards
+___________________
 
 .. image:: ../../_static/images/conductor-level.png
   :alt: Conductor level
@@ -35,32 +42,47 @@ Boards currently supported
 * :ref:`reference/hardware/motor-boards:YFRobot L298P Motor Shield` - 2A
 * :ref:`reference/hardware/motor-boards:Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
-**Intermediate boards (Tinkerer Level)** - require wiring
+Intermediate boards
+____________________
 
 .. image:: ../../_static/images/tinkerer-level.png
   :alt: Tinkerer level
   :scale: 30%
 
+These boards require wiring.
+
 * :ref:`reference/hardware/motor-boards:L298N Motor Driver (dual)` - 2A
 * :ref:`reference/hardware/motor-boards:MiniIBT Motor Driver L6201P (single)` - 5A
-* :ref:`reference/hardware/motor-boards:Makerfabs H-Bridge Motor Shield` - 8A
 * :ref:`reference/hardware/motor-boards:BTS7960 IBT_2 Board (single)` - 43A
 * :ref:`reference/hardware/motor-boards:Dual Motor Driver Module H-bridge MOSFET IRF3205` - 15A
 
-**Expert Level Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
+Expert Level Boards
+____________________
+
+.. image:: ../../_static/images/engineer-level.png
+  :alt: Engineer level
+  :scale: 30%
+
+These boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
 
 * :ref:`reference/hardware/motor-boards:Keyes/Fundumoto ("Beeper Board")` - 2A
+* :ref:`reference/hardware/motor-boards:Makerfabs H-Bridge Motor Shield` - 8A
 * :ref:`reference/hardware/motor-boards:Velleman KA03 (kit) VMA03 (soldered)` - 2A
 * :ref:`reference/hardware/motor-boards:DFRobot 2x2A DC Motor Shield (DRI0009)` - 2A
 
-**Non-compatible boards**
+Incompatible boards
+____________________
 
 * VNH2SP30 - SparkFun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
 * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
 * :ref:`reference/hardware/motor-boards:Dfrobot Romeo V2` - Well, an Engineer could perhaps get this one to work.
 * Kuman Board (and any L293D based boards) - not enough current.
+* Pololu TB9051FTG based motor shield. It can't switch fast enough to generate a reliable DCC signal. `Product page <https://www.pololu.com/product/2520>`_.
    
-Other boards, while not fully supported and tested, can be used. Look for the following criteria:
+Other boards
+_____________
+
+While not fully supported and tested, other boards can potentially be used. Look for the following criteria:
 
 * We recommend a dual h-bridge board or two discrete h-bridge boards. They can be different sizes, one bigger for main track and one smaller for programming track operations.
 * It must handle enough current for the layout. 2 amps will drive 3-5 HO scale locomotives.
@@ -70,10 +92,17 @@ Other boards, while not fully supported and tested, can be used. Look for the fo
 
 .. Note:: Current capabilities of these boards, especially the boards based on the L298 with no heat sink fins like the Arduino Motor Shield can really not deliver 2 Amps. A realistic number would be 1.5 Amps IF you added a heat sink and a cooling fan. If you need 2 Amps or more, you will need to go with a higher current board.
 
-Arduino Motor Shield
-=====================
+Conductor level boards
+=======================
 
-**Conductor level**
+Below we outline the various details that we know of related to each of the different boards that we've either tested, or know to work based on user feedback.
+
+Arduino Motor Shield
+_____________________
+
+.. image:: ../../_static/images/conductor-level.png
+  :alt: Conductor level
+  :scale: 30%
 
 Easy to use, widely available and is rated 2A load per channel. In reality, without a heatsink and fan, it can only handle about 1.3 Amps. This is the standard by which we compare other boards that are about the same, worse, or better.
 
@@ -88,7 +117,9 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
 Deek-Robot Motor Shield
 ________________________
 
-**Conductor Level**
+.. image:: ../../_static/images/conductor-level.png
+  :alt: Conductor level
+  :scale: 30%
 
 Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan.
 
@@ -103,7 +134,9 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 Flashtree Motor Shield
 _______________________
 
-**Conductor Level**
+.. image:: ../../_static/images/conductor-level.png
+  :alt: Conductor level
+  :scale: 30%
 
 Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. Since it identical to the Arduino and the Deek-Robot boards, use the Deek-Robot install below.
 
@@ -121,7 +154,9 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 DIY More L298NH Motor Shield
 _____________________________
 
-**Conductor Level**
+.. image:: ../../_static/images/conductor-level.png
+  :alt: Conductor level
+  :scale: 30%
 
 Another similar board to the Arduino motor shield. Supports 2A per channel. This board uses the L298HN, which is the same L298 internally as the Arduino Motor Shield but in a different form factor with a larger heat sink tab. Current sense and other features are identical to the Arduino version.
 
@@ -138,7 +173,9 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
 YFRobot L298P Motor Shield
 ___________________________
 
-**Conductor Level**
+.. image:: ../../_static/images/conductor-level.png
+  :alt: Conductor level
+  :scale: 30%
 
 This board is electrically the same, though a different layout than the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
 
@@ -167,12 +204,19 @@ Pinout for reference:
 
 |
 
+Tinkerer level boards
+======================
+
 L298N Motor Driver (dual)
 __________________________
 
-**Tinkerer level**
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer level
+  :scale: 30%
 
-THIS BOARD HAS NO CURRENT SENSE! This is a high-current alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You'll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense in order to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471  instead.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+
+This is a high-current alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You'll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense in order to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471  instead.
 
 .. image:: ../../_static/images/motorboards/l298_board.jpg
    :alt: L298 Motor Driver
@@ -188,6 +232,10 @@ https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
 
 MiniIBT Motor Driver L6201P (single)
 _____________________________________
+
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer level
+  :scale: 30%
 
 Found on eBay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge chip and is rated for 5 Amps. With a fan and heat sink, it can handle 3 or 4 Amps at 12-14V. Search for MiniIBT or Wingxine to find it. Be careful to match the picture since there is another board that sometimes comes up in searches.
 
@@ -206,31 +254,12 @@ https://www.aliexpress.com/item/531569334.html
 
 http://trainelectronics.com/DCC_Arduino/DCC++/
 
-Makerfabs H-Bridge Motor Shield
-________________________________
-
-**Engineer Level**
-
-THIS BOARD HAS NO CURRENT SENSE! See the section below about *** current sensing *** . The higher current capability and efficient power MOSFETs, make this board a good choice if you are running more than 3-5 locos.
-
-Select MAKERFABS_MOTOR_SHIELD in your config.h file.
-
-Pinout
-
-| PWM1 - D9 (normally pin 3)
-| PWM2 - D10 (normally pin 11)
-| CNTRL1A (DIR1A) - D4 (normally 12)
-| CNTRL1B (DIR1B) - D5
-| CNTRL2A (DIR2A) - D7 (normally 13)
-| CNTRL2B (DIR2B) - D8
-| ENABLE/SHUTDOWN - D6
-
-|
-
 Pololu MC33926
 _______________
 
-**Tinkerer Level**
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer level
+  :scale: 30%
 
 Comes soldered or in a kit where you just have to solder the headers and connector. While we have a motor board type for this board, the current sense is not acceptable. We recommend using an external current sense board like the MAX471. Many people still use this board.
 
@@ -243,7 +272,9 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 BTS7960 IBT_2 Board (single)
 _____________________________
 
-**Tinkerer to Engineer Level**
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer level
+  :scale: 30%
 
 .. warning:: This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply a whopping 43A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES.
 
@@ -263,7 +294,9 @@ Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 Dual Motor Driver Module H-bridge MOSFET IRF3205
 _________________________________________________
 
-**Tinkerer to Engineer Level**
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer level
+  :scale: 30%
 
 .. warning:: This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply a 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.
 
@@ -277,23 +310,81 @@ You can use this board to handle both your MAIN and PROG track, or you can use o
 
 |
 
+Engineer level boards
+======================
+
 Keyes/Fundumoto ("Beeper Board")
 _________________________________
 
-**Engineer Level**
+.. image:: ../../_static/images/engineer-level.png
+  :alt: Engineer level
+  :scale: 30%
 
-You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board. ***TODO:More details on this fix soon***
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+
+You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board.
 
 .. image:: ../../_static/images/motorboards/keyes_fundumoto.jpg
-   :alt: Keyes/Fundumoto Motor Shield
-   :scale: 100%
+  :alt: Keyes/Fundumoto Motor Shield
+  :scale: 100%
+
+To modify the beeper board, desolder legs 2 and 19 off the solder pad, bend the legs up away from the PCB, and solder a wire directly to the legs. Be sure the legs of the IC are no longer in contact with the PCB, nor other legs.
+
+.. image:: ../../_static/images/motorboards/keyes1.png
+  :alt: Desolder legs
+  :scale: 20%
+
+Solder the other end of each wire to the correct white header post. These correspond to A0 and A1, with pin 2 of the IC connecting to A0, and pin 19 to A1.
+
+.. image:: ../../_static/images/motorboards/keyes2.png
+  :alt: Solder wires
+  :scale: 20%
+
+Solder one end of a 1.5 ohm, 3 watt resistor to each of these same header pins, and the other end to the corresponding black header pin (ground). Once done, your board now has current sense capability.
+
+.. warning:: Check your work!
+
+  When modifying any board like this, it's important to test what you've done before applying any power. You should use a multimeter to ensure the pins desoldered to not have short circuits to any other pins, as well as ensuring you haven't accidentally bridged any header pins together with your soldering. You should also validate that each pin measures 1.5ohms to ground. An open circuit means you haven't soldered them correctly, and a zero ohm reading means they're still connected to ground directly.
+
+.. image:: ../../_static/images/motorboards/keyes3.png
+  :alt: Solder resistors
+  :scale: 30%
+
+|
+
+Makerfabs H-Bridge Motor Shield
+________________________________
+
+.. image:: ../../_static/images/engineer-level.png
+  :alt: Engineer level
+  :scale: 30%
+
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+
+The higher current capability and efficient power MOSFETs, make this board a good choice if you are running more than 3-5 locos.
+
+Select MAKERFABS_MOTOR_SHIELD in your config.h file.
+
+Pinout
+
+| PWM1 - D9 (normally pin 3)
+| PWM2 - D10 (normally pin 11)
+| CNTRL1A (DIR1A) - D4 (normally 12)
+| CNTRL1B (DIR1B) - D5
+| CNTRL2A (DIR2A) - D7 (normally 13)
+| CNTRL2B (DIR2B) - D8
+| ENABLE/SHUTDOWN - D6
 
 |
 
 Velleman KA03 (kit) VMA03 (soldered)
 _____________________________________
 
-**Engineer Level**
+.. image:: ../../_static/images/engineer-level.png
+  :alt: Engineer level
+  :scale: 30%
+
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 Must cut traces and solder resistors to get current sensing on the soldered board. Much easier to simply not solder the pins on the kit version. Pin assignments must be added to a new motorboard entry in the config.h file.
 
@@ -306,7 +397,11 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 DFRobot 2x2A DC Motor Shield (DRI0009)
 _______________________________________
 
-**Engineer Level**
+.. image:: ../../_static/images/engineer-level.png
+  :alt: Engineer level
+  :scale: 30%
+
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 This is another L298 based board with inadequate cooling. Fan and/or heat sink recommended. Max current realistically 1.3A. This board has NO CURRENT SENSE. As with many boards like this, both L298 current sense pins are tied to ground. Cutting traces and adding sense resistors or the use of an eternal current sense board is required for short circuit protection and loco programming. If you don't use current sense, you must ground pins A0 and A1 on the Arduino or you will get an overcurrent condition.
 
@@ -331,7 +426,11 @@ NOTE: There is a "Twin" version of this board that uses pins 10, 11 and 12, 13 i
 DFRobot Romeo V2
 _________________
 
-**Engineer Level**
+.. image:: ../../_static/images/engineer-level.png
+  :alt: Engineer level
+  :scale: 30%
+
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 On the surface, this seems like a great idea, an Arduino and motor controller on one board. It is a very thin surface ;) While we don't recommend it, an Engineer who reads these notes, may still find a use for it. The V2 uses the ATmega32u4 chip instead of either of the chips used on an Uno or a Mega. It only has 2 interrupts that are usable and it reverses their pin assignments. It uses serial on the chip, not with a UART as on the other boards. It may need a software change to accommodate the timer. It also has the same amount of memory as an Uno, which will only run the basic version of DCC++ EX without options. In addition, the serial port uses memory to operate, so you have even less memory free to use than on an Uno.
 
@@ -340,8 +439,6 @@ Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Ardui
 .. image:: ../../_static/images/motorboards/romeo_v2.jpg
    :alt: Romeo V2
    :scale: 40%
-
-Click here for a complete :doc:`Parts Shopping List </reference/hardware/shopping-list>`.
 
 Configuring Motor Boards
 =========================

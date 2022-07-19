@@ -22,35 +22,43 @@ A motor controller (aka shield, aka board) is just a high voltage, high current 
 Boards currently supported
 ===========================
 
-  **Easy to use boards**
+**Easy to use boards**
 
-   * :ref:`reference/hardware/motor-boards:Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
-   * :ref:`reference/hardware/motor-boards:Deek-Robot Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
-   * :ref:`reference/hardware/motor-boards:Flashtree Motor Shield` - 2A rated, 1.5 possible
-   * :ref:`reference/hardware/motor-boards:DIY More L298NH Motor Shield` - 2A
-   * :ref:`reference/hardware/motor-boards:YFRobot L298P Motor Shield` - 2A
-   * :ref:`reference/hardware/motor-boards:Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
+.. image:: ../../_static/images/conductor-level.png
+  :alt: Conductor level
+  :scale: 30%
 
-  **Intermediate boards (Tinkerer Level)** - require wiring
+* :ref:`reference/hardware/motor-boards:Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
+* :ref:`reference/hardware/motor-boards:Deek-Robot Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
+* :ref:`reference/hardware/motor-boards:Flashtree Motor Shield` - 2A rated, 1.5 possible
+* :ref:`reference/hardware/motor-boards:DIY More L298NH Motor Shield` - 2A
+* :ref:`reference/hardware/motor-boards:YFRobot L298P Motor Shield` - 2A
+* :ref:`reference/hardware/motor-boards:Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
-   * :ref:`reference/hardware/motor-boards:L298N Motor Driver (dual)` - 2A
-   * :ref:`reference/hardware/motor-boards:MiniIBT Motor Driver L6201P (single)` - 5A
-   * :ref:`reference/hardware/motor-boards:Makerfabs H-Bridge Motor Shield` - 8A
-   * :ref:`reference/hardware/motor-boards:BTS7960 IBT_2 Board (single)` - 43A
-   * :ref:`reference/hardware/motor-boards:Dual Motor Driver Module H-bridge MOSFET IRF3205` - 15A
+**Intermediate boards (Tinkerer Level)** - require wiring
 
-  **Expert Level Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
-  
-   * :ref:`reference/hardware/motor-boards:Keyes/Fundumoto ("Beeper Board")` - 2A
-   * :ref:`reference/hardware/motor-boards:Velleman KA03 (kit) VMA03 (soldered)` - 2A
-   * :ref:`reference/hardware/motor-boards:DFRobot 2x2A DC Motor Shield (DRI0009)` - 2A
+.. image:: ../../_static/images/tinkerer-level.png
+  :alt: Tinkerer level
+  :scale: 30%
 
-  **Non-compatible boards**
+* :ref:`reference/hardware/motor-boards:L298N Motor Driver (dual)` - 2A
+* :ref:`reference/hardware/motor-boards:MiniIBT Motor Driver L6201P (single)` - 5A
+* :ref:`reference/hardware/motor-boards:Makerfabs H-Bridge Motor Shield` - 8A
+* :ref:`reference/hardware/motor-boards:BTS7960 IBT_2 Board (single)` - 43A
+* :ref:`reference/hardware/motor-boards:Dual Motor Driver Module H-bridge MOSFET IRF3205` - 15A
 
-   * VNH2SP30 - SparkFun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
-   * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
-   * :ref:`reference/hardware/motor-boards:Dfrobot Romeo V2` - Well, an Engineer could perhaps get this one to work.
-   * Kuman Board (and any L293D based boards) - not enough current.
+**Expert Level Boards (Tinkerer or Engineer Level)** - these boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
+
+* :ref:`reference/hardware/motor-boards:Keyes/Fundumoto ("Beeper Board")` - 2A
+* :ref:`reference/hardware/motor-boards:Velleman KA03 (kit) VMA03 (soldered)` - 2A
+* :ref:`reference/hardware/motor-boards:DFRobot 2x2A DC Motor Shield (DRI0009)` - 2A
+
+**Non-compatible boards**
+
+* VNH2SP30 - SparkFun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
+* IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
+* :ref:`reference/hardware/motor-boards:Dfrobot Romeo V2` - Well, an Engineer could perhaps get this one to work.
+* Kuman Board (and any L293D based boards) - not enough current.
    
 Other boards, while not fully supported and tested, can be used. Look for the following criteria:
 
@@ -78,7 +86,7 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
 |
 
 Deek-Robot Motor Shield
-------------------------
+________________________
 
 **Conductor Level**
 
@@ -93,7 +101,7 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 |
 
 Flashtree Motor Shield
------------------------
+_______________________
 
 **Conductor Level**
 
@@ -111,7 +119,7 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 
 
 DIY More L298NH Motor Shield
------------------------------
+_____________________________
 
 **Conductor Level**
 
@@ -128,7 +136,7 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
 |
 
 YFRobot L298P Motor Shield
----------------------------
+___________________________
 
 **Conductor Level**
 
@@ -160,7 +168,7 @@ Pinout for reference:
 |
 
 L298N Motor Driver (dual)
--------------------------
+__________________________
 
 **Tinkerer level**
 
@@ -179,7 +187,7 @@ https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
 |
 
 MiniIBT Motor Driver L6201P (single)
--------------------------------------
+_____________________________________
 
 Found on eBay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge chip and is rated for 5 Amps. With a fan and heat sink, it can handle 3 or 4 Amps at 12-14V. Search for MiniIBT or Wingxine to find it. Be careful to match the picture since there is another board that sometimes comes up in searches.
 
@@ -199,7 +207,7 @@ https://www.aliexpress.com/item/531569334.html
 http://trainelectronics.com/DCC_Arduino/DCC++/
 
 Makerfabs H-Bridge Motor Shield
---------------------------------
+________________________________
 
 **Engineer Level**
 
@@ -220,7 +228,7 @@ Pinout
 |
 
 Pololu MC33926
----------------
+_______________
 
 **Tinkerer Level**
 
@@ -233,7 +241,7 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 |
 
 BTS7960 IBT_2 Board (single)
------------------------------
+_____________________________
 
 **Tinkerer to Engineer Level**
 
@@ -253,7 +261,7 @@ Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 |
 
 Dual Motor Driver Module H-bridge MOSFET IRF3205
--------------------------------------------------
+_________________________________________________
 
 **Tinkerer to Engineer Level**
 
@@ -270,7 +278,7 @@ You can use this board to handle both your MAIN and PROG track, or you can use o
 |
 
 Keyes/Fundumoto ("Beeper Board")
----------------------------------
+_________________________________
 
 **Engineer Level**
 
@@ -283,7 +291,7 @@ You have to lift two traces and solder 2 resistors and use 2 jumpers to the curr
 |
 
 Velleman KA03 (kit) VMA03 (soldered)
--------------------------------------
+_____________________________________
 
 **Engineer Level**
 
@@ -296,7 +304,7 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 |
 
 DFRobot 2x2A DC Motor Shield (DRI0009)
----------------------------------------
+_______________________________________
 
 **Engineer Level**
 
@@ -321,7 +329,7 @@ NOTE: There is a "Twin" version of this board that uses pins 10, 11 and 12, 13 i
 |
 
 DFRobot Romeo V2
------------------
+_________________
 
 **Engineer Level**
 

@@ -98,7 +98,7 @@ html_theme_options = {
     # 'navigation_depth': 3
     'navigation_depth': -1
 }
-
+ 
 html_context = {
     'display_github': True,
     'github_user': 'DCC-EX',

@@ -22,6 +22,10 @@
   background-color: #E0E0E0;
 }
 
+table.intro-table {
+  max-width: 600px;
+}
+
 .intro-table img {
   width: 70%;
   height: auto;

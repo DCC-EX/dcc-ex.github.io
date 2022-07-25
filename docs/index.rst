@@ -16,7 +16,7 @@ Based on off-the-shelf Arduino technology, our products are supported by many th
 * |CS-EX| - our DCC command station for controlling your model railroad. |br|\ It includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.
 
   * |I-EX| - our user friendly installer that takes care of loading the command station firmware onto your Arduino hardware.
-  * |EX-R| - the scripting language, built into the |CS-EX|, allowing to to automate you ma=odel railroad. 
+  * |EX-R| - the scripting language, built into the |CS-EX|, allowing to to automate you model railroad. 
 
 * |WT-EX| - a simple web based controller for your command station.
 * |TT-EX| - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection.

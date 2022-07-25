@@ -1,29 +1,27 @@
-*******************************************
-DCC++ EX Model Railroading |donate_button|
-*******************************************
+.. include:: /include/include.rst
+******************************************
+DCC++EX Model Railroading |donate_button|
+******************************************
 
 .. image:: ./_static/images/icons/v40banner.jpg
    :alt: v4_0 Release Banner
-   :class: float-left
-   :scale: 50%
-   :target: download/commandstation.html
-
-.. |donate_button| image:: ./_static/images/icons/donate_button_blue.png
-   :alt: Donate Button
    :class: float-right
    :scale: 25%
-   :target: donate/index.html
+   :target: download/commandstation.html
 
-The DCC-EX team is pleased to announce the next version of the DCC++EX Command Station. There are tons of new features and enhancements. So many in fact, it takes a separate page to list them all! Be sure to find us on our :doc:`Discord channel </support/index>`. Here are just a few features to whet your appetite.
+Welcome! |BR|\ |DCC++EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
 
-* EX-RAIL Automation and accessory control
-* JMRI and Engine Driver enhancements
-* HAL (Hardware Abstraction Layer) to easily add new types of input and output devices
-* Synchronize multiple throttles
+Based on off-the-shelf Arduino technology, our products are supported by many third party controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more. Our products currently include:
 
-For a complete list, see the :doc:`Release Notes </reference/software/release-notes>` and the :doc:`Press release <press/v40-announce>`.
+* |CS-EX| - our DCC command station for controlling your model railroad. |br|\ It includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.
 
-Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source DCC CommandStation and suite of supporting products for running your complete model railroad layout. Based on Arduino technology, DCC++ EX is supported by many controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.
+  * |I-EX| - our user friendly installer that takes care of loading the command station firmware onto your Arduino hardware.
+  * |EX-R| - the scripting language, built into the |CS-EX|, allowing to to automate you ma=odel railroad. 
+
+* |WT-EX| - a simple web based controller for your command station.
+* |TT-EX| - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection.
+* |BSC| - the original DCC++ software, packaged in a stable release. No active development, bug fixes only.
+
 
 .. table::
    :align: left
@@ -63,25 +61,11 @@ Welcome! DCC++ EX is an easy to use, do-it-yourself and affordable, open source 
 .. _Puzzle: contributing/index.html
 .. |Contribute| replace:: :doc:`Contribute </contributing/index>`
 
-Mission
-=========
 
-Our mission is to make the world of digital model railroading universally accessible.
+What is CommandStation-EX?
+==========================
 
-To achieve that, DCC++ EX provides the model railroad community with a complete, open source DCC (Digital Command Control) system - one that is simple, affordable, and expandable, to control model trains and accessories. Further, it is our goal that this project be organized, documented, and maintained so that it can continue far into the future.
-
-What is DCC++ EX?
-==================
-
-DCC++ EX is the organization developing and maintaining several products that together represent a fully open source DCC system. Currently, this includes the following:
-
-* **CommandStation-EX** - the latest take on the DCC++ command station for controlling your model railroad. DCC-EX runs on Arduino boards, and includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.
-* **WebThrottle-EX** - a simple web based controller for your DCC++ and DCC-EX command station.
-* **Installer-EX** - an installer that takes care of downloading and installing DCC++ or DCC-EX firmware onto your hardware setup.
-* **Turntable-EX (Beta)** - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection.
-* **BaseStation-Classic** - the original DCC++ software, packaged in a stable release. No active development, bug fixes only.
-
-A basic DCC++ EX hardware setup can use easy to find, widely available Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:
+A basic |CS-EX| hardware setup can use easy to find, widely available Arduino boards that you can assemble yourself. Both |CS-EX| and |BSC|\ [#bcs]_ support much of the NMRA Digital Command Control (DCC) standards, including:
 
 * simultaneous control of multiple locomotives
 * 1 and 2 byte locomotive addressing
@@ -91,36 +75,7 @@ A basic DCC++ EX hardware setup can use easy to find, widely available Arduino b
 * Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
 * Programming Track: Same as the main track with the addition of reading CV bytes
 
-**What's new in CommandStation-EX?**
-
-* WiThrottle server built in. Connect Engine Driver or WiThrottle clients directly to your Command Station
-* WiFi and Ethernet shield support
-* No more jumpers or soldering!
-* Direct support for all the most popular motor control boards
-* 28 speed steps in addition to 128
-* I2C Display support
-* Improved short circuit detection and automatic reset from an overload
-* Current reading, sensing and ACK detection settings in milliAmps instead of just pin readings
-* Non-blocking ACK processing - Main track signal is not interrupted when programming on the service track
-* Advanced CV programming diagnostics and tuning
-* Improved adherence to the NMRA DCC specification
-* Complete support for all the old commands and controllers/front-ends like JMRI
-* New DCC-EX features and integrations built into JMRI, EngineDriver, DCCppCAB and more
-* Simpler, modular, faster code with an API Library for developers for easy expansion
-* New direct throttle support from apps like EngineDriver, DCCppCAB
-* Ability to JOIN operations and service track as one "main" track with 2 power districts when not programming
-* DriveAway(tm) feature to place a loco on an isolated siding, read its ID, and drive onto the layout
-* New features and functions in JMRI, like a new current meter
-* Simple address read and set without understanding long/short CVs
-* Function reminders - Function commands are repeated to ensure changes are read by your decoder
-* Ability to run many more locos
-* Emergency Stop commands
-* Forget locos command - Stops reminders for locos no longer on the track
-* Built-in Automation and accessory control with EX-RAIL!
-* Lively community online, and active feature development
-
-.. note:: DCC-EX is a major rewrite to the code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
-
+.. [#bcs] |CS-EX| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
 
 Next see the :doc:`Get Started section <get-started/index>` or click next below.
 

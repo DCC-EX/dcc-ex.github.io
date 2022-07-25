@@ -2,7 +2,11 @@
 WiTcontroller (Physical)
 *************************
 
-From WiThrottle's very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:
+.. include:: ../include/include.rst
+
+|tinkerer|
+
+From Engine Driver's very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:
 
 * ESP32 with LiPo charger
 * rotary encoder
@@ -20,16 +24,36 @@ For a video on how to do this, click below:
 Features
 ==========
 
-* Connects to the first available SSID (of three you can specify) with the specified password
-* Auto-connects to the first found wiThrottle Protocol Server if only one found, otherwise askes which to connect to
+* provides a list of discovered SSIDs with the ability to choose one. When you select one:
+  
+  * if it is one in your specified list, it will use that specifed password 
+  * if it is a DCC++EX wiFi Command Station in access Point mode, it will guess the password
+  * otherwise it will only connect if the password is blank
+
+* Optionally provides a list of SSIDs with the specified passwords (in the sketch) to choose from
+* Auto-connects to the first found wiThrottle Protocol Server if only one found, otherwise:
+
+  * asks which to connect to
+  * if none found will ask to enter the IP Address and Port
+  * Guesses the wiThrottle IP address and Port for DCC++EX WiFi Access Point mode Command Stations
+
 * Rudimentary on-the-fly consists
-* Assign commands directly to the 1-9 buttons (see list below)
-* Command menu (see below for full list) including:
-  - Able to select and deselect locos by their DCC address, via the keypad
-  - Able to select from the first 10 locos in the roster
-  - Power Track On/Off
-  - Disconnect / Reconnect
-  - Put ESP32 in deep sleep and restart it
+* Assign commands directly to the 1-9 buttons (in the sketch)
+* Command menu including:
+  
+  * Able to select and deselect locos 
+    
+    * by their DCC address, via the keypad
+    * from the first 50 locos in the roster
+  
+  * Able to throw/close turnouts/points
+  * Able to activate routes  
+  * set/unset a multiplier for the rotary encoder
+  * Power Track On/Off
+  * Disconnect / Reconnect
+  * Put ESP32 in deep sleep and restart it
+
+* limited dealing with unexpected disconnects.  It will thow you back to the WiThtottle Server selection screen.
 
 NOTE: This is a Project and is therefore a work in progress and open source. New features are being added regularly and a full tutorial will be available soon in the projects section.
 

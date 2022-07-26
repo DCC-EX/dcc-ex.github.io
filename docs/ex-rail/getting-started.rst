@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ***********************
 Getting Started (EX-R) 
 ***********************
@@ -88,7 +89,7 @@ There can be a startup sequence (keywords at the beginning of the script), which
 
 Multiple concurrent sequences are supported.
 
-For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/automation/EX-RAIL-reference`.
+For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.
 
 The script containing your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
 
@@ -96,26 +97,26 @@ Connecting your Arduino and pressing the Upload button in the usual way will sav
 
 To create the myAutomation.h file in the Arduino IDE, use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
 
-.. image:: ../_static/images/ex-rail/setup1.jpg
+.. image:: /_static/images/ex-rail/setup1.jpg
    :alt:  Setup pulldown button
    :align: center
    :scale: 100%
 
-.. image:: ../_static/images/ex-rail/setup2.jpg
+.. image:: /_static/images/ex-rail/setup2.jpg
    :alt:  Setup pulldown menu
    :align: center
    :scale: 100%
 
 Enter the file name "myAutomation.h" (This is case sensitive)
 
-.. image:: ../_static/images/ex-rail/setup3.jpg
+.. image:: /_static/images/ex-rail/setup3.jpg
    :alt:  Setup myAutomation.h
    :align: center
    :scale: 100%
 
 And type your script in.
 
-.. image:: ../_static/images/ex-rail/setup4.jpg
+.. image:: /_static/images/ex-rail/setup4.jpg
    :alt:  Setup Example file
    :align: center
    :scale: 100%
@@ -202,7 +203,7 @@ Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMR
 
 A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
  
-See the :doc:`/automation/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
+See the :doc:`/ex-rail/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 
 Defining Signals
@@ -236,7 +237,7 @@ ____________________________________________
 
 Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.
 
-.. image:: ../_static/images/ex-rail/Example_4_diagram.png
+.. image:: /_static/images/ex-rail/Example_4_diagram.png
    :alt:  Simple example 4
    :align: center
    :scale: 100%
@@ -285,7 +286,7 @@ _______________________________
 
 Consider a single line, shuttling between stations A and B.
 
-.. image:: ../_static/images/ex-rail/Example_6_diagram.png
+.. image:: /_static/images/ex-rail/Example_6_diagram.png
    :alt:  Simple example 4
    :align: center
    :scale: 100%
@@ -341,7 +342,7 @@ So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:
 
-.. image:: ../_static/images/ex-rail/Example_7a_diagram.png
+.. image:: /_static/images/ex-rail/Example_7a_diagram.png
    :alt:  Simple example 4
    :align: center
    :scale: 100%
@@ -375,7 +376,7 @@ All well and good for one loco, but with 2 (or even 3) on this track we need som
 
 So we will need some extra sensors (hardware required) and some logical blocks (all in the mind!):
 
-.. image:: ../_static/images/ex-rail/Example_7b_diagram.png
+.. image:: /_static/images/ex-rail/Example_7b_diagram.png
    :alt:  Simple example 4
    :align: center
    :scale: 100%
@@ -448,7 +449,7 @@ Starting the system
 
 Starting the system is tricky, because we need to place the trains in a suitable position and set them going. We need to have a starting position for each loco, and reserve the block(s) it needs to keep other trains from crashing into it.
 
-.. warning:: This EX-RAIL version isn’t ready to handle locos randomly placed on the layout after a power down!
+.. warning:: This EX-RAIL version isn't ready to handle locos randomly placed on the layout after a power down!
 
 For a known set of locos, the easiest way is to define the startup process at the beginning of the script. E.g. for two engines, one at each station.
 
@@ -459,7 +460,7 @@ For a known set of locos, the easiest way is to define the startup process at th
  RESERVE(3) // and another in block 3
  SENDLOCO(3,12) // send Loco DCC addr 3 on to route 12
  SENDLOCO(17,34) // send loco DCC addr 17 to route 34
- DONE // don’t drop through to the first sequence definition that follows in the script file
+ DONE // don't drop through to the first sequence definition that follows in the script file
 
 .. hint:: Some interesting points about the startup:
 
@@ -560,7 +561,7 @@ ____________________________________________
 
 Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.
 
-Refer to :ref:`automation/ex-rail-reference:aliases` for more information.
+Refer to :ref:`/ex-rail/ex-rail-reference:aliases` for more information.
 
 Alias names:
 
@@ -597,7 +598,7 @@ If you find your myAutomation.h file becoming quite lengthy and cumbersome to sc
 There are some rules that apply in this scenario:
 
 * Anything that needs to be done when the CommandStation starts must be defined first.
-* Any custom macros/commands must be defined before they are used (see :ref:`automation/ex-rail-intro:make your own ex-rail macro or command`) below.
+* Any custom macros/commands must be defined before they are used (see :ref:`/ex-rail/ex-rail-intro:make your own ex-rail macro or command`) below.
 * The files are included in the order defined, so if an item in one file depends on another file's item, make sure they included in the correct order.
 
 Some suggestions to get the most out of this:

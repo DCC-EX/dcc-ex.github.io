@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 **************
 Shopping List
 **************
@@ -59,7 +60,7 @@ This can be a little confusing, so let explain it a different way:
 Add-Ons
 ========
 
-This is just the beginning. You may want to add some items, like a display, or a board to control accessories like lights, motors, and servos. See the :doc:`Hardware Index Page <../index>` for information and more shopping list links.
+This is just the beginning. You may want to add some items, like a display, or a board to control accessories like lights, motors, and servos. See the :doc:`Hardware Index Page </reference/hardware/index>` for information and more shopping list links.
 
 
 

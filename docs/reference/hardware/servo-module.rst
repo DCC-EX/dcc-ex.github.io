@@ -1,10 +1,11 @@
+.. include:: /include/include.rst
 **************************
 Connecting a Servo Module
 **************************
 
 To connect a servo module to DCC++EX, you first need to get a module, based on the PCA9685 chip.
 
-.. image:: ../../_static/images/i2c/pca9685.jpg
+.. image:: /_static/images/i2c/pca9685.jpg
    :alt: PCA9685 Servo Module
    :scale: 40%
 
@@ -22,7 +23,7 @@ consume more current than the Arduino is able to supply, and so a separate 5V su
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
-.. image:: ../../_static/images/i2c/ArduinoMegaServo.png
+.. image:: /_static/images/i2c/ArduinoMegaServo.png
    :alt: PCA9685 Servo Module
    :scale: 30%
 
@@ -38,14 +39,14 @@ Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
 You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
 
-.. image:: ../../_static/images/i2c/TurnoutServoMount.jpg
+.. image:: /_static/images/i2c/TurnoutServoMount.jpg
    :alt: Servo mount to operate a turnout
    :scale: 60%
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
 servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
-.. image:: ../../_static/images/i2c/SemaphoreSignal.jpg
+.. image:: /_static/images/i2c/SemaphoreSignal.jpg
    :alt: Servo mount to operate a Semaphore Signal
    :scale: 60%
 

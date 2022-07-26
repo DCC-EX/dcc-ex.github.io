@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 *******************
 Schematics
 *******************
@@ -5,7 +6,7 @@ Schematics
 Mega+WiFi Board
 ==================
 
-.. image:: ../../_static/images/schematics/mega_wifi1.png
+.. image:: /_static/images/schematics/mega_wifi1.png
    :alt: Mega WiFi Schematic Thumbnail
    :scale: 12%
    :align: left 
@@ -23,7 +24,7 @@ Mega+WiFi Board
 Makerfabs WiFi Shield
 ======================
 
-.. image:: ../../_static/images/schematics/makerfabs_wifi_shield_schematic_v1.png
+.. image:: /_static/images/schematics/makerfabs_wifi_shield_schematic_v1.png
    :alt: Makerfabs WiFi Shield Schematic Thumbnail
    :scale: 22%
    :align: left 
@@ -45,7 +46,7 @@ Makerfabs WiFi Shield
 Arduino Motor Shield
 ======================
 
-.. image:: ../../_static/images/schematics/arduino_motor_shield.png
+.. image:: /_static/images/schematics/arduino_motor_shield.png
    :alt: Arduino Motor Shield Schematic Thumbnail
    :scale: 20%
    :align: left 
@@ -64,7 +65,7 @@ Arduino Motor Shield
 IBT_2 Motor Driver
 ======================
 
-.. image:: ../../_static/images/schematics/IBT_2_schematic.jpg
+.. image:: /_static/images/schematics/IBT_2_schematic.jpg
    :alt: IBT_Motor Driver Schematic Thumbnail
    :scale: 22%
    :align: left 

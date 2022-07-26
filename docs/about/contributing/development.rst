@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ************
 Development
 ************
@@ -10,7 +11,7 @@ Development
 
 This page aims to outline what's required for those who wish to contribute to software development.
 
-If you haven't done so already, make sure you are familiar with how we use :doc:`/contributing/github` and are familiar with our :doc:`/contributing/software`.
+If you haven't done so already, make sure you are familiar with how we use :doc:`/about/contributing/github` and are familiar with our :doc:`/about/contributing/software`.
 
 Bug fixes, features, and releases
 ==================================

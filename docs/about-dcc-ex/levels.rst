@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ******************
 Choose Your Level
 ******************
@@ -8,18 +9,18 @@ We've found that our users tend to identify with one of the following three cate
 Conductor
 ==========
 
-.. image:: ../_static/images/conductor.png
+|.. image:: /_static/images/conductor.png
    :alt: Conductor Hat
    :width: 120px
    :height: 89px
-   :align: left
+   :align: left|
 
 A Conductor, for the most part, just wants to enjoy operating trains. You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running DC and looking to switch over to DCC. This is also the perfect place for someone who just wants something that works without much tinkering. We'll show you how to put together a Command Station with a Controller, and have you up and running in just a few minutes. In short, a Conductor wants to drive trains and doesn't want to have to deal with the details of the hardware or software involved. This path will keep things simple.
 
 Tinkerer
 ==========
 
-.. image:: ../_static/images/tinkerer.png
+.. image:: /_static/images/tinkerer.png
    :alt: Propeller Beanie
    :width: 120px
    :height: 98px
@@ -30,7 +31,7 @@ A Tinkerer likes the joy of building things themselves. They may not have an Eng
 Engineer
 =========
 
-.. image:: ../_static/images/engineer.png
+.. image:: /_static/images/engineer.png
    :alt: Engineer Hat
    :width: 120px
    :height: 93px

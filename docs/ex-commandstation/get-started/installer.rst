@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 **************************************
 Install using the Automated Installer
 **************************************
@@ -28,7 +29,7 @@ Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
 The Installer Window
 =====================
 
-.. figure:: ../_static/images/installer/installer.jpg
+.. figure:: /_static/images/installer/installer.jpg
    :alt: DCC-EX Installer
    :scale: 75%
 
@@ -41,7 +42,7 @@ Choose your options
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
 
-.. figure:: ../_static/images/installer/inst_options.jpg
+.. figure:: /_static/images/installer/inst_options.jpg
    :alt: Options Pane
    :scale: 75%
 
@@ -66,7 +67,7 @@ If you have installed a WiFi board, DCC++ EX will scan all the serial ports on y
 If you wish to connect to your home network instead (connect to your router using "Station Mode"), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:
 
 
-.. figure:: ../_static/images/installer/wifi.jpg
+.. figure:: /_static/images/installer/wifi.jpg
    :alt: WiFi Options
    :scale: 90%
 
@@ -87,7 +88,7 @@ Ethernet Checkbox
 
 If you have an Ethernet shield and check this box, you will see options to change the following settings:
 
-.. figure:: ../_static/images/installer/ethernet.jpg
+.. figure:: /_static/images/installer/ethernet.jpg
    :alt: Ethernet Options
    :scale: 90%
 
@@ -106,7 +107,7 @@ LCD Checkbox
 
 If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:
 
-.. figure:: ../_static/images/installer/lcd.jpg
+.. figure:: /_static/images/installer/lcd.jpg
    :alt: LCD Options
    :scale: 90%
 
@@ -125,7 +126,7 @@ OLED CheckBox
 
 If you have an OLED display connected and check this box, you will see the following options you can edit for your display:
 
-.. figure:: ../_static/images/installer/oled.jpg
+.. figure:: /_static/images/installer/oled.jpg
    :alt: OLED Options
    :scale: 90%
 
@@ -161,7 +162,7 @@ To test with the Arduino Serial Monitor, download the Arduino IDE from the follo
 
 To do a quick test, open the Arduino application:
 
-.. figure:: ../_static/images/installer/arduino_ide.jpg
+.. figure:: /_static/images/installer/arduino_ide.jpg
    :alt: Arduino IDE
    :scale: 100%
 
@@ -170,7 +171,7 @@ To do a quick test, open the Arduino application:
 * Select "Tools -> Serial Monitor" from the Arduino IDE menu
 
 
-.. figure:: ../_static/images/installer/arduino_ide2.jpg
+.. figure:: /_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
    :scale: 100%
 
@@ -179,7 +180,7 @@ To do a quick test, open the Arduino application:
 You will see the following screen:
 
 
-.. figure:: ../_static/images/installer/serial_monitor.jpg
+.. figure:: /_static/images/installer/serial_monitor.jpg
    :alt: Serial Monitor
    :scale: 100%
 
@@ -204,7 +205,7 @@ There are a lot of other commands you can enter here. As a matter of fact, you c
 Using WebThrottle-EX
 --------------------
 
-.. figure:: ../_static/images/installer/exwebthrottle.jpg
+.. figure:: /_static/images/installer/exwebthrottle.jpg
    :alt: WebThrottle-EX
    :scale: 100%
 
@@ -215,7 +216,7 @@ Click this link: :doc:`WebThrottle-EX </throttles/ex-webthrottle>` to run WebThr
 Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
 --------------------------------------------------------------
 
-.. figure:: ../_static/images/installer/engine_driver.png
+.. figure:: /_static/images/installer/engine_driver.png
    :alt: Engine Driver
    :scale: 100%
 

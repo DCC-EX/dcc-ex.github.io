@@ -1,20 +1,14 @@
+.. include:: /include/include.rst
 **************************
 Mega+WiFi Configuration
 **************************
 
-.. image:: ../../_static/images/tinkerer.png
-   :alt: Tinkerer Icon
-   :scale: 50%
-   :align: left
-
-Tinkerer Level
-
-|
+|tinkerer|
 
 A Operational Standalone WiFi DCC Command Station
 ==================================================
 
-.. figure:: ../../_static/images/mega_wifi.png
+.. figure:: /_static/images/mega_wifi.png
    :alt: Mega WiFi
    :scale: 40%
    :align: center
@@ -59,7 +53,7 @@ What You Will Do
 
 Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
 
-.. figure:: ../../_static/images/wifi/ch340_driver.png
+.. figure:: /_static/images/wifi/ch340_driver.png
    :alt: CH340 Recognized
    :scale: 100%
    :align: center
@@ -130,7 +124,7 @@ If you got an error about setuptools being missing, install setuptools with:
 
 With the Mega UNPLUGGED (no power connected!), you will set some switches. Use the following diagram to see the locations on the board. You can click on any picture to enlarge it.
 
-.. figure:: ../../_static/images/wifi/mega_wifi1.png
+.. figure:: /_static/images/wifi/mega_wifi1.png
    :alt: Mega WiFi Switch Locations
    :scale: 50%
    :align: center
@@ -139,7 +133,7 @@ With the Mega UNPLUGGED (no power connected!), you will set some switches. Use t
 
 Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
 
-.. figure:: ../../_static/images/wifi/mega_wifi_sw_flash.png
+.. figure:: /_static/images/wifi/mega_wifi_sw_flash.png
    :alt: Switches in flash mode
    :scale: 30%
    :align: center
@@ -148,7 +142,7 @@ Note that switch 8 is not connected to anything, you don't need to touch it. Wit
 
 Use this image to set the serial port switch to **RXD3/TXD3**.
 
-.. figure:: ../../_static/images/wifi/mega_wifi_sw_serial_cw.png
+.. figure:: /_static/images/wifi/mega_wifi_sw_serial_cw.png
    :alt: Switch setting for Serial Port
    :scale: 100%
    :align: center
@@ -163,7 +157,7 @@ Your board should be configured follows:
  -  Connect Mega+WiFi board to your computer with the USB cable
  -  press the **Mode button**
 
-4. Flash the Firmware
+1. Flash the Firmware
 ------------------------
 
 With the Flash Download Tool
@@ -177,12 +171,12 @@ NOTE: It may take a few seconds to open while you see a black cmd window
 - press [Developer Mode] button
 - Press [ESP8266 Download Tool] button
 
-.. image:: ../../_static/images/wifi/download_tool_dev_mode.jpg
+.. image:: /_static/images/wifi/download_tool_dev_mode.jpg
    :alt: Flasher Tool Buttons
    :scale: 80%
    :align: left
 
-.. figure:: ../../_static/images/wifi/download_tool_esp8266.jpg
+.. figure:: /_static/images/wifi/download_tool_esp8266.jpg
    :alt: Flasher Tool Buttons 2
    :scale: 80%
    :align: left
@@ -199,7 +193,7 @@ Setup the files and memory locations in the Flasher Tool
 - Make sure to check all the file checkboxes to the left of the filled in file names
 - Set the EXACT settings using the radio buttons & baud rate settings: (26M, 40MHz, DIO, 16Mbit-C1, Your COM port selected, and 460800 baud).
 
-.. figure:: ../../_static/images/wifi/flasher_1.png
+.. figure:: /_static/images/wifi/flasher_1.png
    :alt: Flasher Settings Screen
    :scale: 80%
    :align: center
@@ -216,7 +210,7 @@ After flashing, the ESP8266 Log will show it uploaded them all successfully and 
 
 - Disconnect the USB cable.
 
-Skip ahead to :ref:`advanced-setup/supported-microcontrollers/wifi-mega:3. Set the switches for run/sketch mode`
+Skip ahead to :ref:`/ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:3. Set the switches for run/sketch mode`
 
 With esptool.py
 ^^^^^^^^^^^^^^^^
@@ -237,7 +231,7 @@ Windows::
 
 If there is an error, press and hold the mode button, then press and release the reset button while still holding down the mode button. Press enter to send the esptool command and let go of the mode button.
 
-3. Set the switches for run/sketch mode
+1. Set the switches for run/sketch mode
 ==========================================
 
 With the power disconnected from the Mega, set the switches back to the upload/run mode
@@ -245,21 +239,21 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 - (Leave the TX/RX slide Pin on RxD3 TxD3)
 - re-connect the USB cable
 
-.. figure:: ../../_static/images/wifi/mega_wifi_sw_run.png
+.. figure:: /_static/images/wifi/mega_wifi_sw_run.png
    :alt: Switches in flash mode
    :scale: 30%
    :align: center
 
    Switch Settings for sketch load/run
 
-4. Decide if you want AP Mode or Station Mode
+1. Decide if you want AP Mode or Station Mode
 ==============================================
 
 AP Mode (the default) makes the Command Station an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the CS so your Throttles can find it on your network.
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to step 5.
 
-If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
+If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`/ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
 
 5. Download and Configure the DCC++EX Command Station Software
@@ -267,16 +261,16 @@ If you are going to want to connect to your WiFi router, you just need to enter 
 
 Download and install DCC++EX from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 
-:doc:`How to install using the installer <../../get-started/installer>`
+:doc:`How to install using the installer </ex-commandstation/get-started/installer>`
 
-:doc:`How to install using the Arduino IDE <../../get-started/arduino-ide>`
+:doc:`How to install using the Arduino IDE </ex-commandstation/get-started/arduino-ide>`
 
-:doc:`I know what I'm doing, just point me to the downloads page! <../../download/commandstation>`
+:doc:`I know what I'm doing, just point me to the downloads page! </download/ex-commandstation>`
 
 Short Version of Network Setup
 ===============================
 
-:doc:`Long/Detailed Network Setup HERE <../../advanced-setup/wifi-config>`
+:doc:`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/wifi-config>`
 
 All settings are in the config.h file in your CommandStation-EX folder. If you don't have a config.h, rename config.example.h to config.h.
 
@@ -370,7 +364,7 @@ https://github.com/espressif/esptool#installation--dependencies
 
 The Mega+WiFi Schematic diagram. Click on it to enlarge:
 
-.. figure:: ../../_static/images/schematics/mega_wifi1.png
+.. figure:: /_static/images/schematics/mega_wifi1.png
    :alt: Mega WiFi Schematic
    :scale: 20%
    :align: center

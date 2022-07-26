@@ -1,7 +1,9 @@
+.. include:: /include/include.rst
 *****************
 Diagnostic Tools
 *****************
 
+|engineer|
 
 .. toctree::
     :maxdepth: 2

@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ******************
 About DCC-EX
 ******************
@@ -5,5 +6,4 @@ About DCC-EX
 .. toctree::
     :maxdepth: 1
     
-    getting-started
-    advanced
+    big-picture/index

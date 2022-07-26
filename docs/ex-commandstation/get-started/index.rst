@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ************
 Get Started
 ************
@@ -7,7 +8,7 @@ This page is intended to get you started with DCC++ EX by helping you in buildin
 The Components of a Full System
 ================================
 
-- **Command Station** - An Arduino with a motor driver board and the DCC-EX uploadable firmware
+- **EX-CommandStation** - An Arduino with a motor driver board and the DCC-EX uploadable firmware
 - **Controller** - A Throttle/Cab such as WebThrottle-EX, JMRI, Engine Driver, etc
 - **Power** - A DC power supply for the motor board to the track, and optionally one for the Arduino
 - **A "Main" track,** aka "Operations" track - most people already have this: it's your layout!

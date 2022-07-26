@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ******************************************
 Putting it all together - the Big Picture
 ******************************************
@@ -8,9 +9,7 @@ Putting it all together - the Big Picture
       :depth: 1
       :local:
 
-.. image:: ../_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 A common topic that arises in Discord conversations is the question "How does it all fit together?"
 
@@ -24,7 +23,7 @@ We call our demonstration layout "Railway Modeller's Fictional Trains" (or RMFT 
 
 This is the complete layout we will build up to in stages:
 
-.. image:: ../_static/images/big-picture/rmft-complete.png
+.. image:: /_static/images/big-picture/rmft-complete.png
   :alt: RMFT Complete
   :class: responsive-image
 
@@ -43,7 +42,7 @@ These are the various concepts and components we will cover:
 Recommended reading
 ====================
 
-Throughout these pages we will be using EX-RAIL functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EX-RAIL, so it would be best to read through the :doc:`/automation/EX-RAIL-intro` page prior to going any further.
+Throughout these pages we will be using EX-RAIL functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EX-RAIL, so it would be best to read through the :doc:`/ex-rail/getting-started` page prior to going any further.
 
 We will also be outlining the equivalent DCC++ EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-reference` where necessary.
 
@@ -69,7 +68,7 @@ Our diagrams will be created in such a way that you'll be able to click on the v
 We will be using specific colour coded boxes and labels to identify track side buildings, sensors, signals, virtual blocks, and turnouts as outlined below:
 
 .. raw:: html
-  :file: ../_static/images/big-picture/rmft-legend.drawio.svg
+  :file: /_static/images/big-picture/rmft-legend.drawio.svg
 
 Turnout object IDs
 ===================
@@ -78,7 +77,7 @@ Throughout this exercise, we will be defining turnout objects, and for consisten
 
 This way, the various possible variations of each type of object will be defined with the same ID, meaning the same EX-RAIL sequences will apply, no matter how the objects are defined.
 
-For further information on IDs used in EX-RAIL, refer to the :ref:`automation/ex-rail-reference:notes` section of the EX-RAIL reference page.
+For further information on IDs used in EX-RAIL, refer to the :ref:`/ex-rail/ex-rail-reference:notes` section of the EX-RAIL reference page.
 
 DCC addresses
 ______________

@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ********
 Stage 1
 ********
@@ -8,9 +9,7 @@ Stage 1
       :depth: 1
       :local:
 
-.. image:: ../_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 Stage 1 of our RMFT layout is a simple loop including a single siding for a station, which allows for automated running of up to three trains including automated switching for entering and exiting the station siding.
 
@@ -32,7 +31,7 @@ At the end of stage 1, we expect you will learn the following:
 * What hardware can be used, and how to connect the components (Fritzing diagrams for this will be published soon).
 
 .. raw:: html
-  :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
+  :file: ../../_static/images/big-picture/rmft-stage1.drawio.svg
 
 Aliases
 ========
@@ -45,14 +44,14 @@ This also means if there is a need to change a pin or object ID, you can simply 
 
 Further more, you can make radical changes such as moving from pin turnouts to servo turnouts, and only need to edit the defined objects and alias. Again, all your existing sequences, routes, etc. should remain unchanged.
 
-For more information on aliases, refer to :ref:`automation/ex-rail-reference:aliases`.
+For more information on aliases, refer to :ref:`ex-rail/ex-rail-reference:aliases`.
 
 Turnouts
 =========
 
 Two turnouts are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts, you can refer to the :ref:`automation/ex-rail-reference:turnouts` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC++ EX Command reference.
+For further reading on turnouts, you can refer to the :ref:`ex-rail/ex-rail-reference:turnouts` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC++ EX Command reference.
 
 Turnout definitions
 ____________________
@@ -129,7 +128,7 @@ Finally, to define these same turnouts as servo based turnouts, these would be c
 
 .. tip:: 
 
-  Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts, so be sure you read the blurb on :ref:`big-picture/big-picture:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
+  Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts, so be sure you read the blurb on :ref:`/about-dcc-ex/big-picture/big-picture:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
 
   Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
@@ -226,7 +225,7 @@ To define servo based signals, these only require one Vpin per signal along with
 
 .. tip:: 
 
-  Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on :ref:`big-picture/big-picture:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
+  Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on :ref:`/about-dcc-ex/big-picture/big-picture:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
 
   Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
@@ -245,7 +244,7 @@ Allowing for servo based turnouts being used, we will start our signals from the
 Virtual blocks
 ===============
 
-We've divided the layout into four virtual blocks, allowing for up to three trains to coexist safely on the layout. You will need at least one more block than you have trains in order to fully automate a layout, otherwise  there will be nowhere for a train to move to in order to start the automation sequences. This is outlined in further detail in the :ref:`big-picture/stage1:fully automated layout` section.
+We've divided the layout into four virtual blocks, allowing for up to three trains to coexist safely on the layout. You will need at least one more block than you have trains in order to fully automate a layout, otherwise  there will be nowhere for a train to move to in order to start the automation sequences. This is outlined in further detail in the :ref:`/about-dcc-ex/big-picture/stage1:fully automated layout` section.
 
 Block 1
 ________
@@ -311,7 +310,7 @@ Note that you can mix and match all the above I/O methods together, so you can u
 
 For simplicity, we will outline the stage 1 options using consistent hardware types otherwise we'll wear out the scroll button on your mouse.
 
-Once you understand the logic of our routes below and the various turnout, sensor, signal, and virtual block concepts above, you can view some :ref:`big-picture/stage1:complete myautomation.h examples` at the end of this page.
+Once you understand the logic of our routes below and the various turnout, sensor, signal, and virtual block concepts above, you can view some :ref:`/about-dcc-ex/big-picture/stage1:complete myautomation.h examples` at the end of this page.
 
 Startup sequence
 _________________
@@ -419,7 +418,7 @@ Fully automated layout
 
 Now it's time to display the full automation capabilities by setting our layout up for fully automated control of your trains.
 
-You will note that these are somewhat similar to :ref:`automation/ex-rail-intro:example 7: running multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
+You will note that these are somewhat similar to :ref:`/ex-rail/ex-rail-intro:example 7: running multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
 
 To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that EX-RAIL has no way of knowing where a train is on the layout when first starting.
 
@@ -427,7 +426,7 @@ To setup for these fully automated sequences, we need to ensure our trains are p
 * Train 2 in block 2, between sensors 2 and 4.
 * Train 3 in block 4, after turnout 2.
 
-Once you understand the logic below and the various turnout, sensor, signal, and virtual block concepts above, you can view some :ref:`big-picture/stage1:complete myautomation.h examples` at the end of this page.
+Once you understand the logic below and the various turnout, sensor, signal, and virtual block concepts above, you can view some :ref:`/about-dcc-ex/big-picture/stage1:complete myautomation.h examples` at the end of this page.
 
 Virtual block logic
 ____________________
@@ -436,7 +435,7 @@ As mentioned in the introduction, we can enable fully automated running of up to
 
 .. note:: 
 
-  Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to :ref:`automation/ex-rail-reference:blocks`.
+  Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to :ref:`/ex-rail/ex-rail-reference:blocks`.
 
 When reading through the sections below on the logic, it helps to keep in mind the perspective of the engineer driving the train, rather than thinking of the complete layout. As the engineer, you need to ask yourself the question "what needs to be in place for me to safely drive this train to the desired destination?"
 
@@ -445,7 +444,7 @@ The automation is accomplished by defining six separate sequences that map out h
 Full automation startup sequence
 _________________________________
 
-As outlined above in the :ref:`big-picture/stage1:startup sequence` section, everything before the first ``DONE`` in myAutomation.h is executed on start up.
+As outlined above in the :ref:`/about-dcc-ex/big-picture/stage1:startup sequence` section, everything before the first ``DONE`` in myAutomation.h is executed on start up.
 
 Given we are starting with three trains on the layout occupying virtual blocks 1, 2, and 4, we need to ensure our layout starts up in a manner that is safe for the automation to commence running these trains correctly.
 
@@ -480,15 +479,15 @@ _______________________________________________
 
 In order to safely exit block 1, the first decision to be made is if the train will go straight through to continue on the main track, or if it will switch on to the station siding.
 
-Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the :ref:`automation/ex-rail-reference:sensors` section of the EX-RAIL reference.
+Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the :ref:`/ex-rail/ex-rail-reference:sensors` section of the EX-RAIL reference.
 
 When our CommandStation starts up, virtual pin 60 will not be set, and therefore evaluating the IF() statement ``IF(CHOOSE_BLK2)`` will return false, with our sequence then latching this virtual pin, meaning the next time this sequence is called, ``IF(CHOOSE_BLK2)`` will return true.
 
 This logic allows us to follow our block 1 to block 3 sequence (if false) to switch onto the station siding, or follow our block 1 to block 2 sequence (if true) to continue on the main track.
 
-On startup, we are sending train 1 on this sequence, which means with our ``IF(CHOOSE_BLK2)`` returning false on startup, train 1 will first attempt to move from block 1 to block 3, which means switching to our station siding. Control at this point is handed over to the :ref:`big-picture/stage1:moving from block 1 to block 3 - entering the station` sequence.
+On startup, we are sending train 1 on this sequence, which means with our ``IF(CHOOSE_BLK2)`` returning false on startup, train 1 will first attempt to move from block 1 to block 3, which means switching to our station siding. Control at this point is handed over to the :ref:`/about-dcc-ex/big-picture/stage1:moving from block 1 to block 3 - entering the station` sequence.
 
-As a result of executing the ``LATCH(CHOOSE_BLK2)``, the next train navigating this block will instead have control handed over to the :ref:`big-picture/stage1:moving from block 1 to block 2 - continue on the main track` sequence.
+As a result of executing the ``LATCH(CHOOSE_BLK2)``, the next train navigating this block will instead have control handed over to the :ref:`/about-dcc-ex/big-picture/stage1:moving from block 1 to block 2 - continue on the main track` sequence.
 
 .. code-block:: 
 
@@ -515,7 +514,7 @@ Once the turnout is closed, or if it already was, we set our signal green ``GREE
 
 Then, after the train has not only activated sensor 2, but has passed over it completely and allowed it to deactivate for 0.5 seconds ``AFTER(SNS2_MAIN_TRN1_EX)``, the reservation on block 1 can be released ``FREE(BLK1_TRN1_APP)``, meaning the next train needing to enter block 1 can do so.
 
-At this point, control of the train is handed over to the :ref:`big-picture/stage1:moving from block 2 to block 4 - continue on the main track` sequence.
+At this point, control of the train is handed over to the :ref:`/about-dcc-ex/big-picture/stage1:moving from block 2 to block 4 - continue on the main track` sequence.
 
 .. code-block:: 
 
@@ -546,7 +545,7 @@ Once the turnout is thrown, or if it already was, we set our signal green and te
 
 The train needs to ``STOP`` at the appropriate point on the station ``AT(SNS3_STN)``, at which point the reservation on block 1 can be released as we no longer occupy it ``FREE(BLK1_TRN1_APP)`` and it's safe for another train to enter that block.
 
-There is now a delay of 10 to 15 seconds while our passengers embark or disembark ``DELAYRANDOM(10000, 15000)``, before moving off again at low speed ``FWD(10)`` until sensor 5 is reached ``AT(SNS5_STN_TRN2_APP)``, at which point the control of the train is over to the :ref:`big-picture/stage1:moving from block 3 to block 4 - exiting the station siding` sequence.
+There is now a delay of 10 to 15 seconds while our passengers embark or disembark ``DELAYRANDOM(10000, 15000)``, before moving off again at low speed ``FWD(10)`` until sensor 5 is reached ``AT(SNS5_STN_TRN2_APP)``, at which point the control of the train is over to the :ref:`/about-dcc-ex/big-picture/stage1:moving from block 3 to block 4 - exiting the station siding` sequence.
 
 .. code-block:: 
 
@@ -575,7 +574,7 @@ ____________________________________________________________
 
 There are no new concepts here compared with our previous virtual block sequences, and we again need to ensure block 4 is free prior to entering it, then ensure our signals and turnout are set correctly, and once again after leaving block 2 ``AFTER(SNS4_MAIN_TRN2_APP)`` we free block 2 in order for the next train to be able to safely enter it.
 
-Once done, train control is over to the :ref:`big-picture/stage1:moving from block 4 to block 1 - the speed run` sequence.
+Once done, train control is over to the :ref:`/about-dcc-ex/big-picture/stage1:moving from block 4 to block 1 - the speed run` sequence.
 
 .. note:: 
 
@@ -610,7 +609,7 @@ ____________________________________________________________
 
 Leaving the station siding is another repeat of the same logic, ensuring block 4 is free to enter, our signals and turnout are set correctly, and again freeing block 3 after we leave it ``AFTER(SNS5_STN_TRN2_APP)``.
 
-Control is then handed over to the :ref:`big-picture/stage1:moving from block 4 to block 1 - the speed run` sequence.
+Control is then handed over to the :ref:`/about-dcc-ex/big-picture/stage1:moving from block 4 to block 1 - the speed run` sequence.
 
 .. code-block:: 
 
@@ -635,7 +634,7 @@ Control is then handed over to the :ref:`big-picture/stage1:moving from block 4 
 Moving from block 4 to block 1 - the speed run
 _______________________________________________
 
-The final sequence is the simplest of all, and allows for a higher speed run through block 4 ``FWD(40)`` (providing block 1 is free to enter), again freeing up block 4 once we've exited it ``AFTER(SNS1_TRN1_APP)``, and then finally handing control back to our original :ref:`big-picture/stage1:exiting block 1 - station entry or main track?` decision sequence.
+The final sequence is the simplest of all, and allows for a higher speed run through block 4 ``FWD(40)`` (providing block 1 is free to enter), again freeing up block 4 once we've exited it ``AFTER(SNS1_TRN1_APP)``, and then finally handing control back to our original :ref:`/about-dcc-ex/big-picture/stage1:exiting block 1 - station entry or main track?` decision sequence.
 
 Again, we start up with train 3 occupying block 4, and once train 1 has exited block 1, the squence below will execute, with train 3 moving to block 1, and train 2 being able to exit block 2.
 

@@ -1,17 +1,13 @@
+.. include:: /include/include.rst
 ***************************
 Cab Engineer: DCC Throttle
 ***************************
 
-.. image:: ../_static/images/throttles/cab_engineer_logo.png
-   :alt: Engine Driver 4
-   :scale: 60%
-   :align: left
-
-
+|enineer|
 
 **Cab Engineer** is an Android App that uses the WiThrottle Protocol to either connect directly to the DCC++ EX Command Station or connect to the JMRI WiThrottle Server via WiFi. If you connect Cab Engineer to JMRI, you connect to the computer running JMRI via WiFi and connect the JMRI computer to the Command Station using a USB cable. If you connect Cab Engineer directly to DCC++ EX, you will to add a WiFi option to your DCC++ EX Command Station as explained here: :doc:`../get-started/wifi-setup`.
 
-.. image:: ../_static/images/throttles/icon_android.png
+.. image:: /_static/images/throttles/icon_android.png
    :alt: Android Logo
    :scale: 30%
    :align: left
@@ -37,17 +33,17 @@ Features
 Screenshots
 ============
 
-.. image:: ../_static/images/throttles/cab_engineer_screen3.jpg
+.. image:: /_static/images/throttles/cab_engineer_screen3.jpg
    :alt: Engine Driver Main Screen
    :scale: 50%
    :align: left
 
-.. image:: ../_static/images/throttles/cab_engineer_screen2.jpg
+.. image:: /_static/images/throttles/cab_engineer_screen2.jpg
    :alt: Engine Driver 2
    :scale: 50%
    :align: left
 
-.. image:: ../_static/images/throttles/cab_engineer_screen1.jpg
+.. image:: /_static/images/throttles/cab_engineer_screen1.jpg
    :alt: Engine Driver 3
    :scale: 50%
    :align: left

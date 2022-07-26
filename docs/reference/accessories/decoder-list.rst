@@ -1,5 +1,7 @@
+.. include:: /include/include.rst
+***********************
 List of Tested Decoders
-=======================
+***********************
 
 We often receive reports on DCC multifunction decoders via Discord and our support channels as well as requests for help when things don't quite work "out of the box".
 

@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 *************
 I2C Displays
 *************
@@ -10,7 +11,7 @@ I2C Displays
 
 DCC++ EX is designed to accommodate a display. You don't need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.
 
-.. image:: ../../_static/images/display/I2C_LCD_Display_wired.jpg
+.. image:: /_static/images/display/I2C_LCD_Display_wired.jpg
    :alt: Example: 4 line I2C Display
    :scale: 80%
 
@@ -31,7 +32,7 @@ Examples of compatible displays
 Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.
 
 
-.. figure:: ../../_static/images/display/lcd_20x4_backpack.jpg
+.. figure:: /_static/images/display/lcd_20x4_backpack.jpg
    :alt: 20 x 4 LCD
    :scale: 80%
 
@@ -40,7 +41,7 @@ Here is an example of a 20 x 4 LCD screen. They come in different colors like bl
 And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:
 
 
-.. figure:: ../../_static/images/display/lcd_16x2_backpack.jpg
+.. figure:: /_static/images/display/lcd_16x2_backpack.jpg
    :alt: 16 x 2 LCD
    :scale: 80%
 
@@ -55,7 +56,7 @@ _____________________________________________________________
 And here is a picture of the board after soldering or if you purchase a board already soldered (or "welded" as some of the Chinese sites call it)
 
 
-.. figure:: ../../_static/images/display/lcd_soldered.jpg
+.. figure:: /_static/images/display/lcd_soldered.jpg
    :alt: Backpack Soldered to LCD
    :scale: 80%
 
@@ -106,14 +107,14 @@ Connecting an OLED display
 OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO. You will require a Mega. Here are some examples of OLED displays:
 
 
-.. figure:: ../../_static/images/display/adafruit_96in_oled_sm.jpg
+.. figure:: /_static/images/display/adafruit_96in_oled_sm.jpg
    :alt: Adafruit .96" OLED
    :scale: 80%
 
    Adafruit .96" OLED Display
 
 
-.. figure:: ../../_static/images/display/makerfocus_oled_sm.jpg
+.. figure:: /_static/images/display/makerfocus_oled_sm.jpg
    :alt: Makerfocus OLED Display
    :scale: 80%
 

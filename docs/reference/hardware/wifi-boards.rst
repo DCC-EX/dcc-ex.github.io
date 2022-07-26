@@ -1,10 +1,11 @@
+.. include:: /include/include.rst
 ************
 WiFi Boards
 ************
 
-You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the :doc:`Mega+WiFi page <../../advanced-setup/supported-microcontrollers/wifi-mega>`
+You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the :doc:`Mega+WiFi page </ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega>`
 
-For more information on how to configure your CS to use the boards below, see :doc:`Wifi Setup <../../get-started/wifi-setup>`
+For more information on how to configure your CS to use the boards below, see :doc:`Wifi Setup </about-dcc-ex/get-started/wifi-setup>`
 
 - :ref:`reference/hardware/wifi-boards:Makerfabs WiFi Shield`.
 - :ref:`reference/hardware/wifi-boards:Duinopeak WiFi Shield`.
@@ -23,7 +24,7 @@ Conductor Friendly
 
 * `Makerfabs ESP-8266 WiFi Shield (recommended) <https://www.makerfabs.com/esp8266-wifi-shield.html>`_
 
-.. image:: ../../_static/images/wifi_jumpers1.jpg
+.. image:: /_static/images/wifi_jumpers1.jpg
    :alt: Makerfabs ESP-8266 WiFi Shield
    :scale: 70%
 
@@ -37,7 +38,7 @@ Tinkerer
 
 * `Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 
-.. image:: ../../_static/images/duinopeak.jpg
+.. image:: /_static/images/duinopeak.jpg
    :alt: Duinopeak ESP-8266 WiFi Shield
    :scale: 60%
 
@@ -55,7 +56,7 @@ Tinkerer Level
 
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
-.. image:: ../../_static/images/esp-01s_2.jpg
+.. image:: /_static/images/esp-01s_2.jpg
    :alt: ESP-01S
    :scale: 60%
 
@@ -67,13 +68,13 @@ There are also other boards that require jumper wires (they are not shields) but
 
 Buy the one that looks like this:
 
-.. image:: ../../_static/images/esp_breakout2.jpg
+.. image:: /_static/images/esp_breakout2.jpg
    :alt: ESP8266 Breakout Board
    :scale: 25%
 
 We have used the ones that look like the one below just as well, but you have to make sure to wire power to 3.3V NOT 5V and there is no voltage regulation and NO LEVEL SHIFTERS. The GPIO pins on the ESP8266 appear to be 5V tolerant, but there is not guarantee it won't shorten its life to have a 5V signal on the Tx pin. Several test versions are running fine like this after a year, but if you are going to buy a board to stick this into instead of wiring it directly, then why not buy one with the extra circuitry? 
 
-.. image:: ../../_static/images/esp_breakout1.jpg
+.. image:: /_static/images/esp_breakout1.jpg
    :alt: ESP8266 Breakout Board
    :scale: 25%
 
@@ -88,7 +89,7 @@ AKA: Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board
 
 Tinkerer to Engineer Level
 
-.. image:: ../../_static/images/wifi/wangtongze_wifi_board.jpg
+.. image:: /_static/images/wifi/wangtongze_wifi_board.jpg
    :alt: ESP-01S
    :scale: 60%
 
@@ -109,7 +110,7 @@ If these 2 transistors are labelled "JIY" you are lucky and the board with work 
 
  1. **Tinkerer way** - You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the Tx/Rx level shifters. The ESP8266 Tx/Rx pins are 5V tolerant, but it is always best if you can to shift 5V from the Arduino to 3.3V. You could also make a small 2 resistor voltage divider to connect to the debug header Rx pin. The Tx pin to the Arduino will be fine as is.
 
- .. figure:: ../../_static/images/wifi/wangtongze_jumpered.jpg
+ .. figure:: /_static/images/wifi/wangtongze_jumpered.jpg
     :alt: Wangtongze Jumpering to the debug header
     :scale: 30%
 
@@ -119,7 +120,7 @@ If these 2 transistors are labelled "JIY" you are lucky and the board with work 
 
  And here is a voltage divider with just two resistors you can use as a signal level shifter circuit:
 
- .. figure:: ../../_static/images/wifi/esp_level_shifter.png
+ .. figure:: /_static/images/wifi/esp_level_shifter.png
     :alt: 
     :scale: 70%
 
@@ -139,7 +140,7 @@ Tinkerer Level
 
 This is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. The board is relatively expensive, but SparkFun has quality products and top notch support. Detailed installation instructions can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html
 
-.. image:: ../../_static/images/wifi/sparkfun_thing_plus.jpg
+.. image:: /_static/images/wifi/sparkfun_thing_plus.jpg
    :alt: SparkFun Thing Plus
    :scale: 40%
 
@@ -151,7 +152,7 @@ ESP32_Ant-01 Breakout and Development Board (ESP32)
 
 Tinkerer Level
 
-.. image:: ../../_static/images/wifi/esp32_dev_board.jpg
+.. image:: /_static/images/wifi/esp32_dev_board.jpg
    :alt: ESP32 dev board
    :scale: 65%
 

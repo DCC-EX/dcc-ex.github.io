@@ -11,17 +11,17 @@
 .. |conductor| image:: /_static/images/conductor-level.png
    :alt: Conductor Hat
    :scale: 50%
-   :target: ../get-started/levels.html#conductor
+   :target: /about-dcc-ex/get-started/levels.html#conductor
 ..
 .. |tinkerer| image:: /_static/images/tinkerer-level.png
    :alt: Propeller Beanie
    :scale: 50%
-   :target: ../get-started/levels.html#tinkerer
+   :target: /about-dcc-ex/get-started/levels.html#tinkerer
 ..
 .. |engineer| image:: /_static/images/engineer-level.png
    :alt: Engineer Hat
    :scale: 50%
-   :target: ../get-started/levels.html#engineer
+   :target: /about-dcc-ex/get-started/levels.html#engineer
 ..
 .. |DCC-EX| raw:: html
 

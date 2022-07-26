@@ -1,6 +1,9 @@
+.. include:: /include/include.rst
 *************************
 DCC++ EX Command Summary
 *************************
+
+|engineer|
 
 .. sidebar:: On this page
 

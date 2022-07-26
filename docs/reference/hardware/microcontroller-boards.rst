@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ***********************
 Microcontroller Boards
 ***********************
@@ -13,7 +14,7 @@ CommandStation-EX currently is designed for Arduino and select microcontrollers.
 Arduino Mega
 =============
 
-.. image:: ../../_static/images/conductor-level.png
+.. image:: /_static/images/conductor-level.png
   :alt: Conductor Level
   :scale: 50%
 
@@ -26,20 +27,20 @@ ______________________________
 * The mega is only modestly more expensive than an Uno, with clones available for less than $10 USD.
 * See the special note about the Mega+WiFi board below for a board that has the microcontroller and WiFi already on one board.
 
-.. image:: ../../_static/images/microcontrollers/mega2.jpg
+.. image:: /_static/images/microcontrollers/mega2.jpg
    :alt: Arduino Mega Microcontroller
    :scale: 75%
 
 Note that if the size of the regular Mega board is an issue, there are condensed Mega clones that are only 52mm long! They don't take shields, so you will need to use headers and jumper wires, but they will fit in a very small box. Look for boards by the name "Arduino Mega 2560 PRO Embedded" or "Mini MEGA 2560 Pro Micro" or just "Mega Pro 2560". Be careful to get the correct one for what you are trying to do because they can come in 3.3V versions or 5V versions and have a Micro-USB port (which you probably want) or just pins to a TTL serial port, and come with header pins you have to solder or not. Remember it must be a 2560 not a 328.
 
-.. image:: ../../_static/images/microcontrollers/mega_pro2.jpg
+.. image:: /_static/images/microcontrollers/mega_pro2.jpg
    :alt: Mega Pro Micro
    :scale: 35%
 
 Arduino Uno
 ============
 
-.. image:: ../../_static/images/conductor-level.png
+.. image:: /_static/images/conductor-level.png
   :alt: Conductor Level
   :scale: 50%
 
@@ -48,46 +49,46 @@ If you already have an Uno, or will use JMRI to control your trains, then by all
 Arduino Nano
 =============
 
-.. image:: ../../_static/images/tinkerer-level.png
+.. image:: /_static/images/tinkerer-level.png
   :alt: Tinkerer Level
   :scale: 50%
 
 The Arduino Nano shares the same processor with the Arduino Uno, so we support it. The Nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There *is* a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.
 
-See our section on :doc:`Using a Nano <../../advanced-setup/supported-microcontrollers/nano>`
+See our section on :doc:`Using a Nano </ex-commandstation/advanced-setup/supported-microcontrollers/nano>`
 
 Mega+WiFi
 ==========
 
-.. image:: ../../_static/images/tinkerer-level.png
+.. image:: /_static/images/tinkerer-level.png
   :alt: Tinkerer Level
   :scale: 50%
 
 Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
 
-See our section on Using the :doc:`WiFi+Mega Page <../../advanced-setup/supported-microcontrollers/wifi-mega>`
+See our section on Using the :doc:`WiFi+Mega Page </ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega>`
 
 Nano Every
 ===========
 
-.. image:: ../../_static/images/tinkerer-level.png
+.. image:: /_static/images/tinkerer-level.png
   :alt: Tinkerer Level
   :scale: 50%
 
 The Nano Every is an updated Nano. It uses a completely different processor family than the Uno and Nano. S
 
-See the detailed section on the :doc:`Nano Every <../../advanced-setup/supported-microcontrollers/nano-every>`
+See the detailed section on the :doc:`Nano Every </ex-commandstation/advanced-setup/supported-microcontrollers/nano-every>`
 
 Teensy 3.x & 4.x
 =================
 
-.. image:: ../../_static/images/engineer-level.png
+.. image:: /_static/images/engineer-level.png
   :alt: Engineer Level
   :scale: 50%
 
 The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons. 
 
-See the detailed section on the :doc:`Teensy <../../advanced-setup/supported-microcontrollers/teensy>`
+See the detailed section on the :doc:`Teensy </ex-commandstation/advanced-setup/supported-microcontrollers/teensy>`
 
 
 Will you support other microcontrollers in the future?

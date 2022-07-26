@@ -1,8 +1,9 @@
+.. include:: /include/include.rst
 *******************
 Locontrol
 *******************
 
-.. image:: ../_static/images/throttles/icon_ios.png
+.. image:: /_static/images/throttles/icon_ios.png
    :alt: iOS Logo
    :scale: 30%
    :align: left
@@ -15,7 +16,7 @@ We are currently working with the Locontrol folks to work directly with DCC++ EX
 
 `Get it on the Apple App Store <https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920>`_
 
-.. image:: ../_static/images/throttles/locontrol1.jpg
+.. image:: /_static/images/throttles/locontrol1.jpg
    :alt: Locontrol Screenshot 1
    :scale: 100%
 

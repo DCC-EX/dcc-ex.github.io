@@ -11,14 +11,14 @@ Engine Driver
 
 If you wish to connect Engine Driver to JMRI, you need to start the wiThrottle Server and (optionally [#]_) the Web Server in JMRI on the computer running JMRI. The JMRI computer must be connected to the DCC++ EX Command Station using a USB cable. 
 
-If you wish to connect Engine Driver directly to DCC++ EX, you need to add a WiFi option to your DCC++ EX Command Station as explained here: :doc:`WiFi Setup <../get-started/wifi-setup>`.
+If you wish to connect Engine Driver directly to DCC++ EX, you need to add a WiFi option to your DCC++ EX Command Station as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
 
 .. _ed-platforms:
 
 Platforms
 ===========
 
-.. image:: ../_static/images/throttles/icon_android.png
+.. image:: /_static/images/throttles/icon_android.png
    :alt: Android Logo
    :scale: 30%
    :align: left
@@ -54,29 +54,29 @@ DCC++ Specific or advantageous Features
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with DCC++EX
 
 
-:ref:`throttles/driveaway:using the "driveaway(tm)" feature`
+:ref:`/throttles/driveaway:using the "driveaway(tm)" feature`
 
 .. _ed-screenshots:
 
 Screenshots
 ============
 
-.. image:: ../_static/images/throttles/ed1.png
+.. image:: /_static/images/throttles/ed1.png
    :alt: Engine Driver Main Screen
    :scale: 30%
    :align: left
 
-.. image:: ../_static/images/throttles/ed2.png
+.. image:: /_static/images/throttles/ed2.png
    :alt: Engine Driver 2
    :scale: 30%
    :align: left
 
-.. image:: ../_static/images/throttles/ed3.png
+.. image:: /_static/images/throttles/ed3.png
    :alt: Engine Driver 3
    :scale: 30%
    :align: left
 
-.. image:: ../_static/images/throttles/ed4.png
+.. image:: /_static/images/throttles/ed4.png
    :alt: Engine Driver 4
    :scale: 30%
    :align: left
@@ -98,7 +98,7 @@ Using a Bluetooth Controller
 =============================
 This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. His prefered settings are listed in the note below. You can use these as a start and customize them for your own use:
 
-.. image:: ../_static/images/throttles/bt_controller1.jpg
+.. image:: /_static/images/throttles/bt_controller1.jpg
    :alt: Bluetooth Lanyard Controller
    :scale: 50%
    :align: center
@@ -109,7 +109,7 @@ This is the one Steve Todd uses himself on a lanyard. It leaves both hands free 
 
 And here is another Bluetooth controller that provides extra function buttons and you can hold by placing your finger in the ring.
 
-.. image:: ../_static/images/throttles/bt_controller2.jpg
+.. image:: /_static/images/throttles/bt_controller2.jpg
    :alt: Ring Shape Hand Controller
    :scale: 50%
    :align: center
@@ -120,7 +120,7 @@ And here is another Bluetooth controller that provides extra function buttons an
 
 .. Note:: From Steve: I set speedsteps to 10, change amount to 1, repeat delay to 9999, horizontal switching layout, throttle web view. I acquire loco/consist using my phone, then dim & lock and put phone in my holster. Then I can "bump" the joystick up and down 3,2,1,0,-1,-2,-3, easily keeping track of the current "notch". 1 is coupling speed, 2 is switching/yard speed, 3 is mainline. If I'm at home, I put the Conductor view in the web and I have my work for each location.
 
-.. image:: ../_static/images/throttles/ed_conductor_view1.png
+.. image:: /_static/images/throttles/ed_conductor_view1.png
    :alt: Engine Driver Conductor View
    :scale: 15%
    :align: center

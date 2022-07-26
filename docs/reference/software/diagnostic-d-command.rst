@@ -1,7 +1,9 @@
-
+.. include:: /include/include.rst
 ****************************
 Diagnostics ``<D>`` Command
 ****************************
+
+|engineer|
 
 These commands either enable diagnostics or allow settings to be changed. There are a number of diagnostic facilities under the  ``<D>`` command, most are harmless but caution is advised.
 

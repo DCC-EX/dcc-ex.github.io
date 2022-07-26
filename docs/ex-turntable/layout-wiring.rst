@@ -1,10 +1,9 @@
+.. include:: /include/include.rst
 ******************************
 Layout Connections and Wiring
 ******************************
 
-.. image:: ../_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 On this page we hope to outline various different ways to connect your turntable to Turntable-EX and your layout to ensure correct DCC phase alignment with the surrounding tracks.
 
@@ -19,7 +18,7 @@ Wiring these turntables is straight forward, and there is no requirement for eit
 
 Phase switching happens automatically with the rotation of the turntable.
 
-.. image:: ../_static/images/turntable-ex/layout-connection-split-ring.png
+.. image:: /_static/images/turntable-ex/layout-connection-split-ring.png
   :alt: Layout connection with split centre ring
   :scale: 50%
 
@@ -40,7 +39,7 @@ In this scenario, with the relays in their default inactive state, the CommandSt
 
 Assuming that the default behaviour of automatic phase switching is enabled, when the turntable rotates 180 degrees, Turntable-EX will automatically activate the relays, resulting in the CommandStation + connecting to the orange inner ring, and the - connecting to the brown outer ring, reversing the phase and preventing a short circuit from occurring.
 
-.. image:: ../_static/images/turntable-ex/layout-connection-centre-rings.png
+.. image:: /_static/images/turntable-ex/layout-connection-centre-rings.png
   :alt: Layout connection with centre rings
   :scale: 50%
 
@@ -61,6 +60,6 @@ In this scenario, with the relays in their default inactive state, the CommandSt
 
 Assuming that the default behaviour of automatic phase switching is enabled, when the turntable rotates 180 degrees, Turntable-EX will automatically activate the relays, resulting in the CommandStation + connecting to the orange pit rail, and the - connecting to the brown centre ring, reversing the phase and preventing a short circuit from occurring.
 
-.. image:: ../_static/images/turntable-ex/layout-connection-pit-and-centre-rings.png
+.. image:: /_static/images/turntable-ex/layout-connection-pit-and-centre-rings.png
   :alt: Layout connection with centre rings
   :scale: 50%

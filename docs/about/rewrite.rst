@@ -1,4 +1,4 @@
-
+.. include:: /include/include.rst
 *************************
 What's New in DCC++ EX?
 *************************
@@ -68,10 +68,7 @@ First and foremost, we just wanted to have fun. We saw an engineering problem an
 Details to Make Engineer's Propellers Spin
 ============================================
 
-.. image:: ../_static/images/engineer.png
-   :alt: Engineer Icon
-   :scale: 50%
-   :align: left
+|engineer|
 
 We needed a platform that would allow us to grow into the future. The first thing we found was that in order to allow easy changes and to be able to adapt to technology we might want to use going forward, the code needed to be more modular. Each unit needed to be a "black box" that either did just one task and did it well, or take input and generate output without having to know anything about the module it was communicating with. Therefore, we created an internal API through which the modules could communicate. By simply unplugging one unit and plugging in another we could continue to work using different devices. An example of this is input and output. It doesn't matter whether JMRI is sending commands to DCC++ EX or if it is a wireless Cab Controller. It doesn't matter if the output device is the serial monitor or an I2C display. It doesn't matter if you want to use a serial port or a network device to route data. This makes it very easy to implement new features with new devices. We just have to create a small interface for whatever new device we want to implement. This has the side benefit of allowing the code to be more readable.
 

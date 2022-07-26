@@ -1,10 +1,9 @@
+.. include:: /include/include.rst
 ****************
 Getting started
 ****************
 
-.. image:: ../_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 .. sidebar:: On this page
 
@@ -19,15 +18,9 @@ For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with a
 
 .. sidebar:: Use prototype or strip boards
 
-  .. image:: ../_static/images/tinkerer.png
-    :alt: Tinkerer Level
-    :scale: 40%
-    :align: left
+  |tinkerer|
 
-  .. image:: ../_static/images/engineer.png
-    :alt: Engineer Level
-    :scale: 40%
-    :align: right
+  |engineer|
 
   For the Tinkerers and Engineers, a much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.
 
@@ -35,7 +28,7 @@ We will also assume a prototyping shield is available that provides regulated 5V
 
 Throughout the assembly process, you can refer to this Fritzing diagram to help validate your connections are correct (open this image in a new tab or window and zoom in to see the detail):
 
-.. image:: ../_static/images/turntable-ex/assembly.png
+.. image:: /_static/images/turntable-ex/assembly.png
   :alt: Fritzing Diagram
   :scale: 25%
   :align: left
@@ -109,11 +102,11 @@ ____________________
 
 Gather all your components and visually check them all for any obvious damage, paying particular attention to pins on the Arduino to make sure they are straight.
 
-.. image:: ../_static/images/turntable-ex/components.png
+.. image:: /_static/images/turntable-ex/components.png
   :alt: Components
   :scale: 50%
 
-.. image:: ../_static/images/turntable-ex/check-pins.png
+.. image:: /_static/images/turntable-ex/check-pins.png
   :alt: Nano Pins
   :scale: 50%
 
@@ -124,11 +117,11 @@ Insert the Nano into the prototype shield socket, taking care to ensure the USB 
 
 The various pin numbers may also be printed on the prototyping shield to confirm the correct orientation.
 
-.. image:: ../_static/images/turntable-ex/insert-nano.png
+.. image:: /_static/images/turntable-ex/insert-nano.png
   :alt: Insert Nano
   :scale: 50%
 
-.. image:: ../_static/images/turntable-ex/nano-inserted.png
+.. image:: /_static/images/turntable-ex/nano-inserted.png
   :alt: Nano Inserted
   :scale: 50%
 
@@ -136,7 +129,7 @@ At this point, it's a good idea to take careful note of the various pin markings
 
 With the shield used in these assembly photos, you will note that each of the Nano GPIO pins has three pins associated with it marked "G" for ground, "V" for 5V, and "S" for signal, with this last pin being the actual Nano GPIO pin.
 
-.. image:: ../_static/images/turntable-ex/proto-shield-pins.png
+.. image:: /_static/images/turntable-ex/proto-shield-pins.png
   :alt: Prototype Shield Pins
   :scale: 50%
 
@@ -167,21 +160,21 @@ You will need to connect six of the female to female Dupont wires from the ULN20
     * - \-
       - A0 G
   
-.. image:: ../_static/images/turntable-ex/uln2003-pins.png
+.. image:: /_static/images/turntable-ex/uln2003-pins.png
   :alt: ULN2003 Pins
   :scale: 40%
 
-.. image:: ../_static/images/turntable-ex/shield-uln2003-pins.png
+.. image:: /_static/images/turntable-ex/shield-uln2003-pins.png
   :alt: Shield to ULN2003 pins
   :scale: 50%
 
 Insert the stepper motor connector into the recepticle on the ULN2003 controller. Note that it will only go in one way, so check the orientation and simply plug it in.
 
-.. image:: ../_static/images/turntable-ex/28byj-48-connector1.png
+.. image:: /_static/images/turntable-ex/28byj-48-connector1.png
   :alt: 28BYJ-48 Connector
   :scale: 50%
 
-.. image:: ../_static/images/turntable-ex/28byj-48-connector2.png
+.. image:: /_static/images/turntable-ex/28byj-48-connector2.png
   :alt: 28BYJ-48 Connector
   :scale: 50%
 
@@ -206,11 +199,11 @@ Use three of the Dupont wires and connect these from the hall effect sensor to t
     * - S (Right)
       - 5 S
 
-.. image:: ../_static/images/turntable-ex/hall-effect-pins.png
+.. image:: /_static/images/turntable-ex/hall-effect-pins.png
   :alt: Hall Effect Pins
   :scale: 50%
 
-.. image:: ../_static/images/turntable-ex/hall-effect-shield.png
+.. image:: /_static/images/turntable-ex/hall-effect-shield.png
   :alt: Hall Effect to Shield
   :scale: 50%
 
@@ -237,11 +230,11 @@ Use four Dupont wires to connect the other four pins as below:
     * - IN2
       - 4 S
 
-.. image:: ../_static/images/turntable-ex/dual-relay-pins.png
+.. image:: /_static/images/turntable-ex/dual-relay-pins.png
   :alt: Dual Relay Pins
   :scale: 50%
 
-.. image:: ../_static/images/turntable-ex/dual-relay-shield-pins.png
+.. image:: /_static/images/turntable-ex/dual-relay-shield-pins.png
   :alt: Dual Relay to Shield Pins
   :scale: 50%
 
@@ -252,17 +245,17 @@ At this point, it should be safe to plug in the power supply to the DC power jac
 
 When the power supply is turned on, the power LEDs on the Arduino Nano and dual relay board should be lit. Note there is likely no power LED on the ULN2003 stepper controller, and testing of this will require loading the Turntable-EX software on to the Nano in step 7 below.
 
-.. image:: ../_static/images/turntable-ex/power-on.png
+.. image:: /_static/images/turntable-ex/power-on.png
   :alt: Powered On
   :scale: 50%
 
 To validate the hall effect sensor is connected correctly, put a magnet in close proximity (within a millimetre or so) of the sensor IC, and the onboard LED should light up.
 
-.. image:: ../_static/images/turntable-ex/hall-effect-inactive.png
+.. image:: /_static/images/turntable-ex/hall-effect-inactive.png
   :alt: Hall Effect Inactive
   :scale: 50%
 
-.. image:: ../_static/images/turntable-ex/hall-effect-active.png
+.. image:: /_static/images/turntable-ex/hall-effect-active.png
   :alt: Hall Effect Active
   :scale: 50%
 
@@ -279,7 +272,7 @@ At the time of writing, there is no installer for Turntable-EX like there is for
 
 As noted in the tip above, you should have a Turntable-EX folder alongside the CommandStation-EX folder, and neither should reside in the other (the CommandStation-EX software is required in the next step):
 
-.. image:: ../_static/images/turntable-ex/two-folders.png
+.. image:: /_static/images/turntable-ex/two-folders.png
   :alt: Two folders
   :scale: 60%
 
@@ -287,7 +280,7 @@ The process here is the same as installing CommandStation-EX via the Arduino IDE
 
 When you get to the point of opening the sketch, ensure you open the Turntable-EX sketch:
 
-.. image:: ../_static/images/turntable-ex/open-turntable-ex-sketch.png
+.. image:: /_static/images/turntable-ex/open-turntable-ex-sketch.png
   :alt: Open Turntable-EX sketch
   :scale: 60%
 
@@ -297,13 +290,13 @@ If you need to make adjustments to config.h, refer to the :doc:`/turntable-ex/co
 
 Set the board type to "Nano" and set the correct Processor type (typically ATMega328P):
 
-.. image:: ../_static/images/turntable-ex/select-nano.png
+.. image:: /_static/images/turntable-ex/select-nano.png
   :alt: Select Nano
   :scale: 60%
 
 After any adjustments are made and "config.h" has been created, the software can be uploaded to the Arduino with the upload button:
 
-.. image:: ../_static/images/arduino-ide/upload_arrow.jpg
+.. image:: /_static/images/arduino-ide/upload_arrow.jpg
   :alt: Upload
   :scale: 70%
 
@@ -311,20 +304,20 @@ Once the software is loaded successfully on to Turntable-EX, the stepper motor s
 
 If you don't have the magnet installed at this point, or if it is too far from the sensor, Turntable-EX will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.
 
-If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`turntable-ex/troubleshooting:troubleshooting turntable-ex` for further assistance if required.
+If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/troubleshooting:troubleshooting turntable-ex` for further assistance if required.
 
 Automatic calibration
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
 
-  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`turntable-ex/test-and-tune:turntable-ex commands` section.
+  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`/ex-turntable/test-and-tune:turntable-ex commands` section.
 
-  Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`turntable-ex/configure:full_step_count`.
+  Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`/ex-turntable/configure:full_step_count`.
 
 When Turntable-EX is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.
 
-Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`turntable-ex/test-and-tune:tuning your turntable positions`.
+Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`/ex-turntable/test-and-tune:tuning your turntable positions`.
 
 The output in the serial console should look similar to the below:
 
@@ -395,7 +388,7 @@ Scrolling down towards the bottom of that file, you will also see this indented 
 
   //TurntableEX::create(600, 1, 0x60);
 
-If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`reference/software/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the CommandStation-EX software.
+If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`/reference/software/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the CommandStation-EX software.
 
 Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above, which should result in the following content in your new "myHal.cpp" file:
 
@@ -422,12 +415,12 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
 
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
 
-- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send Turntable-EX commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/software/hal:overview`).
+- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send Turntable-EX commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`/reference/software/hal:overview`).
 - I2C address=0x60 - This is the default address on the I2C bus that the Turntable-EX is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myHal.cpp" and in "config.h" in the Turntable-EX software.
 
 If you already have an existing "myHal.cpp" file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the "#include" needs to be before "void halSetup() {" and the "TurntableEX::create..." needs to be before the final "}".
 
-Follow the rest of the directions for :ref:`reference/software/hal-config:adding a new device` all the way through to the :ref:`reference/software/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
+Follow the rest of the directions for :ref:`reference/software/hal-config:adding a new device` all the way through to the :ref:`/reference/software/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
 
 Note there is no point in checking the driver at this stage as Turntable-EX is not connected, and will show as "OFFLINE".
 
@@ -460,15 +453,15 @@ Connect these pins to your CommandStation as shown in the table below, noting th
     * - Any spare ground
       - A4 G
   
-.. image:: ../_static/images/turntable-ex/nano-i2c.png
+.. image:: /_static/images/turntable-ex/nano-i2c.png
   :alt: Nano I2C pins
   :scale: 40%
 
-.. image:: ../_static/images/turntable-ex/commandstation-i2c.png
+.. image:: /_static/images/turntable-ex/commandstation-i2c.png
   :alt: Nano I2C pins
   :scale: 40%
 
-.. image:: ../_static/images/turntable-ex/commandstation-gnd.png
+.. image:: /_static/images/turntable-ex/commandstation-gnd.png
   :alt: Nano I2C pins
   :scale: 40%
 

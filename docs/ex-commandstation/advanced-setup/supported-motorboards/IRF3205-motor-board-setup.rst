@@ -1,22 +1,16 @@
+.. include:: /include/include.rst
 **************************
 IRF3205 Motor Board Setup
 **************************
 
-.. image:: ../../_static/images/tinkerer.png
-   :alt: Engineer Icon
-   :scale: 50%
-   :align: left
+|tinkerer|
 
-Tinkerer Level
-
-|
-
-- :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:What You Will Need (IRF3205)`
-- :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Which option should you choose? (IRF3205)`
-- :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Upgrading (Use the Arduino Motor Shield AND the IRF3205)`
-- :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Replacing (Use both IRF3205 outputs to control MAIN and PROG)`
-- :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing`
-- :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:What You Will Need (IRF3205)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Which option should you choose? (IRF3205)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Upgrading (Use the Arduino Motor Shield AND the IRF3205)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Replacing (Use both IRF3205 outputs to control MAIN and PROG)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
 
 What You Will Need (IRF3205)
 =============================
@@ -31,9 +25,9 @@ What You Will Need (IRF3205)
 * A separate current sense board like one based on the ACS724 chip (or just depend on the 5A fuses)
 * Some Jumper Wires
 
-See the :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
+See the :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
 
-.. image:: ../../_static/images/motorboards/15A_Dual_HBridge3.jpg
+.. image:: /_static/images/motorboards/15A_Dual_HBridge3.jpg
    :alt: 15A Dual H-Bridge
    :scale: 35%
    :align: center
@@ -50,7 +44,7 @@ The IRF3205 is actually the part number of the transistors on the board, N-Chann
 Which Option Should You Choose? (IRF3205)
 ===========================================
 
-.. NOTE:: This board can use the "High Accuracy Waveform" option since it uses just one direction pin per H-Bridge. As long as you use one of our motor board definitions for MOTOR_BOARD_TYPE in your config.h file that uses a Timer1 pin, this will all be automatic. See :doc:`High Accuracy Waveform </advanced-setup/high-accuracy>`.
+.. NOTE:: This board can use the "High Accuracy Waveform" option since it uses just one direction pin per H-Bridge. As long as you use one of our motor board definitions for MOTOR_BOARD_TYPE in your config.h file that uses a Timer1 pin, this will all be automatic. See :doc:`High Accuracy Waveform </ex-commandstation/advanced-setup/high-accuracy>`.
 
 Upgrade (IRF3205)
 ------------------
@@ -68,16 +62,16 @@ The main benefit of the replace option, using only the IRF3205 board, is that yo
 
 To use this option *and* be able to program locos, you **must** have an external current sense board so you can detect the acknowledgement (ACK) pulses from a loco on your programming track. The current sensor also allows the CS to monitor for a short and automatically cut the power to the tracks if there is an overload condition (a short).
 
-There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing` section.
+There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing` section.
 
 Upgrading (Use the Arduino Motor Shield AND the IRF3205)
 ===========================================================
 
 For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.
 
-If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly <../../get-started/assembly>`
+If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly </ex-commandstation/get-started/assembly>`
 
-Tinkerers will use their existing motor shield for PROG and replace the MAIN output with one of the outputs of this board. Engineers can skip to :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Replacing (Use both IRF3205 outputs to control MAIN and PROG)` to see how to modify the board so that just the IRF3205 can manage both tracks.
+Tinkerers will use their existing motor shield for PROG and replace the MAIN output with one of the outputs of this board. Engineers can skip to :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Replacing (Use both IRF3205 outputs to control MAIN and PROG)` to see how to modify the board so that just the IRF3205 can manage both tracks.
 
 What Tinkerers Are Going to Do (Upgrade)
 -----------------------------------------
@@ -99,7 +93,7 @@ Steps (Upgrade IRF3205)
 
 3. Move the two wires we just disconnected from the motor shield and connect one to each of the "Motor1" screw terminals of the IRF3205 board. TODO: Add image.
 
-4. NOTE: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use the ``<1 JOIN>`` command to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "DriveAway" feature. For more detail, see :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Keeping your tracks in phase` below.
+4. NOTE: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use the ``<1 JOIN>`` command to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "DriveAway" feature. For more detail, see :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Keeping your tracks in phase` below.
 
 5. Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. "CS" in the table means "Current Sense":
 
@@ -117,9 +111,9 @@ Steps (Upgrade IRF3205)
 |     GND      |        GND           |
 +--------------+----------------------+
 
-Here is a visual diagram. See :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing`. Click to enlarge:
+Here is a visual diagram. See :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing`. Click to enlarge:
 
-.. image:: ../../_static/images/motorboards/IRF3205_w_arduino_fritz.png
+.. image:: /_static/images/motorboards/IRF3205_w_arduino_fritz.png
    :alt: IRF3205 Wiring Diagram
    :scale: 38%
    :align: center
@@ -127,7 +121,7 @@ Here is a visual diagram. See :ref:`advanced-setup/supported-motorboards/IRF3205
 
 It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IRF3205 (TODO: What does this mean? Did I mean to connect this other board to those pins or the IRF3205?? Fix this in the IBT_2 board page also) to the same pins on the Arduino microcontroller. As with most of our diagrams, you can click on them to enlarge them. )TODO: Mention fuses here? Another diagram?)
 
-.. image:: ../../_static/images/motorboards/IRF3205_w_arduino.png
+.. image:: /_static/images/motorboards/IRF3205_w_arduino.png
    :alt: IRF3205 Wiring Schematic
    :scale: 70%
    :align: center
@@ -169,7 +163,7 @@ This will use pin 3 for Enable and 12 for signal, which will use the "High Accur
 
 8. If you intend to use your Command station for programming on a separate programming track, or you will want to monitor current on your main track, you will connect an external current sense board. See the notes below for more detail about current sense and a suggestion for using an external current sense board.
 
-See :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing`
+See :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing`
 
 
 Replacing (Use both IRF3205 outputs to control MAIN and PROG)
@@ -224,15 +218,15 @@ Use the following diagrams to connect pins from the Arduino Mega to the IRF3205.
 
 It should look like following graphical image. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IRF3205 directly to the same pins on the Arduino microcontroller. Please use fuses on BOTH wires of the output to your MAIN track. As with most of our diagrams, you can click on them to enlarge them.
 
-Here is a wiring diagram. See :ref:`advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing` below. Click on images to enlarge them:
+Here is a wiring diagram. See :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing` below. Click on images to enlarge them:
 
-.. image:: ../../_static/images/motorboards/IRF3205_w_arduino_fritz.png
+.. image:: /_static/images/motorboards/IRF3205_w_arduino_fritz.png
    :alt: IRF3205 Wiring Diagram
    :scale: 30%
 
 Pay attention to board labels, not their position on this drawing. Your current sensor may have its connections wired differently! Here is a schematic image to help clarify the wiring.
 
-.. image:: ../../_static/images/motorboards/IRF3205_w_arduino.png
+.. image:: /_static/images/motorboards/IRF3205_w_arduino.png
    :alt: IRF3205 Wiring Schematic
    :scale: 50%
 
@@ -311,7 +305,7 @@ The choice of motor driver is set in the config.h file. It is set in the followi
 
 The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
-If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section <../motor-board-config>`
+If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section </ex-commandstation/motor-board-config>`
 
 For the Engineers, the definitions and implementation for motor board control are in the following files:
 
@@ -326,7 +320,7 @@ IRF3205 15A Motor Board schematic
 
 Below is a link to the IBT_2 schematic. Click to enlarge. TODO: this is wrong
 
-.. image:: ../../_static/images/schematics/IBT_2_schematic.jpg
+.. image:: /_static/images/schematics/IBT_2_schematic.jpg
    :scale: 50
 
 Keeping Your tracks in Phase

@@ -1,6 +1,9 @@
+.. include:: /include/include.rst
 ********************************
 Diagnostics ``<D ACK>`` Command
 ********************************
+
+|engineer|
 
 - :ref:`reference/software/diagnostic-d-ack-command:\<D ACK ON\>` - Turn on Loco acknowledgement diagnostics
 - :ref:`reference/software/diagnostic-d-ack-command:\<D ACK LIMIT mA\>` - Override ACK processing mA pulse size
@@ -121,4 +124,4 @@ When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will n
 Making the Changes Permanent
 =============================
 
-To make these settings permanent, you can create a :doc:`Startup Configuration <../../advanced-setup/startup-config>` by adding or editing an existing *mySetup.h*. You simply add the appropriate commands in the correct format and upload the Command Station software again. Click on the link in this paragraph for detailed instructions.
+To make these settings permanent, you can create a :doc:`Startup Configuration </ex-commandstation/advanced-setup/startup-config>` by adding or editing an existing *mySetup.h*. You simply add the appropriate commands in the correct format and upload the Command Station software again. Click on the link in this paragraph for detailed instructions.

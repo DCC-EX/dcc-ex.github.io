@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 **************************************
 Diagnosing Issues (Troubleshooting)
 **************************************
@@ -64,7 +65,7 @@ With all of the decoder manufacturers creating hardware and the difficulties in 
 
 #. **Current sense issue** - From the Arduino Serial monitor with ``115200 baud`` set and ``Both CR & NL`` selected in the dropdown, put a loco on the MAIN track. Enter the <1> command to turn on power. Then enter the <C> command and check the response. You should see a valid number for current.
 #. Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capability on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.
-#. **Out of spec. decoder (most likely)** - You will need to run a test and then modify a setting or two. Please go to the :doc:`<Diagnostic \<D ACK\> <../reference/software/diagnostic-d-ack-command>`. Send us your log.
+#. **Out of spec. decoder (most likely)** - You will need to run a test and then modify a setting or two. Please go to the :doc:`<Diagnostic \<D ACK\> </reference/software/diagnostic-d-ack-command>`. Send us your log.
 
 ..
 

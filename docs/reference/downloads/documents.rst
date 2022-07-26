@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 *********************
 Documents
 *********************
@@ -25,7 +26,7 @@ Have DCC++EX command references automatically shown through the DecoderPro Scrip
 
 You can also add user defined ATC Automatic Throttle Control Jython.py scripts to GUI buttons on DecoderPro and PanelPro main menus.
 
-.. image:: ../../_static/images/jmri/DCCEX_JMRI_Script_windows1.jpg
+.. image:: /_static/images/jmri/DCCEX_JMRI_Script_windows1.jpg
    :alt: DCC++EX JMRI scripts
    :scale: 25%
    :align: left
@@ -44,7 +45,7 @@ How To; Create DCC++EX Buttons on JMRI main menus (PDF)
 This pdf file provides instruction on how to install our custom scripts in JMRI and assign them to buttons. 
 You can have the command references for DCC++ EX shown through the Script Output Window in DecoderPro as seen above.
 
-.. image:: ../../_static/images/icons/pdf_logo_sm.png
+.. image:: /_static/images/icons/pdf_logo_sm.png
    :alt: DCC++EX JMRI script install instructions
    :scale: 75%
    :align: left
@@ -61,7 +62,7 @@ Comprehensive DCC++EX & JMRI Getting Started Guide PDF
 
 For a more extensive overview of setting up DCC++EX with JMRI DecoderPro please download and review the 
 
-.. image:: ../../_static/images/icons/pdf_logo_sm.png
+.. image:: /_static/images/icons/pdf_logo_sm.png
    :alt: DCC++EX & JMRI Getting Started Guide
    :scale: 75%
    :align: left

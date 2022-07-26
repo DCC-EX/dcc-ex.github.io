@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ****************************
 Developer and API reference
 ****************************

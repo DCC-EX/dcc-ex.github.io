@@ -1,5 +1,6 @@
 :orphan:
 
+.. include:: /include/include.rst
 **********************************
 Using the "DriveAway(tm)" Feature
 **********************************
@@ -59,7 +60,7 @@ Sample WiFi Throttle App "Discovered Servers"
 Our new multicast Dynamic Network Server (mDNS) enhancement allows us to display the available WiFi Server connections to a DCC++EX Command Station. 
 Choosing one allows your WiFi Throttle App to connect to and load Server Rosters and function keys to your throttle from Either the DCC++EX Command Station, Or from JMRI Engine Roster.
 
-.. image:: ../_static/images/jmri/engine_driver_discovered_servers.png
+.. image:: /_static/images/jmri/engine_driver_discovered_servers.png
   :alt: Engine Driver Discovered Servers
   :scale: 25%
   :align: left
@@ -89,12 +90,12 @@ Sample Roster entry in myAutomation.h file
     ROSTER(2,"CAB 2","")    // Analog DC Engine with no F-Keys
     ROSTER(667, "NH 667","")// Analog DC Engine with no F-Keys
 
-.. image:: ../_static/images/jmri/engine_driver_dcc-ex_server_roster.png
+.. image:: /_static/images/jmri/engine_driver_dcc-ex_server_roster.png
   :alt: Engine Driver DCC++EX Server Roster
   :scale: 25%
   :align: left
 
-.. image:: ../_static/images/jmri/ed_and_dcc-ex_with_dc_and_dcc_throttles.png
+.. image:: /_static/images/jmri/ed_and_dcc-ex_with_dc_and_dcc_throttles.png
   :alt: ED & DCC++EX with DC & DCC Throttles
   :scale: 25%
   :align: left
@@ -106,12 +107,12 @@ By choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered se
 
 Please be sure your JMRI device {Windows, Mac iOS or Raspberry Pi} for JMRI WiThrottle Server is signed on and connected to the same WiFi SSID Name and Password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the JMRI WiThrottle Server IP address: port# displayed into your Engine Driver & WiThrottle Apps.
 
-.. image:: ../_static/images/jmri/engine_driver_jmri_server_roster.png
+.. image:: /_static/images/jmri/engine_driver_jmri_server_roster.png
   :alt: Engine Driver JMRI Server Roster
   :scale: 25%
   :align: left
 
-.. image:: ../_static/images/jmri/engine_driver_and_dcc-ex.png
+.. image:: /_static/images/jmri/engine_driver_and_dcc-ex.png
   :alt: Engine Driver & DCC++EX
   :scale: 25%
   :align: left

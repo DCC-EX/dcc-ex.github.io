@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ****************
 The Big Picture
 ****************
@@ -8,4 +9,4 @@ By popular demand, this section will provide a "big picture" view of how to put 
   :maxdepth: 1
 
   big-picture
-  stage1.rst
+  stage1

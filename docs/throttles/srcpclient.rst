@@ -1,13 +1,14 @@
+.. include:: /include/include.rst
 ********************
 SRCP Client for iOS
 ********************
 
-.. image:: ../_static/images/throttles/icon_ios.png
+.. image:: /_static/images/throttles/icon_ios.png
    :alt: iOS Logo
    :scale: 30%
    :align: left
 
-This is an iOS App from Germany. One of the major benefits of SRCPClient is that it speaks the <DCC++> Application Programming language (API) natively (see our :doc:`Command Reference <../reference/software/command-reference>`). This means it is fast and can take advantage of some features that exist in the DCC++ EX Command Station not implemented in other APIs. Is also can connect to a WiThrottle server so you can use it with JMRI too.
+This is an iOS App from Germany. One of the major benefits of SRCPClient is that it speaks the <DCC++> Application Programming language (API) natively (see our :doc:`Command Reference </reference/software/command-reference>`). This means it is fast and can take advantage of some features that exist in the DCC++ EX Command Station not implemented in other APIs. Is also can connect to a WiThrottle server so you can use it with JMRI too.
 
 Please visit their website: https://www.io-expert.com/
 
@@ -28,7 +29,7 @@ Features
 Screenshots
 ============
 
-.. image:: ../_static/images/throttles/srcpclient1.jpg
+.. image:: /_static/images/throttles/srcpclient1.jpg
    :alt: SrcpClient Screenshot 1
    :scale: 50%
 
@@ -42,7 +43,7 @@ Requirements
 
 * A DCC++ EX Command Station (Mega based for WiFi)
 * An iOS Cell Phone or Tablet
-* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup <../get-started/wifi-setup>`
+* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
 
 .. _srcpclient-operation:
 
@@ -56,7 +57,7 @@ Operation
 Using Wifi
 ++++++++++++
 
-To use Wifi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup <../get-started/wifi-setup>` section.
+To use Wifi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
 
 
 

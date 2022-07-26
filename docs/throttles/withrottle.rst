@@ -1,8 +1,9 @@
+.. include:: /include/include.rst
 ****************
 WiThrottle
 ****************
 
-.. image:: ../_static/images/throttles/icon_ios.png
+.. image:: /_static/images/throttles/icon_ios.png
    :alt: iOS Logo
    :scale: 30%
    :align: left
@@ -31,7 +32,7 @@ Features
 Screenshots
 ============
 
-.. image:: ../_static/images/throttles/withrottle1.png
+.. image:: /_static/images/throttles/withrottle1.png
    :alt: WiThrottle Screenshot 1
    :scale: 90%
 
@@ -45,7 +46,7 @@ Requirements
 
 * A DCC++ EX Command Station (Mega based for WiFi)
 * An iOS Cell Phone or Tablet
-* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup <../get-started/wifi-setup>`
+* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
 
 .. _withrottle-operation:
 
@@ -59,7 +60,7 @@ Operation
 Using Wifi
 ------------
 
-To use Wifi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup <../get-started/wifi-setup>` section.
+To use Wifi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
 
 We have not tested the WiFi implementation yet
 

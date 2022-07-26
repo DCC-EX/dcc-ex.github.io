@@ -1,15 +1,9 @@
+.. include:: /include/include.rst
 **************************
 Motor Board Configuration
 **************************
 
-.. image:: ../_static/images/tinkerer.png
-   :alt: Tinkerer Icon
-   :scale: 50%
-   :align: left
-
-Tinkerer to Engineer Level
-
-| 
+|tinkerer| |Engineer|
 
 DCC++ EX supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
 
@@ -219,4 +213,4 @@ The disadvantage is that you MUST use a bi-directional current sensor, and you n
 
 No matter which method you choose, you are going to have to either select the correct motor board type in your config.h file, or create a motorboard definition to tell DCC++EX which pins you are connecting your current sense board(s) to, and what current sense factor to use to report the current accurately.
 
-For details and instructions on how to connect and configure non-Arduino Motor Shield boards and their clones, see the :doc:`Supported Motorboards Setup Notes <../advanced-setup/supported-motorboards/index>`.
+For details and instructions on how to connect and configure non-Arduino Motor Shield boards and their clones, see the :doc:`Supported Motorboards Setup Notes </ex-commandstation/advanced-setup/supported-motorboards/index>`.

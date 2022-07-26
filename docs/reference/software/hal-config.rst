@@ -1,6 +1,9 @@
+.. include:: /include/include.rst
 **************************
 I/O Device Drivers and HAL
 **************************
+
+|engineer|
 
 The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may 
 outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller

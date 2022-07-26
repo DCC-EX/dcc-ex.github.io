@@ -5,7 +5,7 @@ EX-DCCInspector
 
 |EX-DCCI| is a packet sniffing tool that can connect directly to the signal pins on the Command Station or to the track depending on your circuit. For information in the :doc:`Diagnostic Tools Section <../reference/tools/diagnostic-tools>`
 
-.. image:: ../_static/documents/sniffer_thumbnail.png
+.. image:: /_static/documents/sniffer_thumbnail.png
    :alt: DCC Inspector EX thumbnail
    :scale: 26%
    :align: left   

@@ -1,10 +1,9 @@
+.. include:: /include/include.rst
 *********
 Overview
 *********
 
-.. image:: ../_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 .. sidebar:: On this page
 
@@ -17,11 +16,11 @@ What is Turntable-EX?
 
 Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.
 
-The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`get-started/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
+The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`/about-dcc-ex/get-started/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
 
 The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
-To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL<automation/ex-rail-intro:introduction to ex-rail automation>` automation, but we'll share the details and some examples to help with this.
+To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL</ex-rail/ex-rail-intro:introduction to ex-rail automation>` automation, but we'll share the details and some examples to help with this.
 
 Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
 
@@ -35,12 +34,12 @@ Essentially, if you have setup your own CommandStation, the expectation is that 
 
 .. sidebar:: Supported stepper drivers and motors
 
-  .. image:: ../_static/images/conductor.png
+  .. image:: /_static/images/conductor.png
     :alt: Conductor Level
     :scale: 40%
     :align: left
   
-  .. image:: ../_static/images/tinkerer.png
+  .. image:: /_static/images/tinkerer.png
     :alt: Tinkerer Level
     :scale: 40%
     :align: right
@@ -77,33 +76,33 @@ What you need for Turntable-EX
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
 * Dupont type wires to connect the components, male to female or female to female as required
 * A USB cable to connect the Arduino to a PC to load the software
-* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`turntable-ex/turntable-ex:important! phase (or polarity) switching`)
+* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`/ex-turntable/turntable-ex:important! phase (or polarity) switching`)
 
 .. note:: 
 
-  If you wish to make use of the traverser feature, there is further information on what is required to enable this on the :doc:`/turntable-ex/traverser` page.
+  If you wish to make use of the traverser feature, there is further information on what is required to enable this on the :doc:`/ex-turntable/traverser` page.
 
-.. image:: ../_static/images/turntable-ex/nano-v3.png
+.. image:: /_static/images/turntable-ex/nano-v3.png
   :alt: Nano V3
   :scale: 50%
 
-.. image:: ../_static/images/turntable-ex/uln2003-28byj-48.png
+.. image:: /_static/images/turntable-ex/uln2003-28byj-48.png
   :alt: ULN2003/28BYJ-48 Stepper combo
   :scale: 50%
 
-.. image:: ../_static/images/turntable-ex/hall-effect.png
+.. image:: /_static/images/turntable-ex/hall-effect.png
   :alt: Hall Effect sensor
   :scale: 40%
 
-.. image:: ../_static/images/turntable-ex/dual-relay.png
+.. image:: /_static/images/turntable-ex/dual-relay.png
   :alt: Dual Relay
   :scale: 40%
 
-.. image:: ../_static/images/turntable-ex/nano-shield1.png
+.. image:: /_static/images/turntable-ex/nano-shield1.png
   :alt: Nano Prototype Shield
   :scale: 40%
 
-.. image:: ../_static/images/turntable-ex/dupont.png
+.. image:: /_static/images/turntable-ex/dupont.png
   :alt: Dupont male to female
   :scale: 30%
 
@@ -127,10 +126,7 @@ The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48
 
 .. sidebar:: Unsupported stepper drivers and motors
 
-  .. image:: ../_static/images/tinkerer.png
-    :alt: Tinkerer Level
-    :scale: 40%
-    :align: left
+ |tinkerer|
 
   If you have a need to use a different driver, these should be relatively straight forward to configure in a similar manner to how additional motor drivers are configured for use with CommandStation-EX.
 
@@ -176,7 +172,7 @@ __________________________
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
-Refer to the :ref:`turntable-ex/test-and-tune:testing, tuning, and control` page for more details on this.
+Refer to the :ref:`/ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
 
 Important! Phase (or polarity) switching
 _________________________________________
@@ -199,29 +195,29 @@ Consider the turntable starting in alignment with the entry and exit tracks, wit
 
 If we do not invert or reverse the phase, when it rotates 180 degrees, there will be an obvious issue!
 
-.. image:: ../_static/images/turntable-ex/0degree-phase.png
+.. image:: /_static/images/turntable-ex/0degree-phase.png
   :alt: No rotation
   :scale: 45%
 
-.. image:: ../_static/images/turntable-ex/90degree-no-phase-change.png
+.. image:: /_static/images/turntable-ex/90degree-no-phase-change.png
   :alt: 90 degrees
   :scale: 45%
 
-.. image:: ../_static/images/turntable-ex/180degree-no-phase-change.png
+.. image:: /_static/images/turntable-ex/180degree-no-phase-change.png
   :alt: 180 degrees
   :scale: 45%
 
 Now consider inverting or reversing the phase when performing that 180 degree turn, and the result is just like the starting point, with all tracks in DCC phase alignment.
 
-.. image:: ../_static/images/turntable-ex/0degree-phase.png
+.. image:: /_static/images/turntable-ex/0degree-phase.png
   :alt: No rotation
   :scale: 45%
 
-.. image:: ../_static/images/turntable-ex/90degree-phase-change.png
+.. image:: /_static/images/turntable-ex/90degree-phase-change.png
   :alt: 90 degrees
   :scale: 45%
 
-.. image:: ../_static/images/turntable-ex/180degree-phase-change.png
+.. image:: /_static/images/turntable-ex/180degree-phase-change.png
   :alt: 180 degrees
   :scale: 45%
 
@@ -240,7 +236,7 @@ The surrounding layout tracks have been wired so that each opposing track is wir
 
 To start, the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.
 
-.. image:: ../_static/images/turntable-ex/auto-phase-switch-start.png
+.. image:: /_static/images/turntable-ex/auto-phase-switch-start.png
   :alt: Aligned with first track
   :scale: 100%
 
@@ -248,27 +244,27 @@ Next, we've sent a command for the turntable to rotate 180 degrees, which requir
 
 As this will trigger the turntable to rotate beyond our 45 degree trigger point, the phase will automatically be inverted.
 
-.. image:: ../_static/images/turntable-ex/auto-phase-switch-trigger.png
+.. image:: /_static/images/turntable-ex/auto-phase-switch-trigger.png
   :alt: Rotate beyond 45 degrees
   :scale: 100%
 
 Once the turntable reaches the correct position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.
 
-.. image:: ../_static/images/turntable-ex/auto-phase-switch-end.png
+.. image:: /_static/images/turntable-ex/auto-phase-switch-end.png
   :alt: Rotated 180 degrees
   :scale: 100%
 
 If the turntable continues to rotate beyond the 225 degree point, the phase will revert again.
 
-.. image:: ../_static/images/turntable-ex/auto-phase-switch-revert.png
+.. image:: /_static/images/turntable-ex/auto-phase-switch-revert.png
   :alt: Rotated 180 degrees
   :scale: 100%
 
 The above outlines how the default automatic phase switching works with Turntable-EX, and this behaviour is configurable.
 
-If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in :ref:`get-started/assembly:7. load firmware on your command station`, and the configuration parameter is outlined here: :ref:`turntable-ex/configure:phase_switch_angle`.
+If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in :ref:`get-started/assembly:7. load firmware on your command station`, and the configuration parameter is outlined here: :ref:`/ex-turntable/configure:phase_switch_angle`.
 
-If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in :ref:`turntable-ex/test-and-tune:manual phase switching`.
+If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in :ref:`/ex-turntable/test-and-tune:manual phase switching`.
 
 Time to assemble
 =================

@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ***************************************
 Supported Microcontrollers Setup Notes
 ***************************************

@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 *********************
 Recommended software
 *********************
@@ -116,7 +117,7 @@ Note, however, that the Esbonio server will only generate live previews of the p
 
 Once you've installed the extensions above, it is recommended you close then reopen VSCode, and upon reopening VSCode, you should be prompted in the bottom right hand corner to install the Esbonion language server. It is recommended you do so now.
 
-Refer to the :doc:`/contributing/website` contribution page for more info on generating reliable local previews.
+Refer to the :doc:`/about/contributing/website` contribution page for more info on generating reliable local previews.
 
 Recommended configuration options
 __________________________________

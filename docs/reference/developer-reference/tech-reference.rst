@@ -1,10 +1,9 @@
+.. include:: /include/include.rst
 ********************************************
 Technical Reference for Throttle Developers
 ********************************************
 
-.. image:: ../_static/images/engineer-level.png
-  :alt: Engineer Level
-  :scale: 50%
+|engineer|
 
 .. sidebar:: On this page
 

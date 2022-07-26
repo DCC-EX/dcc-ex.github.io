@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 **********************
 Accessory Controllers
 **********************
@@ -23,7 +24,7 @@ In order to directly drive moderate-current devices such as LEDs, it is recommen
 suitable current-limiting resistor) between the output pin and +5V supply.  The output will therefore
 be inverted (the LED will illuminate when the output is LOW and extinguish when HIGH).  
 
-.. image:: ../../_static/images/accessories/pca8574_2.jpg
+.. image:: /_static/images/accessories/pca8574_2.jpg
    :alt: PCA8574 Port Expander
    :scale: 50%
 
@@ -47,7 +48,7 @@ an I2C serial connection.  Consequently, there are some features which limit its
   pin is capable of directly (absolute maximum ratings 25V and 1.5A according to the datasheet), so may be useful.
 
 
-.. image:: ../../_static/images/i2c/pcf8574_backpack.jpg
+.. image:: /_static/images/i2c/pcf8574_backpack.jpg
    :alt: PCA8574 Port Expander
    :scale: 40%
 

@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 *************************
 EX-RAIL Command Summary
 *************************
@@ -199,7 +200,7 @@ __________________________________
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
     * -  ROSTER( loco, name, func_map )
-      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`automation/ex-rail-intro:roster entries` for examples
+      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`/ex-rail/ex-rail-intro:roster entries` for examples
     * -  DRIVE( analog_pin )
       -  ***Under Construction*** Not complete, DO NOT USE
     * -  :category:`--- Loco DCC functions ---`

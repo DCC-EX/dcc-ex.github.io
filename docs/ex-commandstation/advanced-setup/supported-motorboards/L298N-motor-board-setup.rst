@@ -1,15 +1,9 @@
+.. include:: /include/include.rst
 ************************
 L298N Motor Board Setup
 ************************
 
-.. image:: ../../_static/images/tinkerer.png
-   :alt: Tinkerer Icon
-   :scale: 50%
-   :align: left
-
-Tinkerer Level
-
-|
+|tinkerer|
 
 The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are the key differences:
 
@@ -18,7 +12,7 @@ The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are
 * It doesn't have current sense, so you are going to have to use one of the solutions below
 * It stands vertically on the board with a big heat sink for better cooling
 
-.. figure:: ../../_static/images/motorboards/l298_board2.jpg
+.. figure:: /_static/images/motorboards/l298_board2.jpg
   :alt: L298N Motor Board
   :scale: 25%
 
@@ -65,7 +59,7 @@ You can either cut or lift legs on the L298 chip and insert resistors, or cut a 
 
 2. Choose how you will insert your current sense resistors from the following two options:
 
-.. figure:: ../../_static/images/motorboards/l298_board4.jpg
+.. figure:: /_static/images/motorboards/l298_board4.jpg
   :alt: L298N lift legs to solder CS resistors
   :scale: 50%
 
@@ -73,7 +67,7 @@ You can either cut or lift legs on the L298 chip and insert resistors, or cut a 
 
 or...
 
-.. figure:: ../../_static/images/motorboards/l298nbackmodify.png
+.. figure:: /_static/images/motorboards/l298nbackmodify.png
   :alt: L298N cut traces to install CS resistors
   :scale: 45%
 
@@ -129,7 +123,7 @@ This method uses 2 pins on the Arduino for DCC signal pins and requires the foll
 
 To wire the board, connect the pins according to the following diagram. A table is included as well. This pin usage, with all the pins lined up between boards, allows the use of a ribbon cable to make things a bit more neat:
 
-.. figure:: ../../_static/images/motorboards/l298_wiring_2inputs_2tracks.png
+.. figure:: /_static/images/motorboards/l298_wiring_2inputs_2tracks.png
   :alt: L298N Motor driver wiring diagram
   :scale: 60%
 
@@ -178,7 +172,7 @@ with this:
 
       #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
 
-Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</get-started/arduino-ide>`
+Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/get-started/arduino-ide>`
 
 
 Using One Signal Pin With an Inverter circuit
@@ -188,7 +182,7 @@ This method uses 1 signal pin on the Arduino for each track and uses the standar
 
 Make the following Inverter circuit (You need 2 if you want MAIN and PROG):
 
-.. figure:: ../../_static/images/motorboards/inverter1.jpg
+.. figure:: /_static/images/motorboards/inverter1.jpg
   :alt: Transistor inverter circuit
   :scale: 60%
 

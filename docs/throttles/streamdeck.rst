@@ -1,11 +1,9 @@
+.. include:: /include/include.rst
 *******************
 Elgato Stream Deck
 *******************
 
-.. image:: ../_static/images/tinkerer.png
-   :alt: SrcpClient Screenshot 1
-   :scale: 50%
-   :align: left
+|tinkerer|
 
 Tinkerer Level
 
@@ -14,7 +12,7 @@ Tinkerer Level
 |
 |
 
-.. image:: ../_static/images/throttles/streamdeck1.jpg
+.. image:: /_static/images/throttles/streamdeck1.jpg
    :alt: Stream Deck Unit
    :scale: 20%
    :align: left
@@ -25,7 +23,7 @@ The little hardware controller was originally designed for video production folk
 
 |
 
-.. image:: ../_static/images/throttles/streamdeck_layout.jpg
+.. image:: /_static/images/throttles/streamdeck_layout.jpg
    :alt: Stream Deck Setup
    :scale: 15%
    :align: center

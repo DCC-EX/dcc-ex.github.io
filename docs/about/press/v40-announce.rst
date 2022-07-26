@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 *********************************
 DCC++EX 4.0 Release Announcement
 *********************************
@@ -34,4 +35,4 @@ DCC-EX is a global joint effort of a group of developers and engineers located i
 | Address: 113 Main Street #767, Holly Springs, NC 27540
 | Phone: +1 919-285-1576
 
-`PDF version of this pressser for download <../_static/documents/press_release_v40.pdf>`_
+`PDF version of this pressser for download </_static/documents/press_release_v40.pdf>`_

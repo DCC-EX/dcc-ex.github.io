@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 *********************************
 Choosing a Controller (Throttle)
 *********************************
@@ -40,7 +41,7 @@ Direct (Without JMRI)
 
 For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the Command Station. You need a CS with a WiFi Shield or other type of WiFi board, or a Bluetooth board and a throttle that supports Bluetooth. Here is an image that represents a direct connection.
 
-.. image:: ../_static/images/throttles/throttle_wifi_direct.png
+.. image:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
    :align: center
    :scale: 50%
@@ -50,7 +51,7 @@ With JMRI
 
 For those who want the power of JMRI to operate a complex layout, you would install JMRI on a computer or Raspberry Pi and connect your throttle to JMRI wirelessly through its preferred method, usually the WiThrottle Server or Web Server Interface. Here is an image that shows connecting wirelessly to JMRI, and connecting JMRI via a USB cable to the CS.
 
-.. image:: ../_static/images/throttles/throttle_wifi_jmri.png
+.. image:: /_static/images/throttles/throttle_wifi_jmri.png
    :alt:  WiFi Throttle to JMRI and JMRI to CS with USB cable
    :align: center
    :scale: 50%
@@ -73,14 +74,14 @@ Our WebThrottle-EX (DCC++ | USB/Serial)
 
 The simplest option is to just use a throttle connected directly to the CS. The simplest of all is arguably WebThrottle-EX, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of WebThrottle-EX with the side menu open. You can click on the image to see it full size.
 
-.. image:: ../_static/images/throttles/webthrottle1.jpg
+.. image:: /_static/images/throttles/webthrottle1.jpg
    :alt: WebThrottle-EX
    :align: center
    :scale: 40%
 
 Here are your connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
 
-.. image:: ../_static/images/throttles/webthrottle_setup.jpg
+.. image:: /_static/images/throttles/webthrottle_setup.jpg
    :alt: WebThrottle-EX
    :align: center
    :scale: 45%

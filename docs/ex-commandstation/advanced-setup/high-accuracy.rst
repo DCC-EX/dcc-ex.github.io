@@ -1,11 +1,9 @@
+.. include:: /include/include.rst
 ********************************
 High Accuracy Waveform Mode
 ********************************
 
-.. image:: ../_static/images/engineer.png
-   :alt: Engineer Icon
-   :scale: 50%
-   :align: left
+|engineer|
 
 **Engineer Level**
 
@@ -68,7 +66,7 @@ Inverter Circuit
 
 Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your CS, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.
 
-.. figure:: ../_static/images/motorboards/inverter1.jpg
+.. figure:: /_static/images/motorboards/inverter1.jpg
    :alt: Transistor inverter circuit
    :scale: 70% 
 

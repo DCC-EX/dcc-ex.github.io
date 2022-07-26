@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 **************************
 miniThrottle (Physical)
 **************************
@@ -5,7 +6,7 @@ miniThrottle (Physical)
 A DCC++EX and JMRI Throttle
 
 
-.. image:: ../_static/images/throttles/minithrottle1.jpg
+.. image:: /_static/images/throttles/minithrottle1.jpg
    :alt: Android Logo
    :scale: 50%
    :align: left

@@ -1,10 +1,9 @@
+.. include:: /include/include.rst
 ********************************
 CommandStation-EX API Reference
 ********************************
 
-.. image:: ../_static/images/engineer-level.png
-  :alt: Engineer Level
-  :scale: 50%
+|engineer|
 
 .. sidebar:: On this page
 
@@ -118,7 +117,7 @@ For example, a keyword of "3RAIL" would be valid if it were to be implemented.
 6.2. Numeric
 _____________
 
-These are a consective sequence of one or more digits, with an optional leading ``-`` to indicate a negative value. Unless noted in :ref:`developer-reference/api:a.1. parameter values`, these numbers are base10.
+These are a consective sequence of one or more digits, with an optional leading ``-`` to indicate a negative value. Unless noted in :ref:`/refference/developer-reference/api:a.1. parameter values`, these numbers are base10.
 
 6.3. String
 ____________

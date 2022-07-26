@@ -1,18 +1,19 @@
+.. include:: /include/include.rst
 *******************************
 DigiTrainsPro
 *******************************
 
-.. image:: ../_static/images/throttles/icon_android.png
+.. image:: /_static/images/throttles/icon_android.png
    :alt: Android Logo
    :scale: 30%
    :align: left
 
-.. image:: ../_static/images/throttles/icon_ios.png
+.. image:: /_static/images/throttles/icon_ios.png
    :alt: Apple iOS Logo
    :scale: 30%
    :align: left
 
-.. image:: ../_static/images/throttles/icon_windows.png
+.. image:: /_static/images/throttles/icon_windows.png
    :alt: Windows Logo
    :scale: 30%
    :align: left
@@ -44,12 +45,12 @@ Features
 Screenshots
 ============
 
-.. image:: ../_static/images/throttles/digitrainspro1.png
+.. image:: /_static/images/throttles/digitrainspro1.png
    :alt: DigiTrainsPro Main Screen
    :scale: 40%
    :align: left
 
-.. image:: ../_static/images/throttles/digitrainspro2.png
+.. image:: /_static/images/throttles/digitrainspro2.png
    :alt: DigiTrainsPro Windows Setup Screen
    :scale: 40%
    :align: left

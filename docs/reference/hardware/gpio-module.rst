@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ***************************
 I2C GPIO Expander Modules
 ***************************
@@ -24,7 +25,7 @@ be configured as an input.
 A typical GPIO Expander, for which DCC++EX is pre-configured, is the MCP23017.  An 
 example board (from PiHut) is shown here.
 
-.. image:: ../../_static/images/i2c/MCP23017_module.jpg
+.. image:: /_static/images/i2c/MCP23017_module.jpg
     :alt: MCP23017 Module (PiHut)
     :scale: 80%
 
@@ -34,7 +35,7 @@ Along the top-left and bottom-right edges are the sixteen GPIO pins, and two Vcc
 
 Here is another module, from DFRobot:
 
-.. image:: ../../_static/images/i2c/DFrobot_mcp23017.jpg
+.. image:: /_static/images/i2c/DFrobot_mcp23017.jpg
     :alt: MCP23017 Module (DFRobot)
     :scale: 80%
 
@@ -45,7 +46,7 @@ I2C connector pins; there is also what appears to be a Grove connector at the ri
 
 An example of circuit connections for a module is shown below:
 
-.. image:: ../../_static/images/i2c/ArduinoMega_MCP23017.png
+.. image:: /_static/images/i2c/ArduinoMega_MCP23017.png
     :alt: MCP23017 module connections
     :scale: 30%
 
@@ -55,7 +56,7 @@ MCP23017, and a push-button (2-pin) connected to GPIO1.
 Also generally available is the MCP23017 in IC form (28-pin DIL package).  This can be mounted on 
 a breadboard for use, as shown below, or on stripboard if you want a more permanent solution.
 
-.. image:: ../../_static/images/i2c/ArduinoMega_MCP23017_breadboard.png
+.. image:: /_static/images/i2c/ArduinoMega_MCP23017_breadboard.png
     :alt: MCP23017 on a Breadboard
     :scale: 30%
  

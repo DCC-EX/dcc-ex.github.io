@@ -1,10 +1,9 @@
+.. include:: /include/include.rst
 *****************************
 Testing, Tuning, and Control
 *****************************
 
-.. image:: ../_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 .. sidebar:: On this page
 
@@ -95,7 +94,7 @@ Referring again to :ref:`reference/software/hal-config:adding a new device`, ski
   <* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *>
   <* TurntableEX I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, Turntable-EX is connected!
 
-If there is an "OFFLINE" at the end of the Turntable-EX line, it indicates something is not quite right. Refer to :ref:`turntable-ex/troubleshooting:turntable-ex showing as offline with \<d hal show\>`.
+If there is an "OFFLINE" at the end of the Turntable-EX line, it indicates something is not quite right. Refer to :ref:`ex-turntable/troubleshooting:turntable-ex showing as offline with \<d hal show\>`.
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 
@@ -153,7 +152,7 @@ Tuning your turntable positions
 
 .. tip:: 
 
-  To determine your starting positions, you will need the full turn step count as recorded in :ref:`turntable-ex/get-started:automatic calibration`.
+  To determine your starting positions, you will need the full turn step count as recorded in :ref:`/ex-turntable/getting-started:automatic calibration`.
 
 To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).
 
@@ -170,7 +169,7 @@ Therefore, to determine the number of steps required to turn a certain number of
 
 In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.
 
-.. image:: ../_static/images/turntable-ex/six-pos-example-degrees.png
+.. image:: /_static/images/turntable-ex/six-pos-example-degrees.png
   :alt: Six Postion Example
   :scale: 70%
 
@@ -235,7 +234,7 @@ Now that you have defined all of your turntable positions with appropriate phase
 
 The method to advertise these is to use EX-RAIL's ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the Engine Driver and WiThrottle Routes sections.
 
-If this is your first experience with EX-RAIL and the "myAutomation.h" file, familiarise yourself with EX-RAIL by reading through :ref:`automation/ex-rail-intro:introduction to ex-rail automation`.
+If this is your first experience with EX-RAIL and the "myAutomation.h" file, familiarise yourself with EX-RAIL by reading through :ref:`/ex-rail/ex-rail-intro:introduction to ex-rail automation`.
 
 Pay particular attention to the various mentions of ROUTE and the associated examples.
 
@@ -248,14 +247,14 @@ To define the required turntable positions in the example six position turntable
 
 .. tip:: 
 
-  .. image:: ../_static/images/conductor.png
+  .. image:: /_static/images/conductor.png
     :alt: Conductor Level
     :scale: 40%
     :align: left
   
   To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
 
-That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`automation/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
+That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`/ex-rail/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
 
 My turntable moves on startup!
 _______________________________
@@ -285,7 +284,7 @@ So far, all the examples, testing, and tuning have relied on automatic phase swi
 
 There may be times where manual phase switching is required, whether due to awkward track wiring, layouts that have tracks at angles that make it hard to determine the correct angles at which to automatically switch the phase, or (in an upcoming release) when traversers are used rather than traditional turntables, that don't actually required phase switching at all.
 
-To enable manual phase switching, you must edit "config.h" and set :ref:`turntable-ex/configure:phase_switching` to "MANUAL".
+To enable manual phase switching, you must edit "config.h" and set :ref:`/ex-turntable/configure:phase_switching` to "MANUAL".
 
 Once this has been done, you must explicitly define the phase switching to occur as a part of the diagnostic or EX-RAIL command for every step position that requires an inverted phase.
 
@@ -295,7 +294,7 @@ Once this has been done, you must explicitly define the phase switching to occur
 
   Therefore, for every position that requires the phase to be inverted, you must send the invert command (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn command (0/Turn).
 
-To use our example from above, the commands in :ref:`turntable-ex/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
+To use our example from above, the commands in :ref:`/ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
 
 .. code-block:: 
 

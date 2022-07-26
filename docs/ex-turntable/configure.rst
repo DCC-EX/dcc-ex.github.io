@@ -1,10 +1,9 @@
+.. include:: /include/include.rst
 **********************
 Configuration options
 **********************
 
-.. image:: ../_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 Turntable-EX has a number of different configuration options available to customise the behaviour to suit your needs.
 
@@ -109,7 +108,7 @@ _______________
 - TWO_WIRE - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor
 - TWO_WIRE_INV - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor, with the driver's enable pin inverted
 
-While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to :ref:`turntable-ex/configure:defining custom stepper drivers`.
+While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to :ref:`/ex-turntable/configure:defining custom stepper drivers`.
 
 DISABLE_OUTPUTS_IDLE
 _____________________
@@ -159,7 +158,7 @@ This is the time in milliseconds that the LED is on and off when the set to a sl
 Advanced configuration options
 ===============================
 
-.. image:: ../_static/images/tinkerer-level.png
+.. image:: /_static/images/tinkerer-level.png
   :alt: Tinkerer Level
   :scale: 50%
 
@@ -221,7 +220,7 @@ Note that in turntable mode, a hall effect or similar sensor is typically used w
 Defining custom stepper drivers
 ================================
 
-.. image:: ../_static/images/tinkerer-level.png
+.. image:: /_static/images/tinkerer-level.png
   :alt: Tinkerer Level
   :scale: 50%
 

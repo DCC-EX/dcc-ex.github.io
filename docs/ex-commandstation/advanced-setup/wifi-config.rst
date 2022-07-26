@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 *******************
 WiFi Configuration
 *******************
@@ -8,7 +9,7 @@ WiFi Configuration
     :depth: 1
     :local:
 
-.. image:: ../_static/images/conductor-level.png
+.. image:: /_static/images/conductor-level.png
    :alt: Conductor Icon
    :scale: 50%
 
@@ -29,7 +30,7 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 
 .. note::
 
-   .. image:: ../_static/images/tinkerer.png
+   .. image:: /_static/images/tinkerer.png
       :alt: Tinkerer Icon
       :scale: 30%
       :align: left
@@ -39,7 +40,7 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 Wireless Connections
 =====================
 
-As mentioned in :doc:`WiFi Setup <../get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
+As mentioned in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
 
 .. todo::
    Add Link above
@@ -88,7 +89,7 @@ If you travel to shows, or take your setup to a friend's house, this allows for 
 
 (Remember you can click on images to enlarge them)
 
-.. figure:: ../_static/images/wifi/WiFi_softap_mode.png
+.. figure:: /_static/images/wifi/WiFi_softap_mode.png
    :alt: AP Mode
    :scale: 50%
 
@@ -99,7 +100,7 @@ _____________
 
 Station mode allows you to connect the Command Station to your existing home network. The CS becomes a Station or Client rather than an AP. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the CS by finding its IP address on the network. You will have to find what IP address is assigned to the CS (see below). Alternately, you can define a static IP address in your router to assign to the CS.
 
-.. figure:: ../_static/images/wifi/WiFi_station_mode.png
+.. figure:: /_static/images/wifi/WiFi_station_mode.png
    :alt: Station Mode
    :scale: 50%
 
@@ -132,7 +133,7 @@ You will need to know:
 
 Whenever you connect a USB cable and open the serial monitor, you reset the program running on your CS. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
 
-.. figure:: ../_static/images/wifi/ap_mode1.jpg
+.. figure:: /_static/images/wifi/ap_mode1.jpg
    :alt: IP Address
    :scale: 80%
 
@@ -225,16 +226,16 @@ WiFi Config Options
 
 The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual Arduino IDE install, you will see all of these in the file you renamed from "config.example.h" to "config.h".
 
-| :ref:`advanced-setup/wifi-config:#define IP_PORT 2560`
-| :ref:`advanced-setup/wifi-config:#define ENABLE_WIFI true`
-| :ref:`advanced-setup/wifi-config:#define DONT_TOUCH_WIFI_CONF`
-| :ref:`advanced-setup/wifi-config:#define WIFI_SSID "Your network name"`
-| :ref:`advanced-setup/wifi-config:#define WIFI_PASSWORD "Your network passwd"`
-| :ref:`advanced-setup/wifi-config:#define WIFI_HOSTNAME "dccex"`
-| :ref:`advanced-setup/wifi-config:#define WIFI_CONNECT_TIMEOUT 14000`
-| :ref:`advanced-setup/wifi-config:#define ENABLE_ETHERNET true`
-| :ref:`advanced-setup/wifi-config:#define IP_ADDRESS { 192, 168, 1, 200 }`
-| :ref:`advanced-setup/wifi-config:#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define IP_PORT 2560`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define ENABLE_WIFI true`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define DONT_TOUCH_WIFI_CONF`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define WIFI_SSID "Your network name"`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define WIFI_PASSWORD "Your network passwd"`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define WIFI_HOSTNAME "dccex"`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define WIFI_CONNECT_TIMEOUT 14000`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define ENABLE_ETHERNET true`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define IP_ADDRESS { 192, 168, 1, 200 }`
+| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
 
 #define IP_PORT 2560
 _____________________

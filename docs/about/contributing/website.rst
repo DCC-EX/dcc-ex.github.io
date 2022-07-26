@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 **************
 Documentation
 **************
@@ -21,7 +22,7 @@ reStructuredText is a markdown type language for typesetting documents from webs
 
 There's a handy `reStructuredText QuickReference Guide <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_ here.
 
-If you haven't done so already, make sure you are familiar with how we use :doc:`/contributing/github` and are familiar with our :doc:`/contributing/software`.
+If you haven't done so already, make sure you are familiar with how we use :doc:`/about/contributing/github` and are familiar with our :doc:`/about/contributing/software`.
 
 GitHub repository and the sphinx branch
 ________________________________________
@@ -55,7 +56,7 @@ While editing, be sure to save often, stage and commit your changes, and publish
 Live previews
 ==============
 
-Providing you followed the installation guide for VSCode on the :doc:`/contributing/software` page accurately, there are two methods available for generating live previews as you are editing the reStructuredText code.
+Providing you followed the installation guide for VSCode on the :doc:`/about/contributing/software` page accurately, there are two methods available for generating live previews as you are editing the reStructuredText code.
 
 Esbonio Language server
 ________________________
@@ -204,7 +205,7 @@ Once you are finished editing and are ready to have your updates published you w
 
 .. note:: 
 
-  Remember to perform a :ref:`contributing/website:sphinx build` prior to submitting any pull requests.
+  Remember to perform a :ref:`/about/contributing/website:sphinx build` prior to submitting any pull requests.
 
 At this piont, go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it's merged in by one of the admins, your changes will go live!
 
@@ -259,35 +260,35 @@ All heading underlines and overlines must be at least as long as the text of the
 User level logos
 _________________
 
-On our :doc:`/get-started/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
+On our :doc:`/ex-commandstation/get-started/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
 
 There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.
 
 Graphic logos for callouts/panels:
 
-.. image:: ../_static/images/conductor.png
+.. image:: ../../_static/images/conductor.png
     :alt: Conductor Level
     :scale: 40%
   
-.. image:: ../_static/images/tinkerer.png
+.. image:: ../../_static/images/tinkerer.png
     :alt: Tinkerer Level
     :scale: 40%
 
-.. image:: ../_static/images/engineer.png
+.. image:: ../../_static/images/engineer.png
     :alt: Tinkerer Level
     :scale: 40%
 
 Graphic and text logos for page headings:
 
-.. image:: ../_static/images/conductor-level.png
+.. image:: ../../_static/images/conductor-level.png
     :alt: Conductor Level
     :scale: 40%
   
-.. image:: ../_static/images/tinkerer-level.png
+.. image:: ../../_static/images/tinkerer-level.png
     :alt: Tinkerer Level
     :scale: 40%
 
-.. image:: ../_static/images/engineer-level.png
+.. image:: ../../_static/images/engineer-level.png
     :alt: Tinkerer Level
     :scale: 40%
 
@@ -295,11 +296,11 @@ Here's an example for a Conductor level page heading graphic:
 
 .. code-block:: 
 
-  .. image:: ../_static/images/conductor-level.png
+  .. image:: ../../_static/images/conductor-level.png
     :alt: Conductor Level 
     :scale: 40%
 
-Refer to :ref:`contributing/website:images` below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX :doc:`/turntable-ex/turntable-ex` page.
+Refer to :ref:`/about/contributing/website:images` below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX :doc:`/ex-turntable/turntable-ex` page.
 
 Links
 ______

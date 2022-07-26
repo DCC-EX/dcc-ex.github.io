@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ******************************
 Install using the Arduino IDE
 ******************************
@@ -37,7 +38,7 @@ Run the Arduino IDE
 
 Start the Arduino IDE. You should see something like this:
 
-.. figure:: ../_static/images/arduino-ide/arduino_ide.jpg
+.. figure:: /_static/images/arduino-ide/arduino_ide.jpg
    :alt: Arduino IDE
    :scale: 90%
 
@@ -48,7 +49,7 @@ Open the CommandStation-EX Project
 
 Choose "File -> Open" from the menu to open the file manager.
 
-.. figure:: ../_static/images/arduino-ide/file_open.jpg
+.. figure:: /_static/images/arduino-ide/file_open.jpg
    :alt: File Open Menu
    :scale: 90%
 
@@ -57,7 +58,7 @@ Choose "File -> Open" from the menu to open the file manager.
 Then click on the "CommandStation-EX" sketch folder to open it. Scroll down to the "CommandStation-EX.ino" file (It should have the round, blue Arduino logo on it) and open that file. We also provide example .ino files for those advanced users who want to use optional features like the "User Command Override" feature, high current motor boards, etc. But for now, and for most users, this will be all you need.
 
 
-.. figure:: ../_static/images/arduino-ide/commandstation-ex.jpg
+.. figure:: /_static/images/arduino-ide/commandstation-ex.jpg
    :alt: Find the CommandStation-EX.ino File
    :scale: 90%
 
@@ -81,7 +82,7 @@ Connect the computer to the Arduino with the USB cable. Note the 5V coming from 
 
 From the "Tools" menu select the "Board" menu, then "Arduino AVR boards", and then "Arduino Mega or Mega 2560". 
 
-.. figure:: ../_static/images/arduino-ide/board_type_mega.jpg
+.. figure:: /_static/images/arduino-ide/board_type_mega.jpg
    :alt: Select Arduino Mega
    :scale: 90%
 
@@ -91,7 +92,7 @@ Then select "Processor" and make sure it says "ATMega2560"
 
 Last, select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
-.. figure:: ../_static/images/arduino-ide/board_port_mega.jpg
+.. figure:: /_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port
    :scale: 90%
 
@@ -102,7 +103,7 @@ Upload the software
 
 Click on the Upload button near the top left. It is a circle with a right arrow, next to the Compile button that looks like a check mark.
 
-.. figure:: ../_static/images/arduino-ide/upload_arrow.jpg
+.. figure:: /_static/images/arduino-ide/upload_arrow.jpg
    :alt: Upload the CS Software to the Arduino
    :scale: 90%
 
@@ -125,7 +126,7 @@ Use the Serial Monitor to do a quick test
 The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
 
-.. figure:: ../_static/images/installer/arduino_ide2.jpg
+.. figure:: /_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
    :scale: 90%
 
@@ -133,7 +134,7 @@ The Arduino IDE has a built in serial monitor. That means that in addition to up
 
 Make sure the baud rate at the lower right of the window is set to "115200". This is the data communication speed, equivalent to 115.2kb/s! Make sure the dropdown next to that says "Both NL & CR". That makes sure you send a 'new line' command and 'carriage return' which the Arduino expects.
 
-.. figure:: ../_static/images/installer/serial_monitor.jpg
+.. figure:: /_static/images/installer/serial_monitor.jpg
    :alt: Serial Monitor
    :scale: 90%
 

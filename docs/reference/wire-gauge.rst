@@ -1,3 +1,4 @@
+.. include:: /include/include.rst
 ************************
 Wire Gauge Information
 ************************
@@ -22,7 +23,7 @@ The main bus provides a low resistance, high current capable path for the voltag
 .. todo::
    Add link here. fnd
 
-.. image:: ../_static/images/icons/thumb_up.png
+.. image:: /_static/images/icons/thumb_up.png
    :alt: thumbs-up icon
    :scale: 100%
    :align: left

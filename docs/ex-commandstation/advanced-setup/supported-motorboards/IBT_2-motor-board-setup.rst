@@ -1,26 +1,20 @@
+.. include:: /include/include.rst
 **************************
 IBT_2 BTS7960 Motor Board
 **************************
 
-.. image:: ../../_static/images/engineer.png
-   :alt: Engineer Icon
-   :scale: 50%
-   :align: left
+|engineer.png|
 
-Engineer Level
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:What You Will Need (IBT_2)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Which option should you choose? (IBT_2)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Upgrading (Use the Arduino Motor Shield AND the IBT_2)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Replacing (Using One IBT_2 for MAIN and another for PROG)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)`
+- :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Parts list (IBT_2)`
 
-|
+See the :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Parts list (IBT_2)`
 
-- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:What You Will Need (IBT_2)`
-- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Which option should you choose? (IBT_2)`
-- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Upgrading (Use the Arduino Motor Shield AND the IBT_2)`
-- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Replacing (Using One IBT_2 for MAIN and another for PROG)`
-- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)`
-- :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Parts list (IBT_2)`
-
-See the :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Parts list (IBT_2)`
-
-.. image:: ../../_static/images/motorboards/ibt_2_bts7960_2.jpg
+.. image:: /_static/images/motorboards/ibt_2_bts7960_2.jpg
    :alt: IBT_2 Motor driver
    :scale: 50%
    :align: center   
@@ -72,7 +66,7 @@ Upgrading (Use the Arduino Motor Shield AND the IBT_2)
 
 For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.
 
-If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly <../../get-started/assembly>`
+If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly </ex-commandstation/get-started/assembly>`
 
 What We Are Going To Do (Upgrade)
 ----------------------------------
@@ -124,7 +118,7 @@ Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:
 
 Here is a visual diagram. R1 (current sense modifier), R2 (diode current limiter = 220 Ohms) and D1 (5.1V Zener protection diode) are optional. See current sense notes below. Click to enlarge:
 
-.. figure:: ../../_static/images/motorboards/ibt_wiring.png
+.. figure:: /_static/images/motorboards/ibt_wiring.png
    :alt: IBT_2 Wiring 1
    :scale: 70%
    :name: ibt2-wiring-schematic
@@ -134,7 +128,7 @@ Here is a visual diagram. R1 (current sense modifier), R2 (diode current limiter
 
 It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins directly on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
 
-.. figure:: ../../_static/images/motorboards/ibt_2_wiring_fritz.png
+.. figure:: /_static/images/motorboards/ibt_2_wiring_fritz.png
    :alt: IBT_2 Wiring 2
    :scale: 25%
 
@@ -242,7 +236,7 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
 * Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See :numref:`ibt2-sense-resistors`. When we tie the two CS outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
 * Put a 5A fuse on each output leg going to your track.
 
-.. figure:: ../../_static/images/motorboards/ibt_2_resistors.jpg
+.. figure:: /_static/images/motorboards/ibt_2_resistors.jpg
    :alt: IBT_2 Resistors
    :scale: 70%
    :name: ibt2-sense-resistors
@@ -308,7 +302,7 @@ The choice of motor driver is set in the config.h file. It is set in the followi
 
 The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
-If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section <../motor-board-config>`
+If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section </ex-commandstation/motor-board-config>`
 
 For the Engineers, the definitions and implementation for motor board control are in the following files:
 
@@ -323,7 +317,7 @@ IBT_2 schematic
 
 Below is a link to the IBT_2 schematic. Click to enlarge.
 
-.. image:: ../../_static/images/schematics/IBT_2_schematic.jpg
+.. image:: /_static/images/schematics/IBT_2_schematic.jpg
    :scale: 50
 
 Below is the Handson Technology datasheet, recommended reading for Tinkerers and Engineers

@@ -1,4 +1,4 @@
-
+.. include:: /include/include.rst
 *******************
 Software Downloads
 *******************
@@ -8,7 +8,7 @@ Welcome to the central downloads page for all DCC++ EX software solutions. Pleas
 .. toctree::
     :maxdepth: 1
 
-    commandstation
+    ex-commandstation
     esp8266
-    dcc-inspector-ex
-    turntable-ex
+    ex-dccinspector
+    ex-turntable

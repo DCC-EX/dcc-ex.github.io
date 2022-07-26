@@ -23,33 +23,33 @@
    :scale: 50%
    :target: ../get-started/levels.html#engineer
 ..
-.. |DCC++EX| raw:: html
+.. |DCC-EX| raw:: html
 
-   <span style="font-weight: bold; font-size: 110%;">DCC++EX</span>
+   <span style="font-weight: bold; font-size: 110%;">DCC-EX</span>
 ..
-.. |CS-EX| raw:: html
+.. |EX-CS| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">CommandStation-EX</span>
+   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-CommandStation</span>
 ..
-.. |WT-EX| raw:: html
+.. |EX-WT| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">WebThrottle-EX</span>
+   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-WebThrottle</span>
 ..
 .. |EX-R| raw:: html
 
    <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-Rail</span>
 ..
-.. |I-EX| raw:: html
+.. |EX-I| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">Installer-EX</span>
+   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-Installer</span>
 ..
-.. |TT-EX| raw:: html
+.. |EX-TT| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">Turntable-EX</span>
+   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-Turntable</span>
 ..
 .. |BSC| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">Base Station Clasic (DCC++)</span>
+   <span style="font-weight: bold; font-style: italic; font-size: 110%;">Base Station Classic (DCC++)</span>
 ..
 .. |br| raw:: html
 

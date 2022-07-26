@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 ******************************************
-DCC++EX Model Railroading |donate_button|
+DCC-EX Model Railroading |donate_button|
 ******************************************
 
 .. image:: ./_static/images/icons/v40banner.jpg
@@ -9,19 +9,20 @@ DCC++EX Model Railroading |donate_button|
    :scale: 25%
    :target: download/commandstation.html
 
-Welcome! |BR|\ |DCC++EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
+Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
 
-Based on off-the-shelf Arduino technology, our products are supported by many third party controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more. Our products currently include:
+Based on off-the-shelf Arduino technology, our products currently include:
 
-* |CS-EX| - our DCC command station for controlling your model railroad. |br|\ It includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration.
+* |EX-CS| - our DCC command station for controlling your model railroad.
 
-  * |I-EX| - our user friendly installer that takes care of loading the command station firmware onto your Arduino hardware.
-  * |EX-R| - the scripting language, built into the |CS-EX|, allowing to to automate you model railroad. 
+  * |EX-I| - our user friendly installer that takes care of loading the command station firmware onto your Arduino hardware.
+  * |EX-R| - the scripting language, built into the |EX-CS|, allowing to to automate your model railroad. 
 
-* |WT-EX| - a simple web based controller for your command station.
-* |TT-EX| - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection.
-* |BSC| - the original DCC++ software, packaged in a stable release. No active development, bug fixes only.
+* |EX-WT| - a simple web based controller for your command station.
+* |EX-TT| - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection.
+* |BSC| - the original DCC++ software, packaged in a stable release. (No active development, bug fixes only.)
 
+Our products are supported by many third party controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.
 
 .. table::
    :align: left
@@ -62,10 +63,10 @@ Based on off-the-shelf Arduino technology, our products are supported by many th
 .. |Contribute| replace:: :doc:`Contribute </contributing/index>`
 
 
-What is CommandStation-EX?
+What is EX-CommandStation?
 ==========================
 
-A basic |CS-EX| hardware setup can use easy to find, widely available Arduino boards that you can assemble yourself. Both |CS-EX| and |BSC|\ [#bcs]_ support much of the NMRA Digital Command Control (DCC) standards, including:
+A basic |EX-CS| hardware setup can be made from easy to find, widely available, Arduino boards that you can assemble yourself. Both |EX-CS| and |BSC|\ [#bcs]_ support much of the NMRA Digital Command Control (DCC) standards, including:
 
 * simultaneous control of multiple locomotives
 * 1 and 2 byte locomotive addressing
@@ -75,7 +76,9 @@ A basic |CS-EX| hardware setup can use easy to find, widely available Arduino bo
 * Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
 * Programming Track: Same as the main track with the addition of reading CV bytes
 
-.. [#bcs] |CS-EX| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
+It includes advanced features such as a WiThrottle server implementation, turnout operation, general purpose inputs and outputs (I/O), and JMRI integration
+
+.. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
 
 Next see the :doc:`Get Started section <get-started/index>` or click next below.
 

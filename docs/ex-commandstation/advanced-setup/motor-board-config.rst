@@ -11,13 +11,13 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 
 **Links in This Page**
 
-* :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
-* :ref:`advanced-setup/motor-board-config:Configure By Editing the config.h File`
-* :ref:`advanced-setup/motor-board-config:Your Board is in the Supported List`
-* :ref:`advanced-setup/motor-board-config:Your Board is NOT in the Supported List`
-* :ref:`advanced-setup/motor-board-config:Using High Accuracy Waveform Mode`
-* :ref:`advanced-setup/motor-board-config:Current Sense and Sense Factor`
-* :ref:`advanced-setup/motor-board-config:Just Buy a Current Sense Board Instead`
+* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Configure Using the Installer`
+* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Configure By Editing the config.h File`
+* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Your Board is in the Supported List`
+* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Your Board is NOT in the Supported List`
+* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Using High Accuracy Waveform Mode`
+* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Current Sense and Sense Factor`
+* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Just Buy a Current Sense Board Instead`
 
 Configure Using the Installer
 ==============================

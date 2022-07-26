@@ -872,7 +872,7 @@ To help define the correct ACK parameters required for different decoders, there
   - MIN 2000 uS
   - MAX 20000uS
 
-  If you still need to override these and need to do so permanently, the commands can be added to "mySetup.h" as per :ref:`advanced-setup/startup-config:adding in the startup commands`.
+  If you still need to override these and need to do so permanently, the commands can be added to "mySetup.h" as per :ref:`/ex-commandstation/advanced-setup/startup-config:adding in the startup commands`.
 
   Note with decoders that are equipped with "keep alives" or capacitors, it can be beneficial to turn the power on with `<1>` or `<1 PROG>` to charge the capacitors prior to programming, which can increase the reliability of the ACK, especially when attemping to read the full sheet.
 
@@ -922,7 +922,7 @@ WiFi "AT" Commands
 
 ``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the "+" and the command.
 
-Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file <../../advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
+Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file </ex-commandstation/advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
 
 ``<+X>`` A special command to force the "connected" flag (WiFi Connected Mode) to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created and so you can send your own AT commands.
 
@@ -933,7 +933,7 @@ Examples:
 
 For more detail follow these links:
 
-:doc:`DCC-EX WiFi Configuration <../../advanced-setup/wifi-config>`
+:doc:`DCC-EX WiFi Configuration </ex-commandstation/advanced-setup/wifi-config>`
 
 `Espressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
 

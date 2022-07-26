@@ -16,7 +16,7 @@ What is Turntable-EX?
 
 Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.
 
-The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`/about-dcc-ex/get-started/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
+The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`/about-dcc-ex/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
 
 The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
@@ -76,7 +76,7 @@ What you need for Turntable-EX
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
 * Dupont type wires to connect the components, male to female or female to female as required
 * A USB cable to connect the Arduino to a PC to load the software
-* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`/ex-turntable/turntable-ex:important! phase (or polarity) switching`)
+* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`/ex-turntable/ex-turntable/turntable-ex:important! phase (or polarity) switching`)
 
 .. note:: 
 
@@ -130,7 +130,7 @@ The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48
 
   If you have a need to use a different driver, these should be relatively straight forward to configure in a similar manner to how additional motor drivers are configured for use with CommandStation-EX.
 
-  Refer to :ref:`turntable-ex/configure:defining custom stepper drivers` for more details.
+  Refer to :ref:`/ex-turntable/configure:defining custom stepper drivers` for more details.
 
 However, it is very easy to use one of several other common stepper drivers if you require more torque, or if you prefer to use a NEMA17 or other stepper motor.
 
@@ -172,7 +172,7 @@ __________________________
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
-Refer to the :ref:`/ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
+Refer to the :ref:`/ex-turntable/ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
 
 Important! Phase (or polarity) switching
 _________________________________________

@@ -52,7 +52,6 @@ Click the "next" button below to choose your path, and then move ahead to how to
 .. toctree::
     :hidden:
 
-    levels
     assembly
     wifi-setup
     installer

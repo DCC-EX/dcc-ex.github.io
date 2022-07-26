@@ -347,7 +347,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <automation/EX-RAIL-summary:Automations, Routes and Sequences>`
+Assuming that you have defined your turnouts with :ref:`TURNOUT commands. </ex-rail/EX-RAIL-summary:Automations, Routes and Sequences>`
 
 .. code-block:: cpp
 
@@ -464,7 +464,7 @@ For a known set of locos, the easiest way is to define the startup process at th
 
 .. hint:: Some interesting points about the startup:
 
- * You don’t need to set turnouts, because each route is setting them as required.
+ * You don't need to set turnouts, because each route is setting them as required.
  * Signals default to RED on power up, and get turned GREEN when a route clears them.
 
 
@@ -473,7 +473,7 @@ Drive-Away feature
 
 EX-RAIL can switch a track section between programming and mainline.
 
-Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
+Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let's assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
 
 .. code-block:: cpp
 

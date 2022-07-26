@@ -90,7 +90,7 @@ would set the ack limit to 30mA (more sensitive).
 
 would set the limit to 100mA (less sensitive). 
 
-The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the :doc:`mySetup.h <../../advanced-setup/startup-config>` file.
+The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the :doc:`mySetup.h </ex-commandstation/advanced-setup/startup-config>` file.
 
 <D ACK MIN µS>
 ================

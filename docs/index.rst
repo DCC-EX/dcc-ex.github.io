@@ -41,7 +41,7 @@ Our products are supported by many third party controllers and applications like
 
 .. |Timer| image:: ./_static/images/timer_bl.png
 .. _Timer: get-started/index.html
-.. |Get Started| replace:: :doc:`/get-started/index`
+.. |Get Started| replace:: :doc:`/ex-commandstation/get-started/index`
 
 .. |Arrow| image:: ./_static/images/download_bl.png
 .. _Arrow: download/index.html
@@ -53,7 +53,7 @@ Our products are supported by many third party controllers and applications like
 
 .. |Lightning| image:: ./_static/images/advanced_bl.png
 .. _Lightning: advanced-setup/index.html
-.. |Advanced Setup| replace:: :doc:`/advanced-setup/index`
+.. |Advanced Setup| replace:: :doc:`/ex-commandstation/advanced-setup/index`
 
 .. |Question| image:: ./_static/images/question_bl.png
 .. _Question: support/index.html
@@ -61,7 +61,7 @@ Our products are supported by many third party controllers and applications like
 
 .. |Puzzle| image:: ./_static/images/puzzle_bl.png
 .. _Puzzle: contributing/index.html
-.. |Contribute| replace:: :doc:`Contribute </contributing/index>`
+.. |Contribute| replace:: :doc:`Contribute </about/contributing/index>`
 
 
 What is EX-CommandStation?
@@ -81,7 +81,7 @@ It includes advanced features such as a WiThrottle server implementation, turnou
 
 .. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
 
-Next see the :doc:`Get Started section <get-started/index>` or click next below.
+Next see the :doc:`Get Started section <ex-commandstation/get-started/index>` or click next below.
 
 .. toctree::
    :hidden:

@@ -260,35 +260,35 @@ All heading underlines and overlines must be at least as long as the text of the
 User level logos
 _________________
 
-On our :doc:`/ex-commandstation/get-started/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
+On our :doc:`/about-dcc-ex/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
 
 There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.
 
 Graphic logos for callouts/panels:
 
-.. image:: ../../_static/images/conductor.png
+.. image:: /_static/images/conductor.png
     :alt: Conductor Level
     :scale: 40%
   
-.. image:: ../../_static/images/tinkerer.png
+.. image:: /_static/images/tinkerer.png
     :alt: Tinkerer Level
     :scale: 40%
 
-.. image:: ../../_static/images/engineer.png
+.. image:: /_static/images/engineer.png
     :alt: Tinkerer Level
     :scale: 40%
 
 Graphic and text logos for page headings:
 
-.. image:: ../../_static/images/conductor-level.png
+.. image:: /_static/images/conductor-level.png
     :alt: Conductor Level
     :scale: 40%
   
-.. image:: ../../_static/images/tinkerer-level.png
+.. image:: /_static/images/tinkerer-level.png
     :alt: Tinkerer Level
     :scale: 40%
 
-.. image:: ../../_static/images/engineer-level.png
+.. image:: /_static/images/engineer-level.png
     :alt: Tinkerer Level
     :scale: 40%
 
@@ -296,11 +296,11 @@ Here's an example for a Conductor level page heading graphic:
 
 .. code-block:: 
 
-  .. image:: ../../_static/images/conductor-level.png
+  .. image:: /_static/images/conductor-level.png
     :alt: Conductor Level 
     :scale: 40%
 
-Refer to :ref:`/about/contributing/website:images` below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX :doc:`/ex-turntable/turntable-ex` page.
+Refer to :ref:`/about/contributing/website:images` below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX :doc:`/ex-turntable/ex-turntable/ex-turntable` page.
 
 Links
 ______
@@ -334,7 +334,7 @@ references:
 
     :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
 
-  :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+  :ref:`/ex-commandstation/advanced-setup/motor-board-config:Configure Using the Installer`
 
 The reference is the full name of the document (the absolute path without
 a leading /), a colon, and the section heading. The full name must be used
@@ -348,7 +348,7 @@ Alternative text can be used for the link:
 
     :ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
 
-  :ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
+  :ref:`WiFi configuration </ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
 
 External
 ^^^^^^^^^

@@ -51,7 +51,7 @@ _______
 
 ``<D EXRAIL ON|OFF>`` When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).
 
-Example output from :ref:`/ex-rail/ex-rail-intro:example 6: single line shuttle` running SEQUENCE(13) with loco ID 18:
+Example output from :ref:`/ex-rail/getting-started:example 6: single line shuttle` running SEQUENCE(13) with loco ID 18:
 
 .. code-block:: 
 
@@ -86,7 +86,7 @@ __________
 
 ``</>`` Displays EX-RAIL running task information
 
-Example outputs also using :ref:`/ex-rail/ex-rail-intro:example 6: single line shuttle`:
+Example outputs also using :ref:`/ex-rail/getting-started:example 6: single line shuttle`:
 
 * Leaving right side of the shuttle sequence with speed 50F (forward):
 
@@ -247,7 +247,7 @@ All the below turnout definitions will define turnouts that are advertised to Wi
 
 ``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout. "active_angle" is for THROW, "inactive_angle" is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don't recommend Bounce for turnouts!). Refer to :doc:`/reference/hardware/servo-module` for more information.
 
-``VIRTUAL_TURNOUT( id [, "description"] )`` Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to :ref:`/ex-rail/ex-rail-intro:realistic turnout sequeunces`.
+``VIRTUAL_TURNOUT( id [, "description"] )`` Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to :ref:`/ex-rail/getting-started:realistic turnout sequeunces`.
 
 ``IFCLOSED( turnout_id )``	Test if a turnout is closed.
 
@@ -477,7 +477,7 @@ For example:
 
 ``DELAYMINS( delay )``	Delay a number of minutes
 
-``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`/ex-rail/ex-rail-intro:example 7: running multiple inter-connected trains` for good examples.
+``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`/ex-rail/getting-started:example 7 running multiple inter-connected trains` for good examples.
 
 Delay examples:
 

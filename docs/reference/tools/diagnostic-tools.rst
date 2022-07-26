@@ -23,7 +23,7 @@ Sniffer vs. Analyzer
 Sniffer
 ----------
 
-A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our :doc:`DCCInspector-EX <../../download/dcc-inspector-ex>` sketch.
+A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our :doc:`DCCInspector-EX </download/ex-dccinspector>` sketch.
 
 .. figure:: /_static/images/pixel.png
 

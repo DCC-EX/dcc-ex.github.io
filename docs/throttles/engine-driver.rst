@@ -2,7 +2,7 @@
 Engine Driver
 ******************
 
-.. image:: ../_static/images/throttles/engine_driver_logo.png
+.. image:: /_static/images/throttles/engine_driver_logo.png
    :alt: Android Logo
    :scale: 60%
    :align: left
@@ -54,7 +54,7 @@ DCC++ Specific or advantageous Features
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with DCC++EX
 
 
-:ref:`/throttles/driveaway:using the "driveaway(tm)" feature`
+:doc:`/throttles/driveaway`
 
 .. _ed-screenshots:
 

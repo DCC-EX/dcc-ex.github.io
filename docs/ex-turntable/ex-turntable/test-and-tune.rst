@@ -83,7 +83,7 @@ Testing Turntable-EX
 
 Firstly, power on Turntable-EX, followed by your CommandStation. By powering these on in that order, you will ensure that Turntable-EX is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as "OFFLINE", and commands will fail.
 
-Referring again to :ref:`reference/software/hal-config:adding a new device`, skip ahead to :ref:`reference/software/hal-config:checking the driver`, and the output you're looking for to validate the Turntable-EX device driver is loaded and connected successfully is below:
+Referring again to :ref:`reference/software/hal-config:adding a new device`, skip ahead to :ref:`/reference/software/hal-config:checking the driver`, and the output you're looking for to validate the Turntable-EX device driver is loaded and connected successfully is below:
 
 .. code-block:: 
 
@@ -94,7 +94,7 @@ Referring again to :ref:`reference/software/hal-config:adding a new device`, ski
   <* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *>
   <* TurntableEX I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, Turntable-EX is connected!
 
-If there is an "OFFLINE" at the end of the Turntable-EX line, it indicates something is not quite right. Refer to :ref:`ex-turntable/troubleshooting:turntable-ex showing as offline with \<d hal show\>`.
+If there is an "OFFLINE" at the end of the Turntable-EX line, it indicates something is not quite right. Refer to :ref:`/ex-turntable/ex-turntable/troubleshooting:turntable-ex showing as offline with \<d hal show\>`.
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 
@@ -152,7 +152,7 @@ Tuning your turntable positions
 
 .. tip:: 
 
-  To determine your starting positions, you will need the full turn step count as recorded in :ref:`/ex-turntable/getting-started:automatic calibration`.
+  To determine your starting positions, you will need the full turn step count as recorded in :ref:`/ex-turntable/ex-turntable/getting-started:automatic calibration`.
 
 To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).
 
@@ -254,7 +254,7 @@ To define the required turntable positions in the example six position turntable
   
   To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
 
-That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`/ex-rail/ex-rail-intro:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
+That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`/ex-rail/getting-started:introduction to ex-rail automation` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
 
 My turntable moves on startup!
 _______________________________
@@ -294,7 +294,7 @@ Once this has been done, you must explicitly define the phase switching to occur
 
   Therefore, for every position that requires the phase to be inverted, you must send the invert command (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn command (0/Turn).
 
-To use our example from above, the commands in :ref:`/ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
+To use our example from above, the commands in :ref:`/ex-turntable/ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
 
 .. code-block:: 
 

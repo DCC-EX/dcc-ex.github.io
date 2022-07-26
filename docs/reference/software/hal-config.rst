@@ -188,7 +188,7 @@ There are also drivers included with DCC++ EX for the following modules:
 * ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.
 * VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
 * HC-SR04 - Ultrasound 'sonar' range sensor.  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
-* Turntable-EX - Integrated, stepper motor based turntable controller, refer to :doc:`/turntable-ex/index`.
+* Turntable-EX - Integrated, stepper motor based turntable controller, refer to :doc:`/ex-turntable/index`.
 
 Notes on the PCA9555/TCA9555 I2C GPIO Extenders
 -----------------------------------------------
@@ -250,16 +250,16 @@ list of files in the Arduino IDE.
 Adding A New Device Configuration File
 ======================================
 
-This will need to be done in the :doc:`Arduino-IDE <../../get-started/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`Arduino-IDE </ex-commandstation/get-started/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
 
 
 Create a new tab
 ----------------
 
-First you will need to add a new file, just like the :ref:`config.h file <get-started/arduino-ide:Copy the config.example.h file (or rename it)>`.
+First you will need to add a new file, just like the :ref:`config.h file </ex-commandstation/get-started/arduino-ide:Copy the config.example.h file (or rename it)>`.
 Create a new tab using the following menu option.
 
-.. figure:: ../../_static/images/arduino-ide/arduino_ide_newtab.jpg
+.. figure:: /_static/images/arduino-ide/arduino_ide_newtab.jpg
    :alt: Arduino IDE New Tab
    :scale: 40%
 
@@ -271,7 +271,7 @@ Creating the myHal.cpp file
 At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``myHal.cpp``
 and click ``OK`` to create the new file.
 
-.. figure:: ../../_static/images/i2c/arduino_ide_myHal.jpg
+.. figure:: /_static/images/i2c/arduino_ide_myHal.jpg
    :alt: Arduino IDE New Tab
    :scale: 40%
 
@@ -338,7 +338,7 @@ The file contents should now look like:
 Upload the new version of the software
 --------------------------------------
 
-Finally, upload the code to the Arduino as you would do during the standard :ref:`Arduino IDE Setup <get-started/arduino-ide:Upload the software>`.
+Finally, upload the code to the Arduino as you would do during the standard :ref:`Arduino IDE Setup </ex-commandstation/get-started/arduino-ide:upload the software>`.
 Restart the Command Station and the new device will be configured at startup.  
 
 Checking the Driver

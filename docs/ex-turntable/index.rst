@@ -8,10 +8,10 @@ Welcome to the home of Turntable-EX, a fully integrated turntable controller for
 .. toctree::
   :maxdepth: 1
 
-  turntable-ex
+  ex-turntable/ex-turntable
   getting-started
-  test-and-tune
+  ex-turntable/test-and-tune
   layout-wiring
-  traverser
+  ex-turntable/traverser
   configure
-  troubleshooting
+  ex-turntable/troubleshooting

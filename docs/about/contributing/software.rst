@@ -31,7 +31,7 @@ To do this, open a command prompt and run the following two commands, where ``us
 
 .. tip:: 
 
-  If using our :ref:`contributing/software:recommended editor (vscode)`, once you've installed a Git client, you can do all of your repository work (branches, forks, etc.) directly in VSCode.
+  If using our :ref:`/about/contributing/software:recommended editor (vscode)`, once you've installed a Git client, you can do all of your repository work (branches, forks, etc.) directly in VSCode.
 
 Other handy Git software
 _________________________
@@ -65,7 +65,7 @@ Python 3.x
 
   If you won't be contributing to the website documentation, you can skip this step.
 
-All website documentation is written in reStructuredText format and built using sphinx, which is outlined on our :doc:`/contributing/website` page.
+All website documentation is written in reStructuredText format and built using sphinx, which is outlined on our :doc:`/about/contributing/website` page.
 
 In order to correctly preview changes to the website documentation locally on your computer before publishing to the website, you will need to install Python, preferably the latest 3.x version available.
 

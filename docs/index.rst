@@ -13,16 +13,17 @@ Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to us
 
 Based on off-the-shelf Arduino technology, our products currently include:
 
-* |EX-CS| - our DCC command station for controlling your model railroad.
+* |EX-CS| - our DCC command station for controlling your model railroad
 
-  * |EX-I| - our user friendly installer that takes care of loading the command station firmware onto your Arduino hardware.
-  * |EX-R| - the scripting language, built into the |EX-CS|, allowing to to automate your model railroad. 
+  * |EX-I| - our user friendly installer that takes care of loading the command station firmware onto your Arduino hardware
+  * |EX-R| - the scripting language, built into the |EX-CS|, allowing to to automate your model railroad
 
-* |EX-WT| - a simple web based controller for your command station.
-* |EX-TT| - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection.
-* |BSC| - the original DCC++ software, packaged in a stable release. (No active development, bug fixes only.)
+* |EX-WT| - a simple web based controller for your command station
+* |EX-TT| - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection
+* |EX-DCCI| -  a DCC packet sniffing tool
+* |BSC| - the original DCC++ software, packaged in a stable release. (No active development, bug fixes only)
 
-Our products are supported by many third party controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more.
+Our products are supported by many third party controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more
 
 .. table::
    :align: left
@@ -86,20 +87,28 @@ Next see the :doc:`Get Started section <get-started/index>` or click next below.
    :hidden:
    :maxdepth: 4
 
-   get-started/index
-   advanced-setup/index
+   about-dcc-ex/index
+   ex-commandstation/index
+   ex-installer/index
+   ex-webthrottle/index
+   ex-rail/index
+   ex-turntable/index
+   ex-dccinspector/index
    throttles/index
+   download/index
+   support/index
+   reference/index
+   projects/index
+   about/index
+
+..   advanced-setup/index
+   roadmap/index
+   site-map/index
    automation/index
+   get-started/index
    big-picture/index
    turntable-ex/index
-   reference/index
-   download/index
-   projects/index
-   developer-reference/index
-   contributing/index
-   roadmap/index
-   support/index
-   site-map/index
    donate/index
    press/index
-   about/index
+   contributing/index
+   developer-reference/index

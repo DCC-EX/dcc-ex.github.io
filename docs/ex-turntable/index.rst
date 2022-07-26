@@ -1,5 +1,5 @@
 ********************
-Turntable-EX (Beta)
+EX-Turntable
 ********************
 
 Welcome to the home of Turntable-EX, a fully integrated turntable controller for DCC++ EX.
@@ -8,7 +8,7 @@ Welcome to the home of Turntable-EX, a fully integrated turntable controller for
   :maxdepth: 1
 
   turntable-ex
-  get-started
+  getting-started
   test-and-tune
   layout-wiring
   traverser

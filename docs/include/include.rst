@@ -47,6 +47,10 @@
 
    <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-Turntable</span>
 ..
+.. |EX-DCCI| raw:: html
+
+   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-D<span style="font-size: 90%;">CC</span>Inspector</span>
+..
 .. |BSC| raw:: html
 
    <span style="font-weight: bold; font-style: italic; font-size: 110%;">Base Station Classic (DCC++)</span>

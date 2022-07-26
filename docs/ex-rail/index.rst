@@ -1,5 +1,5 @@
 *********************
-Automation (EX-RAIL)
+EX-Rail (Automation)
 *********************
 
 Welcome to the home for DCC-EX Automation, **EX-RAIL** is the "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
@@ -7,6 +7,6 @@ Welcome to the home for DCC-EX Automation, **EX-RAIL** is the "**EX**\tended **R
 .. toctree::
     :maxdepth: 1
 
-    EX-RAIL-intro
+    getting-started
     EX-RAIL-summary
     EX-RAIL-reference

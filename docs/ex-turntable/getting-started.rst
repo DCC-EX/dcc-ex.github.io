@@ -266,7 +266,7 @@ __________________________________
 
   Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
-  Further to this, note that you will need to end up with two separate folders; one containing the CommandStation-EX software as per  :doc:`/get-started/arduino-ide`, and an additional folder containing the Turntable-EX software. The Turntable-EX software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
+  Further to this, note that you will need to end up with two separate folders; one containing the CommandStation-EX software as per  :doc:`/ex-commandstation/get-started/arduino-ide`, and an additional folder containing the Turntable-EX software. The Turntable-EX software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
 
 At the time of writing, there is no installer for Turntable-EX like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
 
@@ -276,7 +276,7 @@ As noted in the tip above, you should have a Turntable-EX folder alongside the C
   :alt: Two folders
   :scale: 60%
 
-The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/get-started/arduino-ide` page.
+The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/ex-commandstation/get-started/arduino-ide` page.
 
 When you get to the point of opening the sketch, ensure you open the Turntable-EX sketch:
 
@@ -286,7 +286,7 @@ When you get to the point of opening the sketch, ensure you open the Turntable-E
 
 Use Windows Explorer to either copy or rename "config.example.h" to "config.h".
 
-If you need to make adjustments to config.h, refer to the :doc:`/turntable-ex/configure`.
+If you need to make adjustments to config.h, refer to the :doc:`/ex-turntable/configure`.
 
 Set the board type to "Nano" and set the correct Processor type (typically ATMega328P):
 
@@ -304,7 +304,7 @@ Once the software is loaded successfully on to Turntable-EX, the stepper motor s
 
 If you don't have the magnet installed at this point, or if it is too far from the sensor, Turntable-EX will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.
 
-If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/troubleshooting:troubleshooting turntable-ex` for further assistance if required.
+If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`/ex-turntable/troubleshooting:troubleshooting turntable-ex` for further assistance if required.
 
 Automatic calibration
 ^^^^^^^^^^^^^^^^^^^^^^

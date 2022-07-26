@@ -31,7 +31,7 @@ To do this, open a command prompt and run the following two commands, where ``us
 
 .. tip:: 
 
-  If using our :ref:`/about/contributing/software:recommended editor (vscode)`, once you've installed a Git client, you can do all of your repository work (branches, forks, etc.) directly in VSCode.
+  If using our `recommended editor (vscode)`_, once you've installed a Git client, you can do all of your repository work (branches, forks, etc.) directly in VSCode.
 
 Other handy Git software
 _________________________

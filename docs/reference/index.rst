@@ -25,6 +25,7 @@ Software
 .. toctree::
     :maxdepth: 1
 
+    developer-reference/index
     software/hal-config
     software/hal
     software/writing-hal-driver

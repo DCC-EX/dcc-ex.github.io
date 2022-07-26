@@ -9,7 +9,7 @@ We've found that our users tend to identify with one of the following three cate
 Conductor
 ==========
 
-|.. image:: /_static/images/conductor.png
+.. image:: /_static/images/conductor.png
    :alt: Conductor Hat
    :width: 120px
    :height: 89px
@@ -41,7 +41,7 @@ An Engineer is a little more versed in computers and/or electronics. They have a
 
 Keep these definitions in mind as you proceed through this website.
 
-To learn more about how to build your own DCC++ EX station, proceed to the :doc:`Assembly Page <./assembly>` or click on the next button below.
+To learn more about how to build your own DCC++ EX station, proceed to the :doc:`Assembly Page </ex-commandstation/get-started/assembly>` or click on the next button below.
 
 Special Note: We would like to thank Alex Leão of Locontrol who as a personal favor created our modeller levels icons.
 

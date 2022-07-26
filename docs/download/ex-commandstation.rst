@@ -10,11 +10,11 @@ EX-CommandStation Downloads
 
 Welcome to the Command Station download page. You have several choices:
 
-* **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the :ref:`download/commandstation:exInstaller` section.
-* If you are a Tinkerer, or you would like to download a zip file and install the firmware using the Arduino IDE, go to the :ref:`download/commandstation:Latest DCC++ EX Official Release` section.
-* To get the latest unreleased development version, go to the :ref:`download/commandstation:Latest DCC++ EX Unreleased Development Version`.
-* If you are an Engineer or developer, and want to clone the repository onto your computer, go to the :ref:`download/commandstation:CommandStation-EX Repository (project source files)` section.
-* If you're still looking for BaseStation-Classic, go to the :ref:`download/commandstation:Getting BaseStation-Classic` section.
+* **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the :ref:`/download/ex-commandstation:exInstaller` section.
+* If you are a Tinkerer, or you would like to download a zip file and install the firmware using the Arduino IDE, go to the :ref:`/download/ex-commandstation:Latest DCC++ EX Official Release` section.
+* To get the latest unreleased development version, go to the :ref:`/download/ex-commandstation:Latest DCC++ EX Unreleased Development Version`.
+* If you are an Engineer or developer, and want to clone the repository onto your computer, go to the :ref:`/download/ex-commandstation:CommandStation-EX Repository (project source files)` section.
+* If you're still looking for BaseStation-Classic, go to the :ref:`/download/ex-commandstation:Getting BaseStation-Classic` section.
 
 exInstaller
 =============

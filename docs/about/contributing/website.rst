@@ -205,7 +205,7 @@ Once you are finished editing and are ready to have your updates published you w
 
 .. note:: 
 
-  Remember to perform a :ref:`/about/contributing/website:sphinx build` prior to submitting any pull requests.
+  Remember to perform a `website:sphinx build`_ prior to submitting any pull requests.
 
 At this piont, go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it's merged in by one of the admins, your changes will go live!
 
@@ -300,7 +300,7 @@ Here's an example for a Conductor level page heading graphic:
     :alt: Conductor Level 
     :scale: 40%
 
-Refer to :ref:`/about/contributing/website:images` below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX :doc:`/ex-turntable/ex-turntable/ex-turntable` page.
+Refer to `images`_ below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX :doc:`/ex-turntable/ex-turntable/ex-turntable` page.
 
 Links
 ______

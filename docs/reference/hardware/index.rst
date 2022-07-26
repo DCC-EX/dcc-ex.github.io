@@ -17,3 +17,4 @@ Hardware
     power-supplies
     accessory-controllers
     shopping-list
+    decoder-notes

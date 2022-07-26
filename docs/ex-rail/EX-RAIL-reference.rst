@@ -19,7 +19,7 @@ See Also:
 - :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
 
 Notes
-======
+=====
 
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion (as virtual pins or vpins).
@@ -131,7 +131,7 @@ ______________
 
 ``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
-Refer to the LATCH/UNLATCH commands in the :ref:`/ex-rail/ex-rail-reference:sensors` section below for further details.
+Refer to the LATCH/UNLATCH commands in the `sensors`_ section below for further details.
 
 Routes, automations, and sequences
 ===================================
@@ -143,11 +143,11 @@ ________________________
 
 There are three options to define these automation sequences:
 
-``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`/ex-rail/ex-rail-intro:example 4: automating a train (simple loop)` for a simple example.
+``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`/ex-rail/gettting-started:example 4: automating a train (simple loop)` for a simple example.
 
-``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts and signals to allow a train to be driven through a specific route on the layout. See :ref:`/ex-rail/ex-rail-intro:example 1: creating routes for a throttle` for various examples.
+``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts and signals to allow a train to be driven through a specific route on the layout. See :ref:`/ex-rail/gettting-started:example 1: creating routes for a throttle` for various examples.
 
-``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`/ex-rail/ex-rail-intro:example 3: automating various non-track items`, :ref:`/ex-rail/ex-rail-intro:example 6: single line shuttle`, and :ref:`/ex-rail/ex-rail-intro:example 7: running multiple inter-connected trains` for further examples.
+``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`/ex-rail/gettting-started:example 3: automating various non-track items`, :ref:`/ex-rail/gettting-started:example 6: single line shuttle`, and :ref:`/ex-rail/gettting-started:example 7: running multiple inter-connected trains` for further examples.
 
 ``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the EX-RAIL documentation.
 

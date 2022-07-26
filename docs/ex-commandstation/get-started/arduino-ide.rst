@@ -5,7 +5,7 @@ Install using the Arduino IDE
 
 The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our DCC++ EX Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
 
-Those on the Tinkerer or Engineer path—see :doc:`Choose Your Path (levels) <levels>` may want to make changes to the code, or just learn more about how the Command Station (CS) software works. At a minimum, you may need to change options in the config.h file, or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
+Those on the Tinkerer or Engineer path—see :doc:`Choose Your Path (levels) </about-dcc-ex/levels>` may want to make changes to the code, or just learn more about how the Command Station (CS) software works. At a minimum, you may need to change options in the config.h file, or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
 
 **You can click on most of the images below to enlarge them**
 
@@ -29,7 +29,7 @@ Unzip the file into the Arduino IDE project folder
 Find the ZIP file on your computer and unzip it. You should now have a folder with the entire DCC-EX project inside it called "CommandStation-EX". Make sure this folder is at the root level with all your other projects. Note that the name of this folder **MUST** be "CommandStation-EX"! Do not change it. Because of the way the Arduino IDE works, the folder name must match the .ino file inside it.
 
 Copy the config.example.h file (or rename it)
-===============================================
+=============================================
 
 DCC-EX provides you with an example configuration file. This file holds settings that you can change for things like your choice of motor controller, WiFi login credentials, etc. Rather than a future update potentially causing you to lose any changes you make to your configuration, we give this file a different name and leave it up to you to edit if you need to. Simply rename this file to ``config.h``.
 
@@ -99,7 +99,7 @@ Last, select "Port" and find the port on your computer that recognizes the Ardui
    Select the correct COM Port
 
 Upload the software
-====================
+===================
 
 Click on the Upload button near the top left. It is a circle with a right arrow, next to the Compile button that looks like a check mark.
 

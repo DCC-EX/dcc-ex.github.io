@@ -117,7 +117,7 @@ For example, a keyword of "3RAIL" would be valid if it were to be implemented.
 6.2. Numeric
 _____________
 
-These are a consective sequence of one or more digits, with an optional leading ``-`` to indicate a negative value. Unless noted in :ref:`/refference/developer-reference/api:a.1. parameter values`, these numbers are base10.
+These are a consective sequence of one or more digits, with an optional leading ``-`` to indicate a negative value. Unless noted in `a.1. parameter values`_, these numbers are base10.
 
 6.3. String
 ____________
@@ -132,7 +132,7 @@ ______________________
 
 Due to legacy code and backwards compatibility requirements, there are two OPCODES that expect hexadecimal parameter values.
 
-These are the ``<M>`` and ``<P>`` commands documented in the :ref:`reference/software/command-reference:send packet to the track` section of the Command Reference.
+These are the ``<M>`` and ``<P>`` commands documented in the :ref:`/reference/software/command-reference:send packet to the track` section of the Command Reference.
 
 Appendix B. Suggested parameter parsing sequence
 =================================================

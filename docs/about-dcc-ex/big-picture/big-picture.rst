@@ -40,21 +40,21 @@ These are the various concepts and components we will cover:
 * Automated routing and switching
 
 Recommended reading
-====================
+===================
 
 Throughout these pages we will be using EX-RAIL functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EX-RAIL, so it would be best to read through the :doc:`/ex-rail/getting-started` page prior to going any further.
 
 We will also be outlining the equivalent DCC++ EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-reference` where necessary.
 
 Tuning servo positions
-_______________________
+______________________
 
 An important item to note when configuring servo based turnouts and signals is that the angles provided are going to be unique to your layout, and possibly even be unique to each particular turnout or signal, depending on how they are mounted and physically connected.
 
 We provide some handy documentation on how to evaluate the correct angles on our :doc:`/reference/hardware/servo-module` page.
 
 Building blocks and stages
-===========================
+==========================
 
 We'll present this information by starting with a simple loop with a single siding and station, and then proceed to add extra features and complexity a step at a time until we reach the complete layout pictured above.
 
@@ -80,14 +80,14 @@ This way, the various possible variations of each type of object will be defined
 For further information on IDs used in EX-RAIL, refer to the :ref:`/ex-rail/ex-rail-reference:notes` section of the EX-RAIL reference page.
 
 DCC addresses
-______________
+_____________
 
 Further to the above, for DCC controlled turnouts, these will commence at the linear DCC address 101, which starts at an address of 26, and a sub address of 0.
 
 For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`.
 
 Sensor types
-=============
+============
 
 For simplicity, we will use infrared obstacle avoidance/proximity sensors throughout these exercises, which produce an active low output when activated.
 
@@ -113,7 +113,7 @@ If you use different sensors that simply provide an active low or high output, t
     IF(-SNS1)         // If activie high sensor 1 is triggered
 
 Locomotive addresses in use
-============================
+===========================
 
 For our various automations and sequences that involve driving trains, we will be using locomotives that represent the various international locations and preferred modelling eras of the DCC++ EX team. Be warned that this means we will be mixing completely unrealistic combinations of eras on the same layout!
 

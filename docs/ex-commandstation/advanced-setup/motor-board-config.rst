@@ -11,13 +11,13 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 
 **Links in This Page**
 
-* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Configure Using the Installer`
-* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Configure By Editing the config.h File`
-* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Your Board is in the Supported List`
-* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Your Board is NOT in the Supported List`
-* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Using High Accuracy Waveform Mode`
-* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Current Sense and Sense Factor`
-* :ref:`/ex-commandstation/advanced-setup/motor-board-config:Just Buy a Current Sense Board Instead`
+* `Configure Using the Installer`_
+* `Configure By Editing the config.h File`_
+* `Your Board is in the Supported List`_
+* `Your Board is NOT in the Supported List`_
+* `Using High Accuracy Waveform Mode`_
+* `Current Sense and Sense Factor`_
+* `Just Buy a Current Sense Board Instead`_
 
 Configure Using the Installer
 ==============================
@@ -136,7 +136,7 @@ Using High Accuracy Waveform Mode
 
 You may ask, "Do I need high accuracy waveforms?" and the answer is probably not. But we are engineers, and we love to spend our days trying to eke out every bit of performance from the system, and maintain bragging rights for thinking of something 5% more clever than the other members of our team! Even our "standard" waveform is within the NMRA specification. For purists, or if you find a particular decoder that is not in spec and needs to have tighter timing on the DCC waveform, you can make sure you are using high accuracy mode.
 
-If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see :doc:`High Accuracy Waveform Mode </advanced-setup/high-accuracy>`.
+If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see :doc:`High Accuracy Waveform Mode </ex-commandstation/advanced-setup/high-accuracy>`.
 
 
 Current Sense and Sense factor

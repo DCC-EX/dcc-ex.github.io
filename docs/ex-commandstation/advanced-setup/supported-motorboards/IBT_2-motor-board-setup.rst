@@ -3,7 +3,7 @@
 IBT_2 BTS7960 Motor Board
 **************************
 
-|engineer.png|
+|engineer|
 
 - :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:What You Will Need (IBT_2)`
 - :ref:`/ex-commandstation/advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Which option should you choose? (IBT_2)`

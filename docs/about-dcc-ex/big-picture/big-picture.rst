@@ -68,7 +68,7 @@ Our diagrams will be created in such a way that you'll be able to click on the v
 We will be using specific colour coded boxes and labels to identify track side buildings, sensors, signals, virtual blocks, and turnouts as outlined below:
 
 .. raw:: html
-  :file: /_static/images/big-picture/rmft-legend.drawio.svg
+  :file: ../../_static/images/big-picture/rmft-legend.drawio.svg
 
 Turnout object IDs
 ===================

@@ -3,7 +3,7 @@
 Nano Every
 *******************
 
-|tinkerer.png|
+|tinkerer|
 
 .. image:: /_static/images/microcontrollers/nanoevery_box.jpg
    :alt: Arduino

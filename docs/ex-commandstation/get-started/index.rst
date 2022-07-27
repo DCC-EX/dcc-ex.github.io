@@ -28,22 +28,22 @@ It includes advanced features such as:
 * General purpose inputs and outputs (I/O) for extensibility, and 
 * JMRI integration
 
-.. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
+.. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article </about/rewrite>`.
 
 The Components of a Full System
 ================================
 
-To actully run you model railroad you will need a few items:
+To actually run you model railroad you will need a few items:
 
 #. An |EX-CS| - This consists of:
 
   - An Arduino microprocessor,
   - a motor driver board / motor shield,
-  - (Optianlly) a WiFi shield, and
+  - (Optionally) a WiFi shield, and
   - our free, open source, custom software 
  
-#. A **Controller** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiTHrottle, etc
-#. **Power** - The Ardunio and the Motor shields need to be powered seperately, so a DC power supply for the motor shield to the track, and one for the Arduino
+#. A **Controller** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiThrottle, etc
+#. **Power** - The Ardunio and the Motor shields need to be powered separately, so a DC power supply for the motor shield to the track, and one for the Arduino
 #. A **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
 #. A **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
 #. A **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)

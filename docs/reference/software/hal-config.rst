@@ -256,7 +256,7 @@ This will need to be done in the :doc:`Arduino-IDE </ex-commandstation/get-start
 Create a new tab
 ----------------
 
-First you will need to add a new file, just like the :ref:`config.h file </ex-commandstation/get-started/arduino-ide:Copy the config.example.h file (or rename it)>`.
+First you will need to add a new file, just like the :ref:`config.h file <ex-commandstation/get-started/arduino-ide:Copy the config.example.h file (or rename it)>`.
 Create a new tab using the following menu option.
 
 .. figure:: /_static/images/arduino-ide/arduino_ide_newtab.jpg
@@ -266,7 +266,7 @@ Create a new tab using the following menu option.
    Creating a new tab in the Arduino IDE
 
 Creating the myHal.cpp file
------------------------------
+---------------------------
 
 At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``myHal.cpp``
 and click ``OK`` to create the new file.
@@ -338,7 +338,7 @@ The file contents should now look like:
 Upload the new version of the software
 --------------------------------------
 
-Finally, upload the code to the Arduino as you would do during the standard :ref:`Arduino IDE Setup </ex-commandstation/get-started/arduino-ide:upload the software>`.
+Finally, upload the code to the Arduino as you would do during the standard :ref:`Arduino IDE Setup <ex-commandstation/get-started/arduino-ide:upload the software>`.
 Restart the Command Station and the new device will be configured at startup.  
 
 Checking the Driver

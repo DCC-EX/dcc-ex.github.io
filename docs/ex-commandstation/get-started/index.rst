@@ -36,7 +36,7 @@ What you need
 
 **Software**:
 
-- See the :doc:`Command Station download page <../download/commandstation>`
+- See the :doc:`Command Station download page </download/ex-commandstation>`
 
 The DCC++ EX installer is recommended for most users as it automatically downloads and installs the required software. 
 

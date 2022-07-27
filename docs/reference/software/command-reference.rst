@@ -872,7 +872,7 @@ To help define the correct ACK parameters required for different decoders, there
   - MIN 2000 uS
   - MAX 20000uS
 
-  If you still need to override these and need to do so permanently, the commands can be added to "mySetup.h" as per :ref:`/ex-commandstation/advanced-setup/startup-config:adding in the startup commands`.
+  If you still need to override these and need to do so permanently, the commands can be added to "mySetup.h" as per :ref:`ex-commandstation/advanced-setup/startup-config:adding in the startup commands`.
 
   Note with decoders that are equipped with "keep alives" or capacitors, it can be beneficial to turn the power on with `<1>` or `<1 PROG>` to charge the capacitors prior to programming, which can increase the reliability of the ACK, especially when attemping to read the full sheet.
 

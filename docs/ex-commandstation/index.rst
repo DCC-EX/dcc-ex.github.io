@@ -7,4 +7,5 @@ EX-CommandStation
     :maxdepth: 1
     
     getting-started
-    advanced
+    advanced    
+    advanced-setup/index

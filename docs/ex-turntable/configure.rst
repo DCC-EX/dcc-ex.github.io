@@ -86,7 +86,7 @@ ________________
 When set to AUTO, phase switching happens automatically as the turntable rotates. The point at which phase inversion happens is determined by the PHASE_SWITCH_ANGLE (see below), and it will automatically revert 180 degrees later.
 
 PHASE_SWITCH_ANGLE
-___________________
+__________________
 
 `Default: 45`
 
@@ -108,7 +108,7 @@ _______________
 - TWO_WIRE - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor
 - TWO_WIRE_INV - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor, with the driver's enable pin inverted
 
-While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to :ref:`/ex-turntable/configure:defining custom stepper drivers`.
+While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to `defining custom stepper drivers`_.
 
 DISABLE_OUTPUTS_IDLE
 _____________________
@@ -147,7 +147,7 @@ _________
 This is the time in milliseconds that the LED is on and off when the set to a fast blink. With the default, it will be on for 100ms, then off for 100ms.
 
 LED_SLOW
-_________
+________
 
 `Default: 500`
 
@@ -156,7 +156,7 @@ _________
 This is the time in milliseconds that the LED is on and off when the set to a slow blink. With the default, it will be on for 500ms, then off for 500ms.
 
 Advanced configuration options
-===============================
+==============================
 
 .. image:: /_static/images/tinkerer-level.png
   :alt: Tinkerer Level
@@ -170,7 +170,7 @@ ______
 If debug level output is requested as part of a support ticket or when troubleshooting in general, uncomment this line by removing the "//" from in front of "#define".
 
 SANITY_STEPS
-_____________
+____________
 
 `Default: 10000 (Disabled)`
 
@@ -181,7 +181,7 @@ This is the maximum number of steps the stepper motor will move during homing an
 If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.
 
 HOME_SENSITIVITY
-_________________
+________________
 
 `Default: 150 (Disabled)`
 
@@ -192,7 +192,7 @@ This is the minimum number of steps required for the turntable to rotate away fr
 If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.
 
 FULL_STEP_COUNT
-________________
+_______________
 
 `Default: 4096 (Disabled)`
 
@@ -205,7 +205,7 @@ If you enable this option, the calibration sequence will never run automatically
 You can initiate the calibration command manually while this option is enabled, it will perform the calibration sequence and record the calibrated step count in EEPROM, and that setting will take effect whilst Turntable-EX is running. However, the calibrated value in EEPROM will be overridden at the next startup unless this option is disabled.
 
 DEBOUNCE_DELAY
-_______________
+______________
 
 `Default: 10 (Disabled)` - TRAVERSER mode
 
@@ -218,7 +218,7 @@ When using mechanical switches as HOME and LIMIT sensors, it is often necessary 
 Note that in turntable mode, a hall effect or similar sensor is typically used which does not require debouncing, and therefore the default in turntable mode is to set this delay to 0.
 
 Defining custom stepper drivers
-================================
+===============================
 
 .. image:: /_static/images/tinkerer-level.png
   :alt: Tinkerer Level

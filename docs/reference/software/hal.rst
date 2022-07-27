@@ -10,7 +10,7 @@ DCC++EX HAL Architecture
    Available to download and use now!
 
 Introduction
-==============
+============
 
 Firstly, an apology.  The document below is mostly based on my activity log while developing the HAL software and other associated modules (I2C etc.).  
 Consequently, it is badly structured, random, and mostly extremely technical.  For that, I apologise.
@@ -18,7 +18,7 @@ Consequently, it is badly structured, random, and mostly extremely technical.  F
 Now, on to the content.  You have been warned...
 
 Overview
-=========
+========
 
 **HAL** = **H**\ardware **A**\bstraction **L**\ayer.
 
@@ -33,7 +33,7 @@ LED, or a servo moves the railway track points from one position to another.
 
 The class hierarchy is shown below.
 
-.. image:: ../../_static/images/HAL_class_hierarchy.png
+.. image:: /_static/images/HAL_class_hierarchy.png
    :alt: HAL Class Hierarchy
    :scale: 80%
 
@@ -265,7 +265,7 @@ functional in editors that support it (e.g. PlatformIO).
 
 
 List of Changes
-================
+===============
 
 The following functional changes have been done in the neil-hal branch to support the implementation of the HAL in DCC++EX, 
 and to improve the handling of Displays, Turnouts, Sensors and Outputs.
@@ -477,7 +477,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 
 
 Future Enhancements
-=====================
+===================
 
 1.  HAL: Produce a simple IODevice class template, to help DCC++EX developers/tinkerers who want to implement their own extensions protocols, 
     e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.

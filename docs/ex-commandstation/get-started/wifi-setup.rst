@@ -56,10 +56,10 @@ What you will need (for WiFi)
 Quick links
 ==============
 
-* Jump to :ref:`/ex-commandstation/get-started/wifi-setup:Makerfabs ESP8266 WiFi Shield (recommended)`
-* Jump to :ref:`/ex-commandstation/get-started/wifi-setup:Duinopeak ESP8266 WiFi Expansion Board`
-* Jump to :ref:`/ex-commandstation/get-started/wifi-setup:ESP-01 and ESP-01s`
-* Jump to :ref:`/ex-commandstation/get-started/wifi-setup:Mega+WiFi Combo Board`
+* Jump to `Makerfabs ESP8266 WiFi Shield (recommended)`_
+* Jump to `Duinopeak ESP8266 WiFi Expansion Board`_
+* Jump to `ESP-01 and ESP-01s`_
+* Jump to `Mega+WiFi Combo Board`_
 
 Makerfabs ESP8266 WiFi Shield (recommended)
 ===============================================
@@ -219,7 +219,7 @@ If you already have the CS software running and are just adding WiFi, there is n
 
 .. note:: LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
 
-If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads <../download/commandstation>` to load firmware onto the CS.
+If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads </download/ex-commandstation>` to load firmware onto the CS.
 
 .. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and lookingat the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ .Skip to the "The ESP-01S - The Wifi Connection" section
    

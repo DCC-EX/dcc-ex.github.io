@@ -20,7 +20,7 @@ For more information on how to configure your CS to use the boards below, see :d
 Makerfabs WiFi Shield
 ======================
 
-Conductor Friendly
+|conductor|
 
 * `Makerfabs ESP-8266 WiFi Shield (recommended) <https://www.makerfabs.com/esp8266-wifi-shield.html>`_
 
@@ -29,12 +29,12 @@ Conductor Friendly
    :scale: 70%
 
 
-:doc:`Installation Instructions for WiFi <../../get-started/wifi-setup>`
+:doc:`Installation Instructions for WiFi </ex-commandstation/get-started/wifi-setup>`
 
 Duinopeak WiFi Shield
 ======================
 
-Tinkerer
+|tinkerer|
 
 * `Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 
@@ -52,7 +52,7 @@ See the ESP-01S in the next section below that must be installed on this board
 ESP-01S
 =========
 
-Tinkerer Level
+|tinkerer|
 
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
@@ -134,7 +134,7 @@ Here is a link to the `Video and info from Wang Tongze himself <https://www.yout
 
 
 SparkFun Thing Plus (ESP32)
-=============================
+===========================
 
 Tinkerer Level
 

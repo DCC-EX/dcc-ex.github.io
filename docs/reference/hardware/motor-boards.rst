@@ -111,7 +111,7 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
    :alt: Arduino Motor Shield R3
    :scale: 100%
 
-:doc:`Install the Arduino Motor Shield <../../get-started/assembly>`
+:doc:`Install the Arduino Motor Shield </ex-commandstation/get-started/assembly>`
 
 |
 
@@ -128,7 +128,7 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
    :alt: Deek Robot Motor Shield
    :scale: 100%
 
-:doc:`Install the Deek-Robot Motor Shield <../../get-started/assembly>`
+:doc:`Install the Deek-Robot Motor Shield </ex-commandstation/get-started/assembly>`
 
 |
 
@@ -147,7 +147,7 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
    :alt: Flashtree Motor Shield
    :scale: 20%
 
-:doc:`Install the Flashtree (same as Deek-Robot) Motor Shield <../../get-started/assembly>`
+:doc:`Install the Flashtree (same as Deek-Robot) Motor Shield </ex-commandstation/get-started/assembly>`
 
 |
 
@@ -184,7 +184,7 @@ This board is electrically the same, though a different layout than the Arduino 
    :alt: YFRobot L298P Motor Driver Shield
    :scale: 30%
 
-:doc:`Install the YFRobot Motor Shield (same as Deek-Robot) <../../get-started/assembly>`
+:doc:`Install the YFRobot Motor Shield (same as Deek-Robot) </ex-commandstation/get-started/assembly>`
 
 **Remember to select YFROBOT_MOTOR_SHIELD in your config.h file or from the motor board dropdown if using EX-Installer**
 
@@ -199,7 +199,7 @@ Pinout for reference:
 
 .. Note:: This configuration uses the normal accuracy waveform to avoid having to use jumpers. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. For information about high-accuracy mode, See:
 
-:ref:`High Accuracy Waveform <advanced-setup/motor-board-config:Using High Accuracy Waveform Mode>`
+:ref:`High Accuracy Waveform <ex-commandstation/advanced-setup/motor-board-config:Using High Accuracy Waveform Mode>`
 
 .. Todo:: Give a link to how to handle the jumper reconfig
 
@@ -215,7 +215,7 @@ __________________________
   :alt: Tinkerer level
   :scale: 30%
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`/ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 This is a high-current alternative to the Arduino and Deek-Robot shields. It uses the same L298 chip as the Arduino motor shield, only in a different form factor and with better cooling. You'll need to connect jumper wires from the correct pins on the Arduino to this board. IMPORTANT: You will also need to snip two long chip pins and add 2 resistors to enable current sense in order to have overload protection and be able to acknowledge CV reads and writes. As with any of these boards with current sense issues, you can also add a small current sense board like the MAX471  instead.
 
@@ -321,7 +321,7 @@ _________________________________
   :alt: Engineer level
   :scale: 30%
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`/ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board.
 
@@ -360,7 +360,7 @@ ________________________________
   :alt: Engineer level
   :scale: 30%
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`/ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 The higher current capability and efficient power MOSFETs, make this board a good choice if you are running more than 3-5 locos.
 
@@ -385,7 +385,7 @@ _____________________________________
   :alt: Engineer level
   :scale: 30%
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`/ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 Must cut traces and solder resistors to get current sensing on the soldered board. Much easier to simply not solder the pins on the kit version. Pin assignments must be added to a new motorboard entry in the config.h file.
 
@@ -402,7 +402,7 @@ _______________________________________
   :alt: Engineer level
   :scale: 30%
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`/ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 This is another L298 based board with inadequate cooling. Fan and/or heat sink recommended. Max current realistically 1.3A. This board has NO CURRENT SENSE. As with many boards like this, both L298 current sense pins are tied to ground. Cutting traces and adding sense resistors or the use of an eternal current sense board is required for short circuit protection and loco programming. If you don't use current sense, you must ground pins A0 and A1 on the Arduino or you will get an overcurrent condition.
 
@@ -431,7 +431,7 @@ _________________
   :alt: Engineer level
   :scale: 30%
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`/ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
 On the surface, this seems like a great idea, an Arduino and motor controller on one board. It is a very thin surface ;) While we don't recommend it, an Engineer who reads these notes, may still find a use for it. The V2 uses the ATmega32u4 chip instead of either of the chips used on an Uno or a Mega. It only has 2 interrupts that are usable and it reverses their pin assignments. It uses serial on the chip, not with a UART as on the other boards. It may need a software change to accommodate the timer. It also has the same amount of memory as an Uno, which will only run the basic version of DCC++ EX without options. In addition, the serial port uses memory to operate, so you have even less memory free to use than on an Uno.
 

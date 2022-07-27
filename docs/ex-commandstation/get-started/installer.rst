@@ -16,7 +16,7 @@ Requirements (for installing)
 Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
 ============================================================================
 
-* Download the :ref:`DCC-EX Installer <download/commandstation:exInstaller>` which will automatically determine the version you need and download it
+* Download the :ref:`DCC-EX Installer <download/ex-commandstation:exInstaller>` which will automatically determine the version you need and download it
 * Extract the Installer into its own folder with your favorite unzip program
 * Open File Manager for Windows or a terminal window in Mac OS and Linux and navigate to that folder
 * Windows users run ``exInstaller.exe``

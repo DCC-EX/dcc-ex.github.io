@@ -304,20 +304,20 @@ Once the software is loaded successfully on to Turntable-EX, the stepper motor s
 
 If you don't have the magnet installed at this point, or if it is too far from the sensor, Turntable-EX will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.
 
-If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`/ex-turntable/troubleshooting:troubleshooting turntable-ex` for further assistance if required.
+If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/ex-turntable/troubleshooting:troubleshooting turntable-ex` for further assistance if required.
 
 Automatic calibration
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
 
-  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`/ex-turntable/test-and-tune:turntable-ex commands` section.
+  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/ex-turntable/test-and-tune:turntable-ex commands` section.
 
-  Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`/ex-turntable/configure:full_step_count`.
+  Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`ex-turntable/configure:full_step_count`.
 
 When Turntable-EX is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.
 
-Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`/ex-turntable/test-and-tune:tuning your turntable positions`.
+Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`ex-turntable/ex-turntable/test-and-tune:tuning your turntable positions`.
 
 The output in the serial console should look similar to the below:
 
@@ -388,7 +388,7 @@ Scrolling down towards the bottom of that file, you will also see this indented 
 
   //TurntableEX::create(600, 1, 0x60);
 
-If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`/reference/software/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the CommandStation-EX software.
+If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`reference/software/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the CommandStation-EX software.
 
 Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above, which should result in the following content in your new "myHal.cpp" file:
 
@@ -415,12 +415,12 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
 
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
 
-- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send Turntable-EX commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`/reference/software/hal:overview`).
+- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send Turntable-EX commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/software/hal:overview`).
 - I2C address=0x60 - This is the default address on the I2C bus that the Turntable-EX is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myHal.cpp" and in "config.h" in the Turntable-EX software.
 
 If you already have an existing "myHal.cpp" file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the "#include" needs to be before "void halSetup() {" and the "TurntableEX::create..." needs to be before the final "}".
 
-Follow the rest of the directions for :ref:`reference/software/hal-config:adding a new device` all the way through to the :ref:`/reference/software/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
+Follow the rest of the directions for :ref:`reference/software/hal-config:adding a new device` all the way through to the :ref:`reference/software/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
 
 Note there is no point in checking the driver at this stage as Turntable-EX is not connected, and will show as "OFFLINE".
 

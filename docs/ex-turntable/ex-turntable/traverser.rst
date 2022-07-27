@@ -38,7 +38,7 @@ You will note we've rated the traverser feature as Tinkerer level. This is prima
 What you need for traverser mode
 _________________________________
 
-The same components outlined in :ref:`/ex-turntable/turntable-ex:what you need for turntable-ex` apply in traverser mode, with two likely exceptions:
+The same components outlined in :ref:`ex-turntable/ex-turntable/ex-turntable:what you need for turntable-ex` apply in traverser mode, with two likely exceptions:
 
 1. Home and limit sensors: Given the need for positive stops at each end's limit of travel, be it vertical, horizontal, or restricting rotation within an arc for limited rotation turntables, micro switches are likely a better choice for these.
 
@@ -69,12 +69,12 @@ When determining which sensor needs to be located at each limit position of the 
 
 You will need to take these considerations into account, and ensure the sensors are connected in the correct order.
 
-For a method to test and validate this, see :ref:`/ex-turntable/traverser:sensor testing mode` below.
+For a method to test and validate this, see :ref:`ex-turntable/ex-turntable/traverser:sensor testing mode` below.
 
 Assembly
 =========
 
-General assembly is as per the :doc:`/ex-turntable/get-started` page, with the aforementioned limit sensor being connected to the Arduino's pin 2.
+General assembly is as per the :doc:`/ex-turntable/getting-started` page, with the aforementioned limit sensor being connected to the Arduino's pin 2.
 
 Refer to the connection summary below, which makes the assumption that DCC phase switching is not required.
 
@@ -143,7 +143,7 @@ Summary table of all connections required during assembly:
 Loading Turntable-EX for traverser mode
 ========================================
 
-Prepare to load the software as per :ref:`/ex-turntable/get-started:7. load the turntable-ex software`, and ensure "config.h" has been created by copying or renaming "config.example.h".
+Prepare to load the software as per :ref:`ex-turntable/getting-started:7. load the turntable-ex software`, and ensure "config.h" has been created by copying or renaming "config.example.h".
 
 There is also an example "config.traverser.h" file included with the software that can be renamed to "config.h" instead.
 
@@ -168,7 +168,7 @@ If you need to make any other adjustments to cater for using different stepper d
 
   This setting defaults to 10000 steps and is used to prevent a stepper turning indefinitely when attempting to find HOME or LIMIT. If the gear ratio results in a step count greater than 10000, the calibration sequence will fail to complete, and updating this setting to a sufficently high step count will solve that issue.
 
-  Refer to :ref:`/ex-turntable/configure:sanity_steps`.
+  Refer to :ref:`ex-turntable/configure:sanity_steps`.
 
 Once "config.h" is updated, you can continue to load the software onto the Arduino.
 
@@ -179,7 +179,7 @@ ____________________
 
 Prior to proceeding any further, it is recommended to validate the HOME and LIMIT sensors operate correctly, and that they are connected to the correct pins of the Arduino. A new SENSOR_TESTING mode has been added to allow the sensors to be tested, with all other Turntable-EX functionality disabled.
 
-To enable SENSOR_TESTING mode, you will need to edit "config.h" again, and this time remove the "//" from the beginning of the `#define SENSOR_TESTING`` line (Refer to :ref:`/ex-turntable/configure:sensor_testing` to enable sensor testing mode.):
+To enable SENSOR_TESTING mode, you will need to edit "config.h" again, and this time remove the "//" from the beginning of the `#define SENSOR_TESTING`` line (Refer to :ref:`ex-turntable/configure:sensor_testing` to enable sensor testing mode.):
 
 .. code-block:: cpp
 
@@ -254,4 +254,4 @@ When starting up for the first time, you should see output in the serial console
 Traverser mode is ready!
 =========================
 
-Now that you have enabled traverser mode in Turntable-EX, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to :doc:`/ex-turntable/test-and-tune` as the tuning steps and control commands are the same in both turntable and traverser modes.
+Now that you have enabled traverser mode in Turntable-EX, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to :doc:`/ex-turntable/ex-turntable/test-and-tune` as the tuning steps and control commands are the same in both turntable and traverser modes.

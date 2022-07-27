@@ -1,7 +1,7 @@
 .. include:: /include/include.rst
-***********************
+**********************
 Getting Started (EX-R) 
-***********************
+**********************
 
 .. attention::
    17 Feb 2022: *Now included* in **DCC++EX 4.0!**
@@ -14,7 +14,7 @@ Getting Started (EX-R)
       :local:
 
 Introduction
-==============
+============
 
 EX-RAIL is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 that can easily be used to describe sequential actions to automatically take place on your model layout. These actions are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. EX-RAIL will then run automatically on CS startup.
@@ -30,7 +30,7 @@ To begin, let's define a few terms:
 Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with :doc:`throttles </throttles/index>` that support it (:doc:`/throttles/engine-driver`, :doc:`WebThrottle-EX </throttles/ex-webthrottle>`) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. "Automations" can appear on a "handoff" button that will supply or handoff the Loco ID to EX-RAIL where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in the throttle that runs an AUTOMATION to take it on a journey around the layout.
 
 Things You Can Do With EX-RAIL
-====================================
+==============================
 
 - Create "Routes" which set multiple turnouts and signals at the press of a button in WebThrottle-EX or EngineDriver (other WiThrottle-compatible throttles are available)
 - Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up "Automations"
@@ -54,7 +54,7 @@ Things You Can Do With EX-RAIL
    - Chris Harlow
 
 What You Don't Need
-====================
+===================
 
 While extra functionality may be attained by using additional tools and applications, to get the benefit of EX-RAIL you don't need anything more than a *DCC-EX Command Station, and the Arduino IDE* used to configure it.
 
@@ -66,7 +66,7 @@ You DON'T need:
 - Knowledge of C++ or Python/Jython programming
 
 How It Works
-=============
+============
 
 A small amount of code in the CS, the EX-RAIL executor, lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don't have to be a programmer and you don't have to learn code. You simply add your own myAutomation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.
 
@@ -77,7 +77,7 @@ EX-RAIL automation is *much* (perhaps 2 orders of magnitude) more time efficient
 .. note:: The EX-RAIL code is only included in the compilation of the Command Station if the compiler detects a “myAutomation.h” file. If you don't create that file, no extra space is wasted for something you don't use.
 
 The Automation Process
-=======================
+======================
 
 Once started, all sequences step through a list of simple keywords until they reach a ``DONE`` keyword.
 
@@ -123,10 +123,10 @@ And type your script in.
 
 
 Some Simple Examples  
-======================
+====================
 
 Example 1: Creating Routes for a Throttle
-__________________________________________
+_________________________________________
 
 A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like
@@ -171,7 +171,7 @@ Of course, you may want to add signals, and time delays
 
 
 Example 2: Automating Signals with Turnouts
-____________________________________________
+___________________________________________
 
 By intercepting a turnout change command, it's easy to automatically adjust signals or 
 automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE`` keyword to detect a particular turnout change:
@@ -193,7 +193,7 @@ automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE
      DONE
 
 Defining Turnouts
-==================
+=================
 
 DCC-EX supports a number of different turnout hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using ``<T>`` commands from JMRI, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
 
@@ -207,7 +207,7 @@ See the :doc:`/ex-rail/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_
 
 
 Defining Signals
-=================
+================
 
 Signals can now simply be a decoration to be switched by the route process; they don’t need to control anything.
 
@@ -233,7 +233,7 @@ This normally takes place in a timed loop, for example alternate flashing of a f
 Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using ``START(66)``.
 
 Example 4: Automating a train (simple loop)
-____________________________________________
+___________________________________________
 
 Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.
 
@@ -336,7 +336,7 @@ Although the above is trivial, the routes are designed to be independent of the 
 The example above assumes that loco 3 is sitting on the track and pointing in the right direction. A bit later you will see how to script an automatic process to take whatever loco is placed on the programming track, and send it on its way to join in the fun!
 
 Example 7: Running multiple inter-connected trains
-___________________________________________________
+__________________________________________________
 
 So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout
@@ -347,7 +347,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with :ref:`TURNOUT commands. </ex-rail/EX-RAIL-summary:Automations, Routes and Sequences>`
+Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <ex-rail/EX-RAIL-summary:Automations, Routes and Sequences>`
 
 .. code-block:: cpp
 
@@ -445,7 +445,7 @@ If you follow this example carefully, you'll see it allows for up to 3 trains at
 In addition, it is possible to take decisions based on blocks reserved by other trains. The IFRESERVE(block) can be used to reserve a block if it's not already reserved by some other train, or skip to the matching ENDIF. For example, this allows a train to choose which platform to stop at based on prior occupancy. It is features like this that allow for more interesting and unpredictable automations.       
 
 Starting the system
-====================
+===================
 
 Starting the system is tricky, because we need to place the trains in a suitable position and set them going. We need to have a starting position for each loco, and reserve the block(s) it needs to keep other trains from crashing into it.
 
@@ -469,7 +469,7 @@ For a known set of locos, the easiest way is to define the startup process at th
 
 
 Drive-Away feature
-===================
+==================
 
 EX-RAIL can switch a track section between programming and mainline.
 
@@ -494,7 +494,7 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
 Roster entries
-===============
+==============
 
 EX-RAIL has a ROSTER() function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts and routes.
 
@@ -519,12 +519,12 @@ The same again, with more text functions defined to represent a number of differ
    ROSTER(1506, "HUSA", "Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
 
 Sounds
-=======
+======
 
 You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn.
 
 Sensors
-========
+=======
 
 - DCC++EX allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-5)``.
 
@@ -540,13 +540,13 @@ Sensors
 
 
 Outputs
-========
+=======
 
 - Generic Outputs are mapped to VPINs on the HAL (as for sensors)
 - SIGNAL definitions are just groups of 3 Output pins that can be more easily managed.
 
 Sequence Numbers
-=================
+================
 
 - All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
 - 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script. 
@@ -557,11 +557,11 @@ Tips and Techniques
 Below are some tips and techniques you can implement to get the most out of EX-RAIL.
 
 Defining names for any ID numbers (aliases)
-____________________________________________
+___________________________________________
 
 Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.
 
-Refer to :ref:`/ex-rail/ex-rail-reference:aliases` for more information.
+Refer to :ref:`ex-rail/ex-rail-reference:aliases` for more information.
 
 Alias names:
 
@@ -591,14 +591,14 @@ For example:
       GREEN(COAL_YARD_SIGNAL_3)
 
 Including sub-files
-____________________
+___________________
 
 If you find your myAutomation.h file becoming quite lengthy and cumbersome to scroll through and keep track of, you can break your items up into multiple smaller files, and include those in your myAutomation.h file instead.
 
 There are some rules that apply in this scenario:
 
 * Anything that needs to be done when the CommandStation starts must be defined first.
-* Any custom macros/commands must be defined before they are used (see :ref:`/ex-rail/ex-rail-intro:make your own ex-rail macro or command`) below.
+* Any custom macros/commands must be defined before they are used (see `make your own ex-rail macro or command`_) below.
 * The files are included in the order defined, so if an item in one file depends on another file's item, make sure they included in the correct order.
 
 Some suggestions to get the most out of this:
@@ -621,7 +621,7 @@ For example:
    #include "myShuttle.h"
 
 Realistic turnout sequeunces
-_____________________________
+____________________________
 
 Let's say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:
 
@@ -656,7 +656,7 @@ For example:
 A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.
 
 Make your own EX-RAIL macro or command
-_______________________________________
+______________________________________
 
 One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.
 
@@ -728,7 +728,7 @@ Here's the line by line explanation:
 This technique can be used in many different ways limited only by your imagination to have EX-RAIL perform many different actions and automations.
 
 Why Can't I Put a Script on an SDCard?
-=======================================
+======================================
 
 From time to time, we are asked why we can't put automation scripts (the contents of a myAutomation.h file) on an SDCard or load it into EEPROM storage on the Arduino. This is not possible, and as you will see in the last paragraph of this section, would not provide much of a benefit. For you Engineers and advanced Tinkerers:
 

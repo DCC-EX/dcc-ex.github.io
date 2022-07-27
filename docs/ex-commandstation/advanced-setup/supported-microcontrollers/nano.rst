@@ -33,7 +33,7 @@ What You need
 Software
 ========
 
-* See :doc:`Command Station Download Page </download/commandstation>`
+* See :doc:`Command Station Download Page </download/ex-commandstation>`
 * A Controller (aka Throttle or CAB). More on this below.
 
 Optional Hardware

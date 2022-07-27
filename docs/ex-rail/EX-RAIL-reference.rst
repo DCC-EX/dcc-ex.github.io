@@ -51,7 +51,7 @@ _______
 
 ``<D EXRAIL ON|OFF>`` When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).
 
-Example output from :ref:`/ex-rail/getting-started:example 6: single line shuttle` running SEQUENCE(13) with loco ID 18:
+Example output from :ref:`ex-rail/getting-started:example 6: single line shuttle` running SEQUENCE(13) with loco ID 18:
 
 .. code-block:: 
 
@@ -86,7 +86,7 @@ __________
 
 ``</>`` Displays EX-RAIL running task information
 
-Example outputs also using :ref:`/ex-rail/getting-started:example 6: single line shuttle`:
+Example outputs also using :ref:`ex-rail/getting-started:example 6: single line shuttle`:
 
 * Leaving right side of the shuttle sequence with speed 50F (forward):
 
@@ -143,11 +143,11 @@ ________________________
 
 There are three options to define these automation sequences:
 
-``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`/ex-rail/gettting-started:example 4: automating a train (simple loop)` for a simple example.
+``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`ex-rail/getting-started:example 4: automating a train (simple loop)` for a simple example.
 
-``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts and signals to allow a train to be driven through a specific route on the layout. See :ref:`/ex-rail/gettting-started:example 1: creating routes for a throttle` for various examples.
+``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts and signals to allow a train to be driven through a specific route on the layout. See :ref:`ex-rail/getting-started:example 1: creating routes for a throttle` for various examples.
 
-``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`/ex-rail/gettting-started:example 3: automating various non-track items`, :ref:`/ex-rail/gettting-started:example 6: single line shuttle`, and :ref:`/ex-rail/gettting-started:example 7: running multiple inter-connected trains` for further examples.
+``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`ex-rail/getting-started:example 3: automating various non-track items`, :ref:`ex-rail/getting-started:example 6: single line shuttle`, and :ref:`ex-rail/getting-started:example 7: running multiple inter-connected trains` for further examples.
 
 ``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the EX-RAIL documentation.
 
@@ -241,13 +241,13 @@ All the below turnout definitions will define turnouts that are advertised to Wi
 
 "description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turnout to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
 
-``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`/reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions.
+``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions.
 
 ``PIN_TURNOUT( id, pin [, "description"] )``	Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.
 
 ``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout. "active_angle" is for THROW, "inactive_angle" is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don't recommend Bounce for turnouts!). Refer to :doc:`/reference/hardware/servo-module` for more information.
 
-``VIRTUAL_TURNOUT( id [, "description"] )`` Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to :ref:`/ex-rail/getting-started:realistic turnout sequeunces`.
+``VIRTUAL_TURNOUT( id [, "description"] )`` Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to :ref:`ex-rail/getting-started:realistic turnout sequeunces`.
 
 ``IFCLOSED( turnout_id )``	Test if a turnout is closed.
 

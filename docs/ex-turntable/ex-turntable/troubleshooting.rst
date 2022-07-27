@@ -98,5 +98,5 @@ __________________________________________________
   * - | \<D HAL SHOW\> reports Turntable-EX as OFFLINE
       | Turntable-EX does not respond to EX-RAIL or diagnostic commands
     - | Turntable-EX is not powered on, or was powered on after the CommandStation
-      | The I2C interfaces are not connected correctly, refer to :ref:`/ex-turntable/get-started:9. connect turntable-ex to your commandstation`
+      | The I2C interfaces are not connected correctly, refer to :ref:`ex-turntable/getting-started:9. connect turntable-ex to your commandstation`
       | The I2C address in Turntable-EX's config.h does not match the address in the CommandStation's myHal.cpp file

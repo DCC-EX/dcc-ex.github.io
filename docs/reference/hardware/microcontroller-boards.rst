@@ -94,7 +94,7 @@ See the detailed section on the :doc:`Teensy </ex-commandstation/advanced-setup/
 Will you support other microcontrollers in the future?
 =======================================================
 
-Yes, that is on our :doc:`roadmap </roadmap/index>`.
+Yes, that is on our :doc:`roadmap </about/roadmap/index>`.
 
 Click here for a complete :doc:`Shopping List </reference/hardware/shopping-list>`.
 

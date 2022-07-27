@@ -1,7 +1,7 @@
 .. include:: /include/include.rst
-***************
+**************
 Advanced Setup
-***************
+**************
 
 .. toctree::
     :maxdepth: 1

@@ -132,7 +132,7 @@ ______________________
 
 Due to legacy code and backwards compatibility requirements, there are two OPCODES that expect hexadecimal parameter values.
 
-These are the ``<M>`` and ``<P>`` commands documented in the :ref:`/reference/software/command-reference:send packet to the track` section of the Command Reference.
+These are the ``<M>`` and ``<P>`` commands documented in the :ref:`reference/software/command-reference:send packet to the track` section of the Command Reference.
 
 Appendix B. Suggested parameter parsing sequence
 =================================================

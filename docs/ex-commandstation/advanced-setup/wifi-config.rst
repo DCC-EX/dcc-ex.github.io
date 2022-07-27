@@ -120,7 +120,7 @@ To use the default AP mode, you don't have to do anything other than connect an 
 
 That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for DCC++ EX is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. DCC++ EX then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
 
-To see other configuration options you can set in your config.h file, see :ref:`advanced-setup/wifi-config:WiFi Config Options` below.
+To see other configuration options you can set in your config.h file, see :ref:`ex-commandstation/advanced-setup/wifi-config:WiFi Config Options` below.
 
 You will need to know:
 
@@ -226,16 +226,16 @@ WiFi Config Options
 
 The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual Arduino IDE install, you will see all of these in the file you renamed from "config.example.h" to "config.h".
 
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define IP_PORT 2560`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define ENABLE_WIFI true`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define DONT_TOUCH_WIFI_CONF`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define WIFI_SSID "Your network name"`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define WIFI_PASSWORD "Your network passwd"`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define WIFI_HOSTNAME "dccex"`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define WIFI_CONNECT_TIMEOUT 14000`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define ENABLE_ETHERNET true`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define IP_ADDRESS { 192, 168, 1, 200 }`
-| :ref:`/ex-commandstation/advanced-setup/wifi-config:#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`
+| `#define IP_PORT 2560`_
+| `#define ENABLE_WIFI true`_
+| `#define DONT_TOUCH_WIFI_CONF`
+| `#define WIFI_SSID "Your network name"`_
+| `#define WIFI_PASSWORD "Your network passwd"`_
+| `#define WIFI_HOSTNAME "dccex"`_
+| `#define WIFI_CONNECT_TIMEOUT 14000`_
+| `#define ENABLE_ETHERNET true`_
+| `#define IP_ADDRESS { 192, 168, 1, 200 }`_
+| `#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }`_
 
 #define IP_PORT 2560
 _____________________

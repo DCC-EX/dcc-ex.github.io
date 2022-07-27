@@ -16,11 +16,11 @@ What is Turntable-EX?
 
 Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.
 
-The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`/about-dcc-ex/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
+The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`about-dcc-ex/levels:choose your level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
 
 The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
-To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL</ex-rail/ex-rail-intro:introduction to ex-rail automation>` automation, but we'll share the details and some examples to help with this.
+To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL <ex-rail/getting-started:introduction>` automation, but we'll share the details and some examples to help with this.
 
 Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
 
@@ -76,11 +76,11 @@ What you need for Turntable-EX
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
 * Dupont type wires to connect the components, male to female or female to female as required
 * A USB cable to connect the Arduino to a PC to load the software
-* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`/ex-turntable/ex-turntable/turntable-ex:important! phase (or polarity) switching`)
+* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`ex-turntable/ex-turntable/ex-turntable:important! phase (or polarity) switching`)
 
 .. note:: 
 
-  If you wish to make use of the traverser feature, there is further information on what is required to enable this on the :doc:`/ex-turntable/traverser` page.
+  If you wish to make use of the traverser feature, there is further information on what is required to enable this on the :doc:`/ex-turntable/ex-turntable/traverser` page.
 
 .. image:: /_static/images/turntable-ex/nano-v3.png
   :alt: Nano V3
@@ -130,7 +130,7 @@ The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48
 
   If you have a need to use a different driver, these should be relatively straight forward to configure in a similar manner to how additional motor drivers are configured for use with CommandStation-EX.
 
-  Refer to :ref:`/ex-turntable/configure:defining custom stepper drivers` for more details.
+  Refer to :ref:`ex-turntable/configure:defining custom stepper drivers` for more details.
 
 However, it is very easy to use one of several other common stepper drivers if you require more torque, or if you prefer to use a NEMA17 or other stepper motor.
 
@@ -153,7 +153,7 @@ Very simply, a stepper motor is able to be rotated one step at a time, which tra
 
 .. note:: 
 
-  You don't actually need to know the number of steps required to make a full rotation as this is calculated by Turntable-EX the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`turntable-ex/get-started:automatic calibration`.
+  You don't actually need to know the number of steps required to make a full rotation as this is calculated by Turntable-EX the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`ex-turntable/getting-started:automatic calibration`.
 
 In Turntable-EX, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.
 
@@ -168,14 +168,14 @@ That's pretty much as simple as it gets. These step positions are defined in myA
   It's recommended that the home position does not align with a specific layout connection track to ensure that each time Turntable-EX powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
 
 Controlling the turntable
-__________________________
+_________________________
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
-Refer to the :ref:`/ex-turntable/ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
+Refer to the :ref:`ex-turntable/ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
 
 Important! Phase (or polarity) switching
-_________________________________________
+________________________________________
 
 An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.
 
@@ -262,11 +262,11 @@ If the turntable continues to rotate beyond the 225 degree point, the phase will
 
 The above outlines how the default automatic phase switching works with Turntable-EX, and this behaviour is configurable.
 
-If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in :ref:`get-started/assembly:7. load firmware on your command station`, and the configuration parameter is outlined here: :ref:`/ex-turntable/configure:phase_switch_angle`.
+If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in :ref:`/ex-commandstation/get-started/assembly:7. Load firmware on your Command Station`, and the configuration parameter is outlined here: :ref:`/ex-turntable/configure:phase_switch_angle`.
 
-If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in :ref:`/ex-turntable/test-and-tune:manual phase switching`.
+If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in :ref:`ex-turntable/ex-turntable/test-and-tune:manual phase switching`.
 
 Time to assemble
-=================
+================
 
 Now that you have a general overview of Turntable-EX's features and capabilities, click the "next" button to get started on assembly.

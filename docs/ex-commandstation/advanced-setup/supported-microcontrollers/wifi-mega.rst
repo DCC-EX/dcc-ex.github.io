@@ -6,7 +6,7 @@ Mega+WiFi Configuration
 |tinkerer|
 
 A Operational Standalone WiFi DCC Command Station
-==================================================
+=================================================
 
 .. figure:: /_static/images/mega_wifi.png
    :alt: Mega WiFi
@@ -23,7 +23,7 @@ This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our
 
 
 What You Will Need
--------------------
+------------------
 
 This is our tested and proven configuration
 
@@ -39,7 +39,7 @@ This is our tested and proven configuration
 \* NOTE: The L298 Based motor drivers like the Arduino Motor Shield have a 1.5-2V voltage drop. More efficient boards do not have this issue. Be careful in choosing the correct voltage so that you don't put too much voltage on the track and potentially damage your decoders.
 
 What You Will Do
-------------------
+----------------
 
 1. Download the ESP Files
 2. Flash the ESP8266 chip
@@ -49,7 +49,7 @@ What You Will Do
 .. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector used on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands, so may require you to install a driver.
 
 1. Plug in and test your Mega
-------------------------------
+-----------------------------
 
 Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
 
@@ -71,7 +71,7 @@ Once you can see your computer recognizes your board, **remember the port**. For
 For more detail on how to install the correct CH340 drivers for your OS, you can see this `SparkFun Tutorial <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
 2. Download and install the flash download tool
-------------------------------------------------
+-----------------------------------------------
 
 There are two tools you can use to flash the firmware, one is the **"Espressif Flash Download tool"** for Windows and the other is a Python script called **esptool** that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.
 
@@ -120,7 +120,7 @@ If you got an error about setuptools being missing, install setuptools with:
    $ pip install setuptools
 
 3. Set the switches on your Mega for flashing
------------------------------------------------
+---------------------------------------------
 
 With the Mega UNPLUGGED (no power connected!), you will set some switches. Use the following diagram to see the locations on the board. You can click on any picture to enlarge it.
 
@@ -158,13 +158,13 @@ Your board should be configured follows:
  -  press the **Mode button**
 
 1. Flash the Firmware
-------------------------
+---------------------
 
 With the Flash Download Tool
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
 Run the Flasher Tool 
-"""""""""""""""""""""""
+""""""""""""""""""""
 
 NOTE: It may take a few seconds to open while you see a black cmd window
 
@@ -186,7 +186,7 @@ NOTE: It may take a few seconds to open while you see a black cmd window
 .. rst-class:: clearer
 
 Setup the files and memory locations in the Flasher Tool
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 - Click on the each file button (the "..." buttons) and find the bin files you extracted.
 - Follow :numref:`flasher-settings-screen` and pay close attention setting up the Exact `*.bin` Files & locations 0xYYYYYYYY
@@ -210,7 +210,7 @@ After flashing, the ESP8266 Log will show it uploaded them all successfully and 
 
 - Disconnect the USB cable.
 
-Skip ahead to :ref:`/ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:3. Set the switches for run/sketch mode`
+Skip ahead to :ref:`ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:3. Set the switches on your Mega for flashing`
 
 With esptool.py
 ^^^^^^^^^^^^^^^^
@@ -253,10 +253,10 @@ AP Mode (the default) makes the Command Station an Access Point. That is a direc
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to step 5.
 
-If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the :ref:`/ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup` below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
+If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the `Short Version of Network Setup`_ below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
 
-5. Download and Configure the DCC++EX Command Station Software
+1. Download and Configure the DCC++EX Command Station Software
 ================================================================
 
 Download and install DCC++EX from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
@@ -268,7 +268,7 @@ Download and install DCC++EX from by using the Automated exInstaller or using th
 :doc:`I know what I'm doing, just point me to the downloads page! </download/ex-commandstation>`
 
 Short Version of Network Setup
-===============================
+==============================
 
 :doc:`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/wifi-config>`
 

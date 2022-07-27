@@ -1,7 +1,7 @@
 .. include:: /include/include.rst
-******************************************
+*****************************************
 Putting it all together - the Big Picture
-******************************************
+*****************************************
 
 .. sidebar:: On this page
 
@@ -61,7 +61,7 @@ We'll present this information by starting with a simple loop with a single sidi
 At each stage, we will outline how to implement each variation of the objects in use (eg. a servo based turnout, a pin based turnout, and a DCC controlled turnout) as well as outlining how the various objects can potentially interact with each other, and how to build an EX-RAIL automation sequence to take advantage of the features.
 
 How to read the diagrams
-=========================
+========================
 
 Our diagrams will be created in such a way that you'll be able to click on the various items and be taken automatically to the correct page or section of the documentation that provides the software and hardware configuration of that element, along with various options depending on the supported hardware options available, and any EX-RAIL automation examples.
 
@@ -71,13 +71,13 @@ We will be using specific colour coded boxes and labels to identify track side b
   :file: ../../_static/images/big-picture/rmft-legend.drawio.svg
 
 Turnout object IDs
-===================
+==================
 
 Throughout this exercise, we will be defining turnout objects, and for consistency will be using IDs in the range of 100 to 199 for these.
 
 This way, the various possible variations of each type of object will be defined with the same ID, meaning the same EX-RAIL sequences will apply, no matter how the objects are defined.
 
-For further information on IDs used in EX-RAIL, refer to the :ref:`/ex-rail/ex-rail-reference:notes` section of the EX-RAIL reference page.
+For further information on IDs used in EX-RAIL, refer to the :ref:`ex-rail/ex-rail-reference:notes` section of the EX-RAIL reference page.
 
 DCC addresses
 _____________

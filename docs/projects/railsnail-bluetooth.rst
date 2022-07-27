@@ -1,7 +1,10 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l1.rst
 *******************************************************
 RailSnail's Complete Bluetooth DCC++EX Command Station
 *******************************************************
+
+|tinkerer|
 
 .. image:: /_static/images/bluetooth/ex-bluetooth-1.png
    :alt: Bluetooth Command Station

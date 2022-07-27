@@ -1,7 +1,10 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l1.rst
 *******************
 Locontrol
 *******************
+
+|conductor|
 
 .. image:: /_static/images/throttles/icon_ios.png
    :alt: iOS Logo

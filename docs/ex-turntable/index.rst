@@ -1,7 +1,10 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l1.rst
 ********************
 EX-Turntable
 ********************
+
+|conductor|
 
 Welcome to the home of Turntable-EX, a fully integrated turntable controller for DCC++ EX.
 

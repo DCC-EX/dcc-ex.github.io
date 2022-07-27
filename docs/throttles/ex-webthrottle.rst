@@ -1,7 +1,10 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l1.rst
 **********************
 DCC++ EX Web Throttle
 **********************
+
+|conductor|
 
 This is a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Command Station directly through the USB port of a computer.
 

@@ -11,11 +11,9 @@ This next few page will instruct you on how to build an |EX-CS| including assemb
 What is EX-CommandStation?
 ==========================
 
-A basic |EX-CS| hardware setup can be made from easy to find, widely available, Arduino boards that you can assemble yourself. Both |EX-CS| and |BSC|\ [#bcs]_ support much of the NMRA Digital Command Control (DCC) standards, including:
+A basic |EX-CS| hardware setup can be made from easy to find, widely available, Arduino boards that you can assemble yourself. It supports much of the NMRA Digital Command Control (DCC) standards, including:
 
 * simultaneous control of multiple locomotives
-* 1 and 2 byte locomotive addressing
-* 28 and 128 throttle speed steps
 * Activate/de-activate all accessory function addresses 0-2048
 * Control of all cab functions F0-F28 and F29-F68
 * Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
@@ -28,12 +26,10 @@ It includes advanced features such as:
 * General purpose inputs and outputs (I/O) for extensibility, and 
 * JMRI integration
 
-.. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article </about/rewrite>`.
-
 The Components of a Full System
 ================================
 
-To actually run you model railroad you will need a few items:
+To actually run your model railroad you will need a few items:
 
 #. An |EX-CS| - This consists of:
 
@@ -52,10 +48,17 @@ To actually run you model railroad you will need a few items:
 What you need
 ==============
 
+.. sidebar::  |tinkerer| |engineer|
+
+  |EX-CS| is supported on a variety of different hardware that you might also consider
+
+  - Supported :doc:`Arduino boards </reference/hardware/microcontroller-boards>`
+  - Supported :doc:`motor shields </reference/hardware/motor-boards>`
+
 **Hardware**:
 
-- Supported :doc:`Arduino board </reference/hardware/microcontroller-boards>`
-- Supported :doc:`motor shield </reference/hardware/motor-boards>`
+- Supported Arduino board.  We recommend the ???
+- Supported moto shield.  We recommend the ???
 - Compatible :doc:`power supply </reference/hardware/power-supplies>`
 - Computer running Windows, macOS, or Linux (even a Raspberry Pi)
 - USB Cable from the computer to the Arduino
@@ -71,7 +74,7 @@ What you need
 
 - See the :doc:`Command Station download page </download/ex-commandstation>`
 
-The DCC++ EX installer is recommended for most users as it automatically downloads and installs the required software. 
+The |EX-I| is recommended for most users as it automatically downloads and installs the required software. 
 
 You'll also need something to control your trains. Because there are several options, we will discuss this following the system setup.
 

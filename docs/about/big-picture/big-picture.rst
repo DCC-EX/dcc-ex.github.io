@@ -1,4 +1,5 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 *****************************************
 Putting it all together - the Big Picture
 *****************************************

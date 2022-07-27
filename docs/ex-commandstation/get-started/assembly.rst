@@ -1,7 +1,10 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 *******************************
 Assembling the Command Station
 *******************************
+
+|conductor|
 
 Let's start with the basics and add as you see fit. For this install, you'll need the items listed on the :doc:`Get Started <index>` page, plus:
 

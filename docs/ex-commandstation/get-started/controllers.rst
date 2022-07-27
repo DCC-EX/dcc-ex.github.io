@@ -1,7 +1,10 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 *********************************
 Choosing a Controller (Throttle)
 *********************************
+
+|conductor|
 
 You need just two things that work together to operate your model railroad:
 

@@ -1,7 +1,9 @@
 .. include:: /include/include.rst
-******************************************
-DCC-EX Model Railroading |donate_button|
-******************************************
+|donate_button|
+
+************************
+DCC-EX Model Railroading 
+************************
 
 .. image:: ./_static/images/icons/v40banner.jpg
    :alt: v4_0 Release Banner
@@ -81,13 +83,11 @@ It includes advanced features such as a WiThrottle server implementation, turnou
 
 .. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
 
-Next see the :doc:`Get Started section <ex-commandstation/get-started/index>` or click next below.
-
 .. toctree::
    :hidden:
    :maxdepth: 4
 
-   about-dcc-ex/index
+   levels
    ex-commandstation/index
    ex-installer/index
    ex-webthrottle/index

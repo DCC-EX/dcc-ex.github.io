@@ -1,9 +1,12 @@
 .. include:: /include/include.rst
-************
-Get Started
-************
+.. include:: /include/include-l2.rst
+**************
+Geting Started
+**************
 
-This page is intended to get you started with DCC++ EX by helping you in building your hardware setup, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
+|conductor| 
+
+This page is intended to get you started with an EX-CommandStation by helping you in building your hardware setup, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
 
 The Components of a Full System
 ================================

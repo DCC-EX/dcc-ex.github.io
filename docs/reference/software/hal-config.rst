@@ -1,4 +1,5 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 **************************
 I/O Device Drivers and HAL
 **************************

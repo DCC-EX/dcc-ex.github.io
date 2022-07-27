@@ -1,7 +1,10 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 *********************
 Adding a WiFi Option
 *********************
+
+|conductor|
 
 The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page <installer>`.
 

@@ -1,7 +1,10 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 *******************
 WiFi Configuration
 *******************
+
+|conductor|
 
 .. sidebar:: On this page
 

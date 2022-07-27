@@ -260,7 +260,7 @@ All heading underlines and overlines must be at least as long as the text of the
 User level logos
 _________________
 
-On our :doc:`/about-dcc-ex/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
+On our :doc:`/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
 
 There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.
 

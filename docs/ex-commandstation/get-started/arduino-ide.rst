@@ -1,11 +1,14 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 ******************************
 Install using the Arduino IDE
 ******************************
 
+|tinkerer|
+
 The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our DCC++ EX Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
 
-Those on the Tinkerer or Engineer path—see :doc:`Choose Your Path (levels) </about-dcc-ex/levels>` may want to make changes to the code, or just learn more about how the Command Station (CS) software works. At a minimum, you may need to change options in the config.h file, or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
+Those on the Tinkerer or Engineer path—see :doc:`Choose Your Path (levels) </levels>` may want to make changes to the code, or just learn more about how the Command Station (CS) software works. At a minimum, you may need to change options in the config.h file, or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
 
 **You can click on most of the images below to enlarge them**
 

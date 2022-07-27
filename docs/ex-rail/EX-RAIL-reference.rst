@@ -477,7 +477,7 @@ For example:
 
 ``DELAYMINS( delay )``	Delay a number of minutes
 
-``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`/ex-rail/getting-started:example 7 running multiple inter-connected trains` for good examples.
+``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`ex-rail/getting-started:Example 7: Running multiple inter-connected trains` for good examples.
 
 Delay examples:
 

@@ -1,22 +1,52 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-**************
-Geting Started
-**************
+***************
+Getting Started
+***************
 
 |conductor| 
 
-This page is intended to get you started with an EX-CommandStation by helping you in building your hardware setup, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
+This next few page will instruct you on how to build an |EX-CS| including assembling your hardware, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
+
+What is EX-CommandStation?
+==========================
+
+A basic |EX-CS| hardware setup can be made from easy to find, widely available, Arduino boards that you can assemble yourself. Both |EX-CS| and |BSC|\ [#bcs]_ support much of the NMRA Digital Command Control (DCC) standards, including:
+
+* simultaneous control of multiple locomotives
+* 1 and 2 byte locomotive addressing
+* 28 and 128 throttle speed steps
+* Activate/de-activate all accessory function addresses 0-2048
+* Control of all cab functions F0-F28 and F29-F68
+* Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
+* Programming Track: Same as the main track with the addition of reading CV bytes
+
+It includes advanced features such as:
+
+* A WiThrottle server implementation, 
+* Turnout operation, 
+* General purpose inputs and outputs (I/O) for extensibility, and 
+* JMRI integration
+
+.. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
 
 The Components of a Full System
 ================================
 
-- **EX-CommandStation** - An Arduino with a motor driver board and the DCC-EX uploadable firmware
-- **Controller** - A Throttle/Cab such as WebThrottle-EX, JMRI, Engine Driver, etc
-- **Power** - A DC power supply for the motor board to the track, and optionally one for the Arduino
-- **A "Main" track,** aka "Operations" track - most people already have this: it's your layout!
-- **A "Programming" track,** aka "Service" track - a short section of track that you will use to program locomotives (see section on layout)
-- **A Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
+To actully run you model railroad you will need a few items:
+
+#. An |EX-CS| - This consists of:
+
+  - An Arduino microprocessor,
+  - a motor driver board / motor shield,
+  - (Optianlly) a WiFi shield, and
+  - our free, open source, custom software 
+ 
+#. A **Controller** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiTHrottle, etc
+#. **Power** - The Ardunio and the Motor shields need to be powered seperately, so a DC power supply for the motor shield to the track, and one for the Arduino
+#. A **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
+#. A **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
+#. A **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
 
 
 What you need

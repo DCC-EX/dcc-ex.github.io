@@ -1,4 +1,13 @@
 {
   "esbonio.sphinx.confDir": "${workspaceFolder}\\docs",
-  "esbonio.server.enabled": true
+  "esbonio.server.enabled": true,
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "restructuredtext"
+  ]
 }

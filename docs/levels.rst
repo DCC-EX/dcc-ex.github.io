@@ -1,10 +1,11 @@
 .. include:: /include/include.rst
-******************
-Choose Your Level
-******************
+*************************
+Choose Your Comfort Level
+*************************
 
+Our products are are predominately Do-It-Yourself and range in difficulty from very simple to moderately complex. To work out you own personal comfort level, look at the descriptions of the categories below and see which one you most identify with. (A "Conductor", a "Tinkerer", or an "Engineer".)
 
-We've found that our users tend to identify with one of the following three categories, so we've created different paths to help navigate our DCC-EX system and this website. Don't worry, the paths are integrated and you can "switch a turnout" at any point and take another path! See below if you most identify with being a "Conductor", a "Tinkerer", or an "Engineer".
+To help you navigate this web site we have tagged each of the pages with one or more of the categories to help identify its level of difficulty.  Don't worry, the paths are integrated and you can "switch a turnout" at any point and take another path! 
 
 Conductor
 =========
@@ -30,6 +31,8 @@ Tinkerer
 
 A Tinkerer likes the joy of building things themselves. They may not have an Engineering Degree, but they know how to connect a jumper wire and possibly use a soldering iron. They don't have a problem opening something like the Arduino IDE to change settings in a configuration file and upload it back to their Command Station. A Tinkerer wants to do more with model trains, like using different motor controllers or getting into more detailed control of turnouts, sensors, and other accessories. This path will provide more options over the Conductor path, and cover things like expanding your system and using the JMRI software (Java Model Railroad Interface) for more advanced control of your locomotives and your track.
 
+We also recommend that you :doc:`start here to build your EX-CommandStation <ex-commandstation/get-started/index>` if you have not already done so, but look out for the "Tinkerer" and "Engineer" notes on the pages to see other options.
+
 Engineer
 ========
 
@@ -41,9 +44,14 @@ Engineer
 
 An Engineer is a little more versed in computers and/or electronics. They have a desire to dig a little deeper into how things work. They can understand the basics of computer code and can look at the DCC++ EX software and perhaps make simple changes. They may also want to help with offering their talents to the project! They are not averse to experimenting with things to make something work. These are the people whose layout looks like a telephone switching station when you look under their benchwork. This path will offer more technical information and cover more in depth topics like accessory control, sensors, and customizing the DCC++ EX System.
 
+|br| |br|
+
+Next Steps
+==========
+
 Keep these definitions in mind as you proceed through this website.
 
-To learn more about how to build your own DCC++ EX station, proceed to the :doc:`Assembly Page </ex-commandstation/get-started/assembly>` or click on the next button below.
+To learn more about how to build your own |EX-CS| station, proceed to the :doc:`Getting Started Page </ex-commandstation/get-started/index>`.
 
-Special Note: We would like to thank Alex Leão of Locontrol who as a personal favor created our modeller levels icons.
+Special Note: We would like to thank Alex Leão of Locontrol who as a personal favour created our modeller levels icons.
 

@@ -1,4 +1,5 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l3.rst
 **************************
 IRF3205 Motor Board Setup
 **************************

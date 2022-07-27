@@ -1,4 +1,5 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l3.rst
 ************************
 L298N Motor Board Setup
 ************************

@@ -1,4 +1,5 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l3.rst
 **************************
 IBT_2 BTS7960 Motor Board
 **************************

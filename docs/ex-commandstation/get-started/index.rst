@@ -4,11 +4,11 @@
 Getting Started (Purchasing Parts)
 **********************************
 
-.. sidebar::
+.. sidebar:: On this page
 
-  .. contents:: On This Page
-    :local:
+  .. contents:: 
     :depth: 1
+    :local:
 
 |conductor| 
 

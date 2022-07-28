@@ -4,9 +4,9 @@
 Getting Started - Purchasing Parts
 **********************************
 
-.. sidebar:: 
+.. sidebar:: On this page
 
-  .. contents:: On this page
+  .. contents::
     :depth: 1
     :local:
 

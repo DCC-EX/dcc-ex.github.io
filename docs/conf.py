@@ -119,7 +119,7 @@ html_css_files = [
     'css/big_picture_theme.css',
 #    'css/layout.css',
 #    'css/roundslider.min.css',
-#    'css/throttle.css'
+#    'css/throttle.css' 
 ]
 
 html_js_files = [

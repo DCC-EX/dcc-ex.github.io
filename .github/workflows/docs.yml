@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Requirements
         run: |
-          pip3 install sphinx-rtd-theme==0.5.2
+          pip3 install sphinx-rtd-theme==1.0.0
           pip3 install sphinx-sitemap
           pip3 install sphinxcontrib-spelling
       - name: Checkout repo

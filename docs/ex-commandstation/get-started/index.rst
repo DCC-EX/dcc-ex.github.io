@@ -31,54 +31,74 @@ The Components of a Full System
 
 To actually run your model railroad you will need a few items:
 
-#. An |EX-CS| - This consists of:
+1. a |EX-CS| - This consists of:
 
-  - An Arduino microprocessor,
+  - an Arduino microprocessor,
   - a motor driver board / motor shield,
-  - (Optionally) a WiFi shield, and
+  - (Optionally) a WiFi shield or ethernet shield [#jmri]_, and
   - our free, open source, custom software 
  
-#. A **Controller** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiThrottle, etc
-#. **Power** - The Ardunio and the Motor shields need to be powered separately, so a DC power supply for the motor shield to the track, and one for the Arduino
-#. A **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
-#. A **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
-#. A **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
+2. a **Controller** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiThrottle, etc
+#. **Power** - The Arduino and the Motor shields need to be powered separately, so a DC power supply for the motor shield to the track, and one for the Arduino
+#. a **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
+#. a **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
+#. a **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
 
+.. [#jmri]  Requires JMRI installed on a computer
 
 What you need
-==============
+=============
 
-.. sidebar::  |tinkerer| |engineer|
+.. sidebar::  Optional configuration
+    
+  |conductor|
 
-  |EX-CS| is supported on a variety of different hardware that you might also consider
+  |EX-CS| can be configured in several additional 'Conductor friendly' ways.
+
+  - without wifi or ethernet - requires JMRI installed on a computer
+  - with a supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>` instead of the WiFi shield
+
+  |tinkerer| |engineer|
+
+  |EX-CS| is also supported on a variety of different hardware that you might also consider
 
   - Supported :doc:`Arduino boards </reference/hardware/microcontroller-boards>`
   - Supported :doc:`motor shields </reference/hardware/motor-boards>`
+  - Supported :doc:`ESP8266 WiFi shield </reference/hardware/wifi-boards>`
+  - Supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>`
 
-**Hardware**:
 
-- Supported Arduino board.  We recommend the ???
-- Supported moto shield.  We recommend the ???
-- Compatible :doc:`power supply </reference/hardware/power-supplies>`
-- Computer running Windows, macOS, or Linux (even a Raspberry Pi)
-- USB Cable from the computer to the Arduino
-- Piece of track to run trains or program on
-- Known-working DCC-equipped locomotive
+Hardware
+________
 
-**Optional hardware**:
+You will need to find or purchase:
 
-- Supported :doc:`ESP8266 WiFi shield </reference/hardware/wifi-boards>`
-- Supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>`
+- a supported Arduino board. |BR| We recommend the ???
+- a supported motor shield.  |BR| We recommend the ???
+- a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield
+- a supported WiFi shield. |BR| We recommend the ???
+- a 5v DC power supply for the Arduino (while it is connected to the PC, this is not needed)
+- a computer running Windows, macOS, or Linux (even a Raspberry Pi)
+- a USB Cable from the computer to the Arduino
+- a piece of track to run trains or program on
+- a known-working DCC-equipped locomotive
 
-**Software**:
 
-- See the :doc:`Command Station download page </download/ex-commandstation>`
+See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organized for you in one place.
+
+Software
+________
 
 The |EX-I| is recommended for most users as it automatically downloads and installs the required software. 
 
+- See the :doc:`Command Station download page </download/ex-commandstation>` to download a copy to your computer.
+
+A Controller (Throttle)
+_______________________
+
+
 You'll also need something to control your trains. Because there are several options, we will discuss this following the system setup.
 
-See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organized for you in one place.
 
 I'm Ready!
 ===========

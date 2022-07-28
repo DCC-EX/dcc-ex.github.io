@@ -4,11 +4,23 @@
 Assembling the Command Station
 ******************************
 
+.. sidebar::
+
+  .. contents:: On This Page
+    :local:
+    :depth: 1
+
 |conductor|
 
 **Note that you can click on most of the images to enlarge them.**
 
 This page describes the most common, recommended, configuration, but you will see so brakeouts on the right of the page the covers some of the many optional configurations. 
+
+
+For this install, you'll need the items listed on the :doc:`Getting Started <index>` page, plus:
+
+* some hookup wire to connect your tracks |BR| (18 to 16 AWG twisted pair recommended)
+* A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional, but recommended)
 
 .. sidebar::  Optional configuration
 
@@ -17,11 +29,6 @@ This page describes the most common, recommended, configuration, but you will se
   For an Uno, Nano, or other microcontroller, please see :doc:`Using a different microcontroller </reference/hardware/microcontroller-boards>`. 
   
   If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see :doc:`Motor Controllers </reference/hardware/motor-boards>`
-
-For this install, you'll need the items listed on the :doc:`Getting Started <index>` page, plus:
-
-* some hookup wire to connect your tracks |BR| (18 to 16 AWG twisted pair recommended)
-* A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional, but recommended)
 
 .. figure:: /_static/images/basic_setup_lg.jpg
    :alt: Command Station Setup
@@ -35,6 +42,8 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
    .. raw:: html
       
       <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
 
 1. Cut the Vin trace on the motor controller
 ============================================
@@ -57,16 +66,16 @@ b. Bend out or cut off the Vin Pin
 a. Cutting the Trace
 --------------------
 
-Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
+   Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
 
-.. figure:: /_static/images/motor_shield_vin2.jpg
-   :alt: Cut Vin trace on Arduino motor shield
-   :align: center
-   :scale: 80%
+   .. figure:: /_static/images/motor_shield_vin2.jpg
+      :alt: Cut Vin trace on Arduino motor shield
+      :align: center
+      :scale: 80%
 
-   Cutting the Vin trace (click to enlarge)
+      Cutting the Vin trace (click to enlarge)
 
-If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.
+   If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.
 
 b. Bending out or Cutting the Vin Pin (Optional)
 ------------------------------------------------
@@ -88,7 +97,9 @@ b. Bending out or Cutting the Vin Pin (Optional)
    
    It is very easy to misalign the pins and then either have trouble diagnosing problems or damage the board!
 
-Here are some tips:
+   Follow the instructions precisely and you should not have difficulties.
+
+Here are some tips before you start:
 
 * There are power connectors on both boards. They must point in the same direction.
 * There are outdented "tabs" on the opposite end of the board. They must point in the same direction.
@@ -164,7 +175,7 @@ Check your work. Look under and through where the boards connect, make sure no p
 
 .. NOTE:: You may notice that the soldered pins on the underside of the power connector hit the top of the USB connector on the Arduino. You can either lift the board slightly, it will still connect properly, or take diagonal cutters and carefully trim the ends of the pins a bit.
 
-1. Connect your power supply to the motor shield (But don't plug it in yet!)
+3. Connect your power supply to the motor shield (But don't plug it in yet!)
 ==============================================================================
 
 .. warning:: 
@@ -209,11 +220,16 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 5. Connect the power supply to the Arduino (but don't plug it in yet!)
 ========================================================================
 
+.. sidebar:: Arduino Power supply options
+
+   |conductor|
+   
+   There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run WebThrottle-EX or JMRI. There is also a way to use a 5V power supply. Please read :doc:`Power Supplies </reference/hardware/power-supplies>` to help you find what will work best for you).
+
 Connect the 2.5mm barrel connector from your separate 7-9V DC power supply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the "Vin" and "Gnd" pins on the Arduino.
 
-.. note:: There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your CS (for example to run WebThrottle-EX or JMRI. There is also a way to use a 5V power supply. Please read :doc:`Power Supplies </reference/hardware/power-supplies>` to help you find what will work best for you).
 
-6. Install the optional WiFi board
+6. Install the WiFi board
 ==================================
 
 You can connect a controller like JMRI or our WebThrottle-EX by using the serial cable to connect between your computer and the CS. If so, skip to step 7. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.
@@ -227,10 +243,14 @@ Keep your USB cable handy because we are going to need it in this step.
 
 Go to the :doc:`Command Station downloads </download/ex-commandstation>` page. Most users will want to use the installer.
 
+----
+
 Locos Can't Respond to Throttle Commands on the Programming Track!
 ==================================================================
 
 We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification. There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc, but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main. ***TODO: Write the POM*** help.
+
+----
 
 TECHNICAL NOTES
 ================

@@ -14,31 +14,31 @@
 ..
 .. |EX-CS| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-CommandStation</span>
+   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX-CommandStation</span>
 ..
 .. |EX-WT| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-WebThrottle</span>
+   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX-WebThrottle</span>
 ..
 .. |EX-R| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-Rail</span>
+   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX-Rail</span>
 ..
 .. |EX-I| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-Installer</span>
+   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX-Installer</span>
 ..
 .. |EX-TT| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-Turntable</span>
+   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX-Turntable</span>
 ..
 .. |EX-DCCI| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">EX-D<span style="font-size: 90%;">CC</span>Inspector</span>
+   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX-D<span style="font-size: 90%;">CC</span>Inspector</span>
 ..
 .. |BSC| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; font-size: 110%;">Base Station Classic (DCC++)</span>
+   <span style="font-weight: bold; color: #2aabe4; font-size: 100%;">Base Station Classic (DCC++)</span>
 ..
 .. |br| raw:: html
 

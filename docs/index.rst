@@ -67,7 +67,7 @@ Our products are supported by many third party controllers and applications like
    .. |Contribute| replace:: :doc:`Contribute </about/contributing/index>`
 
 
-.. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`.
+.. [#bcs] |EX-CS| is a major rewrite to the original |BSC| code. We started over and rebuilt it from the ground up! For what that means to you, click on our :doc:`Rewrite Article <about/rewrite>`. |br| If you are still using DCC++, we recommend that you move to |EX-CS|.  It will run on the same hardware.
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 

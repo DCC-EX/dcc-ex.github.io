@@ -1,8 +1,14 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-***************
-Getting Started
-***************
+**********************************
+Getting Started (Purchasing Parts)
+**********************************
+
+.. sidebar::
+
+  .. contents:: On This Page
+    :local:
+    :depth: 1
 
 |conductor| 
 
@@ -78,15 +84,15 @@ ________
 
 You will need to find or purchase:
 
-- a supported Arduino board. |BR| We recommend the ???
-- a supported motor shield.  |BR| We recommend the ???
+- a supported **Arduino board**. |BR| We recommend the ???
+- a supported **motor shield**.  |BR| We recommend the ???
 - a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield
-- a supported WiFi shield. |BR| We recommend the ???
-- a 5v DC power supply for the Arduino (while it is connected to the PC, this is not needed)
-- a computer running Windows, macOS, or Linux (even a Raspberry Pi)
-- a USB Cable from the computer to the Arduino
-- a piece of track to run trains or program on
-- a known-working DCC-equipped locomotive
+- a supported **WiFi shield**. |BR| We recommend the ???
+- a **7-9v DC power supply** for the Arduino (while it is connected to the PC, this is not needed)
+- a **computer** running Windows, macOS, or Linux (even a Raspberry Pi)
+- a **USB Cable** from the computer to the Arduino
+- a **piece of track** to run trains or program on
+- a known-working **DCC-equipped locomotive**
 
 
 See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organized for you in one place.

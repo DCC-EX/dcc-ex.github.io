@@ -100,24 +100,24 @@ svg {
 div#on-this-page ul.simple li ul li p {
   font-size: 80% !important;
   line-height: 120% !important;
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 /* sidebar level 3 bullet points */
 div#on-this-page ul.simple li ul li {
   line-height: 120% !important;
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 /* sidebar level 2 bullet points */
 div#on-this-page ul.simple li p {
   font-size: 80% !important;
   line-height: 120% !important;
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 /* sidebar level 2 bullet points */
 div#on-this-page ul.simple li {
   line-height: 120% !important;
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }

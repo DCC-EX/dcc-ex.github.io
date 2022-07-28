@@ -43,7 +43,7 @@ To actually run your model railroad you will need a few items:
 
   - our free, open source, custom software 
  
-2. a **Controller** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiThrottle, etc
+2. a **Controller (Throttle)** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiThrottle, etc
 #. **Power** - The Arduino and the Motor shields need to be powered separately, so a DC power supply for the motor shield to the track, and one for the Arduino
 #. a **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
 #. a **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
@@ -108,7 +108,7 @@ You'll also need something to control your trains. Because there are several opt
 I'm Ready!
 ===========
 
-Click the "next" button below to choose your path, and then move ahead to how to assemble your Command Station.
+Click the "next" button to see how to assemble your |EX-CS|.
 
 .. toctree::
     :hidden:

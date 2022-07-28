@@ -4,9 +4,9 @@
 Assembling the Command Station
 ******************************
 
-.. sidebar:: On this page
+.. sidebar::
 
-  .. contents::
+  .. contents:: On this page
     :local:
     :depth: 1
 

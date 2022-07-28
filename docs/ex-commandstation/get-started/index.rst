@@ -35,7 +35,12 @@ To actually run your model railroad you will need a few items:
 
   - an Arduino microprocessor,
   - a motor driver board / motor shield,
-  - (Optionally) a WiFi shield or ethernet shield [#jmri]_, and
+  - (Optionally) 
+    
+    - a WiFi shield (Recommended), or
+    - an ethernet shield, or
+    - neither [#jmri]_, and
+
   - our free, open source, custom software 
  
 2. a **Controller** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiThrottle, etc

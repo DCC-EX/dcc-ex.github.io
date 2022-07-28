@@ -1,24 +1,34 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*******************************
+******************************
 Assembling the Command Station
-*******************************
+******************************
 
 |conductor|
 
-Let's start with the basics and add as you see fit. For this install, you'll need the items listed on the :doc:`Get Started <index>` page, plus:
+**Note that you can click on most of the images to enlarge them.**
 
-* 18 to 16 AWG twisted pair hookup wire to connect your tracks
-* A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional)
+This page describes the most common, recommended, configuration, but you will see so brakeouts on the right of the page the covers some of the many optional configurations. 
+
+.. sidebar::  Optional configuration
+
+  |tinkerer| |engineer|
+
+  For an Uno, Nano, or other microcontroller, please see :doc:`Using a different microcontroller </reference/hardware/microcontroller-boards>`. 
+  
+  If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see :doc:`Motor Controllers </reference/hardware/motor-boards>`
+
+For this install, you'll need the items listed on the :doc:`Getting Started <index>` page, plus:
+
+* some hookup wire to connect your tracks |BR| (18 to 16 AWG twisted pair recommended)
+* A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional, but recommended)
 
 .. figure:: /_static/images/basic_setup_lg.jpg
    :alt: Command Station Setup
-   :width: 800px
+   :width: 500px
    :align: center
 
    basic setup (click to enlarge picture)
-
-* For an Uno, Nano, or other microcontroller, please see :doc:`Using a different microcontroller </reference/hardware/microcontroller-boards>`. If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see :doc:`Motor Controllers </reference/hardware/motor-boards>`
 
 For a video on how to do this, click below: `Setting Up Your Command Station <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_
 
@@ -26,19 +36,26 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
       
       <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-1. BEFORE YOU BEGIN: Cut the Vin trace on the motor controller, OR: Bend out the Vin Pin
-==============================================================================================
+1. Cut the Vin trace on the motor controller
+============================================
 
-We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks. You will need to turn the motor controller board upside down and do ONE of the following:
+.. warning:: 
+   :class: warning-float-right
+   
+   By default, the motor controller shares its power supply via the pins, with the power supply of the Arduino. *This can supply too much voltage to the Arduino.*
+   
+   *If you do not cut this trace* or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the motor shield. |BR| In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.
 
-1. Cut the Vin trace on the bottom of the board.
+We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks. So **BEFORE YOU BEGIN** It is very important that you cut the Vin trace on the motor controller, OR Bend out the Vin Pin
 
-2. Bend out or cut off the Vin Pin
+You will need to turn the motor controller board upside down and do ONE of the following:
 
-.. note:: By default, the motor controller connects its power supply via the pins, to the Arduino. This can supply too much voltage to the Arduino. If you do not cut this trace or bend out the Vin, you could damage the Arduino if you apply more than 12V to the motor shield. In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other. This would not be good.
+a. Cut the Vin trace on the bottom of the board. (Recommended) |BR| *or*
 
-Cutting the Trace
-------------------
+b. Bend out or cut off the Vin Pin
+
+a. Cutting the Trace
+-----------------
 
 Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
 
@@ -51,22 +68,25 @@ Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 
 
 If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.
 
-Bending out or Cutting the Vin Pin
------------------------------------
+b. Bending out or Cutting the Vin Pin (Optional)
+---------------------------------------------
 
-In this method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
+   In this method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
 
-.. figure:: /_static/images/motorboards/bend_pin1.jpg
-   :alt: Bend out the Vin pin on the Arduino motor shield
-   :align: center
-   :scale: 50%
+   .. figure:: /_static/images/motorboards/bend_pin1.jpg
+      :alt: Bend out the Vin pin on the Arduino motor shield
+      :align: center
+      :scale: 50%
 
-   Bending out the Pin (click to enlarge)
+      Bending out the Pin (click to enlarge)
 
-2. You need to connect the motor shield on top of the Arduino.
-===============================================================
+2. Connect the motor shield to the top of the Arduino
+=====================================================
 
-.. warning:: It is very easy to misalign the pins and then either have trouble diagnosing problems or damage the board!
+.. warning:: 
+   :class: warning-float-right
+   
+   It is very easy to misalign the pins and then either have trouble diagnosing problems or damage the board!
 
 Here are some tips:
 
@@ -78,8 +98,6 @@ Here are some tips:
 
 Place both boards on the table with the power connector end facing in the same direction.
 
-**Note that you can click on most of the images to enlarge them.**
-
 .. figure:: /_static/images/mega_and_motor_shield.png
    :alt: Align Mega and Motor Shield
    :align: center
@@ -87,7 +105,7 @@ Place both boards on the table with the power connector end facing in the same d
 
    Properly orient the boards
 
-a. Did you remember to cut the trace on the motor shield? If not, see above. Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.
+a. Did you remember to cut the trace on the motor shield? |BR| If not, see above. |BR| Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.
 
 .. figure:: /_static/images/bent_pins.png
    :alt: bent pins
@@ -96,7 +114,7 @@ a. Did you remember to cut the trace on the motor shield? If not, see above. Oth
 
    Bent pins
 
-b. Line up the pins on the side of the board closest to the USB with the header connector on the Mega first. You want to line up pins 0-7 on the Mega with the same pins on the motor board. On the other side, IOREF, RESET, 3V3, etc, and A0-A5 need to line up on both boards. See the picture below and notice the small gap between the two sets of pins to match the two pin header sockets.
+b. Line up the pins on the side of the board closest to the USB with the header connector on the Mega first. |BR| You want to line up pins 0-7 on the Mega with the same pins on the motor board. |BR| On the other side, IOREF, RESET, 3V3, etc, and A0-A5 need to line up on both boards. |BR| See the picture below and notice the small gap between the two sets of pins to match the two pin header sockets.
 
 .. figure:: /_static/images/seat1.jpg
    :alt: Line up the pins
@@ -105,7 +123,7 @@ b. Line up the pins on the side of the board closest to the USB with the header 
 
    Line up left side first
 
-c. Just align them and start to push them in but don't push them all the way. Use your fingers to try to push the pins to get them to all go into the holes.
+c. Just align them and start to push them in but don't push them all the way. |BR| Use your fingers to try to push the pins to get them to all go into the holes.
 
 .. figure:: /_static/images/seat2.jpg
    :alt: Push the pins partway in
@@ -114,7 +132,7 @@ c. Just align them and start to push them in but don't push them all the way. Us
 
    Get all the pins started
 
-d. Do the same on the other side. Get all the pins aligned and start to press gently to get them into the holes. Notice on this side, you have more holes than you do pins. This is normal.
+d. Do the same on the other side. |BR| Get all the pins aligned and start to press gently to get them into the holes. Notice on this side, you have more holes than you do pins. This is normal.
 
 .. figure:: /_static/images/seat_reverse1.jpg
    :alt: Line up the other side
@@ -146,10 +164,13 @@ Check your work. Look under and through where the boards connect, make sure no p
 
 .. NOTE:: You may notice that the soldered pins on the underside of the power connector hit the top of the USB connector on the Arduino. You can either lift the board slightly, it will still connect properly, or take diagonal cutters and carefully trim the ends of the pins a bit.
 
-3. Connect your power supply to the motor shield (But don't plug it in yet!)
+1. Connect your power supply to the motor shield (But don't plug it in yet!)
 ==============================================================================
 
-.. warning:: Make sure you have cut the trace on the motor control board. If not, see above first. Once you know the trace is cut, connect power to the motor board
+.. warning:: 
+   :class: warning-float-right
+
+   Make sure you have cut the trace on the motor control board. If not, see above first. Once you know the trace is cut, connect power to the motor board
 
 Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, please see :doc:`compatible Power Supplies </reference/hardware/power-supplies>`
 

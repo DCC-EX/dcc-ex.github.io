@@ -83,3 +83,8 @@ svg {
   max-width: 100%;
   height: auto;
 }
+
+.warning-float-right {
+  float: right;
+  width: 40%;
+}

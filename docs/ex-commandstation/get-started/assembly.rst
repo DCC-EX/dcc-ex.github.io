@@ -14,7 +14,7 @@ Assembling the Command Station
 
 **Note that you can click on most of the images to enlarge them.**
 
-This page describes the most common, recommended, configuration, but you will see so brakeouts on the right of the page the covers some of the many optional configurations. 
+This page describes the most common, recommended, configuration, but you will see some brakeouts on the right of the page the covers some of the many optional configurations. 
 
 
 For this install, you'll need the items listed on the :doc:`Getting Started <index>` page, plus:

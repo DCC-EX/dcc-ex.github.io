@@ -1,12 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
 **********************************
-Getting Started (Purchasing Parts)
+Getting Started - Purchasing Parts
 **********************************
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 1
     :local:
 

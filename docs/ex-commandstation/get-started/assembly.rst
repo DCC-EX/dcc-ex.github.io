@@ -55,7 +55,7 @@ a. Cut the Vin trace on the bottom of the board. (Recommended) |BR| *or*
 b. Bend out or cut off the Vin Pin
 
 a. Cutting the Trace
------------------
+--------------------
 
 Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
 
@@ -69,7 +69,7 @@ Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 
 If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.
 
 b. Bending out or Cutting the Vin Pin (Optional)
----------------------------------------------
+------------------------------------------------
 
    In this method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
 

@@ -85,7 +85,7 @@ b. Bending out or Cutting the Vin Pin (Optional)
 
       Bending out the Pin (click to enlarge)
 
-1. Connect the motor shield to the top of the Arduino
+2. Connect the motor shield to the top of the Arduino
 =====================================================
 
 .. warning:: 
@@ -169,7 +169,7 @@ f. The boards should be seated. Note the pins are longer than the headers. It is
 
 Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.
 
-1. Connect your power supply to the motor shield (But don't plug it in yet!)
+3. Connect your power supply to the motor shield (But don't plug it in yet!)
 ==============================================================================
 
 .. warning:: 
@@ -197,7 +197,7 @@ If you are using a laptop style "brick" power supply or an adapter that plugs in
 
 If you don't have a screw terminal adapter, you can cut the end off your power supply and strip the wires. The outer wire braid is usually the negative connection and the center wire is the positive connection. Check the wiring image on the power supply itself.
 
-1. Connect the power wires to the tracks
+4. Connect the power wires to the tracks
 =========================================
 
 There are two sets of output connectors on the motor shield, "A" and "B". A is the Main or Operations (also called "Ops") track while B is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track. Polarity is not important here, but if you will be using a siding track instead of a separate, unused piece of track, make sure that the positive and negative for both tracks match. In other words, if you view one side of your main track as having a "left" side and a "right" side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be "in phase" with each other. Here is the diagram from above repeated again for reference.
@@ -208,7 +208,7 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 
    Out to Main and Program tracks
 
-1. Connect the power supply to the Arduino (but don't plug it in yet!)
+5. Connect the power supply to the Arduino (but don't plug it in yet!)
 ========================================================================
 
 .. sidebar:: Arduino Power supply options

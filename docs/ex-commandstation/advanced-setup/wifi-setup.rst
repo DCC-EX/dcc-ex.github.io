@@ -205,7 +205,7 @@ Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity
    Rx   -----> Tx
 
 
-In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and "level shifters" to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In :ref:`esp-01s-adapters` below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.
+In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and "level shifters" to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In :ref:`esp-01s-adapters X` below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.
 
 .. note:: About current requirements: While we at DCC-EX Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.
 
@@ -213,7 +213,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
 .. figure:: /_static/images/esp-01_adapter.jpg
    :alt: ESP-01s Adapters
    :scale: 75%
-   :name: esp-01s-adapters
+   :name: esp-01s-adapters X
 
    ESP-01 Breakout Boards X.
 

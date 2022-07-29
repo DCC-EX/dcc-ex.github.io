@@ -63,10 +63,10 @@ What you will need (for WiFi) X
 Quick links X
 ==============
 
-* Jump to `Makerfabs ESP8266 WiFi Shield (recommended)`_
-* Jump to `Duinopeak ESP8266 WiFi Expansion Board`_
-* Jump to `ESP-01 and ESP-01s`_
-* Jump to `Mega+WiFi Combo Board`_
+* Jump to `Makerfabs ESP8266 WiFi Shield (recommended) X`_
+* Jump to `Duinopeak ESP8266 WiFi Expansion Board X`_
+* Jump to `ESP-01 and ESP-01s X`_
+* Jump to `Mega+WiFi Combo Board X`_
 
 Makerfabs ESP8266 WiFi Shield (recommended) X
 ===============================================
@@ -108,20 +108,20 @@ Turn the board so that the tab end is to the left and the power connectors on th
 Seat the boards X
 -----------------
 
-Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (:numref:`wifi-right-side-pins-aligned`). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see :numref:`wifi-fully-seated-boards`).
+Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (:numref:`wifi-right-side-pins-aligned X`). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see :numref:`wifi-fully-seated-boards X`).
 
 
 .. figure:: /_static/images/wifi_seat2a.jpg
    :alt: Get the right side pins aligned
    :scale: 75%
-   :name: wifi-right-side-pins-aligned
+   :name: wifi-right-side-pins-aligned X
 
    Get the right side pins aligned X
 
 .. figure:: /_static/images/wifi_seat_full.jpg
    :alt: Fully seated boards
    :scale: 75%
-   :name: wifi-fully-seated-boards
+   :name: wifi-fully-seated-boards X
 
    Fully seated boards X
 

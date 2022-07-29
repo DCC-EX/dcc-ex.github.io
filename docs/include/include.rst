@@ -38,7 +38,7 @@
 ..
 .. |BSC| raw:: html
 
-   <span style="font-weight: bold; color: #2aabe4; font-size: 100%;">Base Station Classic (DCC++)</span>
+   <span style="font-weight: bold; color: black; font-size: 100%;">Base Station Classic (DCC++)</span>
 ..
 .. |br| raw:: html
 

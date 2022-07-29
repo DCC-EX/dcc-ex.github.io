@@ -6,6 +6,7 @@ Advanced Setup
 .. toctree::
     :maxdepth: 1
     
+    wifi-setup
     wifi-config
     motor-board-config
     startup-config

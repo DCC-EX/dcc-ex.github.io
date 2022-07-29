@@ -60,7 +60,7 @@ What you will need (for WiFi)
 
 * A |EX-CS| made on the from an **Arduino Mega** and an Motor Shield (from the previous page)
 * A WiFi board
-* Two (2) Male to Female Jumpers (plus 3 more if you are using an ESP-01 or 01s)
+* Two (2) Male to Female Jumpers leads
 
 
 |force-break|
@@ -175,10 +175,3 @@ Click :doc:`here </ex-commandstation/get-started/installer>` or click the "next"
 
 .. 
    If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads </download/ex-commandstation>` to load firmware onto the CS.
-
-.. note:: 
-   
-   **TECHNICAL NOTES**
-
-   You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and lookingat the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ .Skip to the "The ESP-01S - The Wifi Connection" section
-  

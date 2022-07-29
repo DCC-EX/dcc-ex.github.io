@@ -89,8 +89,9 @@ ________
 You will need to find or purchase:
 
 - a supported **Arduino board** |BR| We recommend the *???*
-- a supported **motor shield**  |BR| We recommend the ???
+- a supported **motor shield**  |BR| We recommend the *???*
 - a supported **WiFi shield** |BR| We recommend the *Makerfabs ESP8266 WiFi Shield*
+- Two (2) Male to Female **Jumpers leads**
 - a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield
 - a 2.5mm x 5.5mm Female DC Plug to **Screw Terminal (optional, but recommended)** to connect the motor shield power supply
 - a **7-9v DC power supply** |BR| for the Arduino (while it is connected to the PC, this is not needed)

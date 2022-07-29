@@ -144,3 +144,5 @@ esptool
 py
 behaviour
 colour
+progmem
+Makerfabs

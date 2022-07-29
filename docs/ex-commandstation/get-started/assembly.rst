@@ -12,7 +12,7 @@ Initial Assembly
 
 |conductor|
 
-**Note that you can click on most of the images to enlarge them.**
+|image-note|
 
 This page describes the most common, recommended, configuration, but you will see some brakeouts on the right of the page the covers some of the many optional configurations. 
 

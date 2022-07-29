@@ -39,18 +39,22 @@ To actually run your model railroad you will need a few items:
 
 1. a |EX-CS| - This consists of:
 
-  - an Arduino microprocessor,
+  - an **Arduino microprocessor**,
   - a motor driver board / motor shield,
   - (Optionally) 
     
-    - a WiFi shield (Recommended), or
+    - a **WiFi shield (Recommended)**, or
     - an ethernet shield, or
     - neither [#jmri]_, and
 
   - our free, open source, custom software 
  
 2. a **Controller (Throttle)** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiThrottle, etc
-#. **Power** - The Arduino and the Motor shields need to be powered separately, so a DC power supply for the motor shield to the track, and one for the Arduino
+#. Power - The Arduino and the Motor shields need to be powered separately, so 
+ 
+  - a **9-14v DC power supply** for the motor shield to the track, and 
+  - a **5-9v DC power supply** for the Arduino
+
 #. a **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
 #. a **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
 #. a **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
@@ -84,14 +88,16 @@ ________
 
 You will need to find or purchase:
 
-- a supported **Arduino board**. |BR| We recommend the ???
-- a supported **motor shield**.  |BR| We recommend the ???
+- a supported **Arduino board** |BR| We recommend the *???*
+- a supported **motor shield**  |BR| We recommend the ???
+- a supported **WiFi shield** |BR| We recommend the *Makerfabs ESP8266 WiFi Shield*
 - a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield
-- a supported **WiFi shield**. |BR| We recommend the ???
-- a **7-9v DC power supply** for the Arduino (while it is connected to the PC, this is not needed)
+- a 2.5mm x 5.5mm Female DC Plug to **Screw Terminal (optional, but recommended)** to connect the motor shield power supply
+- a **7-9v DC power supply** |BR| for the Arduino (while it is connected to the PC, this is not needed)
 - a **computer** running Windows, macOS, or Linux (even a Raspberry Pi)
 - a **USB Cable** from the computer to the Arduino
 - a **piece of track** to run trains or program on
+- some wire
 - a known-working **DCC-equipped locomotive**
 
 

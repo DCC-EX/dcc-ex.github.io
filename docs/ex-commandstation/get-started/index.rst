@@ -111,8 +111,8 @@ _______________________
 You'll also need something to control your trains. Because there are several options, we will discuss this following the system setup.
 
 
-I'm Ready!
-===========
+Next Steps
+==========
 
 Click the "next" button to see how to assemble your |EX-CS|.
 

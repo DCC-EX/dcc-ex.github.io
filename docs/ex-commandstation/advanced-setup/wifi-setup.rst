@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-***********
-Adding WiFi
-***********
+************
+WiFi Options
+************
 
 .. sidebar:: Optional connection direct to a computer running JMRI
    
@@ -12,13 +12,13 @@ Adding WiFi
 
 |conductor|
 
-The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the |EX-CS|, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page <installer>`.
+The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the |EX-CS|, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page </ex-commandstation/get-started/installer>`.
 
-There are many ways to add WiFi to your Command Station. We will cover a one methods here. You may need to know a little bit about networking, but if you can get your phone to connect to your home network, you can do this. 
+There are many ways to add WiFi to your Command Station. We will cover a four methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this. 
 
 You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our :doc:`Support Page </support/index>` if you have a question.
 
-**Note that you can click on any of the images to make them larger.**
+Note that you can click on any of the images to make them larger.
 
 For a video to help you, click below.
 

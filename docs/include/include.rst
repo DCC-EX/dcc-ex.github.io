@@ -44,4 +44,7 @@
 
    <br />
 ..
-.. usually used as |br|\ to remove the leading space of the following line
+.. |force-break| raw:: html
+
+  <div style="display:block; box-sizing: border-box; clear: both;"> </div>
+..

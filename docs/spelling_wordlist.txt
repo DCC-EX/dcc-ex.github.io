@@ -142,3 +142,5 @@ Designator
 Mbit
 esptool
 py
+behaviour
+colour

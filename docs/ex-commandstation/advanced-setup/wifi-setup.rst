@@ -116,14 +116,14 @@ Now do the the other side. If all the pins are straight and lined up properly, h
    :scale: 75%
    :name: wifi-right-side-pins-aligned
 
-   Get the right side pins aligned
+   Get the right side pins aligned X
 
 .. figure:: /_static/images/wifi_seat_full.jpg
    :alt: Fully seated boards
    :scale: 75%
    :name: wifi-fully-seated-boards
 
-   Fully seated boards
+   Fully seated boards X
 
 Install the jumper wires X
 --------------------------
@@ -215,7 +215,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
    :scale: 75%
    :name: esp-01s-adapters
 
-   ESP-01 Breakout Boards.
+   ESP-01 Breakout Boards X.
 
 .. warning:: The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don't need any additional circuitry. However, to be safe, you can use a small `level shifter board <https://www.mouser.com/ProductDetail/SparkFun/BOB-12009?qs=WyAARYrbSnb%252BGYLWggQnjQ%3D%3D&gclid=Cj0KCQiAzZL-BRDnARIsAPCJs73SnsmU-CTIk9V0XE6qjxY2WKlnxI0sLhT_rY5MYTbIOBmHne50Eh4aAm5ZEALw_wcB>`_, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.
 

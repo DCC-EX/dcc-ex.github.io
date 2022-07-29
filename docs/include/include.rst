@@ -10,7 +10,7 @@
 ..
 .. |DCC-EX| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">DCC<span style="color: black">&#8209EX</span></span>
+   <span style="font-weight: bold; color: black font-size: 110%;">DCC&#8209<span style="color: #00a3b9;">EX</span></span>
 ..
 .. |EX-CS| raw:: html
 

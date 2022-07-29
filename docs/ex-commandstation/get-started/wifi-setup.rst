@@ -12,9 +12,9 @@ Adding WiFi
 
 |conductor|
 
-*The instructions on this page are NOT for connecting your |EX-CS| to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12).*
+*The instructions on this page are NOT for connecting your* |EX-CS| *to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12).*
 
-The purpose of add WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles DIRECTLY to the it, eliminating the need for a computer and another software controller. 
+The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles DIRECTLY to the it, eliminating the need for a computer and another software controller. 
 
 However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page <installer>`.
 

@@ -10,31 +10,31 @@
 ..
 .. |DCC-EX| raw:: html
 
-   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">DCC-EX</span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">DCC<span style="color: black">&#8209EX</span></span>
 ..
 .. |EX-CS| raw:: html
 
-   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX&#8209;CommandStation</span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: black">&#8209;CommandStation</span></span>
 ..
 .. |EX-WT| raw:: html
 
-   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX&#8209;WebThrottle</span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: black">&#8209;WebThrottle</span></span>
 ..
 .. |EX-R| raw:: html
 
-   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX&#8209;Rail</span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: black">&#8209;Rail</span></span>
 ..
 .. |EX-I| raw:: html
 
-   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX&#8209;Installer</span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: black">&#8209;Installer</span></span>
 ..
 .. |EX-TT| raw:: html
 
-   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX&#8209;Turntable</span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: black">&#8209;Turntable</span></span>
 ..
 .. |EX-DCCI| raw:: html
 
-   <span style="font-weight: bold; color: #2aabe4; font-size: 110%;">EX-D<span style="font-size: 90%;">DCC&#8209;Inspector</span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: black">&#8209;Inspector</span></span>
 ..
 .. |BSC| raw:: html
 

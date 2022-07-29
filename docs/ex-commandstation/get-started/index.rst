@@ -97,7 +97,7 @@ You will need to find or purchase:
 - a **computer** running Windows, macOS, or Linux (even a Raspberry Pi)
 - a **USB Cable** from the computer to the Arduino
 - a **piece of track** to run trains or program on
-- some wire
+- some **wire** (18 to 16 AWG twisted pair recommended. See Technical Note below)
 - a known-working **DCC-equipped locomotive**
 
 
@@ -121,6 +121,12 @@ Next Steps
 ==========
 
 Click the "next" button to see how to assemble your |EX-CS|.
+
+.. note::
+
+   **TECHNICAL NOTES**
+
+   **Wire Gauge** - The Arduino motor controller can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).
 
 .. toctree::
     :hidden:

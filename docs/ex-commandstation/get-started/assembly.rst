@@ -16,12 +16,10 @@ Initial Assembly
 
 This page describes the most common, recommended, configuration, but you will see some brakeouts on the right of the page the covers some of the many optional configurations. 
 
+**For this install, you'll need the items listed on the** :doc:`Getting Started <index>` **page.**
+
 |force-break|
 
-For this install, you'll need the items listed on the :doc:`Getting Started <index>` page, plus:
-
-* some hookup wire to connect your tracks |BR| (18 to 16 AWG twisted pair recommended)
-* A 2.5mm x 5.5mm Female DC Plug to Screw Terminal (optional, but recommended)
 
 .. sidebar::  Optional configuration
 

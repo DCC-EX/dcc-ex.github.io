@@ -19,7 +19,7 @@ DCC++ EX supports many different motor boards, you can select any of the pre-con
 Configure Using the Installer
 =============================
 
-Tinkerers and even Conductors should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your Command Station. 
+Tinkerers and even Conductors should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
 
 Configure By Editing the config.h File
 ======================================

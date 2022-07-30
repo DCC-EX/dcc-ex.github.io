@@ -10,8 +10,8 @@ DCC-EX Roadmap
 Software
 ----------
 
-DCC++ EX Command Station 
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+EX-Command Station 
+^^^^^^^^^^^^^^^^^^
 
 * 
 * Add support for an ESP-32 or equivalent to remove resource limitations.
@@ -22,13 +22,13 @@ DCC++ EX Command Station
 * Multiple simultaneous Motor Driver support (beyond the 2 we currently support).
 * Add EX-RAIL "Extended Railroad Automation Instruction Language". Automate your layout with a simple script.
 
-DCCInspector-EX
-^^^^^^^^^^^^^^^^^
+EX-DCCInspector
+^^^^^^^^^^^^^^^
 
 * Add other report formatting options
 
-WebThrottle-EX
-^^^^^^^^^^^^^^^^
+EX-WebThrottle
+^^^^^^^^^^^^^^
 
 * Add Turnout support
 * Add capability to use as an installer/updater/configurer for DCC++ EX
@@ -41,8 +41,8 @@ New Motor shield
 ^^^^^^^^^^^^^^^^^
 
 
-New all-in-one DCC-EX Command Station
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+New all-in-one EX-CommandStation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   * Provide a self-contained, yet expandable custom developed Command Station Features (perhaps revive FireBox)
   * Based on a powerful processor to be chosen from ESP32, Teensy, Xtensa, SAMC21, etc
@@ -72,11 +72,11 @@ New all-in-one DCC-EX Command Station
 
 
 Firebit Modules
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 Based on standard interconnect created for the CS, examples would be separate co-processors, boosters, motor controllers, etc.
 
 Outreach/Partnering/Evangelizing
-----------------------------------
+--------------------------------
 
 Work with other manufacturers to get their hardware, accessories, motor shields, etc. to market and to gain support for DCC++ EX. Add more throttles to the list that support DCC++ directly or through JMRI.

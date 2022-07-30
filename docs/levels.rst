@@ -16,7 +16,7 @@ Conductor
    :height: 89px
    :align: left
 
-A Conductor, for the most part, just wants to enjoy operating trains. |BR| You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running DC and looking to switch over to DCC. This is also the perfect place for someone who just wants something that works without much tinkering. We'll show you how to put together a Command Station with a Controller, and have you up and running in just a few minutes. In short, a Conductor wants to drive trains and doesn't want to have to deal with the details of the hardware or software involved. This path will keep things simple.
+A Conductor, for the most part, just wants to enjoy operating trains. |BR| You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running DC and looking to switch over to DCC. This is also the perfect place for someone who just wants something that works without much tinkering. We'll show you how to put together a DCC Command Station with a Controller, and have you up and running in just a few minutes. In short, a Conductor wants to drive trains and doesn't want to have to deal with the details of the hardware or software involved. This path will keep things simple.
 
 We recommend that you :doc:`start here to build your EX-CommandStation <ex-commandstation/get-started/index>`.
 

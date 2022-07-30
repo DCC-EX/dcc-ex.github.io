@@ -43,8 +43,8 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
 
 ----
 
-1. Cut the Vin trace on the motor controller
-============================================
+1. Disconnect the power between the Arduino and the Motor Shield
+================================================================
 
 .. warning:: 
    :class: warning-float-right
@@ -53,29 +53,25 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
    
    *If you do not cut this trace* or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the motor shield. |BR| In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.
 
-We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks. So **BEFORE YOU BEGIN** It is very important that you cut the Vin trace on the motor controller, OR Bend out the Vin Pin
+We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks. 
+
+So **BEFORE YOU BEGIN** It is very important that isolate the power between the two devices.
 
 You will need to turn the motor controller board upside down and do ONE of the following:
 
-a. Cut the Vin trace on the bottom of the board. (Recommended) |BR| *or*
+- Cut the Vin trace on the bottom of the board. **(Recommended - described below)** |BR| *or*
+- Bend out or cut off the Vin Pin
 
-b. Bend out or cut off the Vin Pin
+|force-break|
 
-a. Cutting the Trace
---------------------
+Cutting the Trace
+-----------------
 
-   Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
+.. sidebar:: 
 
-   .. figure:: /_static/images/motor_shield_vin2.jpg
-      :alt: Cut Vin trace on Arduino motor shield
-      :scale: 80%
-
-      Cutting the Vin trace (click to enlarge)
-
-   If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.
-
-b. Bending out or Cutting the Vin Pin (Optional)
-------------------------------------------------
+   |conductor|
+   
+   **Bending out or Cutting the Vin Pin (Optional)**
 
    In this method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
 
@@ -84,6 +80,16 @@ b. Bending out or Cutting the Vin Pin (Optional)
       :scale: 50%
 
       Bending out the Pin (click to enlarge)
+
+Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
+
+.. figure:: /_static/images/motor_shield_vin2.jpg
+   :alt: Cut Vin trace on Arduino motor shield
+   :scale: 80%
+
+   Cutting the Vin trace (click to enlarge)
+
+If you have an ohmmeter, touch your probes to each side of the trace pads and make sure the resistance reading is infinite. In other words, make sure the trace is cut and there is no longer continuity between the two pads on the trace.
 
 2. Connect the motor shield to the top of the Arduino
 =====================================================

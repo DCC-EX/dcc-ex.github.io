@@ -267,7 +267,7 @@ __________________________________
 
   Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
-  Further to this, note that you will need to end up with two separate folders; one containing the CommandStation-EX software as per  :doc:`/ex-commandstation/get-started/arduino-ide`, and an additional folder containing the Turntable-EX software. The Turntable-EX software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
+  Further to this, note that you will need to end up with two separate folders; one containing the CommandStation-EX software as per  :doc:`/ex-commandstation/advanced-setup/arduino-ide`, and an additional folder containing the Turntable-EX software. The Turntable-EX software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
 
 At the time of writing, there is no installer for Turntable-EX like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
 
@@ -277,7 +277,7 @@ As noted in the tip above, you should have a Turntable-EX folder alongside the C
   :alt: Two folders
   :scale: 60%
 
-The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/ex-commandstation/get-started/arduino-ide` page.
+The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/ex-commandstation/advanced-setup/arduino-ide` page.
 
 When you get to the point of opening the sketch, ensure you open the Turntable-EX sketch:
 

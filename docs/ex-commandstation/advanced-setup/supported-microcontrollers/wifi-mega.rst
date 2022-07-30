@@ -264,7 +264,7 @@ Download and install DCC++EX from by using the Automated exInstaller or using th
 
 :doc:`How to install using the installer </ex-commandstation/get-started/installer>`
 
-:doc:`How to install using the Arduino IDE </ex-commandstation/get-started/arduino-ide>`
+:doc:`How to install using the Arduino IDE </ex-commandstation/advanced-setup/arduino-ide>`
 
 :doc:`I know what I'm doing, just point me to the downloads page! </download/ex-commandstation>`
 

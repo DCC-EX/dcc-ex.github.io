@@ -173,7 +173,7 @@ with this:
 
       #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
 
-Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/get-started/arduino-ide>`
+Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/arduino-ide>`
 
 
 Using One Signal Pin With an Inverter circuit
@@ -221,7 +221,7 @@ Once wired correctly, make sure your config.h file is configured for a STANDARD_
 
       #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 
-Save the file if you needed to add this line and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/get-started/arduino-ide>`
+Save the file if you needed to add this line and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/arduino-ide>`
 
 Method 2: Using An External Current Sense Board
 -------------------------------------------------

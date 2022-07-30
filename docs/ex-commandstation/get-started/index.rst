@@ -135,6 +135,5 @@ Click the "next" button to see how to assemble your |EX-CS|.
     assembly
     wifi-setup
     installer
-    arduino-ide
     controllers
     diagnosing-issues

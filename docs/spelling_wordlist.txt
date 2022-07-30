@@ -144,5 +144,9 @@ esptool
 py
 behaviour
 colour
+favour
 progmem
 Makerfabs
+Wingzine
+Locontrol
+modeller

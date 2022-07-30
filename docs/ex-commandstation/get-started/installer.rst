@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-**************************************
-Install using the Automated Installer
-**************************************
+****************************************************
+Install the software (using the Automated Installer)
+****************************************************
 
 |conductor|
 

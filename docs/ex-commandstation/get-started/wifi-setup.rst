@@ -14,9 +14,9 @@ Adding WiFi
 
 *The instructions on this page are NOT for connecting your* |EX-CS| *to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12).*
 
-The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles DIRECTLY to the it, eliminating the need for a computer and another software controller. 
+The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles (e.g. phones) DIRECTLY to it, eliminating the need for a computer and another software controller. 
 
-However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can :doc:`skip ahead to the next page <installer>`.
+However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to the |EX-CS| using the JMRI application (or similar), you can :doc:`skip ahead to the next page <installer>`.
 
 |force-break|
 
@@ -40,13 +40,19 @@ For a video to help you, click below.
 Why Use WiFi?
 =============
 
+.. sidebar:: 
+
+   |tinkerer| |engineer|
+
+   Using Wifi (OR Ethernet) to talk between JMRI and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a JMRI setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
+
 **BEFORE you purchase a Wifi card, please consider whether you actually need it.**
 
 With the base |EX-CS| consisting of *just* an Arduino Mega and an Arduino Motor Shield (no WiFi board), you must use a USB cable to connect to a computer to run JMRI or our |EX-WT|, or to connect to another controller. The controller (aka Throttle) is what sends commands to the |EX-CS| to run your trains and control your accessories.
 
-If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using |EX-WT|, JMRI, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. Save yourself some money, and effort, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between JMRI and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a JMRI setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
+If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using |EX-WT|, JMRI, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. Save yourself some money, and effort, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer).  If this the case you can :doc:`skip ahead to the next page <installer>`.
 
-If, however, you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY Engine Driver, wiThrottle (or other WiThrottle-protocol devices) connected directly to the |EX-CS|, then you will need Wifi, should follow the instructions below.
+If however, you wish to trains from your phone, tablet or other WiThrottle-protocol devices connected directly to the |EX-CS|, without a PC or Raspberry Pi involved, then you will need Wifi and should follow the instructions below.
 
 .. NOTE:: 
    :class: note-float-right
@@ -65,7 +71,7 @@ What you will need (for WiFi)
 
 |force-break|
 
-Recommended WiFi Board - Makerfabs ESP8266 WiFi Shield installation instructions
+Makerfabs ESP8266 WiFi Shield -  installation instructions
 ================================================================================
 
 .. sidebar:: 

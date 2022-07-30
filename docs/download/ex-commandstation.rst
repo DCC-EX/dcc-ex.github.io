@@ -8,7 +8,7 @@ EX-CommandStation Downloads
    
    This is a *major Command Station update,* including the excitement of **EX-RAIL Automation** for trains, track, and scenery, and **HAL (Hardware Abstraction Library)** to make adding external devices, and GPIO so simple! Grab your copy below!
 
-Welcome to the Command Station download page. You have several choices:
+Welcome to the |EX-CS| download page. You have several choices:
 
 * **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the `exInstaller`_ section.
 * If you are a Tinkerer, or you would like to download a zip file and install the firmware using the Arduino IDE, go to the `Latest DCC++ EX Official Release`_ section.

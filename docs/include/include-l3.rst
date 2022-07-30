@@ -15,6 +15,21 @@
    :scale: 50%
    :target: ../../../levels.html#engineer
 ..
+.. |conductor-no-text| image:: /_static/images/conductor.png
+   :alt: Conductor Hat
+   :scale: 50%
+   :target: ../..../levels.html#conductor
+..
+.. |tinkerer-no-text| image:: /_static/images/tinkerer.png
+   :alt: Propeller Beanie
+   :scale: 50%
+   :target: ../..../levels.html#tinkerer
+..
+.. |engineer-no-text| image:: /_static/images/engineer.png
+   :alt: Engineer Hat
+   :scale: 50%
+   :target: ../..../levels.html#engineer
+..
 .. |conductor-text| raw:: html
 
    <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../levels.html#conductor">Conductor</a>

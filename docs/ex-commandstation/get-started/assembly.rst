@@ -16,7 +16,7 @@ Initial Assembly
 
 This page describes the most common, recommended, configuration, but you will see some brakeouts on the right of the page the covers some of the many optional configurations. 
 
-**For this install, you'll need the items listed on the** :doc:`Getting Started <index>` **page.**
+**For this install, you'll need the items listed on the** :doc:`/ex-commandstation/get-started/purchasing` **page.**
 
 |force-break|
 

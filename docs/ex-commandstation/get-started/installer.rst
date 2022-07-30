@@ -1,27 +1,31 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-****************************************************
-Install the software (using the Automated Installer)
-****************************************************
+********************
+Install the software
+********************
 
 |conductor|
 
-Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable.  To make it as simple as possible we have created the |EX-I| app.
+This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from the that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-installer/index` page for the full instructions.
+
+----
+
+Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable. |br| To make it as simple as possible we have created the |EX-I| app.
 
 Requirements (for installing)
-==============================
+=============================
 
 .. note:: 
    :class: note-float-right
 
    For all versions, make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs are using the computer's serial port.
 
-* Windows/Linux/macOS Computer
-* |EX-CS| (Arduino Mega/Uno + Motor shield and optional WiFi shield)
-* USB cable to connect your computer to the Microcontroller
+* a Windows, Linux or MacOS X **Computer**
+* a |EX-CS| (Arduino Mega/Uno + Motor shield and optional WiFi shield)
+* a **USB cable** to connect your computer to the Microcontroller
 
-Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
-============================================================================
+Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)
+==========================================================================
 
 .. warning::
    :class: warning-float-right
@@ -58,7 +62,7 @@ The EX-Installer Window
 =======================
 
 .. warning::
-   :class: warning-float-right
+   :class: warning-float-right-narrow
    
    **Wait!**
 
@@ -75,7 +79,6 @@ There will be a lot of information appearing in the log window, which can help u
 Choose your options
 ===================
 
-
 In the left side options pane, use the dropdown selector boxes to choose the following options:
 
 .. figure:: /_static/images/installer/inst_options.jpg
@@ -84,28 +87,30 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 
    Options Pane
 
-.. sidebar:: 
-
-   |BSC| is now only in a maintenance support state only.  If you are still using it, we recommend that you move to |EX-CS|.  It will function on the same hardware a |BSC|.
-
-1. Select your **Command Station Type** |BR| This should (almost always) be **'Command Station EX'**
-2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ???
-3. Select your **Motor Shield** |BR| If you are |conductor-text| following our recommended instructions, choose ???
-4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took not of earlier
-5. Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed |BR| If you are |conductor-text| following our recommended instructions, check the **WiFi box**
-6. Check the checkbox for your display type if using an LCD or OLED display
-7. Check the Free Mem warning if you need to diagnose memory issues
-8. Press the "Compile and Upload" button
+1. Select your **Command Station Type** |BR| If you are |conductor-text| following our recommended instructions, choose **'Command Station EX'** |br| |br|
+2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
+3. Select your **Motor Shield** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
+4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took not of earlier |br| |br|
+5. If you have installed an optional a **WiFi Shield** you MUST check the **WiFi box** |br| If you are a |conductor-text| following our recommended instructions, check this box regardless (see below) |br| |br|
+6. Press the "Compile and Upload" button
 
 WiFi Checkbox
---------------
+-------------
 
-MAKE SURE THIS BOX IS CHECKED - If you want WiFi, this box **must** be checked. If you don't want WiFi, you can leave it checked anyway so that if you add WiFi later, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren't going to use WiFi, unchecking the box will free about 10kb of progmem and about 2kb of RAM.
+.. sidebar:: 
 
-If you have installed a WiFi board, DCC++ EX will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), this will set up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like "DCC-EX-xxxxxx", where the "xxxxxx" are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.
+   **Station Mode VS Access Point mode**
 
-If you wish to connect to your home network instead (connect to your router using "Station Mode"), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:
+   The instructions on this page are specifically for setting up your |EX-CS| so that it connects to your home WiFi Network.  This is referred to as *Station Mode*.
 
+   The |EX-CS| can be setup to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*.  (Useful if your layout is away from the house, or you transport your layout frequently.) See the :doc:`/ex-installer/index` page for the full instructions if you are interested in this option.
+
+Even if you didn't install a WiFi shield, we recommend that this box be checked. If left checked and later you add a WiFi Shield, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. 
+
+If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box.
+
+Enter your Home WiFi Network Details
+------------------------------------
 
 .. figure:: /_static/images/installer/wifi.jpg
    :alt: WiFi Options

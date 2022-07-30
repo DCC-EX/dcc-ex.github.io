@@ -89,9 +89,19 @@ svg {
   width: 40%;
 }
 
+.warning-float-right-narrow {
+  float: right;
+  width: 20%;
+}
+
 .note-float-right {
   float: right;
   width: 40%;
+}
+
+.note-float-right-narrow {
+  float: right;
+  width: 20%;
 }
 
 /* temporary - these ned to be moved to the main template */

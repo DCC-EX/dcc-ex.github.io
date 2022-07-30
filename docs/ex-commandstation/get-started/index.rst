@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-**********************************
-Getting Started - Purchasing Parts
-**********************************
+***************
+Getting Started
+***************
 
 .. sidebar::
 
@@ -61,77 +61,15 @@ To actually run your model railroad you will need a few items:
 
 .. [#jmri]  Requires JMRI installed on a computer
 
-What you need
-=============
+Next Steps - Purchasing Parts
+=============================
 
-.. sidebar::  Optional configuration
-    
-  |conductor|
-
-  |EX-CS| can be configured in several additional 'Conductor friendly' ways.
-
-  - without wifi or ethernet - requires JMRI installed on a computer
-  - with a supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>` instead of the WiFi shield
-
-  |tinkerer| |engineer|
-
-  |EX-CS| is also supported on a variety of different hardware that you might also consider
-
-  - Supported :doc:`Arduino boards </reference/hardware/microcontroller-boards>`
-  - Supported :doc:`motor shields </reference/hardware/motor-boards>`
-  - Supported :doc:`ESP8266 WiFi shield </reference/hardware/wifi-boards>`
-  - Supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>`
-
-
-Hardware
-________
-
-You will need to find or purchase:
-
-- a supported **Arduino board** |BR| We recommend the *???*
-- a supported **motor shield**  |BR| We recommend the *???*
-- a supported **WiFi shield** |BR| We recommend the *Makerfabs ESP8266 WiFi Shield*
-- Two (2) Male to Female **Jumpers leads**
-- a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield
-- a 2.5mm x 5.5mm Female DC Plug to **Screw Terminal (optional, but recommended)** to connect the motor shield power supply
-- a **7-9v DC power supply** |BR| for the Arduino (while it is connected to the PC, this is not needed)
-- a **computer** running Windows, macOS, or Linux (even a Raspberry Pi)
-- a **USB Cable** from the computer to the Arduino
-- a **piece of track** to run trains or program on
-- some **wire** (18 to 16 AWG twisted pair recommended. See Technical Note below)
-- a known-working **DCC-equipped locomotive**
-
-
-See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organized for you in one place.
-
-Software
-________
-
-The |EX-I| is recommended for most users as it automatically downloads and installs the required software. 
-
-- See the :doc:`Command Station download page </download/ex-commandstation>` to download a copy to your computer.
-
-A Controller (Throttle)
-_______________________
-
-
-You'll also need something to control your trains. Because there are several options, we will discuss this following the system setup.
-
-
-Next Steps
-==========
-
-Click the "next" button to see how to assemble your |EX-CS|.
-
-.. note::
-
-   **TECHNICAL NOTES**
-
-   **Wire Gauge** - The Arduino motor controller can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).
+Click :doc:`here <purchasing>` or click the "next" button to see what you need to purchase to create your |EX-CS|.
 
 .. toctree::
     :hidden:
 
+    purchasing
     assembly
     wifi-setup
     installer

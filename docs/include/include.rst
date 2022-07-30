@@ -54,9 +54,3 @@
 
    <span style="font-weight: bold; font-style: italic; color: #767676;" >Note that you can click on any of the images to make them larger.</span>
 ..
-   .. |conductor-text| replace:: :ref:`levels:conductor`
-   ..
-   .. |tinkerer-text| replace:: :ref:`levels:tinkerer`
-   ..
-   .. |engineer-text| replace:: :ref:`levels:engineer`
-   ..

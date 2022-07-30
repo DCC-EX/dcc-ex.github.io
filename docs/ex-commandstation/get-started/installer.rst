@@ -6,31 +6,63 @@ Install the software (using the Automated Installer)
 
 |conductor|
 
+Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable.  To make it as simple as possible we have created the |EX-I| app.
+
 Requirements (for installing)
 ==============================
 
-* Windows/Linux/macOS Computer
-* DCC-EX Compatible motor shield / motor controller board
-* DCC-EX Compatible Microcontroller (Arduino Mega/Uno)
-* USB cable to connect your computer to the Microcontroller
+.. note:: 
+   :class: note-float-right
 
-.. note:: For all versions, make sure your USB Cable is connected from your computer to the Command Station (CS). Make sure no other programs are using the computer's serial port.
+   For all versions, make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs are using the computer's serial port.
+
+* Windows/Linux/macOS Computer
+* |EX-CS| (Arduino Mega/Uno + Motor shield and optional WiFi shield)
+* USB cable to connect your computer to the Microcontroller
 
 Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi
 ============================================================================
 
-* Download the :ref:`DCC-EX Installer <download/ex-commandstation:exInstaller>` which will automatically determine the version you need and download it
-* Extract the Installer into its own folder with your favorite unzip program
-* Open File Manager for Windows or a terminal window in Mac OS and Linux and navigate to that folder
-* Windows users run ``exInstaller.exe``
-* Mac and Linux users run the following command: ``./exInstaller``
+.. warning::
+   :class: warning-float-right
+   
+   You *may* need to turn off your antivirus software before you try to install. |BR| We need a piece of Arduino software to be able to compile and upload the Command Station software which sometimes gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
+* **Connect** your |EX-CS| to your computer
+* Determine which COM Port the |EX-CS| is plugged into 
+
+  * for Microsoft Windows:
+
+    * open (run) the 'Device Manager' app and look at the 'Ports (COM & LPT)' as you plug or unplug the |EX-CS|
+    * take note of the COM number (in brackets after the name of the device)
+
+  * for Mac OS or Linux:
+  
+    * ???
+
+* Download the :ref:`EX-Installer <download/ex-commandstation:exInstaller>` app |BR| depending on your computer's operating system it will automatically determine the version you need and download it
+* Extract the downloaded **Installer** into its own folder with your favorite unzip program |BR| |BR|
+* For Microsoft Windows:
+  
+  * Open File Manager
+  * **Run** ``exInstaller.exe`` |BR| |BR|
+
+* For Mac OS or Linux:
+
+  * Open a terminal window and navigate to that folder
+  * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
+
+* You will be presented with the following screen...
+
+The EX-Installer Window
+=======================
 
 .. warning::
-   You may need to turn off your antivirus software before you try to install. We need a piece of Arduino software to be able to compile and upload the Command Station software which sometimes gets blocked. If you see errors on the install screen, this is usually the issue.
+   :class: warning-float-right
+   
+   **Wait!**
 
-The Installer Window
-=====================
+   The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menues.
 
 .. figure:: /_static/images/installer/installer.jpg
    :alt: DCC-EX Installer
@@ -41,7 +73,8 @@ The Installer Window
 There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
 Choose your options
-====================
+===================
+
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
 
@@ -51,11 +84,15 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 
    Options Pane
 
-1. Select your Command Station Type
-2. Select your Arduino Board Type
-3. Select your Motor Shield
-4. Select your COM Port (The installer should usually find it for you)
-5. Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed
+.. sidebar:: 
+
+   |BSC| is now only in a maintenance support state only.  If you are still using it, we recommend that you move to |EX-CS|.  It will function on the same hardware a |BSC|.
+
+1. Select your **Command Station Type** |BR| This should (almost always) be **'Command Station EX'**
+2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ???
+3. Select your **Motor Shield** |BR| If you are |conductor-text| following our recommended instructions, choose ???
+4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took not of earlier
+5. Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed |BR| If you are |conductor-text| following our recommended instructions, check the **WiFi box**
 6. Check the checkbox for your display type if using an LCD or OLED display
 7. Check the Free Mem warning if you need to diagnose memory issues
 8. Press the "Compile and Upload" button

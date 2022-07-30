@@ -15,3 +15,15 @@
    :scale: 50%
    :target: ../levels.html#engineer
 ..
+.. |conductor-text| raw:: html
+
+   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#conductor">Conductor</a>
+..
+.. |tinkerer-text| raw:: html
+
+   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#tinkerer">Tinkerer</a>
+..
+.. |engineer-text| raw:: html
+
+   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#engineer">Engineer</a>
+..

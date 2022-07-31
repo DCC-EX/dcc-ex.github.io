@@ -1,6 +1,8 @@
-*************
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+************
 Requirements
-*************
+************
 
 We assume, since you got here, that you already have a computer up and running being either a Linux, macOS, or Windows machine, as well as a working internet connection and some disk space available. 
 
@@ -85,7 +87,7 @@ When installing you will be prompted to choose the preview method, with the "Esb
 
 Note, however, that the Esbonio server will only generate live previews of the pages you are actively editing, and therefore it will not give you a complete updated view of the entire website.
 
-Refer to the :doc:`/contributing/website` contributing page for more info on generating reliable local previews.
+Refer to the :doc:`/about/contributing/website` contributing page for more info on generating reliable local previews.
 
 Images
 _______

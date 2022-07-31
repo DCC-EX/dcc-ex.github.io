@@ -1,4 +1,6 @@
-***********************************
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+   ***********************************
 Introduction to EX-RAIL Automation
 ***********************************
 
@@ -88,7 +90,7 @@ There can be a startup sequence (keywords at the beginning of the script), which
 
 Multiple concurrent sequences are supported.
 
-For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/automation/EX-RAIL-reference`.
+For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.
 
 The script containing your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
 
@@ -202,7 +204,7 @@ Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMR
 
 A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
  
-See the :doc:`/automation/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
+See the :doc:`/ex-rail/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 
 Defining Signals
@@ -346,7 +348,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <automation/EX-RAIL-summary:Automations, Routes and Sequences>`
+Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <ex-rail/EX-RAIL-summary:Automations, Routes and Sequences>`
 
 .. code-block:: cpp
 
@@ -560,7 +562,7 @@ ____________________________________________
 
 Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.
 
-Refer to :ref:`automation/ex-rail-reference:aliases` for more information.
+Refer to :ref:`ex-rail/ex-rail-reference:aliases` for more information.
 
 Alias names:
 
@@ -597,7 +599,7 @@ If you find your myAutomation.h file becoming quite lengthy and cumbersome to sc
 There are some rules that apply in this scenario:
 
 * Anything that needs to be done when the CommandStation starts must be defined first.
-* Any custom macros/commands must be defined before they are used (see :ref:`automation/ex-rail-intro:make your own ex-rail macro or command`) below.
+* Any custom macros/commands must be defined before they are used (see :ref:`ex-rail/ex-rail-intro:make your own ex-rail macro or command`) below.
 * The files are included in the order defined, so if an item in one file depends on another file's item, make sure they included in the correct order.
 
 Some suggestions to get the most out of this:

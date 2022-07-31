@@ -48,3 +48,10 @@ You can find us on Facebook here:
 You can also find us on TrainBoard:
 
 `DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
+
+
+.. toctree::
+  :maxdepth: 1
+
+  contact-us
+  create-ticket

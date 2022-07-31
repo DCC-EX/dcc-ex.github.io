@@ -21,3 +21,4 @@ For an overview of throttles and how to choose one, please read the :doc:`Gettin
     witcontroller
     uwt50
     streamdeck
+    tech-reference

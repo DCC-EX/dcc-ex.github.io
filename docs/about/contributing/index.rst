@@ -13,6 +13,7 @@ Here you'll find all the necessary resources and information for contributing to
   overview
   github
   software
+  requirements
   development
   website
   donate/index

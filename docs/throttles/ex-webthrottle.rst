@@ -4,6 +4,12 @@
 DCC++ EX Web Throttle
 **********************
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 |conductor|
 
 This is a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Command Station directly through the USB port of a computer.

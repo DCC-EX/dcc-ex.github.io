@@ -73,5 +73,6 @@ Click :doc:`here <purchasing>` or click the "next" button to see what you need t
     assembly
     wifi-setup
     installer
+    testing
     controllers
     diagnosing-issues

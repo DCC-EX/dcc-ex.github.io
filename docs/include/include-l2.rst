@@ -1,5 +1,3 @@
-:orphan:
-
 .. |conductor| image:: /_static/images/conductor-level.png
    :alt: Conductor Hat
    :scale: 50%

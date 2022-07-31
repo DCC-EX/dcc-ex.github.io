@@ -528,7 +528,6 @@ ________________
 * Use British/Australian/Canadian spelling e.g. 'colour' not 'color'.  |br|\ (Primarily because it is used in more English speaking countries)
 *	Use railroad/railway terminology that is understandable by all English-speaking people. |br|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.
 * In general use **'loco'** instead of 'locomotive' or 'engine'
-* Avoid the term 'Checked'. Use **'Enabled'** instead.  ("Checked' is more a US term.)
 *	No full stop at the end of a numbered or unnumbered list
 *	Numbered lists should generally only be used if they are describing a specific sequence, or the numbering is important to the text
 * Use first person (you and your; not I, me, my or am) language

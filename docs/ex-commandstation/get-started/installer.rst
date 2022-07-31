@@ -66,7 +66,7 @@ The EX-Installer Window
    
    **Wait!**
 
-   The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menues.
+   The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
 
 .. figure:: /_static/images/installer/installer.jpg
    :alt: DCC-EX Installer
@@ -79,6 +79,7 @@ There will be a lot of information appearing in the log window, which can help u
 Choose your options
 ===================
 
+
 In the left side options pane, use the dropdown selector boxes to choose the following options:
 
 .. figure:: /_static/images/installer/inst_options.jpg
@@ -86,6 +87,12 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
    :scale: 75%
 
    Options Pane
+
+.. sidebar:: Refresh Ports Button
+
+   |conductor| 
+   
+   This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program. When you plug in a new board, refresh the ports so it can find your device.
 
 1. Select your **Command Station Type** |BR| If you are |conductor-text| following our recommended instructions, choose **'Command Station EX'** |br| |br|
 2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
@@ -95,7 +102,7 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 6. Press the "Compile and Upload" button
 
 WiFi Checkbox
--------------
+_____________
 
 .. sidebar:: 
 
@@ -110,7 +117,7 @@ Even if you didn't install a WiFi shield, we recommend that this box be checked.
 If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box.
 
 Enter your Home WiFi Network Details
-------------------------------------
+____________________________________
 
 .. figure:: /_static/images/installer/wifi.jpg
    :alt: WiFi Options
@@ -128,143 +135,18 @@ Enter your Home WiFi Network Details
 
 * **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
 
-Ethernet Checkbox
-------------------
+Compile and Upload
+==================
 
-If you have an Ethernet shield and check this box, you will see options to change the following settings:
+**Compile and Upload Button**
 
-.. figure:: /_static/images/installer/ethernet.jpg
-   :alt: Ethernet Options
-   :scale: 90%
+Once you have configured your options, press this button to upload the software to your |EX-CS|.
 
-   Ethernet Options
+.. note:: 
 
-* **Host Name** - If your Ethernet Board supports it, this name can be used in addition to the IP address.\ 
+   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
-* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use JMRI.\ 
+Next Steps - Testing your setup 
+===============================
 
-* **MAC Address** - This is the unique identifier for your Ethernet Shield. We recommend leaving this setting as is. If you ever have more than one Ethernet shield on your network and there is a conflict, you can change this setting.
-
-* **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
-
-LCD Checkbox
--------------
-
-If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:
-
-.. figure:: /_static/images/installer/lcd.jpg
-   :alt: LCD Options
-   :scale: 90%
-
-   LCD Options
-
-* **LCD Address (in Decimal format)** - This is the address of your display, it is usually 39 (for 0x27) or 63 (for 0x3F)
-
-* **LCD Columns** - The number of vertical columns on your display
-
-* **LCD Rows** - The number of horizontal rows or lines on your display
-
-For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
-
-OLED CheckBox
----------------
-
-If you have an OLED display connected and check this box, you will see the following options you can edit for your display:
-
-.. figure:: /_static/images/installer/oled.jpg
-   :alt: OLED Options
-   :scale: 90%
-
-   OLED Options
-
-* **OLED Width (in pixels)** - Enter the width or number of horizontal pixels on your display
-
-* **OLED Height (in pixels)** - Enter the height or number of vertical pixels on your display
-
-For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
-
-Refresh Ports Button
-----------------------
-
-This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program, or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.
-
-Compile and Upload Button
---------------------------
-
-Once you have configured your options, press this button to compile all the source code and upload it to your Command Station.
-
-Test your setup
-=================
-
-.. NOTE:: The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
-
-Using the Arduino IDE Serial Monitor
--------------------------------------
-
-To test with the Arduino Serial Monitor, download the Arduino IDE from the following link and install it on your computer.
-
-`Download the Arduino IDE <https://www.arduino.cc/en/Main/software>`_
-
-To do a quick test, open the Arduino application:
-
-.. figure:: /_static/images/installer/arduino_ide.jpg
-   :alt: Arduino IDE
-   :scale: 100%
-
-   The Arduino IDE
-
-* Select "Tools -> Serial Monitor" from the Arduino IDE menu
-
-
-.. figure:: /_static/images/installer/arduino_ide2.jpg
-   :alt: Open the Serial Monitor
-   :scale: 100%
-
-   Open the Serial Monitor from the Tools Menu
-
-You will see the following screen:
-
-
-.. figure:: /_static/images/installer/serial_monitor.jpg
-   :alt: Serial Monitor
-   :scale: 100%
-
-   Serial Monitor
-
-
-* Select "115200" as the baud rate in the dropdown in the lower right
-* Select "Both NL & CR" from the dropdown next to the baud rate
-
-When you open the serial monitor you will see at least one line sent out as status information. If you have a WiFi board or Ethernet Shield you will see a page full of log information as it configures and connects to your network.
-
-At the top of the serial monitor type ``<s>`` (lowercase "s") into the command textbox and press "Send". You should see:
-
-.. code-block::
-
-   <iDCC-EX V-0.2.1 / MEGA / STANDARD_MOTOR_SHIELD G-9db6d36>
-
-This is the "status" command and reports your version, types of boards you are using, and a build number.
-
-There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC++ EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands.
-
-Using WebThrottle-EX
---------------------
-
-.. figure:: /_static/images/installer/exwebthrottle.jpg
-   :alt: WebThrottle-EX
-   :scale: 100%
-
-   WebThrottle-EX
-
-Click this link: :doc:`WebThrottle-EX </throttles/ex-webthrottle>` to run WebThrottle-EX hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
-
-Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
---------------------------------------------------------------
-
-.. figure:: /_static/images/installer/engine_driver.png
-   :alt: Engine Driver
-   :scale: 100%
-
-   Engine Driver
-
-You will need to install Engine Driver on your mobile device and then connect to the CS, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
+Click :doc:`here <testing>` or click the "next" button to learn how to test your |EX-CS|.

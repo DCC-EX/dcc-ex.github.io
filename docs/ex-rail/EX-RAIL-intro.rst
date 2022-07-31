@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-   ***********************************
+**********************************
 Introduction to EX-RAIL Automation
-***********************************
+**********************************
 
 .. attention::
    17 Feb 2022: *Now included* in **DCC++EX 4.0!**

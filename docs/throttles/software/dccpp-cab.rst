@@ -56,7 +56,7 @@ Screenshots
 Requirements
 =============
 
-* A DCC++ EX Command Station (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)
+* A |EX-CS| (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)
 * An Android Cell Phone or Tablet
 * A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup Page </ex-commandstation/get-started/wifi-setup>`
 * An HC-06 Board if you want to connect using Bluetooth

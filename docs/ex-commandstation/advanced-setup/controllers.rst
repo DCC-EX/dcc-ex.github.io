@@ -12,8 +12,8 @@ You need just two things that work together to operate your model railroad:
 
 * A Controller (aka Front-end, Cab, or Throttle)
 
-The Command Station
-====================
+The EC-CommandStation
+=====================
 
 The CS is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller and a motor shield or motor board. The CS accepts instructions from a controller and generates packets that are transmitted to your track.
 
@@ -42,7 +42,7 @@ Wireless Connection Details
 Direct (Without JMRI)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the Command Station. You need a CS with a WiFi Shield or other type of WiFi board, or a Bluetooth board and a throttle that supports Bluetooth. Here is an image that represents a direct connection.
+For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a CS with a WiFi Shield or other type of WiFi board, or a Bluetooth board and a throttle that supports Bluetooth. Here is an image that represents a direct connection.
 
 .. image:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
@@ -82,7 +82,7 @@ The simplest option is to just use a throttle connected directly to the CS. The 
    :align: center
    :scale: 40%
 
-Here are your connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
+Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.
 
 .. image:: /_static/images/throttles/webthrottle_setup.jpg
    :alt: WebThrottle-EX
@@ -146,7 +146,7 @@ JMRI is sort of the 800lb gorilla of front-ends! In its simplest form, it is a t
 Connecting via USB cable
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Probably the way most people use JMRI is to have a Raspberry Pi running JMRI connected via a short USB cable to the DCC++ EX Command Station. They then use Engine Driver on their phone, connected to JMRI via WiFi as a throttle for their engines. If you want to actually operate using all the features of JMRI, you can connect a small monitor, keyboard, and mouse to your computer or Raspberry Pi. You can replace the USB cable with a USB Wireless Bridge which is covered in that section. But let's look at another method next.
+Probably the way most people use JMRI is to have a Raspberry Pi running JMRI connected via a short USB cable to the |EX-CS|. They then use Engine Driver on their phone, connected to JMRI via WiFi as a throttle for their engines. If you want to actually operate using all the features of JMRI, you can connect a small monitor, keyboard, and mouse to your computer or Raspberry Pi. You can replace the USB cable with a USB Wireless Bridge which is covered in that section. But let's look at another method next.
 
 ***TODO:insert diagram here***
 
@@ -162,7 +162,7 @@ USB Wireless Bridge
 
 The USB Wireless Bridge is a pair of small, inexpensive devices that let you replace a USB cable with a wireless connection. You really could connect any two devices that would normally connect with a USB cable. The power of this system is that there is little or no configuration, and no changes need to be made to your controller or the CS. In our world, here are some of the ways you can use it:
 
-* Connect WebThrottle-EX running on a laptop or tablet wirelessly to the DCC++ EX Command Station
+* Connect WebThrottle-EX running on a laptop or tablet wirelessly to the |EX-CS|
 * Connect a computer or Raspberry Pi running JMRI (or another front-end) to the Command Station
 * Connect normally-tethered handheld cabs (throttles) wirelessly to the Command Station
 

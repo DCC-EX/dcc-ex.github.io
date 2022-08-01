@@ -12,7 +12,7 @@ EX-WebThrottle
 
 |conductor|
 
-This is a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Command Station directly through the USB port of a computer.
+This is a new DCC++ EX Throttle/Controller that can connect to the |EX-CS| directly through the USB port of a computer.
 
 For a video on how to install and use WebThrottle-EX click below.
 
@@ -20,8 +20,8 @@ For a video on how to install and use WebThrottle-EX click below.
    
       <iframe width="336" height="189" src="https://www.youtube.com/embed/BkgsEOjxWaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-What you need to run WebThrottle-EX
-====================================
+What you need to run EX-WebThrottle
+===================================
 
 * Chromium-Based Browser version 89 or above (March 2021)
   (Chrome, Opera, Edge)

@@ -21,7 +21,7 @@ CMME (Chesterfield Model Making & Miniature Electronics)
 Chesterfield sells a complete system in a 3D printed case already assembled and tested.
 
 .. image:: /_static/images/suppliers/command_station_case.jpg
-    :alt: Chesterfield Assembled DCC-EX Command Station
+    :alt: Chesterfield Assembled EX-CommandStation
     :scale: 80%
     :align: left
 
@@ -44,7 +44,7 @@ David Yale
 
 .. rst-class:: clearer
 
-David provides the files to make a 3D printed case or can sell an already made case to fit the Mega DCC-EX Command Station with a motor shield, WiFi shield, and LCD display. He has several designs.
+David provides the files to make a 3D printed case or can sell an already made case to fit the Mega |EX-CS| with a motor shield, WiFi shield, and LCD display. He has several designs.
 
 .. image:: /_static/images/suppliers/david_yale_case.png
    :alt: David Yale DCC-EX case
@@ -74,7 +74,7 @@ Chesterfield sells a case to fit the Mega DCC-EX Command Station as well as a ti
     :scale: 80%
     :align: left
 
-`Chesterfield DCC-EX Command Station Case <https://chesterfield-models.co.uk/product/dccex/>`_
+`Chesterfield EX-CommandStation Case <https://chesterfield-models.co.uk/product/dccex/>`_
 
 .. rst-class:: clearer
 

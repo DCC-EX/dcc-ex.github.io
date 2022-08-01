@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-*******************************************************
-RailSnail's Complete Bluetooth DCC++EX Command Station
-*******************************************************
+************************************************
+RailSnail's Complete Bluetooth EX-CommandStation
+************************************************
 
 |tinkerer|
 
@@ -11,7 +11,7 @@ RailSnail's Complete Bluetooth DCC++EX Command Station
    :scale: 50%
    :align: center
 
-UK User Chris (Railsnail) has created a great project you can build that will give you a complete DCC++EX Command Station that includes:
+UK User Chris (Railsnail) has created a great project you can build that will give you a complete |EX-CS| that includes:
 
 * An Arduino Mega Microcontroller
 * An L298 Based Motor Shield

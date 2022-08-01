@@ -304,7 +304,7 @@ Where:
 
 Other notes:
 
-* CAB Functions do not get stored in the DCC++ EX CommandStation
+* CAB Functions do not get stored in the EX-CommandStation
 * Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on. 
 
 Stationary Accessory Decoder & Turnout Commands

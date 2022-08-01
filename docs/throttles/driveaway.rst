@@ -31,7 +31,7 @@ This is a New DCC WiFi Throttle client feature only found in DCC++EX & Engine Dr
 Where it's used
 ================
 
-An Arduino Mega DCC++EX + WiFi enabled Command Station in Standalone Operations mode Directly WiFi connected with Engine Driver WiFi Throttles utilizing the new standalone WiThrottle Server feature embedded in DCC++EX Command Station. 
+An Arduino Mega |EX-CS| + WiFi enabled Command Station in Standalone Operations mode Directly WiFi connected with Engine Driver WiFi Throttles utilizing the new standalone WiThrottle Server feature embedded in |EX-CS|. 
 
 Setup an Arduino Mega DCC++EX CS + ESP 8266 WiFi MakerFab Shield or a ESP01 WiFi board in either Access Point AP mode or Station STA (client) mode through a shared Router for a Command Station (CS) Standalone Operations configuration. Then the Engine Driver and Command Station both sign on to the common SSID Name and Password to share the common WiFi signal and channel. 
 

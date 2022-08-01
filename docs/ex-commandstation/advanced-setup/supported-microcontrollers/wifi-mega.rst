@@ -257,8 +257,8 @@ If you choose to use AP mode, there is nothing you need to do. Just make sure yo
 If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the `Short Version of Network Setup`_ below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
 
-1. Download and Configure the DCC++EX Command Station Software
-================================================================
+1. Download and Configure the EX-CommandStation Software
+========================================================
 
 Download and install DCC++EX from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 

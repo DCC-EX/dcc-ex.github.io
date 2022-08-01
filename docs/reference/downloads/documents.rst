@@ -6,7 +6,7 @@ Documents
 Java Model Railroad Interface JMRI with DCC++EX
 ================================================
 
-JMRI 'Java Model Railroad Interface' software suite provides a GUI Graphical User Interface Controller for DCC++EX Command Stations.
+JMRI 'Java Model Railroad Interface' software suite provides a GUI Graphical User Interface Controller for the |EX-CS|.
 
 The primary JMRI software applications are; 
  - DecoderPro to build and maintain DCC Engine Rosters and read, write, compare & maintain decoder CV’s

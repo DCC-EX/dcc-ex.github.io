@@ -12,13 +12,13 @@ You need just two things that work together to operate your model railroad:
 
 * A Controller (aka Front-end, Cab, or Throttle)
 
-The Command Station
-====================
+The EX-CommandStation
+=====================
 
 The CS is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller and a motor shield or motor board. The CS accepts instructions from a controller and generates packets that are transmitted to your track.
 
 The Controller
-================
+==============
 
 Since the CS simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. It isn't very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉  A controller can be a hardware device like a handheld throttle (also called a Cab), an App that runs on your phone, a Web Page, or front-end software like JMRI or Rocrail that runs on a computer or Raspberry Pi. 
 

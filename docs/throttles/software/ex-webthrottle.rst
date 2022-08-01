@@ -12,7 +12,7 @@ EX-WebThrottle
 
 |conductor| |tinkerer| |engineer|
 
-|EX-WT| is a throttle/controller that can connect to the DCC++ EX Command Station directly through the USB port of a computer.
+|EX-WT| is a throttle/controller that can connect to the |EX-CS| directly through the USB port of a computer.
 
 For a video on how to install and use |EX-WT| click below.
 
@@ -40,7 +40,7 @@ Make sure you are using Chrome version 89 or above (check the menu, help, about 
 
 .. note:: If you don't have your hardware yet or just want to play with the throttle and see commands being sent to the log window, you can skip the part about connecting your Command Station.
 
-To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.
+To get started, connect your |EX-CS| to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.
 
 Run or Install EX-WebThrottle
 =============================
@@ -95,7 +95,7 @@ You should then be connected to the Command Station (CS) and should see the resp
 
 
 
-Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any DCC++ API command in this way. You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
+Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your |EX-CS|. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any DCC++ API command in this way. You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
 
 
 .. raw:: html

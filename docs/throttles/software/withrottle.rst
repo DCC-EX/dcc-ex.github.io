@@ -53,7 +53,7 @@ Screenshots
 Requirements
 =============
 
-* A DCC++ EX Command Station (Mega based for WiFi)
+* A |EX-CS| (Mega based for WiFi)
 * An iOS Cell Phone or Tablet
 * A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
 
@@ -69,7 +69,7 @@ Operation
 Using Wifi
 ------------
 
-To use Wifi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
+To use Wifi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
 
 We have not tested the WiFi implementation yet
 

@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
-**********************
-DCC++ EX Web Throttle
-**********************
+.. include:: /include/include-l2.rst
+**************
+EX-WebThrottle
+**************
 
 .. sidebar::
 
@@ -10,11 +10,11 @@ DCC++ EX Web Throttle
     :depth: 1
     :local:
 
-|conductor|
+|conductor| |tinkerer| |engineer|
 
-This is a new DCC++ EX Throttle/Controller that can connect to the DCC++ EX Command Station directly through the USB port of a computer.
+|EX-WT| is a throttle/controller that can connect to the DCC++ EX Command Station directly through the USB port of a computer.
 
-For a video on how to install and use WebThrottle-EX click below.
+For a video on how to install and use |EX-WT| click below.
 
    .. raw:: html
    
@@ -30,7 +30,7 @@ You don't need anything else to test it out and to run in emulator mode, just ru
 
 * An Arduino Mega or Uno Microcontroller
 * An Arduino Motor Control Shield
-* The DCC++ EX Command Station sketch loaded on your Arduino
+* The |EX-CS| software loaded on your Arduino
 
 
 Getting started
@@ -42,10 +42,10 @@ Make sure you are using Chrome version 89 or above (check the menu, help, about 
 
 To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.
 
-Run or Install WebThrottle-EX
-==============================
+Run or Install EX-WebThrottle
+=============================
 
-You have an option for how you would like to run WebThrottle-Ex, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
+You have an option for how you would like to run |EX-WT|, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
 
 Try it now (Run from the cloud)
 =================================

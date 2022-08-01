@@ -1,7 +1,8 @@
 .. include:: /include/include.rst
-***************
+.. include:: /include/include-l2.rst
+********
 Hardware
-***************
+********
 
 .. toctree::
     :maxdepth: 1

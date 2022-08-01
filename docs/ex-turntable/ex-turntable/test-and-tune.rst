@@ -235,7 +235,7 @@ Now that you have defined all of your turntable positions with appropriate phase
 
 The method to advertise these is to use EX-RAIL's ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the Engine Driver and WiThrottle Routes sections.
 
-If this is your first experience with EX-RAIL and the "myAutomation.h" file, familiarise yourself with EX-RAIL by reading through :ref:`ex-rail/getting-started:introduction`.
+If this is your first experience with EX-RAIL and the "myAutomation.h" file, familiarise yourself with EX-RAIL by reading through :doc:`/ex-rail/index`.
 
 Pay particular attention to the various mentions of ROUTE and the associated examples.
 
@@ -255,7 +255,7 @@ To define the required turntable positions in the example six position turntable
   
   To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
 
-That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :ref:`ex-rail/getting-started:introduction` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
+That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :doc:`/ex-rail/index` page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
 
 My turntable moves on startup!
 _______________________________

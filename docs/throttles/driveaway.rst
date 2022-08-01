@@ -6,7 +6,13 @@
 Using the "DriveAway(tm)" Feature
 **********************************
 
-|conductor|
+|conductor| |tinkerer| |engineer|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
 
 EX-CommandStation and Engine Drivers "Request Loco ID" & “Drive Away" 
 

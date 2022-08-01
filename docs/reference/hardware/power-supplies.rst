@@ -1,7 +1,16 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 ****************
 Power Supplies
 ****************
+
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 The power supply is one of the most important parts of your setup. You need to select a clean, filtered power supply that can supply the correct voltage and deliver the amount of current required by your devices.
 

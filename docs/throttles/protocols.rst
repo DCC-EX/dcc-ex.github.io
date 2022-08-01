@@ -1,7 +1,16 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l1.rst
 ***************************************************
 WiThrottle Server, Web Server, DCC++ API Explained
 ***************************************************
+
+|conductor| |tinkerer| |engineer|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
 
 There are several competing standards and ways to connect external software such as Throttles to the DCC++ EX Command Station or to JMRI. These standards are called "protocols" and the definition and instructions for how to implement them is called an API (Application Programming Interface). There is the WiThrottle API using a WiThrottle Server, the JMRI API using a Web Server, and the DCC++ EX API using <DCC++> Commands. You need to know that the language your throttle uses will work with how you want to connect to your Command Station.
 

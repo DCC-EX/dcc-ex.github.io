@@ -1,10 +1,16 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
-*******************
+.. include:: /include/include-l2.rst
+******************
 Elgato Stream Deck
-*******************
+******************
 
 |tinkerer|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
 
 Tinkerer Level
 

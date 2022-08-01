@@ -1,7 +1,16 @@
 .. include:: /include/include.rst
-********************
-SRCP Client for iOS
-********************
+.. include:: /include/include-l2.rst
+*****************
+SRCP Client (iOS)
+*****************
+
+|conductor| |tinkerer| |engineer|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
 
 .. image:: /_static/images/throttles/icon_ios.png
    :alt: iOS Logo

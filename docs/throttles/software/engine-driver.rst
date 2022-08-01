@@ -1,10 +1,16 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
+.. include:: /include/include-l2.rst
 ******************
 Engine Driver
 ******************
 
-|conductor|
+|conductor| |tinkerer| |engineer|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
 
 .. image:: /_static/images/throttles/engine_driver_logo.png
    :alt: Android Logo

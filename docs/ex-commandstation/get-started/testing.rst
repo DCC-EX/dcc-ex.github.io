@@ -43,7 +43,7 @@ Connect Everything:
 
    WebThrottle-EX
 
-Click this link: :doc:`WebThrottle-EX </throttles/ex-webthrottle>` to run WebThrottle-EX hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
+Click this link: :doc:`WebThrottle-EX </throttles/software/ex-webthrottle>` to run WebThrottle-EX hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
 
 ... TODO - This text needs to be expanded
 

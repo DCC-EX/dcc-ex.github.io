@@ -1,9 +1,18 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 ****************
 Ethernet Boards
 ****************
 
-DCC++ EX supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`.
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
+|EX-CS| supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`.
 
 To use Ethernet instead of WiFi, follow these simple steps:
 

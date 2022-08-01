@@ -1,4 +1,5 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 ************
 I2C Devices
 ************
@@ -9,7 +10,7 @@ I2C Devices
     :depth: 1
     :local:
 
-With the advent of the Hardware Abstraction Layer (HAL), DCC++EX now has the capability for
+With the advent of the Hardware Abstraction Layer (HAL), |EX-CS| now has the capability for
 support for new I/O devices to be added without any change to the base software.  By I/O
 devices I mean the things that are controlled through Sensors, Outputs and Turnouts (and 
 more recently by commands in EX-RAIL too).  Motor shields are not included in the HAL at present.

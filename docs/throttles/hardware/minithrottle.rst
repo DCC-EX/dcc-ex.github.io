@@ -1,9 +1,18 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 **************************
 miniThrottle (Physical)
 **************************
 
-A DCC++EX and JMRI Throttle
+ |tinkerer| |engineer|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
+
+A |EX-CS| and JMRI Throttle
 
 
 .. image:: /_static/images/throttles/minithrottle1.jpg

@@ -1,7 +1,16 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 **********
 DCCpp CAB
 **********
+
+|conductor| |tinkerer| |engineer|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
 
 .. image:: /_static/images/throttles/icon_android.png
    :alt: Android Logo

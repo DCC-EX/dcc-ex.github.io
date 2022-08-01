@@ -1,10 +1,16 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
+.. include:: /include/include-l2.rst
 *************************
 WiTcontroller (Physical)
 *************************
 
 |tinkerer|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
 
 From Engine Driver's very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:
 
@@ -26,8 +32,8 @@ Features
 
 * provides a list of discovered SSIDs with the ability to choose one. When you select one:
   
-  * if it is one in your specified list, it will use that specifed password 
-  * if it is a DCC++EX wiFi Command Station in access Point mode, it will guess the password
+  * if it is one in your specified list, it will use that specified password 
+  * if it is a |EX-CS| in Access Point mode, it will guess the password
   * otherwise it will only connect if the password is blank
 
 * Optionally provides a list of SSIDs with the specified passwords (in the sketch) to choose from

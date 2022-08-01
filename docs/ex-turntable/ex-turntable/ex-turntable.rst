@@ -21,7 +21,7 @@ The aim is to keep things as simple as possible, and to maintain alignment with 
 
 The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
-To make full use of Turntable-EX, you will need a basic understanding of :ref:`EX-RAIL <ex-rail/getting-started:introduction>` automation, but we'll share the details and some examples to help with this.
+To make full use of Turntable-EX, you will need a basic understanding of :doc:`EX-RAIL </ex-rail/index>` automation, but we'll share the details and some examples to help with this.
 
 Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
 

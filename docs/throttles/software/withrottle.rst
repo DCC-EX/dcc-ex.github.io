@@ -1,10 +1,16 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
+.. include:: /include/include-l2.rst
 ****************
 WiThrottle
 ****************
 
 |conductor|
+
+.. sidebar:: On this page
+
+  .. contents:: 
+    :depth: 2
+    :local:
 
 .. image:: /_static/images/throttles/icon_ios.png
    :alt: iOS Logo
@@ -17,7 +23,7 @@ Please visit their website: https://www.withrottle.com
 
 You can find it in the App Store: `WiThrottle <http://itunes.apple.com/app/id344172578>`_
 
-For more information more information about these protocols, see :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
+For more information more information about these protocols, see :doc:`WiThrottle Server, Web Server, DCC++ API Explained </throttles/protocols>`
 
 .. _withrottle-features:
 

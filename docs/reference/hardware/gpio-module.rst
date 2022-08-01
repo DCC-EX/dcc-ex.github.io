@@ -1,7 +1,16 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 ***************************
 I2C GPIO Expander Modules
 ***************************
+
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 GPIO Expander modules, as the name implies, expand the number of General Purpose Input/Output
 pins that you can use for interacting with your railway layout components.
@@ -17,8 +26,8 @@ a suitable power driver, to a motor or solenoid.
 
 A GPIO Expander module typically has 8 or 16 pins that can each be used as an input or
 output.  When you reference a pin, it will be configured in the appropriate mode.  
-So if you use the EX-RAIL `SET(pin)` call, the pin will be configured as an output; but 
-if you use the EX-RAIL `AT(pin)` call, the pin will be configured as an input.  If you 
+So if you use the |EX-R| `SET(pin)` call, the pin will be configured as an output; but 
+if you use the |EX-R| `AT(pin)` call, the pin will be configured as an input.  If you 
 associate the pin with a DCC++EX 'Sensor' object (through the `<S ...>` commands), then it will
 be configured as an input.
 

@@ -1,4 +1,5 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 ***********************
 Microcontroller Boards
 ***********************
@@ -9,7 +10,7 @@ Microcontroller Boards
     :depth: 1
     :local:
 
-CommandStation-EX currently is designed for Arduino and select microcontrollers. Out of the box, it is compatible with the following boards:
+|EX-CS| currently is designed for Arduino and select microcontrollers. Out of the box, it is compatible with the following boards:
 
 Arduino Mega
 =============

@@ -1,7 +1,16 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 **************************
 Connecting a Servo Module
 **************************
+
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 To connect a servo module to DCC++EX, you first need to get a module, based on the PCA9685 chip.
 

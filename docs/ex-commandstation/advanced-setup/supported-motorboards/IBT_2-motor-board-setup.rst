@@ -25,7 +25,7 @@ What You Will Need (IBT_2)
 * An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
 * An Arduino Motor Shield (or another board for your service track for the upgrade option)
 * An IBT_2 Motor Board (1 board for the upgrade option, 2 for the replace option)
-* Version 3.1.0 or later of the DCC++ EX Command Station Software
+* Version 3.1.0 or later of the |EX-CS| Software
 * 10k or a even a 1k Resistor (Optional)
 * Some Jumper Wires
 

@@ -17,7 +17,7 @@ This page is intended to capture relevant information to assist those who develo
 Additional throttle commands
 _____________________________
 
-Release 4.0.2 provides a number of additional throttle information commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation, and roster features which are already found in the Withrottle implementations. 
+Release 4.0.2 provides a number of additional throttle information commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation, and roster features which are already found in the wiThrottle implementations. 
 
 These commands are new and do not overlap with the existing commands (which are probably due to be obsoleted as they are over complex and unfit for purpose).
 
@@ -134,7 +134,7 @@ Obtaining throttle status
 
 Example response:
 
-* ``<l cabid slot speedbyte functionMap>`` - Note that a slot of -1 indicates that the cab is not in the reminders table and this comand will not reserve a slot until such time as the cab is throttled.
+* ``<l cabid slot speedbyte functionMap>`` - Note that a slot of -1 indicates that the cab is not in the reminders table and this command will not reserve a slot until such time as the cab is throttled.
 
 Where:
 

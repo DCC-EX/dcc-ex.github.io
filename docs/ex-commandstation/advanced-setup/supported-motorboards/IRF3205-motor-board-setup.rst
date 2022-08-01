@@ -18,7 +18,7 @@ What You Will Need (IRF3205)
 * An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
 * An Arduino Motor Shield (If you are upgrading or already have an Arduino Motor Shield)
 * An IRF3205 15A motor board
-* Version 3.1.2 or later of the DCC++ EX Command Station Software
+* Version 3.1.2 or later of the |EX-CS| Software
 * A 7-9V DC Power supply for the Mega
 * A 12-18V DC (depending on train scale) power supply rated for the current you need (we recommend 5A)
 * 2 5A fuses and fuse holders

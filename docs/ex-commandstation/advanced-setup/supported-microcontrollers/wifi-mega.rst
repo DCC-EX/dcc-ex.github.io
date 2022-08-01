@@ -252,7 +252,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 
 AP Mode (the default) makes the Command Station an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the CS so your Throttles can find it on your network.
 
-If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install DCC++EX. Go directly to step 5.
+If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install |EX-CS|. Go directly to step 5.
 
 If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the `Short Version of Network Setup`_ below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 

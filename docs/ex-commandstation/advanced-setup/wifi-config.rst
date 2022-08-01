@@ -16,11 +16,11 @@ WiFi Configuration
    :alt: Conductor Icon
    :scale: 50%
 
-This page describes the software configuration options for using WiFi to connect your Command Station (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
+This page describes the software configuration options for using WiFi to connect your |EX-CS| (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
 
 As mentioned in the above link, you will need the following to proceed:
 
-* A DCC++ EX Command Station with Motor Controller
+* A |EX-CS| with Motor Shield
 * A WiFi board (for Bluetooth configuration, click **here**)
   
 .. todo:: link item above to Bluetooth
@@ -62,24 +62,24 @@ Connection Type: Direct to Command Station or through JMRI
 
 Everything on this page seems to come in twos! You have two options for connecting your controller to your CS depending on its capabilities and your preferences:
 
-* Connect directly to DCC++ EX using WiFi or Bluetooth (JMRI not required but optional)
-* Connect to DCC++ EX through JMRI with the USB cable, and connect a WiThrottle compatible throttle to JMRI's WiThrottle Server via WiFi
+* Connect directly to |EX-CS| using WiFi or Bluetooth (JMRI not required but optional)
+* Connect to the |EX-CS| through JMRI with the USB cable, and connect a WiThrottle compatible throttle to JMRI's WiThrottle Server via WiFi
 
 If you don't need JMRI, or just want to connect your wireless controller directly to the CS, then you connect to the CS using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the WiThrottle command language. 
 
-For example, Engine Driver uses the WiThrottle protocol, so it can connect either directly to the CS via WiFi, or indirectly through the JMRI computer that has WiFi and its own WiThrottle Server. DCCpp CAB can connect directly to DCC++ EX via WiFi or Bluetooth, and sends native <DCC++> commands.
+For example, Engine Driver uses the WiThrottle protocol, so it can connect either directly to the CS via WiFi, or indirectly through the JMRI computer that has WiFi and its own WiThrottle Server. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends native <DCC++> commands.
 
 What's a "WiThrottle Server"?
 ==============================
 
-WiThrottle stands for "WiFi Throttle", and a "WiThrottle Server" is just software running on your JMRI computer or on the DCC-EX Command Station. It's called a "Server" because it allows you to connect to it and it "serves", or services, requests from another application. That application is called a "Client". So your throttle in this case is the client.
+WiThrottle stands for "WiFi Throttle", and a "WiThrottle Server" is just software running on your JMRI computer or on the |EX-CS|. It's called a "Server" because it allows you to connect to it and it "serves", or services, requests from another application. That application is called a "Client". So your throttle in this case is the client.
 
-WiThrottle itself is a standard for how WiFi throttles can communicate with Command Stations, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that any device that is WiThrottle compatible should work with DCC++ EX. Also, any device that sends <DCC++> commands should work with DCC++ EX.
+WiThrottle itself is a standard for how WiFi throttles can communicate with Command Stations, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that any device that is WiThrottle compatible should work with the |EX-CS|. Also, any device that sends <DCC++> commands should work with |EX-CS|.
 
 Access Point Mode vs. Station Mode
 ===================================
 
-There are two ways to configure the WiFi board connected to DCC++ EX: "Access Point Mode" (aka "AP MODE"), and "Station Mode". We often abbreviate the latter to "STA". You will also see people refer to it as "Client Mode".
+There are two ways to configure the WiFi board connected to |EX-CS|: "Access Point Mode" (aka "AP MODE"), and "Station Mode". We often abbreviate the latter to "STA". You will also see people refer to it as "Client Mode".
 
 AP Mode
 ________
@@ -121,7 +121,7 @@ Default Operation - AP Mode (No Configuration Necessary)
 
 To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup <../get-started/wifi-setup>`. 
 
-That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for DCC++ EX is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. DCC++ EX then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
+That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for DCC++ EX is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
 
 To see other configuration options you can set in your config.h file, see :ref:`ex-commandstation/advanced-setup/wifi-config:WiFi Config Options` below.
 

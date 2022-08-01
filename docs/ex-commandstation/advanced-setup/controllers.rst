@@ -8,7 +8,7 @@ Choosing a Controller (Throttle) - Advanced
 
 You need just two things that work together to operate your model railroad:
 
-* The DCC++ EX Command Station (aka CS)
+* The |EX-CS| (aka CS)
 
 * A Controller (aka Front-end, Cab, or Throttle)
 
@@ -25,7 +25,7 @@ Since the CS simply accepts commands to turn into signals for your layout, you n
 Connection Types
 =================
 
-Your controller can connect to the DCC++ EX Command Station several different ways, such as:
+Your controller can connect to the |EX-CS| several different ways, such as:
 
 * Direct connection using a USB cable
 * 2 wires to an Arduino serial port
@@ -63,12 +63,12 @@ For those who want the power of JMRI to operate a complex layout, you would inst
 Command Language (API)
 ======================
 
-There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and via the JMRI Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC++, and Web Servers Explained </throttles/protocols>`. DCC++ EX natively understands our own DCC++ API and the WiThrottle API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running JMRI, and use JMRI as the middleware to send commands to DCC++EX. JMRI uses DCC++ commands when speaking to the Command Station.
+There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and via the JMRI Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC++, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own DCC++ API and the WiThrottle API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running JMRI, and use JMRI as the middleware to send commands to |EX-CS|. JMRI uses DCC++ commands when speaking to the Command Station.
 
 Compatible Throttles
 =====================
 
-Here is a list of some of the controllers you can use with DCC++EX. We work closely with developers to help them maintain compatibility with the DCC++EX Command Station. Check back on occasion, as new devices are being added all the time.
+Here is a list of some of the controllers you can use with DCC++EX. We work closely with developers to help them maintain compatibility with the |EX-CS|. Check back on occasion, as new devices are being added all the time.
 
 For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.
 
@@ -95,7 +95,7 @@ For operating instructions see :doc:`how to use WebThrottle-EX </throttles/softw
 Engine Driver (Android | WiThrottle | WiFi)
 --------------------------------------------
 
-Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "WiThrottle" (for WiFi Throttle) and any WiThrottle compatible throttle will work with DCC++ EX. There are two ways to connect it; the first method is by connecting directly to the CS via WiFi. You will need a WiFi board connected to the CS (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
+Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "WiThrottle" (for WiFi Throttle) and any WiThrottle compatible throttle will work with the |EX-CS|. There are two ways to connect it; the first method is by connecting directly to the CS via WiFi. You will need a WiFi board connected to the CS (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
 
 The second method is to use JMRI and connect Engine Driver (ED) to the computer running JMRI. That computer would then connect to the CS via a USB cable (normally) or via a Wireless USB Bridge. The computer running JMRI can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full JMRI setup with WiFi with virtually no fuss.
 

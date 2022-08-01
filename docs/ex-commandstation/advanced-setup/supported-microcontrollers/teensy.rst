@@ -9,7 +9,7 @@ Teensy
 
 It's teensy because it is even smaller than a Nano, but it is even more powerful than a Nano Every. This is not an Arduino, it is from a company called PJRC. Since it is a different processor, there are a lot of changes in the software that load onto the teensy when you select that as your processor.
 
-There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. DCC++ EX will run on all these boards. The biggest difference is size/number of pins. You can also purchase the boards with or without the headers soldered on.
+There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. |EX-CS| will run on all these boards. The biggest difference is size/number of pins. You can also purchase the boards with or without the headers soldered on.
 
 .. image:: /_static/images/microcontrollers/teensy_3_2.jpg
    :alt: Teensy 3.2

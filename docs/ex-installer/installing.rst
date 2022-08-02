@@ -1,16 +1,23 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+
+..
+.. image:: ../_static/images/product-logo-ex-installer.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 *******************
 Using the Installer 
 *******************
+
+|tinkerer| |engineer|
 
 .. sidebar::
 
   .. contents:: On this page
     :depth: 1
     :local:
-
-|tinkerer| |engineer|
 
 Requirements (for installing)
 ==============================

@@ -1,16 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 ***********
 Adding WiFi
 ***********
+
+|conductor|
 
 .. sidebar::
 
   .. contents:: On this page
     :local:
     :depth: 1
-
-|conductor|
 
 *The instructions on this page are NOT for connecting your* |EX-CS| *to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12).*
 

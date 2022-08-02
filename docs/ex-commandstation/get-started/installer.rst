@@ -1,8 +1,16 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 ********************
 Install the software
 ********************
+
+|conductor|
 
 .. sidebar::
 
@@ -10,8 +18,6 @@ Install the software
     :depth: 2
     :local:
     
-|conductor|
-
 This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-installer/index` page for the full instructions.
 
 ----

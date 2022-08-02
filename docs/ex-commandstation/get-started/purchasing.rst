@@ -1,16 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 ****************
 Purchasing Parts
 ****************
+
+|conductor| 
 
 .. sidebar::
 
   .. contents:: On this page
     :depth: 1
     :local:
-
-|conductor| 
 
 This page explains what you will need to acquire to build a |EX-CS| using the recommended parts for a |conductor-text|.  
 

@@ -1,16 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 ****************
 Initial Assembly
 ****************
+
+|conductor|
 
 .. sidebar::
 
   .. contents:: On this page
     :local:
     :depth: 1
-
-|conductor|
 
 |image-note|
 

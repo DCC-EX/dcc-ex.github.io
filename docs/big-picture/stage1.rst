@@ -32,7 +32,7 @@ At the end of stage 1, we expect you will learn the following:
 * What hardware can be used, and how to connect the components (Fritzing diagrams for this will be published soon).
 
 .. raw:: html
-  :file: ../../_static/images/big-picture/rmft-stage1.drawio.svg
+  :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
 
 Aliases
 =======

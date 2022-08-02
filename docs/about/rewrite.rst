@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-*************************
-What's New in DCC++ EX?
-*************************
+*********************
+What's New in DCC-EX?
+*********************
 
 .. sidebar::
 
@@ -53,8 +53,8 @@ We added many new functions such as:
 
 ... and much, much more. 
 
-How did you do it?
-====================
+How did we do it?
+=================
 
 We assembled a team of software developers and electronics engineers from around the world, created a plan, and started work early in 2020. (See the team information and credits on the :doc:`About page <index>`)
 
@@ -98,7 +98,7 @@ We not only are working on a RailCom cutout within the Command Station, but are 
 Automation
 ===========
 
-EX-RAIL (Extended Railroad Automation Interface for Layouts) brings new capability to the world of automation. You don't have to be a programmer to write a script that tells a train to start moving forward at a set speed until some action (like reaching a sensor) occurs! We will be providing a document and tutorial on EX-RAIL once Beta testing is complete. This will be an open-ended project, since who knows what things people will come up with that they want to automate! It will be easy to extend the commands to handle whatever your imagination can dream of.
+|EX-R| (Extended Railroad Automation Interface for Layouts) brings new capability to the world of automation. You don't have to be a programmer to write a script that tells a train to start moving forward at a set speed until some action (like reaching a sensor) occurs! We will be providing a document and tutorial on EX-RAIL once Beta testing is complete. This will be an open-ended project, since who knows what things people will come up with that they want to automate! It will be easy to extend the commands to handle whatever your imagination can dream of.
 
 The bottom line
 =================

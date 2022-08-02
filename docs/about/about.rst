@@ -117,6 +117,7 @@ Documentation / Management
 * Peter Cole - Brisbane QLD Australia (peteGSX)
 * Colin Grabham, Condobolin NSW Straya (Kebbin)
 * Paul Antoine, Western Australia (Paul Antoine)
+* Peter Akers, Queensland Australia (flash62au)
 
 Testing / Research / Support
 =============================

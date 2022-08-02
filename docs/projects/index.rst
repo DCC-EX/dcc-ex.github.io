@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 ****************
-Projects
+Related Projects
 ****************
 
 This page holds projects by some of our team members and users. If you have a project you would like to submit, just send us a note.

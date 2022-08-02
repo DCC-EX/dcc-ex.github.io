@@ -1,7 +1,7 @@
 .. include:: /include/include.rst
-************************************
-About
-************************************
+********************
+About & Contributing
+********************
 
 Find out about who we are and what's different and new in |DCC-EX| as well as a little history of how this all came about.
 
@@ -10,7 +10,12 @@ Find out about who we are and what's different and new in |DCC-EX| as well as a 
 
     about
     rewrite
-    contributing/index
     press/index
     roadmap/index
     site-map/index
+
+
+.. toctree::
+    :maxdepth: 2
+
+    contributing/index

@@ -1,7 +1,7 @@
 .. include:: /include/include.rst
-********
-Press
-********
+*********************
+Press / Announcements
+*********************
 
 .. toctree::
     :maxdepth: 1

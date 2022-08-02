@@ -6,9 +6,9 @@ Engine Driver
 
 |conductor| |tinkerer| |engineer|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 2
     :local:
 
@@ -21,7 +21,7 @@ Engine Driver
 
 If you wish to connect Engine Driver to JMRI, you need to start the wiThrottle Server and (optionally [#]_) the Web Server in JMRI on the computer running JMRI. The JMRI computer must be connected to the |EX-CS| using a USB cable. 
 
-If you wish to connect Engine Driver directly to DCC++ EX, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
+If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
 
 .. _ed-platforms:
 

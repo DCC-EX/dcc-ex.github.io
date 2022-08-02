@@ -10,6 +10,14 @@
 EX-Rail (Automation)
 *********************
 
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 Welcome to the home for DCC-EX Automation, **EX-RAIL** is the "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 
 |EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
@@ -30,7 +38,7 @@ Most people wanting to do animations or run trains through an automated route wi
    17 Feb 2022: *Now included* in **DCC++EX 4.0!**
    Available to download and use now!
 
-
+----
 
 .. toctree::
     :maxdepth: 1
@@ -38,4 +46,3 @@ Most people wanting to do animations or run trains through an automated route wi
     getting-started
     EX-RAIL-summary
     EX-RAIL-reference
-    advanced

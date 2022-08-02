@@ -6,13 +6,13 @@ Technical Reference for Throttle Developers
 
 |engineer|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 2
     :local:
 
-This page is intended to capture relevant information to assist those who develop throttles compatible with DCC++ EX.
+This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS|.
 
 Additional throttle commands
 _____________________________

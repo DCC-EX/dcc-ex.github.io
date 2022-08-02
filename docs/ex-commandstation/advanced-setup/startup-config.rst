@@ -1,8 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+   
 **********************
 Startup Configuration
 **********************
+
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 Sometimes, you will need to configure your |EX-CS| with settings which are not saved by the Command Station when restarted, for example the :ref:`ACK min <reference/software/diagnostic-d-ack-command:\<D ACK LIMIT mA\>>` for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to `2600µS` to be recognised).
 

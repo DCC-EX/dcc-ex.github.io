@@ -6,9 +6,9 @@ Locontrol
 
 |conductor| |tinkerer| |engineer|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 2
     :local:
 
@@ -21,7 +21,7 @@ This iOS App is simply beautiful, but you would expect this from a team of talen
 
 Today, you can use Locontrol on an iOS device connected to JMRI through its Web Interface. JMRI then connects to DCC++EX with a USB cable or wireless USB bridge.
 
-We are currently working with the Locontrol folks to work directly with DCC++ EX without the need for external software. Come back soon for more information. In the meantime, please visit their website https://www.locontrol.com
+We are currently working with the Locontrol folks to work directly with |EX-CS| without the need for external software. Come back soon for more information. In the meantime, please visit their website https://www.locontrol.com
 
 `Get it on the Apple App Store <https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920>`_
 

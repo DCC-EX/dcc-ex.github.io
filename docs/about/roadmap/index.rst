@@ -3,6 +3,11 @@
 DCC-EX Roadmap
 ************************
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 2022
 =====

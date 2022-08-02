@@ -4,13 +4,13 @@
 Putting it all together - the Big Picture
 *****************************************
 
-.. sidebar:: On this page
+|conductor| |tinkerer| |engineer|
 
-   .. contents:: 
+.. sidebar:: 
+
+   .. contents:: On this page
       :depth: 1
       :local:
-
-|conductor|
 
 A common topic that arises in Discord conversations is the question "How does it all fit together?"
 

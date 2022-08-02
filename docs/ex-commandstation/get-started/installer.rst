@@ -56,7 +56,7 @@ Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)
   
     * ???
 
-* Download the :ref:`EX-Installer <download/ex-commandstation:exInstaller>` app |BR| depending on your computer's operating system it will automatically determine the version you need and download it
+* Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app |BR| depending on your computer's operating system it will automatically determine the version you need and download it
 * Extract the downloaded **Installer** into its own folder with your favorite unzip program |BR| |BR|
 * For Microsoft Windows:
   

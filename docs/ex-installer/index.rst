@@ -12,12 +12,6 @@ EX-Installer
 
 |tinkerer| |engineer|
 
-.. sidebar::
-
-  .. contents:: On this page
-    :depth: 1
-    :local:
-
 This page describes all the feature and options of the |EX-I|.  If you identify as an a |conductor-text| and have installed only the recommended hardware we suggest that you look at the simplified instructions on the :doc:`/ex-commandstation/get-started/installer` page.
 
 ----

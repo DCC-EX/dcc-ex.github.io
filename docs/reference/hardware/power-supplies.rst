@@ -4,7 +4,7 @@
 Power Supplies
 ****************
 
-|tinkerer| |engineer|
+|conductor| |tinkerer| |engineer|
 
 .. sidebar::
 

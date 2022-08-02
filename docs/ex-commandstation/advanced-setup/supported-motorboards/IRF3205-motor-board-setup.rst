@@ -1,14 +1,19 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+..
+.. image:: ../../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
 **************************
 IRF3205 Motor Board Setup
 **************************
 
-|tinkerer|
+|tinkerer| |engineer|
 
-.. sidebar:: On this page
+.. sidebar::
 
-   .. contents:: 
+   .. contents:: On this page
       :depth: 2
       :local:
       

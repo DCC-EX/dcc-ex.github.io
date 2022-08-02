@@ -1,20 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 *******************
 WiFi Configuration
 *******************
 
 |conductor|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-   .. contents:: 
+   .. contents:: On this page
     :depth: 1
     :local:
-
-.. image:: /_static/images/conductor-level.png
-   :alt: Conductor Icon
-   :scale: 50%
 
 This page describes the software configuration options for using WiFi to connect your |EX-CS| (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
 

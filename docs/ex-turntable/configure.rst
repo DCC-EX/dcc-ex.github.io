@@ -12,6 +12,13 @@ Configuration options
 
 |conductor|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
+
 Turntable-EX has a number of different configuration options available to customise the behaviour to suit your needs.
 
 Configuration changes are made by editing the "config.h" file.

@@ -6,6 +6,12 @@ DCC++EX HAL Architecture
 
 |engineer|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 .. attention::
    17 Feb 2022: *Now included* in **DCC++EX 4.0!**
    Available to download and use now!
@@ -91,7 +97,7 @@ HAL Programming Interface
 -------------------------
 
 The interface functions to the HAL are as follows.  Apart from the 'create' functions, these functions are generally only called internally 
-from within the DCC++ EX software.  The xxxx::create() functions however are required to be added to the user's myHal.cpp or mySetup.h
+from within the |EX-CS| software.  The xxxx::create() functions however are required to be added to the user's myHal.cpp or mySetup.h
 configuration file in order to register the device driver and configure the specified VPINs.
  
 MCP23017::create(firstVpin, 16, 0x20); *--- OR ---* MCP23017 device1(firstVpin, 16, 0x20);

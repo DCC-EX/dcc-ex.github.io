@@ -37,7 +37,7 @@ You can check Amazon, eBay, AliExpress, Banggood, Adafruit, SparkFun and others 
 Software
 =========
 
-* `DCC++ EX Installer <https://github.com/DCC-EX/BaseStation-Installer/releases/tag/v2.1>`_
+* `EX-Installer <https://github.com/DCC-EX/BaseStation-Installer/releases/tag/v2.1>`_
 * `Steve Todd's Raspberry Pi Image (If you wannt to use a Pi) <https://mstevetodd.com/rpi>`__
 * `JMRI (If you want to use a laptop or desktop) <https://www.jmri.org/>`_
 * `Arduino Software IDE to edit and upload changes (Optional) <https://www.arduino.cc/>`_

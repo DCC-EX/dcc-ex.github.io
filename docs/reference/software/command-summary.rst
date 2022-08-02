@@ -1,14 +1,14 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*************************
-DCC++ EX Command Summary
-*************************
+**********************
+DCC-EX Command Summary
+**********************
 
 |engineer|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 1
     :local:
 

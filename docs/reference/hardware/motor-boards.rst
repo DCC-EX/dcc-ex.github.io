@@ -4,11 +4,14 @@
 Motor Boards
 *************
 
-.. sidebar:: On this page
+|tinkerer| |engineer|
 
-   .. contents:: 
-      :depth: 2
-      :local:
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 
 |EX-CS| is compatible with a wide variety of motor boards, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.
 
@@ -445,6 +448,6 @@ Onboard is the L298 dual H-Bridge, with the same lack of cooling as on the Ardui
 Configuring Motor Boards
 =========================
 
-If your board is not in the list of supported motor board types, or if you need to make changes or have more information about how motor boards are configured in DCC++ EX, see:
+If your board is not in the list of supported motor board types, or if you need to make changes or have more information about how motor boards are configured in |EX-CS|, see:
 
 :doc:`Motor Board Configuration Guide </ex-commandstation/advanced-setup/motor-board-config>`

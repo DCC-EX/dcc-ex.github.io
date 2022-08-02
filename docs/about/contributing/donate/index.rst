@@ -3,6 +3,12 @@
 Donate to Our Project
 **********************
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 How We Use Donations
 ======================
 

@@ -1,11 +1,14 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l1.rst
 *********************
 Recommended software
 *********************
 
-.. sidebar:: On this page
+|tinkerer| |engineer|
 
-   .. contents:: 
+.. sidebar:: 
+
+   .. contents:: On this page
       :depth: 2
       :local:
 

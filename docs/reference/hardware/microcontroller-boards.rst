@@ -4,11 +4,14 @@
 Microcontroller Boards
 ***********************
 
-.. sidebar:: On this page
+|tinkerer| |engineer|
 
-  .. contents:: 
+.. sidebar::
+
+  .. contents:: On this page
     :depth: 1
     :local:
+
 
 |EX-CS| currently is designed for Arduino and select microcontrollers. Out of the box, it is compatible with the following boards:
 

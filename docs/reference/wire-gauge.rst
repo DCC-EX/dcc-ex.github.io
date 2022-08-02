@@ -3,6 +3,14 @@
 Wire Gauge Information
 ************************
 
+|conductor| |tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 Why is Wire Size Important?
 ============================
 
@@ -96,6 +104,6 @@ If you have a small to medium sized layout you could usually power your locos, t
 
 **2. Voltage and current needs** - If you take the power requirements of your accessories off your main track, and power them from a separate supply, you can either run with less Amps or run more locos.
 
-**3. Bi-Directional Communication** - The DCC standard provides no way for accessories or locos to talk back to the CS using the signal on the track. DCC++ EX *does* have this capability by using the GPIO pins as outputs to accessories and inputs from sensors instead of having decoders on your accessories. You can power your accessories with another power supply. There are also several bus structures and accessory control systems, like LCN, that allow not only a separate power system, but 2-way communication system with dedicated microcontrollers that handle turnouts, sensors, lights and other accessories. DCC++ EX can work directly with some of those systems with a simple software switch to hand off commands.
+**3. Bi-Directional Communication** - The DCC standard provides no way for accessories or locos to talk back to the CS using the signal on the track. |EX-CS| *does* have this capability by using the GPIO pins as outputs to accessories and inputs from sensors instead of having decoders on your accessories. You can power your accessories with another power supply. There are also several bus structures and accessory control systems, like LCN, that allow not only a separate power system, but 2-way communication system with dedicated microcontrollers that handle turnouts, sensors, lights and other accessories. DCC++ EX can work directly with some of those systems with a simple software switch to hand off commands.
 
 

@@ -18,7 +18,7 @@ EX-WebThrottle
     :depth: 1
     :local:
 
-This is a new DCC++ EX Throttle/Controller that can connect to the |EX-CS| directly through the USB port of a computer.
+This is a new DC-EX Throttle/Controller that can connect to the |EX-CS| directly through the USB port of a computer.
 
 For a video on how to install and use WebThrottle-EX click below.
 
@@ -36,7 +36,7 @@ You don't need anything else to test it out and to run in emulator mode, just ru
 
 * An Arduino Mega or Uno Microcontroller
 * An Arduino Motor Control Shield
-* The DCC++ EX Command Station sketch loaded on your Arduino
+* The |EX-CS| sketch loaded on your Arduino
 
 
 Getting started
@@ -56,7 +56,7 @@ You have an option for how you would like to run WebThrottle-Ex, from the cloud 
 Try it now (Run from the cloud)
 =================================
 
-Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to DCC++ EX or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run WebThrottle-EX in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run WebThrottle-EX in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
 .. rst-class:: dcclink
 

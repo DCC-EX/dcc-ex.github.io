@@ -6,6 +6,12 @@ DCC Diagnostic Tools
 
 |engineer|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 ***Work in Progress. More detail and pictures soon!***
 
 **LEVEL: Engineers or Serious Tinkerers**

@@ -1,8 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 ************
 WiFi Options
 ************
+
+|conductor| |tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 .. sidebar:: Optional connection direct to a computer running JMRI
    
@@ -42,7 +56,7 @@ If you wish to disconnect your PC/Pi and run trains from your phone or tablet us
 Compatible Boards X
 ===================
 
-Most boards based on the ESP8266 should work with DCC++ EX. However, with all the variations and software versions out there, we've compiled this list of known tested, working hardware. We will add more over time.
+Most boards based on the ESP8266 should work with |EX-CS|. However, with all the variations and software versions out there, we've compiled this list of known tested, working hardware. We will add more over time.
 
 
 * `Makerfabs ESP8266 WiFi Shield (recommended) <https://www.makerfabs.com/esp8266-wifi-shield.html>`_
@@ -71,7 +85,7 @@ Quick links X
 Makerfabs ESP8266 WiFi Shield (recommended) X
 ===============================================
 
-We like this board here at DCC++ EX. It is simple, inexpensive, easy to use, and it works.
+We like this board here at |DCC-EX|. It is simple, inexpensive, easy to use, and it works.
 
 .. figure:: /_static/images/wifi_jumpers1.jpg
    :alt: Makerfabs ESP-8266 WiFi Shield

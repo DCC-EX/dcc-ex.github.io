@@ -12,6 +12,12 @@ Test your setup
 
 |conductor|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 Testing control of a loco
 =========================
 

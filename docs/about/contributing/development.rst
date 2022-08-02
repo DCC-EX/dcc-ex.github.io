@@ -1,11 +1,14 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 ************
 Development
 ************
 
-.. sidebar:: On this page
+|tinkerer| |engineer|
 
-   .. contents:: 
+.. sidebar:: 
+
+   .. contents:: On this page
       :depth: 2
       :local:
 

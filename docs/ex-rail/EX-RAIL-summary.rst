@@ -10,6 +10,13 @@
 EX-RAIL Command Summary
 *************************
 
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 Notes
 ======
@@ -49,7 +56,7 @@ There are some diagnostic and control commands added to the <tag> language norma
     :header-rows: 1
     :class: command-table
 
-    * -  DCC++ EX Commands
+    * -  DCC-EX Commands
       -  Description
     * -  <D EXRAIL ON|OFF>
       -  Turns on/off diagnostic traces for EX-RAIL events

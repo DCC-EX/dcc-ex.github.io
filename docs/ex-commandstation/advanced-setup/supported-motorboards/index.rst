@@ -1,4 +1,9 @@
 .. include:: /include/include.rst
+..
+.. image:: ../../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
 ************************************
 Supported Motorboards Setup Notes
 ************************************

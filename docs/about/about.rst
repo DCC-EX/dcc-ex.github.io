@@ -3,6 +3,12 @@
 About Us - Meet the Team
 *************************
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 Who is behind all this? And will they ever face justice? Who knows, but the 
 following is a list of those names associated with taking over the DCC++ 
 BaseStation Project, and rewriting/expanding it into "DCC++ EX". 

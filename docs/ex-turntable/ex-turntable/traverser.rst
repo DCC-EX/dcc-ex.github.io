@@ -6,9 +6,9 @@ Traversers and Limited Rotation Turntables
 
 |tinkerer|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 1
     :local:
 

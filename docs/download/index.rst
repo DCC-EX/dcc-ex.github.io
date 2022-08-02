@@ -1,7 +1,7 @@
 .. include:: /include/include.rst
-*******************
-Software Downloads
-*******************
+*********
+Downloads
+*********
 
 Welcome to the central downloads page for all |DCC-EX| software solutions. Please click on the project that you'd like to download.
 

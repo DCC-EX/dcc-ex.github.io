@@ -30,7 +30,7 @@ If you wish to add to this list, please fill out the `DCC Decoder Feedback <http
 * ACK Settings - Specific settings to enable correct ACK behaviour for service mode programming.
 * Rating:
 
-  * Rating is out of 3, purely from the perspective of compabitibility and ease of use getting them working and programming specifically with DCC++ EX. No consideration is given to how easy or complicated these are to install as the use cases vary too widely.
+  * Rating is out of 3, purely from the perspective of compatibility and ease of use getting them working and programming specifically with |EX-CS|. No consideration is given to how easy or complicated these are to install as the use cases vary too widely.
   * 1/3 - Can be quite difficult or complicated to get working or testing had inconsistent results.
   * 2/3 - Works as expected, with some extra effort required such as unique ACK settings.
   * 3/3 - Works exactly as expected.

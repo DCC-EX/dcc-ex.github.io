@@ -3,9 +3,11 @@
 GitHub
 *******
 
-.. sidebar:: On this page
+|tinkerer| |Engineer|
 
-   .. contents:: 
+.. sidebar::
+
+   .. contents:: On this page
       :depth: 1
       :local:
 

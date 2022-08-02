@@ -1,14 +1,14 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-*********
-Throttles
-*********
+***********************
+Throttles (Controllers)
+***********************
 
 |conductor| |tinkerer| |engineer|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 2
     :local:
 

@@ -1,10 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+   
 ******************************
 Install using the Arduino IDE
 ******************************
 
-|tinkerer|
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our DCC++ EX Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
 

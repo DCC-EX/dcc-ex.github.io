@@ -1,10 +1,23 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+..
+.. image:: ../../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+   
 ************************
 L298N Motor Board Setup
 ************************
 
-|tinkerer|
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 
 The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are the key differences:
 

@@ -4,9 +4,11 @@
 I2C Devices
 ************
 
-.. sidebar:: On this page
+|tinkerer| |engineer|
 
-  .. contents:: 
+.. sidebar::
+
+  .. contents:: On this page
     :depth: 1
     :local:
 

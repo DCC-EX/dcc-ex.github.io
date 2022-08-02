@@ -4,14 +4,13 @@
 Testing your installation
 *************************
 
+|tinkerer| |engineer|
+
 .. sidebar::
 
   .. contents:: On this page
     :depth: 1
     :local:
-
-|tinkerer| |engineer|
-
 
 Using the Arduino IDE Serial Monitor
 -------------------------------------

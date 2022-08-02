@@ -6,9 +6,9 @@ miniThrottle (Physical)
 
  |tinkerer| |engineer|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 2
     :local:
 

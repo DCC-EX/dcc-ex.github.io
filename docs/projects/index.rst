@@ -9,3 +9,6 @@ This page holds projects by some of our team members and users. If you have a pr
     :maxdepth: 1
 
     railsnail-bluetooth
+    /throttles/hardware/minithrottle
+    /throttles/hardware/witcontroller
+    /throttles/hardware/streamdeck

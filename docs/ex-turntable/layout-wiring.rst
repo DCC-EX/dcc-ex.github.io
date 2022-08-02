@@ -12,6 +12,13 @@ Layout Connections and Wiring
 
 |conductor|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
+
 On this page we hope to outline various different ways to connect your turntable to Turntable-EX and your layout to ensure correct DCC phase alignment with the surrounding tracks.
 
 Given Turntable-EX is in its infancy at the time of writing, there will likely be plenty of other options available or in use that we've not been made aware of as yet. We will capture those here in due course.

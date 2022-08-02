@@ -4,13 +4,13 @@
 Stage 1
 *******
 
-.. sidebar:: On this page
+|conductor| |tinkerer| |engineer|
 
-   .. contents:: 
+.. sidebar:: 
+
+   .. contents:: On this page
       :depth: 1
       :local:
-
-|conductor|
 
 Stage 1 of our RMFT layout is a simple loop including a single siding for a station, which allows for automated running of up to three trains including automated switching for entering and exiting the station siding.
 

@@ -6,6 +6,12 @@ Diagnostics ``<D ACK>`` Command
 
 |engineer|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 - :ref:`reference/software/diagnostic-d-ack-command:\<D ACK ON\>` - Turn on Loco acknowledgement diagnostics
 - :ref:`reference/software/diagnostic-d-ack-command:\<D ACK LIMIT mA\>` - Override ACK processing mA pulse size
 - :ref:`reference/software/diagnostic-d-ack-command:\<D ACK MIN µS\>` - Override ACK processing minimum pulse width

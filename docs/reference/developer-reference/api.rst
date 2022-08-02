@@ -6,9 +6,9 @@ CommandStation-EX API Reference
 
 |engineer|
 
-.. sidebar:: On this page
+.. sidebar:: 
 
-  .. contents:: 
+  .. contents:: On this page
     :depth: 1
     :local:
 
@@ -60,7 +60,7 @@ The WiFI or ethernet collectors work on a per-transmission basis and the first b
 
 API commands are to be sent using the message format outlined below, with responses conforming to the same format.
 
-Due to the nature of DCC++ EX being able to be operated by multiple API clients concurrently combined with the fact there is no unique client identifier, there is no guarantee that a response received directly after a command is sent is related. Care must be taken to take this into account.
+Due to the nature of |EX-CS| being able to be operated by multiple API clients concurrently combined with the fact there is no unique client identifier, there is no guarantee that a response received directly after a command is sent is related. Care must be taken to take this into account.
 
 To repeat from above, any input received that an API client does not understand should be discarded and ignored.
 

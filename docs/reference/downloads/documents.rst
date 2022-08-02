@@ -3,6 +3,14 @@
 Documents
 *********************
 
+|conductor| |tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 Java Model Railroad Interface JMRI with DCC++EX
 ================================================
 
@@ -34,7 +42,7 @@ You can also add user defined ATC Automatic Throttle Control Jython.py scripts t
 .. rst-class:: dcclink
 
 Download DCC++EX Commands.py script (zip) files for JMRI to display DCC++EX Command Summary Lists through the JMRI Script Output Window. 
-   `DCC++ EX Commands JMRI Script </_static/documents/DCCEX_Commands_3.1.py.zip>`_
+   `DCC-EX Commands JMRI Script </_static/documents/DCCEX_Commands_3.1.py.zip>`_
 
 .. rst-class:: clearer
 

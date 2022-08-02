@@ -6,6 +6,12 @@ Troubleshooting Turntable-EX
 
 |conductor|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 Troubleshooting common Turntable-EX issues
 ===========================================
 

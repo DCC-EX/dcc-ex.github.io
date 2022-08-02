@@ -3,6 +3,14 @@
 Reference
 **********
 
+|conductor| |tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 Videos
 ========
 

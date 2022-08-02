@@ -3,6 +3,15 @@
 Overview
 *********
 
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
+
 What can I contribute to?
 ==========================
 

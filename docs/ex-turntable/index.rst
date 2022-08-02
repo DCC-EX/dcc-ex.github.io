@@ -12,7 +12,7 @@ EX-Turntable
 
 |conductor|
 
-Welcome to the home of Turntable-EX, a fully integrated turntable controller for DCC++ EX.
+Welcome to the home of Turntable-EX, a fully integrated turntable controller for |EX-CS|.
 
 .. toctree::
   :maxdepth: 1
@@ -24,4 +24,3 @@ Welcome to the home of Turntable-EX, a fully integrated turntable controller for
   ex-turntable/traverser
   configure
   ex-turntable/troubleshooting
-  advanced

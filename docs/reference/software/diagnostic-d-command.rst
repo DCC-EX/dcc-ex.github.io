@@ -6,6 +6,12 @@ Diagnostics ``<D>`` Command
 
 |engineer|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 These commands either enable diagnostics or allow settings to be changed. There are a number of diagnostic facilities under the  ``<D>`` command, most are harmless but caution is advised.
 
 **The** ``<D>`` **commands are intended for diagnostics only which means that their behaviour can change from one release to another without warning**

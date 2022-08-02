@@ -1,11 +1,16 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+..
+.. image:: ../../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+   
 ************
 Teensy
 ************
 
-|tinkerer|
-
+|tinkerer| |engineer|
 
 It's teensy because it is even smaller than a Nano, but it is even more powerful than a Nano Every. This is not an Arduino, it is from a company called PJRC. Since it is a different processor, there are a lot of changes in the software that load onto the teensy when you select that as your processor.
 

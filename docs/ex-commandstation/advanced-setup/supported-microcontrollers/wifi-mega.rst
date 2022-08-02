@@ -1,10 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+..
+.. image:: ../../../_static/images/product-logo-ex-commandstation.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+   
 **************************
 Mega+WiFi Configuration
 **************************
 
-|tinkerer|
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 A Operational Standalone WiFi DCC Command Station
 =================================================

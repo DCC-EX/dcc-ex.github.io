@@ -1,6 +1,16 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l1.rst
+..
+.. image:: ../_static/images/product-logo-ex-support.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+   
 ************************
 Submit a Support Ticket
 ************************
+
+|conductor| |tinkerer| |engineer|
 
 The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Qf>`_. Usually there is always a team member online to help with your issue, and if not you'll get a response within a few hours. If you still want to use email support, you can fill out the following form or send at email to support@dcc-ex.com.
 

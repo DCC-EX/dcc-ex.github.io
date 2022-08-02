@@ -10,11 +10,14 @@
 EX-RAIL Command Reference
 **************************
 
-.. sidebar:: On this page
+|tinkerer| |engineer|
 
-  .. contents:: 
+.. sidebar::
+
+  .. contents:: On this page
     :depth: 1
     :local:
+
 
 This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
 

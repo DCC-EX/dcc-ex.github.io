@@ -6,41 +6,47 @@ I/O Device Drivers and HAL
 
 |engineer|
 
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 The DCC++ EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may 
 outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.  
 
-DCC++ EX, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
+|EX-CS|, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
 piece of software called the **HAL** or **H**\ardware **A**\bstraction **L**\ayer.  
 The HAL provides support for a range of different input and output modules through drivers that are supplied with DCC++ EX.
-In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to DCC++ EX 
+In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to |EX-CS| 
 without having to change a line of the core application code.  
 
-The HAL exposes a standard set of functions which the rest of DCC++ EX code is able to call upon, and the HAL directs the 
+The HAL exposes a standard set of functions which the rest of |EX-CS| code is able to call upon, and the HAL directs the 
 calls to the appropriate device driver.
 The specific device end-points are given by a kind of pin number, called a **V**\irtual **pin** or VPIN.
 Any module has one or more VPINs associated with it.
 
-When DCC++ EX code needs to write to an Arduino digital output pin, the output is uniquely identified by a pin number.  
-The Arduino Mega has digital I/O pin numbers ranging up to 69.  For example, you may set up an Output in DCC++ EX using the 
+When |EX-CS| code needs to write to an Arduino digital output pin, the output is uniquely identified by a pin number.  
+The Arduino Mega has digital I/O pin numbers ranging up to 69.  For example, you may set up an Output in |EX-CS| using the 
 `<Z 1 40 0>` command (id=1, pin=40).  Then the command `<Z 1 1>` will set pin 40 HIGH and `<Z 1 0>` will set pin 40 LOW.
 
 The HAL extends this model to other devices.  If you want to write to a digital output pin on an external GPIO Extender Module, 
 then you do exactly the same thing, but the pin number identifies a virtual pin number associated with an extender module.  The call is passed to
 the driver software for that module, and a command is sent to the module to modify its pin state.
-DCC++ EX does not need to know what type of device it is, or what low-level commands are necessary to operate it.  
+|EX-CS| does not need to know what type of device it is, or what low-level commands are necessary to operate it.  
 It just sends an instruction for the pin to be set on or off.
 If you want to reposition a servo, the same function is called, but with a VPIN number that identifies a pin
 on a servo controller module; consequently, a command is sent to the servo control module to move the servo to the appropriate position.
 
-The same principle applies to Sensors (inputs).  You can configure a sensor object on DCC++ EX by using the command `<S 2 40 1>` command (id=2, pin=40, pull-up=enabled). 
+The same principle applies to Sensors (inputs).  You can configure a sensor object on |EX-CS| by using the command `<S 2 40 1>` command (id=2, pin=40, pull-up=enabled). 
 When pin 40 is connected to 0V (ground), a message `<Q 2>` is generated, and when it is disconnected, `<q 2>` is generated.  But if you have an MCP23017
 GPIO Extender module connected up, and you replace the pin number 40 with 164 (the number of the first pin on the MCP23017), 
 then you will get the messages when the MCP23017 pin is connected to 0V or disconnected.
 
 So how are these 'VPINs' configured?  
 
-The standard DCC++ EX build for an Arduino Mega already contains support for four external modules, two GPIO Extender modules
+The standard |EX-CS| build for an Arduino Mega already contains support for four external modules, two GPIO Extender modules
 and two servo modules.  The GPIO Extender modules are MCP23017 modules which each have 16 pins that can be configured as inputs or outputs.  The Servo modules are
 PCA9685 modules which each have 16 pins that each provide a pulse-width-modulated signal that may be used to control a servo.  That's sixteen independently controlled
 servos on each module.
@@ -48,10 +54,10 @@ servos on each module.
 If you need more modules, then they can be added from a user-specific configuration file, as described further on.
 
 **IMPORTANT NOTE**  The Arduino Nano and Arduino Uno both have very limited FLASH program space and RAM memory, compared to the Arduino Mega.
-The rest of the DCC++ EX code takes up most of the FLASH program space, and so there is very little spare for any HAL code.  Consequently, when 
-DCC++ EX is compiled for a Nano or Uno, a *reduced HAL* is included in place of the full HAL.  This provides limited functionality and supports 
+The rest of the |EX-CS| code takes up most of the FLASH program space, and so there is very little spare for any HAL code.  Consequently, when 
+|EX-CS| is compiled for a Nano or Uno, a *reduced HAL* is included in place of the full HAL.  This provides limited functionality and supports 
 only for the Arduino digital input and output functions and analogue input functions.  No advanced drivers (Servos, external GPIO etc.) can be installed.
-It is theoretically possible to create an 'on-line only' version of DCC++ EX which excludes the loco programming functions and 
+It is theoretically possible to create an 'on-line only' version of |EX-CS| which excludes the loco programming functions and 
 therefore frees up FLASH on the Uno and Nano to allow the full HAL to operate, but this is not currently supported.
 
 Catching the I2C Bus
@@ -89,7 +95,7 @@ Also, if your I2C bus cable is long then a pull-up value closer to the minimum i
 Identifying What Devices Are Connected
 --------------------------------------
 
-During the startup phase of DCC++ EX, the I2C bus is queried to identify what (if any) devices are connected.
+During the startup phase of |EX-CS|, the I2C bus is queried to identify what (if any) devices are connected.
 The list of active I2C addresses is shown on the serial output during startup.  An example is shown below, with annotations.
 Note that the address does not necessarily tell you what the device is, since different modules may have the same default
 address.
@@ -118,7 +124,7 @@ the current stops flowing.  This is just the same as the Arduino digital GPIO pi
 
 Two MCP23017 modules are pre-configured, one is address 0x20 and uses VPINs 164-179.  The second is address 0x21 and uses VPINs 180-195.
 
-An input pin may be configured using the DCC++ EX Sensor commands, as follows:
+An input pin may be configured using the DCC-EX Sensor commands, as follows:
 
 .. code-block::
 
@@ -126,7 +132,7 @@ An input pin may be configured using the DCC++ EX Sensor commands, as follows:
 
 This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pull-up.
 
-When the sensor activates and deactivates, the following messages are sent by DCC++ EX over the serial output:
+When the sensor activates and deactivates, the following messages are sent by |EX-CS| over the serial output:
 
 .. code-block::
 
@@ -147,7 +153,7 @@ of an external 5V power supply, to power the servo motors.  If this power isn't 
 
 Two PCA9685 modules are pre-configured, one is address 0x40 and uses VPINs 100-115.  The second is address 0x41 and uses VPINs 116-131.
 
-A servo turnout may be configured using the DCC++ EX Turnout commands, as follows:
+A servo turnout may be configured using the DCC-EX Turnout commands, as follows:
 
 .. code-block::
 
@@ -179,13 +185,13 @@ PCA9685 to do exactly this.
 Other Drivers
 =============
 
-There are also drivers included with DCC++ EX for the following modules:
+There are also drivers included with |EX-CS| for the following modules:
 
 * PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I2C).
 * MCP23008 - Another 8-channel GPIO extender module.
 * PCA/TCA9555 - Another 16-channel GPIO extender module (see notes below).
 * DFPlayer - MP3 Media player with microSD card holder.  You can play different sounds from the player by activating or de-activating
-  output VPINs from within DCC++ EX.
+  output VPINs from within |EX-CS|.
 * ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.
 * VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
 * HC-SR04 - Ultrasound 'sonar' range sensor.  Its VPIN activates when a reflecting object is within a defined distance of the sensor.
@@ -209,7 +215,7 @@ If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment ou
   MCP23017::create(164, 16, 0x20);
   MCP23017::create(180, 16, 0x21);
 
-To configure an input pin using the DCC++ EX Sensor commands, use the <S> command:
+To configure an input pin using the DCC-EX Sensor commands, use the <S> command:
 
 .. code-block:: 
 
@@ -217,7 +223,7 @@ To configure an input pin using the DCC++ EX Sensor commands, use the <S> comman
 
 As per the notes above, the 0 or 1 for the pull-up is redundant as this is always on, but the <S> command requires the parameter to be set.
 
-An output port may be configured using the DCC++ EX Output commands, as follows:
+An output port may be configured using the DCC-EX Output commands, as follows:
 
 .. code-block:: 
   
@@ -226,16 +232,16 @@ An output port may be configured using the DCC++ EX Output commands, as follows:
 Adding a New Device
 ===================
 
-If you want to add a device that is not handled by DCC++ EX 'out-of-the-box', then you will need to create a device 
+If you want to add a device that is not handled by |EX-CS| 'out-of-the-box', then you will need to create a device 
 configuration file, with details of the device driver and how to access the device.
 
-DCC++ EX already has a few useful device drivers for different types of sensors, and new ones are appearing regularly.  The
-device drivers can be installed in DCC++ EX just by adding them to the configuration file, using the steps shown below.
-No change is required to the DCC++ EX base code in order to do this, the device driver is configured in a user-specific 
+|EX-CS| already has a few useful device drivers for different types of sensors, and new ones are appearing regularly.  The
+device drivers can be installed in |EX-CS| just by adding them to the configuration file, using the steps shown below.
+No change is required to the |EX-CS| base code in order to do this, the device driver is configured in a user-specific 
 configuration file.
 
 Many device drivers are completely contained within an "#include" file, with a ".h" file extension.  Some may also have one or
-more ".cpp" files too.  You need to ensure that the driver files are present in the DCC++ EX source file folder.  If you have 
+more ".cpp" files too.  You need to ensure that the driver files are present in the |EX-CS| source file folder.  If you have 
 received them from another source, then copy them to this folder.
 
 Many of the driver ".h" files also include a description of how the driver operates, and what configuration lines are

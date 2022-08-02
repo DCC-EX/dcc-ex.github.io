@@ -3,6 +3,14 @@
 Schematics
 *******************
 
+|tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
 Mega+WiFi Board
 ==================
 

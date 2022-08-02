@@ -22,7 +22,7 @@
 ..
 .. |EX-R| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Rail</span></span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>
 ..
 .. |EX-I| raw:: html
 
@@ -57,23 +57,23 @@
       :scale: 40%
 ..
 .. |EX-I-LOGO| image:: /_static/images/product-logo-ex-installer.png
-      :alt: EX-CommandStation
+      :alt: EX-Installer
       :scale: 40%
 ..
 .. |EX-WT-LOGO| image:: /_static/images/product-logo-ex-webthrottle.png
-      :alt: EX-CommandStation
+      :alt: EX-WebThrottle
       :scale: 40%
 ..
 .. |EX-R-LOGO| image:: /_static/images/product-logo-ex-rail.png
-      :alt: EX-CommandStation
+      :alt: EX-RAIL
       :scale: 40%
 ..
 .. |EX-TT-LOGO| image:: /_static/images/product-logo-ex-turntable.png
-      :alt: EX-CommandStation
+      :alt: EX-Turntable
       :scale: 40%
 ..
 .. |EX-DCCI-LOGO| image:: /_static/images/product-logo-ex-dccinspector.png
-      :alt: EX-CommandStation
+      :alt: EX-SCCInspector
       :scale: 40%
 ..
 .. |EX-CS-LOGO-SMALL| image:: /_static/images/product-logo-ex-commandstation.png
@@ -81,21 +81,21 @@
       :scale: 20%
 ..
 .. |EX-I-LOGO-SMALL| image:: /_static/images/product-logo-ex-installer.png
-      :alt: EX-CommandStation
+      :alt: EX-Installer
       :scale: 20%
 ..
 .. |EX-WT-LOGO-SMALL| image:: /_static/images/product-logo-ex-webthrottle.png
-      :alt: EX-CommandStation
+      :alt: EX-WEbThrottle
       :scale: 20%
 ..
 .. |EX-R-LOGO-SMALL| image:: /_static/images/product-logo-ex-rail.png
-      :alt: EX-CommandStation
+      :alt: EX-RAIL
       :scale: 20%
 ..
 .. |EX-TT-LOGO-SMALL| image:: /_static/images/product-logo-ex-turntable.png
-      :alt: EX-CommandStation
+      :alt: EX-Turntable
       :scale: 20%
 ..
 .. |EX-DCCI-LOGO-SMALL| image:: /_static/images/product-logo-ex-dccinspector.png
-      :alt: EX-CommandStation
+      :alt: EX-DCCInspector
       :scale: 20%

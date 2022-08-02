@@ -10,7 +10,7 @@
 Getting Started
 ***************
 
- . sidebar::
+.. sidebar::
 
   .. contents:: On this page
     :depth: 1

@@ -82,6 +82,7 @@ If you are just starting your journey with |DCC-EX| we recommend you look at our
    ex-rail/index
    ex-turntable/index
    ex-dccinspector/index
+   big-picture/index
    throttles/index
    download/index
    support/index

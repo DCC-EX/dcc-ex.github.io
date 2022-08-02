@@ -12,12 +12,6 @@ EX-Rail (Automation)
 
 |tinkerer| |engineer|
 
-.. sidebar::
-
-  .. contents:: On this page
-    :depth: 1
-    :local:
-
 Welcome to the home for DCC-EX Automation, **EX-RAIL** is the "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 
 |EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"

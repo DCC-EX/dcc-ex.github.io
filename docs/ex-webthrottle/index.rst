@@ -18,9 +18,9 @@ EX-WebThrottle
     :depth: 1
     :local:
 
-This is a new DC-EX Throttle/Controller that can connect to the |EX-CS| directly through the USB port of a computer.
+This is our |EX-WT| throttle/controller that can connect to the |EX-CS| directly through the USB port of a computer.
 
-For a video on how to install and use WebThrottle-EX click below.
+For a video on how to install and use |EX-WT| click below.
 
    .. raw:: html
    
@@ -38,20 +38,22 @@ You don't need anything else to test it out and to run in emulator mode, just ru
 * An Arduino Motor Control Shield
 * The |EX-CS| sketch loaded on your Arduino
 
-
 Getting started
 =================
 
-Make sure you are using Chrome version 89 or above (check the menu, help, about screen).
+.. note:: 
+    :class: note-float-right
+    
+    If you don't have your hardware yet or just want to play with the throttle and see commands being sent to the log window, you can skip the part about connecting your Command Station.
 
-.. note:: If you don't have your hardware yet or just want to play with the throttle and see commands being sent to the log window, you can skip the part about connecting your Command Station.
+Make sure you are using Chrome version 89 or above (check the menu, help, about screen).
 
 To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.
 
 Run or Install WebThrottle-EX
 ==============================
 
-You have an option for how you would like to run WebThrottle-Ex, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
+You have an option for how you would like to run |EX-WT|, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
 
 Try it now (Run from the cloud)
 =================================
@@ -62,19 +64,21 @@ Just click this link and you will load a web page from our server that will run 
 
    `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
-WebThrottle-EX is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the WT-EX settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find WebThrottle-EX with your other Apps!
+WebThrottle-EX is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find WebThrottle-EX with your other Apps!
 
 Download
 ==========
+
+.. note:: 
+    :class: note-float-right
+    
+    We recommend using the version hosted on our servers as this will auto-update whenever we release a new update!
 
 This will install all the files to run locally on your machine. You won't need an internet connection to run the software. Just download the latest zip file from the link below and extract it to any folder you have run permission on. Then click on the index.html file to launch the throttle in your browser. Create a shortcut to it on your desktop so you can launch it more easily.
 
 .. rst-class:: dcclink
 
    `Download <https://github.com/DCC-EX/WebThrottle-EX/releases>`_
-
-.. note:: We recommend using the version hosted on our servers as this will auto-update whenever we release a new update!
-
 
 Operation
 ==========
@@ -92,7 +96,7 @@ If you are in "emulator mode", you can skip to the next step. When using the ser
 
 
 
-You should then be connected to the Command Station (CS) and should see the response from the CS in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging.
+You should then be connected to the |EX-CS| and should see the response from the CS in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging.
 
 
 .. raw:: html
@@ -101,7 +105,7 @@ You should then be connected to the Command Station (CS) and should see the resp
 
 
 
-Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any DCC++ API command in this way. You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
+Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any DCC-EX API command in this way. You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
 
 
 .. raw:: html

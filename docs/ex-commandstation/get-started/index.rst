@@ -10,13 +10,13 @@
 Getting Started
 ***************
 
+|conductor| 
+
 .. sidebar::
 
   .. contents:: On this page
     :depth: 1
     :local:
-
-|conductor| 
 
 This following pages will instruct you on how to build an |EX-CS| including assembling your hardware, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
 

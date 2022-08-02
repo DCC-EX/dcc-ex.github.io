@@ -3,7 +3,7 @@
 About
 ************************************
 
-Find out about who we are and what's different and new in DCC++EX as well as a little history of how this all came about.
+Find out about who we are and what's different and new in |DCC-EX| as well as a little history of how this all came about.
 
 .. toctree::
     :maxdepth: 1

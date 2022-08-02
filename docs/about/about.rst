@@ -11,7 +11,7 @@ About Us - Meet the Team
 
 Who is behind all this? And will they ever face justice? Who knows, but the 
 following is a list of those names associated with taking over the DCC++ 
-BaseStation Project, and rewriting/expanding it into "DCC++ EX". 
+BaseStation Project, and rewriting/expanding it into "DCC++ EX" which has now become |DCC-EX|. 
 
 First, a special thanks to Gregg E. Berman, who had the original idea for a model 
 railroad Command Station using an Arduino Uno and a Motor Shield.

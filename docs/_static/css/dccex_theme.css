@@ -111,6 +111,31 @@ svg {
   width: 20%;
 }
 
+/* override table width restrictions */ 
+.table-wrap-text p, .table-wrap-text p { 
+  white-space: normal !important; 
+  font-size: 110% !important;
+  line-height: 140% !important;
+}
+
+.table-wrap-text td {
+  background-color: white !important;  
+  border-style: none !important;
+  border-width:0px !important;
+}
+ 
+.table-wrap-text { 
+  margin-bottom: 24px; 
+  max-width: 100% !important; 
+  overflow: visible !important; 
+  border-style: none !important;
+  border-width:0px !important;
+} 
+ 
+.table-wrap-text th p { 
+    margin-bottom: unset; 
+} 
+
 /* temporary - these ned to be moved to the main template */
 
 /* sidebar level 3 bullet points */
@@ -138,3 +163,4 @@ div#on-this-page ul.simple li {
   line-height: 120% !important;
   margin-bottom: 0px !important;
 }
+

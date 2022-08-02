@@ -71,6 +71,12 @@ Our products are supported by many third party controllers and applications like
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 
+----
+
+|EX-CS-LOGO-SMALL| |EX-I-LOGO-SMALL| |EX-WT-LOGO-SMALL| |EX-R-LOGO-SMALL| |EX-TT-LOGO-SMALL| |EX-DCCI-LOGO-SMALL|
+
+----
+
 .. toctree::
    :hidden:
    :maxdepth: 4

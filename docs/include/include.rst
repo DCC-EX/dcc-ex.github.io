@@ -52,3 +52,50 @@
 
    <span style="font-weight: bold; font-style: italic; color: #767676;" >Note that you can click on any of the images to make them larger.</span>
 ..
+.. |EX-CS-LOGO| image:: /_static/images/product-logo-ex-commandstation.png
+      :alt: EX-CommandStation
+      :scale: 40%
+..
+.. |EX-I-LOGO| image:: /_static/images/product-logo-ex-installer.png
+      :alt: EX-CommandStation
+      :scale: 40%
+..
+.. |EX-WT-LOGO| image:: /_static/images/product-logo-ex-webthrottle.png
+      :alt: EX-CommandStation
+      :scale: 40%
+..
+.. |EX-R-LOGO| image:: /_static/images/product-logo-ex-rail.png
+      :alt: EX-CommandStation
+      :scale: 40%
+..
+.. |EX-TT-LOGO| image:: /_static/images/product-logo-ex-turntable.png
+      :alt: EX-CommandStation
+      :scale: 40%
+..
+.. |EX-DCCI-LOGO| image:: /_static/images/product-logo-ex-dccinspector.png
+      :alt: EX-CommandStation
+      :scale: 40%
+..
+.. |EX-CS-LOGO-SMALL| image:: /_static/images/product-logo-ex-commandstation.png
+      :alt: EX-CommandStation
+      :scale: 20%
+..
+.. |EX-I-LOGO-SMALL| image:: /_static/images/product-logo-ex-installer.png
+      :alt: EX-CommandStation
+      :scale: 20%
+..
+.. |EX-WT-LOGO-SMALL| image:: /_static/images/product-logo-ex-webthrottle.png
+      :alt: EX-CommandStation
+      :scale: 20%
+..
+.. |EX-R-LOGO-SMALL| image:: /_static/images/product-logo-ex-rail.png
+      :alt: EX-CommandStation
+      :scale: 20%
+..
+.. |EX-TT-LOGO-SMALL| image:: /_static/images/product-logo-ex-turntable.png
+      :alt: EX-CommandStation
+      :scale: 20%
+..
+.. |EX-DCCI-LOGO-SMALL| image:: /_static/images/product-logo-ex-dccinspector.png
+      :alt: EX-CommandStation
+      :scale: 20%

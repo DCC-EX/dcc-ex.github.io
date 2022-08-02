@@ -1,5 +1,11 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
+.. include:: /include/include-l2.rst
+..
+.. image:: ../../_static/images/product-logo-ex-turntable.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 *********
 Overview
 *********

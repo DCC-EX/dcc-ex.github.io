@@ -18,10 +18,10 @@ Testing, Tuning, and Control
     :depth: 2
     :local:
 
-Turntable-EX commands
-======================
+Ex-Turntable commands
+=====================
 
-Before proceeding with testing or any configuration, it's important to understand the two commands available for controlling Turntable-EX.
+Before proceeding with testing or any configuration, it's important to understand the two commands available for controlling |EX-TT|.
 
 This is a debug or diagnostic command that can be executed via the serial terminal of the CommandStation:
 
@@ -85,12 +85,12 @@ Here's a quick example to demonstrate the difference between the diagnostic and 
   <D TT 600 100 0>
   MOVETT(600, 100, Turn)
 
-Testing Turntable-EX
-=====================
+Testing EX-Turntable
+====================
 
-Firstly, power on Turntable-EX, followed by your CommandStation. By powering these on in that order, you will ensure that Turntable-EX is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as "OFFLINE", and commands will fail.
+Firstly, power on |EX-TT|, followed by your CommandStation. By powering these on in that order, you will ensure that |EX-TT| is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as "OFFLINE", and commands will fail.
 
-Referring again to :ref:`reference/software/hal-config:adding a new device`, skip ahead to :ref:`reference/software/hal-config:checking the driver`, and the output you're looking for to validate the Turntable-EX device driver is loaded and connected successfully is below:
+Referring again to :ref:`reference/software/hal-config:adding a new device`, skip ahead to :ref:`reference/software/hal-config:checking the driver`, and the output you're looking for to validate the |EX-TT| device driver is loaded and connected successfully is below:
 
 .. code-block:: 
 
@@ -99,9 +99,9 @@ Referring again to :ref:`reference/software/hal-config:adding a new device`, ski
   <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE *>
   <* MCP23017 I2C:x20 Configured on Vpins:164-179 OFFLINE *>
   <* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *>
-  <* TurntableEX I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, Turntable-EX is connected!
+  <* TurntableEX I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, |EX-TT| is connected!
 
-If there is an "OFFLINE" at the end of the Turntable-EX line, it indicates something is not quite right. Refer to :ref:`ex-turntable/ex-turntable/troubleshooting:turntable-ex showing as offline with \<d hal show\>`.
+If there is an "OFFLINE" at the end of the |EX-TT| line, it indicates something is not quite right. Refer to :ref:`ex-turntable/ex-turntable/troubleshooting:ex-turntable showing as offline with \<d hal show\>`.
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 
@@ -152,7 +152,7 @@ Finally, this command will cause the turntable to once again find its home posit
 
 <TO DO: Add a video demonstrating these tests>
 
-Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting Turntable-EX to good use.
+Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting |EX-TT| to good use.
 
 Tuning your turntable positions
 ================================
@@ -166,11 +166,11 @@ To tune your turntable positions, you will need to calculate the number of steps
 Determine the positions
 ________________________
 
-At this point, you should either have a layout you're fitting Turntable-EX into, or a layout design that you're working to, with the various turntable connection tracks defined.
+At this point, you should either have a layout you're fitting |EX-TT| into, or a layout design that you're working to, with the various turntable connection tracks defined.
 
 The simplest way to devise the approximate number of steps for each turntable position is to calculate these based on the degrees each step will turn.
 
-For the default Turntable-EX configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).
+For the default |EX-TT| configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).
 
 Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula "steps = degrees/degrees per step". To turn 10 degrees requires ~114 steps (10 / 0.088 = 113.64).
 
@@ -297,7 +297,7 @@ Once this has been done, you must explicitly define the phase switching to occur
 
 .. note:: 
 
-  The phase switch command (1 for the diagnostic command, Turn_PInvert for EX-RAIL) does not continue to invert the phase each time that command is sent, the command simply tells Turntable-EX whether or not to activate the phase inversion relays.
+  The phase switch command (1 for the diagnostic command, Turn_PInvert for EX-RAIL) does not continue to invert the phase each time that command is sent, the command simply tells |EX-TT| whether or not to activate the phase inversion relays.
 
   Therefore, for every position that requires the phase to be inverted, you must send the invert command (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn command (0/Turn).
 

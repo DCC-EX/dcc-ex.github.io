@@ -87,4 +87,4 @@ If there is no choice but to utilise a third-party library in some form, then th
 * Include the local copy of the library only.
 * Credit the authors of the library appropriately.
 
-For an example of where a third-party library has been successfully incorporated into our code, refer to the `Turntable-EX <https://github.com/DCC-EX/Turntable-EX>`_ repository and the included AccelStepper library.
+For an example of where a third-party library has been successfully incorporated into our code, refer to the `EX-Turntable <https://github.com/DCC-EX/Turntable-EX>`_ repository and the included AccelStepper library.

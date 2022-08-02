@@ -6,9 +6,9 @@
    :scale: 40%
    :align: right
 
-*****************************
-Troubleshooting Turntable-EX
-*****************************
+****************************
+Troubleshooting EX-Turntable
+****************************
 
 |conductor|
 
@@ -18,10 +18,10 @@ Troubleshooting Turntable-EX
     :depth: 1
     :local:
 
-Troubleshooting common Turntable-EX issues
+Troubleshooting common EX-Turntable issues
 ===========================================
 
-You will find resolutions to a number of common issues encountered with Turntable-EX on this page.
+You will find resolutions to a number of common issues encountered with |EX-TT| on this page.
 
 Homing failure
 _______________
@@ -98,7 +98,7 @@ ____________________________________________________________
   * - CommandStation-EX software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp
     - The version of CommandStation-EX is incorrect, you need the "add-turntable-controller" branch of `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_
 
-Turntable-EX showing as offline with <D HAL SHOW>
+EX-Turntable showing as offline with <D HAL SHOW>
 __________________________________________________
 
 .. list-table:: 
@@ -111,5 +111,5 @@ __________________________________________________
   * - | \<D HAL SHOW\> reports Turntable-EX as OFFLINE
       | Turntable-EX does not respond to EX-RAIL or diagnostic commands
     - | Turntable-EX is not powered on, or was powered on after the CommandStation
-      | The I2C interfaces are not connected correctly, refer to :ref:`ex-turntable/getting-started:9. connect turntable-ex to your commandstation`
-      | The I2C address in Turntable-EX's config.h does not match the address in the CommandStation's myHal.cpp file
+      | The I2C interfaces are not connected correctly, refer to :ref:`ex-turntable/getting-started:9. connect ex-turntable to your ex-commandstation`
+      | The I2C address in EX-Turntable's config.h does not match the address in the CommandStation's myHal.cpp file

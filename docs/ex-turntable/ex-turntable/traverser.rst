@@ -21,7 +21,7 @@ Traversers and Limited Rotation Turntables
 Overview
 =========
 
-Turntable-EX has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.
+|EX-TT| has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.
 
 The primary difference from the standard full rotation turntable mode is the addition of a limit sensor to indicate when the traverser or limited rotation turntable reaches the end of its range of movement.
 
@@ -40,12 +40,12 @@ You will note we've rated the traverser feature as Tinkerer level. This is prima
 
 .. note:: 
 
-  This page has been written as an addendum to the general Turntable-EX documentation and focuses on the changes required to enable traverser mode. Please ensure you are familiar with the other existing documentation also.
+  This page has been written as an addendum to the general |EX-TT| documentation and focuses on the changes required to enable traverser mode. Please ensure you are familiar with the other existing documentation also.
 
 What you need for traverser mode
 _________________________________
 
-The same components outlined in :ref:`ex-turntable/ex-turntable/ex-turntable:what you need for turntable-ex` apply in traverser mode, with two likely exceptions:
+The same components outlined in :ref:`ex-turntable/ex-turntable/ex-turntable:what you need for ex-turntable` apply in traverser mode, with two likely exceptions:
 
 1. Home and limit sensors: Given the need for positive stops at each end's limit of travel, be it vertical, horizontal, or restricting rotation within an arc for limited rotation turntables, micro switches are likely a better choice for these.
 
@@ -147,10 +147,10 @@ Summary table of all connections required during assembly:
       - GND
       - A4 G or I2C GND
 
-Loading Turntable-EX for traverser mode
+Loading EX-Turntable for traverser mode
 ========================================
 
-Prepare to load the software as per :ref:`ex-turntable/getting-started:7. load the turntable-ex software`, and ensure "config.h" has been created by copying or renaming "config.example.h".
+Prepare to load the software as per :ref:`ex-turntable/getting-started:7. load the ex-turntable software`, and ensure "config.h" has been created by copying or renaming "config.example.h".
 
 There is also an example "config.traverser.h" file included with the software that can be renamed to "config.h" instead.
 
@@ -159,7 +159,7 @@ Edit "config.h", add "//" at the beginning of the `#define TURNTABLE_EX_MODE TUR
 .. code-block:: cpp
 
   /////////////////////////////////////////////////////////////////////////////////////
-  //  Define the mode for Turntable-EX.
+  //  Define the mode for EX-Turntable.
   //  TURNTABLE : Use this for normal, 360 degree rotation turntables (Default).
   //  TRAVERSER : Use this for vertical or horizontal traversers, or turntables that do
   //              do not rotate a full 360 degrees.
@@ -179,25 +179,25 @@ If you need to make any other adjustments to cater for using different stepper d
 
 Once "config.h" is updated, you can continue to load the software onto the Arduino.
 
-Once the software is loaded and Turntable-EX starts, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.
+Once the software is loaded and |EX-TT| starts, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.
 
 Sensor testing mode
 ____________________
 
-Prior to proceeding any further, it is recommended to validate the HOME and LIMIT sensors operate correctly, and that they are connected to the correct pins of the Arduino. A new SENSOR_TESTING mode has been added to allow the sensors to be tested, with all other Turntable-EX functionality disabled.
+Prior to proceeding any further, it is recommended to validate the HOME and LIMIT sensors operate correctly, and that they are connected to the correct pins of the Arduino. A new SENSOR_TESTING mode has been added to allow the sensors to be tested, with all other |EX-TT| functionality disabled.
 
 To enable SENSOR_TESTING mode, you will need to edit "config.h" again, and this time remove the "//" from the beginning of the `#define SENSOR_TESTING`` line (Refer to :ref:`ex-turntable/configure:sensor_testing` to enable sensor testing mode.):
 
 .. code-block:: cpp
 
   /////////////////////////////////////////////////////////////////////////////////////
-  //  Enable sensor testing only, prevents all Turntable-EX operations.
-  //  Uncomment this line to disable all normal Turntable-EX operations in order to test
+  //  Enable sensor testing only, prevents all EX-Turntable operations.
+  //  Uncomment this line to disable all normal EX-Turntable operations in order to test
   //  and validate that homing and limit sensors activate and deactivate correctly.
   // 
   #define SENSOR_TESTING                                      <<== After removing //
 
-Once enabled, load the Turntable-EX software again, and once Turntable-EX starts you should see this displayed in the serial console:
+Once enabled, load the |EX-TT| software again, and once |EX-TT| starts you should see this displayed in the serial console:
 
 .. code-block:: 
 
@@ -222,7 +222,7 @@ If the sensors report an inverted status (ie. ACIVATED when they are DEACTIVATED
 
 If activating HOME activates LIMIT or vice versa, then swap the Arduino pin connections. HOME connects to pin 5, LIMIT connects to pin 2.
 
-When sensor testing is complete, you can add the "//" back in front of the `#define SENSOR_TESTING` line in "config.h" to disable SENSOR_TESTING mode, and re-load the software to revert to normal Turntable-EX operations.
+When sensor testing is complete, you can add the "//" back in front of the `#define SENSOR_TESTING` line in "config.h" to disable SENSOR_TESTING mode, and re-load the software to revert to normal |EX-TT| operations.
 
 Automatic calibration
 ______________________
@@ -261,4 +261,4 @@ When starting up for the first time, you should see output in the serial console
 Traverser mode is ready!
 =========================
 
-Now that you have enabled traverser mode in Turntable-EX, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to :doc:`/ex-turntable/ex-turntable/test-and-tune` as the tuning steps and control commands are the same in both turntable and traverser modes.
+Now that you have enabled traverser mode in |EX-TT|, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to :doc:`/ex-turntable/ex-turntable/test-and-tune` as the tuning steps and control commands are the same in both turntable and traverser modes.

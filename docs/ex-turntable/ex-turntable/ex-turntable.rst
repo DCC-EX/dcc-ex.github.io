@@ -18,24 +18,24 @@ Overview
     :depth: 2
     :local:
 
-What is Turntable-EX?
-======================
+What is EX-Turntable?
+=====================
 
-Turntable-EX is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for Turntable-EX.
+|EX-TT| is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for |EX-TT|.
 
 The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`levels:choose your comfort level` guide for CommandStation-EX (Conductor, Tinkerer, and Engineer).
 
 The out-of-the-box example configuration should allow a Conductor level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
-To make full use of Turntable-EX, you will need a basic understanding of :doc:`EX-RAIL </ex-rail/index>` automation, but we'll share the details and some examples to help with this.
+To make full use of |EX-TT|, you will need a basic understanding of :doc:`EX-RAIL </ex-rail/index>` automation, but we'll share the details and some examples to help with this.
 
-Essentially, if you have setup your own CommandStation, the expectation is that Turntable-EX will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
+Essentially, if you have setup your own CommandStation, the expectation is that |EX-TT| will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
 
 .. note::
 
-  Turntable-EX is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get Turntable-EX as easy to use and reliable as possible.
+  |EX-TT| is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get |EX-TT| as easy to use and reliable as possible.
 
-  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the Turntable-EX view of the `DCC++ EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
+  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the |EX-TT| view of the `DCC++ EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
   
   For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the `Regression Testing process <https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md>`_, and then submit your test results using the `Beta Test Results <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_ issue template.
 
@@ -53,7 +53,7 @@ Essentially, if you have setup your own CommandStation, the expectation is that 
 
   Using other pre-defined, supported stepper drivers and motors should also be achievable at the Conductor level, but may enter into Tinkerer territory depending on the specific hardware.
 
-The Turntable-EX integration includes:
+The |EX-TT| integration includes:
 
 * Support for an Arduino Nano or Uno
 * I2C device driver
@@ -68,12 +68,12 @@ The Turntable-EX integration includes:
 
   Credit where credit is due!
   
-  **AccelStepper.h credit:** This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. A slightly modified version of this library is included with the Turntable-EX software (sans example sketches), and more details can be found on the official `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page. Modification comments are included within the library.
+  **AccelStepper.h credit:** This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. A slightly modified version of this library is included with the |EX-TT| software (sans example sketches), and more details can be found on the official `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page. Modification comments are included within the library.
 
-  **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of Turntable-EX. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_.
+  **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of |EX-TT|. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_.
 
-What you need for Turntable-EX
-===============================
+What you need for EX-Turntable
+==============================
 
 * A |EX-CS| running the "add-turntable-controller" branch of `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_ (this displays as version 4.0.2)
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
@@ -129,7 +129,7 @@ For other steppers such as the NEMA17 that require 12V DC, you will need either 
 Supported stepper drivers and motors
 =========================================
 
-The default configuration of Turntable-EX is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.
+The default configuration of |EX-TT| is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.
 
 .. sidebar:: Unsupported stepper drivers and motors
 
@@ -154,25 +154,25 @@ How does it work?
 
   Stepper motor drivers typically support more than one mode for driving stepper motors. This simply means that they can be turned less than one complete step, allowing more granular control of positioning, resulting in higher precision, and much smoother operation. For example, the DRV8825 can drive 1/32 of a step, talk about smooooth!
 
-If you're not familiar with stepper motors then you only need a very high level understanding of how they work in order to use Turntable-EX successfully on your layout, as the concept is very simple.
+If you're not familiar with stepper motors then you only need a very high level understanding of how they work in order to use |EX-TT| successfully on your layout, as the concept is very simple.
 
 Very simply, a stepper motor is able to be rotated one step at a time, which translates to degrees of movement around a circle. For example, the ubiquitous 28BYJ-48 stepper motor referred to here takes 2048 steps to make a full 360 degree rotation. The higher the number of steps in a single rotation, the easier it will be to get perfect alignment between the turntable and your layout, and this also typically translates to smoother rotation.
 
 .. note:: 
 
-  You don't actually need to know the number of steps required to make a full rotation as this is calculated by Turntable-EX the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`ex-turntable/getting-started:automatic calibration`.
+  You don't actually need to know the number of steps required to make a full rotation as this is calculated by |EX-TT| the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`ex-turntable/getting-started:automatic calibration`.
 
-In Turntable-EX, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.
+In |EX-TT|, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.
 
 Once the home position is determined, the various positions on your layout are defined as the number of steps from this home position.
 
-The command used to move to these positions simply sends the number of steps to Turntable-EX, which calculates the steps required in order to move the least number of steps to the desired position, meaning it will rotate either clockwise or counter clockwise depending which is the shortest distance.
+The command used to move to these positions simply sends the number of steps to |EX-TT|, which calculates the steps required in order to move the least number of steps to the desired position, meaning it will rotate either clockwise or counter clockwise depending which is the shortest distance.
 
 That's pretty much as simple as it gets. These step positions are defined in myAutomation.h (part of EX-RAIL), which will be described in further detail below, including how to ensure these are advertised to WiThrottle applications.
 
 .. tip:: 
 
-  It's recommended that the home position does not align with a specific layout connection track to ensure that each time Turntable-EX powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
+  It's recommended that the home position does not align with a specific layout connection track to ensure that each time |EX-TT| powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
 
 Controlling the turntable
 _________________________
@@ -194,9 +194,9 @@ In order to prevent short circuits, the phase (or polarity) of the bridge track 
 
 * Use an auto-reverser that automatically reverses the phase when a short circuit is detected (the Digitrax AR1 is a commonly used option here)
 * Use a mechanical method to switch the phase based on the physical position of the turntable
-* Use Turntable-EX to automatically (or manually) invert the phase as appropriate
+* Use |EX-TT| to automatically (or manually) invert the phase as appropriate
 
-The critical aspect when using Turntable-EX/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
+The critical aspect when using |EX-TT|/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
 
 Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the motor shield are connected to the same rail all the way along.
 
@@ -228,10 +228,10 @@ Now consider inverting or reversing the phase when performing that 180 degree tu
   :alt: 180 degrees
   :scale: 45%
 
-How does this work with Turntable-EX?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+How does this work with EX-Turntable?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Turntable-EX supports automatic phase switching by default, but can also be controlled manually by both EX-RAIL and diagnostic commands.
+|EX-TT| supports automatic phase switching by default, but can also be controlled manually by both EX-RAIL and diagnostic commands.
 
 With the default automatic phase switching, once the turntable rotates 45 degrees away from the home position, it will automatically invert the DCC phase, with the phase then reverting 180 degrees later once the turntable rotates to 225 degrees from the home position.
 
@@ -267,7 +267,7 @@ If the turntable continues to rotate beyond the 225 degree point, the phase will
   :alt: Rotated 180 degrees
   :scale: 100%
 
-The above outlines how the default automatic phase switching works with Turntable-EX, and this behaviour is configurable.
+The above outlines how the default automatic phase switching works with |EX-TT|, and this behaviour is configurable.
 
 .. 
   If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in :ref:`ex-commandstation/get-started/assembly:7. Load firmware on your Command Station`, and the configuration parameter is outlined here: :ref:`ex-turntable/configure:phase_switch_angle`.
@@ -279,4 +279,4 @@ If you have a layout that requires more control over when phase switching does a
 Time to assemble
 ================
 
-Now that you have a general overview of Turntable-EX's features and capabilities, click the "next" button to get started on assembly.
+Now that you have a general overview of EX-Turntable's features and capabilities, click the "next" button to get started on assembly.

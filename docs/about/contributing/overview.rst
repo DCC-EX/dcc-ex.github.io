@@ -20,12 +20,12 @@ There are several different aspects to the DCC++ EX project requiring multiple d
 
 As a general guideline we can always use help and assistance in these general areas:
 
-* CommandStation-EX - our core product is written in C++ and is pretty stable and feature-rich, however we're always looking to enhance this, fix bugs, and so forth.
-* WebThrottle-EX - our web based throttle is in need of further development and is one key area we could really use some help with.
-* Installer-EX - our automated installer always needs development as we release new versions.
-* Turntable-EX - another product written in C++ in Beta testing, development needs will become clear as time goes on and the user base increases.
-* Documentation - enhancing our documentation is a never ending task as we add features and receive feedback, and any and all contributions to this are always appreciated.
-* Hardware - as the microcontroller and I/O accessory markets develop, we are constantly assessing what other options are out there, especially as we near the limits of the Arduino AVR architecture.
+* |EX-CS| - our core product is written in C++ and is pretty stable and feature-rich, however we're always looking to enhance this, fix bugs, and so forth.
+* |EX-WT| - our web based throttle is in need of further development and is one key area we could really use some help with.
+* |EX-I| - our automated installer always needs development as we release new versions.
+* |EX-TT| - another product written in C++ in Beta testing, development needs will become clear as time goes on and the user base increases.
+* **Documentation** - enhancing our documentation is a never ending task as we add features and receive feedback, and any and all contributions to this are always appreciated.
+* **Hardware** - as the microcontroller and I/O accessory markets develop, we are constantly assessing what other options are out there, especially as we near the limits of the Arduino AVR architecture.
 
 What do I need to be able to contribute?
 =========================================

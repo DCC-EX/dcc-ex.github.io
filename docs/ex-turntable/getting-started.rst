@@ -250,7 +250,7 @@ __________________________
 
 At this point, it should be safe to plug in the power supply to the DC power jack on the prototyping shield.
 
-When the power supply is turned on, the power LEDs on the Arduino Nano and dual relay board should be lit. Note there is likely no power LED on the ULN2003 stepper controller, and testing of this will require loading the Turntable-EX software on to the Nano in step 7 below.
+When the power supply is turned on, the power LEDs on the Arduino Nano and dual relay board should be lit. Note there is likely no power LED on the ULN2003 stepper controller, and testing of this will require loading the |EX-TT| software on to the Nano in step 7 below.
 
 .. image:: /_static/images/turntable-ex/power-on.png
   :alt: Powered On
@@ -266,18 +266,18 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
   :alt: Hall Effect Active
   :scale: 50%
 
-7. Load the Turntable-EX software
+7. Load the EX-Turntable software
 __________________________________
 
 .. tip:: 
 
   Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
-  Further to this, note that you will need to end up with two separate folders; one containing the CommandStation-EX software as per  :doc:`/ex-commandstation/advanced-setup/arduino-ide`, and an additional folder containing the Turntable-EX software. The Turntable-EX software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
+  Further to this, note that you will need to end up with two separate folders; one containing the CommandStation-EX software as per  :doc:`/ex-commandstation/advanced-setup/arduino-ide`, and an additional folder containing the |EX-TT| software. The |EX-TT| software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
 
-At the time of writing, there is no installer for Turntable-EX like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
+At the time of writing, there is no installer for |EX-TT| like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
 
-As noted in the tip above, you should have a Turntable-EX folder alongside the CommandStation-EX folder, and neither should reside in the other (the CommandStation-EX software is required in the next step):
+As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-TT| folder, and neither should reside in the other (the |EX-TT| software is required in the next step):
 
 .. image:: /_static/images/turntable-ex/two-folders.png
   :alt: Two folders
@@ -288,7 +288,7 @@ The process here is the same as installing CommandStation-EX via the Arduino IDE
 When you get to the point of opening the sketch, ensure you open the Turntable-EX sketch:
 
 .. image:: /_static/images/turntable-ex/open-turntable-ex-sketch.png
-  :alt: Open Turntable-EX sketch
+  :alt: Open EX-Turntable sketch
   :scale: 60%
 
 Use Windows Explorer to either copy or rename "config.example.h" to "config.h".
@@ -307,22 +307,22 @@ After any adjustments are made and "config.h" has been created, the software can
   :alt: Upload
   :scale: 70%
 
-Once the software is loaded successfully on to Turntable-EX, the stepper motor should automatically start rotating in an attempt to find its "home" position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.
+Once the software is loaded successfully on to |EX-TT|, the stepper motor should automatically start rotating in an attempt to find its "home" position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.
 
-If you don't have the magnet installed at this point, or if it is too far from the sensor, Turntable-EX will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.
+If you don't have the magnet installed at this point, or if it is too far from the sensor, |EX-TT| will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.
 
-If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/ex-turntable/troubleshooting:troubleshooting turntable-ex` for further assistance if required.
+If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/ex-turntable/troubleshooting:troubleshooting ex-turntable` for further assistance if required.
 
 Automatic calibration
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
 
-  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/ex-turntable/test-and-tune:turntable-ex commands` section.
+  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/ex-turntable/test-and-tune:ex-turntable commands` section.
 
   Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`ex-turntable/configure:full_step_count`.
 
-When Turntable-EX is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.
+When |EX-TT| is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.
 
 Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`ex-turntable/ex-turntable/test-and-tune:tuning your turntable positions`.
 
@@ -337,12 +337,12 @@ The output in the serial console should look similar to the below:
   CALIBRATION: Completed, storing full turn step count: 4097            <<== This is the step count to record
   Turntable homed successfully
 
-At this point, the full turn step count is written to the Arduino's EEPROM so that it can be retrieved each time Turntable-EX starts up, preventing the need to repeat the calibration sequence at each subsequent start.
+At this point, the full turn step count is written to the Arduino's EEPROM so that it can be retrieved each time |EX-TT| starts up, preventing the need to repeat the calibration sequence at each subsequent start.
 
-You can now safely power off Turntable-EX and remove the USB cable from your PC as it is no longer required for normal operation, and all further commands will be issued by the CommandStation.
+You can now safely power off |EX-TT| and remove the USB cable from your PC as it is no longer required for normal operation, and all further commands will be issued by the CommandStation.
 
-8. Add the Turntable-EX device driver to CommandStation-EX
-___________________________________________________________
+8. Add the EX-Turntable device driver to EX-CommandStation
+__________________________________________________________
 
 .. note:: 
 
@@ -352,15 +352,15 @@ ___________________________________________________________
   
   If the "myHal.cpp_example.txt" is missing the lines referred to below, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of CommandStation-EX.
 
-  The zip file containing the correct version of CommandStation-EX should also be attached to the Turntable-EX release.
+  The zip file containing the correct version of CommandStation-EX should also be attached to the |EX-TT| release.
 
-Before you will be able to test or use Turntable-EX, you need to configure the CommandStation-EX software to load the appropriate device driver.
+Before you will be able to test or use |EX-TT|, you need to configure the CommandStation-EX software to load the appropriate device driver.
 
 This requires creating or editing the myHal.cpp file in the CommandStation-EX code and uploading it to your CommandStation.
 
 .. tip:: 
 
-  It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the :doc:`/reference/software/hal-config` page. However, if that page is more information than you require at this point, then follow the steps below to add the required Turntable-EX device driver and device.
+  It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the :doc:`/reference/software/hal-config` page. However, if that page is more information than you require at this point, then follow the steps below to add the required |EX-TT| device driver and device.
 
 Before continuing, refer to the file "myHal.cpp_example.txt" included with the CommandStation-EX software, and note the following.
 
@@ -373,16 +373,16 @@ At the top of the file there are a number of lines beginning with "#include":
   #include "IO_HCSR04.h"    // Ultrasonic range sensor
   #include "IO_VL53L0X.h"   // Laser time-of-flight sensor
   #include "IO_DFPlayer.h"  // MP3 sound player
-  //#include "IO_TurntableEX.h"   // Turntable-EX turntable controller
+  //#include "IO_TurntableEX.h"   // EX-Turntable turntable controller
 
-Note the last line, this is the device driver required to enable Turntable-EX support.
+Note the last line, this is the device driver required to enable |EX-TT| support.
 
 Scrolling down towards the bottom of that file, you will also see this indented section:
 
 .. code-block:: cpp
 
   //=======================================================================
-  // The following directive defines a Turntable-EX turntable instance.
+  // The following directive defines a EX-Turntable turntable instance.
   //=======================================================================
   // TurntableEX::create(VPIN, Number of VPINs, I2C Address)
     //
@@ -391,7 +391,7 @@ Scrolling down towards the bottom of that file, you will also see this indented 
   //   Number of VPINs=1 (Note there is no reason to change this)
   //   I2C address=0x60
   //
-  // Note that the I2C address is defined in the Turntable-EX code, and 0x60 is the default.
+  // Note that the I2C address is defined in the EX-Turntable code, and 0x60 is the default.
 
   //TurntableEX::create(600, 1, 0x60);
 
@@ -402,11 +402,11 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
 .. code-block:: cpp
 
   #include "IODevice.h"
-  #include "IO_TurntableEX.h"   // Turntable-EX turntable controller
+  #include "IO_TurntableEX.h"   // EX-Turntable turntable controller
 
   void halSetup() {
     //=======================================================================
-    // The following directive defines a Turntable-EX turntable instance.
+    // The following directive defines a EX-Turntable turntable instance.
     //=======================================================================
     // TurntableEX::create(VPIN, Number of VPINs, I2C Address)
     //
@@ -415,30 +415,30 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
     //   Number of VPINs=1 (Note there is no reason to change this)
     //   I2C address=0x60
     //
-    // Note that the I2C address is defined in the Turntable-EX code, and 0x60 is the default.
+    // Note that the I2C address is defined in the EX-Turntable code, and 0x60 is the default.
   
     TurntableEX::create(600, 1, 0x60);
   }
 
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
 
-- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send Turntable-EX commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/software/hal:overview`).
-- I2C address=0x60 - This is the default address on the I2C bus that the Turntable-EX is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myHal.cpp" and in "config.h" in the Turntable-EX software.
+- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send |EX-TT| commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/software/hal:overview`).
+- I2C address=0x60 - This is the default address on the I2C bus that the |EX-TT| is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myHal.cpp" and in "config.h" in the |EX-TT| software.
 
 If you already have an existing "myHal.cpp" file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the "#include" needs to be before "void halSetup() {" and the "TurntableEX::create..." needs to be before the final "}".
 
 Follow the rest of the directions for :ref:`reference/software/hal-config:adding a new device` all the way through to the :ref:`reference/software/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
 
-Note there is no point in checking the driver at this stage as Turntable-EX is not connected, and will show as "OFFLINE".
+Note there is no point in checking the driver at this stage as |EX-TT| is not connected, and will show as "OFFLINE".
 
-9. Connect Turntable-EX to your CommandStation
-_______________________________________________
+9. Connect EX-Turntable to your EX-CommandStation
+_________________________________________________
 
-To control Turntable-EX from your CommandStation, you will need a connection to the I2C (SDA, SCL) pins.
+To control |EX-TT| from your CommandStation, you will need a connection to the I2C (SDA, SCL) pins.
 
 .. danger:: 
 
-  Ensure you turn the power off to both your CommandStation and Turntable-EX prior to making any of these connections.
+  Ensure you turn the power off to both your CommandStation and |EX-TT| prior to making any of these connections.
 
 On the CommandStation, assuming this is a Mega2560 or Mega2560 + WiFi, the SDA (pin 20) and SCL (pin 21) pins are typically labelled as such, so should be easy to identify.
 
@@ -475,8 +475,8 @@ Connect these pins to your CommandStation as shown in the table below, noting th
 Now you're ready!
 =================
 
-At this point, you should have a fully assembled Turntable-EX with the software loaded, a default configuration, and the device driver installed and configured in your CommandStation.
+At this point, you should have a fully assembled |EX-TT| with the software loaded, a default configuration, and the device driver installed and configured in your CommandStation.
 
-In addition, Turntable-EX should be connected to your CommandStation ready to test, tune your turntable positions, and configure EX-RAIL ready for use on your layout.
+In addition, |EX-TT| should be connected to your CommandStation ready to test, tune your turntable positions, and configure EX-RAIL ready for use on your layout.
 
 Click the "next" button to get cracking!

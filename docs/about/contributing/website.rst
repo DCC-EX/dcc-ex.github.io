@@ -303,7 +303,7 @@ Here's an example for a Conductor level page heading graphic:
     :alt: Conductor Level 
     :scale: 40%
 
-Refer to `images`_ below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the Turntable-EX :doc:`/ex-turntable/ex-turntable/ex-turntable` page.
+Refer to `images`_ below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the |EX-TT| :doc:`/ex-turntable/ex-turntable/ex-turntable` page.
 
 Links
 ______

@@ -6,9 +6,9 @@
    :scale: 40%
    :align: right
 
-*******************
+************
 EX-Turntable
-*******************
+************
 
 |tinkerer| |engineer|
 
@@ -16,4 +16,4 @@ EX-Turntable
 
 .. rst-class:: dcclink
 
-   `Turntable-EX Github Repository <https://github.com/DCC-EX/Turntable-EX/releases>`_
+   `EX-Turntable Github Repository <https://github.com/DCC-EX/Turntable-EX/releases>`_

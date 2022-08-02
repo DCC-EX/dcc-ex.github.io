@@ -19,9 +19,9 @@ Layout Connections and Wiring
     :local:
 
 
-On this page we hope to outline various different ways to connect your turntable to Turntable-EX and your layout to ensure correct DCC phase alignment with the surrounding tracks.
+On this page we hope to outline various different ways to connect your turntable to |EX-TT| and your layout to ensure correct DCC phase alignment with the surrounding tracks.
 
-Given Turntable-EX is in its infancy at the time of writing, there will likely be plenty of other options available or in use that we've not been made aware of as yet. We will capture those here in due course.
+Given |EX-TT| is in its infancy at the time of writing, there will likely be plenty of other options available or in use that we've not been made aware of as yet. We will capture those here in due course.
 
 Split ring connection
 ======================
@@ -51,7 +51,7 @@ The common input of each relay is connected to the appropriate centre ring of th
 
 In this scenario, with the relays in their default inactive state, the CommandStation + will connect to the brown outer ring, and the - will connect to the green inner ring.
 
-Assuming that the default behaviour of automatic phase switching is enabled, when the turntable rotates 180 degrees, Turntable-EX will automatically activate the relays, resulting in the CommandStation + connecting to the orange inner ring, and the - connecting to the brown outer ring, reversing the phase and preventing a short circuit from occurring.
+Assuming that the default behaviour of automatic phase switching is enabled, when the turntable rotates 180 degrees, |EX-TT| will automatically activate the relays, resulting in the CommandStation + connecting to the orange inner ring, and the - connecting to the brown outer ring, reversing the phase and preventing a short circuit from occurring.
 
 .. image:: /_static/images/turntable-ex/layout-connection-centre-rings.png
   :alt: Layout connection with centre rings
@@ -72,7 +72,7 @@ This time, the common input of each relay is connected to either the pit rail or
 
 In this scenario, with the relays in their default inactive state, the CommandStation + will connect to the brown centre ring, and the - will connect to the green pit rail.
 
-Assuming that the default behaviour of automatic phase switching is enabled, when the turntable rotates 180 degrees, Turntable-EX will automatically activate the relays, resulting in the CommandStation + connecting to the orange pit rail, and the - connecting to the brown centre ring, reversing the phase and preventing a short circuit from occurring.
+Assuming that the default behaviour of automatic phase switching is enabled, when the turntable rotates 180 degrees, |EX-TT| will automatically activate the relays, resulting in the CommandStation + connecting to the orange pit rail, and the - connecting to the brown centre ring, reversing the phase and preventing a short circuit from occurring.
 
 .. image:: /_static/images/turntable-ex/layout-connection-pit-and-centre-rings.png
   :alt: Layout connection with centre rings

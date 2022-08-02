@@ -19,7 +19,7 @@ Configuration options
     :local:
 
 
-Turntable-EX has a number of different configuration options available to customise the behaviour to suit your needs.
+|EX-TT| has a number of different configuration options available to customise the behaviour to suit your needs.
 
 Configuration changes are made by editing the "config.h" file.
 
@@ -33,11 +33,11 @@ ____________
 
 `Default: 0x60`
 
-This is the address that Turntable-EX will occupy on the I2C bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known I2C devices.
+This is the address that |EX-TT| will occupy on the I2C bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known I2C devices.
 
-If you need to change this for any reason, ensure that the I2C address in "myHal.cpp" in the CommmandStation-EX software is also changed to the same value.
+If you need to change this for any reason, ensure that the I2C address in "myHal.cpp" in the |EX-CS| software is also changed to the same value.
 
-Multiple instances of Turntable-EX can be controlled by the same CommandStation by ensuring each has its own unique I2C address.
+Multiple instances of |EX-TT| can be controlled by the same CommandStation by ensuring each has its own unique I2C address.
 
 TURNTABLE_EX_MODE
 __________________
@@ -57,7 +57,7 @@ _______________
 
 To enable sensor testing, uncomment this line by removing the "//" from in front of "#define".
 
-When sensor testing is enabled, all Turntable-EX operations are disabled. The state changes of HOME and LIMIT sensors are printed to the serial console when activated/deactivated, and no other activity is possible.
+When sensor testing is enabled, all |EX-TT| operations are disabled. The state changes of HOME and LIMIT sensors are printed to the serial console when activated/deactivated, and no other activity is possible.
 
 This is ideal for ensuring sensors are functional prior to enabling TRAVERSER mode.
 
@@ -68,7 +68,7 @@ _________________________
 
 `Valid values: LOW, HIGH`
 
-This is the state that the homing sensor reports to Turntable-EX when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.
+This is the state that the homing sensor reports to |EX-TT| when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.
 
 LIMIT_SENSOR_ACTIVE_STATE
 _________________________
@@ -77,9 +77,9 @@ _________________________
 
 `Valid values: LOW, HIGH`
 
-This is the state that the limit sensor reports to Turntable-EX when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.
+This is the state that the limit sensor reports to |EX-TT| when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.
 
-The limit sensor is only used when Turntable-EX is set to TRAVERSER mode.
+The limit sensor is only used when |EX-TT| is set to TRAVERSER mode.
 
 RELAY_ACTIVE_STATE
 ___________________
@@ -106,7 +106,7 @@ __________________
 
 `Valid values: 0 - 179`
 
-This is the angle in degrees that the turntable needs to rotate away from the home position in order to trigger DCC phase inversion by activating the phase inversion relays. Once the turntable rotates a further 180 degrees, the phase will revert by deactiving the phase inversion relays.
+This is the angle in degrees that the turntable needs to rotate away from the home position in order to trigger DCC phase inversion by activating the phase inversion relays. Once the turntable rotates a further 180 degrees, the phase will revert by deactivating the phase inversion relays.
 
 STEPPER_DRIVER
 _______________
@@ -149,7 +149,7 @@ _____________________
 
 `Valid values: > 0`
 
-The acceleration rate of the turntable, which is defined as steps per second, per second. This is what gives Turntable-EX a more prototypical acceleration/decceleration rate when rotating.
+The acceleration rate of the turntable, which is defined as steps per second, per second. This is what gives |EX-TT| a more prototypical acceleration/deceleration rate when rotating.
 
 LED_FAST
 _________
@@ -216,7 +216,7 @@ If for some reason the automatic calibration sequence is not recording the corre
 
 If you enable this option, the calibration sequence will never run automatically even if the step count is not recorded in EEPROM, and this setting will always override that on startup.
 
-You can initiate the calibration command manually while this option is enabled, it will perform the calibration sequence and record the calibrated step count in EEPROM, and that setting will take effect whilst Turntable-EX is running. However, the calibrated value in EEPROM will be overridden at the next startup unless this option is disabled.
+You can initiate the calibration command manually while this option is enabled, it will perform the calibration sequence and record the calibrated step count in EEPROM, and that setting will take effect whilst |EX-TT| is running. However, the calibrated value in EEPROM will be overridden at the next startup unless this option is disabled.
 
 DEBOUNCE_DELAY
 ______________
@@ -246,13 +246,13 @@ Defining custom stepper drivers
 
   Over time, we expect to build a more complete list of drivers and motors that are compatible with what we have tested.
 
-If you have a need to use a stepper driver and motor combination that isn't on the supported list and isn't "pin-compatible" with an existing supported driver/motor combination, you may need to define a custom entry in "config.h" to allow Turntable-EX to work correctly.
+If you have a need to use a stepper driver and motor combination that isn't on the supported list and isn't "pin-compatible" with an existing supported driver/motor combination, you may need to define a custom entry in "config.h" to allow |EX-TT| to work correctly.
 
 To do this, you will need to add a valid AccelStepper() definition with the appropriate parameters provided, and this entry needs to be  defined as your `STEPPER_DRIVER` option.
 
 The list of parameters required are documented on the `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page.
 
-**Note:** There has been a slight modification to the AccelStepper library included with Turntable-EX. If you have a need to invert the enable option, then provide this as the last parameter. The modified library sets the enable pin (if defined) when the stepper object is instantiated, and if it needs to be inverted, this happens at the same time. We do not call the setEnablePin() or setPinsInverted() functions at any point. You can see this in use in the "standard_steppers.h" file as defined for the "TWO_WIRE_INV" driver option.
+**Note:** There has been a slight modification to the AccelStepper library included with |EX-TT|. If you have a need to invert the enable option, then provide this as the last parameter. The modified library sets the enable pin (if defined) when the stepper object is instantiated, and if it needs to be inverted, this happens at the same time. We do not call the setEnablePin() or setPinsInverted() functions at any point. You can see this in use in the "standard_steppers.h" file as defined for the "TWO_WIRE_INV" driver option.
 
 To add this to "config.h", add your new definition **before** the `STEPPER_DRIVER` line, and update `STEPPER_DRIVER` to use your definition, and ensure all standard options are commented out:
 

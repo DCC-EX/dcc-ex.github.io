@@ -34,7 +34,7 @@
 ..
 .. |EX-DCCI| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Inspector</span></span>
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span>
 ..
 .. |BSC| raw:: html
 

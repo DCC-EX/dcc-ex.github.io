@@ -1,4 +1,11 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l1.rst
+..
+.. image:: ../_static/images/product-logo-ex-rail.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 *************************
 EX-RAIL Command Summary
 *************************

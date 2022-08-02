@@ -1,16 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+..
+.. image:: ../_static/images/product-logo-ex-webthrottle.png
+   :alt: EX-CommandStation
+   :scale: 40%
+   :align: right
+
 ******************
 EX-WebThrottle
 ******************
+
+|conductor|
 
 .. sidebar::
 
   .. contents:: On this page
     :depth: 1
     :local:
-
-|conductor|
 
 This is a new DCC++ EX Throttle/Controller that can connect to the |EX-CS| directly through the USB port of a computer.
 

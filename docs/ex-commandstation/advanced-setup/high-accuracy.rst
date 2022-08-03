@@ -32,7 +32,7 @@ For this to work, you need two things:
 The Motor Board Config
 ========================
 
-You will notice that your motor driver type is set in the *config.h* file. This line sets a standard motor shield compatible with the Arduino Motor Shield:
+You will notice that your motor driver type is set in the *config.h* file. This line sets a standard motor shield compatible with the Arduino Motor Driver:
 
 .. code-block:: cpp
 
@@ -63,7 +63,7 @@ You must choose signal pins from the following list for your Arduino:
 | Uno - 9 and 10
 | Nano - 9 and 10
 
-By luck, two of the Mega pins associated with Timer 1 are directly under the DIRA and DIRB pins of an Arduino Motor Shield or pin compatible shield; pins 12 and 13. Therefore, the combination of a Mega and this shield will automatically use high accuracy for both tracks.
+By luck, two of the Mega pins associated with Timer 1 are directly under the DIRA and DIRB pins of an Arduino Motor Driver; pins 12 and 13. Therefore, the combination of a Mega and this shield will automatically use high accuracy for both tracks.
 
 However, an Uno's pins do not line up with this shield. In order to use high accuracy mode, you would have to change the signal pin assignments and use a jumper wire.
 

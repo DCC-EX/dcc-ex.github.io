@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*********************
-What's New in DCC-EX?
-*********************
+*************************************
+Differences between DCC++ and DCC-EX?
+*************************************
 
 .. sidebar::
 
@@ -13,12 +13,16 @@ What's New in DCC-EX?
 Everything you loved is still there...
 ========================================
 
-First, we want to stress that we didn't break anything! Whether you are using JMRI as a controller/front-end to send commands to your track, handle turnouts, read and write CVs, or using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won't affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.
+First, we want to stress that we didn't break anything! 
+
+Whether you are using JMRI as a controller/front-end to send commands to your track, handle turnouts, read and write CVs, or using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won't affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.
 
 EX-CommandStation is all new!
 =============================
 
-While we made minor changes to the original DCC++ "BaseStation-Classic", all new development is going forward with the |EX-CS|. At first, we expanded features, added functionality, and fixed bugs by working from the existing code base. The updated "Classic" release of DCC++ will be familiar to any of you who played with the code. However, we want to stress that the next release, |EX-CS|, is a complete re-write from the ground up and is greatly improved.
+While we made minor changes to the original DCC++ "BaseStation-Classic", all new development is going forward with the |EX-CS|. At first, we expanded features, added functionality, and fixed bugs by working from the existing code base. 
+
+The updated |BSC| release of DCC++ will be familiar to any of you who played with the code. However, we want to stress that the newer releases, |EX-CS|, are a complete re-write from the ground up and is greatly improved.
 
 What's different?
 ===================

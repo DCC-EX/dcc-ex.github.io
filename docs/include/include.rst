@@ -10,7 +10,7 @@
 ..
 .. |DCC-EX| raw:: html
 
-   <span style="font-weight: bold; color: #00353d; font-size: 110%; font-family: Audiowide,Helvetica,Arial,sans-serif;">DCC-<span style="color: #00a3b9;">EX</span></span>
+   <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>
 ..
 .. |EX-CS| raw:: html
 

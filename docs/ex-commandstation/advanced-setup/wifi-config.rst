@@ -22,7 +22,7 @@ This page describes the software configuration options for using WiFi to connect
 
 As mentioned in the above link, you will need the following to proceed:
 
-* A |EX-CS| with Motor Shield
+* A |EX-CS| with Motor Driver
 * A WiFi board (for Bluetooth configuration, click **here**)
   
 .. todo:: link item above to Bluetooth

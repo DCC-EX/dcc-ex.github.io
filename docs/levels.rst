@@ -1,3 +1,6 @@
+.. meta::
+   :keywords: Comfort Levels Conductor Tinkerer Engineer
+
 .. include:: /include/include.rst
 *************************
 Choose Your Comfort Level

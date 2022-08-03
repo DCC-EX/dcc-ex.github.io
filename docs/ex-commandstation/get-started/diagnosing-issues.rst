@@ -1,3 +1,6 @@
+.. meta::
+   :keywords: EX-CommandStation Command Station diagnosing Issues Troubleshooting
+
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
 ..

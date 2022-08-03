@@ -29,7 +29,7 @@ Welcome to the |EX-CS| download page. You have several choices:
 EX-Installer
 =============
 
-.. note:: Clicking on the link below will automatically find the correct version for your Computer and Operating system (Windows, Mac, Linux) and download it. After unzipping the files to a folder on your computer and running the "EX-Installer" program, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic, and options, such as your Arduino type and motor shield type. It will automatically upload the software to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`. If you have an issue with the web page getting you the correct version, click on the `Latest EX-CommandStation Official Release`_ button in the next section to manually download the correct version.
+.. note:: Clicking on the link below will automatically find the correct version for your Computer and Operating system (Windows, Mac, Linux) and download it. After unzipping the files to a folder on your computer and running the "EX-Installer" program, you will have the opportunity to select either CommandStation-EX or BaseStation-Classic, and options, such as your Arduino type and motor driver type. It will automatically upload the software to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`. If you have an issue with the web page getting you the correct version, click on the `Latest EX-CommandStation Official Release`_ button in the next section to manually download the correct version.
 
 .. raw:: html 
 

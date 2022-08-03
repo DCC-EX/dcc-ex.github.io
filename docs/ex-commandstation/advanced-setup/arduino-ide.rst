@@ -5,7 +5,7 @@
    :alt: EX-CommandStation
    :scale: 40%
    :align: right
-   
+
 ******************************
 Install using the Arduino IDE
 ******************************
@@ -84,7 +84,7 @@ Edit the config.h file (optional)
 
 If you are using the standard Arduino motor shield, and if optionally using one of the supported WiFi boards and want to connect directly to the |EX-CS| in Access Point Mode (AP) from your WiFi controller, there is nothing more to do! Just upload the software to the |EX-CS| in the next step.
 
-If you are using a different motor shield or motor controller board, or if you wish to connect your CS to your home network instead of having a separate access point, follow the instructions in the ``config.h`` file
+If you are using a different motor driver (shield or board), or if you wish to connect your CS to your home network instead of having a separate access point, follow the instructions in the ``config.h`` file
 
 If you want to take a look at this file or make a simple change, just open the file and take a look. You should see many files open in tabs at the top of the IDE window. Find the down facing triangle near the upper right of the window and click on it to open the entire list of files. Scroll down to near the bottom and click on the "config.h" file you renamed in the previous step to open it in the editing window. If you are sure of your changes, make sure to click on "File -> Save" from the top menu to save them.
 
@@ -131,7 +131,7 @@ Don't unplug the serial cable yet!
 Plug in your power adapters
 =============================
 
-You should already have the 7-9V adapter plugged into the Arduino, and the 13-14V adapter plugged into the motor shield. Now you can plug both of them into the power socket. Nothing should happen. Be sure that nothing bad happens, like smoke rising from the board or the boards getting hot. If anything seems wrong, unplug the power adapters immediately.
+You should already have the 7-9V adapter plugged into the Arduino, and the 13-14V adapter plugged into the motor driver. Now you can plug both of them into the power socket. Nothing should happen. Be sure that nothing bad happens, like smoke rising from the board or the boards getting hot. If anything seems wrong, unplug the power adapters immediately.
 
 Use the Serial Monitor to do a quick test
 ==========================================

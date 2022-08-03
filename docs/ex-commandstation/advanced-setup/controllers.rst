@@ -27,7 +27,7 @@ You need just two things that work together to operate your model railroad:
 The EC-CommandStation
 =====================
 
-The CS is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller and a motor shield or motor board. The CS accepts instructions from a controller and generates packets that are transmitted to your track.
+The CS is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller and a motor driver. The CS accepts instructions from a controller and generates packets that are transmitted to your track.
 
 The Controller
 ================

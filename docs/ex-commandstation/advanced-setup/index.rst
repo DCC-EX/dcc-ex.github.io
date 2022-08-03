@@ -31,15 +31,15 @@ TODO
 - Supported Microcontrollers Setup Notes
 
 
-Motor Shields
+Motor Drivers
 =============
 
 
 TODO
 
-- Motor Shield Options
-- Motor Board Configuration
-- Supported Motorboards Setup Notes
+- Motor Driver Options
+- Motor Driver Configuration
+- Supported Motor Driver Setup Notes
 
 
 WiFi and Ethernet

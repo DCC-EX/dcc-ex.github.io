@@ -51,7 +51,7 @@ ________
 You will need to find or purchase:
 
 #. a supported **Arduino board** |BR| We recommend the `Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/>`_ |BR| |BR|
-#. a supported **motor shield**  |BR| We recommend the `Deek-Robot Motor Shield <https://www.aliexpress.com/item/32832049214.html>`_ |BR| |BR|
+#. a supported **Motor Driver**  |BR| We recommend the `Deek-Robot Motor Shield <https://www.aliexpress.com/item/32832049214.html>`_ |BR| |BR|
 #. a supported **WiFi shield** |BR| We recommend the *Makerfabs ESP8266 WiFi Shield* |BR| |BR|
 #. Two (2) Male to Female **Jumpers leads** |BR| |BR|
 #. a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield |BR| We recommend `12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/>`_ |BR| |BR|
@@ -64,8 +64,8 @@ You will need to find or purchase:
 #. a known-working **DCC-equipped locomotive**
 
 
-...
-  XXXXX See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organised for you in one place.
+..
+  TODO See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organised for you in one place.
 
 Software
 ________
@@ -89,4 +89,4 @@ Click the "next" button to see how to assemble your |EX-CS|.
 
    **TECHNICAL NOTES**
 
-   **Wire Gauge** - The Arduino motor controller can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).
+   **Wire Gauge** - The recommended Arduino |Motor Driver| can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different |Motor Driver| and deliver more current to your track, you may need thicker wire (lower number gauge).

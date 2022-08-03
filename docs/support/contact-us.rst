@@ -1,11 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-..
-.. image:: ../_static/images/product-logo-ex-support.png
-   :alt: EX-CommandStation
-   :scale: 40%
-   :align: right
-   
+|EX-SUPPORT-LOGO|
+
 ***********
 Contact Us
 ***********

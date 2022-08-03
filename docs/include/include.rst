@@ -82,6 +82,11 @@
       :scale: 40%
       :class: image-float-right
 ..
+.. |EX-SUPPORT-LOGO| image:: /_static/images/product-logo-ex-support.png
+      :alt: EX-Support
+      :scale: 40%
+      :class: image-float-right
+..
 .. |EX-CS-LOGO-SMALL| image:: /_static/images/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 20%
@@ -105,3 +110,10 @@
 .. |EX-DCCI-LOGO-SMALL| image:: /_static/images/product-logo-ex-dccinspector.png
       :alt: EX-DCCInspector
       :scale: 20%
+..
+..
+..
+.. |Motor Driver| replace::
+
+    :doc:`Motor Driver </reference/glossary>`
+..

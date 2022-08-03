@@ -45,10 +45,10 @@ To actually run your model railroad you will need a few items:
 1. a |EX-CS| - This consists of:
 
   - an **Arduino microprocessor**,
-  - a motor driver board / motor shield,
-  - (Optionally) 
+  - a **Motor Driver** board / motor shield,
+  - Optionally: 
     
-    - a **WiFi shield (Recommended)**, or
+    - a **WiFi shield (Recommended)** [#inst]_, or
     - an ethernet shield, or
     - neither [#jmri]_, and
 
@@ -64,7 +64,8 @@ To actually run your model railroad you will need a few items:
 #. a **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
 #. a **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
 
-.. [#jmri]  Requires JMRI installed on a computer
+.. [#inst]  The Instructions on the following pages assume that that you will use a WiFi Shield.
+.. [#jmri]  Requires JMRI installed on a computer.
 
 Next Steps - Purchasing Parts
 =============================

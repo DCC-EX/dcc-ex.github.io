@@ -105,7 +105,7 @@ The custom ack limit will be effective until you restart the Command Station (it
 <D ACK MAX µS>
 ===============
 
-The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC++ EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
+The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
 
 Example 1: You use the <D ACK ON> and <R> commands described above to generate a test log from a loco on your programming track. You see that there are ACK pulses but that their durations are less than 4000 microseconds. The log shows the shortest one was 3450. You might then choose a setting a little bit lower than your lowest reading:
 

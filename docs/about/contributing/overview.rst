@@ -16,7 +16,7 @@ Overview
 What can I contribute to?
 ==========================
 
-There are several different aspects to the DCC++ EX project requiring multiple different skills and capabilities, and you don't need to be a guru C++ developer or software engineer to help.
+There are several different aspects to the |DCC-EX| project requiring multiple different skills and capabilities, and you don't need to be a guru C++ developer or software engineer to help.
 
 As a general guideline we can always use help and assistance in these general areas:
 

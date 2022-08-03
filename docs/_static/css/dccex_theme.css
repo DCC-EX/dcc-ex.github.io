@@ -143,7 +143,17 @@ svg {
     margin-bottom: unset; 
 } 
 
-/* temporary - these ned to be moved to the main template */
+.image-min-width-144 img {
+  min-width: 144px;
+}
+
+.image-min-width-72 img {
+  min-width: 72px;
+}
+
+.image-float-right img {
+	float:right;
+}
 
 /* sidebar level 3 bullet points */
 div#on-this-page ul.simple li ul li p {

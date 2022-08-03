@@ -85,4 +85,4 @@ Based on standard interconnect created for the CS, examples would be separate co
 Outreach/Partnering/Evangelizing
 --------------------------------
 
-Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for DCC++ EX. Add more throttles to the list that support DCC++ directly or through JMRI.
+Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for |DCC-EX|. Add more throttles to the list that support DCC++ directly or through JMRI.

@@ -16,12 +16,12 @@ While you don't need to be an expert, you should have some knowledge about Git a
 
 All development and documentation related repositories are located in the `DCC-EX GitHub organisation <https://github.com/DCC-EX>`_.
 
-Depending on the editing platform of your choice, you may get all the Git functionality you need, however you may optionally want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the various DCC++ EX repositories.
+Depending on the editing platform of your choice, you may get all the Git functionality you need, however you may optionally want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the various |DCC-EX| repositories.
 
 Code contribution process
 ==========================
 
-When contributing any code to any of our repositories, no matter if you're a direct DCC++ EX team member or an external contributor, we ask that you abide by Git best practice which is to:
+When contributing any code to any of our repositories, no matter if you're a direct |DCC-EX| team member or an external contributor, we ask that you abide by Git best practice which is to:
 
 1. Create a fork of the appropriate repository (only required for external contributors, team members skip this step).
 2. Create a branch for all new features, bug fixes, or other updates; please don't work directly on main/master branches.
@@ -50,7 +50,7 @@ Yes, a fork is an implement you use to eat, but in the context of Git and GitHub
 
 A fork in Git is a complete copy of a code repository created in your own Git account, however it is still linked to the original, meaning any development against this local fork can still be pushed back into the originating source repository.
 
-If you are not a member of the DCC++ EX team, you won't have permissions to create branches or pull requests directly against the DCC++ EX repositories, and instead you will need to create a fork of these first.
+If you are not a member of the |DCC-EX| team, you won't have permissions to create branches or pull requests directly against the DCC++ EX repositories, and instead you will need to create a fork of these first.
 
 Branch
 _______

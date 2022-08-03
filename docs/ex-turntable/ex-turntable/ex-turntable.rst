@@ -1,10 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-..
-.. image:: ../../_static/images/product-logo-ex-turntable.png
-   :alt: EX-CommandStation
-   :scale: 40%
-   :align: right
+|EX-TT-LOGO|
 
 *********
 Overview
@@ -35,7 +31,7 @@ Essentially, if you have setup your own CommandStation, the expectation is that 
 
   |EX-TT| is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get |EX-TT| as easy to use and reliable as possible.
 
-  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the |EX-TT| view of the `DCC++ EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
+  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the |EX-TT| view of the `DCC-EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
   
   For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the `Regression Testing process <https://github.com/DCC-EX/Support-Planning/blob/master/Testing/Turntable-EX/TTEX_Regression_Testing.md>`_, and then submit your test results using the `Beta Test Results <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_ issue template.
 

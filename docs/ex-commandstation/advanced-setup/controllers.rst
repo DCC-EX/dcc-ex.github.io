@@ -1,10 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-..
-.. image:: ../../_static/images/product-logo-ex-commandstation.png
-   :alt: EX-CommandStation
-   :scale: 40%
-   :align: right
+|EX-CS-LOGO|
    
 *******************************************
 Choosing a Controller (Throttle) - Advanced
@@ -153,7 +149,7 @@ See :doc:`SRCPClient Page </throttles/software/srcpclient>`
 JMRI
 ------
 
-JMRI is sort of the 800lb gorilla of front-ends! In its simplest form, it is a throttle, or a gateway to allow you to use Engine Driver, or a mouse or touchscreen, as a throttle without a WiFi board connected to the CS. The WiFi is built into the computer you use to run JMRI, and JMRI has a WiThrottle Server built into it. The computer running JMRI, in turn, connects to the CS with a USB cable. JMRI is a complex program. If you are seriously into your model railroading however, JMRI can provide a lot of value. It can handle your turnouts, outputs, and sensors. It lets you create rosters for your locos and a visual layout of your tracks. There isn't much it can't do. And it is free and open source, just like DCC++ EX!
+JMRI is sort of the 800lb gorilla of front-ends! In its simplest form, it is a throttle, or a gateway to allow you to use Engine Driver, or a mouse or touchscreen, as a throttle without a WiFi board connected to the CS. The WiFi is built into the computer you use to run JMRI, and JMRI has a WiThrottle Server built into it. The computer running JMRI, in turn, connects to the CS with a USB cable. JMRI is a complex program. If you are seriously into your model railroading however, JMRI can provide a lot of value. It can handle your turnouts, outputs, and sensors. It lets you create rosters for your locos and a visual layout of your tracks. There isn't much it can't do. And it is free and open source, just like |DCC-EX|!
 
 Connecting via USB cable
 ^^^^^^^^^^^^^^^^^^^^^^^^^

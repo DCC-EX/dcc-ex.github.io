@@ -32,7 +32,7 @@ Features
 
 * Supports WiThrottle Protocol
 * Connect to JMRI
-* Connect to DCC++ EX if not using JMRI
+* Connect to |EX-CS| if not using JMRI
 * Connect via WiFi
 * Read and Write CVs
 

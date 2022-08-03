@@ -52,7 +52,7 @@ Turnouts
 
 Two turnouts are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts, you can refer to the :ref:`ex-rail/ex-rail-reference:turnouts` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC++ EX Command reference.
+For further reading on turnouts, you can refer to the :ref:`ex-rail/ex-rail-reference:turnouts` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC-EX Command reference.
 
 Turnout definitions
 ___________________
@@ -64,7 +64,7 @@ DCC accessory turnouts
 
 To define these as DCC accessory turnouts, turnout 1 will be at linear address 101, and turnout 2 at 102. These translate to address 26 with sub address 0 for linear address 101, and address 26 with sub address 1 for linear address 102.
 
-Therefore, the DCC++ EX command to define these in the serial console is as follows:
+Therefore, the DCC-EX command to define these in the serial console is as follows:
 
 .. code-block:: 
 
@@ -193,7 +193,7 @@ Three signals have been used in this first stage to indicate whether or not a tr
 Pin based signals
 _________________
 
-To use pin based signals, we require three pins per signal, and therefore nine pins in total, but we will only define an alias for the red pin given that it is the "control" pin for each signal. The other pins are used in the background by DCC++ EX and are not referenced anywhere else outside the object definition.
+To use pin based signals, we require three pins per signal, and therefore nine pins in total, but we will only define an alias for the red pin given that it is the "control" pin for each signal. The other pins are used in the background by DCC-EX and are not referenced anywhere else outside the object definition.
 
 To define pin based signals directly on the Mega2560 with aliases for the control pins:
 
@@ -652,9 +652,9 @@ Again, we start up with train 3 occupying block 4, and once train 1 has exited b
 Learnings from stage 1
 ======================
 
-No doubt, as you've read through this fairly lengthy stage 1 page, you've already noted a number of commonalities between all variations of myAutomation.h, regardless of the way we have defined the various objects, and hopefully you've picked up a few tips and techniques to help you on your DCC++ EX and EX-RAIL journey.
+No doubt, as you've read through this fairly lengthy stage 1 page, you've already noted a number of commonalities between all variations of myAutomation.h, regardless of the way we have defined the various objects, and hopefully you've picked up a few tips and techniques to help you on your |DCC-EX| and |EX-R| journey.
 
-The main things at this point that we'd like to call to your attenion are:
+The main things at this point that we'd like to call to your attention are:
 
 * Using aliases helps your brain along. Most of us aren't geared to remember that turnout ID 100 is the station siding entrance turnout, so defining aliases makes these numbers easier to digest and work with when referring to them in myAutomation.h.
 * You can expand your I/O devices as you need. The Mega2560 provides easily for 42 available I/O pins (A2 to A15, and 22 to 49), but when you exceed this limit, you can very easily expand this using I/O expanders such as the MCP23017. This means you don't need to have all these devices up front and can start with just the Mega2560.

@@ -23,7 +23,7 @@ You may have already seen the instructions for using WiFi for connecting a Contr
 
 This version is Bluetooth connected meaning that your railway layout may be controlled wirelessly from a suitable DCC App on a phone/tablet OR Bluetooth enabled PC/Laptop/Mac.
 
-In keeping with the DCC++ Ex current design philosophy, the microcontroller board used in this design is the Arduino Mega2560 (or clone) and a snap-on Arduino Motor Shield to provide the DCC signals to the MAIN and PROG tracks.
+In keeping with the |DCC-EX| current design philosophy, the microcontroller board used in this design is the Arduino Mega2560 (or clone) and a snap-on Arduino Motor Shield to provide the DCC signals to the MAIN and PROG tracks.
 
 The whole CommandStation is powered by one DC power supply (+15V DC) fitted with a 5.5mm x 2.1mm DC plug. A buck converter module (LM2596) reduces the input voltage to 7.5V DC to power the Arduino Mega2560.
 

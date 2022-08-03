@@ -62,7 +62,7 @@ At the top of the serial monitor type ``<s>`` (lowercase "s") into the command t
 
 This is the "status" command and reports your version, types of boards you are using, and a build number.
 
-There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC++ EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands.
+There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands.
 
 Using WebThrottle-EX
 --------------------

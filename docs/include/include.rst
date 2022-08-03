@@ -1,6 +1,6 @@
 .. meta::
    :description: DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.
-   :keywords: DCC DCC++ EX DCC++EX
+   :keywords: DCC DCC++ EX DCC++EX DCC-EX
 ..
 .. |donate_button| image:: /_static/images/icons/donate_button_blue.png
    :alt: Donate Button
@@ -44,7 +44,7 @@
 
    <br />
 ..
-   .. |force-break| raw:: html
+.. |force-break| raw:: html
 
    <div style="display:block; box-sizing: border-box; clear: both;"> </div>
 ..
@@ -55,26 +55,32 @@
 .. |EX-CS-LOGO| image:: /_static/images/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 40%
+      :class: image-float-right
 ..
 .. |EX-I-LOGO| image:: /_static/images/product-logo-ex-installer.png
       :alt: EX-Installer
       :scale: 40%
+      :class: image-float-right
 ..
 .. |EX-WT-LOGO| image:: /_static/images/product-logo-ex-webthrottle.png
       :alt: EX-WebThrottle
       :scale: 40%
+      :class: image-float-right
 ..
 .. |EX-R-LOGO| image:: /_static/images/product-logo-ex-rail.png
       :alt: EX-RAIL
       :scale: 40%
+      :class: image-float-right
 ..
 .. |EX-TT-LOGO| image:: /_static/images/product-logo-ex-turntable.png
       :alt: EX-Turntable
       :scale: 40%
+      :class: image-float-right
 ..
 .. |EX-DCCI-LOGO| image:: /_static/images/product-logo-ex-dccinspector.png
       :alt: EX-SCCInspector
       :scale: 40%
+      :class: image-float-right
 ..
 .. |EX-CS-LOGO-SMALL| image:: /_static/images/product-logo-ex-commandstation.png
       :alt: EX-CommandStation

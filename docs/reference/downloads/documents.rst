@@ -52,7 +52,7 @@ How To; Create DCC++EX Buttons on JMRI main menus (PDF)
 =======================================================
 
 This pdf file provides instruction on how to install our custom scripts in JMRI and assign them to buttons. 
-You can have the command references for DCC++ EX shown through the Script Output Window in DecoderPro as seen above.
+You can have the command references for |DCC-EX| shown through the Script Output Window in DecoderPro as seen above.
 
 .. image:: /_static/images/icons/pdf_logo_sm.png
    :alt: DCC++EX JMRI script install instructions

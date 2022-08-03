@@ -18,7 +18,7 @@ for turnout control or for animating a layout component, such as the doors to an
 
 |EX-CS|, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a 
 piece of software called the **HAL** or **H**\ardware **A**\bstraction **L**\ayer.  
-The HAL provides support for a range of different input and output modules through drivers that are supplied with DCC++ EX.
+The HAL provides support for a range of different input and output modules through drivers that are supplied with |DCC-EX|.
 In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to |EX-CS| 
 without having to change a line of the core application code.  
 

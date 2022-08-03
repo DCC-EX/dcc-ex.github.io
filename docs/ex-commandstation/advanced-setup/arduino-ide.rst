@@ -1,10 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-..
-.. image:: ../../_static/images/product-logo-ex-commandstation.png
-   :alt: EX-CommandStation
-   :scale: 40%
-   :align: right
+|EX-CS-LOGO|
 
 ******************************
 Install using the Arduino IDE
@@ -18,7 +14,7 @@ Install using the Arduino IDE
     :depth: 1
     :local:
 
-The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our DCC++ EX Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
+The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our |EX-CS| Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
 
 Those on the Tinkerer or Engineer path—see :doc:`Choose Your Path (levels) </levels>` may want to make changes to the code, or just learn more about how the |EX-CS| software works. At a minimum, you may need to change options in the config.h file, or use the IDE's "Serial Monitor" to monitor your CS, get logs if something is not working, or enter commands to test out features.
 
@@ -36,7 +32,7 @@ Download the DCC++ EX ZIP file
 
 Use the link to either the ZIP or TAR file at the bottom of our GitHub page here:
 
-`DCC++ EX Download Page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+`DCC-EX Download Page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
 
 Unzip the file into the Arduino IDE project folder
 ===================================================

@@ -128,7 +128,7 @@ PCA9685::create(firstVpin, 16, 0x40);  *--- OR ---*  PCA9685 device1(firstVpin, 
 DCCAccessoryDecoder::create(firstVpin, 4, addr, subaddr);  *--- OR ---*  DCCAccessoryDecoder device1(firstVpin, 4, addr, subaddr);
   Create a range of four DCC Accessory Decoder pins from firstVpin to firstVpin+3, starting at the specified decoder address/subaddress.  The addresses are treated as a linear address space, so multiple decoders on contiguous addresses may be configured by one statement.
 
-The remainder of the functions below are intended for use within the DCC++ EX software only, and are not usually required by users.
+The remainder of the functions below are intended for use within the DCC-EX software only, and are not usually required by users.
 
 IODevice::write(vpin, 1); IODevice::write(vpin, 0);
   Set/reset the state of a digital pin (local Arduino, remote GPIO extender, servo, DCC Accessory Decoder, or other output device).

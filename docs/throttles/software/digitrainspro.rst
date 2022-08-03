@@ -41,7 +41,7 @@ Features
 ==========
 
 * Runs on Android, IOS, Windows 10 Desktop, Tablet and Mobile.
-* Connects to JMRI using their Web Server or *soon* will be able to connect directly to DCC++ EX
+* Connects to JMRI using their Web Server or *soon* will be able to connect directly to |EX-CS|
 * Attractive User Interface
 * Plays Station Loudspeaker Sounds
 * Includes a Dispatcher game

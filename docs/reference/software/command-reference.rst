@@ -88,7 +88,7 @@ Engine Decoder (CAB) Operation Commands
 
 Breakdown for this example ``<t 1 03 20 1>`` is:
 
-* ``<`` = Start delimiter of a DCC++ EX command. (A space after ``<`` is not required but acceptable)
+* ``<`` = Start delimiter of a DCC-EX command. (A space after ``<`` is not required but acceptable)
 * ``t`` = (lower case t) This command is for a Decoder installed in a engine or simply a "cab".
 * ``1`` = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
 * ``03`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
@@ -99,12 +99,12 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 .. code-block::
 
    RETURNS: "<T 1 20 1>" if the command was successful, meaning :
-   "<" = Begin DCC++ EX command
+   "<" = Begin DCC-EX command
    "T" = (upper case T) DCC++ EX Cab command was sent from |EX-CS|
    "1" = register 1 was changed
    "20" = set to speed 20
    "1" = forward direction
-   ">" = End DCC++ EX command
+   ">" = End DCC-EX command
 
 **Show number of supported cabs**
 
@@ -134,7 +134,7 @@ Examples:
 CAB FUNCTIONS
 ______________
 
-There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC++ EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
+There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC-EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
 
 
 * The ``<F>`` command turns engine decoder functions ON and OFF
@@ -152,12 +152,12 @@ To set functions **F0-F68** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``F`` = (upper case F) This command is for a CAB function i.e.: Lights, horn, bell  
 * ``CAB``  : the short (1-127) or long (128-10293) address of the engine decoder
 * ``FUNC`` : the CAB function number (0-28) whose function is defined by your decoder
 * ``0|1`` : a value of 0 to set the function OFF and 1 to set the function ON
-* ``>`` = End DCC++ EX command
+* ``>`` = End DCC-EX command
 
 Examples:
 
@@ -171,7 +171,7 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB function i.e.: Lights, horn, bell  
 * ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder
 * ``BYTE1`` :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16
@@ -185,7 +185,7 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
   * 128 Alone Turns OFF **F0-F4**
 
 * ``BYTE2`` :  omitted
-* ``>`` = End DCC++ EX command
+* ``>`` = End DCC-EX command
 
 To make BYTE1 add the values of what you want ON together, the ones that you want OFF do not get added to the base value of 128.
 
@@ -200,17 +200,17 @@ To make BYTE1 add the values of what you want ON together, the ones that you wan
 
 Breakdown for this example ``<f 3265 144>``
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function i.e.: Lights, horn, bell
 * ``3265`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder
 * ``144`` = Turn on headlight
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
 * ``BYTE1`` :  176 + F5*1 + F6*2 + F7*4 + F8*8
 
@@ -222,13 +222,13 @@ To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * 176 Alone Turns OFF **F5-F8**
 
 * ``BYTE2`` :  omitted
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
 * ``BYTE1:``  160 + F9*1 +F10*2 + F11*4 + F12*8
 
@@ -240,13 +240,13 @@ To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * 160 Alone Turns OFF **F9-F12**
 
 * ``BYTE2:``  omitted
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
 * ``BYTE1:`` 222 
 * ``BYTE2:`` F13*1 + F14*2 + F15*4 + F16*8 + F17*16 + F18*32 + F19*64 + F20*128
@@ -262,12 +262,12 @@ To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 128 for F20 ON
   * 0 Alone Turns OFF **F13-F20**
 
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB function.
 * ``BYTE1:`` 223
 * ``BYTE2:`` F21*1 + F22*2 + F23*4 + F24*8 + F25*16 + F26*32 + F27*64 + F28*128
@@ -283,7 +283,7 @@ To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 128 for F28 ON
   * 0 Alone Turns OFF **F21-F28**
 
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 **RETURNS:** <l CAB SLOT SPEED/DIR FUNC>
 
@@ -305,7 +305,7 @@ Where:
 Other notes:
 
 * CAB Functions do not get stored in the EX-CommandStation
-* Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on. 
+* Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the |EX-CS|. One for F0 on and another for F22 on. 
 
 Stationary Accessory Decoder & Turnout Commands
 ________________________________________________
@@ -334,21 +334,21 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``a`` (lower case a) this command is for a Accessory Decoder
 * ``LINEAR_ADDRESS:``  the linear address of the decoder controlling this turnout (1-2044)
 * ``ACTIVATE:`` (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)
-* ``>`` = End DCC++ EX command
+* ``>`` = End DCC-EX command
 
 Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``a`` (lower case a) this command is for a Accessory Decoder
 * ``ADDRESS:``  the primary address of the decoder controlling this turnout (0-511)
 * ``SUBADDRESS:`` the subaddress of the decoder controlling this turnout (0-3)
 * ``ACTIVATE:`` (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)
-* ``>`` = End DCC++ EX command
+* ``>`` = End DCC-EX command
 
 
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
@@ -445,30 +445,30 @@ You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in th
 
    Example: You have a turnout on your main line going to warehouse industry. The turnout is controlled by an accessory decoder with a address of 123 and is wired to output 3. 
    You want it to have the ID of 10.
-   You would send the following command to the DCC++ EX CommandStation:
+   You would send the following command to the |EX-CS|:
    ``<T 10 DCC 123 3>``  
 
    * This Command means:  
-   * ``<`` : Begin DCC++ EX command  
+   * ``<`` : Begin DCC-EX command  
    * ``T`` : (Upper case T) Define a Turnout  
    * ``DCC`` : The turnout is DCC Accessory Decoder based
    * ``10`` : ID number I am setting to use this turnout  
    * ``123`` : The accessory decoders address  
    * ``3`` : The turnout is wired to output 3  
-   * ``>`` : End DCC++ EX command
+   * ``>`` : End DCC-EX command
    * RETURNS: ``<O>``  Meaning Command Successful
 
- |    Next you would send the following command to the DCC++ EX CommandStation:
+ |    Next you would send the following command to the |EX-CS|:
      ``<E>``
 
    * This Command means:  
-   * ``<`` : Begin DCC++ EX command  
+   * ``<`` : Begin DCC-EX command  
    * ``E`` : (Upper case E) Store (save) this definition to EEPROM  
-   * ``>`` : End DCC++ EX command
+   * ``>`` : End DCC-EX command
    * RETURNS: ``<O>``  Meaning Command Successful  
 
 If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.  
-Consequently, when the DCC++ EX CommandStation is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
+Consequently, when the |EX-CS| is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
 This is intended so that the servos don't perform a sweep on power-on when their physical position does not match initial position in the CommandStation.
 
 
@@ -491,13 +491,13 @@ Controlling a Defined Turnout
 
 
      * This Command means:  
-     * ``<`` : Begin DCC++ EX command  
+     * ``<`` : Begin DCC-EX command  
      * ``T`` : (Upper case T) Throw a turnout.  
      * ``10`` : ID number of the defined turnout I want to control.  
      * ``1`` : Set turnout to Thrown (turned, on) position.  
      * 
-       ``>`` : End DCC++ EX command
-       DCC++ EX should return ``<H 10 1>``  Meaning Command was Successful
+       ``>`` : End DCC-EX command
+       |EX-CS| should return ``<H 10 1>``  Meaning Command was Successful
 
        NOTE: The ``<T>`` command by itself with no parameters will list all turnout definitions and their directions
 

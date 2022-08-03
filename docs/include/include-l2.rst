@@ -16,16 +16,19 @@
 .. |conductor-no-text| image:: /_static/images/conductor.png
    :alt: Conductor Hat
    :scale: 50%
+   :class: image-min-width-144
    :target: ../../levels.html#conductor
 ..
 .. |tinkerer-no-text| image:: /_static/images/tinkerer.png
    :alt: Propeller Beanie
    :scale: 50%
+   :class: image-min-width-144
    :target: ../../levels.html#tinkerer
 ..
 .. |engineer-no-text| image:: /_static/images/engineer.png
    :alt: Engineer Hat
    :scale: 50%
+   :class: image-min-width-144
    :target: ../../levels.html#engineer
 ..
 .. |conductor-text| raw:: html

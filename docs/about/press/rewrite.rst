@@ -47,7 +47,7 @@ We added many new functions such as:
 * An easy to use Installer
 * Nano and Teensy support
 * ARM Cortex M0 and M4 support
-* New DCC++ EX features added to JMRI like a current monitor display
+* New |DCC-EX| features added to JMRI like a current monitor display
 * Custom add-ons for Engine Driver including Routes and Automations on buttons
 * 28 speed step support in addition to 128
 * Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
@@ -107,14 +107,14 @@ Automation
 The bottom line
 =================
 
-So while maintaining proper deference to Gregg Berman's original concept of an inexpensive Command Station based on the Arduino platform, we don't want to do a disservice to DCC++ EX or developers like Chris Harlow (UkBloke), Harald Barth, Neil McKechnie, Dave Cutting, and others, who brought a new vision to the project, and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible, Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcements...
+So while maintaining proper deference to Gregg Berman's original concept of an inexpensive Command Station based on the Arduino platform, we don't want to do a disservice to |DCC-EX| or developers like Chris Harlow (UkBloke), Harald Barth, Neil McKechnie, Dave Cutting, and others, who brought a new vision to the project, and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible, Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcements...
 
 Thanks
 =======
 
 This is a team effort. There are a dedicated and organized group of about 15-20 core people involved in the project. In addition, there is all of you who contribute with your comments, feature ideas, evangelizing and testing. So we give you our heartfelt thanks. We will see you online!
 
-Click here for :doc:`The DCC++ EX Team Credits <index>`
+Click here for :doc:`The DCC-EX Team Credits <index>`
 
 Fred Decker
 October 2020

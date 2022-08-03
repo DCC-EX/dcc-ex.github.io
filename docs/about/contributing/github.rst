@@ -1,5 +1,5 @@
 .. include:: /include/include.rst
-.. include:: /include/include-L2.rst
+.. include:: /include/include-l2.rst
 *******
 GitHub
 *******

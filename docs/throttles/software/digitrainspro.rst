@@ -66,7 +66,7 @@ Screenshots
 
 .. rst-class:: clearer
 
-.. _digitrains-requireents:
+.. _digitrains-requirements:
 
 Requirements
 =============

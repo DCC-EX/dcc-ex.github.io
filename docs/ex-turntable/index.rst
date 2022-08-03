@@ -6,13 +6,13 @@
    :scale: 40%
    :align: right
 
-********************
+************
 EX-Turntable
-********************
+************
 
 |conductor|
 
-Welcome to the home of |EX-TT|, a fully integrated turntable controller for |EX-CS|.
+Welcome to the home of |EX-TT|, a fully integrated turntable controller for |EX-CS|. 
 
 .. toctree::
   :maxdepth: 1

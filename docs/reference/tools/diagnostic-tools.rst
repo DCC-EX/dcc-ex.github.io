@@ -369,7 +369,7 @@ Using a Digital Multimeter (DMM)
 
 This is pretty easy. Set your DMM to AC Volts (important, NOT DC) in a range above your track voltage. For example, if your track voltage is 15 Volts, your meter may need to be set to the 20 volt range. Then follow these steps noting that unless you have a very expensive "TRUE RMS" Meter. we will just get an indication that there is a DCC signal is on the track, but the voltage will be off by a few volts.
 
-| 1. Put one probe on Rail A of the known block and the other prob on Rail B. For our expected voltage of a 15 Volt supply, depending on your meter, it should read anywhere from 12-28 Volts AC. If not, you have a power issue or a Motor Driver issue.
+| 1. Put one probe on Rail A of the known block and the other probe on Rail B. For our expected voltage of a 15 Volt supply, depending on your meter, it should read anywhere from 12-28 Volts AC. If not, you have a power issue or a Motor Driver issue.
 
 | 2. Move your meter to the other block. Connect one probe to Rail A and the other to Rail B. You should measure the same voltage as before. If not, you have a power issue in your booster. It is either putting out DC or no voltage at all.
 

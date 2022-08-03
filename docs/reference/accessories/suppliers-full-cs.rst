@@ -25,5 +25,3 @@ Chesterfield sells a complete system in a 3D printed case already assembled and 
 
 `Chesterfield assembled DCC-EX Command Station <https://chesterfield-models.co.uk/product/dccex/>`_
 
-.. rst-class:: clearer
-

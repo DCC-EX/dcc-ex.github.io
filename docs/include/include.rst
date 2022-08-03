@@ -25,7 +25,7 @@
    <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>
 ..
 .. |EX-I| raw:: html
-
+   
    <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span>
 ..
 .. |EX-TT| raw:: html
@@ -44,9 +44,9 @@
 
    <br />
 ..
-.. |force-break| raw:: html
+   .. |force-break| raw:: html
 
-  <div style="display:block; box-sizing: border-box; clear: both;"> </div>
+   <div style="display:block; box-sizing: border-box; clear: both;"> </div>
 ..
 .. |image-note| raw:: html
 

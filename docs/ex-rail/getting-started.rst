@@ -29,7 +29,7 @@ Things You Can Do With EX-RAIL
 - Intercept turnout changes to automatically adjust signals or other turnouts
 - Turn on the coffee pot when the train reaches the station
 
-|force-break|
+.. rst-class:: clearer
 
 .. sidebar:: A note from the Author
 

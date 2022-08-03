@@ -1,13 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-..
-.. image:: ../../../_static/images/product-logo-ex-commandstation.png
-   :alt: EX-CommandStation
-   :scale: 40%
-   :align: right
-   
 ************************
-L298N Motor Board Setup
+L298N Motor Driver Setup
 ************************
 
 |tinkerer| |engineer|
@@ -94,7 +88,7 @@ Lifting Or Cutting Chip Legs Option
 
 2. Unsolder or cut the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output CS A for MAIN. Pin 15 to the right is CS output B for PROG.
 
-3. Lift each leg and bend them carfully upward to provide space for a resistor.
+3. Lift each leg and bend them carefully upward to provide space for a resistor.
 
 4. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the CS leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
 
@@ -130,8 +124,8 @@ Your first choice, the easy way, is to create a new motor board definition that 
 Your second choice is to make a small inverter circuit (using 1 FET, IC, or transistor) to connect to the standard signal pin on the Command Station, and split it into two signals connect to the two pins on the L298N board. The advantage of this method is you use just one pin and get the high accuracy DCC waveform. The downside is that you have to solder together a circuit with 2 or 3 parts.
 
 
-Using 2 signal pins (Avoids soldering a transitor inverter)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using 2 signal pins (Avoids soldering a transistor inverter)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This method uses 2 pins on the Arduino for DCC signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform. The advantage of this method is that you don't have to wire a transistor and 2 resistors to create an inverter circuit. The disadvantage is you use an extra pin for each track output and you get the standard accuracy waveform. See :doc:`High Accuracy Waveform Mode</ex-commandstation/advanced-setup/high-accuracy>` to see if you really need it.
 

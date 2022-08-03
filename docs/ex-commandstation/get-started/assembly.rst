@@ -24,8 +24,7 @@ This page describes the most common, recommended, configuration, but you will se
 
 **For this install, you'll need the items listed on the** :doc:`/ex-commandstation/get-started/purchasing` **page.**
 
-|force-break|
-
+.. rst-class:: clearer
 
 .. sidebar::  Optional configuration
 
@@ -68,7 +67,7 @@ You will need to turn the motor controller board upside down and do ONE of the f
 - Cut the Vin trace on the bottom of the board. **(Recommended - described below)** |BR| *or*
 - Bend out or cut off the Vin Pin
 
-|force-break|
+.. rst-class:: clearer
 
 Cutting the Trace
 -----------------
@@ -231,7 +230,7 @@ There are two sets of output connectors on the motor shield, "A" and "B". A is t
 
 Connect the 2.5mm barrel connector from your separate 7-9V DC power supply to the barrel connector on the Arduino. If you have a power supply with bare wires, you can bypass the barrel connector and connect your power supply to the "Vin" and "Gnd" pins on the Arduino.
 
-|force-break|
+.. rst-class:: clearer
 
 Next Steps - Install the WiFi board
 ===================================

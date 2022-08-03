@@ -24,7 +24,7 @@ The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi thro
 
 However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to the |EX-CS| using the JMRI application (or similar), you can :doc:`skip ahead to the next page <installer>`.
 
-|force-break|
+.. rst-class:: clearer
 
 .. sidebar:: 
    
@@ -74,8 +74,7 @@ What you will need (for WiFi)
 * A WiFi board
 * Two (2) Male to Female Jumpers leads
 
-
-|force-break|
+.. rst-class:: clearer
 
 Makerfabs ESP8266 WiFi Shield -  installation instructions
 ================================================================================

@@ -9,7 +9,7 @@ Reference
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 2
+    :depth: 1
     :local:
 
 Glossary
@@ -23,18 +23,20 @@ Glossary
 Videos
 ========
 
-* Please visit our YouTube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_
+.. toctree::
+    :maxdepth: 1
 
-    
-Software
+    videos/index
+ 
+Other
 -------------------------
 
 .. toctree::
     :maxdepth: 1
 
+    downloads/index
     hardware/index
     software/index
     developers/index
     accessories/index
-    downloads/index
     tools/index

@@ -54,7 +54,7 @@ Standard Features (all wiThrottle servers)
 * 'Discover Server' Detect, Select & Connect to WiFi enabled Command Stations
 * 'Roster Server' download Engine ID's & function keys from the Command Station
 * 'Virtual Engine Sounds' {Bell, Horn, Short Horn, Mute} for motor only decoders, on first two throttles
-* Able to use inexpensive bluetooth gamepads for tactile control
+* Able to use inexpensive Bluetooth gamepads for tactile control
 * Multiple theme, colours and throttle layout options 
 
 DCC++ Specific or advantageous Features

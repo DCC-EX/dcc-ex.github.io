@@ -18,18 +18,18 @@ Java Model Railroad Interface JMRI with DCC++EX
 JMRI 'Java Model Railroad Interface' software suite provides a GUI Graphical User Interface Controller for the |EX-CS|.
 
 The primary JMRI software applications are; 
- - DecoderPro to build and maintain DCC Engine Rosters and read, write, compare & maintain decoder CV’s
+ - DecoderPro to build and maintain DCC Engine Rosters and read, write, compare & maintain decoder CV's
  - PanelPro to create and maintain Panels, Turnouts, Sensors, Signal Lighting & create Routes
  - OperationsPro to run operating sessions on your model railroad.
  
-JMRI software is supported on Windows & Mac PC’s and on Linux Pi microcontrollers.
+JMRI software is supported on Windows & Mac PC's and on Linux Pi microcontrollers.
 
 With experience JMRI users can prepare Routing and Automation sequences for their engines to run either by manual Routing or Autonomously by writing extensive Jython/Python.py scripts and setting them up through a myriad of user-friendly panels and sensors, turnouts & routing tools.  
 These scripts can then be placed in GUI buttons on DecoderPro & PanelPro main menus and also displayed as Routing buttons on smartphones with Engine Driver or WiThrottle and other WiFi Throttle App providers.
  
 
-JMRI Jython.py script to Add Custom DCC++EX Buttons to DecoderPro & PanelPro menus
-==================================================================================
+JMRI Jython.py script to Add Custom DCC-EX Buttons to DecoderPro & PanelPro menus
+=================================================================================
 
 Have DCC++EX command references automatically shown through the DecoderPro Script Output Window.
 
@@ -82,14 +82,13 @@ For a more extensive overview of setting up DCC++EX with JMRI DecoderPro please 
 
 .. rst-class:: clearer
 
-
 Other Documentation
 ===================
 
-
 DCC Shortcuts Card
 ===================
-DCC Manufacture Decoder Identificaton
+
+DCC Manufacture Decoder Identification
 
 .. image:: ../../_static/documents/dcc_shortcuts_card_thumbnail.png
    :alt: DCC Shortcuts Card Thumbnail
@@ -101,7 +100,6 @@ DCC Manufacture Decoder Identificaton
    `DCC Shortcuts Card </_static/documents/DCC_Shortcuts_Card.pdf>`_
 
 .. rst-class:: clearer
-
 
 Stationary Decoder Address Table (xlsx Spreadsheet)
 ===================================================

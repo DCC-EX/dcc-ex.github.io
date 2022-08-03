@@ -22,7 +22,7 @@ This page explains what you will need to acquire to build a |EX-CS| using the re
 
 Some of the parts (like track and some wire) you will likely already have on hand.
 
-|force-break|
+.. rst-class:: clearer
 
 What you need to purchase or find
 =================================

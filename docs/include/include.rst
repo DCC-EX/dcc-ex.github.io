@@ -85,7 +85,7 @@
       :scale: 20%
 ..
 .. |EX-WT-LOGO-SMALL| image:: /_static/images/product-logo-ex-webthrottle.png
-      :alt: EX-WEbThrottle
+      :alt: EX-WebThrottle
       :scale: 20%
 ..
 .. |EX-R-LOGO-SMALL| image:: /_static/images/product-logo-ex-rail.png

@@ -17,4 +17,3 @@ Here you'll find all the necessary resources and information for contributing to
   requirements
   development
   website
-  donate/index

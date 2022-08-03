@@ -51,11 +51,11 @@ ________
 
 You will need to find or purchase:
 
-#. a supported **Arduino board** |BR| We recommend the *Elegoo Mega 2560* |BR| |BR|
-#. a supported **motor shield**  |BR| We recommend the *Deek-Robot Motor Shield* |BR| |BR|
+#. a supported **Arduino board** |BR| We recommend the `Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/>`_ |BR| |BR|
+#. a supported **motor shield**  |BR| We recommend the `Deek-Robot Motor Shield <https://www.aliexpress.com/item/32832049214.html>`_ |BR| |BR|
 #. a supported **WiFi shield** |BR| We recommend the *Makerfabs ESP8266 WiFi Shield* |BR| |BR|
 #. Two (2) Male to Female **Jumpers leads** |BR| |BR|
-#. a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield |BR| |BR|
+#. a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield |BR| We recommend `12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/>`_ |BR| |BR|
 #. a 2.5mm x 5.5mm Female DC Plug to **Screw Terminal (optional, but recommended)** to connect the motor shield power supply |BR| |BR|
 #. a **7-9v DC power supply** |BR| for the Arduino (while it is connected to the PC, this is not needed) |BR| |BR|
 #. any **computer** running Windows, macOS, or Linux (only needed for the initial install of the software) |BR| |BR|
@@ -65,7 +65,8 @@ You will need to find or purchase:
 #. a known-working **DCC-equipped locomotive**
 
 
-XXXXX See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organised for you in one place.
+...
+  XXXXX See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organised for you in one place.
 
 Software
 ________

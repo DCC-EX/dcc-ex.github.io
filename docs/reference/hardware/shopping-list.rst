@@ -4,7 +4,7 @@
 Shopping List
 **************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer|
 
 .. sidebar::
 

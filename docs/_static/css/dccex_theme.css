@@ -11,8 +11,12 @@ h1, .h1 {
   clear: both;
 }
 
+.wy-nav-top {
+  background:#00a3b9ff !important; 
+}
+
 .wy-nav-content {
-  max-width: none;
+  max-width: 1024px;
 }
 
 .wy-side-nav-search>a img.logo {

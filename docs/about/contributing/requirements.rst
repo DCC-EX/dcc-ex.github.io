@@ -86,7 +86,7 @@ Sphinx needs Python v3, so if you don't have python installed, it's time to do t
 
 The simplest way to install Python on Windows is via the Microsoft Store. Install the latest version of Python 3 available.
 
-Live preveiew
+Live preview
 ^^^^^^^^^^^^^^
 
 The reStructuredText extension installed with VSCode allows live previewing of the web pages.

@@ -3,7 +3,7 @@
 Related Projects
 ****************
 
-This page holds projects by some of our team members and users. If you have a project you would like to submit, just send us a note.
+This page holds related projects by some of our team members and users. If you have a project you would like to submit, just send us a note.
 
 .. toctree::
     :maxdepth: 1

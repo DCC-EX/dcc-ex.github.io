@@ -7,6 +7,11 @@ Our products are are predominately Do-It-Yourself and range in difficulty from v
 
 To help you navigate this web site we have tagged each of the pages with one or more of the categories to help identify its level of difficulty.  Don't worry, the paths are integrated and you can easily choose a slightly different path at any point. 
 
+.. image:: /_static/images/conductor-level.png
+   :alt: Conductor Hat
+   :scale: 50%
+   :align: right
+
 Conductor
 =========
 
@@ -20,6 +25,11 @@ Conductor
            :width: 144px
       - A Conductor, for the most part, just wants to enjoy operating trains. |BR| You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running DC and looking to switch over to DCC. This is also the perfect place for someone who just wants something that works without much tinkering. We'll show you how to put together a DCC Command Station with a Controller, and have you up and running in just a few minutes. In short, a Conductor wants to drive trains and doesn't want to have to deal with the details of the hardware or software involved. This path will keep things simple. |BR| |BR| We recommend that you :doc:`start here to build your EX-CommandStation <ex-commandstation/get-started/index>`.
 
+.. image:: /_static/images/tinkerer-level.png
+   :alt: Propeller Beanie
+   :scale: 50%
+   :align: right
+
 Tinkerer
 ========
 
@@ -32,6 +42,11 @@ Tinkerer
            :alt: Propeller Beanie
            :width: 144px
       - A Tinkerer likes the joy of building things themselves. |BR| They may not have an Engineering Degree, but they know how to connect a jumper wire and possibly use a soldering iron. They don't have a problem opening something like the Arduino IDE to change settings in a configuration file and upload it back to their Command Station. A Tinkerer wants to do more with model trains, like using different motor controllers or getting into more detailed control of turnouts, sensors, and other accessories. This path will provide more options over the Conductor path, and cover things like expanding your system and using the JMRI software (Java Model Railroad Interface) for more advanced control of your locomotives and your track. |BR| |BR| We also recommend that you :doc:`start here to build your EX-CommandStation <ex-commandstation/get-started/index>` if you have not already done so, but look out for the "Tinkerer" notes on the pages to see other options.
+
+.. image:: /_static/images/engineer-level.png
+   :alt: Engineer Hat
+   :scale: 50%
+   :align: right
 
 Engineer
 ========

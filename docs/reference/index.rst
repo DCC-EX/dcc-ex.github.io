@@ -9,8 +9,16 @@ Reference
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
+
+Glossary
+========
+
+.. toctree::
+    :maxdepth: 1
+
+    glossary
 
 Videos
 ========

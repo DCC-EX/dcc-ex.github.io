@@ -19,7 +19,7 @@ If you haven't done so already, make sure you are familiar with how we use :doc:
 Bug fixes, features, and releases
 ==================================
 
-As mentioned earlier, we expect contributors to follow Git best practises when working on our various repositories.
+As mentioned earlier, we expect contributors to follow Git best practices when working on our various repositories.
 
 * When working on new features or bug fixes, create a branch.
 * Commit and publish regularly.
@@ -41,7 +41,7 @@ ___________________________________
 
 Reading any code in any language is always going to require a basic understanding of the language and features in addition to an understanding of the environment (Arduino in this case, and various CPU versions), plus an understanding of the program features the author is trying to implement (Command parsing and DCC in our case).
 
-The level of C++ that we use is a relatively small subset of the language as we don't need or use many of the more complex C++ features such as stdio, templates, lambdas, operator overloading, multiple inheritance etc., but we DO make significant use of the C++ compiler's pre-processor features to automatically customise the code to various CPU or user feature requirements (Wifi, Ethernet etc).
+The level of C++ that we use is a relatively small subset of the language as we don't need or use many of the more complex C++ features such as studio, templates, lambdas, operator overloading, multiple inheritance etc., but we DO make significant use of the C++ compiler's pre-processor features to automatically customise the code to various CPU or user feature requirements (Wifi, Ethernet etc).
 
 EX-RAIL in particular pulls some very cunning, but legitimate, stunts with the pre-processor to weave your automations into the code as it's compiled.
 

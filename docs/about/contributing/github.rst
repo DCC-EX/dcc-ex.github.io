@@ -1,5 +1,5 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: /include/include-L2.rst
 *******
 GitHub
 *******
@@ -48,7 +48,7 @@ _____
 
 Yes, a fork is an implement you use to eat, but in the context of Git and GitHub, it is more akin to a fork in the road.
 
-A fork in Git is a complete copy of a code respository created in your own Git account, however it is still linked to the original, meaning any development against this local fork can still be pushed back into the originating source repository.
+A fork in Git is a complete copy of a code repository created in your own Git account, however it is still linked to the original, meaning any development against this local fork can still be pushed back into the originating source repository.
 
 If you are not a member of the DCC++ EX team, you won't have permissions to create branches or pull requests directly against the DCC++ EX repositories, and instead you will need to create a fork of these first.
 

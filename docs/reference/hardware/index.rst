@@ -19,3 +19,5 @@ Hardware
     accessory-controllers
     shopping-list
     decoder-notes
+    wire-gauge
+    decoder-list

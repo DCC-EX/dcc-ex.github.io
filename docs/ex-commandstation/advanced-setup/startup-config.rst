@@ -18,7 +18,7 @@ Startup Configuration
     :depth: 1
     :local:
 
-Sometimes, you will need to configure your |EX-CS| with settings which are not saved by the Command Station when restarted, for example the :ref:`ACK min <reference/software/diagnostic-d-ack-command:\<D ACK LIMIT mA\>>` for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to `2600µS` to be recognised).
+Sometimes, you will need to configure your |EX-CS| with settings which are not saved by the Command Station when restarted, for example the :ref:`ACK min <reference/tools/diagnostic-d-ack-command:\<D ACK LIMIT mA\>>` for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to `2600µS` to be recognised).
 
 To automatically run commands at start up, a new file can be created called `mySetup.h` to contain these commands.
 

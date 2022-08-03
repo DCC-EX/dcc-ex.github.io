@@ -10,7 +10,6 @@ Find out about who we are and what's different and new in |DCC-EX| as well as a 
 
     about
     contributing/donate/index
-    rewrite
     press/index
     roadmap/index
     site-map/index

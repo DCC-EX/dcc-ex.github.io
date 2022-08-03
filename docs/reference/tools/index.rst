@@ -9,10 +9,7 @@ Diagnostic Tools
 .. toctree::
     :maxdepth: 2
     
+    diagnostic-d-ack-command
+    diagnostic-d-command
     diagnostic-tools
-
-
-.. toctree::
-    :maxdepth: 2
-
     serial-monitor

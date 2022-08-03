@@ -90,7 +90,7 @@ Testing EX-Turntable
 
 Firstly, power on |EX-TT|, followed by your CommandStation. By powering these on in that order, you will ensure that |EX-TT| is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as "OFFLINE", and commands will fail.
 
-Referring again to :ref:`reference/software/hal-config:adding a new device`, skip ahead to :ref:`reference/software/hal-config:checking the driver`, and the output you're looking for to validate the |EX-TT| device driver is loaded and connected successfully is below:
+Referring again to :ref:`reference/developers/hal-config:adding a new device`, skip ahead to :ref:`reference/developers/hal-config:checking the driver`, and the output you're looking for to validate the |EX-TT| device driver is loaded and connected successfully is below:
 
 .. code-block:: 
 

@@ -7,7 +7,7 @@
    :align: right
    
 ***********
-Contact us
+Contact Us
 ***********
 
 |conductor| |tinkerer| |engineer|

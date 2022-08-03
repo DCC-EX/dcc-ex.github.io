@@ -360,7 +360,7 @@ This requires creating or editing the myHal.cpp file in the CommandStation-EX co
 
 .. tip:: 
 
-  It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the :doc:`/reference/software/hal-config` page. However, if that page is more information than you require at this point, then follow the steps below to add the required |EX-TT| device driver and device.
+  It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the :doc:`/reference/developers/hal-config` page. However, if that page is more information than you require at this point, then follow the steps below to add the required |EX-TT| device driver and device.
 
 Before continuing, refer to the file "myHal.cpp_example.txt" included with the CommandStation-EX software, and note the following.
 
@@ -395,7 +395,7 @@ Scrolling down towards the bottom of that file, you will also see this indented 
 
   //TurntableEX::create(600, 1, 0x60);
 
-If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`reference/software/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the CommandStation-EX software.
+If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`reference/developers/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the CommandStation-EX software.
 
 Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above, which should result in the following content in your new "myHal.cpp" file:
 
@@ -422,12 +422,12 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
 
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
 
-- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send |EX-TT| commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/software/hal:overview`).
+- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send |EX-TT| commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/developers/hal:overview`).
 - I2C address=0x60 - This is the default address on the I2C bus that the |EX-TT| is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myHal.cpp" and in "config.h" in the |EX-TT| software.
 
 If you already have an existing "myHal.cpp" file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the "#include" needs to be before "void halSetup() {" and the "TurntableEX::create..." needs to be before the final "}".
 
-Follow the rest of the directions for :ref:`reference/software/hal-config:adding a new device` all the way through to the :ref:`reference/software/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
+Follow the rest of the directions for :ref:`reference/developers/hal-config:adding a new device` all the way through to the :ref:`reference/developers/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
 
 Note there is no point in checking the driver at this stage as |EX-TT| is not connected, and will show as "OFFLINE".
 

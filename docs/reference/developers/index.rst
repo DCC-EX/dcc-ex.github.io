@@ -1,4 +1,5 @@
 .. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 ****************************
 Developer and API reference
 ****************************
@@ -10,3 +11,6 @@ This section contains detailed information relevant for those who wish to utilis
 
     tech-reference
     api
+    hal
+    hal-config
+    writing-hal-driver

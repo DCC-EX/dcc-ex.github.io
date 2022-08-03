@@ -6,9 +6,9 @@
    :scale: 40%
    :align: right
    
-********************
-Contact and support
-********************
+*****************
+Contact & Support
+*****************
 
 |conductor| |tinkerer| |engineer|
 

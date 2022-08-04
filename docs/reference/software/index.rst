@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*********
-Software
-*********
+***************
+DCC-EX Commands
+***************
 
 |conductor| |tinkerer| |engineer|
 

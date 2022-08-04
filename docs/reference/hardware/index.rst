@@ -11,13 +11,9 @@ Hardware
     motor-boards
     wifi-boards
     ethernet-boards
-    i2c-displays
-    i2c-devices
-    gpio-module
-    servo-module
+    index-ic2
     power-supplies
     accessory-controllers
     shopping-list
-    decoder-notes
+    index-decoder
     wire-gauge
-    decoder-list

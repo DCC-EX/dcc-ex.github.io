@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-************************
-Wire Gauge Information
-************************
+****************************
+DCC Track Wiring Information
+****************************
 
 |conductor| |tinkerer| |engineer|
 

@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: /include/include-l1
+  .rst
 |EX-TT-LOGO|
 
 *******************************************
@@ -41,7 +42,7 @@ You will note we've rated the traverser feature as Tinkerer level. This is prima
 What you need for traverser mode
 _________________________________
 
-The same components outlined in :ref:`ex-turntable/ex-turntable/ex-turntable:what you need for ex-turntable` apply in traverser mode, with two likely exceptions:
+The same components outlined in :ref:`ex-turntable/purchasing:what you need for ex-turntable` apply in traverser mode, with two likely exceptions:
 
 1. Home and limit sensors: Given the need for positive stops at each end's limit of travel, be it vertical, horizontal, or restricting rotation within an arc for limited rotation turntables, micro switches are likely a better choice for these.
 
@@ -72,12 +73,12 @@ When determining which sensor needs to be located at each limit position of the 
 
 You will need to take these considerations into account, and ensure the sensors are connected in the correct order.
 
-For a method to test and validate this, see :ref:`ex-turntable/ex-turntable/traverser:sensor testing mode` below.
+For a method to test and validate this, see :ref:`ex-turntable/traverser:sensor testing mode` below.
 
 Assembly
 =========
 
-General assembly is as per the :doc:`/ex-turntable/getting-started` page, with the aforementioned limit sensor being connected to the Arduino's pin 2.
+General assembly is as per the :doc:`/ex-turntable/assembly` page, with the aforementioned limit sensor being connected to the Arduino's pin 2.
 
 Refer to the connection summary below, which makes the assumption that DCC phase switching is not required.
 
@@ -146,7 +147,7 @@ Summary table of all connections required during assembly:
 Loading EX-Turntable for traverser mode
 ========================================
 
-Prepare to load the software as per :ref:`ex-turntable/getting-started:7. load the ex-turntable software`, and ensure "config.h" has been created by copying or renaming "config.example.h".
+Prepare to load the software as per :ref:`ex-turntable/assembly:7. load the ex-turntable software`, and ensure "config.h" has been created by copying or renaming "config.example.h".
 
 There is also an example "config.traverser.h" file included with the software that can be renamed to "config.h" instead.
 
@@ -257,4 +258,4 @@ When starting up for the first time, you should see output in the serial console
 Traverser mode is ready!
 =========================
 
-Now that you have enabled traverser mode in |EX-TT|, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to :doc:`/ex-turntable/ex-turntable/test-and-tune` as the tuning steps and control commands are the same in both turntable and traverser modes.
+Now that you have enabled traverser mode in |EX-TT|, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to :doc:`/ex-turntable/test-and-tune` as the tuning steps and control commands are the same in both turntable and traverser modes.

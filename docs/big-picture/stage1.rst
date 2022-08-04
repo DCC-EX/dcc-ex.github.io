@@ -84,7 +84,7 @@ In EX-RAIL, we would add these lines to myAutomation.h, with aliases defined:
 Pin turnouts
 ^^^^^^^^^^^^
 
-To define these same turnout IDs as pin turnouts instead, and using I/O pins that are directly on our CommandStation-EX Mega2560, we will use pins 22 and 23.
+To define these same turnout IDs as pin turnouts instead, and using I/O pins that are directly on our |EX-CS| Mega2560, we will use pins 22 and 23.
 
 To define these in the serial console:
 

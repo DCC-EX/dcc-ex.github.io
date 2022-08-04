@@ -1,12 +1,12 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: /include/include-l1.rst
 |EX-TT-LOGO|
 
 *********
 Overview
 *********
 
-|conductor|
+|tinkerer|
 
 .. sidebar:: 
 
@@ -68,83 +68,9 @@ The |EX-TT| integration includes:
 
   **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of |EX-TT|. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_.
 
-What you need for EX-Turntable
-==============================
+How Does IT Work?
+=================
 
-* A |EX-CS| running the "add-turntable-controller" branch of `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_ (this displays as version 4.0.2)
-* An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
-* A supported stepper motor driver and stepper motor (see list below)
-* A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent)
-* A suitable power supply - note that your chosen stepper driver/motor will dictate this, see note below
-* A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
-* Dupont type wires to connect the components, male to female or female to female as required
-* A USB cable to connect the Arduino to a PC to load the software
-* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see :ref:`ex-turntable/ex-turntable/ex-turntable:important! phase (or polarity) switching`)
-
-.. note:: 
-
-  If you wish to make use of the traverser feature, there is further information on what is required to enable this on the :doc:`/ex-turntable/ex-turntable/traverser` page.
-
-.. image:: /_static/images/turntable-ex/nano-v3.png
-  :alt: Nano V3
-  :scale: 50%
-
-.. image:: /_static/images/turntable-ex/uln2003-28byj-48.png
-  :alt: ULN2003/28BYJ-48 Stepper combo
-  :scale: 50%
-
-.. image:: /_static/images/turntable-ex/hall-effect.png
-  :alt: Hall Effect sensor
-  :scale: 40%
-
-.. image:: /_static/images/turntable-ex/dual-relay.png
-  :alt: Dual Relay
-  :scale: 40%
-
-.. image:: /_static/images/turntable-ex/nano-shield1.png
-  :alt: Nano Prototype Shield
-  :scale: 40%
-
-.. image:: /_static/images/turntable-ex/dupont.png
-  :alt: Dupont male to female
-  :scale: 30%
-
-Power supplies
-_______________
-
-Choosing the right power supply for your Arduino and stepper motor is important to get right.
-
-If you are using the default ULN2003/28BYJ-48 it is technically possible to power the driver and stepper directly from the 5V output on an Arduino, however this is not recommended and should be avoided.
-
-Given that this combo requires 5V, you can use a single, regulated 5V DC power supply rated for at least 500mA to power both the Arduino and the ULN2003/28BYJ-48.
-
-Note that if you use the right Arduino Nano prototyping shield, it will likely have a LM317 voltage regulator supplied by the DC power jack. In this instance, you can use a 7 to 9V 500mA+ DC power supply to provide power, and it will be safe to connect the ULN2003 5V to a 5V output on the prototyping shield.
-
-For other steppers such as the NEMA17 that require 12V DC, you will need either two separate power supplies, or a DC-DC converter to provide a lower voltage to the Arduino. Note that the NEMA17 steppers have a considerably higher current rating, so the power supply will need to be rated at 1.5A or higher.
-
-Supported stepper drivers and motors
-=========================================
-
-The default configuration of |EX-TT| is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.
-
-.. sidebar:: Unsupported stepper drivers and motors
-
- |tinkerer|
-
-  If you have a need to use a different driver, these should be relatively straight forward to configure in a similar manner to how additional motor drivers are configured for use with CommandStation-EX.
-
-  Refer to :ref:`ex-turntable/configure:defining custom stepper drivers` for more details.
-
-However, it is very easy to use one of several other common stepper drivers if you require more torque, or if you prefer to use a NEMA17 or other stepper motor.
-
-The complete list of supported stepper drivers and motors:
-
-* ULN2003/28BYJ-48 (Default)
-* A4988/NEMA17
-* DRV8825/NEMA17
-
-How does it work?
-==================
 
 .. sidebar:: Full step, half step, and other modes
 
@@ -156,7 +82,7 @@ Very simply, a stepper motor is able to be rotated one step at a time, which tra
 
 .. note:: 
 
-  You don't actually need to know the number of steps required to make a full rotation as this is calculated by |EX-TT| the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`ex-turntable/getting-started:automatic calibration`.
+  You don't actually need to know the number of steps required to make a full rotation as this is calculated by |EX-TT| the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`ex-turntable/assembly:automatic calibration`.
 
 In |EX-TT|, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.
 
@@ -175,7 +101,7 @@ _________________________
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
-Refer to the :ref:`ex-turntable/ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
+Refer to the :ref:`ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
 
 Important! Phase (or polarity) switching
 ________________________________________
@@ -270,9 +196,9 @@ The above outlines how the default automatic phase switching works with |EX-TT|,
 
 If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in :doc:`/ex-commandstation/get-started/installer`, and the configuration parameter is outlined here: :ref:`ex-turntable/configure:phase_switch_angle`.
 
-If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in :ref:`ex-turntable/ex-turntable/test-and-tune:manual phase switching`.
+If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in :ref:`ex-turntable/test-and-tune:manual phase switching`.
 
-Time to assemble
-================
+Next Steps
+==========
 
-Now that you have a general overview of EX-Turntable's features and capabilities, click the "next" button to get started on assembly.
+Now that you have a general overview of EX-Turntable's features and capabilities, click the "next" button see what is needed to create an |EX-TT|.

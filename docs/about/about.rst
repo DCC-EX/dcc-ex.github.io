@@ -29,8 +29,8 @@ Project Lead
 
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 
-CommandStation-EX
-==================
+EX-CommandStation
+=================
 
 Lead Developer
 

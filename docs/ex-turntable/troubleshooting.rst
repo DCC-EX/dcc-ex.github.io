@@ -1,12 +1,12 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: /include/include-l1.rst
 |EX-TT-LOGO|
 
 ****************************
 Troubleshooting EX-Turntable
 ****************************
 
-|conductor|
+|tinkerer|
 
 .. sidebar::
 
@@ -107,5 +107,5 @@ __________________________________________________
   * - | \<D HAL SHOW\> reports Turntable-EX as OFFLINE
       | Turntable-EX does not respond to EX-RAIL or diagnostic commands
     - | Turntable-EX is not powered on, or was powered on after the CommandStation
-      | The I2C interfaces are not connected correctly, refer to :ref:`ex-turntable/getting-started:9. connect ex-turntable to your ex-commandstation`
+      | The I2C interfaces are not connected correctly, refer to :ref:`ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`
       | The I2C address in EX-Turntable's config.h does not match the address in the CommandStation's myHal.cpp file

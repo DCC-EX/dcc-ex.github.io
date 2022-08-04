@@ -6,7 +6,7 @@
 EX-Turntable
 ************
 
-|conductor|
+|tinkerer|
 
 Welcome to the home of |EX-TT|, a fully integrated turntable controller for |EX-CS|. 
 
@@ -15,10 +15,11 @@ Welcome to the home of |EX-TT|, a fully integrated turntable controller for |EX-
 .. toctree::
   :maxdepth: 1
 
-  ex-turntable/ex-turntable
-  getting-started
-  ex-turntable/test-and-tune
+  overview
+  purchasing
+  assembly
+  test-and-tune
   layout-wiring
-  ex-turntable/traverser
   configure
-  ex-turntable/troubleshooting
+  troubleshooting
+  traverser

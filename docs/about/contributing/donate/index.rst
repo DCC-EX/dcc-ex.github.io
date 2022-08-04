@@ -42,7 +42,7 @@ Or choose user "dccex" on Patreon
 
   `Github Sponsors <https://github.com/sponsors/DCC-EX>`_
 
-We are DCC-EX on GitHub Sponsors. You can also donate from our CommandStation-EX repository page by scrolling down the right side column.
+We are DCC-EX on GitHub Sponsors. You can also donate from our |EX-CS| repository page by scrolling down the right side column.
 
 By Mail: You may send checks made out to DCC-EX to:
 DCC-EX

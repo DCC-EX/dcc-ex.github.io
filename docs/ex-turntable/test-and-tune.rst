@@ -1,12 +1,12 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: /include/include-l1.rst
 |EX-TT-LOGO|
 
 *****************************
 Testing, Tuning, and Control
 *****************************
 
-|conductor|
+|tinkerer|
 
 .. sidebar:: 
 
@@ -97,7 +97,7 @@ Referring again to :ref:`reference/developers/hal-config:adding a new device`, s
   <* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *>
   <* TurntableEX I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, |EX-TT| is connected!
 
-If there is an "OFFLINE" at the end of the |EX-TT| line, it indicates something is not quite right. Refer to :ref:`ex-turntable/ex-turntable/troubleshooting:ex-turntable showing as offline with \<d hal show\>`.
+If there is an "OFFLINE" at the end of the |EX-TT| line, it indicates something is not quite right. Refer to :ref:`ex-turntable/troubleshooting:ex-turntable showing as offline with \<d hal show\>`.
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 
@@ -155,7 +155,7 @@ Tuning your turntable positions
 
 .. tip:: 
 
-  To determine your starting positions, you will need the full turn step count as recorded in :ref:`ex-turntable/getting-started:automatic calibration`.
+  To determine your starting positions, you will need the full turn step count as recorded in :ref:`ex-turntable/assembly:automatic calibration`.
 
 To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).
 
@@ -297,7 +297,7 @@ Once this has been done, you must explicitly define the phase switching to occur
 
   Therefore, for every position that requires the phase to be inverted, you must send the invert command (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn command (0/Turn).
 
-To use our example from above, the commands in :ref:`ex-turntable/ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
+To use our example from above, the commands in :ref:`ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
 
 .. code-block:: 
 

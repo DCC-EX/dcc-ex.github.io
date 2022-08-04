@@ -6,7 +6,7 @@
 Layout Connections and Wiring
 ******************************
 
-|conductor|
+|tinkerer|
 
 .. sidebar::
 

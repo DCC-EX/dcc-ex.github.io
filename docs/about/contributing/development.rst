@@ -30,7 +30,7 @@ Level of C++ understanding required
 
 As a general rule, writing software in C++ for the Arduino platform is fairly simple, with plenty of tutorials and guides available on the internet to help get started.
 
-However, the CommandStation-EX codebase is written using various techniques to fit as much capability as possible into the very limited Arduino AVR architecture and memory limits that are available, and it's important to understand the various techniques in use to support this and avoid adding any dependencies that would compromise this approach.
+However, the |EX-CS| codebase is written using various techniques to fit as much capability as possible into the very limited Arduino AVR architecture and memory limits that are available, and it's important to understand the various techniques in use to support this and avoid adding any dependencies that would compromise this approach.
 
 .. tip:: 
 

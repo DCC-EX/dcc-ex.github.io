@@ -3,10 +3,10 @@
 |EX-TT-LOGO|
 
 ****************
-Getting started
+Assembly & Setup
 ****************
 
-|conductor|
+|tinkerer|
 
 .. sidebar:: 
 
@@ -15,26 +15,23 @@ Getting started
     :local:
 
 Assembly
-=========
+========
 
 For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with an Arduino Nano V3, a standard 3 pin Arduino compatible hall effect sensor, and a dual relay board.
-
-.. sidebar:: Use prototype or strip boards
-
-  |tinkerer|
-
-  |engineer|
-
-  For the Tinkerers and Engineers, a much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.
 
 We will also assume a prototyping shield is available that provides regulated 5V power sufficient for driving the ULN2003/28BYJ-48 stepper combo, and that there is a power supply with a suitable DC power plug to suit the prototyping shield.
 
 Throughout the assembly process, you can refer to this Fritzing diagram to help validate your connections are correct (open this image in a new tab or window and zoom in to see the detail):
 
+.. sidebar:: Use prototype or strip boards
+
+  |tinkerer| |engineer|
+
+  For the Tinkerers and Engineers, a much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.
+
 .. image:: /_static/images/turntable-ex/assembly.png
   :alt: Fritzing Diagram
   :scale: 25%
-  :align: left
 
 Connection summary
 ___________________
@@ -307,20 +304,20 @@ Once the software is loaded successfully on to |EX-TT|, the stepper motor should
 
 If you don't have the magnet installed at this point, or if it is too far from the sensor, |EX-TT| will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.
 
-If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/ex-turntable/troubleshooting:troubleshooting ex-turntable` for further assistance if required.
+If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/troubleshooting:troubleshooting ex-turntable` for further assistance if required.
 
 Automatic calibration
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
 
-  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/ex-turntable/test-and-tune:ex-turntable commands` section.
+  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/test-and-tune:ex-turntable commands` section.
 
   Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`ex-turntable/configure:full_step_count`.
 
 When |EX-TT| is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.
 
-Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`ex-turntable/ex-turntable/test-and-tune:tuning your turntable positions`.
+Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`ex-turntable/test-and-tune:tuning your turntable positions`.
 
 The output in the serial console should look similar to the below:
 

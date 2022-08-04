@@ -37,7 +37,7 @@ Use the link to either the ZIP or TAR file at the bottom of our GitHub page here
 Unzip the file into the Arduino IDE project folder
 ===================================================
 
-Find the ZIP file on your computer and unzip it. You should now have a folder with the entire DCC-EX project inside it called "CommandStation-EX". Make sure this folder is at the root level with all your other projects. Note that the name of this folder **MUST** be "CommandStation-EX"! Do not change it. Because of the way the Arduino IDE works, the folder name must match the .ino file inside it.
+Find the ZIP file on your computer and unzip it. You should now have a folder with the entire |DCC-EX| project inside it called "CommandStation-EX". Make sure this folder is at the root level with all your other projects. Note that the name of this folder **MUST** be "CommandStation-EX"! Do not change it. Because of the way the Arduino IDE works, the folder name must match the .ino file inside it.
 
 Copy the config.example.h file (or rename it)
 =============================================

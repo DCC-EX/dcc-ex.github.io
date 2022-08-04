@@ -36,14 +36,14 @@
      inkscape:current-layer="svg40"
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
-     inkscape:window-x="-8"
-     inkscape:cy="1348.6486"
-     inkscape:cx="2810.1796"
-     inkscape:zoom="0.16831664"
+     inkscape:window-x="1592"
+     inkscape:cy="479.41889"
+     inkscape:cx="2250"
+     inkscape:zoom="0.18355556"
      showgrid="false"
      id="namedview42"
-     inkscape:window-height="996"
-     inkscape:window-width="1920"
+     inkscape:window-height="816"
+     inkscape:window-width="1600"
      inkscape:pageshadow="2"
      inkscape:pageopacity="1"
      guidetolerance="10"
@@ -75,6 +75,12 @@
   </mask>
   <defs
      id="defs38">
+    <rect
+       x="2598.6683"
+       y="-631.96126"
+       width="1405.569"
+       height="457.62712"
+       id="rect1729" />
     <rect
        x="205.28384"
        y="1341.9482"
@@ -277,11 +283,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan47241"><tspan
+       id="tspan2602"><tspan
          style="fill:#00a3b9"
-         id="tspan47237">EX-</tspan><tspan
+         id="tspan2598">EX-</tspan><tspan
          style="fill:#00353d"
-         id="tspan47239">Rail</tspan></tspan></text>
+         id="tspan2600">Rail</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -292,11 +298,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan47247"><tspan
+       id="tspan2608"><tspan
          style="fill:#00353d"
-         id="tspan47243">DCC-</tspan><tspan
+         id="tspan2604">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan47245">EX</tspan></tspan></text>
+         id="tspan2606">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"

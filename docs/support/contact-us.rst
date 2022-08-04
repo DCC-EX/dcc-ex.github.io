@@ -8,7 +8,7 @@ Contact Us
 
 |conductor| |tinkerer| |engineer|
 
-The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Qf>`_. Usually there is always a team member online to help with your issue in English, German and French, and if not you'll get a response within a few hours.
+The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Qf>`_. Usually there is a team member online to help with your issue in English, German and French, and if not you'll get a response within a few hours.
 
 .. raw:: html
 

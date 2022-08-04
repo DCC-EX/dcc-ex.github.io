@@ -4,7 +4,7 @@
 Stage 6 - Putting it all Together
 *********************************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer|
 
 .. sidebar:: 
 

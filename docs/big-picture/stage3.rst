@@ -4,7 +4,7 @@
 Stage 3 - Turnouts/Points, Accessories, Sensors & Blocks
 ********************************************************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer|
 
 What to expect to learn from stage 3
 ====================================

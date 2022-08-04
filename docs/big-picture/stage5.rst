@@ -4,7 +4,7 @@
 Stage 5 - Turntables & Traversers
 *********************************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer|
 
 What to expect to learn from stage 5
 ====================================

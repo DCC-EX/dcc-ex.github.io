@@ -4,7 +4,7 @@
 Stage 4 - Automation
 ********************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer|
 
 What to expect to learn from stage 4
 ====================================

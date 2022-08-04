@@ -23,16 +23,13 @@ To begin, let's define a few terms:
 
 Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with :doc:`throttles </throttles/index>` that support it (:doc:`/throttles/software/engine-driver`, :doc:`WebThrottle-EX </throttles/software/ex-webthrottle>`) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. "Automations" can appear on a "handoff" button that will supply or handoff the Loco ID to |EX-R| where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in the throttle that runs an AUTOMATION to take it on a journey around the layout.
 
-
-.. attention::
-   17 Feb 2022: *Now included* in **DCC++EX 4.0!**
-   Available to download and use now!
-
 ----
 
 .. toctree::
     :maxdepth: 1
 
+    overview
     getting-started
+    tips
     EX-RAIL-summary
     EX-RAIL-reference

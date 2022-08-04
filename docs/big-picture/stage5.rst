@@ -1,16 +1,14 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 *********************************
-Stage 1 - Running a Train
+Stage 5 - Turntables & Traversers
 *********************************
 
 |conductor| |tinkerer| |engineer|
 
-What to expect to learn from stage 1
+What to expect to learn from stage 5
 ====================================
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How run a train on your WiFi enabled |EX-CS|.
-* How run a train on your JMRI connected |EX-CS|.
-* How to program a decoder using JMRI
+* How add a Turntables or Traverser

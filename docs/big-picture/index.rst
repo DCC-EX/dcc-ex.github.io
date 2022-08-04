@@ -11,3 +11,8 @@ By popular demand, this section will provide a "big picture" view of how to put 
 
   big-picture
   stage1
+  stage2
+  stage3
+  stage4
+  stage5
+  stage6

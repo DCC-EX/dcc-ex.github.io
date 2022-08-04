@@ -1,16 +1,16 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 *********************************
-Stage 1 - Running a Train
+Stage 2 - Roster
 *********************************
 
 |conductor| |tinkerer| |engineer|
 
-What to expect to learn from stage 1
+What to expect to learn from stage 2
 ====================================
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How run a train on your WiFi enabled |EX-CS|.
-* How run a train on your JMRI connected |EX-CS|.
-* How to program a decoder using JMRI
+* How add a Loco Roster to your |EX-CS|
+* How add add function labels for you Roster Entries
+* How to add images for your locos (Engine Driver only)

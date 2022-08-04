@@ -39,11 +39,11 @@ Notes
   There are four uses of ID numbers in EX-RAIL:
 
   - AUTOMATION, ROUTE, and SEQUENCE IDs
-  - Turnout IDs
+  - Turnout/Point IDs
   - Pin IDs - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O expander modules, and virtual pins that have no physical presence
   - Virtual block IDs as used in RESERVE/FREE
 
-  Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
+  Therefore, you can have an AUTOMATION, a turnout/point, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
 Interactive diagnostics and control
 ====================================
@@ -142,7 +142,7 @@ Refer to the LATCH/UNLATCH commands in the `sensors`_ section below for further 
 Routes, automations, and sequences
 ===================================
 
-EX-RAIL provides many commands to allow you to create automated sequences and routes that locomotives can follow that may involve turnouts, signals, etc. that can be automatically set to react when the loco trips a sensor.
+EX-RAIL provides many commands to allow you to create automated sequences and routes that locomotives can follow that may involve turnouts/points, signals, etc. that can be automatically set to react when the loco trips a sensor.
 
 Script Definition Terms
 ________________________
@@ -151,7 +151,7 @@ There are three options to define these automation sequences:
 
 ``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`ex-rail/getting-started:example 4: automating a train (simple loop)` for a simple example.
 
-``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts and signals to allow a train to be driven through a specific route on the layout. See :ref:`ex-rail/getting-started:example 1: creating routes for a throttle` for various examples.
+``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See :ref:`ex-rail/getting-started:example 1: creating routes for a throttle` for various examples.
 
 ``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`ex-rail/getting-started:example 3: automating various non-track items`, :ref:`ex-rail/getting-started:example 6: single line shuttle`, and :ref:`ex-rail/getting-started:example 7: running multiple inter-connected trains` for further examples.
 
@@ -160,7 +160,7 @@ There are three options to define these automation sequences:
 Conditional statements
 =======================
 
-There is quite a variety of conditional statements available to influence activities based on the states of sensors, signals, turnouts, and other items.
+There is quite a variety of conditional statements available to influence activities based on the states of sensors, signals, turnouts/points, and other items.
 
 All conditional activities must be terminated with an `ENDIF` statement, and may optionally include an `ELSE` statement.
 
@@ -168,16 +168,16 @@ If a conditional statement is part of an automation sequence, the sequence still
 
 ``ELSE``	Provides alternative logic to any IF related command returning False.
 
-``ENDIF``	Required to end an IF/IFNOT/etc (Used in all IF.. functions).
+``ENDIF``	Required to end an IF/IFNOT/etc. (Used in all IF.. functions).
 
 Aliases
 ========
 
 ``ALIAS( name[, value] )``	Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias "name" text.
 
-This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
+This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
 
-If you simply need a unique identifier for an object used internally to the script, such as a turnout, route, automation, or sequence, you don't even need to provide an ID, EX-RAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don't have to try to remember or keep a list of numbers you've used. This also prevents you from assigning the same number to more than one object.
+If you simply need a unique identifier for an object used internally to the script, such as a turnout/point, route, automation, or sequence, you don't even need to provide an ID, EX-RAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don't have to try to remember or keep a list of numbers you've used. This also prevents you from assigning the same number to more than one object.
 
 REMEMBER: IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
 
@@ -193,13 +193,13 @@ Alias naming rules:
 
 Examples:
 
-Defining a pin turnout without an alias:
+Defining a pin turnout/point without an alias:
 
 .. code-block:: cpp
 
   PIN_TURNOUT(1, 25, "Coal Yard")
 
-Defining a pin turnout with aliases:
+Defining a pin turnout/point with aliases:
 
 .. code-block:: cpp
   
@@ -209,7 +209,7 @@ Defining a pin turnout with aliases:
 
 Note that you could have used the command `ALIAS(COAL_YARD, 1)` in the example above to explicity set the number, but unless you have a reason to use specific numbers, let the Command Station do it for you. 
 
-In this simple example, aliases seem like overkill, however consider the case where you need to have the "Coal Yard" turnout closed or thrown in various different automation sequences, and you will soon see why it's easier to understand you're throwing the COAL_YARD turnout rather than turnout ID 12345.
+In this simple example, aliases seem like overkill, however consider the case where you need to have the "Coal Yard" turnout/point closed or thrown in various different automation sequences, and you will soon see why it's easier to understand you're throwing the COAL_YARD turnout/point rather than turnout/point ID 12345.
 
 Signals
 ========
@@ -240,18 +240,18 @@ Signal examples:
   GREEN(164)                         // Sets our active high signal to green.
   GREEN(101)                        // Sets our servo based signal to green.
 
-Turnouts
-=========
+Turnouts/Points
+===============
 
-All the below turnout definitions will define turnouts that are advertised to WiThrottle apps, Engine Driver, and JMRI, unless the HIDDEN keyword is used.
+All the below turnout/point definitions will define turnouts/points that are advertised to WiThrottle apps, Engine Driver, and JMRI, unless the HIDDEN keyword is used.
 
-"description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turnout to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
+"description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turnout/point to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
 
-``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions.
+``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions.
 
 ``PIN_TURNOUT( id, pin [, "description"] )``	Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.
 
-``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout. "active_angle" is for THROW, "inactive_angle" is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don't recommend Bounce for turnouts!). Refer to :doc:`/reference/hardware/servo-module` for more information.
+``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout/point. "active_angle" is for THROW, "inactive_angle" is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don't recommend Bounce for turnouts/points!). Refer to :doc:`/reference/hardware/servo-module` for more information.
 
 ``VIRTUAL_TURNOUT( id [, "description"] )`` Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to :ref:`ex-rail/tips:realistic turnout sequences`.
 
@@ -259,9 +259,9 @@ All the below turnout definitions will define turnouts that are advertised to Wi
 
 ``IFTHROWN( turnout_id )``	Test if a turnout is thrown.
 
-``ONCLOSE( turnout_id )``	Event handler for when a turnout is sent a close command. Note that there can be only one defined ONCLOSE event for a specific turnout.
+``ONCLOSE( turnout_id )``	Event handler for when a turnout/point is sent a close command. Note that there can be only one defined ONCLOSE event for a specific turnout/point.
 
-``ONTHROW( turnout_id )``	Event handler for when a turnout is sent a throw command. Note that there can be only one defined ONTHROW event for a specific turnout.
+``ONTHROW( turnout_id )``	Event handler for when a turnout/point is sent a throw command. Note that there can be only one defined ONTHROW event for a specific turnout/point.
 
 Examples:
 
@@ -310,7 +310,7 @@ Sensor examples:
 
 .. code-block:: cpp
 
-  IF(25)          // If sensor on the CS pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout.
+  IF(25)          // If sensor on the CS pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.
     RED(101)
     DELAY(10)
     CLOSE(200)
@@ -342,7 +342,7 @@ In this example, LATCH/UNLATCH is used to toggle between two different activitie
 
 .. code-block::
 
-  TURNOUT(17, 30, 1, "Bay to Shed") // DCC turnout with linear address 117
+  TURNOUT(17, 30, 1, "Bay to Shed") // DCC turnout/point with linear address 117
 
   ALIAS(BayExitStarter, 107)        // Starter Signal with Route board
   ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
@@ -368,9 +368,9 @@ Output and servo commands
 
 ``RESET( pin )``	Reset output pin (set to LOW)
 
-``CLOSE( turnout_id )``	Close a defined turnout
+``CLOSE( turnout_id )``	Close a defined turnout/point
 
-``THROW( id )``	Throw a defined turnout
+``THROW( id )``	Throw a defined turnout/point
 
 ``GREEN( signal_id )``	Set a defined signal to GREEN (see SIGNAL)
 
@@ -382,9 +382,9 @@ Output and servo commands
 
 ``LCN( msg )``	Send message to LCN Accessory Network
 
-``SERVO( id, position, profile )``	Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+``SERVO( id, position, profile )``	Move an animation servo. Do NOT use for Turnouts/points. (profile is one of Instant, Fast, Medium, Slow or Bounce)
 
-``SERVO2( id, position, duration )``	Move an animation servo taking duration in ms. Do NOT use for Turnouts
+``SERVO2( id, position, duration )``	Move an animation servo taking duration in ms. Do NOT use for Turnouts/points
 
 ``WAITFOR( pin )``	The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.
 
@@ -392,11 +392,11 @@ A couple of examples:
 
 .. code-block:: cpp
 
-  // First example defines a servo turnout for the coal yard and a signal for the main line.
+  // First example defines a servo turnout/point for the coal yard and a signal for the main line.
   TURNOUT(100, 26, 0, "Coal Yard")
   SIGNAL(25, 26, 27)
 
-  // When our turnout is closed, the main line is open, so the signal is green.
+  // When our turnout/point is closed, the main line is open, so the signal is green.
   ONCLOSE(100)
     GREEN(25)
   DONE
@@ -453,13 +453,13 @@ You could write a very long AUTOMATION sequence to do this, or you could write t
     FWD(30)                         // On our way to the next station
     RETURN                          // Return to the calling sequence
 
-``FOLLOW( route )``	Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.
+``FOLLOW( route )``	Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout/point is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.
 
 For example:
 
 .. code-block:: cpp
 
-  AUTOMATION(23, "Choose your own adventure") // This let's someone control the sequence by throwing a turnout (or not)
+  AUTOMATION(23, "Choose your own adventure") // This let's someone control the sequence by throwing a turnout/point (or not)
     FWD(30)
     AFTER(105)
     IFTHROWN(106)
@@ -476,7 +476,7 @@ For example:
     STOP
     DONE
 
-  SEQUENCE(25, "Adventure 2")                 // If we don't throw the turnout, let's do our station loop from the example above
+  SEQUENCE(25, "Adventure 2")                 // If we don't throw the turnout/point, let's do our station loop from the example above
     FOLLOW(21)
 
 ``DELAY( delay )``	Delay a number of milliseconds

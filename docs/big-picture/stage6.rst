@@ -23,7 +23,7 @@ What to expect to learn from stage 6
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How to define the different types of turnout and signal objects.
+* How to define the different types of turnout/point and signal objects.
 * How to reference sensors.
 * How, why, and when to effectively use aliases.
 * How an object ID is different to the pin or configuration used by the physical object it represents.
@@ -39,30 +39,30 @@ Aliases
 
 As mentioned already, we will be defining aliases throughout these pages to put human-friendly labels on our various objects.
 
-By doing so, it becomes easier to refer to things in various different sequences or contexts when referring to a name than it is to remember a specific pin or turnout ID.
+By doing so, it becomes easier to refer to things in various different sequences or contexts when referring to a name than it is to remember a specific pin or turnout/point ID.
 
 This also means if there is a need to change a pin or object ID, you can simply update the single alias reference, meaning you don't need to dig through all your sequences, routes, and so forth to edit them individually.
 
-Further more, you can make radical changes such as moving from pin turnouts to servo turnouts, and only need to edit the defined objects and alias. Again, all your existing sequences, routes, etc. should remain unchanged.
+Further more, you can make radical changes such as moving from pin turnouts/points to servo turnouts/points, and only need to edit the defined objects and alias. Again, all your existing sequences, routes, etc. should remain unchanged.
 
 For more information on aliases, refer to :ref:`ex-rail/ex-rail-reference:aliases`.
 
-Turnouts
-========
+Turnouts/Points
+===============
 
-Two turnouts are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
+Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts, you can refer to the :ref:`ex-rail/ex-rail-reference:turnouts` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC-EX Command reference.
+For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-reference:turnouts/points` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC-EX Command reference.
 
-Turnout definitions
-___________________
+Turnout/Point definitions
+_________________________
 
-We will define turnout 1 with an ID of 100, and turnout 2 with an ID of 101.
+We will define turnout/point 1 with an ID of 100, and turnout/point 2 with an ID of 101.
 
-DCC accessory turnouts
-^^^^^^^^^^^^^^^^^^^^^^
+DCC accessory turnouts/points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To define these as DCC accessory turnouts, turnout 1 will be at linear address 101, and turnout 2 at 102. These translate to address 26 with sub address 0 for linear address 101, and address 26 with sub address 1 for linear address 102.
+To define these as DCC accessory turnouts/points, turnout/points 1 will be at linear address 101, and turnout/points 2 at 102. These translate to address 26 with sub address 0 for linear address 101, and address 26 with sub address 1 for linear address 102.
 
 Therefore, the DCC-EX command to define these in the serial console is as follows:
 
@@ -81,10 +81,10 @@ In EX-RAIL, we would add these lines to myAutomation.h, with aliases defined:
   TURNOUT(TRN1, 26, 0, "Station entry")
   TURNOUT(TRN2, 26, 1, "Station exit")
 
-Pin turnouts
-^^^^^^^^^^^^
+Pin turnouts/Points
+^^^^^^^^^^^^^^^^^^^
 
-To define these same turnout IDs as pin turnouts instead, and using I/O pins that are directly on our |EX-CS| Mega2560, we will use pins 22 and 23.
+To define these same turnout/point IDs as pin turnouts/points instead, and using I/O pins that are directly on our |EX-CS| Mega2560, we will use pins 22 and 23.
 
 To define these in the serial console:
 
@@ -122,14 +122,14 @@ And again, in myAutomation.h for EX-RAIL:
   PIN_TURNOUT(TRN1, 164, "Station entry")
   PIN_TURNOUT(TRN2, 165, "Station exit")
 
-Servo turnouts
-^^^^^^^^^^^^^^
+Servo turnouts/points
+^^^^^^^^^^^^^^^^^^^^^
 
 Finally, to define these same turnouts as servo based turnouts, these would be connected to a PCA9685 servo module, and our first module starts at Vpin ID 100.
 
 .. tip:: 
 
-  Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts, so be sure you read the blurb on :ref:`big-picture/big-picture:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
+  Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts, so be sure you read the blurb on :ref:`big-picture/stage3:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
 
   Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
@@ -226,7 +226,7 @@ To define servo based signals, these only require one Vpin per signal along with
 
 .. tip:: 
 
-  Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on :ref:`big-picture/big-picture:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
+  Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on :ref:`big-picture/stage3:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
 
   Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
@@ -637,7 +637,7 @@ ______________________________________________
 
 The final sequence is the simplest of all, and allows for a higher speed run through block 4 ``FWD(40)`` (providing block 1 is free to enter), again freeing up block 4 once we've exited it ``AFTER(SNS1_TRN1_APP)``, and then finally handing control back to our original `exiting block 1 - station entry or main track?`_ decision sequence.
 
-Again, we start up with train 3 occupying block 4, and once train 1 has exited block 1, the squence below will execute, with train 3 moving to block 1, and train 2 being able to exit block 2.
+Again, we start up with train 3 occupying block 4, and once train 1 has exited block 1, the sequence below will execute, with train 3 moving to block 1, and train 2 being able to exit block 2.
 
 .. code-block:: 
 

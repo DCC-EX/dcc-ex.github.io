@@ -33,7 +33,7 @@ A basic |EX-CS| hardware setup can be made from easy to find, widely available, 
 It includes advanced features such as:
 
 * A WiThrottle server implementation, 
-* Turnout operation, 
+* Turnout/point operation, 
 * General purpose inputs and outputs (I/O) for extensibility, and 
 * JMRI integration
 

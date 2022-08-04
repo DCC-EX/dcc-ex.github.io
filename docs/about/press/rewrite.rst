@@ -15,7 +15,7 @@ Everything you loved is still there...
 
 First, we want to stress that we didn't break anything! 
 
-Whether you are using JMRI as a controller/front-end to send commands to your track, handle turnouts, read and write CVs, or using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won't affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.
+Whether you are using JMRI as a controller/front-end to send commands to your track, handle turnouts/points, read and write CVs, or using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won't affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.
 
 EX-CommandStation is all new!
 =============================
@@ -36,7 +36,7 @@ We added many new functions such as:
 * EX-RAIL Automation and/or accessory control
 * HAL - Hardware abstraction layer to make adding new types of hardware simple
 * Extended functions up to 68
-* Better turnout handling
+* Better turnout/point handling
 * Servo support
 * Built-in WiThrottle Server to directly support WiThrottle based throttles
 * Built-in support for the LCN node based accessory bus

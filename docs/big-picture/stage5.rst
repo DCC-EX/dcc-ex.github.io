@@ -12,3 +12,7 @@ What to expect to learn from stage 5
 At the end of this stage, we expect you will have learnt the following:
 
 * How add a Turntables or Traverser
+
+Notes
+=====
+

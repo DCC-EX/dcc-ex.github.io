@@ -33,7 +33,7 @@ Most people wanting to do animations or run trains through an automated route wi
 Things You Can Do With EX-RAIL
 ==============================
 
-- Create "Routes" which set multiple turnouts and signals at the press of a button in WebThrottle-EX or EngineDriver (other WiThrottle-compatible throttles are available)
+- Create "Routes" which set multiple turnouts and signals at the press of a button in |EX-WT| or EngineDriver (other WiThrottle-compatible throttles are available)
 - Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up "Automations"
 - Drive trains manually, and hand a train over to an Automation
 - Animate accessories such as lights, crossings, or cranes
@@ -44,22 +44,22 @@ Things You Can Do With EX-RAIL
 
 .. sidebar:: A note from the Author
 
-   My original aim was to see if I could create an automated layout with lots going on, that didn’t just run around in circles. Having looked at JMRI (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.
+   My original aim was to see if I could create an automated layout with lots going on, that didn't just run around in circles. Having looked at JMRI (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.
 
    Some of the automation techniques I read about, using Jython scripts in JRMI, seem to require extensive programming skills and complex table configurations which appeared awkward to me, despite my years of programming in dozens of languages.
 
-   It seemed to me that basing an automation on block occupancy detection leaves a lot of complex technical problems to be solved… and wanting to be cheap, I didn’t want to invest in a range of block occupancy detectors, or ABC braking modules, which are all very well on circular layouts, but not good at complex crossings or single line operations with passing places. Also, I didn’t want the automation to be an obvious cycle of movements… some random timings and decisions need to be introduced so that two trains don’t always arrive at the same place in the same order, nor go on the same journey in a predictable cycle.
+   It seemed to me that basing an automation on block occupancy detection leaves a lot of complex technical problems to be solved… and wanting to be cheap, I didn't want to invest in a range of block occupancy detectors, or ABC braking modules, which are all very well on circular layouts, but not good at complex crossings or single line operations with passing places. Also, I didn't want the automation to be an obvious cycle of movements… some random timings and decisions need to be introduced so that two trains don't always arrive at the same place in the same order, nor go on the same journey in a predictable cycle.
 
    By reversing the usual assumptions, I think I have a workable, extensible and cheap solution.
    
-   Because the original DCC++ used a software design inappropriate for internal automation, I had to start by rewriting the entire Command Station code and this became DCC-EX, so automation has been in the plan from the start.
+   Because the original DCC++ used a software design inappropriate for internal automation, I had to start by rewriting the entire Command Station code and this became the |EX-CS|, so automation has been in the plan from the start.
 
    - Chris Harlow
 
 What You Don't Need
 ===================
 
-While extra functionality may be attained by using additional tools and applications, to get the benefit of EX-RAIL you don't need anything more than a *DCC-EX Command Station, and the Arduino IDE* used to configure it.
+While extra functionality may be attained by using additional tools and applications, to get the benefit of |EX-R| you don't need anything more than a |EX-CS|, *and the Arduino IDE* used to configure it.
 
 You DON'T need:
 
@@ -71,13 +71,13 @@ You DON'T need:
 How It Works
 ============
 
-A small amount of code in the CS, the EX-RAIL executor, lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don't have to be a programmer and you don't have to learn code. You simply add your own myAutomation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.
+A small amount of code in the CS, the |EX-R| executor, lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don't have to be a programmer and you don't have to learn code. You simply add your own myAutomation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.
 
-The EX-RAIL code is surprisingly small and requires very little PROGMEM (memory that holds the program code) or SRAM (the runtime workspace that stores variables and things the program needs) to operate. However, you will still need a Mega for your CS; the UNO and Nano memory is simply too small to include EX-RAIL with the rest of the Command Station code.
+The |EX-R| code is surprisingly small and requires very little PROGMEM (memory that holds the program code) or SRAM (the runtime workspace that stores variables and things the program needs) to operate. However, you will still need a Mega for your CS; the UNO and Nano memory is simply too small to include EX-RAIL with the rest of the Command Station code.
 
 EX-RAIL automation is *much* (perhaps 2 orders of magnitude) more time efficient than the code required to process incoming requests from an external automation processor, or the continuous polling of every sensor.
 
-.. note:: The EX-RAIL code is only included in the compilation of the Command Station if the compiler detects a “myAutomation.h” file. If you don't create that file, no extra space is wasted for something you don't use.
+.. note:: The |EX-R| code is only included in the compilation of the Command Station if the compiler detects a “myAutomation.h” file. If you don't create that file, no extra space is wasted for something you don't use.
 
 ----
 
@@ -86,7 +86,7 @@ Why Can't I Put a Script on an SDCard?
 
 From time to time, we are asked why we can't put automation scripts (the contents of a myAutomation.h file) on an SDCard or load it into EEPROM storage on the Arduino. This is not possible, and as you will see in the last paragraph of this section, would not provide much of a benefit. For you Engineers and advanced Tinkerers:
 
-1) Being able to read an SD card on the arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don't have enough free memory on an Arduino to hold that code. The same problems exist for using EEPROM.   
+1) Being able to read an SD card on the Arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don't have enough free memory on an Arduino to hold that code. The same problems exist for using EEPROM.   
 
 
 2) myAutomation.h is actually generating compiled code as an integral part of the CS. To have this file loaded separately at run time would require that the CS contained all the code necessary to read the file and interpret the contents. This would be a significant additional code burden on the CS (>1000 lines of code) and also require huge amounts of precious RAM to store the interpreted version of the file because it cannot be written into flash memory at run time.   

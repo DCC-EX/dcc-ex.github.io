@@ -1,10 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-..
-.. image:: ../_static/images/product-logo-ex-commandstation.png
-   :alt: EX-CommandStation
-   :scale: 40%
-   :align: right
+|EX-CS-LOGO|
 
 ***************************
 EX-CommandStation Downloads
@@ -71,6 +67,8 @@ EX-CommandStation Repository (project source files)
    `CommandStation-EX GitHub <https://github.com/DCC-EX/CommandStation-EX>`_
 
 |
+
+|EX-BSC-LOGO|
 
 Getting BaseStation-Classic
 ============================

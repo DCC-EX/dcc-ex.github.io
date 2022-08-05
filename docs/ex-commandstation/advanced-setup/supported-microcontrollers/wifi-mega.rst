@@ -1,10 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-..
-.. image:: ../../../_static/images/product-logo-ex-commandstation.png
-   :alt: EX-CommandStation
-   :scale: 40%
-   :align: right
+|EX-CS-LOGO|
    
 **************************
 Mega+WiFi Configuration

@@ -46,64 +46,87 @@
 
    <span style="font-weight: bold; font-style: italic; color: #767676;" >Note that you can click on any of the images to make them larger.</span>
 ..
-.. |EX-CS-LOGO| image:: /_static/images/product-logo-ex-commandstation.png
+.. |EX-CS-LOGO| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 40%
       :class: image-float-right
 ..
-.. |EX-I-LOGO| image:: /_static/images/product-logo-ex-installer.png
+.. |EX-I-LOGO| image:: /_static/images/logos/product-logo-ex-installer.png
       :alt: EX-Installer
       :scale: 40%
       :class: image-float-right
 ..
-.. |EX-WT-LOGO| image:: /_static/images/product-logo-ex-webthrottle.png
+.. |EX-WT-LOGO| image:: /_static/images/logos/product-logo-ex-webthrottle.png
       :alt: EX-WebThrottle
       :scale: 40%
       :class: image-float-right
 ..
-.. |EX-R-LOGO| image:: /_static/images/product-logo-ex-rail.png
+.. |EX-R-LOGO| image:: /_static/images/logos/product-logo-ex-rail.png
       :alt: EX-RAIL
       :scale: 40%
       :class: image-float-right
 ..
-.. |EX-TT-LOGO| image:: /_static/images/product-logo-ex-turntable.png
+.. |EX-TT-LOGO| image:: /_static/images/logos/product-logo-ex-turntable.png
       :alt: EX-Turntable
       :scale: 40%
       :class: image-float-right
 ..
-.. |EX-DCCI-LOGO| image:: /_static/images/product-logo-ex-dccinspector.png
+.. |EX-DCCI-LOGO| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-SCCInspector
       :scale: 40%
       :class: image-float-right
 ..
-.. |EX-SUPPORT-LOGO| image:: /_static/images/product-logo-ex-support.png
+.. |EX-BSC-LOGO| image:: /_static/images/logos/product-logo-basestationclassic.png
+      :alt: BaseStationClassic
+      :scale: 40%
+      :class: image-float-right
+..
+.. |EX-SUPPORT-LOGO| image:: /_static/images/logos/product-logo-ex-support.png
       :alt: EX-Support
       :scale: 40%
       :class: image-float-right
 ..
-.. |EX-CS-LOGO-SMALL| image:: /_static/images/product-logo-ex-commandstation.png
+.. |EX-CS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 20%
+      :class: image-min-width-144
+      :target: ./ex-commandstation/index.html
 ..
-.. |EX-I-LOGO-SMALL| image:: /_static/images/product-logo-ex-installer.png
+.. |EX-I-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-installer.png
       :alt: EX-Installer
       :scale: 20%
+      :class: image-min-width-144
+      :target: ./ex-installer/index.html
 ..
-.. |EX-WT-LOGO-SMALL| image:: /_static/images/product-logo-ex-webthrottle.png
+.. |EX-WT-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-webthrottle.png
       :alt: EX-WebThrottle
       :scale: 20%
+      :class: image-min-width-144
+      :target: ./ex-webthrottle/index.html
 ..
-.. |EX-R-LOGO-SMALL| image:: /_static/images/product-logo-ex-rail.png
+.. |EX-R-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-rail.png
       :alt: EX-RAIL
       :scale: 20%
+      :class: image-min-width-144
+      :target: ./ex-rail/index.html
 ..
-.. |EX-TT-LOGO-SMALL| image:: /_static/images/product-logo-ex-turntable.png
+.. |EX-TT-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-turntable.png
       :alt: EX-Turntable
       :scale: 20%
+      :class: image-min-width-144
+      :target: ./ex-turntable/index.html
 ..
-.. |EX-DCCI-LOGO-SMALL| image:: /_static/images/product-logo-ex-dccinspector.png
+.. |EX-DCCI-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-DCCInspector
       :scale: 20%
+      :class: image-min-width-144
+      :target: ./ex-dccinspector/index.html
+..
+.. |EX-BSC-LOGO-SMALL| image:: /_static/images/logos/product-logo-basestationclassic.png
+      :alt: baseStationClassic
+      :scale: 20%
+      :class: image-min-width-144
+      :target: ./download/ex-commandstation.html#getting-basestation-classic
 ..
 ..
 ..

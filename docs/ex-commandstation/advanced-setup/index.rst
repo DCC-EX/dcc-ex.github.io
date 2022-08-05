@@ -82,13 +82,12 @@ High Accuracy Waveform Mode
 .. toctree::
     :maxdepth: 1
     
-    microcontroller-options
+    supported-microcontrollers/index
+    supported-motorboards/index
     wifi-setup
     motor-board-config
     wifi-config
     controllers
     arduino-ide
     startup-config
-    supported-motorboards/index
-    supported-microcontrollers/index
     high-accuracy

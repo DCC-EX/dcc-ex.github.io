@@ -9,20 +9,19 @@ EX-CommandStation
 What is EX-CommandStation?
 ==========================
 
-A basic |EX-CS| hardware setup can be made from easy to find, widely available, Arduino boards that you can assemble yourself. It supports much of the NMRA Digital Command Control (DCC) standards, including:
+A basic |EX-CS| can be made from widely available Arduino boards that you can assemble yourself. It supports much of the NMRA Digital Command Control (DCC) standards, including:
 
-* simultaneous control of multiple locomotives
-* Activate/de-activate all accessory function addresses 0-2048
-* Control of all cab functions F0-F28 and F29-F68
-* Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
-* Programming Track: Same as the main track with the addition of reading CV bytes
+* Simultaneous control of multiple locomotives
+* Control of all cab functions
+* Control of accessory/function decoders
+* Programming on Main Track
+* Programming Track
 
 It includes advanced features such as:
 
 * A WiThrottle server implementation, 
-* Turnout operation, 
 * General purpose inputs and outputs (I/O) for extensibility, and 
-* JMRI integration
+* |JMRI| integration
 
 
 .. list-table::

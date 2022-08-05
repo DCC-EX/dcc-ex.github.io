@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+|donate-button|
+
 *************************
 About Us - Meet the Team
 *************************

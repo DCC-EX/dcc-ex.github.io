@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
-|donate_button|
-
+.. include:: /include/include-l0.rst
+|donate-button|
 ************************
 DCC-EX Model Railroading 
 ************************
@@ -24,7 +24,7 @@ Based on off-the-shelf Arduino technology, our products currently include:
 * |EX-DCCI| -  a DCC packet sniffing tool
 * |BSC| - the original DCC++ [#bcs]_  software, packaged in a stable release. (No active development, bug fixes only)
 
-Our products are supported by many third party controllers and applications like JMRI, Engine Driver, WiThrottle, Rocrail and more
+Our products are supported by many third party controllers and applications like |JMRI|, Engine Driver, WiThrottle, Rocrail and more
 
 ..
    .. table::

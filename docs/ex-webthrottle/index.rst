@@ -60,7 +60,7 @@ Just click this link and you will load a web page from our server that will run 
 
    `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
-WebThrottle-EX is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find WebThrottle-EX with your other Apps!
+|EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
 
 Download
 ==========
@@ -154,17 +154,3 @@ Going Further / Developing
 If you want to really delve into how this works and help us improve it with your comments or your development skills, please contact us.
 
 To load the Chrome DevTools to look at logging and be able to manually enter "write" commands for testing, click on the Menu (the 3 vertical dots in the upper right hand corner of the Chrome Window), then select "more tools" and then "Developer Tools". Or you can just hit "Ctrl-Shift-I".
-
-License
-========
-
-Copyright 2020 DCC-EX
-
-Licensed under the GNU open source license.
-
-Unless required by applicable law or agreed to in writing, software distributed
-under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied. See the License for the
-specific language governing permissions and limitations under the License.
-
-`DCC-EX <https://dcc-ex.com>`_

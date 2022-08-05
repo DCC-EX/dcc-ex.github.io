@@ -45,7 +45,7 @@ Command Summary
 Diagnostics & Control
 ______________________
 
-There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands < > through both the Arduino IDE Serial Monitor and the JMRI Send DCC++ Command pane.
+There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands < > through both the Arduino IDE Serial Monitor and the |JMRI| Send DCC++ Command pane.
 
 .. list-table::
     :widths: auto

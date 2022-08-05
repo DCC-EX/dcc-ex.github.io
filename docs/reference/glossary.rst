@@ -22,7 +22,7 @@ Glossary
     * - DCC
       -  Digital Command and Control
     * - JMRI
-      - Java Model Railroad Interface
+      - `Java Model Railroad Interface <https://www.jmri.org/>`_
     * - Loco |BR| Locomotive |BR| Engine 
       - TODO
     * - Switching |BR| Shunting

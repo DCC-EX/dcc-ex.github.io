@@ -14,7 +14,7 @@ WiFi Configuration
     :depth: 1
     :local:
 
-This page describes the software configuration options for using WiFi to connect your |EX-CS| (CS) wirelessly to JMRI or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
+This page describes the software configuration options for using WiFi to connect your |EX-CS| (CS) wirelessly to |JMRI| or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
 
 As mentioned in the above link, you will need the following to proceed:
 
@@ -41,7 +41,7 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 Wireless Connections
 =====================
 
-As mentioned in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to JMRI without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running JMRI to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
+As mentioned in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to |JMRI| without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running |JMRI| to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
 
 .. todo::
    Add Link above
@@ -60,17 +60,17 @@ Connection Type: Direct to Command Station or through JMRI
 
 Everything on this page seems to come in twos! You have two options for connecting your controller to your CS depending on its capabilities and your preferences:
 
-* Connect directly to |EX-CS| using WiFi or Bluetooth (JMRI not required but optional)
-* Connect to the |EX-CS| through JMRI with the USB cable, and connect a WiThrottle compatible throttle to JMRI's WiThrottle Server via WiFi
+* Connect directly to |EX-CS| using WiFi or Bluetooth (|JMRI| not required but optional)
+* Connect to the |EX-CS| through |JMRI| with the USB cable, and connect a WiThrottle compatible throttle to JMRI's WiThrottle Server via WiFi
 
-If you don't need JMRI, or just want to connect your wireless controller directly to the CS, then you connect to the CS using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the WiThrottle command language. 
+If you don't need |JMRI|, or just want to connect your wireless controller directly to the CS, then you connect to the CS using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the WiThrottle command language. 
 
 For example, Engine Driver uses the WiThrottle protocol, so it can connect either directly to the CS via WiFi, or indirectly through the JMRI computer that has WiFi and its own WiThrottle Server. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends native <DCC++> commands.
 
 What's a "WiThrottle Server"?
 ==============================
 
-WiThrottle stands for "WiFi Throttle", and a "WiThrottle Server" is just software running on your JMRI computer or on the |EX-CS|. It's called a "Server" because it allows you to connect to it and it "serves", or services, requests from another application. That application is called a "Client". So your throttle in this case is the client.
+WiThrottle stands for "WiFi Throttle", and a "WiThrottle Server" is just software running on your |JMRI| computer or on the |EX-CS|. It's called a "Server" because it allows you to connect to it and it "serves", or services, requests from another application. That application is called a "Client". So your throttle in this case is the client.
 
 WiThrottle itself is a standard for how WiFi throttles can communicate with Command Stations, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that any device that is WiThrottle compatible should work with the |EX-CS|. Also, any device that sends <DCC++> commands should work with |EX-CS|.
 
@@ -109,7 +109,7 @@ Station mode allows you to connect the Command Station to your existing home net
 
 Images are courtesy of `NodeMCU <https://nodemcu.readthedocs.io/en/latest/modules/wifi/>`_. You can find a great tutorial on WiFi there also.
 
-We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with JMRI, click **here**.
+We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with |JMRI|, click **here**.
 
 .. todo:: Add link above.
 
@@ -171,7 +171,7 @@ Ignore the warning that may pop up telling you that "Internet may not be availab
 
 Once you are connected to the CS with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the :ref:`Decoder Test <reference/software/command-reference:DECODER TEST>` section of the Command Reference.
 
-.. note:: Your Mobile Throttle function keys are user defined default function keys, not the function keys you used in either JMRI or Rocrail engine roster function keys.
+.. note:: Your Mobile Throttle function keys are user defined default function keys, not the function keys you used in either |JMRI| or Rocrail engine roster function keys.
 
 **Once again:**
 
@@ -241,7 +241,7 @@ The following defines are all the possible network settings found the config.h f
 #define IP_PORT 2560
 _____________________
 
-**Default: 2560** - This is the port used to communicate with the WiFi board or Ethernet Shield. We use the default value of 2560 because that is the port JMRI uses. You can change this value if you would prefer it to be something else. You will need to enter this in software like Engine Driver in order to connect to the CS via networking.
+**Default: 2560** - This is the port used to communicate with the WiFi board or Ethernet Shield. We use the default value of 2560 because that is the port |JMRI| uses. You can change this value if you would prefer it to be something else. You will need to enter this in software like Engine Driver in order to connect to the CS via networking.
 
 #define ENABLE_WIFI true
 _________________________

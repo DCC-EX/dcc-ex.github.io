@@ -44,7 +44,7 @@ Things You Can Do With EX-RAIL
 
 .. sidebar:: A note from the Author
 
-   My original aim was to see if I could create an automated layout with lots going on, that didn't just run around in circles. Having looked at JMRI (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.
+   My original aim was to see if I could create an automated layout with lots going on, that didn't just run around in circles. Having looked at |JMRI| (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.
 
    Some of the automation techniques I read about, using Jython scripts in JRMI, seem to require extensive programming skills and complex table configurations which appeared awkward to me, despite my years of programming in dozens of languages.
 
@@ -63,7 +63,7 @@ While extra functionality may be attained by using additional tools and applicat
 
 You DON'T need:
 
-- JMRI, or any additional utilities
+- |JMRI|, or any additional utilities
 - EngineDriver, or any other WiThrottle app
 - A separate computer living under your layout
 - Knowledge of C++ or Python/Jython programming

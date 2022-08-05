@@ -22,20 +22,19 @@ This following pages will instruct you on how to build an |EX-CS| including asse
 What is EX-CommandStation?
 ==========================
 
-A basic |EX-CS| hardware setup can be made from easy to find, widely available, Arduino boards that you can assemble yourself. It supports much of the NMRA Digital Command Control (DCC) standards, including:
+A basic |EX-CS| can be made from widely available Arduino boards that you can assemble yourself. It supports much of the NMRA Digital Command Control (DCC) standards, including:
 
-* simultaneous control of multiple locomotives
-* Activate/de-activate all accessory function addresses 0-2048
-* Control of all cab functions F0-F28 and F29-F68
+* Simultaneous control of multiple locomotives
+* Control of all cab functions (F0-F28 and F29-F68)
+* Control of accessory/function decoders (F0-F28 and F29-F68)
 * Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
 * Programming Track: Same as the main track with the addition of reading CV bytes
 
 It includes advanced features such as:
 
 * A WiThrottle server implementation, 
-* Turnout/point operation, 
 * General purpose inputs and outputs (I/O) for extensibility, and 
-* JMRI integration
+* |JMRI| integration
 
 The Components of a Full System
 ================================
@@ -54,7 +53,7 @@ To actually run your model railroad you will need a few items:
 
   - our free, open source, custom software 
  
-2. a **Controller (Throttle)** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like JMRI, Engine Driver, wiThrottle, etc
+2. a **Controller (Throttle)** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, Engine Driver, wiThrottle, etc
 #. Power - The Arduino and the Motor shields need to be powered separately, so 
  
   - a **9-14v DC power supply** for the motor shield to the track, and 
@@ -65,7 +64,7 @@ To actually run your model railroad you will need a few items:
 #. a **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
 
 .. [#inst]  The Instructions on the following pages assume that that you will use a WiFi Shield.
-.. [#jmri]  Requires JMRI installed on a computer.
+.. [#jmri]  Requires |JMRI| installed on a computer.
 
 Next Steps - Purchasing Parts
 =============================

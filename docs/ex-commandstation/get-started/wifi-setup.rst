@@ -21,7 +21,7 @@ Adding WiFi
 
 The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles (e.g. phones) DIRECTLY to it, eliminating the need for a computer and another software controller. 
 
-However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to the |EX-CS| using the JMRI application (or similar), you can :doc:`skip ahead to the next page <installer>`.
+However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to the |EX-CS| using the |JMRI| application (or similar), you can :doc:`skip ahead to the next page <installer>`.
 
 .. rst-class:: clearer
 
@@ -49,13 +49,13 @@ Why Use WiFi?
 
    |tinkerer| |engineer|
 
-   Using Wifi (OR Ethernet) to talk between JMRI and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a JMRI setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
+   Using Wifi (OR Ethernet) to talk between |JMRI| and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
 
 **BEFORE you purchase a Wifi card, please consider whether you actually need it.**
 
-With the base |EX-CS| consisting of *just* an Arduino Mega and an Arduino Motor Shield (no WiFi board), you must use a USB cable to connect to a computer to run JMRI or our |EX-WT|, or to connect to another controller. The controller (aka Throttle) is what sends commands to the |EX-CS| to run your trains and control your accessories.
+With the base |EX-CS| consisting of *just* an Arduino Mega and an Arduino Motor Shield (no WiFi board), you must use a USB cable to connect to a computer to run |JMRI| or our |EX-WT|, or to connect to another controller. The controller (aka Throttle) is what sends commands to the |EX-CS| to run your trains and control your accessories.
 
-If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using |EX-WT|, JMRI, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. Save yourself some money, and effort, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer).  If this the case you can :doc:`skip ahead to the next page <installer>`.
+If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using |EX-WT|, |JMRI|, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. Save yourself some money, and effort, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer).  If this the case you can :doc:`skip ahead to the next page <installer>`.
 
 If however, you wish to trains from your phone, tablet or other WiThrottle-protocol devices connected directly to the |EX-CS|, without a PC or Raspberry Pi involved, then you will need Wifi and should follow the instructions below.
 
@@ -64,7 +64,7 @@ If however, you wish to trains from your phone, tablet or other WiThrottle-proto
 
    |tinkerer| |engineer|
 
-   While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10kB of progmem and about 2kB of RAM). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like JMRI being shared.
+   While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10kB of progmem and about 2kB of RAM). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like |JMRI| being shared.
 
 What you will need (for WiFi)
 =============================

@@ -32,7 +32,7 @@ What you need to purchase or find
 
   |EX-CS| can be configured in several additional 'Conductor friendly' ways.
 
-  - without wifi or ethernet - requires JMRI installed on a computer
+  - without wifi or ethernet - requires |JMRI| installed on a computer
   - with a supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>` instead of the WiFi shield
 
   |tinkerer| |engineer|

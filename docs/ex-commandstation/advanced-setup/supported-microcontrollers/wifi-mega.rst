@@ -345,7 +345,7 @@ If the Engine driver fails to connect the first time with the Command Station ju
 
 You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone WiFi Command Station Via your home router.
 
-.. Note:: This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the JMRI Server Roster.
+.. Note:: This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the |JMRI| Server Roster.
 
 Diagnosing Problems
 =============================

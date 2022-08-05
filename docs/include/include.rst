@@ -2,12 +2,6 @@
    :description: DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.
    :keywords: DCC DCC++ EX DCC++EX DCC-EX
 ..
-.. |donate_button| image:: /_static/images/icons/donate_button_blue.png
-   :alt: Donate Button
-   :class: float-right
-   :scale: 25%
-   :target: ./about/contributing/donate/index.html
-..
 .. |DCC-EX| raw:: html
 
    <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>
@@ -117,3 +111,7 @@
 
     :doc:`Motor Driver </reference/glossary>`
 ..
+.. |JMRI| replace::
+
+    :doc:`JMRI </reference/glossary>`
+..   

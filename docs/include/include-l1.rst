@@ -1,3 +1,9 @@
+.. |donate-button| image:: /_static/images/icons/donate_button_blue.png
+   :alt: Donate Button
+   :class: float-right
+   :scale: 25%
+   :target: ../about/contributing/donate.html
+..
 .. |conductor| image:: /_static/images/conductor-level.png
    :alt: Conductor Hat
    :scale: 50%

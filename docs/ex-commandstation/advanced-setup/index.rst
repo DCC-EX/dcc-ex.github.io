@@ -23,7 +23,6 @@ Microcontrollers
 
 TODO
 
-- Microcontroller Options
 - Supported Microcontrollers Setup Notes
 
 

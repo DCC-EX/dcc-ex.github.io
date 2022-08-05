@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+|donate-button|
+
 *************************************
 Differences between DCC++ and DCC-EX?
 *************************************
@@ -15,7 +17,7 @@ Everything you loved is still there...
 
 First, we want to stress that we didn't break anything! 
 
-Whether you are using JMRI as a controller/front-end to send commands to your track, handle turnouts/points, read and write CVs, or using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won't affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.
+Whether you are using |JMRI| as a controller/front-end to send commands to your track, handle turnouts/points, read and write CVs, or using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won't affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.
 
 EX-CommandStation is all new!
 =============================
@@ -47,7 +49,7 @@ We added many new functions such as:
 * An easy to use Installer
 * Nano and Teensy support
 * ARM Cortex M0 and M4 support
-* New |DCC-EX| features added to JMRI like a current monitor display
+* New |DCC-EX| features added to |JMRI| like a current monitor display
 * Custom add-ons for Engine Driver including Routes and Automations on buttons
 * 28 speed step support in addition to 128
 * Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
@@ -81,7 +83,7 @@ Details to Make Engineer's Propellers Spin
 
 |engineer|
 
-We needed a platform that would allow us to grow into the future. The first thing we found was that in order to allow easy changes and to be able to adapt to technology we might want to use going forward, the code needed to be more modular. Each unit needed to be a "black box" that either did just one task and did it well, or take input and generate output without having to know anything about the module it was communicating with. Therefore, we created an internal API through which the modules could communicate. By simply unplugging one unit and plugging in another we could continue to work using different devices. An example of this is input and output. It doesn't matter whether JMRI is sending commands to the |EX-CS| or if it is a wireless Cab Controller. It doesn't matter if the output device is the serial monitor or an I2C display. It doesn't matter if you want to use a serial port or a network device to route data. This makes it very easy to implement new features with new devices. We just have to create a small interface for whatever new device we want to implement. This has the side benefit of allowing the code to be more readable.
+We needed a platform that would allow us to grow into the future. The first thing we found was that in order to allow easy changes and to be able to adapt to technology we might want to use going forward, the code needed to be more modular. Each unit needed to be a "black box" that either did just one task and did it well, or take input and generate output without having to know anything about the module it was communicating with. Therefore, we created an internal API through which the modules could communicate. By simply unplugging one unit and plugging in another we could continue to work using different devices. An example of this is input and output. It doesn't matter whether |JMRI| is sending commands to the |EX-CS| or if it is a wireless Cab Controller. It doesn't matter if the output device is the serial monitor or an I2C display. It doesn't matter if you want to use a serial port or a network device to route data. This makes it very easy to implement new features with new devices. We just have to create a small interface for whatever new device we want to implement. This has the side benefit of allowing the code to be more readable.
 
 Next, the Waveform Generator needed 2 timers and interrupts, one for the Main track signal and one for the Programming track. The Uno only has 3 timers. So 2 of them were already tied up for sending the DCC signal. Since the programming track sits idle most of the time, and both signals were always being generated to the input of the motor board, processing power was being wasted that could be put to use for something else. In addition, because of the way the Arduino is designed, we were forced to use jumpers to connect pins on the Arduino to those on the motor board. Our new design eliminates the need for jumpers!
 

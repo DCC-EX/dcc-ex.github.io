@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+|donate-button|
+
 *********************************
 DCC++EX 4.0 Release Announcement
 *********************************
@@ -16,7 +18,7 @@ February 1, 2022 7am Eastern Standard Time
 
 DCC++EX :sup:`tm` with EX-RAIL runs on inexpensive and readily available hardware like the Arduino and Teensy series of microcontrollers and supports standard switches, servos, and accessory boards.
 
-Concurrent with this rollout, enhancements to the popular JMRI model railroad software and Engine Driver smartphone and tablet app integrate tightly with the new features. Operators can create routes or automation/animation sequences and have them appear as buttons in Engine Driver. Press a button to begin an automation, or drive trains manually and press a button to hand them off to EX-RAIL to run everything unattended. Take back control with another press of a button.
+Concurrent with this rollout, enhancements to the popular |JMRI| model railroad software and Engine Driver smartphone and tablet app integrate tightly with the new features. Operators can create routes or automation/animation sequences and have them appear as buttons in Engine Driver. Press a button to begin an automation, or drive trains manually and press a button to hand them off to EX-RAIL to run everything unattended. Take back control with another press of a button.
 
 Users no longer have to search for “sketches” and libraries or learn complicated C++ programming. There is no need to modify the |EX-CS| software and risk bringing the whole system down. The only file that needs to be modified is a myAutomation file where simple commands allow the operator to define their devices and tell them what to do when the conditions they specify are triggered. An engine can be sent out from the yard, triggering turnouts/points to engage for a specific route. Along the way, all the signals and crossings operate automatically in response to sensors along the track or timings or other conditions specified by the operator.
 
@@ -26,7 +28,7 @@ Interfacing with hardware has never been easier with the new HAL (Hardware Abstr
 
 The new DriveAway :sup:`tm` feature allows users to drive an engine onto a siding or other electrically isolated block used as a programming track. The engine can be programmed and then driven back onto the main section of the layout, all without touching the locomotive.
 
-DCC++EX has enhanced capabilities to read difficult decoders, provide detailed diagnostics to avoid the dreaded “308 Error”,  and when using JMRI with CV values matching what is in the its decoder file, improve performance by a factor of 8x. Reading and writing CVs in general, whether using JMRI or another method, is still significantly faster than before.
+DCC++EX has enhanced capabilities to read difficult decoders, provide detailed diagnostics to avoid the dreaded “308 Error”,  and when using JMRI with CV values matching what is in the its decoder file, improve performance by a factor of 8x. Reading and writing CVs in general, whether using |JMRI| or another method, is still significantly faster than before.
 
 DCC-EX is a global joint effort of a group of developers and engineers located in the US, UK, Sweden, France, Australia, New Zealand, and India. For more information visit their website at https://www.dcc-ex.com.
 

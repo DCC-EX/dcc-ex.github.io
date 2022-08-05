@@ -143,7 +143,7 @@ Current Sense and Sense factor
 
 .. warning:: It is VERY important to connect some form of current sensing! Without it, you cannot program decoders on the programming track, and you will not have any short circuit protection on either track!
 
-Current sense is actually a voltage output by the motor board that is proportional to the current being delivered to the track. While you are running trains on your MAIN track, the CS is constantly monitoring the current so that we can shut off power to the track in case of a short circuit. Programs like JMRI have a dashboard that can report how much current you are using in real-time.
+Current sense is actually a voltage output by the motor board that is proportional to the current being delivered to the track. While you are running trains on your MAIN track, the CS is constantly monitoring the current so that we can shut off power to the track in case of a short circuit. Programs like |JMRI| have a dashboard that can report how much current you are using in real-time.
 
 The PROG track requires current sense to detect the current pulse back from decoders to ACKnowledge the receipt of your command. The DCC specification says that a decoder must send a short 60mA (60 milliAmps) or more current pulse to the programming track for at least 6ms (6 milliseconds). You may still be able to have the decoder accept a command if current sense is not working, just as you would for POM (programming on main), but you will receive no acknowledgement from the loco, and you will have no way to read CVs.
 

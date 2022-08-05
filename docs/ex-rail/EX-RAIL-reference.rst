@@ -243,7 +243,7 @@ Signal examples:
 Turnouts/Points
 ===============
 
-All the below turnout/point definitions will define turnouts/points that are advertised to WiThrottle apps, Engine Driver, and JMRI, unless the HIDDEN keyword is used.
+All the below turnout/point definitions will define turnouts/points that are advertised to WiThrottle apps, Engine Driver, and |JMRI|, unless the HIDDEN keyword is used.
 
 "description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turnout/point to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
 

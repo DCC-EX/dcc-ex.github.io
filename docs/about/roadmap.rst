@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+|donate-button|
+
 ************************
 DCC-EX Roadmap
 ************************
@@ -74,7 +76,7 @@ New all-in-one EX-CommandStation
   * Standard interconnect for pluggable expansion options
   * Display?
   * SDCard?
-  * Snap on Raspberry Pi to run JMRI?
+  * Snap on Raspberry Pi to run |JMRI|?
 
 
 Firebit Modules
@@ -85,4 +87,4 @@ Based on standard interconnect created for the CS, examples would be separate co
 Outreach/Partnering/Evangelizing
 --------------------------------
 
-Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for |DCC-EX|. Add more throttles to the list that support DCC++ directly or through JMRI.
+Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for |DCC-EX|. Add more throttles to the list that support DCC++ directly or through |JMRI|.

@@ -2,7 +2,7 @@ name: Docs - flash62au-restruct branch (manual)
 
 on:
   workflow_dispatch:
-    branches: [ flash62au_restruct ]
+    branches: [ flash62au-restruct ]
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
           echo 'dcc-ex.com' > docs/_build/html/CNAME
           touch docs/_build/html/.nojekyll
       - name: Deploy
-        if: github.ref == 'refs/heads/flash62au_restruct'
+        if: github.ref == 'refs/heads/flash62au-restruct'
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

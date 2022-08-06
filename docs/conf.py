@@ -96,14 +96,14 @@ html_theme_options = {
     'titles_only': True,
     'collapse_navigation': False,
     # 'navigation_depth': 3
-     'navigation_depth': -1
+     'navigation_depth': -1 
 }
-
+ 
 html_context = {
     'display_github': True,
     'github_user': 'DCC-EX',
     'github_repo': 'dcc-ex.github.io',
-    'github_version': 'flash62au_restruct/docs/',
+    'github_version': 'sphinx/docs/',
 }
 
 #leave this off to have todos invisible, set to true to render them and make the easy to see

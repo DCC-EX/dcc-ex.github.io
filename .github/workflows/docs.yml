@@ -2,11 +2,11 @@ name: Docs
 
 on:
   push:
-    branches: [ flash62au_restruct ]
+    branches: [ sphinx ]
   pull_request:
-    branches: [ flash62au_restruct ]
+    branches: [ sphinx ]
   workflow_dispatch:
- 
+
 jobs:
   build:
     runs-on: ubuntu-latest

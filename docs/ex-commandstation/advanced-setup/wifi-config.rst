@@ -43,7 +43,7 @@ Wireless Connections
 
 As mentioned in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to |JMRI| without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running |JMRI| to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
 
-.. todo::
+.. todo:: link needed for ex-commandstation/advanced-setup/wifi-config.rst - Wireless Connections
    Add Link above
 
 That said, there are two main wireless technologies that let you send commands to your CS and control your trains:
@@ -53,7 +53,7 @@ That said, there are two main wireless technologies that let you send commands t
 
 Your particular controller hardware (a separate controller or your cell phone) may be able to use either or both depending on the controller you choose. This tutorial covers WiFi configuration, for Bluetooth click **here**.
 
-.. todo:: Add Bluetooth link above
+.. todo:: link needed for ex-commandstation/advanced-setup/wifi-config.rst - Add Bluetooth link above
 
 Connection Type: Direct to Command Station or through JMRI
 ============================================================
@@ -111,7 +111,7 @@ Images are courtesy of `NodeMCU <https://nodemcu.readthedocs.io/en/latest/module
 
 We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with |JMRI|, click **here**.
 
-.. todo:: Add link above.
+.. todo:: link needed for ex-commandstation/advanced-setup/wifi-config.rst - Station Mode
 
 
 Default Operation - AP Mode (No Configuration Necessary)

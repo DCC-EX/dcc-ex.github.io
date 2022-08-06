@@ -63,8 +63,7 @@ By luck, two of the Mega pins associated with Timer 1 are directly under the DIR
 
 However, an Uno's pins do not line up with this shield. In order to use high accuracy mode, you would have to change the signal pin assignments and use a jumper wire.
 
-.. todo::
-   put description here
+.. todo:: description needed for ex-commandstation/advanced-setup/high-accuracy.rst - The Motor Board Config
 
 Inverter Circuit
 ================

@@ -15,13 +15,13 @@ Advanced Options
     :local:
 
 
-TODO
+.. todo:: text needed for /x-commandstation/advanced-setup/index.rst - Advanced options
 
 Microcontrollers
 ================
 
 
-TODO
+.. todo:: text needed for /ex-commandstation/advanced-setup/index.rst - Microcontrollers
 
 - Supported Microcontrollers Setup Notes
 
@@ -29,8 +29,7 @@ TODO
 Motor Drivers
 =============
 
-
-TODO
+.. todo:: text needed for ex-commandstation/advanced-setup/index.rst - Motor Drivers
 
 - Motor Driver Options
 - Motor Driver Configuration
@@ -40,8 +39,7 @@ TODO
 WiFi and Ethernet
 =================
 
-
-TODO
+.. todo:: description needed for ex-commandstation/advanced-setup/index.rst - WiFi and Ethernet
 
 - neither (jmri)
 - Wifi
@@ -54,8 +52,7 @@ TODO
 Installation options
 ====================
 
-
-TODO
+.. todo:: description needed for ex-commandstation/advanced-setup/index.rst - Installation options
 
 - |EX-I|
 - Arduino IDE
@@ -64,9 +61,7 @@ TODO
 Startup Configuration
 =====================
 
-
-TODO
-
+.. todo:: description needed for ex-commandstation/advanced-setup/index.rst - Startup Configuration
 
 Controller Options
 ==================

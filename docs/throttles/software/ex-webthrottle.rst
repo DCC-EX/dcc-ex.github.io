@@ -20,8 +20,8 @@ For a video on how to install and use |EX-WT| click below.
    
       <iframe width="336" height="189" src="https://www.youtube.com/embed/BkgsEOjxWaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-What you need to run WebThrottle-EX
-====================================
+What you need to run EX-WebThrottle
+===================================
 
 * Chromium-Based Browser version 89 or above (March 2021)
   (Chrome, Opera, Edge)
@@ -50,13 +50,13 @@ You have an option for how you would like to run |EX-WT|, from the cloud or inst
 Try it now (Run from the cloud)
 =================================
 
-Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run WebThrottle-EX in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-WT| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
 .. rst-class:: dcclink
 
    `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
-WebThrottle-EX is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the WT-EX settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find WebThrottle-EX with your other Apps!
+|EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
 
 Download
 ==========
@@ -86,7 +86,7 @@ If you are in "emulator mode", you can skip to the next step. When using the ser
 
 
 
-You should then be connected to the Command Station (CS) and should see the response from the CS in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging.
+You should then be connected to the |EX-CS| and should see the response from the CS in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging.
 
 
 .. raw:: html

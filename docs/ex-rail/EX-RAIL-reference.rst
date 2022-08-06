@@ -17,7 +17,7 @@ EX-RAIL Command Reference
 
 This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
 
-`CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
+`EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
 See Also:
 
@@ -524,7 +524,7 @@ Blocks
 Command Station Functions
 ==========================
 
-``POWERON`` Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of CommandStation-EX
+``POWERON`` Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of EX-CommandStation
 
 ``POWEROFF``	Power off track
 

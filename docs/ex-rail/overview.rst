@@ -14,7 +14,7 @@ Overview
       :depth: 2
       :local:
 
-Welcome to the home for DCC-EX Automation, |EX-R| is the "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
+Welcome to the home for |DCC-EX| Automation, |EX-R| is the "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 
 |EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 that can easily be used to describe sequential actions to automatically take place on your model layout. These actions are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. |EX-R| will then run automatically on |EX-CS| startup.

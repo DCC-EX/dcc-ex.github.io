@@ -258,7 +258,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 1. Decide if you want AP Mode or Station Mode
 ==============================================
 
-AP Mode (the default) makes the Command Station an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the CS so your Throttles can find it on your network.
+AP Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the CS as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Throttles (Controllers) can find it on your network.
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install |EX-CS|. Go directly to step 5.
 
@@ -281,7 +281,7 @@ Short Version of Network Setup
 
 :doc:`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/wifi-config>`
 
-All settings are in the config.h file in your CommandStation-EX folder. If you don't have a config.h, rename config.example.h to config.h.
+All settings are in the config.h file in your EX-CommandStation folder. If you don't have a config.h, rename config.example.h to config.h.
 
 **First, make sure your dip switches are set with 1,2,3,4 ON and 5,6,7 OFF (8 doesn't matter)**
 
@@ -318,7 +318,7 @@ Setting up WiFi in Station (STA) Mode with Router
 7. Operate Your Command Station
 ================================
 
-After the Arduino IDE uploads DCC-EX sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.
+After the Arduino IDE uploads |EX-CS| sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.
 
 If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi board by Either a USB cable, or for Standalone Operations (no USB) you can use a 7-9vdc power supply in the Arduino 2.1mm female barrel jack.
 

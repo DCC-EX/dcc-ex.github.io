@@ -30,7 +30,7 @@ Sniffer vs. Analyzer
 Sniffer
 ----------
 
-A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our :doc:`DCCInspector-EX </download/ex-dccinspector>` sketch.
+A "sniffer" is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a "PACKET analyzer" which shouldn't be confused with "LOGIC analyzer" in the next section. We recommend using our :doc:`EX-DCCInspector </download/ex-dccinspector>` sketch.
 
 .. figure:: /_static/images/pixel.png
 
@@ -85,7 +85,7 @@ https://www.iascaled.com/store/ARD-DCCSHIELD
 
 **It costs about $30 US.**
 
-And since it is a shield, you just stick it on top of an Uno or Mega, upload :doc:`DCCInspector-EX </download/ex-dccinspector>`, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
+And since it is a shield, you just stick it on top of an Uno or Mega, upload :doc:`EX-DCCInspector </download/ex-dccinspector>`, connect two jumpers to your track, connect the Arduino to your laptop USB and open your serial monitor and you are done.
 
 *** Wiring and more info goes here ***
 
@@ -94,7 +94,7 @@ Build It
 
 Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the |EX-CS| instead of to the track.
 
-You will need to upload our :doc:`DCCInspector-EX </download/ex-dccinspector>` software to whatever microcontroller you choose.
+You will need to upload our :doc:`EX-DCCInspector </download/ex-dccinspector>` software to whatever microcontroller you choose.
 
 .. figure:: /_static/images/tools/sniffer_block_diag.png
    :align: center
@@ -115,7 +115,7 @@ DCC Signal Interface
 Connect directly to the Signal output (enable pin) of the Arduino CS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Easy! You don't need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  :doc:`DCCInspector-EX </download/ex-dccinspector>` download page for which pins to use.
+Easy! You don't need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  :doc:`EX-DCCInspector </download/ex-dccinspector>` download page for which pins to use.
 
 Connect to the track
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -133,7 +133,7 @@ With this option, you can connect to anywhere on your track. Wiring can be tempo
 
    Minimum recommended circuit
 
-The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1µF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our DCCInspector-EX sketch uses the pin 13 LED to provide the same function.
+The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1µF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our |EX-DCCI| sketch uses the pin 13 LED to provide the same function.
 
 **Another tested circuit (courtesy of Geoff Bunza)**
 
@@ -144,7 +144,7 @@ The circuit above represents the minimal number of components to potentially int
 
    Geoff Bunza DCC Interface Schematic
 
-The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like OSH Park) and have them make boards for you. DCC-EX may be selling these, so keep checking back. Here is what the boards look like:
+The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like OSH Park) and have them make boards for you. |DCC-EX| may be selling these, so keep checking back. Here is what the boards look like:
 
 .. figure:: /_static/images/tools/bunza_dcc_interface.jpg
    :align: center
@@ -169,7 +169,7 @@ Showing you how to build a power supply here wouldn't make much sense when you s
 
 **Geoff Bunza's 17 Function Decoder AND Sniffer**
 
-If you just need the power supply for your own board, use the schematic to get what you need. Here at DCC-EX labs, we use lots of these decoders and solder just the components we need. If we need a DCC interface, we just solder those components. If we need to connect it to the track, we add the rectifier and voltage regulator components. 
+If you just need the power supply for your own board, use the schematic to get what you need. Here at |DCC-EX|, we use lots of these decoders and solder just the components we need. If we need a DCC interface, we just solder those components. If we need to connect it to the track, we add the rectifier and voltage regulator components. 
 
 **Ready made circuit boards**
 
@@ -189,7 +189,7 @@ https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-gr
 
 **Build it in a case with a display!**
 
-And if you want to get into the development of DCCInspector-EX and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit DCC-EX team member Neil McKechnie's blog. This version has plans for a 3D printed case and uses an ESP32 development board with an OLED display attached.
+And if you want to get into the development of |EX-DCCI| and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit |DCC-EX| team member Neil McKechnie's blog. This version has plans for a 3D printed case and uses an ESP32 development board with an OLED display attached.
 
 .. figure:: /_static/images/tools/neil_sniffer.png
    :align: center

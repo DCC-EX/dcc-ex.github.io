@@ -49,8 +49,8 @@ Developers
 * Peter Cole - Brisbane QLD Australia (peteGSX)
 
 
-WebThrottle-EX
-===============
+EX-WebThrottle
+==============
 
 Developers
 
@@ -59,8 +59,8 @@ Developers
 * Matt H. - Somewhere in Europe
 
 
-DCCInspector-EX
-================
+EX-DCCInspector
+===============
 
 Developers
 

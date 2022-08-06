@@ -80,7 +80,7 @@ The EX-Installer Window
    The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
 
 .. figure:: /_static/images/installer/installer.jpg
-   :alt: DCC-EX Installer
+   :alt: EX-Installer
    :scale: 75%
 
    Installer Window

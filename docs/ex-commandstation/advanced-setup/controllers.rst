@@ -76,8 +76,8 @@ Command Language (API)
 
 There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, WiThrottle command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC++, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own DCC++ API and the WiThrottle API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses DCC++ commands when speaking to the Command Station.
 
-Compatible Throttles
-=====================
+Compatible Throttles (Controllers)
+==================================
 
 Here is a list of some of the controllers you can use with |EX-CS|. We work closely with developers to help them maintain compatibility with the |EX-CS|. Check back on occasion, as new devices are being added all the time.
 
@@ -86,21 +86,21 @@ For more information on any of these throttles, you can click on their links bel
 Our WebThrottle-EX (DCC++ | USB/Serial)
 ----------------------------------------
 
-The simplest option is to just use a throttle connected directly to the CS. The simplest of all is arguably WebThrottle-EX, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of WebThrottle-EX with the side menu open. You can click on the image to see it full size.
+The simplest option is to just use a throttle connected directly to the |EX-CS|. The simplest of all is arguably |EX-WT|, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of |EX-WT| with the side menu open. You can click on the image to see it full size.
 
 .. image:: /_static/images/throttles/webthrottle1.jpg
-   :alt: WebThrottle-EX
+   :alt: EX-WebThrottle
    :align: center
    :scale: 40%
 
 Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.
 
 .. image:: /_static/images/throttles/webthrottle_setup.jpg
-   :alt: WebThrottle-EX
+   :alt: EX-WebThrottle
    :align: center
    :scale: 45%
 
-For operating instructions see :doc:`how to use WebThrottle-EX </throttles/software/ex-webthrottle>`
+For operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`
 
 
 Engine Driver (Android | WiThrottle | WiFi)
@@ -123,28 +123,28 @@ See :doc:`DCCpp CAB Page </throttles/software/dccpp-cab>`
 WiThrottle (iOS | WiThrottle | WiFi)
 -------------------------------------
 
-|WiThrottle| is an app for iPhones and iPads. It can connect directly to the |EX-CS| like |Engine Driver| does, or connect to |JMRI| on a computer and then have JMRI connect to the CS via a USB cable.
+|WiThrottle| is an app for iPhones and iPads. It can connect directly to the |EX-CS| like |Engine Driver| does, or connect to |JMRI| on a computer and then have |JMRI| connect to the CS via a USB cable.
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>`
 
 Locontrol (iOS | JMRI Web Server, DCC++ | WiFi)
 ------------------------------------------------
 
-Locontrol is a beautiful and functional throttle that uses the |JMRI| Web Server to connect. Soon it will be able to connect directly to the CS by using the <DCC++> Command set.
+Locontrol is a beautiful and functional throttle that uses the |JMRI| Web Server to connect. Soon it will be able to connect directly to the |EX-CS| by using the <DCC++> Command set.
 
 See :doc:`Locontrol Page </throttles/software/locontrol>`
 
 DigiTrainsPro (Android, iOS, Windows | WiThrottle, DCC++ | WiFi)
 -----------------------------------------------------------------
 
-This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to DCC-EX using our command language.
+This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to |EX-CS| using our command language.
 
 See :doc:`DigiTrainsPro Page </throttles/software/digitrainspro>`
 
 SRCPClient (iOS | WiThrottle, DCC++ | WiFi)
 --------------------------------------------
 
-Operate up to 3 locos from your iOS device. It supports both WiThrottle AND the DCC++ APIs.
+Operate up to 3 locos from your iOS device. It supports both |WiThrottle Protocol| AND the DCC++ APIs.
 
 See :doc:`SRCPClient Page </throttles/software/srcpclient>`
 
@@ -152,7 +152,7 @@ See :doc:`SRCPClient Page </throttles/software/srcpclient>`
 JMRI
 ------
 
-|JMRI| is sort of the 800lb gorilla of front-ends! In its simplest form, it is a throttle, or a gateway to allow you to use |Engine Driver|, or a mouse or touchscreen, as a throttle without a WiFi board connected to the CS. The WiFi is built into the computer you use to run |JMRI|, and |JMRI| has a |WiThrottle| Server built into it. The computer running |JMRI|, in turn, connects to the CS with a USB cable. |JMRI| is a complex program. If you are seriously into your model railroading however, |JMRI| can provide a lot of value. It can handle your turnouts, outputs, and sensors. It lets you create rosters for your locos and a visual layout of your tracks. There isn't much it can't do. And it is free and open source, just like |DCC-EX|!
+|JMRI| is sort of the 800lb gorilla of front-ends! In its simplest form, it is a throttle, or a gateway to allow you to use |Engine Driver|, or a mouse or touchscreen, as a throttle without a WiFi board connected to the |EX-CS|. The WiFi is built into the computer you use to run |JMRI|, and |JMRI| has a |WiThrottle| Server built into it. The computer running |JMRI|, in turn, connects to the CS with a USB cable. |JMRI| is a complex program. If you are seriously into your model railroading however, |JMRI| can provide a lot of value. It can handle your turnouts, outputs, and sensors. It lets you create rosters for your locos and a visual layout of your tracks. There isn't much it can't do. And it is free and open source, just like |DCC-EX|!
 
 Connecting via USB cable
 ^^^^^^^^^^^^^^^^^^^^^^^^^

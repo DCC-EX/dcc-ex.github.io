@@ -266,7 +266,7 @@ __________________________________
 
   Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
-  Further to this, note that you will need to end up with two separate folders; one containing the CommandStation-EX software as per  :doc:`/ex-commandstation/advanced-setup/arduino-ide`, and an additional folder containing the |EX-TT| software. The |EX-TT| software is not a component of CommandStation-EX or vice versa, and as such they should not exist in the same folder.
+  Further to this, note that you will need to end up with two separate folders; one containing the |EX-CS| software as per  :doc:`/ex-commandstation/advanced-setup/arduino-ide`, and an additional folder containing the |EX-TT| software. The |EX-TT| software is not a component of |EX-CS| or vice versa, and as such they should not exist in the same folder.
 
 At the time of writing, there is no installer for |EX-TT| like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
 
@@ -339,23 +339,23 @@ __________________________________________________________
 
 .. note:: 
 
-  As mentioned previously, your CommandStation needs to be running the "add-turntable-controller" branch of `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_.
+  As mentioned previously, your CommandStation needs to be running the "add-turntable-controller" branch of `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_.
 
   This will display in the serial console of your CommandStation as version 4.0.2.
   
-  If the "myHal.cpp_example.txt" is missing the lines referred to below, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of CommandStation-EX.
+  If the "myHal.cpp_example.txt" is missing the lines referred to below, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of |EX-CS|.
 
-  The zip file containing the correct version of CommandStation-EX should also be attached to the |EX-TT| release.
+  The zip file containing the correct version of |EX-CS| should also be attached to the |EX-TT| release.
 
-Before you will be able to test or use |EX-TT|, you need to configure the CommandStation-EX software to load the appropriate device driver.
+Before you will be able to test or use |EX-TT|, you need to configure the |EX-CS| software to load the appropriate device driver.
 
-This requires creating or editing the myHal.cpp file in the CommandStation-EX code and uploading it to your CommandStation.
+This requires creating or editing the myHal.cpp file in the |EX-CS| code and uploading it to your CommandStation.
 
 .. tip:: 
 
   It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the :doc:`/reference/developers/hal-config` page. However, if that page is more information than you require at this point, then follow the steps below to add the required |EX-TT| device driver and device.
 
-Before continuing, refer to the file "myHal.cpp_example.txt" included with the CommandStation-EX software, and note the following.
+Before continuing, refer to the file "myHal.cpp_example.txt" included with the |EX-CS| software, and note the following.
 
 At the top of the file there are a number of lines beginning with "#include":
 
@@ -388,7 +388,7 @@ Scrolling down towards the bottom of that file, you will also see this indented 
 
   //TurntableEX::create(600, 1, 0x60);
 
-If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`reference/developers/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the CommandStation-EX software.
+If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`reference/developers/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the |EX-CS| software.
 
 Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above, which should result in the following content in your new "myHal.cpp" file:
 

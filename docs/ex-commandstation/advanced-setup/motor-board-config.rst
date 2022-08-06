@@ -16,7 +16,7 @@ Motor Board Configuration
 
 |EX-CS| supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
 
-.. note:: DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use "high accuracy waveform" mode if you need it. See below for more information on high accuracy mode.
+.. note:: |EX-CS| does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use "high accuracy waveform" mode if you need it. See below for more information on high accuracy mode.
 
 Configure Using the Installer
 =============================

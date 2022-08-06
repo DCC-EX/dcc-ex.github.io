@@ -50,12 +50,12 @@ Connect Everything:
    The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
 
 .. figure:: /_static/images/installer/exwebthrottle.jpg
-   :alt: WebThrottle-EX
+   :alt: EX-WebThrottle
    :scale: 80%
 
-   WebThrottle-EX
+   EX-WebThrottle
 
-Click this link: :doc:`WebThrottle-EX </throttles/software/ex-webthrottle>` to run |EX-WT| hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
+Click this link: :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` to run |EX-WT| hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
 
 ... TODO - This text needs to be expanded
 

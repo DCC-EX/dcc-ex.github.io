@@ -41,7 +41,7 @@ Software
 * `Steve Todd's Raspberry Pi Image (If you wannt to use a Pi) <https://mstevetodd.com/rpi>`__
 * `JMRI (If you want to use a laptop or desktop) <https://www.jmri.org/>`_
 * `Arduino Software IDE to edit and upload changes (Optional) <https://www.arduino.cc/>`_
-* `WebThrottle-EX Controller <https://DCC-EX.github.io/WebThrottle-EX>`_
+* `EX-WebThrottle Controller <https://DCC-EX.github.io/WebThrottle-EX>`_
 
 CS Build Review
 ================
@@ -56,7 +56,7 @@ This can be a little confusing, so let explain it a different way:
 
   4. You will need a controller that sends commands to the CS and controls your trains. That controller can be any one of the following:
 
-    1. A computer capable of running a Chromium based browser to use our WebThrottle-EX to connect to the CS via a USB cable. This computer does not need to be connected to the internet once you download the WebThrottle-EX files to your computer.
+    1. A computer capable of running a Chromium based browser to use our EX-WebThrottle to connect to the CS via a USB cable. This computer does not need to be connected to the internet once you download the EX-WebThrottle files to your computer.
 
     2. A computer running JMRI. JMRI connects via the USB cable to the CS and you control your trains with the Throttles built into JMRI. You can also use the WiThrottle server built into JMRI to connect any |WiThrottle Protocol| controller (such as the |Engine Driver| mobile app) via WiFi to JMRI and control your layout that way. 
     

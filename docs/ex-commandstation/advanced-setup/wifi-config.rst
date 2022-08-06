@@ -86,7 +86,7 @@ In AP mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides
 
 If you travel to shows, or take your setup to a friend's house, this allows for an autonomous, transportable system that does not need a connection to, and hopefully will not interfere with, other networks. 
 
-.. note:: In this mode there is no connection to the Internet for any of the devices that are only connected to the AP. It simply provides a private network to allow a direct connection to your throttles.
+.. note:: In this mode there is no connection to the Internet for any of the devices that are only connected to the AP. It simply provides a private network to allow a direct connection to your throttles (controller).
 
 (Remember you can click on images to enlarge them)
 
@@ -119,7 +119,7 @@ Default Operation - AP Mode (No Configuration Necessary)
 
 To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup <../get-started/wifi-setup>`. 
 
-That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for |EX-CS| is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
+That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for |EX-CS| is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either |WiThrottle Protocol| or <DCC++> format.
 
 To see other configuration options you can set in your config.h file, see :ref:`ex-commandstation/advanced-setup/wifi-config:WiFi Config Options` below.
 
@@ -144,7 +144,7 @@ You will see the line that has ``AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\
 
 Next you will see ``+CIFSR:APIP,"192.168.4.1"``, where your IP address is 192.168.4.1.
 
-APIP here stands for "Access Point IP Address". Your throttle is assigned an IP address in the same IP range, typically 192.168.4.10 to 15. As your AP is also your DCC-EX CS this time, you connect your throttle to the AP IP.
+APIP here stands for "Access Point IP Address". Your throttle is assigned an IP address in the same IP range, typically 192.168.4.10 to 15. As your AP is also your |EX-CS| this time, you connect your throttle to the AP IP.
 
 .. tip:: Remember to enter IP xxx.xxx.x.xx and port xxxx numbers correctly into your WiFi Throttle when you configure that later.
 

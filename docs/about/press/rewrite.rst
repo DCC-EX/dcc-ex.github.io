@@ -54,7 +54,7 @@ We added many new functions such as:
 * 28 speed step support in addition to 128
 * Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
 * Created many new commands
-* Developed a new browser based throttle (:doc:`WebThrottle-EX </throttles/software/ex-webthrottle>`)
+* Developed a new browser based throttle (:doc:`EX-WebThrottle </throttles/software/ex-webthrottle>`)
 * New "DriveAway" feature to be able to recognize a loco on a siding used as a programming track and drive off of onto the main track
 
 ... and much, much more. 

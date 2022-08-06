@@ -14,9 +14,9 @@ DCC-EX Command Reference
 
 This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`
 
-`CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
+`EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* :doc:`WebThrottle-EX </throttles/software/ex-webthrottle>` - Our |EX-WT| browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!
+* :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` - Our |EX-WT| browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within |EX-WT| itself!
 
 * `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Cellphone App WiFi Throttle  
 
@@ -26,7 +26,7 @@ This is a detailed reference. For a summary version, please see :doc:`Command Su
 
 * `Gregg Berman's DCC++ Controller Software <https://github.com/DccPlusPlus/Controller>`_
 
-This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
+This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC-EX Webpage <https://dcc-ex.com>`_.  
 

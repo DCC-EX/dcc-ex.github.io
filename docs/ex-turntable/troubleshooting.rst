@@ -81,8 +81,8 @@ _________________________________________________________________
     - | The DCC phase is out of sync between the layout and bridge track, phase inversion flag is required for the position
       | Tracks opposite each other around the turntable are wired with inverted phases, wiring must be adjusted
 
-CommandStation-EX compile errors with device driver enabled
-____________________________________________________________
+EX-CommandStation compile errors with device driver enabled
+___________________________________________________________
 
 .. list-table:: 
   :widths: auto
@@ -91,8 +91,8 @@ ____________________________________________________________
 
   * - Symptoms
     - Common Causes
-  * - CommandStation-EX software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp
-    - The version of CommandStation-EX is incorrect, you need the "add-turntable-controller" branch of `CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_
+  * - EX-CommandStation software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp
+    - The version of EX-CommandStation is incorrect, you need the "add-turntable-controller" branch of `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_
 
 EX-Turntable showing as offline with <D HAL SHOW>
 __________________________________________________
@@ -104,8 +104,8 @@ __________________________________________________
 
   * - Symptoms
     - Common Causes
-  * - | \<D HAL SHOW\> reports Turntable-EX as OFFLINE
-      | Turntable-EX does not respond to EX-RAIL or diagnostic commands
-    - | Turntable-EX is not powered on, or was powered on after the CommandStation
+  * - | \<D HAL SHOW\> reports EX-Turntable as OFFLINE
+      | EX-Turntable does not respond to EX-RAIL or diagnostic commands
+    - | EX-Turntable is not powered on, or was powered on after the CommandStation
       | The I2C interfaces are not connected correctly, refer to :ref:`ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`
       | The I2C address in EX-Turntable's config.h does not match the address in the CommandStation's myHal.cpp file

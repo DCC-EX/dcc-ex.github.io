@@ -16,7 +16,7 @@ Using the "DriveAway(tm)" Feature
 
 |EX-CS| and |Engine Driver|'s "Request Loco ID" & “Drive Away" 
 
-A new feature enhancement with a Arduino Mega 2560 +WiFi enabled |EX-CS| directly connected to an Engine Driver Throttle on an Android smartphone. 
+A new feature enhancement with a Arduino Mega 2560 +WiFi enabled |EX-CS| directly connected to an |Engine Driver| Throttle on an Android smartphone. 
 
 Place a DCC Engine on a programming track spur or siding, use |Engine Driver| WiFi Throttle "Request Loco ID" to automatically acquire & load the loco# into the |Engine Driver| Throttle, then just throttle-up and "Drive Away" onto the main line tracks.
 
@@ -79,7 +79,7 @@ New EX-CommandStation 4.0 EXRAIL "Roster" Feature
 =================================================
 
 You can now manually enter your ROSTER engine address, names and function keys into your myAutomation.h file and directly pass this Command Stations Engine Roster into your |Engine Driver| and |WiThrottle| Apps.  
-By choosing “DCC-EX” from discovered servers an |Engine Driver| or |WiThrottle| becomes Directly connected to the Command Station and the "Server Roster" radial dial now lists the New DCC-EX EXRAIL "ROSTER" Engines and Function key layout on the |Engine Driver| or WiThrottles in addition to the standard preset |Engine Driver| "default mode" function key names.
+By choosing "DCC-EX" from discovered servers an |Engine Driver| or |WiThrottle| becomes Directly connected to the Command Station and the "Server Roster" radial dial now lists the New DCC-EX |EX-R| "ROSTER" Engines and Function key layout on the |Engine Driver| or |WiThrottle| in addition to the standard preset |Engine Driver| "default mode" function key names.
 
 Sample Roster entry in myAutomation.h file
 

@@ -41,7 +41,8 @@ Elgato
 Ender
 Espressif
 esptool
-exInstaller
+EX-Installer
+EX-WebThrottle
 Expander
 expanders
 favour
@@ -138,7 +139,6 @@ Vin
 Visio
 vpin
 waveforms
-WebThrottle-EX
 Wifi
 WiFi
 Wingzine

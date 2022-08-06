@@ -42,7 +42,7 @@ Find the ZIP file on your computer and unzip it. You should now have a folder wi
 Copy the config.example.h file (or rename it)
 =============================================
 
-DCC-EX provides you with an example configuration file. This file holds settings that you can change for things like your choice of motor controller, WiFi login credentials, etc. Rather than a future update potentially causing you to lose any changes you make to your configuration, we give this file a different name and leave it up to you to edit if you need to. Simply rename this file to ``config.h``.
+|DCC-EX| provides you with an example configuration file. This file holds settings that you can change for things like your choice of motor controller, WiFi login credentials, etc. Rather than a future update potentially causing you to lose any changes you make to your configuration, we give this file a different name and leave it up to you to edit if you need to. Simply rename this file to ``config.h``.
 
 Run the Arduino IDE
 ====================
@@ -156,9 +156,9 @@ You should see log information immediately display in the window. If you have a 
 Type in a command or two
 =========================
 
-There is an entire language that DCC-EX understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_. Let's just try two commands to make sure everything is working.
+There is an entire language that |EX-CS| understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_. Let's just try two commands to make sure everything is working.
 
-All DCC-EX commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the motor shield.
+All |DCC-EX| commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the motor shield.
 
 Now enter ``<s>`` (lowercase). You should see status information for your Command Station appear in the log.
 
@@ -175,13 +175,13 @@ Run your trains!
 
 * Put your loco on the MAIN track. **The loco cannot move or respond to non-programming commands on the PROG track!**
 
-**Now run WebThrottle-EX** directly from our :doc:`WebThrottle-EX web page </throttles/software/ex-webthrottle>`. As described on that page, ensure that you are using Chrome version 89 or above. Note that you can run the throttle from your browser, and/or install it locally from its own menu.
+**Now run EX-WebThrottle** directly from our :doc:`EX-WebThrottle web page </throttles/software/ex-webthrottle>`. As described on that page, ensure that you are using Chrome version 89 or above. Note that you can run the throttle from your browser, and/or install it locally from its own menu.
 
-You can also download our WebThrottle-EX found at `WebThrottle-EX on GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ and run it in your browser. Again, make sure you are using a Chrome based browser version 89 or above.
+You can also download our |EX-WT| found at `EX-WebThrottle on GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ and run it in your browser. Again, make sure you are using a Chrome based browser version 89 or above.
 
 The rest of the instructions show you how to use |EX-WT|. You should be able to find the CS by its serial port and enable it, turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!
 
-You can also watch the `WebThrottle-EX Video <https://www.youtube.com/watch?v=BkgsEOjxWaU>`_.
+You can also watch the `EX-WebThrottle Video <https://www.youtube.com/watch?v=BkgsEOjxWaU>`_.
 
    .. raw:: html
 

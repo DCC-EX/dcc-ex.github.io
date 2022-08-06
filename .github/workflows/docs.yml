@@ -2,9 +2,9 @@ name: Docs
 
 on:
   push:
-    branches: [ flash62au_restruct ]
+    branches: [ sphinx ]
   pull_request:
-    branches: [ flash62au_restruct ]
+    branches: [ sphinx ]
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
           echo 'dcc-ex.com' > docs/_build/html/CNAME
           touch docs/_build/html/.nojekyll
       - name: Deploy
-        if: github.ref == 'refs/heads/flash62au_restruct'
+        if: github.ref == 'refs/heads/sphinx'
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

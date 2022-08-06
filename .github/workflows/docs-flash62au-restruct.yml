@@ -2,6 +2,7 @@ name: Docs - flash62au-restruct branch (manual)
 
 on:
   workflow_dispatch:
+    branches: [ flash62au_restruct ]
 
 jobs:
   build:

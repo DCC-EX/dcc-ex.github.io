@@ -50,7 +50,7 @@ We added many new functions such as:
 * Nano and Teensy support
 * ARM Cortex M0 and M4 support
 * New |DCC-EX| features added to |JMRI| like a current monitor display
-* Custom add-ons for Engine Driver including Routes and Automations on buttons
+* Custom add-ons for |Engine Driver| including Routes and Automations on buttons
 * 28 speed step support in addition to 128
 * Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
 * Created many new commands

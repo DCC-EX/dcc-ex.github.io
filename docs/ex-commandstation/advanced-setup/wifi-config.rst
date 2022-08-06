@@ -14,7 +14,7 @@ WiFi Configuration
     :depth: 1
     :local:
 
-This page describes the software configuration options for using WiFi to connect your |EX-CS| (CS) wirelessly to |JMRI| or a wireless throttle like Engine Driver. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
+This page describes the software configuration options for using WiFi to connect your |EX-CS| (CS) wirelessly to |JMRI| or a wireless throttle like |Engine Driver|. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
 
 As mentioned in the above link, you will need the following to proceed:
 
@@ -41,7 +41,7 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 Wireless Connections
 =====================
 
-As mentioned in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to |JMRI| without a USB cable, or to connect to a wireless controller like the Engine Driver mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running |JMRI| to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
+As mentioned in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to |JMRI| without a USB cable, or to connect to a wireless controller like the |Engine Driver| mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running |JMRI| to your CS, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
 
 .. todo:: link needed for ex-commandstation/advanced-setup/wifi-config.rst - Wireless Connections
    Add Link above
@@ -63,9 +63,9 @@ Everything on this page seems to come in twos! You have two options for connecti
 * Connect directly to |EX-CS| using WiFi or Bluetooth (|JMRI| not required but optional)
 * Connect to the |EX-CS| through |JMRI| with the USB cable, and connect a WiThrottle compatible throttle to JMRI's WiThrottle Server via WiFi
 
-If you don't need |JMRI|, or just want to connect your wireless controller directly to the CS, then you connect to the CS using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the WiThrottle command language. 
+If you don't need |JMRI|, or just want to connect your wireless controller directly to the |EX-CS|, then you connect to the CS using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the WiThrottle command language. 
 
-For example, Engine Driver uses the WiThrottle protocol, so it can connect either directly to the CS via WiFi, or indirectly through the JMRI computer that has WiFi and its own WiThrottle Server. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends native <DCC++> commands.
+For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect either directly to the |EX-CS| via WiFi, or indirectly through the JMRI computer that has WiFi and its own WiThrottle Server. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends native <DCC++> commands.
 
 What's a "WiThrottle Server"?
 ==============================
@@ -119,7 +119,7 @@ Default Operation - AP Mode (No Configuration Necessary)
 
 To use the default AP mode, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup <../get-started/wifi-setup>`. 
 
-That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for DCC++ EX is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
+That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for |EX-SCS| is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either WiThrottle or <DCC++> format.
 
 To see other configuration options you can set in your config.h file, see :ref:`ex-commandstation/advanced-setup/wifi-config:WiFi Config Options` below.
 
@@ -241,7 +241,7 @@ The following defines are all the possible network settings found the config.h f
 #define IP_PORT 2560
 _____________________
 
-**Default: 2560** - This is the port used to communicate with the WiFi board or Ethernet Shield. We use the default value of 2560 because that is the port |JMRI| uses. You can change this value if you would prefer it to be something else. You will need to enter this in software like Engine Driver in order to connect to the CS via networking.
+**Default: 2560** - This is the port used to communicate with the WiFi board or Ethernet Shield. We use the default value of 2560 because that is the port |JMRI| uses. You can change this value if you would prefer it to be something else. You will need to enter this in software like |Engine Driver| in order to connect to the CS via networking.
 
 #define ENABLE_WIFI true
 _________________________

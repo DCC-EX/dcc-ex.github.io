@@ -328,7 +328,7 @@ The document name is a relative or absolute (within the documentation) file
 path, without the .rst suffix.
 
 To link to a position within a page use ``:ref:``. A reST label can be used as
-the reference, but on the DCC++EX website headings are made available to use as
+the reference, but on the |DCC-EX| website headings are made available to use as
 references:
 
 .. admonition:: Example
@@ -385,11 +385,11 @@ source file, define a target:
 
     ::
 
-        Link to the `DCC++EX home page`_.
+        Link to the `DCC-EX home page`_.
 
-        .. _DCC++EX home page: https://dcc-ex.com/index.html
+        .. _DCC-EX home page: https://dcc-ex.com/index.html
 
-    Link to the `DCC++EX home page <https://dcc-ex.com/index.html>`_.
+    Link to the `DCC-EX home page <https://dcc-ex.com/index.html>`_.
 
 Downloads
 ^^^^^^^^^

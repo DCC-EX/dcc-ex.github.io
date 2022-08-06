@@ -36,12 +36,12 @@ What You Will Need
 
 This is our tested and proven configuration
 
-* DCC++EX 3.0.6 or greater
+* |EX-CS| 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFi - Combo Board
 * Deek-Robot L298P Standard Motor Shield (or other :doc:`approved motor controller </reference/hardware/motor-boards>`)
 * 12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
-* Android Smartphone with Engine Driver v2.28.123 or iOS Smartphone with WiThrottle
+* Android Smartphone with |Engine Driver| v2.28.123 or iOS Smartphone with WiThrottle
 * USB-A male to Micro USB-B cable
 * You will also need software provided in the links below and a toothpick or small jewellers screwdriver to be able to flip small switches.
 
@@ -52,7 +52,7 @@ What You Will Do
 
 1. Download the ESP Files
 2. Flash the ESP8266 chip
-3. Edit your config file and Load the DCC++EX v3.0.6 to the Mega2560 chip
+3. Edit your config file and Load the |EX-CS| v3.0.6 to the Mega2560 chip
 4. Setup your Throttle
 
 .. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector used on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands, so may require you to install a driver.
@@ -268,7 +268,7 @@ If you are going to want to connect to your WiFi router, you just need to enter 
 1. Download and Configure the EX-CommandStation Software
 ========================================================
 
-Download and install DCC++EX from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
+Download and install |EX-CS| from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 
 :doc:`How to install using the installer </ex-commandstation/get-started/installer>`
 
@@ -323,7 +323,7 @@ After the Arduino IDE uploads DCC-EX sketch, make sure the serial port switch is
 If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi board by Either a USB cable, or for Standalone Operations (no USB) you can use a 7-9vdc power supply in the Arduino 2.1mm female barrel jack.
 
 - When powered on through a USB cable, check the Arduino IDE Tools > Serial Monitor.
-- It should show the ATMega2560 & ESP8266 WiFi communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new DCC++EX Command Station.
+- It should show the ATMega2560 & ESP8266 WiFi communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new |EX-CS|.
 - You should see `++ Wifi Setup CONNECTED ++`
 
 8. Connect your Phone as a Controller (Throttle)
@@ -335,13 +335,13 @@ If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi
 
 .. NOTE:: You MUST either forget your local network or turn off "auto-reconnect" for that connection when using AP Mode. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.
 
-- Start your Smart Phone (Android) Engine Driver App Or (Apple iOS) WiThrottle App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.
+- Start your Smart Phone (Android) |Engine Driver| App Or (Apple iOS) |WiThrottle| App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.
 
-If the Engine driver fails to connect the first time with the Command Station just press the Mega's red Reset button and try the IP/Port connection again.
+If the |Engine driver| fails to connect the first time with the Command Station just press the Mega's red Reset button and try the IP/Port connection again.
 
-You should have a direct Throttle connection to the DCC++EX 3.0.5+ Standalone WiFi Command Station Via your home router.
+You should have a direct Throttle connection to the |EX-CS| 3.0.5+ Standalone WiFi Command Station Via your home router.
 
-.. Note:: This is an Operations only config, the Engine Driver Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the |JMRI| Server Roster.
+.. Note:: This is an Operations only config, the |Engine Driver| Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the |JMRI| Server Roster.
 
 Diagnosing Problems
 =============================
@@ -380,7 +380,7 @@ The Mega+WiFi Schematic diagram. Click on it to enlarge:
 
    Mega+WiFi Schematic
 
-**Enjoy your New DCC++EX MEGA + WiFi On-Board Command Station!**
+**Enjoy your New EX-CommandStation MEGA + WiFi On-Board Command Station!**
 
 Suppliers
 ==========

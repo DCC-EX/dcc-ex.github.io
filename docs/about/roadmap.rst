@@ -39,7 +39,7 @@ EX-WebThrottle
 ^^^^^^^^^^^^^^
 
 * Add Turnout support
-* Add capability to use as an installer/updater/configurer for DCC++ EX
+* Add capability to use as an installer/updater/configurer for |DCC-EX|
 
 
 Hardware

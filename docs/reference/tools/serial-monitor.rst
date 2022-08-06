@@ -99,7 +99,7 @@ Now enter ``<s>`` (lowercase). You should see status information for your Comman
 
 Turn off the power to the track by sending ``<0>`` to the CS. That is a "zero".
 
-There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver, Ethernet debugging,  and more. Read the documentation and experiment!
+There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like |Engine Driver|, Ethernet debugging,  and more. Read the documentation and experiment!
 
 If you run into trouble, remember to send us a log by cutting and pasting the text from the Serial Monitor window to our support channel in Discord or one of the other methods of contacting us mentioned here: https://dcc-ex.com/support/index.html.
 

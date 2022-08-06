@@ -14,7 +14,7 @@ Contact & Support
     :depth: 1
     :local:
 
-There are several different ways to get in contact with the team and obtain help and support for DCC++ EX.
+There are several different ways to get in contact with the team and obtain help and support for |DCC-EX|.
 
 Preferred option: Discord
 ==========================

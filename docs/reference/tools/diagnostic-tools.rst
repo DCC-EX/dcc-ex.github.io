@@ -92,7 +92,7 @@ And since it is a shield, you just stick it on top of an Uno or Mega, upload :do
 Build It
 ----------
 
-Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the DCC++EX Command Station instead of to the track.
+Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the |EX-CS| instead of to the track.
 
 You will need to upload our :doc:`DCCInspector-EX </download/ex-dccinspector>` software to whatever microcontroller you choose.
 

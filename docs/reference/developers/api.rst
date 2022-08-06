@@ -88,7 +88,7 @@ If, however, WiFi debug is enabled, or the ``<+>`` command is used, then the wra
 4. General Message Format
 ==========================
 
-A DCC++EX API message consists of a leading ``<`` symbol, a single character OPCODE, zero to n parameters separated by spaces, and a terminating ``>`` symbol:
+A DCC-EX API message consists of a leading ``<`` symbol, a single character OPCODE, zero to n parameters separated by spaces, and a terminating ``>`` symbol:
 
 ``<OPCODE Param1 Param2 … ParamX>``
 

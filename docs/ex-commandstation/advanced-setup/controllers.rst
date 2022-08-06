@@ -76,7 +76,7 @@ There are at least 3 ways for a throttle to connect to a Command Station; the DC
 Compatible Throttles
 =====================
 
-Here is a list of some of the controllers you can use with DCC++EX. We work closely with developers to help them maintain compatibility with the |EX-CS|. Check back on occasion, as new devices are being added all the time.
+Here is a list of some of the controllers you can use with |EX-CS|. We work closely with developers to help them maintain compatibility with the |EX-CS|. Check back on occasion, as new devices are being added all the time.
 
 For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.
 
@@ -105,7 +105,7 @@ Engine Driver (Android | WiThrottle | WiFi)
 
 Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "WiThrottle" (for WiFi Throttle) and any WiThrottle compatible throttle will work with the |EX-CS|. There are two ways to connect it; the first method is by connecting directly to the CS via WiFi. You will need a WiFi board connected to the CS (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
 
-The second method is to use |JMRI| and connect Engine Driver (ED) to the computer running |JMRI|. That computer would then connect to the CS via a USB cable (normally) or via a Wireless USB Bridge. The computer running |JMRI| can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full |JMRI| setup with WiFi with virtually no fuss.
+The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. That computer would then connect to the CS via a USB cable (normally) or via a Wireless USB Bridge. The computer running |JMRI| can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full |JMRI| setup with WiFi with virtually no fuss.
 
 See :doc:`Engine Driver Page </throttles/software/engine-driver>`
 
@@ -113,14 +113,14 @@ See :doc:`Engine Driver Page </throttles/software/engine-driver>`
 DCCpp CAB (Android | DCC++ | WiFi, Bluetooth)
 ----------------------------------------------
 
-DCCpp CAB is a throttle that natively speaks the <DCC++> command language (API). It can connect via WiFi or Bluetooth! If you don't need software like |JMRI| running on a computer, DCCpp CAB lets you connect directly to the CS.
+DCCpp CAB is a throttle that natively speaks the <DCC++> command language (API). It can connect via WiFi or Bluetooth! If you don't need software like |JMRI| running on a computer, DCCpp CAB lets you connect directly to the |EX-CS|.
 
 See :doc:`DCCpp CAB Page </throttles/software/dccpp-cab>`
 
 WiThrottle (iOS | WiThrottle | WiFi)
 -------------------------------------
 
-WiThrottle is an app for iPhones and iPads. It can connect directly to the CS like Engine Driver does, or connect to JMRI on a computer and then have JMRI connect to the CS via a USB cable.
+|WiThrottle| is an app for iPhones and iPads. It can connect directly to the |EX-CS| like |Engine Driver| does, or connect to |JMRI| on a computer and then have JMRI connect to the CS via a USB cable.
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>`
 
@@ -149,12 +149,12 @@ See :doc:`SRCPClient Page </throttles/software/srcpclient>`
 JMRI
 ------
 
-|JMRI| is sort of the 800lb gorilla of front-ends! In its simplest form, it is a throttle, or a gateway to allow you to use Engine Driver, or a mouse or touchscreen, as a throttle without a WiFi board connected to the CS. The WiFi is built into the computer you use to run |JMRI|, and |JMRI| has a WiThrottle Server built into it. The computer running |JMRI|, in turn, connects to the CS with a USB cable. |JMRI| is a complex program. If you are seriously into your model railroading however, |JMRI| can provide a lot of value. It can handle your turnouts, outputs, and sensors. It lets you create rosters for your locos and a visual layout of your tracks. There isn't much it can't do. And it is free and open source, just like |DCC-EX|!
+|JMRI| is sort of the 800lb gorilla of front-ends! In its simplest form, it is a throttle, or a gateway to allow you to use |Engine Driver|, or a mouse or touchscreen, as a throttle without a WiFi board connected to the CS. The WiFi is built into the computer you use to run |JMRI|, and |JMRI| has a |WiThrottle| Server built into it. The computer running |JMRI|, in turn, connects to the CS with a USB cable. |JMRI| is a complex program. If you are seriously into your model railroading however, |JMRI| can provide a lot of value. It can handle your turnouts, outputs, and sensors. It lets you create rosters for your locos and a visual layout of your tracks. There isn't much it can't do. And it is free and open source, just like |DCC-EX|!
 
 Connecting via USB cable
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Probably the way most people use |JMRI| is to have a Raspberry Pi running |JMRI| connected via a short USB cable to the |EX-CS|. They then use Engine Driver on their phone, connected to |JMRI| via WiFi as a throttle for their engines. If you want to actually operate using all the features of |JMRI|, you can connect a small monitor, keyboard, and mouse to your computer or Raspberry Pi. You can replace the USB cable with a USB Wireless Bridge which is covered in that section. But let's look at another method next.
+Probably the way most people use |JMRI| is to have a Raspberry Pi running |JMRI| connected via a short USB cable to the |EX-CS|. They then use |Engine Driver| on their phone, connected to |JMRI| via WiFi as a throttle for their engines. If you want to actually operate using all the features of |JMRI|, you can connect a small monitor, keyboard, and mouse to your computer or Raspberry Pi. You can replace the USB cable with a USB Wireless Bridge which is covered in that section. But let's look at another method next.
 
 .. todo:: diagram needed for ex-commandstation/advanced-setup/controllers.rst - connection via USb Cable
 
@@ -179,7 +179,7 @@ The USB Wireless Bridge is a pair of small, inexpensive devices that let you rep
 * Connect normally-tethered handheld cabs (throttles) wirelessly to the Command Station
 
 .. todo:: diagram needed for ex-commandstation/advanced-setup/controllers.rst - USB Wireless Bridge
-   
+
 ***TODO:insert diagram here***
 
 For more information about all the throttles, see the :doc:`Throttles Section </throttles/index>`>

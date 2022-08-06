@@ -6,20 +6,13 @@ Writing a HAL Driver
 
 |engineer|
 
-Suppose you have a particular device you want to use with DCC++EX,
-but there isn't a driver for it.  Well, you could ask for one, and 
-we may well write one for you.  Or you could write it yourself.
+Suppose you have a particular device you want to use with |EX-CS|, but there isn't a driver for it.  Well, you could ask for one, and we may well write one for you.  Or you could write it yourself.
 
-The HAL framework is designed to be extendable by the creation
-of device drivers, without needing to modify the base DCC++EX 
-software or the HAL itself.  
+The HAL framework is designed to be extendable by the creation of device drivers, without needing to modify the base |EX-CS| software or the HAL itself.  
 
-A HAL driver is normally created as an include (.h) file, although for more
-complex ones it may include source (.cpp) files as well.
+A HAL driver is normally created as an include (.h) file, although for more complex ones it may include source (.cpp) files as well.
 
-The driver follows a simple design pattern.  It doesn't need to 
-implement all of the pattern, if you don't implement a particular bit
-then a default will be used instead.
+The driver follows a simple design pattern.  It doesn't need to implement all of the pattern, if you don't implement a particular bit then a default will be used instead.
 
 * Creation - a `create()` function and constructor are required;
 * Initialisation - a `_begin()` function is written (optional);
@@ -96,10 +89,10 @@ Performance
 One thing to be aware of is the time that the functions you write will take to execute.
 If you have a _read() function that polls a device, waits for a calculation to be performed
 and then reads a result, it may, for example, take some milliseconds to complete. 
-During this time, nothing else in DCC++EX is able to run (apart from interrupt code). 
-While this doesn't seem a long time, if you have multiple parts of DCC++EX (Sensor objects, EX-RAIL Sequences, etc.) that 
+During this time, nothing else in |EX-CS| is able to run (apart from interrupt code). 
+While this doesn't seem a long time, if you have multiple parts of |EX-CS| (Sensor objects, EX-RAIL Sequences, etc.) that 
 are reading the values of multiple pins, then the time will be multiplied and you may find 
-that other parts of DCC++EX start to slow down.
+that other parts of |EX-CS| start to slow down.
 
 It is recommended, that:
 

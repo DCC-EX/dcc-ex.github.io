@@ -8,7 +8,7 @@
 
 |EX-CS| works with virtually any decoder using its proprietary programming and ACK detection features. Still, while running locos and sending commands to the main track will always work, you may run into issues during programming operations with ACK Detection. This page describes fixes for any of the decoders users or the DCC-EX team found.
 
-The NMRA specification says that a properly operating decoder will acknowledge commands by sending an "ACK pulse" that is 60mA above the idle track current for 6 milliseconds. However, despite DCC++EX giving a wide margin or tolerance around these, some decoders are so far out of specification, that you may have to upload a change to your command station to get them to program properly.
+The NMRA specification says that a properly operating decoder will acknowledge commands by sending an "ACK pulse" that is 60mA above the idle track current for 6 milliseconds. However, despite |EX-CS| giving a wide margin or tolerance around these, some decoders are so far out of specification, that you may have to upload a change to your command station to get them to program properly.
 
 How to test (diagnostics)
 

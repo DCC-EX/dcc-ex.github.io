@@ -12,7 +12,7 @@ Connecting a Servo Module
     :depth: 1
     :local:
 
-To connect a servo module to DCC++EX, you first need to get a module, based on the PCA9685 chip.
+To connect a servo module to |EX-CS|, you first need to get a module, based on the PCA9685 chip.
 
 .. image:: /_static/images/i2c/pca9685.jpg
    :alt: PCA9685 Servo Module
@@ -36,7 +36,7 @@ Connections to the Arduino are made with four jumper wires (+5V power and GND, a
    :alt: PCA9685 Servo Module
    :scale: 30%
 
-In DCC++EX, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
+In |EX-CS|, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
 
 Once you've made all of the connections, apply power to the Arduino.
 
@@ -71,9 +71,9 @@ EX-RAIL supports three methods of controlling servos:
 Controlling servos for turnouts
 ________________________________
 
-The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in WiThrottle apps, Engine Driver, and JMRI in addition to being defined as a turnout within the CommandStation.
+The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
 
-As per the EX-RAIL reference, turnouts are defined with the following syntax:
+As per the |EX-R| reference, turnouts are defined with the following syntax:
 
 .. code-block:: cpp
 
@@ -86,7 +86,7 @@ The valid parameters are:
 - active_angle = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
 - inactive_angle = The angle to which the servo will move when the turnout is closed (refer below for further detailed information).
 - profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout definition).
-- description = A human-friendly description of the turnout that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes "".
+- description = A human-friendly description of the turnout that will appear in WiThrottle apps and |Engine Driver|. Note that this must be enclosed in quotes "".
 
 An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:
 
@@ -116,11 +116,11 @@ A simple example using the thrid control pins of the first PCA9685 connected to 
 Controlling servos for animations
 __________________________________
 
-The SERVO and SERVO2 directives allow for servos to be used in various automations within EX-RAIL.
+The SERVO and SERVO2 directives allow for servos to be used in various automations within |EX-R|.
 
-Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, Engine Driver, or JMRI, but are instead actions designed to be used within EX-RAIL automations.
+Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, |Engine Driver|, or |JMRI|, but are instead actions designed to be used within |EX-R| automations.
 
-As per the EX-RAIL reference, these are defined with the following syntax:
+As per the |EX-R| reference, these are defined with the following syntax:
 
 .. code-block:: cpp
 

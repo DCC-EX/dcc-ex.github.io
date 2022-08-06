@@ -36,7 +36,7 @@ reStructuredText `QuickReference Guide <https://docutils.sourceforge.io/docs/use
 Git & GitHub
 _____________
 
-You should have some knowledge about Git and GitHub, as we manage all of our documentation (as well as the development) there. Depending on the editing platform of your choice, you may get all the Git functionality you need. You may want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the DCC++EX documentation GitHub repository (dcc-ex.github.io).
+You should have some knowledge about Git and GitHub, as we manage all of our documentation (as well as the development) there. Depending on the editing platform of your choice, you may get all the Git functionality you need. You may want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the |EX-CS| documentation GitHub repository (dcc-ex.github.io).
 
 If you don't have Git installed, now is as good a time as any, follow the instructions in the `Pro Git book <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_
 

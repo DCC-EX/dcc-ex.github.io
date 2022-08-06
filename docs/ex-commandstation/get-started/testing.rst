@@ -23,7 +23,7 @@ Testing control of a loco
 There are two simple options for testing your setup described below:
 
 * Using our |EX-WT| (recommended)
-* using the **Engine Driver** app installed on an Android device, |BR| or the **wiThrottle** app installed on an iOS device
+* using the |Engine Driver| app installed on an Android device, |BR| or the |wiThrottle| app installed on an iOS device
 
 .. sidebar:: 
 
@@ -59,8 +59,8 @@ Click this link: :doc:`WebThrottle-EX </throttles/software/ex-webthrottle>` to r
 
 ... TODO - This text needs to be expanded
 
-Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
-_____________________________________________________________
+Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
+______________________________________________________________________
 
 .. NOTE:: 
    :class: note-float-right
@@ -80,7 +80,7 @@ Connect Everything
 
    Engine Driver
 
-You will need to install Engine Driver on your mobile device and then connect to the |EX-CS|, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
+You will need to install |Engine Driver| on your mobile device and then connect to the |EX-CS|, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
 
 ... TODO - This text needs to be expanded
 

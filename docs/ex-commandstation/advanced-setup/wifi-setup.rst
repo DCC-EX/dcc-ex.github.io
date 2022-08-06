@@ -47,7 +47,7 @@ With the base Command Station (CS) consisting of just an Arduino Mega and an Ard
 
 If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using WebThrottle-EX, |JMRI|, Rocrail, or similar, then YOU DO NOT NEED WiFi ON THE CS. Save yourself some money, and a lot of hassle, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between |JMRI| and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
 
-If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY Engine Driver (or other WiThrottle-protocol devices) connected directly to the CS, then you will need Wifi, and will have to budget some setup and learning time.
+If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY |Engine Driver| (or other |WiThrottle Protocol| devices) connected directly to the |EX-CS|, then you will need Wifi, and will have to budget some setup and learning time.
 
 Compatible Boards X
 ===================
@@ -232,7 +232,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
 Install the Software X
 ======================
 
-If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
+If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the |EX-CS| as an Access Point (AP) and connect a |WiThrottle Protocol| compatible CAB (|Engine Driver|). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
 
 .. note:: LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
 

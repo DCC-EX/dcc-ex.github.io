@@ -14,7 +14,7 @@ Using the "DriveAway(tm)" Feature
     :depth: 2
     :local:
 
-|EX-C| and |Engine Driver|'s "Request Loco ID" & “Drive Away" 
+|EX-CS| and |Engine Driver|'s "Request Loco ID" & “Drive Away" 
 
 A new feature enhancement with a Arduino Mega 2560 +WiFi enabled |EX-CS| directly connected to an Engine Driver Throttle on an Android smartphone. 
 

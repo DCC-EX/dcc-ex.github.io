@@ -1,0 +1,29 @@
+name: Docs - flash62au-restruct branch (manual)
+
+on:
+  workflow_dispatch:
+    branches: [ flash62au-restruct ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Requirements
+        run: |
+          pip3 install sphinx-rtd-theme==1.0.0
+          pip3 install sphinx-sitemap
+          pip3 install sphinxcontrib-spelling
+      - name: Checkout repo
+        uses: actions/checkout@1.0.0
+      - name: Build docs
+        run: |
+          make github
+          echo 'dcc-ex.com' > docs/_build/html/CNAME
+          touch docs/_build/html/.nojekyll
+      - name: Deploy
+        if: github.ref == 'refs/heads/flash62au-restruct'
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages  # The branch the action should deploy to.
+          FOLDER: docs/_build/html  # The folder the action should deploy.

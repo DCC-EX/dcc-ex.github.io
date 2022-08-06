@@ -1,4 +1,4 @@
-name: Docs
+name: Docs - flash62au-restruct branch (manual)
 
 on:
   workflow_dispatch:

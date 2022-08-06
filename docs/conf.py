@@ -103,7 +103,7 @@ html_context = {
     'display_github': True,
     'github_user': 'DCC-EX',
     'github_repo': 'dcc-ex.github.io',
-    'github_version': 'sphinx/docs/',
+    'github_version': 'flash62au_restruct/docs/',
 }
 
 #leave this off to have todos invisible, set to true to render them and make the easy to see

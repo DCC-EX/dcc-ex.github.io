@@ -2,9 +2,9 @@ name: Docs
 
 on:
   push:
-    branches: [ sphinx ]
+    branches: [ flash62au_restruct ]
   pull_request:
-    branches: [ sphinx ]
+    branches: [ flash62au_restruct ]
   workflow_dispatch:
 
 jobs:

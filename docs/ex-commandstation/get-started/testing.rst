@@ -31,9 +31,9 @@ There are two simple options for testing your setup described below:
 
     A more advanced option for testing and diagnosing issues is available and is described here ???? if needed 
 
-    TODO
+    .. TODO:: Sidebar advanced option for testing and diagnosing issues
 
-Using WebThrottle-EX
+Using EX-WebThrottle
 ____________________
 
 Connect Everything:
@@ -57,7 +57,7 @@ Connect Everything:
 
 Click this link: :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` to run |EX-WT| hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
 
-... TODO - This text needs to be expanded
+.. TODO:: URGENT This text needs to be expanded - Using EX-WebThrottle
 
 Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
 ______________________________________________________________________
@@ -82,7 +82,7 @@ Connect Everything
 
 You will need to install |Engine Driver| on your mobile device and then connect to the |EX-CS|, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
 
-... TODO - This text needs to be expanded
+.. TODO:: URGENT This text needs to be expanded - Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
 
 .. note:: 
 

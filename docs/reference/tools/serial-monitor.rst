@@ -115,8 +115,7 @@ Connect with a Cell Phone
 
 .. NOTE:: You can also use Bluetooth if you have a Bluetooth board attached to your CS and make a small modification to the sketch (CS Software). We will cover how to do that in a **Project** tutorial
 
-.. todo::
-   show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar
+.. todo:: show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar
 
 OTG Cable
 -----------

@@ -12,3 +12,4 @@ Press / Announcements
     rewrite
     release-notes
     v40-announce
+    new-name

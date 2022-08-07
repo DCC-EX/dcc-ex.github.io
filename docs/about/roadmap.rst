@@ -16,12 +16,11 @@ DCC-EX Roadmap
 =====
 
 Software
-----------
+________
 
-EX-Command Station 
-^^^^^^^^^^^^^^^^^^
+EX-CommandStation 
+^^^^^^^^^^^^^^^^^
 
-* 
 * Add support for an ESP-32 or equivalent to remove resource limitations.
 * Remove need to have any conditional compilation of features. This means the binary can be built and downloaded directly without a compiler or IDE. Customisation can take place through the command language API and mySetup.h file.
 * Program the WiFi solution with our own code that implements a “true” network connection, still has the AT command set, and can handle at least 12 sockets.
@@ -43,7 +42,7 @@ EX-WebThrottle
 
 
 Hardware
-----------
+________
 
 New Motor Driver
 ^^^^^^^^^^^^^^^^
@@ -85,9 +84,11 @@ Firebit Modules
 Based on standard interconnect created for the CS, examples would be separate co-processors, boosters, motor controllers, etc.
 
 Outreach/Partnering/Evangelizing
---------------------------------
+________________________________
 
 Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for |DCC-EX|. Add more throttles to the list that support DCC++ directly or through |JMRI|.
+
+----
 
 todo
 ====

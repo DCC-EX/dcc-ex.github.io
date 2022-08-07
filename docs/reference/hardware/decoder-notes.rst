@@ -26,4 +26,4 @@ mention "service mode" vs. "operations mode"
 
 Have a link to "Programming Mobile decoders, aka. Reading and Writing CVs" and write that document
 
-.. Todo:: Finish this page
+.. Todo:: Finish this page -  Decoder Notes

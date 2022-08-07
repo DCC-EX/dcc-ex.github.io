@@ -80,6 +80,6 @@ Requirements
 Operation
 ==========
 
-.. todo:: text needed for throttles/software/digitranspro.rst
+.. todo:: text needed for Operation
    
 ***TODO: Write the operation section***

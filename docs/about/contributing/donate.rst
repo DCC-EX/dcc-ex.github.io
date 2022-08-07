@@ -19,6 +19,8 @@ Your donations help to offset the cost of running some of the resources used to 
 
 **Non-US Donors**, Use GitHub for one-time or automatic monthly donations or Patreon for automatic monthly donations. You may use PayPal for one-time donations also, though their fees are higher.
 
+Donation Options
+================
 
 .. rst-class:: dcclink
 

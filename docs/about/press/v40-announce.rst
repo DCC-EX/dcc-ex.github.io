@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |donate-button|
 
-******************************************
-EX-CommandStation 4.0 Release Announcement
-******************************************
+****************************************
+EX-CommandStation 4.0 Release [Feb 2022]
+****************************************
 
 DCC-EX announces version 4.0 of its EX-CommandStation software with EX-RAIL automation and accessory control
 =================================================================================================================

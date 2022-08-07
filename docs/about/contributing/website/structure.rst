@@ -119,7 +119,6 @@ For example:
 
   ***************************************
 
-
 Page Heading
 ____________
 
@@ -132,7 +131,6 @@ Each page must have a Main Heading. Main Headings MUST have asterisks above and 
     *************
 
 See below for more information about heading.
-
 
 Comfort level logos
 ___________________

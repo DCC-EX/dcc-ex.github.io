@@ -68,7 +68,7 @@ Python 3.x
 
   If you won't be contributing to the website documentation, you can skip this step.
 
-All website documentation is written in reStructuredText format and built using sphinx, which is outlined on our :doc:`/about/contributing/website` page.
+All website documentation is written in reStructuredText format and built using sphinx, which is outlined on our :doc:`/about/contributing/website/index` page.
 
 In order to correctly preview changes to the website documentation locally on your computer before publishing to the website, you will need to install Python, preferably the latest 3.x version available.
 
@@ -120,7 +120,7 @@ Note, however, that the Esbonio server will only generate live previews of the p
 
 Once you've installed the extensions above, it is recommended you close then reopen VSCode, and upon reopening VSCode, you should be prompted in the bottom right hand corner to install the Esbonion language server. It is recommended you do so now.
 
-Refer to the :doc:`/about/contributing/website` contribution page for more info on generating reliable local previews.
+Refer to the :doc:`/about/contributing/website/index` contribution page for more info on generating reliable local previews.
 
 Recommended configuration options
 __________________________________

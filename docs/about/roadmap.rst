@@ -39,7 +39,7 @@ EX-WebThrottle
 ^^^^^^^^^^^^^^
 
 * Add Turnout support
-* Add capability to use as an installer/updater/configurer for DCC++ EX
+* Add capability to use as an installer/updater/configurer for |DCC-EX|
 
 
 Hardware
@@ -88,3 +88,9 @@ Outreach/Partnering/Evangelizing
 --------------------------------
 
 Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for |DCC-EX|. Add more throttles to the list that support DCC++ directly or through |JMRI|.
+
+todo
+====
+
+.. todolist:: 
+  

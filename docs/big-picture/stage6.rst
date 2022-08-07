@@ -305,7 +305,7 @@ Manual train control with automated routes
 
 If you still wish to be the driver of the trains but have some automation related to the turnouts and signals, then we can make use of EX-RAIL's ``ROUTE()`` directive. In this scenario, we don't need to implement our virtual blocks, as it will be up to you as the driver to ensure your trains don't collide. We also don't need to use the sensors, and will set our signals based on the choice of routes.
 
-The two routes below will be advertised to WiThrottle applications and Engine Driver, so you can simply select them from the ROUTE menu.
+The two routes below will be advertised to |WiThrottle Protocol| applications such as |Engine Driver|, so you can simply select them from the ROUTE menu.
 
 Note that you can mix and match all the above I/O methods together, so you can use direct I/O pins on the Mega2560 while using MCP23017 I/O expanders, PCA9685 servo modules, and any other supported I/O options, which provides a myriad of possibilities to expand the I/O capabilities of your CommandStation.
 
@@ -337,7 +337,7 @@ If we omit that first ``DONE``, EX-RAIL would automatically execute ``ROUTE(1, "
 Route 1 - main track running
 ____________________________
 
-The first route we publish for use is ``ROUTE(1, "Main track")`` which will appear in WiThrottle apps and Engine Driver with the description "Main track".
+The first route we publish for use is ``ROUTE(1, "Main track")`` which will appear in WiThrottle apps and |Engine Driver| with the description "Main track".
 
 Given we have closed our turnouts and set all our signals red in the startup sequence above, when selecting this route the first time, it will simply set signals 1 and 2 green, as the ``IFTHROWN()`` statements will evaluate as false and not execute the associated commands.
 
@@ -378,7 +378,7 @@ The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any furthe
 Route 2 - enter and exit the station siding
 ___________________________________________
 
-The second route we publish for use is ``ROUTE(2, "Stating siding")`` which will appear in WiThrottle apps and Engine Driver with the description "Station siding".
+The second route we publish for use is ``ROUTE(2, "Stating siding")`` which will appear in WiThrottle apps and |Engine Driver| with the description "Station siding".
 
 Counter to the main track route above, we use ``IFCLOSED()`` statements to evaluate if turnouts need to change or not from their current position. Therefore, if the first route we choose after startup is this one, both statements will evaluate true. The same will occur if we select our main track route.
 

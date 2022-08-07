@@ -33,6 +33,6 @@ Glossary
       - Universal Serial Bus
     * - WiThrottle
       - \ 1. Trademark owned by Brett Hoffman |BR|\ 2. proprietary iOS app developed by Brett Hoffman
-    * - WiThrottle protocol
+    * - WiThrottle Protocol
       - proprietary protocol developed by Brett Hoffman
 

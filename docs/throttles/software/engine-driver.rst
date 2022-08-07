@@ -17,9 +17,9 @@ Engine Driver
    :scale: 60%
    :align: left
 
-**Engine Driver** (ED) is an Android App that uses the WiThrottle\ :sup:`TM` Protocol to either connect directly to the |EX-CS| or connect to the JMRI WiThrottle Server via WiFi. 
+**Engine Driver** (ED) is an Android App that uses the |WiThrottle Protocol| to either connect directly to the |EX-CS| or connect to the JMRI WiThrottle Server via WiFi. 
 
-If you wish to connect Engine Driver to JMRI, you need to start the wiThrottle Server and (optionally [#]_) the Web Server in JMRI on the computer running JMRI. The JMRI computer must be connected to the |EX-CS| using a USB cable. 
+If you wish to connect Engine Driver to |JMRI|, you need to start the wiThrottle Server and (optionally [#]_) the Web Server in JMRI on the computer running JMRI. The JMRI computer must be connected to the |EX-CS| using a USB cable. 
 
 If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
 
@@ -57,11 +57,11 @@ Standard Features (all wiThrottle servers)
 * Able to use inexpensive Bluetooth gamepads for tactile control
 * Multiple theme, colours and throttle layout options 
 
-DCC++ Specific or advantageous Features
-=======================================
-* DCC++EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons
+EX-CommandStation Specific or advantageous Features
+===================================================
+* DCC-EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons
 * Able to select local images for roster locos
-* New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with DCC++EX
+* New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with |EX-CS|
 
 
 :doc:`/throttles/driveaway`

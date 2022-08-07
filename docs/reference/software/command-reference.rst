@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-***************************
-DCC++ EX Command Reference
-***************************
+************************
+DCC-EX Command Reference
+************************
 
 |engineer|
 
@@ -14,9 +14,9 @@ DCC++ EX Command Reference
 
 This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`
 
-`CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
+`EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* :doc:`WebThrottle-EX </throttles/software/ex-webthrottle>` - Our |EX-WT| browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!
+* :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` - Our |EX-WT| browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within |EX-WT| itself!
 
 * `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Cellphone App WiFi Throttle  
 
@@ -26,7 +26,7 @@ This is a detailed reference. For a summary version, please see :doc:`Command Su
 
 * `Gregg Berman's DCC++ Controller Software <https://github.com/DccPlusPlus/Controller>`_
 
-This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
+This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC-EX Webpage <https://dcc-ex.com>`_.  
 
@@ -322,7 +322,7 @@ Accessory Decoder Commands
 There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka "Dual-Coil" method) and linear addressing method. 
 You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).
 
-In the mapping used by DCC++EX, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
+In the mapping used by |EX-CS|, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
 Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders.
 Decoder address 0 does not have a corresponding linear address.  This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.
 If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works.  Or use the address/subaddress versions of the commands.

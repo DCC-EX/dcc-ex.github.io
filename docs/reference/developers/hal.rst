@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-************************
-DCC++EX HAL Architecture
-************************
+***********************
+DCC-EX HAL Architecture
+***********************
 
 |engineer|
 
@@ -13,7 +13,7 @@ DCC++EX HAL Architecture
     :local:
 
 .. attention::
-   17 Feb 2022: *Now included* in **DCC++EX 4.0!**
+   17 Feb 2022: *Now included* in **EX-CommandStation 4.0!**
    Available to download and use now!
 
 Introduction
@@ -29,7 +29,7 @@ Overview
 
 **HAL** = **H**\ardware **A**\bstraction **L**\ayer.
 
-The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from DCC++EX code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.
+The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from |EX-CS| code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.
 
 The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.
 
@@ -227,16 +227,16 @@ mySetup Files
 
 There are various ways of configuring I/O and creating turnouts, sensors and other objects when the CS is powered on:
 
-After using the commands (<S ...>, <T ...>, <Z ...> etc) to define sensors, turnouts and outputs, use the <E> command to 
+After using the commands (<S ...>, <T ...>, <Z ...> etc.) to define sensors, turnouts and outputs, use the <E> command to 
 save them to EEPROM.  Then, when the CS restarts, the definitions are read back from EEPROM and the objects recreated.  This is limited to turnout, sensor and output definitions.
 
-Create a ‘mySetup.h’ file, and add commands in the form ``SETUP("....");``.  This can be used for any command that is accepted 
-by the DCC++EX parser, including turnout, sensor and output definition commands.  The mySetup.h file is included as 
+Create a 'mySetup.h' file, and add commands in the form ``SETUP("....");``.  This can be used for any command that is accepted 
+by the |EX-CS| parser, including turnout, sensor and output definition commands.  The mySetup.h file is included as 
 executable code into other modules of the CS.  Consequently, the content is limited to executable statements (or macros 
 that expand into executable statements).  Global variables or functions cannot be defined, and only very simple include 
-files can be added. Consequently, only a limited number of the DCC++EX api function can be used from here.
+files can be added. Consequently, only a limited number of the DCC-EX API function can be used from here.
 
-Create a ‘myHal.cpp’ file and add a function definition ``void halSetup(){ };``.  Within this function you can add 
+Create a 'myHal.cpp' file and add a function definition ``void halSetup(){ };``.  Within this function you can add 
 any executable code.  Outside the function, you can declare variables and add include files to allow other functions to be invoked.  For example:
 
   .. code-block:: cpp
@@ -274,7 +274,7 @@ functional in editors that support it (e.g. PlatformIO).
 List of Changes
 ===============
 
-The following functional changes have been done in the neil-hal branch to support the implementation of the HAL in DCC++EX, 
+The following functional changes have been done in the neil-hal branch to support the implementation of the HAL in |EX-CS|, 
 and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 
 - HAL: Create new *IODevice class* as the abstract base class for all I/O devices such as GPIO Extenders, remote I/O, 
@@ -486,7 +486,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 Future Enhancements
 ===================
 
-1.  HAL: Produce a simple IODevice class template, to help DCC++EX developers/tinkerers who want to implement their own extensions protocols, 
+1.  HAL: Produce a simple IODevice class template, to help |DCC-EX| developers/tinkerers who want to implement their own extensions protocols, 
     e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.
 
     .. code-block:: none

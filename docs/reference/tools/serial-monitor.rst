@@ -91,7 +91,7 @@ Opening the Serial Monitor always resets the Arduino board. Therefore, you shoul
 Enter Commands to the CS
 -------------------------
 
-There is an entire language that DCC-EX understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the :doc:`DCC-EX Command Reference </reference/software/command-reference>`. Let's just try two commands to make sure everything is working.
+There is an entire language that |EX-CS| understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the :doc:`DCC-EX Command Reference </reference/software/command-reference>`. Let's just try two commands to make sure everything is working.
 
 All DCC-EX commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the motor shield.
 
@@ -99,7 +99,7 @@ Now enter ``<s>`` (lowercase). You should see status information for your Comman
 
 Turn off the power to the track by sending ``<0>`` to the CS. That is a "zero".
 
-There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver, Ethernet debugging,  and more. Read the documentation and experiment!
+There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like |Engine Driver|, Ethernet debugging,  and more. Read the documentation and experiment!
 
 If you run into trouble, remember to send us a log by cutting and pasting the text from the Serial Monitor window to our support channel in Discord or one of the other methods of contacting us mentioned here: https://dcc-ex.com/support/index.html.
 

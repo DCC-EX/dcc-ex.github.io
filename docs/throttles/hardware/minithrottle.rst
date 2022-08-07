@@ -24,7 +24,7 @@ Note, this is a "project" type throttle and requires the user to construct it to
 
 * Open source software free for hobbyist use
 * esp32 based 
-* Supports both the DCC++EX and JMRI protocols
+* Supports both the DCC-EX and JMRI protocols
 * Display support
 * LED status indicators
 * 3v voltmeter for speedometer and brake pressure

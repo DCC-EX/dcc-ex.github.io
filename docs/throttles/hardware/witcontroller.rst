@@ -12,7 +12,7 @@ WiTcontroller (Physical)
     :depth: 2
     :local:
 
-From Engine Driver's very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:
+From |Engine Driver|'s very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:
 
 * ESP32 with LiPo charger
 * rotary encoder
@@ -41,7 +41,7 @@ Features
 
   * asks which to connect to
   * if none found will ask to enter the IP Address and Port
-  * Guesses the wiThrottle IP address and Port for DCC++EX WiFi Access Point mode Command Stations
+  * Guesses the wiThrottle IP address and Port for EX-CommandStation WiFi Access Point mode Command Stations
 
 * Rudimentary on-the-fly consists
 * Assign commands directly to the 1-9 buttons (in the sketch)

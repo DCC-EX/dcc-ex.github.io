@@ -27,7 +27,7 @@ DigiTrainsPro
    :scale: 30%
    :align: left
 
-Currently, DigitTrainsPro works with DCC-EX through JMRI. You use JMRI's Web Server for the connection. However, we are working with the author and will soon have an option to connect directly to the |EX-CS| using <DCC++> Commands (estimated April 2021).
+Currently, DigitTrainsPro works with |EX-CS| through JMRI. You use JMRI's Web Server for the connection. However, we are working with the author and will soon have an option to connect directly to the |EX-CS| using <DCC++> Commands (estimated April 2021).
 
 `WINDOWS - Get if from the Windows Store <https://www.microsoft.com/en-us/p/digitrainspro/9p3kl60r0c5q?rtc=1&activetab=pivot:overviewtab>`_
 
@@ -80,4 +80,6 @@ Requirements
 Operation
 ==========
 
+.. todo:: text needed for throttles/software/digitranspro.rst
+   
 ***TODO: Write the operation section***

@@ -138,3 +138,15 @@
 
     :doc:`JMRI </reference/glossary>`
 ..   
+.. |Engine Driver| replace::
+
+    :doc:`Engine Driver </reference/glossary>`
+..
+.. |wiThrottle| replace::
+
+    :doc:`wiThrottle </reference/glossary>`
+..
+.. |wiThrottle Protocol| replace::
+
+    :doc:`wiThrottle Protocol </reference/glossary>`
+..

@@ -16,7 +16,7 @@ Motor Board Configuration
 
 |EX-CS| supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
 
-.. note:: DCC-EX does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use "high accuracy waveform" mode if you need it. See below for more information on high accuracy mode.
+.. note:: |EX-CS| does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use "high accuracy waveform" mode if you need it. See below for more information on high accuracy mode.
 
 Configure Using the Installer
 =============================
@@ -199,7 +199,7 @@ Reading the input to the motor board
 
 The first option has the advantage of a simple connection, and that it can use a DC (unidirectional) current sensor or a bi-directional current sensor. To connect it, you take the ground lead of the track power supply and connect it to the ground lug of the motor board. Then, instead of connecting the positive wire to the motor board input, you connect it to the positive terminal of the current sensor. You then use another wire to go from the negative terminal of the current sensor to the positive lug of the motor board. By inserting the current sense board in series with power connection, we can measure current.
 
-The disadvantage of measuring at the input power stage is that we are measuring the *total current* to the board. That means we are measuring the current used by the motor board *and* your trains. It takes power to run any electronics, so there is current being used by the motor board even without any locos on the track. The good news is that it is a small current and we can account for it. As a matter of fact, on the programming track, DCC++EX does a quick calibration to "zero out" or "tare" the resting current so we have a baseline to measure decoder ACK pulses against.
+The disadvantage of measuring at the input power stage is that we are measuring the *total current* to the board. That means we are measuring the current used by the motor board *and* your trains. It takes power to run any electronics, so there is current being used by the motor board even without any locos on the track. The good news is that it is a small current and we can account for it. As a matter of fact, on the programming track, |EX-CS| does a quick calibration to "zero out" or "tare" the resting current so we have a baseline to measure decoder ACK pulses against.
 
 The other disadvantage is that if your motor board has both MAIN and PROG sections on it, you need to turn off power to the MAIN track when you are going to do any programming (reading and writing CVs) on the PROG track. There is no way of reading the current of each H-Bridge separately without modifying a dual H-Bridge board like this.
 
@@ -210,6 +210,6 @@ This method has the advantage of reading the actual current being used by things
 
 The disadvantage is that you MUST use a bi-directional current sensor, and you need 2 sensors if you want to use one to sense ACKs (acknowledgements) from locos on the programming track, and to sense current and detect an overload (short circuit) on either track.
 
-No matter which method you choose, you are going to have to either select the correct motor board type in your config.h file, or create a motorboard definition to tell DCC++EX which pins you are connecting your current sense board(s) to, and what current sense factor to use to report the current accurately.
+No matter which method you choose, you are going to have to either select the correct motor board type in your config.h file, or create a motor drive definition to tell |EX-CS| which pins you are connecting your current sense board(s) to, and what current sense factor to use to report the current accurately.
 
 For details and instructions on how to connect and configure non-Arduino Motor Shield boards and their clones, see the :doc:`Supported Motorboards Setup Notes </ex-commandstation/advanced-setup/supported-motorboards/index>`.

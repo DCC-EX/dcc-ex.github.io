@@ -34,7 +34,7 @@ For this option, we assume that many of you may have started off with the Arduin
 1. **"Upgrade"** - Using ONE output of your Arduino Motor Shield to control your PROG track and ONE IBT_2 board to run your MAIN track.
 2. **"Replace"** - Using TWO IBT_2 boards to handle BOTH the MAIN and PROG tracks. You won't need another motor controller. This is a Tinkerer or perhaps an Engineer option since it requires a little more knowledge and abilities.
 
-.. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps. The voltage to the track will be 2 to 3 volts higher using the same power supply than it is with Arduino type (L298) motor boards.
+.. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at |DCC-EX|, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps. The voltage to the track will be 2 to 3 volts higher using the same power supply than it is with Arduino type (L298) motor boards.
 
 The IBT_2 uses N-Channel Power MOSFETS (a type of Transistor) inside its 2 BTS7960B Integrated Circuits. Each of those ICs makes is just a half H-Bridge circuit, it takes two of them to make the full H-Bridge. Don't be confused, each of these boards can only handle one track. The Arduino board is a DUAL full H-Bridge, that is how it can handle 2 tracks. 
 
@@ -43,7 +43,7 @@ Anything with MOSFETS in them is more efficient than something with Bipolar Junc
 Which Option Should You Choose? (IBT_2)
 =========================================
 
-.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like DCCInspector-EX). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see :doc:`High Accuracy Waveform Mode </ex-commandstation/advanced-setup/high-accuracy>`.
+.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like EX-DCCInspector). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see :doc:`High Accuracy Waveform Mode </ex-commandstation/advanced-setup/high-accuracy>`.
 
 Upgrade (IBT_2)
 ----------------

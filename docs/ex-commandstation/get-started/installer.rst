@@ -80,7 +80,7 @@ The EX-Installer Window
    The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
 
 .. figure:: /_static/images/installer/installer.jpg
-   :alt: DCC-EX Installer
+   :alt: EX-Installer
    :scale: 75%
 
    Installer Window
@@ -142,7 +142,7 @@ ____________________________________
 
 * **Host Name** - If your WiFi Board supports it, this name can be used in addition to the IP address.\ 
 
-* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
+* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
 
 * **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
 

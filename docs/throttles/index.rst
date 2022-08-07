@@ -4,30 +4,41 @@
 Throttles (Controllers)
 ***********************
 
-|conductor| |tinkerer| |engineer|
-
 .. sidebar:: 
 
   .. contents:: On this page
     :depth: 2
     :local:
 
-For an overview of throttles and how to choose one, please read the :doc:`Getting Started - Controllers Page </ex-commandstation/get-started/controllers>` Below is a list of controllers that currently support the |EX-CS|.
+This page contains lists of compatible Throttles (Controllers) that currently support the |EX-CS|.  They are listed two ways:
 
-By Communication technology
-===========================
+* `By Communication technology <Throttles - By Communication technology>`_
+* `By Client Technology <Throttles - By Client Technology>`_  (e.g. Android VS iOS)
+
+|conductor|
+
+For an overview of throttles and how to choose one, please read the :doc:`Getting Started - Controllers Page </ex-commandstation/get-started/controllers>` 
+
+|tinkerer| |engineer|
+
+For additional options for throttles and how to choose one, please read the :doc:`Advanced Options - Controllers Page </ex-commandstation/advanced-setup/controllers>`
+
+----
+
+
+Throttles - By Communication technology
+=======================================
 
 General
 _______
 
 - :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
 
-
 DCC-EX (Native <AT> commands>)
 ______________________________
 
 - :doc:`EX-Web-Throttle <software/ex-webthrottle>`
-- :doc:`SRCP Client (iOS))<software/srcpclient>`
+- :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
 
 wiThrottle Protocol Based Throttles
@@ -37,7 +48,7 @@ ___________________________________
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
-- :doc:`SRCP Client (iOS))<software/srcpclient>`
+- :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Hardware) <hardware/witcontroller>`
 - :doc:`TCS UWT-50 (Hardware) <hardware/uwt50>`
@@ -51,13 +62,13 @@ ___________________________________
 
 ----
 
-By Client Technology
-====================
+Throttles - By Client Technology
+================================
 
 Web (Windows, OSX, Linux)
 _________________________
 
-- :doc:`EX-Web-Throttle <software/ex-webthrottle>`
+- :doc:`EX-Web-Throttle (Web Browser) <software/ex-webthrottle>`
 
 Android
 _______
@@ -72,7 +83,7 @@ _________
 
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
-- :doc:`SRCP Client (iOS))<software/srcpclient>`
+- :doc:`SRCP Client (iOS) <software/srcpclient>`
 
 Dedicated Hardware
 __________________

@@ -80,7 +80,7 @@ The EX-Installer Window
    The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
 
 .. figure:: /_static/images/installer/installer.jpg
-   :alt: DCC-EX Installer
+   :alt: EX-Installer
    :scale: 50%
 
    Installer Window
@@ -134,7 +134,7 @@ If you wish to connect to your home network instead (connect to your router usin
 
 * **Host Name** - If your WiFi Board supports it, this name can be used in addition to the IP address.\ 
 
-* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
+* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
 
 * **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
 
@@ -151,7 +151,7 @@ If you have an Ethernet shield and check this box, you will see options to chang
 
 * **Host Name** - If your Ethernet Board supports it, this name can be used in addition to the IP address.\ 
 
-* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like Engine Driver. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use |JMRI|.\ 
+* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use |JMRI|.\ 
 
 * **MAC Address** - This is the unique identifier for your Ethernet Shield. We recommend leaving this setting as is. If you ever have more than one Ethernet shield on your network and there is a conflict, you can change this setting.
 

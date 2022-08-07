@@ -17,7 +17,7 @@ EX-RAIL Command Reference
 
 This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
 
-`CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
+`EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
 See Also:
 
@@ -243,7 +243,7 @@ Signal examples:
 Turnouts/Points
 ===============
 
-All the below turnout/point definitions will define turnouts/points that are advertised to WiThrottle apps, Engine Driver, and |JMRI|, unless the HIDDEN keyword is used.
+All the below turnout/point definitions will define turnouts/points that are advertised to |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI|, unless the HIDDEN keyword is used.
 
 "description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turnout/point to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
 
@@ -524,7 +524,7 @@ Blocks
 Command Station Functions
 ==========================
 
-``POWERON`` Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of CommandStation-EX
+``POWERON`` Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of EX-CommandStation
 
 ``POWEROFF``	Power off track
 

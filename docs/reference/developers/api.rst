@@ -23,7 +23,7 @@ CommandStation-EX API Reference
   * - Last update
     - 24th June 2022
 
-This page documents the API syntax and usage for CommandStation-EX.
+This page documents the API syntax and usage for |EX-CS|.
 
 The current API has resulted from a mix of new commands and commands inherited from the original DCC++ code base, and therefore there are some noted exceptions to the syntax, however all new commands and responses must conform to the correct syntax.
 
@@ -88,7 +88,7 @@ If, however, WiFi debug is enabled, or the ``<+>`` command is used, then the wra
 4. General Message Format
 ==========================
 
-A DCC++EX API message consists of a leading ``<`` symbol, a single character OPCODE, zero to n parameters separated by spaces, and a terminating ``>`` symbol:
+A DCC-EX API message consists of a leading ``<`` symbol, a single character OPCODE, zero to n parameters separated by spaces, and a terminating ``>`` symbol:
 
 ``<OPCODE Param1 Param2 … ParamX>``
 
@@ -111,14 +111,14 @@ _____________
 
 These are a consecutive sequence of one or more non-blank characters consisting of ``a-z``, ``A-Z``, ``0-9``, or ``_``, eg. "JOIN", "WIFI", "ON", "SPEED28".
 
-Keyword parameters are internally hashed to created integers and may start with any of these characters. The CommandStation-EX code does not differentiate between keywords and numbers internally.
+Keyword parameters are internally hashed to created integers and may start with any of these characters. The |EX-CS| code does not differentiate between keywords and numbers internally.
 
 For example, a keyword of "3RAIL" would be valid if it were to be implemented.
 
 6.2. Numeric
 _____________
 
-These are a consective sequence of one or more digits, with an optional leading ``-`` to indicate a negative value. Unless noted in `a.1. parameter values`_, these numbers are base10.
+These are a consecutive sequence of one or more digits, with an optional leading ``-`` to indicate a negative value. Unless noted in `a.1. parameter values`_, these numbers are base10.
 
 6.3. String
 ____________

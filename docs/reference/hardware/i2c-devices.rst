@@ -18,7 +18,7 @@ devices I mean the things that are controlled through Sensors, Outputs and Turno
 more recently by commands in EX-RAIL too).  Motor shields are not included in the HAL at present.
 
 As a consequence of this, it is much easier to write a device driver, without the risk of
-breaking DCC++EX for other users.  So there are various drivers available for you to use:
+breaking |EX-CS| for other users.  So there are various drivers available for you to use:
 
 * I2C-connected GPIO Expanders (MCP23017, MPC23008, PCF8574);
 * I2C-connected Servo Controller (PCA9685);
@@ -60,7 +60,7 @@ able to initiate communications on the bus.  The bus may also have a number of S
 only speaks when it is spoken to by a Master.  
 
 **Note: The I2C standard allows for multi-master buses in which two or more Master devices
-may be present.  DCC++EX only has a single Master, which is the DCC++EX controller itself.**
+may be present.  |EX-CS| only has a single Master, which is the EX-CommandStation controller itself.**
 
 Each Slave device has an address on the bus, which is normally 7 bits in length.  I2C addresses are generally
 written in hex format, in the range 0x00 (0) to 0x7F (127).  For example, a GPIO Expander device might have 
@@ -68,7 +68,7 @@ an address of 0x20, and an OLED display may be 0x3F.
 
 **Note: The addresses in the ranges 0x00 to 0x0f and 0x78 to 0x7f are reserved, and should not be used
 for devices.  Also, the I2C standard allows for 10-bit addresses, but none of the devices currently 
-used by DCC++EX support this.**
+used by |EX-CS| support this.**
 
 When the Master wants to communicate with a Slave device, it sends the address of the device it wishes
 to communicate with, and a Slave device which matches that address will respond.  The Master may
@@ -321,14 +321,14 @@ total capacitance, which at 400kHz should be no more than 400pF.  At this capaci
 pull-up value, the time taken for the bus wire to be pulled up from LOW to HIGH state is significant, compared to the pulse length.
 With a higher pull-up value (e.g. 10kOhm), the maximum permitted capacitance will be lower.
 If you need to run with higher capacitance (e.g. for longer cables), then it is possible to reduce the I2C
-clock speed.  On DCC++EX, operation will continue even with I2C speeds of 32kHz or lower, although the
+clock speed.  On |EX-CS|, operation will continue even with I2C speeds of 32kHz or lower, although the
 scan interval for digital inputs, and the refresh time for I2C displays, may be noticeably slower at speeds
 lower than 32kHz.
 
 Changing the Clock speed
 =========================
 
-In DCC++EX the I2C clock speed is normally the highest speed supported by all configured devices.
+In |EX-CS| the I2C clock speed is normally the highest speed supported by all configured devices.
 It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:
 
 .. code-block:: cpp

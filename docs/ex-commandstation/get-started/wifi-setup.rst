@@ -176,7 +176,7 @@ Next Steps - Install the Software
 Click :doc:`here </ex-commandstation/get-started/installer>` or click the "next" button to learn how to install the software on your |EX-CS|.
 
 .. 
-   If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
+   If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (|Engine Driver|). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
 
 ..
    .. note:: 

@@ -114,8 +114,8 @@ Cutting Traces and Soldering on the Back Option
 5. If you are using both sides of the L298 board for your MAIN and PROG tracks, repeat the process for the other side.
 
 
-Configuring the Board in DCC++EX
-----------------------------------
+Configuring the Board in EX-CommandStation
+------------------------------------------
 
 You have two choices regarding how to wire and configure the L298N motor driver board to the command station. Unlike the Arduino Motor Shield, this board has separate direction inputs which is where we apply the DCC signal. 
 

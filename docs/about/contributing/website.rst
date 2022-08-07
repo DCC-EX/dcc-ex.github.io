@@ -328,7 +328,7 @@ The document name is a relative or absolute (within the documentation) file
 path, without the .rst suffix.
 
 To link to a position within a page use ``:ref:``. A reST label can be used as
-the reference, but on the DCC++EX website headings are made available to use as
+the reference, but on the |DCC-EX| website headings are made available to use as
 references:
 
 .. admonition:: Example
@@ -385,11 +385,11 @@ source file, define a target:
 
     ::
 
-        Link to the `DCC++EX home page`_.
+        Link to the `DCC-EX home page`_.
 
-        .. _DCC++EX home page: https://dcc-ex.com/index.html
+        .. _DCC-EX home page: https://dcc-ex.com/index.html
 
-    Link to the `DCC++EX home page <https://dcc-ex.com/index.html>`_.
+    Link to the `DCC-EX home page <https://dcc-ex.com/index.html>`_.
 
 Downloads
 ^^^^^^^^^
@@ -541,7 +541,7 @@ ________________
 * Double quotes (") should only be used for quoting text from people, documents or web sites
 *	No quotes around 'Also See' type references
 *	Avoid '(above)' or '(below)' in text.  Use hypertext links instead
-*	'TODO' or in the text means that it is still a work-in-process and needs to be updated.  It may be followed by descriptive text in italics describing the issue to be fixed
+*	``.. todo:: description...`` means that it is still a work-in-process and needs to be updated.  It may be followed by descriptive text in italics describing the issue to be fixed
 * Use \`\`\literal text blocks\`\` when describing preference values  - ``literal text blocks``
 * Use \:menuselection\:\`Menu --> Preferences --> ..\` for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
 * Use \:guilabel\:\`\GUI labels\` for buttons  - :guilabel:`GUI labels`

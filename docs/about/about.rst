@@ -95,6 +95,7 @@ Lead Developers
 
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
+* Peter Akers, Queensland Australia (flash62au)
 
 Developers
 
@@ -120,7 +121,6 @@ Documentation / Management
 * Peter Cole - Brisbane QLD Australia (peteGSX)
 * Colin Grabham, Condobolin NSW Straya (Kebbin)
 * Paul Antoine, Western Australia (Paul Antoine)
-* Peter Akers, Queensland Australia (flash62au)
 
 Testing / Research / Support
 =============================
@@ -137,3 +137,17 @@ Testing / Research / Support
 * Larry Dribin - (H0Guy, LarryD)
 * Henk Kruisbrink - UK (Henkk)
 * Colin Grabham, Condobolin NSW Straya (Kebbin)
+
+Related Software
+================
+
+Making sure this software works well with |EX-CS|
+
+* JMRI
+  
+  * M Steve Todd - USA
+
+* Engine Driver (ED)
+  
+  * M Steve Todd - USA
+  * Peter Akers, Queensland Australia (flash62au)

@@ -15,7 +15,7 @@ Here you'll find all the necessary resources and information for contributing to
 
   overview
   github
-  software
   requirements
+  software
   development
   website/index

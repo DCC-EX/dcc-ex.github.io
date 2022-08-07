@@ -95,7 +95,7 @@ When installing you will be prompted to choose the preview method, with the "Esb
 
 Note, however, that the Esbonio server will only generate live previews of the pages you are actively editing, and therefore it will not give you a complete updated view of the entire website.
 
-Refer to the :doc:`/about/contributing/website` contributing page for more info on generating reliable local previews.
+Refer to the :doc:`/about/contributing/website/index` contributing page for more info on generating reliable local previews.
 
 Images
 _______

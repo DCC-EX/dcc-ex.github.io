@@ -18,4 +18,4 @@ Here you'll find all the necessary resources and information for contributing to
   software
   requirements
   development
-  website
+  website/index

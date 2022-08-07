@@ -64,8 +64,7 @@ You will need to find or purchase:
 #. a known-working **DCC-equipped locomotive**
 
 
-..
-  TODO See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organised for you in one place.
+.. TODO:: URGENT See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organised for you in one place.
 
 Software
 ________

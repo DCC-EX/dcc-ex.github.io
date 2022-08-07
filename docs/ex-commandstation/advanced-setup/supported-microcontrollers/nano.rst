@@ -16,7 +16,9 @@ Arduino Nano Setup
 
 The Arduino Nano is an Uno in disguise. It has the same processor, the same speed, the same (small) amount of memory. It's just small. The disadvantage is that you can't plug shields on top of it, but the benefit is that it can fit in a small box. You can always use all the same Uno shields, like the full-sized motor shield, you just have to solder or use wire jumpers to make the connections.
 
-.. NOTE:: Be sure to compare the Mega before using the Nano ***TODO: add link to the comparison page***
+.. NOTE:: Be sure to compare the Mega before using the Nano 
+   
+.. TODO:: add link to the comparison page
 
 .. figure:: /_static/images/microcontrollers/nano.jpg
    :alt: Arduino Nano
@@ -77,9 +79,11 @@ The Gravitech is available from RobotShop and direct from Gravitech for $29 US p
 To use this board, you simple plug the Nano into the motor shield (really a carrier board), upload the software and wire it to your track. It is just as easy as Using a Mega and an Arduino Motor shield.
 
 
-***TODO: Finish the above and the below sections***
-***TODO: Show VCC power wiring option***
-***TODO: Show all the other Nano sized terminal boards and the ethernet board***
+.. TODO:: Finish the above and the below sections
+
+.. TODO:: Show VCC power wiring option
+
+.. TODO:: Show all the other Nano sized terminal boards and the ethernet board
 
 Wiring a Motor Shield
 =====================

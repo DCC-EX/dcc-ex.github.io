@@ -6,6 +6,8 @@ Glossary
 
 |conductor| |tinkerer| |engineer|
 
+.. TODO:: Glossary
+
 .. list-table::
     :widths: 25 75
     :width: 900px

@@ -183,7 +183,7 @@ Have them fabricated
 
 Fritzing diagram
 
-***TODO: Add this board***
+..TODO:: Add this board - Fritzing diagram
 
 https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/
 
@@ -301,7 +301,7 @@ Capture the samples in PulseView
 
 You can save your captures and display them again at any time. More details coming soon.
 
-.. TODO:: Finish this above
+.. TODO:: Finish this above - Capture the samples in PulseView
 
 DCC Track Phase Detector
 ==========================

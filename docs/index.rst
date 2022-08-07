@@ -6,12 +6,11 @@
 DCC-EX Model Railroading 
 ************************
 
-.. image:: ./_static/images/icons/v40banner.jpg
-   :alt: v4_0 Release Banner
-   :class: float-right
-   :scale: 25%
-   :target: download/commandstation.html
- 
+.. rst-class:: dcclink-right
+
+  `We have a New Name! <about/press/new-name.html>`_
+
+
 Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
 Based on off-the-shelf Arduino technology, our products currently include:
  

@@ -74,6 +74,18 @@ table.intro-table {
   border-radius: 5px;
 }
 
+.dcclink-right a {
+  background-color: #00a3b9ff;
+  box-shadow: 0 2px 0 #00353dff;
+  color: white;
+  padding: 0.5em 0.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: none;
+  border-radius: 5px;
+  float:right;
+}
+
 .dcclink a:visited {
   color: whitesmoke
 }

@@ -183,7 +183,7 @@ The same rules as above apply to using 2 boards. The only difference is that we 
 
 Please see `Important Notes on Current Sensing (IBT_2)`_.
 
-TODO: Fritzing image of 2 ibt 2 boards here
+.. TODO:: Fritzing image of 2 ibt 2 boards here
 
 Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 for your MAIN track:
 
@@ -261,7 +261,7 @@ Using External Current Sense
 
 Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (5A or 10A boards), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
 
-***TODO: Add help or point to a section for external current sense boards***
+.. TODO:: Add help or point to a section for external current sense boards***
 
 Parts List (IBT_2)
 =====================

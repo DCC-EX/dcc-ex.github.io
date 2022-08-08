@@ -74,7 +74,7 @@ ________________
 * Heading levels:
 
   * **#########** with overline, for parts - not really used
-  * **\*\*\*\*\*\*\*\*\*\*\*\** Page Titles
+  * \*\*\*\*\*\*\*\*\*\*\*\* Page Titles
   * **=========** for sections
   * **\_\_\_\_\_\_\_\_\_\_\_\_** for subsections  (underscore)
   * **\^\^\^\^\^\^\^\^\^\^** for subsubsections

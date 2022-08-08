@@ -524,7 +524,7 @@ Image Types
 We typically prefer compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
 
 Drawing and saving graphs and schemas
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_____________________________________
 
 Use `draw.io <https://app.diagrams.net/>`_ to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
 
@@ -533,7 +533,7 @@ Images, diagrams, and any other artefacts created by draw.io that aren't publish
 An `image-artefacts <https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx/image-artefacts/>`_ directory has been created in the documentation repository for this purpose. Any draw.io artefacts can be saved here and will not be published as part of the website build.
 
 SVG images
-~~~~~~~~~~
+__________
 
 We are currently experimenting with using SVG images to provide contextual links to be embedded within the images so users can be linked directly to relevant documentation. For example, a Fritzing diagram of a CommandStation connected to some peripherals can be given context, and clicking on the relevant component can take you directly to that documentation page.
 
@@ -553,7 +553,7 @@ To include the SVG file, use the ``raw:: html`` directive:
     :file: ../_static/images/image.svg
 
 CSS for SVG images
-~~~~~~~~~~~~~~~~~~
+__________________
 
 SVG images can be effectively controlled by CSS, and the implementation of this is controlled via the overall "svg" CSS directive and/or standard CSS classes and IDs.
 

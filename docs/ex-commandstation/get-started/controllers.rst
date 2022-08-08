@@ -57,7 +57,7 @@ Connecting via WiFi
 
 Direct (Without JMRI)
 
-For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS||. You need a CS with a WiFi Shield. Here is an image that represents a direct connection.
+For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a CS with a WiFi Shield. Here is an image that represents a direct connection.
 
 .. image:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS

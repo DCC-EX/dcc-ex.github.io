@@ -9,7 +9,7 @@ We have changed our name from **'DCC++ EX'** to |DCC-EX|, dropping the **'++'**.
 
 We have also changed our product names to have a consistent form of **EX-<product name>** (without spaces in the product names if there are multiple words).
 
-|EX-CS| |_| |_| |EX-I| |_| |_| |EX-R| |_| |_| |EX-WT| |_| |_| |EX-TT| |_| |_| |EX-DCCI|
+|EX-CS| |_| - |_| |EX-I| |_| - |_| |EX-WT| |_| - |_| |EX-R| |_| - |_| |EX-TT| |_| - |_| |EX-DCCI|
 
 To go along with it we have created logos for the individual products
 
@@ -17,6 +17,11 @@ To go along with it we have created logos for the individual products
 
 Why did we do this
 __________________
+
+
+.. todo:: URGENT Need text for the new name page
+
+**TODO**  URGENT Need text for the new name page
 
 * Moved on from the original DCC++...
 * Confusion between the team and the Command Station...  DCC++EX term used interchangeably
@@ -38,4 +43,3 @@ ________
 * internal code references the <DCC++> codes/commands
 * |BSC| won't be renamed but does get a new logo
 
-.. todo:: URGENT Need text for the new name page

@@ -14,9 +14,9 @@ DCC-EX Model Railroading
 Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
 Based on off-the-shelf Arduino technology, our products currently include:
  
-* |EX-CS| - our DCC command station for controlling your model railroad |BR| |BR|
+* |EX-CS| - our DCC command station for controlling your model railroad
 
-  * |EX-I| - our user friendly installer that takes care of loading the command station firmware onto your Arduino hardware
+  * |EX-I| - our user friendly installer for loading the command station firmware onto your Arduino hardware
   * |EX-R| - the scripting language, built into the |EX-CS|, allowing to to automate your model railroad |BR| |BR|
 
 * |EX-WT| - a simple web based controller for your command station

@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |donate-button|
 
-*************************************
-Differences between DCC++ and DCC-EX?
-*************************************
+***************************
+DCC++ VS DCC-EX? [Oct 2022]
+***************************
 
 .. sidebar::
 
@@ -120,6 +120,3 @@ Click here for :doc:`The DCC-EX Team Credits <index>`
 
 Fred Decker
 October 2020
-
-.. 
-  todolist::

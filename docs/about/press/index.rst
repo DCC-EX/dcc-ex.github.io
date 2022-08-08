@@ -10,6 +10,6 @@ Press / Announcements
     :maxdepth: 1
 
     rewrite
-    release-notes
     v40-announce
+    release-notes
     new-name

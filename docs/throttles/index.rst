@@ -40,6 +40,7 @@ ______________________________
 - :doc:`EX-Web-Throttle <software/ex-webthrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
+- :doc:`JMRI <software/jmri>`
 
 wiThrottle Protocol Based Throttles
 ___________________________________
@@ -65,21 +66,21 @@ ___________________________________
 Throttles - By Client Technology
 ================================
 
-Web (Windows, OSX, Linux)
-_________________________
+Web Browser (Windows, OSX, Linux)
+_________________________________
 
 - :doc:`EX-Web-Throttle (Web Browser) <software/ex-webthrottle>`
 
-Android
-_______
+Android (Phones and Tablets)
+____________________________
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
 - :doc:`DigiTrainsPro (Android) <software/digitrainspro>`
 
-Apple iOS
-_________
+Apple iOS (Phones and Tablets)
+______________________________
 
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
@@ -93,6 +94,11 @@ __________________
 - :doc:`WiTcontroller (Hardware) <hardware/witcontroller>`
 - :doc:`TCS UWT-50 (Hardware) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (hardware) <hardware/streamdeck>`
+
+Personal Computers
+__________________
+
+- :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
 
 Reference
 =========

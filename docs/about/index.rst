@@ -12,14 +12,17 @@ Find out about who we are and what's different and new in |DCC-EX| as well as a 
     :maxdepth: 1
 
     about
-    licence
     press/index
-    roadmap
-    site-map
-
 
 .. toctree::
     :maxdepth: 2
 
     contributing/donate
     contributing/index
+
+.. toctree::
+    :maxdepth: 1
+
+    licence
+    roadmap
+    site-map

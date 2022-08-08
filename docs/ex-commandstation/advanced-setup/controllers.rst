@@ -20,9 +20,6 @@ You need just two things that work together to operate your model railroad:
 
 * A Controller (aka Front-end, Cab, or Throttle)
 
-.. todo:: URGENT This page needs to be cut down to just a couple of options  (Full version to remain in the advanced section)
-
-
 The EC-CommandStation
 =====================
 

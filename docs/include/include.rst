@@ -32,11 +32,14 @@
 ..
 .. |BSC| raw:: html
 
-   <span style="font-weight: bold; color: #00353d; font-size: 100%;">Base Station Classic (DCC++)</span>
+   <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
 ..
 .. |br| raw:: html
 
    <br />
+..
+.. |_| unicode:: 0xA0
+   :trim:
 ..
 .. |force-break| raw:: html
 

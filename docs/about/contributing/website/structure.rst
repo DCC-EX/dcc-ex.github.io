@@ -26,11 +26,11 @@ Elements
 
 The elements of the documentation fall into the following broad categories:
 
-* Folders
-* Pages
-* Images
-* Documents / Files
-* Image Artifacts / originals   (used to create the images, but not part of the documentation)
+* `Folders`_
+* `Pages`_
+* `Images <Image Types>`_
+* `Documents / Files`_
+* `Image Artifacts`_ / originals   (used to create the images, but not part of the documentation)
 
 Folders
 =======
@@ -42,11 +42,12 @@ Folders *follow* the basic structure:
 * Folder name
 
   * index.rst
-  * getting-started.rst
+  * getting-started.rst   or    overview.rst
   * ... .rst (as needed)
 
-* Every folder SHOULD have a 'index.rst' file which is the primary navigation point for the pages in the folder |BR| There are exceptions to this rule, but use them carefully.
+Every folder SHOULD have a 'index.rst' file which is the primary navigation point for the pages in the folder |BR| There are exceptions to this rule, but use them carefully.
 
+Every folder SHOULD have either a 'getting-started.rst' OR and 'overview.rst' file which is the second navigation point for the pages in the folder |BR| There are exceptions to this rule (e.g. the Throttle options), but use them carefully.
 
 Pages
 =====
@@ -55,15 +56,21 @@ Pages *generally* follow the basic structure:
 
 * Page Name (.rst file)
   
-  * Meta Keywords 
-  * Includes
-  * Product Icon (where appropriate)
-  * Main Heading
-  * On This Page - Table of Contents (longer pages with multiple headings)
-  * <content>
-  
-    * Next Steps
+  * `Meta Keywords`_
+  * `Includes`_
+  * `Product Icon`_ (where appropriate)
+  * `Page Heading`_
+  * `Comfort Level Logos`_
+  * `On This Page - Table of Contents`_ (on longer pages with multiple headings)
+  * `Page Content`_
+    * `Headings and Sub Headings`_
 
+      * Text, links, images, etc.
+      * ...
+    
+    * Next Steps Heading  (if it is part of sequence of pages this is mandatory)
+
+Each 
 
 Meta Keywords
 _____________
@@ -76,10 +83,12 @@ Generally each page should start with any additional meta keywords that are appr
 
 For example, the meta tags for levels.rst are:
 
-.. code-block:: 
+.. admonition:: Example
 
-  .. meta::
-   :keywords: Comfort Levels Conductor Tinkerer Engineer
+  ::
+
+    .. meta::
+    :keywords: Comfort Levels Conductor Tinkerer Engineer
 
 Includes
 ________
@@ -93,10 +102,12 @@ All pages MUST include two standard include files. ``/include/include.rst`` and,
 
 For example:
 
-.. code-block:: 
+.. admonition:: Example
 
-  .. include:: /include/include.rst
-  .. include:: /include/include-l2.rst
+  ::
+
+    .. include:: /include/include.rst
+    .. include:: /include/include-l2.rst
 
 
 .. note:: 
@@ -111,20 +122,25 @@ If the page specifically and only relates to of the |DCC-EX| products, the speci
 
 For example:
 
-.. code-block:: 
+.. admonition:: Example
 
-  .. include:: /include/include.rst
-  .. include:: /include/include-l3.rst
-  |EX-CS-LOGO|
+  ::
 
-  ***************************************
+
+    .. include:: /include/include.rst
+    .. include:: /include/include-l3.rst
+    |EX-CS-LOGO|
+
+    ***************************************
 
 Page Heading
 ____________
 
 Each page must have a Main Heading. Main Headings MUST have asterisks above and below them:
 
-  .. code-block:: 
+.. admonition:: Example
+
+  ::
 
     *************
     Main Heading
@@ -139,59 +155,68 @@ On our :doc:`/levels` page, we refer to Conductor, Tinkerer, and Engineer level 
 
 There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.
 
-Graphic logos for callouts/panels:
+* Where possible, use the expansions for the level images:
 
-.. image:: /_static/images/conductor.png
-    :alt: Conductor Level
-    :scale: 40%
+  * \|conductor\| |conductor|
+  * \|tinkerer\| |tinkerer|
+  * \|engineer\| |engineer|
+  * \|conductor-no-text\| |conductor-no-text|
+  * \|tinkerer-no-text\| |tinkerer-no-text|
+  * \|engineer-no-text\| |engineer-no-text|
+
+* Where possible, use the Team and Product names the expansions (not possible in headings)
   
-.. image:: /_static/images/tinkerer.png
-    :alt: Tinkerer Level
-    :scale: 40%
+  * \|DCC-EX\| for |DCC-EX|
+  * \|EX-CS\| for |EX-CS|
+  * \|EX-I\| for |EX-I|
+  * \|EX-R\| for |EX-R|
+  * \|EX-TT\| for |EX-TT|
+  * \|EX-DCCI\| for |EX-DCCI|
+  * \|BSC\| for |BSC|
 
-.. image:: /_static/images/engineer.png
-    :alt: Tinkerer Level
-    :scale: 40%
+* Where possible, use the expansions for the level text 
 
-Graphic and text logos for page headings:
+  * \|conductor-text\| |conductor-text|
+  * \|tinkerer-text\| |tinkerer-text|
+  * \|engineer-text\| |engineer-text|
 
-.. image:: /_static/images/conductor-level.png
-    :alt: Conductor Level
-    :scale: 40%
-  
-.. image:: /_static/images/tinkerer-level.png
-    :alt: Tinkerer Level
-    :scale: 40%
-
-.. image:: /_static/images/engineer-level.png
-    :alt: Tinkerer Level
-    :scale: 40%
-
-Here's an example for a Conductor level page heading graphic:
+Only if really necessary use image tags:
 
 .. code-block:: 
 
+  .. image:: /_static/images/conductor.png
+    :alt: Conductor Level
+    :scale: 40%
+  
   .. image:: /_static/images/conductor-level.png
     :alt: Conductor Level 
     :scale: 40%
 
 Refer to `images`_ below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the |EX-TT| :doc:`/ex-turntable/assembly` page.
 
+----
 
 On This Page - Table of Contents
 ________________________________
 
+.. todo:: On This Page - Table of Contents
+
+**todo** On This Page - Table of Contents
+
+
+
+----
 
 Page Content
 ____________
 
 Page content can include:
 
-* Headings and Sub Headings
-* Text
-* Links
-* Tables
-* Images / Drawings
+* `Headings and Sub Headings`_
+* `Text`_
+* `Links / Hyperlinks`_
+* `Tables`_
+* `Including Images / Drawings <Images>`_
 
 Headings and Sub Headings
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -232,24 +257,56 @@ Headings and Sub Headings
     Last level
     ~~~~~~~~~~~
 
-All heading underlines and overlines must be at least as long as the text of the.
+All heading underlines and overlines must be at least as long as the text of the heading text.
+
+----
 
 Text
 ^^^^
 
-Links
-^^^^^
+.. todo::   text content
+
+**TODO** text content
+
+Refer the :doc:`/about/contributing/website/style-guide`
+
+----
+
+Links / Hyperlinks
+^^^^^^^^^^^^^^^^^^
 
 Internal - Same Page
 ~~~~~~~~~~~~~~~~~~~~
 
+.. todo::   internal links - same page
+
+Sphinx cross-references are used for internal links in the same document/page. This ensures they are correct and by default will use the destination heading text as the link text.
+
+These take either of two forms. **Preferred form**:
+
+.. admonition:: Example
+
+  ::
+
+    `Internal - Same page`_
+
+    `some other text to apper in the apage <Internal - Same page>`_
+
+or 
+
+.. admonition:: Example
+
+  ::
+
+    :ref:`Internal - Same page`
+
+    :ref:`some other text to apper in the apage <Internal - Same page>`
 
 
-Internal - Different Page
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Internal - To a Different Page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sphinx cross-references are used for internal links. This ensures they are
-correct and by default will use the destination heading text as the link text.
+Sphinx cross-references are used for internal links. This ensures they are correct and by default will use the destination heading text as the link text.
 
 To link to a page use ``:doc:``:
 
@@ -262,7 +319,10 @@ To link to a page use ``:doc:``:
   :doc:`/reference/hardware/motor-boards`
 
 The document name is a relative or absolute (within the documentation) file
-path, without the .rst suffix.
+path, without the .rst suffix.  Absolute are generally safer.
+
+Internal - To a Sub Heading of a Different Page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To link to a position within a page use ``:ref:``. A reST label can be used as
 the reference, but on the |DCC-EX| website headings are made available to use as
@@ -328,8 +388,8 @@ source file, define a target:
 
     Link to the `DCC-EX home page <https://dcc-ex.com/index.html>`_.
 
-Downloads
-~~~~~~~~~
+Downloads or Important Links
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download buttons are created using the ``dcclink`` class, added using the
 ``.. rst-class::`` directive:
@@ -345,6 +405,24 @@ Download buttons are created using the ``dcclink`` class, added using the
     .. rst-class:: dcclink
 
        `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+
+|force-break|
+
+    .. rst-class:: dcclink-right
+
+       `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+
+or (float right)...
+
+.. admonition:: Example
+
+    ::
+
+        .. rst-class:: dcclink-right
+
+           `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+
+
 
 
 Tables
@@ -440,9 +518,8 @@ A single ``|`` adds an additional blank line before the next paragraph in the ou
 Use a figure when including a caption. Sphinx will automatically number the figure. Add a ``:name:`` option to be able to refer to the figure in the text using ``:numref:`<figure name>```.
 
 
-
-Image types
-~~~~~~~~~~~
+Image Types
+===========
 
 We typically prefer compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
 
@@ -529,6 +606,16 @@ To then ensure the SVG only occupies 50% of the page, this is added to the CSS t
   }
 
 Going any further into the details and options of controlling SVGs via CSS is beyond the scope of this documentation, and beyond the knowledge of the author! The Internet or your local, friendly CSS guru are your best options to understand what is possible.
+
+Documents / Files
+=================
+
+.. todo:: documents description
+
+Image Artifacts
+===============
+
+.. todo:: image Artifacts description
 
 
 Hiding pages and comments

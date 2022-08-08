@@ -52,10 +52,10 @@ ________________
   * \|tinkerer-text\| |tinkerer-text|
   * \|engineer-text\| |engineer-text|
 
-* Use British/Australian/Canadian spelling e.g. 'colour' not 'color'.  |br|\ (Primarily because it is used in more English speaking countries)
+* Use British/Australian/Canadian/Indian (pretty much every except the USA) spelling e.g. 'colour' not 'color'.  |br|\ (Primarily because it is used in more English speaking countries)
 * Preferred Terms:
   
-  * Use "Motor Driver", not "Motor Shield" "Moto Board" "Motorboard"
+  * Use **"Motor Driver"**, not "Motor Shield", "Motor Board", "Motorboard"
   * In general use **'loco'** instead of 'locomotive' or 'engine'
 
 *	Use railroad/railway terminology that is understandable by all English-speaking people. |br|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.
@@ -66,20 +66,26 @@ ________________
 * Double quotes (") should only be used for quoting text from people, documents or web sites
 *	No quotes around 'Also See' type references
 *	Avoid '(above)' or '(below)' in text.  Use hypertext links instead
-*	``.. todo:: description...`` means that it is still a work-in-process and needs to be updated.  It may be followed by descriptive text in italics describing the issue to be fixed
-* Use \`\`\literal text blocks\`\` when describing preference values  - ``literal text blocks``
-* Use \:menuselection\:\`Menu --> Preferences --> ..\` for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
-* Use \:guilabel\:\`\GUI labels\` for buttons  - :guilabel:`GUI labels`
-* Avoid using 'phone' alone. Preferably use 'Android device/phone'
+*	**``.. todo:: description...``** means that it is still a work-in-process and needs to be updated.  It may be followed by descriptive text in italics describing the issue to be fixed.  If you want to to show in the page you will need add a separate line 
+* Use **\`\`\literal text blocks\`\`** when describing preference values  - ``literal text blocks``
+* Use **\:menuselection\:\`Menu --> Preferences --> ..\`** for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
+* Use **\:guilabel\:\`\GUI labels\`** for buttons  - :guilabel:`GUI labels`
 * For dates, use dd-mmm-yyyy or yyyy-mm-dd to avoid confusion with the way dates are uniquely written in the US. |br|\ e.g. 2-Mar-2022 or 2022-3-2, not 2-3-2022 
 * Heading levels:
 
-  * ######### with overline, for parts - not really used
-  * \*\*\*\*\*\*\*\*\*\*\*\* Page Titles
-  * \=\=\=\=\=\=\=\=\=\ for sections
-  * \_\_\_\_\_\_\_\_\_\_\_\_ for subsections
-  * \^\^\^\^\^\^\^\^\^\^ for subsubsections
-  * \~\~\~\~\~\~\~\~\~\~ for paragraphs
-  * only if really needed: 
+  * **#########** with overline, for parts - not really used
+  * **\*\*\*\*\*\*\*\*\*\*\*\** Page Titles
+  * **=========** for sections
+  * **\_\_\_\_\_\_\_\_\_\_\_\_** for subsections  (underscore)
+  * **\^\^\^\^\^\^\^\^\^\^** for subsubsections
+  * **\~\~\~\~\~\~\~\~\~\~** for paragraphs
+  * only if really needed (i.e. avoid): 
   
-     * \'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\' for sub paragraphs
+     * **\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'** for sub paragraphs
+     * **----------------------** for sub-sub-paragraphs (hyphens)
+
+* To force a :
+
+  * Line break/new line use **\|br\|**
+  * Non-breaking space use **\|_\|**
+  * Paragraph break that a 'float right' element must not be placed before a point use **\|force-break\|**  |br| useful if the 'float right' element is being placed beside another 'float right' element, rather than below.

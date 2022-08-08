@@ -18,3 +18,4 @@ Throttles (Software)
     cab-engineer
     digitrainspro
     srcpclient
+    jmri

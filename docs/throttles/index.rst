@@ -67,7 +67,7 @@ Throttles - By Client Technology
 ================================
 
 Web Browser (Windows, OSX, Linux)
-_________________________
+_________________________________
 
 - :doc:`EX-Web-Throttle (Web Browser) <software/ex-webthrottle>`
 

@@ -56,7 +56,7 @@ What You Will Do
 .. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector used on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands, so may require you to install a driver.
 
 1. Flashing the ESP8266 chip
-=========================
+=============================
 
 a. Plug in and test your Mega
 _____________________________
@@ -318,8 +318,8 @@ _________________________________________________
 - Select the correct COM port that sees your Mega and set baud rate to 115200
 - Click the upload button (the arrow pointing to the right near the checkmark in the upper left of the program window)
 
-5. Operate Your EX-Command tation
-================================
+5. Operate Your EX-CommandStation
+=================================
 
 After the Arduino IDE uploads |EX-CS| sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.
 

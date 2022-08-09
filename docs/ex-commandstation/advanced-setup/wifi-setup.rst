@@ -65,7 +65,7 @@ What you will need (for WiFi)
    
    While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10kB of progmem and about 2kB of RAM). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like |JMRI| being shared.
 
-**Either: **
+**Either:**
 
 * A |EX-CS| - Command Station (CS) made from a **Mega** and an **Arduino Motor Shield**
 * One of the above WiFi boards

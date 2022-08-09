@@ -16,7 +16,7 @@ WiFi Options
 
 The purpose of this WiFi solution is for connecting up to 5 WiFi Throttles DIRECTLY to the |EX-CS|, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like |JMRI|, you can :doc:`skip ahead to the next page </ex-commandstation/get-started/installer>`.
 
-There are many ways to add WiFi to your Command Station. We will cover four methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this.
+There are many ways to add WiFi to your Command Station. We will cover four methods here. You may need to know a little bit about networking, but if you can get your phone to connect to your home network, you can do this.
 
 You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our :doc:`Support Page </support/index>` if you have a question.
 
@@ -60,11 +60,20 @@ Fore more boards you may be able to use, see the :doc:`WiFi Boards Section </ref
 What you will need (for WiFi)
 =============================
 
-* A Command Station (CS) made from a **Mega** and an Arduino Motor Shield
+.. NOTE:: 
+   :class: note-float-right
+   
+   While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10kB of progmem and about 2kB of RAM). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like |JMRI| being shared.
+
+**Either: **
+
+* A |EX-CS| - Command Station (CS) made from a **Mega** and an **Arduino Motor Shield**
 * One of the above WiFi boards
 * Two (2) Male to Female Jumpers (plus 3 more if you are using an ESP-01 or 01s)
 
-.. NOTE:: While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10kB of progmem and about 2kB of RAM). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like |JMRI| being shared.
+**Or:**
+
+* A |EX-CS| - Command Station (CS) made from a **Mega+WiFi Combo Board**
 
 Quick links
 ===========
@@ -85,7 +94,7 @@ We like this board here at |DCC-EX|. It is simple, inexpensive, easy to use, and
 
    Makerfabs ESP8266 WiFi Shield
 
-Installing the board follows the same procedure in the previous section on assembly. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.
+Installing the board follows the same procedure in the :doc:`section on assembly </ex-commandstation/get-started/assembly>`. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.
 
 Remove the plastic jumpers
 --------------------------
@@ -114,7 +123,7 @@ Turn the board so that the tab end is to the left and the power connectors on th
 Seat the boards
 ---------------
 
-Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (:numref:`wifi-right-side-pins-aligned`). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see :numref:`wifi-fully-seated-boards`).
+Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (:numref:`wifi-right-side-pins-aligned-advanced`). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see :numref:`wifi-fully-seated-boards-advanced`).
 
 
 .. figure:: /_static/images/wifi_seat2a.jpg

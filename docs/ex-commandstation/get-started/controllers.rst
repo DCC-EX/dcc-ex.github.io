@@ -14,12 +14,13 @@ Choosing a Controller (Throttle)
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 3
+    :depth: 4
     :local:
 
 This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
 
-----
+What You Need and Why You Need It
+=================================
 
 You need just two things that work together to operate your model railroad:
 
@@ -27,14 +28,16 @@ You need just two things that work together to operate your model railroad:
 * A Controller (aka Front-end, Cab, or Throttle)
 
 The EX-CommandStation
-=====================
+_____________________
 
 The |EX-CS| is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller, a motor driver and a WiFi shield. The CS accepts instructions from a controller and generates packets that are transmitted to your track.
 
 The Controller (Throttle)
-=========================
+_________________________
 
 Since the |EX-CS| simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. It isn't very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉  A controller can be a hardware device like a handheld throttle (also called a Cab), an App that runs on your phone, a Web Page, or front-end software like |JMRI| or Rocrail that runs on a computer or Raspberry Pi. 
+
+----
 
 Connection Types
 =================
@@ -53,9 +56,7 @@ On this page we are only going to cover a small number of popular options that w
 Here is a list of *some* of the controllers you can use with the |EX-CS|.
 
 Connecting via WiFi
------------------------------
-
-Direct (Without JMRI)
+___________________
 
 For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a CS with a WiFi Shield. Here is an image that represents a direct connection.
 
@@ -79,8 +80,6 @@ Engine Driver (Android \| WiThrottle \| WiFi)
 * The first method is by connecting directly to the CS via WiFi. You will need a WiFi board connected to the CS (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
 * The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. (We won't cover that option here.)
 
-TODO 
-
 See :doc:`Engine Driver Page </throttles/software/engine-driver>`
 
 WiThrottle (iOS \| WiThrottle \| WiFi)
@@ -90,14 +89,20 @@ WiThrottle (iOS \| WiThrottle \| WiFi)
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>`
 
-
 Connection via USB
-------------------
+__________________
 
-There currently only one USB compatible controller (throttle) for the |EX-CS|.
+Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.
+
+.. image:: /_static/images/throttles/webthrottle_setup.jpg
+   :alt: EX-WebThrottle
+   :align: center
+   :scale: 45%
 
 Compatible USB Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There is currently only one USB compatible controller (throttle) for the |EX-CS|.
 
 Our EX-WebThrottle (DCC++ | USB/Serial)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,19 +114,5 @@ The simplest option is to just use a throttle connected directly to the CS. The 
    :align: center
    :scale: 40%
 
-Here are your connections, just a computer running a chromium-based browser, a USB cable, and your Command Station.
-
-.. image:: /_static/images/throttles/webthrottle_setup.jpg
-   :alt: EX-WebThrottle
-   :align: center
-   :scale: 45%
-
 For operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`
-
-Connecting via USB cable
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Probably the way most people use |JMRI| is to have a Raspberry Pi running |JMRI| connected via a short USB cable to the |EX-CS|. They then use |Engine Driver| on their phone, connected to |JMRI| via WiFi as a throttle for their engines. If you want to actually operate using all the features of |JMRI|, you can connect a small monitor, keyboard, and mouse to your computer or Raspberry Pi. You can replace the USB cable with a USB Wireless Bridge which is covered in that section. But let's look at another method next.
-
-.. TODO:: insert diagram here - Connecting via USB cable
 

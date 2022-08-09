@@ -120,14 +120,14 @@ Now do the the other side. If all the pins are straight and lined up properly, h
 .. figure:: /_static/images/wifi_seat2a.jpg
    :alt: Get the right side pins aligned
    :scale: 75%
-   :name: wifi-right-side-pins-aligned
+   :name: wifi-right-side-pins-aligned-advanced
 
    Get the right side pins aligned
 
 .. figure:: /_static/images/wifi_seat_full.jpg
    :alt: Fully seated boards
    :scale: 75%
-   :name: wifi-fully-seated-boards
+   :name: wifi-fully-seated-boards-advanced
 
    Fully seated boards
 

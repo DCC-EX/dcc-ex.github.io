@@ -64,8 +64,8 @@ table.intro-table {
 }
 
 .dcclink a {
-  background-color: lightseagreen;
-  box-shadow: 0 2px 0 darkslategray;
+  background-color: #00a3b9ff;
+  box-shadow: 0 2px 0 #00353dff;
   color: white;
   padding: 0.5em 0.5em;
   position: relative;

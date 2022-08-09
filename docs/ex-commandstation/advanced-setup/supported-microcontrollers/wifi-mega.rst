@@ -11,11 +11,10 @@ Mega+WiFi Configuration
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
-A Operational Standalone WiFi DCC Command Station
-=================================================
+**A WiFi EX-CommandStation on one Board**
 
 .. figure:: /_static/images/mega_wifi.png
    :alt: Mega WiFi
@@ -32,7 +31,7 @@ This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our
 
 
 What You Will Need
-------------------
+==================
 
 This is our tested and proven configuration
 
@@ -48,17 +47,19 @@ This is our tested and proven configuration
 \* NOTE: The L298 Based motor drivers like the Arduino Motor Shield have a 1.5-2V voltage drop. More efficient boards do not have this issue. Be careful in choosing the correct voltage so that you don't put too much voltage on the track and potentially damage your decoders.
 
 What You Will Do
-----------------
+================
 
-1. Download the ESP Files
-2. Flash the ESP8266 chip
-3. Edit your config file and Load the |EX-CS| v3.0.6 to the Mega2560 chip
-4. Setup your Throttle
+1. Flash the ESP8266 chip (requiring downloading of the ESP Files)
+2. Edit your config file and Load the |EX-CS| v3.0.6 to the Mega2560 chip
+3. Setup your Throttle
 
 .. Note:: This board uses a Micro-USB connector instead of the USB-B printer type connector used on regular Arduino Boards. It also uses the CH340G USB to Serial Driver chip instead of the FTDI on Arduino brands, so may require you to install a driver.
 
-1. Plug in and test your Mega
------------------------------
+1. Flashing the ESP8266 chip
+=========================
+
+a. Plug in and test your Mega
+_____________________________
 
 Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
 
@@ -79,13 +80,13 @@ Once you can see your computer recognizes your board, **remember the port**. For
 
 For more detail on how to install the correct CH340 drivers for your OS, you can see this `SparkFun Tutorial <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
-2. Download and install the flash download tool
------------------------------------------------
+b. Download and install the flash download tool
+_______________________________________________
 
 There are two tools you can use to flash the firmware, one is the **"Espressif Flash Download tool"** for Windows and the other is a Python script called **esptool** that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.
 
 Using the Flash Download Tool (Windows)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware files by clicking on the buttons below. Unzip them wherever you like:
 
@@ -98,7 +99,7 @@ Download the Flash Download Tool and the ESP8266_NONOS_AT_Bin_v1.7.4 firmware fi
    `ESP8266 Firmware Zipped </_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip>`_
 
 Using esptool.py (Windows, Mac, Linux)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button below:
 
@@ -128,8 +129,8 @@ If you got an error about setuptools being missing, install setuptools with:
 
    $ pip install setuptools
 
-3. Set the switches on your Mega for flashing
----------------------------------------------
+c. Set the switches on your Mega for flashing
+_____________________________________________
 
 With the Mega UNPLUGGED (no power connected!), you will set some switches. Use the following diagram to see the locations on the board. You can click on any picture to enlarge it.
 
@@ -166,14 +167,14 @@ Your board should be configured follows:
  -  Connect Mega+WiFi board to your computer with the USB cable
  -  press the **Mode button**
 
-1. Flash the Firmware
----------------------
+d. Flash the Firmware
+_____________________
 
 With the Flash Download Tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
 Run the Flasher Tool 
-""""""""""""""""""""
+~~~~~~~~~~~~~~~~~~~~
 
 NOTE: It may take a few seconds to open while you see a black cmd window
 
@@ -219,10 +220,10 @@ After flashing, the ESP8266 Log will show it uploaded them all successfully and 
 
 - Disconnect the USB cable.
 
-Skip ahead to :ref:`ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:3. Set the switches on your Mega for flashing`
+Skip ahead to :ref:`ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:c. Set the switches on your Mega for flashing`
 
 With esptool.py
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 Unzip the firmware files and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on macOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected::
 
@@ -240,8 +241,8 @@ Windows::
 
 If there is an error, press and hold the mode button, then press and release the reset button while still holding down the mode button. Press enter to send the esptool command and let go of the mode button.
 
-1. Set the switches for run/sketch mode
-==========================================
+e. Set the switches for run/sketch mode
+_______________________________________
 
 With the power disconnected from the Mega, set the switches back to the upload/run mode
 - dip switches 5,6,7 OFF and 1,2,3,4 ON
@@ -255,7 +256,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 
    Switch Settings for sketch load/run
 
-1. Decide if you want Access Point Mode or Station Mode
+2. Decide if you want Access Point Mode or Station Mode
 =======================================================
 
 Access Point (AP) Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Controllers (Throttles) can find it on your network.
@@ -264,9 +265,11 @@ If you choose to use AP mode, there is nothing you need to do. Just make sure yo
 
 If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the `Short Version of Network Setup`_ below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
+3. Configure the EX-CommandStation Software
+===========================================
 
-1. Download and Configure the EX-CommandStation Software
-========================================================
+Short Version of Network Setup
+______________________________
 
 Download and install |EX-CS| from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 
@@ -276,8 +279,8 @@ Download and install |EX-CS| from by using the Automated exInstaller or using th
 
 :doc:`I know what I'm doing, just point me to the downloads page! </download/ex-commandstation>`
 
-Short Version of Network Setup
-==============================
+Long Version of Network Setup
+_____________________________
 
 :doc:`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/wifi-config>`
 
@@ -286,7 +289,7 @@ All settings are in the config.h file in your EX-CommandStation folder. If you d
 **First, make sure your dip switches are set with 1,2,3,4 ON and 5,6,7 OFF (8 doesn't matter)**
 
 Setting up in Access Point AP Mode
------------------------------------
+__________________________________
 
 - If using the installer, just check the WiFi check box and leave SSID and password alone
   
@@ -296,7 +299,7 @@ Setting up in Access Point AP Mode
 - Upload the software to your Mega+WiFi (see Compile and Re-upload below)
 
 Setting up WiFi in Station (STA) Mode with Router
---------------------------------------------------
+_________________________________________________
 
 - This mode is also sometimes called "Client" mode
 
@@ -308,14 +311,14 @@ Setting up WiFi in Station (STA) Mode with Router
   - Change `#define WIFI_SSID "Your network name"` to the name of your local network.
   - Change `#define WIFI_PASSWORD "Your network passwd"` to the password for your network.
 
-6. Compile and Re-upload DCC-EX to the Arduino
-===============================================
+4. Compile and Re-upload EX-CommandStation software to the Arduino
+==================================================================
 
 - If using the Arduino IDE, select ATMega2560 board from the "tools, boards" menu.
 - Select the correct COM port that sees your Mega and set baud rate to 115200
 - Click the upload button (the arrow pointing to the right near the checkmark in the upper left of the program window)
 
-7. Operate Your Command Station
+5. Operate Your EX-Command tation
 ================================
 
 After the Arduino IDE uploads |EX-CS| sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.
@@ -326,7 +329,7 @@ If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi
 - It should show the ATMega2560 & ESP8266 WiFi communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new |EX-CS|.
 - You should see `++ Wifi Setup CONNECTED ++`
 
-8. Connect your Phone as a Controller (Throttle)
+6. Connect your Phone as a Controller (Throttle)
 ===================================================
 
 - If operating in STA mode, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)
@@ -344,7 +347,7 @@ You should have a direct Throttle connection to the |EX-CS| 3.0.5+ Standalone Wi
 .. Note:: This is an Operations only config, the |Engine Driver| Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the |JMRI| Server Roster.
 
 Diagnosing Problems
-=============================
+===================
 
 There a few things to try if you experience issues connecting or staying connected:
 

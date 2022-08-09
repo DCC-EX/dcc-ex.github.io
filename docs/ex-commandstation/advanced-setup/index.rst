@@ -79,8 +79,8 @@ High Accuracy Waveform Mode
     
     supported-microcontrollers/index
     supported-motorboards/index
-    wifi-setup
     motor-board-config
+    wifi-setup
     wifi-config
     controllers
     arduino-ide

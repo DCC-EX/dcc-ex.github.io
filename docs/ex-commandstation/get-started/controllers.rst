@@ -116,3 +116,10 @@ The simplest option is to just use a throttle connected directly to the CS. The 
 
 For operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`
 
+
+----
+
+Next Steps - Testing your setup 
+===============================
+
+Click :doc:`here <testing>` or click the "next" button to learn how to test your |EX-CS|.

@@ -157,7 +157,7 @@ Once you have configured your options, press this button to upload the software 
 
    If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
-Next Steps - Testing your setup 
-===============================
+Next Steps - Selecting a Controller 
+===================================
 
-Click :doc:`here <testing>` or click the "next" button to learn how to test your |EX-CS|.
+Click :doc:`here <controllers>` or click the "next" button to learn how to select a controller suitable to test and use your |EX-CS|.

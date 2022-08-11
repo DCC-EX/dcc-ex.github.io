@@ -6,7 +6,7 @@
 WiFi Configuration
 *******************
 
-|conductor|
+|tinkerer| |engineer|
 
 .. sidebar:: 
 

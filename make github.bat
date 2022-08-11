@@ -1,0 +1,3 @@
+call make github
+
+pause

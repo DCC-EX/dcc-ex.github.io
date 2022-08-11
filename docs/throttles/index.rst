@@ -1,7 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 ***********************
-Throttles (Controllers)
+Controllers (Throttles)
 ***********************
 
 .. sidebar:: 
@@ -10,7 +10,7 @@ Throttles (Controllers)
     :depth: 2
     :local:
 
-This page contains lists of compatible Throttles (Controllers) that currently support the |EX-CS|.  They are listed two ways:
+This page contains lists of compatible Controllers (Throttles) that currently support the |EX-CS|.  They are listed two ways:
 
 * `By Communication technology <Throttles - By Communication technology>`_
 * `By Client Technology <Throttles - By Client Technology>`_  (e.g. Android VS iOS)

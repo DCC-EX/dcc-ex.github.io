@@ -14,15 +14,15 @@ DCC-EX Model Railroading
 Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
 Based on off-the-shelf Arduino technology, our products currently include:
  
-* |EX-CS| - our DCC command station for controlling your model railroad |BR| |BR|
+* |EX-CS| - our DCC command station for controlling your model railroad
 
-  * |EX-I| - our user friendly installer that takes care of loading the command station firmware onto your Arduino hardware
-  * |EX-R| - the scripting language, built into the |EX-CS|, allowing to to automate your model railroad |BR| |BR|
+  * |EX-I| - our user friendly installer for loading the command station software
+  * |EX-R| - the scripting language, built into the |EX-CS|, allowing you to automate your model railroad |BR| |BR|
 
 * |EX-WT| - a simple web based controller for your command station
-* |EX-TT| - an integrated, stepper based turntable controller running on an additional Arduino microcontroller via an I2C connection
+* |EX-TT| - a stepper based turntable controller running on an additional Arduino microcontroller
 * |EX-DCCI| -  a DCC packet sniffing tool
-* |BSC| - the original DCC++ [#bcs]_  software, packaged in a stable release. (No active development, bug fixes only)
+* |BSC| - the original DCC++ [#bcs]_  software, packaged in a stable release
 
 Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more
 
@@ -73,7 +73,7 @@ If you are just starting your journey with |DCC-EX| we recommend you look at our
 
 ----
 
-.. [#bcs] |EX-CS| is a :doc:`major rewrite <about/press/rewrite>` to the original |BSC| code. |br| If you are still using DCC++, we recommend that you move to |EX-CS|.  It will run on the same hardware.
+.. [#bcs] |EX-CS| is a :doc:`major rewrite <about/press/rewrite>` to the original |BSC| code. No active development. Bug fixes only. |br| If you are still using DCC++, we recommend that you move to |EX-CS|.  It will run on the same hardware.
 
 
 .. toctree::

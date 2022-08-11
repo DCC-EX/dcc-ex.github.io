@@ -17,7 +17,7 @@ Install the software
     :depth: 2
     :local:
     
-This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-installer/index` page for the full instructions.
+This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware (including WiFi). If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-installer/index` page for the full instructions.
 
 ----
 
@@ -157,7 +157,7 @@ Once you have configured your options, press this button to upload the software 
 
    If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
-Next Steps - Testing your setup 
-===============================
+Next Steps - Selecting a Controller 
+===================================
 
-Click :doc:`here <testing>` or click the "next" button to learn how to test your |EX-CS|.
+Click :doc:`here <controllers>` or click the "next" button to learn how to select a controller suitable to test and use your |EX-CS|.

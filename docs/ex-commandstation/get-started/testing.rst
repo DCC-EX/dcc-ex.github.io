@@ -29,9 +29,7 @@ There are two simple options for testing your setup described below:
 
     |tinkerer| |engineer|
 
-    A more advanced option for testing and diagnosing issues is available and is described here ???? if needed 
-
-    .. TODO:: Sidebar advanced option for testing and diagnosing issues
+    Additional options (controllers) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
 
 Using EX-WebThrottle
 ____________________

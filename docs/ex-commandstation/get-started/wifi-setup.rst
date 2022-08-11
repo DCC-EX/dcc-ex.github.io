@@ -17,7 +17,9 @@ Adding WiFi
     :local:
     :depth: 1
 
-*The instructions on this page are NOT for connecting your* |EX-CS| *to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12).*
+This page is specifically intended for a |conductor-text| who intends to install *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or want to install some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/wifi-setup` page for the full list of WiFi options.
+
+----
 
 The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles (e.g. phones) DIRECTLY to it, eliminating the need for a computer and another software controller. 
 
@@ -27,11 +29,11 @@ However, WiFi is optional. If you wish to simply use your computer connected via
 
 .. sidebar:: 
    
-   |conductor|
+   |conductor| |tinkerer| |engineer|
 
-   If you wish to consider other WiFi options see :doc:`here </ex-commandstation/advanced-setup/wifi-config>`. |BR| You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our :doc:`Support Page </support/index>` if you have a question.
+   *The instructions on this page are NOT for connecting your* |EX-CS| *to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12).*
 
-There are many ways to add WiFi to your Command Station. We will cover only one method here. You may need to know a little bit about networking, but if you can get your phone to connect to your home network, you can do this.
+There are many ways to add WiFi to your Command Station. **We will cover only one method here.** You may need to know a little bit about networking, but if you can get your phone to connect to your home network, you can do this.
 
 
 |image-note|
@@ -49,22 +51,21 @@ Why Use WiFi?
 
    |tinkerer| |engineer|
 
-   Using Wifi (OR Ethernet) to talk between |JMRI| and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
+   Using Wifi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
 
 **BEFORE you purchase a Wifi card, please consider whether you actually need it.**
 
-With the base |EX-CS| consisting of *just* an Arduino Mega and an Arduino Motor Shield (no WiFi board), you must use a USB cable to connect to a computer to run |JMRI| or our |EX-WT|, or to connect to another controller. The controller (aka Throttle) is what sends commands to the |EX-CS| to run your trains and control your accessories.
+If you wish to trains from your phone, tablet or other |WiThrottle protocol| devices connected directly to the |EX-CS|, without a PC involved, then you **should follow the instructions below**.
 
-If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using |EX-WT|, |JMRI|, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. Save yourself some money, and effort, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer).  If this the case you can :doc:`skip ahead to the next page <installer>`.
+   However, with the base |EX-CS| without a WiFi shiled, you can use a USB cable to connect to a computer to run |JMRI| or our web browser based |EX-WT|. So, if you intend to run trains from a PC, or by only using a web browser, |JMRI|, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. If this the case you can :doc:`skip ahead to the next page <installer>`.
 
-If however, you wish to trains from your phone, tablet or other WiThrottle-protocol devices connected directly to the |EX-CS|, without a PC or Raspberry Pi involved, then you will need Wifi and should follow the instructions below.
+|force-break|
 
-.. NOTE:: 
-   :class: note-float-right
+.. sidebar:: 
 
    |tinkerer| |engineer|
 
-   While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10kB of progmem and about 2kB of RAM). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like |JMRI| being shared.
+   While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory.
 
 What you will need (for WiFi)
 =============================

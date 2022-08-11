@@ -17,7 +17,9 @@ Choosing a Controller (Throttle)
     :depth: 4
     :local:
 
-This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
+This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware (including WiFi). If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
+
+----
 
 What You Need and Why You Need It
 =================================
@@ -35,7 +37,7 @@ The |EX-CS| is covered in the :doc:`Getting Started <index>` section, and is usu
 The Controller (Throttle)
 _________________________
 
-Since the |EX-CS| simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. It isn't very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉  A controller can be a hardware device like a handheld throttle (also called a Cab), an App that runs on your phone, a Web Page, or front-end software like |JMRI| or Rocrail that runs on a computer or Raspberry Pi. 
+Since the |EX-CS| simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. It isn't very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉  A controller can be a hardware device like a handheld throttle (also called a Controller or Cab), an App that runs on your phone, a Web Page, or front-end software like |JMRI| or Rocrail that runs on a computer or Raspberry Pi. 
 
 ----
 
@@ -55,6 +57,8 @@ On this page we are only going to cover a small number of popular options that w
 
 Here is a list of *some* of the controllers you can use with the |EX-CS|.
 
+----
+
 Connecting via WiFi
 ___________________
 
@@ -72,6 +76,14 @@ Compatible Wifi Throttles
 
 For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.
 
+We will just  cover two here:
+
+* `Engine Driver <Engine Driver (Android \| WiThrottle \| WiFi)>`_
+* `WiThrottle <WiThrottle (iOS \| WiThrottle \| WiFi)>`_
+
+If you have an Android phone use `Engine Driver <Engine Driver (Android \| WiThrottle \| WiFi)>`_. |br| If you have a Apple (iOS) phone use 
+`WiThrottle Lite <WiThrottle (iOS \| WiThrottle \| WiFi)>`_.
+
 Engine Driver (Android \| WiThrottle \| WiFi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -80,16 +92,20 @@ Engine Driver (Android \| WiThrottle \| WiFi)
 * The first method is by connecting directly to the CS via WiFi. You will need a WiFi board connected to the CS (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
 * The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. (We won't cover that option here.)
 
-See :doc:`Engine Driver Page </throttles/software/engine-driver>`
+See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |wiThrottle|.
 
 WiThrottle (iOS \| WiThrottle \| WiFi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |WiThrottle| is an app for iPhones and iPads. It can connect directly to the |EX-CS| like |Engine Driver| does, or connect to |JMRI| on a computer and then have |JMRI| connect to the CS via a USB cable.
 
-See :doc:`WiThrottle Page </throttles/software/withrottle>`
+The "Lite" version of |WiThrottle| is free and is more than adequate for some initial testing and base running of locos.
 
-Connection via USB
+See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
+
+----
+
+Connecting via USB
 __________________
 
 Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.

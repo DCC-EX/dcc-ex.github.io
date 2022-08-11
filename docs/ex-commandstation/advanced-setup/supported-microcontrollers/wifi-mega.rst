@@ -2,9 +2,9 @@
 .. include:: /include/include-l3.rst
 |EX-CS-LOGO|
    
-**************************
-Mega+WiFi Configuration
-**************************
+***************
+Mega+WiFi Setup
+***************
 
 |tinkerer| |engineer|
 

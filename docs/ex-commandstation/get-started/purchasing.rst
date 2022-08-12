@@ -23,17 +23,14 @@ Some of the parts (like track and some wire) you will likely already have on han
 
 .. rst-class:: clearer
 
-What you need to purchase or find
-=================================
+What you need to Acquire
+========================
 
 .. sidebar::  Optional configuration
     
   |conductor|
 
-  |EX-CS| can be configured in several additional 'Conductor friendly' ways.
-
-  - without wifi or ethernet - requires |JMRI| installed on a computer
-  - with a supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>` instead of the WiFi shield
+  |EX-CS| can be configured in an additional 'Conductor friendly', without wifi, but it requires that |JMRI| installed on a computer.
 
   |tinkerer| |engineer|
 
@@ -43,7 +40,6 @@ What you need to purchase or find
   - Supported :doc:`motor shields </reference/hardware/motor-boards>`
   - Supported :doc:`ESP8266 WiFi shield </reference/hardware/wifi-boards>`
   - Supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>`
-
 
 Hardware
 ________
@@ -60,11 +56,8 @@ You will need to find or purchase:
 #. any **computer** running Windows, macOS, or Linux (only needed for the initial install of the software) |BR| |BR|
 #. a **USB Cable** from the computer to the Arduino |BR| |BR|
 #. a **piece of track** to run trains or program on |BR| |BR|
-#. some **wire** (18 to 16 AWG twisted pair recommended. See Technical Note below) |BR| |BR|
-#. a known-working **DCC-equipped locomotive**
-
-
-.. TODO:: URGENT See this :doc:`Shopping List </reference/hardware/shopping-list>` for everything you need, organised for you in one place.
+#. some **wire** (18 to 16 AWG twisted pair recommended [#wire]_.) |BR| |BR|
+#. a 'known' working **DCC-equipped locomotive**
 
 Software
 ________
@@ -84,8 +77,6 @@ Next Steps
 
 Click the "next" button to see how to assemble your |EX-CS|.
 
-.. note::
+----
 
-   **TECHNICAL NOTES**
-
-   **Wire Gauge** - The recommended Arduino |Motor Driver| can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different |Motor Driver| and deliver more current to your track, you may need thicker wire (lower number gauge).
+.. [#wire] **Wire Gauge** - The recommended Arduino |Motor Driver| can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different |Motor Driver| and deliver more current to your track, you may need thicker wire (lower number gauge).

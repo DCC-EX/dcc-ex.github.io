@@ -29,9 +29,7 @@ There are two simple options for testing your setup described below:
 
     |tinkerer| |engineer|
 
-    A more advanced option for testing and diagnosing issues is available and is described here ???? if needed 
-
-    .. TODO:: Sidebar advanced option for testing and diagnosing issues
+    Additional options (controllers) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
 
 Using EX-WebThrottle
 ____________________
@@ -87,6 +85,11 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 .. note:: 
 
    If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
+
+   **Locos Can't Respond to Throttle Commands on the Programming Track!**
+
+   We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification. There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc, but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main. ***TODO: Write the POM*** help.
+
 
 Next Steps - Choosing a throttle
 ================================

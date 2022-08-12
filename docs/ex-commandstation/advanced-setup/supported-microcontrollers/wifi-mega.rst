@@ -16,7 +16,7 @@ Mega+WiFi Setup
 
 **A WiFi EX-CommandStation on one Board**
 
-.. figure:: /_static/images/mega_wifi.png
+.. figure:: /_static/images/assembly/mega_wifi.png
    :alt: Mega WiFi
    :scale: 40%
    :align: center

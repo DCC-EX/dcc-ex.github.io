@@ -153,3 +153,7 @@
 
     :doc:`wiThrottle Protocol </reference/glossary>`
 ..
+.. |wiThrottle Server| replace::
+
+    :doc:`wiThrottle Server </reference/glossary>`
+..

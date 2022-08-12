@@ -33,7 +33,7 @@ Makerfabs WiFi Shield
 
 * `Makerfabs ESP-8266 WiFi Shield (recommended) <https://www.makerfabs.com/esp8266-wifi-shield.html>`_
 
-.. image:: /_static/images/wifi_jumpers1.jpg
+.. image:: /_static/images/assembly/wifi_jumpers1.jpg
    :alt: Makerfabs ESP-8266 WiFi Shield
    :scale: 70%
 
@@ -47,7 +47,7 @@ Duinopeak WiFi Shield
 
 * `Duinopeak ESP-8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 
-.. image:: /_static/images/duinopeak.jpg
+.. image:: /_static/images/assembly/duinopeak.jpg
    :alt: Duinopeak ESP-8266 WiFi Shield
    :scale: 60%
 
@@ -65,7 +65,7 @@ ESP-01S
 
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
-.. image:: /_static/images/esp-01s_2.jpg
+.. image:: /_static/images/assembly/esp-01s_2.jpg
    :alt: ESP-01S
    :scale: 60%
 
@@ -77,13 +77,13 @@ There are also other boards that require jumper wires (they are not shields) but
 
 Buy the one that looks like this:
 
-.. image:: /_static/images/esp_breakout2.jpg
+.. image:: /_static/images/assembly/esp_breakout2.jpg
    :alt: ESP8266 Breakout Board
    :scale: 25%
 
 We have used the ones that look like the one below just as well, but you have to make sure to wire power to 3.3V NOT 5V and there is no voltage regulation and NO LEVEL SHIFTERS. The GPIO pins on the ESP8266 appear to be 5V tolerant, but there is not guarantee it won't shorten its life to have a 5V signal on the Tx pin. Several test versions are running fine like this after a year, but if you are going to buy a board to stick this into instead of wiring it directly, then why not buy one with the extra circuitry? 
 
-.. image:: /_static/images/esp_breakout1.jpg
+.. image:: /_static/images/assembly/esp_breakout1.jpg
    :alt: ESP8266 Breakout Board
    :scale: 25%
 

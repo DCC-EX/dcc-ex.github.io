@@ -89,7 +89,7 @@ Most boards based on the ESP8266 should work with the |EX-CS|. However, with all
 
 We like this board here at |DCC-EX|. It is simple, inexpensive, easy to use, and it works.
 
-.. figure:: /_static/images/wifi_jumpers1.jpg
+.. figure:: /_static/images/assembly/wifi_jumpers1.jpg
    :alt: Makerfabs ESP-8266 WiFi Shield
    :scale: 75%
 
@@ -103,7 +103,7 @@ Remove the plastic jumpers
 Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.
 
 
-.. figure:: /_static/images/wifi_pins.jpg
+.. figure:: /_static/images/assembly/wifi_pins.jpg
    :alt: Remove the plastic jumpers
    :scale: 75%
 
@@ -117,7 +117,7 @@ Turn the board so that the tab end is to the left and the power connectors on th
 Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.
 
 
-.. figure:: /_static/images/wifi_seat1.jpg
+.. figure:: /_static/images/assembly/wifi_seat1.jpg
    :alt: Get the left side pins aligned
    :scale: 75%
 
@@ -131,14 +131,14 @@ Now do the the other side. If all the pins are straight and lined up properly, h
 Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see :numref:`wifi-fully-seated-boards`).
 
 
-.. figure:: /_static/images/wifi_seat2a.jpg
+.. figure:: /_static/images/assembly/wifi_seat2a.jpg
    :alt: Get the right side pins aligned
    :scale: 75%
    :name: wifi-right-side-pins-aligned
 
    Get the right side pins aligned
 
-.. figure:: /_static/images/wifi_seat_full.jpg
+.. figure:: /_static/images/assembly/wifi_seat_full.jpg
    :alt: Fully seated boards
    :scale: 75%
    :name: wifi-fully-seated-boards
@@ -165,7 +165,7 @@ Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board, a
 
 Take a second jumper wire and connect it to any one of the Rx pins on the Wifi Board and connect the other end to Tx1 on the mega (pin 18).
 
-.. figure:: /_static/images/wifi_jumpers2.png
+.. figure:: /_static/images/assembly/wifi_jumpers2.png
    :alt: Install the Jumper wires
    :scale: 75%
 

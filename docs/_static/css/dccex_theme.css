@@ -3,9 +3,27 @@
 
 h1, .h1 {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
-  font-weight: 500;
-  color: #00353d;
+  font-weight: 500 !important;
+  color: #00353d !important;
+  font-size: 220% !important;
+}
+
+h2, .h2 {
+  color: #00353d !important;
   font-size: 190% !important;
+  text-shadow: 2px 2px #00a3b915;
+}
+
+h3, .h3 {
+  font-size: 170% !important;
+}
+
+h4, .h4 {
+  font-size: 150% !important;
+}
+
+h5, .h5 {
+  font-size: 130% !important;
 }
 
 .clearer {

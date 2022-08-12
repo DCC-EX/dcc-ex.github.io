@@ -41,6 +41,11 @@ The Components of a Full System
 
 To actually run your model railroad you will need a few items:
 
+.. image:: /_static/images/wifi/wangtongze_jumpered.png
+   :alt: EX-CommandStation
+   :scale: 15%
+   :align: right
+
 1. a |EX-CS| - This consists of:
 
   - an **Arduino microprocessor**,
@@ -52,24 +57,31 @@ To actually run your model railroad you will need a few items:
     - neither [#jmri]_, and
 
   - our free, open source, custom software 
- 
+
+.. image:: /_static/images/engine_driver/vertical_slider.png
+   :alt: Engine Driver
+   :scale: 50%
+   :align: right
+
 2. a **Controller (Throttle)** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc
-#. Power - The Arduino and the Motor shields need to be powered separately, so 
+3. Power - The Arduino and the Motor shields need to be powered separately, so 
  
   - a **9-14v DC power supply** for the motor shield to the track, and 
   - a **5-9v DC power supply** for the Arduino
 
-#. a **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
-#. a **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
-#. a **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
-
-.. [#inst]  The Instructions on the following pages assume that that you will use a WiFi Shield.
-.. [#jmri]  Requires |JMRI| installed on a computer.
+4. a **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
+5. a **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
+6. a **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
 
 Next Steps - Purchasing Parts
 =============================
 
-Click :doc:`here <purchasing>` or click the "next" button to see what you need to purchase to create your |EX-CS|.
+Click :doc:`here <purchasing>` or click the "next" button to see what you need to aquire to create your |EX-CS|.
+
+----
+
+.. [#inst]  The Instructions on the following pages assume that that you will use a WiFi Shield.
+.. [#jmri]  Requires |JMRI| installed on a computer.
 
 .. toctree::
     :hidden:

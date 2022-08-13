@@ -4,11 +4,11 @@
    data-name="Camada 2"
    viewBox="0 0 799.99998 212.52001"
    version="1.1"
-   sodipodi:docname="level_icons_conductor.svg"
+   sodipodi:docname="level_icons_conductor_text.svg"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    width="800"
    height="212.52"
-   inkscape:export-filename="..\docs\_static\images\level_icons\conductor-level.png"
+   inkscape:export-filename="..\..\docs\_static\images\level_icons\conductor-level.png"
    inkscape:export-xdpi="40.721939"
    inkscape:export-ydpi="40.721939"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,8 +26,8 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="0.89439959"
-     inkscape:cx="420.39375"
-     inkscape:cy="182.8042"
+     inkscape:cx="370.08067"
+     inkscape:cy="183.92227"
      inkscape:window-width="1600"
      inkscape:window-height="816"
      inkscape:window-x="-8"
@@ -41,9 +41,15 @@
     <rect
        x="243.5029"
        y="30.042564"
-       width="752.64532"
-       height="313.07516"
+       width="548.03879"
+       height="177.78887"
        id="rect6323" />
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="292.0011"
+       height="103.99635"
+       id="rect6323-5" />
   </defs>
   <rect
      class="cls-3"
@@ -119,13 +125,17 @@
      transform="translate(0,-4)"><tspan
        x="243.50195"
        y="99.491674"
-       id="tspan8545"><tspan
+       id="tspan6987"><tspan
          style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan8543">Conductor    
-</tspan></tspan><tspan
+         id="tspan6985">Conductor </tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text6321-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-5);display:inline;fill:#00353d;fill-opacity:1;stroke:none"
+     transform="translate(0,80)"><tspan
        x="243.50195"
-       y="190.4917"
-       id="tspan8549"><tspan
-         style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan8547">Level</tspan></tspan></text>
+       y="94.149439"
+       id="tspan6991"><tspan
+         style="font-size:66.6667px"
+         id="tspan6989">Level</tspan></tspan></text>
 </svg>

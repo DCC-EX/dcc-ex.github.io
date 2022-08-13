@@ -4,11 +4,11 @@
    data-name="Camada 2"
    viewBox="0 0 799.99999 212.52001"
    version="1.1"
-   sodipodi:docname="level_icons_tinkerer.svg"
+   sodipodi:docname="level_icons_tinkerer_text.svg"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    width="800"
    height="212.52"
-   inkscape:export-filename="..\docs\_static\images\level_icons\tinkerer-level.png"
+   inkscape:export-filename="..\..\docs\_static\images\level_icons\tinkerer-level.png"
    inkscape:export-xdpi="40.721939"
    inkscape:export-ydpi="40.721939"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,8 +26,8 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="1.264872"
-     inkscape:cx="572.38992"
-     inkscape:cy="211.48385"
+     inkscape:cx="536.81321"
+     inkscape:cy="212.27444"
      inkscape:window-width="1600"
      inkscape:window-height="816"
      inkscape:window-x="-8"
@@ -41,9 +41,15 @@
     <rect
        x="243.5029"
        y="30.042564"
-       width="752.64532"
-       height="313.07516"
+       width="550.2533"
+       height="181.04599"
        id="rect6323" />
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="292.0011"
+       height="103.99635"
+       id="rect6323-5" />
   </defs>
   <path
      class="cls-1"
@@ -91,13 +97,17 @@
      transform="translate(0,-6)"><tspan
        x="243.50195"
        y="99.491674"
-       id="tspan8520"><tspan
+       id="tspan6169"><tspan
          style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan8518">Tinkerer    
-</tspan></tspan><tspan
+         id="tspan6167">Tinkerer </tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text6321-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-5);display:inline;fill:#00353d;fill-opacity:1;stroke:none"
+     transform="translate(0,80)"><tspan
        x="243.50195"
-       y="190.4917"
-       id="tspan8524"><tspan
-         style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan8522">Level</tspan></tspan></text>
+       y="94.149439"
+       id="tspan6173"><tspan
+         style="font-size:66.6667px"
+         id="tspan6171">Level</tspan></tspan></text>
 </svg>

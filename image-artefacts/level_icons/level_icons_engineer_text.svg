@@ -8,7 +8,7 @@
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    width="800"
    height="212.52"
-   inkscape:export-filename="..\docs\_static\images\level_icons\engineer-level.png"
+   inkscape:export-filename="..\..\docs\_static\images\level_icons\engineer-level.png"
    inkscape:export-xdpi="40.721939"
    inkscape:export-ydpi="40.721939"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,8 +26,8 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="0.89439959"
-     inkscape:cx="550.64873"
-     inkscape:cy="230.88114"
+     inkscape:cx="499.77662"
+     inkscape:cy="231.99921"
      inkscape:window-width="1600"
      inkscape:window-height="816"
      inkscape:window-x="-8"
@@ -39,11 +39,17 @@
     <rect
        x="243.5029"
        y="30.042564"
-       width="752.64532"
-       height="313.07516"
+       width="544.68458"
+       height="186.73342"
        id="rect6323" />
     <style
        id="style2">.cls-1,.cls-5,.cls-6,.cls-7{fill:#fff;}.cls-1,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8{stroke:#29abe2;stroke-miterlimit:10;}.cls-1,.cls-3{stroke-width:5px;}.cls-2,.cls-3,.cls-4{fill:#29abe2;}.cls-4{stroke-width:4.03px;}.cls-5,.cls-8{stroke-width:2.09px;}.cls-6{stroke-width:1.85px;}.cls-7{stroke-width:2.34px;}.cls-8{fill:none;}</style>
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="292.00111"
+       height="103.99635"
+       id="rect6323-5" />
   </defs>
   <path
      class="cls-1"
@@ -390,13 +396,17 @@
      transform="translate(0,-6)"><tspan
        x="243.50195"
        y="99.491674"
-       id="tspan8603"><tspan
+       id="tspan6230"><tspan
          style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan8601">Engineer    
-</tspan></tspan><tspan
+         id="tspan6228">Engineer    </tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text6321-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-5);display:inline;fill:#00353d;fill-opacity:1;stroke:none"
+     transform="translate(0,80)"><tspan
        x="243.50195"
-       y="190.4917"
-       id="tspan8607"><tspan
-         style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan8605">Level</tspan></tspan></text>
+       y="94.149439"
+       id="tspan6234"><tspan
+         style="font-size:66.6667px"
+         id="tspan6232">Level</tspan></tspan></text>
 </svg>

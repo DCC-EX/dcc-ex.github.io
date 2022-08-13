@@ -1,5 +1,5 @@
 .. meta::
-   :keywords: EX-CommandStation Command Station Installer
+   :keywords: EX-CommandStation Command Station EX-Installer
 
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
@@ -14,7 +14,7 @@ Install the software
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 2
+    :depth: 3
     :local:
     
 This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware (including WiFi). If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-installer/index` page for the full instructions.
@@ -35,8 +35,8 @@ Requirements (for installing)
 * a |EX-CS| (Arduino Mega/Uno + Motor shield and optional WiFi shield)
 * a **USB cable** to connect your computer to the Microcontroller
 
-Getting Ready 
-=============
+1. Getting Ready 
+================
 
 **Instruction for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
 
@@ -57,6 +57,9 @@ Getting Ready
   
     * ???
 
+2. Download and Run EX-Installer 
+================================
+
 * Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app |BR| depending on your computer's operating system it will automatically determine the version you need and download it
 * Extract the downloaded **Installer** into its own folder with your favorite unzip program |BR| |BR|
 * For Microsoft Windows:
@@ -71,8 +74,8 @@ Getting Ready
 
 * You will be presented with the following screen...
 
-The EX-Installer Window
-=======================
+3. The EX-Installer Window
+==========================
 
 .. warning::
    :class: warning-float-right-narrow
@@ -90,7 +93,7 @@ The EX-Installer Window
 There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
 Choose your options
-===================
+___________________
 
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
@@ -115,7 +118,7 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 6. Press the "Compile and Upload" button
 
 WiFi Checkbox
-_____________
+^^^^^^^^^^^^^
 
 .. sidebar:: 
 
@@ -130,7 +133,7 @@ Even if you didn't install a WiFi shield, we recommend that this box be checked.
 If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box.
 
 Enter your Home WiFi Network Details
-____________________________________
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/installer/wifi.jpg
    :alt: WiFi Options
@@ -149,7 +152,7 @@ ____________________________________
 * **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
 
 Compile and Upload
-==================
+__________________
 
 **Compile and Upload Button**
 
@@ -158,6 +161,8 @@ Once you have configured your options, press this button to upload the software 
 .. note:: 
 
    If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
+
+----
 
 Next Steps - Selecting a Controller 
 ===================================

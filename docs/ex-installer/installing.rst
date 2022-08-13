@@ -57,6 +57,9 @@ Requirements (for installing)
   
     * ???
 
+.. todo::  URGENT include details for how to get the port COm number for iOS
+
+
 2. Download and Run EX-Installer 
 ================================
 

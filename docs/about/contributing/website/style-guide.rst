@@ -12,7 +12,7 @@ Style Guide
       :depth: 2
       :local:
 
-This page aims to provide guidance for people contributing to the |DCC-EX| website.
+This page aims to provide guidance for people contributing to the |DCC-EX| website on how to write individual pages to a) provide a better user experience, and b) be easier to maintain the documentation.
 
 Text and Style Standards
 ========================

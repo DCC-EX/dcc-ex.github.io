@@ -5,9 +5,12 @@
 Contributing to the Documentation
 *********************************
 
+|conductor| |tinkerer| |engineer|
+
 .. toctree::
     :maxdepth: 1
 
     getting-started
     structure
+    basic-rst
     style-guide

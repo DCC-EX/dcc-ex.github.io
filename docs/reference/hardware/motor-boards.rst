@@ -36,9 +36,7 @@ Current list of boards
 Easy to use boards
 ___________________
 
-.. image:: /_static/images/conductor-level.png
-  :alt: Conductor level
-  :scale: 30%
+|conductor|
 
 * :ref:`reference/hardware/motor-boards:Arduino Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
 * :ref:`reference/hardware/motor-boards:Deek-Robot Motor Shield` - 2A rated, 1.5 possible **[RECOMMENDED]**
@@ -50,9 +48,7 @@ ___________________
 Intermediate boards
 ____________________
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer level
-  :scale: 30%
+|tinkerer|
 
 These boards require wiring.
 
@@ -64,9 +60,7 @@ These boards require wiring.
 Expert Level Boards
 ____________________
 
-.. image:: /_static/images/engineer-level.png
-  :alt: Engineer level
-  :scale: 30%
+|engineer|
 
 These boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)
 
@@ -105,9 +99,7 @@ Below we outline the various details that we know of related to each of the diff
 Arduino Motor Shield
 _____________________
 
-.. image:: /_static/images/conductor-level.png
-  :alt: Conductor level
-  :scale: 30%
+|conductor|
 
 Easy to use, widely available and is rated 2A load per channel. In reality, without a heatsink and fan, it can only handle about 1.3 Amps. This is the standard by which we compare other boards that are about the same, worse, or better.
 
@@ -122,9 +114,7 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
 Deek-Robot Motor Shield
 ________________________
 
-.. image:: /_static/images/conductor-level.png
-  :alt: Conductor level
-  :scale: 30%
+|conductor|
 
 Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan.
 
@@ -139,9 +129,7 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 Flashtree Motor Shield
 _______________________
 
-.. image:: /_static/images/conductor-level.png
-  :alt: Conductor level
-  :scale: 30%
+|conductor|
 
 Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. Since it identical to the Arduino and the Deek-Robot boards, use the Deek-Robot install below.
 
@@ -159,9 +147,7 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 DIY More L298NH Motor Shield
 _____________________________
 
-.. image:: /_static/images/conductor-level.png
-  :alt: Conductor level
-  :scale: 30%
+|conductor|
 
 Another similar board to the Arduino motor shield. Supports 2A per channel. This board uses the L298HN, which is the same L298 internally as the Arduino Motor Shield but in a different form factor with a larger heat sink tab. Current sense and other features are identical to the Arduino version.
 
@@ -178,9 +164,7 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
 YFRobot L298P Motor Shield
 ___________________________
 
-.. image:: /_static/images/conductor-level.png
-  :alt: Conductor level
-  :scale: 30%
+|conductor|
 
 This board is electrically the same, though a different layout than the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
 
@@ -215,9 +199,7 @@ Tinkerer level boards
 L298N Motor Driver (dual)
 __________________________
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer level
-  :scale: 30%
+|tinkerer|
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
@@ -238,9 +220,7 @@ https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
 MiniIBT Motor Driver L6201P (single)
 _____________________________________
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer level
-  :scale: 30%
+|tinkerer|
 
 Found on eBay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge chip and is rated for 5 Amps. With a fan and heat sink, it can handle 3 or 4 Amps at 12-14V. Search for MiniIBT or Wingxine to find it. Be careful to match the picture since there is another board that sometimes comes up in searches.
 
@@ -262,9 +242,7 @@ http://trainelectronics.com/DCC_Arduino/DCC++/
 Pololu MC33926
 _______________
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer level
-  :scale: 30%
+|tinkerer|
 
 Comes soldered or in a kit where you just have to solder the headers and connector. While we have a motor board type for this board, the current sense is not acceptable. We recommend using an external current sense board like the MAX471. Many people still use this board.
 
@@ -277,9 +255,7 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 BTS7960 IBT_2 Board (single)
 _____________________________
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer level
-  :scale: 30%
+|tinkerer|
 
 .. warning:: This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply a whopping 43A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES.
 
@@ -299,9 +275,7 @@ Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 Dual Motor Driver Module H-bridge MOSFET IRF3205
 _________________________________________________
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer level
-  :scale: 30%
+|tinkerer|
 
 .. warning:: This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply a 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.
 
@@ -321,9 +295,7 @@ Engineer level boards
 Keyes/Fundumoto ("Beeper Board")
 _________________________________
 
-.. image:: /_static/images/engineer-level.png
-  :alt: Engineer level
-  :scale: 30%
+|engineer|
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
@@ -360,9 +332,7 @@ Solder one end of a 1.5 ohm, 3 watt resistor to each of these same header pins, 
 Makerfabs H-Bridge Motor Shield
 ________________________________
 
-.. image:: /_static/images/engineer-level.png
-  :alt: Engineer level
-  :scale: 30%
+|engineer|
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
@@ -385,9 +355,7 @@ Pinout
 Velleman KA03 (kit) VMA03 (soldered)
 _____________________________________
 
-.. image:: /_static/images/engineer-level.png
-  :alt: Engineer level
-  :scale: 30%
+|engineer|
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
@@ -402,9 +370,7 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 DFRobot 2x2A DC Motor Shield (DRI0009)
 _______________________________________
 
-.. image:: /_static/images/engineer-level.png
-  :alt: Engineer level
-  :scale: 30%
+|engineer|
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 
@@ -431,9 +397,7 @@ NOTE: There is a "Twin" version of this board that uses pins 10, 11 and 12, 13 i
 DFRobot Romeo V2
 _________________
 
-.. image:: /_static/images/engineer-level.png
-  :alt: Engineer level
-  :scale: 30%
+|engineer|
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/motor-board-config:current sense and sense factor` section for further information.
 

@@ -168,9 +168,7 @@ This is the time in milliseconds that the LED is on and off when the set to a sl
 Advanced configuration options
 ==============================
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer Level
-  :scale: 50%
+|tinkerer|
 
 DEBUG
 ______
@@ -230,9 +228,7 @@ Note that in turntable mode, a hall effect or similar sensor is typically used w
 Defining custom stepper drivers
 ===============================
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer Level
-  :scale: 50%
+|tinkerer|
 
 .. note:: 
 

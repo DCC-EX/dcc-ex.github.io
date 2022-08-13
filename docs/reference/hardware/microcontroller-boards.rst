@@ -18,9 +18,7 @@ Microcontroller Boards
 Arduino Mega
 =============
 
-.. image:: /_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 Why do we recommend the Mega?
 ______________________________
@@ -44,18 +42,14 @@ Note that if the size of the regular Mega board is an issue, there are condensed
 Arduino Uno
 ============
 
-.. image:: /_static/images/conductor-level.png
-  :alt: Conductor Level
-  :scale: 50%
+|conductor|
 
 If you already have an Uno, or will use JMRI to control your trains, then by all means use an Uno. Just remember that you can't have WiFi, Ethernet or a few other options due to memory limitations. But as a Command Station connected to JMRI with a USB cable it works great.
 
 Arduino Nano
 =============
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer Level
-  :scale: 50%
+|tinkerer|
 
 The Arduino Nano shares the same processor with the Arduino Uno, so we support it. The Nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There *is* a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.
 
@@ -64,9 +58,7 @@ See our section on :doc:`Using a Nano </ex-commandstation/advanced-setup/support
 Mega+WiFi
 ==========
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer Level
-  :scale: 50%
+|tinkerer|
 
 Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
 
@@ -75,9 +67,7 @@ See our section on Using the :doc:`WiFi+Mega Page </ex-commandstation/advanced-s
 Nano Every
 ===========
 
-.. image:: /_static/images/tinkerer-level.png
-  :alt: Tinkerer Level
-  :scale: 50%
+|tinkerer|
 
 The Nano Every is an updated Nano. It uses a completely different processor family than the Uno and Nano. S
 
@@ -86,9 +76,7 @@ See the detailed section on the :doc:`Nano Every </ex-commandstation/advanced-se
 Teensy 3.x & 4.x
 =================
 
-.. image:: /_static/images/engineer-level.png
-  :alt: Engineer Level
-  :scale: 50%
+|engineer|
 
 The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons. 
 

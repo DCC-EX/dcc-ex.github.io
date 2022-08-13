@@ -14,7 +14,7 @@ Purchasing Parts
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 This page explains what you will need to acquire to build a |EX-CS| using the recommended parts for a |conductor-text|.  

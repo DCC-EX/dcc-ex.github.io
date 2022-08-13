@@ -15,7 +15,7 @@ To help you navigate this web site the pages are tagged [#tags]_ with one or mor
 
 ----
 
-.. image:: /_static/images/conductor-level.png
+.. image:: /_static/images/level_icons/conductor-level.png
    :alt: Conductor Hat
    :scale: 50%
    :align: right
@@ -30,7 +30,7 @@ Conductor
     :header-rows: 0
     :class: table-wrap-text
 
-    * - .. image:: /_static/images/conductor.png
+    * - .. image:: /_static/images/level_icons/conductor.png
            :alt: Conductor Hat
            :width: 144px
            :class: image-min-width-72
@@ -39,7 +39,7 @@ Conductor
 
 ----
 
-.. image:: /_static/images/tinkerer-level.png
+.. image:: /_static/images/level_icons/tinkerer-level.png
    :alt: Propeller Beanie
    :scale: 50%
    :align: right
@@ -54,7 +54,7 @@ Tinkerer
     :header-rows: 0
     :class: table-wrap-text
 
-    * - .. image:: /_static/images/tinkerer.png
+    * - .. image:: /_static/images/level_icons/tinkerer.png
            :alt: Propeller Beanie
            :width: 144px
            :class: image-min-width-72
@@ -62,7 +62,7 @@ Tinkerer
 
 ----
 
-.. image:: /_static/images/engineer-level.png
+.. image:: /_static/images/level_icons/engineer-level.png
    :alt: Engineer Hat
    :scale: 50%
    :align: right
@@ -77,7 +77,7 @@ Engineer
     :header-rows: 0
     :class: table-wrap-text
 
-    * - .. image:: /_static/images/engineer.png
+    * - .. image:: /_static/images/level_icons/engineer.png
            :alt: Engineer Hat
            :width: 144px
            :class: image-min-width-72

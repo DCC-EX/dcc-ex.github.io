@@ -14,7 +14,7 @@ Test your setup
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 Testing control of a loco

@@ -48,12 +48,15 @@ Find this section in the file:
 
 You will see a list of supported boards with their type and the "STANDARD_MOTOR_SHIELD" defined as the default. Continue below.
 
-Your Board is in the Supported List
------------------------------------
+If Your Board is in the Supported List
+______________________________________
+
+.. note:: 
+  :class: note-float-right
+
+  The Arduino Motor Shield, Deek-Robot Motor Shield, DIY More Motor Shield and any other shield or board that is 100% compatible with the Arduino Motor Shield is defined as a "STANDARD_MOTOR_SHIELD"
 
 This option is possibly Conductor friendly for those just choosing a supported board that requires no wiring.
-
-.. note:: The Arduino Motor Shield, Deek-Robot Motor Shield, DIY More Motor Shield and any other shield or board that is 100% compatible with the Arduino Motor Shield is defined as a "STANDARD_MOTOR_SHIELD"
 
 To select your board, just change the #define line to the type for your board. The following line configures a Pololu Motor Shield. We just copy and paste its name over the STANDARD_MOTOR_SHIELD:
 
@@ -66,7 +69,7 @@ That's all you need to do. Make your change and then upload the sketch to your A
 .. note:: If your board is not a shield that plugs onto your Arduino, then you are going to have to run jumper wires. An IBT_2 High Current Motor Board is an example of such a board. See the section on your board for installation help.
 
 Your board is NOT in the Supported List
----------------------------------------
+_______________________________________
 
 |tinkerer|
 
@@ -171,19 +174,19 @@ Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require 
 .. warning:: Choose your current sense resistor or circuit carefully! You need to account for all the factors mentioned above, and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).
 
 How Do I Find Volts per Amp?
-----------------------------
+____________________________
 
 In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you should use separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the :doc:`Advanced Setup Section <../advanced-setup/index>` for more info.
 
 Just Buy a Current Sense Board Instead
---------------------------------------
+______________________________________
 
 Tinkerers and Conductors who don't mind connecting a few jumper wires may like this option.
 
 This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards for sale.
 
 Where do I measure the current?
--------------------------------
+_______________________________
 
 Another way to ask the question is, "How do I connect a current sensor?" There are 2 ways to connect a current sensor board, listed here by ease of use:
 

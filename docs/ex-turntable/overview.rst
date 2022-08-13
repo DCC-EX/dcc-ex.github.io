@@ -37,12 +37,12 @@ Essentially, if you have setup your own CommandStation, the expectation is that 
 
 .. sidebar:: Supported stepper drivers and motors
 
-  .. image:: /_static/images/conductor.png
+  .. image:: /_static/images/level_icons/conductor.png
     :alt: Conductor Level
     :scale: 40%
     :align: left
   
-  .. image:: /_static/images/tinkerer.png
+  .. image:: /_static/images/level_icons/tinkerer.png
     :alt: Tinkerer Level
     :scale: 40%
     :align: right

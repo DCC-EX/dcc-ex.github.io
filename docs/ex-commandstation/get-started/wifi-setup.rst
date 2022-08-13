@@ -35,7 +35,6 @@ However, WiFi is optional. If you wish to simply use your computer connected via
 
 There are many ways to add WiFi to your Command Station. **We will cover only one method here.** You may need to know a little bit about networking, but if you can get your phone to connect to your home network, you can do this.
 
-
 |image-note|
 
 For a video to help you, click below.
@@ -57,7 +56,7 @@ Why Use WiFi?
 
 If you wish to trains from your phone, tablet or other |WiThrottle protocol| devices connected directly to the |EX-CS|, without a PC involved, then you **should follow the instructions below**.
 
-   However, with the base |EX-CS| without a WiFi shiled, you can use a USB cable to connect to a computer to run |JMRI| or our web browser based |EX-WT|. So, if you intend to run trains from a PC, or by only using a web browser, |JMRI|, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. If this the case you can :doc:`skip ahead to the next page <installer>`.
+   However, with the base |EX-CS| without a WiFi shield, you can use a USB cable to connect to a computer to run |JMRI| or our web browser based |EX-WT|. So, if you intend to run trains from a PC, or by only using a web browser, |JMRI|, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. If this the case you can :doc:`skip ahead to the next page <installer>`.
 
 |force-break|
 
@@ -65,12 +64,12 @@ If you wish to trains from your phone, tablet or other |WiThrottle protocol| dev
 
    |tinkerer| |engineer|
 
-   While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory.
+   While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is not supported. The Uno simply does not have enough memory.
 
 What you will need (for WiFi)
 =============================
 
-* A |EX-CS| made on the from an **Arduino Mega** and an Motor Shield (from the previous page)
+* A |EX-CS| made on the from an **Arduino Mega** and a Motor Driver (from the previous page)
 * A WiFi board
 * Two (2) Male to Female Jumpers leads
 

@@ -35,8 +35,10 @@ Requirements (for installing)
 * a |EX-CS| (Arduino Mega/Uno + Motor shield and optional WiFi shield)
 * a **USB cable** to connect your computer to the Microcontroller
 
-Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)
-==========================================================================
+Getting Ready 
+=============
+
+**Instruction for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
 
 .. warning::
    :class: warning-float-right
@@ -105,7 +107,7 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
    
    This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program. When you plug in a new board, refresh the ports so it can find your device.
 
-1. Select your **Command Station Type** |BR| If you are |conductor-text| following our recommended instructions, choose **'Command Station EX'** |br| |br|
+1. Select your **Command Station (Base Station) Type** |BR| If you are |conductor-text| following our recommended instructions, choose **'Command Station EX'** |br| |br|
 2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
 3. Select your **Motor Shield** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
 4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took not of earlier |br| |br|

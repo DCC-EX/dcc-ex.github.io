@@ -250,7 +250,7 @@ To define the required turntable positions in the example six position turntable
 
 .. tip:: 
 
-  .. image:: /_static/images/conductor.png
+  .. image:: /_static/images/level_icons/conductor.png
     :alt: Conductor Level
     :scale: 40%
     :align: left

@@ -4,32 +4,32 @@
    :scale: 25%
    :target: ../about/contributing/donate.html
 ..
-.. |conductor| image:: /_static/images/conductor-level.png
+.. |conductor| image:: /_static/images/level_icons/conductor-level.png
    :alt: Conductor Hat
    :scale: 50%
    :target: ../levels.html#conductor
 ..
-.. |tinkerer| image:: /_static/images/tinkerer-level.png
+.. |tinkerer| image:: /_static/images/level_icons/tinkerer-level.png
    :alt: Propeller Beanie
    :scale: 50%
    :target: ../levels.html#tinkerer
 ..
-.. |engineer| image:: /_static/images/engineer-level.png
+.. |engineer| image:: /_static/images/level_icons/engineer-level.png
    :alt: Engineer Hat
    :scale: 50%
    :target: ../levels.html#engineer
 ..
-.. |conductor-no-text| image:: /_static/images/conductor.png
+.. |conductor-no-text| image:: /_static/images/level_icons/conductor.png
    :alt: Conductor Hat
    :scale: 50%
    :target: ../levels.html#conductor
 ..
-.. |tinkerer-no-text| image:: /_static/images/tinkerer.png
+.. |tinkerer-no-text| image:: /_static/images/level_icons/tinkerer.png
    :alt: Propeller Beanie
    :scale: 50%
    :target: ../levels.html#tinkerer
 ..
-.. |engineer-no-text| image:: /_static/images/engineer.png
+.. |engineer-no-text| image:: /_static/images/level_icons/engineer.png
    :alt: Engineer Hat
    :scale: 50%
    :target: ../levels.html#engineer

@@ -31,7 +31,7 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 
 .. note::
 
-   .. image:: /_static/images/tinkerer.png
+   |.. image:: /_static/images/level_icons/tinkerer.png
       :alt: Tinkerer Icon
       :scale: 30%
       :align: left

@@ -30,9 +30,9 @@ The elements of the documentation fall into the following broad categories:
 
 * `Folders`_
 * `Pages`_
-* `Images <Image Types>`_
-* `Documents / Files`_
-* `Image Artifacts`_ / originals   (used to create the images, but not part of the documentation)
+* :ref:`about/contributing/website/basic-rst:Image Types`
+* :ref:`about/contributing/website/basic-rst:Documents / Files`
+* :ref:`about/contributing/website/basic-rst:Image Artifacts` / originals   (used to create the images, but not part of the documentation)
 
 Folders
 =======
@@ -192,7 +192,7 @@ Only if really necessary use image tags:
     :alt: Conductor Level 
     :scale: 40%
 
-Refer to `images`_ below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the |EX-TT| :doc:`/ex-turntable/assembly` page.
+Refer to :ref:`about/contributing/website/basic-rst:images` below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the |EX-TT| :doc:`/ex-turntable/assembly` page.
 
 ----
 
@@ -214,8 +214,8 @@ Page content can include:
 
 * `Headings and Sub Headings`_
 * `Text`_
-* `Links / Hyperlinks`_
-* `Tables`_
+* :ref:`about/contributing/website/basic-rst:Links / Hyperlinks`
+* :ref:`about/contributing/website/basic-rst:Tables`
 * `Including Images / Drawings <Images>`_
 
 After the heading, the page should start with an explanation of the purpose of the page.

@@ -30,12 +30,12 @@ You need just two things that work together to operate your model railroad:
 * A Controller (aka Front-end, Cab, or Throttle)
 
 The EX-CommandStation
-_____________________
+---------------------
 
 The |EX-CS| is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller, a motor driver and a WiFi shield. The Command Station accepts instructions from a controller and generates packets that are transmitted to your track.
 
 The Controller (Throttle)
-_________________________
+-------------------------
 
 Since the |EX-CS| simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. It isn't very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉  A controller can be a hardware device like a handheld throttle (also called a Controller or Cab), an App that runs on your phone, a Web Page, or front-end software like |JMRI| or Rocrail that runs on a computer or Raspberry Pi. 
 
@@ -60,7 +60,7 @@ Here is a list of *some* of the controllers you can use with the |EX-CS|.
 ----
 
 Connecting via WiFi
-___________________
+-------------------
 
 For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a Command Station with a WiFi Shield. Here is an image that represents a direct connection.
 
@@ -106,7 +106,7 @@ See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how t
 ----
 
 Connecting via USB
-__________________
+------------------
 
 Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.
 
@@ -123,7 +123,7 @@ There is currently only one USB compatible controller (throttle) for the |EX-CS|
 Our EX-WebThrottle (DCC++ | USB/Serial)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The simplest option is to just use a throttle connected directly to the CS. The simplest of all is arguably |EX-WT|, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of |EX-WT| with the side menu open. You can click on the image to see it full size.
+The simplest option is to just use a throttle connected directly to the Command Station. The simplest of all is arguably |EX-WT|, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of |EX-WT| with the side menu open. You can click on the image to see it full size.
 
 .. image:: /_static/images/throttles/webthrottle1.jpg
    :alt: EX-WebThrottle

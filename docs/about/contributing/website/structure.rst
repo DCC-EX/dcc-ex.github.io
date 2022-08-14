@@ -73,7 +73,7 @@ Pages *generally* follow the basic structure:
     * Next Steps Heading  (if it is part of sequence of pages this is mandatory)
 
 Meta Keywords
-_____________
+-------------
 
 The meta keywords help search entries find find the page based on key words. 
 
@@ -91,7 +91,7 @@ For example, the meta tags for levels.rst are:
     :keywords: Comfort Levels Conductor Tinkerer Engineer
 
 Includes
-________
+--------
 
 All pages MUST include two standard include files. ``/include/include.rst`` and, depending on the depth in the folder structure, one of following as the second file:
 
@@ -116,7 +116,7 @@ For example:
   The expansion must be followed by a blank line.
 
 Product Icon
-____________
+------------
 
 If the page specifically and only relates to of the |DCC-EX| products, the specify  the product icon immediately after include files, but using the appropriate expansion:
 
@@ -134,7 +134,7 @@ For example:
     ***************************************
 
 Page Heading
-____________
+------------
 
 Each page must have a Main Heading. Main Headings MUST have asterisks above and below them:
 
@@ -149,7 +149,7 @@ Each page must have a Main Heading. Main Headings MUST have asterisks above and 
 See below for more information about heading.
 
 Comfort level logos
-___________________
+-------------------
 
 On our :doc:`/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
 
@@ -197,7 +197,7 @@ Refer to :ref:`about/contributing/website/basic-rst:images` below for details on
 ----
 
 On This Page - Table of Contents
-________________________________
+--------------------------------
 
 .. todo:: On This Page - Table of Contents
 
@@ -208,7 +208,7 @@ ________________________________
 ----
 
 Page Content
-____________
+------------
 
 Page content can include:
 
@@ -227,37 +227,44 @@ Headings and Sub Headings
 
   .. code-block:: 
 
-    *************
+    ************
     Main Heading
-    *************
+    ************
 
 * Subheadings are underlined with equals signs:
 
   .. code-block:: 
 
     Subheading
-    ===========
+    ==========
 
-* The next level is underlined with underscores:
+* The next level is underlined with hyphens:
 
   .. code-block:: 
 
     Next level
-    ___________
+    ----------
 
 * And the next level is underlined with carets:
 
   .. code-block:: 
 
     Next level
-    ^^^^^^^^^^^
+    ^^^^^^^^^^
 
-* The last one we use is underlined with tildes:
+* The next one we use is underlined with tildes:
 
   .. code-block:: 
 
-    Last level
-    ~~~~~~~~~~~
+    Next level
+    ~~~~~~~~~~
+
+* The last one we use is underlined with underscores:
+
+  .. code-block:: 
+
+    Next level
+    __________
 
 All heading underlines and overlines must be at least as long as the text of the heading text.
 

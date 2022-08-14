@@ -69,7 +69,7 @@ EX-RAIL supports three methods of controlling servos:
 * Animations via the SERVO or SERVO2 directives
 
 Controlling servos for turnouts
-________________________________
+-------------------------------
 
 The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
 
@@ -95,7 +95,7 @@ An example definition for a servo connected to the second control pins of the fi
    SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
 
 Controlling servos for signals
-_______________________________
+------------------------------
 
 The SERVO_SIGNAL directive defines a servo based signal in EX-RAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.
 
@@ -114,7 +114,7 @@ A simple example using the thrid control pins of the first PCA9685 connected to 
    SERVO_SIGNAL(102, 400, 250, 100)
 
 Controlling servos for animations
-__________________________________
+---------------------------------
 
 The SERVO and SERVO2 directives allow for servos to be used in various automations within |EX-R|.
 

@@ -45,8 +45,8 @@ Developers
 * Neil McKechnie -  Worcestershire, UK
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Gregor Baues - Île-de-France, France (grbba)
-* Herb Morton - Kingwood Texas, USA (Ash++)
-* Peter Cole - Brisbane QLD Australia (peteGSX)
+* Herb Morton - Kingwood, Texas, USA (Ash++)
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
 
 
 EX-WebThrottle
@@ -65,7 +65,7 @@ EX-DCCInspector
 Developers
 
 * Neil McKechnie -  Worcestershire, UK
-* Fred Decker - Holly Springs NC, USA
+* Fred Decker - Holly Springs, NC, USA
 
 DCC++ Classic
 ==============
@@ -95,7 +95,7 @@ Lead Developers
 
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
-* Peter Akers, Queensland Australia (flash62au)
+* Peter Akers - Brisbane, QLD, Australia (flash62au)
 
 Developers
 
@@ -109,7 +109,7 @@ Hardware / Electronics
 * Neil McKechnie -  Worcestershire, UK
 * Fred Decker - Holly Springs NC, USA
 * Herb Morton - Kingwood Texas, USA (Ash++)
-* Paul Antoine, Western Australia (Paul Antoine)
+* Paul Antoine - Western Australia (Paul Antoine)
 
 
 Documentation / Management
@@ -117,15 +117,15 @@ Documentation / Management
 
 * Roger Beschizza - Dorset, UK (Roger Beschizza)
 * Keith Ledbetter - Chicago, Illinois, USA (Keith Ledbetter)
-* Kevin Smith - Rochester Hills, Michigan - USA (KC Smith)
-* Peter Cole - Brisbane QLD Australia (peteGSX)
-* Colin Grabham, Condobolin NSW Straya (Kebbin)
-* Paul Antoine, Western Australia (Paul Antoine)
+* Kevin Smith - Rochester Hills, Michigan, USA (KC Smith)
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
+* Colin Grabham - Condobolin NSW Straya (Kebbin)
+* Paul Antoine - Western Australia (Paul Antoine)
 
 Testing / Research / Support
 =============================
 
-* Kevin Smith - Rochester Hills, Michigan USA (KC Smith)
+* Kevin Smith - Rochester Hills, Michigan, USA (KC Smith)
 * Scott Eric Catalano - Western Pennsylvania, USA (PilotinControl)
 * Sumner Patterson - Blanding Utah, USA (Sumner)
 * Larry Dribin - (H0Guy)
@@ -136,7 +136,7 @@ Testing / Research / Support
 * Jack Reagan - Cape Girardeau, Missouri, USA (Marada1)
 * Larry Dribin - (H0Guy, LarryD)
 * Henk Kruisbrink - UK (Henkk)
-* Colin Grabham, Condobolin NSW Straya (Kebbin)
+* Colin Grabham - Condobolin NSW Straya (Kebbin)
 
 Related Software
 ================
@@ -150,4 +150,4 @@ Making sure this software works well with |EX-CS|
 * Engine Driver (ED)
   
   * M Steve Todd - USA
-  * Peter Akers, Queensland Australia (flash62au)
+  * Peter Akers - Brisbane, QLD, Australia (flash62au)

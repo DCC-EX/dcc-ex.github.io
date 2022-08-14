@@ -60,7 +60,7 @@ Detailed command reference
 ===========================
 
 Turnouts
-_________
+--------
 
 The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.
 
@@ -85,7 +85,7 @@ Example responses:
   - Chris Harlow
 
 Automations/Routes
-___________________
+------------------
 
 A throttle needs to know which EX-RAIL Automations and Routes it can show the user.
 
@@ -115,7 +115,7 @@ An **AUTOMATION** is a handoff of the last accessed loco ID to an EX-RAIL AUTOMA
 * An automation expects a start command with a cab ID, for example ``</START 13 3>``.
 
 Roster Information
-___________________
+------------------
 
 ``<JR>`` - Requests a list of cab IDs from the roster.
 
@@ -131,7 +131,7 @@ Example response:
 * ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">`` - Returns the defined description "Thomas" with each defined function's name. Refer to the EX-RAIL ROSTER command for function map format.
 
 Obtaining throttle status
-__________________________
+-------------------------
 
 ``<t cabid>`` - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
 

@@ -52,8 +52,8 @@ There are some diagnostic and control commands added to the <tag> language norma
 
 These can be used in the same manner as other CommandStation directives to interact with EX-RAIL sequences and objects once they have been defined in myAutomation.h and are uploaded to the CommandStation.
 
-EXRAIL
-_______
+EX-RAIL
+-------
 
 ``<D EXRAIL ON|OFF>`` When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).
 
@@ -81,14 +81,14 @@ Example output from :ref:`ex-rail/getting-started:example 6: single line shuttle
   <1 18 0 178 0>
   
 PAUSE/RESUME
-_____________
+------------
 
 ``</PAUSE>`` Pauses **ALL** EX-RAIL automation activities, including sending an E-STOP to all locos.
 
 ``</RESUME>`` Resumes **ALL** EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.
 
 Task info
-__________
+---------
 
 ``</>`` Displays EX-RAIL running task information
 
@@ -105,7 +105,7 @@ Example outputs also using :ref:`ex-rail/getting-started:example 6: single line 
   ID=1,PC=12,LOCO=18 ,SPEED=50F *>
 
 ROUTES
-_______
+------
 
 ``</ ROUTES>``	Returns the Routes & Automations control list in |WiThrottle Protocol| format.
 
@@ -117,21 +117,21 @@ Example output:
   PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]\[A5}|{Example 5: Round in circles}|{4>
 
 START/KILL
-___________
+----------
 
 ``</ START [loco_addr] route_id>``	Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
 
 ``</ KILL task_id>``	Kills a currently running script task by ID (use to list task IDs)
 
 RESERVE/FREE
-_____________
+------------
 
 ``</ RESERVE block_id>``	Manually reserves a virtual track Block, valid IDs are in the range 0 - 255.
 
 ``</ FREE block_id>``	Manually frees a virtual track Block, valid IDs are in the range 0 - 255.
 
 LATCH/UNLATCH
-______________
+-------------
 
 ``</ LATCH sensor_id>``	Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 255.
 
@@ -145,7 +145,7 @@ Routes, automations, and sequences
 EX-RAIL provides many commands to allow you to create automated sequences and routes that locomotives can follow that may involve turnouts/points, signals, etc. that can be automatically set to react when the loco trips a sensor.
 
 Script Definition Terms
-________________________
+-----------------------
 
 There are three options to define these automation sequences:
 

@@ -20,7 +20,7 @@ This page describes all the supported WiFi options of the |EX-CS|.  If you ident
 
 The purpose of this WiFi solution is for connecting up to 5 WiFi Throttles DIRECTLY to the |EX-CS|, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like |JMRI|, you can :doc:`skip ahead to the next page </ex-commandstation/get-started/installer>`.
 
-There are many ways to add WiFi to your Command Station. We will cover four methods here.
+There are many ways to add WiFi to your Command Station. We will cover four supported methods here.
 
 You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our :doc:`Support Page </support/index>` if you have a question.
 
@@ -43,9 +43,9 @@ Why Use WiFi?
 
 **BEFORE you purchase a Wifi card, please consider whether you actually need it:**
 
-With the base Command Station (CS) consisting of just an Arduino Mega and an Arduino Motor Driver (no WiFi board), you must use a USB cable to connect to a computer to run |JMRI| or our WebThrottle-EX, or to connect to another controller. The controller (aka Throttle) is what sends commands to the Command Station to run your trains and control your accessories.
+With the base Command Station (CS) consisting of just an Arduino Mega and an Arduino Motor Driver (no WiFi board), you must use a USB cable to connect to a computer to run |JMRI| or our |EX-WT|, or to connect to another controller. The controller (aka Throttle) is what sends commands to the Command Station to run your trains and control your accessories.
 
-If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using |EX-WT|, |JMRI|, Rocrail, or similar, then YOU DO NOT NEED WiFi ON THE CS. Save yourself some money, and a lot of hassle, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between |JMRI| and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
+If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using |EX-WT|, |JMRI|, Rocrail, or similar, then YOU DO NOT NEED WiFi ON THE Command Station. Save yourself some money, and a lot of hassle, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between |JMRI| and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
 
 If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY |Engine Driver| (or other |WiThrottle Protocol| devices) connected directly to the |EX-CS|, then you will need Wifi, and will have to budget some setup and learning time.
 
@@ -90,7 +90,7 @@ Quick links:
 * Jump to `Mega+WiFi Combo Board`_
 
 Makerfabs ESP8266 WiFi Shield (recommended)
-___________________________________________
+-------------------------------------------
 
 We like this board here at |DCC-EX|. It is simple, inexpensive, easy to use, and it works.
 
@@ -165,10 +165,10 @@ Take a second jumper wire and connect it to any one of the Rx pins on the Wifi B
 
    Install the jumper wires
 
-.. note:: The screenprinting on the board may make it hard to see which pins are 18 and 19, they may not be aligned exactly. Count the pins if you need to to make sure that you are using the correct ones.
+.. note:: The screen printing on the board may make it hard to see which pins are 18 and 19, they may not be aligned exactly. Count the pins if you need to to make sure that you are using the correct ones.
 
 Duinopeak ESP8266 WiFi Expansion Board
-______________________________________
+--------------------------------------
 
 This board is designed as an expansion/prototyping board as well as a WiFi board. Tinkerers that want the extra space on the board to solder your experiments can have a party on the PCB! The only caveat with this board is that it cannot easily be connected in "passthrough mode" if you needed to use the Arduino to test a direct connection to the onboard ESP8266. It does not like the USB cable connected at the same time as a signal is on the Tx/Rx pins. This is a minor issue and does not affect normal operation since you won't have anything connected to the USB port.
 
@@ -191,7 +191,7 @@ To install this board on your Arduino, follow the same steps as above, with the 
 * Seat an ESP-01s onto the 8 pin header on the board, oriented with the white ESP-01 outline
 
 ESP-01 and ESP-01s
-__________________
+------------------
 
 This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
 
@@ -228,7 +228,7 @@ Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity
 
 In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a "Y" shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called "ESP-01 Breakout Board" or "ESP-01 Breadboard adapter". Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and "level shifters" to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In `esp-01s-adapters`_ below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.
 
-.. note:: About current requirements: While we at DCC-EX Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.
+.. note:: About current requirements: While we at |DCC-EX| Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.
 
 
 .. figure:: /_static/images/assembly/esp-01_adapter.jpg
@@ -242,7 +242,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
 
 
 Mega+WiFi Combo Board
-_____________________
+---------------------
 
 .. figure:: /_static/images/assembly/mega_wifi.png
    :alt: Mega WiFi
@@ -260,9 +260,9 @@ Install the Software
 
 If you already have the Command Station software running and are just adding WiFi, there is nothing further you need to do if you want to use the |EX-CS| as an Access Point (AP) and connect a |WiThrottle Protocol| compatible CAB (|Engine Driver|). The next time you power up the Command Station, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
 
-.. note:: LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your Command Station to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
+.. note:: LOGIN PASSWORD - If you use |Access Point Mode|, you must connect your throttle to the DCCEX network, not your home network. The |Access Point| will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your Command Station to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
 
-If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads </download/ex-commandstation>` to load firmware onto the CS.
+If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads </download/ex-commandstation>` to load firmware onto the Command Station.
 
 .. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and lookingat the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ .Skip to the "The ESP-01S - The Wifi Connection" section
    

@@ -21,7 +21,7 @@ Arduino Mega
 |conductor|
 
 Why do we recommend the Mega?
-______________________________
+-----------------------------
 
 * When compiled, our code just barely squeezes onto an Arduino Uno. **A mega allows you to add more features** like networking and displays because it has more memory.
 * The Mega has many more GPIOs (General Purpose Input/Outputs) available to you for constructing control panels and controlling turnouts, signals and other accessories.

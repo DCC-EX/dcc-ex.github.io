@@ -16,7 +16,7 @@ To go along with it we have created logos for the individual products
 |EX-CS-LOGO-SMALL| |EX-I-LOGO-SMALL| |EX-WT-LOGO-SMALL| |EX-R-LOGO-SMALL| |EX-TT-LOGO-SMALL| |EX-DCCI-LOGO-SMALL| |EX-BSC-LOGO-SMALL|
 
 Why did we do this
-__________________
+------------------
 
 
 .. todo:: URGENT Need text for the new name page
@@ -30,7 +30,8 @@ __________________
 
 
 Yet To Do  
-_________
+---------
+
 (These still refer to to DCC++EX and will be changed over time) :
 
 * Discord
@@ -38,7 +39,7 @@ _________
 * FaceBook  
 
 Won't do
-________
+--------
 
 * internal code references the <DCC++> codes/commands
 * |BSC| won't be renamed but does get a new logo

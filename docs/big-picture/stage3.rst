@@ -19,14 +19,14 @@ Notes
 =====
 
 Tuning servo positions
-______________________
+----------------------
 
 An important item to note when configuring servo based turnouts/points and signals is that the angles provided are going to be unique to your layout, and possibly even be unique to each particular turnout/point or signal, depending on how they are mounted and physically connected.
 
 We provide some handy documentation on how to evaluate the correct angles on our :doc:`/reference/hardware/servo-module` page.
 
 Turnout/point object IDs
-________________________
+------------------------
 
 Throughout this exercise, we will be defining turnout/point objects, and for consistency will be using IDs in the range of 100 to 199 for these.
 
@@ -35,7 +35,7 @@ This way, the various possible variations of each type of object will be defined
 For further information on IDs used in |EX-R|, refer to the :ref:`ex-rail/ex-rail-reference:notes` section of the |EX-R| reference page.
 
 DCC addresses
-_____________
+-------------
 
 Further to the above, for DCC controlled turnouts/points, these will commence at the linear DCC address 101, which starts at an address of 26, and a sub address of 0.
 

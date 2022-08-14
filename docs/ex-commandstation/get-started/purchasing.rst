@@ -42,7 +42,7 @@ What you need to Acquire
   - Supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>`
 
 Hardware
-________
+--------
 
 You will need to find or purchase:
 
@@ -60,14 +60,14 @@ You will need to find or purchase:
 #. a 'known' working **DCC-equipped locomotive**
 
 Software
-________
+--------
 
 Our |EX-I| app is recommended for most users as it automatically downloads and installs the required software. 
 
 13. See the :doc:`Command Station download page </download/ex-commandstation>` to download a copy to your computer.
 
 A Controller (Throttle)
-_______________________
+-----------------------
 
 
 14. You'll also need something to control your trains. |BR| There are several options. We will discuss these following the system setup, but the introductory configuration covered in the following pages lends itself to using a smart phone (Android or Apple iOS).

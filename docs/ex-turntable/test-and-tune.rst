@@ -160,7 +160,7 @@ Tuning your turntable positions
 To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).
 
 Determine the positions
-________________________
+-----------------------
 
 At this point, you should either have a layout you're fitting |EX-TT| into, or a layout design that you're working to, with the various turntable connection tracks defined.
 
@@ -206,7 +206,7 @@ Therefore, using our formula, the starting point for each position will be:
       - 2386
 
 Example tuning commands
-________________________
+-----------------------
 
 To validate the above calculated positions, the following six diagnostic commands should be executed in the serial terminal of the CommandStation, which will allow you to visually inspect the alignment with your layout tracks and adjust accordingly:
 
@@ -224,7 +224,7 @@ If you find any of these positions are slightly out of alignment, simply adjust 
 Note that due to the automatic phase inversion, the last three positions will automatically active the phase inversion relays due to being within the 45 to 225 degree angles that activates phase inversion.
 
 Apply to your layout
-_____________________
+--------------------
 
 At this point, you should be able to apply the above calculations to your own layout and come up with the step count required for each position.
 
@@ -260,7 +260,7 @@ To define the required turntable positions in the example six position turntable
 That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :doc:`/ex-rail/index` page, the routes for each turntable position should automatically be visible in |Engine Driver| and |WiThrottle| applications.
 
 My turntable moves on startup!
-_______________________________
+------------------------------
 
 There is one "catch" with the above "myAutomation.h" example. When your CommandStation starts up and EX-RAIL starts, it will automatically execute everything in "myAutomation.h" up until the first "DONE" statement it encounters.
 

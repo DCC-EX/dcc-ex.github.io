@@ -132,7 +132,7 @@ Examples:
        RETURNS: NONE
 
 CAB FUNCTIONS
-______________
+-------------
 
 There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC-EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
 
@@ -308,7 +308,7 @@ Other notes:
 * Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the |EX-CS|. One for F0 on and another for F22 on. 
 
 Stationary Accessory Decoder & Turnout Commands
-________________________________________________
+-----------------------------------------------
 
 |EX-CS| can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
 
@@ -657,7 +657,7 @@ Engine Decoder Programming Commands
 ======================================
 
 PROGRAMMING-MAIN TRACK
-_______________________
+----------------------
 
 WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -686,7 +686,7 @@ Writes, without any verification, a single bit within a Configuration Variable B
   * RETURNS: NONE
 
 PROGRAMMING-PROGRAMMING TRACK
-______________________________
+-----------------------------
 
 .. NOTE:: By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little "jumps" you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an "ACK" (acnowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
@@ -804,7 +804,7 @@ Diagnostic Commands
 =====================
 
 Status
-_______
+------
 
 ``<s>`` Lowercase "s": EX-CommandStation Status
 
@@ -814,7 +814,7 @@ _______
        Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
 
 "D" Commands
-_____________
+------------
 
 .. Note:: 1 and 0 and ON and OFF can be used interchangeably in EX-CommandStation
 
@@ -848,7 +848,7 @@ _____________
       17:00:10.358 -> <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
 
 DECODER TEST
-_____________
+------------
 
 These following commands are detailed above but are worth repeating here. The ``<R>`` command will attempt to read the decoder on the service (programming) track and try to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn't moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the ``<D ACK ON>`` command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.
 
@@ -896,7 +896,7 @@ To quote the relevant section from NMRA S 9.2.3:
 ``<D PROGBOOST>``  By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
  
 SEND PACKET TO THE TRACK
-_________________________
+------------------------
 
 .. Warning:: THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER
 

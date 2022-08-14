@@ -25,7 +25,7 @@ Standard configuration options
 ===============================
 
 I2C_ADDRESS
-____________
+-----------
 
 `Default: 0x60`
 
@@ -36,7 +36,7 @@ If you need to change this for any reason, ensure that the I2C address in "myHal
 Multiple instances of |EX-TT| can be controlled by the same CommandStation by ensuring each has its own unique I2C address.
 
 TURNTABLE_EX_MODE
-__________________
+-----------------
 
 `Default: TURNTABLE`
 
@@ -47,7 +47,7 @@ This option can be used to enable support for horizontal or vertical traversers,
 Be sure to read the documentation carefully and ensure both home and limit sensors are functioning correctly.
 
 SENSOR_TESTING
-_______________
+--------------
 
 `Default: disabled`
 
@@ -58,7 +58,7 @@ When sensor testing is enabled, all |EX-TT| operations are disabled. The state c
 This is ideal for ensuring sensors are functional prior to enabling TRAVERSER mode.
 
 HOME_SENSOR_ACTIVE_STATE
-_________________________
+------------------------
 
 `Default: LOW`
 
@@ -67,7 +67,7 @@ _________________________
 This is the state that the homing sensor reports to |EX-TT| when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.
 
 LIMIT_SENSOR_ACTIVE_STATE
-_________________________
+-------------------------
 
 `Default: LOW`
 
@@ -78,7 +78,7 @@ This is the state that the limit sensor reports to |EX-TT| when activated. Use L
 The limit sensor is only used when |EX-TT| is set to TRAVERSER mode.
 
 RELAY_ACTIVE_STATE
-___________________
+------------------
 
 `Default: HIGH`
 
@@ -87,7 +87,7 @@ ___________________
 This is the state that the phase inversion relays need to be set to in order to activate, or invert the phase. Use HIGH for relays that require 5V to activate, and LOW for those that require the input to be grounded to activate.
 
 PHASE_SWITCHING
-________________
+---------------
 
 `Default: AUTO`
 
@@ -96,7 +96,7 @@ ________________
 When set to AUTO, phase switching happens automatically as the turntable rotates. The point at which phase inversion happens is determined by the PHASE_SWITCH_ANGLE (see below), and it will automatically revert 180 degrees later.
 
 PHASE_SWITCH_ANGLE
-__________________
+------------------
 
 `Default: 45`
 
@@ -105,7 +105,7 @@ __________________
 This is the angle in degrees that the turntable needs to rotate away from the home position in order to trigger DCC phase inversion by activating the phase inversion relays. Once the turntable rotates a further 180 degrees, the phase will revert by deactivating the phase inversion relays.
 
 STEPPER_DRIVER
-_______________
+--------------
 
 `Default: ULN2003_HALF_CW`
 
@@ -121,7 +121,7 @@ _______________
 While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to `defining custom stepper drivers`_.
 
 DISABLE_OUTPUTS_IDLE
-_____________________
+--------------------
 
 `Default: enabled`
 
@@ -130,7 +130,7 @@ When defined, this option will ensure that the stepper driver outputs are disabl
 To disable this option, simply comment the line out by adding "//" before the "#define".
 
 STEPPER_MAX_SPEED
-__________________
+-----------------
 
 `Default: 200`
 
@@ -139,7 +139,7 @@ __________________
 This is the maximum speed that the turntable will rotate at, in steps per second.
 
 STEPPER_ACCELERATION
-_____________________
+--------------------
 
 `Default: 25`
 
@@ -148,7 +148,7 @@ _____________________
 The acceleration rate of the turntable, which is defined as steps per second, per second. This is what gives |EX-TT| a more prototypical acceleration/deceleration rate when rotating.
 
 LED_FAST
-_________
+--------
 
 `Default: 100`
 
@@ -157,7 +157,7 @@ _________
 This is the time in milliseconds that the LED is on and off when the set to a fast blink. With the default, it will be on for 100ms, then off for 100ms.
 
 LED_SLOW
-________
+--------
 
 `Default: 500`
 
@@ -171,14 +171,14 @@ Advanced configuration options
 |tinkerer|
 
 DEBUG
-______
+-----
 
 `Default: Disabled`
 
 If debug level output is requested as part of a support ticket or when troubleshooting in general, uncomment this line by removing the "//" from in front of "#define".
 
 SANITY_STEPS
-____________
+------------
 
 `Default: 10000 (Disabled)`
 
@@ -189,7 +189,7 @@ This is the maximum number of steps the stepper motor will move during homing an
 If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.
 
 HOME_SENSITIVITY
-________________
+----------------
 
 `Default: 150 (Disabled)`
 
@@ -200,7 +200,7 @@ This is the minimum number of steps required for the turntable to rotate away fr
 If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.
 
 FULL_STEP_COUNT
-_______________
+---------------
 
 `Default: 4096 (Disabled)`
 
@@ -213,7 +213,7 @@ If you enable this option, the calibration sequence will never run automatically
 You can initiate the calibration command manually while this option is enabled, it will perform the calibration sequence and record the calibrated step count in EEPROM, and that setting will take effect whilst |EX-TT| is running. However, the calibrated value in EEPROM will be overridden at the next startup unless this option is disabled.
 
 DEBOUNCE_DELAY
-______________
+--------------
 
 `Default: 10 (Disabled)` - TRAVERSER mode
 

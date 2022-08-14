@@ -34,7 +34,7 @@ Current list of boards
 =======================
 
 Easy to use boards
-___________________
+------------------
 
 |conductor|
 
@@ -46,7 +46,7 @@ ___________________
 * :ref:`reference/hardware/motor-boards:Pololu MC33926` - 3A - current sensing is not appropriate for most CV programming
 
 Intermediate boards
-____________________
+-------------------
 
 |tinkerer|
 
@@ -58,7 +58,7 @@ These boards require wiring.
 * :ref:`reference/hardware/motor-boards:Dual Motor Driver Module H-bridge MOSFET IRF3205` - 15A
 
 Expert Level Boards
-____________________
+-------------------
 
 |engineer|
 
@@ -70,7 +70,7 @@ These boards require you to add your own config to the config.h file, and may no
 * :ref:`reference/hardware/motor-boards:DFRobot 2x2A DC Motor Shield (DRI0009)` - 2A
 
 Incompatible boards
-____________________
+-------------------
 
 * VNH2SP30 - SparkFun Monster Moto and others. It can't switch fast enough to generate a reliable DCC signal
 * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
@@ -79,7 +79,7 @@ ____________________
 * Pololu TB9051FTG based motor shield. It can't switch fast enough to generate a reliable DCC signal. `Product page <https://www.pololu.com/product/2520>`_.
    
 Other boards
-_____________
+------------
 
 While not fully supported and tested, other boards can potentially be used. Look for the following criteria:
 
@@ -97,7 +97,7 @@ Conductor level boards
 Below we outline the various details that we know of related to each of the different boards that we've either tested, or know to work based on user feedback.
 
 Arduino Motor Shield
-_____________________
+--------------------
 
 |conductor|
 
@@ -112,7 +112,7 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
 |
 
 Deek-Robot Motor Shield
-________________________
+-----------------------
 
 |conductor|
 
@@ -127,7 +127,7 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 |
 
 Flashtree Motor Shield
-_______________________
+----------------------
 
 |conductor|
 
@@ -145,7 +145,7 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 
 
 DIY More L298NH Motor Shield
-_____________________________
+----------------------------
 
 |conductor|
 
@@ -162,7 +162,7 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
 |
 
 YFRobot L298P Motor Shield
-___________________________
+--------------------------
 
 |conductor|
 
@@ -197,7 +197,7 @@ Tinkerer level boards
 ======================
 
 L298N Motor Driver (dual)
-__________________________
+-------------------------
 
 |tinkerer|
 
@@ -218,7 +218,7 @@ https://www.smart-prototyping.com/L298N-Dual-H-bridge-Motor-Driver-Board
 |
 
 MiniIBT Motor Driver L6201P (single)
-_____________________________________
+------------------------------------
 
 |tinkerer|
 
@@ -240,7 +240,7 @@ https://www.aliexpress.com/item/531569334.html
 http://trainelectronics.com/DCC_Arduino/DCC++/
 
 Pololu MC33926
-_______________
+--------------
 
 |tinkerer|
 
@@ -253,7 +253,7 @@ Comes soldered or in a kit where you just have to solder the headers and connect
 |
 
 BTS7960 IBT_2 Board (single)
-_____________________________
+----------------------------
 
 |tinkerer|
 
@@ -273,7 +273,7 @@ Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 |
 
 Dual Motor Driver Module H-bridge MOSFET IRF3205
-_________________________________________________
+------------------------------------------------
 
 |tinkerer|
 
@@ -293,7 +293,7 @@ Engineer level boards
 ======================
 
 Keyes/Fundumoto ("Beeper Board")
-_________________________________
+--------------------------------
 
 |engineer|
 
@@ -330,7 +330,7 @@ Solder one end of a 1.5 ohm, 3 watt resistor to each of these same header pins, 
 |
 
 Makerfabs H-Bridge Motor Shield
-________________________________
+-------------------------------
 
 |engineer|
 
@@ -353,7 +353,7 @@ Pinout
 |
 
 Velleman KA03 (kit) VMA03 (soldered)
-_____________________________________
+------------------------------------
 
 |engineer|
 
@@ -368,7 +368,7 @@ Must cut traces and solder resistors to get current sensing on the soldered boar
 |
 
 DFRobot 2x2A DC Motor Shield (DRI0009)
-_______________________________________
+--------------------------------------
 
 |engineer|
 
@@ -395,7 +395,7 @@ NOTE: There is a "Twin" version of this board that uses pins 10, 11 and 12, 13 i
 |
 
 DFRobot Romeo V2
-_________________
+-----------------
 
 |engineer|
 

@@ -95,7 +95,7 @@ Requirements (for installing)
 There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
 Choose your options
-___________________
+-------------------
 
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
@@ -154,7 +154,7 @@ Enter your Home WiFi Network Details
 * **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.\ 
 
 Compile and Upload
-__________________
+------------------
 
 **Compile and Upload Button**
 

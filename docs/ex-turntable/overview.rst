@@ -97,14 +97,14 @@ That's pretty much as simple as it gets. These step positions are defined in myA
   It's recommended that the home position does not align with a specific layout connection track to ensure that each time |EX-TT| powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
 
 Controlling the turntable
-_________________________
+-------------------------
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
 Refer to the :ref:`ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
 
 Important! Phase (or polarity) switching
-________________________________________
+----------------------------------------
 
 An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.
 

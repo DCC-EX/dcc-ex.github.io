@@ -28,7 +28,7 @@ Links / Hyperlinks
 ==================
 
 Internal - Same Page
-____________________
+--------------------
 
 .. todo::   internal links - same page
 
@@ -56,7 +56,7 @@ or
 
 
 Internal - To a Different Page
-______________________________
+------------------------------
 
 Sphinx cross-references are used for internal links. This ensures they are correct and by default will use the destination heading text as the link text.
 
@@ -74,7 +74,7 @@ The document name is a relative or absolute (within the documentation) file
 path, without the .rst suffix.  Absolute are generally safer.
 
 Internal - To a Sub Heading of a Different Page
-_______________________________________________
+-----------------------------------------------
 
 To link to a position within a page use ``:ref:``. A reST label can be used as
 the reference, but on the |DCC-EX| website headings are made available to use as
@@ -103,7 +103,7 @@ Alternative text can be used for the link:
   :ref:`WiFi configuration <ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
 
 External
-________
+--------
 
 For URLs that are shown, just use the URL:
 
@@ -141,7 +141,7 @@ source file, define a target:
     Link to the `DCC-EX home page <https://dcc-ex.com/index.html>`_.
 
 Downloads or Important Links
-____________________________
+----------------------------
 
 Download buttons are created using the ``dcclink`` class, added using the
 ``.. rst-class::`` directive:
@@ -253,7 +253,7 @@ Images
 ======
 
 Including images
-________________
+----------------
 
 Include images with the ``.. image::`` and ``.. figure::`` directives. Horizontal positioning using the ``:align:`` option needs a bit of care.
 
@@ -269,12 +269,12 @@ Use a figure when including a caption. Sphinx will automatically number the figu
 
 
 Image Types
-___________
+-----------
 
 We typically prefer compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
 
 Drawing and saving graphs and schemas
-_____________________________________
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use `draw.io <https://app.diagrams.net/>`_ to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
 
@@ -283,7 +283,7 @@ Images, diagrams, and any other artefacts created by draw.io that aren't publish
 An `image-artefacts <https://github.com/DCC-EX/dcc-ex.github.io/tree/sphinx/image-artefacts/>`_ directory has been created in the documentation repository for this purpose. Any draw.io artefacts can be saved here and will not be published as part of the website build.
 
 SVG images
-__________
+^^^^^^^^^^
 
 We are currently experimenting with using SVG images to provide contextual links to be embedded within the images so users can be linked directly to relevant documentation. For example, a Fritzing diagram of a CommandStation connected to some peripherals can be given context, and clicking on the relevant component can take you directly to that documentation page.
 
@@ -303,7 +303,7 @@ To include the SVG file, use the ``raw:: html`` directive:
     :file: ../_static/images/image.svg
 
 CSS for SVG images
-__________________
+^^^^^^^^^^^^^^^^^^
 
 SVG images can be effectively controlled by CSS, and the implementation of this is controlled via the overall "svg" CSS directive and/or standard CSS classes and IDs.
 
@@ -373,7 +373,7 @@ Hiding pages and comments
 If there is a need to hide a page from the toctree, or a need for a specific comment on a page that isn't part of the published content, use the techniques below.
 
 Hidden Pages
-_____________
+------------
 
 Use the ``:orphan:`` tag with a comment below it saying "Remove orphan field when the document is added to a toctree". This will allow us to easily search for the word "orphan" to find incomplete pages and avoids triggering an error that there are pages without an entry in a toctree
 
@@ -385,7 +385,7 @@ Use the ``:orphan:`` tag with a comment below it saying "Remove orphan field whe
 This is a handy tip for pages that are a long time in the making and aren't quite ready for publishing, or for pages that provide context in one specific scenario and could be confusing or misleading if included directly in a toctree.
 
 Hidden comments
-________________
+---------------
 
 You can hide notes or searchable placeholders by putting placing the text on a line with a space above and below and preceding it with two period and a space, for example ``.. This is a hidden comment``.
 

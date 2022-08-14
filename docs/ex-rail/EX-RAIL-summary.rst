@@ -43,7 +43,7 @@ Command Summary
    :class: category
 
 Diagnostics & Control
-______________________
+---------------------
 
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands < > through both the Arduino IDE Serial Monitor and the |JMRI| Send DCC++ Command pane.
 
@@ -84,7 +84,7 @@ There are some diagnostic and control commands added to the <tag> language norma
       -  Set the specified signal green
 
 Automations, Routes and Sequences
-__________________________________
+---------------------------------
 
 .. list-table::
     :widths: auto

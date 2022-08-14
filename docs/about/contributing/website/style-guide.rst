@@ -22,7 +22,7 @@ Please ensure to follow the standards below when creating or updating documentat
 .. highlight:: rst
 
 Style Guidelines
-________________
+----------------
 
 * every page (except a few pages like home, about, contact, etc.) MUST start with one or more level images (after the title) to indicate the intended base audience for the page. 
 * Where possible, use the expansions for the level images:
@@ -50,7 +50,12 @@ ________________
   * \|tinkerer-text\| |tinkerer-text|
   * \|engineer-text\| |engineer-text|
 
-* Avoid abbreviations that would not be easily recognised by 'Conductors'.  |BR| In particular *don't* use 'CS'.  Use the full name 'Command Station'
+* Avoid abbreviations that would not be easily recognised by 'Conductors'.  
+
+  * In particular *don't* use 'CS'.  Use the full name 'Command Station'
+  * *don't* use 'AP'.  Use 'Access Point' or 'Access Point Mode'
+  * *don't* use 'STA'.  Use 'Station' or 'Station Mode'
+
 * Avoid 'fluff' - unnecessary text that adds no value.
 
   * Re-read everything you write. Ask yourself a) is there a simpler way of saying it. b) does it add value.
@@ -83,13 +88,13 @@ ________________
   * **#########** with overline, for parts - not really used
   * \*\*\*\*\*\*\*\*\*\*\*\* Page Titles
   * **=========** for sections
-  * **\_\_\_\_\_\_\_\_\_\_\_\_** for subsections  (underscore)
+  * **----------------------** for subsections  (underscore)
   * **\^\^\^\^\^\^\^\^\^\^** for subsubsections
   * **\~\~\~\~\~\~\~\~\~\~** for paragraphs
   * only if really needed (i.e. avoid): 
   
      * **\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'** for sub paragraphs
-     * **----------------------** for sub-sub-paragraphs (hyphens)
+     * **\_\_\_\_\_\_\_\_\_\_\_\_** for sub-sub-paragraphs (hyphens)
 
 * To force a :
 

@@ -64,7 +64,7 @@ Some Simple Examples
 ====================
 
 Example 1: Creating Routes for a Throttle
-_________________________________________
+-----------------------------------------
 
 A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like
@@ -109,7 +109,7 @@ Of course, you may want to add signals, and time delays
 
 
 Example 2: Automating Signals with Turnouts
-___________________________________________
+-------------------------------------------
 
 By intercepting a turnout change command, it's easy to automatically adjust signals or 
 automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE`` keyword to detect a particular turnout change:
@@ -153,7 +153,7 @@ Signals can now simply be a decoration to be switched by the route process; they
 
 
 Example 3: Automating various non-track items 
-______________________________________________
+---------------------------------------------
 
 This normally takes place in a timed loop, for example alternate flashing of a fire engine's lights. To do this use a SEQUENCE.
 
@@ -171,7 +171,7 @@ This normally takes place in a timed loop, for example alternate flashing of a f
 Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using ``START(66)``.
 
 Example 4: Automating a train (simple loop)
-___________________________________________
+-------------------------------------------
 
 Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.
 
@@ -200,7 +200,7 @@ The instructions are followed in sequence by the loco given to it; the ``AT`` co
 Notice that this automation does not specify the loco address. If you drive a loco with the throttle and then hand it over to this automation, then the automation will run with the loco you last drove.
 
 Example 5: Signals in a train script
-_____________________________________
+------------------------------------
 
 Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
 
@@ -220,7 +220,7 @@ Adding a station signal to the loop script is extremely simple, but it does requ
       FOLLOW(4)  // and continue to follow the automation
 
 Example 6: Single line shuttle
-_______________________________
+------------------------------
 
 Consider a single line, shuttling between stations A and B.
 
@@ -274,7 +274,7 @@ Although the above is trivial, the routes are designed to be independent of the 
 The example above assumes that loco 3 is sitting on the track and pointing in the right direction. A bit later you will see how to script an automatic process to take whatever loco is placed on the programming track, and send it on its way to join in the fun!
 
 Example 7: Running multiple inter-connected trains
-__________________________________________________
+--------------------------------------------------
 
 So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout

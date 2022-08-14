@@ -60,7 +60,7 @@ For those who just want to run trains and not use any other control software, th
 With JMRI
 ^^^^^^^^^^^^^
 
-For those who want the power of |JMRI| to operate a complex layout, you would install |JMRI| on a computer or Raspberry Pi and connect your throttle to JM|JMRI|RI wirelessly through its preferred method, usually the |WiThrottle Server| or Web Server Interface. Here is an image that shows connecting wirelessly to |JMRI|, and connecting |JMRI| via a USB cable to the CS.
+For those who want the power of |JMRI| to operate a complex layout, you would install |JMRI| on a computer or Raspberry Pi and connect your throttle to JM|JMRI|RI wirelessly through its preferred method, usually the |WiThrottle Server| or Web Server Interface. Here is an image that shows connecting wirelessly to |JMRI|, and connecting |JMRI| via a USB cable to the Command Station.
 
 .. image:: /_static/images/throttles/throttle_wifi_jmri.png
    :alt:  WiFi Throttle to JMRI and JMRI to CS with USB cable

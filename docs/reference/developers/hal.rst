@@ -232,7 +232,7 @@ save them to EEPROM.  Then, when the Command Station restarts, the definitions a
 
 Create a 'mySetup.h' file, and add commands in the form ``SETUP("....");``.  This can be used for any command that is accepted 
 by the |EX-CS| parser, including turnout, sensor and output definition commands.  The mySetup.h file is included as 
-executable code into other modules of the CS.  Consequently, the content is limited to executable statements (or macros 
+executable code into other modules of the Command Station.  Consequently, the content is limited to executable statements (or macros 
 that expand into executable statements).  Global variables or functions cannot be defined, and only very simple include 
 files can be added. Consequently, only a limited number of the DCC-EX API function can be used from here.
 
@@ -424,7 +424,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   on the Nano and Uno of the neil-hal branch to 27,724 bytes, 560 bytes less than the current master branch (28,284 at 10th May 2021).  
   The symbol IO_NO_HAL is automatically defined for the Uno and Nano, but not for other architectures which are less limited by FLASH size.
 - HAL: Add hook for optional myHal.cpp file.  The existing mySetup.h hook provides a place for system-specific initialisation 
-  that is to be permanently built into the CS, but is limited to specific directives and commands (e.g. SETUP("S 1 28 1"); 
+  that is to be permanently built into the Command Station, but is limited to specific directives and commands (e.g. SETUP("S 1 28 1"); 
   to define a sensor).  For example, library #includes cannot be added to enable optional features.  The myHal.cpp, however 
   is expected to be a syntactically complete C++ module which may include #includes directives, and should have a definition 
   of a function halSetup().  When included in the build, the halSetup() function will be called during the startup of the Command Station, 
@@ -547,7 +547,7 @@ Future Enhancements
 7.  HAL, Turnouts:  EEPROM is currently optionally used for storing definitions of Turnouts, Sensors and Outputs.  
     In addition, if a turnout or output definition has been saved to EEPROM then the state of the turnout 
     (closed/thrown) or output will be updated in EEPROM each time it is changed.  This allows the turnout/output 
-    to be reinitialised to its last known state on each restart of the CS.  However, if the EEPROM is not 
+    to be reinitialised to its last known state on each restart of the Command Station.  However, if the EEPROM is not 
     used for definitions, then the states are not available either.  PROPOSAL: If the EEPROM isn't used for 
     object definitions, then store current states of objects instead.  This could be done fairly readily for 
     turnouts, using existing code, by writing just the TurnoutData contents to EEPROM - this contains the 

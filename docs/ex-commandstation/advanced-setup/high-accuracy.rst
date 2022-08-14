@@ -68,7 +68,7 @@ However, an Uno's pins do not line up with this shield. In order to use high acc
 Inverter Circuit
 ================
 
-Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your CS, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.
+Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your Command Station, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.
 
 .. figure:: /_static/images/motorboards/inverter1.jpg
    :alt: Transistor inverter circuit

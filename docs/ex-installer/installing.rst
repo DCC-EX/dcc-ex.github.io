@@ -96,7 +96,7 @@ Requirements (for installing)
 There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
 Choose your options
-___________________
+-------------------
 
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
@@ -207,7 +207,7 @@ Refresh Ports Button
 This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program, or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.
 
 Compile and Upload
-__________________
+------------------
 
 **Compile and Upload Button**
 

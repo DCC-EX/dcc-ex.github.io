@@ -19,7 +19,7 @@ The DCC++ API
 
 The first way to connect to |EX-CS| is to use our DCC++ API. This is the set of commands that tell the Command Station how to control your trains. |EX-CS| understands simple command surrounded by brackets like this: "<1 MAIN>". That command turns your main track power on.
 
-Since this is just sending characters back and forth across a serial connection, anything that can connect to an Arduino through a USB cable or one of the other serial ports using WiFi of Bluetooth can send DCC++ commands to the CS. This method is fast, direct, and can take advantage of special features that exist only in |EX-CS|. You can even connect using the Arduino Serial Monitor or connect to our WiFi with a terminal program like PuTTY and type DCC++ commands manually. Our |EX-WT|, |JMRI| and CABs like DCCpp CAB and DigiTrainsPro send commands in DCC++ format.
+Since this is just sending characters back and forth across a serial connection, anything that can connect to an Arduino through a USB cable or one of the other serial ports using WiFi of Bluetooth can send DCC++ commands to the Command Station. This method is fast, direct, and can take advantage of special features that exist only in |EX-CS|. You can even connect using the Arduino Serial Monitor or connect to our WiFi with a terminal program like PuTTY and type DCC++ commands manually. Our |EX-WT|, |JMRI| and CABs like DCCpp CAB and DigiTrainsPro send commands in DCC++ format.
 
 The WiThrottle Server
 =====================

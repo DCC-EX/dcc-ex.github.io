@@ -44,7 +44,7 @@ If you're brand new to using Git and GitHub, you will no doubt be instantly conf
 If you're not familiar with these, we provide a very brief overview below, however we highly recommend reading GitHub's documentation: `Collaborate with pull requests <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests>`_.
 
 Fork
-_____
+----
 
 Yes, a fork is an implement you use to eat, but in the context of Git and GitHub, it is more akin to a fork in the road.
 
@@ -53,7 +53,7 @@ A fork in Git is a complete copy of a code repository created in your own Git ac
 If you are not a member of the |DCC-EX| team, you won't have permissions to create branches or pull requests directly against the |DCC-EX| repositories, and instead you will need to create a fork of these first.
 
 Branch
-_______
+------
 
 When working on any new features or bug fixes, a good practice is to create a new branch prior to making any changes.
 
@@ -62,7 +62,7 @@ By following this practise and ensuring a new branch is created, you will always
 Further to this, it affords an opportunity to have other contributors review your code prior to merging it in to the main code base to ensure we only release quality code.
 
 Pull request
-_____________
+------------
 
 When you're ready to get the changes made in your branch merged in to the main code base, you need to submit a pull request.
 
@@ -71,7 +71,7 @@ When a pull request is submitted, GitHub will automatically compare it to the ma
 This is the point where another team member can review your proposed changes and approve or reject the request.
 
 Merge
-______
+-----
 
 Once a pull request is approved, it needs to be merged into the main code base.
 

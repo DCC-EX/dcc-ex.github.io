@@ -71,7 +71,7 @@ You DON'T need:
 How It Works
 ============
 
-A small amount of code in the CS, the |EX-R| executor, lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don't have to be a programmer and you don't have to learn code. You simply add your own myAutomation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.
+A small amount of code in the Command Station, the |EX-R| executor, lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don't have to be a programmer and you don't have to learn code. You simply add your own myAutomation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.
 
 The |EX-R| code is surprisingly small and requires very little PROGMEM (memory that holds the program code) or SRAM (the runtime workspace that stores variables and things the program needs) to operate. However, you will still need a Mega for your CS; the UNO and Nano memory is simply too small to include EX-RAIL with the rest of the Command Station code.
 
@@ -98,7 +98,7 @@ From time to time, we are asked why we can't put automation scripts (the content
 4) The current implementation requires no additional PC code/tool download or installation. If you are able to setup your Command Station, you already have everything you need to add your myAutomation.
 
 
-5) To implement an SD card solution requires a user to have access to the CS, which could involve climbing under their layout, opening the Command Station case if you have one, dismounting the motor shield to get access to the SDCard slot, potentially damaging the Command Station, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the Command Station.
+5) To implement an SD card solution requires a user to have access to the Command Station, which could involve climbing under their layout, opening the Command Station case if you have one, dismounting the motor shield to get access to the SDCard slot, potentially damaging the Command Station, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the Command Station.
 
 In contrast... with the current system: One takes the end of the USB cable that has been thoughtfully left connected to the Command Station and plugs it into ones laptop. The Arduino IDE (or suitable alternative) is opened and the myAutomation.h files is edited. A SINGLE CLICK on the upload button is sufficient to save the file, check it for errors, upload to the Command Station and restart the Command Station. 
 

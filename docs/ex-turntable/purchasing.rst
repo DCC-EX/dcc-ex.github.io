@@ -56,7 +56,7 @@ What you need for EX-Turntable
   :scale: 30%
 
 Power supplies
-_______________
+--------------
 
 Choosing the right power supply for your Arduino and stepper motor is important to get right.
 

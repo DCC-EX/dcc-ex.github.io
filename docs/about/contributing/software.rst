@@ -37,7 +37,7 @@ To do this, open a command prompt and run the following two commands, where ``us
   If using our `recommended editor (vscode)`_, once you've installed a Git client, you can do all of your repository work (branches, forks, etc.) directly in VSCode.
 
 Other handy Git software
-_________________________
+------------------------
 
 GitHub Desktop is an application by GiHub that provides a graphical user interface for managing Git repositories and so forth:
 
@@ -57,7 +57,7 @@ However, if you haven't, it's recommended to have this installed, even if using 
 To get up and running with the Arduino IDE, follow the `Getting started with Arduino products <https://www.arduino.cc/en/Guide>`_ page.
 
 ESP32 support
-______________
+-------------
 
 If you need ESP32 support in addition to the standard Arduino AVR boards, follow the official `Espressif Arduino ESP32 documentation <https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html>`_.
 
@@ -96,7 +96,7 @@ You can download VSCode `here <https://code.visualstudio.com/download>`_.
 VSCode includes many different extensions and configuration options to enable the various syntax checks and other additional components, so please review the below to ensure the right configuration and extensions are in place to make things easier for yourself.
 
 Recommended extensions
-_______________________
+----------------------
 
 To install and manage extensions, either click the manage extensions icon in the left menu section or press <Ctrl> + <Shift> + <x>.
 
@@ -123,7 +123,7 @@ Once you've installed the extensions above, it is recommended you close then reo
 Refer to the :doc:`/about/contributing/website/index` contribution page for more info on generating reliable local previews.
 
 Recommended configuration options
-__________________________________
+---------------------------------
 
 Once VSCode is installed, it is recommended you update the default spacing for code indents as we standardise this to two spaces across our code base (including documentation).
 
@@ -152,7 +152,7 @@ To configure these:
 4. Save and close the settings, and the irrelevant warnings should no longer bother you.
 
 Use VSCode for git
-___________________
+------------------
 
 If you wish to use VSCode as your default editor for Git, open a command prompt and run the following command:
 

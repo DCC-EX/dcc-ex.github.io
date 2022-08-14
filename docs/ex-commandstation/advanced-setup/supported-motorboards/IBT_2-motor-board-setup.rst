@@ -253,7 +253,7 @@ Modifying Your Motor Board Definition To Give The Correct Current Sense Factor
 
 If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exactly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formula to calculate it. Everything you need to create your own motor board definition is here:
 
-:ref:`Creating a Custom Motor Board Definition <ex-commandstation/advanced-setup/motor-board-config:Your board is NOT in the Supported List>`
+:ref:`Creating a Custom Motor Board Definition <ex-commandstation/advanced-setup/motor-board-config:If Your board is NOT in the Supported List>`
 
 
 Using External Current Sense

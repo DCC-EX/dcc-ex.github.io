@@ -25,10 +25,10 @@ Please ensure to follow the standards below when creating or updating documentat
 
 
 Links / Hyperlinks
-^^^^^^^^^^^^^^^^^^
+==================
 
 Internal - Same Page
-~~~~~~~~~~~~~~~~~~~~
+____________________
 
 .. todo::   internal links - same page
 
@@ -56,7 +56,7 @@ or
 
 
 Internal - To a Different Page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+______________________________
 
 Sphinx cross-references are used for internal links. This ensures they are correct and by default will use the destination heading text as the link text.
 
@@ -74,7 +74,7 @@ The document name is a relative or absolute (within the documentation) file
 path, without the .rst suffix.  Absolute are generally safer.
 
 Internal - To a Sub Heading of a Different Page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_______________________________________________
 
 To link to a position within a page use ``:ref:``. A reST label can be used as
 the reference, but on the |DCC-EX| website headings are made available to use as
@@ -103,7 +103,7 @@ Alternative text can be used for the link:
   :ref:`WiFi configuration <ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
 
 External
-~~~~~~~~
+________
 
 For URLs that are shown, just use the URL:
 
@@ -141,7 +141,7 @@ source file, define a target:
     Link to the `DCC-EX home page <https://dcc-ex.com/index.html>`_.
 
 Downloads or Important Links
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+____________________________
 
 Download buttons are created using the ``dcclink`` class, added using the
 ``.. rst-class::`` directive:
@@ -175,7 +175,7 @@ or (float right)...
            `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
 
 Tables
-^^^^^^
+======
 
 There are two recommended table types to use within our website.
 
@@ -250,10 +250,10 @@ This will render a table like this:
 Note that while these tables look very similar, adding and editing the markdown style table becomes quite cumbersome compared with ``list-table``.
 
 Images
-^^^^^^
+======
 
 Including images
-~~~~~~~~~~~~~~~~
+________________
 
 Include images with the ``.. image::`` and ``.. figure::`` directives. Horizontal positioning using the ``:align:`` option needs a bit of care.
 
@@ -269,7 +269,7 @@ Use a figure when including a caption. Sphinx will automatically number the figu
 
 
 Image Types
-===========
+___________
 
 We typically prefer compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
 

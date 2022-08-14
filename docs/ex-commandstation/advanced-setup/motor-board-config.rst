@@ -21,7 +21,7 @@ Motor Driver Configuration
 Configure Using the Installer
 =============================
 
-Tinkerers and even Conductors should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
+A |Tinkerer-text| and even a |Conductor-text| should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
 
 Configure By Editing the config.h File
 ======================================
@@ -56,7 +56,7 @@ If Your Board is in the Supported List
 
   The Arduino Motor Shield, Deek-Robot Motor Shield, DIY More Motor Shield and any other shield or board that is 100% compatible with the Arduino Motor Shield is defined as a "STANDARD_MOTOR_SHIELD"
 
-This option is possibly Conductor friendly for those just choosing a supported board that requires no wiring.
+This option is possibly |Conductor-text| friendly for those just choosing a supported board that requires no wiring.
 
 To select your board, just change the #define line to the type for your board. The following line configures a Pololu Motor Shield. We just copy and paste its name over the STANDARD_MOTOR_SHIELD:
 
@@ -181,7 +181,7 @@ In some cases, the datasheet for your motor shield will list it. If the board or
 Just Buy a Current Sense Board Instead
 --------------------------------------
 
-Tinkerers and Conductors who don't mind connecting a few jumper wires may like this option.
+A |Tinkerer-text| or |Conductor-text| who doesn't mind connecting a few jumper wires may like this option.
 
 This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards for sale.
 

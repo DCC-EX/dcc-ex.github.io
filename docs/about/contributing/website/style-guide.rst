@@ -50,6 +50,18 @@ Style Guidelines
   * \|tinkerer-text\| |tinkerer-text|
   * \|engineer-text\| |engineer-text|
 
+* Additional expansions that should be used where possible: (currently this hyperlink to the the glossary but the intention is to have them link some more sensible later.)
+
+  * \|Motor Driver\|
+  * \|JMRI\|
+  * \|Engine Driver\|
+  * \|wiThrottle\| 
+  * \|wiThrottle Protocol\|
+  * \|wiThrottle Server\|
+  * \|Access Point\|
+  * \|Access Point Mode\|
+  * \|Station Mode\|
+
 * Avoid abbreviations that would not be easily recognised by 'Conductors'.  
 
   * In particular *don't* use 'CS'.  Use the full name 'Command Station'
@@ -68,9 +80,9 @@ Style Guidelines
 * Preferred Terms:
   
   * Use **"Motor Driver"**, not "Motor Shield", "Motor Board", "Motorboard"
-  * In general use **'loco'** instead of 'locomotive' or 'engine'
+  * In general use **'train'** or **'loco'** instead of 'locomotive' or 'engine'
 
-*	Use railroad/railway terminology that is understandable by all English-speaking people. |br|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.
+*	Use railroad/railway terminology that is understandable by all English-speaking people. |br|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)
 *	No full stop at the end of a numbered or unnumbered list
 *	Numbered lists should generally only be used if they are describing a specific sequence, or the numbering is important to the text
 * Use first person (you and your; not I, me, my or am) language
@@ -78,7 +90,7 @@ Style Guidelines
 * Double quotes (") should only be used for quoting text from people, documents or web sites
 *	No quotes around 'Also See' type references
 *	Avoid '(above)' or '(below)' in text.  Use hypertext links instead
-*	**``.. todo:: description...``** means that it is still a work-in-process and needs to be updated.  It may be followed by descriptive text in italics describing the issue to be fixed.  If you want to to show in the page you will need add a separate line 
+*	**``.. todo:: description...``** means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  If you want to to show in the page you will need add a separate line. 
 * Use **\`\`\literal text blocks\`\`** when describing preference values  - ``literal text blocks``
 * Use **\:menuselection\:\`Menu --> Preferences --> ..\`** for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
 * Use **\:guilabel\:\`\GUI labels\`** for buttons  - :guilabel:`GUI labels`

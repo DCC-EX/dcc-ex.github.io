@@ -31,9 +31,9 @@ Overview
 
 The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from |EX-CS| code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.
 
-The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.
+The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user's configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a 'virtual pin' or vpin and is a reference to any kind of 'end-point' connected to a local or remote device.
 
-When CS changes a turnout or output, the CS code issues calls in the form **IODevice::write(vpin,value)**.  
+When Command Station changes a turnout or output, the Command Station code issues calls in the form **IODevice::write(vpin,value)**.  
 The vpin is used to route the call to the correct device handler, and the device handler sends a command to 
 the device being controlled to carry out an action; for example, a digital output is switched to illuminate an 
 LED, or a servo moves the railway track points from one position to another.
@@ -47,7 +47,7 @@ The class hierarchy is shown below.
 IODevice defines the overall base class interface, which is implemented in each HAL device driver class.  
 The class GPIOBase implements functionality that is common to, and inherited by, the drivers for GPIO input/output modules 
 (MCP23017, MCP23008 and PCF8574).  Consequently, the drivers for those modules are relatively simple and just include the 
-device-specific commands for reading and writing to the module’s registers.
+device-specific commands for reading and writing to the module's registers.
 
 
 Command Reference
@@ -108,7 +108,7 @@ MCP23017::create(firstVpin, 16, 0x20); *--- OR ---* MCP23017 device1(firstVpin, 
 
 
 MCP23017::create(firstVpin, 16, 0x20, 40); *--- OR ---* MCP23017 device1(firstVpin, 16, 0x20, 40);
-  As above, but using the MCP23017’s interrupt pins (INTA/INTB) connected to Arduino GPIO pin 40 via a jumper wire.  
+  As above, but using the MCP23017's interrupt pins (INTA/INTB) connected to Arduino GPIO pin 40 via a jumper wire.  
   The device will only be polled when the MCP23017 pulls INTA or INTB (and hence pin 40) to ground to signify that a change has occurred.
   A single Arduino pin may be shared by multiple modules by commoning together the INT* pins from each module.
         
@@ -184,33 +184,33 @@ DIAG_IO
   Enable supplementary diagnostic output from the HAL classes
 
 DIAG_LOOPTIMES
-  Enable calculation and display of average and maximum loop times for the CS’s overall main ‘loop’ function.  
-  When enabled, the diagnostic is updated every 5 seconds and is sent to the diagnostic output (USB Serial) and to the LCD  line 1 (overwriting the ‘Ready’ message).
+  Enable calculation and display of average and maximum loop times for the CS's overall main 'loop' function.  
+  When enabled, the diagnostic is updated every 5 seconds and is sent to the diagnostic output (USB Serial) and to the LCD  line 1 (overwriting the 'Ready' message).
 
 IO_NO_HAL
   Removes the bulk of the HAL code.  The only parts that remain are those that are required to interface to the 
-  Arduino’s input and output pins.  This symbol is automatically defined if the code is being compiled for an Arduino Uno or Arduino Nano target, to reduce the memory footprint.  In this mode, inputs pull-ups are enabled and inputs are inverted (i.e. 5V=inactive and 0V=active).
+  Arduino's input and output pins.  This symbol is automatically defined if the code is being compiled for an Arduino Uno or Arduino Nano target, to reduce the memory footprint.  In this mode, inputs pull-ups are enabled and inputs are inverted (i.e. 5V=inactive and 0V=active).
 
 IO_SWITCH_OFF_SERVO
   When a transition between states has completed on a PCA9685 (e.g. a servo movement), the servo motor will be 
   switched off, by disabling the pulses on the pin.  This reduces power consumption and potential noise (servo buzz) 
-  when the servo isn’t moving.
+  when the servo isn't moving.
 
 
 The following symbols may be defined in I2CManager.h or the platformio.ini file to adjust the behaviour of the I2C subsystem.
 
 I2C_USE_WIRE
-  Direct the I2C Manager to use the ‘Wire’ library instead of the native AVR and 4809 drivers.  For platforms other 
-  than the AVR and 4809, the ‘Wire’ library will be used irrespective of this symbol.
-  The ‘Wire’ library is a blocking driver, i.e. the CS cannot run any useful code while I2C messages are being sent 
-  and received.  The native drivers are non-blocking and are able to perform I2C operations in parallel with other CS code.
+  Direct the I2C Manager to use the 'Wire' library instead of the native AVR and 4809 drivers.  For platforms other 
+  than the AVR and 4809, the 'Wire' library will be used irrespective of this symbol.
+  The 'Wire' library is a blocking driver, i.e. the Command Station cannot run any useful code while I2C messages are being sent 
+  and received.  The native drivers are non-blocking and are able to perform I2C operations in parallel with other Command Station code.
 
 I2C_USE_INTERRUPTS
-  Configure the I2C Manager’s non-blocking AVR and 4809 drivers to use interrupts to signal completion of an I2C 
+  Configure the I2C Manager's non-blocking AVR and 4809 drivers to use interrupts to signal completion of an I2C 
   operation (default unless I2C_NO_INTERRUPTS is defined).
 
 I2C_NO_INTERRUPTS
-  Don’t use interrupts to signal completion of an I2C operation.  The I2C state is instead checked whenever the following functions are called:
+  Don't use interrupts to signal completion of an I2C operation.  The I2C state is instead checked whenever the following functions are called:
   
   .. code-block:: cpp
 
@@ -225,10 +225,10 @@ I2C_NO_INTERRUPTS
 mySetup Files
 -------------
 
-There are various ways of configuring I/O and creating turnouts, sensors and other objects when the CS is powered on:
+There are various ways of configuring I/O and creating turnouts, sensors and other objects when the Command Station is powered on:
 
 After using the commands (<S ...>, <T ...>, <Z ...> etc.) to define sensors, turnouts and outputs, use the <E> command to 
-save them to EEPROM.  Then, when the CS restarts, the definitions are read back from EEPROM and the objects recreated.  This is limited to turnout, sensor and output definitions.
+save them to EEPROM.  Then, when the Command Station restarts, the definitions are read back from EEPROM and the objects recreated.  This is limited to turnout, sensor and output definitions.
 
 Create a 'mySetup.h' file, and add commands in the form ``SETUP("....");``.  This can be used for any command that is accepted 
 by the |EX-CS| parser, including turnout, sensor and output definition commands.  The mySetup.h file is included as 
@@ -278,14 +278,14 @@ The following functional changes have been done in the neil-hal branch to suppor
 and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 
 - HAL: Create new *IODevice class* as the abstract base class for all I/O devices such as GPIO Extenders, remote I/O, 
-  DCC Accessories and (for completeness) Arduino I/O pins.  The base class/subclass model allows the CS code to 
+  DCC Accessories and (for completeness) Arduino I/O pins.  The base class/subclass model allows the Command Station code to 
   communicate directly with the base class, without having to be tailored for functionality implemented in specific 
   subclasses.  Specific implementations of the interface, to support different hardware devices, can be easily 
-  *‘plugged in’ as desired at compile time*, by adding an include file (``#include "xxx.h"``) and one line to the 
-  user’s ‘mySetup’ file (``xxx::create(firstVpin, nPins, ...);``) before building the software.  *This enables a 
+  *'plugged in' as desired at compile time*, by adding an include file (``#include "xxx.h"``) and one line to the 
+  user's 'mySetup' file (``xxx::create(firstVpin, nPins, ...);``) before building the software.  *This enables a 
   wide selection of hardware to be supported, without unwanted or unused device drivers taking valuable space in the 
   microcontroller.*  Also, support for new devices can be developed by capable end-users, and included in the 
-  user’s build without having to change the base CS software.
+  user's build without having to change the base Command Station software.
 
 - HAL: The default initialisation of the HAL supports use of the Arduino pins on all platforms.  
   On the Nano and Uno platforms, the HAL is excluded (by defining IO_NO_HAL) and input and output to 
@@ -308,7 +308,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 
 - HAL: Add looptime monitor to IODevice::loop() function to support performance monitoring during 
   development.  Outputs to LCD line 1 and to USB, once every 5 seconds, and shows average and maximum 
-  loop cycle time for the entire CS software over the last 5 second period.  This monitor may be 
+  loop cycle time for the entire Command Station software over the last 5 second period.  This monitor may be 
   enabled by #defining the symbol DIAG_LOOPTIMES in IODevice.h.  Other HAL diagnostics are enabled 
   by DIAG_IO symbol.
 
@@ -342,9 +342,9 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   closer to where the functionality is implemented.  Therefore, the code for handling a servo is only included in FLASH if the servo driver module is configured.
 - Sensors/Turnouts/Outputs: Modify turnout handling to more effectively store the turnout parameters in the available space.  
   Allows range of up to 0-511 for activeposition and inactiveposition (nominal range for a typical servo is 200-400).
-- HAL: For GPIO devices (MCP23008 and MCP23017) allow the ‘interrupt’ output pin from the module to be connected to an 
-  Arduino digital input pin so that the module will only be polled if this ‘interrupt’ signal is activated (pulled down) 
-  by the module to signify that one or more of the module’s inputs have changed state.  The interrupt signal from multiple 
+- HAL: For GPIO devices (MCP23008 and MCP23017) allow the 'interrupt' output pin from the module to be connected to an 
+  Arduino digital input pin so that the module will only be polled if this 'interrupt' signal is activated (pulled down) 
+  by the module to signify that one or more of the module's inputs have changed state.  The interrupt signal from multiple 
   modules can be connected together to minimise pin usage, or they may be kept separate.
 - HAL: Enable pull-ups to be configured on remote (I/O extender) digital inputs as for Arduino pins.  This feature may 
   be removed, as feedback received indicates that there is no benefit in switching pull-ups off, and some FLASH and RAM can be released by removing the code.
@@ -355,22 +355,22 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   state changes, only write one byte to EEPROM instead of rewriting the entire EEPROM.
 - HAL: Adjust the existing LCN handling to fit alongside the use of VPINs:
 
-  - Replace use of pin 255 for ‘impossible pin’ with constant VPIN_NONE, since 255 is a valid value for a VPIN.
+  - Replace use of pin 255 for 'impossible pin' with constant VPIN_NONE, since 255 is a valid value for a VPIN.
   - When an LCN message is received put the value into the inputState field of a sensor, instead of the active field (to facilitate notification of change to JMRI).
 
 - Sensors/Turnouts/Outputs: Ensure that servo turnouts and outputs are driven to the correct position (as configured, 
-  or as last saved in EEPROM) when the CS is powered on or reset.
+  or as last saved in EEPROM) when the Command Station is powered on or reset.
 - I2C: Revise I2CManager class to add the following features:
   
   - Add non-blocking I2C interface, using a request block structure to maintain the call context and completion status.  
     Request block is queued without the caller having to wait for completion.  The caller can later test for completion, 
     or wait for completion.  Supported operations are Write from RAM, Write from FLASH, Read. and Request (write 
-    followed by read).  The benefit of non-blocking calls is that the CS doesn’t spend so much of its time waiting 
-    for I2C operations to complete; the CS overall loop cycle time is reduced, making all the code more responsive.  
+    followed by read).  The benefit of non-blocking calls is that the Command Station doesn't spend so much of its time waiting 
+    for I2C operations to complete; the Command Station overall loop cycle time is reduced, making all the code more responsive.  
     The queue is implemented as a linked list of request blocks, to optimise RAM use.
   - For convenience, provide blocking API equivalents for these operations for use where timing is less critical (e.g. during startup).
   - Implementation of native I2C drivers for the ATmega328 (Arduino Nano and Uno), ATmega2560 (Arduino Mega) and the 
-    ATmega4809 (Arduino Nano Every and Uno WiFi).  This removes the dependency on the ‘Wire’ I2C library, reducing 
+    ATmega4809 (Arduino Nano Every and Uno WiFi).  This removes the dependency on the 'Wire' I2C library, reducing 
     RAM and FLASH usage significantly.
   - Retain and enhance the existing Wire-based back-end for the I2CManager interface, providing compatibility with non-Atmel 
     platforms.  With the Wire library, all calls are blocking (i.e. when the request is made, the calling code does not 
@@ -380,7 +380,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
     interrupts, at the expense of I2C throughput).  On the Arduino Mega with the standard motor driver pin usage, the 
     native I2C driver has no impact whatsoever on the DCC signal, with or without interrupts.
   - Performance figures:  With the current base device allocations of 32 x PCA9685 servo pins and 32 x MCP23017 GPIO pins, 
-    the average loop time for the CS software (one throttle, no user actions, 16 sensors defined) is 120us.  During stress 
+    the average loop time for the Command Station software (one throttle, no user actions, 16 sensors defined) is 120us.  During stress 
     testing, a full I2C scan of 8 x 32-input I2C GPIO extenders (128 inputs in total) takes under 2.2 ms at an I2C clock speed of 400kHz.
 
 - I2C: Revise modules that use I2C (currently SSD1306Ascii, LiquidCrystal_I2C, PCF8574, PCA9584, MCP23016 and MCP23008) 
@@ -392,7 +392,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   2.  On first cyclic entry, the request block is added to the I2CManager queue.  Once it has been added to the queue, the 
       program does not have to wait for completion and can allow other functions to continue executing.  The requested
       operation will begin once any other pending operations have finished.
-  3.  On subsequent entries to the program’s loop function, the program tests the completion status of the request block.  
+  3.  On subsequent entries to the program's loop function, the program tests the completion status of the request block.  
       If it is still busy, then other loop functions may be allowed to run.
   4.  When the operation completes, the status of the request block is updated to show it is no longer busy.
   5.  At the next loop entry of the program, the test for competition status shows that the request block is no longer busy.  
@@ -401,19 +401,19 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   When necessary, the operation may be repeated by requeueing the original request block (either unchanged or with different parameters or data).
 
   If the non-blocking I2C driver is not available (e.g. on controllers other than ATmega328, ATmega2560 and ATmega4809), 
-  the blocking I2C functions in the Wire library are automatically used instead, without any changes to the CS code.
+  the blocking I2C functions in the Wire library are automatically used instead, without any changes to the Command Station code.
 
 - Turnouts: Totally revised Turnout class and TurnoutData struct layout for more optimal storage and layout.  
   The struct is now optimised for access and for storage size.  Further optimisation is possible by writing (and reading) only 
   the number of bytes applicable to each turnout type, instead of the worst case turnout size.
 - HAL: IODevice::configure method originally passed supplied parameters to the specified pin handler without any way of checking 
-  that parameters are appropriate for the device (e.g. that a servo hasn’t been instructed to turn on an input pull-up).  
+  that parameters are appropriate for the device (e.g. that a servo hasn't been instructed to turn on an input pull-up).  
   Additional parameter has been added which identifies the function being performed, e.g. 1=Servo config, 2=Pullup on/off etc.  
-  Thus, the device’s _configure method validates that the requested configuration function is supported, or rejects it.
+  Thus, the device's _configure method validates that the requested configuration function is supported, or rejects it.
 - HAL: Normally the Sensor class issues cyclic read request using IODevice::read() to poll digital input states for the current 
   value and to detect changes.  To potentially increase performance and response times where there are a lot of inputs to scan, 
   but infrequent changes, a mechanism for optional callback notification has been added to the HAL IODevice class.  Each input 
-  device driver may implement this capability or not, according to the programmer’s preference.  If the callback capability is 
+  device driver may implement this capability or not, according to the programmer's preference.  If the callback capability is 
   implemented, then the Sensor class no longer needs to poll the device but, instead, registers a callback function which is 
   invoked whenever the device driver detects a pin state change while acquiring the input data.  The GPIOBase class has been 
   modified to implement this behaviour, which is inherited by MCP23017, MCP23008 and PCF8574.  [Note: Callback notification 
@@ -427,18 +427,18 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   that is to be permanently built into the CS, but is limited to specific directives and commands (e.g. SETUP("S 1 28 1"); 
   to define a sensor).  For example, library #includes cannot be added to enable optional features.  The myHal.cpp, however 
   is expected to be a syntactically complete C++ module which may include #includes directives, and should have a definition 
-  of a function halSetup().  When included in the build, the halSetup() function will be called during the startup of the CS, 
+  of a function halSetup().  When included in the build, the halSetup() function will be called during the startup of the Command Station, 
   before the directives in mySetup.h are executed.  This provides a simple yet flexible way of including optional features 
   into the build, such as support for specific IO Extender modules, or optional advanced features as an alternative to 
-  conditional compilation or other changes to the CS code.  If it is required that the configuration, build and upload be 
+  conditional compilation or other changes to the Command Station code.  If it is required that the configuration, build and upload be 
   automated, the myHal.cpp file can be generated by a tool before invoking the build and upload.
 - HAL: Small servos such as the ubiquitous SG90, according to the datasheet, expect a pulse length of 1.0-2.0ms at 50Hz to 
   operate over their full range, translating to PWM settings between 205 and 410.  Other servos might operate over a range 
   of 0.5ms to 2.4ms (PWM settings 102 to 490).
 - HAL: PCA9685 servo module driver now has a default mode.  If not configured, then no memory is allocated for parameters 
   and dynamic state for individual pins.  Originally a write to a non-configured pin would be ignored.  Now, instead, 
-  default servo limits will be assumed: a write of value ‘1’ will request 2ms servo pulses (position 410), and a write 
-  value ‘0’ will request 1ms servo pulses (position 205).  This will typically cause a movement of about 90 degrees by 
+  default servo limits will be assumed: a write of value '1' will request 2ms servo pulses (position 410), and a write 
+  value '0' will request 1ms servo pulses (position 205).  This will typically cause a movement of about 90 degrees by 
   the servo.
 - HAL: New IODevice::writeAnalogue(vpin, value, profile) added to support EXRAIL.  This function is initially implemented 
   only for the PCA9685 driver.  It allows a servo to be repositioned to any arbitrary position (value parameter) using the 
@@ -498,7 +498,7 @@ Future Enhancements
 
 2.  HAL: Remove the ability to switch off pull-ups for inputs?  Initially the IODevice class was implemented with pull-ups switched 
     permanently on for input pins.  On the PCF8574 they have to be on anyway, because of the way the chip works.  
-    So I added them, but @UKBloke asked why anyone wouldn’t want pull-ups enabled?  Most, if not all, sensors operate by 
+    So I added them, but @UKBloke asked why anyone wouldn't want pull-ups enabled?  Most, if not all, sensors operate by 
     pulling a pin down to earth.  Look at pushbuttons, microswitches, relays, hall effect sensors, and others.  So supplying a 
     pull-up, and inverting (0V=active=true, 5V=inactive=false), would seem to be the standard.  Pull-up+inversion is now default if not 
     configured otherwise.
@@ -515,23 +515,23 @@ Future Enhancements
     would indicate that the device in question is connected to the primary bus and is not affected by the state of the 
     multiplexer.  The impact on I2C traffic is minimal;  two additional bytes need to be sent if an I2C request requires 
     to switch to a different sub-bus and the affect on the code is just the changes above to the I2C handling.
-4.  Sensors/Turnouts/Outputs: I can’t see anything in the existing code which checks whether the EEPROM writes 
+4.  Sensors/Turnouts/Outputs: I can't see anything in the existing code which checks whether the EEPROM writes 
     overrun the available EEPROM space.  If not, then when the address overflows, I think that the writes will wrap 
     around and overwrite the start of the EEPROM space.  This is, in fact, safe since the beginning of the EEPROM 
     contains a text flag and, if it s not present or has been overwritten, the EEPROM is considered to be empty.  
     PROPOSAL: Analyse more thoroughly and, if the address overrun check is missing, add suitable checks, and report 
-    failure (<X>) if there is insufficient EEPROM to store everything.  I’ve added a DIAG report of how much EEPROM 
+    failure (<X>) if there is insufficient EEPROM to store everything.  I've added a DIAG report of how much EEPROM 
     is written when <E> command is executed.
 5.  Sensors: Sensor handling is not ideal.  When the Sensor class scans for changes in current 
     state by calling IODevice::read(), potentially each device (ArduinoPins, MCP23017 etc) needs to be checked to find 
     the correct device, which takes time.  For a system with, say, three I2C devices, this means up to four devices being 
     checked for each pin being read.  This can be mitigated by using the callback capability, but this also has its 
     problems.  When a change is detected and the callback is invoked, the relevant sensor object has to be located by 
-    scanning the sensor list, potentially to the end.  For the same three I2C devices each with 16 sensors, that’s 
-    up to 48 sensor objects that need to be checked to find the appropriate sensor object, but this isn’t as bad as 
+    scanning the sensor list, potentially to the end.  For the same three I2C devices each with 16 sensors, that's 
+    up to 48 sensor objects that need to be checked to find the appropriate sensor object, but this isn't as bad as 
     it sounds as it only happens on a sensor state change.  Also, the transmission of the <Q>/<q> message is deferred 
     to the checkAll() method which also has to scan through all of the sensor objects, partly because of the anti-bounce 
-    delay handling and partly because the output stream is only available within the checkAll function.  I can’t really 
+    delay handling and partly because the output stream is only available within the checkAll function.  I can't really 
     see how this can be improved without serious restructuring of other parts of the CS.  PROPOSAL: The anti-bounce code 
     in the Sensor class could be removed in favour of adding simple double-scan validation within the HAL drivers (input 
     must be the same for two consecutive scans to be considered a valid change).  This would use minimal RAM in external 
@@ -548,7 +548,7 @@ Future Enhancements
     In addition, if a turnout or output definition has been saved to EEPROM then the state of the turnout 
     (closed/thrown) or output will be updated in EEPROM each time it is changed.  This allows the turnout/output 
     to be reinitialised to its last known state on each restart of the CS.  However, if the EEPROM is not 
-    used for definitions, then the states are not available either.  PROPOSAL: If the EEPROM isn’t used for 
+    used for definitions, then the states are not available either.  PROPOSAL: If the EEPROM isn't used for 
     object definitions, then store current states of objects instead.  This could be done fairly readily for 
     turnouts, using existing code, by writing just the TurnoutData contents to EEPROM - this contains the 
     turnout ID, type and current position (closed/thrown).  Thus, when a turnout is recreated (from a <T> 
@@ -558,6 +558,6 @@ Future Enhancements
     is not found, then the first free space would be allocated to it.  When the turnout position changes, 
     the flags byte would be rewritten to EEPROM.  Note that this approach only stores the binary closed/thrown 
     state and not, for example, the current position of a servo, which may be any arbitrary value within the 
-    servo’s range.
+    servo's range.
 
 *N McKechnie, 27th August 2021*

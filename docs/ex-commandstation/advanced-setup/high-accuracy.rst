@@ -49,7 +49,7 @@ The first line after setting the name and display text is for the Main (operatio
    MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)
 
 
-Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (e.g. IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise, or LPWM and RPWM for left and right pulse width modulation. If you want to use two pins, so that you don't need a transistor or integrated circuit inverter to take one output from the CS and split it into two, then you can't use the high accuracy waveform.
+Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (e.g. IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise, or LPWM and RPWM for left and right pulse width modulation. If you want to use two pins, so that you don't need a transistor or integrated circuit inverter to take one output from the Command Station and split it into two, then you can't use the high accuracy waveform.
 
 If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit shown below, you can use the high accuracy mode.
 

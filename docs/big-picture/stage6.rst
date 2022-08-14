@@ -337,7 +337,7 @@ If we omit that first ``DONE``, EX-RAIL would automatically execute ``ROUTE(1, "
 Route 1 - main track running
 ____________________________
 
-The first route we publish for use is ``ROUTE(1, "Main track")`` which will appear in WiThrottle apps and |Engine Driver| with the description "Main track".
+The first route we publish for use is ``ROUTE(1, "Main track")`` which will appear in |WiThrottle Protocol| based apps (like |Engine Driver| and |wiThrottle|) with the description "Main track".
 
 Given we have closed our turnouts and set all our signals red in the startup sequence above, when selecting this route the first time, it will simply set signals 1 and 2 green, as the ``IFTHROWN()`` statements will evaluate as false and not execute the associated commands.
 
@@ -378,7 +378,7 @@ The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any furthe
 Route 2 - enter and exit the station siding
 ___________________________________________
 
-The second route we publish for use is ``ROUTE(2, "Stating siding")`` which will appear in WiThrottle apps and |Engine Driver| with the description "Station siding".
+The second route we publish for use is ``ROUTE(2, "Stating siding")`` which will appear in |WiThrottle Protocol| based apps (like |Engine Driver| and |wiThrottle|)  with the description "Station siding".
 
 Counter to the main track route above, we use ``IFCLOSED()`` statements to evaluate if turnouts need to change or not from their current position. Therefore, if the first route we choose after startup is this one, both statements will evaluate true. The same will occur if we select our main track route.
 

@@ -54,15 +54,15 @@ This can be a little confusing, so let explain it a different way:
 
   3. You will need a computer and a USB cable to download software and then upload it to the Arduino. You may also want to download an SDCard image to use a Raspberry Pi instead of a computer to upload your Command Station software and run a controller.
 
-  4. You will need a controller that sends commands to the CS and controls your trains. That controller can be any one of the following:
+  4. You will need a controller that sends commands to the Command Station and controls your trains. That controller can be any one of the following:
 
-    1. A computer capable of running a Chromium based browser to use our EX-WebThrottle to connect to the CS via a USB cable. This computer does not need to be connected to the internet once you download the EX-WebThrottle files to your computer.
+    1. A computer capable of running a Chromium based browser to use our EX-WebThrottle to connect to the Command Station via a USB cable. This computer does not need to be connected to the internet once you download the EX-WebThrottle files to your computer.
 
-    2. A computer running JMRI. JMRI connects via the USB cable to the CS and you control your trains with the Throttles built into JMRI. You can also use the WiThrottle server built into JMRI to connect any |WiThrottle Protocol| controller (such as the |Engine Driver| mobile app) via WiFi to JMRI and control your layout that way. 
+    2. A computer running |JMRI|. |JMRI| connects via the USB cable to the Command Station and you control your trains with the Throttles built into |JMRI|. You can also use the WiThrottle server built into |JMRI| to connect any |WiThrottle Protocol| controller (such as the |Engine Driver| mobile app) via WiFi to |JMRI| and control your layout that way. 
     
-    3. A Raspberry Pi as a computer. You can do any of the things mentioned in 1 and 2 above. With Steve Todd's image burned to an SDCard and installed in the Raspberry Pi, JMRI, the WiThrottle Server with networking, and more is installed and running when you boot. You still need a USB cable to connect the Pi to the CS.
+    3. A Raspberry Pi as a computer. You can do any of the things mentioned in 1 and 2 above. With Steve Todd's image burned to an SDCard and installed in the Raspberry Pi, |JMRI|, the |WiThrottle Server| with networking, and more is installed and running when you boot. You still need a USB cable to connect the Pi to the Command Station.
 
-    4. If you install an ESP8266 WiFi Shield, you don't need a computer or a Pi if you don't want it once you upload the software to the Arduino. You can connect directly to the CS via WiFi using any |WiThrottle Protocol| controller such as |Engine Driver| running on a WiFi device like your mobile phone.
+    4. If you install an ESP8266 WiFi Shield, you don't need a computer or a Pi if you don't want it once you upload the software to the Arduino. You can connect directly to the Command Station via WiFi using any |WiThrottle Protocol| controller such as |Engine Driver| running on a WiFi device like your mobile phone.
 
 .. note:: The computer USB port in option 1, 2, or 3 may be able to be the power supply for the Arduino (but you will still need a 12-14V DC power supply for the motor shield) See :doc:`Power Supplies <power-supplies>` for information on how to choose the right power supplies and different ways you can power the Arduino.
   

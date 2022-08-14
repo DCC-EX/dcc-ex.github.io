@@ -86,11 +86,11 @@ Lifting Or Cutting Chip Legs Option
 
 1. Remove all jumpers, there are 3!
 
-2. Unsolder or cut the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output CS A for MAIN. Pin 15 to the right is CS output B for PROG.
+2. Unsolder or cut the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output Command Station ``Output A`` for MAIN. Pin 15 to the right is Command Station ``Output B`` for PROG.
 
 3. Lift each leg and bend them carefully upward to provide space for a resistor.
 
-4. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the CS leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
+4. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the Command Station leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
 
 5. Solder the leg of the chip you unsoldered to the top of the resistor. You should be able to carefully bend the leg to meet the top resistor lead as the resistor stands vertically. You are basically inserting a resistor into the space where you cut the leg of the chip. Solder the wire fairly close to the end of the resistor. You may need a small piece of hookup wire to reach between the connections. Repeat on the other side. Do not trim the top resistor lead yet.
 

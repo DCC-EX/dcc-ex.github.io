@@ -43,7 +43,7 @@ This API reference applies to any API client that makes use of these commands an
 API clients may include:
 
 - Throttles (both wired and wireless)
-- JMRI
+- |JMRI|
 - Other integrations (eg. RedHat)
 
 2. Serial port and WiFi/Ethernet monitoring

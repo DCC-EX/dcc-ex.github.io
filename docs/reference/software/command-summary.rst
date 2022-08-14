@@ -150,7 +150,7 @@ WiFi Control
 =============
  ``<+command>`` Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
 
- ``<+X>`` Force the CS into "WiFi Connected" mode
+ ``<+X>`` Force the Command Station into "WiFi Connected" mode
 
 Diagnostic traces
 ==================

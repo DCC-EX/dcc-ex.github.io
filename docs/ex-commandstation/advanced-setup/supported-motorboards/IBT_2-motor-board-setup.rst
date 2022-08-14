@@ -57,14 +57,14 @@ It would be possible to just use fuses to both rails of your MAIN track to prote
 Replace (IBT_2)
 ---------------
 
-The main benefit of the replace option, using 2 IBT_2 boards, is that you don't have to have two different types of boards. If you are building a new CS and don't already have an Arduino Motor Shield, you will need two of the IBT_2 boards.
+The main benefit of the replace option, using 2 IBT_2 boards, is that you don't have to have two different types of boards. If you are building a new Command Station and don't already have an Arduino Motor Shield, you will need two of the IBT_2 boards.
 
-To use this option *and* be able to program locos, you **must** have an current sense capability. These boards *do* have a current sense output, but you may want to modify that or use an external current sense board. We will cover more about that later. Accurate current sense lets you detect the acknowledgement (ACK) pulses from a loco on your programming track. It also allows the CS to monitor for a short and automatically cut the power to the tracks if there is an overload condition (a short).
+To use this option *and* be able to program locos, you **must** have an current sense capability. These boards *do* have a current sense output, but you may want to modify that or use an external current sense board. We will cover more about that later. Accurate current sense lets you detect the acknowledgement (ACK) pulses from a loco on your programming track. It also allows the Command Station to monitor for a short and automatically cut the power to the tracks if there is an overload condition (a short).
 
 Upgrading (Use the Arduino Motor Shield AND the IBT_2)
 =======================================================
 
-For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.
+For this installation we are going to assume you already have a working Command Station or at least have all the parts you need as listed above.
 
 If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly </ex-commandstation/get-started/assembly>`
 
@@ -165,7 +165,7 @@ Please see `Important Notes on Current Sensing (IBT_2)`_.
 Replacing (Using One IBT_2 for MAIN and another for PROG)
 ===========================================================
 
-This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IBT_2 can deliver much more current than you need for a programming track. If you install 1 Amp fuses in between the IBT_2 outputs and both rails of your programming track, that and the lower trip current we set in the CS for the programming track should protect your layout.
+This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IBT_2 can deliver much more current than you need for a programming track. If you install 1 Amp fuses in between the IBT_2 outputs and both rails of your programming track, that and the lower trip current we set in the Command Station for the programming track should protect your layout.
 
 What We Are Going to Do (Replace)
 -----------------------------------
@@ -233,7 +233,7 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
 
 * Test your board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the current sense output does not produce more than 5V.
 * Use a 5.1V zener diode (D1) and current limiting resistor (R2). This should be 220 Ohms, which will protect you from 5.2V to at least 12V of over voltage at the Arduino analog pin. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5V the response is no longer linear when using the diode, so you you may want to design your system to output its current sense range between 0 and 4V and use 5V as the over limit setting.
-* Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See :numref:`ibt2-sense-resistors`. When we tie the two CS outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
+* Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See :numref:`ibt2-sense-resistors`. When we tie the two Command Station outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
 * Put a 5A fuse on each output leg going to your track.
 
 .. figure:: /_static/images/motorboards/ibt_2_resistors.jpg
@@ -244,7 +244,7 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
    10k (103) current sense resistors
 
 
-The spec sheet of the BTS7960B states that the "expected" (aka nominal) value for the ratio of output current to the current reported at the current sense pin is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the CS pin. If we apply that through our 5k of resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This means that a 3A current can be reported as anything from 1V to 5V on the CS pin. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connected to your Arduino! In other words, **You could destroy the analog input pin on your Arduino**. Use a known current on your track and measure the current sense voltage for your board before connecting it to your command station.
+The spec sheet of the BTS7960B states that the "expected" (aka nominal) value for the ratio of output current to the current reported at the current sense pin is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the Command Station pin. If we apply that through our 5k of resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This means that a 3A current can be reported as anything from 1V to 5V on the CS pin. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connected to your Arduino! In other words, **You could destroy the analog input pin on your Arduino**. Use a known current on your track and measure the current sense voltage for your board before connecting it to your command station.
 
 .. WARNING:: If you are going to use more than 3 Amps, you should add a 10k or less current sense resistor (R1) and a 5.1V Zener diode and a 220 Ohm series resistor protection circuit (D1 and R2). See the section above "Important Notes on Current Sensing". An additional 10k resistor would give you .392 Volts per Amp and will require a small change to your sketch to adjust your current conversion factor (usually a value of 10). A 2.2k resistor would allow you to measure up to 10A, but the larger the current range, the less sensitivity and accuracy you can get. Besides, we should use boosters and power districts if we need more than 5 Amps, right? ;)
 

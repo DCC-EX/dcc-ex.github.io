@@ -117,7 +117,7 @@ Once you have Python installed, you will need to install esptool.py. Open a comm
 
    $ pip install esptool
 
-NOTE:with some Python installations that command may not work and you’ll receive an error. If that’s the case, try to install esptool.py with one of the following:
+NOTE:with some Python installations that command may not work and you'll receive an error. If that's the case, try to install esptool.py with one of the following:
 
 | pip3 install esptool
 | python -m pip install esptool
@@ -259,7 +259,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 2. Decide if you want Access Point Mode or Station Mode
 =======================================================
 
-Access Point (AP) Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Controllers (Throttles) can find it on your network.
+Access Point (AP) Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  Station Mode connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Controllers (Throttles) can find it on your network.
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install |EX-CS|. Go directly to step 5.
 

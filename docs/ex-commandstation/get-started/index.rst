@@ -32,7 +32,7 @@ A basic |EX-CS| can be made from widely available Arduino boards that you can as
 
 It includes advanced features such as:
 
-* A WiThrottle server implementation, 
+* A |WiThrottle server| implementation, 
 * General purpose inputs and outputs (I/O) for extensibility, and 
 * |JMRI| integration
 

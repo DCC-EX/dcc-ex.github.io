@@ -14,7 +14,7 @@ WiFi Boards
 
 You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the :doc:`Mega+WiFi page </ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega>`
 
-For more information on how to configure your CS to use the boards below, see :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
+For more information on how to configure your Command Station to use the boards below, see :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
 
 - :ref:`reference/hardware/wifi-boards:Makerfabs WiFi Shield`.
 - :ref:`reference/hardware/wifi-boards:Duinopeak WiFi Shield`.
@@ -24,7 +24,7 @@ For more information on how to configure your CS to use the boards below, see :d
 - :ref:`reference/hardware/wifi-boards:SparkFun Thing Plus (ESP32)`.
 - :ref:`reference/hardware/wifi-boards:ESP32_Ant-01 Breakout and Development Board (ESP32)`.
 
-.. NOTE:: This is NOT to make a connection to JMRI. Use a USB cable instead. The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
+.. NOTE:: This is NOT to make a connection to |JMRI|. Use a USB cable instead. The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the |EX-CS| without the need for any other software such as |JMRI|. While using a WiFi/Ethernet connection to |JMRI| will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.
 
 Makerfabs WiFi Shield
 ======================

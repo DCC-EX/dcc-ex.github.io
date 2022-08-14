@@ -50,6 +50,7 @@ ________________
   * \|tinkerer-text\| |tinkerer-text|
   * \|engineer-text\| |engineer-text|
 
+* Avoid abbreviations that would not be easily recognised by 'Conductors'.  |BR| In particular *don't* use 'CS'.  Use the full name 'Command Station'
 * Avoid 'fluff' - unnecessary text that adds no value.
 
   * Re-read everything you write. Ask yourself a) is there a simpler way of saying it. b) does it add value.

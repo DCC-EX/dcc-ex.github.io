@@ -58,16 +58,16 @@ It would be possible to just use fuses to both rails of your MAIN track to prote
 Replace (IRF3205)
 -----------------
 
-The main benefit of the replace option, using only the IRF3205 board, is that you only need one board. If you are building a new CS and don't already have an Arduino Motor Shield, you can save money and space by not having to buy another board.
+The main benefit of the replace option, using only the IRF3205 board, is that you only need one board. If you are building a new Command Station and don't already have an Arduino Motor Shield, you can save money and space by not having to buy another board.
 
-To use this option *and* be able to program locos, you **must** have an external current sense board so you can detect the acknowledgement (ACK) pulses from a loco on your programming track. The current sensor also allows the CS to monitor for a short and automatically cut the power to the tracks if there is an overload condition (a short).
+To use this option *and* be able to program locos, you **must** have an external current sense board so you can detect the acknowledgement (ACK) pulses from a loco on your programming track. The current sensor also allows the Command Station to monitor for a short and automatically cut the power to the tracks if there is an overload condition (a short).
 
 There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`ex-commandstation/advanced-setup/supported-motorboards/IRF3205-motor-board-setup:Important Notes on Current Sensing` section.
 
 Upgrading (Use the Arduino Motor Shield AND the IRF3205)
 ===========================================================
 
-For this installation we are going to assume you already have a working CS or at least have all the parts you need as listed above.
+For this installation we are going to assume you already have a working Command Station or at least have all the parts you need as listed above.
 
 If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly </ex-commandstation/get-started/assembly>`
 
@@ -277,7 +277,7 @@ Important Notes on Current Sensing
 
 Please do the following to verify you won't damage the Arduino, your layout, or yourself:
 
-* Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the output going to pin A3 of the CS does not produce more than 5V.
+* Test your current sense board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the output going to pin A3 of the Command Station does not produce more than 5V.
 * Consider using a 5V Zener diode and current limiting resistor to clamp the voltage on the analog pin. This would normally be a 270 Ohm resistor.
 * Put a 5A fuse on each output leg going to your track.
 
@@ -288,7 +288,7 @@ Using Other External Current Sense Boards
 
 Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (10A+), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
 
-..TODO:: Add help or point to a section for external CS boards
+..TODO:: Add help or point to a section for external Command Station boards
 
 Sense Current at the Tracks instead of the motor board input
 --------------------------------------------------------------

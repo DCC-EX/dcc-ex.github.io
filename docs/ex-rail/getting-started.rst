@@ -147,7 +147,7 @@ See the :doc:`/ex-rail/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_
 Defining Signals
 ================
 
-Signals can now simply be a decoration to be switched by the route process; they don’t need to control anything.
+Signals can now simply be a decoration to be switched by the route process; they don't need to control anything.
 
 ``GREEN(55)`` would turn signal 55 green, and ``RED(55)`` would turn it red. Somewhere in the script there must be a SIGNAL command like this: ``SIGNAL(55,56,57)``.  This defines a signal with ID 55, where the Red/Stop lamp is connected to pin 55, the Amber/Caution lamp to pin 56, and the Green/Proceed lamp to pin 57. The pin allocations do not need to be contiguous, and the red pin number is also used as the signal ID. Thus you can change the signal by ``RED(55)``, ``AMBER(55)``, or ``GREEN(55)``. This means you don't have to manually turn off the other lamps. A RED/GREEN only signal may be created with a zero amber pin.
 
@@ -239,7 +239,7 @@ Starting from Station A, the steps may be something like:
 -  When I get to A, stop.
 
 
-Notice that the sensors at A and B are near the ends of the track (allowing for braking distance, but don’t care about train length or whether the engine is at the front or back.) We have wired sensor A on pin 41, and sensor B on pin 42 for this example.
+Notice that the sensors at A and B are near the ends of the track (allowing for braking distance, but don't care about train length or whether the engine is at the front or back.) We have wired sensor A on pin 41, and sensor B on pin 42 for this example.
 
 .. code-block:: cpp
 
@@ -429,7 +429,7 @@ Here for example is a launch sequence that has no predefined locos but allows lo
    START(12) // send loco off along route 12
    FOLLOW(99) // keep doing this for another launch
 
-The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
+The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
 Roster entries
 ==============

@@ -107,7 +107,7 @@ Example outputs also using :ref:`ex-rail/getting-started:example 6: single line 
 ROUTES
 _______
 
-``</ ROUTES>``	Returns the Routes & Automations control list in WiThrottle format.
+``</ ROUTES>``	Returns the Routes & Automations control list in |WiThrottle Protocol| format.
 
 Example output:
 
@@ -310,13 +310,13 @@ Sensor examples:
 
 .. code-block:: cpp
 
-  IF(25)          // If sensor on the CS pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.
+  IF(25)          // If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.
     RED(101)
     DELAY(10)
     CLOSE(200)
   ENDIF
 
-  IFNOT(26)       // If sensor on the CS pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
+  IFNOT(26)       // If sensor on the Command Station pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
     GREEN(102)
   ELSE
     RED(102)

@@ -35,7 +35,7 @@ An Arduino Mega |EX-CS| + WiFi enabled Command Station in Standalone Operations 
 
 Setup an Arduino Mega |EX-CS| + ESP 8266 WiFi MakerFab Shield or a ESP01 WiFi board in either Access Point AP mode or Station STA (client) mode through a shared Router for a Command Station (CS) Standalone Operations configuration. Then the |Engine Driver| and Command Station both sign on to the common SSID Name and Password to share the common WiFi signal and channel. 
 
-This Standalone WiFi configuration works Without the use of any additional PC, Mac or PI hardware or third party software controller's like JMRI or Rocrail interfaces.
+This Standalone WiFi configuration works Without the use of any additional PC, Mac or PI hardware or third party software controller's like |JMRI| or Rocrail interfaces.
 
 How it works
 =============
@@ -67,7 +67,7 @@ Sample WiFi Throttle App "Discovered Servers"
       "RPi JMRI Railroad”       {JMRI WiFI connected via WiThrottle Server on Raspberry Pi}
       
 Our new multicast Dynamic Network Server (mDNS) enhancement allows us to display the available WiFi Server connections to a |EX-CS|. 
-Choosing one allows your WiFi Throttle App to connect to and load Server Rosters and function keys to your throttle from Either the |EX-CS|, Or from JMRI Engine Roster.
+Choosing one allows your WiFi Throttle App to connect to and load Server Rosters and function keys to your throttle from Either the |EX-CS|, Or from |JMRI| Engine Roster.
 
 .. image:: /_static/images/jmri/engine_driver_discovered_servers.png
   :alt: Engine Driver Discovered Servers
@@ -112,9 +112,9 @@ Sample Roster entry in myAutomation.h file
 Current JMRI Engine Rosters
 ===========================
   
-By choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered servers an |Engine Driver| or |WiThrottle| is then connected via a {PC, Mac or Pi} JMRI WiThrottle Server to the |EX-CS| and the JMRI Engine Roster & function keys are loaded to your WiFi Throttle App.
+By choosing “My JMRI Railroad” or ”RPi JMRI Railroad” from discovered servers an |Engine Driver| or |WiThrottle| is then connected via a {PC, Mac or Pi} |JMRI| |WiThrottle Server| to the |EX-CS| and the |JMRI| Engine Roster & function keys are loaded to your WiFi Throttle App.
 
-Please be sure your JMRI device {Windows, Mac iOS or Raspberry Pi} for JMRI WiThrottle Server is signed on and connected to the same WiFi SSID Name and Password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the JMRI WiThrottle Server IP address: port# displayed into your |Engine Driver| & |WiThrottle| Apps.
+Please be sure your |JMRI| device {Windows, Mac iOS or Raspberry Pi} for |JMRI| |WiThrottle Server| is signed on and connected to the same WiFi SSID Name and Password as your WiFi Throttles and then you can choose the JMRI Railroad name or directly enter the |JMRI| |WiThrottle Server| IP address: port# displayed into your |Engine Driver| & |WiThrottle| Apps.
 
 .. image:: /_static/images/jmri/engine_driver_jmri_server_roster.png
   :alt: Engine Driver JMRI Server Roster

@@ -50,7 +50,7 @@ Why Use WiFi?
 
    |tinkerer| |engineer|
 
-   Using Wifi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.
+   Using Wifi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
 
 **BEFORE you purchase a Wifi card, please consider whether you actually need it.**
 
@@ -176,12 +176,12 @@ Next Steps - Install the Software
 Click :doc:`here </ex-commandstation/get-started/installer>` or click the "next" button to learn how to install the software on your |EX-CS|.
 
 .. 
-   If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (|Engine Driver|). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
+   If you already have the Command Station software running and are just adding WiFi, there is nothing further you need to do if you want to use the Command Station as an Access Point (AP) and connect a WiThrottle compatible CAB (|Engine Driver|). The next time you power up the Command Station, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`
 
 ..
    .. note:: 
       
-      LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
+      LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your Command Station to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
 
 .. 
    If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads </download/ex-commandstation>` to load firmware onto the CS.

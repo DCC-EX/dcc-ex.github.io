@@ -32,7 +32,7 @@ You need just two things that work together to operate your model railroad:
 The EX-CommandStation
 _____________________
 
-The |EX-CS| is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller, a motor driver and a WiFi shield. The CS accepts instructions from a controller and generates packets that are transmitted to your track.
+The |EX-CS| is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller, a motor driver and a WiFi shield. The Command Station accepts instructions from a controller and generates packets that are transmitted to your track.
 
 The Controller (Throttle)
 _________________________
@@ -62,7 +62,7 @@ Here is a list of *some* of the controllers you can use with the |EX-CS|.
 Connecting via WiFi
 ___________________
 
-For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a CS with a WiFi Shield. Here is an image that represents a direct connection.
+For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a Command Station with a WiFi Shield. Here is an image that represents a direct connection.
 
 .. image:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
@@ -87,9 +87,9 @@ If you have an Android phone use `Engine Driver <Engine Driver (Android \| WiThr
 Engine Driver (Android \| WiThrottle \| WiFi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|Engine Driver| is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "WiThrottle" (for WiFi Throttle) and any WiThrottle compatible throttle will work with the |EX-CS|. There are two ways to connect it;
+|Engine Driver| is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "|WiThrottle Protocol|" (for WiFi Throttle). Any |WiThrottle Protocol| compatible throttle will work with the |EX-CS|. There are two ways to connect it;
 
-* The first method is by connecting directly to the CS via WiFi. You will need a WiFi board connected to the CS (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
+* The first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
 * The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. (We won't cover that option here.)
 
 See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |wiThrottle|.
@@ -97,7 +97,7 @@ See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on
 WiThrottle (iOS \| WiThrottle \| WiFi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|WiThrottle| is an app for iPhones and iPads. It can connect directly to the |EX-CS| like |Engine Driver| does, or connect to |JMRI| on a computer and then have |JMRI| connect to the CS via a USB cable.
+|WiThrottle| is an app for iPhones and iPads. It can connect directly to the |EX-CS| like |Engine Driver| does, or connect to |JMRI| on a computer and then have |JMRI| connect to the Command Station via a USB cable.
 
 The "Lite" version of |WiThrottle| is free and is more than adequate for some initial testing and base running of locos.
 

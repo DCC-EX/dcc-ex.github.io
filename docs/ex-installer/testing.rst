@@ -75,8 +75,8 @@ Using EX-WebThrottle
 
 Click this link: :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` to run EX-WebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
 
-Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
---------------------------------------------------------------
+Using Engine Driver (or other WiThrottle Protocol Throttle) - Requires WiFi
+---------------------------------------------------------------------------
 
 .. figure:: /_static/images/installer/engine_driver.png
    :alt: Engine Driver

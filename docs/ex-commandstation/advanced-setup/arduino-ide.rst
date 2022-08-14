@@ -80,7 +80,7 @@ Edit the config.h file (optional)
 
 If you are using the standard Arduino motor shield, and if optionally using one of the supported WiFi boards and want to connect directly to the |EX-CS| in Access Point Mode (AP) from your WiFi controller, there is nothing more to do! Just upload the software to the |EX-CS| in the next step.
 
-If you are using a different motor driver (shield or board), or if you wish to connect your CS to your home network instead of having a separate access point, follow the instructions in the ``config.h`` file
+If you are using a different motor driver (shield or board), or if you wish to connect your Command Station to your home network instead of having a separate access point, follow the instructions in the ``config.h`` file
 
 If you want to take a look at this file or make a simple change, just open the file and take a look. You should see many files open in tabs at the top of the IDE window. Find the down facing triangle near the upper right of the window and click on it to open the entire list of files. Scroll down to near the bottom and click on the "config.h" file you renamed in the previous step to open it in the editing window. If you are sure of your changes, make sure to click on "File -> Save" from the top menu to save them.
 
@@ -118,7 +118,7 @@ Click on the Upload button near the top left. It is a circle with a right arrow,
    :alt: Upload the CS Software to the Arduino
    :scale: 90%
 
-   Upload the CS Software to the Arduino
+   Upload the Command Station Software to the Arduino
 
 The IDE will go through a compile process which will build all the files into an application the Arduino can run, and then upload it. You may see many lines of logging as it finishes its task. When done, it will upload the file to the Arduino which you may see as some lights blinking on the Arduino. Make sure there are no errors in the log window, and that it shows "done uploading" in the status bar and "SUCCESS" and a listing of how much memory is used on the Arduino in the log window.
 
@@ -151,7 +151,7 @@ Make sure the baud rate at the lower right of the window is set to "115200". Thi
 
    Serial Monitor
 
-You should see log information immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the CS will sense that, the network test will fail, but everything else will be working as it should.
+You should see log information immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.
 
 Type in a command or two
 =========================
@@ -179,7 +179,7 @@ Run your trains!
 
 You can also download our |EX-WT| found at `EX-WebThrottle on GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ and run it in your browser. Again, make sure you are using a Chrome based browser version 89 or above.
 
-The rest of the instructions show you how to use |EX-WT|. You should be able to find the CS by its serial port and enable it, turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!
+The rest of the instructions show you how to use |EX-WT|. You should be able to find the Command Station by its serial port and enable it, turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!
 
 You can also watch the `EX-WebThrottle Video <https://www.youtube.com/watch?v=BkgsEOjxWaU>`_.
 

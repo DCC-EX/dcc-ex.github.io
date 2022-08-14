@@ -27,7 +27,7 @@ EX-CommandStation
 * Upgrade the WiFi option with possible ESP32 containing custom AT firmware with possible Ethernet upgrade and Web Interface for configuration and/or control.
 * OpenMRN on a co-processor?
 * Multiple simultaneous Motor Driver support (beyond the 2 we currently support).
-* Add EX-RAIL "Extended Railroad Automation Instruction Language". Automate your layout with a simple script.
+* Add EX-RAIL "Extended Railroad Automation Instruction Language". Automate your layout with a simple script. - Now in BETA
 
 EX-DCCInspector
 ^^^^^^^^^^^^^^^
@@ -40,13 +40,11 @@ EX-WebThrottle
 * Add Turnout support
 * Add capability to use as an installer/updater/configurer for |DCC-EX|
 
-
 Hardware
 ________
 
 New Motor Driver
 ^^^^^^^^^^^^^^^^
-
 
 New all-in-one EX-CommandStation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -77,7 +75,6 @@ New all-in-one EX-CommandStation
   * SDCard?
   * Snap on Raspberry Pi to run |JMRI|?
 
-
 Firebit Modules
 ^^^^^^^^^^^^^^^
 
@@ -86,11 +83,11 @@ Based on standard interconnect created for the CS, examples would be separate co
 Outreach/Partnering/Evangelizing
 ________________________________
 
-Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for |DCC-EX|. Add more throttles to the list that support DCC++ directly or through |JMRI|.
+Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for |DCC-EX|. Add more throttles to the list that support the |EX-CS| directly or through |JMRI|.
 
 ----
 
-todo
+TODO
 ====
 
 .. todolist:: 

@@ -2,8 +2,8 @@
 <svg
    inkscape:export-ydpi="17.060751"
    inkscape:export-xdpi="17.060751"
-   inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-rail.png"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-rail.png"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="DCC-EX_product-logo-ex-rail.svg"
    id="svg40"
    version="1.1"
@@ -36,25 +36,27 @@
      inkscape:current-layer="svg40"
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
-     inkscape:window-x="1592"
-     inkscape:cy="479.41889"
-     inkscape:cx="2250"
+     inkscape:window-x="-8"
+     inkscape:cy="465.79902"
+     inkscape:cx="1514.5278"
      inkscape:zoom="0.18355556"
      showgrid="false"
      id="namedview42"
      inkscape:window-height="816"
      inkscape:window-width="1600"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      guidetolerance="10"
      gridtolerance="10"
      objecttolerance="10"
      borderopacity="1"
-     bordercolor="#666666"
-     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     pagecolor="#505050"
      inkscape:document-rotation="0"
      inkscape:pagecheckerboard="0"
-     width="4000px" />
+     width="4000px"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#505050" />
   <mask
      height="599"
      width="599"
@@ -263,7 +265,7 @@
     </linearGradient>
   </defs>
   <rect
-     style="fill:#ffffff;fill-opacity:1;stroke-width:0.377953;-inkscape-stroke:none;stop-color:#000000;stroke:none"
+     style="fill:none;fill-opacity:1;stroke-width:0.377953;-inkscape-stroke:none;stop-color:#000000;stroke:none"
      id="rect46006"
      width="4501.5605"
      height="901.94586"
@@ -283,11 +285,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan2602"><tspan
+       id="tspan33043"><tspan
          style="fill:#00a3b9"
-         id="tspan2598">EX-</tspan><tspan
+         id="tspan33039">EX-</tspan><tspan
          style="fill:#00353d"
-         id="tspan2600">Rail</tspan></tspan></text>
+         id="tspan33041">Rail</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -298,11 +300,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan2608"><tspan
+       id="tspan33049"><tspan
          style="fill:#00353d"
-         id="tspan2604">DCC-</tspan><tspan
+         id="tspan33045">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan2606">EX</tspan></tspan></text>
+         id="tspan33047">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"

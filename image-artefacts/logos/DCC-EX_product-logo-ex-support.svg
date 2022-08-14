@@ -2,9 +2,9 @@
 <svg
    inkscape:export-ydpi="17.060751"
    inkscape:export-xdpi="17.060751"
-   inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-webthrottle.png"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="DCC-EX_product-logo-ex-turntable.svg"
+   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-webthrottle.png"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="DCC-EX_product-logo-ex-support.svg"
    id="svg40"
    version="1.1"
    fill="none"
@@ -37,24 +37,26 @@
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
      inkscape:window-x="-8"
-     inkscape:cy="1348.6486"
-     inkscape:cx="2810.1796"
+     inkscape:cy="1351.6192"
+     inkscape:cx="2008.1199"
      inkscape:zoom="0.16831664"
      showgrid="false"
      id="namedview42"
-     inkscape:window-height="996"
-     inkscape:window-width="1920"
+     inkscape:window-height="816"
+     inkscape:window-width="1600"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      guidetolerance="10"
      gridtolerance="10"
      objecttolerance="10"
      borderopacity="1"
-     bordercolor="#666666"
-     pagecolor="#ffffff"
+     bordercolor="#eeeeee"
+     pagecolor="#505050"
      inkscape:document-rotation="0"
      inkscape:pagecheckerboard="0"
-     width="4000px" />
+     width="4000px"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#505050" />
   <mask
      height="599"
      width="599"
@@ -257,7 +259,7 @@
     </linearGradient>
   </defs>
   <rect
-     style="fill:#ffffff;fill-opacity:1;stroke-width:0.377953;-inkscape-stroke:none;stop-color:#000000;stroke:none"
+     style="fill:none;fill-opacity:1;stroke-width:0.377953;-inkscape-stroke:none;stop-color:#000000;stroke:none"
      id="rect46006"
      width="4501.5605"
      height="901.94586"
@@ -277,11 +279,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan50775"><tspan
+       id="tspan38727"><tspan
          style="fill:#00a3b9"
-         id="tspan50771">EX-</tspan><tspan
+         id="tspan38723">EX-</tspan><tspan
          style="fill:#00353d"
-         id="tspan50773">WebThrottle</tspan></tspan></text>
+         id="tspan38725">WebThrottle</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -292,11 +294,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan50781"><tspan
+       id="tspan38733"><tspan
          style="fill:#00353d"
-         id="tspan50777">DCC-</tspan><tspan
+         id="tspan38729">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan50779">EX</tspan></tspan></text>
+         id="tspan38731">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"

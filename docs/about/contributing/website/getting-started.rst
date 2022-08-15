@@ -28,14 +28,14 @@ There's a handy `reStructuredText QuickReference Guide <https://docutils.sourcef
 If you haven't done so already, make sure you are familiar with how we use :doc:`/about/contributing/github` and are familiar with our :doc:`/about/contributing/software`.
 
 GitHub repository and the sphinx branch
-_______________________________________
+---------------------------------------
 
 In order for GitHub pages to function correctly and automatically publish updated content, the content must be located in a specific repository named after the GitHub organisation, and therefore our website repository is `dcc-ex.github.io <https://github.com/DCC-EX/dcc-ex.github.io>`_.
 
 In addition to this, rather than using the main or master branch, the default branch is called "sphinx", so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.
 
 Cloning the repository
-______________________
+----------------------
 
 For this section, we are assuming that you are using VSCode with Git installed, allowing the built-in functionality for Git management in VSCode to work.
 
@@ -62,7 +62,7 @@ Live previews
 Providing you followed the installation guide for VSCode on the :doc:`/about/contributing/software` page accurately, there are two methods available for generating live previews as you are editing the reStructuredText code.
 
 Esbonio Language server
-_______________________
+-----------------------
 
 The first option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.
 
@@ -71,7 +71,7 @@ To view the preview, press <Ctrl> + <Shift> + "r" and it will open the live prev
 The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process in the next section to ensure the entire website is still able to be built successfully after any updates.
 
 Sphinx build
-____________
+------------
 
 To refresh the entire website while editing, it is necessary to run the equivalent commands that the GitHub publishing workflow runs to ensure no issues have been introduced.
 

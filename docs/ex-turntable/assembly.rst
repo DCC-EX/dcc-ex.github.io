@@ -34,7 +34,7 @@ Throughout the assembly process, you can refer to this Fritzing diagram to help 
   :scale: 25%
 
 Connection summary
-___________________
+------------------
 
 Summary table of all connections required during assembly:
 
@@ -98,7 +98,7 @@ Summary table of all connections required during assembly:
 Of course for the Tinkerers and Engineers, if you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
 
 1. BEFORE you start
-____________________
+--------------------
 
 Gather all your components and visually check them all for any obvious damage, paying particular attention to pins on the Arduino to make sure they are straight.
 
@@ -111,7 +111,7 @@ Gather all your components and visually check them all for any obvious damage, p
   :scale: 50%
 
 2. Insert the Nano into the shield
-___________________________________
+----------------------------------
 
 Insert the Nano into the prototype shield socket, taking care to ensure the USB socket is located at the same end as the DC power jack, and that all pins are straight and aligned correctly with the female headers.
 
@@ -134,7 +134,7 @@ With the shield used in these assembly photos, you will note that each of the Na
   :scale: 50%
 
 3. Connect the stepper controller and motor
-____________________________________________
+-------------------------------------------
 
 Firstly, note that the ULN2003 controller will have four pins marked "IN1" through "IN4", as well as a pair of pins with "+" and "-". There is a likely a jumper installed across two pins beside these that is unmarked, leave this in place.
 
@@ -179,7 +179,7 @@ Insert the stepper motor connector into the recepticle on the ULN2003 controller
   :scale: 50%
 
 4. Connect the hall effect sensor
-__________________________________
+---------------------------------
 
 The hall effect sensor has three pins, and likely only two of these pins are marked, the left with "-" and right with "S". The middle pin is likely to be unmarked, and will be the 5V pin. There are probably many different varieties of sensors and designs out there, but both that I have (from different suppliers) are marked identically.
 
@@ -208,7 +208,7 @@ Use three of the Dupont wires and connect these from the hall effect sensor to t
   :scale: 50%
 
 5. Connect the dual relay board
-________________________________
+-------------------------------
 
 Note there should be six pins on the dual relay board marked "VCC", "GND", "IN1", "IN2", "COM", and "GND". The "COM" and "GND" pins should have a jumper installed to connect these together. Leave this in place.
 
@@ -239,7 +239,7 @@ Use four Dupont wires to connect the other four pins as below:
   :scale: 50%
 
 6. Connect power and test
-__________________________
+-------------------------
 
 At this point, it should be safe to plug in the power supply to the DC power jack on the prototyping shield.
 
@@ -260,13 +260,13 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
   :scale: 50%
 
 7. Load the EX-Turntable software
-__________________________________
+---------------------------------
 
 .. tip:: 
 
   Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
-  Further to this, note that you will need to end up with two separate folders; one containing the |EX-CS| software as per  :doc:`/ex-commandstation/advanced-setup/arduino-ide`, and an additional folder containing the |EX-TT| software. The |EX-TT| software is not a component of |EX-CS| or vice versa, and as such they should not exist in the same folder.
+  Further to this, note that you will need to end up with two separate folders; one containing the |EX-CS| software as per  :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the |EX-TT| software. The |EX-TT| software is not a component of |EX-CS| or vice versa, and as such they should not exist in the same folder.
 
 At the time of writing, there is no installer for |EX-TT| like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
 
@@ -276,7 +276,7 @@ As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-TT
   :alt: Two folders
   :scale: 60%
 
-The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/ex-commandstation/advanced-setup/arduino-ide` page.
+The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
 
 When you get to the point of opening the sketch, ensure you open the Turntable-EX sketch:
 
@@ -335,7 +335,7 @@ At this point, the full turn step count is written to the Arduino's EEPROM so th
 You can now safely power off |EX-TT| and remove the USB cable from your PC as it is no longer required for normal operation, and all further commands will be issued by the CommandStation.
 
 8. Add the EX-Turntable device driver to EX-CommandStation
-__________________________________________________________
+----------------------------------------------------------
 
 .. note:: 
 
@@ -425,7 +425,7 @@ Follow the rest of the directions for :ref:`reference/developers/hal-config:addi
 Note there is no point in checking the driver at this stage as |EX-TT| is not connected, and will show as "OFFLINE".
 
 9. Connect EX-Turntable to your EX-CommandStation
-_________________________________________________
+-------------------------------------------------
 
 To control |EX-TT| from your CommandStation, you will need a connection to the I2C (SDA, SCL) pins.
 

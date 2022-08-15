@@ -30,12 +30,12 @@ Throttles - By Communication technology
 =======================================
 
 General
-_______
+-------
 
 - :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
 
 DCC-EX (Native <AT> commands>)
-______________________________
+------------------------------
 
 - :doc:`EX-Web-Throttle <software/ex-webthrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
@@ -43,7 +43,7 @@ ______________________________
 - :doc:`JMRI <software/jmri>`
 
 wiThrottle Protocol Based Throttles
-___________________________________
+-----------------------------------
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
@@ -56,7 +56,7 @@ ___________________________________
 - :doc:`Elgato Stream Deck (hardware) <hardware/streamdeck>`
 
 JMRI Web Server Based Throttles
-___________________________________
+-------------------------------
 
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`DigiTrainsPro (Android) <software/digitrainspro>`
@@ -67,12 +67,12 @@ Throttles - By Client Technology
 ================================
 
 Web Browser (Windows, OSX, Linux)
-_________________________________
+---------------------------------
 
 - :doc:`EX-Web-Throttle (Web Browser) <software/ex-webthrottle>`
 
 Android (Phones and Tablets)
-____________________________
+----------------------------
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
@@ -80,14 +80,14 @@ ____________________________
 - :doc:`DigiTrainsPro (Android) <software/digitrainspro>`
 
 Apple iOS (Phones and Tablets)
-______________________________
+------------------------------
 
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 
 Dedicated Hardware
-__________________
+------------------
 
 - :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
 - :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
@@ -96,7 +96,7 @@ __________________
 - :doc:`Elgato Stream Deck (hardware) <hardware/streamdeck>`
 
 Personal Computers
-__________________
+------------------
 
 - :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
 

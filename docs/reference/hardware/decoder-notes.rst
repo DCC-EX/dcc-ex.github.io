@@ -12,7 +12,7 @@ The NMRA specification says that a properly operating decoder will acknowledge c
 
 How to test (diagnostics)
 
-How to program (jmri, ex-webthrottle, serial monitor, throttles)
+How to program (|JMRI|, |EX-WT|, serial monitor, throttles)
 
 Commands used
 

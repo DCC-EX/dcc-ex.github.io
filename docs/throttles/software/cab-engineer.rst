@@ -12,7 +12,7 @@ Cab Engineer: DCC Throttle
     :depth: 2
     :local:
 
-**Cab Engineer** is an Android App that uses the WiThrottle Protocol to either connect directly to the |EX-CS| or connect to the JMRI WiThrottle Server via WiFi. If you connect Cab Engineer to JMRI, you connect to the computer running JMRI via WiFi and connect the JMRI computer to the Command Station using a USB cable. If you connect Cab Engineer directly to |EX-CS|, you will to add a WiFi option to your |EX-CS| as explained here: :doc:`/ex-commandstation/get-started/wifi-setup`.
+**Cab Engineer** is an Android App that uses the |WiThrottle Protocol| to either connect directly to the |EX-CS| or connect to the |JMRI| |WiThrottle Server| via WiFi. If you connect Cab Engineer to |JMRI|, you connect to the computer running |JMRI| via WiFi and connect the |JMRI| computer to the Command Station using a USB cable. If you connect Cab Engineer directly to |EX-CS|, you will to add a WiFi option to your |EX-CS| as explained here: :doc:`/ex-commandstation/get-started/wifi-setup`.
 
 .. image:: /_static/images/throttles/icon_android.png
    :alt: Android Logo
@@ -30,7 +30,7 @@ Please visit Ralf at the Alf Labs Website: https://www.alfray.com/trains/cab_app
 Features
 ==========
 
-* Select loco by address or from the JMRI roster if connected to JMRI
+* Select loco by address or from the |JMRI| roster if connected to |JMRI|
 * Speed and direction control
 * 13 DCC functions (F0-F12)
 * Turnout control

@@ -22,7 +22,7 @@ This is the "Help, it's not working!" page.
 
 NOTE: This section is a very rough draft. More coming soon.
 
-There are a lot of optional settings and choices a user can make and sometimes things don't work as you expect them to. If you upload software to the Command Station, connect power to your motor controller and the CS and then connect the output to your track and don't see power or your train responding, here are the steps to follow.
+There are a lot of optional settings and choices a user can make and sometimes things don't work as you expect them to. If you upload software to the Command Station, connect power to your motor controller and the Command Station and then connect the output to your track and don't see power or your train responding, here are the steps to follow.
 
 Is it Plugged In, Is it Turned On?
 ===================================

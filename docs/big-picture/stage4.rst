@@ -24,7 +24,7 @@ Notes
 =====
 
 Locomotive addresses in use
-___________________________
+---------------------------
 
 For our various automations and sequences that involve driving trains, we will be using locomotives that represent the various international locations and preferred modelling eras of the |DCC-EX| team. Be warned that this means we will be mixing completely unrealistic combinations of eras on the same layout!
 

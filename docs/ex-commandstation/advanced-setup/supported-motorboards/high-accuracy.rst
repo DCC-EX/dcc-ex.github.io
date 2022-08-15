@@ -49,7 +49,7 @@ The first line after setting the name and display text is for the Main (operatio
    MotorDriver(power_pin, signal_pin, signal_pin2, brake_pin, current_pin, senseFactor, tripMilliamps, faultPin)
 
 
-Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (e.g. IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise, or LPWM and RPWM for left and right pulse width modulation. If you want to use two pins, so that you don't need a transistor or integrated circuit inverter to take one output from the CS and split it into two, then you can't use the high accuracy waveform.
+Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (e.g. IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise, or LPWM and RPWM for left and right pulse width modulation. If you want to use two pins, so that you don't need a transistor or integrated circuit inverter to take one output from the Command Station and split it into two, then you can't use the high accuracy waveform.
 
 If you have a board with a single DIR input, or wish to make the simple 1 transistor and 2 resistor inverter circuit shown below, you can use the high accuracy mode.
 
@@ -68,10 +68,10 @@ However, an Uno's pins do not line up with this shield. In order to use high acc
 Inverter Circuit
 ================
 
-Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your CS, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.
+Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your Command Station, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.
 
 .. figure:: /_static/images/motorboards/inverter1.jpg
    :alt: Transistor inverter circuit
    :scale: 70% 
 
-You will also have to make sure that you use a motor board definition that uses pin 11, 12, or 13 for the output signal on a Mega, or pin 9 or 10 for an Uno or Nano. For information about how to do this, see the section on :ref:`Creating a motor board definition <ex-commandstation/advanced-setup/motor-board-config:Your Board is in the Supported List>`.
+You will also have to make sure that you use a motor board definition that uses pin 11, 12, or 13 for the output signal on a Mega, or pin 9 or 10 for an Uno or Nano. For information about how to do this, see the section on :ref:`Creating a motor board definition <ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:If Your Board is in the Supported List>`.

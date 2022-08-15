@@ -40,7 +40,7 @@ We added many new functions such as:
 * Extended functions up to 68
 * Better turnout/point handling
 * Servo support
-* Built-in WiThrottle Server to directly support WiThrottle based throttles
+* Built-in |WiThrottle Server| to directly support |WiThrottle Protocol| based throttles
 * Built-in support for the LCN node based accessory bus
 * Support for more motor controllers
 * Easy to create motor definition for motor controllers not in our current list

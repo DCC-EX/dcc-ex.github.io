@@ -14,8 +14,29 @@ Advanced Options
     :depth: 1
     :local:
 
+These pages describe the major supported hardware options for building a |EX-CS|, along with some guidance for some of the unsupported options. They are primarily targeted at |tinkerer-text| and |engineer-text| level.  However there are some options that are suitable for a |conductor-text|.  If however, you identify as a |conductor-text| and only wish to install the recommended hardware we suggest that you look at the simplified :doc:`/ex-commandstation/get-started/index` page.
 
-.. todo:: URGENT text needed for Advanced options
+
+Steps to Build an EX-CommandStation
+===================================
+
+#. choose a `Microcontroller <Microcontrollers>`_
+#. choose a `Motor Driver <Motor Drivers>`_
+#. choose a `Connection Method <Connection Options>`_ and if required choose a:
+
+  #. WiFi board,
+  #. Ethernet board,
+  #. Bluetooth board, 
+  #. Or none of the above (Direct Connection)
+
+#. choose a `LCD/oLED screen <LED/oLED Screens>`_ (if desired)
+#. choose a `Controller (throttle) <Controller Options>`_
+#. Choose an `installation method <Installation options>`_
+#. Set your `startup options <Startup Configuration>`_ (if required)
+#. `Install the software <Installation options>`_
+#. Run your trains
+
+----
 
 Microcontrollers
 ================
@@ -23,7 +44,10 @@ Microcontrollers
 
 .. todo:: URGENT text needed for  Microcontrollers
 
-- Supported Microcontrollers Setup Notes
+.. toctree::
+    :maxdepth: 2
+    
+    supported-microcontrollers/index
 
 
 Motor Drivers
@@ -31,31 +55,66 @@ Motor Drivers
 
 .. todo:: URGENT text needed for Motor Drivers
 
-- Motor Driver Options
-- Motor Driver Configuration
-- Supported Motor Driver Setup Notes
+.. toctree::
+    :maxdepth: 2
+    
+    supported-motorboards/index
+
+Connection Options
+==================
+
+.. todo:: URGENT description needed for connection options
+
+Direct Connection (USB)
+-----------------------
+
+.. todo:: URGENT description needed for USB/direct connection
 
 
-WiFi and Ethernet
-=================
+nothing to do
 
-.. todo:: URGENT description needed for WiFi and Ethernet
+works out of the box
 
-- neither (jmri)
-- Wifi
-- ethernet
 
-- WiFi Options
-- WiFi Configuration
+WiFi Shields
+------------
 
+.. toctree::
+    :maxdepth: 2
+    
+    supported-connections/index
+    supported-wifi/index
+
+Ethernet Boards
+---------------
+
+.. toctree::
+    :maxdepth: 2
+    
+    supported-ethernet/index
+
+Bluetooth Boards
+----------------
+
+.. toctree::
+    :maxdepth: 1
+    
+    supported-bluetooth/index
+
+LED/oLED Screens
+================
+
+refer to :doc:`/reference/hardware/i2c-displays`
 
 Installation options
 ====================
 
 .. todo:: URGENT description needed for Installation options
 
-- |EX-I|
-- Arduino IDE
+.. toctree::
+    :maxdepth: 2
+    
+    installation-options/index
 
 
 Startup Configuration
@@ -63,26 +122,17 @@ Startup Configuration
 
 .. todo:: URGENT description needed for Startup Configuration
 
+.. toctree::
+    :maxdepth: 1
+    
+    startup-config
+
 Controller Options
 ==================
 Choosing a Controller (Throttle) - Advanced
 
-Technical
-=========
-
-High Accuracy Waveform Mode
-
-----
-
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     
-    supported-microcontrollers/index
-    supported-motorboards/index
-    motor-board-config
-    wifi-setup
-    wifi-config
     controllers
-    arduino-ide
-    startup-config
-    high-accuracy
+

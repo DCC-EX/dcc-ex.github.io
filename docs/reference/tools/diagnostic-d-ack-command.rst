@@ -69,7 +69,7 @@ If we succeed on the first bit, we check each of the remaining 7 bits. ``NO-ACK`
 
 We do one final test at the end to ``Verify Byte``, you see that as ``VB``. This does a double-check to see if the byte contains what we found by checking it one bit at a time. The must match for a successful read.
 
-Other than when using the "decoder address test", ``<R>`` with no parameters, you need to enter CV read commands with all 3 parameters. The format is ``<R CV x y>`` where R stands for read and CV is the CV number you want to check. The X and Y values can be anything, but must be entered. They are an advanced feature for programmers whose software can work with DCC-EX (like JMRI). So you would enter ``<R 8 55 55>`` or ``R 8 1 1>`` to try and read CV 8. The response is ``<r CV x y>`` where "x" and "y" are whatever numbers you entered after the CV value.
+Other than when using the "decoder address test", ``<R>`` with no parameters, you need to enter CV read commands with all 3 parameters. The format is ``<R CV x y>`` where R stands for read and CV is the CV number you want to check. The X and Y values can be anything, but must be entered. They are an advanced feature for programmers whose software can work with DCC-EX (like |JMRI|). So you would enter ``<R 8 55 55>`` or ``R 8 1 1>`` to try and read CV 8. The response is ``<r CV x y>`` where "x" and "y" are whatever numbers you entered after the CV value.
 
 To turn off the ack diagnostics use any parameter that is not "ON" or "LIMIT".
 
@@ -126,7 +126,7 @@ Pick a setting a little bit higher than your highest reading like this:
 
 ``<D PROGBOOST>`` - Override 250mA prog track limit while idle. 
 
-When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the CS is reset.
+When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the Command Station is reset.
 
 Making the Changes Permanent
 =============================

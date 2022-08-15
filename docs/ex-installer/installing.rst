@@ -14,7 +14,7 @@ Using the Installer
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 3
     :local:
 
 Requirements (for installing)
@@ -35,8 +35,10 @@ Requirements (for installing)
   
 * a **USB cable** to connect your computer to the Microcontroller
 
-Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)
-==========================================================================
+1. Getting Ready 
+================
+
+**(for Windows, Mac OS X, and Linux (including the Raspberry Pi))**
 
 .. warning::
    :class: warning-float-right
@@ -55,6 +57,12 @@ Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)
   
     * ???
 
+.. todo::  URGENT include details for how to get the port COm number for iOS
+
+
+2. Download and Run EX-Installer 
+================================
+
 * Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app |BR| depending on your computer's operating system it will automatically determine the version you need and download it
 * Extract the downloaded **Installer** into its own folder with your favorite unzip program |BR| |BR|
 * For Microsoft Windows:
@@ -69,8 +77,8 @@ Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)
 
 * You will be presented with the following screen...
 
-The EX-Installer Window
-=======================
+3. The EX-Installer Window
+==========================
 
 .. warning::
    :class: warning-float-right
@@ -88,7 +96,7 @@ The EX-Installer Window
 There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
 Choose your options
-===================
+-------------------
 
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
@@ -113,11 +121,11 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 8. Press the "Compile and Upload" button
 
 WiFi Checkbox
---------------
+^^^^^^^^^^^^^
 
 MAKE SURE THIS BOX IS CHECKED - If you want WiFi, this box **must** be checked. If you don't want WiFi, you can leave it checked anyway so that if you add WiFi later, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren't going to use WiFi, unchecking the box will free about 10kb of progmem and about 2kb of RAM.
 
-If you have installed a WiFi board, |EX-CS| will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), this will set up the CS to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like "DCC-EX-xxxxxx", where the "xxxxxx" are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.
+If you have installed a WiFi board, |EX-CS| will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), this will set up the Command Station to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like "DCC-EX-xxxxxx", where the "xxxxxx" are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.
 
 If you wish to connect to your home network instead (connect to your router using "Station Mode"), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:
 
@@ -134,12 +142,12 @@ If you wish to connect to your home network instead (connect to your router usin
 
 * **Host Name** - If your WiFi Board supports it, this name can be used in addition to the IP address.\ 
 
-* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
+* **Server Port** - This is the communication port our internal |WiThrottle server| uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
 
-* **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
+* **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.\ 
 
 Ethernet Checkbox
-------------------
+^^^^^^^^^^^^^^^^^
 
 If you have an Ethernet shield and check this box, you will see options to change the following settings:
 
@@ -151,14 +159,14 @@ If you have an Ethernet shield and check this box, you will see options to chang
 
 * **Host Name** - If your Ethernet Board supports it, this name can be used in addition to the IP address.\ 
 
-* **Server Port** - This is the communication port our internal WiThrottle server uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use |JMRI|.\ 
+* **Server Port** - This is the communication port our internal |WiThrottle server| uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use |JMRI|.\ 
 
 * **MAC Address** - This is the unique identifier for your Ethernet Shield. We recommend leaving this setting as is. If you ever have more than one Ethernet shield on your network and there is a conflict, you can change this setting.
 
-* **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the CS always uses the same one, you can enter it here.\ 
+* **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.\ 
 
 LCD Checkbox
--------------
+^^^^^^^^^^^^
 
 If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:
 
@@ -177,7 +185,7 @@ If you have a 2 or 4 line LCD display connected and check this box, you will see
 For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
 
 OLED CheckBox
----------------
+^^^^^^^^^^^^^
 
 If you have an OLED display connected and check this box, you will see the following options you can edit for your display:
 
@@ -194,16 +202,24 @@ If you have an OLED display connected and check this box, you will see the follo
 For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
 
 Refresh Ports Button
-----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program, or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.
 
-Compile and Upload Button
---------------------------
+Compile and Upload
+------------------
+
+**Compile and Upload Button**
 
 Once you have configured your options, press this button to compile all the source code and upload it to your Command Station.
 
-Test your setup
-=================
+.. note:: 
+
+   If you have any difficulties check the :doc:`/ex-commandstation/get-started/diagnosing-issues` page for assistance.
+
+----
+
+Next Steps - Test your setup
+============================
 
 .. NOTE:: The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.

@@ -43,7 +43,7 @@ This API reference applies to any API client that makes use of these commands an
 API clients may include:
 
 - Throttles (both wired and wireless)
-- JMRI
+- |JMRI|
 - Other integrations (eg. RedHat)
 
 2. Serial port and WiFi/Ethernet monitoring
@@ -65,19 +65,19 @@ Due to the nature of |EX-CS| being able to be operated by multiple API clients c
 To repeat from above, any input received that an API client does not understand should be discarded and ignored.
 
 3.1. Command responses
-_______________________
+----------------------
 
 Command responses should conform to the syntax standard to ensure they are processed correctly by API clients.
 
 3.2. Broadcast responses
-_________________________
+------------------------
 
 Broadcast information is sent to all API clients along with WiThrottle responses on the understanding that API clients will discard and ignore any responses they do not understand.
 
 It is mandatory that an API client accepts and ignores a broadcast it doesn't understand.
 
 3.3. Diagnostics and other responses
-_____________________________________
+------------------------------------
 
 If diagnostic commands are enabled, these are sent to the USB serial port.
 
@@ -107,7 +107,7 @@ Memory limitations prohibit more detailed error messages.
 There are three types of parameters in use:
 
 6.1. Keyword
-_____________
+------------
 
 These are a consecutive sequence of one or more non-blank characters consisting of ``a-z``, ``A-Z``, ``0-9``, or ``_``, eg. "JOIN", "WIFI", "ON", "SPEED28".
 
@@ -116,12 +116,12 @@ Keyword parameters are internally hashed to created integers and may start with 
 For example, a keyword of "3RAIL" would be valid if it were to be implemented.
 
 6.2. Numeric
-_____________
+------------
 
 These are a consecutive sequence of one or more digits, with an optional leading ``-`` to indicate a negative value. Unless noted in `a.1. parameter values`_, these numbers are base10.
 
 6.3. String
-____________
+-----------
 
 These are surrounded by a leading and trailing ``"`` and may contain text including spaces eg. "This is a turnout description".
 
@@ -129,7 +129,7 @@ Appendix A. Exceptions
 =======================
 
 A.1. Parameter values
-______________________
+---------------------
 
 Due to legacy code and backwards compatibility requirements, there are two OPCODES that expect hexadecimal parameter values.
 
@@ -141,17 +141,17 @@ Appendix B. Suggested parameter parsing sequence
 To obtain the parameters:
 
 B.1. Obtain the OPCODE
-_______________________
+----------------------
 
 The first level of parsing is to obtain the single character, case sensitive OPCODE which is preceeded by a ``<`` character.
 
 B.2. Obtain the parameters
-___________________________
+--------------------------
 
 The second level of parsing takes the next non-blank parameter along with each blank separated parameter and turns them into integers. There are no decimal point or float inputs. A prefix ``-`` may be used.
 
 B.3. Example command and response
-__________________________________
+---------------------------------
 
 A simple example is sending an API command to retrieve the list of defined turnouts.
 
@@ -167,7 +167,7 @@ Appendix C. Further information
 ================================
 
 C.1. Keyword parameters are not case sensitive
-_______________________________________________
+----------------------------------------------
 
 Unlike OPCODES, keyword parameters are not case sensitive.
 

@@ -37,7 +37,7 @@ However, the |EX-CS| codebase is written using various techniques to fit as much
   Anyone wishing to read our code is welcome, and we will do our best to explain anything that's not obvious, but we will expect "basic" C++ skills and a general understanding of Arduinos and DCC which are extensively documented on the web, otherwise you are unlikely to understand our answers.
 
 Reading and understanding our code
-___________________________________
+----------------------------------
 
 Reading any code in any language is always going to require a basic understanding of the language and features in addition to an understanding of the environment (Arduino in this case, and various CPU versions), plus an understanding of the program features the author is trying to implement (Command parsing and DCC in our case).
 
@@ -50,7 +50,7 @@ The Arduino environment is fundamentally very simple for most programming tasks 
 Comments in our code could be better but excessive commenting often leads to confusion as things change and in most cases the use of meaningful function and variable names conveys all the information a comment could.
 
 C++ concepts to understand
-___________________________
+--------------------------
 
 The following subsets of C++ are good to understand:
 
@@ -60,14 +60,14 @@ The following subsets of C++ are good to understand:
 * Eliminate float: As float calculations are CPU intensive and need a lot of program memory on a small AVR CPU these kind of calculations have been eliminated. We therefore would use values like 2500mA instead of 2.5A.
 
 Reliance on the C++ pre-processor
-__________________________________
+---------------------------------
 
 We rely on the ability of the compiler/linker to remove functions that are never called so the resulting binary image is as small as possible. This avoids having to manage separate code for large and small cpus.
 
 We also rely on the compiler to propagate constants. This, for example, allows us to use a floating point value for motor shield definitions but have the float to integer calculation performed by the compiler, meaning the large floating point library is not needed at run time.
 
 Other concepts and techniques
-______________________________
+-----------------------------
 
 * Use of bit manipulation operators to pack multiple flags into a byte.
 * EX-RAIL and the DCC ACK manager use "virtual machine" techniques to implement multitasking.

@@ -37,11 +37,11 @@ Features
   * otherwise it will only connect if the password is blank
 
 * Optionally provides a list of SSIDs with the specified passwords (in the sketch) to choose from
-* Auto-connects to the first found wiThrottle Protocol Server if only one found, otherwise:
+* Auto-connects to the first found |wiThrottle Server| if only one found, otherwise:
 
   * asks which to connect to
   * if none found will ask to enter the IP Address and Port
-  * Guesses the wiThrottle IP address and Port for EX-CommandStation WiFi Access Point mode Command Stations
+  * Guesses the |wiThrottle server| IP address and Port for EX-CommandStation WiFi Access Point mode Command Stations
 
 * Rudimentary on-the-fly consists
 * Assign commands directly to the 1-9 buttons (in the sketch)

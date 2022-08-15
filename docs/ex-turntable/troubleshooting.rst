@@ -20,7 +20,7 @@ Troubleshooting common EX-Turntable issues
 You will find resolutions to a number of common issues encountered with |EX-TT| on this page.
 
 Homing failure
-_______________
+--------------
 
 .. list-table:: 
   :widths: auto
@@ -35,7 +35,7 @@ _______________
       | Hall effect sensor is connected incorrectly
 
 Calibration failure
-_____________________
+-------------------
 
 .. list-table:: 
   :widths: auto
@@ -51,7 +51,7 @@ _____________________
       | Hall effect sensor is connected incorrectly
 
 Turntable judders, stalls, or fails to rotate
-______________________________________________
+---------------------------------------------
 
 .. list-table:: 
   :widths: auto
@@ -68,7 +68,7 @@ ______________________________________________
       | Something is physically interfering with the turntable or stepper operation, check for interference
 
 Track power is cut when locomotive enters turntable bridge track
-_________________________________________________________________
+----------------------------------------------------------------
 
 .. list-table:: 
   :widths: auto
@@ -82,7 +82,7 @@ _________________________________________________________________
       | Tracks opposite each other around the turntable are wired with inverted phases, wiring must be adjusted
 
 EX-CommandStation compile errors with device driver enabled
-___________________________________________________________
+-----------------------------------------------------------
 
 .. list-table:: 
   :widths: auto
@@ -95,7 +95,7 @@ ___________________________________________________________
     - The version of EX-CommandStation is incorrect, you need the "add-turntable-controller" branch of `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_
 
 EX-Turntable showing as offline with <D HAL SHOW>
-__________________________________________________
+-------------------------------------------------
 
 .. list-table:: 
   :widths: auto

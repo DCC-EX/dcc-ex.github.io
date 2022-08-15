@@ -75,8 +75,8 @@ Using EX-WebThrottle
 
 Click this link: :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` to run EX-WebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
 
-Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
---------------------------------------------------------------
+Using Engine Driver (or other WiThrottle Protocol Throttle) - Requires WiFi
+---------------------------------------------------------------------------
 
 .. figure:: /_static/images/installer/engine_driver.png
    :alt: Engine Driver
@@ -84,4 +84,4 @@ Using Engine Driver (or other WiThrottle Cab) - Requires WiFi
 
    Engine Driver
 
-You will need to install |Engine Driver| on your mobile device and then connect to the CS, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
+You will need to install |Engine Driver| on your mobile device and then connect to the Command Station, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.

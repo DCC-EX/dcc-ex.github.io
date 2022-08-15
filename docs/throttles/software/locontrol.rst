@@ -19,7 +19,7 @@ Locontrol
 
 This iOS App is simply beautiful, but you would expect this from a team of talented people consisting of an artist/graphic designer, an iOS Developer, and a User Interface (UI) Designer.
 
-Today, you can use Locontrol on an iOS device connected to JMRI through its Web Interface. JMRI then connects to |EX-CS| with a USB cable or wireless USB bridge.
+Today, you can use Locontrol on an iOS device connected to |JMRI| through its Web Interface. |JMRI| then connects to |EX-CS| with a USB cable or wireless USB bridge.
 
 We are currently working with the Locontrol folks to work directly with |EX-CS| without the need for external software. Come back soon for more information. In the meantime, please visit their website https://www.locontrol.com
 
@@ -34,7 +34,7 @@ We are currently working with the Locontrol folks to work directly with |EX-CS| 
 Features
 =========
 
-* Connect to JMRI with the WiFi Web Server in DecoderPro
+* Connect to |JMRI| with the WiFi Web Server in DecoderPro
 * Locomotive Roster list with Photos
 * Uses the phone camera
 * Make videos and take pictures of your trains while operating

@@ -82,7 +82,7 @@ We have not tested the WiFi implementation yet
 Using Bluetooth
 ----------------
 
-The Bluetooth connection requires an Android device with Bluetooth capability and a Bluetooth board attached to the Command Station. The setup is similar to how we use a WiFi Shield or an ESP-01s board. It is just a different method to create a wireless serial connection to the CS from another device.
+The Bluetooth connection requires an Android device with Bluetooth capability and a Bluetooth board attached to the Command Station. The setup is similar to how we use a WiFi Shield or an ESP-01s board. It is just a different method to create a wireless serial connection to the Command Station from another device.
 
 You will need one of these inexpensive HC-06 boards.
 

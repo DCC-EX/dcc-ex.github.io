@@ -157,3 +157,15 @@
 
     :doc:`wiThrottle Server </reference/glossary>`
 ..
+.. |Access Point| replace::
+
+    :doc:`Access Point </reference/glossary>`
+..
+.. |Access Point Mode| replace::
+
+    :doc:`Access Point Mode </reference/glossary>`
+..
+.. |Station Mode| replace::
+
+    :doc:`Station Mode </reference/glossary>`
+..

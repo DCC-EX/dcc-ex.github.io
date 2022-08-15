@@ -14,7 +14,7 @@ Test your setup
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 Testing control of a loco
@@ -32,7 +32,7 @@ There are two simple options for testing your setup described below:
     Additional options (controllers) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
 
 Using EX-WebThrottle
-____________________
+--------------------
 
 Connect Everything:
 
@@ -58,7 +58,7 @@ Click this link: :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` to r
 .. TODO:: URGENT This text needs to be expanded - Using EX-WebThrottle
 
 Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
-______________________________________________________________________
+----------------------------------------------------------------------
 
 .. NOTE:: 
    :class: note-float-right

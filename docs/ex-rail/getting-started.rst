@@ -64,7 +64,7 @@ Some Simple Examples
 ====================
 
 Example 1: Creating Routes for a Throttle
-_________________________________________
+-----------------------------------------
 
 A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like
@@ -109,7 +109,7 @@ Of course, you may want to add signals, and time delays
 
 
 Example 2: Automating Signals with Turnouts
-___________________________________________
+-------------------------------------------
 
 By intercepting a turnout change command, it's easy to automatically adjust signals or 
 automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE`` keyword to detect a particular turnout change:
@@ -147,13 +147,13 @@ See the :doc:`/ex-rail/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_
 Defining Signals
 ================
 
-Signals can now simply be a decoration to be switched by the route process; they don’t need to control anything.
+Signals can now simply be a decoration to be switched by the route process; they don't need to control anything.
 
 ``GREEN(55)`` would turn signal 55 green, and ``RED(55)`` would turn it red. Somewhere in the script there must be a SIGNAL command like this: ``SIGNAL(55,56,57)``.  This defines a signal with ID 55, where the Red/Stop lamp is connected to pin 55, the Amber/Caution lamp to pin 56, and the Green/Proceed lamp to pin 57. The pin allocations do not need to be contiguous, and the red pin number is also used as the signal ID. Thus you can change the signal by ``RED(55)``, ``AMBER(55)``, or ``GREEN(55)``. This means you don't have to manually turn off the other lamps. A RED/GREEN only signal may be created with a zero amber pin.
 
 
 Example 3: Automating various non-track items 
-______________________________________________
+---------------------------------------------
 
 This normally takes place in a timed loop, for example alternate flashing of a fire engine's lights. To do this use a SEQUENCE.
 
@@ -171,7 +171,7 @@ This normally takes place in a timed loop, for example alternate flashing of a f
 Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using ``START(66)``.
 
 Example 4: Automating a train (simple loop)
-___________________________________________
+-------------------------------------------
 
 Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.
 
@@ -200,7 +200,7 @@ The instructions are followed in sequence by the loco given to it; the ``AT`` co
 Notice that this automation does not specify the loco address. If you drive a loco with the throttle and then hand it over to this automation, then the automation will run with the loco you last drove.
 
 Example 5: Signals in a train script
-_____________________________________
+------------------------------------
 
 Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
 
@@ -220,7 +220,7 @@ Adding a station signal to the loop script is extremely simple, but it does requ
       FOLLOW(4)  // and continue to follow the automation
 
 Example 6: Single line shuttle
-_______________________________
+------------------------------
 
 Consider a single line, shuttling between stations A and B.
 
@@ -239,7 +239,7 @@ Starting from Station A, the steps may be something like:
 -  When I get to A, stop.
 
 
-Notice that the sensors at A and B are near the ends of the track (allowing for braking distance, but don’t care about train length or whether the engine is at the front or back.) We have wired sensor A on pin 41, and sensor B on pin 42 for this example.
+Notice that the sensors at A and B are near the ends of the track (allowing for braking distance, but don't care about train length or whether the engine is at the front or back.) We have wired sensor A on pin 41, and sensor B on pin 42 for this example.
 
 .. code-block:: cpp
 
@@ -274,7 +274,7 @@ Although the above is trivial, the routes are designed to be independent of the 
 The example above assumes that loco 3 is sitting on the track and pointing in the right direction. A bit later you will see how to script an automatic process to take whatever loco is placed on the programming track, and send it on its way to join in the fun!
 
 Example 7: Running multiple inter-connected trains
-__________________________________________________
+--------------------------------------------------
 
 So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout
@@ -429,7 +429,7 @@ Here for example is a launch sequence that has no predefined locos but allows lo
    START(12) // send loco off along route 12
    FOLLOW(99) // keep doing this for another launch
 
-The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
+The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
 Roster entries
 ==============

@@ -15,7 +15,7 @@ Using a Serial Monitor
 What is a Serial Monitor and Why Do I Need One?
 ================================================
 
-A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your CS, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
+A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
 
 * Test your Command Station
 * View startup and other diagnostic logs to fix issues or help us support you
@@ -26,7 +26,7 @@ A Serial Monitor is another name for a "terminal" program. It is software that r
 * Manually control your locos
 * Program CVs without the need for any other software
 
-If you know how to use a terminal program it is as simple as connecting your device to the Command Station, opening a session and selecting the right baud rate (115200) and line endings (Carriage Return and Line Feed). For the rest of us, we will include detailed instructions on how to use a computer or a phone app to connect to your CS.
+If you know how to use a terminal program it is as simple as connecting your device to the Command Station, opening a session and selecting the right baud rate (115200) and line endings (Carriage Return and Line Feed). For the rest of us, we will include detailed instructions on how to use a computer or a phone app to connect to your Command Station.
 
 Connect with the Arduino Serial Monitor
 ========================================
@@ -86,7 +86,7 @@ Make sure the **baud rate at the lower right of the window is set to "115200"**.
 
    Serial Monitor - Note line ending and baud rate settings!
 
-Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the CS setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the CS will sense that, the network test will fail, but everything else will be working as it should.
+Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.
 
 Enter Commands to the CS
 -------------------------
@@ -113,7 +113,7 @@ Connect with a Cell Phone
 * An "On The Go" Cable (aka. OTG Cable)
 * The USB Cable for your Arduino
 
-.. NOTE:: You can also use Bluetooth if you have a Bluetooth board attached to your CS and make a small modification to the sketch (CS Software). We will cover how to do that in a **Project** tutorial
+.. NOTE:: You can also use Bluetooth if you have a Bluetooth board attached to your Command Station and make a small modification to the sketch (Command Station Software). We will cover how to do that in a **Project** tutorial
 
 .. todo:: show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar
 

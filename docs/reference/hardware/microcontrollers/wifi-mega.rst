@@ -23,6 +23,10 @@ Mega+WiFi Setup
 
    Mega+WiFi Board
 
+Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
+
+----
+
 This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brand names though the board itself can also be unmarked. Links to some suppliers are at the bottom of this page:
 
 * Wemos
@@ -59,7 +63,7 @@ What You Will Do
 =============================
 
 a. Plug in and test your Mega
-_____________________________
+-----------------------------
 
 Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
 
@@ -81,7 +85,7 @@ Once you can see your computer recognizes your board, **remember the port**. For
 For more detail on how to install the correct CH340 drivers for your OS, you can see this `SparkFun Tutorial <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
 b. Download and install the flash download tool
-_______________________________________________
+-----------------------------------------------
 
 There are two tools you can use to flash the firmware, one is the **"Espressif Flash Download tool"** for Windows and the other is a Python script called **esptool** that will run on Windows, Mac, or Linux. Follow the path for the flash tool you choose.
 
@@ -117,7 +121,7 @@ Once you have Python installed, you will need to install esptool.py. Open a comm
 
    $ pip install esptool
 
-NOTE:with some Python installations that command may not work and you’ll receive an error. If that’s the case, try to install esptool.py with one of the following:
+NOTE:with some Python installations that command may not work and you'll receive an error. If that's the case, try to install esptool.py with one of the following:
 
 | pip3 install esptool
 | python -m pip install esptool
@@ -130,7 +134,7 @@ If you got an error about setuptools being missing, install setuptools with:
    $ pip install setuptools
 
 c. Set the switches on your Mega for flashing
-_____________________________________________
+---------------------------------------------
 
 With the Mega UNPLUGGED (no power connected!), you will set some switches. Use the following diagram to see the locations on the board. You can click on any picture to enlarge it.
 
@@ -168,7 +172,7 @@ Your board should be configured follows:
  -  press the **Mode button**
 
 d. Flash the Firmware
-_____________________
+---------------------
 
 With the Flash Download Tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -220,7 +224,7 @@ After flashing, the ESP8266 Log will show it uploaded them all successfully and 
 
 - Disconnect the USB cable.
 
-Skip ahead to :ref:`ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:c. Set the switches on your Mega for flashing`
+Skip ahead to :ref:`reference/hardware/microcontrollers/wifi-mega:c. Set the switches on your Mega for flashing`
 
 With esptool.py
 ~~~~~~~~~~~~~~~
@@ -242,7 +246,7 @@ Windows::
 If there is an error, press and hold the mode button, then press and release the reset button while still holding down the mode button. Press enter to send the esptool command and let go of the mode button.
 
 e. Set the switches for run/sketch mode
-_______________________________________
+---------------------------------------
 
 With the power disconnected from the Mega, set the switches back to the upload/run mode
 - dip switches 5,6,7 OFF and 1,2,3,4 ON
@@ -259,7 +263,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 2. Decide if you want Access Point Mode or Station Mode
 =======================================================
 
-Access Point (AP) Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  Station Mode connects the CS to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Controllers (Throttles) can find it on your network.
+Access Point (AP) Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  Station Mode connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Controllers (Throttles) can find it on your network.
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install |EX-CS|. Go directly to step 5.
 
@@ -269,27 +273,27 @@ If you are going to want to connect to your WiFi router, you just need to enter 
 ===========================================
 
 Short Version of Network Setup
-______________________________
+------------------------------
 
 Download and install |EX-CS| from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 
 :doc:`How to install using the installer </ex-commandstation/get-started/installer>`
 
-:doc:`How to install using the Arduino IDE </ex-commandstation/advanced-setup/arduino-ide>`
+:doc:`How to install using the Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 
 :doc:`I know what I'm doing, just point me to the downloads page! </download/ex-commandstation>`
 
 Long Version of Network Setup
-_____________________________
+-----------------------------
 
-:doc:`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/wifi-config>`
+:doc:`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
 All settings are in the config.h file in your EX-CommandStation folder. If you don't have a config.h, rename config.example.h to config.h.
 
 **First, make sure your dip switches are set with 1,2,3,4 ON and 5,6,7 OFF (8 doesn't matter)**
 
 Setting up in Access Point AP Mode
-__________________________________
+----------------------------------
 
 - If using the installer, just check the WiFi check box and leave SSID and password alone
   
@@ -299,7 +303,7 @@ __________________________________
 - Upload the software to your Mega+WiFi (see Compile and Re-upload below)
 
 Setting up WiFi in Station (STA) Mode with Router
-_________________________________________________
+-------------------------------------------------
 
 - This mode is also sometimes called "Client" mode
 
@@ -330,7 +334,7 @@ If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi
 - You should see `++ Wifi Setup CONNECTED ++`
 
 6. Connect your Phone as a Controller (Throttle)
-===================================================
+================================================
 
 - If operating in STA mode, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)
 

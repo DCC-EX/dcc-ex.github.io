@@ -21,7 +21,7 @@ Motor Driver Configuration
 Configure Using the Installer
 =============================
 
-Tinkerers and even Conductors should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
+A |Tinkerer-text| and even a |Conductor-text| should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
 
 Configure By Editing the config.h File
 ======================================
@@ -48,12 +48,15 @@ Find this section in the file:
 
 You will see a list of supported boards with their type and the "STANDARD_MOTOR_SHIELD" defined as the default. Continue below.
 
-Your Board is in the Supported List
------------------------------------
+If Your Board is in the Supported List
+--------------------------------------
 
-This option is possibly Conductor friendly for those just choosing a supported board that requires no wiring.
+.. note:: 
+  :class: note-float-right
 
-.. note:: The Arduino Motor Shield, Deek-Robot Motor Shield, DIY More Motor Shield and any other shield or board that is 100% compatible with the Arduino Motor Shield is defined as a "STANDARD_MOTOR_SHIELD"
+  The Arduino Motor Shield, Deek-Robot Motor Shield, DIY More Motor Shield and any other shield or board that is 100% compatible with the Arduino Motor Shield is defined as a "STANDARD_MOTOR_SHIELD"
+
+This option is possibly |Conductor-text| friendly for those just choosing a supported board that requires no wiring.
 
 To select your board, just change the #define line to the type for your board. The following line configures a Pololu Motor Shield. We just copy and paste its name over the STANDARD_MOTOR_SHIELD:
 
@@ -65,8 +68,8 @@ That's all you need to do. Make your change and then upload the sketch to your A
 
 .. note:: If your board is not a shield that plugs onto your Arduino, then you are going to have to run jumper wires. An IBT_2 High Current Motor Board is an example of such a board. See the section on your board for installation help.
 
-Your board is NOT in the Supported List
----------------------------------------
+If Your board is NOT in the Supported List
+------------------------------------------
 
 |tinkerer|
 
@@ -133,14 +136,14 @@ Using High Accuracy Waveform Mode
 
 You may ask, "Do I need high accuracy waveforms?" and the answer is probably not. But we are engineers, and we love to spend our days trying to eke out every bit of performance from the system, and maintain bragging rights for thinking of something 5% more clever than the other members of our team! Even our "standard" waveform is within the NMRA specification. For purists, or if you find a particular decoder that is not in spec and needs to have tighter timing on the DCC waveform, you can make sure you are using high accuracy mode.
 
-If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see :doc:`High Accuracy Waveform Mode </ex-commandstation/advanced-setup/high-accuracy>`.
+If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see :doc:`High Accuracy Waveform Mode </ex-commandstation/advanced-setup/supported-motorboards/high-accuracy>`.
 
 Current Sense and Sense factor
 ==============================
 
 .. warning:: It is VERY important to connect some form of current sensing! Without it, you cannot program decoders on the programming track, and you will not have any short circuit protection on either track!
 
-Current sense is actually a voltage output by the motor board that is proportional to the current being delivered to the track. While you are running trains on your MAIN track, the CS is constantly monitoring the current so that we can shut off power to the track in case of a short circuit. Programs like |JMRI| have a dashboard that can report how much current you are using in real-time.
+Current sense is actually a voltage output by the motor board that is proportional to the current being delivered to the track. While you are running trains on your MAIN track, the Command Station is constantly monitoring the current so that we can shut off power to the track in case of a short circuit. Programs like |JMRI| have a dashboard that can report how much current you are using in real-time.
 
 The PROG track requires current sense to detect the current pulse back from decoders to ACKnowledge the receipt of your command. The DCC specification says that a decoder must send a short 60mA (60 milliAmps) or more current pulse to the programming track for at least 6ms (6 milliseconds). You may still be able to have the decoder accept a command if current sense is not working, just as you would for POM (programming on main), but you will receive no acknowledgement from the loco, and you will have no way to read CVs.
 
@@ -166,19 +169,19 @@ We use the senseFactor to calculate our current in milliAmps by just taking a ra
 
 You will also note that if you have the maximum of 2A flowing for this board (2000mA), that the pin reading will only be around 669. That isn't very close to 1023. That is because the Arduino Motor Shield actually only reports its maximum current of 2 Amps as 3.3V, not 5. That would let you use a 3.3V microcontroller with this motor shield.
 
-Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require a current sense resistor connected between the CS pin on the motor board and ground. This creates a voltage we can read by then connecting the pin to our CS analog pin (usually A0 or A1). This resistor needs to be very small, usually .15 to .25 ohms. We don't want a large voltage drop taking power away from our track (E = I * R, so 2 Amps at 1 Ohm would drop 2 Volts!). We also don't want to have to have a huge resistor (P = I * E, so 2V drop in the resistor times 2 Amps of current is 4 Watts!). But, you say, if the Arduino Motor Shield uses only a .15 Ohm resistor, that's only a voltage reading of 0 to .3 volts (.15 Ohms * 2 Amps). That is a very low reading for the Arduino to read! And that is why the motor shield has an op amp circuit that multiplies this voltage by 11 to bring it up to 3.3 Volts and put it in a range that an Arduino can read.
+Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require a current sense resistor connected between the Command Station pin on the motor board and ground. This creates a voltage we can read by then connecting the pin to our Command Station analog pin (usually A0 or A1). This resistor needs to be very small, usually .15 to .25 ohms. We don't want a large voltage drop taking power away from our track (E = I * R, so 2 Amps at 1 Ohm would drop 2 Volts!). We also don't want to have to have a huge resistor (P = I * E, so 2V drop in the resistor times 2 Amps of current is 4 Watts!). But, you say, if the Arduino Motor Shield uses only a .15 Ohm resistor, that's only a voltage reading of 0 to .3 volts (.15 Ohms * 2 Amps). That is a very low reading for the Arduino to read! And that is why the motor shield has an op amp circuit that multiplies this voltage by 11 to bring it up to 3.3 Volts and put it in a range that an Arduino can read.
 
 .. warning:: Choose your current sense resistor or circuit carefully! You need to account for all the factors mentioned above, and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).
 
 How Do I Find Volts per Amp?
 ----------------------------
 
-In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you should use separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the :doc:`Advanced Setup Section <../advanced-setup/index>` for more info.
+In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm's law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you should use separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the :doc:`Advanced Setup Section </ex-commandstation/advanced-setup/supported-motorboards/index>` for more info.
 
 Just Buy a Current Sense Board Instead
 --------------------------------------
 
-Tinkerers and Conductors who don't mind connecting a few jumper wires may like this option.
+A |Tinkerer-text| or |Conductor-text| who doesn't mind connecting a few jumper wires may like this option.
 
 This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards for sale.
 

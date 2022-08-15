@@ -14,7 +14,7 @@ Purchasing Parts
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 This page explains what you will need to acquire to build a |EX-CS| using the recommended parts for a |conductor-text|.  
@@ -42,13 +42,13 @@ What you need to Acquire
   - Supported :doc:`Ethernet shield </reference/hardware/ethernet-boards>`
 
 Hardware
-________
+--------
 
 You will need to find or purchase:
 
 #. a supported **Arduino board** |BR| We recommend the `Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/>`_ |BR| |BR|
 #. a supported **Motor Driver**  |BR| We recommend the `Deek-Robot Motor Shield <https://www.aliexpress.com/item/32832049214.html>`_ |BR| |BR|
-#. a supported **WiFi shield** |BR| We recommend the *Makerfabs ESP8266 WiFi Shield* |BR| |BR|
+#. a supported **WiFi shield** |BR| We recommend the :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` |BR| |BR|
 #. Two (2) Male to Female **Jumpers leads** |BR| |BR|
 #. a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield |BR| We recommend `12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/>`_ |BR| |BR|
 #. a 2.5mm x 5.5mm Female DC Plug to **Screw Terminal (optional, but recommended)** to connect the motor shield power supply |BR| |BR|
@@ -60,14 +60,14 @@ You will need to find or purchase:
 #. a 'known' working **DCC-equipped locomotive**
 
 Software
-________
+--------
 
 Our |EX-I| app is recommended for most users as it automatically downloads and installs the required software. 
 
 13. See the :doc:`Command Station download page </download/ex-commandstation>` to download a copy to your computer.
 
 A Controller (Throttle)
-_______________________
+-----------------------
 
 
 14. You'll also need something to control your trains. |BR| There are several options. We will discuss these following the system setup, but the introductory configuration covered in the following pages lends itself to using a smart phone (Android or Apple iOS).

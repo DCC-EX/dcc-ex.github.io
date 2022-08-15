@@ -86,11 +86,11 @@ Lifting Or Cutting Chip Legs Option
 
 1. Remove all jumpers, there are 3!
 
-2. Unsolder or cut the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output CS A for MAIN. Pin 15 to the right is CS output B for PROG.
+2. Unsolder or cut the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output Command Station ``Output A`` for MAIN. Pin 15 to the right is Command Station ``Output B`` for PROG.
 
 3. Lift each leg and bend them carefully upward to provide space for a resistor.
 
-4. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the CS leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
+4. Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the Command Station leg, about 1/4" (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.
 
 5. Solder the leg of the chip you unsoldered to the top of the resistor. You should be able to carefully bend the leg to meet the top resistor lead as the resistor stands vertically. You are basically inserting a resistor into the space where you cut the leg of the chip. Solder the wire fairly close to the end of the resistor. You may need a small piece of hookup wire to reach between the connections. Repeat on the other side. Do not trim the top resistor lead yet.
 
@@ -119,7 +119,7 @@ Configuring the Board in EX-CommandStation
 
 You have two choices regarding how to wire and configure the L298N motor driver board to the command station. Unlike the Arduino Motor Shield, this board has separate direction inputs which is where we apply the DCC signal. 
 
-Your first choice, the easy way, is to create a new motor board definition that uses the proper pins. This requires you to edit the config.h file, cut and paste the motor board definition below, upload the sketch with the new settings, and connect wires from the L298N board to the correct pins on the Arduino. The only disadvantage to this method is that is uses an extra pin (though there are plenty of spare pins on a Mega), and it uses the standard accuracy waveform. Standard accuracy is fine for almost all cases, but you can read more on the :doc:`High Accuracy Waveform Mode</ex-commandstation/advanced-setup/high-accuracy>`
+Your first choice, the easy way, is to create a new motor board definition that uses the proper pins. This requires you to edit the config.h file, cut and paste the motor board definition below, upload the sketch with the new settings, and connect wires from the L298N board to the correct pins on the Arduino. The only disadvantage to this method is that is uses an extra pin (though there are plenty of spare pins on a Mega), and it uses the standard accuracy waveform. Standard accuracy is fine for almost all cases, but you can read more on the :doc:`High Accuracy Waveform Mode</ex-commandstation/advanced-setup/supported-motorboards/high-accuracy>`
 
 Your second choice is to make a small inverter circuit (using 1 FET, IC, or transistor) to connect to the standard signal pin on the Command Station, and split it into two signals connect to the two pins on the L298N board. The advantage of this method is you use just one pin and get the high accuracy DCC waveform. The downside is that you have to solder together a circuit with 2 or 3 parts.
 
@@ -127,7 +127,7 @@ Your second choice is to make a small inverter circuit (using 1 FET, IC, or tran
 Using 2 signal pins (Avoids soldering a transistor inverter)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This method uses 2 pins on the Arduino for DCC signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform. The advantage of this method is that you don't have to wire a transistor and 2 resistors to create an inverter circuit. The disadvantage is you use an extra pin for each track output and you get the standard accuracy waveform. See :doc:`High Accuracy Waveform Mode</ex-commandstation/advanced-setup/high-accuracy>` to see if you really need it.
+This method uses 2 pins on the Arduino for DCC signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform. The advantage of this method is that you don't have to wire a transistor and 2 resistors to create an inverter circuit. The disadvantage is you use an extra pin for each track output and you get the standard accuracy waveform. See :doc:`High Accuracy Waveform Mode</ex-commandstation/advanced-setup/supported-motorboards/high-accuracy>` to see if you really need it.
 
 To wire the board, connect the pins according to the following diagram. A table is included as well. This pin usage, with all the pins lined up between boards, allows the use of a ribbon cable to make things a bit more neat:
 
@@ -180,7 +180,7 @@ with this:
 
       #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
 
-Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/arduino-ide>`
+Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 
 
 Using One Signal Pin With an Inverter circuit
@@ -228,7 +228,7 @@ Once wired correctly, make sure your config.h file is configured for a STANDARD_
 
       #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 
-Save the file if you needed to add this line and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/arduino-ide>`
+Save the file if you needed to add this line and then upload the entire sketch into the Command Station using the Arduino IDE as explained in :doc:`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 
 Method 2: Using An External Current Sense Board
 -------------------------------------------------

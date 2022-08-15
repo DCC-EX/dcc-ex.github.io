@@ -40,7 +40,7 @@ You will note we've rated the traverser feature as Tinkerer level. This is prima
   This page has been written as an addendum to the general |EX-TT| documentation and focuses on the changes required to enable traverser mode. Please ensure you are familiar with the other existing documentation also.
 
 What you need for traverser mode
-_________________________________
+--------------------------------
 
 The same components outlined in :ref:`ex-turntable/purchasing:what you need for ex-turntable` apply in traverser mode, with two likely exceptions:
 
@@ -87,7 +87,7 @@ If using micro switches for the home and limit sensors, the best way is to conne
 It is recommended not to fully assemble the traverser with the stepper motor until such time as you have validated the correct rotational direction of the stepper motor, and that the HOME and LIMIT sensors are connected correctly and functional.
 
 Traverser mode connection summary
-__________________________________
+---------------------------------
 
 Summary table of all connections required during assembly:
 
@@ -179,7 +179,7 @@ Once "config.h" is updated, you can continue to load the software onto the Ardui
 Once the software is loaded and |EX-TT| starts, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.
 
 Sensor testing mode
-____________________
+-------------------
 
 Prior to proceeding any further, it is recommended to validate the HOME and LIMIT sensors operate correctly, and that they are connected to the correct pins of the Arduino. A new SENSOR_TESTING mode has been added to allow the sensors to be tested, with all other |EX-TT| functionality disabled.
 
@@ -222,7 +222,7 @@ If activating HOME activates LIMIT or vice versa, then swap the Arduino pin conn
 When sensor testing is complete, you can add the "//" back in front of the `#define SENSOR_TESTING` line in "config.h" to disable SENSOR_TESTING mode, and re-load the software to revert to normal |EX-TT| operations.
 
 Automatic calibration
-______________________
+---------------------
 
 Once you know the normal direction of your stepper and have confirmed both HOME and LIMIT sensors work correctly, you can finish assembling your traverser with the stepper and proceed with the automatic calibration.
 

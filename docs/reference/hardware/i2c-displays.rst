@@ -55,7 +55,7 @@ Connecting an LCD Display
 ==========================
 
 Soldering on the Backpack (if you purchased separate pieces)
-_____________________________________________________________
+------------------------------------------------------------
 
 And here is a picture of the board after soldering or if you purchase a board already soldered (or "welded" as some of the Chinese sites call it)
 
@@ -67,12 +67,12 @@ And here is a picture of the board after soldering or if you purchase a board al
    LCD with backpack soldered to the back
 
 Connecting the Jumper Wires
-____________________________
+---------------------------
 
-To connect the Display to the CS, you will need 4 male to female jumper wires:
+To connect the Display to the Command Station, you will need 4 male to female jumper wires:
 
 #. Connect a wire from +5V on the Motor Shield or WiFi Board to Vcc on the backpack
-#. Connect a wire from Gnd on the CS to Gnd on the backpack
+#. Connect a wire from Gnd on the Command Station to Gnd on the backpack
 #. Connect SDA on the Arduino (pin 20 on the Mega, pin 16 on the Uno) to SDA on the backpack
 #. Connect SCL on the Arduino (pin 21 on the Mega, pin 17 on the Uno) to SCL on the backpack
 
@@ -80,7 +80,7 @@ To connect the Display to the CS, you will need 4 male to female jumper wires:
 
 
 Controlling Brightness
-_______________________
+----------------------
 
 The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:
 
@@ -88,7 +88,7 @@ The LCD displays are usually very bright. We remove the jumper on the side of th
 
 
 Upload the sketch to your CS
-_____________________________
+----------------------------
 
 To upload the new sketch on your Command Station
 
@@ -125,22 +125,22 @@ OLED displays come in more varieties than LCD displays. The library to run them 
    Makerfocus 128x32 .91" OLED Display
 
 Soldering Wires to the Display
-_______________________________
+------------------------------
 
 For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.
 
 Connecting Jumper Wires to the CS
-__________________________________
+---------------------------------
 
 ** Not Finished. Coming soon! **
 
 Installing the Software (OLED)
-_______________________________
+------------------------------
 
 ** Not Finished. Coming soon! **
 
 Changing the I2C Address
-_________________________
+------------------------
 
 If you have other I2C devices, like an I2C bus to control turnouts or other accessories, you may need to change the address of your I2C display to avoid a conflict. The display should have instructions available for how to do this.
 

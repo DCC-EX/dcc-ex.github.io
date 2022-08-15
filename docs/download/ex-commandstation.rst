@@ -36,7 +36,7 @@ EX-Installer
 Latest EX-CommandStation Official Release
 =========================================
 
-.. note:: On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for |EX-CS|. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for `Arduino IDE installation instructions <../get-started/arduino-ide.html>`_.
+.. note:: On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for |EX-CS|. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for `Arduino IDE installation instructions :doc:`</ex-commandstation/advanced-setup/installation-options/arduino-ide>`.
 
 .. rst-class:: dcclink
 

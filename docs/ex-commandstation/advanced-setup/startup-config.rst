@@ -23,13 +23,13 @@ To automatically run commands at start up, a new file can be created called `myS
 Make sure you are running the Arduino IDE
 =========================================
 
-This will need to be done in the :doc:`Arduino-IDE </ex-commandstation/advanced-setup/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, so first make sure you have followed these steps to load up the Arduino IDE.
 
 
 Create a new tab
 ================
 
-First you will need to add a new file, just like the :ref:`config.h file <ex-commandstation/advanced-setup/arduino-ide:Copy the config.example.h file (or rename it)>`. Create a new tab using the following menu option.
+First you will need to add a new file, just like the :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. Create a new tab using the following menu option.
 
 .. figure:: /_static/images/arduino-ide/arduino_ide_newtab.jpg
    :alt: Arduino IDE New Tab
@@ -82,4 +82,4 @@ Here you can add comments on each line, these can be added by using the double f
 Upload the new version of the software
 ======================================
 
-Finally, upload the code to the Arduino as you would do during the standard :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/arduino-ide:Upload the software>`. Restart the Command Station and these commands will have run at start up.
+Finally, upload the code to the Arduino as you would do during the standard :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:Upload the software>`. Restart the Command Station and these commands will have run at start up.

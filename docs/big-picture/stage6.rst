@@ -55,7 +55,7 @@ Two turnouts/points are used in this first stage of our RMFT layout to allow tra
 For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-reference:turnouts/points` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC-EX Command reference.
 
 Turnout/Point definitions
-_________________________
+-------------------------
 
 We will define turnout/point 1 with an ID of 100, and turnout/point 2 with an ID of 101.
 
@@ -191,7 +191,7 @@ Signals
 Three signals have been used in this first stage to indicate whether or not a train can enter either the station siding or proceed beyond turnout 1 on the main track, to indicate whether a train can exit the station siding, or if a train can proceed beyond turnout 2 on the main track.
 
 Pin based signals
-_________________
+-----------------
 
 To use pin based signals, we require three pins per signal, and therefore nine pins in total, but we will only define an alias for the red pin given that it is the "control" pin for each signal. The other pins are used in the background by DCC-EX and are not referenced anywhere else outside the object definition.
 
@@ -220,7 +220,7 @@ Moving these again to an MCP23017 I/O expander, these would start at Vpin 172, h
   SIGNAL(SIG3_STN_EX, 179, 180)
 
 Servo based signals
-___________________
+-------------------
 
 To define servo based signals, these only require one Vpin per signal along with specifying the servo angle for the red, amber, and green positions.
 
@@ -248,7 +248,7 @@ Virtual blocks
 We've divided the layout into four virtual blocks, allowing for up to three trains to coexist safely on the layout. You will need at least one more block than you have trains in order to fully automate a layout, otherwise  there will be nowhere for a train to move to in order to start the automation sequences. This is outlined in further detail in the `fully automated layout`_ section.
 
 Block 1
-_______
+-------
 
 Block 1 is the approach to turnout 1, and can be used to prevent a train from entering either the station siding or the main track between turnouts 1 and 2 if they are occupied.
 
@@ -259,7 +259,7 @@ We will use ID 1 for this, with an alias:
   ALIAS(BLK1_TRN1_APP, 1)
 
 Block 2
-_______
+-------
 
 Block 2 consists of the section of the main track between turnouts 1 and 2, providing for a section to hold one train, allow a train on the station siding to exit safely, and also prevent a train running around the main track from entering this block.
 
@@ -270,7 +270,7 @@ We will use ID 2 for this, with an alias:
   ALIAS(BLK2_MAIN_HOLD, 2)
 
 Block 3
-_______
+-------
 
 Block 3 is for our station siding, ensuring no other trains can enter this block while it is occupied.
 
@@ -281,7 +281,7 @@ We will use ID 3 for this, with an alias:
   ALIAS(BLK3_STN, 3)
 
 Block 4
-_______
+-------
 
 Block 4 is the exit beyond turnout 2, and can hold a train while block 1 is occupied. Once block 1 is free, a train can run uninterrupted from block 4 back to block 1.
 
@@ -314,7 +314,7 @@ For simplicity, we will outline the stage 1 options using consistent hardware ty
 Once you understand the logic of our routes below and the various turnout, sensor, signal, and virtual block concepts above, you can view some `complete myautomation.h examples`_ at the end of this page.
 
 Startup sequence
-________________
+----------------
 
 When the CommandStation and EX-RAIL starts, everything defined before the first ``DONE`` command executes automatically.
 
@@ -335,9 +335,9 @@ If we omit that first ``DONE``, EX-RAIL would automatically execute ``ROUTE(1, "
   DONE
 
 Route 1 - main track running
-____________________________
+----------------------------
 
-The first route we publish for use is ``ROUTE(1, "Main track")`` which will appear in WiThrottle apps and |Engine Driver| with the description "Main track".
+The first route we publish for use is ``ROUTE(1, "Main track")`` which will appear in |WiThrottle Protocol| based apps (like |Engine Driver| and |wiThrottle|) with the description "Main track".
 
 Given we have closed our turnouts and set all our signals red in the startup sequence above, when selecting this route the first time, it will simply set signals 1 and 2 green, as the ``IFTHROWN()`` statements will evaluate as false and not execute the associated commands.
 
@@ -376,9 +376,9 @@ The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any furthe
   DONE
 
 Route 2 - enter and exit the station siding
-___________________________________________
+-------------------------------------------
 
-The second route we publish for use is ``ROUTE(2, "Stating siding")`` which will appear in WiThrottle apps and |Engine Driver| with the description "Station siding".
+The second route we publish for use is ``ROUTE(2, "Stating siding")`` which will appear in |WiThrottle Protocol| based apps (like |Engine Driver| and |wiThrottle|)  with the description "Station siding".
 
 Counter to the main track route above, we use ``IFCLOSED()`` statements to evaluate if turnouts need to change or not from their current position. Therefore, if the first route we choose after startup is this one, both statements will evaluate true. The same will occur if we select our main track route.
 
@@ -430,7 +430,7 @@ To setup for these fully automated sequences, we need to ensure our trains are p
 Once you understand the logic below and the various turnout, sensor, signal, and virtual block concepts above, you can view some `complete myautomation.h examples`_ at the end of this page.
 
 Virtual block logic
-___________________
+-------------------
 
 As mentioned in the introduction, we can enable fully automated running of up to three trains on this layout by breaking it into four virtual blocks.
 
@@ -443,7 +443,7 @@ When reading through the sections below on the logic, it helps to keep in mind t
 The automation is accomplished by defining six separate sequences that map out how trains can move safely from one block to the next, and we also use ``LATCH()`` as a technique to alternate between trains stopping at the station or continuing on the main track.
 
 Full automation startup sequence
-________________________________
+--------------------------------
 
 As outlined above in the `startup sequence`_ section, everything before the first ``DONE`` in myAutomation.h is executed on start up.
 
@@ -476,7 +476,7 @@ Once these activities have been done, we can tell our trains to start following 
   DONE
 
 Exiting block 1 - station entry or main track?
-______________________________________________
+----------------------------------------------
 
 In order to safely exit block 1, the first decision to be made is if the train will go straight through to continue on the main track, or if it will switch on to the station siding.
 
@@ -503,7 +503,7 @@ As a result of executing the ``LATCH(CHOOSE_BLK2)``, the next train navigating t
     ENDIF
 
 Moving from block 1 to block 2 - continue on the main track
-___________________________________________________________
+-----------------------------------------------------------
 
 To move from block 1 to block 2, the first thing we need to know is if it's safe to do so.
 
@@ -536,7 +536,7 @@ At this point, control of the train is handed over to the `moving from block 2 t
     FOLLOW(BLK2_BLK4)
 
 Moving from block 1 to block 3 - entering the station
-_____________________________________________________
+-----------------------------------------------------
 
 To move from block 1 to block 3, we again use ``RESERVE()``.
 
@@ -571,7 +571,7 @@ There is now a delay of 10 to 15 seconds while our passengers embark or disembar
     FOLLOW(BLK3_BLK4)
 
 Moving from block 2 to block 4 - continue on the main track
-___________________________________________________________
+-----------------------------------------------------------
 
 There are no new concepts here compared with our previous virtual block sequences, and we again need to ensure block 4 is free prior to entering it, then ensure our signals and turnout are set correctly, and once again after leaving block 2 ``AFTER(SNS4_MAIN_TRN2_APP)`` we free block 2 in order for the next train to be able to safely enter it.
 
@@ -606,7 +606,7 @@ Once done, train control is over to the `moving from block 4 to block 1 - the sp
     FOLLOW(BLK4_BLK1)
 
 Moving from block 3 to block 4 - exiting the station siding
-___________________________________________________________
+-----------------------------------------------------------
 
 Leaving the station siding is another repeat of the same logic, ensuring block 4 is free to enter, our signals and turnout are set correctly, and again freeing block 3 after we leave it ``AFTER(SNS5_STN_TRN2_APP)``.
 
@@ -633,7 +633,7 @@ Control is then handed over to the `moving from block 4 to block 1 - the speed r
     FOLLOW(BLK4_BLK1)
 
 Moving from block 4 to block 1 - the speed run
-______________________________________________
+----------------------------------------------
 
 The final sequence is the simplest of all, and allows for a higher speed run through block 4 ``FWD(40)`` (providing block 1 is free to enter), again freeing up block 4 once we've exited it ``AFTER(SNS1_TRN1_APP)``, and then finally handing control back to our original `exiting block 1 - station entry or main track?`_ decision sequence.
 
@@ -665,7 +665,7 @@ Complete myAutomation.h examples
 ================================
 
 ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins
-__________________________________________________________________________
+--------------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -737,7 +737,7 @@ __________________________________________________________________________
   DONE
 
 ROUTEs with turnouts/signals on Mega2560 direct I/O pins
-________________________________________________________
+--------------------------------------------------------
 
 .. code-block:: 
 
@@ -809,7 +809,7 @@ ________________________________________________________
   DONE
 
 ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins
-___________________________________________________________
+-----------------------------------------------------------
 
 .. code-block:: 
 
@@ -881,7 +881,7 @@ ___________________________________________________________
   DONE
 
 ROUTEs with servo based turnouts/signals on a PCA9685 servo module
-__________________________________________________________________
+------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -951,7 +951,7 @@ __________________________________________________________________
   DONE
 
 Full automation with pin based turnouts and signals on Mega2560 direct I/O pins
-_______________________________________________________________________________
+-------------------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -1096,7 +1096,7 @@ _______________________________________________________________________________
     FOLLOW(BLK1_EXIT)
 
 Full automation with pin based turnouts and signals on MCP23017 I/O expander Vpins
-__________________________________________________________________________________
+----------------------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -1242,7 +1242,7 @@ ________________________________________________________________________________
     FOLLOW(BLK1_EXIT)
 
 Full automation with servo based turnouts and signals with a PCA9685 servo module
-_________________________________________________________________________________
+---------------------------------------------------------------------------------
 
 .. code-block:: 
 

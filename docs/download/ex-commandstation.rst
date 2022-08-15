@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-CS-LOGO|
 
-***************************
-EX-CommandStation Downloads
-***************************
+*****************
+EX-CommandStation
+*****************
 
 |conductor| |tinkerer| |engineer|
 

@@ -199,11 +199,7 @@ Refer to :ref:`about/contributing/website/basic-rst:images` below for details on
 On This Page - Table of Contents
 --------------------------------
 
-.. todo:: On This Page - Table of Contents
-
-**todo** On This Page - Table of Contents
-
-
+.. todo:: Contributing - On This Page - Table of Contents
 
 ----
 
@@ -273,9 +269,7 @@ All heading underlines and overlines must be at least as long as the text of the
 Text
 ^^^^
 
-.. todo::   text content
-
-**TODO** text content
+.. todo::  Contributing - text content
 
 Refer to the :doc:`/about/contributing/website/basic-rst` and :doc:`/about/contributing/website/style-guide` 
 

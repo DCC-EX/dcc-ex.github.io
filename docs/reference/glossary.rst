@@ -23,6 +23,8 @@ Glossary
       - Direct Current
     * - DCC
       -  Digital Command and Control
+    * - Engine Driver |BR| Engine Driver Throttle
+      -  TODO
     * - JMRI
       - `Java Model Railroad Interface <https://www.jmri.org/>`_
     * - Loco |BR| Locomotive |BR| Engine 
@@ -37,4 +39,6 @@ Glossary
       - \ 1. Trademark owned by Brett Hoffman |BR|\ 2. proprietary iOS app developed by Brett Hoffman
     * - WiThrottle Protocol
       - proprietary protocol developed by Brett Hoffman
+    * - WiThrottle Server
+      - TODO
 

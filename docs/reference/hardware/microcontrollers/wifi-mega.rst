@@ -23,6 +23,10 @@ Mega+WiFi Setup
 
    Mega+WiFi Board
 
+Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
+
+----
+
 This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brand names though the board itself can also be unmarked. Links to some suppliers are at the bottom of this page:
 
 * Wemos

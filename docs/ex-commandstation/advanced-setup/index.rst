@@ -20,17 +20,17 @@ These pages describe the major supported hardware options for building a |EX-CS|
 Steps to Build an EX-CommandStation
 ===================================
 
-#. choose a `Microcontroller <Microcontrollers>`_
-#. choose a `Motor Driver <Motor Drivers>`_
-#. choose a `Connection Method <Connection Options>`_ and if required choose a:
+#. Choose a `Microcontroller <Microcontrollers>`_
+#. Choose a `Motor Driver <Motor Drivers>`_
+#. Choose a `Connection Method <Connection Options>`_ and if required choose a:
 
   #. WiFi board,
   #. Ethernet board,
   #. Bluetooth board, 
   #. Or none of the above (Direct Connection)
 
-#. choose a `LCD/oLED screen <LED/oLED Screens>`_ (if desired)
-#. choose a `Controller (throttle) <Controller Options>`_
+#. Choose a `LCD/oLED screen <LED/oLED Screens>`_ (if desired)
+#. Choose a `Controller (throttle) <Controller Options>`_
 #. Choose an `installation method <Installation options>`_
 #. Set your `startup options <Startup Configuration>`_ (if required)
 #. `Install the software <Installation options>`_
@@ -41,8 +41,7 @@ Steps to Build an EX-CommandStation
 Microcontrollers
 ================
 
-
-.. todo:: URGENT text needed for  Microcontrollers
+There are several different supported microcontrollers you can use as your |EX-CS|.
 
 .. toctree::
     :maxdepth: 2

@@ -8,6 +8,10 @@ Supported Motor Drivers
 
 These pages are notes and guides for how to connect and configure each specific motor controller supported by |EX-CS|. Click on the motor controller you want to use. Be sure to read :doc:`Motor Board Config </ex-commandstation/advanced-setup/supported-motorboards/motor-board-config>` as well. For a listing of the different types of motor boards and whether they are supported or not, see the :doc:`Motor Boards </reference/hardware/motor-boards>` page.
 
+.. todo:: URGENT the boards on this page are at odds with the comfort levels Reference/hardware/motorboards page
+
+**Note: the following links take you to the Hardware section of the Website**
+
 .. toctree::
     :maxdepth: 1
 

@@ -21,7 +21,7 @@ What is EX-Turntable?
 
 The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`levels:choose your comfort level` guide for |EX-CS| (Conductor, Tinkerer, and Engineer).
 
-The out-of-the-box example configuration should allow a |Conductor-text| level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
+The out-of-the-box example configuration should allow a |conductor-text| level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
 To make full use of |EX-TT|, you will need a basic understanding of :doc:`EX-RAIL </ex-rail/index>` automation, but we'll share the details and some examples to help with this.
 

@@ -10,20 +10,22 @@ h1, .h1 {
 
 h2, .h2 {
   color: #00353d !important;
-  font-size: 190% !important;
+  font-size: 200% !important;
   text-shadow: 2px 2px #00a3b915;
 }
 
 h3, .h3 {
   font-size: 170% !important;
+  font-style: italic !important;
 }
 
 h4, .h4 {
-  font-size: 150% !important;
+  font-size: 140% !important;
 }
 
 h5, .h5 {
-  font-size: 130% !important;
+  font-size: 110% !important;
+  font-style: italic !important;
 }
 
 .clearer {

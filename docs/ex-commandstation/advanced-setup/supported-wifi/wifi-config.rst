@@ -14,7 +14,7 @@ WiFi Configuration
     :depth: 1
     :local:
 
-This page describes the software configuration options for using WiFi to connect your |EX-CS| (CS) wirelessly to |JMRI| or a wireless throttle like |Engine Driver|. For information on how to connect your hardware, go to :doc:`WiFi Setup <../get-started/wifi-setup>`.
+This page describes the software configuration options for using WiFi to connect your |EX-CS| (CS) wirelessly to |JMRI| or a wireless throttle like |Engine Driver|. For information on how to connect your hardware, go to :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
 
 As mentioned in the above link, you will need the following to proceed:
 
@@ -117,11 +117,11 @@ We will focus on how to connect a Throttle to the Command Station. For info on u
 Access Point Mode (Default - No Configuration Necessary)
 ========================================================
 
-To use the default |Access Point mode|, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup <../get-started/wifi-setup>`. 
+To use the default |Access Point mode|, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`. 
 
 That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for |EX-CS| is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either |WiThrottle Protocol| or <DCC++> format.
 
-To see other configuration options you can set in your config.h file, see :ref:`ex-commandstation/advanced-setup/wifi-config:WiFi Config Options` below.
+To see other configuration options you can set in your config.h file, see `WiFi Config Options`_ below.
 
 You will need to know:
 

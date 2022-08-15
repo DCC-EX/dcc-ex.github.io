@@ -220,7 +220,7 @@ After flashing, the ESP8266 Log will show it uploaded them all successfully and 
 
 - Disconnect the USB cable.
 
-Skip ahead to :ref:`ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:c. Set the switches on your Mega for flashing`
+Skip ahead to :ref:`reference/hardware/microcontrollers/wifi-mega:c. Set the switches on your Mega for flashing`
 
 With esptool.py
 ~~~~~~~~~~~~~~~
@@ -275,14 +275,14 @@ Download and install |EX-CS| from by using the Automated exInstaller or using th
 
 :doc:`How to install using the installer </ex-commandstation/get-started/installer>`
 
-:doc:`How to install using the Arduino IDE </ex-commandstation/advanced-setup/arduino-ide>`
+:doc:`How to install using the Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 
 :doc:`I know what I'm doing, just point me to the downloads page! </download/ex-commandstation>`
 
 Long Version of Network Setup
 -----------------------------
 
-:doc:`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/wifi-config>`
+:doc:`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
 All settings are in the config.h file in your EX-CommandStation folder. If you don't have a config.h, rename config.example.h to config.h.
 

@@ -43,7 +43,7 @@ Anything with MOSFETS in them is more efficient than something with Bipolar Junc
 Which Option Should You Choose? (IBT_2)
 =========================================
 
-.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like EX-DCCInspector). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see :doc:`High Accuracy Waveform Mode </ex-commandstation/advanced-setup/high-accuracy>`.
+.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like EX-DCCInspector). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see :doc:`High Accuracy Waveform Mode </ex-commandstation/advanced-setup/supported-motorboards/high-accuracy>`.
 
 Upgrade (IBT_2)
 ----------------
@@ -157,7 +157,7 @@ Change the last line to look like this. To be sure of your spelling, you can cop
 
 ``#define MOTOR_SHIELD_TYPE IBT_2_WITH_ARDUINO``
 
-Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started <../../get-started/index>`
+Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started </ex-commandstation/get-started/index>`
 
 Please see `Important Notes on Current Sensing (IBT_2)`_.
 
@@ -253,7 +253,7 @@ Modifying Your Motor Board Definition To Give The Correct Current Sense Factor
 
 If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exactly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formula to calculate it. Everything you need to create your own motor board definition is here:
 
-:ref:`Creating a Custom Motor Board Definition <ex-commandstation/advanced-setup/motor-board-config:If Your board is NOT in the Supported List>`
+:ref:`Creating a Custom Motor Board Definition <ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:If Your board is NOT in the Supported List>`
 
 
 Using External Current Sense
@@ -302,7 +302,7 @@ The choice of motor driver is set in the config.h file. It is set in the followi
 
 The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
-If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section </ex-commandstation/advanced-setup/motor-board-config>`
+If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section </ex-commandstation/advanced-setup/supported-motorboards/motor-board-config>`
 
 For the Engineers, the definitions and implementation for motor board control are in the following files:
 

@@ -86,7 +86,7 @@ references:
 
     :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
 
-  :ref:`ex-commandstation/advanced-setup/motor-board-config:Configure Using the Installer`
+  :ref:`ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:Configure Using the Installer`
 
 The reference is the full name of the document (the absolute path without
 a leading /), a colon, and the section heading. The full name must be used
@@ -100,7 +100,7 @@ Alternative text can be used for the link:
 
     :ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
 
-  :ref:`WiFi configuration <ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
+  :ref:`WiFi configuration <reference/hardware/microcontrollers/wifi-mega:Short Version of Network Setup>`
 
 External
 --------

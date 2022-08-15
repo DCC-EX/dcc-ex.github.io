@@ -103,7 +103,7 @@ For operating instructions see :doc:`how to use EX-WebThrottle </throttles/softw
 Engine Driver (Android | WiThrottle | WiFi)
 --------------------------------------------
 
-Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "|WiThrottle Protocol|" (for WiFi Throttle). any |WiThrottle Protocol| compatible throttle will work with the |EX-CS|. There are two ways to connect it; the first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
+Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "|WiThrottle Protocol|" (for WiFi Throttle). any |WiThrottle Protocol| compatible throttle will work with the |EX-CS|. There are two ways to connect it; the first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see Wifi Setup :doc:`WiFi Setup </ex-commandstation/advanced-setup/supported-connections/wifi-setup>`).
 
 The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. That computer would then connect to the Command Station via a USB cable (normally) or via a Wireless USB Bridge. The computer running |JMRI| can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full |JMRI| setup with WiFi with virtually no fuss.
 

@@ -40,7 +40,7 @@ extensions = [
    # 'sphinx.ext.graphviz',
    # 'sphinx_sitemap',
    # 'sphinx.ext.inheritance_diagram',
-    'sphinxcontrib.spelling',
+   # 'sphinxcontrib.spelling',
 ]
 
 autosectionlabel_prefix_document = True

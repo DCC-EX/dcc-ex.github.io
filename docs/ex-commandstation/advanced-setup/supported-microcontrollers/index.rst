@@ -13,7 +13,9 @@ These pages are notes and guides for how to connect and configure each specific 
 .. toctree::
     :maxdepth: 1
 
-    wifi-mega
-    nano
-    nano-every
-    teensy
+    /reference/hardware/microcontrollers/arduino-mega
+    /reference/hardware/microcontrollers/arduino-uno
+    /reference/hardware/microcontrollers/nano
+    /reference/hardware/microcontrollers/nano-every
+    /reference/hardware/microcontrollers/teensy
+    /reference/hardware/microcontrollers/wifi-mega

@@ -53,7 +53,7 @@ Arduino Nano
 
 The Arduino Nano shares the same processor with the Arduino Uno, so we support it. The Nano has a different form factor than the Uno or Mega, so motor driver shields will usually need to be attached with jumper wires. There *is* a carrier board with an Arduino Motor Shield compatible circuit you can plug your Nano into. Other than having to solder and size, the Nano is in every way as capable as an Arduino Uno.
 
-See our section on :doc:`Using a Nano </ex-commandstation/advanced-setup/supported-microcontrollers/nano>`
+See our section on :doc:`Using a Nano </reference/hardware/microcontrollers/nano>`
 
 Mega+WiFi
 ==========
@@ -62,7 +62,7 @@ Mega+WiFi
 
 Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
 
-See our section on Using the :doc:`WiFi+Mega Page </ex-commandstation/advanced-setup/supported-microcontrollers/wifi-mega>`
+See our section on Using the :doc:`WiFi+Mega Page </reference/hardware/microcontrollers/wifi-mega>`
 
 Nano Every
 ===========
@@ -71,7 +71,7 @@ Nano Every
 
 The Nano Every is an updated Nano. It uses a completely different processor family than the Uno and Nano. S
 
-See the detailed section on the :doc:`Nano Every </ex-commandstation/advanced-setup/supported-microcontrollers/nano-every>`
+See the detailed section on the :doc:`Nano Every </reference/hardware/microcontrollers/nano-every>`
 
 Teensy 3.x & 4.x
 =================
@@ -80,7 +80,7 @@ Teensy 3.x & 4.x
 
 The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons. 
 
-See the detailed section on the :doc:`Teensy </ex-commandstation/advanced-setup/supported-microcontrollers/teensy>`
+See the detailed section on the :doc:`Teensy </reference/hardware/microcontrollers/teensy>`
 
 
 Will you support other microcontrollers in the future?

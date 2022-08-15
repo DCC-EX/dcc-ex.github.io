@@ -4,6 +4,10 @@
 Hardware
 ********
 
+|conductor| |tinkerer| |engineer|
+
+.. todo::  Text for the hardware index page
+
 .. toctree::
     :maxdepth: 1
     

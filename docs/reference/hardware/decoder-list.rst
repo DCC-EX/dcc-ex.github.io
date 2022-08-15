@@ -4,6 +4,8 @@
 List of Tested Decoders
 ***********************
 
+|conductor| |tinkerer| |engineer|
+
 We often receive reports on DCC multifunction decoders via Discord and our support channels as well as requests for help when things don't quite work "out of the box".
 
 As a result, we've started compiling a list of decoders that we've experienced with a view to helping people get up and running quicker with their DCC layouts.

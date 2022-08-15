@@ -27,5 +27,4 @@ Note that if the size of the regular Mega board is an issue, there are condensed
    :alt: Mega Pro Micro
    :scale: 35%
 
-
-.. todo::  mega setup notes ... refer to the getting started
+See the :doc:`/ex-commandstation/get-started/assembly` page for information on setting up this microcontroller.

@@ -4,7 +4,7 @@
 Motor Boards
 *************
 
-|tinkerer| |engineer|
+|conductor| |tinkerer| |engineer|
 
 .. sidebar::
 

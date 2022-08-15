@@ -8,4 +8,9 @@ Supported Bluetooth Boards
 
 |tinkerer| |engineer|
 
-.. todo:: text for supported bluetooth boards
+.. todo:: URGENT text for supported Bluetooth boards
+
+.. toctree::
+    :maxdepth: 1
+
+    /reference/hardware/bluetooth-boards

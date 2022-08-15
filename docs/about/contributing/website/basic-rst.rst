@@ -30,7 +30,7 @@ Links / Hyperlinks
 Internal - Same Page
 --------------------
 
-.. todo::   internal links - same page
+.. todo::   Contributing - internal links - same page
 
 Sphinx cross-references are used for internal links in the same document/page. This ensures they are correct and by default will use the destination heading text as the link text.
 
@@ -60,7 +60,7 @@ Internal - To a Different Page
 
 Sphinx cross-references are used for internal links. This ensures they are correct and by default will use the destination heading text as the link text.
 
-To link to a page use ``:doc:``:
+To link to a different page use ``:doc:``:
 
 .. admonition:: Example
 
@@ -70,14 +70,12 @@ To link to a page use ``:doc:``:
 
   :doc:`/reference/hardware/motor-boards`
 
-The document name is a relative or absolute (within the documentation) file
-path, without the .rst suffix.  Absolute are generally safer.
+The document name is a relative or absolute (within the documentation) file path, without the .rst suffix.  Absolute are generally safer.
 
 Internal - To a Sub Heading of a Different Page
 -----------------------------------------------
 
-To link to a position within a page use ``:ref:``. A reST label can be used as
-the reference, but on the |DCC-EX| website headings are made available to use as
+To link to a position within a page use ``:ref:``. A reST label can be used as the reference, but on the |DCC-EX| website headings are made available to use as
 references:
 
 .. admonition:: Example
@@ -88,9 +86,7 @@ references:
 
   :ref:`ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:Configure Using the Installer`
 
-The reference is the full name of the document (the absolute path without
-a leading /), a colon, and the section heading. The full name must be used
-even when referring to headings in the same source file.
+The reference is the full name of the document (the absolute path without a leading /), a colon, and the section heading. The full name must be used even when referring to headings in the same source file.
 
 Alternative text can be used for the link:
 
@@ -360,12 +356,12 @@ Going any further into the details and options of controlling SVGs via CSS is be
 Documents / Files
 =================
 
-.. todo:: documents description
+.. todo:: Contributing - documents description
 
 Image Artifacts
 ===============
 
-.. todo:: image Artifacts description
+.. todo:: Contributing - image Artifacts description
 
 Hiding pages and comments
 ==========================

@@ -1,18 +1,22 @@
-***************************
-DCC++ EX Command Reference
-***************************
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+************************
+DCC-EX Command Reference
+************************
 
-.. sidebar:: On this page
+|engineer|
 
-  .. contents:: 
+.. sidebar:: 
+
+  .. contents:: On this page
     :depth: 1
     :local:
 
 This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`
 
-`CommandStation-EX <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
+`EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* :doc:`WebThrottle-EX </throttles/ex-webthrottle>` - Our DCC++ EX browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within WebThrottle-EX itself!
+* :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` - Our |EX-WT| browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within |EX-WT| itself!
 
 * `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Cellphone App WiFi Throttle  
 
@@ -22,9 +26,9 @@ This is a detailed reference. For a summary version, please see :doc:`Command Su
 
 * `Gregg Berman's DCC++ Controller Software <https://github.com/DccPlusPlus/Controller>`_
 
-This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `CommandStation-EX Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
+This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
-You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC++ EX Webpage <https://dcc-ex.com>`_.  
+You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC-EX Webpage <https://dcc-ex.com>`_.  
 
 Track Power Commands
 =====================
@@ -84,7 +88,7 @@ Engine Decoder (CAB) Operation Commands
 
 Breakdown for this example ``<t 1 03 20 1>`` is:
 
-* ``<`` = Start delimiter of a DCC++ EX command. (A space after ``<`` is not required but acceptable)
+* ``<`` = Start delimiter of a DCC-EX command. (A space after ``<`` is not required but acceptable)
 * ``t`` = (lower case t) This command is for a Decoder installed in a engine or simply a "cab".
 * ``1`` = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
 * ``03`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
@@ -95,12 +99,12 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 .. code-block::
 
    RETURNS: "<T 1 20 1>" if the command was successful, meaning :
-   "<" = Begin DCC++ EX command
-   "T" = (upper case T) DCC++ EX Cab command was sent from DCC++ EX Command Station
+   "<" = Begin DCC-EX command
+   "T" = (upper case T) DCC++ EX Cab command was sent from |EX-CS|
    "1" = register 1 was changed
    "20" = set to speed 20
    "1" = forward direction
-   ">" = End DCC++ EX command
+   ">" = End DCC-EX command
 
 **Show number of supported cabs**
 
@@ -128,9 +132,9 @@ Examples:
        RETURNS: NONE
 
 CAB FUNCTIONS
-______________
+-------------
 
-There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC++ EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
+There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC-EX method. Both methods are described here though new applications are encouraged to use the newer ``<F>`` command (capital F vs. small f).
 
 
 * The ``<F>`` command turns engine decoder functions ON and OFF
@@ -148,12 +152,12 @@ To set functions **F0-F68** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``F`` = (upper case F) This command is for a CAB function i.e.: Lights, horn, bell  
 * ``CAB``  : the short (1-127) or long (128-10293) address of the engine decoder
 * ``FUNC`` : the CAB function number (0-28) whose function is defined by your decoder
 * ``0|1`` : a value of 0 to set the function OFF and 1 to set the function ON
-* ``>`` = End DCC++ EX command
+* ``>`` = End DCC-EX command
 
 Examples:
 
@@ -167,7 +171,7 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB function i.e.: Lights, horn, bell  
 * ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder
 * ``BYTE1`` :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16
@@ -181,7 +185,7 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
   * 128 Alone Turns OFF **F0-F4**
 
 * ``BYTE2`` :  omitted
-* ``>`` = End DCC++ EX command
+* ``>`` = End DCC-EX command
 
 To make BYTE1 add the values of what you want ON together, the ones that you want OFF do not get added to the base value of 128.
 
@@ -196,17 +200,17 @@ To make BYTE1 add the values of what you want ON together, the ones that you wan
 
 Breakdown for this example ``<f 3265 144>``
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function i.e.: Lights, horn, bell
 * ``3265`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder
 * ``144`` = Turn on headlight
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
 * ``BYTE1`` :  176 + F5*1 + F6*2 + F7*4 + F8*8
 
@@ -218,13 +222,13 @@ To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * 176 Alone Turns OFF **F5-F8**
 
 * ``BYTE2`` :  omitted
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
 * ``BYTE1:``  160 + F9*1 +F10*2 + F11*4 + F12*8
 
@@ -236,13 +240,13 @@ To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * 160 Alone Turns OFF **F9-F12**
 
 * ``BYTE2:``  omitted
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
 * ``BYTE1:`` 222 
 * ``BYTE2:`` F13*1 + F14*2 + F15*4 + F16*8 + F17*16 + F18*32 + F19*64 + F20*128
@@ -258,12 +262,12 @@ To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 128 for F20 ON
   * 0 Alone Turns OFF **F13-F20**
 
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB function.
 * ``BYTE1:`` 223
 * ``BYTE2:`` F21*1 + F22*2 + F23*4 + F24*8 + F25*16 + F26*32 + F27*64 + F28*128
@@ -279,7 +283,7 @@ To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 128 for F28 ON
   * 0 Alone Turns OFF **F21-F28**
 
-* ``>`` = End DCC++ EX command  
+* ``>`` = End DCC-EX command  
 
 **RETURNS:** <l CAB SLOT SPEED/DIR FUNC>
 
@@ -300,13 +304,13 @@ Where:
 
 Other notes:
 
-* CAB Functions do not get stored in the DCC++ EX CommandStation
-* Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ EX CommandStation. One for F0 on and another for F22 on. 
+* CAB Functions do not get stored in the EX-CommandStation
+* Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the |EX-CS|. One for F0 on and another for F22 on. 
 
 Stationary Accessory Decoder & Turnout Commands
-________________________________________________
+-----------------------------------------------
 
-DCC++ EX COMMAND STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
+|EX-CS| can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
 
 All decoders that are not in an engine are accessory decoders including turnouts.
 
@@ -318,7 +322,7 @@ Accessory Decoder Commands
 There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka "Dual-Coil" method) and linear addressing method. 
 You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).
 
-In the mapping used by DCC++EX, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
+In the mapping used by |EX-CS|, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
 Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders.
 Decoder address 0 does not have a corresponding linear address.  This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.
 If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works.  Or use the address/subaddress versions of the commands.
@@ -330,21 +334,21 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``a`` (lower case a) this command is for a Accessory Decoder
 * ``LINEAR_ADDRESS:``  the linear address of the decoder controlling this turnout (1-2044)
 * ``ACTIVATE:`` (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)
-* ``>`` = End DCC++ EX command
+* ``>`` = End DCC-EX command
 
 Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ``<`` = Begin DCC++ EX command
+* ``<`` = Begin DCC-EX command
 * ``a`` (lower case a) this command is for a Accessory Decoder
 * ``ADDRESS:``  the primary address of the decoder controlling this turnout (0-511)
 * ``SUBADDRESS:`` the subaddress of the decoder controlling this turnout (0-3)
 * ``ACTIVATE:`` (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)
-* ``>`` = End DCC++ EX command
+* ``>`` = End DCC-EX command
 
 
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
@@ -441,30 +445,30 @@ You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in th
 
    Example: You have a turnout on your main line going to warehouse industry. The turnout is controlled by an accessory decoder with a address of 123 and is wired to output 3. 
    You want it to have the ID of 10.
-   You would send the following command to the DCC++ EX CommandStation:
+   You would send the following command to the |EX-CS|:
    ``<T 10 DCC 123 3>``  
 
    * This Command means:  
-   * ``<`` : Begin DCC++ EX command  
+   * ``<`` : Begin DCC-EX command  
    * ``T`` : (Upper case T) Define a Turnout  
    * ``DCC`` : The turnout is DCC Accessory Decoder based
    * ``10`` : ID number I am setting to use this turnout  
    * ``123`` : The accessory decoders address  
    * ``3`` : The turnout is wired to output 3  
-   * ``>`` : End DCC++ EX command
+   * ``>`` : End DCC-EX command
    * RETURNS: ``<O>``  Meaning Command Successful
 
- |    Next you would send the following command to the DCC++ EX CommandStation:
+ |    Next you would send the following command to the |EX-CS|:
      ``<E>``
 
    * This Command means:  
-   * ``<`` : Begin DCC++ EX command  
+   * ``<`` : Begin DCC-EX command  
    * ``E`` : (Upper case E) Store (save) this definition to EEPROM  
-   * ``>`` : End DCC++ EX command
+   * ``>`` : End DCC-EX command
    * RETURNS: ``<O>``  Meaning Command Successful  
 
 If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.  
-Consequently, when the DCC++ EX CommandStation is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
+Consequently, when the |EX-CS| is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
 This is intended so that the servos don't perform a sweep on power-on when their physical position does not match initial position in the CommandStation.
 
 
@@ -487,13 +491,13 @@ Controlling a Defined Turnout
 
 
      * This Command means:  
-     * ``<`` : Begin DCC++ EX command  
+     * ``<`` : Begin DCC-EX command  
      * ``T`` : (Upper case T) Throw a turnout.  
      * ``10`` : ID number of the defined turnout I want to control.  
      * ``1`` : Set turnout to Thrown (turned, on) position.  
      * 
-       ``>`` : End DCC++ EX command
-       DCC++ EX should return ``<H 10 1>``  Meaning Command was Successful
+       ``>`` : End DCC-EX command
+       |EX-CS| should return ``<H 10 1>``  Meaning Command was Successful
 
        NOTE: The ``<T>`` command by itself with no parameters will list all turnout definitions and their directions
 
@@ -501,7 +505,7 @@ Controlling a Defined Turnout
 Sensors (Input) Commands
 =========================
 
-DCC++ EX CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
+|EX-CS| supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
 and other devices. 
 Physical sensors can be of any type (infrared, magnetic, mechanical...).  They may be configured to pull-up or not.  
 When configured for pull-up, the input is connected (within the CS) to 
@@ -565,14 +569,14 @@ Example: This shows sensors 1 and 2 are tripped or active while 3 and 4 are not.
 Outputs (DIO Pin) Commands
 ===========================
 
-DCC++ EX CommandStation supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. 
+|EX-CS| supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. 
 The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.  
 
 Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
 The default is to set each defined pin to active or inactive according to its restored state. 
 However, the default behavior can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.  
 
-To have DCC++ EX CommandStation utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
+To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
 
 
 * ``<Z ID PIN IFLAG>`` : Creates a new output ID, with specified PIN and IFLAG values.  
@@ -628,7 +632,7 @@ To change the state of outputs that have been defined use:
   * ``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)  
 
 When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power. 
-A list of the current states of each output in the form ``<Y ID STATE>`` is generated by DCC++ EX CommandStation whenever the ``<s>`` 
+A list of the current states of each output in the form ``<Y ID STATE>`` is generated by |EX-CS| whenever the ``<s>`` 
 status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program. 
 
 Storing and Erasing Turnouts, Sensors and Outputs in EEPROM
@@ -653,7 +657,7 @@ Engine Decoder Programming Commands
 ======================================
 
 PROGRAMMING-MAIN TRACK
-_______________________
+----------------------
 
 WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -682,7 +686,7 @@ Writes, without any verification, a single bit within a Configuration Variable B
   * RETURNS: NONE
 
 PROGRAMMING-PROGRAMMING TRACK
-______________________________
+-----------------------------
 
 .. NOTE:: By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little "jumps" you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an "ACK" (acnowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
@@ -726,7 +730,7 @@ Writes, and then verifies, a Configuration Variable BYTE to the decoder of an en
 * ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  
 * ``VALUE`` : The value to be written to the Configuration Variable memory location (0-255).  
 * ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
+* ``CALLBACKSUB`` : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.  
 
   * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV Value>``  
   * ``CV VALUE:`` Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.  
@@ -742,7 +746,7 @@ Writes, and then verifies, a Configuration Variable BIT to the decoder of an eng
 * ``BIT`` : The bit number of the Configuration Variable memory location to write (0-7).  
 * ``VALUE`` : The value of the bit to be written (0-1).  
 * ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function.  
+* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.  
 
   * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV BIT VALUE>``  
   * ``CV VALUE`` is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.  
@@ -757,7 +761,7 @@ Read CV BYTE Format is: ``<R CV CALLBACKNUM CALLBACKSUB>``
 
 * ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).  
 * ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC++ EX Interface) that call this function. 
+* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function. 
 
   * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV VALUE>``  
   * ``CV VALUE`` is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.
@@ -800,9 +804,9 @@ Diagnostic Commands
 =====================
 
 Status
-_______
+------
 
-``<s>`` Lowercase "s": DCC++ EX CommandStation Status
+``<s>`` Lowercase "s": EX-CommandStation Status
 
   .. code-block::
 
@@ -810,9 +814,9 @@ _______
        Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
 
 "D" Commands
-_____________
+------------
 
-.. Note:: 1 and 0 and ON and OFF can be used interchangeably in DCC++ EX
+.. Note:: 1 and 0 and ON and OFF can be used interchangeably in EX-CommandStation
 
 * ``<D CABS>`` Shows cab numbers and speed in reminder table.
 * ``<D RAM>`` Shows remaining RAM.
@@ -844,7 +848,7 @@ _____________
       17:00:10.358 -> <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
 
 DECODER TEST
-_____________
+------------
 
 These following commands are detailed above but are worth repeating here. The ``<R>`` command will attempt to read the decoder on the service (programming) track and try to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn't moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the ``<D ACK ON>`` command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.
 
@@ -869,7 +873,7 @@ To help define the correct ACK parameters required for different decoders, there
   - MIN 2000 uS
   - MAX 20000uS
 
-  If you still need to override these and need to do so permanently, the commands can be added to "mySetup.h" as per :ref:`advanced-setup/startup-config:adding in the startup commands`.
+  If you still need to override these and need to do so permanently, the commands can be added to "mySetup.h" as per :ref:`ex-commandstation/advanced-setup/startup-config:adding in the startup commands`.
 
   Note with decoders that are equipped with "keep alives" or capacitors, it can be beneficial to turn the power on with `<1>` or `<1 PROG>` to charge the capacitors prior to programming, which can increase the reliability of the ACK, especially when attemping to read the full sheet.
 
@@ -892,7 +896,7 @@ To quote the relevant section from NMRA S 9.2.3:
 ``<D PROGBOOST>``  By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
  
 SEND PACKET TO THE TRACK
-_________________________
+------------------------
 
 .. Warning:: THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER
 
@@ -919,9 +923,9 @@ WiFi "AT" Commands
 
 ``<+COMMAND>`` Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the "+" and the command.
 
-Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file <../../advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
+Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file </ex-commandstation/advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
 
-``<+X>`` A special command to force the "connected" flag (WiFi Connected Mode) to on inside the CS so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the CS that it needs to process commands on a connection you created and so you can send your own AT commands.
+``<+X>`` A special command to force the "connected" flag (WiFi Connected Mode) to on inside the Command Station so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the Command Station that it needs to process commands on a connection you created and so you can send your own AT commands.
 
 Examples:
 
@@ -930,7 +934,7 @@ Examples:
 
 For more detail follow these links:
 
-:doc:`DCC-EX WiFi Configuration <../../advanced-setup/wifi-config>`
+:doc:`DCC-EX WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
 `Espressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
 

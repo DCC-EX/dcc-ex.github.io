@@ -27,11 +27,9 @@ However, WiFi is optional. If you wish to simply use your computer connected via
 
 .. rst-class:: clearer
 
-.. sidebar:: 
+.. sidebar:: Using JMRI (Alternate)
    
-   |conductor| |tinkerer| |engineer|
-
-   *The instructions on this page are NOT for connecting your* |EX-CS| *to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12).*
+   |conductor| |BR| An *Alternate* to connecting to your |EX-CS| directly via WiFi is to do so indirectly through |JMRI|. To do this, you don't need a WiFi board. You only need to use a USB cable instead. This is described on the :doc:`/ex-commandstation/advanced-setup/supported-connections/jmri` page.
 
 There are many ways to add WiFi to your Command Station. **We will cover only one method here.** You may need to know a little bit about networking, but if you can get your phone to connect to your home network, you can do this.
 
@@ -48,9 +46,7 @@ Why Use WiFi?
 
 .. sidebar:: 
 
-   |tinkerer| |engineer|
-
-   Using Wifi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
+   |tinkerer| |engineer| |BR| Using Wifi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
 
 **BEFORE you purchase a Wifi card, please consider whether you actually need it.**
 

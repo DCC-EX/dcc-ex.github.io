@@ -26,10 +26,9 @@ Once you have assembled your |EX-CS| hardware you need to load our software onto
 Requirements (for installing)
 =============================
 
-.. note:: 
-   :class: note-float-right
-
-   For all versions, make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs are using the computer's serial port.
+.. sidebar:: **USB Cable**
+   
+   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the Arduino IDE) are using the same USB port.
 
 * a Windows, Linux or MacOS X **Computer**
 * a |EX-CS| (Arduino Mega/Uno + Motor shield and optional WiFi shield)
@@ -43,7 +42,7 @@ Requirements (for installing)
 .. warning::
    :class: warning-float-right
    
-   You *may* need to turn off your antivirus software before you try to install. |BR| We need a piece of Arduino software to be able to compile and upload the Command Station software which sometimes gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
+   **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
 * **Connect** your |EX-CS| to your computer
 * Determine which COM Port the |EX-CS| is plugged into 
@@ -76,14 +75,14 @@ Requirements (for installing)
 
 * You will be presented with the following screen...
 
+.. todo:: URGENT need to complete the installer dropdown options
+
 3. The EX-Installer Window
 ==========================
 
-.. warning::
+.. warning:: **Wait!**
    :class: warning-float-right-narrow
    
-   **Wait!**
-
    The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
 
 .. figure:: /_static/images/installer/installer.jpg
@@ -97,7 +96,6 @@ There will be a lot of information appearing in the log window, which can help u
 Choose your options
 -------------------
 
-
 In the left side options pane, use the dropdown selector boxes to choose the following options:
 
 .. figure:: /_static/images/installer/inst_options.jpg
@@ -108,14 +106,14 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 
 .. sidebar:: Refresh Ports Button
    
-   This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program. When you plug in a new board, refresh the ports so it can find your device.
+   The :guilabel:`Refresh Ports` button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program. When you plug in a new board, refresh the ports so it can find your device.
 
 1. Select your **Command Station (Base Station) Type** |BR| If you are |conductor-text| following our recommended instructions, choose **'Command Station EX'** |br| |br|
 2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
 3. Select your **Motor Shield** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
 4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took not of earlier |br| |br|
 5. If you have installed an optional a **WiFi Shield** you MUST check the **WiFi box** |br| If you are a |conductor-text| following our recommended instructions, check this box regardless (see below) |br| |br|
-6. Press the "Compile and Upload" button
+6. Press the :guilabel:`Compile and Upload` button
 
 Station Mode VS Access Point Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -124,11 +122,9 @@ The instructions on this page are specifically for setting up your |EX-CS| to ha
 
 The |EX-CS| can be setup so that it connects to your existing home WiFi Network.  This is referred to as |Station Mode|. See the sidebar on this page or the :doc:`/ex-installer/index` page for the full instructions if you are interested in this option.
 
-.. sidebar:: Station Mode
+.. sidebar:: Station Mode (Alternate)
 
-   |conductor|
-
-   This alternate path will make your |EX-CS| connect to your existing home WiFi Network. 
+   |conductor| |BR| This alternate WiFi configuration will make your |EX-CS| connect to your existing home WiFi Network. 
 
    1. Check the ``WiFi`` box. 
    

@@ -11,8 +11,9 @@ What to expect to learn from stage 1
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How run a train on your WiFi enabled |EX-CS|.
-* How run a train on your |JMRI| connected |EX-CS|.
+* How run a train on your WiFi enabled |EX-CS|
+* How run a train on your |JMRI| connected |EX-CS|
+* How to run more than one train (Individual or Consist/Multiple Units)
 * How to program a decoder using |JMRI|
 
 Notes

@@ -11,9 +11,9 @@ What to expect to learn from stage 3
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How add a Loco Roster to your |EX-CS|
-* How add add function labels for you Roster Entries
-* How to add images for your locos (|Engine Driver| only)
+* How add Turnout/Point
+* How to Add Sensors
+* How to add Blocks
 
 Notes
 =====

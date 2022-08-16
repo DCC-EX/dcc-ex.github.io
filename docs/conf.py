@@ -41,7 +41,6 @@ extensions = [
    # 'sphinx_sitemap',
    # 'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.spelling',
-    'sphinx_toolbox.collapse',
 ]  
 
 autosectionlabel_prefix_document = True
@@ -97,7 +96,7 @@ html_theme_options = {
     'titles_only': True,
     'collapse_navigation': False,
     # 'navigation_depth': 3
-    # 'navigation_depth': -1 
+     'navigation_depth': -1 
 }
  
 html_context = {

@@ -119,39 +119,56 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 5. If you have installed an optional a **WiFi Shield** you MUST check the **WiFi box** |br| If you are a |conductor-text| following our recommended instructions, check this box regardless (see below) |br| |br|
 6. Press the "Compile and Upload" button
 
+Station Mode VS Access Point Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The instructions on this page are specifically for setting up your |EX-CS| to have its own, completely isolated, WiFi Network. This is referred to as |Access Point Mode|.  (Most useful if your layout is away from the house, or you transport your layout frequently.)
+
+The |EX-CS| can be setup so that it connects to your existing home WiFi Network.  This is referred to as |Station Mode|. See the sidebar on this page or the :doc:`/ex-installer/index` page for the full instructions if you are interested in this option.
+
+.. sidebar:: Station Mode
+
+   |conductor|
+
+   This alternate path will make your |EX-CS| connect to your existing home WiFi Network. 
+
+   1. Check the ``WiFi`` box. 
+   
+   2. Enter your Home WiFi Network Details
+
+      * **WiFi SSID** - The name of your home network.\ 
+
+      * **WiFi Password** - The password required to connect to your home network.\ 
+
+      * **Host Name** - If your WiFi Board supports it, this name can be used in addition to the IP address.\ 
+
+      * **Server Port** - This is the communication port our internal |WiThrottle server| uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560.\ 
+
+      * **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.
+
+
+Access Point Mode
+^^^^^^^^^^^^^^^^
+
 WiFi Checkbox
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
-.. sidebar:: 
+Check the ``WiFi`` box.  That's it, there is nothing more to do here.
 
-   **Station Mode VS Access Point mode**
+   .. figure:: /_static/images/installer/wifi.jpg
+      :alt: WiFi Options
+      :scale: 90%
 
-   The instructions on this page are specifically for setting up your |EX-CS| so that it connects to your home WiFi Network.  This is referred to as *Station Mode*.
+      Wifi Options
 
-   The |EX-CS| can be setup to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*.  (Useful if your layout is away from the house, or you transport your layout frequently.) See the :doc:`/ex-installer/index` page for the full instructions if you are interested in this option.
+Even if you didn't install a WiFi shield, we recommend that this box be checked. If left checked and later you add a WiFi Shield, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station.  (If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box.)
 
-Even if you didn't install a WiFi shield, we recommend that this box be checked. If left checked and later you add a WiFi Shield, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. 
+|force-break|
 
-If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box.
+.. note::
+   :class: note-float-right 
 
-Enter your Home WiFi Network Details
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. figure:: /_static/images/installer/wifi.jpg
-   :alt: WiFi Options
-   :scale: 90%
-
-   Wifi Options
-
-* **WiFi SSID** - The name of your home network.\ 
-
-* **WiFi Password** - The password required to connect to your home network.\ 
-
-* **Host Name** - If your WiFi Board supports it, this name can be used in addition to the IP address.\ 
-
-* **Server Port** - This is the communication port our internal |WiThrottle server| uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
-
-* **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.\ 
+   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
 Compile and Upload
 ------------------
@@ -159,10 +176,6 @@ Compile and Upload
 **Compile and Upload Button**
 
 Once you have configured your options, press this button to upload the software to your |EX-CS|.
-
-.. note:: 
-
-   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
 ----
 

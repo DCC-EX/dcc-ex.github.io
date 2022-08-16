@@ -1098,11 +1098,6 @@ Full automation with pin based turnouts and signals on Mega2560 direct I/O pins
 Full automation with pin based turnouts and signals on MCP23017 I/O expander Vpins
 ----------------------------------------------------------------------------------
 
-.. collapse:: test
-
-  yyyyyyy
-  
-
 .. code-block:: 
 
   // myAutomation.h for SEQUENCEs with pin based turnouts, sensors, and signals via MCP23017 I/O expander Vpins.

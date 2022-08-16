@@ -28,13 +28,9 @@ What you need to Acquire
 
 .. sidebar::  Optional configuration
     
-  |conductor|
+  |conductor| |BR| |EX-CS| can be configured in an additional 'Conductor friendly', without wifi, but it requires that |JMRI| installed on a computer.
 
-  |EX-CS| can be configured in an additional 'Conductor friendly', without wifi, but it requires that |JMRI| installed on a computer.
-
-  |tinkerer| |engineer|
-
-  |EX-CS| is also supported on a variety of different hardware that you might also consider
+  |tinkerer| |engineer| |BR| |EX-CS| is also supported on a variety of different hardware that you might also consider
 
   - Supported :doc:`Arduino boards </reference/hardware/microcontroller-boards>`
   - Supported :doc:`motor shields </reference/hardware/motor-boards>`

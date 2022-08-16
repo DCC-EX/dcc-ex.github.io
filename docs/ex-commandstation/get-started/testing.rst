@@ -29,9 +29,7 @@ There are two simple options for testing your setup described below:
 
 .. sidebar:: 
 
-    |tinkerer| |engineer|
-
-    Additional options (controllers) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
+    |tinkerer| |engineer| |BR| Additional options (controllers) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
 
 Using EX-WebThrottle
 --------------------
@@ -88,12 +86,20 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 
    If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
+.. warning:: 
+
    **Locos Can't Respond to Throttle Commands on the Programming Track!**
 
    We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification. There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc, but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main. ***TODO: Write the POM*** help.
 
 
-Next Steps - Choosing a throttle
-================================
+Next Steps - Run Your Trains
+============================
 
-Click :doc:`here <testing>` or click the "next" button see your options for a controller (throttle).
+*You now should have everything you need to run your trains.*
+
+We suggest that you look at the :doc:`/big-picture/index` to get some additional guidance on running trains and the additional capabilities of |DCC-EX| that you may prove of interest.
+
+You might also like to look at the other :doc:`Controllers (Throttles) </ex-commandstation/advanced-setup/controllers>` that are available.
+
+If you are still having difficulties click :guilabel:`Next`.

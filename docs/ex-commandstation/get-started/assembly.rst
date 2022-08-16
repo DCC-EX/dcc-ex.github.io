@@ -27,9 +27,7 @@ This page describes the most common, recommended, configuration, but you will se
 
 .. sidebar::  Optional configuration
 
-  |tinkerer| |engineer|
-
-  For an Uno, Nano, or other microcontroller, please see :doc:`Using a different microcontroller </reference/hardware/microcontroller-boards>`. 
+  |tinkerer| |engineer| |BR| For an Uno, Nano, or other microcontroller, please see :doc:`Using a different microcontroller </reference/hardware/microcontroller-boards>`. 
   
   If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see :doc:`Motor Controllers </reference/hardware/motor-boards>`
 
@@ -71,19 +69,17 @@ You will need to turn the motor controller board upside down and do ONE of the f
 Cutting the Trace
 -----------------
 
-.. sidebar:: 
+.. sidebar:: Bending out or Cutting the Vin Pin (Optional)
 
-   |conductor|
-   
-   **Bending out or Cutting the Vin Pin (Optional)**
-
-   In this method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. Alternately, you can just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
+   |conductor| |BR| In this *alternate* method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. 
 
    .. figure:: /_static/images/motorboards/bend_pin1.jpg
       :alt: Bend out the Vin pin on the Arduino motor shield
       :scale: 50%
 
       Bending out the Pin (click to enlarge)
+   
+   Another *Alternate* method is to just snip off the pin with wire cutters and make sure that there is not enough pin left to still make contact with the hole it normally would go into when seated on the Arduino.
 
 Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.
 
@@ -229,9 +225,7 @@ In other words, if you view one side of your main track as having a 'left' side 
 
 .. sidebar:: Arduino Power supply options
 
-   |conductor|
-   
-   There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your |EX-CS| (for example to run |EX-WT| or |JMRI|. There is also a way to use a 5V power supply. Please read :doc:`Power Supplies </reference/hardware/power-supplies>` to help you find what will work best for you).
+   |conductor| |BR| There are different ways to power your Arduino. You may be able to avoid having a second power supply if you will always have a computer connected to your |EX-CS| (for example to run |EX-WT| or |JMRI|. There is also a way to use a 5V power supply. Please read :doc:`Power Supplies </reference/hardware/power-supplies>` to help you find what will work best for you).
 
 Connect the 2.5mm barrel connector from your separate 7-9V DC power supply to the barrel connector on the Arduino. 
 
@@ -245,9 +239,7 @@ Next Steps - Install the WiFi board
 .. sidebar:: 
    :class: sidebar-float-right
 
-   |conductor|
-
-   You can connect a controller like JMRI or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS|. If so, skip to :doc:`installer`. If you are installing an ESP8266 Shield or bare ESP8266 to connect wirelessly, click the link below.
+   |conductor| |BR| You can *alternately* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS|. If so, skip to :doc:`installer`.
 
 Click :doc:`here </ex-commandstation/get-started/wifi-setup>` or click the "next" button to learn how to connect the WiFi shield to your |EX-CS|.
 

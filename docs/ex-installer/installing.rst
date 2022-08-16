@@ -14,16 +14,11 @@ Using the Installer
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 3
+    :depth: 2
     :local:
 
 Requirements (for installing)
 ==============================
-
-.. note:: 
-   :class: note-float-right
-
-   For all versions, make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs are using the computer's serial port.
 
 * a Windows, Linux or MacOS X **Computer**
 * a |EX-CS|
@@ -35,6 +30,10 @@ Requirements (for installing)
   
 * a **USB cable** to connect your computer to the Microcontroller
 
+.. sidebar:: **USB Cable**
+   
+   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the Arduino IDE) are using the same USB port.
+
 1. Getting Ready 
 ================
 
@@ -43,7 +42,7 @@ Requirements (for installing)
 .. warning::
    :class: warning-float-right
    
-   You *may* need to turn off your antivirus software before you try to install. |BR| We need a piece of Arduino software to be able to compile and upload the Command Station software which sometimes gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
+   **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
 * **Connect** your |EX-CS| to your computer
 * Determine which COM Port the |EX-CS| is plugged into 
@@ -80,11 +79,9 @@ Requirements (for installing)
 3. The EX-Installer Window
 ==========================
 
-.. warning::
-   :class: warning-float-right
+.. warning:: **Wait!**
+   :class: warning-float-right-narrow
    
-   **Wait!**
-
    The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
 
 .. figure:: /_static/images/installer/installer.jpg
@@ -118,7 +115,7 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 5. Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed
 6. Check the checkbox for your display type if using an LCD or OLED display
 7. Check the Free Mem warning if you need to diagnose memory issues
-8. Press the "Compile and Upload" button
+8. Press the :guilabel:`Compile and Upload` button
 
 WiFi Checkbox
 ^^^^^^^^^^^^^
@@ -209,7 +206,7 @@ This button allows you to refresh the serial ports in case you didn't have the A
 Compile and Upload
 ------------------
 
-**Compile and Upload Button**
+:guilabel:`Compile and Upload` **Button**
 
 Once you have configured your options, press this button to compile all the source code and upload it to your Command Station.
 

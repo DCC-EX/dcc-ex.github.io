@@ -148,7 +148,7 @@ The |EX-CS| can be setup so that it connects to your existing home WiFi Network.
 
 
 Access Point Mode
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 WiFi Checkbox
 ~~~~~~~~~~~~~

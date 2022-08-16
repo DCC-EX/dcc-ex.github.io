@@ -97,7 +97,7 @@ html_theme_options = {
     'collapse_navigation': False,
     # 'navigation_depth': 3
     'navigation_depth': -1 
-}
+} 
  
 html_context = {
     'display_github': True,

@@ -16,11 +16,11 @@ EX-CommandStation
 
 Welcome to the |EX-CS| download page. You have several choices:
 
-* **[RECOMMENDED]** If you are a Conductor, or you just want an easy installer to do the work for you, go to the `ex-Installer`_ section.
-* If you are a Tinkerer, or you would like to download a zip file and install the firmware using the Arduino IDE, go to the `Latest EX-CommandStation Official Release`_ section.
+* **[RECOMMENDED]** If you are a |conductor-text|, or you just want an easy installer to do the work for you, go to the `ex-Installer`_ section.
+* If you are a |tinkerer-text|, or you would like to download a zip file and install the firmware using the Arduino IDE, go to the `Latest EX-CommandStation Official Release`_ section.
 * To get the latest unreleased development version, go to the `Latest EX-CommandStation Unreleased Development Version`_.
-* If you are an Engineer or developer, and want to clone the repository onto your computer, go to the `EX-CommandStation Repository (project source files)`_ section.
-* If you're still looking for BaseStation-Classic, go to the `Getting BaseStation-Classic`_ section.
+* If you are an |engineer-text| or developer, and want to clone the repository onto your computer, go to the `EX-CommandStation Repository (project source files)`_ section.
+* If you're still looking for |BSC|, go to the `Getting BaseStation-Classic`_ section.
 
 EX-Installer
 =============
@@ -73,7 +73,9 @@ EX-CommandStation Repository (project source files)
 Getting BaseStation-Classic
 ============================
 
-The installer will allow you to install BaseStation-Classic. We recommend using the newer |EX-CS|. If you are looking for the original source for the project (with some minor bug fixes and improvements), see the links below.
+|EX-I| will allow you to install BaseStation-Classic. However, we recommend using the newer |EX-CS| as it will run on the same hardware and is better supported. 
+
+If you are looking for the original source for the project (with some minor bug fixes and improvements), see the links below.
 
 .. warning:: This version is not actively maintained, and will only be updated with bug fixes.
 

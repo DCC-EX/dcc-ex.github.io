@@ -17,6 +17,8 @@ Test your setup
     :depth: 2
     :local:
 
+This page is specifically written for someone who has installed *just* the recommended hardware (including WiFi). However it will generally be suitable for testing most other configuration options.
+
 Testing control of a loco
 =========================
 

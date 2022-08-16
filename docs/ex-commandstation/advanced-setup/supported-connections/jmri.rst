@@ -9,12 +9,12 @@ JMRI Connection
 |tinkerer| |engineer|
 
 
-.. todo:: JMRI Connection.  actually uses one of the of the other connection types so not sure it needs to be here as a separate page
+.. todo:: JMRI Connection.  actually uses one of the of the other connection types
 
 Connection Type: Direct to Command Station or through JMRI
 ============================================================
 
-Everything on this page seems to come in twos! You have two options for connecting your controller to your Command Station depending on its capabilities and your preferences:
+You have two options for connecting your controller to your Command Station depending on its capabilities and your preferences:
 
 * Connect directly to |EX-CS| using WiFi or Bluetooth (|JMRI| not required but optional)
 * Connect to the |EX-CS| through |JMRI| with the USB cable, and connect a |WiThrottle Protocol| compatible throttle to JMRI's |WiThrottle Server| via WiFi

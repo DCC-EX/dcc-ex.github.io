@@ -9,23 +9,27 @@ h1, .h1 {
 }
 
 h2, .h2 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   color: #00353d !important;
   font-size: 180% !important;
   text-shadow: 3px 3px #00a3b915;
 }
 
 h3, .h3 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   color: #00353d !important;
   font-size: 160% !important;
   font-style: italic !important;
 }
 
 h4, .h4 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   color: #00353d !important;
   font-size: 140% !important;
 }
 
 h5, .h5 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   color: #00353d !important;
   font-size: 120% !important;
   font-style: italic !important;

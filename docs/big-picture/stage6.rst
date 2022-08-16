@@ -12,7 +12,7 @@ Stage 6 - Putting it all Together
       :depth: 2
       :local:
 
-Stage 1 of our RMFT layout is a simple loop including a single siding for a station, which allows for automated running of up to three trains including automated switching for entering and exiting the station siding.
+Stage 6 of our RMFT layout is a simple loop including a single siding for a station, which allows for automated running of up to three trains including automated switching for entering and exiting the station siding.
 
 To accomplish this, the layout will be broken up into four virtual blocks with five sensors in use to detect the position of our trains as they enter and exit the blocks, and three signals that will be controlled by automation to indicate when it is safe to proceed.
 

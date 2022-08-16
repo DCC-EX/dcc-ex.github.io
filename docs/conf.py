@@ -96,8 +96,8 @@ html_theme_options = {
     'titles_only': True,
     'collapse_navigation': False,
     # 'navigation_depth': 3
-     'navigation_depth': -1 
-}
+    'navigation_depth': -1 
+} 
  
 html_context = {
     'display_github': True,

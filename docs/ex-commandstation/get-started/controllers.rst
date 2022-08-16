@@ -21,8 +21,8 @@ This page is specifically intended for a |conductor-text| who has installed *jus
 
 ----
 
-What You Need and Why You Need It
-=================================
+What You Need & Why You Need It
+===============================
 
 You need just two things that work together to operate your model railroad:
 
@@ -32,7 +32,7 @@ You need just two things that work together to operate your model railroad:
 The EX-CommandStation
 ---------------------
 
-The |EX-CS| is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller, a motor driver and a WiFi shield. The Command Station accepts instructions from a controller and generates packets that are transmitted to your track.
+The |EX-CS| is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller, a motor driver and a WiFi shield. The Command Station accepts instructions from a controller and generates packets that are transmitted to your track and subsequently your trains.
 
 The Controller (Throttle)
 -------------------------
@@ -41,28 +41,30 @@ Since the |EX-CS| simply accepts commands to turn into signals for your layout, 
 
 ----
 
-Connection Types
-=================
+Controller Options
+==================
 
-Your controller can connect to the |EX-CS| several different ways, such as:
+.. sidebar:: Connection Types
 
-* **WiFi**
-* **Direct connection using a USB cable**
-* 2 wires to an Arduino serial port
-* Ethernet
-* Bluetooth 
-* Remote connection (VNC, MQTT, etc.)
+   Your controller can connect to the |EX-CS| several different ways, such as:
 
-On this page we are only going to cover a small number of popular options that will be suitable for use if you have installed *just* the recommended hardware. Namely **WiFi** (using a smart phone) and **Direct Connection**. 
+   * **WiFi**
+   * **Direct connection using a USB cable**
+   * 2 wires to an Arduino serial port
+   * Ethernet
+   * Bluetooth 
+   * Remote connection (VNC, MQTT, etc.)
 
-Here is a list of *some* of the controllers you can use with the |EX-CS|.
+   You are welcome to explore the many other :doc:`/throttles/index`, but the the ones on this page are still recommended for initial testing. 
 
-----
+Here is a list of  a small subset of the controllers you can use with the |EX-CS|. These options are simple and inexpensive (i.e. free) and are suitable for initial testing if you have installed *just* the recommended hardware (including WiFi). Namely **WiFi** (using a smart phone) and **Direct Connection**.
 
 Connecting via WiFi
 -------------------
 
-For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a Command Station with a WiFi Shield. Here is an image that represents a direct connection.
+For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a Command Station with a WiFi Shield. 
+
+Here is an image that represents a direct connection.
 
 .. image:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
@@ -84,6 +86,9 @@ We will just  cover two here:
 If you have an Android phone use `Engine Driver <Engine Driver (Android \| WiThrottle \| WiFi)>`_. |br| If you have a Apple (iOS) phone use 
 `WiThrottle Lite <WiThrottle (iOS \| WiThrottle \| WiFi)>`_.
 
+.. warning:: A limitation of the |Access Point Mode| that is recommended in the :doc:`/ex-commandstation/get-started/index` pages is that the |wiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can guess it, but |wiThrottle| can't.  In |wiThrottle| you will need type in the address.
+
+
 Engine Driver (Android \| WiThrottle \| WiFi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -92,7 +97,7 @@ Engine Driver (Android \| WiThrottle \| WiFi)
 * The first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
 * The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. (We won't cover that option here.)
 
-See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |wiThrottle|.
+See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |Engine Driver|.
 
 WiThrottle (iOS \| WiThrottle \| WiFi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

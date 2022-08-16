@@ -107,8 +107,6 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
    Options Pane
 
 .. sidebar:: Refresh Ports Button
-
-   |conductor| 
    
    This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program. When you plug in a new board, refresh the ports so it can find your device.
 

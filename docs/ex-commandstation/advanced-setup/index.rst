@@ -41,7 +41,17 @@ Steps to Build an EX-CommandStation
 Microcontrollers
 ================
 
-There are several different supported microcontrollers you can use as your |EX-CS|.
+There are several different supported microcontrollers you can use as your |EX-CS| as per the following list.
+
+The Arduino Mega2560 is by far the simplest option and is well proven with many users choosing this option.
+
+Whilst the Uno and Nano options are fairly popular and also relatively simple, there are limitations due to the lack of available RAM available, and therefore some features (such as WiFi and EX-RAIL) are limited.
+
+The other item of specific note is the Mega2560 + WiFi which, while appearing a good alternative to a standard Mega2560, suffers from quality control issues, and numerous users have had poor experiences getting this to function correctly. While this option is supported, it is definitely *buyer beware!*
+
+.. note:: 
+
+  Our developers are always experimenting with new microcontrollers and hardware platforms, so while a specific option may not be explicitly listed on here, it may be on our roadmap or under active development. Feel free to :doc:`/support/contact-us` to see if something that's taken your eye is on the agenda.
 
 .. toctree::
     :maxdepth: 2
@@ -52,7 +62,9 @@ There are several different supported microcontrollers you can use as your |EX-C
 Motor Drivers
 =============
 
-.. todo:: URGENT text needed for Motor Drivers
+As with microcontrollers, there is a selection of supported motor drivers to choose from. For those who desire simplicity, stick with the recommended Arduino and Deek-Robot motor shields.
+
+However, if you need more current than these can provide, then you need to consider the IBT_2 or IRF3205 options.
 
 .. toctree::
     :maxdepth: 2
@@ -62,18 +74,18 @@ Motor Drivers
 Connection Options
 ==================
 
-.. todo:: URGENT description needed for connection options
+How you connect to your |EX-CS| is going to depend entirely on your personal choices of how you wish to interact with it. Are you a JMRI user? Do you only want to use wireless hand-held throttles?
+
+To faciliate a variety of these choices, there are four ways to connect: direct via USB, WiFi, Ethernet, and/or Bluetooth.
+
+Depending on your platform choice for your |EX-CS|, the connectivity options aren't mutually exclusive, and you can use multiple methods.
 
 Direct Connection (USB)
 -----------------------
 
-.. todo:: URGENT description needed for USB/direct connection
+If you are a JMRI user, then a direct USB connection is all you need. JMRI will connect to your |EX-CS| via the USB port, and you won't require any other connection method to be available.
 
-
-nothing to do
-
-works out of the box
-
+Note for Uno and Nano users, this is your only option for connectivity.
 
 WiFi Shields
 ------------

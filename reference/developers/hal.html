@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
+<meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DCC-EX HAL Architecture &mdash; DCC-EX Model Railroading  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/platform.js"></script>
+        <script src="../../_static/js/extra.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="I/O Device Drivers and HAL" href="hal-config.html" />
+    <link rel="prev" title="CommandStation-EX API Reference" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../../index.html">
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../levels.html">Choose Your Comfort Level</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-commandstation/index.html">EX-CommandStation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/get-started/index.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/wifi-setup.html">Adding WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/installer.html">Install the software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/testing.html">Test your setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/index.html">Supported Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/direct.html">Direct Connection (USB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/wifi-setup.html">WiFi Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/ethernet.html">Ethernet Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/bluetooth.html">Bluetooth Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/jmri.html">JMRI Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/bluetooth-boards.html">Bluetooth Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-installer/index.html">Install using EX-Installer</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html">Install using the Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Controller (Throttle) - Advanced</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-installer/index.html">EX-Installer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-webthrottle/index.html">EX-WebThrottle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-rail/index.html">EX-RAIL (Automation)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Creating Automations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/troubleshooting.html">Troubleshooting EX-Turntable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-dccinspector/index.html">EX-DCCInspector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../big-picture/index.html">The Big Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/big-picture.html">How it All Works Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage1.html">Stage 1 - Running a Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage2.html">Stage 2 - Adding a Roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage4.html">Stage 4 - Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage5.html">Stage 5 - Turntables &amp; Traversers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage6.html">Stage 6 - Putting it all Together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example1.html">Example 1 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example2.html">Example 2 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example3.html">Example 3 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example4.html">Example 4 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example5.html">Example 5 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example6.html">Example 6 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example7.html">Example 7 Full automation with turnouts &amp; signals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Controllers (Throttles)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/ex-webthrottle.html">EX-WebThrottle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/engine-driver.html">Engine Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/withrottle.html">WiThrottle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/dccpp-cab.html">DCCpp CAB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/locontrol.html">Locontrol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/digitrainspro.html">DigiTrainsPro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/jmri.html">JMRI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/physical-knobs.html">Adding a Physical Knob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/uwt50.html">TCS UWT-50 (Physical)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../download/ex-commandstation.html">EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/ex-dccinspector.html">EX-DCCInspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/ex-turntable.html">EX-Turntable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Contact &amp; Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../support/contact-us.html">Contact Us</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../videos/index.html">Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/microcontroller-boards.html">Microcontroller Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/wifi-boards.html">WiFi Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/wangtongze-board.html">WangTongze Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/ethernet-boards.html">Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index-ic2.html">iC2 Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/servo-module.html">Connecting a Servo Module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index-decoder.html">Decoders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/decoder-notes.html">Decoder Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/wire-gauge.html">DCC Track Wiring Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../software/index.html">DCC-EX Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../software/command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/command-summary.html">DCC-EX Command Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Developer and API reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html">CommandStation-EX API Reference</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DCC-EX HAL Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-hal-driver.html">Writing a HAL Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index-diagnostics-d.html">Diagnostic d Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tools/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tools/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About &amp; Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/press/index.html">Press / Announcements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/press/rewrite.html">DCC++ VS DCC-EX? [Oct 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/press/v40-announce.html">EX-CommandStation 4.0 Release [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/press/release-notes.html">Release Notes [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/press/new-name.html">Our New Name [Aug 2022]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contributing/donate.html">Donate to Our Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contributing/index.html">Contributing - Helping the DCC-EX Team</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/github.html">GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/requirements.html">What You Need to Know/Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/software.html">Recommended Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/website/index.html">Contributing to the Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/getting-started.html">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/structure.html">Folder and Page Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/style-guide.html">Style Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/licence.html">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/roadmap.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/site-map.html">Site Map</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DCC-EX Model Railroading</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Reference</a> &raquo;</li>
+          <li><a href="index.html">Developer and API reference</a> &raquo;</li>
+      <li>DCC-EX HAL Architecture</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/flash62au_restruct/docs/reference/developers/hal.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dcc-ex-hal-architecture">
+<h1>DCC-EX HAL Architecture<a class="headerlink" href="#dcc-ex-hal-architecture" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 169.5px; height: 45.0px;" /></a></p>
+<aside class="sidebar">
+<div class="contents local topic" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction" id="id1">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#overview" id="id2">Overview</a></p></li>
+<li><p><a class="reference internal" href="#command-reference" id="id3">Command Reference</a></p></li>
+<li><p><a class="reference internal" href="#list-of-changes" id="id4">List of Changes</a></p></li>
+<li><p><a class="reference internal" href="#future-enhancements" id="id5">Future Enhancements</a></p></li>
+</ul>
+</div>
+</aside>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>17 Feb 2022: <em>Now included</em> in <strong>EX-CommandStation 4.0!</strong>
+Available to download and use now!</p>
+</div>
+<section id="introduction">
+<h2><a class="toc-backref" href="#id1">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>Firstly, an apology.  The document below is mostly based on my activity log while developing the HAL software and other associated modules (I2C etc.).
+Consequently, it is badly structured, random, and mostly extremely technical.  For that, I apologise.</p>
+<p>Now, on to the content.  You have been warned…</p>
+</section>
+<section id="overview">
+<h2><a class="toc-backref" href="#id2">Overview</a><a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p><strong>HAL</strong> = <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer.</p>
+<p>The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.</p>
+<p>The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.</p>
+<p>When Command Station changes a turnout or output, the Command Station code issues calls in the form <strong>IODevice::write(vpin,value)</strong>.
+The vpin is used to route the call to the correct device handler, and the device handler sends a command to
+the device being controlled to carry out an action; for example, a digital output is switched to illuminate an
+LED, or a servo moves the railway track points from one position to another.</p>
+<p>The class hierarchy is shown below.</p>
+<a class="reference internal image-reference" href="../../_images/HAL_class_hierarchy.png"><img alt="HAL Class Hierarchy" src="../../_images/HAL_class_hierarchy.png" style="width: 429.6px; height: 334.40000000000003px;" /></a>
+<p>IODevice defines the overall base class interface, which is implemented in each HAL device driver class.
+The class GPIOBase implements functionality that is common to, and inherited by, the drivers for GPIO input/output modules
+(MCP23017, MCP23008 and PCF8574).  Consequently, the drivers for those modules are relatively simple and just include the
+device-specific commands for reading and writing to the module’s registers.</p>
+</section>
+<section id="command-reference">
+<h2><a class="toc-backref" href="#id3">Command Reference</a><a class="headerlink" href="#command-reference" title="Permalink to this heading"></a></h2>
+<section id="revised-turnout-command-list">
+<h3>Revised Turnout Command List<a class="headerlink" href="#revised-turnout-command-list" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>&lt;T id SERVO vpin activePos inactivePos profile&gt;</dt><dd><p>Define turnout servo (PWM) on specified vpin.
+The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM).
+The limits for an SG90 servo are about 102 to 490.  The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
+Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec)
+and 4=Bounce (subject to revision).
+<em>Note: Servos are not supported on the minimal HAL (Uno or Nano target).</em></p>
+</dd>
+<dt>&lt;T id VPIN vpin&gt;</dt><dd><p>Define turnout output on specified vpin.  This may be used for controlling Arduino digital output pins or pins on an I/O Extender.</p>
+</dd>
+<dt>&lt;T id DCC addr subaddr&gt;</dt><dd><p>Define turnout on a DCC Accessory Decoder with the specified address and subaddress.</p>
+</dd>
+<dt>&lt;T id DCC linearAddr&gt;</dt><dd><p>Define turnout on a DCC Accessory Decoder with the specified linear address.</p>
+</dd>
+<dt>&lt;T id addr subaddr&gt;</dt><dd><p>Legacy command format for defining a turnout on a DCC Accessory Decoder with the specified address and subaddress.</p>
+</dd>
+<dt>&lt;T id vpin activePos inactivePos&gt;</dt><dd><p>Legacy command format for defining a turnout servo on specified vpin.  The positions are the same as for the turnout servo command above.
+<em>Note: Servos are not supported on the minimal HAL (Uno or Nano target).</em></p>
+</dd>
+<dt>&lt;T id 1&gt; or &lt;T id T&gt;</dt><dd><p>Throw turnout / energise output</p>
+</dd>
+<dt>&lt;T id 0&gt; or &lt;T id C&gt;</dt><dd><p>Close turnout / de-energise output</p>
+</dd>
+<dt>&lt;T&gt;</dt><dd><p>List Turnout configurations and states</p>
+</dd>
+<dt>&lt;T id&gt;</dt><dd><p>Delete nominated turnout</p>
+</dd>
+</dl>
+</section>
+<section id="hal-programming-interface">
+<h3>HAL Programming Interface<a class="headerlink" href="#hal-programming-interface" title="Permalink to this heading"></a></h3>
+<p>The interface functions to the HAL are as follows.  Apart from the ‘create’ functions, these functions are generally only called internally
+from within the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.  The xxxx::create() functions however are required to be added to the user’s myHal.cpp or mySetup.h
+configuration file in order to register the device driver and configure the specified VPINs.</p>
+<dl class="simple">
+<dt>MCP23017::create(firstVpin, 16, 0x20); <em>— OR —</em> MCP23017 device1(firstVpin, 16, 0x20);</dt><dd><p>Create an instance of a HAL I/O driver for an MCP23017 GPIO Extender with 16 inputs/outputs (numbered from
+firstVpin to firstVpin+15), on I2C address 0x20.  The device input pins will be polled at a target rate of once every 4 milliseconds.
+The first syntax calls a function, so should be placed in executable code context (in a function).  The
+second syntax is a declaration and should NOT be in a function.</p>
+</dd>
+<dt>MCP23017::create(firstVpin, 16, 0x20, 40); <em>— OR —</em> MCP23017 device1(firstVpin, 16, 0x20, 40);</dt><dd><p>As above, but using the MCP23017’s interrupt pins (INTA/INTB) connected to Arduino GPIO pin 40 via a jumper wire.
+The device will only be polled when the MCP23017 pulls INTA or INTB (and hence pin 40) to ground to signify that a change has occurred.
+A single Arduino pin may be shared by multiple modules by commoning together the INT* pins from each module.</p>
+</dd>
+<dt>PCF8574::create(firstVpin, 8, 0x23); <em>— OR —</em> PCF8574 device1(firstVpin, 8, 0x23);</dt><dd><p>Create an instance of a HAL I/O driver for an PCF8574 GPIO Extender with 8 inputs/outputs, on I2C address 0x23.
+[An interrupt pin may be specified as for MCP23017.]</p>
+</dd>
+<dt>MCP23008::create(firstVpin, 8, 0x21);  <em>— OR —</em>   MCP23008 device1(firstVpin, 8, 0x21);</dt><dd><p>Create an instance of a HAL I/O driver for an MCP23008 GPIO Extender with 8 inputs/outputs (numbered from
+firstVpin to firstVpin+7), on I2C address 0x21.
+[An interrupt pin may be specified as for MCP23017.]</p>
+</dd>
+<dt>PCA9685::create(firstVpin, 16, 0x40);  <em>— OR —</em>  PCA9685 device1(firstVpin, 16, 0x40);</dt><dd><p>Create an instance of a PCA9685 servo interface module driver with 16 outputs (numbered from firstVpin to firstVpin+15), on I2C address 0x40.</p>
+</dd>
+<dt>DCCAccessoryDecoder::create(firstVpin, 4, addr, subaddr);  <em>— OR —</em>  DCCAccessoryDecoder device1(firstVpin, 4, addr, subaddr);</dt><dd><p>Create a range of four DCC Accessory Decoder pins from firstVpin to firstVpin+3, starting at the specified decoder address/subaddress.  The addresses are treated as a linear address space, so multiple decoders on contiguous addresses may be configured by one statement.</p>
+</dd>
+</dl>
+<p>The remainder of the functions below are intended for use within the DCC-EX software only, and are not usually required by users.</p>
+<dl>
+<dt>IODevice::write(vpin, 1); IODevice::write(vpin, 0);</dt><dd><p>Set/reset the state of a digital pin (local Arduino, remote GPIO extender, servo, DCC Accessory Decoder, or other output device).
+The vpin will be implicitly switched into output mode by this call.
+If the device in question does not support the write operation, the call will be ignored.</p>
+</dd>
+<dt>IODevice::writeAnalogue(vpin, value, param2, param3);</dt><dd><p>Write value to a pin capable of analogue operations (e.g. a servo attached to a PCA9685 module). This function does not require the
+pin to have been previously configured by the IODevice::configure() function.</p>
+<p>[For the PCA9685, value is the position, between 0 and 4095 and represents the PWM ratio, with 0 being fully off and 4095 being
+fully on; param2 is profile, which defines how the servo moves, and may be 0 (Instant), 1 (Fast), 2 (Medium), 3 (Slow) or 4 (Bounce).
+If param2 is zero, then param3 is the time that the animation is to take in 20ths of a second (default 0).
+If the top bit of param2 is set (e.g. param2=0x80 + 1) then the PWM output will be maintained after the desired position is reached.
+This is useful if the device is controlling an LED, since otherwise the LED will be turned off at the end.]</p>
+<p>[For the DFPlayer MP3 player device, value is the number of the sound file to be played; and param2 is the volume.]
+If the device in question does not support the writeAnalogue operation, the call will be ignored.</p>
+</dd>
+<dt>int state = IODevice::read(vpin);</dt><dd><p>Read the current state of an input pin (local Arduino or remote GPIO extender, or other input device).
+The vpin will be implicitly switched into input mode by this call.
+For digital inputs, the return value is true (1) for 0V (active) and false (0) for +5V (inactive), accounting for the pull-up.
+If the device in question does not support the read operation, the value returned will be zero.</p>
+</dd>
+<dt>int value = IODevice::readAnalogue(vpin);</dt><dd><p>Read the current value of an analogue input pin (local Arduino or remote ADS111x ADC module, or other input device).
+The vpin will be implicitly switched into input mode by this call.
+If the device in question does not support the readAnalogue operation, the value returned will be zero.</p>
+</dd>
+<dt>bool ok = IODevice::configureInput(1, pull-up);</dt><dd><p>Configure a digital input pin for pull-up or no pull-up (default is that pull-ups are enabled).
+If the device in question does not support the configureInput operation, the value returned will be false.</p>
+</dd>
+<dt>bool ok = IODevice::configureServo(activePosition, inactivePosition, profile[, initialState]);</dt><dd><p>Configure a PWM (servo) output (required).  Profile may be 0 (immediate), 1 (fast), 2 (medium), 3 (slow) or 4 (bounce).
+[activePosition and inactivePosition are between 0 and 4095 and represent the PWM ratio, with 0 being fully
+off and 4095 being fully on.  Thus, the PWM signal may be used to drive servos, LEDs or other devices.]
+If the device in question does not support the configureServo operation, the value returned will be false.</p>
+</dd>
+<dt>IODevice::loop();</dt><dd><p>Invoke the regular operations of the HAL, e.g. updating servo positions, regular polling of inputs, etc.
+[This is called from the loop() function in CommandStation-EX.ino.]</p>
+</dd>
+</dl>
+</section>
+<section id="hal-define-symbols">
+<h3>HAL #define Symbols<a class="headerlink" href="#hal-define-symbols" title="Permalink to this heading"></a></h3>
+<p>The following #define symbols may be defined in the IODevice.h file or the platformio.ini file in order to facilitate fault-finding or to remove the
+HAL from the build.</p>
+<dl class="simple">
+<dt>DIAG_IO</dt><dd><p>Enable supplementary diagnostic output from the HAL classes</p>
+</dd>
+<dt>DIAG_LOOPTIMES</dt><dd><p>Enable calculation and display of average and maximum loop times for the CS’s overall main ‘loop’ function.
+When enabled, the diagnostic is updated every 5 seconds and is sent to the diagnostic output (USB Serial) and to the LCD  line 1 (overwriting the ‘Ready’ message).</p>
+</dd>
+<dt>IO_NO_HAL</dt><dd><p>Removes the bulk of the HAL code.  The only parts that remain are those that are required to interface to the
+Arduino’s input and output pins.  This symbol is automatically defined if the code is being compiled for an Arduino Uno or Arduino Nano target, to reduce the memory footprint.  In this mode, inputs pull-ups are enabled and inputs are inverted (i.e. 5V=inactive and 0V=active).</p>
+</dd>
+<dt>IO_SWITCH_OFF_SERVO</dt><dd><p>When a transition between states has completed on a PCA9685 (e.g. a servo movement), the servo motor will be
+switched off, by disabling the pulses on the pin.  This reduces power consumption and potential noise (servo buzz)
+when the servo isn’t moving.</p>
+</dd>
+</dl>
+<p>The following symbols may be defined in I2CManager.h or the platformio.ini file to adjust the behaviour of the I2C subsystem.</p>
+<dl>
+<dt>I2C_USE_WIRE</dt><dd><p>Direct the I2C Manager to use the ‘Wire’ library instead of the native AVR and 4809 drivers.  For platforms other
+than the AVR and 4809, the ‘Wire’ library will be used irrespective of this symbol.
+The ‘Wire’ library is a blocking driver, i.e. the Command Station cannot run any useful code while I2C messages are being sent
+and received.  The native drivers are non-blocking and are able to perform I2C operations in parallel with other Command Station code.</p>
+</dd>
+<dt>I2C_USE_INTERRUPTS</dt><dd><p>Configure the I2C Manager’s non-blocking AVR and 4809 drivers to use interrupts to signal completion of an I2C
+operation (default unless I2C_NO_INTERRUPTS is defined).</p>
+</dd>
+<dt>I2C_NO_INTERRUPTS</dt><dd><p>Don’t use interrupts to signal completion of an I2C operation.  The I2C state is instead checked whenever the following functions are called:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="o">::</span><span class="n">loop</span><span class="p">();</span>
+<span class="n">I2CRB</span><span class="o">::</span><span class="n">wait</span><span class="p">();</span>
+<span class="n">I2CRB</span><span class="o">::</span><span class="n">isBusy</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>This option will reduce the amount of time spent in interrupt code, but not completely eliminate it (since interrupts
+are also used by the serial USB, clock and other components).  It will also slow down the I2C throughput as there will be increased latency between consecutive bytes sent and received.</p>
+</dd>
+</dl>
+</section>
+<section id="mysetup-files">
+<h3>mySetup Files<a class="headerlink" href="#mysetup-files" title="Permalink to this heading"></a></h3>
+<p>There are various ways of configuring I/O and creating turnouts, sensors and other objects when the Command Station is powered on:</p>
+<p>After using the commands (&lt;S …&gt;, &lt;T …&gt;, &lt;Z …&gt; etc.) to define sensors, turnouts and outputs, use the &lt;E&gt; command to
+save them to EEPROM.  Then, when the Command Station restarts, the definitions are read back from EEPROM and the objects recreated.  This is limited to turnout, sensor and output definitions.</p>
+<p>Create a ‘mySetup.h’ file, and add commands in the form <code class="docutils literal notranslate"><span class="pre">SETUP(&quot;....&quot;);</span></code>.  This can be used for any command that is accepted
+by the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> parser, including turnout, sensor and output definition commands.  The mySetup.h file is included as
+executable code into other modules of the Command Station.  Consequently, the content is limited to executable statements (or macros
+that expand into executable statements).  Global variables or functions cannot be defined, and only very simple include
+files can be added. Consequently, only a limited number of the DCC-EX API function can be used from here.</p>
+<p>Create a ‘myHal.cpp’ file and add a function definition <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">halSetup(){</span> <span class="pre">};</span></code>.  Within this function you can add
+any executable code.  Outside the function, you can declare variables and add include files to allow other functions to be invoked.  For example:</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;Turnouts.h&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Servo controller on I2C addr 0x41</span>
+  <span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">);</span>
+  <span class="c1">// Define servo on first pin</span>
+  <span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">420</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">create()</span></code> function allocates memory for the device at run-time.  As an alternative to the <code class="docutils literal notranslate"><span class="pre">create()</span></code> function, the
+device can be declared statically so that the compiler allocates the basic RAM required for it at compile-time.</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;Turnouts.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// Servo controller on I2C addr 0x41</span>
+<span class="n">PCA9685</span> <span class="nf">pwmModule1</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Define servo on first pin</span>
+  <span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">420</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Because the myHal.cpp module is a self-contained C++ module, autocomplete and visual syntax checking will be fully
+functional in editors that support it (e.g. PlatformIO).</p>
+</section>
+</section>
+<section id="list-of-changes">
+<h2><a class="toc-backref" href="#id4">List of Changes</a><a class="headerlink" href="#list-of-changes" title="Permalink to this heading"></a></h2>
+<p>The following functional changes have been done in the neil-hal branch to support the implementation of the HAL in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>,
+and to improve the handling of Displays, Turnouts, Sensors and Outputs.</p>
+<ul>
+<li><p>HAL: Create new <em>IODevice class</em> as the abstract base class for all I/O devices such as GPIO Extenders, remote I/O,
+DCC Accessories and (for completeness) Arduino I/O pins.  The base class/subclass model allows the Command Station code to
+communicate directly with the base class, without having to be tailored for functionality implemented in specific
+subclasses.  Specific implementations of the interface, to support different hardware devices, can be easily
+<em>‘plugged in’ as desired at compile time</em>, by adding an include file (<code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&quot;xxx.h&quot;</span></code>) and one line to the
+user’s ‘mySetup’ file (<code class="docutils literal notranslate"><span class="pre">xxx::create(firstVpin,</span> <span class="pre">nPins,</span> <span class="pre">...);</span></code>) before building the software.  <em>This enables a
+wide selection of hardware to be supported, without unwanted or unused device drivers taking valuable space in the
+microcontroller.</em>  Also, support for new devices can be developed by capable end-users, and included in the
+user’s build without having to change the base Command Station software.</p></li>
+<li><p>HAL: The default initialisation of the HAL supports use of the Arduino pins on all platforms.
+On the Nano and Uno platforms, the HAL is excluded (by defining IO_NO_HAL) and input and output to
+vpins corresponding to Arduino pins operate directly on the Arduino pins using pinMode, digitalWrite
+and digitalRead calls or equivalents.  On other platforms, a selection of Vpins are enabled for use
+of certain drivers.  The current build has the following directives in the IODevice::begin() method:</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initialise the IO subsystem</span>
+<span class="n">ArduinoPins</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">NUM_DIGITAL_PINS</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>  <span class="c1">// Reserve pins for direct access</span>
+<span class="c1">// Predefine two PCA9685 modules 0x40-0x41</span>
+<span class="c1">// Allocates 32 pins 100-131</span>
+<span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">);</span>
+<span class="n">PCA9685</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">116</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x41</span><span class="p">);</span>
+<span class="c1">// Predefine two MCP23017 module 0x20/0x21</span>
+<span class="c1">// Allocates 32 pins 164-195</span>
+<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">);</span>
+<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>HAL: Add looptime monitor to IODevice::loop() function to support performance monitoring during
+development.  Outputs to LCD line 1 and to USB, once every 5 seconds, and shows average and maximum
+loop cycle time for the entire Command Station software over the last 5 second period.  This monitor may be
+enabled by #defining the symbol DIAG_LOOPTIMES in IODevice.h.  Other HAL diagnostics are enabled
+by DIAG_IO symbol.</p></li>
+<li><p>HAL: Create IODevice subclasses for Arduino Pins, PCA9685 Servo Controller module, PCF8574 8-bit GPIO
+Extender, MCP23008 8-bit GPIO Extender and MCP23017 16-bit GPIO Extender modules.</p></li>
+<li><p>HAL: Create helper class for PCA9685 to support configurable transitions between PWM states, e.g.
+a fast or slow progressive movement of a servo between the inactive position and the active position
+(rather than a step change).  Also, the helper powers off the servo when not moving, to reduce power
+consumption and to eliminate servo buzz. [Note: Helper class code has subsequently been incorporated
+within the PCA9685 class.]</p></li>
+<li><p>Sensors/Turnouts/Outputs: Revise Sensor, Turnout and Output classes to interface them to the IODevice interface using virtual I/O pins (VPINs).</p></li>
+<li><p>Displays: Rationalise SSD1306 OLED driver to reduce RAM and FLASH usage, and to consolidate the
+code into two source files (.SSD1306Ascii.h and SSD1306Ascii.cpp).</p></li>
+<li><p>Displays: Rationalise LiquidCrystal_I2C driver to remove unnecessary code.</p></li>
+<li><p>I2C: During I2CManager startup, detect and list I2C devices that are connected and responding.</p></li>
+<li><p>Sensors/Turnouts/Outputs: Revise memory layout for Sensor, Output and Turnout classes to optimise EEPROM usage and RAM usage.</p></li>
+<li><p>Displays: Make SSD1306Ascii and LiquidCrystal_I2C into subclasses of LcdDisplay.</p></li>
+<li><p>Displays: Enable upper-case only mode for SSD1306Ascii, optionally reducing FLASH usage for font storage.</p></li>
+<li><p>Sensors/Turnouts/Outputs: Revise Turnout command handling to support new commands, e.g.</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T id SERVO vpin activeposition inactiveposition profile&gt;
+&lt;T id DCC address subaddress&gt;  // address 1-512, subaddress 0-3
+&lt;T id DCC linearaddress&gt;         // linearaddress 1-2048
+&lt;T id VPIN pin&gt;
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Sensors/Turnouts/Outputs: Move detailed turnout command handling from DCCEXParser.cpp to Turnouts.cpp and PCA9685,
+closer to where the functionality is implemented.  Therefore, the code for handling a servo is only included in FLASH if the servo driver module is configured.</p></li>
+<li><p>Sensors/Turnouts/Outputs: Modify turnout handling to more effectively store the turnout parameters in the available space.
+Allows range of up to 0-511 for activeposition and inactiveposition (nominal range for a typical servo is 200-400).</p></li>
+<li><p>HAL: For GPIO devices (MCP23008 and MCP23017) allow the ‘interrupt’ output pin from the module to be connected to an
+Arduino digital input pin so that the module will only be polled if this ‘interrupt’ signal is activated (pulled down)
+by the module to signify that one or more of the module’s inputs have changed state.  The interrupt signal from multiple
+modules can be connected together to minimise pin usage, or they may be kept separate.</p></li>
+<li><p>HAL: Enable pull-ups to be configured on remote (I/O extender) digital inputs as for Arduino pins.  This feature may
+be removed, as feedback received indicates that there is no benefit in switching pull-ups off, and some FLASH and RAM can be released by removing the code.</p></li>
+<li><p>Displays: Make display scroll mode 1 the default (scroll by page).   If there are more messages than the screen can hold,
+then the screen alternates between displaying the first four lines, and displaying the remaining lines.  Previous behaviour
+(cycle through the messages, always displaying four lines) can be reinstated by adding “#define SCROLLMODE 0” in the config.h file.</p></li>
+<li><p>Sensors/Turnouts/Outputs: Improve EEPROM handling so that when EEPROM writes are turned off, they stay off.  When turnout
+state changes, only write one byte to EEPROM instead of rewriting the entire EEPROM.</p></li>
+<li><p>HAL: Adjust the existing LCN handling to fit alongside the use of VPINs:</p>
+<ul class="simple">
+<li><p>Replace use of pin 255 for ‘impossible pin’ with constant VPIN_NONE, since 255 is a valid value for a VPIN.</p></li>
+<li><p>When an LCN message is received put the value into the inputState field of a sensor, instead of the active field (to facilitate notification of change to JMRI).</p></li>
+</ul>
+</li>
+<li><p>Sensors/Turnouts/Outputs: Ensure that servo turnouts and outputs are driven to the correct position (as configured,
+or as last saved in EEPROM) when the Command Station is powered on or reset.</p></li>
+<li><p>I2C: Revise I2CManager class to add the following features:</p>
+<ul class="simple">
+<li><p>Add non-blocking I2C interface, using a request block structure to maintain the call context and completion status.
+Request block is queued without the caller having to wait for completion.  The caller can later test for completion,
+or wait for completion.  Supported operations are Write from RAM, Write from FLASH, Read. and Request (write
+followed by read).  The benefit of non-blocking calls is that the Command Station doesn’t spend so much of its time waiting
+for I2C operations to complete; the Command Station overall loop cycle time is reduced, making all the code more responsive.
+The queue is implemented as a linked list of request blocks, to optimise RAM use.</p></li>
+<li><p>For convenience, provide blocking API equivalents for these operations for use where timing is less critical (e.g. during startup).</p></li>
+<li><p>Implementation of native I2C drivers for the ATmega328 (Arduino Nano and Uno), ATmega2560 (Arduino Mega) and the
+ATmega4809 (Arduino Nano Every and Uno WiFi).  This removes the dependency on the ‘Wire’ I2C library, reducing
+RAM and FLASH usage significantly.</p></li>
+<li><p>Retain and enhance the existing Wire-based back-end for the I2CManager interface, providing compatibility with non-Atmel
+platforms.  With the Wire library, all calls are blocking (i.e. when the request is made, the calling code does not
+continue until the I2C operation has completed).</p></li>
+<li><p>The native I2C driver for the ATmega328, ATmega2560 and ATmega4809 based controllers supports use with interrupts
+(for high I2C throughput) or without interrupts (to minimise impact on the DCC waveform, when generated through software
+interrupts, at the expense of I2C throughput).  On the Arduino Mega with the standard motor driver pin usage, the
+native I2C driver has no impact whatsoever on the DCC signal, with or without interrupts.</p></li>
+<li><p>Performance figures:  With the current base device allocations of 32 x PCA9685 servo pins and 32 x MCP23017 GPIO pins,
+the average loop time for the Command Station software (one throttle, no user actions, 16 sensors defined) is 120us.  During stress
+testing, a full I2C scan of 8 x 32-input I2C GPIO extenders (128 inputs in total) takes under 2.2 ms at an I2C clock speed of 400kHz.</p></li>
+</ul>
+</li>
+<li><p>I2C: Revise modules that use I2C (currently SSD1306Ascii, LiquidCrystal_I2C, PCF8574, PCA9584, MCP23016 and MCP23008)
+to call the non-blocking I2C interface using the following model:</p>
+<ol class="arabic simple">
+<li><p>During initialisation, use the original (blocking) I2CManager interface to set up the I2C device registers as required.
+Set up request block structures with parameters for the desired operations (which could be a data write to an output
+port, or a data read from an input port on the I2C device, for example).</p></li>
+<li><p>On first cyclic entry, the request block is added to the I2CManager queue.  Once it has been added to the queue, the
+program does not have to wait for completion and can allow other functions to continue executing.  The requested
+operation will begin once any other pending operations have finished.</p></li>
+<li><p>On subsequent entries to the program’s loop function, the program tests the completion status of the request block.
+If it is still busy, then other loop functions may be allowed to run.</p></li>
+<li><p>When the operation completes, the status of the request block is updated to show it is no longer busy.</p></li>
+<li><p>At the next loop entry of the program, the test for competition status shows that the request block is no longer busy.
+The program may then retrieve the success/failure status, and any data that has been received, for further processing.</p></li>
+</ol>
+<p>When necessary, the operation may be repeated by requeueing the original request block (either unchanged or with different parameters or data).</p>
+<p>If the non-blocking I2C driver is not available (e.g. on controllers other than ATmega328, ATmega2560 and ATmega4809),
+the blocking I2C functions in the Wire library are automatically used instead, without any changes to the Command Station code.</p>
+</li>
+<li><p>Turnouts: Totally revised Turnout class and TurnoutData struct layout for more optimal storage and layout.
+The struct is now optimised for access and for storage size.  Further optimisation is possible by writing (and reading) only
+the number of bytes applicable to each turnout type, instead of the worst case turnout size.</p></li>
+<li><p>HAL: IODevice::configure method originally passed supplied parameters to the specified pin handler without any way of checking
+that parameters are appropriate for the device (e.g. that a servo hasn’t been instructed to turn on an input pull-up).
+Additional parameter has been added which identifies the function being performed, e.g. 1=Servo config, 2=Pullup on/off etc.
+Thus, the device’s _configure method validates that the requested configuration function is supported, or rejects it.</p></li>
+<li><p>HAL: Normally the Sensor class issues cyclic read request using IODevice::read() to poll digital input states for the current
+value and to detect changes.  To potentially increase performance and response times where there are a lot of inputs to scan,
+but infrequent changes, a mechanism for optional callback notification has been added to the HAL IODevice class.  Each input
+device driver may implement this capability or not, according to the programmer’s preference.  If the callback capability is
+implemented, then the Sensor class no longer needs to poll the device but, instead, registers a callback function which is
+invoked whenever the device driver detects a pin state change while acquiring the input data.  The GPIOBase class has been
+modified to implement this behaviour, which is inherited by MCP23017, MCP23008 and PCF8574.  [Note: Callback notification
+of input change has now been implemented in the revised GPIO device class hierarchy.]</p></li>
+<li><p>HAL: Add conditional compilation directives for IO_NO_HAL.  If defined, this implements a reduced version of the HAL which
+supports Arduino I/O pins only, and excludes code from Turnouts.cpp and Sensors.cpp which relate to features that require
+HAL drivers to be present, such as drivers for external I/O modules, including servos.  This reduces the memory footprint
+on the Nano and Uno of the neil-hal branch to 27,724 bytes, 560 bytes less than the current master branch (28,284 at 10th May 2021).
+The symbol IO_NO_HAL is automatically defined for the Uno and Nano, but not for other architectures which are less limited by FLASH size.</p></li>
+<li><p>HAL: Add hook for optional myHal.cpp file.  The existing mySetup.h hook provides a place for system-specific initialisation
+that is to be permanently built into the Command Station, but is limited to specific directives and commands (e.g. SETUP(“S 1 28 1”);
+to define a sensor).  For example, library #includes cannot be added to enable optional features.  The myHal.cpp, however
+is expected to be a syntactically complete C++ module which may include #includes directives, and should have a definition
+of a function halSetup().  When included in the build, the halSetup() function will be called during the startup of the Command Station,
+before the directives in mySetup.h are executed.  This provides a simple yet flexible way of including optional features
+into the build, such as support for specific IO Extender modules, or optional advanced features as an alternative to
+conditional compilation or other changes to the Command Station code.  If it is required that the configuration, build and upload be
+automated, the myHal.cpp file can be generated by a tool before invoking the build and upload.</p></li>
+<li><p>HAL: Small servos such as the ubiquitous SG90, according to the datasheet, expect a pulse length of 1.0-2.0ms at 50Hz to
+operate over their full range, translating to PWM settings between 205 and 410.  Other servos might operate over a range
+of 0.5ms to 2.4ms (PWM settings 102 to 490).</p></li>
+<li><p>HAL: PCA9685 servo module driver now has a default mode.  If not configured, then no memory is allocated for parameters
+and dynamic state for individual pins.  Originally a write to a non-configured pin would be ignored.  Now, instead,
+default servo limits will be assumed: a write of value ‘1’ will request 2ms servo pulses (position 410), and a write
+value ‘0’ will request 1ms servo pulses (position 205).  This will typically cause a movement of about 90 degrees by
+the servo.</p></li>
+<li><p>HAL: New IODevice::writeAnalogue(vpin, value, profile) added to support EXRAIL.  This function is initially implemented
+only for the PCA9685 driver.  It allows a servo to be repositioned to any arbitrary position (value parameter) using the
+specified profile.  The function does not require the pin to have been previously configured.  However, if not already
+configured, the pin will be implicitly configured to use the specified profile, and default active/inactive positions
+of 410 and 205 (as above).</p></li>
+<li><p>HAL: New function IODevice::isActive(vpin) added to support EXRAIL.  This returns true while an animation is executing
+(e.g. turnout is in motion), and false otherwise.</p></li>
+<li><p>Turnouts: Allow DCC Accessory turnouts to be swapped in polarity.  Classic DCC++ has the &lt;T id 1&gt; command throwing the
+turnout and &lt;T id 0&gt; closing it.  This is translated in classic DCC++ to a packet with D=1 for Throw and D=0 for Close.
+RCN-213 standard specifies that the packet should contain D=1 for Close and D=0 for Throw, i.e. the opposite of DCC++.
+Consequently an option is added to allow classic behaviour within the packet generation, or RCN-213 compliant behaviour by editing the Config.h file.
+The command format of &lt;T id 1&gt; meaning ‘Throw’ has been retained to avoid confusion.</p></li>
+<li><p>HAL: New device support for HC-SR04 Ultrasonic Distance Sensor.  This device senses distance of nearby objects by sending
+an ultrasound pulse and listening for the echo.  From the delay time, the distance can be calculated.
+The device is configured in myHal.cpp by</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IO_HCSR04.h&quot;</span><span class="cp"></span>
+<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="n">HCSR04</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">triggerPin</span><span class="p">,</span> <span class="n">echoPin</span><span class="p">,</span> <span class="n">onThreshold</span><span class="p">,</span> <span class="n">offThreshold</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>where triggerPin and echoPin are the Arduino pins connected to the corresponding pins on the sensor, and onThreshold and
+offThreshold are the distances (in centimetres) at which the vpin is to be set to 1 or 0 respectively (onThreshold &lt; offThreshold).</p>
+</li>
+<li><p>HAL: New function IODevice::readAnalogue(vpin) added to support analogue inputs on the Arduino pins and on external
+I2C analogue input modules.  Driver for ADS1113 and ADS1114 (both single input) and ADS1115 (4-input) added as class ADS111x.
+The device is configured in myHal.cpp by</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IO_AnalogueInputs.h&quot;</span><span class="cp"></span>
+<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="n">ADS111x</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span> <span class="n">nPins</span><span class="p">,</span> <span class="n">i2cAddress</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="future-enhancements">
+<h2><a class="toc-backref" href="#id5">Future Enhancements</a><a class="headerlink" href="#future-enhancements" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>HAL: Produce a simple IODevice class template, to help <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> developers/tinkerers who want to implement their own extensions protocols,
+e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>_begin  Initialise serial line.
+_loop   State machine to read incoming characters and decode rudimentary data messages.
+_read   Return current state from received data messages.
+_write  Send simple messages over serial line
+</pre></div>
+</div>
+</li>
+<li><p>HAL: Remove the ability to switch off pull-ups for inputs?  Initially the IODevice class was implemented with pull-ups switched
+permanently on for input pins.  On the PCF8574 they have to be on anyway, because of the way the chip works.
+So I added them, but &#64;UKBloke asked why anyone wouldn’t want pull-ups enabled?  Most, if not all, sensors operate by
+pulling a pin down to earth.  Look at pushbuttons, microswitches, relays, hall effect sensors, and others.  So supplying a
+pull-up, and inverting (0V=active=true, 5V=inactive=false), would seem to be the standard.  Pull-up+inversion is now default if not
+configured otherwise.</p></li>
+<li><p>I2C: The overall capacitance of an I2C bus is limited in the specification to 400pF.  Above this, the slew rate
+of the clock and data signals is too slow to achieve the expected performance.  Capacitance increases with bus length,
+and increases as devices are added to the bus.  Also, the I2C address choice for most devices is limited and using the
+same I2C address for two devices causes a conflict.  PROPOSAL: A bus multiplexer provides the capability to switch,
+under I2C control, one or more separate bus segments to be connected to the bus controller.  When a bus segment is not
+connected, its devices will not respond, and the capacitance of the bus segment does not contribute to the overall I2C
+bus capacitance.  Support for a bus multiplexer could readily be added in the I2CManager, by extending the I2C address
+field for each device to 16 bits (instead of 8 bits).  The low bits would contain the I2C address of the destination
+device.  The high bits would contain a selector for the multiplexer (1-8, as up to 8 multiplexers may be present),
+and a sub-bus number (0-7) to be selected on the multiplexer.  A value of zero for the multiplexer and sub-bus number
+would indicate that the device in question is connected to the primary bus and is not affected by the state of the
+multiplexer.  The impact on I2C traffic is minimal;  two additional bytes need to be sent if an I2C request requires
+to switch to a different sub-bus and the affect on the code is just the changes above to the I2C handling.</p></li>
+<li><p>Sensors/Turnouts/Outputs: I can’t see anything in the existing code which checks whether the EEPROM writes
+overrun the available EEPROM space.  If not, then when the address overflows, I think that the writes will wrap
+around and overwrite the start of the EEPROM space.  This is, in fact, safe since the beginning of the EEPROM
+contains a text flag and, if it s not present or has been overwritten, the EEPROM is considered to be empty.
+PROPOSAL: Analyse more thoroughly and, if the address overrun check is missing, add suitable checks, and report
+failure (&lt;X&gt;) if there is insufficient EEPROM to store everything.  I’ve added a DIAG report of how much EEPROM
+is written when &lt;E&gt; command is executed.</p></li>
+<li><p>Sensors: Sensor handling is not ideal.  When the Sensor class scans for changes in current
+state by calling IODevice::read(), potentially each device (ArduinoPins, MCP23017 etc) needs to be checked to find
+the correct device, which takes time.  For a system with, say, three I2C devices, this means up to four devices being
+checked for each pin being read.  This can be mitigated by using the callback capability, but this also has its
+problems.  When a change is detected and the callback is invoked, the relevant sensor object has to be located by
+scanning the sensor list, potentially to the end.  For the same three I2C devices each with 16 sensors, that’s
+up to 48 sensor objects that need to be checked to find the appropriate sensor object, but this isn’t as bad as
+it sounds as it only happens on a sensor state change.  Also, the transmission of the &lt;Q&gt;/&lt;q&gt; message is deferred
+to the checkAll() method which also has to scan through all of the sensor objects, partly because of the anti-bounce
+delay handling and partly because the output stream is only available within the checkAll function.  I can’t really
+see how this can be improved without serious restructuring of other parts of the CS.  PROPOSAL: The anti-bounce code
+in the Sensor class could be removed in favour of adding simple double-scan validation within the HAL drivers (input
+must be the same for two consecutive scans to be considered a valid change).  This would use minimal RAM in external
+GPIO module drivers (one extra byte per 8 input pins) but would need more changes for Arduino pins, which are
+currently scanned on demand.</p></li>
+<li><p>HAL, Sensors/Turnouts: Each HAL device and pin, each turnout, and each sensor requires some RAM to hold its
+configuration parameters and its current state.  While the configuration parameters associated with dynamically created
+objects (e.g. turnouts through the &lt;T&gt; command) must be held in RAM, it is theoretically possible to provide an
+alternative way of creating these objects where the configuration parameters are held only in FLASH, thereby reducing
+the RAM requirements.  This would be relatively straightforward if all objects were to be statically created, but
+the need to support both dynamically create objects and statically created objects would complicate the code
+significantly.  To be explored.</p></li>
+<li><p>HAL, Turnouts:  EEPROM is currently optionally used for storing definitions of Turnouts, Sensors and Outputs.
+In addition, if a turnout or output definition has been saved to EEPROM then the state of the turnout
+(closed/thrown) or output will be updated in EEPROM each time it is changed.  This allows the turnout/output
+to be reinitialised to its last known state on each restart of the Command Station.  However, if the EEPROM is not
+used for definitions, then the states are not available either.  PROPOSAL: If the EEPROM isn’t used for
+object definitions, then store current states of objects instead.  This could be done fairly readily for
+turnouts, using existing code, by writing just the TurnoutData contents to EEPROM - this contains the
+turnout ID, type and current position (closed/thrown).  Thus, when a turnout is recreated (from a &lt;T&gt;
+command in the myConfig.h, or otherwise) the last known state for that turnout ID can be retrieved by
+searching the EEPROM for a turnout with a matching ID.  When a turnout is deleted, the slot it
+occupied in EEPROM would be marked free (e.g. with an ID of -1).  If a turnout is created and its ID
+is not found, then the first free space would be allocated to it.  When the turnout position changes,
+the flags byte would be rewritten to EEPROM.  Note that this approach only stores the binary closed/thrown
+state and not, for example, the current position of a servo, which may be any arbitrary value within the
+servo’s range.</p></li>
+</ol>
+<p><em>N McKechnie, 27th August 2021</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api.html" class="btn btn-neutral float-left" title="CommandStation-EX API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hal-config.html" class="btn btn-neutral float-right" title="I/O Device Drivers and HAL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

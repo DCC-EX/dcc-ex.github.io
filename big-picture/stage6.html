@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
+<meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage 6 - Putting it all Together &mdash; DCC-EX Model Railroading  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/platform.js"></script>
+        <script src="../_static/js/extra.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Example - ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins" href="stage6/example1.html" />
+    <link rel="prev" title="Stage 5 - Turntables &amp; Traversers" href="stage5.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../index.html">
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../levels.html">Choose Your Comfort Level</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-commandstation/index.html">EX-CommandStation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/get-started/index.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/wifi-setup.html">Adding WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/installer.html">Install the software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/testing.html">Test your setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/index.html">Supported Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/direct.html">Direct Connection (USB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/wifi-setup.html">WiFi Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/ethernet.html">Ethernet Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/bluetooth.html">Bluetooth Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/jmri.html">JMRI Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth-boards.html">Bluetooth Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-installer/index.html">Install using EX-Installer</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/arduino-ide.html">Install using the Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/controllers.html">Choosing a Controller (Throttle) - Advanced</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-installer/index.html">EX-Installer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-webthrottle/index.html">EX-WebThrottle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-rail/index.html">EX-RAIL (Automation)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/getting-started.html">Creating Automations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/tips.html">Tips and Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-turntable/troubleshooting.html">Troubleshooting EX-Turntable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-dccinspector/index.html">EX-DCCInspector</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Big Picture</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="big-picture.html">How it All Works Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stage1.html">Stage 1 - Running a Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stage2.html">Stage 2 - Adding a Roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stage4.html">Stage 4 - Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stage5.html">Stage 5 - Turntables &amp; Traversers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Stage 6 - Putting it all Together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stage6/example1.html">Example 1 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stage6/example2.html">Example 2 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stage6/example3.html">Example 3 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stage6/example4.html">Example 4 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stage6/example5.html">Example 5 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stage6/example6.html">Example 6 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stage6/example7.html">Example 7 Full automation with turnouts &amp; signals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Controllers (Throttles)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/ex-webthrottle.html">EX-WebThrottle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/engine-driver.html">Engine Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/withrottle.html">WiThrottle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/dccpp-cab.html">DCCpp CAB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/locontrol.html">Locontrol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/digitrainspro.html">DigiTrainsPro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/jmri.html">JMRI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/physical-knobs.html">Adding a Physical Knob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/uwt50.html">TCS UWT-50 (Physical)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-commandstation.html">EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-dccinspector.html">EX-DCCInspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-turntable.html">EX-Turntable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Contact &amp; Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../support/contact-us.html">Contact Us</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/videos/index.html">Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wifi-boards.html">WiFi Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/wangtongze-board.html">WangTongze Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/ethernet-boards.html">Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-ic2.html">iC2 Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-decoder.html">Decoders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/decoder-notes.html">Decoder Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wire-gauge.html">DCC Track Wiring Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/index.html">DCC-EX Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/software/command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary.html">DCC-EX Command Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/developers/index.html">Developer and API reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/api.html">CommandStation-EX API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal.html">DCC-EX HAL Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/writing-hal-driver.html">Writing a HAL Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/index-diagnostics-d.html">Diagnostic d Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/tools/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/tools/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About &amp; Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/press/index.html">Press / Announcements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about/press/rewrite.html">DCC++ VS DCC-EX? [Oct 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/press/v40-announce.html">EX-CommandStation 4.0 Release [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/press/release-notes.html">Release Notes [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/press/new-name.html">Our New Name [Aug 2022]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contributing/donate.html">Donate to Our Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contributing/index.html">Contributing - Helping the DCC-EX Team</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/github.html">GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/requirements.html">What You Need to Know/Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/software.html">Recommended Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/website/index.html">Contributing to the Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/getting-started.html">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/structure.html">Folder and Page Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/style-guide.html">Style Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../about/licence.html">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/roadmap.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/site-map.html">Site Map</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DCC-EX Model Railroading</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">The Big Picture</a> &raquo;</li>
+      <li>Stage 6 - Putting it all Together</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/flash62au_restruct/docs/big-picture/stage6.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stage-6-putting-it-all-together">
+<h1>Stage 6 - Putting it all Together<a class="headerlink" href="#stage-6-putting-it-all-together" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 169.5px; height: 45.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 169.5px; height: 45.0px;" /></a></p>
+<aside class="sidebar">
+<div class="contents local topic" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#what-to-expect-to-learn-from-stage-6" id="id1">What to expect to learn from stage 6</a></p></li>
+<li><p><a class="reference internal" href="#aliases" id="id2">Aliases</a></p></li>
+<li><p><a class="reference internal" href="#turnouts-points" id="id3">Turnouts/Points</a></p>
+<ul>
+<li><p><a class="reference internal" href="#turnout-point-definitions" id="id4">Turnout/Point definitions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sensors" id="id5">Sensors</a></p></li>
+<li><p><a class="reference internal" href="#signals" id="id6">Signals</a></p>
+<ul>
+<li><p><a class="reference internal" href="#pin-based-signals" id="id7">Pin based signals</a></p></li>
+<li><p><a class="reference internal" href="#servo-based-signals" id="id8">Servo based signals</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#virtual-blocks" id="id9">Virtual blocks</a></p>
+<ul>
+<li><p><a class="reference internal" href="#block-1" id="id10">Block 1</a></p></li>
+<li><p><a class="reference internal" href="#block-2" id="id11">Block 2</a></p></li>
+<li><p><a class="reference internal" href="#block-3" id="id12">Block 3</a></p></li>
+<li><p><a class="reference internal" href="#block-4" id="id13">Block 4</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#station" id="id14">Station</a></p></li>
+<li><p><a class="reference internal" href="#manual-train-control-with-automated-routes" id="id15">Manual train control with automated routes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#startup-sequence" id="id16">Startup sequence</a></p></li>
+<li><p><a class="reference internal" href="#route-1-main-track-running" id="id17">Route 1 - main track running</a></p></li>
+<li><p><a class="reference internal" href="#route-2-enter-and-exit-the-station-siding" id="id18">Route 2 - enter and exit the station siding</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#fully-automated-layout" id="id19">Fully automated layout</a></p>
+<ul>
+<li><p><a class="reference internal" href="#virtual-block-logic" id="id20">Virtual block logic</a></p></li>
+<li><p><a class="reference internal" href="#full-automation-startup-sequence" id="id21">Full automation startup sequence</a></p></li>
+<li><p><a class="reference internal" href="#exiting-block-1-station-entry-or-main-track" id="id22">Exiting block 1 - station entry or main track?</a></p></li>
+<li><p><a class="reference internal" href="#moving-from-block-1-to-block-2-continue-on-the-main-track" id="id23">Moving from block 1 to block 2 - continue on the main track</a></p></li>
+<li><p><a class="reference internal" href="#moving-from-block-1-to-block-3-entering-the-station" id="id24">Moving from block 1 to block 3 - entering the station</a></p></li>
+<li><p><a class="reference internal" href="#moving-from-block-2-to-block-4-continue-on-the-main-track" id="id25">Moving from block 2 to block 4 - continue on the main track</a></p></li>
+<li><p><a class="reference internal" href="#moving-from-block-3-to-block-4-exiting-the-station-siding" id="id26">Moving from block 3 to block 4 - exiting the station siding</a></p></li>
+<li><p><a class="reference internal" href="#moving-from-block-4-to-block-1-the-speed-run" id="id27">Moving from block 4 to block 1 - the speed run</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#learnings-from-stage-1" id="id28">Learnings from stage 1</a></p></li>
+<li><p><a class="reference internal" href="#complete-myautomation-h-examples" id="id29">Complete myAutomation.h examples</a></p>
+<ul>
+<li><p><a class="reference internal" href="#routes-with-dcc-accessory-turnouts-and-signals-on-mega2560-direct-i-o-pins" id="id30">ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins</a></p></li>
+<li><p><a class="reference internal" href="#routes-with-turnouts-signals-on-mega2560-direct-i-o-pins" id="id31">ROUTEs with turnouts/signals on Mega2560 direct I/O pins</a></p></li>
+<li><p><a class="reference internal" href="#routes-with-turnouts-signals-on-mcp23017-i-o-expander-vpins" id="id32">ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins</a></p></li>
+<li><p><a class="reference internal" href="#routes-with-servo-based-turnouts-signals-on-a-pca9685-servo-module" id="id33">ROUTEs with servo based turnouts/signals on a PCA9685 servo module</a></p></li>
+<li><p><a class="reference internal" href="#full-automation-with-pin-based-turnouts-and-signals-on-mega2560-direct-i-o-pins" id="id34">Full automation with pin based turnouts and signals on Mega2560 direct I/O pins</a></p></li>
+<li><p><a class="reference internal" href="#full-automation-with-pin-based-turnouts-and-signals-on-mcp23017-i-o-expander-vpins" id="id35">Full automation with pin based turnouts and signals on MCP23017 I/O expander Vpins</a></p></li>
+<li><p><a class="reference internal" href="#full-automation-with-servo-based-turnouts-and-signals-with-a-pca9685-servo-module" id="id36">Full automation with servo based turnouts and signals with a PCA9685 servo module</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</aside>
+<p>Stage 6 of our RMFT layout is a simple loop including a single siding for a station, which allows for automated running of up to three trains including automated switching for entering and exiting the station siding.</p>
+<p>To accomplish this, the layout will be broken up into four virtual blocks with five sensors in use to detect the position of our trains as they enter and exit the blocks, and three signals that will be controlled by automation to indicate when it is safe to proceed.</p>
+<p>Below, we’ll cover off the various aspects required to get up and running with stage 1 including object definitions, the various hardware options you can use, and how you can apply automation techniques to the layout.</p>
+<section id="what-to-expect-to-learn-from-stage-6">
+<h2><a class="toc-backref" href="#id1">What to expect to learn from stage 6</a><a class="headerlink" href="#what-to-expect-to-learn-from-stage-6" title="Permalink to this heading"></a></h2>
+<p>At the end of this stage, we expect you will have learnt the following:</p>
+<ul class="simple">
+<li><p>How to define the different types of turnout/point and signal objects.</p></li>
+<li><p>How to reference sensors.</p></li>
+<li><p>How, why, and when to effectively use aliases.</p></li>
+<li><p>How an object ID is different to the pin or configuration used by the physical object it represents.</p></li>
+<li><p>How to enable layout automation while still manually controlling the trains.</p></li>
+<li><p>How to enable a fully automated layout.</p></li>
+<li><p>What hardware can be used, and how to connect the components (Fritzing diagrams for this will be published soon).</p></li>
+</ul>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Do not edit this file with editors other than diagrams.net -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="2363px" height="922px" viewBox="-0.5 -0.5 2363 922" content="&lt;mxfile host=&quot;Electron&quot; modified=&quot;2022-07-09T22:51:56.275Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/19.0.3 Chrome/102.0.5005.63 Electron/19.0.3 Safari/537.36&quot; etag=&quot;tBZ1tajoNlCR4wQuo3fs&quot; version=&quot;19.0.3&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;UqJefaDkaJI5XY2zxdVd&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);"><defs/><g><image x="-0.5" y="54.5" width="2362" height="866" xlink:href="data:image/png;base64,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"/><rect x="1577" y="123" width="212" height="49" fill="none" stroke="none" transform="rotate(180,1683,147.5)" pointer-events="all"/><path d="M 1577 123 L 1789 123 L 1789 172 L 1577 172" fill="none" stroke="#ff0000" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" transform="rotate(180,1683,147.5)" pointer-events="all"/><rect x="628" y="123" width="240" height="49" fill="none" stroke="none" pointer-events="all"/><path d="M 628 123 L 868 123 L 868 172 L 628 172" fill="none" stroke="#ff0000" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#block-3"><rect x="880" y="123" width="690" height="20" fill="none" stroke="#ff0000" stroke-width="3" pointer-events="all"/></a><a xlink:href="#station"><rect x="960" y="55" width="530" height="40" rx="6" ry="6" fill="none" stroke="none" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="960" y="55" width="530" height="40" rx="6" ry="6" fill="none" stroke="none" pointer-events="all"/><path d="M 961.43 56.58 C 961.43 56.58 961.43 56.58 961.43 56.58 M 961.43 56.58 C 961.43 56.58 961.43 56.58 961.43 56.58 M 966.15 63.34 C 967.42 62.38 969.24 60.44 970.09 58.81 M 966.15 63.34 C 967.66 61.82 969.18 59.91 970.09 58.81 M 966.29 75.38 C 970.39 69.45 975.3 62.17 980.72 58.78 M 966.29 75.38 C 972.29 68.05 978.08 63.44 980.72 58.78 M 963.14 91.2 C 974.16 80.67 985.03 66.53 991.35 58.75 M 963.14 91.2 C 969.65 83.99 976.23 76.04 991.35 58.75 M 968.52 97.2 C 978.92 87.29 984.45 76.06 1001.98 58.71 M 968.52 97.2 C 980.61 81.31 995.51 67.27 1001.98 58.71 M 979.15 97.17 C 990.66 84.26 1000.56 73.48 1012.61 58.68 M 979.15 97.17 C 991.43 84.61 1001.2 70.31 1012.61 58.68 M 989.78 97.13 C 999.4 82.87 1012.05 73.66 1023.24 58.64 M 989.78 97.13 C 997.75 89.46 1006.18 79.05 1023.24 58.64 M 1000.41 97.1 C 1010.08 86.03 1024.78 72.54 1033.87 58.61 M 1000.41 97.1 C 1011.2 83.68 1024.39 71.09 1033.87 58.61 M 1011.04 97.06 C 1021.35 86.2 1031.13 72.97 1044.5 58.57 M 1011.04 97.06 C 1024.35 84.25 1036.22 69.82 1044.5 58.57 M 1021.67 97.03 C 1030.29 87.17 1036.18 80.76 1055.13 58.54 M 1021.67 97.03 C 1034.55 81.68 1047.6 68.1 1055.13 58.54 M 1032.3 96.99 C 1042.21 86.01 1055.68 73.28 1065.76 58.5 M 1032.3 96.99 C 1046.53 81.31 1058.51 66.58 1065.76 58.5 M 1042.93 96.96 C 1055.16 85.63 1067.3 69.09 1076.39 58.47 M 1042.93 96.96 C 1055.55 81.54 1067.92 67.65 1076.39 58.47 M 1053.56 96.92 C 1065.9 84.32 1076.74 69.06 1087.02 58.43 M 1053.56 96.92 C 1065.36 85.35 1075.69 72.87 1087.02 58.43 M 1064.19 96.89 C 1069.51 86.57 1078.81 80.58 1097.65 58.4 M 1064.19 96.89 C 1072.19 87.86 1080.43 78.34 1097.65 58.4 M 1074.82 96.86 C 1082.22 87.04 1089.74 76.7 1108.28 58.37 M 1074.82 96.86 C 1083.86 86.54 1092.47 76.76 1108.28 58.37 M 1085.45 96.82 C 1093.16 88.07 1099.01 78.54 1118.91 58.33 M 1085.45 96.82 C 1097.43 83.47 1110.04 68.89 1118.91 58.33 M 1095.42 97.54 C 1102 88.53 1111.26 79.44 1129.54 58.3 M 1095.42 97.54 C 1106.16 84.07 1116.31 71.91 1129.54 58.3 M 1106.05 97.51 C 1117.02 87.43 1123.83 75.04 1139.51 59.02 M 1106.05 97.51 C 1118.41 84.4 1129.19 70.65 1139.51 59.02 M 1116.68 97.47 C 1127.37 86.81 1135.13 74.74 1150.14 58.98 M 1116.68 97.47 C 1126.13 85.33 1136.32 73.66 1150.14 58.98 M 1127.31 97.44 C 1140.04 81.42 1151.1 67.73 1160.77 58.95 M 1127.31 97.44 C 1139.87 84.65 1150.71 70.81 1160.77 58.95 M 1137.95 97.4 C 1147.11 88.09 1158.54 77.05 1171.4 58.91 M 1137.95 97.4 C 1145.12 90.01 1150.47 81.3 1171.4 58.91 M 1148.58 97.37 C 1156.71 88.52 1161.44 81.77 1182.03 58.88 M 1148.58 97.37 C 1155.15 89.17 1163.49 79.85 1182.03 58.88 M 1159.21 97.33 C 1165.35 89.71 1177.42 79.09 1192.66 58.84 M 1159.21 97.33 C 1170.99 83.09 1183.2 69.77 1192.66 58.84 M 1169.84 97.3 C 1179.78 82.73 1194.35 69.16 1203.29 58.81 M 1169.84 97.3 C 1177.64 88.09 1184.59 79 1203.29 58.81 M 1180.47 97.27 C 1193.22 83.71 1204.05 70.41 1213.92 58.78 M 1180.47 97.27 C 1189.83 86.6 1200.07 74.45 1213.92 58.78 M 1191.1 97.23 C 1202.46 84.92 1214.25 73.44 1224.55 58.74 M 1191.1 97.23 C 1201.64 83.57 1213.39 69.87 1224.55 58.74 M 1201.73 97.2 C 1207.13 90.12 1217.19 81.92 1235.18 58.71 M 1201.73 97.2 C 1209.28 89.6 1216.39 79.73 1235.18 58.71 M 1212.36 97.16 C 1222.39 85.29 1231.95 78.44 1245.81 58.67 M 1212.36 97.16 C 1224.74 82.09 1236.64 69.05 1245.81 58.67 M 1222.99 97.13 C 1231.17 90.09 1236.57 80.83 1256.44 58.64 M 1222.99 97.13 C 1234.24 83.65 1246.17 69.3 1256.44 58.64 M 1233.62 97.09 C 1243.13 87.11 1254.07 75.22 1267.07 58.6 M 1233.62 97.09 C 1244.46 84.45 1256.48 70.68 1267.07 58.6 M 1244.25 97.06 C 1253.95 88.08 1259.61 79.02 1277.7 58.57 M 1244.25 97.06 C 1251.9 87.23 1261.02 77.7 1277.7 58.57 M 1254.88 97.02 C 1265.13 83.07 1279.34 70.04 1288.34 58.53 M 1254.88 97.02 C 1266.9 84.07 1278.44 70.49 1288.34 58.53 M 1265.51 96.99 C 1273.23 87.43 1278.15 81.53 1298.97 58.5 M 1265.51 96.99 C 1272.66 87.82 1280.02 80.47 1298.97 58.5 M 1276.14 96.96 C 1287.53 83.59 1303.08 69.06 1309.6 58.47 M 1276.14 96.96 C 1289.63 82.03 1301.56 66.54 1309.6 58.47 M 1286.77 96.92 C 1297.27 83.36 1310.41 67.84 1320.23 58.43 M 1286.77 96.92 C 1295.83 85.81 1305.86 74.53 1320.23 58.43 M 1297.4 96.89 C 1305.07 86.17 1314.08 75.61 1330.86 58.4 M 1297.4 96.89 C 1305.36 86.44 1314.14 78.56 1330.86 58.4 M 1308.03 96.85 C 1318.42 85.42 1325.23 76.81 1341.49 58.36 M 1308.03 96.85 C 1318.04 83.73 1329.31 71.5 1341.49 58.36 M 1318 97.57 C 1329.78 87.17 1337.93 74.37 1352.12 58.33 M 1318 97.57 C 1324.41 89.24 1332.38 81.51 1352.12 58.33 M 1328.63 97.54 C 1342.25 85.06 1352.87 68.47 1362.75 58.29 M 1328.63 97.54 C 1338.15 88.18 1345.65 77.93 1362.75 58.29 M 1339.26 97.5 C 1350.23 86.46 1357.74 75.69 1372.72 59.01 M 1339.26 97.5 C 1350.3 84.42 1363.22 69.67 1372.72 59.01 M 1349.89 97.47 C 1361.92 84.89 1372.75 72.07 1383.35 58.98 M 1349.89 97.47 C 1356.59 89.66 1363.19 82.19 1383.35 58.98 M 1360.52 97.43 C 1370.45 87.07 1376.59 78.4 1393.98 58.94 M 1360.52 97.43 C 1370.37 86.35 1380.93 74.84 1393.98 58.94 M 1371.15 97.4 C 1380.37 86.72 1391.38 73.08 1404.61 58.91 M 1371.15 97.4 C 1379.31 87.68 1388.17 77.27 1404.61 58.91 M 1381.78 97.37 C 1392.21 84.66 1404.39 69 1415.24 58.87 M 1381.78 97.37 C 1390.15 88.83 1398.28 78.71 1415.24 58.87 M 1392.41 97.33 C 1405.57 83.53 1416.63 71.46 1425.87 58.84 M 1392.41 97.33 C 1399.88 88.58 1406.57 80.29 1425.87 58.84 M 1403.04 97.3 C 1411.71 87.76 1422.2 76.17 1436.5 58.81 M 1403.04 97.3 C 1412.6 86.52 1419.71 78.33 1436.5 58.81 M 1413.67 97.26 C 1422.46 84.34 1433.4 72.61 1447.13 58.77 M 1413.67 97.26 C 1422.68 84.94 1434.12 73.81 1447.13 58.77 M 1424.3 97.23 C 1436.67 83.55 1444.54 74.23 1457.76 58.74 M 1424.3 97.23 C 1433.51 87.06 1444.57 74.39 1457.76 58.74 M 1434.93 97.19 C 1446.29 86.01 1452.87 76.35 1468.39 58.7 M 1434.93 97.19 C 1448.21 82.2 1461.44 67.76 1468.39 58.7 M 1445.56 97.16 C 1459.49 83.66 1471.16 67.51 1479.02 58.67 M 1445.56 97.16 C 1454.68 86.09 1464.96 74.55 1479.02 58.67 M 1456.19 97.12 C 1466.96 81.98 1479.4 69.05 1489.65 58.63 M 1456.19 97.12 C 1463.07 88.65 1469.95 79.43 1489.65 58.63 M 1466.82 97.09 C 1476.06 86.05 1483.16 77.35 1489.78 70.67 M 1466.82 97.09 C 1475.2 87.53 1483.39 77.93 1489.78 70.67 M 1477.45 97.05 C 1481.02 90.11 1486.47 84.7 1489.92 82.72 M 1477.45 97.05 C 1482.45 91.33 1486.46 86.55 1489.92 82.72" fill="none" stroke="#000000" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><path d="M 961.43 56.58 C 961.43 56.58 961.43 56.58 961.43 56.58 M 961.43 56.58 C 961.43 56.58 961.43 56.58 961.43 56.58 M 966.15 63.34 C 967.42 62.38 969.24 60.44 970.09 58.81 M 966.15 63.34 C 967.66 61.82 969.18 59.91 970.09 58.81 M 966.29 75.38 C 970.39 69.45 975.3 62.17 980.72 58.78 M 966.29 75.38 C 972.29 68.05 978.08 63.44 980.72 58.78 M 963.14 91.2 C 974.16 80.67 985.03 66.53 991.35 58.75 M 963.14 91.2 C 969.65 83.99 976.23 76.04 991.35 58.75 M 968.52 97.2 C 978.92 87.29 984.45 76.06 1001.98 58.71 M 968.52 97.2 C 980.61 81.31 995.51 67.27 1001.98 58.71 M 979.15 97.17 C 990.66 84.26 1000.56 73.48 1012.61 58.68 M 979.15 97.17 C 991.43 84.61 1001.2 70.31 1012.61 58.68 M 989.78 97.13 C 999.4 82.87 1012.05 73.66 1023.24 58.64 M 989.78 97.13 C 997.75 89.46 1006.18 79.05 1023.24 58.64 M 1000.41 97.1 C 1010.08 86.03 1024.78 72.54 1033.87 58.61 M 1000.41 97.1 C 1011.2 83.68 1024.39 71.09 1033.87 58.61 M 1011.04 97.06 C 1021.35 86.2 1031.13 72.97 1044.5 58.57 M 1011.04 97.06 C 1024.35 84.25 1036.22 69.82 1044.5 58.57 M 1021.67 97.03 C 1030.29 87.17 1036.18 80.76 1055.13 58.54 M 1021.67 97.03 C 1034.55 81.68 1047.6 68.1 1055.13 58.54 M 1032.3 96.99 C 1042.21 86.01 1055.68 73.28 1065.76 58.5 M 1032.3 96.99 C 1046.53 81.31 1058.51 66.58 1065.76 58.5 M 1042.93 96.96 C 1055.16 85.63 1067.3 69.09 1076.39 58.47 M 1042.93 96.96 C 1055.55 81.54 1067.92 67.65 1076.39 58.47 M 1053.56 96.92 C 1065.9 84.32 1076.74 69.06 1087.02 58.43 M 1053.56 96.92 C 1065.36 85.35 1075.69 72.87 1087.02 58.43 M 1064.19 96.89 C 1069.51 86.57 1078.81 80.58 1097.65 58.4 M 1064.19 96.89 C 1072.19 87.86 1080.43 78.34 1097.65 58.4 M 1074.82 96.86 C 1082.22 87.04 1089.74 76.7 1108.28 58.37 M 1074.82 96.86 C 1083.86 86.54 1092.47 76.76 1108.28 58.37 M 1085.45 96.82 C 1093.16 88.07 1099.01 78.54 1118.91 58.33 M 1085.45 96.82 C 1097.43 83.47 1110.04 68.89 1118.91 58.33 M 1095.42 97.54 C 1102 88.53 1111.26 79.44 1129.54 58.3 M 1095.42 97.54 C 1106.16 84.07 1116.31 71.91 1129.54 58.3 M 1106.05 97.51 C 1117.02 87.43 1123.83 75.04 1139.51 59.02 M 1106.05 97.51 C 1118.41 84.4 1129.19 70.65 1139.51 59.02 M 1116.68 97.47 C 1127.37 86.81 1135.13 74.74 1150.14 58.98 M 1116.68 97.47 C 1126.13 85.33 1136.32 73.66 1150.14 58.98 M 1127.31 97.44 C 1140.04 81.42 1151.1 67.73 1160.77 58.95 M 1127.31 97.44 C 1139.87 84.65 1150.71 70.81 1160.77 58.95 M 1137.95 97.4 C 1147.11 88.09 1158.54 77.05 1171.4 58.91 M 1137.95 97.4 C 1145.12 90.01 1150.47 81.3 1171.4 58.91 M 1148.58 97.37 C 1156.71 88.52 1161.44 81.77 1182.03 58.88 M 1148.58 97.37 C 1155.15 89.17 1163.49 79.85 1182.03 58.88 M 1159.21 97.33 C 1165.35 89.71 1177.42 79.09 1192.66 58.84 M 1159.21 97.33 C 1170.99 83.09 1183.2 69.77 1192.66 58.84 M 1169.84 97.3 C 1179.78 82.73 1194.35 69.16 1203.29 58.81 M 1169.84 97.3 C 1177.64 88.09 1184.59 79 1203.29 58.81 M 1180.47 97.27 C 1193.22 83.71 1204.05 70.41 1213.92 58.78 M 1180.47 97.27 C 1189.83 86.6 1200.07 74.45 1213.92 58.78 M 1191.1 97.23 C 1202.46 84.92 1214.25 73.44 1224.55 58.74 M 1191.1 97.23 C 1201.64 83.57 1213.39 69.87 1224.55 58.74 M 1201.73 97.2 C 1207.13 90.12 1217.19 81.92 1235.18 58.71 M 1201.73 97.2 C 1209.28 89.6 1216.39 79.73 1235.18 58.71 M 1212.36 97.16 C 1222.39 85.29 1231.95 78.44 1245.81 58.67 M 1212.36 97.16 C 1224.74 82.09 1236.64 69.05 1245.81 58.67 M 1222.99 97.13 C 1231.17 90.09 1236.57 80.83 1256.44 58.64 M 1222.99 97.13 C 1234.24 83.65 1246.17 69.3 1256.44 58.64 M 1233.62 97.09 C 1243.13 87.11 1254.07 75.22 1267.07 58.6 M 1233.62 97.09 C 1244.46 84.45 1256.48 70.68 1267.07 58.6 M 1244.25 97.06 C 1253.95 88.08 1259.61 79.02 1277.7 58.57 M 1244.25 97.06 C 1251.9 87.23 1261.02 77.7 1277.7 58.57 M 1254.88 97.02 C 1265.13 83.07 1279.34 70.04 1288.34 58.53 M 1254.88 97.02 C 1266.9 84.07 1278.44 70.49 1288.34 58.53 M 1265.51 96.99 C 1273.23 87.43 1278.15 81.53 1298.97 58.5 M 1265.51 96.99 C 1272.66 87.82 1280.02 80.47 1298.97 58.5 M 1276.14 96.96 C 1287.53 83.59 1303.08 69.06 1309.6 58.47 M 1276.14 96.96 C 1289.63 82.03 1301.56 66.54 1309.6 58.47 M 1286.77 96.92 C 1297.27 83.36 1310.41 67.84 1320.23 58.43 M 1286.77 96.92 C 1295.83 85.81 1305.86 74.53 1320.23 58.43 M 1297.4 96.89 C 1305.07 86.17 1314.08 75.61 1330.86 58.4 M 1297.4 96.89 C 1305.36 86.44 1314.14 78.56 1330.86 58.4 M 1308.03 96.85 C 1318.42 85.42 1325.23 76.81 1341.49 58.36 M 1308.03 96.85 C 1318.04 83.73 1329.31 71.5 1341.49 58.36 M 1318 97.57 C 1329.78 87.17 1337.93 74.37 1352.12 58.33 M 1318 97.57 C 1324.41 89.24 1332.38 81.51 1352.12 58.33 M 1328.63 97.54 C 1342.25 85.06 1352.87 68.47 1362.75 58.29 M 1328.63 97.54 C 1338.15 88.18 1345.65 77.93 1362.75 58.29 M 1339.26 97.5 C 1350.23 86.46 1357.74 75.69 1372.72 59.01 M 1339.26 97.5 C 1350.3 84.42 1363.22 69.67 1372.72 59.01 M 1349.89 97.47 C 1361.92 84.89 1372.75 72.07 1383.35 58.98 M 1349.89 97.47 C 1356.59 89.66 1363.19 82.19 1383.35 58.98 M 1360.52 97.43 C 1370.45 87.07 1376.59 78.4 1393.98 58.94 M 1360.52 97.43 C 1370.37 86.35 1380.93 74.84 1393.98 58.94 M 1371.15 97.4 C 1380.37 86.72 1391.38 73.08 1404.61 58.91 M 1371.15 97.4 C 1379.31 87.68 1388.17 77.27 1404.61 58.91 M 1381.78 97.37 C 1392.21 84.66 1404.39 69 1415.24 58.87 M 1381.78 97.37 C 1390.15 88.83 1398.28 78.71 1415.24 58.87 M 1392.41 97.33 C 1405.57 83.53 1416.63 71.46 1425.87 58.84 M 1392.41 97.33 C 1399.88 88.58 1406.57 80.29 1425.87 58.84 M 1403.04 97.3 C 1411.71 87.76 1422.2 76.17 1436.5 58.81 M 1403.04 97.3 C 1412.6 86.52 1419.71 78.33 1436.5 58.81 M 1413.67 97.26 C 1422.46 84.34 1433.4 72.61 1447.13 58.77 M 1413.67 97.26 C 1422.68 84.94 1434.12 73.81 1447.13 58.77 M 1424.3 97.23 C 1436.67 83.55 1444.54 74.23 1457.76 58.74 M 1424.3 97.23 C 1433.51 87.06 1444.57 74.39 1457.76 58.74 M 1434.93 97.19 C 1446.29 86.01 1452.87 76.35 1468.39 58.7 M 1434.93 97.19 C 1448.21 82.2 1461.44 67.76 1468.39 58.7 M 1445.56 97.16 C 1459.49 83.66 1471.16 67.51 1479.02 58.67 M 1445.56 97.16 C 1454.68 86.09 1464.96 74.55 1479.02 58.67 M 1456.19 97.12 C 1466.96 81.98 1479.4 69.05 1489.65 58.63 M 1456.19 97.12 C 1463.07 88.65 1469.95 79.43 1489.65 58.63 M 1466.82 97.09 C 1476.06 86.05 1483.16 77.35 1489.78 70.67 M 1466.82 97.09 C 1475.2 87.53 1483.39 77.93 1489.78 70.67 M 1477.45 97.05 C 1481.02 90.11 1486.47 84.7 1489.92 82.72 M 1477.45 97.05 C 1482.45 91.33 1486.46 86.55 1489.92 82.72" fill="none" stroke="#647687" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/><path d="M 966 55 M 966 55 C 1166.74 56.09 1367.32 57.44 1484 55 M 966 55 C 1131.69 56.22 1297.89 55.55 1484 55 M 1484 55 C 1486.25 55.19 1490.18 57.91 1490 61 M 1484 55 C 1487.37 54.07 1491.93 57.21 1490 61 M 1490 61 C 1489.21 68.59 1491.04 76.26 1490 89 M 1490 61 C 1490.23 70.73 1490.03 81.5 1490 89 M 1490 89 C 1488.37 92.83 1487.57 95.6 1484 95 M 1490 89 C 1491.5 94.43 1489.18 93.72 1484 95 M 1484 95 C 1314.38 93.53 1144.18 93.32 966 95 M 1484 95 C 1360.54 96.31 1237.15 96.74 966 95 M 966 95 C 962.51 96.89 961.82 91.13 960 89 M 966 95 C 962.74 93.5 961.6 92.53 960 89 M 960 89 C 960.83 81.28 960.89 76.67 960 61 M 960 89 C 960.19 79.8 960.19 71 960 61 M 960 61 C 959.32 58.06 963.01 53.06 966 55 M 960 61 C 961.55 58.89 960.64 56.76 966 55" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><path d="M 966 55 M 966 55 C 1166.74 56.09 1367.32 57.44 1484 55 M 966 55 C 1131.69 56.22 1297.89 55.55 1484 55 M 1484 55 C 1486.25 55.19 1490.18 57.91 1490 61 M 1484 55 C 1487.37 54.07 1491.93 57.21 1490 61 M 1490 61 C 1489.21 68.59 1491.04 76.26 1490 89 M 1490 61 C 1490.23 70.73 1490.03 81.5 1490 89 M 1490 89 C 1488.37 92.83 1487.57 95.6 1484 95 M 1490 89 C 1491.5 94.43 1489.18 93.72 1484 95 M 1484 95 C 1314.38 93.53 1144.18 93.32 966 95 M 1484 95 C 1360.54 96.31 1237.15 96.74 966 95 M 966 95 C 962.51 96.89 961.82 91.13 960 89 M 966 95 C 962.74 93.5 961.6 92.53 960 89 M 960 89 C 960.83 81.28 960.89 76.67 960 61 M 960 89 C 960.19 79.8 960.19 71 960 61 M 960 61 C 959.32 58.06 963.01 53.06 966 55 M 960 61 C 961.55 58.89 960.64 56.76 966 55" fill="none" stroke="#314354" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/></a><a xlink:href="#block-2"><rect x="880" y="152" width="690" height="20" fill="none" stroke="#ff0000" stroke-width="3" pointer-events="all"/></a><path d="M 1924 369 L 1954.56 369 L 1974.32 368.73" fill="none" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1980.32 368.65 L 1972.38 372.76 L 1974.32 368.73 L 1972.27 364.76 Z" fill="#2d7600" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#sensors"><rect x="1854" y="349" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="1854" y="349" width="70" height="40" rx="6" ry="6" fill="#60a917" stroke="#2d7600" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 369px; margin-left: 1855px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sns1</div></div></div></foreignObject><text x="1889" y="374" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sns1</text></switch></g></a><rect x="1990" y="359" width="10" height="20" fill="none" stroke="rgb(0, 0, 0)" transform="rotate(90,1995,369)" pointer-events="all"/><rect x="1130" y="123" width="10" height="20" fill="none" stroke="rgb(0, 0, 0)" pointer-events="all"/><rect x="1549" y="152" width="10" height="20" fill="none" stroke="rgb(0, 0, 0)" pointer-events="all"/><rect x="880" y="123" width="10" height="20" fill="none" stroke="rgb(0, 0, 0)" pointer-events="all"/><rect x="880" y="152" width="10" height="20" fill="none" stroke="rgb(0, 0, 0)" pointer-events="all"/><path d="M 1527 245 L 1553.33 245 L 1553.33 183.4" fill="none" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1553.33 177.4 L 1557.33 185.4 L 1553.33 183.4 L 1549.33 185.4 Z" fill="#2d7600" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#sensors"><rect x="1457" y="225" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="1457" y="225" width="70" height="40" rx="6" ry="6" fill="#60a917" stroke="#2d7600" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 245px; margin-left: 1458px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sns2</div></div></div></foreignObject><text x="1492" y="250" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sns2</text></switch></g></a><path d="M 1135 225 L 1135 151.24" fill="none" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1135 145.24 L 1139 153.24 L 1135 151.24 L 1131 153.24 Z" fill="#2d7600" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#sensors"><rect x="1100" y="225" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="1100" y="225" width="70" height="40" rx="6" ry="6" fill="#60a917" stroke="#2d7600" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 245px; margin-left: 1101px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sns3</div></div></div></foreignObject><text x="1135" y="250" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sns3</text></switch></g></a><path d="M 885 227 L 885 199.56 L 885.46 180.89" fill="none" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 885.61 174.9 L 889.41 182.99 L 885.46 180.89 L 881.42 182.79 Z" fill="#2d7600" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#sensors"><rect x="850" y="227" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="850" y="227" width="70" height="40" rx="6" ry="6" fill="#60a917" stroke="#2d7600" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 247px; margin-left: 851px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sns4</div></div></div></foreignObject><text x="885" y="252" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sns4</text></switch></g></a><path d="M 838 85 L 885 85 L 885 114.76" fill="none" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 885 120.76 L 881 112.76 L 885 114.76 L 889 112.76 Z" fill="#2d7600" stroke="#2d7600" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#sensors"><rect x="768" y="65" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="768" y="65" width="70" height="40" rx="6" ry="6" fill="#60a917" stroke="#2d7600" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 85px; margin-left: 769px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sns5</div></div></div></foreignObject><text x="803" y="90" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sns5</text></switch></g></a><path d="M 1330 184 L 1161.97 184" fill="none" stroke="#001dbc" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1154.47 184 L 1164.47 179 L 1161.97 184 L 1164.47 189 Z" fill="#001dbc" stroke="#001dbc" stroke-width="4" stroke-miterlimit="10" pointer-events="all"/><path d="M 1329 109 L 1160.97 109" fill="none" stroke="#001dbc" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1153.47 109 L 1163.47 104 L 1160.97 109 L 1163.47 114 Z" fill="#001dbc" stroke="#001dbc" stroke-width="4" stroke-miterlimit="10" pointer-events="all"/><path d="M 917 116 L 890 116 L 890 103 L 632 103 L 632 116.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 632 121.88 L 628.5 114.88 L 632 116.63 L 635.5 114.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/><rect x="917" y="111" width="10" height="10" rx="1.5" ry="1.5" fill="#1ba1e2" stroke="#006eaf" pointer-events="all"/><path d="M 838 25 L 922 25 L 922 102.76" fill="none" stroke="#006eaf" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 922 108.76 L 918 100.76 L 922 102.76 L 926 100.76 Z" fill="#006eaf" stroke="#006eaf" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#signals"><rect x="768" y="5" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="768" y="5" width="70" height="40" rx="6" ry="6" fill="#1ba1e2" stroke="#006eaf" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 25px; margin-left: 769px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sig3</div></div></div></foreignObject><text x="803" y="30" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sig3</text></switch></g></a><rect x="917" y="143" width="10" height="10" rx="1.5" ry="1.5" fill="#1ba1e2" stroke="#006eaf" pointer-events="all"/><path d="M 955 207 L 922 207 L 922 161.24" fill="none" stroke="#006eaf" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 922 155.24 L 926 163.24 L 922 161.24 L 918 163.24 Z" fill="#006eaf" stroke="#006eaf" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#signals"><rect x="955" y="187" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="955" y="187" width="70" height="40" rx="6" ry="6" fill="#1ba1e2" stroke="#006eaf" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 207px; margin-left: 956px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sig2</div></div></div></foreignObject><text x="990" y="212" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sig2</text></switch></g></a><rect x="1693" y="136" width="10" height="10" rx="1.5" ry="1.5" fill="#1ba1e2" stroke="#006eaf" pointer-events="all"/><a xlink:href="#signals"><rect x="1735" y="65" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="1735" y="65" width="70" height="40" rx="6" ry="6" fill="#1ba1e2" stroke="#006eaf" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 85px; margin-left: 1736px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Sig1</div></div></div></foreignObject><text x="1770" y="90" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Sig1</text></switch></g></a><path d="M 1735 85 L 1700.33 85 L 1700.33 127.87" fill="none" stroke="#006eaf" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1700.33 133.87 L 1696.33 125.87 L 1700.33 127.87 L 1704.33 125.87 Z" fill="#006eaf" stroke="#006eaf" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><path d="M 1325 245 L 1394 245 L 1394.04 180.08" fill="none" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1394.05 174.08 L 1398.04 182.08 L 1394.04 180.08 L 1390.04 182.07 Z" fill="#b85450" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#block-2"><rect x="1255" y="225" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="1255" y="225" width="70" height="40" rx="6" ry="6" fill="#f8cecc" stroke="#b85450" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 245px; margin-left: 1256px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Blk2</div></div></div></foreignObject><text x="1290" y="250" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="18px" text-anchor="middle">Blk2</text></switch></g></a><path d="M 1325 21 L 1394 21 L 1394.05 113.6" fill="none" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1394.05 119.6 L 1390.04 111.61 L 1394.05 113.6 L 1398.04 111.6 Z" fill="#b85450" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#block-3"><rect x="1255" y="1" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="1255" y="1" width="70" height="40" rx="6" ry="6" fill="#f8cecc" stroke="#b85450" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 21px; margin-left: 1256px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Blk3</div></div></div></foreignObject><text x="1290" y="26" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="18px" text-anchor="middle">Blk3</text></switch></g></a><path d="M 1790 225 L 1790 180.24" fill="none" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1790 174.24 L 1794 182.24 L 1790 180.24 L 1786 182.24 Z" fill="#b85450" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#block-1"><rect x="1755" y="225" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="1755" y="225" width="70" height="40" rx="6" ry="6" fill="#f8cecc" stroke="#b85450" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 245px; margin-left: 1756px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Blk1</div></div></div></foreignObject><text x="1790" y="250" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="18px" text-anchor="middle">Blk1</text></switch></g></a><rect x="1657" y="152" width="10" height="20" fill="none" stroke="rgb(0, 0, 0)" pointer-events="all"/><rect x="793" y="152" width="10" height="20" fill="none" stroke="rgb(0, 0, 0)" pointer-events="all"/><path d="M 762 247 L 798 247 L 798 180.24" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 798 174.24 L 802 182.24 L 798 180.24 L 794 182.24 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#turnouts"><rect x="692" y="227" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="692" y="227" width="70" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 247px; margin-left: 693px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Trn2</div></div></div></foreignObject><text x="727" y="252" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Trn2</text></switch></g></a><path d="M 1647 247 L 1661.78 247 L 1661.76 181.3" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1661.76 175.3 L 1665.76 183.3 L 1661.76 181.3 L 1657.76 183.3 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#turnouts"><rect x="1577" y="227" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="1577" y="227" width="70" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 247px; margin-left: 1578px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Trn1</div></div></div></foreignObject><text x="1612" y="252" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">Trn1</text></switch></g></a><path d="M 441.84 373.91 C 438.74 322.16 456.86 271.38 492.02 233.29 C 527.19 195.19 576.36 173.07 628.19 172.04" fill="none" stroke="#ff0000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#block-4"><path d="M 401.93 374.71 C 396.19 310.9 417.2 247.58 459.94 199.86 C 502.69 152.15 563.33 124.33 627.38 123.05" fill="none" stroke="#ff0000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/></a><path d="M 1599.5 362.5 C 1599.5 258.77 1682.49 174.11 1786.19 172.04" fill="none" stroke="#ff0000" stroke-width="3" stroke-miterlimit="10" transform="rotate(90,1790,362.5)" pointer-events="all"/><a xlink:href="#block-1"><path d="M 1559.01 356.31 C 1558.39 294.65 1582.46 235.3 1625.84 191.48 C 1669.23 147.66 1728.33 123 1790 123" fill="none" stroke="#ff0000" stroke-width="3" stroke-miterlimit="10" transform="rotate(90,1790,354)" pointer-events="all"/></a><rect x="1980.5" y="355" width="40.5" height="22" fill="none" stroke="none" pointer-events="all"/><path d="M 1980.5 355 M 2021 355 L 2021 377 L 1980.5 377 L 1980.5 355" fill="none" stroke="#ff0000" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/><path d="M 610 225 L 610 180.24" fill="none" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 610 174.24 L 614 182.24 L 610 180.24 L 606 182.24 Z" fill="#b85450" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/><a xlink:href="#block-4"><rect x="575" y="225" width="70" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="575" y="225" width="70" height="40" rx="6" ry="6" fill="#f8cecc" stroke="#b85450" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 245px; margin-left: 576px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Blk4</div></div></div></foreignObject><text x="610" y="250" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="18px" text-anchor="middle">Blk4</text></switch></g></a><a xlink:href="#station"><rect x="970" y="35" width="110" height="40" rx="6" ry="6" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all" transform="translate(2,3)" opacity="0.25"/><rect x="970" y="35" width="110" height="40" rx="6" ry="6" fill="#647687" stroke="#314354" stroke-width="2" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 55px; margin-left: 971px;"><div data-drawio-colors="color: #000000; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">Station</div></div></div></foreignObject><text x="1025" y="60" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle" font-weight="bold">Station</text></switch></g></a></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Text is not SVG - cannot display</text></a></switch></svg></section>
+<section id="aliases">
+<h2><a class="toc-backref" href="#id2">Aliases</a><a class="headerlink" href="#aliases" title="Permalink to this heading"></a></h2>
+<p>As mentioned already, we will be defining aliases throughout these pages to put human-friendly labels on our various objects.</p>
+<p>By doing so, it becomes easier to refer to things in various different sequences or contexts when referring to a name than it is to remember a specific pin or turnout/point ID.</p>
+<p>This also means if there is a need to change a pin or object ID, you can simply update the single alias reference, meaning you don’t need to dig through all your sequences, routes, and so forth to edit them individually.</p>
+<p>Further more, you can make radical changes such as moving from pin turnouts/points to servo turnouts/points, and only need to edit the defined objects and alias. Again, all your existing sequences, routes, etc. should remain unchanged.</p>
+<p>For more information on aliases, refer to <a class="reference internal" href="../ex-rail/EX-RAIL-reference.html#aliases"><span class="std std-ref">Aliases</span></a>.</p>
+</section>
+<section id="turnouts-points">
+<h2><a class="toc-backref" href="#id3">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h2>
+<p>Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.</p>
+<p>For further reading on turnouts/points, you can refer to the <a class="reference internal" href="../ex-rail/EX-RAIL-reference.html#turnouts-points"><span class="std std-ref">Turnouts/Points</span></a> section of the EX-RAIL reference and <a class="reference internal" href="../reference/software/command-reference.html#defining-setting-up-a-turnout"><span class="std std-ref">Defining (Setting up) a Turnout</span></a> in the DCC-EX Command reference.</p>
+<section id="turnout-point-definitions">
+<h3><a class="toc-backref" href="#id4">Turnout/Point definitions</a><a class="headerlink" href="#turnout-point-definitions" title="Permalink to this heading"></a></h3>
+<p>We will define turnout/point 1 with an ID of 100, and turnout/point 2 with an ID of 101.</p>
+<section id="dcc-accessory-turnouts-points">
+<h4>DCC accessory turnouts/points<a class="headerlink" href="#dcc-accessory-turnouts-points" title="Permalink to this heading"></a></h4>
+<p>To define these as DCC accessory turnouts/points, turnout/points 1 will be at linear address 101, and turnout/points 2 at 102. These translate to address 26 with sub address 0 for linear address 101, and address 26 with sub address 1 for linear address 102.</p>
+<p>Therefore, the DCC-EX command to define these in the serial console is as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T 100 DCC 26 0&gt;
+&lt;T 101 DCC 26 1&gt;
+</pre></div>
+</div>
+<p>In EX-RAIL, we would add these lines to myAutomation.h, with aliases defined:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(TRN1, 100)
+ALIAS(TRN2, 101)
+
+TURNOUT(TRN1, 26, 0, &quot;Station entry&quot;)
+TURNOUT(TRN2, 26, 1, &quot;Station exit&quot;)
+</pre></div>
+</div>
+</section>
+<section id="pin-turnouts-points">
+<h4>Pin turnouts/Points<a class="headerlink" href="#pin-turnouts-points" title="Permalink to this heading"></a></h4>
+<p>To define these same turnout/point IDs as pin turnouts/points instead, and using I/O pins that are directly on our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> Mega2560, we will use pins 22 and 23.</p>
+<p>To define these in the serial console:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T 100 VPIN 22&gt;
+&lt;T 101 VPIN 23&gt;
+</pre></div>
+</div>
+<p>In EX-RAIL, we would add these lines to myAutomation.h:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(TRN1, 100)
+ALIAS(TRN2, 101)
+
+PIN_TURNOUT(TRN1, 22, &quot;Station entry&quot;)
+PIN_TURNOUT(TRN2, 23, &quot;Station exit&quot;)
+</pre></div>
+</div>
+<p>If we were instead to use an MCP23017 I/O expander, we would use Vpins instead of direct pins on the Mega2560, and we would start these at the first I/O expander’s 164 Vpin ID.</p>
+<p>To define these in the serial console:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T 100 VPIN 164&gt;
+&lt;T 101 VPIN 165&gt;
+</pre></div>
+</div>
+<p>And again, in myAutomation.h for EX-RAIL:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(TRN1, 100)
+ALIAS(TRN2, 101)
+
+PIN_TURNOUT(TRN1, 164, &quot;Station entry&quot;)
+PIN_TURNOUT(TRN2, 165, &quot;Station exit&quot;)
+</pre></div>
+</div>
+</section>
+<section id="servo-turnouts-points">
+<h4>Servo turnouts/points<a class="headerlink" href="#servo-turnouts-points" title="Permalink to this heading"></a></h4>
+<p>Finally, to define these same turnouts as servo based turnouts, these would be connected to a PCA9685 servo module, and our first module starts at Vpin ID 100.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts, so be sure you read the blurb on <a class="reference internal" href="stage3.html#tuning-servo-positions"><span class="std std-ref">Tuning servo positions</span></a> and the <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> page.</p>
+<p>Please don’t blindly copy/paste the servo angles listed here and expect them to “just work”.</p>
+</div>
+<p>Throughout these pages, we will assume that the thrown servo position is 400, the closed servo position is 100, and we will use the “Slow” profile.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will note below that our turnout ID 100 matches the first PCA9685 module’s first Vpin which happens to also be 100. While these numbers are the same, they do not represent the same item.</p>
+<p>You can see within this section on defining the turnouts that a turnout with an object ID of 100 could represent any variation of turnout object, with any support hardware implementation.</p>
+</div>
+<p>Defining these in the serial console therefore would be:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T 100 SERVO 100 400 100 3&gt;
+&lt;T 101 SERVO 101 400 100 3&gt;
+</pre></div>
+</div>
+<p>Again, in myAutomation.h this becomes:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(TRN1, 100)
+ALIAS(TRN2, 101)
+
+SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, &quot;Station entry&quot;)
+SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, &quot;Station exit&quot;)
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="sensors">
+<h2><a class="toc-backref" href="#id5">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h2>
+<p>Five sensors are used in this first stage, which allows us to have up to three trains controlled by EX-RAIL automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.</p>
+<p>We don’t need to explicitly define any sensor objects to work with EX-RAIL, so we will simply map these by defining EX-RAIL aliases.</p>
+<p>To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/23 for turnouts):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(SNS1_TRN1_APP, 24)       // Sensor 1, approaching turnout 1
+ALIAS(SNS2_MAIN_TRN1_EX, 25)   // Sensor 2, on the main track exiting turnout 1
+ALIAS(SNS3_STN, 26)            // Sensor 3, at our station stop
+ALIAS(SNS4_MAIN_TRN2_APP, 27)  // Sensor 4, on the main track approaching turnout 2
+ALIAS(SNS5_STN_TRN2_APP, 28)   // Sensor 5, on the station siding approaching turnout 2
+</pre></div>
+</div>
+<p>Moving these to our first MCP23017 I/O expander, these would start at Vpin 166 (we used Vpins 164/165 for turnouts):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(SNS1_TRN1_APP, 166)       // Sensor 1, approaching turnout 1
+ALIAS(SNS2_MAIN_TRN1_EX, 167)   // Sensor 2, on the main track exiting turnout 1
+ALIAS(SNS3_STN, 168)            // Sensor 3, at our station stop
+ALIAS(SNS4_MAIN_TRN2_APP, 169)  // Sensor 4, on the main track approaching turnout 2
+ALIAS(SNS5_STN_TRN2_APP, 170)   // Sensor 5, on the station siding approaching turnout 2
+</pre></div>
+</div>
+</section>
+<section id="signals">
+<h2><a class="toc-backref" href="#id6">Signals</a><a class="headerlink" href="#signals" title="Permalink to this heading"></a></h2>
+<p>Three signals have been used in this first stage to indicate whether or not a train can enter either the station siding or proceed beyond turnout 1 on the main track, to indicate whether a train can exit the station siding, or if a train can proceed beyond turnout 2 on the main track.</p>
+<section id="pin-based-signals">
+<h3><a class="toc-backref" href="#id7">Pin based signals</a><a class="headerlink" href="#pin-based-signals" title="Permalink to this heading"></a></h3>
+<p>To use pin based signals, we require three pins per signal, and therefore nine pins in total, but we will only define an alias for the red pin given that it is the “control” pin for each signal. The other pins are used in the background by DCC-EX and are not referenced anywhere else outside the object definition.</p>
+<p>To define pin based signals directly on the Mega2560 with aliases for the control pins:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(SIG1_TRN1_APP, 30)       // Signal 1, approaching turnout 1
+ALIAS(SIG2_TRN2_GO, 33)        // Signal 2, proceed beyond turnout 2
+ALIAS(SIG3_STN_EX, 36)         // Signal 3, exit the station siding
+
+SIGNAL(SIG1_TRN1_APP, 31, 32)
+SIGNAL(SIG2_TRN2_GO, 34, 35)
+SIGNAL(SIG3_STN_EX, 37, 38)
+</pre></div>
+</div>
+<p>Moving these again to an MCP23017 I/O expander, these would start at Vpin 172, however this also overlaps to a second I/O expander by one pin:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(SIG1_TRN1_APP, 172)      // Signal 1, approaching turnout 1
+ALIAS(SIG2_TRN2_GO, 175)       // Signal 2, proceed beyond turnout 2
+ALIAS(SIG3_STN_EX, 178)        // Signal 3, exit the station siding
+
+SIGNAL(SIG1_TRN1_APP, 173, 174)
+SIGNAL(SIG2_TRN2_GO, 176, 177)
+SIGNAL(SIG3_STN_EX, 179, 180)
+</pre></div>
+</div>
+</section>
+<section id="servo-based-signals">
+<h3><a class="toc-backref" href="#id8">Servo based signals</a><a class="headerlink" href="#servo-based-signals" title="Permalink to this heading"></a></h3>
+<p>To define servo based signals, these only require one Vpin per signal along with specifying the servo angle for the red, amber, and green positions.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on <a class="reference internal" href="stage3.html#tuning-servo-positions"><span class="std std-ref">Tuning servo positions</span></a> and the <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> page.</p>
+<p>Please don’t blindly copy/paste the servo angles listed here and expect them to “just work”.</p>
+</div>
+<p>Allowing for servo based turnouts being used, we will start our signals from the third available Vpin on our PCA9685 servo module (we used the first two for servo turnouts). We will make the assumption that red requires a servo angle of 100, amber 250, and green 400:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(SIG1_TRN1_APP, 102)       // Signal 1, approaching turnout 1
+ALIAS(SIG2_TRN2_GO, 103)        // Signal 2, proceed beyond turnout 2
+ALIAS(SIG3_STN_EX, 104)         // Signal 3, exit the station siding
+
+SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
+SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
+SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
+</pre></div>
+</div>
+</section>
+</section>
+<section id="virtual-blocks">
+<h2><a class="toc-backref" href="#id9">Virtual blocks</a><a class="headerlink" href="#virtual-blocks" title="Permalink to this heading"></a></h2>
+<p>We’ve divided the layout into four virtual blocks, allowing for up to three trains to coexist safely on the layout. You will need at least one more block than you have trains in order to fully automate a layout, otherwise  there will be nowhere for a train to move to in order to start the automation sequences. This is outlined in further detail in the <a class="reference internal" href="#fully-automated-layout">fully automated layout</a> section.</p>
+<section id="block-1">
+<h3><a class="toc-backref" href="#id10">Block 1</a><a class="headerlink" href="#block-1" title="Permalink to this heading"></a></h3>
+<p>Block 1 is the approach to turnout 1, and can be used to prevent a train from entering either the station siding or the main track between turnouts 1 and 2 if they are occupied.</p>
+<p>We will use ID 1 for this, with an alias:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(BLK1_TRN1_APP, 1)
+</pre></div>
+</div>
+</section>
+<section id="block-2">
+<h3><a class="toc-backref" href="#id11">Block 2</a><a class="headerlink" href="#block-2" title="Permalink to this heading"></a></h3>
+<p>Block 2 consists of the section of the main track between turnouts 1 and 2, providing for a section to hold one train, allow a train on the station siding to exit safely, and also prevent a train running around the main track from entering this block.</p>
+<p>We will use ID 2 for this, with an alias:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(BLK2_MAIN_HOLD, 2)
+</pre></div>
+</div>
+</section>
+<section id="block-3">
+<h3><a class="toc-backref" href="#id12">Block 3</a><a class="headerlink" href="#block-3" title="Permalink to this heading"></a></h3>
+<p>Block 3 is for our station siding, ensuring no other trains can enter this block while it is occupied.</p>
+<p>We will use ID 3 for this, with an alias:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(BLK3_STN, 3)
+</pre></div>
+</div>
+</section>
+<section id="block-4">
+<h3><a class="toc-backref" href="#id13">Block 4</a><a class="headerlink" href="#block-4" title="Permalink to this heading"></a></h3>
+<p>Block 4 is the exit beyond turnout 2, and can hold a train while block 1 is occupied. Once block 1 is free, a train can run uninterrupted from block 4 back to block 1.</p>
+<p>Note that block 4 on the diagram continues all the way to the beginning of block 1</p>
+<p>We will use ID 4 for this, with an alias:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(BLK4_TRN2_EX, 4)
+</pre></div>
+</div>
+</section>
+</section>
+<section id="station">
+<h2><a class="toc-backref" href="#id14">Station</a><a class="headerlink" href="#station" title="Permalink to this heading"></a></h2>
+<p>In this particular stage, there’s nothing specific for the station, however some advanced concepts might be to trigger an automated sound recording of arrivals and departures based on triggering sensor 3 or even sensor 2 if turnout 1 is in the thrown position.</p>
+<p>This would likely make use of the EX-RAIL <code class="docutils literal notranslate"><span class="pre">AT()</span></code> or <code class="docutils literal notranslate"><span class="pre">AFTER()</span></code> commands.</p>
+</section>
+<section id="manual-train-control-with-automated-routes">
+<h2><a class="toc-backref" href="#id15">Manual train control with automated routes</a><a class="headerlink" href="#manual-train-control-with-automated-routes" title="Permalink to this heading"></a></h2>
+<p>If you still wish to be the driver of the trains but have some automation related to the turnouts and signals, then we can make use of EX-RAIL’s <code class="docutils literal notranslate"><span class="pre">ROUTE()</span></code> directive. In this scenario, we don’t need to implement our virtual blocks, as it will be up to you as the driver to ensure your trains don’t collide. We also don’t need to use the sensors, and will set our signals based on the choice of routes.</p>
+<p>The two routes below will be advertised to <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> applications such as <a class="reference internal" href="../reference/glossary.html"><span class="doc">Engine Driver</span></a>, so you can simply select them from the ROUTE menu.</p>
+<p>Note that you can mix and match all the above I/O methods together, so you can use direct I/O pins on the Mega2560 while using MCP23017 I/O expanders, PCA9685 servo modules, and any other supported I/O options, which provides a myriad of possibilities to expand the I/O capabilities of your CommandStation.</p>
+<p>For simplicity, we will outline the stage 1 options using consistent hardware types otherwise we’ll wear out the scroll button on your mouse.</p>
+<p>Once you understand the logic of our routes below and the various turnout, sensor, signal, and virtual block concepts above, you can view some <a class="reference internal" href="#complete-myautomation-h-examples">complete myautomation.h examples</a> at the end of this page.</p>
+<section id="startup-sequence">
+<h3><a class="toc-backref" href="#id16">Startup sequence</a><a class="headerlink" href="#startup-sequence" title="Permalink to this heading"></a></h3>
+<p>When the CommandStation and EX-RAIL starts, everything defined before the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> command executes automatically.</p>
+<p>For safe running and a known starting state, we ensure both our turnouts are closed and set all our signals to red, followed by the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> to stop EX-RAIL executing any further automatically.</p>
+<p>If we omit that first <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, EX-RAIL would automatically execute <code class="docutils literal notranslate"><span class="pre">ROUTE(1,</span> <span class="pre">&quot;Main</span> <span class="pre">Track&quot;)</span></code> at every startup. Note, of course, that if you want that first route executed at every startup, then you can simply omit that same <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, which will have the same effect as manually selecting the “Main track” route.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Start up with turnouts closed and signals red
+CLOSE(TRN1)
+CLOSE(TRN2)
+RED(SIG1_TRN1_APP)
+RED(SIG2_TRN2_GO)
+RED(SIG3_STN_EX)
+
+// We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+DONE
+</pre></div>
+</div>
+</section>
+<section id="route-1-main-track-running">
+<h3><a class="toc-backref" href="#id17">Route 1 - main track running</a><a class="headerlink" href="#route-1-main-track-running" title="Permalink to this heading"></a></h3>
+<p>The first route we publish for use is <code class="docutils literal notranslate"><span class="pre">ROUTE(1,</span> <span class="pre">&quot;Main</span> <span class="pre">track&quot;)</span></code> which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> based apps (like <a class="reference internal" href="../reference/glossary.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle</span></a>) with the description “Main track”.</p>
+<p>Given we have closed our turnouts and set all our signals red in the startup sequence above, when selecting this route the first time, it will simply set signals 1 and 2 green, as the <code class="docutils literal notranslate"><span class="pre">IFTHROWN()</span></code> statements will evaluate as false and not execute the associated commands.</p>
+<p>On subsequent selections of this route, after selecting route 2 below, the turnouts will be thrown, resulting in these <code class="docutils literal notranslate"><span class="pre">IFTHROWN()</span></code> statements evaluating as true, and therefore executing the associated commands.</p>
+<p>When this happens, signal 3 to exit the station siding is set to red <code class="docutils literal notranslate"><span class="pre">RED(SIG3_STN_EX)</span></code> as it is no longer safe to exit.</p>
+<p>Next, in order to safely be able to close turnout 1, signal 1 is set to amber for 2 seconds to warn of the impending change <code class="docutils literal notranslate"><span class="pre">AMBER(SIG1_TRN1_APP)</span></code>, and then red for a further 2 seconds <code class="docutils literal notranslate"><span class="pre">RED(SIG1_TRN1_APP)</span></code> to allow time for the turnout to close fully <code class="docutils literal notranslate"><span class="pre">CLOSE(TRN1)</span></code>.</p>
+<p>This same logic is applied for turnout 2, setting signal 2 to amber <code class="docutils literal notranslate"><span class="pre">AMBER(SIG2_TRN2_GO)</span></code>, then red <code class="docutils literal notranslate"><span class="pre">RED(SIG2_TRN2_GO)</span></code> to allow turnout 2 to close fully <code class="docutils literal notranslate"><span class="pre">CLOSE(TRN2)</span></code>.</p>
+<p>Once both turnouts are closed, both signals 1 and 2 are set to green to indicate trains are safe to run through both turnouts with <code class="docutils literal notranslate"><span class="pre">GREEN(SIG1_TRN1_APP)</span></code> and <code class="docutils literal notranslate"><span class="pre">GREEN(SIG2_TRN2_GO)</span></code>.</p>
+<p>The route is completed with a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> to tell EX-RAIL not to proceed any further.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROUTE(1, &quot;Main track&quot;)        // Select this route to just use the main track
+  RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
+  IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
+    AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+    DELAY(2000)
+    RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
+    CLOSE(TRN1)               // Close turnout 1
+    DELAY(2000)               // Wait 2 seconds for the turnout to close
+  ENDIF
+  IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
+    AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+    DELAY(2000)
+    RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
+    CLOSE(TRN2)               // Close turnout 2
+    DELAY(2000)               // Wait 2 seconds for the turnout to close
+  ENDIF
+  GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we&#39;re safe to proceed
+  GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we&#39;re safe to proceed
+DONE
+</pre></div>
+</div>
+</section>
+<section id="route-2-enter-and-exit-the-station-siding">
+<h3><a class="toc-backref" href="#id18">Route 2 - enter and exit the station siding</a><a class="headerlink" href="#route-2-enter-and-exit-the-station-siding" title="Permalink to this heading"></a></h3>
+<p>The second route we publish for use is <code class="docutils literal notranslate"><span class="pre">ROUTE(2,</span> <span class="pre">&quot;Stating</span> <span class="pre">siding&quot;)</span></code> which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> based apps (like <a class="reference internal" href="../reference/glossary.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle</span></a>)  with the description “Station siding”.</p>
+<p>Counter to the main track route above, we use <code class="docutils literal notranslate"><span class="pre">IFCLOSED()</span></code> statements to evaluate if turnouts need to change or not from their current position. Therefore, if the first route we choose after startup is this one, both statements will evaluate true. The same will occur if we select our main track route.</p>
+<p>When this happens, signal 2 to proceed beyond turnout 2 on the main track is set to red <code class="docutils literal notranslate"><span class="pre">RED(SIG2_TRN2_GO)</span></code> as it is no longer safe to exit that section of track.</p>
+<p>Next, in order to safely be able to throw turnout 1, signal 1 is set to amber for 2 seconds to warn of the impending change <code class="docutils literal notranslate"><span class="pre">AMBER(SIG1_TRN1_APP)</span></code>, and then red for a further 2 seconds <code class="docutils literal notranslate"><span class="pre">RED(SIG1_TRN1_APP)</span></code> to allow time for the turnout to throw fully <code class="docutils literal notranslate"><span class="pre">THROW(TRN1)</span></code>.</p>
+<p>This same logic is applied for turnout 2, setting signal 3 to amber <code class="docutils literal notranslate"><span class="pre">AMBER(SIG3_STN_EX)</span></code>, then red <code class="docutils literal notranslate"><span class="pre">RED(SIG3_STN_EX)</span></code> to allow turnout 2 to be thrown <code class="docutils literal notranslate"><span class="pre">THROW(TRN2)</span></code>.</p>
+<p>Once both turnouts are thrown, both signals 1 and 3 are set to green to indicate trains are safe to enter and exit the station siding with <code class="docutils literal notranslate"><span class="pre">GREEN(SIG1_TRN1_APP)</span></code> and <code class="docutils literal notranslate"><span class="pre">GREEN(SIG3_STN_EX)</span></code>.</p>
+<p>The route is completed with a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> to tell EX-RAIL not to proceed any further.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROUTE(2, &quot;Station siding&quot;)    // Select this route to use the station siding
+  RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
+  IFCLOSED(TRN1)              // If turnout 1 is closed, do these:
+    AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+    DELAY(2000)
+    RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
+    THROW(TRN1)               // Throw turnout 1
+    DELAY(2000)               // Wait 2 seconds for the turnout to throw
+  ENDIF
+  IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
+    AMBER(SIG3_STN_EX)       // Set signal 2 amber for 2 seconds to warn of the change
+    DELAY(2000)
+    RED(SIG3_STN_EX)         // Set signal 2 red while we throw turnout 2
+    THROW(TRN2)               // Throw turnout 2
+    DELAY(2000)               // Wait 2 seconds for the turnout to throw
+  ENDIF
+  GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we&#39;re safe to proceed
+  GREEN(SIG3_STN_EX)          // Set signal 2 green because we&#39;re safe to proceed
+DONE
+</pre></div>
+</div>
+</section>
+</section>
+<section id="fully-automated-layout">
+<h2><a class="toc-backref" href="#id19">Fully automated layout</a><a class="headerlink" href="#fully-automated-layout" title="Permalink to this heading"></a></h2>
+<p>Now it’s time to display the full automation capabilities by setting our layout up for fully automated control of your trains.</p>
+<p>You will note that these are somewhat similar to <a class="reference internal" href="../ex-rail/getting-started.html#example-7-running-multiple-inter-connected-trains"><span class="std std-ref">Example 7: Running multiple inter-connected trains</span></a>, updated to suit the specifics of the RMFT layout.</p>
+<p>To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that EX-RAIL has no way of knowing where a train is on the layout when first starting.</p>
+<ul class="simple">
+<li><p>Train 1 in block 1, between sensor 1 and turnout 1.</p></li>
+<li><p>Train 2 in block 2, between sensors 2 and 4.</p></li>
+<li><p>Train 3 in block 4, after turnout 2.</p></li>
+</ul>
+<p>Once you understand the logic below and the various turnout, sensor, signal, and virtual block concepts above, you can view some <a class="reference internal" href="#complete-myautomation-h-examples">complete myautomation.h examples</a> at the end of this page.</p>
+<section id="virtual-block-logic">
+<h3><a class="toc-backref" href="#id20">Virtual block logic</a><a class="headerlink" href="#virtual-block-logic" title="Permalink to this heading"></a></h3>
+<p>As mentioned in the introduction, we can enable fully automated running of up to three trains on this layout by breaking it into four virtual blocks.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don’t confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to <a class="reference internal" href="../ex-rail/EX-RAIL-reference.html#blocks"><span class="std std-ref">Blocks</span></a>.</p>
+</div>
+<p>When reading through the sections below on the logic, it helps to keep in mind the perspective of the engineer driving the train, rather than thinking of the complete layout. As the engineer, you need to ask yourself the question “what needs to be in place for me to safely drive this train to the desired destination?”</p>
+<p>The automation is accomplished by defining six separate sequences that map out how trains can move safely from one block to the next, and we also use <code class="docutils literal notranslate"><span class="pre">LATCH()</span></code> as a technique to alternate between trains stopping at the station or continuing on the main track.</p>
+</section>
+<section id="full-automation-startup-sequence">
+<h3><a class="toc-backref" href="#id21">Full automation startup sequence</a><a class="headerlink" href="#full-automation-startup-sequence" title="Permalink to this heading"></a></h3>
+<p>As outlined above in the <a class="reference internal" href="#startup-sequence">startup sequence</a> section, everything before the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> in myAutomation.h is executed on start up.</p>
+<p>Given we are starting with three trains on the layout occupying virtual blocks 1, 2, and 4, we need to ensure our layout starts up in a manner that is safe for the automation to commence running these trains correctly.</p>
+<p>Therefore, once again we ensure both our turnouts are closed and our signals are set to red so these objects are all in a known state to start with.</p>
+<p>Next, we place a RESERVE() on each block a train occupies, which will prevent any sequence from driving another train into that block.</p>
+<p>Once these activities have been done, we can tell our trains to start following the appropriate sequence, which will let them start on their fully automated journey safely.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Start up with turnouts closed and signals red
+CLOSE(TRN1)
+CLOSE(TRN2)
+RED(SIG1_TRN1_APP)
+RED(SIG2_TRN2_GO)
+RED(SIG3_STN_EX)
+
+// Send three locos around our layout:
+RESERVE(BLK1_TRN1_APP)
+RESERVE(BLK2_MAIN_HOLD)
+RESERVE(BLK4_TRN2_EX)
+SENDLOCO(1, BLK1_EXIT)
+SENDLOCO(2, BLK2_BLK4)
+SENDLOCO(3, BLK4_BLK1)
+
+// We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+DONE
+</pre></div>
+</div>
+</section>
+<section id="exiting-block-1-station-entry-or-main-track">
+<h3><a class="toc-backref" href="#id22">Exiting block 1 - station entry or main track?</a><a class="headerlink" href="#exiting-block-1-station-entry-or-main-track" title="Permalink to this heading"></a></h3>
+<p>In order to safely exit block 1, the first decision to be made is if the train will go straight through to continue on the main track, or if it will switch on to the station siding.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">LATCH()</span></code> command gives us a way to automatically alternate between the main track and the station siding. <code class="docutils literal notranslate"><span class="pre">LATCH()</span></code> simply sets the state of a pin (either real or virtual) which can then be tested by an <code class="docutils literal notranslate"><span class="pre">IF()</span></code> statement. In this particular case, we have defined pin 60 (alias “CHOOSE_BLK2”) to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on <code class="docutils literal notranslate"><span class="pre">LATCH()</span></code> and <code class="docutils literal notranslate"><span class="pre">UNLATCH()</span></code> can be found in the <a class="reference internal" href="../ex-rail/EX-RAIL-reference.html#sensors"><span class="std std-ref">Sensors</span></a> section of the EX-RAIL reference.</p>
+<p>When our CommandStation starts up, virtual pin 60 will not be set, and therefore evaluating the IF() statement <code class="docutils literal notranslate"><span class="pre">IF(CHOOSE_BLK2)</span></code> will return false, with our sequence then latching this virtual pin, meaning the next time this sequence is called, <code class="docutils literal notranslate"><span class="pre">IF(CHOOSE_BLK2)</span></code> will return true.</p>
+<p>This logic allows us to follow our block 1 to block 3 sequence (if false) to switch onto the station siding, or follow our block 1 to block 2 sequence (if true) to continue on the main track.</p>
+<p>On startup, we are sending train 1 on this sequence, which means with our <code class="docutils literal notranslate"><span class="pre">IF(CHOOSE_BLK2)</span></code> returning false on startup, train 1 will first attempt to move from block 1 to block 3, which means switching to our station siding. Control at this point is handed over to the <a class="reference internal" href="#moving-from-block-1-to-block-3-entering-the-station">moving from block 1 to block 3 - entering the station</a> sequence.</p>
+<p>As a result of executing the <code class="docutils literal notranslate"><span class="pre">LATCH(CHOOSE_BLK2)</span></code>, the next train navigating this block will instead have control handed over to the <a class="reference internal" href="#moving-from-block-1-to-block-2-continue-on-the-main-track">moving from block 1 to block 2 - continue on the main track</a> sequence.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Sequence to exit block 1, and choose whether to go to the station or continue on main
+SEQUENCE(BLK1_EXIT)
+  IF(CHOOSE_BLK2)
+    UNLATCH(CHOOSE_BLK2)
+    FOLLOW(BLK1_BLK2)
+  ELSE
+    LATCH(CHOOSE_BLK2)
+    FOLLOW(BLK1_BLK3)
+  ENDIF
+</pre></div>
+</div>
+</section>
+<section id="moving-from-block-1-to-block-2-continue-on-the-main-track">
+<h3><a class="toc-backref" href="#id23">Moving from block 1 to block 2 - continue on the main track</a><a class="headerlink" href="#moving-from-block-1-to-block-2-continue-on-the-main-track" title="Permalink to this heading"></a></h3>
+<p>To move from block 1 to block 2, the first thing we need to know is if it’s safe to do so.</p>
+<p>In EX-RAIL, this is accomplished by using the <code class="docutils literal notranslate"><span class="pre">RESERVE()</span></code> command which says if the block is free, we can reserve it. If it is not free, the reserve cannot be completed, and the train will stop until the block is freed, in which case the sequence can continue.</p>
+<p>So, providing a reserve can be placed on block 2, we can then test to see if turnout 1 is thrown. If so, the turnout needs to be closed, but in order to do so safely we set the approach signal amber for 2 seconds <code class="docutils literal notranslate"><span class="pre">AMBER(SIG1_TRN1_APP)</span></code>, then set the signal red <code class="docutils literal notranslate"><span class="pre">RED(SIG1_TRN1_APP)</span></code> before closing the turnout <code class="docutils literal notranslate"><span class="pre">CLOSE(TRN2)</span></code>, and waiting a further 2 seconds to ensure the turnout is fully closed.</p>
+<p>Once the turnout is closed, or if it already was, we set our signal green <code class="docutils literal notranslate"><span class="pre">GREEN(SIG1_TRN1_APP)</span></code> and tell the train to proceed at speed 20 <code class="docutils literal notranslate"><span class="pre">FWD(20)</span></code>. The speed is relatively slow given the train is likely to need to stop again before being able to move beyond turnout 2.</p>
+<p>Then, after the train has not only activated sensor 2, but has passed over it completely and allowed it to deactivate for 0.5 seconds <code class="docutils literal notranslate"><span class="pre">AFTER(SNS2_MAIN_TRN1_EX)</span></code>, the reservation on block 1 can be released <code class="docutils literal notranslate"><span class="pre">FREE(BLK1_TRN1_APP)</span></code>, meaning the next train needing to enter block 1 can do so.</p>
+<p>At this point, control of the train is handed over to the <a class="reference internal" href="#moving-from-block-2-to-block-4-continue-on-the-main-track">moving from block 2 to block 4 - continue on the main track</a> sequence.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Sequence to go from block 1 to block 2
+SEQUENCE(BLK1_BLK2)
+  RESERVE(BLK2_MAIN_HOLD)
+  IFTHROWN(TRN1)
+    AMBER(SIG1_TRN1_APP)
+    DELAY(2000)
+    RED(SIG1_TRN1_APP)
+    CLOSE(TRN1)
+    DELAY(2000)
+  ENDIF
+  GREEN(SIG1_TRN1_APP)
+  FWD(20)
+  AFTER(SNS2_MAIN_TRN1_EX)
+  FREE(BLK1_TRN1_APP)
+  FOLLOW(BLK2_BLK4)
+</pre></div>
+</div>
+</section>
+<section id="moving-from-block-1-to-block-3-entering-the-station">
+<h3><a class="toc-backref" href="#id24">Moving from block 1 to block 3 - entering the station</a><a class="headerlink" href="#moving-from-block-1-to-block-3-entering-the-station" title="Permalink to this heading"></a></h3>
+<p>To move from block 1 to block 3, we again use <code class="docutils literal notranslate"><span class="pre">RESERVE()</span></code>.</p>
+<p>As per our move to block 2 above, we ensure turnout 1 is set correctly, however this time we need it to be thrown rather than closed, and so again set our signals if it needs to change.</p>
+<p>Once the turnout is thrown, or if it already was, we set our signal green and tell the train to proceed at a very leisurely speed of 10 <code class="docutils literal notranslate"><span class="pre">FWD(10)</span></code> as we need to be cautious approaching the station.</p>
+<p>The train needs to <code class="docutils literal notranslate"><span class="pre">STOP</span></code> at the appropriate point on the station <code class="docutils literal notranslate"><span class="pre">AT(SNS3_STN)</span></code>, at which point the reservation on block 1 can be released as we no longer occupy it <code class="docutils literal notranslate"><span class="pre">FREE(BLK1_TRN1_APP)</span></code> and it’s safe for another train to enter that block.</p>
+<p>There is now a delay of 10 to 15 seconds while our passengers embark or disembark <code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(10000,</span> <span class="pre">15000)</span></code>, before moving off again at low speed <code class="docutils literal notranslate"><span class="pre">FWD(10)</span></code> until sensor 5 is reached <code class="docutils literal notranslate"><span class="pre">AT(SNS5_STN_TRN2_APP)</span></code>, at which point the control of the train is over to the <a class="reference internal" href="#moving-from-block-3-to-block-4-exiting-the-station-siding">moving from block 3 to block 4 - exiting the station siding</a> sequence.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Sequence to go from block 1 to block 3
+SEQUENCE(BLK1_BLK3)
+  RESERVE(BLK3_STN)
+  IFCLOSED(TRN1)
+    AMBER(SIG1_TRN1_APP)
+    DELAY(2000)
+    RED(SIG1_TRN1_APP)
+    THROW(TRN1)
+    DELAY(2000)
+  ENDIF
+  GREEN(SIG1_TRN1_APP)
+  FWD(10)
+  AT(SNS3_STN)
+  STOP
+  FREE(BLK1_TRN1_APP)
+  DELAYRANDOM(10000, 15000)
+  FWD(10)
+  AT(SNS5_STN_TRN2_APP)
+  FOLLOW(BLK3_BLK4)
+</pre></div>
+</div>
+</section>
+<section id="moving-from-block-2-to-block-4-continue-on-the-main-track">
+<h3><a class="toc-backref" href="#id25">Moving from block 2 to block 4 - continue on the main track</a><a class="headerlink" href="#moving-from-block-2-to-block-4-continue-on-the-main-track" title="Permalink to this heading"></a></h3>
+<p>There are no new concepts here compared with our previous virtual block sequences, and we again need to ensure block 4 is free prior to entering it, then ensure our signals and turnout are set correctly, and once again after leaving block 2 <code class="docutils literal notranslate"><span class="pre">AFTER(SNS4_MAIN_TRN2_APP)</span></code> we free block 2 in order for the next train to be able to safely enter it.</p>
+<p>Once done, train control is over to the <a class="reference internal" href="#moving-from-block-4-to-block-1-the-speed-run">moving from block 4 to block 1 - the speed run</a> sequence.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that we start with train 2 occupying block 2, and train 3 occupying block 4 (both with a <code class="docutils literal notranslate"><span class="pre">RESERVE()</span></code> in place as part of our startup sequence) and therefore train 2 cannot proceed until train 3 has exited block 4.</p>
+<p>Also on startup, train 1 is occupying block 1 (with a <code class="docutils literal notranslate"><span class="pre">RESERVE()</span></code> in place as part of our startup sequence), and therefore until train 1 exits block 1, train 3 cannot enter block 1.</p>
+<p>This creates a domino effect whereby train 1’s exit of block 1 is needed in order for train 3 to enter block 1, and likewise for train 3 to exit block 4 in order for train 2 to enter block 4. The trains will then follow the sequences around the layout accordingly.</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Sequence to go from block 2 to block 4
+SEQUENCE(BLK2_BLK4)
+  RESERVE(BLK4_TRN2_EX)
+  IFTHROWN(TRN2)
+    AMBER(SIG2_TRN2_GO)
+    AMBER(SIG3_STN_EX)
+    DELAY(2000)
+    RED(SIG2_TRN2_GO)
+    RED(SIG3_STN_EX)
+    CLOSE(TRN2)
+    DELAY(2000)
+  ENDIF
+  GREEN(SIG2_TRN2_GO)
+  FWD(20)
+  AFTER(SNS4_MAIN_TRN2_APP)
+  FREE(BLK2_MAIN_HOLD)
+  FOLLOW(BLK4_BLK1)
+</pre></div>
+</div>
+</section>
+<section id="moving-from-block-3-to-block-4-exiting-the-station-siding">
+<h3><a class="toc-backref" href="#id26">Moving from block 3 to block 4 - exiting the station siding</a><a class="headerlink" href="#moving-from-block-3-to-block-4-exiting-the-station-siding" title="Permalink to this heading"></a></h3>
+<p>Leaving the station siding is another repeat of the same logic, ensuring block 4 is free to enter, our signals and turnout are set correctly, and again freeing block 3 after we leave it <code class="docutils literal notranslate"><span class="pre">AFTER(SNS5_STN_TRN2_APP)</span></code>.</p>
+<p>Control is then handed over to the <a class="reference internal" href="#moving-from-block-4-to-block-1-the-speed-run">moving from block 4 to block 1 - the speed run</a> sequence.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Sequence to go from block 3 to block 4
+SEQUENCE(BLK3_BLK4)
+  RESERVE(BLK4_TRN2_EX)
+  IFCLOSED(TRN2)
+    AMBER(SIG2_TRN2_GO)
+    AMBER(SIG3_STN_EX)
+    DELAY(2000)
+    RED(SIG2_TRN2_GO)
+    RED(SIG3_STN_EX)
+    THROW(TRN2)
+    DELAY(2000)
+  ENDIF
+  GREEN(SIG3_STN_EX)
+  FWD(20)
+  AFTER(SNS5_STN_TRN2_APP)
+  FREE(BLK3_STN)
+  FOLLOW(BLK4_BLK1)
+</pre></div>
+</div>
+</section>
+<section id="moving-from-block-4-to-block-1-the-speed-run">
+<h3><a class="toc-backref" href="#id27">Moving from block 4 to block 1 - the speed run</a><a class="headerlink" href="#moving-from-block-4-to-block-1-the-speed-run" title="Permalink to this heading"></a></h3>
+<p>The final sequence is the simplest of all, and allows for a higher speed run through block 4 <code class="docutils literal notranslate"><span class="pre">FWD(40)</span></code> (providing block 1 is free to enter), again freeing up block 4 once we’ve exited it <code class="docutils literal notranslate"><span class="pre">AFTER(SNS1_TRN1_APP)</span></code>, and then finally handing control back to our original <a class="reference internal" href="#exiting-block-1-station-entry-or-main-track">exiting block 1 - station entry or main track?</a> decision sequence.</p>
+<p>Again, we start up with train 3 occupying block 4, and once train 1 has exited block 1, the sequence below will execute, with train 3 moving to block 1, and train 2 being able to exit block 2.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Sequence to move from block 4 back to block 1
+SEQUENCE(BLK4_BLK1)
+  RESERVE(BLK1_TRN1_APP)
+  FWD(40)
+  AFTER(SNS1_TRN1_APP)
+  FREE(BLK4_TRN2_EX)
+  FOLLOW(BLK1_EXIT)
+</pre></div>
+</div>
+</section>
+</section>
+<section id="learnings-from-stage-1">
+<h2><a class="toc-backref" href="#id28">Learnings from stage 1</a><a class="headerlink" href="#learnings-from-stage-1" title="Permalink to this heading"></a></h2>
+<p>No doubt, as you’ve read through this fairly lengthy stage 1 page, you’ve already noted a number of commonalities between all variations of myAutomation.h, regardless of the way we have defined the various objects, and hopefully you’ve picked up a few tips and techniques to help you on your <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> journey.</p>
+<p>The main things at this point that we’d like to call to your attention are:</p>
+<ul class="simple">
+<li><p>Using aliases helps your brain along. Most of us aren’t geared to remember that turnout ID 100 is the station siding entrance turnout, so defining aliases makes these numbers easier to digest and work with when referring to them in myAutomation.h.</p></li>
+<li><p>You can expand your I/O devices as you need. The Mega2560 provides easily for 42 available I/O pins (A2 to A15, and 22 to 49), but when you exceed this limit, you can very easily expand this using I/O expanders such as the MCP23017. This means you don’t need to have all these devices up front and can start with just the Mega2560.</p></li>
+<li><p>Use virtual blocks to safely control automation of your layout. With appropriate use of <code class="docutils literal notranslate"><span class="pre">RESERVE()</span></code> and <code class="docutils literal notranslate"><span class="pre">FREE()</span></code> along with appropriate location of sensors, you can safely have a number of different trains traversing all sorts of layouts without colliding.</p></li>
+<li><p>EX-RAIL is an incredibly powerful piece of software that can automate the most basic, simple layout functions as well as provide fully automated, prototypical operation of an entire layout which is limited only by your imagination.</p></li>
+</ul>
+</section>
+<section id="complete-myautomation-h-examples">
+<h2><a class="toc-backref" href="#id29">Complete myAutomation.h examples</a><a class="headerlink" href="#complete-myautomation-h-examples" title="Permalink to this heading"></a></h2>
+<section id="routes-with-dcc-accessory-turnouts-and-signals-on-mega2560-direct-i-o-pins">
+<h3><a class="toc-backref" href="#id30">ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins</a><a class="headerlink" href="#routes-with-dcc-accessory-turnouts-and-signals-on-mega2560-direct-i-o-pins" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="stage6/example1.html"><span class="doc">Example - ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins</span></a></p>
+</section>
+<section id="routes-with-turnouts-signals-on-mega2560-direct-i-o-pins">
+<h3><a class="toc-backref" href="#id31">ROUTEs with turnouts/signals on Mega2560 direct I/O pins</a><a class="headerlink" href="#routes-with-turnouts-signals-on-mega2560-direct-i-o-pins" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="stage6/example2.html"><span class="doc">Example - ROUTEs with turnouts/signals on Mega2560 direct I/O pins</span></a></p>
+</section>
+<section id="routes-with-turnouts-signals-on-mcp23017-i-o-expander-vpins">
+<h3><a class="toc-backref" href="#id32">ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins</a><a class="headerlink" href="#routes-with-turnouts-signals-on-mcp23017-i-o-expander-vpins" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="stage6/example3.html"><span class="doc">Example - ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins</span></a></p>
+</section>
+<section id="routes-with-servo-based-turnouts-signals-on-a-pca9685-servo-module">
+<h3><a class="toc-backref" href="#id33">ROUTEs with servo based turnouts/signals on a PCA9685 servo module</a><a class="headerlink" href="#routes-with-servo-based-turnouts-signals-on-a-pca9685-servo-module" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="stage6/example4.html"><span class="doc">Example - ROUTEs with servo based turnouts/signals on a PCA9685 servo module</span></a></p>
+</section>
+<section id="full-automation-with-pin-based-turnouts-and-signals-on-mega2560-direct-i-o-pins">
+<h3><a class="toc-backref" href="#id34">Full automation with pin based turnouts and signals on Mega2560 direct I/O pins</a><a class="headerlink" href="#full-automation-with-pin-based-turnouts-and-signals-on-mega2560-direct-i-o-pins" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="stage6/example5.html"><span class="doc">Example - Full automation with pin based turnouts and signals on Mega2560 direct I/O pins</span></a></p>
+</section>
+<section id="full-automation-with-pin-based-turnouts-and-signals-on-mcp23017-i-o-expander-vpins">
+<h3><a class="toc-backref" href="#id35">Full automation with pin based turnouts and signals on MCP23017 I/O expander Vpins</a><a class="headerlink" href="#full-automation-with-pin-based-turnouts-and-signals-on-mcp23017-i-o-expander-vpins" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="stage6/example6.html"><span class="doc">Example - Full automation with pin based turnouts and signals on MCP23017 I/O expander Vpins</span></a></p>
+</section>
+<section id="full-automation-with-servo-based-turnouts-and-signals-with-a-pca9685-servo-module">
+<h3><a class="toc-backref" href="#id36">Full automation with servo based turnouts and signals with a PCA9685 servo module</a><a class="headerlink" href="#full-automation-with-servo-based-turnouts-and-signals-with-a-pca9685-servo-module" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="stage6/example7.html"><span class="doc">Example - Full automation with servo based turnouts and signals with a PCA9685 servo module</span></a></p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stage5.html" class="btn btn-neutral float-left" title="Stage 5 - Turntables &amp; Traversers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="stage6/example1.html" class="btn btn-neutral float-right" title="Example - ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -75,9 +75,7 @@ Requirements (for installing)
 
 * You will be presented with the following screen...
 
-.. todo:: URGENT need to complete the installer dropdown options
-
-3. The EX-Installer Window
+1. The EX-Installer Window
 ==========================
 
 .. warning:: **Wait!**
@@ -108,9 +106,9 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
    
    The :guilabel:`Refresh Ports` button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program. When you plug in a new board, refresh the ports so it can find your device.
 
-1. Select your **Command Station (Base Station) Type** |BR| If you are |conductor-text| following our recommended instructions, choose **'Command Station EX'** |br| |br|
-2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
-3. Select your **Motor Shield** |BR| If you are |conductor-text| following our recommended instructions, choose ??? |br| |br|
+1. Select your **Command Station (Base Station) Type** |BR| If you are |conductor-text| following our recommended instructions, choose ``Command Station EX`` |br| |br|
+2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ``Mega`` |br| |br|
+3. Select your **Motor Shield** |BR| If you are |conductor-text| following our recommended instructions, choose ``Arduino Motor Shield`` |br| |br|
 4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took not of earlier |br| |br|
 5. If you have installed an optional a **WiFi Shield** you MUST check the **WiFi box** |br| If you are a |conductor-text| following our recommended instructions, check this box regardless (see below) |br| |br|
 6. Press the :guilabel:`Compile and Upload` button
@@ -177,3 +175,7 @@ Next Steps - Selecting a Controller
 ===================================
 
 Click :doc:`here <controllers>` or click the "next" button to learn how to select a controller suitable to test and use your |EX-CS|.
+
+----
+
+.. todo:: need to update installer screenshots

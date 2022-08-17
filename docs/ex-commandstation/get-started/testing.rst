@@ -131,6 +131,8 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 
 * Back on the 'Throttle screen' you can now use the sliders to move your train.
 
+See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |Engine Driver|.
+
 Using wiThrottle (Apple iOS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -182,6 +184,8 @@ Using wiThrottle (Apple iOS)
 * The address should appear in the green box at the top left.
 * Select the 'Throttle' tab
 * You can now use the sliders to move your train 
+
+See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
 
 .. warning:: 
 

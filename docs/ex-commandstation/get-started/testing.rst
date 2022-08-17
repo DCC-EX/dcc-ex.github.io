@@ -57,8 +57,8 @@ Click this link: :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` to r
 
 .. TODO:: URGENT This text needs to be expanded - Using EX-WebThrottle
 
-Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
-----------------------------------------------------------------------
+Using Engine Driver or WiThrottle - Requires WiFi
+-------------------------------------------------
 
 .. NOTE:: 
    :class: note-float-right
@@ -68,23 +68,97 @@ Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
 Connect Everything
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
-* Connect the wires from the motor shield to your main track
+* Connect the wires from the 'main' terminals the motor shield to your main track
 * Plug in the two power supplies (The one for the Arduino and the the one for the motor shield)
 * wait for about 30 seconds
 
+Using Engine Driver (Android)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. figure:: /_static/images/installer/engine_driver.png
+   :align: right
    :alt: Engine Driver
-   :scale: 100%
+   :scale: 80%
 
    Engine Driver
 
 You will need to install |Engine Driver| on your mobile device and then connect to the |EX-CS|, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
 
-.. TODO:: URGENT This text needs to be expanded - Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
-
 .. note:: 
+   :class: note-float-right
 
    If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
+
+* If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
+  
+  * open the network settings on you phone
+  * change to the network of the |EX-CS|
+  
+    * id ...
+    * password...
+
+* If you have set up your |EX-CS| in |Station Mode| (The alternate approach)
+  
+  * open the network settings on you phone
+  * change to your home network
+  
+    * use your normal home id and password 
+
+* Start the |engine driver| App
+* go through the initial startup pages to set some basic configuration items
+* On the 'Connection screen'
+  
+  * you should see ??? in the discovered servers list
+  * Click on this.  (As long as you did not changed the IP address when you ran |EX-I| then this should connect.
+
+* You should now be on the the 'Throttle screen'
+
+* Turn on the power to the track via the menu 
+   
+   * (the three dots or bars) then 'Power'.  Then click the power button till it goes green. 9may require more than one click)
+   * The four red LEDs on the Motor board will turn on
+   * click :guilabel:`Back`
+
+* back on the 'Throttle screen'
+
+  * Click one of the :guilabel:`Select` buttons
+  
+* this will have taken you to the 'Select Loco screen'
+
+  * Enter the DCC Address of the loco you put on the track
+  * select ``Short`` or ``Long`` (normally if the address is less than 127, it will automatically assume it is short) 
+  * Click :guilabel:`Aquire`
+
+* back on the 'Throttle screen' you can now use the sliders to move your train.
+
+Using wiThrottle (Apple iOS)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: 
+   :class: note-float-right
+
+   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
+
+* If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
+  
+  * open the network settings on you phone
+  * change to the network of the |EX-CS|
+  
+    * id ...
+    * password...
+
+* If you have set up your |EX-CS| in |Station Mode| (The alternate approach)
+  
+  * open the network settings on you phone
+  * change to your home network
+  
+    * use your normal home id and password 
+
+* Start the |wiThrottle| App
+* ...
+
+.. TODO:: URGENT This text needs to be expanded - Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
+
 
 .. warning:: 
 
@@ -92,6 +166,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 
    We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification. There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc, but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main.
 
+----
 
 Next Steps - Run Your Trains
 ============================
@@ -103,6 +178,3 @@ We suggest that you look at the :doc:`/big-picture/index` to get some additional
 You might also like to look at the other :doc:`Controllers (Throttles) </ex-commandstation/advanced-setup/controllers>` that are available.
 
 If you are still having difficulties click :guilabel:`Next`.
-
-.. todo:: MEDIUM - Write the POM help
-

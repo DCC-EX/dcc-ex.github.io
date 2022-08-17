@@ -6,6 +6,12 @@ Stage 1 - Running a Train
 
 |conductor|
 
+.. sidebar:: 
+
+   .. contents:: On this page
+      :depth: 2
+      :local:
+
 What to expect to learn from stage 1
 ====================================
 
@@ -90,3 +96,11 @@ JMRI (programming decoders)
 ---------------------------
 
 TODO
+
+Programming Track
+^^^^^^^^^^^^^^^^^
+
+TODO
+
+Programming on the Main
+^^^^^^^^^^^^^^^^^^^^^^^

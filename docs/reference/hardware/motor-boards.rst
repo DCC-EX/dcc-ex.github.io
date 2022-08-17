@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*************
-Motor Boards
-*************
+***********************
+Supported Motor Drivers
+***********************
 
 |conductor| |tinkerer| |engineer|
 
@@ -92,6 +92,8 @@ Incompatible boards
 Other boards
 ------------
 
+|engineer|
+
 While not fully supported and tested, other boards can potentially be used. Look for the following criteria:
 
 * We recommend a dual h-bridge board or two discrete h-bridge boards. They can be different sizes, one bigger for main track and one smaller for programming track operations.
@@ -102,9 +104,26 @@ While not fully supported and tested, other boards can potentially be used. Look
 
 .. Note:: Current capabilities of these boards, especially the boards based on the L298 with no heat sink fins like the Arduino Motor Shield can really not deliver 2 Amps. A realistic number would be 1.5 Amps IF you added a heat sink and a cooling fan. If you need 2 Amps or more, you will need to go with a higher current board.
 
-Configuring Motor Boards
+Configuring Motor Drivers
 =========================
+
+|tinkerer| |engineer|
 
 If your board is not in the list of supported motor board types, or if you need to make changes or have more information about how motor boards are configured in |EX-CS|, see:
 
-:doc:`Motor Board Configuration Guide </ex-commandstation/advanced-setup/supported-motorboards/motor-board-config>`
+.. toctree:: 
+  :maxdepth: 1
+
+  Motor Driver Configuration Guide </reference/hardware/motorboards/motor-board-config>
+
+High Accuracy Waveform
+======================
+
+|engineer|
+
+If you're experiencing issues with specific decoders and all attempts to get them working are failing, you may need to enable the high accuracy waveform functionality (providing your motor driver supports it).
+
+.. toctree:: 
+  :maxdepth: 1
+
+  High Accuracy Waveform Guide </reference/hardware/motorboards/high-accuracy>

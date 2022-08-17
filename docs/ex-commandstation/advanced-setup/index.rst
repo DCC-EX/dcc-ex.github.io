@@ -69,7 +69,7 @@ However, if you need more current than these can provide, then you need to consi
 .. toctree::
     :maxdepth: 2
     
-    supported-motorboards/index
+    /reference/hardware/motor-boards
 
 Connection Options
 ==================

@@ -58,7 +58,7 @@ The IRF3205 is actually the part number of the transistors on the board, N-Chann
 Which Option Should You Choose? (IRF3205)
 ===========================================
 
-.. NOTE:: This board can use the "High Accuracy Waveform" option since it uses just one direction pin per H-Bridge. As long as you use one of our motor board definitions for MOTOR_BOARD_TYPE in your config.h file that uses a Timer1 pin, this will all be automatic. See :doc:`High Accuracy Waveform </ex-commandstation/advanced-setup/supported-motorboards/high-accuracy>`.
+.. NOTE:: This board can use the "High Accuracy Waveform" option since it uses just one direction pin per H-Bridge. As long as you use one of our motor board definitions for MOTOR_BOARD_TYPE in your config.h file that uses a Timer1 pin, this will all be automatic. See :doc:`High Accuracy Waveform </reference/hardware/motorboards/high-accuracy>`.
 
 Upgrade (IRF3205)
 ------------------
@@ -321,7 +321,7 @@ The choice of motor driver is set in the config.h file. It is set in the followi
 
 The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
-If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section </ex-commandstation//advanced-setup/supported-motorboards/motor-board-config>`
+If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section </reference/hardware/motorboards/motor-board-config>`
 
 For the Engineers, the definitions and implementation for motor board control are in the following files:
 

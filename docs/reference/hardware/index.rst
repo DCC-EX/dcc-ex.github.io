@@ -18,6 +18,5 @@ Hardware
     index-ic2
     power-supplies
     accessory-controllers
-    shopping-list
     index-decoder
     wire-gauge

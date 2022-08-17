@@ -91,11 +91,11 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 
 * If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
   
-  * open the network settings on you phone
-  * change to the network of the |EX-CS|
+  * Open the network settings on you phone
+  * Change to the network of the |EX-CS|
   
-    * id ...
-    * password...
+    * SSID (Network name) : 'DCCEX_xxxxxx' |BR| where the x's are the last 6 digits of your device' MAC address (unique to each device)
+    * Password: 'PASS_xxxxxx' |BR| where the x's are the last 6 digits of your device' MAC address (same as above)
 
 * If you have set up your |EX-CS| in |Station Mode| (The alternate approach)
   
@@ -105,31 +105,31 @@ You will need to install |Engine Driver| on your mobile device and then connect 
     * use your normal home id and password 
 
 * Start the |engine driver| App
-* go through the initial startup pages to set some basic configuration items
+* Go through the initial startup pages to set some basic configuration items
 * On the 'Connection screen'
   
-  * you should see ??? in the discovered servers list
-  * Click on this.  (As long as you did not changed the IP address when you ran |EX-I| then this should connect.
+  * You should see 'DCCEX_xxxxxx' (as above) in the discovered servers list
+  * Click on this. |BR| (As long as you did not change the IP address of the |EX-CS| when you ran |EX-I| then this should connect
 
 * You should now be on the the 'Throttle screen'
 
 * Turn on the power to the track via the menu 
    
-   * (the three dots or bars) then 'Power'.  Then click the power button till it goes green. 9may require more than one click)
+   * (The three dots or bars) then 'Power'.  Then click the power button till it goes green. 9may require more than one click)
    * The four red LEDs on the Motor board will turn on
-   * click :guilabel:`Back`
+   * Click :guilabel:`Back`
 
 * back on the 'Throttle screen'
 
   * Click one of the :guilabel:`Select` buttons
   
-* this will have taken you to the 'Select Loco screen'
+* This will have taken you to the 'Select Loco screen'
 
   * Enter the DCC Address of the loco you put on the track
-  * select ``Short`` or ``Long`` (normally if the address is less than 127, it will automatically assume it is short) 
+  * Select ``Short`` or ``Long`` (normally if the address is less than 127, it will automatically assume it is short) 
   * Click :guilabel:`Aquire`
 
-* back on the 'Throttle screen' you can now use the sliders to move your train.
+* Back on the 'Throttle screen' you can now use the sliders to move your train.
 
 Using wiThrottle (Apple iOS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -141,30 +141,53 @@ Using wiThrottle (Apple iOS)
 
 * If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
   
-  * open the network settings on you phone
-  * change to the network of the |EX-CS|
+  * Open the network settings on you phone
+  * Change to the network of the |EX-CS|
   
-    * id ...
-    * password...
+    * SSID (Network name) : 'DCCEX_xxxxxx' |BR| where the x's are the last 6 digits of your device' MAC address (unique to each device)
+    * Password: 'PASS_xxxxxx' |BR| where the x's are the last 6 digits of your device' MAC address (same as above)
 
 * If you have set up your |EX-CS| in |Station Mode| (The alternate approach)
   
-  * open the network settings on you phone
-  * change to your home network
+  * Open the network settings on you phone
+  * Change to your home network
   
-    * use your normal home id and password 
+    * Use your normal home id and password 
 
 * Start the |wiThrottle| App
-* ...
+* |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|
+* If you are using |Access Point Mode| 
 
-.. TODO:: URGENT This text needs to be expanded - Using Engine Driver (or other WiThrottle Protocol app) - Requires WiFi
+  * It should find the |wiThrottle Server| and automatically connect to it
 
+* If you are using |Station Mode| 
+  
+  * It will not find the |wiThrottle Server| automatically
+  * Enter:
+
+    * The IP Address: 192.168.4.1
+    * The Port: 2560
+
+  * |wiThrottle| should then connect 
+
+* You should then see the 'Address Screen'
+* Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``
+
+   * The four red LEDs on the Motor board will turn on
+
+* Go back to the 'Address' tab
+* Enter the DCC Address of the loco you put on the track in the ``Keypad`` field
+* Select ``Long`` or ``Short`` (normally if the address is less than 127, it should be a 'Short' address.)
+* Click the :guilabel:`Set` button
+* The address should appear in the green box at the top left.
+* Select the 'Throttle' tab
+* You can now use the sliders to move your train 
 
 .. warning:: 
 
    **Locos Can't Respond to Throttle Commands on the Programming Track!**
 
-   We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification. There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc, but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main.
+   We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification.
 
 ----
 

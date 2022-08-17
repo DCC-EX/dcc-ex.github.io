@@ -14,7 +14,7 @@ Choosing a Controller (Throttle)
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 4
+    :depth: 2
     :local:
 
 This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware (including WiFi). If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.

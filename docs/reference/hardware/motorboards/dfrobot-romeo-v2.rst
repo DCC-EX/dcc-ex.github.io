@@ -9,7 +9,7 @@ DFRobot Romeo V2
 |engineer|
 
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 
 On the surface, this seems like a great idea, an Arduino and motor controller on one board. It is a very thin surface ;) While we don't recommend it, an Engineer who reads these notes, may still find a use for it. The V2 uses the ATmega32u4 chip instead of either of the chips used on an Uno or a Mega. It only has 2 interrupts that are usable and it reverses their pin assignments. It uses serial on the chip, not with a UART as on the other boards. It may need a software change to accommodate the timer. It also has the same amount of memory as an Uno, which will only run the basic version of |EX-CS| without options. In addition, the serial port uses memory to operate, so you have even less memory free to use than on an Uno.
 

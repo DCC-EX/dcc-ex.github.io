@@ -6,7 +6,7 @@ Keyes/Fundumoto ("Beeper Board")
 
 |engineer|
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 
 You have to lift two traces and solder 2 resistors and use 2 jumpers to the current sense pins. This board is immediately recognizable because it has a cylindrical beeper or buzzer on the board.
 

@@ -6,7 +6,7 @@ DFRobot 2x2A DC Motor Shield (DRI0009)
 
 |engineer|
 
-**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:current sense and sense factor` section for further information.
+**THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 
 This is another L298 based board with inadequate cooling. Fan and/or heat sink recommended. Max current realistically 1.3A. This board has NO CURRENT SENSE. As with many boards like this, both L298 current sense pins are tied to ground. Cutting traces and adding sense resistors or the use of an eternal current sense board is required for short circuit protection and loco programming. If you don't use current sense, you must ground pins A0 and A1 on the Arduino or you will get an overcurrent condition.
 

@@ -4,7 +4,7 @@
 Stage 2 - Adding a Roster
 *********************************
 
-|conductor| |tinkerer| |engineer|
+|conductor|
 
 What to expect to learn from stage 2
 ====================================
@@ -19,3 +19,20 @@ Notes
 =====
 
 .. todo:: URGENT  Big Picture Stage 2 page
+
+Add a Loco Roster to your EX-CommandStation
+===========================================
+
+TODO
+
+Add function labels for your Roster Entries
+===========================================
+
+TODO
+
+Add images for your locos (Engine Driver only)
+==============================================
+
+|EX-CS| does not natively support roster images ...
+
+TODO

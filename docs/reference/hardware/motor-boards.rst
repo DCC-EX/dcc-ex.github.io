@@ -17,7 +17,7 @@ Motor Boards
 
 If you have trouble finding a particular board from the list, try searching based on it's name or the type of chip on the board and the terms "H-Bridge" or "Motor Shield". There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.
 
-**TL;DR** (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot. See the :doc:`/reference/hardware/shopping-list`.
+**TL;DR** (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot.
 
 .. image:: /_static/images/deek_robot1_sm.jpg
    :alt: Deek Robot Motor Shield

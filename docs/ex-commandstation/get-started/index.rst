@@ -52,8 +52,9 @@ To actually run your model railroad you will need a few items:
   - a **Motor Driver** board / motor shield,
   - Optionally: 
     
-    - a **WiFi shield (Recommended)** [#inst]_, or
+    - a **WiFi shield (Recommended)** [#inst]_, or |BR| (*This is the option that will be described on the following pages*)
     - an ethernet shield, or
+    - a Bluetooth board, or
     - neither [#jmri]_, and
 
   - our free, open source, custom software 

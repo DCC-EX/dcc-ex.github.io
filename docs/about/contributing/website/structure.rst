@@ -118,7 +118,7 @@ For example:
 Product Icon
 ------------
 
-If the page specifically and only relates to of the |DCC-EX| products, the specify  the product icon immediately after include files, but using the appropriate expansion:
+If the page specifically, and only, relates to one of the |DCC-EX| products, then specify the product icon immediately after include files, by using the appropriate expansion:
 
 For example:
 

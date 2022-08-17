@@ -6,6 +6,12 @@ Stage 1 - Running a Train
 
 |conductor|
 
+.. sidebar:: 
+
+   .. contents:: On this page
+      :depth: 2
+      :local:
+
 What to expect to learn from stage 1
 ====================================
 
@@ -86,7 +92,17 @@ Program a decoder using JMRI
 
 TODO
 
-JMRI (programming decoders)
+JMRI (Programming Decoders)
 ---------------------------
 
 TODO
+
+Programming Track
+^^^^^^^^^^^^^^^^^
+
+TODO
+
+Programming on the Main
+^^^^^^^^^^^^^^^^^^^^^^^
+
+ There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc., but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main.

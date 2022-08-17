@@ -14,4 +14,4 @@ Installation Options
     :maxdepth: 1
     
     Install using EX-Installer </ex-installer/index>
-    arduino-ide
+    Install using Arduino IDE <arduino-ide>

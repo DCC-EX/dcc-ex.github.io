@@ -6,6 +6,12 @@ Stage 2 - Adding a Roster
 
 |conductor|
 
+.. sidebar:: 
+
+   .. contents:: On this page
+      :depth: 2
+      :local:
+
 What to expect to learn from stage 2
 ====================================
 

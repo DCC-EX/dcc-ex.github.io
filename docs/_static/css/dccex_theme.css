@@ -43,6 +43,11 @@ h5, .h5 {
   background:#00a3b9ff !important; 
 }
 
+.wy-nav-top a {
+  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
+  font-weight: 100 !important;
+}
+
 .wy-nav-content {
   max-width: 1024px;
 }

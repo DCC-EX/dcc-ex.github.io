@@ -8,7 +8,7 @@ Supported Ethernet Boards
 
 |tinkerer| |engineer|
 
-.. todo:: text for supported ethernet boards
+.. todo:: LOW - text for supported ethernet boards
 
 .. toctree::
     :maxdepth: 1

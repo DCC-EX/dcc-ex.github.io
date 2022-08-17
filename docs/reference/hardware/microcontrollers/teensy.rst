@@ -71,4 +71,4 @@ Teensy Specifications
 
 The only downside is that PJRC is a very small company, it doesn't have the resources or the staff of Arduino or Espressif. The board is also 3.3V, so you have to be careful that anything connected to the GPIO ports is also 3.3V 
 
-.. TODO:: Add pinouts and motor shield wiring diagrams
+.. TODO:: LOW - Add pinouts and motor shield wiring diagrams

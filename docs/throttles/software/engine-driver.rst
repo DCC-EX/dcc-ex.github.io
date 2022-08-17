@@ -102,7 +102,7 @@ https://enginedriver.mstevetodd.com/operation
 
 https://enginedriver.mstevetodd.com/videos
 
-.. TODO:: Give some setup tutorial here. Need a video to match since ED is the top used software
+.. TODO:: LOW - Give some setup tutorial here. Need a video to match since ED is the top used software
 
 Using a Bluetooth Controller
 =============================

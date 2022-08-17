@@ -8,5 +8,5 @@ Ethernet Connection
 
 |tinkerer| |engineer|
 
-.. todo:: Ethernet connection
+.. todo:: LOW - Ethernet connection
     

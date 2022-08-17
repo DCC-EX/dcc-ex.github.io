@@ -73,4 +73,4 @@ To use Wifi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:
 
 We have not tested the WiFi implementation yet
 
-..TODO:: insert tutorial here - Using Wifi
+.. TODO:: URGENT - insert tutorial here - Using Wifi (see big-picture - stage 2)

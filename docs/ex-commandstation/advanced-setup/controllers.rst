@@ -156,18 +156,15 @@ Connecting via USB cable
 
 Probably the way most people use |JMRI| is to have a Raspberry Pi running |JMRI| connected via a short USB cable to the |EX-CS|. They then use |Engine Driver| on their phone, connected to |JMRI| via WiFi as a throttle for their engines. If you want to actually operate using all the features of |JMRI|, you can connect a small monitor, keyboard, and mouse to your computer or Raspberry Pi. You can replace the USB cable with a USB Wireless Bridge which is covered in that section. But let's look at another method next.
 
-.. todo:: diagram needed for the connection via USb Cable
-
-***TODO:insert diagram here***
+.. todo:: LOW - diagram needed for the connection via USb Cable
 
 Connecting via VNC
 ^^^^^^^^^^^^^^^^^^^
 
 VNC stands for "Virtual Network Computing", and it is a way to access a device remotely. Variations of this are called "Remote Desktop" in Windows, Teamviewer, Anydesk, etc. It is free and it lets you take another device, like a tablet, and have a viewport into the computer you are using to run |JMRI|. It literally is a "remote desktop". Everything is running on your computer or Raspberry Pi, yet you can control it from a handheld wireless device with a touchscreen.
 
-.. todo:: diagram needed for Connecting via VNC
+.. todo:: LOW - diagram needed for Connecting via VNC
 
-***TODO:insert diagram here***
 
 USB Wireless Bridge
 ====================
@@ -178,8 +175,6 @@ The USB Wireless Bridge is a pair of small, inexpensive devices that let you rep
 * Connect a computer or Raspberry Pi running |JMRI| (or another front-end) to the Command Station
 * Connect normally-tethered handheld cabs (throttles) wirelessly to the Command Station
 
-.. todo:: diagram needed for USB Wireless Bridge
-
-***TODO:insert diagram here***
+.. todo:: LOW - diagram needed for USB Wireless Bridge
 
 For more information about all the throttles, see the :doc:`Throttles Section </throttles/index>`>

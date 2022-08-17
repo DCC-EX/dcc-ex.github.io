@@ -8,7 +8,7 @@ Direct Connection (USB)
 
 |tinkerer| |engineer|
 
-.. todo::  direct connection text
+.. todo::  MEDIUM - direct connection text
 
 Connection Type: Direct to Command Station or through JMRI
 ============================================================

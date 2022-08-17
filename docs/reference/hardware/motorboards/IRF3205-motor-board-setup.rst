@@ -279,9 +279,9 @@ This will us pin 3 for Enable and 12 for signal, which will use the "High Accura
 Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started </ex-commandstation/get-started/index>`
 
 
-.. TODO:: organize the above and add pictures
+.. TODO:: LOW - organize the above and add pictures
 
-.. TODO:: Finish this section
+.. TODO:: LOW - Finish this section
 
 
 Important Notes on Current Sensing
@@ -298,16 +298,16 @@ Please do the following to verify you won't damage the Arduino, your layout, or 
 Using Other External Current Sense Boards
 ------------------------------------------
 
-.. TODO:: finish this - Using Other External Current Sense Boards
+.. TODO:: LOW - finish this - Using Other External Current Sense Boards
 
 Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (10A+), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
 
-..TODO:: Add help or point to a section for external Command Station boards
+.. TODO:: LOW - Add help or point to a section for external Command Station boards
 
 Sense Current at the Tracks instead of the motor board input
 --------------------------------------------------------------
 
-.. TODO:: Finish this. Sense Current at the Tracks instead of the motor board input
+.. TODO:: LOW - Finish this. Sense Current at the Tracks instead of the motor board input
 
 Tech Notes (IRF3205)
 ====================
@@ -336,7 +336,7 @@ IRF3205 15A Motor Board schematic
 
 Below is a link to the IBT_2 schematic. Click to enlarge. 
 
-.. TODO:: this is wrong - IRF3205 15A Motor Board schematic
+.. TODO:: MEDIUM - this is wrong - IRF3205 15A Motor Board schematic
 
 .. image:: /_static/images/schematics/IBT_2_schematic.jpg
    :scale: 50
@@ -348,7 +348,7 @@ If you are an Engineer will be using the <1 JOIN> command to connect the main an
 
 To check phase, Put an AC Voltmeter with one lead on the LEFT rail on PROG and the other lead on the left rail on MAIN. If the meter measures an AC voltage near track voltage (around 17-20 VAC normally) then reverse one of the power wires to one of the tracks at the track or at the motor board output. Test again.It should now read 0 Volts AC.
 
-.. TODO:: Finish this section - Keeping Your tracks in Phase
+.. TODO:: LOW - Finish this section - Keeping Your tracks in Phase
 
 
 Parts List (IRF3205)
@@ -376,7 +376,7 @@ various sellers, prices and delivery methods. $16 and higher.
 https://www.amazon.com/gp/product/B087PF8CZM
 $24.40 +tax; prime shipping
 
-.. TODO:: See the PDF file IRF3205_mega_ACS724 in trains folder to include here
+.. TODO:: LOW - See the PDF file IRF3205_mega_ACS724 in trains folder to include here
 
 .. WARNING:: If you intend to use more than 5A of current though this board, we recommend using heat sinks.
 

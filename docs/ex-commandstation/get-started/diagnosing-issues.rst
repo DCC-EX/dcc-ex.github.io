@@ -45,7 +45,7 @@ Testing the Arduino and Base Station code
 
 TODO: Coming soon... 
 
-.. TODO:: Testing the Arduino and Base Station code
+.. TODO:: MEDIUM - Testing the Arduino and Base Station code
 
 
 Testing the DCC signal
@@ -84,6 +84,6 @@ With all of the decoder manufacturers creating hardware and the difficulties in 
 #. Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capability on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.
 #. **Out of spec. decoder (most likely)** - You will need to run a test and then modify a setting or two. Please go to the :doc:`<Diagnostic \<D ACK\> </reference/tools/diagnostic-d-ack-command>`. Send us your log.
 
-.. TODO:: finish this section. Link to notes about current sensing. - Loco Programming Issues (-1 or JMRI 308 error)
+.. TODO:: LOW - finish this section. Link to notes about current sensing. - Loco Programming Issues (-1 or JMRI 308 error)
 
 Updated June 30, 2021

@@ -183,7 +183,7 @@ Have them fabricated
 
 Fritzing diagram
 
-..TODO:: Add this board - Fritzing diagram
+.. TODO:: LOW - Add this board - Fritzing diagram
 
 https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/
 

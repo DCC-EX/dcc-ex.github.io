@@ -8,4 +8,4 @@ Bluetooth Connection
 
 |tinkerer| |engineer|
 
-.. todo:: bluetooth connection text
+.. todo:: LOW - bluetooth connection text

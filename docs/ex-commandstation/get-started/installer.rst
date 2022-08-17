@@ -178,4 +178,4 @@ Click :doc:`here <controllers>` or click the "next" button to learn how to selec
 
 ----
 
-.. todo:: need to update installer screenshots
+.. todo:: LOW - need to update installer screenshots

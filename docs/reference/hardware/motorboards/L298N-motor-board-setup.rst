@@ -235,7 +235,7 @@ Method 2: Using An External Current Sense Board
 
 Coming Soon
 
-.. todo:: finish this page
+.. todo:: LOW - finish this page
 
 L298N for PROG and High Current IBT_2 for MAIN
 ================================================

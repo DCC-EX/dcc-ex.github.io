@@ -14,4 +14,4 @@ JMRI
 
 |JMRi| can be used as a throttle...
 
-.. todo:: need text for using JMRI as a trottle
+.. todo:: URGENT - need text for using JMRI as a trottle

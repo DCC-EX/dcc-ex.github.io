@@ -90,7 +90,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 
    **Locos Can't Respond to Throttle Commands on the Programming Track!**
 
-   We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification. There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc, but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main. ***TODO: Write the POM*** help.
+   We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification. There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc, but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main.
 
 
 Next Steps - Run Your Trains
@@ -103,3 +103,6 @@ We suggest that you look at the :doc:`/big-picture/index` to get some additional
 You might also like to look at the other :doc:`Controllers (Throttles) </ex-commandstation/advanced-setup/controllers>` that are available.
 
 If you are still having difficulties click :guilabel:`Next`.
+
+.. todo:: MEDIUM - Write the POM help
+

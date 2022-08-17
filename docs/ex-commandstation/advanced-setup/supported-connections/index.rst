@@ -8,7 +8,7 @@ Supported Connections
 
 |tinkerer| |engineer|
 
-.. todo::   supported connection methods text
+.. todo:: LOW - supported connection methods text
 
 |EX-CS| supports connecting to it using a variety of methods...
 

@@ -6,7 +6,7 @@ Glossary
 
 |conductor| |tinkerer| |engineer|
 
-.. TODO:: Glossary
+.. TODO:: MEDIUM - Glossary
 
 .. list-table::
     :widths: 25 75

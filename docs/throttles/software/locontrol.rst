@@ -46,6 +46,6 @@ Requirements
 
 * An iOS Device
 
-..TODO:: More content coming soon - Requirements Locontrol
+.. TODO:: LOW - More content coming soon - Requirements Locontrol
 
 

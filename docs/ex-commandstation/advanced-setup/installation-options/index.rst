@@ -8,7 +8,7 @@ Installation Options
 
 |tinkerer| |engineer|
 
-.. todo:: installation options text
+.. todo:: LOW - installation options text
 
 .. toctree::
     :maxdepth: 1

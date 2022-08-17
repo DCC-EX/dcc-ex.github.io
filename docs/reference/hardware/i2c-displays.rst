@@ -84,7 +84,7 @@ Controlling Brightness
 
 The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:
 
-.. TODO:: Add image - Controlling Brightness
+.. TODO:: LOW - Add image - Controlling Brightness
 
 
 Upload the sketch to your CS

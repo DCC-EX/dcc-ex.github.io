@@ -1,42 +1,67 @@
-.. include:: /include/include.rst
-.. include:: /include/include-l1.rst
-*********
+**********
 Reference
-*********
-
-|conductor| |tinkerer| |engineer|
-
-.. sidebar::
-
-  .. contents:: On this page
-    :depth: 1
-    :local:
-
-Glossary
-========
-
-.. toctree::
-    :maxdepth: 1
-
-    glossary
+**********
 
 Videos
 ========
 
-.. toctree::
-    :maxdepth: 1
+* Please visit our YouTube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_
 
-    videos/index
- 
-Other
+Command Station
+================
+
+Hardware
+-----------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    hardware/index
+    
+Software
 -------------------------
 
 .. toctree::
     :maxdepth: 1
 
+    software/hal-config
+    software/hal
+    software/writing-hal-driver
+    software/release-notes
+    software/command-reference
+    software/command-summary
+    software/diagnostic-d-ack-command
+    software/diagnostic-d-command
+
+Accessories
+--------------
+
+.. toctree::
+    :maxdepth: 2
+
+    accessories/decoder-list
+    accessories/suppliers
+
+Downloads
+-----------
+
+.. toctree::
+    :maxdepth: 4
+
     downloads/index
-    hardware/index
-    software/index
-    developers/index
-    accessories/index
+
+Diagnostic Tools
+------------------
+
+.. toctree::
+    :maxdepth: 2
+
     tools/index
+
+Miscellaneous
+---------------
+
+.. toctree::
+    :maxdepth: 1
+
+    wire-gauge

@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>DCC Inspector-EX &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/platform.js"></script>
+        <script src="../_static/js/extra.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Turntable-EX" href="turntable-ex.html" />
+    <link rel="prev" title="ESP8266 Files" href="esp8266.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/levels.html">Choose Your Level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/assembly.html">Assembling the Command Station</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/wifi-setup.html">Adding a WiFi Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/installer.html">Install using the Automated Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/teensy.html">Teensy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/high-accuracy.html">High Accuracy Waveform Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/engine-driver.html">Engine Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/withrottle.html">WiThrottle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/dccpp-cab.html">DCCpp CAB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/locontrol.html">Locontrol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/digitrainspro.html">DigiTrainsPro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/srcpclient.html">SRCP Client for iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/uwt50.html">TCS UWT-50 (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../automation/index.html">Automation (EX-RAIL)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../big-picture/index.html">The Big Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/big-picture.html">Putting it all together - the Big Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/stage1.html">Stage 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../turntable-ex/index.html">Turntable-EX (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/motor-boards.html">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/shopping-list.html">Shopping List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/hal.html">DCC++EX HAL Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/writing-hal-driver.html">Writing a HAL Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/release-notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/command-summary.html">DCC++ EX Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/wire-gauge.html">Wire Gauge Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Software Downloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commandstation.html">Command Station Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esp8266.html">ESP8266 Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DCC Inspector-EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turntable-ex.html">Turntable-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth DCC++EX Command Station</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-reference/index.html">Developer and API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer-reference/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developer-reference/api.html">CommandStation-EX API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/github.html">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/software.html">Recommended software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/website.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/index.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Contact and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../site-map/index.html">Site Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../donate/index.html">Donate to Our Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../press/index.html">Press</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/rewrite.html">What’s New in DCC++ EX?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Software Downloads</a> &raquo;</li>
+        
+      <li>DCC Inspector-EX</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/download/dcc-inspector-ex.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dcc-inspector-ex">
+<h1>DCC Inspector-EX<a class="headerlink" href="#dcc-inspector-ex" title="Permalink to this heading">¶</a></h1>
+<p>DCC Inspector-EX is a packet sniffing tool that can connect directly to the signal pins on the Command Station or to the track depending on your circuit. For information in the <a class="reference internal" href="../reference/tools/diagnostic-tools.html"><span class="doc">Diagnostic Tools Section</span></a></p>
+<a class="reference internal image-reference" href="../_images/sniffer_thumbnail.png"><img alt="DCC Inspector EX thumbnail" class="align-left" src="../_images/sniffer_thumbnail.png" style="width: 146.12px; height: 94.64px;" /></a>
+<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/DCCInspector-EX/archive/refs/heads/main.zip">DCCInspector-EX source code Zip file</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/DCCInspector-EX">DCCInspector-EX Github Repository</a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="turntable-ex.html" class="btn btn-neutral float-right" title="Turntable-EX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="esp8266.html" class="btn btn-neutral float-left" title="ESP8266 Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

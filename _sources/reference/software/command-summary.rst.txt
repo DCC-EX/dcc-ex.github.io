@@ -1,14 +1,10 @@
-.. include:: /include/include.rst
-.. include:: /include/include-l2.rst
-**********************
-DCC-EX Command Summary
-**********************
+*************************
+DCC++ EX Command Summary
+*************************
 
-|engineer|
+.. sidebar:: On this page
 
-.. sidebar:: 
-
-  .. contents:: On this page
+  .. contents:: 
     :depth: 1
     :local:
 
@@ -150,7 +146,7 @@ WiFi Control
 =============
  ``<+command>`` Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
 
- ``<+X>`` Force the Command Station into "WiFi Connected" mode
+ ``<+X>`` Force the CS into "WiFi Connected" mode
 
 Diagnostic traces
 ==================

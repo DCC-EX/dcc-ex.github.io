@@ -1,0 +1,549 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Adding a WiFi Option &mdash; DCC++ EX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/platform.js"></script>
+        <script src="../_static/js/extra.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Install using the Automated Installer" href="installer.html" />
+    <link rel="prev" title="Assembling the Command Station" href="assembly.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Get Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="levels.html">Choose Your Level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly.html">Assembling the Command Station</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Adding a WiFi Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installer.html">Install using the Automated Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arduino-ide.html">Install using the Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Choosing a Controller (Throttle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced-setup/index.html">Advanced Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/wifi-mega.html">Mega+WiFi Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-setup/supported-microcontrollers/teensy.html">Teensy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-setup/high-accuracy.html">High Accuracy Waveform Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/engine-driver.html">Engine Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/withrottle.html">WiThrottle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/dccpp-cab.html">DCCpp CAB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/locontrol.html">Locontrol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/digitrainspro.html">DigiTrainsPro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/srcpclient.html">SRCP Client for iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/uwt50.html">TCS UWT-50 (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../automation/index.html">Automation (EX-RAIL)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../automation/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../big-picture/index.html">The Big Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/big-picture.html">Putting it all together - the Big Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/stage1.html">Stage 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../turntable-ex/index.html">Turntable-EX (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/turntable-ex.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/get-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/motor-boards.html">Motor Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wifi-boards.html">WiFi Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/ethernet-boards.html">Ethernet Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/shopping-list.html">Shopping List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/hal.html">DCC++EX HAL Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/writing-hal-driver.html">Writing a HAL Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/release-notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/command-reference.html">DCC++ EX Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/command-summary.html">DCC++ EX Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/wire-gauge.html">Wire Gauge Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Software Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download/commandstation.html">Command Station Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/esp8266.html">ESP8266 Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/turntable-ex.html">Turntable-EX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth DCC++EX Command Station</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-reference/index.html">Developer and API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer-reference/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developer-reference/api.html">CommandStation-EX API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/github.html">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/software.html">Recommended software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/website.html">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/index.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Contact and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../site-map/index.html">Site Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../donate/index.html">Donate to Our Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../press/index.html">Press</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/rewrite.html">What’s New in DCC++ EX?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DCC++ EX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Get Started</a> &raquo;</li>
+        
+      <li>Adding a WiFi Option</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/get-started/wifi-setup.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="adding-a-wifi-option">
+<h1>Adding a WiFi Option<a class="headerlink" href="#adding-a-wifi-option" title="Permalink to this heading">¶</a></h1>
+<p>The purpose of this WiFi solution is for connecting up to 5 WiFi throttles DIRECTLY to the Command Station, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like JMRI, you can <a class="reference internal" href="installer.html"><span class="doc">skip ahead to the next page</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is NOT to make a connection to JMRI. Use a USB cable instead (or wireless USB Bridge like the HC-12). The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the DCC-EX CS without the need for any other software such as JMRI. While using a WiFi/Ethernet connection to JMRI will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.</p>
+</div>
+<p>There are many ways to add WiFi to your Command Station. We will cover a four methods here. You may need to know a little bit about networking, but if you can get your phone and your Roku to connect to your network, you can do this.</p>
+<p>You should be able to apply what you learn here to using other boards, but you can ask us for help using any of the contact links on our <a class="reference internal" href="../support/index.html"><span class="doc">Support Page</span></a> if you have a question.</p>
+<p>Note that you can click on any of the images to make them larger.</p>
+<p>For a video to help you, click below.</p>
+<blockquote>
+<div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
+<div class="section" id="why-use-wifi">
+<h2>Why Use WiFi?<a class="headerlink" href="#why-use-wifi" title="Permalink to this heading">¶</a></h2>
+<p><strong>BEFORE you purchase a Wifi card, please consider whether you actually need it:</strong></p>
+<p>With the base Command Station (CS) consisting of just an Arduino Mega and an Arduino Motor Shield (no WiFi board), you must use a USB cable to connect to a computer to run JMRI or our WebThrottle-EX, or to connect to another controller. The controller (aka Throttle) is what sends commands to the CS to run your trains and control your accessories.</p>
+<p>If you intend to run trains from a PC or Raspberry Pi, either by entering &lt;DCC++&gt; commands, by using WebThrottle-EX, JMRI, Rocrail, or similar, then YOU DO NOT NEED WiFi ON THE CS. Save yourself some money, and a lot of hassle, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between JMRI and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a JMRI setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the CS, while the CS gets its commands through the USB connection.</p>
+<p>If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY Engine Driver (or other WiThrottle-protocol devices) connected directly to the CS, then you will need Wifi, and will have to budget some setup and learning time.</p>
+</div>
+<div class="section" id="compatible-boards">
+<h2>Compatible Boards<a class="headerlink" href="#compatible-boards" title="Permalink to this heading">¶</a></h2>
+<p>Most boards based on the ESP8266 should work with DCC++ EX. However, with all the variations and software versions out there, we’ve compiled this list of known tested, working hardware. We will add more over time.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></p></li>
+<li><p><a class="reference external" href="https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN">Duinopeak ESP8266 WiFi Expansion Board (plus an ESP-01 or 01s)</a></p></li>
+<li><p><a class="reference external" href="https://www.amzn.com/B00O34AGSU/">ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers)</a></p></li>
+</ul>
+<p>Fore more boards you may be able to use, see the <a class="reference internal" href="../reference/hardware/wifi-boards.html"><span class="doc">WiFi Boards Section</span></a></p>
+</div>
+<div class="section" id="what-you-will-need-for-wifi">
+<h2>What you will need (for WiFi)<a class="headerlink" href="#what-you-will-need-for-wifi" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>A Command Station (CS) made from a <strong>Mega</strong> and an Arduino Motor Shield</p></li>
+<li><p>One of the above WiFi boards</p></li>
+<li><p>Two (2) Male to Female Jumpers (plus 3 more if you are using an ESP-01 or 01s)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While it may be possible to run WiFi on an Uno, Nano or Pro Mini, it is currently not supported. The Uno simply does not have enough memory to run networking in addition to all the other CS features (network code takes about 10kB of progmem and about 2kB of RAM). Also, there is only one hardware serial port. There would be a conflict with the USB port used for logging and connection to software like JMRI being shared.</p>
+</div>
+</div>
+<div class="section" id="quick-links">
+<h2>Quick links<a class="headerlink" href="#quick-links" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Jump to <a class="reference internal" href="#id1"><span class="std std-ref">Makerfabs ESP8266 WiFi Shield (recommended)</span></a></p></li>
+<li><p>Jump to <a class="reference internal" href="#duinopeak-esp8266-wifi-expansion-board"><span class="std std-ref">Duinopeak ESP8266 WiFi Expansion Board</span></a></p></li>
+<li><p>Jump to <a class="reference internal" href="#esp-01-and-esp-01s"><span class="std std-ref">ESP-01 and ESP-01s</span></a></p></li>
+<li><p>Jump to <a class="reference internal" href="#mega-wifi-combo-board"><span class="std std-ref">Mega+WiFi Combo Board</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Makerfabs ESP8266 WiFi Shield (recommended)<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<p>We like this board here at DCC++ EX. It is simple, inexpensive, easy to use, and it works.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/wifi_jumpers1.jpg"><img alt="Makerfabs ESP-8266 WiFi Shield" src="../_images/wifi_jumpers1.jpg" style="width: 450.0px; height: 340.5px;" /></a>
+<p class="caption"><span class="caption-number">Figure 14 </span><span class="caption-text">Makerfabs ESP8266 WiFi Shield</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Installing the board follows the same procedure in the previous section on assembly. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.</p>
+<div class="section" id="remove-the-plastic-jumpers">
+<h3>Remove the plastic jumpers<a class="headerlink" href="#remove-the-plastic-jumpers" title="Permalink to this heading">¶</a></h3>
+<p>Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/wifi_pins.jpg"><img alt="Remove the plastic jumpers" src="../_images/wifi_pins.jpg" style="width: 450.0px; height: 435.75px;" /></a>
+<p class="caption"><span class="caption-number">Figure 15 </span><span class="caption-text">Remove the plastic jumpers</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="align-the-boards">
+<h3>Align the boards<a class="headerlink" href="#align-the-boards" title="Permalink to this heading">¶</a></h3>
+<p>Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Rx, Tx, 2, 3, 4, 5, 6, 7 pins on the Motor Shield line up with the 0 through 7 pins on the Makerfabs WiFi Board. Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/wifi_seat1.jpg"><img alt="Get the left side pins aligned" src="../_images/wifi_seat1.jpg" style="width: 450.0px; height: 300.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 16 </span><span class="caption-text">Get the left side pins aligned</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="seat-the-boards">
+<h3>Seat the boards<a class="headerlink" href="#seat-the-boards" title="Permalink to this heading">¶</a></h3>
+<p>Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (<a class="reference internal" href="#wifi-right-side-pins-aligned"><span class="std std-numref">Figure 17</span></a>). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see <a class="reference internal" href="#wifi-fully-seated-boards"><span class="std std-numref">Figure 18</span></a>).</p>
+<div class="figure align-default" id="wifi-right-side-pins-aligned">
+<a class="reference internal image-reference" href="../_images/wifi_seat2a.jpg"><img alt="Get the right side pins aligned" src="../_images/wifi_seat2a.jpg" style="width: 450.0px; height: 300.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 17 </span><span class="caption-text">Get the right side pins aligned</span><a class="headerlink" href="#wifi-right-side-pins-aligned" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="wifi-fully-seated-boards">
+<a class="reference internal image-reference" href="../_images/wifi_seat_full.jpg"><img alt="Fully seated boards" src="../_images/wifi_seat_full.jpg" style="width: 450.0px; height: 306.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 18 </span><span class="caption-text">Fully seated boards</span><a class="headerlink" href="#wifi-fully-seated-boards" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="install-the-jumper-wires">
+<h3>Install the jumper wires<a class="headerlink" href="#install-the-jumper-wires" title="Permalink to this heading">¶</a></h3>
+<p>We now need to connect The Transmit (Tx) and Receive (Rx) pins on the ESP8266 to the Rx and Tx pins for Serial1 on the Mega. The Mega has one serial port connected to the USB port, and then 3 extra ones we can access from pins on the board. You can think of Tx as “talking” and Rx as “listening”. That will help you remember that if one thing is talking, the other has to use its ears to listen. So we must connect the Tx of the WiFi board to Rx1 on the Mega and the Rx pin on the WiFi Board to Tx1 on the Mega.</p>
+<p>There are three rows of pins on the Makerfabs WiFi shield. The middle pins each connect to one of the first 8 pins on the header. Pin 0 goes to header pin 0, pin 1 goes to header pin 1, and so on. We aren’t going to need those. With the plastic jumpers removed, nothing will be connected to any of those pins on the WiFi Board, and therefore not connected down to the Mega through the Motor Shield.</p>
+<p>ALL of the pins in the row marked Tx (the row closest to the header) are connected to the Tx pin of the ESP8266. ALL of the pins in the row marked Rx (the row closest to the middle of the board) are connected to the Rx pin on the ESP8266.</p>
+<p>Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board, and connect the other end to the Rx1 pin on the mega (pin 19).</p>
+<p>Take a second jumper wire and connect it to any one of the Rx pins on the Wifi Board and connect the other end to Tx1 on the mega (pin 18).</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/wifi_jumpers2.png"><img alt="Install the Jumper wires" src="../_images/wifi_jumpers2.png" style="width: 450.0px; height: 317.25px;" /></a>
+<p class="caption"><span class="caption-number">Figure 19 </span><span class="caption-text">Install the jumper wires</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The screenprinting on the board may make it hard to see which pins are 18 and 19, they may not be aligned exactly. Count the pins if you need to to make sure that you are using the correct ones.</p>
+</div>
+</div>
+</div>
+<div class="section" id="duinopeak-esp8266-wifi-expansion-board">
+<h2>Duinopeak ESP8266 WiFi Expansion Board<a class="headerlink" href="#duinopeak-esp8266-wifi-expansion-board" title="Permalink to this heading">¶</a></h2>
+<p>This board is designed as an expansion/prototyping board as well as a WiFi board. Tinkerers that want the extra space on the board to solder your experiments can have a party on the PCB! The only caveat with this board is that it cannot easily be connected in “passthrough mode” if you needed to use the Arduino to test a direct connection to the onboard ESP8266. It does not like the USB cable connected at the same time as a signal is on the Tx/Rx pins. This is a minor issue and does not affect normal operation since you won’t have anything connected to the USB port.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is just a carrier board for an ESP-01 or 01s. You will still need an ESP-01s to place onto this board. See the next section.</p>
+</div>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/duinopeak.jpg"><img alt="Duinopeak WiFi Board" src="../_images/duinopeak.jpg" style="width: 450.0px; height: 432.75px;" /></a>
+<p class="caption"><span class="caption-number">Figure 20 </span><span class="caption-text">Duinopeak WiFi Board</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="install-the-shield">
+<h3>Install the Shield<a class="headerlink" href="#install-the-shield" title="Permalink to this heading">¶</a></h3>
+<p>To install this board on your Arduino, follow the same steps as above, with the added step of installing an ESP-01s onto the board:</p>
+<ul class="simple">
+<li><p>Remove or place the plastic pin jumpers to the side</p></li>
+<li><p>Align and seat the board</p></li>
+<li><p>Use wire jumpers to connect any Rx pin to Tx1 on the Mega, and any Tx pin to Rx1 on the Mega</p></li>
+<li><p>Seat an ESP-01s onto the 8 pin header on the board, oriented with the white ESP-01 outline</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="esp-01-and-esp-01s">
+<h2>ESP-01 and ESP-01s<a class="headerlink" href="#esp-01-and-esp-01s" title="Permalink to this heading">¶</a></h2>
+<p>This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-“S”. Since the 01 version has been retired, any new board you get should be the 01s, but either will work.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/esp-01s_2.jpg"><img alt="ESP-01s" src="../_images/esp-01s_2.jpg" style="width: 300.0px; height: 293.25px;" /></a>
+<p class="caption"><span class="caption-number">Figure 21 </span><span class="caption-text">ESP-01s</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="install-the-module">
+<h3>Install the Module<a class="headerlink" href="#install-the-module" title="Permalink to this heading">¶</a></h3>
+<p>Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity, the image does not show the motor board already on top of the Mega, but since the headers connect all the pins together vertically, you can find the same pins on the motor board to get the 3.3V and Gnd to power the ESP8266.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/esp8266_mega.jpg"><img alt="ESP-8266 Wiring to a Mega" src="../_images/esp8266_mega.jpg" style="width: 540.0px; height: 233.25px;" /></a>
+<p class="caption"><span class="caption-number">Figure 22 </span><span class="caption-text">Wiring an ESP-01s to a Mega</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Wiring</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Arduino   ESP8266
+3.3V -----&gt; Vcc
+3.3V -----&gt; CH_PD
+Gnd  -----&gt; Gnd
+Tx   -----&gt; Rx
+Rx   -----&gt; Tx
+</pre></div>
+</div>
+<p>In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you can make a “Y” shaped jumper or put the ESP-01s on a small circuit board and wire it that way. Below are little boards you can buy called “ESP-01 Breakout Board” or “ESP-01 Breadboard adapter”. Some even have a voltage regulator so you can use the 5V power from the Mega instead of 3.3V, and “level shifters” to adapt the IO pins from 5V to 3.3. We highly recommend these little boards. In <a class="reference internal" href="#esp-01s-adapters"><span class="std std-numref">Figure 23</span></a> below, the board on the left is just a plain breadboard adapter. The other two boards have the regulator and logic level shifters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>About current requirements: While we at DCC-EX Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.</p>
+</div>
+<div class="figure align-default" id="esp-01s-adapters">
+<a class="reference internal image-reference" href="../_images/esp-01_adapter.jpg"><img alt="ESP-01s Adapters" src="../_images/esp-01_adapter.jpg" style="width: 450.0px; height: 225.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 23 </span><span class="caption-text">ESP-01 Breakout Boards.</span><a class="headerlink" href="#esp-01s-adapters" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don’t need any additional circuitry. However, to be safe, you can use a small <a class="reference external" href="https://www.mouser.com/ProductDetail/SparkFun/BOB-12009?qs=WyAARYrbSnb%252BGYLWggQnjQ%3D%3D&amp;gclid=Cj0KCQiAzZL-BRDnARIsAPCJs73SnsmU-CTIk9V0XE6qjxY2WKlnxI0sLhT_rY5MYTbIOBmHne50Eh4aAm5ZEALw_wcB">level shifter board</a>, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.</p>
+</div>
+</div>
+</div>
+<div class="section" id="install-the-software">
+<h2>Install the Software<a class="headerlink" href="#install-the-software" title="Permalink to this heading">¶</a></h2>
+<p>If you already have the CS software running and are just adding WiFi, there is nothing further you need to do if you want to use the CS as an Access Point (AP) and connect a WiThrottle compatible CAB (Engine Driver). The next time you power up the CS, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: <a class="reference internal" href="../advanced-setup/wifi-config.html"><span class="doc">WiFi Configuration</span></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>LOGIN PASSWORD - If you use AP Mode, you must connect your throttle to the DCCEX network, not your home network. The AP will be called DCCEX_abcdef and the password will be PASS_abcdef, where “abcdef” is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your CS to a computer running a serial monitor. Please click on the “WiFi Configuration” link above for more detailed instruction.</p>
+</div>
+<p>If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to <a class="reference internal" href="../download/commandstation.html"><span class="doc">Command Station Downloads</span></a> to load firmware onto the CS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and lookingat the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called “flashing”. You can find how to do this, as well as some other interesting things in the <a class="reference external" href="https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_">Geoff Bunza article on creating a signal only command station.</a> .Skip to the “The ESP-01S - The Wifi Connection” section</p>
+</div>
+</div>
+<div class="section" id="mega-wifi-combo-board">
+<h2>Mega+WiFi Combo Board<a class="headerlink" href="#mega-wifi-combo-board" title="Permalink to this heading">¶</a></h2>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/mega_wifi.png"><img alt="Mega WiFi" src="../_images/mega_wifi.png" style="width: 384.40000000000003px; height: 308.40000000000003px;" /></a>
+</div>
+<p>The Mega+WiFi is a board from China that combines an Arduino Mega design with an on-board ESP8266 WiFi chip. The advantage of this configuration is that with WiFI on the same board with the Microntroller, you only need two boards. Your “stack” will have just the Mega+WiFi board with the Motor Shield on top. The disadvantage is that you will have to “flash” (upload new firmware) to the ESP chip on the board. This requires a computer, downloading a flash tool and a zipped data file, setting some switches, connecting the Mega+WiFi to the computer with a USB cable, and uploading the new firmware. A Conductor should be able to follow the instructions, but Tinkerers may feel more comfortable. It takes about 15-20 minutes from start to finish (read, download, unzip, flash, done). Click on the link below for detailed instructions on exactly how to configure and use a Mega+WiFi board.</p>
+<p><a class="reference internal" href="../advanced-setup/supported-microcontrollers/wifi-mega.html"><span class="doc">Mega+WiFi Configuration</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="installer.html" class="btn btn-neutral float-right" title="Install using the Automated Installer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="assembly.html" class="btn btn-neutral float-left" title="Assembling the Command Station" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

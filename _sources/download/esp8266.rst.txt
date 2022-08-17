@@ -1,10 +1,6 @@
-.. include:: /include/include.rst
-.. include:: /include/include-l1.rst
-*********************
-ESP8266 (WiFi Boards)
-*********************
-
-|tinkerer| |engineer|
+********************
+ESP8266 Files
+********************
 
 Espressif Flash Download tool (note: You can also use the Python tool esptool.py which is installed using the pip command)
 

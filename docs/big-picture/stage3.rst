@@ -41,6 +41,14 @@ Further to the above, for DCC controlled turnouts/points, these will commence at
 
 For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`.
 
+.. note:: 
+
+  When going through the various examples where we define DCC turnouts/points, you may notice that a turnout/point ID has a DCC linear address that is the same, or close to it. **This is pure coincidence**.
+
+  A turnout/point ID has no direct relationship to a DCC linear address, so turnout/point ID 100 has no direct relationship to DCC address 100.
+
+  Some people choose to ensure the turnout/point ID matches the DCC linear address when using DCC turnouts/points, but this is not necessary.
+
 Sensor types
 ============
 

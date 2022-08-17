@@ -6,4 +6,4 @@ Bluetooth Boards
 
 |tinkerer| |engineer|
 
-.. todo:: URGENT Bluetooth boards
+.. todo:: LOW Bluetooth boards

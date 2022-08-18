@@ -10,46 +10,23 @@ DCC-EX Model Railroading
 
   `We have a New Name! <about/press/new-name.html>`_
 
-
 Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
 Based on off-the-shelf Arduino technology, our products currently include:
 
 .. list-table::
-    :widths: 30 70
+    :widths: 33 33 33
     :header-rows: 0
     :class: table-wrap-text
 
-    * - |EX-CS-LOGO-SMALL| 
-      - our DCC command station for controlling your model railroad
-    * - |EX-I-LOGO-SMALL| 
-      - our user friendly installer for loading the command station software
-    * - |EX-R-LOGO-SMALL|  
-      - the scripting language, built into the |EX-CS|, allowing you to automate your model railroad
-    * - |EX-WT-LOGO-SMALL|
-      - a simple web based controller for your command station
-    * - |EX-TT-LOGO-SMALL| 
-      - a stepper based turntable controller running on an additional Arduino microcontroller
-    * - |EX-DCCI-LOGO-SMALL| 
-      - a DCC packet sniffing tool 
-    * - |EX-BSC-LOGO-SMALL|
-      - the original DCC++ [#bcs]_  software, packaged in a stable release 
-
-----
-
-.. list-table::
-    :widths: 50 50
-    :header-rows: 0
-    :class: table-wrap-text
-
-    * - |EX-CS-LOGO-SMALL| |br| our DCC command station for controlling your model railroad
-      -    
-    * - |EX-I-LOGO-SMALL| |br| our user friendly installer for loading the command station software
-      - |EX-R-LOGO-SMALL| |br| the scripting language, built into the |EX-CS|, allowing you to automate your model railroad
-    * - |EX-WT-LOGO-SMALL| |br| a simple web based controller for your command station
-      - |EX-TT-LOGO-SMALL| |BR| a stepper based turntable controller running on an additional Arduino microcontroller
-    * - |EX-DCCI-LOGO-SMALL| |BR| a DCC packet sniffing tool 
-      - |EX-BSC-LOGO-SMALL| |BR| the original DCC++ [#bcs]_  software, packaged in a stable release 
-
+    * - |EX-CS-LOGO-SMALL| |br| Our DCC command station for controlling your model railroad
+      - |EX-I-LOGO-SMALL| |br| Our user friendly installer for loading the |EX-CS| software
+      - |EX-R-LOGO-SMALL| |br| The scripting language, built into the |EX-CS|, allowing you to automate your model railroad
+    * - |EX-WT-LOGO-SMALL| |br| A simple web based controller for your command station
+      - |EX-TT-LOGO-SMALL| |BR| A stepper based turntable controller running on an additional Arduino microcontroller
+      - |EX-DCCI-LOGO-SMALL| |BR| A DCC packet sniffing tool
+    * -  
+      - |EX-BSC-LOGO-SMALL| |BR| The original DCC++ [#bcs]_  software, packaged in a stable release 
+      -
 
 ..
    * |EX-CS| - our DCC command station for controlling your model railroad
@@ -64,44 +41,37 @@ Based on off-the-shelf Arduino technology, our products currently include:
 
 Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more
 
-..
-   .. table::
-      :align: left
-      :class: intro-table
+If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 
-      ==================   ==================   ====================
-      |Timer|_             |Arrow|_             |Binder|_
-      ------------------   ------------------   --------------------
-      |Get Started|        |Download|           |Reference|
-      ------------------   ------------------   --------------------
-      |Lightning|_         |Question|_          |Puzzle|_
-      ------------------   ------------------   --------------------
-      |Advanced Setup|     |Support|            |Contribute|
-      ==================   ==================   ====================
+----
 
-   .. |Timer| image:: ./_static/images/timer_bl.png
-   .. _Timer: get-started/index.html
-   .. |Get Started| replace:: :doc:`/ex-commandstation/get-started/index`
+----
 
-   .. |Arrow| image:: ./_static/images/download_bl.png
-   .. _Arrow: download/index.html
-   .. |Download| replace:: :doc:`Download </download/index>`
 
-   .. |Binder| image:: ./_static/images/api_bl.png
-   .. _Binder: reference/index.html
-   .. |Reference| replace:: :doc:`/reference/index`
+Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
+Based on off-the-shelf Arduino technology, our products currently include:
 
-   .. |Lightning| image:: ./_static/images/advanced_bl.png
-   .. _Lightning: advanced-setup/index.html
-   .. |Advanced Setup| replace:: :doc:`/ex-commandstation/advanced-setup/index`
+.. list-table::
+    :widths: 30 70
+    :header-rows: 0
+    :class: table-wrap-text
 
-   .. |Question| image:: ./_static/images/question_bl.png
-   .. _Question: support/index.html
-   .. |Support| replace:: :doc:`/support/index`
+    * - |EX-CS-LOGO-SMALL| 
+      - Our DCC command station for controlling your model railroad
+    * - |EX-I-LOGO-SMALL| 
+      - Our user friendly installer for loading the command station software
+    * - |EX-R-LOGO-SMALL|  
+      - The scripting language, built into the |EX-CS|, allowing you to automate your model railroad
+    * - |EX-WT-LOGO-SMALL|
+      - A simple web based controller for your command station
+    * - |EX-TT-LOGO-SMALL| 
+      - A stepper based turntable controller running on an additional Arduino microcontroller
+    * - |EX-DCCI-LOGO-SMALL| 
+      - A DCC packet sniffing tool 
+    * - |EX-BSC-LOGO-SMALL|
+      - The original DCC++ [#bcs]_  software, packaged in a stable release 
 
-   .. |Puzzle| image:: ./_static/images/puzzle_bl.png
-   .. _Puzzle: contributing/index.html
-   .. |Contribute| replace:: :doc:`Contribute </about/contributing/index>`
+Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 

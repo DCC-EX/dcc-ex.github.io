@@ -163,7 +163,7 @@ svg {
 }
 
 /* override table width restrictions */ 
-.table-wrap-text p, .table-wrap-text p { 
+.table-wrap-text p, .table-wrap-text-align-top p { 
   white-space: normal !important; 
   font-size: 110% !important;
   line-height: 140% !important;
@@ -174,8 +174,15 @@ svg {
   border-style: none !important;
   border-width:0px !important;
 }
- 
-.table-wrap-text { 
+
+.table-wrap-text-align-top td {
+  vertical-align:top !important;
+  background-color: white !important;  
+  border-style: none !important;
+  border-width:0px !important;
+}
+
+.table-wrap-text, .table-wrap-text-align-top { 
   margin-bottom: 24px; 
   max-width: 100% !important; 
   overflow: visible !important; 
@@ -183,7 +190,7 @@ svg {
   border-width:0px !important;
 } 
  
-.table-wrap-text th p { 
+.table-wrap-text th p, table-wrap-text-align-top th p { 
     margin-bottom: unset; 
 } 
 

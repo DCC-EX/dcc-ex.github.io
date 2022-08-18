@@ -16,16 +16,16 @@ Based on off-the-shelf Arduino technology, our products currently include:
 .. list-table::
     :widths: 33 33 33
     :header-rows: 0
-    :class: table-wrap-text
+    :class: table-wrap-text-align-top
 
-    * - |EX-CS-LOGO-SMALL| |br| Our DCC command station for controlling your model railroad
-      - |EX-I-LOGO-SMALL| |br| Our user friendly installer for loading the |EX-CS| software
-      - |EX-R-LOGO-SMALL| |br| The scripting language, built into the |EX-CS|, allowing you to automate your model railroad
-    * - |EX-WT-LOGO-SMALL| |br| A simple web based controller for your command station
-      - |EX-TT-LOGO-SMALL| |BR| A stepper based turntable controller running on an additional Arduino microcontroller
-      - |EX-DCCI-LOGO-SMALL| |BR| A DCC packet sniffing tool
+    * - |EX-CS-LOGO-SMALL| |br| |BR| Our DCC command station for controlling your model railroad
+      - |EX-I-LOGO-SMALL| |br| |BR| Our user friendly installer for loading the |EX-CS| software
+      - |EX-R-LOGO-SMALL| |br| |BR| The scripting language, built into the |EX-CS|, allowing you to automate your model railroad
+    * - |EX-WT-LOGO-SMALL| |br| |BR| A simple web based controller for your command station
+      - |EX-TT-LOGO-SMALL| |BR| |BR| A stepper based turntable controller running on an additional Arduino microcontroller
+      - |EX-DCCI-LOGO-SMALL| |BR| |BR| A DCC packet sniffing tool
     * -  
-      - |EX-BSC-LOGO-SMALL| |BR| The original DCC++ [#bcs]_  software, packaged in a stable release 
+      - |EX-BSC-LOGO-SMALL| |BR| |BR|  The original DCC++ [#bcs]_  software, packaged in a stable release 
       -
 
 ..
@@ -39,7 +39,7 @@ Based on off-the-shelf Arduino technology, our products currently include:
    * |EX-DCCI| -  a DCC packet sniffing tool
    * |BSC| - the original DCC++ [#bcs]_  software, packaged in a stable release
 
-Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more
+Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 
@@ -69,7 +69,7 @@ Based on off-the-shelf Arduino technology, our products currently include:
     * - |EX-BSC-LOGO-SMALL|
       - The original DCC++ [#bcs]_  software, packaged in a stable release 
 
-Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more
+Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 

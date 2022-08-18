@@ -68,7 +68,7 @@ The |EX-TT| integration includes:
 
   **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of |EX-TT|. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_.
 
-How Does IT Work?
+How Does It Work?
 =================
 
 

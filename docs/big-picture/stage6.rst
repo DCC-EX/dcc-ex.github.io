@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+|EX-BP-LOGO|
+
 *********************************
 Stage 6 - Putting it all Together
 *********************************
@@ -232,15 +234,19 @@ To define servo based signals, these only require one Vpin per signal along with
 
 Allowing for servo based turnouts being used, we will start our signals from the third available Vpin on our PCA9685 servo module (we used the first two for servo turnouts). We will make the assumption that red requires a servo angle of 100, amber 250, and green 400:
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  ALIAS(SIG1_TRN1_APP, 102)       // Signal 1, approaching turnout 1
-  ALIAS(SIG2_TRN2_GO, 103)        // Signal 2, proceed beyond turnout 2
-  ALIAS(SIG3_STN_EX, 104)         // Signal 3, exit the station siding
+    .. code-block:: 
 
-  SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
-  SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
-  SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
+      ALIAS(SIG1_TRN1_APP, 102)       // Signal 1, approaching turnout 1
+      ALIAS(SIG2_TRN2_GO, 103)        // Signal 2, proceed beyond turnout 2
+      ALIAS(SIG3_STN_EX, 104)         // Signal 3, exit the station siding
+
+      SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
+      SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
+      SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
+
+|
 
 Virtual blocks
 ==============
@@ -322,17 +328,21 @@ For safe running and a known starting state, we ensure both our turnouts are clo
 
 If we omit that first ``DONE``, EX-RAIL would automatically execute ``ROUTE(1, "Main Track")`` at every startup. Note, of course, that if you want that first route executed at every startup, then you can simply omit that same ``DONE``, which will have the same effect as manually selecting the "Main track" route.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  // Start up with turnouts closed and signals red
-  CLOSE(TRN1)
-  CLOSE(TRN2)
-  RED(SIG1_TRN1_APP)
-  RED(SIG2_TRN2_GO)
-  RED(SIG3_STN_EX)
+    .. code-block:: 
 
-  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
-  DONE
+      // Start up with turnouts closed and signals red
+      CLOSE(TRN1)
+      CLOSE(TRN2)
+      RED(SIG1_TRN1_APP)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
+
+      // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+      DONE
+
+|
 
 Route 1 - main track running
 ----------------------------
@@ -353,27 +363,31 @@ Once both turnouts are closed, both signals 1 and 2 are set to green to indicate
 
 The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any further.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  ROUTE(1, "Main track")        // Select this route to just use the main track
-    RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
-    IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
-      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
-      DELAY(2000)
-      RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
-      CLOSE(TRN1)               // Close turnout 1
-      DELAY(2000)               // Wait 2 seconds for the turnout to close
-    ENDIF
-    IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
-      AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
-      DELAY(2000)
-      RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
-      CLOSE(TRN2)               // Close turnout 2
-      DELAY(2000)               // Wait 2 seconds for the turnout to close
-    ENDIF
-    GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
-    GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
-  DONE
+    .. code-block:: 
+
+      ROUTE(1, "Main track")        // Select this route to just use the main track
+        RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
+        IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
+          AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+          DELAY(2000)
+          RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
+          CLOSE(TRN1)               // Close turnout 1
+          DELAY(2000)               // Wait 2 seconds for the turnout to close
+        ENDIF
+        IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
+          AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+          DELAY(2000)
+          RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
+          CLOSE(TRN2)               // Close turnout 2
+          DELAY(2000)               // Wait 2 seconds for the turnout to close
+        ENDIF
+        GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+        GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
+      DONE
+
+|
 
 Route 2 - enter and exit the station siding
 -------------------------------------------
@@ -392,27 +406,31 @@ Once both turnouts are thrown, both signals 1 and 3 are set to green to indicate
 
 The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any further.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  ROUTE(2, "Station siding")    // Select this route to use the station siding
-    RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
-    IFCLOSED(TRN1)              // If turnout 1 is closed, do these:
-      AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
-      DELAY(2000)
-      RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
-      THROW(TRN1)               // Throw turnout 1
-      DELAY(2000)               // Wait 2 seconds for the turnout to throw
-    ENDIF
-    IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
-      AMBER(SIG3_STN_EX)       // Set signal 2 amber for 2 seconds to warn of the change
-      DELAY(2000)
-      RED(SIG3_STN_EX)         // Set signal 2 red while we throw turnout 2
-      THROW(TRN2)               // Throw turnout 2
-      DELAY(2000)               // Wait 2 seconds for the turnout to throw
-    ENDIF
-    GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
-    GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
-  DONE
+    .. code-block:: 
+
+      ROUTE(2, "Station siding")    // Select this route to use the station siding
+        RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
+        IFCLOSED(TRN1)              // If turnout 1 is closed, do these:
+          AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+          DELAY(2000)
+          RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
+          THROW(TRN1)               // Throw turnout 1
+          DELAY(2000)               // Wait 2 seconds for the turnout to throw
+        ENDIF
+        IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
+          AMBER(SIG3_STN_EX)       // Set signal 2 amber for 2 seconds to warn of the change
+          DELAY(2000)
+          RED(SIG3_STN_EX)         // Set signal 2 red while we throw turnout 2
+          THROW(TRN2)               // Throw turnout 2
+          DELAY(2000)               // Wait 2 seconds for the turnout to throw
+        ENDIF
+        GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+        GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
+      DONE
+
+|
 
 Fully automated layout
 ======================
@@ -455,25 +473,29 @@ Next, we place a RESERVE() on each block a train occupies, which will prevent an
 
 Once these activities have been done, we can tell our trains to start following the appropriate sequence, which will let them start on their fully automated journey safely.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  // Start up with turnouts closed and signals red
-  CLOSE(TRN1)
-  CLOSE(TRN2)
-  RED(SIG1_TRN1_APP)
-  RED(SIG2_TRN2_GO)
-  RED(SIG3_STN_EX)
+    .. code-block:: 
 
-  // Send three locos around our layout:
-  RESERVE(BLK1_TRN1_APP)
-  RESERVE(BLK2_MAIN_HOLD)
-  RESERVE(BLK4_TRN2_EX)
-  SENDLOCO(1, BLK1_EXIT)
-  SENDLOCO(2, BLK2_BLK4)
-  SENDLOCO(3, BLK4_BLK1)
+      // Start up with turnouts closed and signals red
+      CLOSE(TRN1)
+      CLOSE(TRN2)
+      RED(SIG1_TRN1_APP)
+      RED(SIG2_TRN2_GO)
+      RED(SIG3_STN_EX)
 
-  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
-  DONE
+      // Send three locos around our layout:
+      RESERVE(BLK1_TRN1_APP)
+      RESERVE(BLK2_MAIN_HOLD)
+      RESERVE(BLK4_TRN2_EX)
+      SENDLOCO(1, BLK1_EXIT)
+      SENDLOCO(2, BLK2_BLK4)
+      SENDLOCO(3, BLK4_BLK1)
+
+      // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+      DONE
+
+|
 
 Exiting block 1 - station entry or main track?
 ----------------------------------------------
@@ -490,17 +512,21 @@ On startup, we are sending train 1 on this sequence, which means with our ``IF(C
 
 As a result of executing the ``LATCH(CHOOSE_BLK2)``, the next train navigating this block will instead have control handed over to the `moving from block 1 to block 2 - continue on the main track`_ sequence.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  // Sequence to exit block 1, and choose whether to go to the station or continue on main
-  SEQUENCE(BLK1_EXIT)
-    IF(CHOOSE_BLK2)
-      UNLATCH(CHOOSE_BLK2)
-      FOLLOW(BLK1_BLK2)
-    ELSE
-      LATCH(CHOOSE_BLK2)
-      FOLLOW(BLK1_BLK3)
-    ENDIF
+  .. code-block:: 
+
+      // Sequence to exit block 1, and choose whether to go to the station or continue on main
+      SEQUENCE(BLK1_EXIT)
+        IF(CHOOSE_BLK2)
+          UNLATCH(CHOOSE_BLK2)
+          FOLLOW(BLK1_BLK2)
+        ELSE
+          LATCH(CHOOSE_BLK2)
+          FOLLOW(BLK1_BLK3)
+        ENDIF
+
+|
 
 Moving from block 1 to block 2 - continue on the main track
 -----------------------------------------------------------
@@ -517,23 +543,27 @@ Then, after the train has not only activated sensor 2, but has passed over it co
 
 At this point, control of the train is handed over to the `moving from block 2 to block 4 - continue on the main track`_ sequence.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  // Sequence to go from block 1 to block 2
-  SEQUENCE(BLK1_BLK2)
-    RESERVE(BLK2_MAIN_HOLD)
-    IFTHROWN(TRN1)
-      AMBER(SIG1_TRN1_APP)
-      DELAY(2000)
-      RED(SIG1_TRN1_APP)
-      CLOSE(TRN1)
-      DELAY(2000)
-    ENDIF
-    GREEN(SIG1_TRN1_APP)
-    FWD(20)
-    AFTER(SNS2_MAIN_TRN1_EX)
-    FREE(BLK1_TRN1_APP)
-    FOLLOW(BLK2_BLK4)
+  .. code-block:: 
+
+    // Sequence to go from block 1 to block 2
+    SEQUENCE(BLK1_BLK2)
+      RESERVE(BLK2_MAIN_HOLD)
+      IFTHROWN(TRN1)
+        AMBER(SIG1_TRN1_APP)
+        DELAY(2000)
+        RED(SIG1_TRN1_APP)
+        CLOSE(TRN1)
+        DELAY(2000)
+      ENDIF
+      GREEN(SIG1_TRN1_APP)
+      FWD(20)
+      AFTER(SNS2_MAIN_TRN1_EX)
+      FREE(BLK1_TRN1_APP)
+      FOLLOW(BLK2_BLK4)
+
+|
 
 Moving from block 1 to block 3 - entering the station
 -----------------------------------------------------
@@ -548,27 +578,31 @@ The train needs to ``STOP`` at the appropriate point on the station ``AT(SNS3_ST
 
 There is now a delay of 10 to 15 seconds while our passengers embark or disembark ``DELAYRANDOM(10000, 15000)``, before moving off again at low speed ``FWD(10)`` until sensor 5 is reached ``AT(SNS5_STN_TRN2_APP)``, at which point the control of the train is over to the `moving from block 3 to block 4 - exiting the station siding`_ sequence.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  // Sequence to go from block 1 to block 3
-  SEQUENCE(BLK1_BLK3)
-    RESERVE(BLK3_STN)
-    IFCLOSED(TRN1)
-      AMBER(SIG1_TRN1_APP)
-      DELAY(2000)
-      RED(SIG1_TRN1_APP)
-      THROW(TRN1)
-      DELAY(2000)
-    ENDIF
-    GREEN(SIG1_TRN1_APP)
-    FWD(10)
-    AT(SNS3_STN)
-    STOP
-    FREE(BLK1_TRN1_APP)
-    DELAYRANDOM(10000, 15000)
-    FWD(10)
-    AT(SNS5_STN_TRN2_APP)
-    FOLLOW(BLK3_BLK4)
+    .. code-block:: 
+
+      // Sequence to go from block 1 to block 3
+      SEQUENCE(BLK1_BLK3)
+        RESERVE(BLK3_STN)
+        IFCLOSED(TRN1)
+          AMBER(SIG1_TRN1_APP)
+          DELAY(2000)
+          RED(SIG1_TRN1_APP)
+          THROW(TRN1)
+          DELAY(2000)
+        ENDIF
+        GREEN(SIG1_TRN1_APP)
+        FWD(10)
+        AT(SNS3_STN)
+        STOP
+        FREE(BLK1_TRN1_APP)
+        DELAYRANDOM(10000, 15000)
+        FWD(10)
+        AT(SNS5_STN_TRN2_APP)
+        FOLLOW(BLK3_BLK4)
+
+|
 
 Moving from block 2 to block 4 - continue on the main track
 -----------------------------------------------------------
@@ -585,25 +619,29 @@ Once done, train control is over to the `moving from block 4 to block 1 - the sp
 
   This creates a domino effect whereby train 1's exit of block 1 is needed in order for train 3 to enter block 1, and likewise for train 3 to exit block 4 in order for train 2 to enter block 4. The trains will then follow the sequences around the layout accordingly.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  // Sequence to go from block 2 to block 4
-  SEQUENCE(BLK2_BLK4)
-    RESERVE(BLK4_TRN2_EX)
-    IFTHROWN(TRN2)
-      AMBER(SIG2_TRN2_GO)
-      AMBER(SIG3_STN_EX)
-      DELAY(2000)
-      RED(SIG2_TRN2_GO)
-      RED(SIG3_STN_EX)
-      CLOSE(TRN2)
-      DELAY(2000)
-    ENDIF
-    GREEN(SIG2_TRN2_GO)
-    FWD(20)
-    AFTER(SNS4_MAIN_TRN2_APP)
-    FREE(BLK2_MAIN_HOLD)
-    FOLLOW(BLK4_BLK1)
+    .. code-block:: 
+
+      // Sequence to go from block 2 to block 4
+      SEQUENCE(BLK2_BLK4)
+        RESERVE(BLK4_TRN2_EX)
+        IFTHROWN(TRN2)
+          AMBER(SIG2_TRN2_GO)
+          AMBER(SIG3_STN_EX)
+          DELAY(2000)
+          RED(SIG2_TRN2_GO)
+          RED(SIG3_STN_EX)
+          CLOSE(TRN2)
+          DELAY(2000)
+        ENDIF
+        GREEN(SIG2_TRN2_GO)
+        FWD(20)
+        AFTER(SNS4_MAIN_TRN2_APP)
+        FREE(BLK2_MAIN_HOLD)
+        FOLLOW(BLK4_BLK1)
+
+|
 
 Moving from block 3 to block 4 - exiting the station siding
 -----------------------------------------------------------
@@ -612,25 +650,29 @@ Leaving the station siding is another repeat of the same logic, ensuring block 4
 
 Control is then handed over to the `moving from block 4 to block 1 - the speed run`_ sequence.
 
-.. code-block:: 
+.. collapse:: Click to show/hide the code
 
-  // Sequence to go from block 3 to block 4
-  SEQUENCE(BLK3_BLK4)
-    RESERVE(BLK4_TRN2_EX)
-    IFCLOSED(TRN2)
-      AMBER(SIG2_TRN2_GO)
-      AMBER(SIG3_STN_EX)
-      DELAY(2000)
-      RED(SIG2_TRN2_GO)
-      RED(SIG3_STN_EX)
-      THROW(TRN2)
-      DELAY(2000)
-    ENDIF
-    GREEN(SIG3_STN_EX)
-    FWD(20)
-    AFTER(SNS5_STN_TRN2_APP)
-    FREE(BLK3_STN)
-    FOLLOW(BLK4_BLK1)
+    .. code-block:: 
+
+      // Sequence to go from block 3 to block 4
+      SEQUENCE(BLK3_BLK4)
+        RESERVE(BLK4_TRN2_EX)
+        IFCLOSED(TRN2)
+          AMBER(SIG2_TRN2_GO)
+          AMBER(SIG3_STN_EX)
+          DELAY(2000)
+          RED(SIG2_TRN2_GO)
+          RED(SIG3_STN_EX)
+          THROW(TRN2)
+          DELAY(2000)
+        ENDIF
+        GREEN(SIG3_STN_EX)
+        FWD(20)
+        AFTER(SNS5_STN_TRN2_APP)
+        FREE(BLK3_STN)
+        FOLLOW(BLK4_BLK1)
+
+|
 
 Moving from block 4 to block 1 - the speed run
 ----------------------------------------------
@@ -639,7 +681,7 @@ The final sequence is the simplest of all, and allows for a higher speed run thr
 
 Again, we start up with train 3 occupying block 4, and once train 1 has exited block 1, the sequence below will execute, with train 3 moving to block 1, and train 2 being able to exit block 2.
 
-.. collapse:: click to see the code
+.. collapse:: Click to show/hide the code
 
     .. code-block:: 
 
@@ -650,7 +692,7 @@ Again, we start up with train 3 occupying block 4, and once train 1 has exited b
         AFTER(SNS1_TRN1_APP)
         FREE(BLK4_TRN2_EX)
         FOLLOW(BLK1_EXIT)
- 
+
 |
 
 Learnings from stage 1
@@ -668,40 +710,16 @@ The main things at this point that we'd like to call to your attention are:
 Complete myAutomation.h examples
 ================================
 
-ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins
---------------------------------------------------------------------------
 
-:doc:`stage6/example1`
+* :doc:`ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins<stage6/example1>`
+* :doc:`ROUTEs with turnouts/signals on Mega2560 direct I/O pins <stage6/example2>`
+* :doc:`ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins <stage6/example3>`
+* :doc:`ROUTEs with servo based turnouts/signals on a PCA9685 servo module <stage6/example4>`
+* :doc:`Full automation with pin based turnouts and signals on Mega2560 direct I/O pins <stage6/example5>`
+* :doc:`Full automation with pin based turnouts and signals on MCP23017 I/O expander Vpins <stage6/example6>`
+* :doc:`Full automation with servo based turnouts and signals with a PCA9685 servo module <stage6/example7>`
 
-ROUTEs with turnouts/signals on Mega2560 direct I/O pins
---------------------------------------------------------
-
-:doc:`stage6/example2`
-
-ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins
------------------------------------------------------------
-
-:doc:`stage6/example3`
-
-ROUTEs with servo based turnouts/signals on a PCA9685 servo module
-------------------------------------------------------------------
-
-:doc:`stage6/example4`
-
-Full automation with pin based turnouts and signals on Mega2560 direct I/O pins
--------------------------------------------------------------------------------
-
-:doc:`stage6/example5`
-
-Full automation with pin based turnouts and signals on MCP23017 I/O expander Vpins
-----------------------------------------------------------------------------------
-
-:doc:`stage6/example6`
-
-Full automation with servo based turnouts and signals with a PCA9685 servo module
----------------------------------------------------------------------------------
-
-:doc:`stage6/example7`
+|
 
 .. toctree::
   :hidden:

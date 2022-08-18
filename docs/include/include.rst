@@ -84,6 +84,11 @@
       :scale: 40%
       :class: image-float-right
 ..
+.. |EX-BP-LOGO| image:: /_static/images/logos/product-logo-bigpicture.png
+      :alt: The Big Picture
+      :scale: 40%
+      :class: image-float-right
+..
 .. |EX-SUPPORT-LOGO| image:: /_static/images/logos/product-logo-ex-support.png
       :alt: EX-Support
       :scale: 40%
@@ -130,6 +135,11 @@
       :scale: 20%
       :class: image-min-width-144
       :target: ./download/ex-commandstation.html#getting-basestation-classic
+..
+.. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png
+      :alt: The Big Picture
+      :scale: 20%
+      :class: image-float-right
 ..
 ..
 ..

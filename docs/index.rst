@@ -45,8 +45,6 @@ If you are just starting your journey with |DCC-EX| we recommend you look at our
 
 ----
 
-----
-
 
 Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
 Based on off-the-shelf Arduino technology, our products currently include:

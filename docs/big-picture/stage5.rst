@@ -73,6 +73,8 @@ At this point, based on the assumption above, your |EX-TT| should be configured 
     #define LED_FAST 100
     #define LED_SLOW 500
 
+|
+
 Now that the basics of |EX-TT| have been completed and it is ready to be added to your |EX-CS|, we need to get it connected ready for action.
 
 Firstly, your |EX-CS| needs to be prepared by ensuring the |EX-TT| device driver is loaded. This is covered in :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation`.
@@ -100,6 +102,8 @@ Next, you need to connect |EX-TT| to your |EX-CS| which requires a connection to
     }
 
     #endif
+
+|
 
 Once you have prepared your |EX-CS| and connected |EX-TT|, turn them on and feel free to validate it is connected and working as per :ref:`ex-turntable/test-and-tune:testing ex-turntable`.
 
@@ -147,6 +151,8 @@ Once you have noted these changes, you can proceed with :ref:`ex-turntable/assem
     #define LED_FAST 100
     #define LED_SLOW 500
 
+|
+
 Once again, as per the turntable above, we need to add the traverser device to our |EX-CS|, and this is where we need to specify both the updated I2C address of `0x61` and the updated Vpin of `601` to ensure we are adding this as a second device that does not conflict with the turntable.
 
 As per our turntable section above, these changes need to be incorporated into the process outlined in :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation` in order to add the traverser device driver to your |EX-CS|.
@@ -173,6 +179,8 @@ As per our turntable section above, these changes need to be incorporated into t
     }
 
     #endif
+
+|
 
 At this point, we're ready to connect the |EX-TT| in traverser to our |EX-CS| as outlined in :ref:`ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`, and then validate it's working as per :ref:`ex-turntable/test-and-tune:testing ex-turntable`.
 
@@ -214,6 +222,8 @@ Ideally these should have been noted in :ref:`ex-turntable/assembly:7. load the 
     Homing...
     Homing started
     Turntable homed successfully
+
+|
 
 Tuning the turntable
 --------------------

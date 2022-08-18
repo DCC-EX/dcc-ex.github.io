@@ -113,9 +113,9 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 
 * You should now be on the the 'Throttle screen'
 
-* Turn on the power to the track via the menu 
+* Turn on the power to the track via the Menu 
    
-   * (The three dots or bars) then 'Power'.  Then click the power button till it goes green. 9may require more than one click)
+   * (The three dots or bars) then 'Power'.  Then click the :guilabel:`Power` button till it goes green. (may require more than one click)
    * The four red LEDs on the Motor board will turn on
    * Click :guilabel:`Back`
 

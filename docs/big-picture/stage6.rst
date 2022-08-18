@@ -639,15 +639,19 @@ The final sequence is the simplest of all, and allows for a higher speed run thr
 
 Again, we start up with train 3 occupying block 4, and once train 1 has exited block 1, the sequence below will execute, with train 3 moving to block 1, and train 2 being able to exit block 2.
 
-.. code-block:: 
+.. collapse:: click to see the code
 
-  // Sequence to move from block 4 back to block 1
-  SEQUENCE(BLK4_BLK1)
-    RESERVE(BLK1_TRN1_APP)
-    FWD(40)
-    AFTER(SNS1_TRN1_APP)
-    FREE(BLK4_TRN2_EX)
-    FOLLOW(BLK1_EXIT)
+    .. code-block:: 
+
+      // Sequence to move from block 4 back to block 1
+      SEQUENCE(BLK4_BLK1)
+        RESERVE(BLK1_TRN1_APP)
+        FWD(40)
+        AFTER(SNS1_TRN1_APP)
+        FREE(BLK4_TRN2_EX)
+        FOLLOW(BLK1_EXIT)
+ 
+|
 
 Learnings from stage 1
 ======================

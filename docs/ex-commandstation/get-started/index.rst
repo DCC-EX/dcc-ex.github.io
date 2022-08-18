@@ -22,7 +22,7 @@ The following pages will instruct you on how to build an |EX-CS| including assem
 What is EX-CommandStation?
 ==========================
 
-A basic |EX-CS| can be made from widely available Arduino boards that you can assemble yourself. It supports much of the NMRA Digital Command Control (DCC) standards, including:
+An |EX-CS| is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards. It supports much of the NMRA Digital Command Control (DCC) standards, including:
 
 * Simultaneous control of multiple locomotives
 * Control of all cab functions (F0-F28 and F29-F68)
@@ -51,11 +51,11 @@ To actually run your model railroad you will need a few items:
   - an **Arduino microprocessor**,
   - a **Motor Driver** board / motor shield,
   - Optionally: 
-    
-    - a **WiFi shield (Recommended)** [#inst]_, or |BR| (*This is the option that will be described on the following pages*)
+
+    - a **WiFi shield (Recommended)** [#inst]_ (*This option described on the following pages*), or
     - an ethernet shield, or
     - a Bluetooth board, or
-    - neither [#jmri]_, and
+    - direct connection to a PC [#jmri]_, and
 
   - our free, open source, custom software 
 
@@ -64,8 +64,8 @@ To actually run your model railroad you will need a few items:
    :scale: 50%
    :align: right
 
-2. a **Controller (Throttle)** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc
-3. Power - The Arduino and the Motor shields need to be powered separately, so 
+1. a **Controller (Throttle)** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc
+2. Power - The Arduino and the Motor shields need to be powered separately, so 
  
   - a **9-14v DC power supply** for the motor shield to the track, and 
   - a **5-9v DC power supply** for the Arduino

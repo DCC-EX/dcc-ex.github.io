@@ -30,11 +30,7 @@ Links / Hyperlinks
 Internal - Same Page
 --------------------
 
-.. todo::   Contributing - internal links - same page
-
 Sphinx cross-references are used for internal links in the same document/page. This ensures they are correct and by default will use the destination heading text as the link text.
-
-These take either of two forms. **Preferred form**:
 
 .. admonition:: Example
 
@@ -44,7 +40,11 @@ These take either of two forms. **Preferred form**:
 
     `some other text to apper in the apage <Internal - Same page>`_
 
-or 
+
+Internal - To a Heading in a Different Page
+-------------------------------------------
+
+Sphinx cross-references are used for internal links in the different pages. This ensures they are correct and by default will use the destination heading text as the link text.
 
 .. admonition:: Example
 
@@ -52,8 +52,7 @@ or
 
     :ref:`Internal - Same page`
 
-    :ref:`some other text to apper in the apage <Internal - Same page>`
-
+    :ref:`some other text to appear in the page <Internal - Same page>`
 
 Internal - To a Different Page
 ------------------------------
@@ -68,7 +67,7 @@ To link to a different page use ``:doc:``:
 
     :doc:`/reference/hardware/motor-boards`
 
-  :doc:`/reference/hardware/motor-boards`
+    :doc:`some other text to appear in the page </reference/hardware/motor-boards>`
 
 The document name is a relative or absolute (within the documentation) file path, without the .rst suffix.  Absolute are generally safer.
 
@@ -356,12 +355,13 @@ Going any further into the details and options of controlling SVGs via CSS is be
 Documents / Files
 =================
 
-.. todo:: Contributing - documents description
+.. todo:: LOW - Contributing - documents description
+
 
 Image Artifacts
 ===============
 
-.. todo:: Contributing - image Artifacts description
+.. todo:: LOW - Contributing - image Artifacts description
 
 Hiding pages and comments
 ==========================

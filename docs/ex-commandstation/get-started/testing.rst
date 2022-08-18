@@ -6,7 +6,7 @@
 |EX-CS-LOGO|
 
 ***************
-Test your setup
+Test Your Setup
 ***************
 
 |conductor|

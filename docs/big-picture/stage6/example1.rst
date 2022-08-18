@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+|EX-BP-LOGO|
+
 ************************************************************************************
 Example - ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins
 ************************************************************************************

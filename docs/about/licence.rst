@@ -18,4 +18,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 Attributions
 ============
 
-Puzzle icon by Satawat Foto Anukul - https://freeicons.io/profile/103766
+
+* We would like to thank Alex Leão of Locontrol who as a personal favour created our comfort level icons
+* Puzzle icon by Satawat Foto Anukul - https://freeicons.io/profile/103766

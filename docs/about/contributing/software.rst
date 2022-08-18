@@ -82,7 +82,10 @@ Once installed, you will need to install three Python packages in order to succe
 
 .. code-block:: 
 
-  pip install sphinx sphinx_rtd_theme sphinxcontrib-spelling sphinx-toolbox
+  pip install sphinx-toolbox
+  pip install sphinx 
+  pip install sphinx_rtd_theme
+  pip install sphinxcontrib-spelling
 
 Recommended editor (VSCode)
 ============================

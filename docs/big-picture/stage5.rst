@@ -126,12 +126,11 @@ Expand the code below to see what we expect config.h to look like for |EX-TT|:
   */
 
   #define I2C_ADDRESS 0x61
-  #define TURNTABLE_EX_MODE TURNTABLE
+  #define TURNTABLE_EX_MODE TRAVERSER
   #define HOME_SENSOR_ACTIVE_STATE LOW
   #define LIMIT_SENSOR_ACTIVE_STATE LOW
   #define RELAY_ACTIVE_STATE HIGH
-  #define PHASE_SWITCHING AUTO
-  #define PHASE_SWITCH_ANGLE 45
+  #define PHASE_SWITCHING MANUAL
   #define STEPPER_DRIVER ULN2003_HALF_CW
   #define DISABLE_OUTPUTS_IDLE
   #define STEPPER_MAX_SPEED 200     // Maximum possible speed the stepper will reach
@@ -167,6 +166,9 @@ Expand the code below to see what we expect myHal.cpp to resemble at this point:
 Tune your EX-Turntable positions
 ================================
 
+Tuning the turntable
+--------------------
+
 .. .. collapse:: Expand to see the output
 
 .. code-block:: 
@@ -181,6 +183,11 @@ Tune your EX-Turntable positions
   Homing...
   Homing started
   Turntable homed successfully
+
+Tuning the traverser
+--------------------
+
+
 
 Control and automate your EX-Turntable
 ======================================

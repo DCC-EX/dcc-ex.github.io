@@ -61,7 +61,7 @@ Our products are based on off-the-shelf Arduino technology and currently include
 .. list-table::
     :widths: 30 70
     :header-rows: 0
-    :class: table-wrap-text
+    :class: table-wrap-text-align-top
 
     * - |EX-CS-LOGO-SMALL| 
       - Our DCC command station for controlling your model railroad

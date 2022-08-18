@@ -18,14 +18,23 @@ Based on off-the-shelf Arduino technology, our products currently include:
     :header-rows: 0
     :class: table-wrap-text-align-top
 
-    * - |EX-CS-LOGO-SMALL| |br| |BR| Our DCC command station for controlling your model railroad
-      - |EX-I-LOGO-SMALL| |br| |BR| Our user friendly installer for loading the |EX-CS| software
-      - |EX-R-LOGO-SMALL| |br| |BR| The scripting language, built into the |EX-CS|, allowing you to automate your model railroad
-    * - |EX-WT-LOGO-SMALL| |br| |BR| A simple web based controller for your command station
-      - |EX-TT-LOGO-SMALL| |BR| |BR| A stepper based turntable controller running on an additional Arduino microcontroller
-      - |EX-DCCI-LOGO-SMALL| |BR| |BR| A DCC packet sniffing tool
+    * - |EX-CS-LOGO-SMALL|
+      - |EX-I-LOGO-SMALL|
+      - |EX-R-LOGO-SMALL|
+    * - Our DCC command station for controlling your model railroad
+      - Our user friendly installer for loading the |EX-CS| software
+      - The scripting language, built into the |EX-CS|, allowing you to automate your model railroad
+    * - |EX-WT-LOGO-SMALL|
+      - |EX-TT-LOGO-SMALL|
+      - |EX-DCCI-LOGO-SMALL|
+    * - A simple web based controller for your command station
+      - A stepper based turntable controller running on an additional Arduino microcontroller
+      - A DCC packet sniffing tool
     * -  
-      - |EX-BSC-LOGO-SMALL| |BR| |BR|  The original DCC++ [#bcs]_  software, packaged in a stable release 
+      - |EX-BSC-LOGO-SMALL| 
+      -
+    * -  
+      - The original DCC++ [#bcs]_  software, packaged in a stable release 
       -
 
 ..

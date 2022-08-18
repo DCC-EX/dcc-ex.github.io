@@ -169,6 +169,18 @@ svg {
   line-height: 140% !important;
 }
 
+.table-wrap-text tr:nth-child(odd), .table-wrap-text-align-top tr:nth-child(odd) {
+  background-color: white !important;  
+  border-style: none !important;
+  border-width:0px !important;
+}
+
+.table-wrap-text tr:nth-child(even), .table-wrap-text-align-top tr:nth-child(even) {
+  background-color: #ffffff00 !important;  
+  border-style: none !important;
+  border-width:0px !important;
+}
+
 .table-wrap-text td {
   background-color: white !important;  
   border-style: none !important;
@@ -177,7 +189,7 @@ svg {
 
 .table-wrap-text-align-top td {
   vertical-align:top !important;
-  background-color: white !important;  
+  background-color: #ffffff00 !important;  
   border-style: none !important;
   border-width:0px !important;
 }

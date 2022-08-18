@@ -11,7 +11,7 @@ DCC-EX Model Railroading
   `We have a New Name! <about/press/new-name.html>`_
 
 Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
-Based on off-the-shelf Arduino technology, our products currently include:
+Our products are based on off-the-shelf Arduino technology and currently include:
 
 .. list-table::
     :widths: 33 33 33
@@ -22,8 +22,8 @@ Based on off-the-shelf Arduino technology, our products currently include:
       - |EX-I-LOGO-SMALL|
       - |EX-R-LOGO-SMALL|
     * - Our DCC command station for controlling your model railroad
-      - Our user friendly installer for loading the |EX-CS| software
-      - The scripting language, built into the |EX-CS|, allowing you to automate your model railroad
+      - Our user friendly installer for loading the command station software
+      - The scripting language, built into the command station software, providing automation of your model railroad
     * - |EX-WT-LOGO-SMALL|
       - |EX-TT-LOGO-SMALL|
       - |EX-DCCI-LOGO-SMALL|
@@ -56,7 +56,7 @@ If you are just starting your journey with |DCC-EX| we recommend you look at our
 
 
 Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
-Based on off-the-shelf Arduino technology, our products currently include:
+Our products are based on off-the-shelf Arduino technology and currently include:
 
 .. list-table::
     :widths: 30 70

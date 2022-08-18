@@ -45,7 +45,11 @@ Adding the turntable
 
 For the purposes of this exercise, we will assume you've acquired everything you need from the :doc:`/ex-turntable/purchasing` page, and have completed all steps up to and including :ref:`ex-turntable/assembly:7. load the ex-turntable software` on the :doc:`/ex-turntable/assembly` page.
 
-Now that the basics of |EX-TT| have been completed and it is ready to be added to your |EX-CS|, we need to get it calibrated and connected ready for action.
+Now that the basics of |EX-TT| have been completed and it is ready to be added to your |EX-CS|, we need to get it connected ready for action.
+
+Connecting |EX-TT| to |EX-CS| requires a connection to the I2C interface, and it's a good idea to make sure |EX-TT| is turned on before |EX-CS| to ensure it's detected successfully at startup.
+
+
 
 Adding the traverser
 --------------------
@@ -56,6 +60,19 @@ Tune your EX-Turntable positions
 ================================
 
 
+
+.. code-block:: 
+
+  License GPLv3 fsf.org (c) dcc-ex.com
+  Turntable-EX version 0.4.0-Beta
+  Available at I2C address 0x60
+  Turntable-EX in TURNTABLE mode
+  Turntable-EX has been calibrated for 4097 steps per revolution
+  Automatic phase switching enabled at 45 degrees
+  Phase will switch at 512 steps from home, and revert at 2560 steps from home
+  Homing...
+  Homing started
+  Turntable homed successfully
 
 Control and automate your EX-Turntable
 ======================================

@@ -59,20 +59,20 @@ For the purposes of this exercise, we will assume you've acquired everything you
 Tune your EX-Turntable positions
 ================================
 
+.. collapse:: Expand to see the output
 
+  .. code-block:: 
 
-.. code-block:: 
-
-  License GPLv3 fsf.org (c) dcc-ex.com
-  Turntable-EX version 0.4.0-Beta
-  Available at I2C address 0x60
-  Turntable-EX in TURNTABLE mode
-  Turntable-EX has been calibrated for 4097 steps per revolution
-  Automatic phase switching enabled at 45 degrees
-  Phase will switch at 512 steps from home, and revert at 2560 steps from home
-  Homing...
-  Homing started
-  Turntable homed successfully
+    License GPLv3 fsf.org (c) dcc-ex.com
+    Turntable-EX version 0.4.0-Beta
+    Available at I2C address 0x60
+    Turntable-EX in TURNTABLE mode
+    Turntable-EX has been calibrated for 4097 steps per revolution
+    Automatic phase switching enabled at 45 degrees
+    Phase will switch at 512 steps from home, and revert at 2560 steps from home
+    Homing...
+    Homing started
+    Turntable homed successfully
 
 Control and automate your EX-Turntable
 ======================================

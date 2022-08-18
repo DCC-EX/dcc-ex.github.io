@@ -41,15 +41,17 @@ DCC-EX (Native <AT> commands>)
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
 - :doc:`JMRI <software/jmri>`
+- :doc:`RtDtive DCC++ <software/rtdrive-dccpp>`
 
 wiThrottle Protocol Based Throttles
 -----------------------------------
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`
-- :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
+- :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
+- :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Hardware) <hardware/witcontroller>`
 - :doc:`TCS UWT-50 (Hardware) <hardware/uwt50>`
@@ -78,6 +80,7 @@ Android (Phones and Tablets)
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
 - :doc:`DigiTrainsPro (Android) <software/digitrainspro>`
+- :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 
 Apple iOS (Phones and Tablets)
 ------------------------------
@@ -85,6 +88,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
+- :doc:`Train Driver (iOS) <software/train-driver>`
 
 Dedicated Hardware
 ------------------

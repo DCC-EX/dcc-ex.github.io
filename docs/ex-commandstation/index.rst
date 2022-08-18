@@ -9,12 +9,12 @@ EX-CommandStation
 What is EX-CommandStation?
 ==========================
 
-A basic |EX-CS| can be made from widely available Arduino boards that you can assemble yourself. It supports much of the NMRA Digital Command Control (DCC) standards, including:
+An |EX-CS| is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards. It supports much of the NMRA Digital Command Control (DCC) standards, including:
 
 * Simultaneous control of multiple locomotives and their functions
 * Control of accessory/function decoders
-* Programming on Main Track
 * Programming Track
+* Programming on Main Track
 
 It includes advanced features such as:
 

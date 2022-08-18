@@ -19,3 +19,5 @@ Throttles (Software)
     digitrainspro
     srcpclient
     jmri
+    rtdrive-dccpp
+    train-driver

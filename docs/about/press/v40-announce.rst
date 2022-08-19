@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-|EX-AN-LOGO| |donate-button| 
+|EX-AN-LOGO|
 
 ****************************************
 EX-CommandStation 4.0 Release [Feb 2022]

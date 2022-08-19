@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-|EX-AN-LOGO| |donate-button| 
+|donate-button|
 
 ***************************
 About, Press & Contributing

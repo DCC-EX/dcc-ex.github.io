@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-|EX-AN-LOGO| |donate-button| 
+|EX-AN-LOGO|
 
 *********************
 Press / Announcements

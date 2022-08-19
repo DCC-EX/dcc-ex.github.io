@@ -54,9 +54,9 @@ Requirements (for installing)
 
   * for Mac OS or Linux:
   
-    * ???
-
-.. todo::  URGENT include details for how to get the port COM number for iOS
+    * open a terminal screen and run the command ``ls /dev/tty.usbmodem*``
+    * this should result in displaying a device name such as ``/dev/tty.usbmodem12033``
+    * if multiple devices are listed, you may need to unplug your |EX-CS|, re-run the command to see which device is left, then plug it in again to note the difference
 
 2. Download and Run EX-Installer 
 ================================

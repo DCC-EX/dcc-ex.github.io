@@ -81,9 +81,9 @@ references:
 
   ::
 
-    :ref:`advanced-setup/motor-board-config:Configure Using the Installer`
+    :ref:`reference/hardware/motorboards/motor-board-config:configure using the installer`
 
-  :ref:`ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:Configure Using the Installer`
+  :ref:`reference/hardware/motorboards/motor-board-config:configure using the installer`
 
 The reference is the full name of the document (the absolute path without a leading /), a colon, and the section heading. The full name must be used even when referring to headings in the same source file.
 

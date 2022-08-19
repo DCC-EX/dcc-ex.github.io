@@ -27,7 +27,7 @@ Pinout for reference:
 
 .. Note:: This configuration uses the normal accuracy waveform to avoid having to use jumpers. To use the high-accuracy waveform, you would need to use pins 3 and 11 in your motor board definition in config.h and jumper them to D5 and D6 on the shield. For information about high-accuracy mode, See:
 
-:ref:`High Accuracy Waveform <ex-commandstation/advanced-setup/supported-motorboards/motor-board-config:Using High Accuracy Waveform Mode>`
+:ref:`High Accuracy Waveform <reference/hardware/motorboards/motor-board-config:Using High Accuracy Waveform Mode>`
 
 .. Todo:: LOW - Give a link to how to handle the jumper reconfig
 

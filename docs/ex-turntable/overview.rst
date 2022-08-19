@@ -19,7 +19,7 @@ What is EX-Turntable?
 
 |EX-TT| is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for |EX-TT|.
 
-The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`levels:choose your comfort level` guide for |EX-CS| (Conductor, Tinkerer, and Engineer).
+The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`levels:choose your comfort level` guide for |EX-CS| (|conductor-text|, |tinkerer-text|, and |engineer-text|).
 
 The out-of-the-box example configuration should allow a |conductor-text| level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
@@ -29,7 +29,7 @@ Essentially, if you have setup your own CommandStation, the expectation is that 
 
 .. note::
 
-  |EX-TT| is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get |EX-TT| as easy to use and reliable as possible.
+  |EX-TT| is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our :doc:`/support/contact-us` methods and help us get |EX-TT| as easy to use and reliable as possible.
 
   For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the |EX-TT| view of the `DCC-EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
   
@@ -68,7 +68,7 @@ The |EX-TT| integration includes:
 
   **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of |EX-TT|. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_.
 
-How Does IT Work?
+How Does It Work?
 =================
 
 

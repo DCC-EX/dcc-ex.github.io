@@ -101,7 +101,7 @@ Style Guidelines
   * **#########** with overline, for parts - not really used
   * \*\*\*\*\*\*\*\*\*\*\*\* Page Titles
   * **=========** for sections
-  * **----------------------** for subsections  (underscore)
+  * **----------------------** for subsections (hyphen)
   * **\^\^\^\^\^\^\^\^\^\^** for subsubsections
   * **\~\~\~\~\~\~\~\~\~\~** for paragraphs
   * only if really needed (i.e. avoid): 

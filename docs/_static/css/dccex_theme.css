@@ -209,10 +209,12 @@ svg {
 
 .image-min-width-144 {
   min-width: 144px;
+  height: auto !important;
 }
 
 .image-min-width-72 {
   min-width: 72px;
+  height: auto !important;
 }
 
 .image-float-right img {

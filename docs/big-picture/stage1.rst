@@ -232,34 +232,63 @@ Run more than one train (Individual or Consist/Multiple Units)
 Engine Driver (Multiple Trains)
 -------------------------------
 
-TODO
+.. todo:: LOW - Stage 1 - Engine Driver - Multiple Trains
 
 wiThrottle (Multiple Trains)
 ----------------------------
 
-TODO
+.. todo:: LOW - Stage 1 - wiThrottle - Multiple Trains
 
 Other Controllers (Multiple Trains)
 -----------------------------------
 
-TODO
+.. todo:: LOW - Stage 1 - other controllers - Multiple Trains
 
 Program a decoder using JMRI
 ============================
 
-TODO
+|DCC-EX| does not currently provide any apps with a user friendly interface for programming DCC decoders.
+
+At least one Smart Phone App (:doc:`/throttles/software/rtdrive-dccpp`) can program decoders on a |EX-CS| but it is not particularly user friendly to do so.
+
+As a result, we recommend using JMRI's Decoder Pro for programming decoders.  It provides plain English descriptions of all the CVs of a huge number of different decoders. It is very well supported, runs on the major PC operating systems, is free and open source.
 
 JMRI (Programming Decoders)
 ---------------------------
 
+|JMRI| is a PC based app that runs on Windows, Apple OSX, and Linux (including Raspberry Pi's Raspbian (RasPi)).
+
+It relies on the |EX-CS| being connected to the PC running |JMRI|, normally by the USB cable. (It can be done over WiFi, but is not recommended).  This means that, even if you setup your |EX-CS| for Wifi you will need to connect it to the PC.  Don't worry, this will work without having to load the software on the |EX-CS| again.
+
+Installing JMRI
+^^^^^^^^^^^^^^^
+
 TODO
+
+see https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml
+
+Programming Track CS Programming on the Main
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There are two basic methods for programming decoders
+
+* Using the Programming Track
+* Programming on the Main
+
+
+With "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc., but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main.
 
 Programming Track
 ^^^^^^^^^^^^^^^^^
+
+see https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_ServiceMode.shtml
 
 TODO
 
 Programming on the Main
 ^^^^^^^^^^^^^^^^^^^^^^^
 
- There is such a thing as "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc., but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main.
+or OPS Mode programming
+
+https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml
+

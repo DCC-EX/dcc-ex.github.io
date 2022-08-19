@@ -127,7 +127,7 @@
 .. |EX-DCCI-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-DCCInspector
       :scale: 30%
-      :class: image-min-width72
+      :class: image-min-width-72
       :target: ./ex-dccinspector/index.html
 ..
 .. |EX-BSC-LOGO-SMALL| image:: /_static/images/logos/product-logo-basestationclassic.png

@@ -207,11 +207,11 @@ svg {
     margin-bottom: unset; 
 } 
 
-.image-min-width-144 img {
+.image-min-width-144 {
   min-width: 144px;
 }
 
-.image-min-width-72 img {
+.image-min-width-72 {
   min-width: 72px;
 }
 

@@ -23,7 +23,7 @@ Our products are based on off-the-shelf Arduino technology and currently include
       - |EX-R-LOGO-SMALL|
     * - Our DCC command station for controlling your model railroad
       - Our user friendly command station software installer
-      - The included scripting language for automating your model railroad
+      - The in-built scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
       - |EX-TT-LOGO-SMALL|
       - |EX-DCCI-LOGO-SMALL|
@@ -34,7 +34,7 @@ Our products are based on off-the-shelf Arduino technology and currently include
       - |EX-BSC-LOGO-SMALL| 
       -
     * -  
-      - The original DCC++ [#bcs]_  software, packaged in a stable release 
+      - The original DCC++ [#bcs]_  software |BR| packaged in a stable release 
       -
 
 ..

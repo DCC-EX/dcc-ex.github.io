@@ -2,9 +2,9 @@
 <svg
    inkscape:export-ydpi="17.060751"
    inkscape:export-xdpi="17.060751"
-   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-turntable.png"
+   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-announcements.png"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="DCC-EX_product-logo-ex-turntable.svg"
+   sodipodi:docname="DCC-EX_product-announcements.svg"
    id="svg40"
    version="1.1"
    fill="none"
@@ -37,8 +37,8 @@
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
      inkscape:window-x="-8"
-     inkscape:cy="1351.6192"
-     inkscape:cx="1488.2664"
+     inkscape:cy="1363.5016"
+     inkscape:cx="1146.6484"
      inkscape:zoom="0.16831664"
      showgrid="false"
      id="namedview42"
@@ -203,14 +203,14 @@
     <rect
        x="205.28384"
        y="1341.9482"
-       width="1334.3451"
-       height="174.87143"
+       width="1039.0117"
+       height="116.82903"
        id="rect2482-4-7-6" />
     <rect
        x="205.28384"
        y="1341.9482"
-       width="1334.3451"
-       height="174.87143"
+       width="499.55879"
+       height="133.90032"
        id="rect2482-4-7-6-3" />
     <rect
        x="205.28384"
@@ -257,18 +257,6 @@
          stop-color="white"
          offset="1" />
     </linearGradient>
-    <rect
-       x="2598.6682"
-       y="-631.96124"
-       width="1405.569"
-       height="457.62711"
-       id="rect1729" />
-    <rect
-       x="2598.6682"
-       y="-631.96124"
-       width="1405.569"
-       height="457.62711"
-       id="rect1729-6" />
   </defs>
   <rect
      style="fill:none;fill-opacity:1;stroke-width:0.377953;-inkscape-stroke:none;stop-color:#000000;stroke:none"
@@ -280,37 +268,35 @@
   <text
      xml:space="preserve"
      id="text4021"
-     style="font-size:14.6667px;line-height:2px;font-family:'Adobe Gothic Std';-inkscape-font-specification:'Adobe Gothic Std';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect4023);fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+     style="font-size:14.6667px;line-height:2px;font-family:'Adobe Gothic Std';-inkscape-font-specification:'Adobe Gothic Std';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect4023);display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   <text
      xml:space="preserve"
      id="text2480-6-0-6"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6);fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6);display:inline;fill:#000000;fill-opacity:1;stroke:none"
      transform="matrix(3.4802183,0,0,3.4802183,104.67054,-4197.4634)"
      inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-turntable.png"
      inkscape:export-xdpi="18.431187"
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan954"><tspan
-         style="fill:#00a3b9"
-         id="tspan950">EX-</tspan><tspan
+       id="tspan3466"><tspan
          style="fill:#00353d"
-         id="tspan952">Turntable</tspan></tspan></text>
+         id="tspan3464">Announcements</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6-3);fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6-3);display:inline;fill:#000000;fill-opacity:1;stroke:none"
      transform="matrix(3.4802183,0,0,3.4802183,104.67083,-4563.0201)"
      inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-commandstation.png"
      inkscape:export-xdpi="18.431187"
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan960"><tspan
+       id="tspan3472"><tspan
          style="fill:#00353d"
-         id="tspan956">DCC-</tspan><tspan
+         id="tspan3468">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan958">EX</tspan></tspan></text>
+         id="tspan3470">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"
@@ -320,58 +306,9 @@
      inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-commandstation.png"
      inkscape:export-xdpi="18.431187"
      inkscape:export-ydpi="18.431187" />
-  <g
-     id="g5370-3"
-     transform="matrix(1.0404,0,0,1.0404,-289.17028,128.52568)"
-     inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-commandstation.png"
-     inkscape:export-xdpi="18.431187"
-     inkscape:export-ydpi="18.431187">
-    <rect
-       id="rect2-8"
-       stroke-linejoin="round"
-       stroke-miterlimit="16"
-       stroke-width="14.3637"
-       stroke="#00353D"
-       fill="#ffffff"
-       transform="rotate(-45)"
-       rx="63.718899"
-       height="437.06601"
-       width="437.06601"
-       y="506.54724"
-       x="57.163441"
-       style="stroke:#00353d;stroke-opacity:0.956863" />
-    <g
-       transform="translate(1.8796397,-2.1336634)"
-       id="g15-36"
-       mask="url(#mask0-5-7)">
-      <path
-         style="fill:url(#paint0_linear-0)"
-         id="path7-3"
-         fill="url(#paint0_linear)"
-         d="m 558.03,10.9856 c 7.305,6.359 311.428,260.2244 19.227,487.4164 l 94.853,87.162 49.99,11.536 61.722,-42.127 C 1014.79,279.491 624.481,0.449243 615.806,-4.43481 Z" />
-      <path
-         id="path9-6"
-         stroke-width="10.2598"
-         stroke="#00353d"
-         d="m 579.281,51.6391 91.645,-38.7324 33.869,26.0143 -101.607,42.7791 16.603,28.3269 111.567,-45.0917 30.549,29.4829 -130.163,47.4038 13.282,29.483 146.765,-45.67 25.235,34.108 -158.054,45.092 2.656,39.888 186.611,-39.888 40.51,57.809 -223.136,26.592 -21.915,47.404 262.981,-19.077 v 71.684 l -284.896,-3.469 -23.908,41.045 284.233,48.56 -44.495,83.246 -279.583,-83.246" />
-      <path
-         id="path11-7"
-         stroke-width="20.5195"
-         stroke="#ffffff"
-         d="M 570.647,491.57 C 862.849,264.379 565.999,11.7512 558.694,5.39221 M 616.47,-10.0282 c 8.675,4.88406 398.99,283.9262 168.016,559.4082 L 736.2,597.1" />
-      <path
-         id="path13-1"
-         stroke-width="10.2598"
-         stroke="#00353d"
-         d="M 570.647,491.57 C 862.849,264.379 565.999,11.7512 558.694,5.39221 M 616.47,-10.0282 c 8.675,4.88406 398.99,283.9262 168.016,559.4082 l -44.441,45.157" />
-    </g>
-  </g>
-  <text
-     xml:space="preserve"
-     id="text1727"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.02853px;line-height:1.25;font-family:Stencil;-inkscape-font-specification:'Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1729-6);fill:#e6e6e6;fill-opacity:1;stroke:#333333;stroke-width:0.07707388;stroke-miterlimit:4;stroke-dasharray:none"
-     transform="matrix(36.970019,18.89477,-18.89477,36.970019,-104784.31,-25693.6)"><tspan
-       x="2598.668"
-       y="-622.92884"
-       id="tspan962">Beta</tspan></text>
+  <path
+     d="m 264.26226,134.69934 c 5.43999,1.20422 10.31709,4.20369 13.84071,8.51949 l 219.68786,159.34361 180.24096,36.2458 c 26.45755,5.04472 49.96306,20.06809 65.65885,41.9565 15.69569,21.88833 22.38096,48.97068 18.67336,75.64845 -3.70749,26.67794 -17.52417,50.91154 -38.59358,67.69009 -21.06962,16.7795 -47.78071,24.82079 -74.61129,22.46216 l -89.92455,178.38167 c -7.26548,14.30795 -19.91871,25.14422 -35.17345,30.12382 -15.25474,4.97953 -31.86304,3.69488 -46.17103,-3.57069 -14.308,-7.26541 -25.1445,-19.91765 -30.12405,-35.17244 -4.97938,-15.25572 -3.69462,-31.86402 3.57086,-46.17197 l 31.26445,-62.21647 -23.53734,-4.73326 c -2.02719,-0.40767 -3.94257,-1.2451 -5.59093,-2.48879 -1.64664,-1.24673 -2.98176,-2.86329 -3.90135,-4.71391 -0.92046,-1.85187 -1.39975,-3.88978 -1.40203,-5.95753 -0.002,-2.06744 0.4739,-4.10636 1.39146,-5.95939 l 22.10646,-46.29779 c 1.30235,-2.70219 3.46632,-4.89466 6.15217,-6.232 2.68482,-1.33765 5.7394,-1.74378 8.68093,-1.15449 l 31.80723,6.39629 7.50249,-14.81727 -69.76385,-14.02929 -263.90997,62.75603 c -4.91802,2.61818 -10.5759,3.50137 -16.05807,2.50697 -52.05786,-10.46861 -28.26424,-188.58054 -19.52262,-232.0504 8.74163,-43.46994 55.64848,-216.9338 107.70632,-206.46519 z m 227.06463,424.91319 -10.0967,21.13507 14.20723,2.85707 10.5208,-21.04983 z m -15.65521,123.37931 c -2.38769,4.56665 -3.65306,9.63578 -3.69072,14.78752 -0.0389,5.15251 1.14977,10.23982 3.46862,14.84168 2.67833,5.60627 6.86727,10.35484 12.0948,13.71261 5.22751,3.35791 11.2889,5.19128 17.50079,5.29433 6.21295,0.10327 12.33101,-1.52688 17.66786,-4.70831 5.33792,-3.18136 9.68177,-7.78803 12.54575,-13.30244 l 86.26953,-171.72575 -67.96145,-13.66676 z m -1.16974,-198.24467 167.6241,33.7085 c 20.30149,4.08259 41.39449,-0.0669 58.63713,-11.5359 17.24263,-11.46876 29.22307,-29.31718 33.30583,-49.61973 4.08254,-20.30146 -0.0669,-41.39465 -11.53579,-58.63722 -11.46892,-17.2425 -29.31815,-29.2233 -49.61964,-33.30588 L 505.28949,331.64843 c -2.42715,52.30039 -12.80879,103.9257 -30.78755,153.09874 z m -250.34452,50.70225 221.94674,-52.11078 c 10.06798,-25.68788 17.83966,-52.217 23.22288,-79.27712 5.5342,-27.02655 8.65355,-54.49123 9.33373,-82.07024 L 294.11109,188.1358 c 8.18814,59.11897 -4.86571,149.26593 -10.75032,178.52863 -5.88461,29.2627 -28.69269,117.44814 -59.20335,168.78499 z m -42.66335,10.8354 c 16.6574,-7.6814 56.66213,-91.9675 75.36067,-184.95062 18.69854,-92.98321 14.44916,-186.49948 1.99199,-199.70479 -16.76343,7.6601 -56.78948,92.0522 -75.46668,184.92931 -18.67722,92.87713 -14.44916,186.49951 -1.88598,199.7261 z"
+     fill="#000000"
+     id="path1253"
+     style="fill:#00a3b9;fill-opacity:1;stroke-width:10.8146" />
 </svg>

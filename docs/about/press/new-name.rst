@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+|EX-AN-LOGO| |donate-button| 
 
 ***********************
 Our New Name [Aug 2022]

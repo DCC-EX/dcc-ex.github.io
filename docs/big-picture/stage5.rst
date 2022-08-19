@@ -10,7 +10,7 @@ Stage 5 - Turntables & Traversers
 
   .. contents:: On this page
     :local:
-    :depth: 1
+    :depth: 2
 
 A turntable can add significant interest to a layout, especially when involved in operations sessions, and when depicting realistic engine yards.
 
@@ -36,7 +36,7 @@ What to expect to learn from stage 5
 At the end of this stage, we expect you will have learnt the following:
 
 * How to add an |EX-TT| to your |EX-CS| in both turntable and traverser modes
-* How to tune your |EX-TT| positions
+* How to calculate and tune your |EX-TT| positions, including DCC phase/polarity switching
 * How to control and automate your |EX-TT|
 
 Add an EX-Turntable to your EX-CommandStation
@@ -202,6 +202,10 @@ We'll use some basic mathematics to tune our turntable and traverser positions, 
 
   We will be using the same steps per revolution number throughout this page (4097) for both the turntable and traverser, and are keeping this consistent with the examples in the |EX-TT| documentation for simplicity.
 
+  If the calculations below seem too complicated, then you are free to figure the step positions out however suits you, and you can always just use experimentation with the diagnostic command to determine the correct positions.
+
+  However, when it comes to DCC phase/polarity switching, it's important to get this right in order to prevent short circuits when locos enter and exit the turntable bridge track.
+
 Obtain the steps per revolution
 -------------------------------
 
@@ -228,31 +232,390 @@ Ideally these should have been noted in :ref:`ex-turntable/assembly:7. load the 
 
 Once we have our steps per revolution, we can use that number with our formulas to calculate the steps required to move to each desired position.
 
-Tuning the turntable
---------------------
+Calculating EX-Turntable positions and DCC phase/polarity switching
+-------------------------------------------------------------------
 
-.. todo:: MEDIUM - add diagram outlining angles/steps for turntable position calculations and phase switching
+.. todo:: MEDIUM - add diagram outlining angles for turntable position calculations and phase switching
 
 .. tip:: 
 
   It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with |EX-TT|. Refer to :ref:`ex-turntable/overview:important! phase (or polarity) switching` and :ref:`ex-turntable/overview:how does this work with ex-turntable?` for details.
 
+.. note:: 
+
+  When outlining turntable positions and angles at which DCC phase switching occurs, these are all relative to the home sensor from the perspective of the turntable bridge end that has the magnet attached.
+
 There are two aspects to tuning our turntable positions; one being the step counts of each track position around the turntable to ensure correct track alignment, and the other being when to swap our DCC phase/polarity to ensure locos can enter and exit the turntable without causing short circuits.
 
 We will refer to our turntable positions from number 1 through to 7 moving in a clockwise direction from our home position, with 1 through 6 being roundhouse stalls 1 through 6, and 7 being our track connecting to the switching/shunting yard.
 
-The home position has been set just before position 1.
+The home position has been set 10 degrees before position 1/roundhouse stall 1.
 
-:ref:`ex-turntable/test-and-tune:tuning your turntable positions`
+Track wiring
+^^^^^^^^^^^^
+
+.. todo:: MEDIUM - track wiring diagram
+
+In this layout, positions 1 through 6 are all somewhat opposite our connecting track at position 7, and therefore the simplest option for track wiring is to ensure they are all wired with the same polarity (this will be outlined in a diagram).
+
+This means when the home sensor end of our turntable bridge is aligned with any of the roundhouse stall positions, we don't need to reverse the DCC phase/polarity.
+
+However, when the opposite end of the bridge aligns with any of these positions, the DCC phase/polarity must be reversed.
+
+DCC phase/polarity switching angle calculation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Given our track wiring in combination with the home and roundhouse stall positions, we now know that between 0 (home) and 60 degrees (roundhouse stall 6), we need the DCC phase to be maintained in line with our track wiring, with phase switching occurring at some point after this, before reaching our connection track at position 7.
+
+Therefore, we will set our phase switching angle to 65 degrees, resulting in the phase automatically reverting at 245 degrees.
+
+The means, for our turntable |EX-TT|, we will need to update "config.h" and repeat :ref:`ex-turntable/assembly:7. load the ex-turntable software`.
+
+Expand "config.h" to see the updated |EX-TT| configuration file for the turntable, noting we have removed all comments for brevity.
+
+.. collapse:: Updated "config.h" for the turntable
+
+  .. code-block:: cpp
+
+    #define I2C_ADDRESS 0x60
+    #define TURNTABLE_EX_MODE TURNTABLE
+    #define HOME_SENSOR_ACTIVE_STATE LOW
+    #define LIMIT_SENSOR_ACTIVE_STATE LOW
+    #define RELAY_ACTIVE_STATE HIGH
+    #define PHASE_SWITCHING AUTO
+    #define PHASE_SWITCH_ANGLE 65
+    #define STEPPER_DRIVER ULN2003_HALF_CW
+    #define DISABLE_OUTPUTS_IDLE
+    #define STEPPER_MAX_SPEED 200     // Maximum possible speed the stepper will reach
+    #define STEPPER_ACCELERATION 25   // Acceleration and deceleration rate
+    #define LED_FAST 100
+    #define LED_SLOW 500
+  
+|
+
+Turntable position calculation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since we know the angles of our positions as outlined when considering our DCC phase switching, we can now calculate the step counts required for the turntable bridge to align with these positions. We will use the formula outlined in :ref:`ex-turntable/test-and-tune:determine the positions` to calculate these step counts (full rotation step count / 360 degrees * position in degrees).
+
+Using this formular results in these step counts (noting we round up or down to the nearest full number):
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  Position
+      -  Description
+      -  Degrees from home
+      -  Calculation
+      -  Step count
+    * -  1
+      -  Roundhouse stall 1
+      -  10
+      -  4097 / 360 * 10
+      -  114
+    * -  2
+      -  Roundhouse stall 2
+      -  20
+      -  4097 / 360 * 20
+      -  228
+    * -  3
+      -  Roundhouse stall 3
+      -  30
+      -  4097 / 360 * 30
+      -  344
+    * -  4
+      -  Roundhouse stall 4
+      -  40
+      -  4097 / 360 * 40
+      -  459
+    * -  5
+      -  Roundhouse stall 5
+      -  50
+      -  4097 / 360 * 50
+      -  573
+    * -  6
+      -  Roundhouse stall 6
+      -  60
+      -  4097 / 360 * 60
+      -  688
+    * -  7
+      -  Yard connection
+      -  220
+      -  4097 / 360 * 220
+      -  2523
 
 Tuning the traverser
 --------------------
 
 .. todo:: LOW - add diagram outlining steps for traverser position calculations
 
-For our traverser positions, we will simply start with the fact we will have six evenly spaced tracks on the traverser.
+.. tip:: 
 
-With our assumption of a full rotation moving the traverser from the first to last track, this would give us x steps between positions (360 degrees / 6 positions).
+  Now is a great time to revisit the :doc:`/ex-turntable/traverser` page, and in particular the section on :ref:`ex-turntable/traverser:considerations - turntable vs. traverser`.
+
+For our traverser positions, we will simply start with the fact we will have six evenly spaced tracks on the traverser. In addition, we need to ensure we leave a buffer between our home and limit sensors as they should provide some indication of when the traverser is reaching the physical limits of movement. We will use an arbitrary value of 100 steps for this buffer.
+
+This will mean our first position will be at step 100, and our last position will be at step 3097, and we will need an additional four positions divided equally between these two positions. Our effective step count between positions 1 and 6 becomes 2997 (3097 - 100) which needs to be divided by 5 to give us 4 evenly distributed positions, which is a gap of 599.4 steps between each.
+
+This results in these positions (noting we round up or down to the nearest full number):
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  Position
+      -  Description
+      -  Calculation
+      -  Step count
+    * -  1
+      -  Staging 1
+      -  0 + 100 (home + buffer)
+      -  100
+    * -  2
+      -  Staging 2
+      -  100 + 599.4 (position 1 + gap)
+      -  699
+    * -  3
+      -  Staging 3
+      -  100 + 1198.8 (position 1 + 2 * gap)
+      -  1299
+    * -  4
+      -  Staging 4
+      -  100 + 1798.2 (position 1 + 3 * gap)
+      -  1898
+    * -  5
+      -  Staging 5
+      -  100 + 2397.6 (position 1 + 4 * gap)
+      -  2498
+    * -  6
+      -  Staging 6
+      -  4097 - 100 (limit - buffer)
+      -  3097
 
 Control and automate your EX-Turntable
 ======================================
+
+Now we have determined our various turntable and traverser positions and have calculated the correct angle at which to switch our DCC phase/polarity, it's time to put this all into place so we can control and automate our |EX-TT|.
+
+Control via diagnostic commands
+-------------------------------
+
+For basic control and validation of the turntable and traverser positions, this can be accomplished using the diagostic command ``<D TT vpin steps activity>`` via the serial console of you |EX-CS|.
+
+.. collapse:: Expand to see the diagnostic commands to move to our calculated turntable positions.
+
+  .. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  Position
+      -  Description
+      -  Command
+    * -  1
+      -  Roundhouse stall 1
+      -  ``<D TT 600 114 0>``
+    * -  2
+      -  Roundhouse stall 2
+      -  ``<D TT 600 228 0>``
+    * -  3
+      -  Roundhouse stall 3
+      -  ``<D TT 600 344 0>``
+    * -  4
+      -  Roundhouse stall 4
+      -  ``<D TT 600 459 0>``
+    * -  5
+      -  Roundhouse stall 5
+      -  ``<D TT 600 573 0>``
+    * -  6
+      -  Roundhouse stall 6
+      -  ``<D TT 600 688 0>``
+    * -  7
+      -  Yard connection
+      -  ``<D TT 600 2523 0>``
+    * -  0
+      -  Home turntable
+      -  ``<D TT 600 0 2>``
+
+  The last command will move to the home position.
+
+|
+
+.. collapse:: Expand to see the diagnostic commands to move to our calculated traverser positions.
+
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+      :class: command-table
+
+      * -  Position
+        -  Description
+        -  Command
+      * -  1
+        -  Staging 1
+        -  ``<D TT 601 100 0>``
+      * -  2
+        -  Staging 2
+        -  ``<D TT 601 699 0>``
+      * -  3
+        -  Staging 3
+        -  ``<D TT 601 1299 0>``
+      * -  4
+        -  Staging 4
+        -  ``<D TT 601 1898 0>``
+      * -  5
+        -  Staging 5
+        -  ``<D TT 601 2498 0>``
+      * -  6
+        -  Staging 6
+        -  ``<D TT 601 3097 0>``
+      * -  0
+        -  Home traverser
+        -  ``<D TT 601 0 2>``
+
+  As for our turntable, the last command will move our traverser to the home position.
+
+|
+
+Control and automation with EX-RAIL
+-----------------------------------
+
+While controlling |EX-TT| via the diagnostic command is great for testing and tuning our various |EX-TT| positions, it's not exactly the friendliest way to control the turntable during normal use of our layout.
+
+There is a much better way to do this by using the ``MOVETT(vpin, steps, activity)`` command available in |EX-R| as part of a route definition that is advertised to |wiThrottle| apps and |Engine Driver|. This allows you to simply select the appropriate route from the route list, and |EX-R| and |EX-TT| will do their things, rotating or moving to the provided position. This is also covered in :ref:`ex-turntable/test-and-tune:advertising positions to engine driver and withrottle applications`.
+
+Controlling your |EX-TT| this way also allows you to incorporate other automated activities associated with turntable or traverser movements, such as using the virtual block commands ``<RESERVE>`` and ``<FREE>`` to ensure no other automation sequences attempt to drive a loco on to the turntable while it is moving, to control auxiliary warning LEDs to indicate movements are happening, and so forth.
+
+EX-RAIL commands for EX-Turntable
+---------------------------------
+
+.. collapse:: Expand to see the |EX-R| version of our diagnostic commands.
+
+  .. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  Position
+      -  Description
+      -  Command
+    * -  1
+      -  Roundhouse stall 1
+      -  ``MOVETT(600, 114, 0)``
+    * -  2
+      -  Roundhouse stall 2
+      -  ``MOVETT(600, 228, 0)``
+    * -  3
+      -  Roundhouse stall 3
+      -  ``MOVETT(600, 344, 0)``
+    * -  4
+      -  Roundhouse stall 4
+      -  ``MOVETT(600, 459, 0)``
+    * -  5
+      -  Roundhouse stall 5
+      -  ``MOVETT(600, 573, 0)``
+    * -  6
+      -  Roundhouse stall 6
+      -  ``MOVETT(600, 688, 0)``
+    * -  7
+      -  Yard connection
+      -  ``MOVETT(600, 2523, 0)``
+    * -  0
+      -  Home turntable
+      -  ``MOVETT(600, 0, 2)``
+    * -  1
+      -  Staging 1
+      -  ``MOVETT(601, 100, 0)``
+    * -  2
+      -  Staging 2
+      -  ``MOVETT(601, 699, 0)``
+    * -  3
+      -  Staging 3
+      -  ``MOVETT(601, 1299, 0)``
+    * -  4
+      -  Staging 4
+      -  ``MOVETT(601, 1898, 0)``
+    * -  5
+      -  Staging 5
+      -  ``MOVETT(601, 2498, 0)``
+    * -  6
+      -  Staging 6
+      -  ``MOVETT(601, 3097, 0)``
+    * -  0
+      -  Home traverser
+      -  ``MOVETT(601, 0, 2)``
+
+|
+
+EX-RAIL ROUTEs for EX-Turntable
+-------------------------------
+
+Here is an example of what you can do to control an |EX-TT| via a ROUTE using |EX-R| (you will note this is based on the example provided in myEX-Turntable.example.h provided with the |EX-CS| software):
+
+.. code-block:: 
+
+  // Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.
+  // This includes RESERVE()/FREE() to protect any automation activities.
+  //
+  #define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \
+    ROUTE(route_id, desc) \
+      RESERVE(reserve_id) \
+      MOVETT(vpin, steps, activity) \
+      WAITFOR(vpin) \
+      FREE(reserve_id) \
+      DONE
+  
+  EX_TURNTABLE(TTRoute1, Turntable, 600, 114, Turn, "Roundhose stall 1")
+
+  ALIAS(Turntable, 255)
+  ALIAS(TTRoute1)
+
+Here's the explanation:
+
+.. code-block:: 
+
+  #define EX-TURNTABLE...
+
+This macro is only defined once, and encapsulates all the activities you wish to configure and perform for each |EX-TT| position you want to define as a ROUTE.
+
+In this case, this macro will do these things:
+
+* ``#define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \`` - this line defines how you need to call the macro and provide the parameters for each ROUTE later
+* ``ROUTE(route_id, desc) \`` - this line defines the ROUTE ID, and the description, which is what will appear in |wiThrottle| apps and |Engine Driver|
+* ``RESERVE(reserve_id) \`` - this line attempts to reserve the virtual block; if it is already reserved by another ROUTE, it will pause until it is free, otherwise it will reserve it and continue
+* ``MOVETT(vpin, steps, activity) \`` - this line is what actually tells |EX-TT| what to do, based on the step count and activity provided
+* ``WAITFOR(vpin) \`` - this line tells |EX-R| not to continue processing further until such time as |EX-TT| has finished moving
+* ``FREE(reserve_id) \`` - this line is what frees our virtual block reservation only when the move is complete
+* ``DONE`` - this is our mandatory termination line for a ROUTE as required by |EX-R|
+* ``EX_TURNTABLE(TTRoute1, Turntable, 600, 114, Turn, "Roundhose stall 1")`` - this line calls our macro and provides the required parameters for the lines above
+* ``ALIAS(Turntable, 255)`` - this line defines an alias for the number 255 which is used as a virtual block ID
+* ``ALIAS(TTRoute1)`` - this line simply ensures we have a unique ID we pass to the EX_TURNTABLE macro, and we don't particular care what the ID is, just that it's unique
+
+EX-Turntable is ready to use
+============================
+
+That's really all there is to it!
+
+We've successfully added |EX-TT| to our |EX-CS| in both turntable and traverser modes.
+
+We've successfully calculated our |EX-TT| positions and DCC phase/polarity switching angles, and we know how to tune the individual positions as well.
+
+We also know how to control our |EX-TT| by both the interactive diagnostic commands as well as via |EX-R|.
+
+Complete myAutomation.h examples
+================================
+
+To finish up, here are two complete myAutomation.h examples to peruse.
+
+The first is |EX-TT| in turntable mode only, and the second has the traverser mode added as well.
+
+As per our our |EX-R| routes explanation, these are based on the "myEX-Turntable.example.h" included with the |EX-CS| software.
+
+.. toctree::
+  :maxdepth: 1
+
+  stage5/turntable-example
+  stage5/traverser-example

@@ -71,23 +71,24 @@ Here is an image that represents a direct connection.
    :align: center
    :scale: 50%
 
-There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a wifi controller (throttle) for the |EX-CS|.  On this page we are only going to cover two.  These two are a) free, or have a free version, b) are reasonably easy to get to work, and c) most people will already have a suitable phone to use.
+There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a wifi controller (throttle) for the |EX-CS|.  On this page we are only going to cover two. 
 
 Compatible Wifi Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. warning:: 
+   :class: warning-float-right
+   A limitation of the |Access Point Mode| that is recommended in the :doc:`/ex-commandstation/get-started/index` pages is that the |wiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can guess it, but |wiThrottle| can't.  In |wiThrottle| you will need type in the address.
+
 For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.
 
-We will just  cover two here:
+We will just cover two here. These two are a) free, or have a free version, b) are reasonably easy to get to work, and c) most people will already have a suitable phone to use:
 
 * `Engine Driver <Engine Driver (Android \| WiThrottle \| WiFi)>`_
 * `WiThrottle <WiThrottle (iOS \| WiThrottle \| WiFi)>`_
 
 If you have an Android phone use `Engine Driver <Engine Driver (Android \| WiThrottle \| WiFi)>`_. |br| If you have a Apple (iOS) phone use 
 `WiThrottle Lite <WiThrottle (iOS \| WiThrottle \| WiFi)>`_.
-
-.. warning:: A limitation of the |Access Point Mode| that is recommended in the :doc:`/ex-commandstation/get-started/index` pages is that the |wiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can guess it, but |wiThrottle| can't.  In |wiThrottle| you will need type in the address.
-
 
 Engine Driver (Android \| WiThrottle \| WiFi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,16 +98,16 @@ Engine Driver (Android \| WiThrottle \| WiFi)
 * The first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
 * The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. (We won't cover that option here.)
 
-See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |Engine Driver|.
+Basic use of |Engine Driver| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page. (See :doc:`Engine Driver Page </throttles/software/engine-driver>` for additional details on how to install and run |Engine Driver|.)
 
-WiThrottle (iOS \| WiThrottle \| WiFi)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+WiThrottle Lite (iOS \| WiThrottle \| WiFi)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |WiThrottle| is an app for iPhones and iPads. It can connect directly to the |EX-CS| like |Engine Driver| does, or connect to |JMRI| on a computer and then have |JMRI| connect to the Command Station via a USB cable.
 
 The "Lite" version of |WiThrottle| is free and is more than adequate for some initial testing and base running of locos.
 
-See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
+Basic use of |wiThrottle| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page.  (See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.)
 
 ----
 
@@ -135,7 +136,9 @@ The simplest option is to just use a throttle connected directly to the Command 
    :align: center
    :scale: 40%
 
-For operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`
+|
+
+Basic use of |EX-WT| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page.  (For additional operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`)
 
 
 ----

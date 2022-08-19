@@ -53,9 +53,43 @@ Connect Everything:
 
    EX-WebThrottle
 
+* Click this link and it will load a web page from our server that will run the web throttle on your PC
+
+.. rst-class:: dcclink
+
+   `Run EX-WebThrottle Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+
+* Click on the "Serial" dropdown button and select "Serial"
+* Click on the :guilabel:`Connect DCC++ EX` button 
+* If the program finds a compatible device,
+
+  * It will open a popup a window showing you a selection. |BR| It may show a line at the top such as "Arduino Mega 2560 (COM3)". (The COM port will vary)
+  * Click on your board to select it
+  * Then click the :guilabel:`Connect DCC++ EX` button
+  
+* You should then be connected to the |EX-CS| and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. |BR| Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging
+* Once you are connected, you can:   
+  
+  * Enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the SEND button. 
+  * You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information |BR| |BR|
+
+* Now you are ready to run trains! |BR| |BR|
+* Place your loco on the track 
+* Click the :guilabel:`Power Slider` button to turn on power to your track
+* You should see lights on your Arduino Motor Shield and an indication that your loco has power
+* Next go to the ``Locomotive ID`` textbox 
+* Enter the DCC address of your loco
+* Then press the :guilabel:`Acquire` button
+* You should now have full control over your loco
+* The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons
+
+.. sidebar:: 
+
+    |EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
+
 Click this link: :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` to run |EX-WT| hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
 
-.. TODO:: URGENT This text needs to be expanded - Using EX-WebThrottle
+|force-break|
 
 Using Engine Driver or WiThrottle - Requires WiFi
 -------------------------------------------------
@@ -102,7 +136,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
   * open the network settings on you phone
   * change to your home network
   
-    * use your normal home id and password 
+    * Use your normal home SSID (Network name) and Password to connect to the network 
 
 * Start the |engine driver| App
 * Go through the initial startup pages to set some basic configuration items
@@ -154,7 +188,7 @@ Using wiThrottle (Apple iOS)
   * Open the network settings on you phone
   * Change to your home network
   
-    * Use your normal home id and password 
+    * Use your normal home SSID (Network name) and Password to connect to the network  
 
 * Start the |wiThrottle| App
 * |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|

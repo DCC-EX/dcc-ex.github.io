@@ -1,10 +1,10 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*******************
+****
 JMRI
-*******************
+****
 
-|conductor| |tinkerer| |engineer|
+|conductor|
 
 .. sidebar:: 
 
@@ -12,6 +12,16 @@ JMRI
     :depth: 2
     :local:
 
-|JMRi| can be used as a throttle...
+|JMRi| is quite a powerful suite of software applications, and can be as simple or as complex as you wish to make it.
 
-.. todo:: URGENT - need text for using JMRI as a trottle
+On this page, we will focus on utilising |JMRi| as a throttle only.
+
+Connecting to your EX-CommandStation
+====================================
+
+Create a new throttle
+=====================
+
+Select and control a loco
+=========================
+

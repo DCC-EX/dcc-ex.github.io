@@ -22,14 +22,14 @@ Our products are based on off-the-shelf Arduino technology and currently include
       - |EX-I-LOGO-SMALL|
       - |EX-R-LOGO-SMALL|
     * - Our DCC command station for controlling your model railroad
-      - Our user friendly installer for loading the command station software
-      - The scripting language, built into the command station software, providing automation of your model railroad
+      - Our user friendly command station software installer
+      - The included scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
       - |EX-TT-LOGO-SMALL|
       - |EX-DCCI-LOGO-SMALL|
     * - A simple web based controller for your command station
-      - A stepper based turntable controller running on an additional Arduino microcontroller
-      - A DCC packet sniffing tool
+      - A separate stepper based turntable controller
+      - A separate DCC packet sniffing tool
     * -  
       - |EX-BSC-LOGO-SMALL| 
       -
@@ -66,17 +66,17 @@ Our products are based on off-the-shelf Arduino technology and currently include
     * - |EX-CS-LOGO-SMALL| 
       - Our DCC command station for controlling your model railroad
     * - |EX-I-LOGO-SMALL| 
-      - Our user friendly installer for loading the command station software
+      - Our user friendly command station software installer
     * - |EX-R-LOGO-SMALL|  
-      - The scripting language, built into the |EX-CS|, allowing you to automate your model railroad
+      - The included scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
       - A simple web based controller for your command station
     * - |EX-TT-LOGO-SMALL| 
-      - A stepper based turntable controller running on an additional Arduino microcontroller
+      - A separate stepper based turntable controller
     * - |EX-DCCI-LOGO-SMALL| 
       - A DCC packet sniffing tool 
     * - |EX-BSC-LOGO-SMALL|
-      - The original DCC++ [#bcs]_  software, packaged in a stable release 
+      - The original DCC++ [#bcs]_ , packaged in a stable release 
 
 Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 

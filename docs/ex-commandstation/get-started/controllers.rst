@@ -78,6 +78,7 @@ Compatible Wifi Throttles
 
 .. warning:: 
    :class: warning-float-right
+   
    A limitation of the |Access Point Mode| that is recommended in the :doc:`/ex-commandstation/get-started/index` pages is that the |wiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can guess it, but |wiThrottle| can't.  In |wiThrottle| you will need type in the address.
 
 For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.

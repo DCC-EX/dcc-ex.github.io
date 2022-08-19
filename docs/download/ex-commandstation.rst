@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-|EX-CS-LOGO|
+|EX-DL-LOGO|
 
 *****************
 EX-CommandStation

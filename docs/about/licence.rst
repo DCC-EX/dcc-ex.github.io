@@ -21,3 +21,5 @@ Attributions
 
 * We would like to thank Alex Leão of Locontrol who as a personal favour created our comfort level icons
 * Puzzle icon by Satawat Foto Anukul - https://freeicons.io/profile/103766
+* Announcement icon by `ColourCreatype <https://freeicons.io/profile/5790>`_ on https://freeicons.io
+* Download Icon by `Gayrat Muminov <https://freeicons.io/profile/3277>`_ on https://freeicons.io

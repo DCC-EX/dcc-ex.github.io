@@ -6,12 +6,6 @@
 DCC++ VS DCC-EX? [Oct 2022]
 ***************************
 
-.. sidebar::
-
-  .. contents:: On this page
-    :depth: 1
-    :local:
-
 Everything you loved is still there...
 ========================================
 

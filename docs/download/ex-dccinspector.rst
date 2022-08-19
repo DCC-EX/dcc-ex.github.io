@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-|EX-DCCI-LOGO|
+|EX-DL-LOGO|
 
 *******************
 EX-DCCInspector

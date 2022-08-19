@@ -94,6 +94,11 @@
       :scale: 40%
       :class: image-float-right
 ..
+.. |EX-DL-LOGO| image:: /_static/images/logos/product-logo-download.png
+      :alt: Downlaods
+      :scale: 40%
+      :class: image-float-right
+..
 .. |EX-SUPPORT-LOGO| image:: /_static/images/logos/product-logo-ex-support.png
       :alt: EX-Support
       :scale: 40%

@@ -52,6 +52,11 @@ h5, .h5 {
   max-width: 1024px;
 }
 
+.wy-breadcrumbs {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-size: 80% !important;
+}
+
 .wy-side-nav-search>a img.logo {
     width: 60%;
 }

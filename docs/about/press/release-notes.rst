@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+|EX-AN-LOGO|
+
 ************************
 Release Notes [Feb 2022]
 ************************

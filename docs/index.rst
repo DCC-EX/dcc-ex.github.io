@@ -10,66 +10,82 @@ DCC-EX Model Railroading
 
   `We have a New Name! <about/press/new-name.html>`_
 
-
 Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
-Based on off-the-shelf Arduino technology, our products currently include:
- 
-* |EX-CS| - our DCC command station for controlling your model railroad
+Our products are based on off-the-shelf Arduino technology and currently include:
 
-  * |EX-I| - our user friendly installer for loading the command station software
-  * |EX-R| - the scripting language, built into the |EX-CS|, allowing you to automate your model railroad |BR| |BR|
+.. list-table::
+    :widths: 33 33 33
+    :header-rows: 0
+    :class: table-wrap-text-align-top
 
-* |EX-WT| - a simple web based controller for your command station
-* |EX-TT| - a stepper based turntable controller running on an additional Arduino microcontroller
-* |EX-DCCI| -  a DCC packet sniffing tool
-* |BSC| - the original DCC++ [#bcs]_  software, packaged in a stable release
-
-Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more
+    * - |EX-CS-LOGO-SMALL|
+      - |EX-I-LOGO-SMALL|
+      - |EX-R-LOGO-SMALL|
+    * - Our DCC command station for controlling your model railroad
+      - Our user friendly command station software installer
+      - The in-built scripting language for automating your model railroad
+    * - |EX-WT-LOGO-SMALL|
+      - |EX-TT-LOGO-SMALL|
+      - |EX-DCCI-LOGO-SMALL|
+    * - A simple web based controller for your command station
+      - A separate stepper based turntable controller
+      - A separate DCC packet sniffing tool
+    * -  
+      - |EX-BSC-LOGO-SMALL| 
+      -
+    * -  
+      - The original DCC++ [#bcs]_  software |BR| packaged in a stable release 
+      -
 
 ..
-   .. table::
-      :align: left
-      :class: intro-table
+   * |EX-CS| - our DCC command station for controlling your model railroad
 
-      ==================   ==================   ====================
-      |Timer|_             |Arrow|_             |Binder|_
-      ------------------   ------------------   --------------------
-      |Get Started|        |Download|           |Reference|
-      ------------------   ------------------   --------------------
-      |Lightning|_         |Question|_          |Puzzle|_
-      ------------------   ------------------   --------------------
-      |Advanced Setup|     |Support|            |Contribute|
-      ==================   ==================   ====================
+   * |EX-I| - our user friendly installer for loading the command station software
+   * |EX-R| - the scripting language, built into the |EX-CS|, allowing you to automate your model railroad |BR| |BR|
 
-   .. |Timer| image:: ./_static/images/timer_bl.png
-   .. _Timer: get-started/index.html
-   .. |Get Started| replace:: :doc:`/ex-commandstation/get-started/index`
+   * |EX-WT| - a simple web based controller for your command station
+   * |EX-TT| - a stepper based turntable controller running on an additional Arduino microcontroller
+   * |EX-DCCI| -  a DCC packet sniffing tool
+   * |BSC| - the original DCC++ [#bcs]_  software, packaged in a stable release
 
-   .. |Arrow| image:: ./_static/images/download_bl.png
-   .. _Arrow: download/index.html
-   .. |Download| replace:: :doc:`Download </download/index>`
-
-   .. |Binder| image:: ./_static/images/api_bl.png
-   .. _Binder: reference/index.html
-   .. |Reference| replace:: :doc:`/reference/index`
-
-   .. |Lightning| image:: ./_static/images/advanced_bl.png
-   .. _Lightning: advanced-setup/index.html
-   .. |Advanced Setup| replace:: :doc:`/ex-commandstation/advanced-setup/index`
-
-   .. |Question| image:: ./_static/images/question_bl.png
-   .. _Question: support/index.html
-   .. |Support| replace:: :doc:`/support/index`
-
-   .. |Puzzle| image:: ./_static/images/puzzle_bl.png
-   .. _Puzzle: contributing/index.html
-   .. |Contribute| replace:: :doc:`Contribute </about/contributing/index>`
+Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 
 ----
 
-|EX-CS-LOGO-SMALL| |EX-I-LOGO-SMALL| |EX-WT-LOGO-SMALL| |EX-R-LOGO-SMALL| |EX-TT-LOGO-SMALL| |EX-DCCI-LOGO-SMALL| |EX-BSC-LOGO-SMALL|
+
+Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
+Our products are based on off-the-shelf Arduino technology and currently include:
+
+.. list-table::
+    :widths: 30 70
+    :header-rows: 0
+    :class: table-wrap-text-align-top
+
+    * - |EX-CS-LOGO-SMALL| 
+      - Our DCC command station for controlling your model railroad
+    * - |EX-I-LOGO-SMALL| 
+      - Our user friendly command station software installer
+    * - |EX-R-LOGO-SMALL|  
+      - The included scripting language for automating your model railroad
+    * - |EX-WT-LOGO-SMALL|
+      - A simple web based controller for your command station
+    * - |EX-TT-LOGO-SMALL| 
+      - A separate stepper based turntable controller
+    * - |EX-DCCI-LOGO-SMALL| 
+      - A DCC packet sniffing tool 
+    * - |EX-BSC-LOGO-SMALL|
+      - The original DCC++ [#bcs]_ , packaged in a stable release 
+
+Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+
+If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
+
+.. 
+   ----
+
+   |EX-CS-LOGO-SMALL| |EX-I-LOGO-SMALL| |EX-WT-LOGO-SMALL| |EX-R-LOGO-SMALL| |EX-TT-LOGO-SMALL| |EX-DCCI-LOGO-SMALL| |EX-BSC-LOGO-SMALL|
 
 ----
 

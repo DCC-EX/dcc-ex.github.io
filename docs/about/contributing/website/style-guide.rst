@@ -81,6 +81,7 @@ Style Guidelines
   
   * Use **"Motor Driver"**, not "Motor Shield", "Motor Board", "Motorboard"
   * In general use **'train'** or **'loco'** instead of 'locomotive' or 'engine'
+  * Use **"Smart Phone"** instead of **"Cell Phone"** (US only term) or **"Mobile Phone"** (just about everywhere else)
 
 *	Use railroad/railway terminology that is understandable by all English-speaking people. |br|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)
 *	No full stop at the end of a numbered or unnumbered list

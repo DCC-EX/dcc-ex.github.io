@@ -6,7 +6,7 @@
 |EX-CS-LOGO|
 
 ********************
-Install the software
+Install the Software
 ********************
 
 |conductor|

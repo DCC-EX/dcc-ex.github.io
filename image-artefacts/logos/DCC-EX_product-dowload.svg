@@ -2,9 +2,9 @@
 <svg
    inkscape:export-ydpi="17.060751"
    inkscape:export-xdpi="17.060751"
-   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-webthrottle.png"
+   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-download.png"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="DCC-EX_product-logo-ex-support.svg"
+   sodipodi:docname="DCC-EX_product-dowload.svg"
    id="svg40"
    version="1.1"
    fill="none"
@@ -36,9 +36,9 @@
      inkscape:current-layer="svg40"
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
-     inkscape:window-x="-8"
-     inkscape:cy="953.55991"
-     inkscape:cx="2836.915"
+     inkscape:window-x="1592"
+     inkscape:cy="1369.4427"
+     inkscape:cx="1146.6484"
      inkscape:zoom="0.16831664"
      showgrid="false"
      id="namedview42"
@@ -77,6 +77,12 @@
   </mask>
   <defs
      id="defs38">
+    <rect
+       x="-647.58897"
+       y="1099.1189"
+       width="2305.1791"
+       height="1158.5307"
+       id="rect4779" />
     <rect
        x="205.28384"
        y="1341.9482"
@@ -203,14 +209,14 @@
     <rect
        x="205.28384"
        y="1341.9482"
-       width="1016.819"
-       height="118.53616"
+       width="1039.0117"
+       height="116.82903"
        id="rect2482-4-7-6" />
     <rect
        x="205.28384"
        y="1341.9482"
-       width="1334.3451"
-       height="174.87143"
+       width="499.55879"
+       height="133.90032"
        id="rect2482-4-7-6-3" />
     <rect
        x="205.28384"
@@ -279,11 +285,9 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan4289"><tspan
-         style="fill:#00a3b9"
-         id="tspan4285">EX-</tspan><tspan
+       id="tspan6158"><tspan
          style="fill:#00353d"
-         id="tspan4287">Support</tspan></tspan></text>
+         id="tspan6156">Downloads</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -294,11 +298,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan4295"><tspan
+       id="tspan6164"><tspan
          style="fill:#00353d"
-         id="tspan4291">DCC-</tspan><tspan
+         id="tspan6160">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan4293">EX</tspan></tspan></text>
+         id="tspan6162">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"
@@ -308,50 +312,33 @@
      inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-commandstation.png"
      inkscape:export-xdpi="18.431187"
      inkscape:export-ydpi="18.431187" />
+  <text
+     xml:space="preserve"
+     id="text4777"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:Impact;-inkscape-font-specification:Impact;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect4779);display:inline;fill:#000000;fill-opacity:1;stroke:none" />
   <g
-     id="g5370-3"
-     transform="matrix(1.0404,0,0,1.0404,-289.17028,128.52568)"
-     inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-commandstation.png"
-     inkscape:export-xdpi="18.431187"
-     inkscape:export-ydpi="18.431187">
+     id="g5316"
+     transform="matrix(0.96377331,0,0,0.96377331,140.60657,-830.8685)">
+    <path
+       class="cls-1"
+       d="m 568.49475,1441.7264 a 32.800035,32.800035 0 0 0 -32.80004,32.8 v 101.6801 a 23.091225,23.091225 0 0 1 -22.96002,22.96 H 33.854179 a 23.091225,23.091225 0 0 1 -22.960024,-22.96 v -101.6801 a 32.800035,32.800035 0 0 0 -65.60007,0 v 101.6801 a 88.560094,88.560094 0 0 0 88.560094,88.5601 H 512.73469 a 88.560094,88.560094 0 0 0 88.56009,-88.5601 v -101.6801 a 32.800035,32.800035 0 0 0 -32.80003,-32.8 z"
+       id="path5122"
+       style="fill:#00a3b9;fill-opacity:1;stroke-width:13.12" />
+    <path
+       class="cls-1"
+       d="m 248.49761,1509.9504 1.0496,3.4112 1.7056,3.0176 a 24.403226,24.403226 0 0 0 1.312,2.624 33.062435,33.062435 0 0 0 9.05281,9.0529 l 2.62401,1.312 3.0176,1.7056 3.4112,1.0496 2.624,1.4432 a 35.292838,35.292838 0 0 0 13.12002,0 l 2.7552,-0.7872 3.41121,-1.0496 3.0176,-1.7056 2.624,-1.312 a 48.281652,48.281652 0 0 0 4.98561,-4.0672 L 423.781,1404.0719 a 32.841468,32.841468 0 0 0 -46.44485,-46.4448 l -64.68167,63.8944 v -379.9556 a 32.800035,32.800035 0 0 0 -65.60007,0 v 459.2005 a 35.686438,35.686438 0 0 0 0.656,6.4288 21.779223,21.779223 0 0 0 0.7872,2.7552 z"
+       id="path5124"
+       style="fill:#00a3b9;fill-opacity:1;stroke-width:13.12" />
     <rect
-       id="rect2-8"
-       stroke-linejoin="round"
-       stroke-miterlimit="16"
-       stroke-width="14.3637"
-       stroke="#00353D"
-       fill="#ffffff"
+       class="cls-2"
+       x="-914.66968"
+       y="1033.9724"
+       width="65.600067"
+       height="146.55055"
+       rx="32.800034"
+       ry="32.800034"
        transform="rotate(-45)"
-       rx="63.718899"
-       height="437.06601"
-       width="437.06601"
-       y="506.54724"
-       x="57.163441"
-       style="stroke:#00353d;stroke-opacity:0.956863" />
-    <g
-       transform="translate(1.8796397,-2.1336634)"
-       id="g15-36"
-       mask="url(#mask0-5-7)">
-      <path
-         style="fill:url(#paint0_linear-0)"
-         id="path7-3"
-         fill="url(#paint0_linear)"
-         d="m 558.03,10.9856 c 7.305,6.359 311.428,260.2244 19.227,487.4164 l 94.853,87.162 49.99,11.536 61.722,-42.127 C 1014.79,279.491 624.481,0.449243 615.806,-4.43481 Z" />
-      <path
-         id="path9-6"
-         stroke-width="10.2598"
-         stroke="#00353d"
-         d="m 579.281,51.6391 91.645,-38.7324 33.869,26.0143 -101.607,42.7791 16.603,28.3269 111.567,-45.0917 30.549,29.4829 -130.163,47.4038 13.282,29.483 146.765,-45.67 25.235,34.108 -158.054,45.092 2.656,39.888 186.611,-39.888 40.51,57.809 -223.136,26.592 -21.915,47.404 262.981,-19.077 v 71.684 l -284.896,-3.469 -23.908,41.045 284.233,48.56 -44.495,83.246 -279.583,-83.246" />
-      <path
-         id="path11-7"
-         stroke-width="20.5195"
-         stroke="#ffffff"
-         d="M 570.647,491.57 C 862.849,264.379 565.999,11.7512 558.694,5.39221 M 616.47,-10.0282 c 8.675,4.88406 398.99,283.9262 168.016,559.4082 L 736.2,597.1" />
-      <path
-         id="path13-1"
-         stroke-width="10.2598"
-         stroke="#00353d"
-         d="M 570.647,491.57 C 862.849,264.379 565.999,11.7512 558.694,5.39221 M 616.47,-10.0282 c 8.675,4.88406 398.99,283.9262 168.016,559.4082 l -44.441,45.157" />
-    </g>
+       id="rect5126"
+       style="fill:#00353d;fill-opacity:1;stroke-width:13.12" />
   </g>
 </svg>

@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+|EX-BP-LOGO|
+
 ********************************************************************************************
 Example - Full automation with pin based turnouts and signals on MCP23017 I/O expander Vpins
 ********************************************************************************************

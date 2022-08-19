@@ -1,16 +1,10 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-|donate-button|
+|EX-AN-LOGO|
 
 ***************************
 DCC++ VS DCC-EX? [Oct 2022]
 ***************************
-
-.. sidebar::
-
-  .. contents:: On this page
-    :depth: 1
-    :local:
 
 Everything you loved is still there...
 ========================================

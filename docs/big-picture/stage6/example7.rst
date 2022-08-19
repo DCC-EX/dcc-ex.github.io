@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+|EX-BP-LOGO|
+
 *******************************************************************************************
 Example - Full automation with servo based turnouts and signals with a PCA9685 servo module
 *******************************************************************************************

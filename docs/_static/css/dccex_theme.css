@@ -52,6 +52,11 @@ h5, .h5 {
   max-width: 1024px;
 }
 
+.wy-breadcrumbs {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-size: 80% !important;
+}
+
 .wy-side-nav-search>a img.logo {
     width: 60%;
 }
@@ -163,10 +168,22 @@ svg {
 }
 
 /* override table width restrictions */ 
-.table-wrap-text p, .table-wrap-text p { 
+.table-wrap-text p, .table-wrap-text-align-top p { 
   white-space: normal !important; 
   font-size: 110% !important;
   line-height: 140% !important;
+}
+
+.table-wrap-text tr:nth-child(odd), .table-wrap-text-align-top tr:nth-child(odd) {
+  background-color: white !important;  
+  border-style: none !important;
+  border-width:0px !important;
+}
+
+.table-wrap-text tr:nth-child(even), .table-wrap-text-align-top tr:nth-child(even) {
+  background-color: #ffffff00 !important;  
+  border-style: none !important;
+  border-width:0px !important;
 }
 
 .table-wrap-text td {
@@ -174,8 +191,16 @@ svg {
   border-style: none !important;
   border-width:0px !important;
 }
- 
-.table-wrap-text { 
+
+.table-wrap-text-align-top td {
+  font-size: 80% !important;
+  vertical-align:top !important;
+  background-color: #ffffff00 !important;  
+  border-style: none !important;
+  border-width:0px !important;
+}
+
+.table-wrap-text, .table-wrap-text-align-top { 
   margin-bottom: 24px; 
   max-width: 100% !important; 
   overflow: visible !important; 
@@ -183,16 +208,18 @@ svg {
   border-width:0px !important;
 } 
  
-.table-wrap-text th p { 
+.table-wrap-text th p, table-wrap-text-align-top th p { 
     margin-bottom: unset; 
 } 
 
-.image-min-width-144 img {
+.image-min-width-144 {
   min-width: 144px;
+  height: auto !important;
 }
 
-.image-min-width-72 img {
+.image-min-width-72 {
   min-width: 72px;
+  height: auto !important;
 }
 
 .image-float-right img {

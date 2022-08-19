@@ -17,7 +17,7 @@ Getting Started
     :depth: 1
     :local:
 
-The following pages will instruct you on how to build an |EX-CS| including assembling your hardware, installing software, flashing firmware, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
+The following pages will instruct you on how to build an |EX-CS| including assembling your hardware, installing software, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
 
 What is EX-CommandStation?
 ==========================
@@ -52,7 +52,7 @@ To actually run your model railroad you will need a few items:
   - a **Motor Driver** board / motor shield,
   - Optionally: 
 
-    - a **WiFi shield (Recommended)** [#inst]_ (*This option described on the following pages*), or
+    - a **WiFi shield (Recommended)** [#inst]_ (*This option is described on the following pages*), or
     - an ethernet shield, or
     - a Bluetooth board, or
     - direct connection to a PC [#jmri]_, and
@@ -64,7 +64,7 @@ To actually run your model railroad you will need a few items:
    :scale: 50%
    :align: right
 
-1. a **Controller (Throttle)** - Something to control you trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc
+1. a **Controller (Throttle)** - Something to control your trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc.
 2. Power - The Arduino and the Motor shields need to be powered separately, so 
  
   - a **9-14v DC power supply** for the motor shield to the track, and 

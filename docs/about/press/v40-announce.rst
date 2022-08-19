@@ -1,17 +1,17 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-|donate-button|
+|EX-AN-LOGO|
 
 ****************************************
 EX-CommandStation 4.0 Release [Feb 2022]
 ****************************************
 
-DCC-EX announces version 4.0 of its EX-CommandStation software with EX-RAIL automation and accessory control
-=================================================================================================================
+Announcing version 4.0 of its EX-CommandStation software with EX-RAIL automation and accessory control
+======================================================================================================
 
 *Operators can now have a fully automated model railroad or a separate accessory control bus for their entire layout and read CVs up to 8 times faster*
 
-February 1, 2022 7am Eastern Standard Time
+1 February 2022 - 7am USA - Eastern Standard Time
 
 
 **Holly Springs, North Carolina USA** - DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of |EX-CS| includes the new EX-RAIL :sup:`tm` (Extended Railroad Automation Instruction Language) system that revolutionizes the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts/points, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.

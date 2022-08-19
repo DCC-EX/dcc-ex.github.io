@@ -16,15 +16,17 @@ Glossary
     * - Term
       - Meaning
     * - Motor Driver 
-      - TODO - same as "Motor Shield" "Moto Board" "Motorboard"
+      - Same as "Motor Shield" "Motor Board" "Motorboard" |BR| See :doc:`/reference/hardware/motor-boards`
     * - Command Station |BR| DCC Command Station |BR| DCC Base Station
       - TODO
+    * - Consist |BR| Multiple Unit
+      - Multiple locos hauling a singe train
     * - DC
       - Direct Current
     * - DCC
-      -  Digital Command and Control
+      -  Digital Command Control.  NMRA Specification for controlling trains. |BR| See https://dccwiki.com/NMRA/NMRA_Standards
     * - Engine Driver |BR| Engine Driver Throttle
-      -  TODO
+      -  Android app for controlling DCC locos using the wiThrottle Protocol |BR| See :doc:`/throttles/software/engine-driver`
     * - JMRI
       - `Java Model Railroad Interface <https://www.jmri.org/>`_
     * - Loco |BR| Locomotive |BR| Engine 
@@ -36,7 +38,7 @@ Glossary
     * - USB
       - Universal Serial Bus
     * - WiThrottle
-      - \ 1. Trademark owned by Brett Hoffman |BR|\ 2. proprietary iOS app developed by Brett Hoffman
+      - \ 1. Trademark owned by Brett Hoffman |BR|\ 2. proprietary iOS app developed by Brett Hoffman. See :doc:`/throttles/software/withrottle`
     * - WiThrottle Protocol
       - proprietary protocol developed by Brett Hoffman
     * - WiThrottle Server

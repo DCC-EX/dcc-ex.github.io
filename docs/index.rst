@@ -10,8 +10,8 @@ DCC-EX Model Railroading
 
   `We have a New Name! <about/press/new-name.html>`_
 
-Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
-Our products are based on off-the-shelf Arduino technology and currently include:
+Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout.  
+Our easy to use, do-it-yourself, affordable, open source products are based on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more. |_| |_| |_| They currently include:
 
 .. list-table::
     :widths: 33 33 33
@@ -30,12 +30,6 @@ Our products are based on off-the-shelf Arduino technology and currently include
     * - A simple web based controller for your command station
       - A separate stepper based turntable controller
       - A separate DCC packet sniffing tool
-    * -  
-      - |EX-BSC-LOGO-SMALL| 
-      -
-    * -  
-      - The original DCC++ [#bcs]_  software |BR| packaged in a stable release 
-      -
 
 ..
    * |EX-CS| - our DCC command station for controlling your model railroad
@@ -48,48 +42,13 @@ Our products are based on off-the-shelf Arduino technology and currently include
    * |EX-DCCI| -  a DCC packet sniffing tool
    * |BSC| - the original DCC++ [#bcs]_  software, packaged in a stable release
 
-Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 
-----
+..
 
-
-Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
-Our products are based on off-the-shelf Arduino technology and currently include:
-
-.. list-table::
-    :widths: 30 70
-    :header-rows: 0
-    :class: table-wrap-text-align-top
-
-    * - |EX-CS-LOGO-SMALL| 
-      - Our DCC command station for controlling your model railroad
-    * - |EX-I-LOGO-SMALL| 
-      - Our user friendly command station software installer
-    * - |EX-R-LOGO-SMALL|  
-      - The included scripting language for automating your model railroad
-    * - |EX-WT-LOGO-SMALL|
-      - A simple web based controller for your command station
-    * - |EX-TT-LOGO-SMALL| 
-      - A separate stepper based turntable controller
-    * - |EX-DCCI-LOGO-SMALL| 
-      - A DCC packet sniffing tool 
-    * - |EX-BSC-LOGO-SMALL|
-      - The original DCC++ [#bcs]_ , packaged in a stable release 
-
-Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
-
-If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
-
-.. 
-   ----
-
-   |EX-CS-LOGO-SMALL| |EX-I-LOGO-SMALL| |EX-WT-LOGO-SMALL| |EX-R-LOGO-SMALL| |EX-TT-LOGO-SMALL| |EX-DCCI-LOGO-SMALL| |EX-BSC-LOGO-SMALL|
-
-----
-
-.. [#bcs] |EX-CS| is a :doc:`major rewrite <about/press/rewrite>` to the original |BSC| code. No active development. Bug fixes only. |br| If you are still using DCC++, we recommend that you move to |EX-CS|.  It will run on the same hardware.
+   .. [ # b c s] |EX-CS| is a :doc:`major rewrite <about/press/rewrite>` to the original |BSC| code. No active development. Bug fixes only. |br| If you are still using DCC++, we recommend that you move to |EX-CS|.  It will run on the same hardware.
 
 
 .. toctree::
@@ -111,14 +70,3 @@ If you are just starting your journey with |DCC-EX| we recommend you look at our
    projects/index
    about/index
 
-..   advanced-setup/index
-   roadmap/index
-   site-map/index
-   automation/index
-   get-started/index
-   big-picture/index
-   turntable-ex/index
-   donate/index
-   press/index
-   contributing/index
-   developer-reference/index

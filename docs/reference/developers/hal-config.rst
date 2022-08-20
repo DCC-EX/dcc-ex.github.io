@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+|EX-REF-LOGO|
+
 **************************
 I/O Device Drivers and HAL
 **************************

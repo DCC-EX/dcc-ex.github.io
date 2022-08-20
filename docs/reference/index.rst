@@ -1,16 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+|EX-REF-LOGO|
+
 *********
 Reference
 *********
 
 |conductor| |tinkerer| |engineer|
-
-.. sidebar::
-
-  .. contents:: On this page
-    :depth: 1
-    :local:
 
 Glossary
 ========
@@ -29,7 +25,7 @@ Videos
     videos/index
  
 Other
--------------------------
+=====
 
 .. toctree::
     :maxdepth: 1

@@ -95,7 +95,12 @@
       :class: image-float-right
 ..
 .. |EX-DL-LOGO| image:: /_static/images/logos/product-logo-download.png
-      :alt: Downlaods
+      :alt: Downloads
+      :scale: 40%
+      :class: image-float-right
+..
+.. |EX-REF-LOGO| image:: /_static/images/logos/product-logo-reference.png
+      :alt: Reference
       :scale: 40%
       :class: image-float-right
 ..

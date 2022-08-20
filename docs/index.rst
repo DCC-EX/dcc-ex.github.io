@@ -30,7 +30,7 @@ Our easy to use, do-it-yourself, affordable products are based on off-the-shelf 
     * - A simple web based controller for your command station
       - A separate stepper based turntable controller
       - A separate DCC packet sniffing tool
-..
+
 .. list-table::
     :widths: 50 50
     :header-rows: 0
@@ -48,14 +48,13 @@ Our easy to use, do-it-yourself, affordable products are based on off-the-shelf 
       - A separate stepper based turntable controller
     * - |EX-DCCI-LOGO-SMALL| 
       -  A DCC packet sniffing tool
-..
+
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
-..
+
 ..
 
    .. [ # b c s] |EX-CS| is a :doc:`major rewrite <about/press/rewrite>` to the original |BSC| code. No active development. Bug fixes only. |br| If you are still using DCC++, we recommend that you move to |EX-CS|.  It will run on the same hardware.
-..
-..
+
 .. toctree::
    :hidden:
    :maxdepth: 4

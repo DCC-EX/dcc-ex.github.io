@@ -147,6 +147,8 @@ svg {
   height: auto;
 }
 
+/* *************************************** */
+
 .warning-float-right {
   float: right;
   width: 40%;
@@ -167,20 +169,22 @@ svg {
   width: 20%;
 }
 
+/* *************************************** */
+
 /* override table width restrictions */ 
-.table-wrap-text p, .table-wrap-text-align-top p { 
+.table-wrap-text p, .table-grid-homepage p, .table-list-homepage p { 
   white-space: normal !important; 
   font-size: 110% !important;
   line-height: 140% !important;
 }
 
-.table-wrap-text tr:nth-child(odd), .table-wrap-text-align-top tr:nth-child(odd) {
+.table-wrap-text tr:nth-child(odd), .table-grid-homepage tr:nth-child(odd), .table-list-homepage tr:nth-child(odd) {
   background-color: white !important;  
   border-style: none !important;
   border-width:0px !important;
 }
 
-.table-wrap-text tr:nth-child(even), .table-wrap-text-align-top tr:nth-child(even) {
+.table-wrap-text tr:nth-child(even), .table-grid-homepage tr:nth-child(even), .table-list-homepage tr:nth-child(even) {
   background-color: #ffffff00 !important;  
   border-style: none !important;
   border-width:0px !important;
@@ -192,7 +196,7 @@ svg {
   border-width:0px !important;
 }
 
-.table-wrap-text-align-top td {
+.table-grid-homepage td, .table-list-homepage td {
   font-size: 80% !important;
   color: #666666 !important;
   vertical-align:top !important;
@@ -201,17 +205,38 @@ svg {
   border-width:0px !important;
 }
 
-.table-wrap-text, .table-wrap-text-align-top { 
+.table-wrap-text, .table-grid-homepage, .table-list-homepage { 
   margin-bottom: 24px; 
   max-width: 100% !important; 
   overflow: visible !important; 
   border-style: none !important;
   border-width:0px !important;
 } 
- 
+
+@media screen and (max-width: 800px) {
+  .table-grid-homepage {
+    display: none;
+  }
+  .table-list-homepage {
+    display: block;
+  }
+}
+
+@media not screen and (max-width: 800px) {
+  .table-grid-homepage {
+    display: block;
+  }
+  .table-list-homepage {
+    display: none;
+  }
+}
+
+
 .table-wrap-text th p, table-wrap-text-align-top th p { 
     margin-bottom: unset; 
 } 
+
+/* *************************************** */
 
 .image-min-width-144 {
   min-width: 144px;
@@ -226,6 +251,8 @@ svg {
 .image-float-right img {
 	float:right;
 }
+
+/* *************************************** */
 
 /* sidebar level 3 bullet points */
 div#on-this-page ul.simple li ul li p {

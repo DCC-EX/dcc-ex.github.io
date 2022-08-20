@@ -9,7 +9,7 @@ JMRI Connection
 |tinkerer| |engineer|
 
 
-.. todo:: HIGH - JMRI Connection.  actually uses one of the of the other connection types
+.. todo:: URGENT - JMRI Connection.  actually uses one of the of the other connection types
 
 Connection Type: Direct to Command Station or through JMRI
 ============================================================

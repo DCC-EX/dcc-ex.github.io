@@ -10,8 +10,8 @@ DCC-EX Model Railroading
 
   `We have a New Name! <about/press/new-name.html>`_
 
-Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout. 
-Our products are based on off-the-shelf Arduino technology and currently include:
+Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout.  
+Our easy to use, do-it-yourself, affordable, open source products are based on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more. |_| |_| |_| They currently include:
 
 .. list-table::
     :widths: 33 33 33
@@ -42,7 +42,7 @@ Our products are based on off-the-shelf Arduino technology and currently include
    * |EX-DCCI| -  a DCC packet sniffing tool
    * |BSC| - the original DCC++ [#bcs]_  software, packaged in a stable release
 
-Our products are supported by many third party controllers and applications like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
 

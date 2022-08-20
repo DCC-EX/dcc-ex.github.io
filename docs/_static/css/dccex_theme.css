@@ -194,6 +194,7 @@ svg {
 
 .table-wrap-text-align-top td {
   font-size: 80% !important;
+  color: #666666 !important;
   vertical-align:top !important;
   background-color: #ffffff00 !important;  
   border-style: none !important;

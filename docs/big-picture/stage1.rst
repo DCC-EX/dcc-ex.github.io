@@ -11,20 +11,35 @@ Stage 1 - Running a Train
 .. sidebar:: 
 
    .. contents:: On this page
-      :depth: 1
+      :depth: 2
       :local:
+
+Throttle options
+================
+
+There are lots of different throttle otions available to control your trains and layout, including software applications available for your smart phone or computer and physical hardware options, both wired and wireless.
+
+Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the three options most commonly used with |EX-CS|: |EX-WT|, |Engine Driver|, |wiThrottle|, and |JMRi|.
+
+There is more information available in our :doc:`/throttles/index` section on the various throttle options available.
 
 What to expect to learn from stage 1
 ====================================
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How run a train on your WiFi enabled |EX-CS|
-* How run a train on your |JMRI| connected |EX-CS|
+* How to run a train using our very own |EX-WT|
+* How to run a train on your WiFi enabled |EX-CS|
+* How to run a train on your |JMRI| connected |EX-CS|
 * How to run more than one train (Individual or Consist/Multiple Units)
 * How to program a decoder using |JMRI|
 
 ----
+
+Run a train using EX-WebThrottle
+================================
+
+
 
 Run a train on your WiFi enabled EX-CommandStation
 ==================================================
@@ -221,7 +236,7 @@ See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how t
 Other apps
 ----------
 
-.. todo:: LOW - Stage 1 - JMRI - Other Controllers
+There are lots of other options for throttles you can use with your |EX-CS|.
 
 Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
 

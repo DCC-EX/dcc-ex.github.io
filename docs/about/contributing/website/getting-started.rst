@@ -16,6 +16,11 @@ This page aims to provide the information required to help people contribute to 
 
 If what is outlined in this page is too involved, and you simply wish to provide some content that we can add, clarify, or update, then simply get in touch with us via the :doc:`/support/index` page and we can help you out.
 
+Required Software
+=================
+
+Refer to the :doc:`/about/contributing/software` page, in particular the section related to :ref:`about/contributing/software:Python 3.x` and :ref:`VSCode <about/contributing/software:Recommended editor (VSCode)>` for the software necessary to contribute to the documentation.
+
 GitHub Pages, sphinx, and reStructuredText
 ==========================================
 

@@ -210,7 +210,7 @@ svg {
   vertical-align:top !important;
   background-color: #ffffff00 !important;  
   border-style: none !important;
-  border-width:0px !important;
+  border-width: 0px !important;
 }
 
 .table-wrap-text, .table-grid-homepage, .table-list-homepage { 
@@ -218,7 +218,7 @@ svg {
   max-width: 100% !important; 
   overflow: visible !important; 
   border-style: none !important;
-  border-width:0px !important;
+  border-width: 0px !important;
 } 
 
 @media screen and (max-width: 900px) {
@@ -258,6 +258,16 @@ svg {
 
 .image-float-right img {
 	float:right;
+}
+
+.image-product-logo-float-right img {
+	float:right;
+}
+
+@media screen and (max-width: 1000px) {
+  .image-product-logo-float-right img {
+    display: none;
+  }
 }
 
 /* *************************************** */

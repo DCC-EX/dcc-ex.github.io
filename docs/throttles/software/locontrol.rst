@@ -40,12 +40,3 @@ Features
 * Make videos and take pictures of your trains while operating
 
 .. _locontrol-requirements:
-
-Requirements
-=============
-
-* An iOS Device
-
-.. TODO:: LOW - More content coming soon - Requirements Locontrol
-
-

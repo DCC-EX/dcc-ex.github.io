@@ -17,18 +17,18 @@ Stage 1 - Running a Train
 Throttle options
 ================
 
-There are lots of different throttle otions available to control your trains and layout, including software applications available for your smart phone or computer and physical hardware options, both wired and wireless.
+There are a lot of different throttle otions available to control your trains and layout, including software applications available for your smart phone or computer and physical hardware options, both wired and wireless.
 
-Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the three options most commonly used with |EX-CS|: |EX-WT|, |Engine Driver|, |wiThrottle|, and |JMRi|.
+Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with |EX-CS|: |EX-WT|, |Engine Driver|, |wiThrottle|, and |JMRi|.
 
-There is more information available in our :doc:`/throttles/index` section on the various throttle options available.
+For other throttle options, refer to the :doc:`/ex-commandstation/advanced-setup/controllers` page for further information on choosing a throttle, and you can also refer to the  :doc:`/throttles/index` section for more information on the various throttle options available.
 
 What to expect to learn from stage 1
 ====================================
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How to run a train using our very own |EX-WT|
+* How to run a train on your direct connected |EX-CS| with |EX-WT|
 * How to run a train on your WiFi enabled |EX-CS|
 * How to run a train on your |JMRI| connected |EX-CS|
 * How to run more than one train (Individual or Consist/Multiple Units)
@@ -39,7 +39,9 @@ At the end of this stage, we expect you will have learnt the following:
 Run a train using EX-WebThrottle
 ================================
 
+If you're just starting out with |EX-CS|, or have a minimal system with no WiFi or Ethernet connection options, then a great way to start simply is by using |EX-WT| via your direct USB connection.
 
+This is by far the simplest option to verify your |EX-CS| is set up and working correctly, as you don't need to install any software or worry about any network connections to get your first train running on your layout.
 
 Run a train on your WiFi enabled EX-CommandStation
 ==================================================

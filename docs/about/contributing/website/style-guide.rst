@@ -24,7 +24,7 @@ Please ensure to follow the standards below when creating or updating documentat
 Style Guidelines
 ----------------
 
-* every page (except a few pages like home, about, contact, etc.) MUST start with one or more level images (after the title) to indicate the intended base audience for the page. 
+* Every page (except a few pages like home, about, contact, etc.) MUST start with one or more level images (after the title) to indicate the intended base audience for the page. 
 * Where possible, use the expansions for the level images:
 
   * \|conductor\| |conductor|
@@ -44,13 +44,13 @@ Style Guidelines
   * \|EX-DCCI\| for |EX-DCCI|
   * \|BSC\| for |BSC|
 
-* Where possible, use the expansions for the level text 
+* Where possible, use the expansions for the level text (not possible in headings)
 
   * \|conductor-text\| |conductor-text|
   * \|tinkerer-text\| |tinkerer-text|
   * \|engineer-text\| |engineer-text|
 
-* Additional expansions that should be used where possible: (currently this hyperlink to the the glossary but the intention is to have them link some more sensible later.)
+* Additional expansions that should be used where possible: (currently these hyperlink to the the glossary but the intention is to have them link somewhere more sensible later.)
 
   * \|Motor Driver\|
   * \|JMRI\|
@@ -81,7 +81,7 @@ Style Guidelines
   
   * Use **"Motor Driver"**, not "Motor Shield", "Motor Board", "Motorboard"
   * In general use **'train'** or **'loco'** instead of 'locomotive' or 'engine'
-  * Use **"Smart Phone"** instead of **"Cell Phone"** (US only term) or **"Mobile Phone"** (just about everywhere else)
+  * Use **"Smart Phone"** instead of 'Cell Phone' (US only term) or 'Mobile Phone' (just about everywhere else)
 
 *	Use railroad/railway terminology that is understandable by all English-speaking people. |br|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)
 *	No full stop at the end of a numbered or unnumbered list

@@ -55,5 +55,3 @@ Screenshots
    :scale: 50%
    :align: left
 
-.. rst-class:: clearer
-

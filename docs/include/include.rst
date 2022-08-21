@@ -49,114 +49,122 @@
 
    <span style="font-weight: bold; font-style: italic; color: #767676;" >Note that you can click on any of the images to make them larger.</span>
 ..
+.. ................................................
+..
 .. |EX-CS-LOGO| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-I-LOGO| image:: /_static/images/logos/product-logo-ex-installer.png
       :alt: EX-Installer
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-WT-LOGO| image:: /_static/images/logos/product-logo-ex-webthrottle.png
       :alt: EX-WebThrottle
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-R-LOGO| image:: /_static/images/logos/product-logo-ex-rail.png
       :alt: EX-RAIL
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-TT-LOGO| image:: /_static/images/logos/product-logo-ex-turntable.png
       :alt: EX-Turntable
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-DCCI-LOGO| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-SCCInspector
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-BSC-LOGO| image:: /_static/images/logos/product-logo-basestationclassic.png
       :alt: BaseStationClassic
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
+..
+.. ................................................
 ..
 .. |EX-BP-LOGO| image:: /_static/images/logos/product-logo-bigpicture.png
       :alt: The Big Picture
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-AN-LOGO| image:: /_static/images/logos/product-logo-announcements.png
       :alt: Announcements
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-DL-LOGO| image:: /_static/images/logos/product-logo-download.png
       :alt: Downloads
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-REF-LOGO| image:: /_static/images/logos/product-logo-reference.png
       :alt: Reference
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
 ..
 .. |EX-SUPPORT-LOGO| image:: /_static/images/logos/product-logo-ex-support.png
       :alt: EX-Support
       :scale: 40%
-      :class: image-float-right
+      :class: image-product-logo-float-right
+..
+.. ................................................
 ..
 .. |EX-CS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 30%
-      :class: image-min-width-72
+      :class: image-min-width-144
       :target: ./ex-commandstation/index.html
 ..
 .. |EX-I-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-installer.png
       :alt: EX-Installer
       :scale: 30%
-      :class: image-min-width-72
+      :class: image-min-width-144
       :target: ./ex-installer/index.html
 ..
 .. |EX-WT-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-webthrottle.png
       :alt: EX-WebThrottle
       :scale: 30%
-      :class: image-min-width-72
+      :class: image-min-width-144
       :target: ./ex-webthrottle/index.html
 ..
 .. |EX-R-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-rail.png
       :alt: EX-RAIL
       :scale: 30%
-      :class: image-min-width-72
+      :class: image-min-width-144
       :target: ./ex-rail/index.html
 ..
 .. |EX-TT-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-turntable.png
       :alt: EX-Turntable
       :scale: 30%
-      :class: image-min-width-72
+      :class: image-min-width-144
       :target: ./ex-turntable/index.html
 ..
 .. |EX-DCCI-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-DCCInspector
       :scale: 30%
-      :class: image-min-width-72
+      :class: image-min-width-144
       :target: ./ex-dccinspector/index.html
 ..
 .. |EX-BSC-LOGO-SMALL| image:: /_static/images/logos/product-logo-basestationclassic.png
       :alt: baseStationClassic
       :scale: 30%
-      :class: image-min-width-72
+      :class: image-min-width-144
       :target: ./download/ex-commandstation.html#getting-basestation-classic
+..
+.. ................................................
 ..
 .. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png
       :alt: The Big Picture
       :scale: 30%
       :class: image-float-right
 ..
-..
+.. ...............................................
 ..
 .. |Motor Driver| replace::
 

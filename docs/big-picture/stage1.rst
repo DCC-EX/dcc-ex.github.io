@@ -195,7 +195,7 @@ See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on
 wiThrottle (via JMRI)
 ---------------------
 
-* Open the network settings on you phone
+* Open the network settings on your phone
 * Change to same network of the PC that JMRI is on
 * Start the |wiThrottle| App
 * |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|

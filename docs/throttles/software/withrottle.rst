@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-****************
+***********
 WiThrottle
-****************
+***********
 
 |conductor|
 
@@ -62,15 +62,25 @@ Requirements
 Operation
 ==========
 
-.. Note:: A Mega is required for using the WiFi connection
-
-.. _withrottle-wifi:
-
-Using Wifi
-------------
-
 To use Wifi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
 
-We have not tested the WiFi implementation yet
+* Open the network settings on your phone
+* Change to same network of the PC that JMRI is on
+* Start the |wiThrottle| App
+* |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|
+* If you are using |Access Point Mode| 
 
-.. TODO:: URGENT - insert tutorial here - Using Wifi (see big-picture - stage 2)
+  * It should find the |wiThrottle Server| in |JMRI| and automatically connect to it
+
+* You should then see the 'Address Screen'
+* Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``
+
+   * The four red LEDs on the Motor board will turn on
+
+* Go back to the 'Address' tab
+* Enter the DCC Address of the loco you put on the track in the ``Keypad`` field
+* Select ``Long`` or ``Short`` (normally if the address is less than 127, it should be a 'Short' address.)
+* Click the :guilabel:`Set` button
+* The address should appear in the green box at the top left.
+* Select the 'Throttle' tab
+* You can now use the sliders to move your train 

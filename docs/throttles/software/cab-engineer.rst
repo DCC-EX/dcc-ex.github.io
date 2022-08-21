@@ -57,11 +57,3 @@ Screenshots
 
 .. rst-class:: clearer
 
-.. _ce-operation:
-
-Operation
-===========
-
-.. todo:: LOW - text needed for Operation
-
-***TODO: More details to come***

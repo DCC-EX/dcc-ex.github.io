@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+|EX-THROTTLES-LOGO|
+
 ********************************************
 Technical Reference for Throttle Developers
 ********************************************

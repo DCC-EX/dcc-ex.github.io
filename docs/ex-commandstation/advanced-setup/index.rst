@@ -30,7 +30,7 @@ Steps to Build an EX-CommandStation
   #. Or none of the above (Direct Connection)
 
 #. Choose a `LCD/oLED screen <LED/oLED Screens>`_ (if desired)
-#. Choose a `Controller (throttle) <Controller Options>`_
+#. Choose a `Throttle (Controller) <Controller Options>`_
 #. Choose an `installation method <Installation options>`_
 #. Set your `startup options <Startup Configuration>`_ (if required)
 #. `Install the software <Installation options>`_
@@ -158,8 +158,8 @@ However, there are occasions when the startup configuration does need modificati
     
     startup-config
 
-Controller Options
-==================
+Throttle (Controller) Options
+=============================
 
 If you wish to take your |EX-CS| experience further, then there are various different controller options available including commercial and DIY throttles as well as an API if you want to design and build your own controller.
 

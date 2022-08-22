@@ -135,7 +135,7 @@ Other Controllers
 
 .. todo:: LOW - Stage 1 - Wifi - Other Controllers
 
-Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
+Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of Throttle (Controller) options.
 
 ----
 
@@ -223,7 +223,7 @@ Other apps
 
 .. todo:: LOW - Stage 1 - JMRI - Other Controllers
 
-Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
+Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of Throttle (Controller) options.
 
 
 Run more than one train (Individual or Consist/Multiple Units)

@@ -62,7 +62,7 @@ Our |EX-I| app is recommended for most users as it automatically downloads and i
 
 13. See the :doc:`Command Station download page </download/ex-commandstation>` to download a copy to your computer.
 
-A Controller (Throttle)
+A Throttle (Controller)
 -----------------------
 
 

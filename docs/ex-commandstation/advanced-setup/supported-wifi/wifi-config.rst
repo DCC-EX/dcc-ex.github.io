@@ -41,7 +41,7 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 Wireless Connections
 =====================
 
-As mentioned in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to |JMRI| without a USB cable, or to connect to a wireless controller like the |Engine Driver| mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running |JMRI| to your Command Station, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
+As mentioned in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to |JMRI| without a USB cable, or to connect to a wireless throttle (controller) like the |Engine Driver| mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running |JMRI| to your Command Station, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in **HC-12 page coming**.
 
 .. todo:: LOW - link needed for Wireless Connections
    Add Link above
@@ -58,12 +58,12 @@ Your particular controller hardware (a separate controller or your cell phone) m
 Connection Type: Direct to Command Station or through JMRI
 ============================================================
 
-Everything on this page seems to come in twos! You have two options for connecting your controller to your Command Station depending on its capabilities and your preferences:
+Everything on this page seems to come in twos! You have two options for connecting your throttle (controller) to your Command Station depending on its capabilities and your preferences:
 
 * Connect directly to |EX-CS| using WiFi or Bluetooth (|JMRI| not required but optional)
 * Connect to the |EX-CS| through |JMRI| with the USB cable, and connect a |WiThrottle Protocol| compatible throttle to JMRI's |WiThrottle Server| via WiFi
 
-If you don't need |JMRI|, or just want to connect your wireless controller directly to the |EX-CS|, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the |WiThrottle Protocol| command language. 
+If you don't need |JMRI|, or just want to connect your wireless throttle (controller) directly to the |EX-CS|, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the |WiThrottle Protocol| command language. 
 
 For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect either directly to the |EX-CS| via WiFi, or indirectly through the JMRI computer that has WiFi and its own |WiThrottle Server|. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends native <DCC++> commands.
 

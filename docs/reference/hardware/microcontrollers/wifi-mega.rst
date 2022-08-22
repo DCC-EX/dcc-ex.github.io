@@ -263,7 +263,7 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 2. Decide if you want Access Point Mode or Station Mode
 =======================================================
 
-Access Point (AP) Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  Station Mode connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Controllers (Throttles) can find it on your network.
+Access Point (AP) Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  Station Mode connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Throttles (Controllers) can find it on your network.
 
 If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install |EX-CS|. Go directly to step 5.
 
@@ -333,7 +333,7 @@ If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi
 - It should show the ATMega2560 & ESP8266 WiFi communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new |EX-CS|.
 - You should see `++ Wifi Setup CONNECTED ++`
 
-6. Connect your Phone as a Controller (Throttle)
+6. Connect your Phone as a Throttle (Controller)
 ================================================
 
 - If operating in STA mode, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)

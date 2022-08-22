@@ -147,13 +147,6 @@ wiThrottle (iOS)
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
 
-Other Controllers
------------------
-
-.. todo:: LOW - Stage 1 - Wifi - Other Controllers
-
-Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
-
 ----
 
 Run a train on your JMRI connected EX-CommandStation
@@ -235,14 +228,6 @@ wiThrottle (via JMRI)
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
 
-Other apps
-----------
-
-There are lots of other options for throttles you can use with your |EX-CS|.
-
-Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
-
-
 Run more than one train (Individual or Consist/Multiple Units)
 ==============================================================
 
@@ -256,19 +241,30 @@ wiThrottle (Multiple Trains)
 
 .. todo:: LOW - Stage 1 - wiThrottle - Multiple Trains
 
-Other Controllers (Multiple Trains)
------------------------------------
-
-.. todo:: LOW - Stage 1 - other controllers - Multiple Trains
-
-Program a decoder using JMRI
-============================
+Program a decoder's DCC address
+===============================
 
 |DCC-EX| does not currently provide any apps with a user friendly interface for programming DCC decoders.
 
-At least one Smart Phone App (:doc:`/throttles/software/rtdrive-dccpp`) can program decoders on a |EX-CS| but it is not particularly user friendly to do so.
+At least one Smart Phone App (:doc:`/throttles/software/rtdrive-dccpp`) can program decoders on |EX-CS| but it is not particularly user friendly to do so.
 
-As a result, we recommend using JMRI's Decoder Pro for programming decoders.  It provides plain English descriptions of all the CVs of a huge number of different decoders. It is very well supported, runs on the major PC operating systems, is free and open source.
+As a result, we recommend using |JMRi| DecoderPro for programming decoders.  It provides plain English descriptions of all the CVs of a huge number of different decoders, is very well supported, runs on the major PC operating systems, and is free and open source.
+
+Programming options
+-------------------
+
+There are two basic methods for programming decoders
+
+* Using the Programming Track (Service Mode programming)
+* Programming on Main (POM or Ops Mode programming)
+
+Programming on the programming track, or service mode programming, allows for receiving acknowledgement that programming changes have successfully been applied, and also allows |JMRi| DecoderPro to interrogate a decoder to make a best guess at the type of decoder that's installed, what the address is, and so forth.
+
+Programming on main, also known as POM or ops mode programming, doesn't allow for acknowledgement or reading of CVs, but is handy when changes need to be made while a loco is in operation.
+
+We will outline how to use each option below to update a locomotive DCC decoder's address.
+
+To program any other features, refer to the `DecoderPro user guide <https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml>`_.
 
 JMRI (Programming Decoders)
 ---------------------------
@@ -280,30 +276,21 @@ It relies on the |EX-CS| being connected to the PC running |JMRI|, normally by t
 Installing JMRI
 ^^^^^^^^^^^^^^^
 
-TODO
+To install |JMRi|, refer to the installation instructions on the `JMRI <https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml>`_ website.
 
-see https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml
+Using the programming track (service mode)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Programming Track CS Programming on the Main
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-There are two basic methods for programming decoders
-
-* Using the Programming Track
-* Programming on the Main
+Once |JMRi| is installed, launch DecoderPro. If you haven't previously used DecoderPro or any |JMRi| applications, you will need to setup your |EX-CS| connection. Refer to the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml>`_ for instructions on how to accomplish this.
 
 
-With "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc., but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main.
-
-Programming Track
-^^^^^^^^^^^^^^^^^
 
 see https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_ServiceMode.shtml
 
-TODO
 
-Programming on the Main
-^^^^^^^^^^^^^^^^^^^^^^^
+
+Programming on main (POM or ops mode)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 or OPS Mode programming
 

@@ -43,6 +43,29 @@ If you're just starting out with |EX-CS|, or have a minimal system with no WiFi 
 
 This is by far the simplest option to verify your |EX-CS| is set up and working correctly, as you don't need to install any software or worry about any network connections to get your first train running on your layout.
 
+While there is a lot more detail on the :doc:`/ex-webthrottle/index` page, we will give you a very quick start guide here to get a single train running with your |EX-CS|.
+
+Firstly, launch :guilabel:`EX-WebThrottle` in your Chromium based web browser (Google Chrome, Microsoft Edge, or Opera):abbr:
+
+.. rst-class:: dcclink
+
+   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+
+Once you have |EX-WT| opened in your browser, follow these steps to get your train running:
+
+* Ensure your |EX-CS| is connected to your computer via the USB cable
+* In the top right corner, ensure "Serial" is selected from the pull down menu, then click the :guilabel:`Connect DCC++ EX` button
+* A pop up window should appear, prompting you to choose your COM port
+* Select the COM port then click the :guilabel:`Connect` button, and the button in the top right corner should change to :guilabel:`Disconnect DCC++ EX` with a green circle to the left
+* Turn track power on with the :guilabel:`Power` button
+* Type the DCC address of your loco into the "Locomitive ID" text box, then click the :guilabel:`>` button to set it
+* You can now use the throttle slider or :guilabel:`+` and :guilabel:`-` buttons to set the speed, and the slider in the centre of the screen to set forward, reverse, stop, or EStop
+* The function buttons to the right can also be used to set the various functions supported by your decoder
+
+Enjoy running your train!
+
+----
+
 Run a train on your WiFi enabled EX-CommandStation
 ==================================================
 

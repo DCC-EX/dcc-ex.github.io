@@ -123,6 +123,7 @@ table.intro-table {
   text-transform: none;
   border-radius: 10px;
   float:right;
+  margin: 0px 0px 0px 10px;
 }
 
 .dcclink a:visited {

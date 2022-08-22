@@ -12,7 +12,7 @@ DCC-EX Model Railroading
 
 Welcome to affordable, extensible DCC model railroading! |BR| \ |BR| \
 |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout.  
-Our easy to use, do-it-yourself products are based on off-the-shelf open source Arduino technology. They currently include:
+Our easy to use, Do-It-Yourself(DIY) products are based on off-the-shelf open source Arduino technology. They currently include:
 
 .. list-table::
     :widths: 33 33 33

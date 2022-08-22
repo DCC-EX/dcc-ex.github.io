@@ -64,7 +64,7 @@ To actually run your model railroad you will need a few items:
    :scale: 50%
    :align: right
 
-1. a **Controller (Throttle)** - Something to control your trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc.
+1. a **Throttle (Controller)** - Something to control your trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc.
 2. Power - The Arduino and the Motor shields need to be powered separately, so 
  
   - a **9-14v DC power supply** for the motor shield to the track, and 

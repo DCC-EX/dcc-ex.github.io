@@ -27,7 +27,7 @@ Our easy to use, do-it-yourself, affordable products are based on off-the-shelf 
     * - |EX-WT-LOGO-SMALL|
       - |EX-TT-LOGO-SMALL|
       - |EX-DCCI-LOGO-SMALL|
-    * - A simple web based controller for your command station
+    * - A simple web based throttle for your command station
       - A separate stepper based turntable controller
       - A separate DCC packet sniffing tool
 
@@ -43,7 +43,7 @@ Our easy to use, do-it-yourself, affordable products are based on off-the-shelf 
     * - |EX-R-LOGO-SMALL| 
       - The in-built scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL| 
-      - A simple web based controller for your command station
+      - A simple web based throttle for your command station
     * - |EX-TT-LOGO-SMALL| 
       - A separate stepper based turntable controller
     * - |EX-DCCI-LOGO-SMALL| 

@@ -38,7 +38,7 @@ General
 - :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
 
 DCC-EX (Native <DCC++> commands>)
-------------------------------
+---------------------------------
 
 - :doc:`EX-Web-Throttle <software/ex-webthrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`

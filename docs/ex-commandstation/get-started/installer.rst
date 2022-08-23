@@ -171,10 +171,10 @@ Once you have configured your options, press this button to upload the software 
 
 ----
 
-Next Steps - Selecting a Controller 
-===================================
+Next Steps - Selecting a Throttle (Controller) 
+==============================================
 
-Click :doc:`here <controllers>` or click the "next" button to learn how to select a controller suitable to test and use your |EX-CS|.
+Click :doc:`here <controllers>` or click the "next" button to learn how to select a throttle (controller) suitable to test and use your |EX-CS|.
 
 ----
 

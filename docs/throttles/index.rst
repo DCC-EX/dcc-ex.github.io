@@ -1,8 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+|EX-THROTTLES-LOGO|
+
 ***********************
-Controllers (Throttles)
+Throttles (Controllers)
 ***********************
+
+This page contains lists of compatible Throttles (Controllers) that currently support the |EX-CS|.  They are listed two ways:
 
 .. sidebar:: 
 
@@ -10,18 +14,17 @@ Controllers (Throttles)
     :depth: 2
     :local:
 
-This page contains lists of compatible Controllers (Throttles) that currently support the |EX-CS|.  They are listed two ways:
 
 * `By Communication technology <Throttles - By Communication technology>`_
 * `By Client Technology <Throttles - By Client Technology>`_  (e.g. Android VS iOS)
 
 |conductor|
 
-For an overview of throttles and how to choose one, please read the :doc:`Getting Started - Controllers Page </ex-commandstation/get-started/controllers>` 
+For an overview of throttles and how to choose one, please read the :doc:`Getting Started - Throttles Page </ex-commandstation/get-started/controllers>` 
 
 |tinkerer| |engineer|
 
-For additional options for throttles and how to choose one, please read the :doc:`Advanced Options - Controllers Page </ex-commandstation/advanced-setup/controllers>`
+For additional options for throttles and how to choose one, please read the :doc:`Advanced Options - Throttles Page </ex-commandstation/advanced-setup/controllers>`
 
 ----
 
@@ -39,7 +42,7 @@ DCC-EX (Native <AT> commands>)
 
 - :doc:`EX-Web-Throttle <software/ex-webthrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
-- :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`JMRI <software/jmri>`
 - :doc:`RtDtive DCC++ <software/rtdrive-dccpp>`
 
@@ -52,10 +55,10 @@ wiThrottle Protocol Based Throttles
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
-- :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
-- :doc:`WiTcontroller (Hardware) <hardware/witcontroller>`
-- :doc:`TCS UWT-50 (Hardware) <hardware/uwt50>`
-- :doc:`Elgato Stream Deck (hardware) <hardware/streamdeck>`
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
+- :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
+- :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 
 JMRI Web Server Based Throttles
 -------------------------------
@@ -93,11 +96,11 @@ Apple iOS (Phones and Tablets)
 Dedicated Hardware
 ------------------
 
-- :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
-- :doc:`miniThrottle (Hardware) <hardware/minithrottle>`
-- :doc:`WiTcontroller (Hardware) <hardware/witcontroller>`
-- :doc:`TCS UWT-50 (Hardware) <hardware/uwt50>`
-- :doc:`Elgato Stream Deck (hardware) <hardware/streamdeck>`
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
+- :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
+- :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 
 Personal Computers
 ------------------

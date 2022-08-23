@@ -29,7 +29,7 @@ There are two simple options for testing your setup described below:
 
 .. sidebar:: 
 
-    |tinkerer| |engineer| |BR| Additional options (controllers) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
+    |tinkerer| |engineer| |BR| Additional options (throttles) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
 
 Using EX-WebThrottle
 --------------------
@@ -236,6 +236,6 @@ Next Steps - Run Your Trains
 
 We suggest that you look at the :doc:`/big-picture/index` to get some additional guidance on running trains and the additional capabilities of |DCC-EX| that you may prove of interest.
 
-You might also like to look at the other :doc:`Controllers (Throttles) </ex-commandstation/advanced-setup/controllers>` that are available.
+You might also like to look at the other :doc:`Throttles (Controllers) </ex-commandstation/advanced-setup/controllers>` that are available.
 
 If you are still having difficulties click :guilabel:`Next`.

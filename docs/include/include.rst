@@ -108,6 +108,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |EX-THROTTLES-LOGO| image:: /_static/images/logos/product-logo-throttles.png
+      :alt: Throttles
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. |EX-SUPPORT-LOGO| image:: /_static/images/logos/product-logo-ex-support.png
       :alt: EX-Support
       :scale: 40%

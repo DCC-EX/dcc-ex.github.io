@@ -6,7 +6,7 @@
 |EX-CS-LOGO|
 
 *********************************
-Choosing a Controller (Throttle)
+Choosing a Throttle (Controller)
 *********************************
 
 |conductor| 
@@ -17,7 +17,7 @@ Choosing a Controller (Throttle)
     :depth: 2
     :local:
 
-This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware (including WiFi). If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of controller (Throttle) options.
+This page is specifically intended for a |conductor-text| who has installed *just* the recommended hardware (including WiFi). If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of Throttle (Controller) options.
 
 ----
 
@@ -34,19 +34,19 @@ The EX-CommandStation
 
 The |EX-CS| is covered in the :doc:`Getting Started <index>` section, and is usually an Arduino microcontroller, a motor driver and a WiFi shield. The Command Station accepts instructions from a controller and generates packets that are transmitted to your track and subsequently your trains.
 
-The Controller (Throttle)
+The Throttle (Controller)
 -------------------------
 
 Since the |EX-CS| simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. It isn't very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉  A controller can be a hardware device like a handheld throttle (also called a Controller or Cab), an App that runs on your phone, a Web Page, or front-end software like |JMRI| or Rocrail that runs on a computer or Raspberry Pi. 
 
 ----
 
-Controller Options
-==================
+Throttle (Controller) Options
+=============================
 
 .. sidebar:: Connection Types
 
-   Your controller can connect to the |EX-CS| several different ways, such as:
+   Your throttle (controller) can connect to the |EX-CS| several different ways, such as:
 
    * **WiFi**
    * **Direct connection using a USB cable**
@@ -57,7 +57,7 @@ Controller Options
 
    You are welcome to explore the many other :doc:`/throttles/index`, but the the ones on this page are still recommended for initial testing. 
 
-Here is a list of  a small subset of the controllers you can use with the |EX-CS|. These options are simple and inexpensive (i.e. free) and are suitable for initial testing if you have installed *just* the recommended hardware (including WiFi). Namely **WiFi** (using a smart phone) and **Direct Connection**.
+Here is a list of  a small subset of the throttles you can use with the |EX-CS|. These options are simple and inexpensive (i.e. free) and are suitable for initial testing if you have installed *just* the recommended hardware (including WiFi). Namely **WiFi** (using a smart phone) and **Direct Connection**.
 
 Connecting via WiFi
 -------------------
@@ -71,7 +71,7 @@ Here is an image that represents a direct connection.
    :align: center
    :scale: 50%
 
-There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a wifi controller (throttle) for the |EX-CS|.  On this page we are only going to cover two. 
+There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a wifi Throttle (Controller) for the |EX-CS|.  On this page we are only going to cover two. 
 
 Compatible Wifi Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -125,7 +125,7 @@ Here are your connections, just a computer running a chromium-based browser, a U
 Compatible USB Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There is currently only one USB compatible controller (throttle) for the |EX-CS|.
+There is currently only one USB compatible Throttle (Controller) for the |EX-CS|.
 
 Our EX-WebThrottle (DCC++ | USB/Serial)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -12,7 +12,7 @@ EX-WebThrottle
 
 |conductor| |tinkerer| |engineer|
 
-|EX-WT| is a throttle/controller that can connect to the |EX-CS| directly through the USB port of a computer.
+|EX-WT| is a throttle (controller) that can connect to the |EX-CS| directly through the USB port of a computer.
 
 For a video on how to install and use |EX-WT| click below.
 

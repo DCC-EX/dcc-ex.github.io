@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+|EX-CONTRIBUTING-LOGO|
+
 **********************
 Donate to Our Project
 **********************

@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+|EX-CONTRIBUTING-LOGO|
+
 ***************************************
 Contributing to the Hardware & Software
 ***************************************

@@ -37,7 +37,7 @@ General
 
 - :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
 
-DCC-EX (Native <AT> commands>)
+DCC-EX (Native <DCC++> commands>)
 ------------------------------
 
 - :doc:`EX-Web-Throttle <software/ex-webthrottle>`
@@ -45,12 +45,12 @@ DCC-EX (Native <AT> commands>)
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`JMRI <software/jmri>`
 - :doc:`RtDtive DCC++ <software/rtdrive-dccpp>`
+- :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 
 wiThrottle Protocol Based Throttles
 -----------------------------------
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`
-- :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`

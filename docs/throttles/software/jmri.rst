@@ -57,9 +57,9 @@ At this point, you should have your |JMRi| throttle window open ready for action
 
 To select and control a loco from here, you need to:
 
-* Ensure track power is turned on using the big power button at the top of the window, or selecting "Power On" from the "Power" menu
-* Type the address of your loco in the "Address Panel" then press the "Set" button
-* You can now use the throttle slider, forward, reverse, idle, and STOP! buttons to control your loco
+* Ensure track power is turned on using the :guilabel:`Power` button at the top of the window, or selecting "Power On" from the "Power" menu
+* Type the address of your loco in the "Address Panel" then press the :guilabel:`Set` button
+* You can now use the throttle slider, forward, reverse, :guilabel:`Idle`, and :guilabel:`STOP!` buttons to control your loco
 * Use the buttons in the "Function Panel" to control your various loco funcions also
 
 Here we show a loco at address 3 selected, with track power turned on, and running in a forward direction at 25% speed:

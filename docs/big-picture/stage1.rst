@@ -11,18 +11,58 @@ Stage 1 - Running a Train
 .. sidebar:: 
 
    .. contents:: On this page
-      :depth: 1
+      :depth: 2
       :local:
+
+Throttle options
+================
+
+There are a lot of different throttle otions available to control your trains and layout, including software applications available for your smart phone or computer and physical hardware options, both wired and wireless.
+
+Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with |EX-CS|: |EX-WT|, |Engine Driver|, |wiThrottle|, and |JMRi|.
+
+For other throttle options, refer to the :doc:`/ex-commandstation/advanced-setup/controllers` page for further information on choosing a throttle, and you can also refer to the  :doc:`/throttles/index` section for more information on the various throttle options available.
 
 What to expect to learn from stage 1
 ====================================
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How run a train on your WiFi enabled |EX-CS|
-* How run a train on your |JMRI| connected |EX-CS|
+* How to run a train on your direct connected |EX-CS| with |EX-WT|
+* How to run a train on your WiFi enabled |EX-CS|
+* How to run a train on your |JMRI| connected |EX-CS|
 * How to run more than one train (Individual or Consist/Multiple Units)
 * How to program a decoder using |JMRI|
+
+----
+
+Run a train using EX-WebThrottle
+================================
+
+If you're just starting out with |EX-CS|, or have a minimal system with no WiFi or Ethernet connection options, then a great way to start simply is by using |EX-WT| via your direct USB connection.
+
+This is by far the simplest option to verify your |EX-CS| is set up and working correctly, as you don't need to install any software or worry about any network connections to get your first train running on your layout.
+
+While there is a lot more detail on the :doc:`/ex-webthrottle/index` page, we will give you a very quick start guide here to get a single train running with your |EX-CS|.
+
+Firstly, launch :guilabel:`EX-WebThrottle` in your Chromium based web browser (Google Chrome, Microsoft Edge, or Opera):abbr:
+
+.. rst-class:: dcclink
+
+   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+
+Once you have |EX-WT| opened in your browser, follow these steps to get your train running:
+
+* Ensure your |EX-CS| is connected to your computer via the USB cable
+* In the top right corner, ensure "Serial" is selected from the pull down menu, then click the :guilabel:`Connect DCC++ EX` button
+* A pop up window should appear, prompting you to choose your COM port
+* Select the COM port then click the :guilabel:`Connect` button, and the button in the top right corner should change to :guilabel:`Disconnect DCC++ EX` with a green circle to the left
+* Turn track power on with the :guilabel:`Power` button
+* Type the DCC address of your loco into the "Locomitive ID" text box, then click the :guilabel:`>` button to set it
+* You can now use the throttle slider or :guilabel:`+` and :guilabel:`-` buttons to set the speed, and the slider in the centre of the screen to set forward, reverse, stop, or EStop
+* The function buttons to the right can also be used to set the various functions supported by your decoder
+
+Enjoy running your train!
 
 ----
 
@@ -130,13 +170,6 @@ wiThrottle (iOS)
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
 
-Other Controllers
------------------
-
-.. todo:: LOW - Stage 1 - Wifi - Other Controllers
-
-Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of Throttle (Controller) options.
-
 ----
 
 Run a train on your JMRI connected EX-CommandStation
@@ -218,14 +251,6 @@ wiThrottle (via JMRI)
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
 
-Other apps
-----------
-
-.. todo:: LOW - Stage 1 - JMRI - Other Controllers
-
-Look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of Throttle (Controller) options.
-
-
 Run more than one train (Individual or Consist/Multiple Units)
 ==============================================================
 
@@ -239,19 +264,30 @@ wiThrottle (Multiple Trains)
 
 .. todo:: LOW - Stage 1 - wiThrottle - Multiple Trains
 
-Other Controllers (Multiple Trains)
------------------------------------
-
-.. todo:: LOW - Stage 1 - other controllers - Multiple Trains
-
-Program a decoder using JMRI
-============================
+Program a decoder's DCC address
+===============================
 
 |DCC-EX| does not currently provide any apps with a user friendly interface for programming DCC decoders.
 
-At least one Smart Phone App (:doc:`/throttles/software/rtdrive-dccpp`) can program decoders on a |EX-CS| but it is not particularly user friendly to do so.
+At least one Smart Phone App (:doc:`/throttles/software/rtdrive-dccpp`) can program decoders on |EX-CS| but it is not particularly user friendly to do so.
 
-As a result, we recommend using JMRI's Decoder Pro for programming decoders.  It provides plain English descriptions of all the CVs of a huge number of different decoders. It is very well supported, runs on the major PC operating systems, is free and open source.
+As a result, we recommend using |JMRi| DecoderPro for programming decoders.  It provides plain English descriptions of all the CVs of a huge number of different decoders, is very well supported, runs on the major PC operating systems, and is free and open source.
+
+Programming options
+-------------------
+
+There are two basic methods for programming decoders
+
+* Using the Programming Track (Service Mode programming)
+* Programming on Main (POM or Ops Mode programming)
+
+Programming on the programming track, or service mode programming, allows for receiving acknowledgement that programming changes have successfully been applied, and also allows |JMRi| DecoderPro to interrogate a decoder to make a best guess at the type of decoder that's installed, what the address is, and so forth.
+
+Programming on main, also known as POM or ops mode programming, doesn't allow for acknowledgement or reading of CVs, but is handy when changes need to be made while a loco is in operation.
+
+We will outline how to use each option below to update a locomotive DCC decoder's address.
+
+To program any other features, refer to the `DecoderPro user guide <https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml>`_.
 
 JMRI (Programming Decoders)
 ---------------------------
@@ -263,30 +299,21 @@ It relies on the |EX-CS| being connected to the PC running |JMRI|, normally by t
 Installing JMRI
 ^^^^^^^^^^^^^^^
 
-TODO
+To install |JMRi|, refer to the installation instructions on the `JMRI <https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml>`_ website.
 
-see https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml
+Using the programming track (service mode)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Programming Track CS Programming on the Main
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-There are two basic methods for programming decoders
-
-* Using the Programming Track
-* Programming on the Main
+Once |JMRi| is installed, launch DecoderPro. If you haven't previously used DecoderPro or any |JMRi| applications, you will need to setup your |EX-CS| connection. Refer to the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml>`_ for instructions on how to accomplish this.
 
 
-With "Programming on Main", where you can adjust things like sounds, throttle curves, speed matching, etc., but you can't get acknowledgment back from the loco on the main track. That is usually fine because you will know if a setting like a sound change "took" or not. We will have a section on programming on main.
-
-Programming Track
-^^^^^^^^^^^^^^^^^
 
 see https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_ServiceMode.shtml
 
-TODO
 
-Programming on the Main
-^^^^^^^^^^^^^^^^^^^^^^^
+
+Programming on main (POM or ops mode)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 or OPS Mode programming
 

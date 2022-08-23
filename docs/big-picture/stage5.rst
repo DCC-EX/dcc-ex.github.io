@@ -39,6 +39,8 @@ At the end of this stage, we expect you will have learnt the following:
 * How to calculate and tune your |EX-TT| positions, including DCC phase/polarity switching
 * How to control and automate your |EX-TT|
 
+----
+
 Add an EX-Turntable to your EX-CommandStation
 =============================================
 

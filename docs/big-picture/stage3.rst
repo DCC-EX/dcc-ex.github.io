@@ -74,3 +74,13 @@ If you use different sensors that simply provide an active low or high output, t
 
     AT(-SNS1)         // When activie high sensor 1 is triggered
     IF(-SNS1)         // If activie high sensor 1 is triggered
+
+Adding a Turnout/Point
+======================
+
+.. todo:: MEDIUM - Stage 2 - Adding a turnout/point
+
+Adding a Sensor
+===============
+
+.. todo:: MEDIUM - Stage 2 - Adding a Sensor

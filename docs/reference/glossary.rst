@@ -20,9 +20,9 @@ Glossary
     * - Motor Driver 
       - Same as "Motor Shield" "Motor Board" "Motorboard" |BR| See :doc:`/reference/hardware/motor-boards`
     * - Command Station |BR| DCC Command Station |BR| DCC Base Station
-      - TODO
+      - see https://dccwiki.com/Command_Station
     * - Consist |BR| Multiple Unit
-      - Multiple locos hauling a singe train
+      - Multiple locos hauling a singe train. see https://dccwiki.com/Multiple_Unit_Consisting
     * - DC
       - Direct Current
     * - DCC

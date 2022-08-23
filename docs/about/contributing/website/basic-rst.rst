@@ -360,10 +360,12 @@ Documents / Files
 .. todo:: LOW - Contributing - documents description
 
 
-Image Artifacts
-===============
+Image Artifacts / Original Grpahics
+===================================
 
-.. todo:: LOW - Contributing - image Artifacts description
+Any 'original' files that are not actually presented in the web site, but are used to create files for the web site (e.g. the Inkscape files used to created the logos) must be included in the repository.
+
+These files should be placed in the ``image-artefacts`` folder.
 
 Hiding pages and comments
 ==========================

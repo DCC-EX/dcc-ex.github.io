@@ -59,9 +59,12 @@ And type your script in.
    :align: center
    :scale: 100%
 
-
 Some Simple Examples  
 ====================
+
+.. todo:: 
+
+   MEDIUM - Update these examples to use valid pins and vpins that are available on the Mega2560 or I/O expanders and servo modules.
 
 Example 1: Creating Routes for a Throttle
 -----------------------------------------

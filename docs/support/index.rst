@@ -54,6 +54,8 @@ We try to follow FaceBook and JMRI groups, but there are just too many separate 
 
 You can find us on Facebook here:
 
+`Arduino for Model Railroading <https://www.facebook.com/groups/926390087391995>`_
+
 `DCC++ and Arduino Model Railroading <https://www.facebook.com/groups/1406785379394934/>`_
 
 You can also find us on TrainBoard:

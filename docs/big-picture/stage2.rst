@@ -35,7 +35,7 @@ To add a roster you need to:
 
 
 Create myAutomation.h
---------------------- 
+---------------------
 
 In a text editor (e.g. notepad) create a new text file named 'myAutomation.h'. (Note the capital 'A' in the name.  The case of all the characters is important.)
 
@@ -87,11 +87,11 @@ Example of loco without sound:
 
 Note that it only has FO (the Headlight) and not following slashes.
 
-re-upload the EX-CommandStation software
+Re-upload the EX-CommandStation software
 ----------------------------------------
 
 Using EX-Installer
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 #. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-I| files.
 #. Re-Run |EX-I|
@@ -100,7 +100,7 @@ Using EX-Installer
 The Roster will be automatically loaded with the |EX-CS| software.
 
 Using the Arduino IDE
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 #. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-CS| files from GitHub.
 #. Run the Arduino IDE

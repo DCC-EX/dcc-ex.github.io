@@ -201,7 +201,15 @@ Refer to :ref:`about/contributing/website/basic-rst:images` below for details on
 On This Page - Table of Contents
 --------------------------------
 
-.. todo:: LOW - Contributing - On This Page - Table of Contents
+Pages with multiple headings should generally have a Table of Contents.  The depth of the table is a subjective decision.
+
+.. code-block:: 
+
+  .. sidebar::
+
+    .. contents:: On this page
+        :depth: 4
+        :local:
 
 ----
 
@@ -270,8 +278,6 @@ All heading underlines and overlines must be at least as long as the text of the
 
 Text
 ^^^^
-
-.. todo::  LOW - Contributing - text content
 
 Refer to the :doc:`/about/contributing/website/basic-rst` and :doc:`/about/contributing/website/style-guide` 
 

@@ -12,14 +12,14 @@ Throttles (Software)
 .. toctree::
     :maxdepth: 1
     
-    ex-webthrottle
-    engine-driver
-    withrottle
-    dccpp-cab
-    locontrol
-    cab-engineer
-    digitrainspro
-    srcpclient
+    EX-Web-Throttle <ex-webthrottle>
     jmri
-    rtdrive-dccpp
-    train-driver
+    Engine Driver (Android) <engine-driver>
+    DCCpp CAB (android) <dccpp-cab>
+    Cab Engineer: DCC Throttle (Android) <cab-engineer>
+    DigiTrainsPro (Android) <digitrainspro>
+    WiThrottle (iOS) <withrottle>
+    Locontrol (iOS) <locontrol>
+    SRCP Client (iOS) <srcpclient>
+    RtDtive DCC++ (Android) <rtdrive-dccpp>
+    Train Driver (iOS) <train-driver>

@@ -34,7 +34,7 @@ The elements of the documentation fall into the following broad categories:
 * `Pages`_
 * :ref:`about/contributing/website/basic-rst:Image Types`
 * :ref:`about/contributing/website/basic-rst:Documents / Files`
-* :ref:`about/contributing/website/basic-rst:Image Artifacts` / originals   (used to create the images, but not part of the documentation)
+* :ref:`about/contributing/website/basic-rst:Image Artifacts / Original Grpahics`    (used to create the images, but not part of the documentation)
 
 Folders
 =======

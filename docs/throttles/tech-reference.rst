@@ -151,8 +151,9 @@ Where:
 Commands to avoid
 -----------------
 
-* ``<f cab func1 func2>`` - Use ``<F cab function 1/0>`` instead.
-* ``<t  slot cab speed dir>`` - Just drop the slot number .
-* ``<T commands>`` - other than ``<T id 0/1>``.
-* ``<s>`` - This may need to change in the future to support new features.
-* ``<c>`` - This may need to change in the future to support new features.
+* ``<f cab func1 func2>`` - Use ``<F cab function 1/0>`` instead
+* ``<t  slot cab speed dir>`` - Just drop the slot number
+* ``<T commands>`` - other than ``<T id 0/1>``
+* ``<s>`` - This may need to change in the future to support new features
+* ``<c>`` - This may need to change in the future to support new features
+* ``<D>`` - If the throttle developer sees the need to obtain info which is <D> only please contact us to get a better way to do it

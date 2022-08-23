@@ -110,7 +110,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 
 **Show number of supported cabs**
 
-* ``<#>`` - Will return either ``<# 20>``, ``<# 30>``, or ``<# 50>``. Depending on Arduino used: Uno, Nano, or other (usually Mega) respectively. This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. This can be adjusted knowing that each new slot will take approximately 8k of memory. The ``<D RAM>`` command will display the amount of free memory and the "Forget Locos" command (``<- [CAB])`` will aid in making more room in memory by removing slots for locos no longer in operation.
+* ``<#>`` - Will display the number of available cab slots. This will typically be ``<# 20>``, ``<# 30>``, or ``<# 50>`` depending on how much memory your |EX-CS| has available. This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing ``MAX_LOCOS`` in "DCC.h", knowing that each new slot will take approximately 8 bytes of memory. The ``<D RAM>`` command will display the amount of free memory. If you fill the available slots, the “Forget Locos” command (``<- [CAB]>``) will free up unused locos. Currently there is no automatic purging of unused locos.
 
 **Forget Locos**
 

@@ -27,12 +27,11 @@ Do you know you are going want WiFi connectivity to connect your Throttle direct
 
 ----
 
-This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brand names though the board itself can also be unmarked. Links to some suppliers are at the bottom of this page:
+This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brand names though the board itself can also be unmarked.
 
-* Wemos
-* RobotDyn
-* Geekcreit
+.. warning:: 
 
+   Buyer beware! There have been numerous reports of build quality with these clone boards, with poorly soldered USB connectors and issues getting wireless working two commonly reported issues.
 
 What You Will Need
 ==================
@@ -392,10 +391,6 @@ The Mega+WiFi Schematic diagram. Click on it to enlarge:
 Suppliers
 ==========
 
- https://robotdyn.com/mega-wifi-r3-atmega2560-esp8266-flash-32mb-usb-ttl-ch340g-micro-usb.html
+https://www.amazon.com/SongHe-Mega2560-ATmega2560-ESP8266-Compatible/dp/B07THDDFSJ
 
- https://www.amazon.com/SongHe-Mega2560-ATmega2560-ESP8266-Compatible/dp/B07THDDFSJ
-
- https://usa.banggood.com/Geekcreit-Mega-+WiFi-R3-Module-ATmega2560+ESP8266-32Mb-Memory-USB-TTL-CH340G-p-1205437.html?cur_warehouse=CN
-
- .. TODO:: LOW - show link for external antenna and how to cut the trace to the circuit trace antenna on the board.
+.. TODO:: LOW - show link for external antenna and how to cut the trace to the circuit trace antenna on the board.

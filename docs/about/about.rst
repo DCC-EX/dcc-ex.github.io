@@ -79,7 +79,7 @@ LCN / LCOS (Layout Control)
 ============================
 
 * Rob Simonds - Reno, Nevada, USA (RobinS)
-* Jack Reagan - Cape Girardeau, Missouri (Marada1)
+* Jack Regan - Callao, Mo, USA (Marada1)
 
 Installer Software
 ===================
@@ -133,7 +133,7 @@ Testing / Research / Support
 * Gregor Baues - Île-de-France, France (grbba)
 * Herb Morton - Kingwood Texas, USA (Ash++)
 * Travis Farmer - Farmington Maine, USA (travis_farmer)
-* Jack Reagan - Cape Girardeau, Missouri, USA (Marada1)
+* Jack Regan - Callao, Mo, USA (Marada1)
 * Larry Dribin - (H0Guy, LarryD)
 * Henk Kruisbrink - UK (Henkk)
 * Colin Grabham - Condobolin NSW Straya (Kebbin)

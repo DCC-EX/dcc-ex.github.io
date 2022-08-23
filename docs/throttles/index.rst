@@ -44,8 +44,8 @@ DCC-EX (Native <DCC++> commands>)
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`JMRI <software/jmri>`
-- :doc:`RtDtive DCC++ <software/rtdrive-dccpp>`
-- :doc:`DCCpp CAB (android) <software/dccpp-cab>`
+- :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
+- :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
 
 wiThrottle Protocol Based Throttles
 -----------------------------------

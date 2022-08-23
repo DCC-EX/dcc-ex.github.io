@@ -87,23 +87,25 @@ Example of loco without sound:
 
 Note that it only has FO (the Headlight) and not following slashes.
 
-Locos With the Same DCC Address
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..
+   
+   Locos With the Same DCC Address
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have two or more Loco with identical DCC Addresses, but with with decoder functions you need to make the "name" different or you'll get compile error 'Duplicate Case Value'.
+   If you have two or more Loco with identical DCC Addresses, but with with decoder functions you need to make the "name" different or you'll get compile error 'Duplicate Case Value'.
 
-Examples of naming Different Locos identical DCC Addresses. Notice the different Function values in the following two examples:
+   Examples of naming Different Locos identical DCC Addresses. Notice the different Function values in the following two examples:
 
-.. code-block:: 
+   .. code-block:: 
 
-    ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
+      ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
 
-For example, you can add a "-2" to the Second Loco DCC Address and Name:
+   For example, you can add a "-2" to the Second Loco DCC Address and Name:
 
-.. code-block:: 
+   .. code-block:: 
 
-   ROSTER(4468-2,"LNER 4468-2","Lights/Steam/*L~Whistle/*S~Whistle/*Whistle2/DoorSlam/Whl Slip/Coal Shvl/BlwDown/SftyVlv/Injector/CylnCock/Brake/Blower/Grd Whistle/Coupler/Fireman/Chuff-Coast/Aux Lghts")
- 
+      ROSTER(4468-2,"LNER 4468-2","Lights/Steam/*L~Whistle/*S~Whistle/*Whistle2/DoorSlam/Whl Slip/Coal Shvl/BlwDown/SftyVlv/Injector/CylnCock/Brake/Blower/Grd Whistle/Coupler/Fireman/Chuff-Coast/Aux Lghts")
+   
 
 Re-upload the EX-CommandStation software
 ----------------------------------------

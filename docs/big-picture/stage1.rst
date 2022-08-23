@@ -283,9 +283,11 @@ There are two basic methods for programming decoders
 
 Programming on the programming track, or service mode programming, allows for receiving acknowledgement that programming changes have successfully been applied, and also allows |JMRi| DecoderPro to interrogate a decoder to make a best guess at the type of decoder that's installed, what the address is, and so forth.
 
-Programming on main, also known as POM or ops mode programming, doesn't allow for acknowledgement or reading of CVs, but is handy when changes need to be made while a loco is in operation.
+Programming on main, also known as POM or ops mode programming, doesn't allow for acknowledgement or reading of CVs, but is handy when simple changes need to be made while a loco is in operation.
 
-We will outline how to use each option below to update a locomotive DCC decoder's address.
+We will outline how to use each option below to update a locomotive DCC decoder's address, as well as identify a loco that is currently on the programming track.
+
+Service mode programming is the preferred method for making wholesale changes to decoder settings as you will receive positive feedback that changes have been made and, if you make a mistake with a DCC address, you can quickly read what has been programmed to correct the issue, or reset them to factory default settings and start again.
 
 To program any other features, refer to the `DecoderPro user guide <https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml>`_.
 
@@ -301,21 +303,44 @@ Installing JMRI
 
 To install |JMRi|, refer to the installation instructions on the `JMRI <https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml>`_ website.
 
-Using the programming track (service mode)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Once |JMRi| is installed, launch DecoderPro. If you haven't previously used DecoderPro or any |JMRi| applications, you will need to setup your |EX-CS| connection. Refer to the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml>`_ for instructions on how to accomplish this.
 
+Using the programming track (service mode)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+At this point, DecoderPro will be open at the "Getting Started" screen, assuming you have not used it before, and have no roster entries defined. The loco to be programmed also must be placed on your programming track.
 
-see https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_ServiceMode.shtml
+This is the process to create your first roster entry and set the desired DCC decoder address:
 
+* Click the :guilabel:`New Loco` button on the menu bar at the top of the screen
+* Click the :guilabel:`Read type from decoder` button at the bottom of the screen
+* The most appropriate decoder should automatically be detected and selected automatically (multiple matches may be made, so select the most appropriate)
+* Once only one decoder is selected, the "Create Basic Roster Entry" pane should appear to the right of the decoder list
+* Enter the desired name in "Roster ID", enter the desired DCC address in the "Active Address" box, then click the :guilabel:`Write` button to write the new address to the decoder
+* An "OK" should appear in the bottom left corner to indicate the write was successful
+* Click :guilabel:`Save` to save your roster entry, and then either close the window or repeat the process for other locos
 
+Once your roster entries are populated, if you forget which loco was programmed with what, place your loco on the programming track and click the :guilabel:`Identify` button on the top menu. DecoderPro will detect the decoder settings and, if they match an existing roster entry, this will be displayed.
+
+To make further programming changes to your decoders, simply select the roster entry, make sure "Programming Track" is selected in the bottom right corner, then click the :guilabel:`Program` button which will open the full programming dialogue window.
+
+For further information on programming in service mode, see `Service Mode Programmer <https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_ServiceMode.shtml>`_ on the |JMRi| website.
 
 Programming on main (POM or ops mode)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-or OPS Mode programming
+If you wish to set up a new roster entry for a loco that is already on your main track, or you don't have a programming track available, you can still do this through DecoderPro. You will, however, receive no acknowledgement that the changes have been written successfully.
 
-https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml
+This is the process to add a roster entry and set the desired DCC address:
 
+* Use the :guilabel:`Power` button at the top of the window to turn track power on
+* Click the :guilabel:`New Loco` button on the menu bar at the top of the screen
+* Unlike the service mode process above, you will need to manually select the installed decoder
+* Once the decoder is selected, the "Create Basic Roster Entry" pane should appear to the right of the decoder list
+* Enter the desired name in "Roster ID", enter the current DCC address in the "Active Address" box, then click the :guilabel:`Save` to save your roster entry, then close the "New Loco" window
+* To set the desired DCC address, select the correct roster entry
+* Select "Programming on Main", then click the :guilabel:`Program` button
+* Click the "Basic" tab, set the desired DCC address in the "Active Address" text box, then click the :guilabel:`Write changes on sheet` button
+* Close the "Program" window and when prompted, click the :guilabel:`Save and close` button
+
+For further information on programming on the main track, see `Ops Mode Programming <https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml>`_ on the |JMRi| website.

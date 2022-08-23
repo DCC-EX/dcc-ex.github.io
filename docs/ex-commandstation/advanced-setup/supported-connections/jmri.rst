@@ -8,17 +8,20 @@ JMRI Connection
 
 |tinkerer| |engineer|
 
+Connection Type: Direct to Command Station through JMRI
+=======================================================
 
-.. todo:: URGENT - JMRI Connection.  actually uses one of the of the other connection types
+If you prefer to use, or need some features of, |JMRi|, then you can use |JMRi| to connect directly to your |EX-CS| via the USB connection, and then connect your controller(s) to |JMRi|.
 
-Connection Type: Direct to Command Station or through JMRI
-============================================================
+To enable this functionality, |JMRi| includes a |WiThrottle| server.
 
-You have two options for connecting your controller to your Command Station depending on its capabilities and your preferences:
+For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect through the JMRI computer that has WiFi and its own |WiThrottle Server|. This should also apply to any other controller that supports the |wiThrottle Protocol|.
 
-* Connect directly to |EX-CS| using WiFi or Bluetooth (|JMRI| not required but optional)
-* Connect to the |EX-CS| through |JMRI| with the USB cable, and connect a |WiThrottle Protocol| compatible throttle to JMRI's |WiThrottle Server| via WiFi
+You can read further on connecting your controller to |JMRi| on the `JMRI: WiFi Connected Throttle <https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/UserInterface.shtml>`_ page on the |JMRi| website.
 
-If you don't need |JMRI|, or just want to connect your wireless Throttle (Controller) directly to the |EX-CS|, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the |WiThrottle Protocol| command language. 
+Some reasons you may wish to use |JMRi| with your |EX-CS|:
 
-For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect either directly to the |EX-CS| via WiFi, or indirectly through the JMRI computer that has WiFi and its own |WiThrottle Server|. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends native <DCC++> commands.
+* You wish to connect more than 4 controllers to your |EX-CS| via WiFi
+* You wish to use DecoderPro for programming your DCC decoders
+* You wish to use the features available in PanelPro to display various graphical representations of your layout
+* You wish to control multiple DCC controllers from the same interface

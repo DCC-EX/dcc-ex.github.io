@@ -88,7 +88,6 @@ Example of loco without sound:
 Note that it only has FO (the Headlight) and not following slashes.
 
 ..
-
    Locos With the Same DCC Address
 
    If you have two or more Loco with identical DCC Addresses, but with with decoder functions you need to make the "name" different or you'll get compile error 'Duplicate Case Value'.

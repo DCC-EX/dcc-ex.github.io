@@ -3,7 +3,7 @@
 |EX-R-LOGO|
 
 *********************
-Creating Key Elements
+Adding Key Elements
 *********************
 
 |tinkerer| |engineer|
@@ -18,7 +18,7 @@ First we need the elements that we will use for our automations.
 
 There are four key elements that are important for creating automations:
 
-* Roster entries
+* Roster Entries - Your locos
 * Turnouts/Points
 * Sensors
 * Signals
@@ -63,10 +63,10 @@ Some more realistic examples might look like:
 
 Note: Add additional 'ROSTER(...)' lines for all your locos
 
-Unavailable Functions
----------------------
+Locos with Unavailable Functions
+--------------------------------
 
-If a function is not available leave the spot empty. (Don't even have the space character.)
+If a function is not available just leave the spot empty. (Don't even have the space character.)
 
 For example: 
 
@@ -89,8 +89,12 @@ Note that it only has FO (the Headlight) and not following slashes.
 Adding Turnouts/Points
 ======================
 
-Hardware -  Turnouts/points
----------------------------
+.. sidebar::
+  
+  You can also refer to :doc:`/reference/hardware/servo-module` for more information.
+
+Adding the Hardware -  Turnouts/points
+--------------------------------------
 
 To connect a servo to |EX-CS|, you first need to get a module, based on the PCA9685 chip.
 
@@ -100,15 +104,11 @@ To connect a servo to |EX-CS|, you first need to get a module, based on the PCA9
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
-Note the pin connectors along the left side of the module - these are where you connect to the
-Arduino.  
+Note the pin connectors along the left side of the module - these are where you connect to the Arduino.  
 
-The 16 columns of three pins along the bottom of the module are where you connect the servos.
-The pins are arranged so that you can just plug a servo connector directly onto them, but be
-sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.
+The 16 columns of three pins along the bottom of the module are where you connect the servos. The pins are arranged so that you can just plug a servo connector directly onto them, but be sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.
 
-The servo module itself is powered from the Arduino, but the servos themselves contain motors that
-consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.
+The servo module itself is powered from the Arduino, but the servos themselves contain motors that consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
@@ -132,16 +132,15 @@ You can use the servo to control turnouts, semaphore signals, engine shed doors,
    :alt: Servo mount to operate a turnout
    :scale: 60%
 
-And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
-servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
+And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
 .. image:: /_static/images/i2c/SemaphoreSignal.jpg
    :alt: Servo mount to operate a Semaphore Signal
    :scale: 60%
 
 
-myAutomation.h - Turnouts/points
---------------------------------
+Configure the software - myAutomation.h - Turnouts/points
+---------------------------------------------------------
 
 The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Turnout/Point.
 
@@ -151,8 +150,8 @@ EX-RAIL supports three methods of controlling servos:
 * Signals via the SERVO_SIGNAL directive
 * Animations via the SERVO or SERVO2 directives
 
-Controlling servos for turnouts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Controlling Servos for Turnouts/Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
 
@@ -177,7 +176,7 @@ An example definition for a servo connected to the second control pins of the fi
 
    SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
 
-Controlling servos for signals
+Controlling Servos for Signals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The SERVO_SIGNAL directive defines a servo based signal in EX-RAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.
@@ -190,13 +189,13 @@ Unlike servo based turnouts, there is no ID or description (they don't appear in
 
    SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
 
-A simple example using the thrid control pins of the first PCA9685 connected to the CommandStation would be:
+A simple example using the third control pins of the first PCA9685 connected to the CommandStation would be:
 
 .. code-block:: 
 
    SERVO_SIGNAL(102, 400, 250, 100)
 
-Controlling servos for animations
+Controlling Servos for Animations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The SERVO and SERVO2 directives allow for servos to be used in various automations within |EX-R|.
@@ -233,70 +232,81 @@ The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a 
 
 This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
 
-
 ----
 
 Adding Sensors
 ==============
 
-.. todo::   URGENT - Need to have the details on how to add the hardware to support a Sensor, plus configuring EX-CS
+Adding the Hardware -  Sensors
+------------------------------
 
-Hardware -  Sensors
--------------------
+.. sidebar:: 
 
-For |conductor-text| we are assume you are use a single Mega2560 for Sensors and use a PCA9685 Servo/Signal board for Turnouts and LED Signals.
+  Alternate is to use a :doc:`/reference/hardware/gpio-module`
 
 On the Mega2560 Processor board: 
 
 Place IR Infrared or Optical sensors Output wire on Dpins 22, 23, 24 ... 62. One wire to Gnd and for the IR sensor a third wire to 5v pin.
 
-Software -  Sensors
--------------------
+Configure the software - myAutomation.h - Sensors
+--------------------------------------------------
 
-TODO
+You don't actually require anything special to be configured in advance of using them in an automation.
 
-don't actually require anything special to be configured in advnce of using them in an automation.
+Use in automation as AT(DpinNo) or AT(-DpinNo)
 
-use in automation as AT(DpinNo) or AT(-DpinNo)
-
+----
 
 Adding Signals
 ==============
 
-.. todo::   URGENT - Need to have the details on how to add signals
+Adding the Hardware - Signals
+------------------------------
 
-Hardware -  Signals
--------------------
+To connect a servo to |EX-CS|, you first need to get a module, based on the PCA9685 chip.
 
-For |conductor-text| we are assume you are use a single Mega2560 for Sensors and use a PCA9685 Servo/Signal board for Turnouts and LED Signals.
+.. image:: /_static/images/i2c/pca9685.jpg
+   :alt: PCA9685 Servo Module
+   :scale: 40%
 
-Mega2560 Processor board 
+These are widely available from eBay, Amazon, etc. for a few dollars.
+
+Note the pin connectors along the left side of the module - these are where you connect to the Arduino.  
+
+The 16 columns of three pins along the bottom of the module are where you connect the LEDs.
+
+In |EX-CS|, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115.
 
 On the PCA9685 Servo Signal Board:
 
-Servo Turnouts  and LED Signals and Special Lighting Effects
-Connect 2 Red\Green LED point signals for the two turnouts on vpins 106 Red & 107 Green for turnout T1, and on vpins 108 Red & 109 Green for turnout T2
+* Connect individual LEDs on vpins 101, 102 ... 115 as needed
+* Only use the -Gnd and Output+ vpins, NOT the center 5v pin
 
-For LEDs Only use the -Gnd and Output+ vpins, NOT the center 5v pin
-
-Software -  Signals
--------------------
-
-TODO
+Configure the software - myAutomation.h - Signals
+--------------------------------------------------
 
 The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Signal.
 
-// Signals setup on vpins 106, 107 ,108, 109, 110, 111, 112, 113, 114, 115(on first PCA9685 Signal Board)
-// SIGNAL(red_pin, amber_pin, green_pin) Define a signal (RED/AMBER/GREEN commands 
-//       always use the first red_pin as the signal_id for All signal color changes)
-SIGNAL(106, 0, 107) // Red, Amber, Green For turnout 1
+Signals setup on vpins 101, 102 ... 115
 
+For each signal add a line in myAutomation.h in the form:
 
-// New 4.1 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)  // define a Servo Signal
-//  Use the first Red vpin# as the signal_id for All Signal color changes
+SIGNAL(red_pin, amber_pin, green_pin) 
 
-// Use this to Combine the two commands Servo_Turnout and Signal above into One Function 
-SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close = Green
+.. code-block:: 
+
+    // always use the first red_pin as the signal_id for All signal color changes)
+    SIGNAL(106, 0, 107) // Red, Amber, Green For turnout 1
+
+Combine the two commands Servo_Turnout and Signal (New 4.1:)
+
+New 4.1 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
+
+.. code-block:: 
+
+    // Use the first Red vpin# as the signal_id for All Signal color changes
+    // Use this to Combine the two commands Servo_Turnout and Signal above into One Function 
+    SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close = Green
 
 ----
 

@@ -289,14 +289,14 @@ The myAutomation.h file needs to be altered so that the |EX-CS| knows about each
 // Signals setup on vpins 106, 107 ,108, 109, 110, 111, 112, 113, 114, 115(on first PCA9685 Signal Board)
 // SIGNAL(red_pin, amber_pin, green_pin) Define a signal (RED/AMBER/GREEN commands 
 //       always use the first red_pin as the signal_id for All signal color changes)
-   SIGNAL(106, 0, 107) // Red, Amber, Green For turnout 1
+SIGNAL(106, 0, 107) // Red, Amber, Green For turnout 1
 
 
 // New 4.1 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)  // define a Servo Signal
 //  Use the first Red vpin# as the signal_id for All Signal color changes
-//******************************************************************************************************************************//
+
 // Use this to Combine the two commands Servo_Turnout and Signal above into One Function 
-    SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close = Green
+SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close = Green
 
 ----
 
@@ -304,7 +304,7 @@ Re-upload the EX-CommandStation software
 ========================================
 
 Using EX-Installer
-^^^^^^^^^^^^^^^^^^
+------------------
 
 #. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-I| files.
 #. Re-Run |EX-I|
@@ -313,7 +313,7 @@ Using EX-Installer
 The Roster will be automatically loaded with the |EX-CS| software.
 
 Using the Arduino IDE
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 #. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-CS| files from GitHub.
 #. Run the Arduino IDE

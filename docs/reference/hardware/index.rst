@@ -18,6 +18,7 @@ Hardware
     wifi-boards
     ethernet-boards
     index-ic2
+    other/index
     power-supplies
     accessory-controllers
     index-decoder

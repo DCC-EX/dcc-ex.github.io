@@ -21,6 +21,7 @@ Click 'Next' to explore the possibilities of |EX-R|.
     :maxdepth: 1
 
     overview
+    creating-elements
     getting-started
     tips
     EX-RAIL-summary

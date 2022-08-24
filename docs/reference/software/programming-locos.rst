@@ -1,7 +1,3 @@
-:orphan:
-
-.. Remove orphan field when the document is added to a toctree
-
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
 ***********************
@@ -19,5 +15,18 @@ Requirements
 
 .. NOTE:: The default EX-CommandStation with a dual output Arduino Motor shield has everything you need, a main track output, a programming track output, and a configuration that handles current sense for programming a loco on output B and current sense for overlimit detection on output A.
 
-.. TODO:: URGENT - Get help with this. We should have had this long ago.  (see Big-picture - Stage 1)
+JMRI DecoderPro
+===============
 
+While it is possible to use the |DCC-EX| API to program decoders, the recommended course of action at the moment is to use |JMRi| DecoderPro for this as it provides a comprehensive yet relatively simple to use interface for all your programming needs.
+
+For a quick intro to setting up roster entries in |JMRi| and changing basic items such as the decoder address, refer to :ref:`big-picture/stage1:jmri (programming decoders)`.
+
+Roster entries
+--------------
+
+Programming individual CVs
+--------------------------
+
+Comprehensive programmer
+------------------------

@@ -240,6 +240,8 @@ Adding Sensors
 Adding the Hardware -  Sensors
 ------------------------------
 
+.. todo:: MEDIUM - Stage 2 - Adding a Sensor - needs to be extended
+
 .. sidebar:: 
 
   Alternate is to use a :doc:`/reference/hardware/gpio-module`

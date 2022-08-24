@@ -18,9 +18,11 @@ First we need the elements that we will use for our automations.
 
 This consists of:
 
-* adding the hardware (not applicable to the roster)
-* configuring |EX-CS| by modifying 'myAutomation.h' so that it know about the element
-* re-uploading the software to the |EX-CS|
+* Adding the hardware (not applicable to the roster)
+* Configuring |EX-CS| by modifying 'myAutomation.h' so that it know about the element
+* Re-uploading the software to the |EX-CS|
+
+----
 
 Adding a Roster
 ===============
@@ -75,6 +77,7 @@ Example of loco without sound:
 
 Note that it only has FO (the Headlight) and not following slashes.
 
+----
 
 Adding Turnouts/points
 ======================
@@ -88,18 +91,32 @@ For |conductor-text| we are assume you are use a single Mega2560 for Sensors and
 
 Mega2560 Processor board 
 
-PCA9685 Servo Signal Board
-Servo Turnouts and LED Signals and Special Lighting Effects
-Connect servos on vpin 101, 102 and 115.  {Wired Brown Gnd, Orange 5v, Yellow Output}
+On the PCA9685 Servo Signal Board:
 
-To connect the Mega to the  PCA9685 Servo board use a four wire Female to Female cable simple connect four wire from the top of the Motor Shields four male pins labeled SCL, SDA, 5v, Gnd to the PCA male pins labeled SCL, SDA, 5v Gnd.
+* Connect servos on vpin 1, 2 ... 14, 15.  {Wired Brown Gnd, Orange 5v, Yellow Output} |BR| These pins on the board are referred as 101, 102 ... 114, 115.
+
+To connect the Mega to the PCA9685 Servo board use a four wire Female to Female cable simple connect four wire from the top of the Motor Shields four male pins labeled SCL, SDA, 5v, Gnd to the PCA male pins labeled SCL, SDA, 5v Gnd.
 
 When you boot up the CS it will automatically find the board and assign address 40 to it.
 
 myAutomation.h -  Turnouts/points
 ---------------------------------
 
-TODO
+For each turnout add an entry in the form:
+
+  SERVO_TURNOUT(id,pin,active_angle,inactive_angle,profile,"description")
+
+  where:
+  
+  * profile = Slow, Medium, Fast, Bounce
+  * description is optional
+  
+.. code-block:: 
+
+   SERVO_TURNOUT(0,100,490,110,Slow,"Testing Servo 0")  // Testing Or Accessory Servo T0 vpin 100, angles 490 to 110, Slow 3 motion 'Description'
+
+
+----
 
 Adding Sensors
 ==============
@@ -111,14 +128,19 @@ Hardware -  Sensors
 
 For |conductor-text| we are assume you are use a single Mega2560 for Sensors and use a PCA9685 Servo/Signal board for Turnouts and LED Signals.
 
-Mega2560 Processor board 
-Sensors and optional Momentary push buttons.
-place IR Infrared or Optical sensors Output wire on Dpins 22, 23 & 24 sensors  one wire to Gnd and for the IR sensor a third wire to 5v pin.
+On the Mega2560 Processor board: 
+
+Place IR Infrared or Optical sensors Output wire on Dpins 22, 23, 24 ... 62. One wire to Gnd and for the IR sensor a third wire to 5v pin.
 
 Software -  Sensors
 -------------------
 
 TODO
+
+don't actually require anything special to be configured in advnce of using them in an automation.
+
+use in automation as AT(DpinNo) or AT(-DpinNo)
+
 
 Adding Signals
 ==============
@@ -132,7 +154,8 @@ For |conductor-text| we are assume you are use a single Mega2560 for Sensors and
 
 Mega2560 Processor board 
 
-PCA9685 Servo Signal Board
+On the PCA9685 Servo Signal Board:
+
 Servo Turnouts  and LED Signals and Special Lighting Effects
 Connect 2 Red\Green LED point signals for the two turnouts on vpins 106 Red & 107 Green for turnout T1, and on vpins 108 Red & 109 Green for turnout T2
 
@@ -142,6 +165,19 @@ Software -  Signals
 -------------------
 
 TODO
+
+// Signals setup on vpins 106, 107 ,108, 109, 110, 111, 112, 113, 114, 115(on first PCA9685 Signal Board)
+// SIGNAL(red_pin, amber_pin, green_pin) Define a signal (RED/AMBER/GREEN commands 
+//       always use the first red_pin as the signal_id for All signal color changes)
+   SIGNAL(106, 0, 107) // Red, Amber, Green For turnout 1
+
+
+// New 4.1 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)  // define a Servo Signal
+//  Use the first Red vpin# as the signal_id for All Signal color changes
+//******************************************************************************************************************************//
+// Use this to Combine the two commands Servo_Turnout and Signal above into One Function 
+    SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close = Green
+
 
 Re-upload the EX-CommandStation software
 ----------------------------------------

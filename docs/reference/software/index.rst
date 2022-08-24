@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |EX-REF-LOGO|
 
-***************
-DCC-EX Commands
-***************
+********
+Software
+********
 
 |conductor| |tinkerer| |engineer|
 
@@ -13,3 +13,4 @@ DCC-EX Commands
 
     command-reference
     command-summary
+    programming-locos

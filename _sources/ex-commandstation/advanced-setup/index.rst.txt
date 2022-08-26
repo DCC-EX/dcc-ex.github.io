@@ -20,26 +20,26 @@ These pages describe the major supported hardware options for building a |EX-CS|
 Steps to Build an EX-CommandStation
 ===================================
 
-#. Choose a :ref:`Microcontroller <ex-commandstation/advanced-setup/index:microcontrollers>`
-#. Choose a :ref:`Motor Driver <ex-commandstation/advanced-setup/index:motor drivers>`
-#. Choose a :ref:`Connection Method <ex-commandstation/advanced-setup/index:connection options>` and if required choose a:
+1. Choose a `Microcontroller <#microcontrollers>`_
+2. Choose a `Motor Driver <#motor-drivers>`_
+3. Choose a `Connection Method <#connection-options>`_ and if required choose a:
 
-  #. WiFi board,
-  #. Ethernet board,
-  #. Bluetooth board, 
-  #. Or none of the above (Direct Connection)
+  a. WiFi board,
+  b. Ethernet board,
+  c. Bluetooth board, 
+  d. Or none of the above (Direct Connection)
 
-#. Choose a :ref:`LCD/OLED Screen <ex-commandstation/advanced-setup/index:lcd/oled screens>` (if desired)
-#. Choose a :ref:`Throttle (Controller) <ex-commandstation/advanced-setup/index:throttle (controller) options>`
-#. Choose an :ref:`installation method <ex-commandstation/advanced-setup/index:installation options>`
-#. Set your :ref:`startup options <ex-commandstation/advanced-setup/index:startup configuration>` (if required)
-#. :ref:`Install the software <ex-commandstation/advanced-setup/index:installation options>`
-#. Run your trains
+4. Choose a `LCD/oLED screen <#lcd-oled-screens>`_ (if desired)
+5. Choose an `installation method <#installation-options>`_
+6. Set your `startup options <#startup-configuration>`_ (if required)
+7. `Install the software <#installation-options>`_
+8. Choose a `Throttle (Controller) <#throttle-controller-options>`_
+9. Run your trains
 
 ----
 
 Microcontrollers
-================
+=================
 
 There are several different supported microcontrollers you can use as your |EX-CS| as per the following list.
 

@@ -1,4 +1,0 @@
-{
-  "esbonio.sphinx.confDir": "${workspaceFolder}\\docs",
-  "esbonio.server.enabled": true
-}

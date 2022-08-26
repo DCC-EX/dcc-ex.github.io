@@ -1,15 +1,27 @@
-********************
-Contact and support
-********************
+.. include:: /include/include.rst
+.. include:: /include/include-l1.rst
+|EX-SUPPORT-LOGO|
+   
+*****************
+Contact & Support
+*****************
 
-There are several different ways to get in contact with the team and obtain help and support for DCC++ EX.
+|conductor| |tinkerer| |engineer|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
+There are several different ways to get in contact with the team and obtain help and support for |DCC-EX|.
 
 Preferred option: Discord
 ==========================
 
 The best way to reach us is on our Discord server. Usually there is always a team member online to help with your issue, and if not you'll get a response within a few hours.
 
-Discord allows for live chatting rather than just a back and forth offline support process, so you can join a live conversation with the DCC++ EX team members and other DCC++ EX users.
+Discord allows for live chatting rather than just a back and forth offline support process, so you can join a live conversation with the |DCC-EX| team members and other |DCC-EX| users.
 
 This is a great way not just to get support, but also to share ideas and feedback and maybe even get some inspiration for that new layout or automation idea that's tickling the back of your mind.
 
@@ -51,3 +63,10 @@ There is also another group you you can join here:
 You can also find us on TrainBoard:
 
 `DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
+
+
+.. toctree::
+  :maxdepth: 1
+
+  contact-us
+  create-ticket

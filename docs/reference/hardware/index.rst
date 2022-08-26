@@ -1,6 +1,14 @@
-***************
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+|EX-REF-LOGO|
+
+********
 Hardware
-***************
+********
+
+|conductor| |tinkerer| |engineer|
+
+.. todo::  MEDIUM - Text for the hardware index page
 
 .. toctree::
     :maxdepth: 1
@@ -9,10 +17,9 @@ Hardware
     motor-boards
     wifi-boards
     ethernet-boards
-    i2c-displays
-    i2c-devices
-    gpio-module
-    servo-module
+    index-ic2
+    other/index
     power-supplies
     accessory-controllers
-    shopping-list
+    index-decoder
+    wire-gauge

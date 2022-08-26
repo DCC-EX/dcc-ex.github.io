@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'DCC++ EX'
+project = 'DCC-EX Model Railroading'
 copyright = '2020-2022 - Fred Decker, Mani Kumar'
 author = 'Dave Cutting, Fred Decker, Mani Kumar'
 
@@ -41,6 +41,7 @@ extensions = [
    # 'sphinx_sitemap',
    # 'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.spelling',
+    'sphinx_toolbox.collapse',
 ]
 
 autosectionlabel_prefix_document = True
@@ -96,19 +97,19 @@ html_theme_options = {
     'titles_only': True,
     'collapse_navigation': False,
     # 'navigation_depth': 3
-    'navigation_depth': -1
+    #'navigation_depth': -1 
 }
  
 html_context = {
     'display_github': True,
     'github_user': 'DCC-EX',
     'github_repo': 'dcc-ex.github.io',
-    'github_version': 'sphinx/docs/',
+    'github_version': 'flash62au_restruct/docs/',
 }
 
 #leave this off to have todos invisible, set to true to render them and make the easy to see
 #A list of all the todos in the document can be shown in the about page
-todo_include_todos = False
+todo_include_todos = True
 
 #html_additional_pages = {
 #    'exwebthrottle': 'exwebthrottle/index.html',
@@ -119,7 +120,7 @@ html_css_files = [
     'css/big_picture_theme.css',
 #    'css/layout.css',
 #    'css/roundslider.min.css',
-#    'css/throttle.css'
+#    'css/throttle.css' 
 ]
 
 html_js_files = [

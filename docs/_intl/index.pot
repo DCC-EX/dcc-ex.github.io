@@ -109,7 +109,7 @@ msgid "**BaseStation-Classic** - the original DCC++ software, packaged in a stab
 msgstr ""
 
 #: ../index.rst:56
-msgid "A basic DCC++ EX hardware setup can use easy to find, widely avalable Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:"
+msgid "A basic DCC++ EX hardware setup can use easy to find, widely avaliable Arduino boards that you can assemble yourself. Both CommandStation-EX and BaseStation-Classic support much of the NMRA Digital Command Control (DCC) standards, including:"
 msgstr ""
 
 #: ../index.rst:58

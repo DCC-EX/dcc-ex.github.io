@@ -6,7 +6,7 @@
 Configuration options
 **********************
 
-|conductor|
+|tinkerer|
 
 .. sidebar::
 
@@ -168,7 +168,7 @@ This is the time in milliseconds that the LED is on and off when the set to a sl
 Advanced configuration options
 ==============================
 
-|tinkerer|
+|tinkerer| |engineer|
 
 DEBUG
 -----
@@ -228,7 +228,7 @@ Note that in turntable mode, a hall effect or similar sensor is typically used w
 Defining custom stepper drivers
 ===============================
 
-|tinkerer|
+|tinkerer| |engineer|
 
 .. note:: 
 

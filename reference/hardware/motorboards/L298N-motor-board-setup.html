@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
+<meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L298N Motor Driver Setup &mdash; DCC-EX Model Railroading  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/platform.js"></script>
+        <script src="../../../_static/js/extra.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="IRF3205 Motor Driver Setup" href="IRF3205-motor-board-setup.html" />
+    <link rel="prev" title="YFRobot L298P Motor Shield" href="yfrobot-l298p.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../../../index.html">
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../levels.html">Choose Your Comfort Level</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../ex-commandstation/index.html">EX-CommandStation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-commandstation/get-started/index.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/wifi-setup.html">Adding WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/installer.html">Install the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/controllers.html">Choosing a Throttle (Controller)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/testing.html">Test Your Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/index.html">Supported Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/direct.html">Direct Connection (USB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/wifi-setup.html">WiFi Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/ethernet.html">Ethernet Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/bluetooth.html">Bluetooth Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/jmri.html">JMRI Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../bluetooth-boards.html">Bluetooth Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-installer/index.html">Install using EX-Installer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html">Install using Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-installer/index.html">EX-Installer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-webthrottle/index.html">EX-WebThrottle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-rail/index.html">EX-RAIL (Automation)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/creating-elements.html">Adding Key Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/getting-started.html">Creating Automations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/tips.html">Tips and Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/troubleshooting.html">Troubleshooting EX-Turntable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-dccinspector/index.html">EX-DCCInspector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../big-picture/index.html">The Big Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/big-picture.html">How it All Works Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage1.html">Stage 1 - Running a Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage2.html">Stage 2 - Adding a Roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage4.html">Stage 4 - Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage5.html">Stage 5 - Turntables &amp; Traversers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage5/turntable-example.html">Example - Turntable ROUTEs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage5/traverser-example.html">Example - Turntable and traverser ROUTEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage6.html">Stage 6 - Putting it all Together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example1.html">Example 1 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example2.html">Example 2 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example3.html">Example 3 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example4.html">Example 4 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example5.html">Example 5 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example6.html">Example 6 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example7.html">Example 7 Full automation with turnouts &amp; signals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../throttles/index.html">Throttles (Controllers)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/ex-webthrottle.html">EX-Web-Throttle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/jmri.html">JMRI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/engine-driver.html">Engine Driver (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/dccpp-cab.html">DCCpp CAB (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/digitrainspro.html">DigiTrainsPro (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/withrottle.html">WiThrottle (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/locontrol.html">Locontrol (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/rtdrive-dccpp.html">RtDtive DCC++ (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/physical-knobs.html">Adding a Physical Knob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/uwt50.html">TCS UWT-50 (Physical)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/index.html">Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-commandstation.html">EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-dccinspector.html">EX-DCCInspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-turntable.html">EX-Turntable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../support/index.html">Contact &amp; Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/contact-us.html">Contact Us</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../videos/index.html">Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../microcontroller-boards.html">Microcontroller Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi-boards.html">WiFi Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/wangtongze-board.html">WangTongze Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ethernet-boards.html">Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index-ic2.html">iC2 Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../servo-module.html">Connecting a Servo Module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../other/index.html">Other Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../other/ir-sensor.html">IR Sensor Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index-decoder.html">Decoders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../decoder-notes.html">Decoder Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../wire-gauge.html">DCC Track Wiring Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/index.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/command-summary.html">DCC-EX Command Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/programming-locos.html">Programming Locos (CVs)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../developers/index.html">Developer and API reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/api.html">CommandStation-EX API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/hal.html">DCC-EX HAL Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/writing-hal-driver.html">Writing a HAL Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/index-diagnostics-d.html">Diagnostic d Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tools/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tools/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/index.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About, Press &amp; Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/press/index.html">Press / Announcements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/rewrite.html">DCC++ VS DCC-EX? [Oct 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/v40-announce.html">EX-CommandStation 4.0 Release [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/release-notes.html">Release Notes [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/new-name.html">Our New Name [Aug 2022]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contributing/donate.html">Donate to Our Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contributing/index.html">Contributing - Helping the DCC-EX Team</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/github.html">GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/requirements.html">What You Need to Know/Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/software.html">Recommended Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/website/index.html">Contributing to the Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/getting-started.html">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/structure.html">Folder and Page Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/style-guide.html">Style Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/licence.html">Licence &amp; Attributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/roadmap.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/site-map.html">Site Map</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DCC-EX Model Railroading</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../ex-commandstation/index.html">EX-CommandStation</a> &raquo;</li>
+          <li><a href="../../../ex-commandstation/advanced-setup/index.html">Advanced Options</a> &raquo;</li>
+          <li><a href="../motor-boards.html">Supported Motor Drivers</a> &raquo;</li>
+      <li>L298N Motor Driver Setup</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/flash62au_restruct/docs/reference/hardware/motorboards/L298N-motor-board-setup.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="l298n-motor-driver-setup">
+<h1>L298N Motor Driver Setup<a class="headerlink" href="#l298n-motor-driver-setup" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
+<aside class="sidebar">
+<div class="contents local topic" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#when-is-the-l298n-a-good-option" id="id8">When is the L298N a Good Option?</a></p></li>
+<li><p><a class="reference internal" href="#l298n-for-main-and-prog-with-current-sense" id="id9">L298N for MAIN and PROG with Current Sense</a></p></li>
+<li><p><a class="reference internal" href="#l298n-for-prog-and-high-current-ibt-2-for-main" id="id10">L298N for PROG and High Current IBT_2 for MAIN</a></p></li>
+</ul>
+</div>
+</aside>
+<p>The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are the key differences:</p>
+<ul class="simple">
+<li><p>It is in a much smaller form factor</p></li>
+<li><p>It isn’t a shield so you have to jumper wires to connect it to your CS</p></li>
+<li><p>It doesn’t have current sense, so you are going to have to use one of the solutions below</p></li>
+<li><p>It stands vertically on the board with a big heat sink for better cooling</p></li>
+</ul>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../../_images/l298_board2.jpg"><img alt="L298N Motor Board" src="../../../_images/l298_board2.jpg" style="width: 225.0px; height: 232.25px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 35 </span><span class="caption-text">L298N Motor Board</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="when-is-the-l298n-a-good-option">
+<h2><a class="toc-backref" href="#id8">When is the L298N a Good Option?</a><a class="headerlink" href="#when-is-the-l298n-a-good-option" title="Permalink to this heading"></a></h2>
+<p>You may wonder why one would go through the trouble of using this board when the Arduino / Deek-Robot Motor Shield already has what we need and is a recommended option. The answer is you may want to use this board because:</p>
+<ul class="simple">
+<li><p>You already have one in your parts box</p></li>
+<li><p>They are dirt cheap</p></li>
+<li><p>You are not using an Arduino for your Command Station and a shield is unwieldy</p></li>
+<li><p>You want something smaller</p></li>
+<li><p>You are going to use the L298N for programming and something with more current for MAIN</p></li>
+</ul>
+<p>The disadvantage of this board:</p>
+<ul class="simple">
+<li><p>It does not come with current sense. You will need to add it.</p></li>
+<li><p>It does not have much more current output than the Arduino Motor Shield</p></li>
+</ul>
+</section>
+<section id="l298n-for-main-and-prog-with-current-sense">
+<h2><a class="toc-backref" href="#id9">L298N for MAIN and PROG with Current Sense</a><a class="headerlink" href="#l298n-for-main-and-prog-with-current-sense" title="Permalink to this heading"></a></h2>
+<p>You will need to have currense sense in order to program locos on the programming (service) track. In addition, current sense is necessary to provide short-circuit detection for each track. There are two methods to add current sensing to this board, the first method requires cutting two leads on the IC and soldering in current sense resistors. The other method is to use an external current sense board to measure the current going into the board.</p>
+<section id="method-1-adding-current-sense-resistors">
+<h3>Method 1: Adding Current Sense Resistors<a class="headerlink" href="#method-1-adding-current-sense-resistors" title="Permalink to this heading"></a></h3>
+<p>This is easier than it sounds and takes about 15 minutes. To do this yourself, you will need:</p>
+<ul class="simple">
+<li><p>2 One Ohm, 3 Watt Power Resistors</p></li>
+<li><p>small wire cutters</p></li>
+<li><p>soldering iron and solder</p></li>
+<li><p>18 Guage hookup wire</p></li>
+<li><p>2 Male to Male Arduino jumper wires (dupont connectors)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you will only be using this board for the programming track and another board like the IBT_2 for your MAIN track, you only need one resistor and can follow the instructions for just the B side of the procedure.</p>
+</div>
+<p>You can either cut or lift legs on the L298 chip and insert resistors, or cut a trace on the back of the board and insert the resistors there.</p>
+<ol class="arabic simple">
+<li><p>Remove all jumpers, there are 3!</p></li>
+<li><p>Choose how you will insert your current sense resistors from the following two options:</p></li>
+</ol>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../../_images/l298_board4.jpg"><img alt="L298N lift legs to solder CS resistors" src="../../../_images/l298_board4.jpg" style="width: 500.0px; height: 375.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 36 </span><span class="caption-text">Lift or cut chip legs on front</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>or…</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../../_images/l298nbackmodify.png"><img alt="L298N cut traces to install CS resistors" src="../../../_images/l298nbackmodify.png" style="width: 360.0px; height: 360.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 37 </span><span class="caption-text">Cut traces and solder on back</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="lifting-or-cutting-chip-legs-option">
+<h4>Lifting Or Cutting Chip Legs Option<a class="headerlink" href="#lifting-or-cutting-chip-legs-option" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Remove all jumpers, there are 3!</p></li>
+<li><p>Unsolder or cut the A and B current sense legs on the L298N chip at the green circles being careful to lift them out without breaking them. Pin 1 to the left is output Command Station <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">A</span></code> for MAIN. Pin 15 to the right is Command Station <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">B</span></code> for PROG.</p></li>
+<li><p>Lift each leg and bend them carefully upward to provide space for a resistor.</p></li>
+<li><p>Cut one wire lead of the 1 Ohm resistor short, but long enough that you can solder that end into the hole left by unsoldering the Command Station leg, about 1/4” (6mm). This connects one end of the resistor to ground. Solder the resistor from the bottom leaving air space for cooling. Repeat on the other side.</p></li>
+<li><p>Solder the leg of the chip you unsoldered to the top of the resistor. You should be able to carefully bend the leg to meet the top resistor lead as the resistor stands vertically. You are basically inserting a resistor into the space where you cut the leg of the chip. Solder the wire fairly close to the end of the resistor. You may need a small piece of hookup wire to reach between the connections. Repeat on the other side. Do not trim the top resistor lead yet.</p></li>
+<li><p>Measure a jumper wire long enough to connect from the top of resistor A and reach over push into pin A0 on the Arduino. Solder one end of the jumper to the top of resistor A above where you soldered the chip’s CS leg. Trim off any remaining resistor lead. Repeat for the resistor on side B making sure the male dupont end of the jumper can reach pin A1 on the Arduino.</p></li>
+<li><p>If you haven’t already, plug the male end of the A jumper into pin A0 on the Arduino and the male end of the B jumper to pin A1 on the Arduino.</p></li>
+<li><p>Configure the board in your Command Station in the next step.</p></li>
+</ol>
+</section>
+<section id="cutting-traces-and-soldering-on-the-back-option">
+<h4>Cutting Traces and Soldering on the Back Option<a class="headerlink" href="#cutting-traces-and-soldering-on-the-back-option" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Using a razor blade or x-acto knife, carefully cut the ground pads where marked with white lines.</p></li>
+<li><p>Using the blade, carefully scratch the conformal coating off the back of the circuit board where marked with yellow rectangles to expose the bare copper underneath. Be careful, you just want to scrape away the protective layer, you do not want to cut through the copper here.</p></li>
+<li><p>Using an Ohmmeter, test for continuity between the newly exposed pads and the leg of the L298N chip on the other side that is soldered to the same pad. Make sure you have an open circuit (infinite resistance). If not, scrape a little more to widen the gap where you cut the trace, being careful not to cut too deep.</p></li>
+<li><p>Trim the leads of your resistor to fit with one leg soldered to the solder joint of the current sense pin of the L298 and the other lead to the exposed ground pad you scraped clean as shown in the picture.</p></li>
+<li><p>If you are using both sides of the L298 board for your MAIN and PROG tracks, repeat the process for the other side.</p></li>
+</ol>
+</section>
+</section>
+<section id="configuring-the-board-in-ex-commandstation">
+<h3>Configuring the Board in EX-CommandStation<a class="headerlink" href="#configuring-the-board-in-ex-commandstation" title="Permalink to this heading"></a></h3>
+<p>You have two choices regarding how to wire and configure the L298N motor driver board to the command station. Unlike the Arduino Motor Shield, this board has separate direction inputs which is where we apply the DCC signal.</p>
+<p>Your first choice, the easy way, is to create a new motor board definition that uses the proper pins. This requires you to edit the config.h file, cut and paste the motor board definition below, upload the sketch with the new settings, and connect wires from the L298N board to the correct pins on the Arduino. The only disadvantage to this method is that is uses an extra pin (though there are plenty of spare pins on a Mega), and it uses the standard accuracy waveform. Standard accuracy is fine for almost all cases, but you can read more on the <a class="reference internal" href="high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a></p>
+<p>Your second choice is to make a small inverter circuit (using 1 FET, IC, or transistor) to connect to the standard signal pin on the Command Station, and split it into two signals connect to the two pins on the L298N board. The advantage of this method is you use just one pin and get the high accuracy DCC waveform. The downside is that you have to solder together a circuit with 2 or 3 parts.</p>
+<section id="using-2-signal-pins-avoids-soldering-a-transistor-inverter">
+<h4>Using 2 signal pins (Avoids soldering a transistor inverter)<a class="headerlink" href="#using-2-signal-pins-avoids-soldering-a-transistor-inverter" title="Permalink to this heading"></a></h4>
+<p>This method uses 2 pins on the Arduino for DCC signal pins and requires the following custom motor board definition. It uses the standard accuracy DCC waveform. The advantage of this method is that you don’t have to wire a transistor and 2 resistors to create an inverter circuit. The disadvantage is you use an extra pin for each track output and you get the standard accuracy waveform. See <a class="reference internal" href="high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a> to see if you really need it.</p>
+<p>To wire the board, connect the pins according to the following diagram. A table is included as well. This pin usage, with all the pins lined up between boards, allows the use of a ribbon cable to make things a bit more neat:</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../_images/l298_wiring_2inputs_2tracks.png"><img alt="L298N Motor driver wiring diagram" src="../../../_images/l298_wiring_2inputs_2tracks.png" style="width: 808.1999999999999px; height: 343.2px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 38 </span><span class="caption-text">L298N 2 signal pin, 2 track wiring diagram</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">2 Signal Pin Wiring diagram</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Arduino</p></th>
+<th class="head"><p>L298N</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>7 (enable A)</p></td>
+<td><p>ENA</p></td>
+</tr>
+<tr class="row-odd"><td><p>6 (signal A1)</p></td>
+<td><p>IN1</p></td>
+</tr>
+<tr class="row-even"><td><p>5 (signal A2)</p></td>
+<td><p>IN2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A0 (CS MAIN)</p></td>
+<td><p>CS A</p></td>
+</tr>
+<tr class="row-even"><td><p>2 (enable B)</p></td>
+<td><p>ENB</p></td>
+</tr>
+<tr class="row-odd"><td><p>4 (signal B1)</p></td>
+<td><p>IN3</p></td>
+</tr>
+<tr class="row-even"><td><p>3 (signal B2)</p></td>
+<td><p>IN4</p></td>
+</tr>
+<tr class="row-odd"><td><p>A1 (CS PROG)</p></td>
+<td><p>CS B</p></td>
+</tr>
+<tr class="row-even"><td><p>5V</p></td>
+<td><p>Vcc  (+5V from Arduino)</p></td>
+</tr>
+<tr class="row-odd"><td><p>GND</p></td>
+<td><p>GND</p></td>
+</tr>
+</tbody>
+</table>
+<p>Once wired correctly, edit the config.h file and replace the following line:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
+</pre></div>
+</div>
+<p>with this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#define MY_L298N_BOARD F(&quot;MY_L298N_BOARD&quot;),\
+   new MotorDriver(7, 6, 5, UNUSED_PIN, A0, 4.88, 2000, UNUSED_PIN), \
+   new MotorDriver(2, 4, 3, UNUSED_PIN, A1, 4.88, 2000, UNUSED_PIN)
+
+   #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
+</pre></div>
+</div>
+<p>Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Installing Using the Arduino IDE</span></a></p>
+</section>
+<section id="using-one-signal-pin-with-an-inverter-circuit">
+<h4>Using One Signal Pin With an Inverter circuit<a class="headerlink" href="#using-one-signal-pin-with-an-inverter-circuit" title="Permalink to this heading"></a></h4>
+<p>This method uses 1 signal pin on the Arduino for each track and uses the standard motorboard definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don’t have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.</p>
+<p>Make the following Inverter circuit (You need 2 if you want MAIN and PROG):</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/inverter1.jpg"><img alt="Transistor inverter circuit" src="../../../_images/inverter1.jpg" style="width: 385.2px; height: 192.0px;" /></a>
+</figure>
+<p>Then wire the L298N to the Arduino with jumper wires according to the following table:</p>
+<p>To wire the board, connect the pins as follows:</p>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">1 Signal Pin Wiring diagram</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Arduino</p></th>
+<th class="head"><p>L298N</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3 (enable A)</p></td>
+<td><p>ENA</p></td>
+</tr>
+<tr class="row-odd"><td><p>12 (signal A1)</p></td>
+<td><p>IN4</p></td>
+</tr>
+<tr class="row-even"><td><p>Inverter A</p></td>
+<td><p>IN3</p></td>
+</tr>
+<tr class="row-odd"><td><p>A0 (CS MAIN)</p></td>
+<td><p>CS A</p></td>
+</tr>
+<tr class="row-even"><td><p>11 (enable B)</p></td>
+<td><p>ENB</p></td>
+</tr>
+<tr class="row-odd"><td><p>13 (signal B1)</p></td>
+<td><p>IN2</p></td>
+</tr>
+<tr class="row-even"><td><p>Inverter B</p></td>
+<td><p>IN1</p></td>
+</tr>
+<tr class="row-odd"><td><p>A1 (CS PROG)</p></td>
+<td><p>CS B</p></td>
+</tr>
+<tr class="row-even"><td><p>5V</p></td>
+<td><p>Vcc  (+5V from Arduino)</p></td>
+</tr>
+<tr class="row-odd"><td><p>GND</p></td>
+<td><p>GND</p></td>
+</tr>
+</tbody>
+</table>
+<p>Once wired correctly, make sure your config.h file is configured for a STANDARD_MOTOR_SHIELD. If you have not already uploaded the CommandStation-EX sketch to your Command Station, you can make sure this line is in your config.h:</p>
+<blockquote>
+<div><p>#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</p>
+</div></blockquote>
+<p>Save the file if you needed to add this line and then upload the entire sketch into the Command Station using the Arduino IDE as explained in <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Installing Using the Arduino IDE</span></a></p>
+</section>
+</section>
+<section id="method-2-using-an-external-current-sense-board">
+<h3>Method 2: Using An External Current Sense Board<a class="headerlink" href="#method-2-using-an-external-current-sense-board" title="Permalink to this heading"></a></h3>
+<p>Coming Soon</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>LOW - finish this page</p>
+</div>
+</section>
+</section>
+<section id="l298n-for-prog-and-high-current-ibt-2-for-main">
+<h2><a class="toc-backref" href="#id10">L298N for PROG and High Current IBT_2 for MAIN</a><a class="headerlink" href="#l298n-for-prog-and-high-current-ibt-2-for-main" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="yfrobot-l298p.html" class="btn btn-neutral float-left" title="YFRobot L298P Motor Shield" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="IRF3205-motor-board-setup.html" class="btn btn-neutral float-right" title="IRF3205 Motor Driver Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

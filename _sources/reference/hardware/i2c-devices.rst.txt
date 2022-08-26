@@ -1,20 +1,26 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+|EX-REF-LOGO|
+
 ************
 I2C Devices
 ************
 
-.. sidebar:: On this page
+|tinkerer| |engineer|
 
-  .. contents:: 
+.. sidebar::
+
+  .. contents:: On this page
     :depth: 1
     :local:
 
-With the advent of the Hardware Abstraction Layer (HAL), DCC++EX now has the capability for
+With the advent of the Hardware Abstraction Layer (HAL), |EX-CS| now has the capability for
 support for new I/O devices to be added without any change to the base software.  By I/O
 devices I mean the things that are controlled through Sensors, Outputs and Turnouts (and 
 more recently by commands in EX-RAIL too).  Motor shields are not included in the HAL at present.
 
 As a consequence of this, it is much easier to write a device driver, without the risk of
-breaking DCC++EX for other users.  So there are various drivers available for you to use:
+breaking |EX-CS| for other users.  So there are various drivers available for you to use:
 
 * I2C-connected GPIO Expanders (MCP23017, MPC23008, PCF8574);
 * I2C-connected Servo Controller (PCA9685);
@@ -56,7 +62,7 @@ able to initiate communications on the bus.  The bus may also have a number of S
 only speaks when it is spoken to by a Master.  
 
 **Note: The I2C standard allows for multi-master buses in which two or more Master devices
-may be present.  DCC++EX only has a single Master, which is the DCC++EX controller itself.**
+may be present.  |EX-CS| only has a single Master, which is the EX-CommandStation controller itself.**
 
 Each Slave device has an address on the bus, which is normally 7 bits in length.  I2C addresses are generally
 written in hex format, in the range 0x00 (0) to 0x7F (127).  For example, a GPIO Expander device might have 
@@ -64,7 +70,7 @@ an address of 0x20, and an OLED display may be 0x3F.
 
 **Note: The addresses in the ranges 0x00 to 0x0f and 0x78 to 0x7f are reserved, and should not be used
 for devices.  Also, the I2C standard allows for 10-bit addresses, but none of the devices currently 
-used by DCC++EX support this.**
+used by |EX-CS| support this.**
 
 When the Master wants to communicate with a Slave device, it sends the address of the device it wishes
 to communicate with, and a Slave device which matches that address will respond.  The Master may
@@ -90,7 +96,7 @@ currently shown in the right-hand position marked '--' (=OFF).  This means the a
 to 0x20.  If we move all three jumpers to the left-hand position ('+'=ON), then the address
 will be 0x27.
 
-.. figure:: ../../_static/images/i2c/pcf8574.jpg
+.. figure:: /_static/images/i2c/pcf8574.jpg
    :alt: PCF8574 GPIO Expander Module
    :scale: 30%
 
@@ -152,7 +158,7 @@ connectors.  Again, they are available in kit form for crimping onto ribbon cabl
 or they can be found in pre-assembled form.  Note that, while they look very much like the Grove connectors,
 they are a different size and are not interchangeable.
 
-.. figure:: ../../_static/images/i2c/connectors.jpg
+.. figure:: /_static/images/i2c/connectors.jpg
    :alt: JST-XH, Dupont, and Grove connectors
    :scale: 80%
 
@@ -171,7 +177,7 @@ The position of the I2C pins depends on what controller module you are using:
 * On the Arduino Uno, you may use pins A4 (SDA) and A5 (SCL), or pins D20 (SDA) and D21 (SCL), which are in the same place as on the Mega.
   Bear in mind that, even if you use pins D20 and D21 for I2C, the pins A4 and A5 cannot be used for analogue inputs.
 
-.. figure:: ../../_static/images/i2c/mega_i2cpins.png
+.. figure:: /_static/images/i2c/mega_i2cpins.png
    :alt: Arduino Mega/Uno I2C pins
    :scale: 80%
 
@@ -180,7 +186,7 @@ The position of the I2C pins depends on what controller module you are using:
 Some motor shields come with header pins for the I2C connections, for example the Arduino motor shield and 
 the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.
 
-.. figure:: ../../_static/images/i2c/deek_robot.jpg
+.. figure:: /_static/images/i2c/deek_robot.jpg
    :alt: Motor shield I2C pins
    :scale: 40%
 
@@ -192,7 +198,7 @@ rear of the case.  The orange wires connect four LEDs (with current-limiting ser
 5V and 14V power, and of outgoing DCC power to the Main and Programming tracks.  I've also mounted a small self-adhesive aluminium 
 heat sink onto the L298P device.
 
-.. figure:: ../../_static/images/i2c/deekrobot_motor_shield.jpg
+.. figure:: /_static/images/i2c/deekrobot_motor_shield.jpg
    :alt: Motor shield I2C pins
    :scale: 40%
 
@@ -204,14 +210,14 @@ the motor shield, if you have one, to the device.  Be sure to check that you con
 SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each
 device!  
 
-.. figure:: ../../_static/images/i2c/ArduinoMegaOLED.png
+.. figure:: /_static/images/i2c/ArduinoMegaOLED.png
    :alt: Arduino Mega with OLED Display
    :scale: 30%
 
    Connecting an OLED Display to an Arduino Mega
 
 
-.. figure:: ../../_static/images/i2c/ArduinoMegaServo.png
+.. figure:: /_static/images/i2c/ArduinoMegaServo.png
    :alt: Arduino Mega with one servo controllers
    :scale: 30%
 
@@ -222,7 +228,7 @@ If you have more than one device, then there are a few options open to you.  Som
 set of pins to connect to the Arduino and the other set to connect to another device.  You 
 can chain multiple devices, subject to the restrictions described in sections for Cabling and Pull-ups.
 
-.. figure:: ../../_static/images/i2c/ArduinoMega2xServo.png
+.. figure:: /_static/images/i2c/ArduinoMega2xServo.png
    :alt: Arduino Mega with two servo controllers
    :scale: 30%
 
@@ -242,7 +248,7 @@ and JST-XH male sockets (which accept female cable connectors, or female Dupont 
 I also have a four-way socket header connected in parallel, into which
 an OLED display is fitted for testing.
 
-.. figure:: ../../_static/images/i2c/i2chub.jpg
+.. figure:: /_static/images/i2c/i2chub.jpg
    :alt: Home-brew I2C Passive Hub
    :scale: 60%
 
@@ -251,7 +257,7 @@ an OLED display is fitted for testing.
 If you just want a temporary hookup for multiple I2C devices, then you can use a small piece of breadboard.
 The board shown has space for five Dupont connectors in each half row.
 
-.. figure:: ../../_static/images/i2c/breadboard-hub.jpg
+.. figure:: /_static/images/i2c/breadboard-hub.jpg
    :alt: Bread-board based I2C Passive Hub
    :scale: 80%
 
@@ -286,13 +292,13 @@ thing to do is identify which components on the module PCB are the pull-up resis
 
 As examples of where to find the pull-up resistors, take a look at the figures below:
 
-.. figure:: ../../_static/images/i2c/pca9685_pullups.jpg
+.. figure:: /_static/images/i2c/pca9685_pullups.jpg
    :alt: PCA9685 pull-up resistors
    :scale: 30%
   
    Location of Pull-up Resistors for PCA9685 Module (ringed in red)
 
-.. figure:: ../../_static/images/i2c/pcf8574_pullups.jpg
+.. figure:: /_static/images/i2c/pcf8574_pullups.jpg
    :alt: PCF8574 pull-up resistors
    :scale: 50%
   
@@ -317,14 +323,14 @@ total capacitance, which at 400kHz should be no more than 400pF.  At this capaci
 pull-up value, the time taken for the bus wire to be pulled up from LOW to HIGH state is significant, compared to the pulse length.
 With a higher pull-up value (e.g. 10kOhm), the maximum permitted capacitance will be lower.
 If you need to run with higher capacitance (e.g. for longer cables), then it is possible to reduce the I2C
-clock speed.  On DCC++EX, operation will continue even with I2C speeds of 32kHz or lower, although the
+clock speed.  On |EX-CS|, operation will continue even with I2C speeds of 32kHz or lower, although the
 scan interval for digital inputs, and the refresh time for I2C displays, may be noticeably slower at speeds
 lower than 32kHz.
 
 Changing the Clock speed
 =========================
 
-In DCC++EX the I2C clock speed is normally the highest speed supported by all configured devices.
+In |EX-CS| the I2C clock speed is normally the highest speed supported by all configured devices.
 It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:
 
 .. code-block:: cpp

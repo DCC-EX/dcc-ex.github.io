@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
+<meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WiFi Configuration &mdash; DCC-EX Model Railroading  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/platform.js"></script>
+        <script src="../../../_static/js/extra.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Supported Ethernet Boards" href="../supported-ethernet/index.html" />
+    <link rel="prev" title="Mega+WiFi Combo Board" href="../../../reference/hardware/wifi-boards/mega-wifi.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../../../index.html">
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../levels.html">Choose Your Comfort Level</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">EX-CommandStation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/index.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/purchasing.html">Purchasing Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/assembly.html">Initial Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/wifi-setup.html">Adding WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/installer.html">Install the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Throttle (Controller)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/testing.html">Test Your Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Advanced Options</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../supported-connections/index.html">Supported Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../supported-connections/direct.html">Direct Connection (USB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../supported-connections/wifi-setup.html">WiFi Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../supported-connections/ethernet.html">Ethernet Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../supported-connections/bluetooth.html">Bluetooth Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../supported-connections/jmri.html">JMRI Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Supported WiFi Shields and Boards</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">WiFi Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/bluetooth-boards.html">Bluetooth Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation-options/index.html">Installation Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-installer/index.html">Install using EX-Installer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation-options/arduino-ide.html">Install using Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-installer/index.html">EX-Installer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-webthrottle/index.html">EX-WebThrottle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-rail/index.html">EX-RAIL (Automation)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/creating-elements.html">Adding Key Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/getting-started.html">Creating Automations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/tips.html">Tips and Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/troubleshooting.html">Troubleshooting EX-Turntable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-dccinspector/index.html">EX-DCCInspector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../big-picture/index.html">The Big Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/big-picture.html">How it All Works Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage1.html">Stage 1 - Running a Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage2.html">Stage 2 - Adding a Roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage4.html">Stage 4 - Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage5.html">Stage 5 - Turntables &amp; Traversers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage5/turntable-example.html">Example - Turntable ROUTEs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage5/traverser-example.html">Example - Turntable and traverser ROUTEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage6.html">Stage 6 - Putting it all Together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example1.html">Example 1 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example2.html">Example 2 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example3.html">Example 3 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example4.html">Example 4 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example5.html">Example 5 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example6.html">Example 6 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example7.html">Example 7 Full automation with turnouts &amp; signals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../throttles/index.html">Throttles (Controllers)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/ex-webthrottle.html">EX-Web-Throttle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/jmri.html">JMRI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/engine-driver.html">Engine Driver (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/dccpp-cab.html">DCCpp CAB (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/digitrainspro.html">DigiTrainsPro (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/withrottle.html">WiThrottle (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/locontrol.html">Locontrol (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/rtdrive-dccpp.html">RtDtive DCC++ (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/physical-knobs.html">Adding a Physical Knob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/uwt50.html">TCS UWT-50 (Physical)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/index.html">Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-commandstation.html">EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-dccinspector.html">EX-DCCInspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-turntable.html">EX-Turntable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../support/index.html">Contact &amp; Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/contact-us.html">Contact Us</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/videos/index.html">Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/downloads/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/wifi-boards.html">WiFi Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/wangtongze-board.html">WangTongze Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/ethernet-boards.html">Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/index-ic2.html">iC2 Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/other/index.html">Other Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/other/ir-sensor.html">IR Sensor Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/index-decoder.html">Decoders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/decoder-notes.html">Decoder Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/wire-gauge.html">DCC Track Wiring Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/software/index.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/software/command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/software/command-summary.html">DCC-EX Command Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/developers/index.html">Developer and API reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/developers/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/developers/api.html">CommandStation-EX API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/developers/hal.html">DCC-EX HAL Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/developers/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/developers/writing-hal-driver.html">Writing a HAL Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/tools/index-diagnostics-d.html">Diagnostic d Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/tools/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/tools/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/index.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About, Press &amp; Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/press/index.html">Press / Announcements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/rewrite.html">DCC++ VS DCC-EX? [Oct 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/v40-announce.html">EX-CommandStation 4.0 Release [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/release-notes.html">Release Notes [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/new-name.html">Our New Name [Aug 2022]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contributing/donate.html">Donate to Our Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contributing/index.html">Contributing - Helping the DCC-EX Team</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/github.html">GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/requirements.html">What You Need to Know/Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/software.html">Recommended Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/website/index.html">Contributing to the Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/getting-started.html">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/structure.html">Folder and Page Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/style-guide.html">Style Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/licence.html">Licence &amp; Attributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/roadmap.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/site-map.html">Site Map</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DCC-EX Model Railroading</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">EX-CommandStation</a> &raquo;</li>
+          <li><a href="../index.html">Advanced Options</a> &raquo;</li>
+          <li><a href="index.html">Supported WiFi Shields and Boards</a> &raquo;</li>
+      <li>WiFi Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/flash62au_restruct/docs/ex-commandstation/advanced-setup/supported-wifi/wifi-config.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+<section id="wifi-configuration">
+<h1>WiFi Configuration<a class="headerlink" href="#wifi-configuration" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
+<aside class="sidebar">
+<div class="contents local topic" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#wireless-connections" id="id9">Wireless Connections</a></p></li>
+<li><p><a class="reference internal" href="#connection-type-direct-to-command-station-or-through-jmri" id="id10">Connection Type: Direct to Command Station or through JMRI</a></p></li>
+<li><p><a class="reference internal" href="#what-s-a-withrottle-server" id="id11">What’s a “WiThrottle Server”?</a></p></li>
+<li><p><a class="reference internal" href="#access-point-mode-vs-station-mode" id="id12">Access Point Mode vs. Station Mode</a></p></li>
+<li><p><a class="reference internal" href="#access-point-mode-default-no-configuration-necessary" id="id13">Access Point Mode (Default - No Configuration Necessary)</a></p></li>
+<li><p><a class="reference internal" href="#connecting-to-your-network-station-mode-sta-edit-config-h" id="id14">Connecting to your Network - Station Mode “STA” (edit config.h)</a></p></li>
+<li><p><a class="reference internal" href="#wifi-config-options" id="id15">WiFi Config Options</a></p></li>
+<li><p><a class="reference internal" href="#resetting-network-settings" id="id16">Resetting Network Settings</a></p></li>
+<li><p><a class="reference internal" href="#disabling-wifi" id="id17">Disabling WiFi</a></p></li>
+<li><p><a class="reference internal" href="#network-startup-sequence" id="id18">Network Startup sequence</a></p></li>
+<li><p><a class="reference internal" href="#tips-and-tricks" id="id19">Tips and Tricks</a></p></li>
+</ul>
+</div>
+</aside>
+<p>This page describes the software configuration options for using WiFi to connect your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> (CS) wirelessly to <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> or a wireless throttle like <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Engine Driver</span></a>. For information on how to connect your hardware, go to <a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">WiFi Setup</span></a>.</p>
+<p>As mentioned in the above link, you will need the following to proceed:</p>
+<ul class="simple">
+<li><p>A <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> with Motor Driver</p></li>
+<li><p>A WiFi board (for Bluetooth configuration, click <strong>here</strong>)</p></li>
+</ul>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>LOW - link item above to Bluetooth</p>
+</div>
+<p>For a video, click <a class="reference external" href="https://www.youtube.com/watch?v=N6TWR7fIl0A&amp;t=5s">Setting up WiFi</a>.</p>
+<blockquote>
+<div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<a class="reference internal image-reference" href="../../../_images/tinkerer.png"><img alt="Tinkerer Icon" class="align-left" src="../../../_images/tinkerer.png" style="width: 36.0px; height: 36.0px;" /></a>
+<p>If using a separate ESP instead of a shield, this becomes tinkerer level.</p>
+</div>
+<section id="wireless-connections">
+<h2><a class="toc-backref" href="#id9">Wireless Connections</a><a class="headerlink" href="#wireless-connections" title="Permalink to this heading"></a></h2>
+<p>As mentioned in <a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">WiFi Setup</span></a>, there are two main reasons for wanting to use WiFi; to connect to <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> without a USB cable, or to connect to a wireless throttle (controller) like the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Engine Driver</span></a> mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> to your Command Station, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover in <strong>HC-12 page coming</strong>.</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>LOW - link needed for Wireless Connections
+Add Link above</p>
+</div>
+<p>That said, there are two main wireless technologies that let you send commands to your Command Station and control your trains:</p>
+<ul class="simple">
+<li><p>WiFi</p></li>
+<li><p>Bluetooth</p></li>
+</ul>
+<p>Your particular controller hardware (a separate controller or your cell phone) may be able to use either or both depending on the controller you choose. This tutorial covers WiFi configuration, for Bluetooth click <strong>here</strong>.</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>LOW - link needed for Add Bluetooth link above</p>
+</div>
+</section>
+<section id="connection-type-direct-to-command-station-or-through-jmri">
+<h2><a class="toc-backref" href="#id10">Connection Type: Direct to Command Station or through JMRI</a><a class="headerlink" href="#connection-type-direct-to-command-station-or-through-jmri" title="Permalink to this heading"></a></h2>
+<p>Everything on this page seems to come in twos! You have two options for connecting your throttle (controller) to your Command Station depending on its capabilities and your preferences:</p>
+<ul class="simple">
+<li><p>Connect directly to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> using WiFi or Bluetooth (<a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> not required but optional)</p></li>
+<li><p>Connect to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> through <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> with the USB cable, and connect a <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> compatible throttle to JMRI’s <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> via WiFi</p></li>
+</ul>
+<p>If you don’t need <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>, or just want to connect your wireless throttle (controller) directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the &lt;DCC++&gt; command language, or the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> command language.</p>
+<p>For example, <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Engine Driver</span></a> uses the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a>, so it can connect either directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via WiFi, or indirectly through the JMRI computer that has WiFi and its own <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Server</span></a>. DCCpp CAB can connect directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via WiFi or Bluetooth, and sends native &lt;DCC++&gt; commands.</p>
+</section>
+<section id="what-s-a-withrottle-server">
+<h2><a class="toc-backref" href="#id11">What’s a “WiThrottle Server”?</a><a class="headerlink" href="#what-s-a-withrottle-server" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle</span></a> stands for “WiFi Throttle”, and a “<a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Server</span></a>” is just software running on your <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> computer or on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> that communicates using the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a>. It’s called a “Server” because it allows you to connect to it and it “serves”, or services, requests from another application. That application is called a “Client”. So your throttle in this case is the client.</p>
+<p><a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> itself is a standard for how WiFi throttles can communicate with Command Stations, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that any device that is <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> compatible should work with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. Also, any device that sends &lt;DCC++&gt; commands should work with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+</section>
+<section id="access-point-mode-vs-station-mode">
+<h2><a class="toc-backref" href="#id12">Access Point Mode vs. Station Mode</a><a class="headerlink" href="#access-point-mode-vs-station-mode" title="Permalink to this heading"></a></h2>
+<p>There are two ways to configure the WiFi board connected to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>: “Access Point Mode” (aka “AP MODE”), and “Station Mode”. We often abbreviate the latter to “STA”. You will also see people refer to it as “Client Mode”.</p>
+<section id="access-point-mode">
+<h3>Access Point Mode<a class="headerlink" href="#access-point-mode" title="Permalink to this heading"></a></h3>
+<p>In <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Access Point</span></a> (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. This is the simplest way to enable a connection for a WiFi throttle.</p>
+<p>If you travel to shows, or take your setup to a friend’s house, this allows for an autonomous, transportable system that does not need a connection to, and hopefully will not interfere with, other networks.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this mode there is no connection to the Internet for any of the devices that are only connected to the AP. It simply provides a private network to allow a direct connection to your throttles (controller).</p>
+</div>
+<p>(Remember you can click on images to enlarge them)</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../_images/WiFi_softap_mode.png"><img alt="AP Mode" src="../../../_images/WiFi_softap_mode.png" style="width: 400.0px; height: 193.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 52 </span><span class="caption-text">Access Point Mode - Things connect to the WiFi Board</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="station-mode">
+<h3>Station Mode<a class="headerlink" href="#station-mode" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Station Mode</span></a> allows you to connect the Command Station to your existing home network. The Command Station becomes a Station or Client rather than an <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Access Point</span></a>. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the Command Station by finding its IP address on the network. You will have to find what IP address is assigned to the Command Station (see below). Alternately, you can define a static IP address in your router to assign to the Command Station.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../../_images/WiFi_station_mode.png"><img alt="Station Mode" src="../../../_images/WiFi_station_mode.png" style="width: 400.0px; height: 210.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 53 </span><span class="caption-text">Station Mode - Things connect to the router and find the WiFi board by its IP address</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Images are courtesy of <a class="reference external" href="https://nodemcu.readthedocs.io/en/latest/modules/wifi/">NodeMCU</a>. You can find a great tutorial on WiFi there also.</p>
+<p>We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>, click <strong>here</strong>.</p>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>MEDIUM - link needed for Station Mode</p>
+</div>
+</section>
+</section>
+<section id="access-point-mode-default-no-configuration-necessary">
+<h2><a class="toc-backref" href="#id13">Access Point Mode (Default - No Configuration Necessary)</a><a class="headerlink" href="#access-point-mode-default-no-configuration-necessary" title="Permalink to this heading"></a></h2>
+<p>To use the default <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Access Point Mode</span></a>, you don’t have to do anything other than connect an ESP8266 board as described in <a class="reference internal" href="../../get-started/wifi-setup.html"><span class="doc">WiFi Setup</span></a>.</p>
+<p>That’s it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> then accepts commands from WiFi throttles in either <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> or &lt;DCC++&gt; format.</p>
+<p>To see other configuration options you can set in your config.h file, see <a class="reference internal" href="#wifi-config-options">WiFi Config Options</a> below.</p>
+<p>You will need to know:</p>
+<ul class="simple">
+<li><p>The IP address assigned by the WiFi board (Usually <strong>192.168.4.1</strong>)</p></li>
+<li><p>The port to communicate through (<strong>port 2560</strong> unless you change it in your config.h file)</p></li>
+<li><p>The SSID or Server name to connect to (<strong>DCCEX_xxxxxx</strong> where the x’s are the last 6 digits of your device’ MAC address)</p></li>
+<li><p>The password (Unless you change it in config.h, your local WiFi password.)  Its default is <strong>PASS_xxxxxx</strong> where the x’s are the last 6 digits of your device’ MAC address)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All of this information is displayed in the startup log if you connect the Command Station to a serial monitor. The IP address and port also appear on the optional LCD or OLED display.</p>
+</div>
+<p>Whenever you connect a USB cable and open the serial monitor, you reset the program running on your Command Station. It will go through the bootup sequence again and try to connect to a network. If you did not setup a “Station Mode” configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../../_images/ap_mode1.jpg"><img alt="IP Address" src="../../../_images/ap_mode1.jpg" style="width: 514.4px; height: 404.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 54 </span><span class="caption-text">Serial Monitor Log (click to enlarge)</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>You will see the line that has <code class="docutils literal notranslate"><span class="pre">AT+CIPSERVER=1,2560\r\r\nno</span> <span class="pre">change\r\n\r\nOK\r\n</span></code>, where 2560 is your port number</p>
+<p>Next you will see <code class="docutils literal notranslate"><span class="pre">+CIFSR:APIP,&quot;192.168.4.1&quot;</span></code>, where your IP address is 192.168.4.1.</p>
+<p>APIP here stands for “Access Point IP Address”. Your throttle is assigned an IP address in the same IP range, typically 192.168.4.10 to 15. As your <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Access Point</span></a> is also your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> this time, you connect your throttle to the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Access Point</span></a> IP.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to enter IP xxx.xxx.x.xx and port xxxx numbers correctly into your WiFi Throttle when you configure that later.</p>
+</div>
+<p>You will also see your SSID and Password in the log.</p>
+<p>Once you see an <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Access Point</span></a> IP Address and see <code class="docutils literal notranslate"><span class="pre">++</span> <span class="pre">Wifi</span> <span class="pre">Setup</span> <span class="pre">OK</span> <span class="pre">++</span></code> at the bottom of the log (it may take a few seconds for the Command Station to complete the configuration), you can connect to it!</p>
+<section id="connecting-to-the-access-point">
+<h3>Connecting to the Access Point<a class="headerlink" href="#connecting-to-the-access-point" title="Permalink to this heading"></a></h3>
+<p>There are two steps to get you running trains with your WiFi throttle.</p>
+<ul class="simple">
+<li><p>Connect your phone’s WiFi to the Command Station <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Access Point</span></a> instead of your home network.</p></li>
+<li><p>Connect your throttle app to the Command Station <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Access Point</span></a> in its settings.</p></li>
+</ul>
+<p>On your mobile device, go into your WiFi settings the same way you would to connect to your home router. Look for another network name to connect to.
+You should see a new network that begins with “DCCEX” like this example: <code class="docutils literal notranslate"><span class="pre">DCCEX_6e321b</span></code>. Remember those last 6 digits; this is the MAC address to be used later.</p>
+<p>Simply click on that network and connect to it on your mobile device. You will need to enter the password you specified in the config.h file. If you did not enter one, the default will be <strong>PASS_xxxxxx</strong> where “xxxxxx” are the same last 6 digits of your device’s MAC address displayed in the SSID like this example: <code class="docutils literal notranslate"><span class="pre">PASS_6e321b</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The last 6 letters and numbers of your AP name and default password will be specific to your WiFi board, and uniquely identify it. They are the last 6 letters of that device’s MAC address. You can always find it in the log or by simply looking at the DCCEX_xxxxxx SSID name in your list of available networks.</p>
+</div>
+<p>Ignore the warning that may pop up telling you that “Internet may not be available”. The Command Station is not connected to the internet, and you are connecting to the Command Station directly from your mobile device for the purpose of controlling trains, not surfing the web. Depending on the config and OS of your mobile device, you may still have internet access over mobile data through a cell tower connection. If you wish to use your home network internet (for example, if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.</p>
+<p>Once you are connected to the Command Station with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (<strong>the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure</strong>), enter <strong>2560 for the port number</strong>, and then select and acquire your loco by its address. If you don’t know your loco address, see the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> command in the <a class="reference internal" href="../../../reference/software/command-reference.html#decoder-test"><span class="std std-ref">Decoder Test</span></a> section of the Command Reference.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Your Mobile Throttle function keys are user defined default function keys, not the function keys you used in either <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> or Rocrail engine roster function keys.</p>
+</div>
+<p><strong>Once again:</strong></p>
+<ul class="simple">
+<li><p>IP Address - Normally 192.168.4.1</p></li>
+<li><p>Port Number - 2560</p></li>
+<li><p>Server Name - DCCEX_123456 where the last 6 characters are unique to your WiFi device</p></li>
+<li><p>Server Password - PASS_123456 where the last 6 characters are the same as above</p></li>
+</ul>
+<p><strong>All this information appears in the startup log when connected using a serial monitor, in case you forget.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you experience dropped connections to the AP, turn off the Auto-connect feature on your phone to prevent it from randomly disconnecting from the AP and connecting to your home router because it thinks it’s a better connection. You can also “Forget” the connection it wants to switch to and then manually connect to that network when you need it.</p>
+</div>
+</section>
+</section>
+<section id="connecting-to-your-network-station-mode-sta-edit-config-h">
+<h2><a class="toc-backref" href="#id14">Connecting to your Network - Station Mode “STA” (edit config.h)</a><a class="headerlink" href="#connecting-to-your-network-station-mode-sta-edit-config-h" title="Permalink to this heading"></a></h2>
+<p>In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials, unless you have already entered your credentials earlier via the automated exInstaller. The easiest way to do this, other than the installer, is to use the Arduino IDE and open the project.
+Look for these lines in the file:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Station Mode Configuration</span><a class="headerlink" href="#id8" title="Permalink to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">//</span>
+<span class="c1">// NOTE: Only supported on Arduino Mega</span>
+<span class="c1">// Set to false if you do not want it even on the Arduino Mega</span>
+<span class="c1">//</span>
+<span class="cp">#define ENABLE_WIFI true</span>
+
+<span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">//</span>
+<span class="c1">// DEFINE WiFi Parameters (only in effect if WIFI is on)</span>
+<span class="c1">//</span>
+<span class="cp">#define WIFI_SSID &quot;Your network name&quot;</span>
+<span class="cp">#define WIFI_PASSWORD &quot;Your network passwd&quot;</span>
+<span class="cp">#define WIFI_HOSTNAME &quot;dccex&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>First, make sure that the <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">ENABLE_WIFI</span> <span class="pre">true</span></code> line is not commented out. Two slashes <code class="docutils literal notranslate"><span class="pre">//</span></code> in front of a line make it a comment, and not a line of code.</p>
+<p>Next, enter your network information into the <code class="docutils literal notranslate"><span class="pre">WIFI_SSID</span></code>, <code class="docutils literal notranslate"><span class="pre">WIFI_PASSWORD</span></code> and <code class="docutils literal notranslate"><span class="pre">WIFI_HOSTNAME</span></code> fields. Here is an example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define WIFI_SSID &quot;JonesFamily&quot;</span>
+<span class="cp">#define WIFI_PASSWORD &quot;Secret!2020&quot;</span>
+</pre></div>
+</div>
+<p>We recommend leaving WIFI_HOSTNAME to “dccex”, but you can change it if you like. If your ESP8266 WiFi board has a later version of firmware, that can allow you to connect using this name instead of the IP address. In other words, it allows that name to be an alias for the IP address.</p>
+<p>Save your config.h file and upload the sketch to your Command Station.</p>
+</section>
+<section id="wifi-config-options">
+<h2><a class="toc-backref" href="#id15">WiFi Config Options</a><a class="headerlink" href="#wifi-config-options" title="Permalink to this heading"></a></h2>
+<p>The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual Arduino IDE install, you will see all of these in the file you renamed from “config.example.h” to “config.h”.</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="#define-ip-port-2560">#define IP_PORT 2560</a></div>
+<div class="line"><a class="reference internal" href="#define-enable-wifi-true">#define ENABLE_WIFI true</a></div>
+<div class="line"><cite>#define DONT_TOUCH_WIFI_CONF</cite></div>
+<div class="line"><a class="reference internal" href="#define-wifi-ssid-your-network-name">#define WIFI_SSID “Your network name”</a></div>
+<div class="line"><a class="reference internal" href="#define-wifi-password-your-network-passwd">#define WIFI_PASSWORD “Your network passwd”</a></div>
+<div class="line"><a class="reference internal" href="#define-wifi-hostname-dccex">#define WIFI_HOSTNAME “dccex”</a></div>
+<div class="line"><a class="reference internal" href="#define-wifi-connect-timeout-14000">#define WIFI_CONNECT_TIMEOUT 14000</a></div>
+<div class="line"><a class="reference internal" href="#define-enable-ethernet-true">#define ENABLE_ETHERNET true</a></div>
+<div class="line"><a class="reference internal" href="#define-ip-address-192-168-1-200">#define IP_ADDRESS { 192, 168, 1, 200 }</a></div>
+<div class="line"><a class="reference internal" href="#define-mac-address-0xde-0xad-0xbe-0xef-0xfe-0xef">#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }</a></div>
+</div>
+<section id="define-ip-port-2560">
+<h3>#define IP_PORT 2560<a class="headerlink" href="#define-ip-port-2560" title="Permalink to this heading"></a></h3>
+<p><strong>Default: 2560</strong> - This is the port used to communicate with the WiFi board or Ethernet Shield. We use the default value of 2560 because that is the port <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> uses. You can change this value if you would prefer it to be something else. You will need to enter this in software like <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Engine Driver</span></a> in order to connect to the Command Station via networking.</p>
+</section>
+<section id="define-enable-wifi-true">
+<h3>#define ENABLE_WIFI true<a class="headerlink" href="#define-enable-wifi-true" title="Permalink to this heading"></a></h3>
+<p><strong>Default: true</strong> - WiFi is supported only on a Mega. If you do not wish to use WiFi, and want to save boot time by not having the Mega check for a WiFi board each time, you may set this to “false”.</p>
+</section>
+<section id="define-dont-touch-wifi-conf">
+<h3>#define DONT_TOUCH_WIFI_CONF<a class="headerlink" href="#define-dont-touch-wifi-conf" title="Permalink to this heading"></a></h3>
+<p><strong>Default: commented out</strong> If uncommented, this tells the Command Station to NOT process any WiFi commands in the Command Station. If other WiFi defines are enabled, the Command Station will ignore them. With this command, you can leave #define ENABLE_WIFI true so that networking is active, but send no configuration commands to ESP8266. This allows you to enter your own AT commands to set up your WiFi however you want. To do this, you would enter &lt;+&gt; commands in the serial monitor, or add code to send these commands automatically.</p>
+</section>
+<section id="define-wifi-ssid-your-network-name">
+<h3>#define WIFI_SSID “Your network name”<a class="headerlink" href="#define-wifi-ssid-your-network-name" title="Permalink to this heading"></a></h3>
+<p><strong>Default: “Your network name”</strong> - To connect to your Command Station as an AP (Access Point), do not change this setting. If you wish to connect to your home network instead, enter the SSID (network name) for that network. If you do NOT set the WIFI_SSID, the WiFi chip will first try to connect to the previously configured network, and if that fails, fall back to Access Point mode. The SSID of the AP will be automatically set to DCCEX_xxxxxx, where xxxxxx is the last 6 digits of the MAC address for the WiFi chip.
+Your SSID may not contain <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> (double quote, ASCII 0x22).</p>
+</section>
+<section id="define-wifi-password-your-network-passwd">
+<h3>#define WIFI_PASSWORD “Your network passwd”<a class="headerlink" href="#define-wifi-password-your-network-passwd" title="Permalink to this heading"></a></h3>
+<p><strong>Default: “Your network passwd”</strong> - WIFI_PASSWORD is the network password for your home network, or if you want to change the password from default AP mode password to the AP password you want.  Your password may not contain <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> (double quote, ASCII 0x22).
+If you don’t change this setting and start up in AP mode instead, the default password is PASS_xxxxxx where xxxxxx is the last 6 digits of the MAX address for your ESP board.</p>
+</section>
+<section id="define-wifi-hostname-dccex">
+<h3>#define WIFI_HOSTNAME “dccex”<a class="headerlink" href="#define-wifi-hostname-dccex" title="Permalink to this heading"></a></h3>
+<p><strong>Default: “dccex”</strong> You would normally not want to change this, as it is the host name that will appear in the list of available networks displayed for devices connecting to DCC-EX. It helps you know which WiFi device is your Command Station.</p>
+</section>
+<section id="define-wifi-connect-timeout-14000">
+<h3>#define WIFI_CONNECT_TIMEOUT 14000<a class="headerlink" href="#define-wifi-connect-timeout-14000" title="Permalink to this heading"></a></h3>
+<p><strong>Default: 14000 milliseconds (14 seconds)</strong> - You only need to set this if you have an extremely slow WiFi router, and the response to the connection request takes longer than normal.</p>
+</section>
+<section id="define-enable-ethernet-true">
+<h3>#define ENABLE_ETHERNET true<a class="headerlink" href="#define-enable-ethernet-true" title="Permalink to this heading"></a></h3>
+<p><strong>Default: commented out</strong> - Uncomment this line if you wish to use an Ethernet Shield &amp; cable (not WiFi, see above for that). You will also need to install the Arduino Ethernet Library on whichever IDE you use to compile and upload your sketch.</p>
+</section>
+<section id="define-ip-address-192-168-1-200">
+<h3>#define IP_ADDRESS { 192, 168, 1, 200 }<a class="headerlink" href="#define-ip-address-192-168-1-200" title="Permalink to this heading"></a></h3>
+<p><strong>Default: commented out</strong> - Uncomment this line if you wish to use a static IP address, otherwise the Command Station will use DHCP to automatically assign an IP address from your router. If you use a static IP, you will also have to configure this IP in your router.</p>
+<p><strong>Note</strong> - this is only valid when using Ethernet, and does not apply to WiFi.</p>
+</section>
+<section id="define-mac-address-0xde-0xad-0xbe-0xef-0xfe-0xef">
+<h3>#define MAC_ADDRESS {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }<a class="headerlink" href="#define-mac-address-0xde-0xad-0xbe-0xef-0xfe-0xef" title="Permalink to this heading"></a></h3>
+<p><strong>Default: commented out</strong> - This is for Ethernet only! Ethernet shields do not normally come with a defined MAC address. We give you two, and you can uncomment the one you prefer. You can also choose any other validly formatted MAC address that will not conflict with any devices already on your network.</p>
+</section>
+</section>
+<section id="resetting-network-settings">
+<h2><a class="toc-backref" href="#id16">Resetting Network Settings</a><a class="headerlink" href="#resetting-network-settings" title="Permalink to this heading"></a></h2>
+<p>Once you enter a network SSID and password, the Command Station will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.</p>
+<section id="clearing-the-esp-wifi-ssid-settings">
+<h3>Clearing the ESP-WiFi SSID Settings<a class="headerlink" href="#clearing-the-esp-wifi-ssid-settings" title="Permalink to this heading"></a></h3>
+<p>Open your serial monitor and wait until the Command Station has gone through the startup sequence. Then in the command textbox enter <code class="docutils literal notranslate"><span class="pre">&lt;+RESTORE&gt;</span></code> and press “SEND”.</p>
+<p>You will then see an “Ok” message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the Command Station had WiFi credentials in it, then as soon as your Command Station restarts, it will load and save those settings again. So…</p>
+</section>
+<section id="if-you-want-to-run-in-ap-mode">
+<h3>If you want to run in AP mode<a class="headerlink" href="#if-you-want-to-run-in-ap-mode" title="Permalink to this heading"></a></h3>
+<p>Edit the config.h, change your SSID and password lines back to default. It MUST look like the following. If it is anything else it will try to login with whatever you type there as credentials!</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define WIFI_SSID &quot;Your network name&quot;</span>
+<span class="cp">#define WIFI_PASSWORD &quot;Your network passwd&quot;</span>
+</pre></div>
+</div>
+<p>Then upload the project into the Command Station.</p>
+</section>
+<section id="if-you-want-to-change-your-network-login">
+<h3>If you want to change your network login<a class="headerlink" href="#if-you-want-to-change-your-network-login" title="Permalink to this heading"></a></h3>
+<p>Edit the config.h file, change your SSID and password to your new credentials, and then upload the project into the Command Station.</p>
+</section>
+</section>
+<section id="disabling-wifi">
+<h2><a class="toc-backref" href="#id17">Disabling WiFi</a><a class="headerlink" href="#disabling-wifi" title="Permalink to this heading"></a></h2>
+<p>Edit the config.h file. Comment out the line <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">WIFI_ENABLE</span> <span class="pre">true</span></code> by adding two forward slash marks (<code class="docutils literal notranslate"><span class="pre">//</span></code>) in front of the line. Then upload the project back to the Command Station.</p>
+</section>
+<section id="network-startup-sequence">
+<h2><a class="toc-backref" href="#id18">Network Startup sequence</a><a class="headerlink" href="#network-startup-sequence" title="Permalink to this heading"></a></h2>
+<p>For reference, it may be helpful to know the sequence the Command Station uses to try and establish a network connection. The following provides the flow of this sequence.</p>
+<ol class="arabic simple">
+<li><p>Check for a WiFi Device - Scan serial ports 1, 2, and 3 in order to look for WiFi. If no response, abort network setup and start the Command Station without WiFi.</p></li>
+<li><p>If we find a WiFi device, next check if <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">DONT_TOUCH_WIFI_CONF</span></code> is uncommented. If so, abort config attempts here - done.</p></li>
+<li><p>Next, if no SSID is configured, check if the ESP is configured in STATION mode already from a previous network connection. If so, try to connect to that network. If we connect, exit and start the Command Station, if not, go to step 4.</p></li>
+<li><p>Try to configure in STATION mode from values in the config.h file - done.</p></li>
+<li><p>If none of the above, set up as an AP with an SSID of DCCEX_xxxxxx and a password set in the config.h file. If unconfigured, the default will be PASS_xxxxxx (xxxxxx will be the last 6 characters of the device SSID &amp; MAC address)</p></li>
+</ol>
+</section>
+<section id="tips-and-tricks">
+<h2><a class="toc-backref" href="#id19">Tips and Tricks</a><a class="headerlink" href="#tips-and-tricks" title="Permalink to this heading"></a></h2>
+<p>There are circumstances where you may want to make temporary changes to your network, such as when you take your layout to a show. The following are some handy things you can do.</p>
+<div class="admonition-remember admonition">
+<p class="admonition-title">Remember…</p>
+<ul class="simple">
+<li><p>Use a serial monitor connected to the USB port of your Command Station, and enter the commands you need.</p></li>
+<li><p>If you disconnect the serial monitor and reconnect it (or anything else) to the USB port, it will reset the Command Station, and it will go back to the default configuration.</p></li>
+<li><p>Press “send” after each command.</p></li>
+</ul>
+</div>
+<section id="temporarily-log-into-a-different-network">
+<h3>Temporarily Log Into A Different Network<a class="headerlink" href="#temporarily-log-into-a-different-network" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Forget your network settings by entering <code class="docutils literal notranslate"><span class="pre">&lt;+CWQAP&gt;</span></code> in the serial monitor.</p></li>
+<li><p>Login to the new network by entering either a new local SSID &amp; password, or using the Command Station in Access Point Mode.</p></li>
+</ol>
+</section>
+<section id="create-a-static-ip-for-your-command-station-in-access-point-mode">
+<h3>Create a Static IP for your Command Station in Access Point Mode<a class="headerlink" href="#create-a-static-ip-for-your-command-station-in-access-point-mode" title="Permalink to this heading"></a></h3>
+<p>You are still going to have to go into your router, find the MAC address for your WiFi board (or find it in the serial monitor log) and then assign a static IP address (sometimes called “reserved” IP address) to that MAC. That should be all you need, as the DHCP server on your network will assign that IP to your Command Station when the Command Station asks for one.</p>
+<p>You can try these commands also. You must have a recent version of the firmware to support _DEF commands. If they don’t work, try entering them without this suffix (Example: &lt;+CIPAP&gt; instead of &lt;+CIPAP_DEF&gt;)</p>
+<ol class="arabic simple">
+<li><p>Forget your network settings by entering &lt;+RESTORE&gt;</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">&lt;+CIPAP_DEF=&quot;192.168.5.1&quot;,&quot;192.168.5.1&quot;,&quot;255.255.255.0&quot;&gt;</span></code> to setup the AP with your IP address</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">&lt;+CWDHCP_DEF=1,1&gt;</span></code></p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">&lt;+CWDHCPPS_DEF=&quot;1,10,&quot;192.168.5.100&quot;,&quot;192.168.5.150&quot;&gt;</span></code></p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../../reference/hardware/wifi-boards/mega-wifi.html" class="btn btn-neutral float-left" title="Mega+WiFi Combo Board" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../supported-ethernet/index.html" class="btn btn-neutral float-right" title="Supported Ethernet Boards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

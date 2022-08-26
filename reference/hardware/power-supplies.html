@@ -1,40 +1,21 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
+<meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Power Supplies &mdash; DCC++ EX  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
-
-  
-  
+  <title>Power Supplies &mdash; DCC-EX Model Railroading  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
@@ -42,42 +23,21 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Accessory Controllers" href="accessory-controllers.html" />
-    <link rel="prev" title="Connecting a Servo Module" href="servo-module.html" /> 
+    <link rel="prev" title="IR Sensor Boards" href="other/ir-sensor.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
-          
-
-          
             <a href="../../index.html">
-          
-
-          
-            
             <img src="../../_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -85,236 +45,366 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/levels.html">Choose Your Level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/assembly.html">Assembling the Command Station</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/wifi-setup.html">Adding a WiFi Option</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/installer.html">Install using the Automated Installer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/arduino-ide.html">Install using the Arduino IDE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Controller (Throttle)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../levels.html">Choose Your Comfort Level</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-commandstation/index.html">EX-CommandStation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/get-started/index.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/wifi-setup.html">Adding WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/installer.html">Install the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/controllers.html">Choosing a Throttle (Controller)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/testing.html">Test Your Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../advanced-setup/index.html">Advanced Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/wifi-config.html">WiFi Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/motor-board-config.html">Motor Board Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/startup-config.html">Startup Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-motorboards/index.html">Supported Motorboards Setup Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/L298N-motor-board-setup.html">L298N Motor Board Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IBT_2-motor-board-setup.html">IBT_2 BTS7960 Motor Board</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-motorboards/IRF3205-motor-board-setup.html">IRF3205 Motor Board Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers Setup Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/wifi-mega.html">Mega+WiFi Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano.html">Arduino Nano Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/nano-every.html">Nano Every</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/supported-microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../advanced-setup/high-accuracy.html">High Accuracy Waveform Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/index.html">Supported Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/direct.html">Direct Connection (USB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/wifi-setup.html">WiFi Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/ethernet.html">Ethernet Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/bluetooth.html">Bluetooth Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/jmri.html">JMRI Connection</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/ex-webthrottle.html">DCC++ EX Web Throttle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/engine-driver.html">Engine Driver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/withrottle.html">WiThrottle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/dccpp-cab.html">DCCpp CAB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/locontrol.html">Locontrol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/cab-engineer.html">Cab Engineer: DCC Throttle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/digitrainspro.html">DigiTrainsPro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/srcpclient.html">SRCP Client for iOS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/minithrottle.html">miniThrottle (Physical)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/witcontroller.html">WiTcontroller (Physical)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/uwt50.html">TCS UWT-50 (Physical)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../automation/index.html">Automation (EX-RAIL)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-intro.html">Introduction to EX-RAIL Automation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../automation/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bluetooth-boards.html">Bluetooth Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-installer/index.html">Install using EX-Installer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html">Install using Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-installer/index.html">EX-Installer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-webthrottle/index.html">EX-WebThrottle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-rail/index.html">EX-RAIL (Automation)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/creating-elements.html">Adding Key Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Creating Automations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/troubleshooting.html">Troubleshooting EX-Turntable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-dccinspector/index.html">EX-DCCInspector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../big-picture/index.html">The Big Picture</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../big-picture/big-picture.html">Putting it all together - the Big Picture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage1.html">Stage 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/big-picture.html">How it All Works Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage1.html">Stage 1 - Running a Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage2.html">Stage 2 - Adding a Roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage4.html">Stage 4 - Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage5.html">Stage 5 - Turntables &amp; Traversers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage5/turntable-example.html">Example - Turntable ROUTEs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage5/traverser-example.html">Example - Turntable and traverser ROUTEs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../turntable-ex/index.html">Turntable-EX (Beta)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/turntable-ex.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/get-started.html">Getting started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/test-and-tune.html">Testing, Tuning, and Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/layout-wiring.html">Layout Connections and Wiring</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/traverser.html">Traversers and Limited Rotation Turntables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/configure.html">Configuration options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../turntable-ex/troubleshooting.html">Troubleshooting Turntable-EX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage6.html">Stage 6 - Putting it all Together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example1.html">Example 1 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example2.html">Example 2 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example3.html">Example 3 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example4.html">Example 4 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example5.html">Example 5 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example6.html">Example 6 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example7.html">Example 7 Full automation with turnouts &amp; signals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles (Controllers)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/ex-webthrottle.html">EX-Web-Throttle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/jmri.html">JMRI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/engine-driver.html">Engine Driver (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/dccpp-cab.html">DCCpp CAB (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/digitrainspro.html">DigiTrainsPro (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/withrottle.html">WiThrottle (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/locontrol.html">Locontrol (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/rtdrive-dccpp.html">RtDtive DCC++ (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/physical-knobs.html">Adding a Physical Knob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/uwt50.html">TCS UWT-50 (Physical)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../download/ex-commandstation.html">EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/ex-dccinspector.html">EX-DCCInspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/ex-turntable.html">EX-Turntable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Contact &amp; Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../support/contact-us.html">Contact Us</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../support/create-ticket.html">Submit a Support Ticket</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="motor-boards.html">Motor Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gpio-module.html">I2C GPIO Expander Modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="servo-module.html">Connecting a Servo Module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Power Supplies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="accessory-controllers.html">Accessory Controllers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="shopping-list.html">Shopping List</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../software/hal-config.html">I/O Device Drivers and HAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/hal.html">DCC++EX HAL Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/writing-hal-driver.html">Writing a HAL Driver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/release-notes.html">Release Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/command-reference.html">DCC++ EX Command Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/command-summary.html">DCC++ EX Command Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../accessories/decoder-list.html">List of Tested Decoders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../accessories/suppliers.html">Hardware, Software, and Accessory Suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../videos/index.html">Videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Downloads</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../downloads/documents.html">Documents</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wifi-boards.html">WiFi Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/wangtongze-board.html">WangTongze Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet-boards.html">Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index-ic2.html">iC2 Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="servo-module.html">Connecting a Servo Module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="other/index.html">Other Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="other/ir-sensor.html">IR Sensor Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index-decoder.html">Decoders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decoder-notes.html">Decoder Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wire-gauge.html">DCC Track Wiring Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../software/index.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../software/command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/command-summary.html">DCC-EX Command Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/programming-locos.html">Programming Locos (CVs)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers/index.html">Developer and API reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/api.html">CommandStation-EX API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/hal.html">DCC-EX HAL Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers/writing-hal-driver.html">Writing a HAL Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Diagnostic Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index-diagnostics-d.html">Diagnostic d Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tools/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tools/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../wire-gauge.html">Wire Gauge Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Software Downloads</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../download/commandstation.html">Command Station Downloads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../download/dcc-inspector-ex.html">DCC Inspector-EX</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../download/turntable-ex.html">Turntable-EX</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Projects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth DCC++EX Command Station</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../developer-reference/index.html">Developer and API reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../developer-reference/tech-reference.html">Technical Reference for Throttle Developers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../developer-reference/api.html">CommandStation-EX API Reference</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/github.html">GitHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/software.html">Recommended software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/development.html">Development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/website.html">Documentation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../roadmap/index.html">DCC-EX Roadmap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Contact and support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../site-map/index.html">Site Map</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../donate/index.html">Donate to Our Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../press/index.html">Press</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../press/v40-announce.html">DCC++EX 4.0 Release Announcement</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About, Press &amp; Contributing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About Us - Meet the Team</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/rewrite.html">What’s New in DCC++ EX?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/press/index.html">Press / Announcements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/press/rewrite.html">DCC++ VS DCC-EX? [Oct 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/press/v40-announce.html">EX-CommandStation 4.0 Release [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/press/release-notes.html">Release Notes [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/press/new-name.html">Our New Name [Aug 2022]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contributing/donate.html">Donate to Our Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contributing/index.html">Contributing - Helping the DCC-EX Team</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/github.html">GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/requirements.html">What You Need to Know/Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/software.html">Recommended Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/website/index.html">Contributing to the Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/getting-started.html">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/structure.html">Folder and Page Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/style-guide.html">Style Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/licence.html">Licence &amp; Attributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/roadmap.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/site-map.html">Site Map</a></li>
 </ul>
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">DCC++ EX</a>
-        
+          <a href="../../index.html">DCC-EX Model Railroading</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html">Reference</a> &raquo;</li>
-        
           <li><a href="index.html">Hardware</a> &raquo;</li>
-        
       <li>Power Supplies</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/power-supplies.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/flash62au_restruct/docs/reference/hardware/power-supplies.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="power-supplies">
-<h1>Power Supplies<a class="headerlink" href="#power-supplies" title="Permalink to this heading">¶</a></h1>
+             
+  <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+<section id="power-supplies">
+<h1>Power Supplies<a class="headerlink" href="#power-supplies" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
+<aside class="sidebar">
+<div class="contents local topic" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#do-i-need-two-power-supplies" id="id1">Do I need two power supplies?</a></p></li>
+<li><p><a class="reference internal" href="#wall-warts" id="id2">Wall Warts</a></p></li>
+<li><p><a class="reference internal" href="#bricks-laptop-style" id="id3">Bricks (Laptop Style)</a></p></li>
+<li><p><a class="reference internal" href="#adjustable-power-supplies" id="id4">Adjustable Power Supplies</a></p></li>
+<li><p><a class="reference internal" href="#cage-power-supplies" id="id5">Cage Power Supplies</a></p></li>
+<li><p><a class="reference internal" href="#dual-voltage-power-supplies" id="id6">Dual voltage power supplies</a></p></li>
+<li><p><a class="reference internal" href="#using-one-power-supply-with-cheap-converters-to-power-everything" id="id7">Using one power supply with cheap converters to power everything</a></p></li>
+<li><p><a class="reference internal" href="#using-diodes-to-reduce-voltage" id="id8">Using Diodes to Reduce Voltage</a></p></li>
+</ul>
+</div>
+</aside>
 <p>The power supply is one of the most important parts of your setup. You need to select a clean, filtered power supply that can supply the correct voltage and deliver the amount of current required by your devices.</p>
 <p><strong>What’s covered here:</strong></p>
 <ul class="simple">
@@ -330,50 +420,50 @@
 <li><p><a class="reference internal" href="#using-buck-converters"><span class="std std-ref">Using Buck Converters</span></a></p></li>
 <li><p><a class="reference internal" href="#using-diodes-to-reduce-voltage"><span class="std std-ref">Using Diodes to Reduce Voltage</span></a></p></li>
 </ul>
-<div class="section" id="do-i-need-two-power-supplies">
-<h2>Do I need two power supplies?<a class="headerlink" href="#do-i-need-two-power-supplies" title="Permalink to this heading">¶</a></h2>
+<section id="do-i-need-two-power-supplies">
+<h2><a class="toc-backref" href="#id1">Do I need two power supplies?</a><a class="headerlink" href="#do-i-need-two-power-supplies" title="Permalink to this heading"></a></h2>
 <p>Well, you at least need two voltages. It is possible to get multiple voltages from one power supply, how to do that is covered below in the <a class="reference internal" href="#using-one-power-supply-with-cheap-converters-to-power-everything"><span class="std std-ref">Using one power supply with cheap converters to power everything</span></a>. Both your microcontroller (the Arduino) and the motor controller need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. The voltage requirement to the motor controller does not change based on how you power your Arduino, you need the correct voltage and amperage for your gauge and layout.</p>
-<div class="section" id="four-ways-to-power-the-arduino">
-<h3>Four ways to power the Arduino<a class="headerlink" href="#four-ways-to-power-the-arduino" title="Permalink to this heading">¶</a></h3>
+<section id="four-ways-to-power-the-arduino">
+<h3>Four ways to power the Arduino<a class="headerlink" href="#four-ways-to-power-the-arduino" title="Permalink to this heading"></a></h3>
 <p><strong>Barrel Connector</strong> - This is where we can connect our 7-9V DC supply. The power goes through a voltage regulator on the Arduino and converts the 7-9V to the 5V the board can use. You will still need a separate source of power for the motor controller.</p>
 <p><strong>Vin pin</strong> - You can connect a 7-9V DC power supply with jumper wires. The positive from the power supply goes to Vin and negative to any pin marked “gnd” for ground. This also uses the voltage regulator on the Arduino to convert your supply voltage to 5V. You will still need a separate power supply for the motor controller.</p>
-<p><strong>USB Connector</strong> - If you always will have a computer connected to your Command Station (for example when using JMRI or WebThrottle-EX), the 5V from your computer can power it. You won’t need separate power supply in addition to the one you need for the motor controller. Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the CS. A motor shield, a WiFi shield and a fan that draws 50mA should be fine. Even if you don’t have a laptop, you can use a 5V, 800mA or more USB power supply like a phone charger and connect it to the USB port.</p>
+<p><strong>USB Connector</strong> - If you always will have a computer connected to your Command Station (for example when using <a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a> or <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>), the 5V from your computer can power it. You won’t need separate power supply in addition to the one you need for the motor controller. Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the Command Station. A motor shield, a WiFi shield and a fan that draws 50mA should be fine. Even if you don’t have a laptop, you can use a 5V, 800mA or more USB power supply like a phone charger and connect it to the USB port.</p>
 <p><strong>5V pin</strong> - Engineers only! Arduino recommends against this. You can connect a good quality 5V power supply directly to the 5V pin and ground. You can NOT ever plug anything into the other power connectors if you connect power this way! This bypasses the voltage regulator on the board which means you can use more current. But it also connects voltage to the output of the 5V regulator. Be aware that there is no diode for reverse voltage protection and no fuse for overcurrent. Research this option before attempting it.</p>
 <p><strong>Barrel Connector and USB at the same time?</strong> You may wonder what happens if you have a 7-9V power supply connected to the barrel connector and plug your laptop into the USB port to use the serial monitor. The Uno and Mega actually have a conflict protection circuit. If you plug in a 7V or more power supply to the barrel connector, the Arduino automatically switches internally to use that power supply. So regardless of which connector you plug in first, if the barrel connector has a voltage 7V or greater applied to it, that is the voltage the Arduino will use and the USB connection will just provide communication signals.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>We recommend only a 7-9V DC power supply for your Arduino because, despite what may be said on a specification sheet, anything over 5V is generates unnecessary heat in the voltage regulator on an Arduino. There is a 2V voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12V and connected a WiFi board or other devices that also use the 5V power supply on the Arduino, the voltage regulator is likely to overheat.</p>
 </div>
-</div>
-<div class="section" id="powering-the-motor-controller">
-<h3>Powering the Motor Controller<a class="headerlink" href="#powering-the-motor-controller" title="Permalink to this heading">¶</a></h3>
-<div class="section" id="voltage">
-<h4>Voltage<a class="headerlink" href="#voltage" title="Permalink to this heading">¶</a></h4>
+</section>
+<section id="powering-the-motor-controller">
+<h3>Powering the Motor Controller<a class="headerlink" href="#powering-the-motor-controller" title="Permalink to this heading"></a></h3>
+<section id="voltage">
+<h4>Voltage<a class="headerlink" href="#voltage" title="Permalink to this heading"></a></h4>
 <p>N and Z scale layouts should run at at about 12V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this <a class="reference external" href="https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/">TrainBoard Thread</a> Another good link (along with just about anything written by Mark Gurries), is here: <a class="reference external" href="https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster">Mark Gurries - Choosing the Right Booster</a></p>
 <p>Most larger scales will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.</p>
 <p>Be aware that the motor controller you use will affect the actual voltage at the track. If you use the Arduino Motor Shield or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligable voltage drop so 12V in will give you 12V at the track.</p>
 <p>If you have a power supply you wish to use, but it has an output voltage that is a few volts higher than you need, use either the diode or buck converter method listed below to reduce the voltage.</p>
-</div>
-<div class="section" id="amperage">
-<h4>Amperage<a class="headerlink" href="#amperage" title="Permalink to this heading">¶</a></h4>
-<p>A 3A power supply will give you plenty of current to handle the maximum of 2A on channel A to the MAIN track (assuming you’re using the Arduino motor shield or Pololu motor shield). Channel B for the programming track will only be used occasionally and does not need much current. In fact, it is limited to protect your trains (normally to 250mA). Running trains on main and programming a loco on Prog at the same time will be fine. The overcurrent limit set in the CS will automatically cut power if you go over that number of Amps. A rule of thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards. For larger layouts with higher current requirements on the MAIN track and a motor driver that can handle those currents, you’ll want power supply that can deliver that larger current. See <a class="reference internal" href="motor-boards.html"><span class="doc">Motor Boards</span></a> for more information about higher current motor controllers.</p>
-<p>A device will only draw the current it needs. So whether you have a 2A power supply or a 20A power supply, if you setup only needs 1A, then both supplies will work just fine, but no sense paying for more than you need. And it is also worth noting that devices that can supply a large current can cause a large amount of damage if you don’t have proper safety features installed like the overprotection feature of the CS AND fuses to the track.</p>
+</section>
+<section id="amperage">
+<h4>Amperage<a class="headerlink" href="#amperage" title="Permalink to this heading"></a></h4>
+<p>A 3A power supply will give you plenty of current to handle the maximum of 2A on channel A to the MAIN track (assuming you’re using the Arduino motor shield or Pololu motor shield). Channel B for the programming track will only be used occasionally and does not need much current. In fact, it is limited to protect your trains (normally to 250mA). Running trains on main and programming a loco on Prog at the same time will be fine. The overcurrent limit set in the Command Station will automatically cut power if you go over that number of Amps. A rule of thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards. For larger layouts with higher current requirements on the MAIN track and a motor driver that can handle those currents, you’ll want power supply that can deliver that larger current. See <a class="reference internal" href="motor-boards.html"><span class="doc">Motor Boards</span></a> for more information about higher current motor controllers.</p>
+<p>A device will only draw the current it needs. So whether you have a 2A power supply or a 20A power supply, if you setup only needs 1A, then both supplies will work just fine, but no sense paying for more than you need. And it is also worth noting that devices that can supply a large current can cause a large amount of damage if you don’t have proper safety features installed like the overprotection feature of the Command Station AND fuses to the track.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you think you need more that 5 Amps to your track, you should strongly consider using boosters and power districts.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="wall-warts">
-<h2>Wall Warts<a class="headerlink" href="#wall-warts" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="wall-warts">
+<h2><a class="toc-backref" href="#id2">Wall Warts</a><a class="headerlink" href="#wall-warts" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Wall warts are a good choice for beginners and those not comfortable with mains wiring. You can get a 12V, 3A, relatively small one for around $8 US.</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/12v-3A-wall-wart-sm.jpg"><img alt="12V Wall Wart" src="../../_images/12v-3A-wall-wart-sm.jpg" style="width: 205.0px; height: 218.0px;" /></a>
-</div>
-<div class="section" id="bricks-laptop-style">
-<h2>Bricks (Laptop Style)<a class="headerlink" href="#bricks-laptop-style" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="bricks-laptop-style">
+<h2><a class="toc-backref" href="#id3">Bricks (Laptop Style)</a><a class="headerlink" href="#bricks-laptop-style" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>You can also find plenty of laptop type “brick” power supplies. They come in ranges from 12V to 19.5V and 3-5 Amps.</p></li>
 </ul>
@@ -384,9 +474,9 @@
 <a class="reference internal image-reference" href="../../_images/samsung_brick.jpg"><img alt="Samsung brick" src="../../_images/samsung_brick.jpg" style="width: 243.0px; height: 248.75px;" /></a>
 <p><a class="reference external" href="https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/">https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/</a></p>
 <p>Since many people have old laptop power supplies that can be 18-19.5V DC, you can use the diode or buck converter method listed below to reduce the voltage.</p>
-</div>
-<div class="section" id="adjustable-power-supplies">
-<h2>Adjustable Power Supplies<a class="headerlink" href="#adjustable-power-supplies" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="adjustable-power-supplies">
+<h2><a class="toc-backref" href="#id4">Adjustable Power Supplies</a><a class="headerlink" href="#adjustable-power-supplies" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>These have a selector switch to choose the voltage. Be careful to get a model that can deliver the current you need at the voltage you want. Sometimes the maximum output current will vary depending on the voltage selected.</p></li>
 </ul>
@@ -394,9 +484,9 @@
 <p><a class="reference external" href="https://www.amazon.com/dp/B07J6RC43S/">https://www.amazon.com/dp/B07J6RC43S/</a></p>
 <a class="reference internal image-reference" href="../../_images/belker_adjustable_45w.jpg"><img alt="Belker_adjustable brick" src="../../_images/belker_adjustable_45w.jpg" style="width: 236.25px; height: 233.25px;" /></a>
 <p><a class="reference external" href="https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU">https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU</a></p>
-</div>
-<div class="section" id="cage-power-supplies">
-<h2>Cage Power Supplies<a class="headerlink" href="#cage-power-supplies" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="cage-power-supplies">
+<h2><a class="toc-backref" href="#id5">Cage Power Supplies</a><a class="headerlink" href="#cage-power-supplies" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>The Meanwell LRS-100-15 power supply is a good choice for larger scales. It supplies 15V and 105W (that’s 7 amps), so it is plenty for running two channels simultaneously. At only $18, it is an inexpensive and solid option.</p></li>
 </ul>
@@ -406,9 +496,9 @@
 <p class="admonition-title">Warning</p>
 <p>For the Meanwell LRS-100-15 you will need to do your own mains wiring. If you don’t have experience with this get a friend who does or hire an electrician to do it for you. <strong>MAINS POWER IS DANGEROUS!</strong></p>
 </div>
-</div>
-<div class="section" id="dual-voltage-power-supplies">
-<h2>Dual voltage power supplies<a class="headerlink" href="#dual-voltage-power-supplies" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="dual-voltage-power-supplies">
+<h2><a class="toc-backref" href="#id6">Dual voltage power supplies</a><a class="headerlink" href="#dual-voltage-power-supplies" title="Permalink to this heading"></a></h2>
 <p>With a dual voltage power supply, you can provide 12V for the motor controller and 5V for the Arduino. You may also be able to find higher voltage units if you need such as 14-15V if your scale trains require it.</p>
 <ul class="simple">
 <li><p>Mean Well Dual Voltage Power Supply (5V and 12V)</p></li>
@@ -419,9 +509,9 @@
 <p class="admonition-title">Warning</p>
 <p>For the Meanwell RD125A, you will need to do your own mains wiring. If you don’t have experience with this get a friend who does or hire an electrician to do it for you. <strong>MAINS POWER IS DANGEROUS!</strong></p>
 </div>
-</div>
-<div class="section" id="using-one-power-supply-with-cheap-converters-to-power-everything">
-<h2>Using one power supply with cheap converters to power everything<a class="headerlink" href="#using-one-power-supply-with-cheap-converters-to-power-everything" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="using-one-power-supply-with-cheap-converters-to-power-everything">
+<h2><a class="toc-backref" href="#id7">Using one power supply with cheap converters to power everything</a><a class="headerlink" href="#using-one-power-supply-with-cheap-converters-to-power-everything" title="Permalink to this heading"></a></h2>
 <p><strong>Tinkerers and Engineers</strong></p>
 <ul class="simple">
 <li><p>Using this method, you select a power supply that can power the track (or your highest voltage devices) and deliver enough Amps to power everything you will connect to it. This includes the DC-DC downconverters (Buck Converters) that take your higher voltage and reduce it to 5V, 7V, 9V, etc. Note that most buck converters are also boost converters, then can take a lower voltage and raise it to a higher one. We will just cover the first option here.</p></li>
@@ -430,93 +520,76 @@
 <p class="admonition-title">Note</p>
 <p>You will still need a wall voltage AC to 12-18V DC power supply with enough Amperage to handle what you want to power. Ex: You need 5A max to the track, are powering 2A worth of lights, and you have 2A of accessories. That is 9A. So you should get a 10A or greater power supply.</p>
 </div>
-<div class="section" id="v-13a-power-supplies">
-<h3>15V 13A Power Supplies<a class="headerlink" href="#v-13a-power-supplies" title="Permalink to this heading">¶</a></h3>
+<section id="v-13a-power-supplies">
+<h3>15V 13A Power Supplies<a class="headerlink" href="#v-13a-power-supplies" title="Permalink to this heading"></a></h3>
 <p>Some options for a power supply are the <strong>Meanwell SP-200-15</strong> or the <strong>ATOS-300-15</strong>. They are 15V, 13A supplies. You can use 15V to the motor controller and use buck converters to step down the 15V to whatever voltages you need.</p>
 <a class="reference internal image-reference" href="../../_images/15v_13A_power_supply.jpg"><img alt="15V 20A supply" src="../../_images/15v_13A_power_supply.jpg" style="width: 250.0px; height: 250.0px;" /></a>
 <p>Here is a link to where you can find the <a class="reference external" href="https://www.walmart.com/ip/NEW-Mean-Well-15Vdc-PFC-Power-Supply-SP-200-15/628549676?wmlspartner=wlpa&amp;selectedSellerId=844">Meanwell SP-200-15 Power Supply</a></p>
-</div>
-<div class="section" id="using-buck-converters">
-<h3>Using Buck Converters<a class="headerlink" href="#using-buck-converters" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="using-buck-converters">
+<h3>Using Buck Converters<a class="headerlink" href="#using-buck-converters" title="Permalink to this heading"></a></h3>
 <p>The following image shows how to connect buck converters. You start with a power supply with more voltage than the highest voltage you want to convert and with enough current to drive everything you want to power. This example shows a 15V supply that you can connect directly to the input to the motor controller which will in turn power your track. If you need to power 5V and 12V devices, you simply get 2 buck converters, connect them in parallel to the 15V output of your power supply (or to extra 15V outputs on the supply), and adjust each one to the voltage output you want. Then connect the converters to your 5V and 12V bus and connect your devices to the correct bus.</p>
 <a class="reference internal image-reference" href="../../_images/using_buck_converters.jpg"><img alt="Using Buck Converters" src="../../_images/using_buck_converters.jpg" style="width: 646.0999999999999px; height: 520.1px;" /></a>
-</div>
-<div class="section" id="high-power-buck-converters">
-<h3>High Power Buck Converters<a class="headerlink" href="#high-power-buck-converters" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="high-power-buck-converters">
+<h3>High Power Buck Converters<a class="headerlink" href="#high-power-buck-converters" title="Permalink to this heading"></a></h3>
 <p>These come in different sizes. Show here is a 2A and a 6A Version. You can look for “60W 6A Adjustable Voltage Regulator with Cooling Fan”, or “DC to DC 5.5V-30V to 0.5V-30V Power Supply Module”. Or just “Buck Boost Voltage Converter”. The bigger unit usually comes with a fan. A model number is a <strong>“ZK-DP60”</strong>.</p>
 <a class="reference internal image-reference" href="../../_images/35W_4A_variable_buck_w_display.jpg"><img alt="35W 4A 5-24v Buck Power Supply" src="../../_images/35W_4A_variable_buck_w_display.jpg" style="width: 250.4px; height: 237.8px;" /></a>
 <a class="reference internal image-reference" href="../../_images/60W_6A_variable_buck_w_display.jpg"><img alt="60W 6A 5-24V Buck Power Supply" src="../../_images/60W_6A_variable_buck_w_display.jpg" style="width: 259.02px; height: 223.38px;" /></a>
 <p><strong>One example from Amazon</strong>, click to follow the link: <a class="reference external" href="https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/">5 to 30V Adjustable regulator converter</a></p>
-</div>
-<div class="section" id="pack-of-buck-regular-converters">
-<h3>4 Pack of Buck Regular Converters<a class="headerlink" href="#pack-of-buck-regular-converters" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="pack-of-buck-regular-converters">
+<h3>4 Pack of Buck Regular Converters<a class="headerlink" href="#pack-of-buck-regular-converters" title="Permalink to this heading"></a></h3>
 <a class="reference internal image-reference" href="../../_images/4_pack_buck_converters.jpg"><img alt="4 pack of buck converters" src="../../_images/4_pack_buck_converters.jpg" style="width: 330.0px; height: 300.74px;" /></a>
 <p>These are Input Voltage: DC 4-38V, error ±0.1V. Output Voltage: DC 1.25V to 36V at 5A.</p>
 <p><a class="reference external" href="https://www.amazon.com/dp/B079N9BFZC">https://www.amazon.com/dp/B079N9BFZC</a></p>
-</div>
-<div class="section" id="cheap-buck-converter-with-display-5">
-<h3>Cheap Buck Converter with Display $5<a class="headerlink" href="#cheap-buck-converter-with-display-5" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="cheap-buck-converter-with-display-5">
+<h3>Cheap Buck Converter with Display $5<a class="headerlink" href="#cheap-buck-converter-with-display-5" title="Permalink to this heading"></a></h3>
 <a class="reference internal image-reference" href="../../_images/20W_DC_buck.jpg"><img alt="20W DC Buck converter with display" src="../../_images/20W_DC_buck.jpg" style="width: 270.0px; height: 180.0px;" /></a>
 <p>This is a push button programmable 20W adjustable DC-DC buck converter module with digital display. It is based on LM2596 3A step-down voltage regulator and supports an input of 0~40V DC to an output of 1.25 to 37V with an accuracy of ± 0.05V.</p>
 <p>Here is one example sold by DFRobot, click to follow the link: <a class="reference external" href="https://www.dfrobot.com/product-1552.html">20W 3A programmable buck converter</a>.</p>
-</div>
-</div>
-<div class="section" id="using-diodes-to-reduce-voltage">
-<h2>Using Diodes to Reduce Voltage<a class="headerlink" href="#using-diodes-to-reduce-voltage" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+<section id="using-diodes-to-reduce-voltage">
+<h2><a class="toc-backref" href="#id8">Using Diodes to Reduce Voltage</a><a class="headerlink" href="#using-diodes-to-reduce-voltage" title="Permalink to this heading"></a></h2>
 <p>If you are like us and save your old power adapters when you recycle old equipment, you may have old wall warts or power supplies laying around that are perfectly fine, but have too high a voltage. You can use diodes to easily step the voltage down to a usable level if you only need to drop a few volts. Silicon diodes drop .6 - .7 volts across them in a ciruit at our currents. We can take advantage of this property to create a very inexpensive voltage step down circuit. Be careful to use the correct type of diode with the correct current rating. LEDs and signal diodes like a Schottky won’t work for this. Diodes in the 1N5400 series will work perfectly for up to 3A. Simply connect however many diodes you need in series to drop the voltage. For example, a 6A1 diode will drop 0.7V. Putting 5 in series beteen the positive wire of the power supply and the input to the motor driver will therefor reduce an 18V power supply to 14.5V (18 - 3.5). If you use an Arduino Motor Shield or other L298 based motor driver with an additional 2V voltage drop, that will give you 12.7 at the track. Work out the math to provide the voltage your track needs.</p>
 <p>Needed:</p>
 <p>5 6A1 Diodes (1N5401 can work also)
 1 circuit board (needed to help with cooling)</p>
 <p>Note that the voltage drop is not linear with diodes. We are assuming that you are operating with less than 3A of current. The voltage drop in each diode goes up with current. So if you tried to use higher current diodes to go over 3A and/or tried to use a lot more diodes to drop more voltage, your voltage could vary too much with the current used, in addition to generating a lot of heat. Do not use more than 4 or 5 diodes, rather use buck converters as shown above, they are much more efficient. For example, a lot of laptops use a 19 volt power supply. If you try to drop that to 14.6, that would take 7 diodes. The voltage could vary between 12.7 and 14.8 Volts depending on what was using current on the track. With more locos on the track, you could see all of them slow a bit. In addition, each diode would be wasting over 2 watts of power, times 7 that is 14 Watts of heat!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="other/ir-sensor.html" class="btn btn-neutral float-left" title="IR Sensor Boards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="accessory-controllers.html" class="btn btn-neutral float-right" title="Accessory Controllers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="servo-module.html" class="btn btn-neutral float-left" title="Connecting a Servo Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.
-
-    </p>
+    <p>&#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

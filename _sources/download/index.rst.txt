@@ -1,14 +1,19 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l1.rst
+|EX-DL-LOGO|
 
-*******************
-Software Downloads
-*******************
+*********
+Downloads
+*********
 
-Welcome to the central downloads page for all DCC++ EX software solutions. Please click on the project that you'd like to download.
+|conductor| |tinkerer| |engineer|
+
+Welcome to the central downloads page for all |DCC-EX| software solutions. Please click on the project that you'd like to download.
 
 .. toctree::
     :maxdepth: 1
 
-    commandstation
+    ex-commandstation
     esp8266
-    dcc-inspector-ex
-    turntable-ex
+    ex-dccinspector
+    ex-turntable

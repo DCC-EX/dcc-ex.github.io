@@ -129,43 +129,43 @@
       :alt: EX-CommandStation
       :scale: 30%
       :class: image-min-width-144
-      :target: ./ex-commandstation/index.html
+      :target: /ex-commandstation/index.html
 ..
 .. |EX-I-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-installer.png
       :alt: EX-Installer
       :scale: 30%
       :class: image-min-width-144
-      :target: ./ex-installer/index.html
+      :target: /ex-installer/index.html
 ..
 .. |EX-WT-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-webthrottle.png
       :alt: EX-WebThrottle
       :scale: 30%
       :class: image-min-width-144
-      :target: ./ex-webthrottle/index.html
+      :target: /ex-webthrottle/index.html
 ..
 .. |EX-R-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-rail.png
       :alt: EX-RAIL
       :scale: 30%
       :class: image-min-width-144
-      :target: ./ex-rail/index.html
+      :target: /ex-rail/index.html
 ..
 .. |EX-TT-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-turntable.png
       :alt: EX-Turntable
       :scale: 30%
       :class: image-min-width-144
-      :target: ./ex-turntable/index.html
+      :target: /ex-turntable/index.html
 ..
 .. |EX-DCCI-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-DCCInspector
       :scale: 30%
       :class: image-min-width-144
-      :target: ./ex-dccinspector/index.html
+      :target: /ex-dccinspector/index.html
 ..
 .. |EX-BSC-LOGO-SMALL| image:: /_static/images/logos/product-logo-basestationclassic.png
       :alt: baseStationClassic
       :scale: 30%
       :class: image-min-width-144
-      :target: ./download/ex-commandstation.html#getting-basestation-classic
+      :target: /download/ex-commandstation.html#getting-basestation-classic
 ..
 .. ................................................
 ..

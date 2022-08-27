@@ -21,11 +21,9 @@ What is EX-Turntable?
 
 The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`levels:choose your comfort level` guide for |EX-CS| (|conductor-text|, |tinkerer-text|, and |engineer-text|).
 
-The out-of-the-box example configuration should allow a |conductor-text| level user to get up and running relatively quickly using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
+However, there are complexities in setting up a turntable that tend to make |EX-TT| more in the realm of the |tinkerer-text| level user, even when using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
 To make full use of |EX-TT|, you will need a basic understanding of :doc:`EX-RAIL </ex-rail/index>` automation, but we'll share the details and some examples to help with this.
-
-Essentially, if you have setup your own CommandStation, the expectation is that |EX-TT| will be a natural extension of this, and be equally as easy to setup (at least from the electronics and software perspective).
 
 .. note::
 
@@ -37,17 +35,17 @@ Essentially, if you have setup your own CommandStation, the expectation is that 
 
 .. sidebar:: Supported stepper drivers and motors
 
-  .. image:: /_static/images/level_icons/conductor.png
-    :alt: Conductor Level
-    :scale: 40%
-    :align: left
-  
   .. image:: /_static/images/level_icons/tinkerer.png
     :alt: Tinkerer Level
     :scale: 40%
+    :align: left
+  
+  .. image:: /_static/images/level_icons/engineer.png
+    :alt: Engineer Level
+    :scale: 40%
     :align: right
 
-  Using other pre-defined, supported stepper drivers and motors should also be achievable at the Conductor level, but may enter into Tinkerer territory depending on the specific hardware.
+  Using other pre-defined, supported stepper drivers and motors are achievable at the |tinkerer-text| level, but may enter into |engineer-text| territory depending on the specific hardware.
 
 The |EX-TT| integration includes:
 
@@ -76,9 +74,9 @@ How Does It Work?
 
   Stepper motor drivers typically support more than one mode for driving stepper motors. This simply means that they can be turned less than one complete step, allowing more granular control of positioning, resulting in higher precision, and much smoother operation. For example, the DRV8825 can drive 1/32 of a step, talk about smooooth!
 
-If you're not familiar with stepper motors then you only need a very high level understanding of how they work in order to use |EX-TT| successfully on your layout, as the concept is very simple.
+If you're not familiar with stepper motors then you only need a very basic understanding of how they work in order to use |EX-TT| successfully on your layout, as the concept is very simple.
 
-Very simply, a stepper motor is able to be rotated one step at a time, which translates to degrees of movement around a circle. For example, the ubiquitous 28BYJ-48 stepper motor referred to here takes 2048 steps to make a full 360 degree rotation. The higher the number of steps in a single rotation, the easier it will be to get perfect alignment between the turntable and your layout, and this also typically translates to smoother rotation.
+A stepper motor is able to be rotated one step at a time, which translates to degrees of movement around a circle. For example, the ubiquitous 28BYJ-48 stepper motor referred to here takes 2048 steps to make a full 360 degree rotation (in full step mode). The higher the number of steps in a single rotation, the easier it will be to get perfect alignment between the turntable and your layout, and this also typically translates to smoother rotation.
 
 .. note:: 
 

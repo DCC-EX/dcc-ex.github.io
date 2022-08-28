@@ -34,6 +34,10 @@ The process for creating these elements consist of:
 Adding a Roster
 ===============
 
+EX-RAIL has a ROSTER() function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.
+
+The functions can simply be listed as "F" numbers, or you can provide a text description of the function. Prefacing the function with a "*" indicates it is momentary, meaning it is only activated while holding that function button down.
+
 In a text editor (e.g. notepad) create a new text file named 'myAutomation.h'. (Note the capital 'A' in the name.  The case of all the characters is important.)
 
 If you are already using |EX-R| and have a myAutomation.h, then just the add ``ROSTER(...)`` lines near the top of the file.
@@ -60,8 +64,23 @@ Some more realistic examples might look like:
    ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
    ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
 
-
 Note: Add additional 'ROSTER(...)' lines for all your locos
+
+.. code-block:: cpp
+   
+   ROSTER(1506, "HUSA", "Light/Bell/*Horn")
+
+A more complex example with generic functions for the same loco (note the momentary F2 for horn):
+
+.. code-block:: cpp
+
+   ROSTER(1506, "HUSA", "F0/F1/*F2/F3/F4/F5/F6/F7/F8/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
+
+The same again, with more text functions defined to represent a number of different sounds:
+
+.. code-block:: cpp
+
+   ROSTER(1506, "HUSA", "Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
 
 Locos with Unavailable Functions
 --------------------------------
@@ -139,7 +158,7 @@ And in the next picture you can see a servo that operates a semaphore signal.  T
    :scale: 60%
 
 
-Configure the software - myAutomation.h - Turnouts/points
+Configure the software - myAutomation.h - Turnouts/Points
 ---------------------------------------------------------
 
 The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Turnout/Point.

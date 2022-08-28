@@ -11,7 +11,7 @@ EX-RAIL Command Summary
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 3
     :local:
 
 Notes
@@ -86,6 +86,9 @@ There are some diagnostic and control commands added to the <tag> language norma
 Automations, Routes and Sequences
 ---------------------------------
 
+Script Definition Items 
+^^^^^^^^^^^^^^^^^^^^^^^
+
 .. list-table::
     :widths: auto
     :header-rows: 1
@@ -103,6 +106,17 @@ Automations, Routes and Sequences
       -  A general purpose Sequence for scenic animations, etc.
     * -  ENDTASK or DONE
       -  Completes a Animation/Routes/Sequence Event handler, etc.
+
+Object definitions
+^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  EXRAIL Functions
+      -  Description
     * -  :category:`--- Object definitions ---`
       -
     * -  ALIAS( name[, value ])
@@ -121,6 +135,17 @@ Automations, Routes and Sequences
       -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
       -  Define a servo signal
+
+Flow control functions
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  EXRAIL Functions
+      -  Description
     * -  :category:`--- Flow control functions ---`
       -
     * -  CALL( route )
@@ -163,6 +188,17 @@ Automations, Routes and Sequences
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
       -  Required to end an IF/IFNOT/etc (Used in all IF.. functions)
+
+Command Station functions
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  EXRAIL Functions
+      -  Description
     * -  :category:`--- Command Station functions ---`
       -
     * -  POWERON
@@ -191,6 +227,17 @@ Automations, Routes and Sequences
       -  Writes direct to Serial2
     * -  SERIAL3( msg )
       -  Writes direct to Serial3
+
+EX-RAIL functions
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  EXRAIL Functions
+      -  Description
     * -  :category:`--- EX-RAIL functions ---`
       -
     * -  PAUSE
@@ -213,6 +260,17 @@ Automations, Routes and Sequences
       -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`ex-rail/creating-elements:adding a roster` for examples
     * -  DRIVE( analog_pin )
       -  ***Under Construction*** Not complete, DO NOT USE
+
+Loco DCC functions
+^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  EXRAIL Functions
+      -  Description
     * -  :category:`--- Loco DCC functions ---`
       -
     * -  ESTOP
@@ -231,7 +289,18 @@ Automations, Routes and Sequences
       -  Turn off loco function
     * -  INVERT_DIRECTION
       -  Switches FWD/REV meaning for this loco
-    * -  :category:`--- Sensor input & event handlers ---`
+
+Sensor input
+^^^^^^^^^^^^
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  EXRAIL Functions
+      -  Description
+    * -  :category:`--- Sensor input ---`
       -
     * -  AT( sensor_id )
       -  Wait until sensor is active/triggered, use negative values for active HIGH sensors
@@ -247,6 +316,21 @@ Automations, Routes and Sequences
       -  Latches a sensor on (Sensors 0-255 only)
     * -  UNLATCH( sensor_id )
       -  Remove LATCH on sensor
+    * -  WAITFOR( pin )
+      -  Wait for servo to complete movement
+  
+Sensor event handlers
+^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  EXRAIL Functions
+      -  Description
+    * -  :category:`--- Sensor event handlers ---`
+      -
     * -  ONCLOSE( turnout_id )
       -  Event handler for turnout close
     * -  ONTHROW( turnout_id )
@@ -259,8 +343,18 @@ Automations, Routes and Sequences
       -  Event handler for 2 part DCC accessory packet value 0
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
-    * -  WAITFOR( pin )
-      -  Wait for servo to complete movement
+
+
+Action output functions 
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * -  EXRAIL Functions
+      -  Description
     * -  :category:`--- Action output functions ---`
       -
     * -  SET( pin )

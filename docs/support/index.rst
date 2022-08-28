@@ -19,7 +19,7 @@ There are several different ways to get in contact with the team and obtain help
 Preferred option: Discord
 ==========================
 
-The best way to reach us is on our Discord server. Usually there is always a team member online to help with your issue, and if not you'll get a response within a few hours.
+The best way to reach us is on our Discord server. Usually there is a team member online to help with your issue, and if not you'll get a response within a few hours.
 
 Discord allows for live chatting rather than just a back and forth offline support process, so you can join a live conversation with the |DCC-EX| team members and other |DCC-EX| users.
 

@@ -142,11 +142,11 @@
 ..   
 .. |Engine Driver| replace::
 
-    :doc:`Engine Driver </reference/glossary>`
+    :doc:`Engine Driver </throttles/software/engine-driver>`
 ..
 .. |wiThrottle| replace::
 
-    :doc:`wiThrottle </reference/glossary>`
+    :doc:`wiThrottle </throttles/software/withrottle>`
 ..
 .. |wiThrottle Protocol| replace::
 

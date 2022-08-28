@@ -275,6 +275,7 @@ svg {
 
 /* sidebar level 3 bullet points */
 div#on-this-page ul.simple li ul li p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   font-size: 80% !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
@@ -282,12 +283,14 @@ div#on-this-page ul.simple li ul li p {
 
 /* sidebar level 3 bullet points */
 div#on-this-page ul.simple li ul li {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
 }
 
 /* sidebar level 2 bullet points */
 div#on-this-page ul.simple li p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   font-size: 80% !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
@@ -295,10 +298,23 @@ div#on-this-page ul.simple li p {
 
 /* sidebar level 2 bullet points */
 div#on-this-page ul.simple li {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
 }
 
 div#on-this-page ul.simple {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
   margin-bottom: 0px !important;
+}
+
+div#on-this-page p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  margin-top: 0px !important;
+  margin-bottom: 6px !important;
+}
+
+/* sidebars */
+.rst-content .sidebar {
+  padding: 12px 24px 12px 24px !important;
 }

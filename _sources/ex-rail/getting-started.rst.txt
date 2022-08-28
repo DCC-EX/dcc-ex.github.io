@@ -17,7 +17,7 @@ Creating Automations
 The Automation Process
 ======================
 
-Once started, all sequences step through a list of simple keywords until they reach a ``DONE`` keyword.
+Once started, each 'sequence' will step through a list of simple keywords until they reach a ``DONE`` keyword.
 
 There can be a startup sequence (keywords at the beginning of the script), which if present is automatically executed, as are any sequences that contain an ``AUTOSTART``.
 
@@ -29,11 +29,11 @@ Multiple concurrent sequences are supported.
 
 For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.
 
-The script containing your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
+The script containing all your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
 
-Connecting your Arduino and pressing the Upload button in the usual way will save the file and upload your script into the Command Station.
+Connecting your Arduino and pressing the :guilabel:`Upload` button in the usual way will save the file and upload your script into the Command Station.
 
-To create the myAutomation.h file in the Arduino IDE, use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
+If you are using the Arduino IDE (rather than the |EX-I|) you can create the myAutomation.h file in the Arduino IDE. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
 
 .. image:: /_static/images/ex-rail/setup1.jpg
    :alt:  Setup pulldown button
@@ -133,12 +133,12 @@ automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE
      GREEN(24)
      DONE
 
-Defining Turnouts
-=================
+Referencing Turnouts/Points in Automations
+==========================================
 
-|EX-CS| supports a number of different turnout hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using ``<T>`` commands from JMRI, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
+|EX-CS| supports a number of different turnout/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using ``<T>`` commands from JMRI, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
 
-You may, however, find it more convenient to define turnouts using EX-RAIL commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
+You may, however, find it more convenient to define turnouts/points using EX-RAIL commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
 
 Turnouts defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 
@@ -147,8 +147,8 @@ A TURNOUT sends DCC signals to a decoder attached to the track, a PIN_TURNOUT se
 See the :doc:`/ex-rail/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 
-Defining Signals
-================
+Referencing Signals in Automations
+==================================
 
 Signals can now simply be a decoration to be switched by the route process; they don't need to control anything.
 
@@ -434,38 +434,13 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
-Roster entries
-==============
-
-EX-RAIL has a ROSTER() function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts and routes.
-
-The functions can simply be listed as "F" numbers, or you can provide a text description of the function. Prefacing the function with a "*" indicates it is momentary, meaning it is only activated while holding that function button down.
-
-A very simple roster entry for a loco with ID 1506 called "HUSA" with three functions of light, bell, and momentary horn would look like this:
-
-.. code-block:: cpp
-   
-   ROSTER(1506, "HUSA", "Light/Bell/*Horn")
-
-A more complex example with generic functions for the same loco (note the momentary F2 for horn):
-
-.. code-block:: cpp
-
-   ROSTER(1506, "HUSA", "F0/F1/*F2/F3/F4/F5/F6/F7/F8/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
-
-The same again, with more text functions defined to represent a number of different sounds:
-
-.. code-block:: cpp
-
-   ROSTER(1506, "HUSA", "Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
-
-Sounds
-======
+Referencing Loco Functions in Automations
+=========================================
 
 You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn.
 
-Sensors
-=======
+Referencing Sensors in Automations
+==================================
 
 - |EX-CS| allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-5)``.
 

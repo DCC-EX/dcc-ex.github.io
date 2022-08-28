@@ -210,7 +210,7 @@ Automations, Routes and Sequences
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
     * -  ROSTER( loco, name, func_map )
-      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`ex-rail/getting-started:roster entries` for examples
+      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`ex-rail/creating-elements:adding a roster` for examples
     * -  DRIVE( analog_pin )
       -  ***Under Construction*** Not complete, DO NOT USE
     * -  :category:`--- Loco DCC functions ---`

@@ -128,8 +128,8 @@ You will need to install |Engine Driver| on your mobile device and then connect 
   * Open the network settings on you phone
   * Change to the network of the |EX-CS|
   
-    * SSID (Network name) : 'DCCEX_xxxxxx' |BR| where the x's are the last 6 digits of your device' MAC address (unique to each device)
-    * Password: 'PASS_xxxxxx' |BR| where the x's are the last 6 digits of your device' MAC address (same as above)
+    * SSID (Network name): ``DCCEX_xxxxxx`` |BR| where the x's are the last 6 digits of your device' MAC address (unique to each device)
+    * Password: ``PASS_xxxxxx`` |BR| where the x's are the last 6 digits of your device' MAC address (same as above)
 
 * If you have set up your |EX-CS| in |Station Mode| (The alternate approach)
   
@@ -142,7 +142,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 * Go through the initial startup pages to set some basic configuration items
 * On the 'Connection screen'
   
-  * You should see 'DCCEX_xxxxxx' (as above) in the discovered servers list
+  * You should see ``DCCEX_xxxxxx`` (as above) in the discovered servers list
   * Click on this. |BR| (As long as you did not change the IP address of the |EX-CS| when you ran |EX-I| then this should connect
 
 * You should now be on the the 'Throttle screen'
@@ -153,7 +153,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
    * The four red LEDs on the Motor board will turn on
    * Click :guilabel:`Back`
 
-* back on the 'Throttle screen'
+* Back on the 'Throttle screen'
 
   * Click one of the :guilabel:`Select` buttons
   

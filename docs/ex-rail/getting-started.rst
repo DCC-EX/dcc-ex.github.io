@@ -62,10 +62,18 @@ And type your script in.
    :align: center
    :scale: 100%
 
+|
+
 Structure of an Automation
 ==========================
 
 Automations take one of the following forms:
+
+.. sidebar:: Ids (Sequence Numbers)
+
+   - ROUTE / AUTOMATION / SEQUENCE ids share the same sequence number collection. i.e. an id must be unique across all three types
+   - All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
+   - 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script. 
 
 .. code-block:: 
 

@@ -102,7 +102,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 
    RETURNS: "<T 1 20 1>" if the command was successful, meaning :
    "<" = Begin DCC-EX command
-   "T" = (upper case T) DCC++ EX Cab command was sent from |EX-CS|
+   "T" = (upper case T) DCC++ EX Cab command was sent from the Command Station
    "1" = register 1 was changed
    "20" = set to speed 20
    "1" = forward direction

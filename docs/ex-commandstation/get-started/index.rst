@@ -1,8 +1,8 @@
 .. meta::
-   :keywords: EX-CommandStation Command Station
+   :keywords: EX-CommandStation Command Station EX-CS
 
-.. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: ../../include/include.rst
+.. include:: ../../include/include-l2.rst
 |EX-CS-LOGO|
 
 ***************
@@ -61,7 +61,7 @@ To actually run your model railroad you will need a few items:
 
 .. image:: /_static/images/engine_driver/vertical_slider.png
    :alt: Engine Driver
-   :scale: 50%
+   :scale: 75%
    :align: right
 
 1. a **Throttle (Controller)** - Something to control your trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc.

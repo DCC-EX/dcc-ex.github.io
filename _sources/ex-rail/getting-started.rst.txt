@@ -21,13 +21,16 @@ Once started, each 'sequence' will step through a list of simple keywords until 
 
 There can be a startup sequence (keywords at the beginning of the script), which if present is automatically executed, as are any sequences that contain an ``AUTOSTART``.
 
+Multiple concurrent sequences are supported.
+
+For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.
+
 .. note:: 
 
    There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first ``DONE`` keyword is executed on startup. If you don't wish anything to happen at startup, simply add the keyword ``DONE`` as the first line.
 
-Multiple concurrent sequences are supported.
-
-For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.
+myAutomation.h - Editing Automations
+====================================
 
 The script containing all your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
 
@@ -58,6 +61,68 @@ And type your script in.
    :alt:  Setup Example file
    :align: center
    :scale: 100%
+
+Structure of an Automation
+==========================
+
+Automations take one of the following forms:
+
+.. code-block:: 
+
+   AUTOMATION( id, “description” )
+     ...
+     DONE
+
+.. code-block:: 
+
+   ROUTE( id, “description” )
+      ...   
+      DONE
+
+.. code-block:: 
+
+   SEQUENCE( id )
+      ...
+      DONE  
+
+
+They can also take one of the following forms for sensor event based automations:
+
+.. code-block:: 
+
+   ONCLOSE( turnout_id )
+      ...
+      DONE  
+
+.. code-block:: 
+
+   ONTHROW( turnout_id )
+      ...
+      DONE  
+
+.. code-block:: 
+
+   ONACTIVATE( addr, sub_addr )
+      ...
+      DONE  
+
+.. code-block:: 
+
+   ONACTIVATEL( linear )
+      ...
+      DONE  
+
+.. code-block:: 
+
+   ONDEACTIVATE( addr, sub_addr )
+      ...
+      DONE  
+
+.. code-block:: 
+
+   ONDEACTIVATEL( linear )
+      ...
+      DONE  
 
 Some Simple Examples  
 ====================

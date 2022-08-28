@@ -410,7 +410,24 @@
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#notes" id="id1">Notes</a></p></li>
-<li><p><a class="reference internal" href="#command-summary" id="id2">Command Summary</a></p></li>
+<li><p><a class="reference internal" href="#command-summary" id="id2">Command Summary</a></p>
+<ul>
+<li><p><a class="reference internal" href="#diagnostics-control" id="id3">Diagnostics &amp; Control</a></p></li>
+<li><p><a class="reference internal" href="#automations-routes-and-sequences" id="id4">Automations, Routes and Sequences</a></p>
+<ul>
+<li><p><a class="reference internal" href="#script-definition-items" id="id5">Script Definition Items</a></p></li>
+<li><p><a class="reference internal" href="#object-definitions" id="id6">Object definitions</a></p></li>
+<li><p><a class="reference internal" href="#flow-control-functions" id="id7">Flow control functions</a></p></li>
+<li><p><a class="reference internal" href="#command-station-functions" id="id8">Command Station functions</a></p></li>
+<li><p><a class="reference internal" href="#ex-rail-functions" id="id9">EX-RAIL functions</a></p></li>
+<li><p><a class="reference internal" href="#loco-dcc-functions" id="id10">Loco DCC functions</a></p></li>
+<li><p><a class="reference internal" href="#sensor-input" id="id11">Sensor input</a></p></li>
+<li><p><a class="reference internal" href="#sensor-event-handlers" id="id12">Sensor event handlers</a></p></li>
+<li><p><a class="reference internal" href="#action-output-functions" id="id13">Action output functions</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </aside>
@@ -439,7 +456,7 @@
 <section id="command-summary">
 <h2><a class="toc-backref" href="#id2">Command Summary</a><a class="headerlink" href="#command-summary" title="Permalink to this heading"></a></h2>
 <section id="diagnostics-control">
-<h3>Diagnostics &amp; Control<a class="headerlink" href="#diagnostics-control" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3">Diagnostics &amp; Control</a><a class="headerlink" href="#diagnostics-control" title="Permalink to this heading"></a></h3>
 <p>There are some diagnostic and control commands added to the &lt;tag&gt; language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands &lt; &gt; through both the Arduino IDE Serial Monitor and the <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> Send DCC++ Command pane.</p>
 <table class="colwidths-auto command-table docutils align-default">
 <thead>
@@ -494,7 +511,9 @@
 </table>
 </section>
 <section id="automations-routes-and-sequences">
-<h3>Automations, Routes and Sequences<a class="headerlink" href="#automations-routes-and-sequences" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4">Automations, Routes and Sequences</a><a class="headerlink" href="#automations-routes-and-sequences" title="Permalink to this heading"></a></h3>
+<section id="script-definition-items">
+<h4><a class="toc-backref" href="#id5">Script Definition Items</a><a class="headerlink" href="#script-definition-items" title="Permalink to this heading"></a></h4>
 <table class="colwidths-auto command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
@@ -517,33 +536,57 @@
 <tr class="row-even"><td><p>ENDTASK or DONE</p></td>
 <td><p>Completes a Animation/Routes/Sequence Event handler, etc.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong class="category">— Object definitions —</strong></p></td>
+</tbody>
+</table>
+</section>
+<section id="object-definitions">
+<h4><a class="toc-backref" href="#id6">Object definitions</a><a class="headerlink" href="#object-definitions" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong class="category">— Object definitions —</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ALIAS( name[, value ])</p></td>
+<tr class="row-odd"><td><p>ALIAS( name[, value ])</p></td>
 <td><p>Assign names to values. Can go anywhere in the script</p></td>
 </tr>
-<tr class="row-odd"><td><p>SIGNAL( red_pin, amber_pin, green_pin )</p></td>
+<tr class="row-even"><td><p>SIGNAL( red_pin, amber_pin, green_pin )</p></td>
 <td><p>Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colors)</p></td>
 </tr>
-<tr class="row-even"><td><p>SIGNALH(redpin, amberpin, greenpin)</p></td>
+<tr class="row-odd"><td><p>SIGNALH(redpin, amberpin, greenpin)</p></td>
 <td><p>Same as signal but for active-HIGH LEDs</p></td>
 </tr>
-<tr class="row-odd"><td><p>TURNOUT( id, addr, sub_addr [, “description”] )</p></td>
+<tr class="row-even"><td><p>TURNOUT( id, addr, sub_addr [, “description”] )</p></td>
 <td><p>Define DCC Accessory turnout</p></td>
 </tr>
-<tr class="row-even"><td><p>PIN_TURNOUT( id, pin [, “description”] )</p></td>
+<tr class="row-odd"><td><p>PIN_TURNOUT( id, pin [, “description”] )</p></td>
 <td><p>Define pin operated turnout</p></td>
 </tr>
-<tr class="row-odd"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
+<tr class="row-even"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
 <td><p>Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts!)</p></td>
 </tr>
-<tr class="row-even"><td><p>VIRTUAL_TURNOUT( id [, “description”] )</p></td>
+<tr class="row-odd"><td><p>VIRTUAL_TURNOUT( id [, “description”] )</p></td>
 <td><p>Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.</p></td>
 </tr>
-<tr class="row-odd"><td><p>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</p></td>
+<tr class="row-even"><td><p>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</p></td>
 <td><p>Define a servo signal</p></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="flow-control-functions">
+<h4><a class="toc-backref" href="#id7">Flow control functions</a><a class="headerlink" href="#flow-control-functions" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
 <tr class="row-even"><td><p><strong class="category">— Flow control functions —</strong></p></td>
 <td></td>
 </tr>
@@ -607,81 +650,117 @@
 <tr class="row-even"><td><p>ENDIF</p></td>
 <td><p>Required to end an IF/IFNOT/etc (Used in all IF.. functions)</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong class="category">— Command Station functions —</strong></p></td>
+</tbody>
+</table>
+</section>
+<section id="command-station-functions">
+<h4><a class="toc-backref" href="#id8">Command Station functions</a><a class="headerlink" href="#command-station-functions" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong class="category">— Command Station functions —</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>POWERON</p></td>
+<tr class="row-odd"><td><p>POWERON</p></td>
 <td><p>Power on track, will UNJOIN programming from main (not implemented yet)</p></td>
 </tr>
-<tr class="row-odd"><td><p>POWEROFF</p></td>
+<tr class="row-even"><td><p>POWEROFF</p></td>
 <td><p>Power off track</p></td>
 </tr>
-<tr class="row-even"><td><p>JOIN</p></td>
+<tr class="row-odd"><td><p>JOIN</p></td>
 <td><p>Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks</p></td>
 </tr>
-<tr class="row-odd"><td><p>UNJOIN</p></td>
+<tr class="row-even"><td><p>UNJOIN</p></td>
 <td><p>Disconnect Prog track from Main DCC signal</p></td>
 </tr>
-<tr class="row-even"><td><p>READ_LOCO</p></td>
+<tr class="row-odd"><td><p>READ_LOCO</p></td>
 <td><p>Read loco ID from Prog track</p></td>
 </tr>
-<tr class="row-odd"><td><p>POM( cv, value )</p></td>
+<tr class="row-even"><td><p>POM( cv, value )</p></td>
 <td><p>Program CV value on main</p></td>
 </tr>
-<tr class="row-even"><td><p>LCD( row, msg )</p></td>
+<tr class="row-odd"><td><p>LCD( row, msg )</p></td>
 <td><p>Write message on a LCD/OLED screen if one is declared and used</p></td>
 </tr>
-<tr class="row-odd"><td><p>BROADCAST ( msg )</p></td>
+<tr class="row-even"><td><p>BROADCAST ( msg )</p></td>
 <td><p>Broadcasts the specified text to all connected throttles/JMRI, over both serial and WiFi</p></td>
 </tr>
-<tr class="row-even"><td><p>PRINT( msg )</p></td>
+<tr class="row-odd"><td><p>PRINT( msg )</p></td>
 <td><p>Print diagnostic message to the IDE Serial Monitor and JMRI DCC++ Traffic Monitor</p></td>
 </tr>
-<tr class="row-odd"><td><p>SERIAL( msg )</p></td>
+<tr class="row-even"><td><p>SERIAL( msg )</p></td>
 <td><p>Writes direct to Serial (Serial0/USB)</p></td>
 </tr>
-<tr class="row-even"><td><p>SERIAL1( msg )</p></td>
+<tr class="row-odd"><td><p>SERIAL1( msg )</p></td>
 <td><p>Writes direct to Serial1</p></td>
 </tr>
-<tr class="row-odd"><td><p>SERIAL2( msg )</p></td>
+<tr class="row-even"><td><p>SERIAL2( msg )</p></td>
 <td><p>Writes direct to Serial2</p></td>
 </tr>
-<tr class="row-even"><td><p>SERIAL3( msg )</p></td>
+<tr class="row-odd"><td><p>SERIAL3( msg )</p></td>
 <td><p>Writes direct to Serial3</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong class="category">— EX-RAIL functions —</strong></p></td>
+</tbody>
+</table>
+</section>
+<section id="ex-rail-functions">
+<h4><a class="toc-backref" href="#id9">EX-RAIL functions</a><a class="headerlink" href="#ex-rail-functions" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong class="category">— EX-RAIL functions —</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>PAUSE</p></td>
+<tr class="row-odd"><td><p>PAUSE</p></td>
 <td><p>E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd</p></td>
 </tr>
-<tr class="row-odd"><td><p>RESUME</p></td>
+<tr class="row-even"><td><p>RESUME</p></td>
 <td><p>Resume all paused tasks, including loco movement</p></td>
 </tr>
-<tr class="row-even"><td><p>RESERVE( block_id )</p></td>
+<tr class="row-odd"><td><p>RESERVE( block_id )</p></td>
 <td><p>Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free</p></td>
 </tr>
-<tr class="row-odd"><td><p>FREE( block_id )</p></td>
+<tr class="row-even"><td><p>FREE( block_id )</p></td>
 <td><p>Free previously reserved block</p></td>
 </tr>
-<tr class="row-even"><td><p>START( sequence_id )</p></td>
+<tr class="row-odd"><td><p>START( sequence_id )</p></td>
 <td><p>Start a new task to execute a route or sequence</p></td>
 </tr>
-<tr class="row-odd"><td><p>SETLOCO( loco )</p></td>
+<tr class="row-even"><td><p>SETLOCO( loco )</p></td>
 <td><p>Set the loco address for this task</p></td>
 </tr>
-<tr class="row-even"><td><p>SENDLOCO( loco, route )</p></td>
+<tr class="row-odd"><td><p>SENDLOCO( loco, route )</p></td>
 <td><p>Start a new task send a given loco along given route/sequence</p></td>
 </tr>
-<tr class="row-odd"><td><p>AUTOSTART</p></td>
+<tr class="row-even"><td><p>AUTOSTART</p></td>
 <td><p>A task is automatically started at this point during startup</p></td>
 </tr>
-<tr class="row-even"><td><p>ROSTER( loco, name, func_map )</p></td>
+<tr class="row-odd"><td><p>ROSTER( loco, name, func_map )</p></td>
 <td><p>Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see <a class="reference internal" href="creating-elements.html#adding-a-roster"><span class="std std-ref">Adding a Roster</span></a> for examples</p></td>
 </tr>
-<tr class="row-odd"><td><p>DRIVE( analog_pin )</p></td>
+<tr class="row-even"><td><p>DRIVE( analog_pin )</p></td>
 <td><p><strong>*Under Construction*</strong> Not complete, DO NOT USE</p></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="loco-dcc-functions">
+<h4><a class="toc-backref" href="#id10">Loco DCC functions</a><a class="headerlink" href="#loco-dcc-functions" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
 <tr class="row-even"><td><p><strong class="category">— Loco DCC functions —</strong></p></td>
 <td></td>
 </tr>
@@ -709,29 +788,59 @@
 <tr class="row-even"><td><p>INVERT_DIRECTION</p></td>
 <td><p>Switches FWD/REV meaning for this loco</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong class="category">— Sensor input &amp; event handlers —</strong></p></td>
+</tbody>
+</table>
+</section>
+<section id="sensor-input">
+<h4><a class="toc-backref" href="#id11">Sensor input</a><a class="headerlink" href="#sensor-input" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong class="category">— Sensor input —</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>AT( sensor_id )</p></td>
+<tr class="row-odd"><td><p>AT( sensor_id )</p></td>
 <td><p>Wait until sensor is active/triggered, use negative values for active HIGH sensors</p></td>
 </tr>
-<tr class="row-odd"><td><p>ATTIMEOUT( sensor_id, timeout_ms )</p></td>
+<tr class="row-even"><td><p>ATTIMEOUT( sensor_id, timeout_ms )</p></td>
 <td><p>Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable “timed out” flag, use negative values for active HIGH sensors</p></td>
 </tr>
-<tr class="row-even"><td><p>ATGTE( analogpin, value)</p></td>
+<tr class="row-odd"><td><p>ATGTE( analogpin, value)</p></td>
 <td><p>waits for analog pin to reach value</p></td>
 </tr>
-<tr class="row-odd"><td><p>ATLT (analogpin,value)</p></td>
+<tr class="row-even"><td><p>ATLT (analogpin,value)</p></td>
 <td><p>waits for analog pin to go below value</p></td>
 </tr>
-<tr class="row-even"><td><p>AFTER( sensor_id )</p></td>
+<tr class="row-odd"><td><p>AFTER( sensor_id )</p></td>
 <td><p>Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors</p></td>
 </tr>
-<tr class="row-odd"><td><p>LATCH( sensor_id )</p></td>
+<tr class="row-even"><td><p>LATCH( sensor_id )</p></td>
 <td><p>Latches a sensor on (Sensors 0-255 only)</p></td>
 </tr>
-<tr class="row-even"><td><p>UNLATCH( sensor_id )</p></td>
+<tr class="row-odd"><td><p>UNLATCH( sensor_id )</p></td>
 <td><p>Remove LATCH on sensor</p></td>
+</tr>
+<tr class="row-even"><td><p>WAITFOR( pin )</p></td>
+<td><p>Wait for servo to complete movement</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sensor-event-handlers">
+<h4><a class="toc-backref" href="#id12">Sensor event handlers</a><a class="headerlink" href="#sensor-event-handlers" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong class="category">— Sensor event handlers —</strong></p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>ONCLOSE( turnout_id )</p></td>
 <td><p>Event handler for turnout close</p></td>
@@ -751,9 +860,18 @@
 <tr class="row-even"><td><p>ONDEACTIVATEL( linear )</p></td>
 <td><p>Event handler for linear DCC accessory packet value 0</p></td>
 </tr>
-<tr class="row-odd"><td><p>WAITFOR( pin )</p></td>
-<td><p>Wait for servo to complete movement</p></td>
+</tbody>
+</table>
+</section>
+<section id="action-output-functions">
+<h4><a class="toc-backref" href="#id13">Action output functions</a><a class="headerlink" href="#action-output-functions" title="Permalink to this heading"></a></h4>
+<table class="colwidths-auto command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EXRAIL Functions</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
+</thead>
+<tbody>
 <tr class="row-even"><td><p><strong class="category">— Action output functions —</strong></p></td>
 <td></td>
 </tr>
@@ -813,6 +931,7 @@
 </tr>
 </tbody>
 </table>
+</section>
 </section>
 </section>
 </section>

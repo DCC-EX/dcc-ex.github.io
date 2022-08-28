@@ -23,6 +23,7 @@ Click 'Next' to explore the possibilities of |EX-R|.
     overview
     creating-elements
     getting-started
+    about
     tips
     EX-RAIL-summary
     EX-RAIL-reference

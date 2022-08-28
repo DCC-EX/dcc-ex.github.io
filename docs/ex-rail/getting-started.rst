@@ -29,8 +29,8 @@ For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detaile
 
    There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first ``DONE`` keyword is executed on startup. If you don't wish anything to happen at startup, simply add the keyword ``DONE`` as the first line.
 
-myAutomation.h - Editing Automations
-====================================
+myAutomation.h - Editing Sequences
+==================================
 
 The script containing all your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
 
@@ -64,10 +64,22 @@ And type your script in.
 
 |
 
-Structure of an Automation
-==========================
+Comments in in myAutomation.h
+-----------------------------
 
-Automations take one of the following forms:
+Note that if ``//`` occurs in the line everything after that (including the slashes) is ignored.  i.e. a 'Comment'
+
+If a line starts with ``/*`` then everything, including all subsequent lines, after that (including the slashes) is ignored until a ``*/`` is found.  i.e. a 'Comment'
+
+----
+
+Structure of an Sequence
+========================
+
+Sequence types
+--------------
+
+Sequences take one of the following forms:
 
 .. sidebar:: Ids (Sequence Numbers)
 
@@ -79,59 +91,139 @@ Automations take one of the following forms:
 
    AUTOMATION( id, “description” )
      ...
-     DONE
+     DONE     or     FOLLFFOLLOWOLLOWow ( id )
 
 .. code-block:: 
 
    ROUTE( id, “description” )
       ...   
-      DONE
+      DONE     or     FOLLOW ( id )
 
 .. code-block:: 
 
    SEQUENCE( id )
       ...
-      DONE  
+      DONE     or     RETURN     or     FOLLOW ( id )
 
 
-They can also take one of the following forms for sensor event based automations:
+They can also take one of the following forms for sequences that trigger on sersor events:
 
 .. code-block:: 
 
    ONCLOSE( turnout_id )
       ...
-      DONE  
+      DONE     or     RETURN     or     FOLLOW ( id )
 
 .. code-block:: 
 
    ONTHROW( turnout_id )
       ...
-      DONE  
+      DONE     or     RETURN     or     FOLLOW ( id )
 
 .. code-block:: 
 
    ONACTIVATE( addr, sub_addr )
       ...
-      DONE  
+      DONE     or     RETURN     or     FOLLOW ( id )
 
 .. code-block:: 
 
    ONACTIVATEL( linear )
       ...
-      DONE  
+      DONE     or     RETURN     or     FOLLOW ( id )
 
 .. code-block:: 
 
    ONDEACTIVATE( addr, sub_addr )
       ...
-      DONE  
+      DONE     or     RETURN     or     FOLLOW ( id )
 
 .. code-block:: 
 
    ONDEACTIVATEL( linear )
       ...
-      DONE  
+      DONE     or     RETURN     or     FOLLOW ( id )
 
+Inside an Sequence
+------------------
+
+For a simple sequence, once triggered the system steps though each and every instruction until it hits ``DONE`` at the end of the sequence.
+
+However there are a number of ways that the processing of a sequence can be changed:
+
+* Conditionals
+* CALL - Branch to a separate sequence expecting a RETURN
+* FOLLOW - Branch or Follow a numbered sequence (think of “GOTO”)
+* RETURN - Return to caller (see CALL)
+
+
+Conditionals
+^^^^^^^^^^^^
+
+If a condtional is encountered, the enclosed instructions are only executed if certail conditions are met.
+
+Conditional have the structure:
+
+.. code-block:: 
+
+  ...
+  IFxxx( id_or_condition, ... )  // where xxx is the type of 'IF' instruction (see below)
+    <instructions to execute if the conditions are met>
+    ...
+  ENDIF
+  ...
+
+or
+
+.. code-block:: 
+
+  ...
+  IFxxx( id, ...)  // where xxx is the type of 'IF' instruction (see below)
+    <instructions to execute if the conditions are met>
+    ...
+  ELSE
+    <instructions to execute if the conditions are NOT met>
+    ...
+  ENDIF
+  ...
+
+Types of conditionals
+^^^^^^^^^^^^^^^^^^^^^
+
+Sensor Related Conditional
+
+* IF( sensor_id )
+* IFNOT( sensor_id )
+* IFGTE( sensor_id, value )
+* IFLT( sensor_id, value )
+
+Turnout/Point Related Conditonals
+
+* IFTHROWN( turnout_id )
+* IFCLOSED( turnout_id )
+
+Signal Related Conditionals
+
+* IFRED( signal_id )
+* IFAMBER( signal_id )
+* IFGREEN( signal_id )
+
+Other Contitionals
+
+* IFRANDOM( percent )
+* IFRESERVE( block )
+* IFTIMEOUT
+
+CALL and RETURN
+---------------
+
+.. todo:: CALL and RETURN
+
+FOLLOW
+------
+
+.. todo:: FOLLFFOLLOWOLLOWow
+   
 Some Simple Examples  
 ====================
 

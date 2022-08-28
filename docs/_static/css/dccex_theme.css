@@ -310,6 +310,7 @@ div#on-this-page ul.simple {
 
 div#on-this-page p {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  margin-top: 0px !important;
   margin-bottom: 6px !important;
 }
 

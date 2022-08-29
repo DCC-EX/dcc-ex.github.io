@@ -149,12 +149,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../ex-webthrottle/index.html">EX-WebThrottle</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-RAIL (Automation)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating-elements.html">Adding Key Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Creating Automations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html">About and History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-elements.html">Adding Key Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Creating Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">EX-RAIL Command Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html">About and History</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -561,13 +562,13 @@
 <td><p>Same as signal but for active-HIGH LEDs</p></td>
 </tr>
 <tr class="row-even"><td><p>TURNOUT( id, addr, sub_addr [, “description”] )</p></td>
-<td><p>Define DCC Accessory turnout</p></td>
+<td><p>Define DCC Accessory turnout/point</p></td>
 </tr>
 <tr class="row-odd"><td><p>PIN_TURNOUT( id, pin [, “description”] )</p></td>
 <td><p>Define pin operated turnout</p></td>
 </tr>
 <tr class="row-even"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
-<td><p>Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts!)</p></td>
+<td><p>Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts/points!)</p></td>
 </tr>
 <tr class="row-odd"><td><p>VIRTUAL_TURNOUT( id [, “description”] )</p></td>
 <td><p>Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.</p></td>
@@ -743,10 +744,7 @@
 <tr class="row-even"><td><p>AUTOSTART</p></td>
 <td><p>A task is automatically started at this point during startup</p></td>
 </tr>
-<tr class="row-odd"><td><p>ROSTER( loco, name, func_map )</p></td>
-<td><p>Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see <a class="reference internal" href="creating-elements.html#adding-a-roster"><span class="std std-ref">Adding a Roster</span></a> for examples</p></td>
-</tr>
-<tr class="row-even"><td><p>DRIVE( analog_pin )</p></td>
+<tr class="row-odd"><td><p>DRIVE( analog_pin )</p></td>
 <td><p><strong>*Under Construction*</strong> Not complete, DO NOT USE</p></td>
 </tr>
 </tbody>
@@ -764,28 +762,31 @@
 <tr class="row-even"><td><p><strong class="category">— Loco DCC functions —</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>ESTOP</p></td>
+<tr class="row-odd"><td><p>ROSTER( loco, name, func_map )</p></td>
+<td><p>Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see <a class="reference internal" href="creating-elements.html#adding-a-roster"><span class="std std-ref">Adding a Roster</span></a> for examples</p></td>
+</tr>
+<tr class="row-even"><td><p>ESTOP</p></td>
 <td><p>Emergency stop loco</p></td>
 </tr>
-<tr class="row-even"><td><p>FWD( speed )</p></td>
+<tr class="row-odd"><td><p>FWD( speed )</p></td>
 <td><p>Drive loco forward at DCC speed 0-127 (1=ESTOP)</p></td>
 </tr>
-<tr class="row-odd"><td><p>REV( speed )</p></td>
+<tr class="row-even"><td><p>REV( speed )</p></td>
 <td><p>Drive logo in reverse at DCC speed 0-127 (1=ESTOP)</p></td>
 </tr>
-<tr class="row-even"><td><p>SPEED( speed )</p></td>
+<tr class="row-odd"><td><p>SPEED( speed )</p></td>
 <td><p>Drive loco in current direction at DCC speed (0-127)</p></td>
 </tr>
-<tr class="row-odd"><td><p>STOP</p></td>
+<tr class="row-even"><td><p>STOP</p></td>
 <td><p>Set loco speed to 0 (same as SPEED(0) )</p></td>
 </tr>
-<tr class="row-even"><td><p>FON( func )</p></td>
+<tr class="row-odd"><td><p>FON( func )</p></td>
 <td><p>Turn on loco function</p></td>
 </tr>
-<tr class="row-odd"><td><p>FOFF( func )</p></td>
+<tr class="row-even"><td><p>FOFF( func )</p></td>
 <td><p>Turn off loco function</p></td>
 </tr>
-<tr class="row-even"><td><p>INVERT_DIRECTION</p></td>
+<tr class="row-odd"><td><p>INVERT_DIRECTION</p></td>
 <td><p>Switches FWD/REV meaning for this loco</p></td>
 </tr>
 </tbody>

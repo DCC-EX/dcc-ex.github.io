@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tips and Techniques &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Examples &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="EX-RAIL Command Summary" href="EX-RAIL-summary.html" />
-    <link rel="prev" title="Examples" href="examples.html" />
+    <link rel="next" title="Tips and Techniques" href="tips.html" />
+    <link rel="prev" title="Creating Sequences" href="getting-started.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -151,8 +151,8 @@
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="creating-elements.html">Adding Key Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Creating Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Tips and Techniques</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html">About and History</a></li>
@@ -392,9 +392,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">EX-RAIL (Automation)</a> &raquo;</li>
-      <li>Tips and Techniques</li>
+      <li>Examples</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-rail/tips.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-rail/examples.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -403,169 +403,305 @@
            <div itemprop="articleBody">
              
   <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-rail.png"><img alt="EX-RAIL" class="image-product-logo-float-right" src="../_images/product-logo-ex-rail.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="tips-and-techniques">
-<h1>Tips and Techniques<a class="headerlink" href="#tips-and-techniques" title="Permalink to this heading"></a></h1>
+<section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#defining-names-for-any-id-numbers-aliases" id="id1">Defining names for any ID numbers (aliases)</a></p></li>
-<li><p><a class="reference internal" href="#including-sub-files" id="id2">Including sub-files</a></p></li>
-<li><p><a class="reference internal" href="#realistic-turnout-sequences" id="id3">Realistic turnout sequences</a></p></li>
-<li><p><a class="reference internal" href="#make-your-own-ex-rail-macro-or-command" id="id4">Make your own EX-RAIL macro or command</a></p></li>
+<li><p><a class="reference internal" href="#example-1-creating-routes-for-a-throttle" id="id2">Example 1: Creating Routes for a Throttle</a></p></li>
+<li><p><a class="reference internal" href="#example-2-automating-signals-with-turnouts" id="id3">Example 2: Automating Signals with Turnouts</a></p></li>
+<li><p><a class="reference internal" href="#example-3-automating-various-non-track-items" id="id4">Example 3: Automating various non-track items</a></p></li>
+<li><p><a class="reference internal" href="#example-4-automating-a-train-simple-loop" id="id5">Example 4: Automating a train (simple loop)</a></p></li>
+<li><p><a class="reference internal" href="#example-5-signals-in-a-train-script" id="id6">Example 5: Signals in a train script</a></p></li>
+<li><p><a class="reference internal" href="#example-6-single-line-shuttle" id="id7">Example 6: Single line shuttle</a></p></li>
+<li><p><a class="reference internal" href="#example-7-running-multiple-inter-connected-trains" id="id8">Example 7: Running multiple inter-connected trains</a></p>
+<ul>
+<li><p><a class="reference internal" href="#starting-the-system" id="id9">Starting the system</a></p></li>
+<li><p><a class="reference internal" href="#drive-away-feature" id="id10">Drive-Away feature</a></p></li>
+</ul>
+</li>
 </ul>
 </div>
 </aside>
-<p>Below are some tips and techniques you can implement to get the most out of EX-RAIL.</p>
-<section id="defining-names-for-any-id-numbers-aliases">
-<h2><a class="toc-backref" href="#id1">Defining names for any ID numbers (aliases)</a><a class="headerlink" href="#defining-names-for-any-id-numbers-aliases" title="Permalink to this heading"></a></h2>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">ALIAS()</span></code> command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.</p>
-<p>Refer to <a class="reference internal" href="EX-RAIL-reference.html#aliases"><span class="std std-ref">Aliases</span></a> for more information.</p>
-<p>Alias names:</p>
-<ul class="simple">
-<li><p><strong>Must not</strong> be an existing EX-RAIL command name or other reserved word.</p></li>
-<li><p><strong>Should be</strong> reasonably short but descriptive.</p></li>
-<li><p><strong>Must start</strong> with letters A-Z/a-z or underscore _ .</p></li>
-<li><p><strong>May then</strong> also contain numbers.</p></li>
-<li><p><strong>Must not</strong> contain spaces or special characters.</p></li>
-</ul>
-<p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">,</span><span class="mi">19</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">,</span><span class="mi">27</span><span class="p">)</span>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>MEDIUM - Update these examples to use valid pins and vpins that are available on the Mega2560 or I/O expanders and servo modules.</p>
+</div>
+<section id="example-1-creating-routes-for-a-throttle">
+<h2><a class="toc-backref" href="#id2">Example 1: Creating Routes for a Throttle</a><a class="headerlink" href="#example-1-creating-routes-for-a-throttle" title="Permalink to this heading"></a></h2>
+<p>A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
+The EX-RAIL instructions to do this might look like</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>
+  <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+  <span class="n">DONE</span>
+</pre></div>
+</div>
+<p>Or you can write it like this</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>  <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>  <span class="n">DONE</span>
+</pre></div>
+</div>
+<p>Or add comments</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is my coal yard to engine shed route</span>
+  <span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>     <span class="c1">// appears in the throttle</span>
+    <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">// throw turnout onto coal yard siding</span>
+    <span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>   <span class="c1">// close turnout for engine shed</span>
+    <span class="n">DONE</span>    <span class="c1">// that&#39;s all folks!</span>
+</pre></div>
+</div>
+<p>Of course, you may want to add signals, and time delays</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">79</span><span class="p">)</span>  <span class="c1">// see the Defining Signals section</span>
+<span class="n">SIGNAL</span><span class="p">(</span><span class="mi">92</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">93</span><span class="p">)</span>   <span class="c1">//      below for details</span>
 
-<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-   <span class="n">THROW</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
-
-<span class="c1">// As above with auto generated IDs</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
-
-<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-   <span class="n">THROW</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>
+   <span class="n">RED</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span>
+   <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+   <span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>  <span class="c1">// this is a 5 second wait</span>
+   <span class="n">GREEN</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span>
+   <span class="n">DONE</span>
 </pre></div>
 </div>
 </section>
-<section id="including-sub-files">
-<h2><a class="toc-backref" href="#id2">Including sub-files</a><a class="headerlink" href="#including-sub-files" title="Permalink to this heading"></a></h2>
-<p>If you find your myAutomation.h file becoming quite lengthy and cumbersome to scroll through and keep track of, you can break your items up into multiple smaller files, and include those in your myAutomation.h file instead.</p>
-<p>There are some rules that apply in this scenario:</p>
-<ul class="simple">
-<li><p>Anything that needs to be done when the CommandStation starts must be defined first.</p></li>
-<li><p>Any custom macros/commands must be defined before they are used (see <a class="reference internal" href="#make-your-own-ex-rail-macro-or-command">make your own ex-rail macro or command</a>) below.</p></li>
-<li><p>The files are included in the order defined, so if an item in one file depends on another file’s item, make sure they included in the correct order.</p></li>
-</ul>
-<p>Some suggestions to get the most out of this:</p>
-<ul class="simple">
-<li><p>Define everything that needs to happen on startup directly in myAutomation.h, before any other includes.</p></li>
-<li><p>Have a specific file for your custom macros or commands (eg. myMacros.h) and include this before other includes.</p></li>
-<li><p>Have a specific file for all your aliases (eg. myAliases.h).</p></li>
-<li><p>Group other items logically according to their purpose, eg. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.</p></li>
-<li><p>Remember the rules and ensure files are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.</p></li>
-</ul>
-<p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-   <span class="n">THROW</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span>
+<section id="example-2-automating-signals-with-turnouts">
+<h2><a class="toc-backref" href="#id3">Example 2: Automating Signals with Turnouts</a><a class="headerlink" href="#example-2-automating-signals-with-turnouts" title="Permalink to this heading"></a></h2>
+<p>By intercepting a turnout change command, it’s easy to automatically adjust signals or
+automatically switch an adjacent facing turnout. Use an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code> or <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code> keyword to detect a particular turnout change:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>  <span class="c1">// When turnout 8 is thrown,</span>
+   <span class="n">THROW</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1">// must also throw the facing turnout</span>
+   <span class="n">RED</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+   <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
    <span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
    <span class="n">DONE</span>
-<span class="cp">#include</span> <span class="cpf">&quot;myFireEngineLights.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;myShuttle.h&quot;</span><span class="cp"></span>
+
+<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>  <span class="c1">// When turnout 8 is closed</span>
+  <span class="n">CLOSE</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+  <span class="n">RED</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
+  <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+  <span class="n">GREEN</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+  <span class="n">DONE</span>
 </pre></div>
 </div>
 </section>
-<section id="realistic-turnout-sequences">
-<h2><a class="toc-backref" href="#id3">Realistic turnout sequences</a><a class="headerlink" href="#realistic-turnout-sequences" title="Permalink to this heading"></a></h2>
-<p>Let’s say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:</p>
-<ol class="arabic simple">
-<li><p>An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p></li>
-<li><p>A virtual turnout. This turnout will have an ID and description, will show up in throttles and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, but has no hardware or electronics associated with it.</p></li>
-</ol>
-<p>Once these are defined, you can then use EX-RAIL’s ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EX-RAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.</p>
-<p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">456</span><span class="p">,</span> <span class="n">HIDDEN</span><span class="p">)</span>    <span class="c1">// Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.</span>
-<span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">9101</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>       <span class="c1">// Define the virtual turnout, which will be visible to throttles/JMRI.</span>
-
-<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span>                                <span class="c1">// When throwing the virtual turnout:</span>
-<span class="n">RED</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span>                          <span class="c1">// Set a red signal.</span>
-<span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>                                  <span class="c1">// Wait for the signalman to move to the turnout lever.</span>
-<span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                                   <span class="c1">// Throw the real turnout.</span>
-<span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span>                                  <span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
-<span class="n">GREEN</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span>                        <span class="c1">// Set a green signal.</span>
-<span class="n">DONE</span>
-
-<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span>                                <span class="c1">// When closing the virtual turnout:</span>
-<span class="n">GREEN</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span>                        <span class="c1">// Set a green signal.</span>
-<span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>                                  <span class="c1">// Wait for the signalman to move to the turnout lever.</span>
-<span class="n">CLOSE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                                   <span class="c1">// Close the real turnout.</span>
-<span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span>                                  <span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
-<span class="n">RED</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span>                          <span class="c1">// Set a red signal.</span>
-<span class="n">DONE</span>
+<section id="example-3-automating-various-non-track-items">
+<h2><a class="toc-backref" href="#id4">Example 3: Automating various non-track items</a><a class="headerlink" href="#example-3-automating-various-non-track-items" title="Permalink to this heading"></a></h2>
+<p>This normally takes place in a timed loop, for example alternate flashing of a fire engine’s lights. To do this use a SEQUENCE.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>
+  <span class="n">SET</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>   <span class="c1">// sets output 101 HIGH</span>
+  <span class="n">RESET</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span> <span class="c1">// sets output 102 LOW</span>
+  <span class="n">DELAY</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>   <span class="c1">// wait 0.5 seconds</span>
+  <span class="n">SET</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>   <span class="c1">// swap the lights</span>
+  <span class="n">RESET</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+  <span class="n">DELAY</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>   <span class="c1">// wait 0.5 seconds</span>
+  <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>  <span class="c1">// follow sequence 66 continuously</span>
 </pre></div>
 </div>
-<p>A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.</p>
+<p>Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using <code class="docutils literal notranslate"><span class="pre">START(66)</span></code>.</p>
 </section>
-<section id="make-your-own-ex-rail-macro-or-command">
-<h2><a class="toc-backref" href="#id4">Make your own EX-RAIL macro or command</a><a class="headerlink" href="#make-your-own-ex-rail-macro-or-command" title="Permalink to this heading"></a></h2>
-<p>One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.</p>
-<p>To do this, you’re actually making use of some C++ code in addition to the clever programming in DCC++ EX.</p>
-<p>(Yes, we just called ourselves cunning and clever. Our talent is superceded only by our modesty ;) )</p>
-<p>The way to implement this is as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MYMACRO(parameter1, parameter2, parameter3, ...) \</span>
-<span class="cp">COMMAND(parameter1) \</span>
-<span class="cp">COMMAND(parameter2) \</span>
-<span class="cp">COMMAND(parameter3) \</span>
-<span class="cp">DONE</span>
+<section id="example-4-automating-a-train-simple-loop">
+<h2><a class="toc-backref" href="#id5">Example 4: Automating a train (simple loop)</a><a class="headerlink" href="#example-4-automating-a-train-simple-loop" title="Permalink to this heading"></a></h2>
+<p>Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.</p>
+<a class="reference internal image-reference" href="../_images/Example_4_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_4_diagram.png" style="width: 915.0px; height: 191.0px;" /></a>
+<p>Using an <code class="docutils literal notranslate"><span class="pre">AUTOMATION</span></code> keyword means that this automation will appear in the throttle so you can drive the train manually, and then hand it over to the automation at the press of a button.</p>
+<p>* Technically, an automation can independently run multiple locos along the same path through the layout, but this is discussed later…</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span>
+   <span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>   <span class="c1">// move forward at DCC speed 50 (out of 127)</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>     <span class="c1">// when you get to sensor on pin (40)</span>
+   <span class="n">STOP</span>      <span class="c1">// stop the train</span>
+   <span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span> <span class="c1">// delay somewhere between 5 and 20 seconds</span>
+   <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>   <span class="c1">// start a bit slower</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>  <span class="c1">// until sensor on pin 40 has been passed</span>
+   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1">// and continue to follow the automation</span>
 </pre></div>
 </div>
-<p>Firstly, note the “#define”. This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.</p>
-<p>The entire macro needs to be on a single line, hence the addition of the backslash “\” at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line while allowing things to be more readable for us humans.</p>
-<p>Here’s an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Define a pulse time of 25ms to activate the coil
-#define PULSE 2
-
-// Define a macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
-// This macro:
-// Defines a pin turnout
-// Defines an alias
-// Sets the direction pin and sends the pulse for the CLOSE command
-// Resets the direction pin and sends the pulse for the THROW command
-#define ROKUHANTURNOUT(t, p1, p2, desc, ali) \
-PIN_TURNOUT(t, 0, desc) \
-ALIAS(ali, t) \
-DONE \
-ONCLOSE(t) \
-SET(p1) \
-SET(p2)DELAY(PULSE)RESET(p2) \
-DONE \
-ONTHROW(t) \
-RESET(p1) \
-SET(p2)DELAY(PULSE)RESET(p2) \
-DONE
-
-ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &quot;Yard entrance&quot; turnout with turnout ID 5 using MCP23017 pins 168/176, and create alias YD_E
+<p>The instructions are followed in sequence by the loco given to it; the <code class="docutils literal notranslate"><span class="pre">AT</span></code> command just leaves the loco running until that sensor is detected.</p>
+<p>Notice that this automation does not specify the loco address. If you drive a loco with the throttle and then hand it over to this automation, then the automation will run with the loco you last drove.</p>
+</section>
+<section id="example-5-signals-in-a-train-script">
+<h2><a class="toc-backref" href="#id6">Example 5: Signals in a train script</a><a class="headerlink" href="#example-5-signals-in-a-train-script" title="Permalink to this heading"></a></h2>
+<p>Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">79</span><span class="p">)</span>  <span class="c1">// see the Defining Signals section above for details</span>
+<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span>
+   <span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>   <span class="c1">// move forward at DCC speed 50 (out of 127)</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>    <span class="c1">// when you get to sensor on pin (40)</span>
+   <span class="n">STOP</span>      <span class="c1">// Stop the train</span>
+   <span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span> <span class="c1">// delay somewhere between 5 and 20 seconds</span>
+   <span class="n">GREEN</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span>    <span class="c1">// set signal #77 to Green</span>
+   <span class="n">DELAY</span><span class="p">(</span><span class="mi">2500</span><span class="p">)</span>  <span class="c1">// This is not Formula1!</span>
+   <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>    <span class="c1">// start a bit slower</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>  <span class="c1">// until sensor on pin 40 has been passed</span>
+   <span class="n">RED</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span>    <span class="c1">// set signal #77 to Red</span>
+   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1">// and continue to follow the automation</span>
 </pre></div>
 </div>
-<p>Typically, you would define a pin turnout with the PIN_TURNOUT command, however in this example we need a CLOSE or THROW sent to these turnouts to do more than just set a pin high or low, hence the need for the macro.</p>
-<p>Here’s the line by line explanation:</p>
+</section>
+<section id="example-6-single-line-shuttle">
+<h2><a class="toc-backref" href="#id7">Example 6: Single line shuttle</a><a class="headerlink" href="#example-6-single-line-shuttle" title="Permalink to this heading"></a></h2>
+<p>Consider a single line, shuttling between stations A and B.</p>
+<a class="reference internal image-reference" href="../_images/Example_6_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_6_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
+<p>Starting from Station A, the steps may be something like:</p>
 <ul class="simple">
-<li><p>A pulse time of 25ms reliably switches the turnouts.</p></li>
-<li><p>Define the ROKUHANTURNOUT macro, providing parameters for the turnout ID, direction pin, enable or pulse pin, a description, and an alias name.</p></li>
-<li><p>Create a PIN_TURNOUT that is advertised to WiThrottles using the provided turnout ID and description, with the pin set to 0 as this is not used.</p></li>
-<li><p>Create the provided alias for the turnout ID.</p></li>
-<li><p>The first DONE is required because we need to separate the turnout and alias definitions from the ONCLOSE and ONTHROW actions.</p></li>
-<li><p>Define what happens when a CLOSE command is sent to that turnout ID.</p></li>
-<li><p>Setting the direction pin high will result in closing the turnout.</p></li>
-<li><p>Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually close the turnout.</p></li>
-<li><p>The DONE is required to tell EX-RAIL not to proceed any further.</p></li>
-<li><p>Define what happens when a THROW command is sent to that turnout ID.</p></li>
-<li><p>Resetting the direction pin will result in throwing the turnout.</p></li>
-<li><p>Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually throw the turnout.</p></li>
-<li><p>The DONE is required to tell EX-RAIL not to proceed any further.</p></li>
-<li><p>Finally, use the macro to create the “Yard entrance” turnout with turnout ID 105, pins 168/176 on an MCP23017 I/O expander, and an alias of YD_E that can be referred to in other sequences.</p></li>
+<li><p>Wait between 10 and 20 seconds for the guard to stop chatting up the girl in the ticket office.</p></li>
+<li><p>Move forward at speed 30</p></li>
+<li><p>When I get to B, stop.</p></li>
+<li><p>Wait 15 seconds for the tea trolley to be restocked</p></li>
+<li><p>Move backwards at speed 20</p></li>
+<li><p>When I get to A, stop.</p></li>
 </ul>
-<p>This technique can be used in many different ways limited only by your imagination to have EX-RAIL perform many different actions and automations.</p>
+<p>Notice that the sensors at A and B are near the ends of the track (allowing for braking distance, but don’t care about train length or whether the engine is at the front or back.) We have wired sensor A on pin 41, and sensor B on pin 42 for this example.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+  <span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span> <span class="c1">// random wait between 10 and 20 seconds</span>
+  <span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+  <span class="n">AT</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="c1">// sensor 42 is at the far end of platform B</span>
+  <span class="n">STOP</span>
+  <span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span>
+  <span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1">// Reverse at DCC speed 20 (out of 127)</span>
+  <span class="n">AT</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span> <span class="c1">// far end of platform A</span>
+  <span class="n">STOP</span>
+  <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span> <span class="c1">// follows sequence 13 again… forever</span>
+</pre></div>
+</div>
+<p>Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the throttle.</p>
+<p>When the Command Station is powered up or reset, EX-RAIL starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span> <span class="c1">// Start sequence 13 using loco 3</span>
+<span class="n">DONE</span>           <span class="c1">// This marks the end of the startup process</span>
+</pre></div>
+</div>
+<p>The sequence can also be started from a serial monitor with the command <code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">START</span> <span class="pre">3</span> <span class="pre">13&gt;</span></code>.</p>
+<p>If you have multiple separate sections of track which do not require inter-train cooperation, you may add many more separate sequences and they will operate independently.</p>
+<p>Although the above is trivial, the routes are designed to be independent of the loco address so that we can have several locos following the same route at the same time (not in the end to end example above!), perhaps passing each other or crossing over with trains on other routes.</p>
+<p>The example above assumes that loco 3 is sitting on the track and pointing in the right direction. A bit later you will see how to script an automatic process to take whatever loco is placed on the programming track, and send it on its way to join in the fun!</p>
+</section>
+<section id="example-7-running-multiple-inter-connected-trains">
+<h2><a class="toc-backref" href="#id8">Example 7: Running multiple inter-connected trains</a><a class="headerlink" href="#example-7-running-multiple-inter-connected-trains" title="Permalink to this heading"></a></h2>
+<p>So what about routes that cross or share single lines (passing places etc)?
+Let’s add a passing place between A and B. S= Sensors, T=Turnout
+number. So now our route looks like this:</p>
+<a class="reference internal image-reference" href="../_images/Example_7a_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_7a_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
+<p>Assuming that you have defined your turnouts with <a class="reference internal" href="EX-RAIL-summary.html#automations-routes-and-sequences"><span class="std std-ref">TURNOUT commands.</span></a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+   <span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span> <span class="c1">// random wait between 10 and 20 seconds</span>
+   <span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+   <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="c1">// sensor 42 is at the far end of platform B</span>
+   <span class="n">STOP</span>
+   <span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span>
+   <span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+   <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+   <span class="n">STOP</span>
+   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="c1">// follows sequence 11 again… forever</span>
+</pre></div>
+</div>
+<p>All well and good for one loco, but with 2 (or even 3) on this track we need some rules. The principle behind this is</p>
+<ul class="simple">
+<li><p>To enter a section of track that may be shared, you must RESERVE it. If you cant reserve it because another loco already has, then you will be stopped and the script will wait until such time as you can reserve it. When you leave a shared section you must free it.</p></li>
+<li><p>Each “section” is merely a logical concept, there are no electronic section breaks in the track. You may have up to 255 sections (more can be supported by a code mod if required).</p></li>
+</ul>
+<p>So we will need some extra sensors (hardware required) and some logical blocks (all in the mind!):</p>
+<a class="reference internal image-reference" href="../_images/Example_7b_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_7b_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
+<p>We can use this diagram to plan routes. When we do so, it will be easier to imagine 4 separate mini routes, each passing from one block to the next. Then we can chain them together to form a full route, but also start from any block.</p>
+<p>So… lets take a look at the routes now. For convenience I have used route numbers that help remind us what the route is for.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1">// From block 1 to block 2</span>
+   <span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span> <span class="c1">// random wait between 10 and 20 seconds</span>
+   <span class="n">RESERVE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// we wish to enter block 2… so wait for it</span>
+   <span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// Now we “own” the block, set the turnout</span>
+   <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="c1">// and proceed forward</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">71</span><span class="p">)</span> <span class="c1">// Once we have reached AND passed sensor 71</span>
+   <span class="n">FREE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// we no longer occupy block 1</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">72</span><span class="p">)</span> <span class="c1">// When we get to sensor 72</span>
+   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span> <span class="c1">// follow route from block 2 to block 3</span>
+
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span> <span class="c1">// Travel from block 2 to block 3</span>
+   <span class="n">RESERVE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">// will STOP if block 3 occupied</span>
+   <span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// Now we have the block, we can set turnouts</span>
+   <span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1">// we may or may not have stopped at the RESERVE</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="c1">// sensor 2 is at the far end of platform B</span>
+   <span class="n">STOP</span>
+   <span class="n">FREE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+   <span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span>
+   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span>
+
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="c1">// you get the idea</span>
+   <span class="n">RESERVE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+   <span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+   <span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">73</span><span class="p">)</span>
+   <span class="n">FREE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">74</span><span class="p">)</span>
+   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+   <span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+   <span class="n">STOP</span>
+   <span class="n">FREE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1">// follows Route 12 again… forever</span>
+</pre></div>
+</div>
+<p>Does that look long? Worried about memory on your Arduino…. Well the script above takes about 100 BYTES of program memory and no dynamic SRAM!</p>
+<p>If you follow this example carefully, you’ll see it allows for up to 3 trains at a time, because one of them will always have somewhere to go. Notice that there is a common theme to this…</p>
+<ul class="simple">
+<li><p>RESERVE where you want to go. If you are moving and the reserve fails, your loco will STOP and the reserve waits for the block to become available. *These waits and the manual WAITS do not block the Arduino process… DCC and the other locos continue to follow their routes!</p></li>
+<li><p>Set the points to enter the reserved area. Do this ASAP, as you may be still moving towards them.</p></li>
+<li><p>Set any signals.</p></li>
+<li><p>Move into the reserved area.</p></li>
+<li><p>Reset your signals.</p></li>
+<li><p>Free off your previous reserve as soon as you have fully left the block.</p></li>
+</ul>
+<p>In addition, it is possible to take decisions based on blocks reserved by other trains. The IFRESERVE(block) can be used to reserve a block if it’s not already reserved by some other train, or skip to the matching ENDIF. For example, this allows a train to choose which platform to stop at based on prior occupancy. It is features like this that allow for more interesting and unpredictable automations.</p>
+<section id="starting-the-system">
+<h3><a class="toc-backref" href="#id9">Starting the system</a><a class="headerlink" href="#starting-the-system" title="Permalink to this heading"></a></h3>
+<p>Starting the system is tricky, because we need to place the trains in a suitable position and set them going. We need to have a starting position for each loco, and reserve the block(s) it needs to keep other trains from crashing into it.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This EX-RAIL version isn’t ready to handle locos randomly placed on the layout after a power down!</p>
+</div>
+<p>For a known set of locos, the easiest way is to define the startup process at the beginning of the script. E.g. for two engines, one at each station.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ensure all blocks are reserved as if the locos had arrived there</span>
+<span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// start with a loco in block 1</span>
+<span class="n">RESERVE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">// and another in block 3</span>
+<span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span> <span class="c1">// send Loco DCC addr 3 on to route 12</span>
+<span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="mi">34</span><span class="p">)</span> <span class="c1">// send loco DCC addr 17 to route 34</span>
+<span class="n">DONE</span> <span class="c1">// don&#39;t drop through to the first sequence definition that follows in the script file</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Some interesting points about the startup:</p>
+<ul class="simple">
+<li><p>You don’t need to set turnouts, because each route is setting them as required.</p></li>
+<li><p>Signals default to RED on power up, and get turned GREEN when a route clears them.</p></li>
+</ul>
+</div>
+</section>
+<section id="drive-away-feature">
+<h3><a class="toc-backref" href="#id10">Drive-Away feature</a><a class="headerlink" href="#drive-away-feature" title="Permalink to this heading"></a></h3>
+<p>EX-RAIL can switch a track section between programming and mainline.</p>
+<p>Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+  <span class="n">SIGNAL</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">29</span><span class="p">)</span>
+  <span class="n">RED</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>   <span class="c1">// indicate launch not ready</span>
+  <span class="n">AFTER</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// user presses and releases launch button</span>
+  <span class="n">UNJOIN</span>    <span class="c1">// separate the programming track from main</span>
+  <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+  <span class="n">AMBER</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1">// Show amber, user may place loco</span>
+  <span class="n">AFTER</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// user places loco on track and presses “launch” again</span>
+  <span class="n">READ_LOCO</span> <span class="c1">// identify the loco</span>
+  <span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1">// show green light to user</span>
+  <span class="n">JOIN</span>      <span class="c1">// connect prog track to main</span>
+  <span class="n">START</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1">// send loco off along route 12</span>
+  <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span> <span class="c1">// keep doing this for another launch</span>
+</pre></div>
+</div>
+<p>The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
+</section>
 </section>
 </section>
 
@@ -573,8 +709,8 @@ ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &q
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="EX-RAIL-summary.html" class="btn btn-neutral float-right" title="EX-RAIL Command Summary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting-started.html" class="btn btn-neutral float-left" title="Creating Sequences" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tips.html" class="btn btn-neutral float-right" title="Tips and Techniques" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

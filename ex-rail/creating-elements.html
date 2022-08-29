@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adding Key Elements &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Adding Key Objects &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
@@ -26,7 +26,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Creating Automations" href="getting-started.html" />
+    <link rel="next" title="Creating Sequences" href="getting-started.html" />
     <link rel="prev" title="Overview" href="overview.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -149,12 +149,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../ex-webthrottle/index.html">EX-WebThrottle</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-RAIL (Automation)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Adding Key Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Creating Automations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html">About and History</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Adding Key Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Creating Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html">About and History</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -391,7 +392,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">EX-RAIL (Automation)</a> &raquo;</li>
-      <li>Adding Key Elements</li>
+      <li>Adding Key Objects</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-rail/creating-elements.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -402,8 +403,8 @@
            <div itemprop="articleBody">
              
   <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-rail.png"><img alt="EX-RAIL" class="image-product-logo-float-right" src="../_images/product-logo-ex-rail.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="adding-key-elements">
-<h1>Adding Key Elements<a class="headerlink" href="#adding-key-elements" title="Permalink to this heading"></a></h1>
+<section id="adding-key-objects">
+<h1>Adding Key Objects<a class="headerlink" href="#adding-key-objects" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <div class="contents local topic" id="on-this-page">
@@ -441,18 +442,18 @@
 </ul>
 </div>
 </aside>
-<p>First we need the elements that we will use for our automations.</p>
-<p>There are four key elements that are important for creating automations:</p>
+<p>First we need the ‘objects’ that we will use for our automation sequences.</p>
+<p>There are four key objects that are important for creating sequences:</p>
 <ul class="simple">
 <li><p>Roster Entries - Your locos</p></li>
 <li><p>Turnouts/Points</p></li>
 <li><p>Sensors</p></li>
 <li><p>Signals</p></li>
 </ul>
-<p>The process for creating these elements consist of:</p>
+<p>The process for creating these objects consist of:</p>
 <ul class="simple">
 <li><p>Adding the hardware (not applicable to the roster)</p></li>
-<li><p>Configuring <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> by modifying ‘myAutomation.h’ so that it knows about the element</p></li>
+<li><p>Configuring <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> by modifying ‘myAutomation.h’ so that it knows about the object</p></li>
 <li><p>Re-uploading the software to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
 </ul>
 <hr class="docutils" />
@@ -695,7 +696,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="getting-started.html" class="btn btn-neutral float-right" title="Creating Automations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting-started.html" class="btn btn-neutral float-right" title="Creating Sequences" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

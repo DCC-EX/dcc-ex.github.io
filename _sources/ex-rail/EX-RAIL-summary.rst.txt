@@ -126,11 +126,11 @@ Object definitions
     * -  SIGNALH(redpin, amberpin, greenpin)
       -  Same as signal but for active-HIGH LEDs
     * -  TURNOUT( id, addr, sub_addr [, "description"] )
-      -  Define DCC Accessory turnout
+      -  Define DCC Accessory turnout/point
     * -  PIN_TURNOUT( id, pin [, "description"] )
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
-      -  Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts!)
+      -  Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts/points!)
     * -  VIRTUAL_TURNOUT( id [, "description"] )
       -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
@@ -256,8 +256,6 @@ EX-RAIL functions
       -  Start a new task send a given loco along given route/sequence
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
-    * -  ROSTER( loco, name, func_map )
-      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`ex-rail/creating-elements:adding a roster` for examples
     * -  DRIVE( analog_pin )
       -  ***Under Construction*** Not complete, DO NOT USE
 
@@ -273,6 +271,8 @@ Loco DCC functions
       -  Description
     * -  :category:`--- Loco DCC functions ---`
       -
+    * -  ROSTER( loco, name, func_map )
+      -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`ex-rail/creating-elements:adding a roster` for examples
     * -  ESTOP
       -  Emergency stop loco
     * -  FWD( speed )

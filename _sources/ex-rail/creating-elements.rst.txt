@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-*********************
-Adding Key Elements
-*********************
+******************
+Adding Key Objects
+******************
 
 |tinkerer| |engineer|
 
@@ -14,19 +14,19 @@ Adding Key Elements
     :depth: 2
     :local:
 
-First we need the elements that we will use for our automations.
+First we need the 'objects' that we will use for our automation sequences.
 
-There are four key elements that are important for creating automations:
+There are four key objects that are important for creating sequences:
 
 * Roster Entries - Your locos
 * Turnouts/Points
 * Sensors
 * Signals
 
-The process for creating these elements consist of:
+The process for creating these objects consist of:
 
 * Adding the hardware (not applicable to the roster)
-* Configuring |EX-CS| by modifying 'myAutomation.h' so that it knows about the element
+* Configuring |EX-CS| by modifying 'myAutomation.h' so that it knows about the object
 * Re-uploading the software to the |EX-CS|
 
 ----

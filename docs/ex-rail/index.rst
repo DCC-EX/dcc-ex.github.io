@@ -24,7 +24,7 @@ Click 'Next' to explore the possibilities of |EX-R|.
     creating-elements
     getting-started
     examples
-    about
     tips
     EX-RAIL-summary
     EX-RAIL-reference
+    about

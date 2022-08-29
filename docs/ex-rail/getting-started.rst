@@ -21,17 +21,19 @@ The script containing all your sequences is added to your Command Station by cre
 
 Connecting your Arduino and pressing the :guilabel:`Upload` button in the usual way will save the file and upload your script into the Command Station.
 
-If you are using the Arduino IDE (rather than the |EX-I|) you can create the myAutomation.h file in the Arduino IDE. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
+You can create and edit the myAutomation.h using a text editor (like Notepad), but if you are using the Arduino IDE (rather than the |EX-I|) you can create the myAutomation.h file in the Arduino IDE. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
 
 .. image:: /_static/images/ex-rail/setup1.jpg
    :alt:  Setup pulldown button
    :align: center
    :scale: 100%
+   :target: #myautomation-h-editing-your-sequences
 
 .. image:: /_static/images/ex-rail/setup2.jpg
    :alt:  Setup pulldown menu
    :align: center
    :scale: 100%
+   :target: #myautomation-h-editing-your-sequences
 
 Enter the file name "myAutomation.h" (This is case sensitive)
 
@@ -39,6 +41,7 @@ Enter the file name "myAutomation.h" (This is case sensitive)
    :alt:  Setup myAutomation.h
    :align: center
    :scale: 100%
+   :target: #myautomation-h-editing-your-sequences
 
 And type your script in.
 
@@ -46,15 +49,17 @@ And type your script in.
    :alt:  Setup Example file
    :align: center
    :scale: 100%
+   :target: #
 
 |
 
 Comments in in myAutomation.h
 -----------------------------
 
-Note that if ``//`` occurs in the line, everything after that (including the slashes) is ignored.  i.e. a 'Comment'
+You can add comments (text that does nothing) to myAutomation.h in two ways:
 
-If a line starts with ``/*`` then everything, including all subsequent lines an including the '/*') is ignored until a ``*/`` is found.  i.e. a 'Comment'
+* If ``//`` occurs in the line, everything after that (including the slashes) is ignored.  i.e. a 'Comment'
+* If a line starts with ``/*`` then everything, including all subsequent lines an including the '/*') is ignored until a ``*/`` is found.  i.e. a 'Comment'
 
 ----
 
@@ -74,20 +79,50 @@ Multiple concurrent sequences are supported.
 
 For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.
 
+----
+
+Before You Start - Adding Objects
+==================================
+
+Generally you will need to have created some Key Objects before you start writing sequences.
+
+Refer to the :doc:`creating-elements` for creating and adding those Objects:
+
+* Roster Entries
+* Turnouts/Points
+* Sensors
+* Signals
+
+Note that these Objects don't have to be added before the sequence in which you use it.
 
 ----
 
 Structure of a Sequence
 =======================
 
-Sequence types
+In general, sequences follow the basic structure:
+
+.. code-block:: 
+
+   <sequence-type>( parameter1, paramerer2, ...)
+     <command 1>
+     <command 2>
+     ...
+     <command n>
+     DONE     or     RETURN     or     FOLLOW ( id )
+
+
+Sequence Types
 --------------
 
-Sequences are either:
+Sequences are fall in the following broad groups:
 
 * Manually triggered
 * Triggered by another sequence
-* Triggered as a result of an event that has occured on one of the turnouts/points, sensors, signals.
+* Triggered as a result of an event that has occurred on one of the turnouts/points, sensors, signals.
+
+Manually Triggered Sequences
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Manually triggered sequences take one of the following forms:
 
@@ -109,6 +144,11 @@ Manually triggered sequences take one of the following forms:
       ...   
       DONE     or     FOLLOW ( id )
 
+Note that these can also be invoked by other sequences.
+
+Invoked Sequences
+^^^^^^^^^^^^^^^^^
+
 Sequences that can only be triggered by other sequences have the following form:
 
 .. code-block:: 
@@ -117,8 +157,10 @@ Sequences that can only be triggered by other sequences have the following form:
       ...
       DONE     or     RETURN     or     FOLLOW ( id )
 
+Event Triggered Sequences
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sequences that trigger on 'events' have the following forms:
+Sequences that are triggered when 'events' occur, have the following forms:
 
 .. code-block:: 
 
@@ -156,26 +198,52 @@ Sequences that trigger on 'events' have the following forms:
       ...
       DONE     or     RETURN     or     FOLLOW ( id )
 
-Inside a Sequence
------------------
+See :doc:`EX-RAIL-summary` page for additional information on these sequence types. 
 
-A sequence is made up of commands, one per line.  Those commands relate to the elements of the system you have created and defined, like turnouts/points, sensors, signals, blocks and locos.  
+Contents of a Sequence
+----------------------
 
-The commands fall into a few basic categories:
+A sequence is made up of commands, one per line.  The commands fall into a few basic categories:
 
 * Commands that 'do' something
 * Commands that change the flow sequence that the commands are executed
 * Commands that change the timing of the execution  of the commands
 * Informational commands
+* Command Station commands
 
-Commands - Getting EX-RAIL to do 'Things'
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Action Commands - Getting EX-RAIL to do 'Things'
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: commands
+This type of command relates to the Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.  
 
+There are a substantial number of commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
 
-Sequence Flow Commands
-^^^^^^^^^^^^^^^^^^^^^^
+Turnout/Point commands include:
+
+* THROW( id ) - Throw a defined turnout
+* CLOSE( id) - Close a defined turnout
+
+Signal commands include:
+
+* RED( signal_id ) - Set defined signal to Red (See SIGNAL)
+* AMBER( signal_id ) - Set a defined signal to Amber. (See SIGNAL)
+* GREEN( signal_id ) - Set a defined signal to GREEN (see SIGNAL)
+
+Loco related include:
+
+* FWD( speed ) - Drive loco forward at DCC speed 0-127 (1=ESTOP)
+* REV( speed ) - Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
+* SPEED( speed ) - Drive loco in current direction at DCC speed (0-127)
+* STOP - Set loco speed to 0 (same as SPEED(0) )
+
+Turnout Commands include:
+
+* MOVETT( vpin, steps, activity ) - Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
+
+See :doc:`EX-RAIL-summary` page for additional commands. 
+
+Sequence Flow  / Flow Control Commands
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For a simple sequence, once triggered the system steps though each and every instruction as quickly as possible until it hits ``DONE`` at the end of the sequence.
 
@@ -183,17 +251,17 @@ However there are a number of ways that the processing of a sequence can be chan
 
 * Conditionals
 * CALL - Branch to a separate sequence expecting a RETURN
-* FOLLOW - Branch or Follow a numbered sequence (think of “GOTO”)
 * RETURN - Return to caller (see CALL)
+* FOLLOW - Branch or Follow a numbered sequence (think of “GOTO”)
 
-The timing of the execution of the commands can be altered as well with 'Delays',
+The timing of the execution of the commands can be altered as well with 'Delay' type commands.
 
 Conditionals
 ~~~~~~~~~~~~
 
-If a condtional is encountered, the following (enclosed) commands are only executed if the specified conditions are met.
+If a conditional is encountered, the following (enclosed) commands are only executed if the specified conditions are met.
 
-Conditional have the structure:
+Conditionals have the structure:
 
 .. code-block:: 
 
@@ -218,28 +286,28 @@ or
   ENDIF
   ...
 
-Types of conditionals
+Types of Conditionals
 _____________________
 
-Sensor Related Conditional
+Sensor Related Conditional:
 
 * IF( sensor_id )
 * IFNOT( sensor_id )
 * IFGTE( sensor_id, value )
 * IFLT( sensor_id, value )
 
-Turnout/Point Related Conditonals
+Turnout/Point Related Conditionals:
 
 * IFTHROWN( turnout_id )
 * IFCLOSED( turnout_id )
 
-Signal Related Conditionals
+Signal Related Conditionals:
 
 * IFRED( signal_id )
 * IFAMBER( signal_id )
 * IFGREEN( signal_id )
 
-Other Contitionals
+Other Conditionals:
 
 * IFRANDOM( percent )
 * IFRESERVE( block )
@@ -257,18 +325,32 @@ ______
 
 .. todo:: FOLLOW
 
-Delays
-~~~~~~
+Delay Commands and Wait Commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. todo:: Delays
+The timing of the execution of the commands can be altered as well with 'Delay' type commands.
+
+There are a number of delay type commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
+
+* DELAY( delay ) - Delay a number of milliseconds
+* DELAYMINS( delay ) - Delay a number of minutes
+* DELAYRANDOM( min_delay, max_delay ) - Delay a random time between min and max milliseconds
+* AFTER( sensor_id ) - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
+* WAITFOR( pin ) - Wait for servo to complete movement
+
 
 Informational Commands
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: Informational Commands
 
-Referencing Key Elements in Sequences
-=====================================
+Command Station Commands
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: Command Station Commands
+
+Referencing Key Objects in Sequences
+====================================
 
 Referencing Turnouts/Points
 ---------------------------

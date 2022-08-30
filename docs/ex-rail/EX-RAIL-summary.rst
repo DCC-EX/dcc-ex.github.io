@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-*************************
-EX-RAIL Command Summary
-*************************
+********************
+EX-RAIL Command List
+********************
 
 |tinkerer| |engineer|
 

@@ -3,7 +3,7 @@
 |EX-R-LOGO|
 
 **************************
-EX-RAIL Command Reference
+EX-RAIL Detailed Reference
 **************************
 
 |tinkerer| |engineer|

@@ -50,10 +50,10 @@ Add a line that looks like:
 
 Where:
 
-* 999 - is the DCC address of your loco
-* My Loco Name - is anything you want to see as the name of this loco in the throttle apps
-* F0 F1 F3 ... F27. - are the names that you want to see for the functions specific to this loco
-* \*F2 - note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (\*).  The most common example of this is the Horn/Whistle which is commonly on F2.
+* **999** - is the DCC address of your loco
+* **My Loco Name** - is anything you want to see as the name of this loco in the throttle apps
+* **F0 F1 F3 ... F27**. - are the names that you want to see for the functions specific to this loco
+* **\*F2** - note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (\*).  The most common example of this is the Horn/Whistle which is commonly on F2.
 
 Some more realistic examples might look like:
 
@@ -89,7 +89,7 @@ If a function is not available just leave the spot empty. (Don't even have the s
 
 For example: 
 
-.. code-block:: 
+.. code-block:: cpp
 
    ROSTER(2825,"CN ES44AC","Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup & Shutdown")
 
@@ -97,7 +97,7 @@ Note the two missing text labels for positions F5 and F6. Engine Driver will ski
 
 Example of loco without sound:
 
-.. code-block:: 
+.. code-block:: cpp
 
    ROSTER(2405,"AT&SF 2-8-0 2405","Headlight")
 

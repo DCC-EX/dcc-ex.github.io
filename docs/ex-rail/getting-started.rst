@@ -70,14 +70,7 @@ You can add comments (text that does nothing) to myAutomation.h in two ways:
 The Automation Process
 ======================
 
-.. note:: 
-   :class: note-float-right
-
-   There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first ``DONE`` keyword is executed on startup. If you don't wish anything to happen at startup, simply add the keyword ``DONE`` as the first line.
-
 Once started, each 'sequence' will step through a list of simple keyword commands until they reach a ``DONE`` keyword.
-
-There can be a startup sequence (keywords at the beginning of the script), which if present is automatically executed, as are any sequences that contain an ``AUTOSTART``.
 
 Multiple concurrent sequences are supported.
 
@@ -211,11 +204,16 @@ Sequences that are triggered when 'events' occur, include:
 See :doc:`EX-RAIL-summary` page for additional Event Triggered Sequence types, and additional information on these types. 
 
 Automatically Running a Sequence at Power Up
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
+
+.. note:: 
+   :class: note-float-right
+
+   There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first ``DONE`` keyword is executed on startup. If you don't wish anything to happen at startup, simply add the keyword ``DONE`` as the first line.
 
 If you want a sequence to start immediate the system powers up, add the ``AUTOSTART`` command to the content of the sequence.
 
-This is useful for sequences where you want to monitor the state of sensors and switches.
+This is useful for sequences where you want to constantly monitor the state of sensors and switches.
 
 Contents of a Sequence
 ----------------------
@@ -583,4 +581,4 @@ Here for example is a launch sequence that has no predefined locos but allows lo
    START(12) // send loco off along route 12
    FOLLOW(99) // keep doing this for another launch
 
-The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
+The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the ``INVERT_DIRECTION`` instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)

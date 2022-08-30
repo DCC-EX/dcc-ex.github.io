@@ -424,9 +424,9 @@
 <li><p><a class="reference internal" href="#sequence-types-manually-triggered" id="id14">Sequence Types - Manually Triggered</a></p></li>
 <li><p><a class="reference internal" href="#sequence-types-invoked" id="id15">Sequence Types - Invoked</a></p></li>
 <li><p><a class="reference internal" href="#sequence-types-event-triggered" id="id16">Sequence Types - Event Triggered</a></p></li>
-<li><p><a class="reference internal" href="#automatically-running-a-sequence-at-power-up" id="id17">Automatically Running a Sequence at Power Up</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#automatically-running-a-sequence-at-power-up" id="id17">Automatically Running a Sequence at Power Up</a></p></li>
 <li><p><a class="reference internal" href="#contents-of-a-sequence" id="id18">Contents of a Sequence</a></p>
 <ul>
 <li><p><a class="reference internal" href="#action-commands-getting-ex-rail-to-do-something" id="id19">Action Commands - Getting EX-RAIL to ‘do’ something</a></p></li>
@@ -484,12 +484,7 @@
 <hr class="docutils" />
 <section id="the-automation-process">
 <h2><a class="toc-backref" href="#id10">The Automation Process</a><a class="headerlink" href="#the-automation-process" title="Permalink to this heading"></a></h2>
-<div class="note-float-right admonition note">
-<p class="admonition-title">Note</p>
-<p>There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword is executed on startup. If you don’t wish anything to happen at startup, simply add the keyword <code class="docutils literal notranslate"><span class="pre">DONE</span></code> as the first line.</p>
-</div>
 <p>Once started, each ‘sequence’ will step through a list of simple keyword commands until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.</p>
-<p>There can be a startup sequence (keywords at the beginning of the script), which if present is automatically executed, as are any sequences that contain an <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code>.</p>
 <p>Multiple concurrent sequences are supported.</p>
 <p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a>, and for further detailed information, see the <a class="reference internal" href="EX-RAIL-reference.html"><span class="doc">EX-RAIL Command Reference</span></a>.</p>
 </section>
@@ -605,11 +600,15 @@
 </table>
 <p>See <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> page for additional Event Triggered Sequence types, and additional information on these types.</p>
 </section>
-<section id="automatically-running-a-sequence-at-power-up">
-<h4><a class="toc-backref" href="#id17">Automatically Running a Sequence at Power Up</a><a class="headerlink" href="#automatically-running-a-sequence-at-power-up" title="Permalink to this heading"></a></h4>
-<p>If you want a sequence to start immediate the system powers up, add the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> command to the content of the sequence.</p>
-<p>This is useful for sequences where you want to monitor the state of sensors and switches.</p>
 </section>
+<section id="automatically-running-a-sequence-at-power-up">
+<h3><a class="toc-backref" href="#id17">Automatically Running a Sequence at Power Up</a><a class="headerlink" href="#automatically-running-a-sequence-at-power-up" title="Permalink to this heading"></a></h3>
+<div class="note-float-right admonition note">
+<p class="admonition-title">Note</p>
+<p>There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword is executed on startup. If you don’t wish anything to happen at startup, simply add the keyword <code class="docutils literal notranslate"><span class="pre">DONE</span></code> as the first line.</p>
+</div>
+<p>If you want a sequence to start immediate the system powers up, add the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> command to the content of the sequence.</p>
+<p>This is useful for sequences where you want to constantly monitor the state of sensors and switches.</p>
 </section>
 <section id="contents-of-a-sequence">
 <h3><a class="toc-backref" href="#id18">Contents of a Sequence</a><a class="headerlink" href="#contents-of-a-sequence" title="Permalink to this heading"></a></h3>
@@ -737,7 +736,7 @@ ENDIF
 </div>
 <p>or</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>...
-IFxxx( id, ...)  // where xxx is the type of &#39;IF&#39; command (see below)
+IFxxx( id_or_condition, ...)  // where xxx is the type of &#39;IF&#39; command (see below)
   &lt;commands to execute if the conditions are met&gt;
   ...
 ELSE
@@ -949,7 +948,7 @@ ENDIF
   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span> <span class="c1">// keep doing this for another launch</span>
 </pre></div>
 </div>
-<p>The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
+<p>The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the <code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code> instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
 </section>
 </section>
 

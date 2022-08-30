@@ -410,18 +410,15 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#example-1-creating-routes-for-a-throttle" id="id2">Example 1: Creating Routes for a Throttle</a></p></li>
+<li><p><a class="reference internal" href="#example-1-creating-routes" id="id2">Example 1: Creating Routes</a></p></li>
 <li><p><a class="reference internal" href="#example-2-automating-signals-with-turnouts" id="id3">Example 2: Automating Signals with Turnouts</a></p></li>
 <li><p><a class="reference internal" href="#example-3-automating-various-non-track-items" id="id4">Example 3: Automating various non-track items</a></p></li>
-<li><p><a class="reference internal" href="#example-4-automating-a-train-simple-loop" id="id5">Example 4: Automating a train (simple loop)</a></p></li>
-<li><p><a class="reference internal" href="#example-5-signals-in-a-train-script" id="id6">Example 5: Signals in a train script</a></p></li>
-<li><p><a class="reference internal" href="#example-6-single-line-shuttle" id="id7">Example 6: Single line shuttle</a></p></li>
-<li><p><a class="reference internal" href="#example-7-running-multiple-inter-connected-trains" id="id8">Example 7: Running multiple inter-connected trains</a></p>
-<ul>
+<li><p><a class="reference internal" href="#example-4-stopping-at-a-station-simple-loop" id="id5">Example 4: Stopping at a Station (simple loop)</a></p></li>
+<li><p><a class="reference internal" href="#example-5-stopping-at-a-station-adding-signals" id="id6">Example 5: Stopping at a Station - Adding Signals</a></p></li>
+<li><p><a class="reference internal" href="#example-6-point-to-point-shuttle" id="id7">Example 6: Point to Point Shuttle</a></p></li>
+<li><p><a class="reference internal" href="#example-7-multiple-inter-connected-trains" id="id8">Example 7: Multiple inter-connected trains</a></p></li>
 <li><p><a class="reference internal" href="#starting-the-system" id="id9">Starting the system</a></p></li>
 <li><p><a class="reference internal" href="#drive-away-feature" id="id10">Drive-Away feature</a></p></li>
-</ul>
-</li>
 </ul>
 </div>
 </aside>
@@ -429,8 +426,8 @@
 <p class="admonition-title">Todo</p>
 <p>MEDIUM - Update these examples to use valid pins and vpins that are available on the Mega2560 or I/O expanders and servo modules.</p>
 </div>
-<section id="example-1-creating-routes-for-a-throttle">
-<h2><a class="toc-backref" href="#id2">Example 1: Creating Routes for a Throttle</a><a class="headerlink" href="#example-1-creating-routes-for-a-throttle" title="Permalink to this heading"></a></h2>
+<section id="example-1-creating-routes">
+<h2><a class="toc-backref" href="#id2">Example 1: Creating Routes</a><a class="headerlink" href="#example-1-creating-routes" title="Permalink to this heading"></a></h2>
 <p>A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>
@@ -445,10 +442,10 @@ The EX-RAIL instructions to do this might look like</p>
 </div>
 <p>Or add comments</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is my coal yard to engine shed route</span>
-  <span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>     <span class="c1">// appears in the throttle</span>
-    <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">// throw turnout onto coal yard siding</span>
-    <span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>   <span class="c1">// close turnout for engine shed</span>
-    <span class="n">DONE</span>    <span class="c1">// that&#39;s all folks!</span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>     <span class="c1">// appears in the throttle</span>
+  <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">// throw turnout onto coal yard siding</span>
+  <span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>   <span class="c1">// close turnout for engine shed</span>
+  <span class="n">DONE</span>    <span class="c1">// that&#39;s all folks!</span>
 </pre></div>
 </div>
 <p>Of course, you may want to add signals, and time delays</p>
@@ -500,8 +497,8 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 </div>
 <p>Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using <code class="docutils literal notranslate"><span class="pre">START(66)</span></code>.</p>
 </section>
-<section id="example-4-automating-a-train-simple-loop">
-<h2><a class="toc-backref" href="#id5">Example 4: Automating a train (simple loop)</a><a class="headerlink" href="#example-4-automating-a-train-simple-loop" title="Permalink to this heading"></a></h2>
+<section id="example-4-stopping-at-a-station-simple-loop">
+<h2><a class="toc-backref" href="#id5">Example 4: Stopping at a Station (simple loop)</a><a class="headerlink" href="#example-4-stopping-at-a-station-simple-loop" title="Permalink to this heading"></a></h2>
 <p>Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.</p>
 <a class="reference internal image-reference" href="../_images/Example_4_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_4_diagram.png" style="width: 915.0px; height: 191.0px;" /></a>
 <p>Using an <code class="docutils literal notranslate"><span class="pre">AUTOMATION</span></code> keyword means that this automation will appear in the throttle so you can drive the train manually, and then hand it over to the automation at the press of a button.</p>
@@ -519,8 +516,8 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <p>The instructions are followed in sequence by the loco given to it; the <code class="docutils literal notranslate"><span class="pre">AT</span></code> command just leaves the loco running until that sensor is detected.</p>
 <p>Notice that this automation does not specify the loco address. If you drive a loco with the throttle and then hand it over to this automation, then the automation will run with the loco you last drove.</p>
 </section>
-<section id="example-5-signals-in-a-train-script">
-<h2><a class="toc-backref" href="#id6">Example 5: Signals in a train script</a><a class="headerlink" href="#example-5-signals-in-a-train-script" title="Permalink to this heading"></a></h2>
+<section id="example-5-stopping-at-a-station-adding-signals">
+<h2><a class="toc-backref" href="#id6">Example 5: Stopping at a Station - Adding Signals</a><a class="headerlink" href="#example-5-stopping-at-a-station-adding-signals" title="Permalink to this heading"></a></h2>
 <p>Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">79</span><span class="p">)</span>  <span class="c1">// see the Defining Signals section above for details</span>
 <span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span>
@@ -537,8 +534,8 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 </pre></div>
 </div>
 </section>
-<section id="example-6-single-line-shuttle">
-<h2><a class="toc-backref" href="#id7">Example 6: Single line shuttle</a><a class="headerlink" href="#example-6-single-line-shuttle" title="Permalink to this heading"></a></h2>
+<section id="example-6-point-to-point-shuttle">
+<h2><a class="toc-backref" href="#id7">Example 6: Point to Point Shuttle</a><a class="headerlink" href="#example-6-point-to-point-shuttle" title="Permalink to this heading"></a></h2>
 <p>Consider a single line, shuttling between stations A and B.</p>
 <a class="reference internal image-reference" href="../_images/Example_6_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_6_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
 <p>Starting from Station A, the steps may be something like:</p>
@@ -574,8 +571,8 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <p>Although the above is trivial, the routes are designed to be independent of the loco address so that we can have several locos following the same route at the same time (not in the end to end example above!), perhaps passing each other or crossing over with trains on other routes.</p>
 <p>The example above assumes that loco 3 is sitting on the track and pointing in the right direction. A bit later you will see how to script an automatic process to take whatever loco is placed on the programming track, and send it on its way to join in the fun!</p>
 </section>
-<section id="example-7-running-multiple-inter-connected-trains">
-<h2><a class="toc-backref" href="#id8">Example 7: Running multiple inter-connected trains</a><a class="headerlink" href="#example-7-running-multiple-inter-connected-trains" title="Permalink to this heading"></a></h2>
+<section id="example-7-multiple-inter-connected-trains">
+<h2><a class="toc-backref" href="#id8">Example 7: Multiple inter-connected trains</a><a class="headerlink" href="#example-7-multiple-inter-connected-trains" title="Permalink to this heading"></a></h2>
 <p>So what about routes that cross or share single lines (passing places etc)?
 Let’s add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:</p>
@@ -600,7 +597,7 @@ number. So now our route looks like this:</p>
 <p>All well and good for one loco, but with 2 (or even 3) on this track we need some rules. The principle behind this is</p>
 <ul class="simple">
 <li><p>To enter a section of track that may be shared, you must RESERVE it. If you cant reserve it because another loco already has, then you will be stopped and the script will wait until such time as you can reserve it. When you leave a shared section you must free it.</p></li>
-<li><p>Each “section” is merely a logical concept, there are no electronic section breaks in the track. You may have up to 255 sections (more can be supported by a code mod if required).</p></li>
+<li><p>Each ‘section’ is merely a logical concept, there are no electronic section breaks in the track. You may have up to 255 sections (more can be supported by a code mod if required).</p></li>
 </ul>
 <p>So we will need some extra sensors (hardware required) and some logical blocks (all in the mind!):</p>
 <a class="reference internal image-reference" href="../_images/Example_7b_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_7b_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
@@ -655,9 +652,10 @@ number. So now our route looks like this:</p>
 <li><p>Reset your signals.</p></li>
 <li><p>Free off your previous reserve as soon as you have fully left the block.</p></li>
 </ul>
-<p>In addition, it is possible to take decisions based on blocks reserved by other trains. The IFRESERVE(block) can be used to reserve a block if it’s not already reserved by some other train, or skip to the matching ENDIF. For example, this allows a train to choose which platform to stop at based on prior occupancy. It is features like this that allow for more interesting and unpredictable automations.</p>
+<p>In addition, it is possible to take decisions based on blocks reserved by other trains. The <code class="docutils literal notranslate"><span class="pre">IFRESERVE(block)</span></code> can be used to reserve a block if it’s not already reserved by some other train, or skip to the matching ENDIF. For example, this allows a train to choose which platform to stop at based on prior occupancy. It is features like this that allow for more interesting and unpredictable automations.</p>
+</section>
 <section id="starting-the-system">
-<h3><a class="toc-backref" href="#id9">Starting the system</a><a class="headerlink" href="#starting-the-system" title="Permalink to this heading"></a></h3>
+<h2><a class="toc-backref" href="#id9">Starting the system</a><a class="headerlink" href="#starting-the-system" title="Permalink to this heading"></a></h2>
 <p>Starting the system is tricky, because we need to place the trains in a suitable position and set them going. We need to have a starting position for each loco, and reserve the block(s) it needs to keep other trains from crashing into it.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -682,26 +680,25 @@ number. So now our route looks like this:</p>
 </div>
 </section>
 <section id="drive-away-feature">
-<h3><a class="toc-backref" href="#id10">Drive-Away feature</a><a class="headerlink" href="#drive-away-feature" title="Permalink to this heading"></a></h3>
+<h2><a class="toc-backref" href="#id10">Drive-Away feature</a><a class="headerlink" href="#drive-away-feature" title="Permalink to this heading"></a></h2>
 <p>EX-RAIL can switch a track section between programming and mainline.</p>
-<p>Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.</p>
+<p>Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a ‘launch’ button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
-  <span class="n">SIGNAL</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">29</span><span class="p">)</span>
-  <span class="n">RED</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>   <span class="c1">// indicate launch not ready</span>
-  <span class="n">AFTER</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// user presses and releases launch button</span>
-  <span class="n">UNJOIN</span>    <span class="c1">// separate the programming track from main</span>
-  <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-  <span class="n">AMBER</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1">// Show amber, user may place loco</span>
-  <span class="n">AFTER</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// user places loco on track and presses “launch” again</span>
-  <span class="n">READ_LOCO</span> <span class="c1">// identify the loco</span>
-  <span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1">// show green light to user</span>
-  <span class="n">JOIN</span>      <span class="c1">// connect prog track to main</span>
-  <span class="n">START</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1">// send loco off along route 12</span>
-  <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span> <span class="c1">// keep doing this for another launch</span>
+   <span class="n">SIGNAL</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">29</span><span class="p">)</span>
+   <span class="n">RED</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>   <span class="c1">// indicate launch not ready</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// user presses and releases launch button</span>
+   <span class="n">UNJOIN</span>    <span class="c1">// separate the programming track from main</span>
+   <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+   <span class="n">AMBER</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1">// Show amber, user may place loco</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// user places loco on track and presses “launch” again</span>
+   <span class="n">READ_LOCO</span> <span class="c1">// identify the loco</span>
+   <span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1">// show green light to user</span>
+   <span class="n">JOIN</span>      <span class="c1">// connect prog track to main</span>
+   <span class="n">START</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1">// send loco off along route 12</span>
+   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span> <span class="c1">// keep doing this for another launch</span>
 </pre></div>
 </div>
-<p>The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the INVERT_DIRECTION instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
-</section>
+<p>The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the <code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code> instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
 </section>
 </section>
 

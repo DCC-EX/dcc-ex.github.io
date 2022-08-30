@@ -469,10 +469,10 @@
 </div>
 <p>Where:</p>
 <ul class="simple">
-<li><p>999 - is the DCC address of your loco</p></li>
-<li><p>My Loco Name - is anything you want to see as the name of this loco in the throttle apps</p></li>
-<li><p>F0 F1 F3 … F27. - are the names that you want to see for the functions specific to this loco</p></li>
-<li><p>*F2 - note that if the function is ‘momentary’ rather than ‘latching’ (On/Off) then start the function label with a asterisk (*).  The most common example of this is the Horn/Whistle which is commonly on F2.</p></li>
+<li><p><strong>999</strong> - is the DCC address of your loco</p></li>
+<li><p><strong>My Loco Name</strong> - is anything you want to see as the name of this loco in the throttle apps</p></li>
+<li><p><strong>F0 F1 F3 … F27</strong>. - are the names that you want to see for the functions specific to this loco</p></li>
+<li><p><strong>*F2</strong> - note that if the function is ‘momentary’ rather than ‘latching’ (On/Off) then start the function label with a asterisk (*).  The most common example of this is the Horn/Whistle which is commonly on F2.</p></li>
 </ul>
 <p>Some more realistic examples might look like:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span> <span class="p">(</span>  <span class="mi">3</span><span class="p">,</span><span class="s">&quot;Eng 3&quot;</span><span class="p">,</span> <span class="s">&quot;F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//&quot;</span><span class="p">)</span> <span class="c1">// Address 3, Eng 3, Function keys F0-F10</span>
@@ -497,12 +497,12 @@
 <h3><a class="toc-backref" href="#id3">Locos with Unavailable Functions</a><a class="headerlink" href="#locos-with-unavailable-functions" title="Permalink to this heading"></a></h3>
 <p>If a function is not available just leave the spot empty. (Don’t even have the space character.)</p>
 <p>For example:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROSTER(2825,&quot;CN ES44AC&quot;,&quot;Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup &amp; Shutdown&quot;)
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2825</span><span class="p">,</span><span class="s">&quot;CN ES44AC&quot;</span><span class="p">,</span><span class="s">&quot;Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup &amp; Shutdown&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note the two missing text labels for positions F5 and F6. Engine Driver will skip those buttons and not display them at all in the interface since they do nothing for that loco.</p>
 <p>Example of loco without sound:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROSTER(2405,&quot;AT&amp;SF 2-8-0 2405&quot;,&quot;Headlight&quot;)
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2405</span><span class="p">,</span><span class="s">&quot;AT&amp;SF 2-8-0 2405&quot;</span><span class="p">,</span><span class="s">&quot;Headlight&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note that it only has FO (the Headlight) and not following slashes.</p>

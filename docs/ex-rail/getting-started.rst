@@ -98,7 +98,7 @@ Refer to the :doc:`creating-elements` for creating and adding those Objects:
 * Sensors
 * Signals
 
-Note that these Objects don't have to be added before the sequence in which you use it.
+Note that these objects don't have to be added before the sequence in which you use it, but it is good practice to do so.
 
 ----
 
@@ -148,7 +148,7 @@ Sequences types fall in the following broad groups:
 Sequence Types - Manually Triggered
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Manually triggered sequences are advertised to WiThrottles so you can activate them on you Throttles (e.g. |engine driver| or |withrottle|). They are one of:
+Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. |engine driver| or |withrottle|). They are one of:
 
 .. list-table:: 
     :widths: 30 70
@@ -165,7 +165,7 @@ Note that these can also be invoked by other sequences.
 Sequence Types - Invoked
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sequences that can only be triggered by other sequences include:
+Sequences that can only be triggered by other sequences have the following form:
 
 .. list-table::
     :widths: auto
@@ -222,16 +222,16 @@ A sequence is made up of 'Commands'. Commands are usually written one per line o
 
 The commands fall into some basic categories:
 
-* Commands that 'do' something (Actions)
-* Commands that change the flow/order in which the commands are executed (Conditionals)
-* Commands that change the timing of the execution of the commands  (Delays)
-* Informational commands
-* Command Station commands
+* `Actions <Action Commands - Getting EX-RAIL to 'do' something>`_ - Commands that 'do' something
+* `Sequence Flow / Flow Control Commands`_
+  * `Conditionals`_ & Branching - Commands that change the flow/order in which the commands are executed
+  * `Delays & Waits`_ - Commands that change the timing of the execution of the commands
+* `Command Station commands`_
 
 Action Commands - Getting EX-RAIL to 'do' something
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This type of command relates to the Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.  
+This type of command will somehow change Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.  
 
 There are a substantial number of commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
 
@@ -312,7 +312,7 @@ Turnout related commands include:
     * - MOVETT( vpin, steps, activity ) 
       - Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
 
-See :doc:`EX-RAIL-summary` page for additional commands. 
+See :doc:`EX-RAIL-summary` page for additional commands and additional information on these commands. 
 
 Sequence Flow / Flow Control Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -321,12 +321,13 @@ For a simple sequence, once triggered, the system steps though each and every in
 
 However there are a number of ways that the processing of a sequence can be changed:
 
-* Conditionals
-* CALL - Branch to a separate sequence expecting a RETURN
-* RETURN - Return to caller (see CALL)
-* FOLLOW - Branch or Follow a numbered sequence (think of “GOTO”)
+* `Conditionals`_
+* `Branching`_
+   * `CALL <CALL and RETURN>`_ - Branch to a separate sequence expecting a RETURN
+   * `RETURN <CALL and RETURN>`_ - Return to caller (see `CALL <CALL and RETURN>`_)
+   * `FOLLOW`_ - Branch or Follow a numbered sequence (think of “GOTO”)
 
-The timing of the execution of the commands can be altered as well with 'Delay' type commands.
+The timing of the execution of the commands can be altered as well with 'Delay' and 'Wait' type commands.
 
 Conditionals
 ~~~~~~~~~~~~
@@ -374,7 +375,7 @@ or
   ...
 
 Types of Conditionals
-_____________________
+'''''''''''''''''''''
 
 Sensor Related Conditional:
 
@@ -435,6 +436,9 @@ Other Conditionals:
 
 see :doc:`EX-RAIL-summary` page for additional information.
 
+Branching
+'''''''''
+
 CALL and RETURN
 _______________
 
@@ -451,8 +455,8 @@ ______
 
 ``FOLLOW( route )`` Branch or Follow a numbered sequence. (The 'followed' sequence does not return to the sequence that invoked it.)
 
-Delay and Wait Commands
-~~~~~~~~~~~~~~~~~~~~~~~
+Delays & Waits
+~~~~~~~~~~~~~~
 
 The timing of the execution of the commands can be altered with 'Delay' or 'Wait' type commands. i.e. they don't happen immediately on completion of the previous command.
 
@@ -483,20 +487,47 @@ There are a number of delay type commands that you can explore on the :doc:`EX-R
       - Delay a number of minutes
     * - DELAYRANDOM( min_delay, max_delay ) 
       - Delay a random time between min and max milliseconds
+
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
     * - AFTER( sensor_id ) 
       - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
     * - WAITFOR( pin ) 
       - Wait for servo to complete movement
-
-Informational Commands
-^^^^^^^^^^^^^^^^^^^^^^
-
-.. todo:: Informational Commands
+    * - AT( sensor_id )
+      - Wait until sensor is active/triggered, use negative values for active HIGH sensors
+    * - ATTIMEOUT( sensor_id, timeout_ms )
+      - Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors
+    * - ATGTE( analogpin, value)
+      - waits for analog pin to reach value
+    * - ATLT (analogpin,value)
+      - waits for analog pin to go below value
+    * - AFTER( sensor_id )
+      - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
 
 Command Station Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: Command Station Commands
+
+There are a substantial number of commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
+
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
+    * -  POWERON
+      -  Power on track, will UNJOIN programming from main (not implemented yet)
+    * -  POWEROFF
+      -  Power off track
+    * -  READ_LOCO
+      -  Read loco ID from Prog track
+
+See :doc:`EX-RAIL-summary` page for additional commands and additional information on these commands. 
 
 Referencing Key Objects in Sequences
 ====================================

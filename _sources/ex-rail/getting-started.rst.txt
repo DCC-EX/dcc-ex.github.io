@@ -14,6 +14,10 @@ Creating Sequences
       :depth: 4
       :local:
 
+This page is a limited introduction to the |EX-R| automation sequences.  For more comprehensive information refer to the :doc:`/ex-rail/EX-RAIL-reference` and :doc:`/ex-rail/EX-RAIL-summary` pages.
+
+----
+
 myAutomation.h - Editing Your Sequences
 =======================================
 
@@ -86,6 +90,14 @@ Before You Start - Adding Objects
 
 Generally you will need to have created some Key Objects before you start writing sequences.
 
+.. code-block:: cpp
+   :class: code-block-float-right
+
+   // Example
+   ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
+   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
+   SERVO_SIGNAL(102, 400, 250, 100)
+
 Refer to the :doc:`creating-elements` for creating and adding those Objects:
 
 * Roster Entries
@@ -102,29 +114,31 @@ Structure of a Sequence
 
 In general, sequences follow the basic structure:
 
-.. code-block:: 
+.. code-block:: cpp
+   :class: code-block-float-right
 
-   <sequence-type>( parameter1, paramerer2, ...)
+   // Example
+   ROUTE(1,"Coal Yard exit")
+      RED(77)      // signal 77 to Red
+      THROW(1)     // throw turnout/point 1
+      CLOSE(7)     // close turnout/point 7
+      DELAY(5000)  // 5 second wait
+      GREEN(92)    // signal 92 to Green
+      DONE
+
+.. code-block:: cpp
+
+   <sequence-type>( parameter-1, parameter-2, ...)
      <command 1>
      <command 2>
      ...
      <command n>
      DONE     or     RETURN     or     FOLLOW ( id )
 
+|force-break|
 
 Sequence Types
 --------------
-
-Sequences are fall in the following broad groups:
-
-* Manually triggered
-* Triggered by another sequence
-* Triggered as a result of an event that has occurred on one of the turnouts/points, sensors, signals.
-
-Manually Triggered Sequences
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Manually triggered sequences take one of the following forms:
 
 .. sidebar:: Ids (Sequence Numbers)
 
@@ -132,120 +146,180 @@ Manually triggered sequences take one of the following forms:
    - All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
    - 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script. 
 
-.. code-block:: 
+Sequences types fall in the following broad groups:
 
-   AUTOMATION( id, “description” )
-     ...
-     DONE     or     FOLLOW ( id )
+* Manually triggered
+* Triggered by another sequence
+* Triggered as a result of an event that has occurred on one of the turnouts/points, sensors, signals.
 
-.. code-block:: 
+Sequence Types - Manually Triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   ROUTE( id, “description” )
-      ...   
-      DONE     or     FOLLOW ( id )
+Manually triggered sequences are advertised to WiThrottles so you can activate them on you Throttles (e.g. |engine driver| or |withrottle|). They are one of:
+
+.. list-table::
+    :widths: 30 70
+    :header-rows: 0
+    :class: command-table
+
+    * - AUTOMATION( id, “description” ) 
+      - Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
+    * - ROUTE( id, “description” ) 
+      - Start of a Route Sequence and creates a WiThrottles {Set} button to manual drive the train along
 
 Note that these can also be invoked by other sequences.
 
-Invoked Sequences
-^^^^^^^^^^^^^^^^^
+Sequence Types - Invoked
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sequences that can only be triggered by other sequences have the following form:
+Sequences that can only be triggered by other sequences include:
 
-.. code-block:: 
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
 
-   SEQUENCE( id )
-      ...
-      DONE     or     RETURN     or     FOLLOW ( id )
+    * - SEQUENCE( id ) 
+      - A general purpose Sequence for scenic animations, etc.
 
-Event Triggered Sequences
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Sequence Types - Event Triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sequences that are triggered when 'events' occur, have the following forms:
+.. code-block:: cpp
+   :class: code-block-float-right
 
-.. code-block:: 
+   // Example
+   ONTHROW(8)     // When turnout 8 is thrown,
+      THROW(9)    // throw the facing turnout
+      RED(24)     // signal 24 to red
+      DELAY(2000) // wait 2 seconds
+      GREEN(27)   // signal 27 to green
+      DONE
 
-   ONCLOSE( turnout_id )
-      ...
-      DONE     or     RETURN     or     FOLLOW ( id )
+Sequences that are triggered when 'events' occur, include:
 
-.. code-block:: 
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
 
-   ONTHROW( turnout_id )
-      ...
-      DONE     or     RETURN     or     FOLLOW ( id )
+    * - ONCLOSE( turnout_id ) 
+      - Event handler for turnout close
+    * - ONTHROW( turnout_id ) 
+      - Event handler for turnout thrown
 
-.. code-block:: 
+See :doc:`EX-RAIL-summary` page for additional Event Triggered Sequence types, and additional information on these types. 
 
-   ONACTIVATE( addr, sub_addr )
-      ...
-      DONE     or     RETURN     or     FOLLOW ( id )
+Automatically Running a Sequence at Power Up
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: 
+If you want a sequence to start immediate the system powers up, add the ``AUTOSTART`` command to the content of the sequence.
 
-   ONACTIVATEL( linear )
-      ...
-      DONE     or     RETURN     or     FOLLOW ( id )
-
-.. code-block:: 
-
-   ONDEACTIVATE( addr, sub_addr )
-      ...
-      DONE     or     RETURN     or     FOLLOW ( id )
-
-.. code-block:: 
-
-   ONDEACTIVATEL( linear )
-      ...
-      DONE     or     RETURN     or     FOLLOW ( id )
-
-See :doc:`EX-RAIL-summary` page for additional information on these sequence types. 
+This is useful for sequences where you want to monitor the state of sensors and switches.
 
 Contents of a Sequence
 ----------------------
 
-A sequence is made up of commands, one per line.  The commands fall into a few basic categories:
+A sequence is made up of 'Commands'. Commands are usually written one per line or ease of reading, but you can put multiple commands on a single line.  
 
-* Commands that 'do' something
-* Commands that change the flow sequence that the commands are executed
-* Commands that change the timing of the execution  of the commands
+The commands fall into some basic categories:
+
+* Commands that 'do' something (Actions)
+* Commands that change the flow/order in which the commands are executed (Conditionals)
+* Commands that change the timing of the execution of the commands  (Delays)
 * Informational commands
 * Command Station commands
 
-Action Commands - Getting EX-RAIL to do 'Things'
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Action Commands - Getting EX-RAIL to 'do' something
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This type of command relates to the Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.  
 
 There are a substantial number of commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
 
+.. code-block:: cpp
+   :class: code-block-float-right
+
+   // Example
+   ONTHROW(8)     // When turnout 8 is thrown,
+      THROW(9)    // throw the facing turnout
+      RED(24)     // signal 24 to red
+      DELAY(2000) // wait 2 seconds
+      GREEN(27)   // signal 27 to green
+      DONE
+
 Turnout/Point commands include:
 
-* THROW( id ) - Throw a defined turnout
-* CLOSE( id) - Close a defined turnout
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
 
-Signal commands include:
+    * - THROW( id ) 
+      - Throw a defined turnout
+    * - CLOSE( id) 
+      - Close a defined turnout
 
-* RED( signal_id ) - Set defined signal to Red (See SIGNAL)
-* AMBER( signal_id ) - Set a defined signal to Amber. (See SIGNAL)
-* GREEN( signal_id ) - Set a defined signal to GREEN (see SIGNAL)
+Signal related commands include:
 
-Loco related include:
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
 
-* FWD( speed ) - Drive loco forward at DCC speed 0-127 (1=ESTOP)
-* REV( speed ) - Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
-* SPEED( speed ) - Drive loco in current direction at DCC speed (0-127)
-* STOP - Set loco speed to 0 (same as SPEED(0) )
+    * -  RED( signal_id ) 
+      - Set defined signal to Red (See SIGNAL)
+    * - AMBER( signal_id ) 
+      - Set a defined signal to Amber. (See SIGNAL)
+    * - GREEN( signal_id ) 
+      - Set a defined signal to GREEN (see SIGNAL)
 
-Turnout Commands include:
+.. code-block:: cpp
+   :class: code-block-float-right
 
-* MOVETT( vpin, steps, activity ) - Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
+   // Example
+   AUTOMATION(4,"Back and Forward")
+      AUTOSTART   // start this immediately the system powers up
+      FWD(50)     // move forward at DCC speed 50
+      DELAY(5000) // run for 5 seconds
+      STOP        // stop the train 
+      REV(30)     // move backwards at DCC speed 50
+      DELAY(5000) // run for 5 seconds
+      STOP        // stop the train 
+      FOLLOW(4)   // repeat forever
+
+Loco related commands include:
+
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
+    * - FWD( speed ) 
+      - Drive loco forward at DCC speed 0-127 (1=ESTOP)
+    * - REV( speed ) 
+      - Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
+    * - SPEED( speed ) 
+      - Drive loco in current direction at DCC speed (0-127)
+    * - STOP 
+      - Set loco speed to 0 (same as SPEED(0) )
+
+Turnout related commands include:
+
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
+    * - MOVETT( vpin, steps, activity ) 
+      - Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
 
 See :doc:`EX-RAIL-summary` page for additional commands. 
 
-Sequence Flow  / Flow Control Commands
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sequence Flow / Flow Control Commands
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For a simple sequence, once triggered the system steps though each and every instruction as quickly as possible until it hits ``DONE`` at the end of the sequence.
+For a simple sequence, once triggered, the system steps though each and every instruction as quickly as possible until it hits ``DONE`` at the end of the sequence.
 
 However there are a number of ways that the processing of a sequence can be changed:
 
@@ -262,6 +336,21 @@ Conditionals
 If a conditional is encountered, the following (enclosed) commands are only executed if the specified conditions are met.
 
 Conditionals have the structure:
+
+.. code-block:: cpp
+   :class: code-block-float-right
+
+   // Example 
+   // - Toggle a turnout/point based on a push button
+   SEQUENCE(85)
+      DELAY(100)     // check every 0.1 of a second
+      AT(35)         // monitor push button 35
+      IFCLOSED(105)  // check the state of turnout/point 105
+         THROW(105)  // if closed THROW Turnout/Point 105
+      ELSE
+         CLOSE(105)  // if closed CLOSE Turnout/Point 105
+      ENDIF 
+      FOLLOW(85)     // repeat forever
 
 .. code-block:: 
 
@@ -291,27 +380,60 @@ _____________________
 
 Sensor Related Conditional:
 
-* IF( sensor_id )
-* IFNOT( sensor_id )
-* IFGTE( sensor_id, value )
-* IFLT( sensor_id, value )
+
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
+    * - IF( sensor_id )
+      - If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors
+    * - IFNOT( sensor_id )
+      - If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors
+    * - IFGTE( sensor_id, value )
+      - Test if analog pin reading is greater than or equal to value (>=)
+    * - IFLT( sensor_id, value )
+      - Test if analog pin reading is less than value (<)
 
 Turnout/Point Related Conditionals:
 
-* IFTHROWN( turnout_id )
-* IFCLOSED( turnout_id )
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
+    * - IFTHROWN( turnout_id )
+      - Test if turnout is thrown
+    * - IFCLOSED( turnout_id )
+      - Check if turnout is closed
 
 Signal Related Conditionals:
 
-* IFRED( signal_id )
-* IFAMBER( signal_id )
-* IFGREEN( signal_id )
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
+    * - IFRED( signal_id )
+      - Tests if signal is red
+    * - IFAMBER( signal_id )
+      - Tests if signal is amber
+    * - IFGREEN( signal_id )
+      - Tests if signal is green
 
 Other Conditionals:
 
-* IFRANDOM( percent )
-* IFRESERVE( block )
-* IFTIMEOUT
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
+    * - IFRANDOM( percent )
+      - Runs commands in IF block a random percentage of the time
+    * - IFRESERVE( block )
+      - If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
+    * - IFTIMEOUT
+      - Tests if “timed out” flag has been set by an ATTIMEOUT sensor reading attempt
 
 see :doc:`EX-RAIL-summary` page for additional information.
 
@@ -320,24 +442,53 @@ _______________
 
 .. todo:: CALL and RETURN
 
+``CALL( route )`` Branch to a separate sequence, which will need to RETURN when complete.
+
+``RETURN`` Return to the calling sequence when completed (no DONE required).
+
 FOLLOW
 ______
 
 .. todo:: FOLLOW
 
-Delay Commands and Wait Commands
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``FOLLOW( route )`` Branch or Follow a numbered sequence. (The 'followed' sequence does not return to the sequence that invoked it.)
 
-The timing of the execution of the commands can be altered as well with 'Delay' type commands.
+Delay and Wait Commands
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The timing of the execution of the commands can be altered with 'Delay' or 'Wait' type commands. i.e. they don't happen immediately on completion of the previous command.
 
 There are a number of delay type commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
 
-* DELAY( delay ) - Delay a number of milliseconds
-* DELAYMINS( delay ) - Delay a number of minutes
-* DELAYRANDOM( min_delay, max_delay ) - Delay a random time between min and max milliseconds
-* AFTER( sensor_id ) - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
-* WAITFOR( pin ) - Wait for servo to complete movement
 
+.. code-block:: cpp
+   :class: code-block-float-right
+
+   // Example
+   AUTOMATION(5,"Back and Forward - Random")
+      FWD(50)     // move forward at DCC speed 50
+      DELAY(5000, 20000) // run for between 5 to 20 seconds (random)
+      STOP        // stop the train 
+      REV(30)     // move backwards at DCC speed 50
+      DELAY(5000, 20000) // run for between 5 to 20 seconds (random)
+      STOP        // stop the train 
+      FOLLOW(5)   // repeat forever
+
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
+
+    * - DELAY( delay ) 
+      - Delay a number of milliseconds
+    * - DELAYMINS( delay ) 
+      - Delay a number of minutes
+    * - DELAYRANDOM( min_delay, max_delay ) 
+      - Delay a random time between min and max milliseconds
+    * - AFTER( sensor_id ) 
+      - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
+    * - WAITFOR( pin ) 
+      - Wait for servo to complete movement
 
 Informational Commands
 ^^^^^^^^^^^^^^^^^^^^^^

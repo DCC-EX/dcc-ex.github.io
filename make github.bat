@@ -1,3 +1,2 @@
 call make github
-
 pause

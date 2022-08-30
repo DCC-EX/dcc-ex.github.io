@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-********
-Examples
-********
+*****************
+Example Sequences
+*****************
 
 |tinkerer| |conductor|
 

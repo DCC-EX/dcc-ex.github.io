@@ -57,7 +57,7 @@ Where:
 
 Some more realistic examples might look like:
 
-.. code-block:: 
+.. code-block:: cpp
    
    ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
    ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'

@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-*************************
-EX-RAIL Command Summary
-*************************
+********************
+EX-RAIL Command List
+********************
 
 |tinkerer| |engineer|
 
@@ -52,7 +52,7 @@ There are some diagnostic and control commands added to the <tag> language norma
     :header-rows: 1
     :class: command-table
 
-    * -  DCC-EX Commands
+    * -  DCC++ Commands
       -  Description
     * -  <D EXRAIL ON|OFF>
       -  Turns on/off diagnostic traces for EX-RAIL events
@@ -96,7 +96,7 @@ Script Definition Items
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  AUTOMATION( id, "description" )
       -  Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
@@ -117,7 +117,7 @@ Object definitions
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  ALIAS( name[, value ])
       -  Assign names to values. Can go anywhere in the script
@@ -146,7 +146,7 @@ Flow control functions
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  CALL( route )
       -  Branch to a separate sequence expecting a RETURN
@@ -199,7 +199,7 @@ Command Station functions
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  POWERON
       -  Power on track, will UNJOIN programming from main (not implemented yet)
@@ -238,7 +238,7 @@ EX-RAIL functions
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  PAUSE
       -  E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd
@@ -269,7 +269,7 @@ Loco DCC functions
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  ROSTER( loco, name, func_map )
       -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`ex-rail/creating-elements:adding a roster` for examples
@@ -300,7 +300,7 @@ Sensor input
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  AT( sensor_id )
       -  Wait until sensor is active/triggered, use negative values for active HIGH sensors
@@ -329,7 +329,7 @@ Sensor event handlers
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  ONCLOSE( turnout_id )
       -  Event handler for turnout close
@@ -354,7 +354,7 @@ Action output functions
     :header-rows: 1
     :class: command-table
 
-    * -  EXRAIL Functions
+    * -  EX-RAIL Functions
       -  Description
     * -  SET( pin )
       -  Set an output pin (set to HIGH)

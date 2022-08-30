@@ -153,8 +153,8 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Creating Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html">Example Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html">About and History</a></li>
 </ul>
 </li>
@@ -433,30 +433,29 @@
 <li><p><a class="reference internal" href="#sequence-flow-flow-control-commands" id="id20">Sequence Flow / Flow Control Commands</a></p>
 <ul>
 <li><p><a class="reference internal" href="#conditionals" id="id21">Conditionals</a></p></li>
-<li><p><a class="reference internal" href="#delay-and-wait-commands" id="id22">Delay and Wait Commands</a></p></li>
+<li><p><a class="reference internal" href="#delays-waits" id="id22">Delays &amp; Waits</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#informational-commands" id="id23">Informational Commands</a></p></li>
-<li><p><a class="reference internal" href="#command-station-commands" id="id24">Command Station Commands</a></p></li>
+<li><p><a class="reference internal" href="#command-station-commands" id="id23">Command Station Commands</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#referencing-key-objects-in-sequences" id="id25">Referencing Key Objects in Sequences</a></p>
+<li><p><a class="reference internal" href="#referencing-key-objects-in-sequences" id="id24">Referencing Key Objects in Sequences</a></p>
 <ul>
-<li><p><a class="reference internal" href="#referencing-turnouts-points" id="id26">Referencing Turnouts/Points</a></p></li>
-<li><p><a class="reference internal" href="#referencing-signals" id="id27">Referencing Signals</a></p></li>
-<li><p><a class="reference internal" href="#referencing-locos" id="id28">Referencing Locos</a></p></li>
-<li><p><a class="reference internal" href="#referencing-loco-functions" id="id29">Referencing Loco Functions</a></p></li>
-<li><p><a class="reference internal" href="#referencing-sensors" id="id30">Referencing Sensors</a></p></li>
-<li><p><a class="reference internal" href="#outputs" id="id31">Outputs</a></p></li>
+<li><p><a class="reference internal" href="#referencing-turnouts-points" id="id25">Referencing Turnouts/Points</a></p></li>
+<li><p><a class="reference internal" href="#referencing-signals" id="id26">Referencing Signals</a></p></li>
+<li><p><a class="reference internal" href="#referencing-locos" id="id27">Referencing Locos</a></p></li>
+<li><p><a class="reference internal" href="#referencing-loco-functions" id="id28">Referencing Loco Functions</a></p></li>
+<li><p><a class="reference internal" href="#referencing-sensors" id="id29">Referencing Sensors</a></p></li>
+<li><p><a class="reference internal" href="#outputs" id="id30">Outputs</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#drive-away-feature" id="id32">Drive-Away feature</a></p></li>
+<li><p><a class="reference internal" href="#drive-away-feature" id="id31">Drive-Away feature</a></p></li>
 </ul>
 </div>
 </aside>
-<p>This page is a limited introduction to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> automation sequences.  For more comprehensive information refer to the <a class="reference internal" href="EX-RAIL-reference.html"><span class="doc">EX-RAIL Command Reference</span></a> and <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> pages.</p>
+<p>This page is a limited introduction to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> automation sequences.  For more comprehensive information refer to the <a class="reference internal" href="EX-RAIL-reference.html"><span class="doc">EX-RAIL Detailed Reference</span></a> and <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> pages.</p>
 <hr class="docutils" />
 <section id="myautomation-h-editing-your-sequences">
 <h2><a class="toc-backref" href="#id8">myAutomation.h - Editing Your Sequences</a><a class="headerlink" href="#myautomation-h-editing-your-sequences" title="Permalink to this heading"></a></h2>
@@ -486,7 +485,7 @@
 <h2><a class="toc-backref" href="#id10">The Automation Process</a><a class="headerlink" href="#the-automation-process" title="Permalink to this heading"></a></h2>
 <p>Once started, each ‘sequence’ will step through a list of simple keyword commands until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.</p>
 <p>Multiple concurrent sequences are supported.</p>
-<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a>, and for further detailed information, see the <a class="reference internal" href="EX-RAIL-reference.html"><span class="doc">EX-RAIL Command Reference</span></a>.</p>
+<p>For a full list of keywords, see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a>, and for further detailed information, see the <a class="reference internal" href="EX-RAIL-reference.html"><span class="doc">EX-RAIL Detailed Reference</span></a>.</p>
 </section>
 <hr class="docutils" />
 <section id="before-you-start-adding-objects">
@@ -505,7 +504,7 @@
 <li><p>Sensors</p></li>
 <li><p>Signals</p></li>
 </ul>
-<p>Note that these Objects don’t have to be added before the sequence in which you use it.</p>
+<p>Note that these objects don’t have to be added before the sequence in which you use it, but it is good practice to do so.</p>
 </section>
 <hr class="docutils" />
 <section id="structure-of-a-sequence">
@@ -548,7 +547,7 @@
 </ul>
 <section id="sequence-types-manually-triggered">
 <h4><a class="toc-backref" href="#id14">Sequence Types - Manually Triggered</a><a class="headerlink" href="#sequence-types-manually-triggered" title="Permalink to this heading"></a></h4>
-<p>Manually triggered sequences are advertised to WiThrottles so you can activate them on you Throttles (e.g. <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>). They are one of:</p>
+<p>Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>). They are one of:</p>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -567,7 +566,7 @@
 </section>
 <section id="sequence-types-invoked">
 <h4><a class="toc-backref" href="#id15">Sequence Types - Invoked</a><a class="headerlink" href="#sequence-types-invoked" title="Permalink to this heading"></a></h4>
-<p>Sequences that can only be triggered by other sequences include:</p>
+<p>Sequences that can only be triggered by other sequences have the following form:</p>
 <table class="colwidths-auto command-table docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p>SEQUENCE( id )</p></td>
@@ -598,7 +597,7 @@
 </tr>
 </tbody>
 </table>
-<p>See <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> page for additional Event Triggered Sequence types, and additional information on these types.</p>
+<p>See <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> page for additional Event Triggered Sequence types, and additional information on these types.</p>
 </section>
 </section>
 <section id="automatically-running-a-sequence-at-power-up">
@@ -615,16 +614,16 @@
 <p>A sequence is made up of ‘Commands’. Commands are usually written one per line or ease of reading, but you can put multiple commands on a single line.</p>
 <p>The commands fall into some basic categories:</p>
 <ul class="simple">
-<li><p>Commands that ‘do’ something (Actions)</p></li>
-<li><p>Commands that change the flow/order in which the commands are executed (Conditionals)</p></li>
-<li><p>Commands that change the timing of the execution of the commands  (Delays)</p></li>
-<li><p>Informational commands</p></li>
-<li><p>Command Station commands</p></li>
+<li><p><a class="reference external" href="ActionCommands-GettingEX-RAILto'do'something">Actions</a> - Commands that ‘do’ something</p></li>
+<li><p><a class="reference internal" href="#sequence-flow-flow-control-commands">Sequence Flow / Flow Control Commands</a>
+* <a class="reference internal" href="#conditionals">Conditionals</a> &amp; Branching - Commands that change the flow/order in which the commands are executed
+* <a class="reference internal" href="#delays-waits">Delays &amp; Waits</a> - Commands that change the timing of the execution of the commands</p></li>
+<li><p><a class="reference internal" href="#command-station-commands">Command Station commands</a></p></li>
 </ul>
 <section id="action-commands-getting-ex-rail-to-do-something">
 <h4><a class="toc-backref" href="#id19">Action Commands - Getting EX-RAIL to ‘do’ something</a><a class="headerlink" href="#action-commands-getting-ex-rail-to-do-something" title="Permalink to this heading"></a></h4>
-<p>This type of command relates to the Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.</p>
-<p>There are a substantial number of commands that you can explore on the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> page.  We will look at just a few here.</p>
+<p>This type of command will somehow change Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.</p>
+<p>There are a substantial number of commands that you can explore on the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> page.  We will look at just a few here.</p>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
 <span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>     <span class="c1">// When turnout 8 is thrown,</span>
    <span class="n">THROW</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>    <span class="c1">// throw the facing turnout</span>
@@ -696,19 +695,25 @@
 </tr>
 </tbody>
 </table>
-<p>See <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> page for additional commands.</p>
+<p>See <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> page for additional commands and additional information on these commands.</p>
 </section>
 <section id="sequence-flow-flow-control-commands">
 <h4><a class="toc-backref" href="#id20">Sequence Flow / Flow Control Commands</a><a class="headerlink" href="#sequence-flow-flow-control-commands" title="Permalink to this heading"></a></h4>
 <p>For a simple sequence, once triggered, the system steps though each and every instruction as quickly as possible until it hits <code class="docutils literal notranslate"><span class="pre">DONE</span></code> at the end of the sequence.</p>
 <p>However there are a number of ways that the processing of a sequence can be changed:</p>
 <ul class="simple">
-<li><p>Conditionals</p></li>
-<li><p>CALL - Branch to a separate sequence expecting a RETURN</p></li>
-<li><p>RETURN - Return to caller (see CALL)</p></li>
-<li><p>FOLLOW - Branch or Follow a numbered sequence (think of “GOTO”)</p></li>
+<li><p><a class="reference internal" href="#conditionals">Conditionals</a></p></li>
+<li><dl class="simple">
+<dt><a class="reference internal" href="#branching">Branching</a></dt><dd><ul>
+<li><p><a class="reference external" href="CALLandRETURN">CALL</a> - Branch to a separate sequence expecting a RETURN</p></li>
+<li><p><a class="reference external" href="CALLandRETURN">RETURN</a> - Return to caller (see <a class="reference external" href="CALLandRETURN">CALL</a>)</p></li>
+<li><p><a class="reference internal" href="#follow">FOLLOW</a> - Branch or Follow a numbered sequence (think of “GOTO”)</p></li>
 </ul>
-<p>The timing of the execution of the commands can be altered as well with ‘Delay’ type commands.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>The timing of the execution of the commands can be altered as well with ‘Delay’ and ‘Wait’ type commands.</p>
 <section id="conditionals">
 <h5><a class="toc-backref" href="#id21">Conditionals</a><a class="headerlink" href="#conditionals" title="Permalink to this heading"></a></h5>
 <p>If a conditional is encountered, the following (enclosed) commands are only executed if the specified conditions are met.</p>
@@ -804,11 +809,13 @@ ENDIF
 </tr>
 </tbody>
 </table>
-<p>see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> page for additional information.</p>
+<p>see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> page for additional information.</p>
 </section>
+<section id="branching">
+<h6>Branching<a class="headerlink" href="#branching" title="Permalink to this heading"></a></h6>
 <section id="call-and-return">
-<h6>CALL and RETURN<a class="headerlink" href="#call-and-return" title="Permalink to this heading"></a></h6>
-<div class="admonition-todo admonition" id="id1">
+<h7>CALL and RETURN<a class="headerlink" href="#call-and-return" title="Permalink to this heading"></a></h7>
+<div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">Todo</p>
 <p>CALL and RETURN</p>
 </div>
@@ -816,18 +823,19 @@ ENDIF
 <p><code class="docutils literal notranslate"><span class="pre">RETURN</span></code> Return to the calling sequence when completed (no DONE required).</p>
 </section>
 <section id="follow">
-<h6>FOLLOW<a class="headerlink" href="#follow" title="Permalink to this heading"></a></h6>
-<div class="admonition-todo admonition" id="id2">
+<h7>FOLLOW<a class="headerlink" href="#follow" title="Permalink to this heading"></a></h7>
+<div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
 <p>FOLLOW</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">FOLLOW(</span> <span class="pre">route</span> <span class="pre">)</span></code> Branch or Follow a numbered sequence. (The ‘followed’ sequence does not return to the sequence that invoked it.)</p>
 </section>
 </section>
-<section id="delay-and-wait-commands">
-<h5><a class="toc-backref" href="#id22">Delay and Wait Commands</a><a class="headerlink" href="#delay-and-wait-commands" title="Permalink to this heading"></a></h5>
+</section>
+<section id="delays-waits">
+<h5><a class="toc-backref" href="#id22">Delays &amp; Waits</a><a class="headerlink" href="#delays-waits" title="Permalink to this heading"></a></h5>
 <p>The timing of the execution of the commands can be altered with ‘Delay’ or ‘Wait’ type commands. i.e. they don’t happen immediately on completion of the previous command.</p>
-<p>There are a number of delay type commands that you can explore on the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> page.  We will look at just a few here.</p>
+<p>There are a number of delay type commands that you can explore on the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> page.  We will look at just a few here.</p>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
 <span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s">&quot;Back and Forward - Random&quot;</span><span class="p">)</span>
    <span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>     <span class="c1">// move forward at DCC speed 50</span>
@@ -850,56 +858,83 @@ ENDIF
 <tr class="row-odd"><td><p>DELAYRANDOM( min_delay, max_delay )</p></td>
 <td><p>Delay a random time between min and max milliseconds</p></td>
 </tr>
-<tr class="row-even"><td><p>AFTER( sensor_id )</p></td>
+</tbody>
+</table>
+<table class="colwidths-auto command-table docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>AFTER( sensor_id )</p></td>
 <td><p>Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors</p></td>
 </tr>
-<tr class="row-odd"><td><p>WAITFOR( pin )</p></td>
+<tr class="row-even"><td><p>WAITFOR( pin )</p></td>
 <td><p>Wait for servo to complete movement</p></td>
+</tr>
+<tr class="row-odd"><td><p>AT( sensor_id )</p></td>
+<td><p>Wait until sensor is active/triggered, use negative values for active HIGH sensors</p></td>
+</tr>
+<tr class="row-even"><td><p>ATTIMEOUT( sensor_id, timeout_ms )</p></td>
+<td><p>Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable “timed out” flag, use negative values for active HIGH sensors</p></td>
+</tr>
+<tr class="row-odd"><td><p>ATGTE( analogpin, value)</p></td>
+<td><p>waits for analog pin to reach value</p></td>
+</tr>
+<tr class="row-even"><td><p>ATLT (analogpin,value)</p></td>
+<td><p>waits for analog pin to go below value</p></td>
+</tr>
+<tr class="row-odd"><td><p>AFTER( sensor_id )</p></td>
+<td><p>Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 </section>
-<section id="informational-commands">
-<h4><a class="toc-backref" href="#id23">Informational Commands</a><a class="headerlink" href="#informational-commands" title="Permalink to this heading"></a></h4>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>Informational Commands</p>
-</div>
-</section>
 <section id="command-station-commands">
-<h4><a class="toc-backref" href="#id24">Command Station Commands</a><a class="headerlink" href="#command-station-commands" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id23">Command Station Commands</a><a class="headerlink" href="#command-station-commands" title="Permalink to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id4">
 <p class="admonition-title">Todo</p>
 <p>Command Station Commands</p>
 </div>
+<p>There are a substantial number of commands that you can explore on the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> page.  We will look at just a few here.</p>
+<table class="colwidths-auto command-table docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>POWERON</p></td>
+<td><p>Power on track, will UNJOIN programming from main (not implemented yet)</p></td>
+</tr>
+<tr class="row-even"><td><p>POWEROFF</p></td>
+<td><p>Power off track</p></td>
+</tr>
+<tr class="row-odd"><td><p>READ_LOCO</p></td>
+<td><p>Read loco ID from Prog track</p></td>
+</tr>
+</tbody>
+</table>
+<p>See <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> page for additional commands and additional information on these commands.</p>
 </section>
 </section>
 </section>
 <section id="referencing-key-objects-in-sequences">
-<h2><a class="toc-backref" href="#id25">Referencing Key Objects in Sequences</a><a class="headerlink" href="#referencing-key-objects-in-sequences" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id24">Referencing Key Objects in Sequences</a><a class="headerlink" href="#referencing-key-objects-in-sequences" title="Permalink to this heading"></a></h2>
 <section id="referencing-turnouts-points">
-<h3><a class="toc-backref" href="#id26">Referencing Turnouts/Points</a><a class="headerlink" href="#referencing-turnouts-points" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id25">Referencing Turnouts/Points</a><a class="headerlink" href="#referencing-turnouts-points" title="Permalink to this heading"></a></h3>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports a number of different turnout/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> commands from JMRI, or in <code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;T</span> <span class="pre">...&gt;&quot;)</span></code> commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.</p>
 <p>You may, however, find it more convenient to define turnouts/points using EX-RAIL commands, which may appear anywhere in the ‘myAutomation.h’ file, even after they are referenced in an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code>, <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code>, <code class="docutils literal notranslate"><span class="pre">THROW</span></code> or <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts/Points defined in ‘myAutomation.h’ will still be visible to WiThrottle and JMRI in the normal way.</p>
 <p>A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a “throw” or “close” (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.</p>
-<p>See the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a> page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
+<p>See the <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command List</span></a> page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
 </section>
 <section id="referencing-signals">
-<h3><a class="toc-backref" href="#id27">Referencing Signals</a><a class="headerlink" href="#referencing-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id26">Referencing Signals</a><a class="headerlink" href="#referencing-signals" title="Permalink to this heading"></a></h3>
 <p>Signals can now simply be a decoration to be switched by the route process; they don’t need to control anything.</p>
 <p><code class="docutils literal notranslate"><span class="pre">GREEN(55)</span></code> would turn signal 55 green, and <code class="docutils literal notranslate"><span class="pre">RED(55)</span></code> would turn it red. Somewhere in the script there must be a SIGNAL command like this: <code class="docutils literal notranslate"><span class="pre">SIGNAL(55,56,57)</span></code>.  This defines a signal with ID 55, where the Red/Stop lamp is connected to pin 55, the Amber/Caution lamp to pin 56, and the Green/Proceed lamp to pin 57. The pin allocations do not need to be contiguous, and the red pin number is also used as the signal ID. Thus you can change the signal by <code class="docutils literal notranslate"><span class="pre">RED(55)</span></code>, <code class="docutils literal notranslate"><span class="pre">AMBER(55)</span></code>, or <code class="docutils literal notranslate"><span class="pre">GREEN(55)</span></code>. This means you don’t have to manually turn off the other lamps. A RED/GREEN only signal may be created with a zero amber pin.</p>
 </section>
 <section id="referencing-locos">
-<h3><a class="toc-backref" href="#id28">Referencing Locos</a><a class="headerlink" href="#referencing-locos" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id27">Referencing Locos</a><a class="headerlink" href="#referencing-locos" title="Permalink to this heading"></a></h3>
 <div class="admonition-todo admonition" id="id5">
 <p class="admonition-title">Todo</p>
 <p>Referencing Locos in Sequences</p>
 </div>
 </section>
 <section id="referencing-loco-functions">
-<h3><a class="toc-backref" href="#id29">Referencing Loco Functions</a><a class="headerlink" href="#referencing-loco-functions" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id28">Referencing Loco Functions</a><a class="headerlink" href="#referencing-loco-functions" title="Permalink to this heading"></a></h3>
 <div class="admonition-todo admonition" id="id6">
 <p class="admonition-title">Todo</p>
 <p>Referencing Loco Functions in Sequences</p>
@@ -907,7 +942,7 @@ ENDIF
 <p>You can use <code class="docutils literal notranslate"><span class="pre">FON(n)</span></code> and <code class="docutils literal notranslate"><span class="pre">FOFF(n)</span></code> to switch loco functions… eg sound horn.</p>
 </section>
 <section id="referencing-sensors">
-<h3><a class="toc-backref" href="#id30">Referencing Sensors</a><a class="headerlink" href="#referencing-sensors" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id29">Referencing Sensors</a><a class="headerlink" href="#referencing-sensors" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> allows for sensors that are <strong>Active Low or Active High</strong>. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. <code class="docutils literal notranslate"><span class="pre">AT(-5)</span></code>.</p></li>
 <li><p>Magnetic/Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.</p></li>
@@ -918,7 +953,7 @@ ENDIF
 </ul>
 </section>
 <section id="outputs">
-<h3><a class="toc-backref" href="#id31">Outputs</a><a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id30">Outputs</a><a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
 <div class="admonition-todo admonition" id="id7">
 <p class="admonition-title">Todo</p>
 <p>HIGH - Outputs - what is this?</p>
@@ -930,7 +965,7 @@ ENDIF
 </section>
 </section>
 <section id="drive-away-feature">
-<h2><a class="toc-backref" href="#id32">Drive-Away feature</a><a class="headerlink" href="#drive-away-feature" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id31">Drive-Away feature</a><a class="headerlink" href="#drive-away-feature" title="Permalink to this heading"></a></h2>
 <p>EX-RAIL can switch a track section between programming and mainline.</p>
 <p>Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>

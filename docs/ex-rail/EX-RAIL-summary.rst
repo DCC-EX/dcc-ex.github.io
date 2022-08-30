@@ -48,7 +48,7 @@ Diagnostics & Control
 There are some diagnostic and control commands added to the <tag> language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands < > through both the Arduino IDE Serial Monitor and the |JMRI| Send DCC++ Command pane.
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
@@ -83,6 +83,8 @@ There are some diagnostic and control commands added to the <tag> language norma
     * -  </ GREEN signal_id>
       -  Set the specified signal green
 
+|
+
 Automations, Routes and Sequences
 ---------------------------------
 
@@ -90,14 +92,12 @@ Script Definition Items
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- Script Definition Items ---`
-      -
     * -  AUTOMATION( id, "description" )
       -  Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
     * -  ROUTE( id, "description" )
@@ -107,18 +107,18 @@ Script Definition Items
     * -  ENDTASK or DONE
       -  Completes a Animation/Routes/Sequence Event handler, etc.
 
+|
+
 Object definitions
 ^^^^^^^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- Object definitions ---`
-      -
     * -  ALIAS( name[, value ])
       -  Assign names to values. Can go anywhere in the script
     * -  SIGNAL( red_pin, amber_pin, green_pin )
@@ -136,18 +136,18 @@ Object definitions
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
       -  Define a servo signal
 
+|
+
 Flow control functions
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- Flow control functions ---`
-      -
     * -  CALL( route )
       -  Branch to a separate sequence expecting a RETURN
     * -  FOLLOW( route )
@@ -189,18 +189,18 @@ Flow control functions
     * -  ENDIF
       -  Required to end an IF/IFNOT/etc (Used in all IF.. functions)
 
+|
+
 Command Station functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- Command Station functions ---`
-      -
     * -  POWERON
       -  Power on track, will UNJOIN programming from main (not implemented yet)
     * -  POWEROFF
@@ -228,18 +228,18 @@ Command Station functions
     * -  SERIAL3( msg )
       -  Writes direct to Serial3
 
+|
+
 EX-RAIL functions
 ^^^^^^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- EX-RAIL functions ---`
-      -
     * -  PAUSE
       -  E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd
     * -  RESUME
@@ -259,18 +259,18 @@ EX-RAIL functions
     * -  DRIVE( analog_pin )
       -  ***Under Construction*** Not complete, DO NOT USE
 
+|
+
 Loco DCC functions
 ^^^^^^^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- Loco DCC functions ---`
-      -
     * -  ROSTER( loco, name, func_map )
       -  Provide Engine Roster and F-Key info from the Command Station directly to WiThrottle Apps, see :ref:`ex-rail/creating-elements:adding a roster` for examples
     * -  ESTOP
@@ -290,18 +290,18 @@ Loco DCC functions
     * -  INVERT_DIRECTION
       -  Switches FWD/REV meaning for this loco
 
+|
+
 Sensor input
 ^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- Sensor input ---`
-      -
     * -  AT( sensor_id )
       -  Wait until sensor is active/triggered, use negative values for active HIGH sensors
     * -  ATTIMEOUT( sensor_id, timeout_ms )
@@ -319,18 +319,18 @@ Sensor input
     * -  WAITFOR( pin )
       -  Wait for servo to complete movement
   
+|
+
 Sensor event handlers
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- Sensor event handlers ---`
-      -
     * -  ONCLOSE( turnout_id )
       -  Event handler for turnout close
     * -  ONTHROW( turnout_id )
@@ -344,19 +344,18 @@ Sensor event handlers
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
 
+|
 
 Action output functions 
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
-    :widths: auto
+    :widths: 30 70
     :header-rows: 1
     :class: command-table
 
     * -  EXRAIL Functions
       -  Description
-    * -  :category:`--- Action output functions ---`
-      -
     * -  SET( pin )
       -  Set an output pin (set to HIGH)
     * -  RESET( pin )

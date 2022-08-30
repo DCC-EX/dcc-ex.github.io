@@ -150,7 +150,7 @@ Sequence Types - Manually Triggered
 
 Manually triggered sequences are advertised to WiThrottles so you can activate them on you Throttles (e.g. |engine driver| or |withrottle|). They are one of:
 
-.. list-table::
+.. list-table:: 
     :widths: 30 70
     :header-rows: 0
     :class: command-table
@@ -364,7 +364,7 @@ or
 .. code-block:: 
 
   ...
-  IFxxx( id, ...)  // where xxx is the type of 'IF' command (see below)
+  IFxxx( id_or_condition, ...)  // where xxx is the type of 'IF' command (see below)
     <commands to execute if the conditions are met>
     ...
   ELSE

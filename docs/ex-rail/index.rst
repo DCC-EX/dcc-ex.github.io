@@ -25,6 +25,6 @@ Click 'Next' to explore the possibilities of |EX-R|.
     getting-started
     examples
     tips
-    EX-RAIL-summary
     EX-RAIL-reference
+    EX-RAIL-summary
     about

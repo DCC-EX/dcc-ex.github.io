@@ -89,4 +89,4 @@ Next Steps - Objects
 ====================
 
    
-Click :doc:`here <creating-elements>` or click the "next" button to learn how to add the key objects you will need to create your automation sequences.
+Click :doc:`here <creating-elements>` or click the :guilabel:`Next` button to learn how to add the key objects you will need to create your automation sequences.

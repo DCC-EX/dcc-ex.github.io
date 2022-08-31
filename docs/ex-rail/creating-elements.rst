@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-******************
-Adding Key Objects
-******************
+**************
+Adding Objects
+**************
 
 |tinkerer| |engineer|
 
@@ -16,16 +16,17 @@ Adding Key Objects
 
 First we need the 'objects' that we will use for our automation sequences.
 
-There are four key objects that are important for creating sequences:
+There are a number key objects that are important for creating sequences:
 
-* Roster Entries - Your locos
-* Turnouts/Points
-* Sensors
-* Signals
+* `Roster Entries - Your locos <Adding a Roster>`_
+* `Turnouts/Points <Adding Turnouts/Points>`_
+* `Servos for Semophores/Signals and Animations <Servos for Signals and Animations>`_
+* `Sensors <Sensors>`_
+* `Signals (Lights) <Signals>`_
 
-The process for creating these objects consist of:
+The process for creating these objects consists of:
 
-* Adding the hardware (not applicable to the roster)
+* Adding the hardware (not strictly applicable to the roster)
 * Configuring |EX-CS| by modifying 'myAutomation.h' so that it knows about the object
 * Re-uploading the software to the |EX-CS|
 
@@ -34,7 +35,7 @@ The process for creating these objects consist of:
 Adding a Roster
 ===============
 
-EX-RAIL has a ROSTER() function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.
+EX-RAIL has a ``ROSTER()`` function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.
 
 The functions can simply be listed as "F" numbers, or you can provide a text description of the function. Prefacing the function with a "*" indicates it is momentary, meaning it is only activated while holding that function button down.
 
@@ -44,7 +45,7 @@ If you are already using |EX-R| and have a myAutomation.h, then just the add ``R
 
 Add a line that looks like:
 
-.. code-block:: 
+.. code-block:: cpp
    
    ROSTER(999,"Loco Name","F0/F1/*F2/F3/F4/F5/F6/F7/F8")
 
@@ -82,38 +83,69 @@ The same again, with more text functions defined to represent a number of differ
 
    ROSTER(1506, "HUSA", "Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28")
 
-Locos with Unavailable Functions
---------------------------------
+**Locos with Unavailable Functions**
 
-If a function is not available just leave the spot empty. (Don't even have the space character.)
+   If a function is not available just leave the spot empty. (Don't even have the space character.)
 
-For example: 
+   For example: 
 
-.. code-block:: cpp
+   .. code-block:: cpp
 
-   ROSTER(2825,"CN ES44AC","Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup & Shutdown")
+      ROSTER(2825,"CN ES44AC","Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup & Shutdown")
 
-Note the two missing text labels for positions F5 and F6. Engine Driver will skip those buttons and not display them at all in the interface since they do nothing for that loco.
+   Note the two missing text labels for positions F5 and F6. Engine Driver will skip those buttons and not display them at all in the interface since they do nothing for that loco.
 
-Example of loco without sound:
+   Example of loco without sound:
 
-.. code-block:: cpp
+   .. code-block:: cpp
 
-   ROSTER(2405,"AT&SF 2-8-0 2405","Headlight")
+      ROSTER(2405,"AT&SF 2-8-0 2405","Headlight")
 
-Note that it only has FO (the Headlight) and not following slashes.
+   Note that it only has FO (the Headlight) and not following slashes.
 
 ----
 
 Adding Turnouts/Points
 ======================
 
+Turnouts/Points can included on your layout in one of the
+
+* DCC turnouts/Points
+* Servo Turnouts/Points
+* Pin turnouts/Points
+
+DCC Turnouts/Points
+-------------------
+
+Adding the Hardware -  DCC Turnouts/Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: DCC Turnouts/points
+
+Configure myAutomation.h - DCC Turnouts/Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Pin Turnouts/Points
+-------------------
+
+Adding the Hardware -  Pin Turnouts/Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: DCC Turnouts/points
+
+Configure myAutomation.h - Pin Turnouts/Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Servo Turnouts/Points
+---------------------
+
+Adding the Hardware -  Servo Turnouts/Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. sidebar::
   
   You can also refer to :doc:`/reference/hardware/servo-module` for more information.
-
-Adding the Hardware -  Turnouts/points
---------------------------------------
 
 To connect a servo to |EX-CS|, you first need to get a module, based on the PCA9685 chip.
 
@@ -158,8 +190,8 @@ And in the next picture you can see a servo that operates a semaphore signal.  T
    :scale: 60%
 
 
-Configure the software - myAutomation.h - Turnouts/Points
----------------------------------------------------------
+Configure myAutomation.h - Servo Turnouts/Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Turnout/Point.
 
@@ -170,7 +202,7 @@ EX-RAIL supports three methods of controlling servos:
 * Animations via the SERVO or SERVO2 directives
 
 Controlling Servos for Turnouts/Points
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
 
@@ -178,9 +210,17 @@ As per the |EX-R| reference, turnouts are defined with the following syntax:
 
 .. code-block:: cpp
 
+   // Example
    SERVO_TURNOUT(id, pin, active_angle, inactive_angle, profile [, "description"])
 
-The valid parameters are:
+
+.. code-block:: cpp
+   :class: code-block-float-right
+
+   // Example
+   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
+
+   /* An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation: */The valid parameters are:
 
 - id = Unique ID within the CommandStation (note these are shared across turnouts, sensors, and outputs).
 - pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
@@ -189,14 +229,28 @@ The valid parameters are:
 - profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout definition).
 - description = A human-friendly description of the turnout that will appear in WiThrottle apps and |Engine Driver|. Note that this must be enclosed in quotes "".
 
-An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:
 
-.. code-block:: cpp
+----
 
-   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
+Servos for Signals and Animations
+=================================
 
-Controlling Servos for Signals
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+See above for information on installing the servo hardware (it is the same as for a turnout/point).
+
+Configure myAutomation.h - Servos for Signals an Animations
+-----------------------------------------------------------
+
+The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Turnout/Point.
+
+EX-RAIL supports three methods of controlling servos:
+
+* Turnouts via the SERVO_TURNOUT directive
+* Signals via the SERVO_SIGNAL directive
+* Animations via the SERVO or SERVO2 directives
+
+
+Servos for Signals
+^^^^^^^^^^^^^^^^^^
 
 The SERVO_SIGNAL directive defines a servo based signal in EX-RAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.
 
@@ -208,14 +262,23 @@ Unlike servo based turnouts, there is no ID or description (they don't appear in
 
    SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
 
-A simple example using the third control pins of the first PCA9685 connected to the CommandStation would be:
+.. code-block:: cpp
+   :class: code-block-float-right
 
-.. code-block:: 
-
+   // Example
    SERVO_SIGNAL(102, 400, 250, 100)
 
-Controlling Servos for Animations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   /* A simple example using the third control pins of the first
+   PCA9685 connected to the CommandStation would be: */
+
+- **vpin** = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
+- **redpos** = The angle to which the servo will move to for the red position.
+- **amberpos** = The angle to which the servo will move to for the amber position.
+- **greenpos** = The angle to which the servo will move to for the green position.
+
+
+Servos for Animations
+^^^^^^^^^^^^^^^^^^^^^
 
 The SERVO and SERVO2 directives allow for servos to be used in various automations within |EX-R|.
 
@@ -230,17 +293,15 @@ As per the |EX-R| reference, these are defined with the following syntax:
 
 The valid parameters are:
 
-- vpin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
-- position = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
-- profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce.
-- duration = The time (in milliseconds (ms)) for the servo to be actively rotating.
-
-As an example, consider a lineside worker that needs to be moved away from the track when a train approaches, which is controlled by an infrared sensor.
-
-The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a sensor attached to VPin 164 (first pin on the first MCP23017):
+- **vpin** = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
+- **position** = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
+- **profile** = There are five profiles to choose from that determine the speed at which a servo will move: Instant, Fast, Medium, Slow, and Bounce.
+- **duration** = The time (in milliseconds (ms)) for the servo to be actively rotating.
 
 .. code-block:: cpp
+   :class: code-block-float-right
 
+   // Example
    AT(164)
    SERVO(101, 400, Fast)
    DONE
@@ -249,7 +310,15 @@ The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a 
    SERVO(101, 100, Slow)
    DONE
 
-This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
+   /* As an example, consider a lineside worker that needs to be moved away 
+   from the track when a train approaches, which is controlled by an infrared 
+   sensor.
+   The SERVO is attached to VPin 101 (second control pin on first PCA9685), 
+   with a sensor attached to VPin 164 (first pin on the first MCP23017):
+   This tells EX-RAIL that when the sensor at VPin 164 is activated, the 
+   lineside worker moves quickly back from the track for safety, and then 
+   after the sensor has been deactivated, he can leisurely move back to his 
+   working position (no one wants to rush back to work right?). */
 
 ----
 
@@ -269,12 +338,26 @@ On the Mega2560 Processor board:
 
 Place IR Infrared or Optical sensors Output wire on Dpins 22, 23, 24 ... 62. One wire to Gnd and for the IR sensor a third wire to 5v pin.
 
-Configure the software - myAutomation.h - Sensors
---------------------------------------------------
+Configure myAutomation.h - Sensors
+----------------------------------
 
-You don't actually require anything special to be configured in advance of using them in an automation.
+You don't actually require anything special to be added to myAutomation.h in advance of using them in an sequence.
 
-Use in automation as AT(DpinNo) or AT(-DpinNo)
+Handling sensors in sequences is made easy because |EX-R| throws away the concept of interrupts (“oh… sensor 5 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 5 triggers, and then carry on in the script”.
+
+Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. 
+
+.. note:: 
+   :class: note-float-right
+   
+   Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.
+
+|EX-CS| allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-5)``.
+
+Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(5) LATCH(5)`` for example effectively latches the sensor 5 on when detected once.
+
+Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.
+
 
 ----
 
@@ -303,8 +386,8 @@ On the PCA9685 Servo Signal Board:
 * Connect individual LEDs on vpins 101, 102 ... 115 as needed
 * Only use the -Gnd and Output+ vpins, NOT the center 5v pin
 
-Configure the software - myAutomation.h - Signals
---------------------------------------------------
+Configure myAutomation.h - Signals
+----------------------------------
 
 The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Signal.
 
@@ -329,27 +412,11 @@ New 4.1 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
     // Use this to Combine the two commands Servo_Turnout and Signal above into One Function 
     SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close = Green
 
+
 ----
 
-Re-upload the EX-CommandStation software
-========================================
+Next Steps - Creating Sequences
+===============================
 
-Using EX-Installer
-------------------
-
-#. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-I| files.
-#. Re-Run |EX-I|
-#. Select the same options that you originally chose and upload
-
-The Roster will be automatically loaded with the |EX-CS| software.
-
-Using the Arduino IDE
----------------------
-
-#. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-CS| files from GitHub.
-#. Run the Arduino IDE
-#. Open the ``CommandStation-EX`` folder
-#. Select the Board, COM port etc. as before
-#. click :guilabel:`Upload`
-
-The Roster will be automatically loaded with the |EX-CS| software.
+   
+Click :doc:`here <getting-started>` or click the "next" button to learn how to create automation sequences.

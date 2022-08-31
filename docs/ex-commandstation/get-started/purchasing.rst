@@ -55,6 +55,10 @@ You will need to find or purchase:
 #. some **wire** (18 to 16 AWG twisted pair recommended [#wire]_.) |BR| |BR|
 #. a 'known' working **DCC-equipped locomotive**
 
+.. note:: 
+
+  You can also find more detailed hardware information in the :doc:`/reference/hardware/index` section.
+
 Software
 --------
 

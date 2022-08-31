@@ -11,7 +11,7 @@ What to expect to learn from stage 3
 
 At the end of this stage, we expect you will have learnt the following:
 
-* How add Turnout/Point
+* How add Turnouts/Points
 * How to Add Sensors
 * How to add Blocks
 
@@ -167,15 +167,21 @@ An example definition for a servo connected to the second control pins of the fi
 Adding a Sensor
 ===============
 
-.. todo:: MEDIUM - Stage 2 - Adding a Sensor - needs to be extended
-  
 .. sidebar:: 
 
   Alternate is to use a :doc:`/reference/hardware/gpio-module`
 
-On the Mega2560 Processor board: 
+IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).
 
-Place IR Infrared or Optical sensors Output wire on Dpins 22, 23, 24 ... 62. One wire to Gnd and for the IR sensor a third wire to 5v pin.
+.. image:: /_static/images/accessories/ir-sensor.png
+   :alt: IR Sensor microcontroller-boards
+   :scale: 100%
+
+To add a sensor, simply connect VCC to 5V, GND to ground, and OUT (or S) to an available digital I/O pin on your |EX-CS|. Typically D22 through to D49 are available for use.
+
+If you are using I/O expander modules, then connect OUT (or S) to an available pin on the appropriate module, and you will need to reference the sensor by that vpin.
+
+Note that some users prefer to desolder one or both LEDs and mount them on wire with one on each side of the track to modify the sensor to become a broken beam type. In this scenario, the sensor will become active high.
 
 Configure the software - myAutomation.h - Sensors
 --------------------------------------------------
@@ -184,4 +190,22 @@ You don't actually require anything special to be configured in advance of using
 
 Use in automation as AT(DpinNo) or AT(-DpinNo)
 
+Adding a Block
+==============
 
+.. sidebar:: 
+   
+   You can also refer to :ref:`ex-rail/ex-rail-reference:blocks` for more information.
+
+Blocks in EX-RAIL are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.
+
+A block is represented by an ID from 0 to 255 and is used to logically reserve a section of track in automation sequences to ensure only one train can enter a block at any given time to avoid collisions.
+
+There are two keywords for using blocks: RESERVE(id) and FREE(id)
+
+Configure the software - myAutomation.h - Blocks
+------------------------------------------------
+
+You don't actually require anything to be configured when using blocks in a sequence.
+
+Simply attempt to reserve a block with ``RESERVE(id)``, and when the train has exited the block, free it again with ``FREE(id)``.

@@ -412,12 +412,12 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#is-it-plugged-in-is-it-turned-on" id="id3">Is it Plugged In, Is it Turned On?</a></p></li>
-<li><p><a class="reference internal" href="#diagnosing-and-testing" id="id4">Diagnosing and Testing</a></p></li>
-<li><p><a class="reference internal" href="#testing-the-arduino-and-base-station-code" id="id5">Testing the Arduino and Base Station code</a></p></li>
-<li><p><a class="reference internal" href="#testing-the-dcc-signal" id="id6">Testing the DCC signal</a></p></li>
-<li><p><a class="reference internal" href="#testing-the-motor-shield" id="id7">Testing the Motor Shield</a></p></li>
-<li><p><a class="reference internal" href="#loco-programming-issues-1-or-jmri-308-error" id="id8">Loco Programming Issues (-1 or JMRI 308 error)</a></p></li>
+<li><p><a class="reference internal" href="#is-it-plugged-in-is-it-turned-on" id="id1">Is it Plugged In, Is it Turned On?</a></p></li>
+<li><p><a class="reference internal" href="#diagnosing-and-testing" id="id2">Diagnosing and Testing</a></p></li>
+<li><p><a class="reference internal" href="#testing-the-arduino-and-ex-commandstation-code" id="id3">Testing the Arduino and EX-CommandStation code</a></p></li>
+<li><p><a class="reference internal" href="#testing-the-motor-shield" id="id4">Testing the Motor Shield</a></p></li>
+<li><p><a class="reference internal" href="#testing-the-dcc-signal" id="id5">Testing the DCC signal</a></p></li>
+<li><p><a class="reference internal" href="#loco-programming-issues-1-or-jmri-308-error" id="id6">Loco Programming Issues (-1 or JMRI 308 error)</a></p></li>
 </ul>
 </div>
 </aside>
@@ -425,7 +425,7 @@
 <p>NOTE: This section is a very rough draft. More coming soon.</p>
 <p>There are a lot of optional settings and choices a user can make and sometimes things don’t work as you expect them to. If you upload software to the Command Station, connect power to your motor controller and the Command Station and then connect the output to your track and don’t see power or your train responding, here are the steps to follow.</p>
 <section id="is-it-plugged-in-is-it-turned-on">
-<h2><a class="toc-backref" href="#id3">Is it Plugged In, Is it Turned On?</a><a class="headerlink" href="#is-it-plugged-in-is-it-turned-on" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1">Is it Plugged In, Is it Turned On?</a><a class="headerlink" href="#is-it-plugged-in-is-it-turned-on" title="Permalink to this heading"></a></h2>
 <p>Yes, we need to start with the basics. If you have 12V DC or less connected to the input power of the Arduino and did not cut the power connect trace underneath the Motor Controller, then the Motor Controller and the Arduino can be powered from the one power supply connected to the barrel jack of the Motor Shield. If you cut the trace (which we highly recommend), then you will need two power supplies, a 7-9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the Motor Controller.</p>
 <ul class="simple">
 <li><p>If you have one power supply, is it plugged into the wall and is it at least capable of delivering 2 Amps of current?</p></li>
@@ -434,28 +434,23 @@
 </ul>
 </section>
 <section id="diagnosing-and-testing">
-<h2><a class="toc-backref" href="#id4">Diagnosing and Testing</a><a class="headerlink" href="#diagnosing-and-testing" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2">Diagnosing and Testing</a><a class="headerlink" href="#diagnosing-and-testing" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Remove the Motor Shield —we are going to test just the Arduino first.</p></li>
 <li><p>Download and install the most current version of <a class="reference internal" href="../../download/ex-commandstation.html#latest-ex-commandstation-official-release"><span class="std std-ref">EX-CommandStation</span></a></p></li>
 <li><p>Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to <code class="docutils literal notranslate"><span class="pre">115200</span> <span class="pre">baud</span></code> and make sure you have set <code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">CR</span> <span class="pre">&amp;</span> <span class="pre">NL</span></code> from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see “DCC-EX” and the software version as well as other log lines that mention WiFi. If you don’t see anything in the log, it could be that the software did not upload correctly, less than 7 Volts DC to the Arduino, or be an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.</p></li>
 </ol>
 </section>
-<section id="testing-the-arduino-and-base-station-code">
-<h2><a class="toc-backref" href="#id5">Testing the Arduino and Base Station code</a><a class="headerlink" href="#testing-the-arduino-and-base-station-code" title="Permalink to this heading"></a></h2>
-<p>TODO: Coming soon…</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>MEDIUM - Testing the Arduino and Base Station code</p>
-</div>
-</section>
-<section id="testing-the-dcc-signal">
-<h2><a class="toc-backref" href="#id6">Testing the DCC signal</a><a class="headerlink" href="#testing-the-dcc-signal" title="Permalink to this heading"></a></h2>
-<p>Now the fun part – we are going to test the generation of the DCC signal itself.</p>
-<p>The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12V DC is going INTO the Motor Shield, but you have to use the <strong>AC setting</strong> to measure the bipolar square wave signal. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on our input voltage and a few other factors. An N-Scale track with 12V DC input to the motor shield is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, motor shield, or config.h settings.</p>
+<section id="testing-the-arduino-and-ex-commandstation-code">
+<h2><a class="toc-backref" href="#id3">Testing the Arduino and EX-CommandStation code</a><a class="headerlink" href="#testing-the-arduino-and-ex-commandstation-code" title="Permalink to this heading"></a></h2>
+<p>Validating the Arduino and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> code is functional is a pretty straight forward exercise.</p>
+<ol class="arabic simple">
+<li><p>From the serial monitor window, type <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RESET&gt;</span></code> to restart the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and monitor the startup logs. Once it has started, ensure the version you expect is displayed, and that the motor driver you have configured is also displayed. Look for a line similar to <code class="docutils literal notranslate"><span class="pre">&lt;iDCC-EX</span> <span class="pre">V-4.2.3</span> <span class="pre">rc1</span> <span class="pre">/</span> <span class="pre">STM32</span> <span class="pre">/</span> <span class="pre">STANDARD_MOTOR_SHIELD</span> <span class="pre">G-PORTX-HAL-20220828&gt;</span></code> which translates to <code class="docutils literal notranslate"><span class="pre">&lt;Version</span> <span class="pre">/</span> <span class="pre">Microcontroller</span> <span class="pre">/</span> <span class="pre">Motor</span> <span class="pre">shield</span> <span class="pre">definition&gt;</span></code>. If these differ from what you expect, the software hasn’t loaded correctly, or your “config.h” file may not have been updated prior to uploading the software.</p></li>
+<li><p>If there are obvious issues noted from these startup logs, review “config.h”, make sure you have downloaded the correct version of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, and upload the software again.</p></li>
+</ol>
 </section>
 <section id="testing-the-motor-shield">
-<h2><a class="toc-backref" href="#id7">Testing the Motor Shield</a><a class="headerlink" href="#testing-the-motor-shield" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4">Testing the Motor Shield</a><a class="headerlink" href="#testing-the-motor-shield" title="Permalink to this heading"></a></h2>
 <p>If first two tests pass, then the Arduino is functioning correctly and it’s time to test the Motor Shield.</p>
 <ol class="arabic simple">
 <li><p>Power down the Arduino</p></li>
@@ -470,19 +465,20 @@
 <p>If only one of the LEDs attached to the one of the output channels comes on when you send a <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> command, but the other does not, this suggests that either the DCC signal is not getting through to the Motor Shield, in which case it is a mapping/wiring/jumper problem, OR that the signal is getting through but the H-bridge on the Motor Shield itself is not functioning (and the Motor Shield may need to be replaced).</p>
 <p>If you still need help, please find us on Discord or send an email to <a class="reference external" href="mailto:support&#37;&#52;&#48;dcc-ex&#46;com">support<span>&#64;</span>dcc-ex<span>&#46;</span>com</a></p>
 </section>
+<section id="testing-the-dcc-signal">
+<h2><a class="toc-backref" href="#id5">Testing the DCC signal</a><a class="headerlink" href="#testing-the-dcc-signal" title="Permalink to this heading"></a></h2>
+<p>Now the fun part – we are going to test the generation of the DCC signal itself.</p>
+<p>The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12V DC is going INTO the Motor Shield, but you have to use the <strong>AC setting</strong> to measure the bipolar square wave signal. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on our input voltage and a few other factors. An N-Scale track with 12V DC input to the motor shield is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, motor shield, or config.h settings.</p>
+</section>
 <section id="loco-programming-issues-1-or-jmri-308-error">
-<h2><a class="toc-backref" href="#id8">Loco Programming Issues (-1 or JMRI 308 error)</a><a class="headerlink" href="#loco-programming-issues-1-or-jmri-308-error" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6">Loco Programming Issues (-1 or JMRI 308 error)</a><a class="headerlink" href="#loco-programming-issues-1-or-jmri-308-error" title="Permalink to this heading"></a></h2>
 <p>With all of the decoder manufacturers creating hardware and the difficulties in properly interpreting the NMRA standard, we have found that quite a few decoders are wildly outside the specification. That presents a few challenges. If you can’t read CVs or program your loco or you see “Error 308” in your JMRI log, it could be one of the following:</p>
 <ol class="arabic simple">
 <li><p><strong>Current sense issue</strong> - From the Arduino Serial monitor with <code class="docutils literal notranslate"><span class="pre">115200</span> <span class="pre">baud</span></code> set and <code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">CR</span> <span class="pre">&amp;</span> <span class="pre">NL</span></code> selected in the dropdown, put a loco on the MAIN track. Enter the &lt;1&gt; command to turn on power. Then enter the &lt;C&gt; command and check the response. You should see a valid number for current.</p></li>
 <li><p>Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capability on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.</p></li>
 <li><p><strong>Out of spec. decoder (most likely)</strong> - You will need to run a test and then modify a setting or two. Please go to the <a class="reference internal" href="../../reference/tools/diagnostic-d-ack-command.html"><span class="doc">&lt;Diagnostic &lt;D ACK&gt;</span></a>. Send us your log.</p></li>
 </ol>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>LOW - finish this section. Link to notes about current sensing. - Loco Programming Issues (-1 or JMRI 308 error)</p>
-</div>
-<p>Updated June 30, 2021</p>
+<p>If you continue to have issues reading decoders on the programming track with multiple different decoders, it’s worthwhile reviewing the <a class="reference internal" href="../../reference/hardware/motorboards/motor-board-config.html"><span class="doc">Motor Driver Configuration</span></a> page, especially all information relating to current sensing. If current sensing is not configured and functioning correctly, you will not be able to read any decoders via the programming track.</p>
 </section>
 </section>
 

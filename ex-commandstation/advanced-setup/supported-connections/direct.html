@@ -408,19 +408,19 @@
 <section id="direct-connection-usb">
 <h1>Direct Connection (USB)<a class="headerlink" href="#direct-connection-usb" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>MEDIUM - direct connection text</p>
+<section id="connection-type-direct-to-command-station">
+<h2>Connection Type: Direct to Command Station<a class="headerlink" href="#connection-type-direct-to-command-station" title="Permalink to this heading"></a></h2>
+<p>If your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is an Arduino Nano or Uno, or you’re using <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>, or you have a throttle that connects via a serial connection, you only need a direct connection method and don’t need Bluetooth or wireless capabilities.</p>
+<p>This is also all that’s required if you’re using API commands via the serial console. However, this is probably only relevant if you need to do so if requested as part of a support ticket.</p>
+<p>The direct connection is provided by simply connecting to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via the USB interface.</p>
+<p>If you are using <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>, refer to the <a class="reference internal" href="jmri.html"><span class="doc">JMRI Connection</span></a> page.</p>
+<p>If you’re using a throttle with a physical serial interface, this may require connecting directly to the Tx/Rx pins on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, but the specifics of this will need to be outlined by the throttle instructions.</p>
+<p>If you’re using a Mega2560 or another microcontroller that has more than one serial connection available, you will need to uncomment the appropriate line in your “config.h” file:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define SERIAL1_COMMANDS    </span><span class="c1">// Broadcast to throttles on Tx1/Rx1</span>
+<span class="cp">#define SERIAL2_COMMANDS    </span><span class="c1">// Broadcast to throttles on Tx2/Rx2</span>
+<span class="cp">#define SERIAL3_COMMANDS    </span><span class="c1">// Broadcast to throttles on Tx3/Rx3</span>
+</pre></div>
 </div>
-<section id="connection-type-direct-to-command-station-or-through-jmri">
-<h2>Connection Type: Direct to Command Station or through JMRI<a class="headerlink" href="#connection-type-direct-to-command-station-or-through-jmri" title="Permalink to this heading"></a></h2>
-<p>You have two options for connecting your controller to your Command Station depending on its capabilities and your preferences:</p>
-<ul class="simple">
-<li><p>Connect directly to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> using WiFi or Bluetooth (<a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> not required but optional)</p></li>
-<li><p>Connect to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> through <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> with the USB cable, and connect a <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> compatible throttle to JMRI’s <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> via WiFi</p></li>
-</ul>
-<p>If you don’t need <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>, or just want to connect your wireless controller directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the &lt;DCC++&gt; command language, or the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> command language.</p>
-<p>For example, <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> uses the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a>, so it can connect either directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via WiFi, or indirectly through the JMRI computer that has WiFi and its own <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Server</span></a>. DCCpp CAB can connect directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via WiFi or Bluetooth, and sends native &lt;DCC++&gt; commands.</p>
 </section>
 </section>
 

@@ -2,22 +2,29 @@
 .. include:: /include/include-l3.rst
 |EX-CS-LOGO|
 
-**************************
+***********************
 Direct Connection (USB)
-**************************
+***********************
 
 |tinkerer| |engineer|
 
-.. todo::  MEDIUM - direct connection text
+Connection Type: Direct to Command Station
+==========================================
 
-Connection Type: Direct to Command Station or through JMRI
-============================================================
+If your |EX-CS| is an Arduino Nano or Uno, or you're using |JMRi|, or you have a throttle that connects via a serial connection, you only need a direct connection method and don't need Bluetooth or wireless capabilities.
 
-You have two options for connecting your controller to your Command Station depending on its capabilities and your preferences:
+This is also all that's required if you're using API commands via the serial console. However, this is probably only relevant if you need to do so if requested as part of a support ticket.
 
-* Connect directly to |EX-CS| using WiFi or Bluetooth (|JMRI| not required but optional)
-* Connect to the |EX-CS| through |JMRI| with the USB cable, and connect a |WiThrottle Protocol| compatible throttle to JMRI's |WiThrottle Server| via WiFi
+The direct connection is provided by simply connecting to |EX-CS| via the USB interface.
 
-If you don't need |JMRI|, or just want to connect your wireless controller directly to the |EX-CS|, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the |WiThrottle Protocol| command language. 
+If you are using |JMRi|, refer to the :doc:`/ex-commandstation/advanced-setup/supported-connections/jmri` page.
 
-For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect either directly to the |EX-CS| via WiFi, or indirectly through the JMRI computer that has WiFi and its own |WiThrottle Server|. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends native <DCC++> commands.
+If you're using a throttle with a physical serial interface, this may require connecting directly to the Tx/Rx pins on the |EX-CS|, but the specifics of this will need to be outlined by the throttle instructions.
+
+If you're using a Mega2560 or another microcontroller that has more than one serial connection available, you will need to uncomment the appropriate line in your "config.h" file:
+
+.. code-block:: cpp
+
+  #define SERIAL1_COMMANDS    // Broadcast to throttles on Tx1/Rx1
+  #define SERIAL2_COMMANDS    // Broadcast to throttles on Tx2/Rx2
+  #define SERIAL3_COMMANDS    // Broadcast to throttles on Tx3/Rx3

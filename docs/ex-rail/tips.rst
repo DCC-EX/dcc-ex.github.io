@@ -139,7 +139,7 @@ One of the cunning features of EX-RAIL is enabling users to define macros, or wh
 
 To do this, you're actually making use of some C++ code in addition to the clever programming in DCC++ EX.
 
-(Yes, we just called ourselves cunning and clever. Our talent is superceded only by our modesty ;) )
+(Yes, we just called ourselves cunning and clever. Our talent is superseded only by our modesty ;) )
 
 The way to implement this is as follows:
 

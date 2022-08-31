@@ -40,21 +40,13 @@ Diagnosing and Testing
 #. Download and install the most current version of :ref:`EX-CommandStation <download/ex-commandstation:Latest EX-CommandStation Official Release>`
 #. Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to ``115200 baud`` and make sure you have set ``Both CR & NL`` from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see "DCC-EX" and the software version as well as other log lines that mention WiFi. If you don't see anything in the log, it could be that the software did not upload correctly, less than 7 Volts DC to the Arduino, or be an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.
 
-Testing the Arduino and Base Station code
+Testing the Arduino and EX-CommandStation code
 ==============================================
 
-TODO: Coming soon... 
+Validating the Arduino and |EX-CS| code is functional is a pretty straight forward exercise.
 
-.. TODO:: MEDIUM - Testing the Arduino and Base Station code
-
-
-Testing the DCC signal
-=========================
-
-Now the fun part -- we are going to test the generation of the DCC signal itself.  
-
-The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12V DC is going INTO the Motor Shield, but you have to use the **AC setting** to measure the bipolar square wave signal. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on our input voltage and a few other factors. An N-Scale track with 12V DC input to the motor shield is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, motor shield, or config.h settings.
-
+#. From the serial monitor window, type ``<D RESET>`` to restart the |EX-CS| and monitor the startup logs. Once it has started, ensure the version you expect is displayed, and that the motor driver you have configured is also displayed. Look for a line similar to ``<iDCC-EX V-4.2.3 rc1 / STM32 / STANDARD_MOTOR_SHIELD G-PORTX-HAL-20220828>`` which translates to ``<Version / Microcontroller / Motor shield definition>``. If these differ from what you expect, the software hasn't loaded correctly, or your "config.h" file may not have been updated prior to uploading the software.
+#. If there are obvious issues noted from these startup logs, review "config.h", make sure you have downloaded the correct version of |EX-CS|, and upload the software again. 
 
 Testing the Motor Shield
 ==============================
@@ -75,6 +67,13 @@ If only one of the LEDs attached to the one of the output channels comes on when
 
 If you still need help, please find us on Discord or send an email to support@dcc-ex.com
 
+Testing the DCC signal
+=========================
+
+Now the fun part -- we are going to test the generation of the DCC signal itself.  
+
+The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12V DC is going INTO the Motor Shield, but you have to use the **AC setting** to measure the bipolar square wave signal. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on our input voltage and a few other factors. An N-Scale track with 12V DC input to the motor shield is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, motor shield, or config.h settings.
+
 Loco Programming Issues (-1 or JMRI 308 error)
 ===============================================
 
@@ -84,6 +83,4 @@ With all of the decoder manufacturers creating hardware and the difficulties in 
 #. Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capability on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.
 #. **Out of spec. decoder (most likely)** - You will need to run a test and then modify a setting or two. Please go to the :doc:`<Diagnostic \<D ACK\> </reference/tools/diagnostic-d-ack-command>`. Send us your log.
 
-.. TODO:: LOW - finish this section. Link to notes about current sensing. - Loco Programming Issues (-1 or JMRI 308 error)
-
-Updated June 30, 2021
+If you continue to have issues reading decoders on the programming track with multiple different decoders, it's worthwhile reviewing the :doc:`/reference/hardware/motorboards/motor-board-config` page, especially all information relating to current sensing. If current sensing is not configured and functioning correctly, you will not be able to read any decoders via the programming track.

@@ -57,7 +57,7 @@ EX-RAIL
 
 ``<D EXRAIL ON|OFF>`` When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).
 
-Example output from :ref:`ex-rail/examples:example 6: Point to Point Shuttle` running SEQUENCE(13) with loco ID 18:
+Example output from :ref:`ex-rail/examples:Point to Point Shuttle` running SEQUENCE(13) with loco ID 18:
 
 .. code-block:: 
 
@@ -92,7 +92,7 @@ Task info
 
 ``</>`` Displays EX-RAIL running task information
 
-Example outputs also using :ref:`ex-rail/examples:example 6: Point to Point Shuttle`:
+Example outputs also using :ref:`ex-rail/examples:Point to Point Shuttle`:
 
 * Leaving right side of the shuttle sequence with speed 50F (forward):
 
@@ -149,11 +149,11 @@ Script Definition Terms
 
 There are three options to define these automation sequences:
 
-``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`ex-rail/examples:example 4: Stopping at a Station (simple loop)` for a simple example.
+``AUTOMATION( id, "description" )``	Define an automation sequence that is advertised to WiThrottles to send a train along. See :ref:`ex-rail/examples:Stopping at a Station (simple loop)` for a simple example.
 
-``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See :ref:`ex-rail/examples:example 1: creating routes` for various examples.
+``ROUTE( id, "description" )``	Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See :ref:`ex-rail/examples:creating routes` for various examples.
 
-``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`ex-rail/examples:example 3: automating various non-track items`, :ref:`ex-rail/examples:example 6: Point to Point Shuttle`, and :ref:`ex-rail/examples:example 7: multiple inter-connected trains` for further examples.
+``SEQUENCE( id )``	A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`ex-rail/examples:automating various non-track items`, :ref:`ex-rail/examples:Point to Point Shuttle`, and :ref:`ex-rail/examples:multiple inter-connected trains` for further examples.
 
 ``ENDTASK`` or ``DONE``	Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the EX-RAIL documentation.
 
@@ -483,7 +483,7 @@ For example:
 
 ``DELAYMINS( delay )``	Delay a number of minutes
 
-``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`ex-rail/examples:Example 7: Multiple inter-connected trains` for good examples.
+``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`ex-rail/examples:Multiple inter-connected trains` for good examples.
 
 Delay examples:
 

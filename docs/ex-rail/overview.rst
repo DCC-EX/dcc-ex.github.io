@@ -54,3 +54,9 @@ You DON'T need:
 - A separate computer living under your layout
 - Knowledge of C++ or Python/Jython programming
 
+----
+
+Next Steps - myAutomation.h
+===========================
+   
+Click :doc:`here <editing>` or click the "next" button to learn how to edit the file which will contain your automation sequences.

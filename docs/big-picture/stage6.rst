@@ -437,7 +437,7 @@ Fully automated layout
 
 Now it's time to display the full automation capabilities by setting our layout up for fully automated control of your trains.
 
-You will note that these are somewhat similar to :ref:`ex-rail/examples:example 7: multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
+You will note that these are somewhat similar to :ref:`ex-rail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
 
 To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that EX-RAIL has no way of knowing where a train is on the layout when first starting.
 

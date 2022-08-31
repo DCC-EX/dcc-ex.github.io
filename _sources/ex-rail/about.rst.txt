@@ -50,15 +50,11 @@ From time to time, we are asked why we can't put automation scripts (the content
 
 1) Being able to read an SD card on the Arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don't have enough free memory on an Arduino to hold that code. The same problems exist for using EEPROM.   
 
-
 2) myAutomation.h is actually generating compiled code as an integral part of the Command Station. To have this file loaded separately at run time would require that the Command Station contained all the code necessary to read the file and interpret the contents. This would be a significant additional code burden on the Command Station (>1000 lines of code) and also require huge amounts of precious RAM to store the interpreted version of the file because it cannot be written into flash memory at run time.   
-
 
 3) By compiling the code on your pc, you have the advantage of the vast majority of syntax errors being detected by the compiler (albeit somewhat opaquely) rather than having to move the SDCard to the Command Station before discovering an issue.   
 
-
 4) The current implementation requires no additional PC code/tool download or installation. If you are able to setup your Command Station, you already have everything you need to add your myAutomation.
-
 
 5) To implement an SD card solution requires a user to have access to the Command Station, which could involve climbing under their layout, opening the Command Station case if you have one, dismounting the motor shield to get access to the SDCard slot, potentially damaging the Command Station, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the Command Station.
 

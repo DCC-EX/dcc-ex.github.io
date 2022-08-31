@@ -419,20 +419,21 @@
 </aside>
 <p>Welcome to the home for <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> Automation.</p>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> is an “<strong>EX</strong>tended <strong>R</strong>ailroad <strong>A</strong>utomation <strong>I</strong>nstruction <strong>L</strong>anguage”
-that can easily be used to describe sequential command ‘sequences’ to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. <strong>EX-Rail</strong> will then run automatically on <strong>EX-CommandStation</strong> startup or if trigger manually or on occurance of the specified events.</p>
+that can easily be used to describe sequential command ‘sequences’ to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. <strong>EX-Rail</strong> will then run automatically on <strong>EX-CommandStation</strong> startup or if trigger manually or on occurrence of the specified events.</p>
 <p>To begin, let’s define a few terms:</p>
+<p><strong>OBJECT</strong> - Things / devices on your layout that you want to interact with. these include: <a class="reference external" href="AddingaRoster">Your locos</a>, <a class="reference external" href="AddingTurnouts/Points">Turnouts/Points</a>, <a class="reference external" href="ServosforSignalsandAnimations">Semophores/Signals</a>, <a class="reference external" href="ServosforSignalsandAnimations">Servo based Animations</a>, <a class="reference external" href="Sensors">Sensors</a> and <a class="reference external" href="Signals">Signals (Lights)</a>.</p>
 <p><strong>SEQUENCE</strong> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.</p>
 <p><strong>ROUTE</strong> - A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.</p>
 <p><strong>AUTOMATION</strong> - A special type of SEQUENCE that is made visible to a throttle so that a user can hand over a loco and let <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> drive the train away, following each step listed in the sequence.</p>
-<p>Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with <a class="reference internal" href="../throttles/index.html"><span class="doc">throttles</span></a> that support it (<a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <a class="reference internal" href="../throttles/software/ex-webthrottle.html"><span class="doc">WebThrottle-EX</span></a>) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. “Routes” go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. “Automations” can appear on a “handoff” button that will supply or handoff the Loco ID to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> where it can take over and run the train autonomously. An automation example would be manually driving a train into a station and pressing the assigned handoff button in the throttle that runs an AUTOMATION to take it on a journey around the layout.</p>
+<p>Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with <a class="reference internal" href="../throttles/index.html"><span class="doc">throttles</span></a> that support it (<a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. “Routes” go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. Automation ‘sequences’ can appear on a ‘handoff’ button that will supply or handoff the Loco ID to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> where it can take over and run the train autonomously. An automation sequence example would be manually driving a train into a station and pressing the assigned handoff button in the throttle that runs an AUTOMATION to take it on a journey around the layout.</p>
 <section id="things-you-can-do-with-ex-rail">
 <h2><a class="toc-backref" href="#id1">Things You Can Do With EX-RAIL</a><a class="headerlink" href="#things-you-can-do-with-ex-rail" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Create “Routes” which set multiple turnouts and signals at the press of a button in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> or EngineDriver (other WiThrottle-compatible throttles are available)</p></li>
-<li><p>Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up “Automations”</p></li>
+<li><p>Create ‘Routes’ which set multiple turnouts/points and signals at the press of a button in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> or <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>, or other WiThrottle-compatible throttles are available</p></li>
+<li><p>Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up Automations ‘Sequences’</p></li>
 <li><p>Drive trains manually, and hand a train over to an Automation</p></li>
 <li><p>Animate accessories such as lights, crossings, or cranes</p></li>
-<li><p>Intercept turnout changes to automatically adjust signals or other turnouts</p></li>
+<li><p>Intercept turnout/point changes to automatically adjust signals or other turnouts</p></li>
 <li><p>Turn on the coffee pot when the train reaches the station</p></li>
 </ul>
 </section>
@@ -442,7 +443,7 @@ that can easily be used to describe sequential command ‘sequences’ to automa
 <p>You DON’T need:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, or any additional utilities</p></li>
-<li><p>EngineDriver, or any other WiThrottle app</p></li>
+<li><p><a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>, or any other WiThrottle app</p></li>
 <li><p>A separate computer living under your layout</p></li>
 <li><p>Knowledge of C++ or Python/Jython programming</p></li>
 </ul>
@@ -450,7 +451,7 @@ that can easily be used to describe sequential command ‘sequences’ to automa
 <hr class="docutils" />
 <section id="next-steps-myautomation-h">
 <h2><a class="toc-backref" href="#id3">Next Steps - myAutomation.h</a><a class="headerlink" href="#next-steps-myautomation-h" title="Permalink to this heading"></a></h2>
-<p>Click <a class="reference internal" href="editing.html"><span class="doc">here</span></a> or click the “next” button to learn how to edit the file which will contain your automation sequences.</p>
+<p>Click <a class="reference internal" href="editing.html"><span class="doc">here</span></a> or click the <span class="guilabel">Next</span> button to learn how to edit the file which will contain your automation sequences.</p>
 </section>
 </section>
 

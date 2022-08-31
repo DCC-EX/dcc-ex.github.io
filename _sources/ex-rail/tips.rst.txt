@@ -14,27 +14,33 @@ Tips and Techniques
       :depth: 2
       :local:
 
-Below are some tips and techniques you can implement to get the most out of EX-RAIL.
+Below are some tips and techniques you can implement to get the most out of |EX-R|.
 
-Defining names for any ID numbers (aliases)
-===========================================
 
-Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.
+Comments
+========
 
-Refer to :ref:`ex-rail/ex-rail-reference:aliases` for more information.
+Comments can be very helpful if you need to go back at a later time to make changes to your sequences, to help you remember what you did or why you did it.
 
-Alias names:
+You can add comments to myAutomation.h in two ways:
 
-- **Must not** be an existing EX-RAIL command name or other reserved word.
-- **Should be** reasonably short but descriptive.
-- **Must start** with letters A-Z/a-z or underscore _ .
-- **May then** also contain numbers.
-- **Must not** contain spaces or special characters.
-   
-For example:
+* If ``//`` occurs in the line, everything after that (including the slashes) is ignored.  i.e. a 'Comment'
+* If a line starts with ``/*`` then everything, including all subsequent lines an including the '/*') is ignored until a ``*/`` is found.  i.e. a 'Comment'
+
+
+Aliases - User Friendly Names for any Ids
+=========================================
+
+Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. 
+
+``ALIAS( name[, value] )`` Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias "name" text.
+
+This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
 
 .. code-block:: cpp
+   :class: code-block-float-right
 
+   //example
    ALIAS(COAL_YARD_TURNOUT,19)
    ALIAS(COAL_YARD_SIGNAL_3,27)
 
@@ -49,6 +55,17 @@ For example:
    ROUTE(1,"Coal yard exit")
       THROW(COAL_YARD_TURNOUT)
       GREEN(COAL_YARD_SIGNAL_3)
+
+Refer to :ref:`ex-rail/ex-rail-reference:aliases` for more information.
+
+Alias names:
+
+- **Must not** be an existing EX-RAIL command name or other reserved word.
+- **Should be** reasonably short but descriptive.
+- **Must start** with letters A-Z/a-z, 0-9 or underscore _ .
+- **May then** also contain numbers.
+- **Must not** contain spaces or special characters.
+   
 
 Including sub-files
 ===================

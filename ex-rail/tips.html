@@ -27,7 +27,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="EX-RAIL Detailed Reference" href="EX-RAIL-reference.html" />
-    <link rel="prev" title="Example Sequences" href="examples.html" />
+    <link rel="prev" title="Example Objects and Sequences" href="examples.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -149,9 +149,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../ex-webthrottle/index.html">EX-WebThrottle</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-RAIL (Automation)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating-elements.html">Adding Key Objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Creating Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Example Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html">Editing myAutomation.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-elements.html">Adding Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Introduction to Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Tips and Techniques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command List</a></li>
@@ -410,28 +411,31 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#defining-names-for-any-id-numbers-aliases" id="id1">Defining names for any ID numbers (aliases)</a></p></li>
-<li><p><a class="reference internal" href="#including-sub-files" id="id2">Including sub-files</a></p></li>
-<li><p><a class="reference internal" href="#realistic-turnout-sequences" id="id3">Realistic turnout sequences</a></p></li>
-<li><p><a class="reference internal" href="#make-your-own-ex-rail-macro-or-command" id="id4">Make your own EX-RAIL macro or command</a></p></li>
+<li><p><a class="reference internal" href="#comments" id="id1">Comments</a></p></li>
+<li><p><a class="reference internal" href="#aliases-user-friendly-names-for-any-ids" id="id2">Aliases - User Friendly Names for any Ids</a></p></li>
+<li><p><a class="reference internal" href="#including-sub-files" id="id3">Including sub-files</a></p></li>
+<li><p><a class="reference internal" href="#realistic-turnout-sequences" id="id4">Realistic turnout sequences</a></p></li>
+<li><p><a class="reference internal" href="#make-your-own-ex-rail-macro-or-command" id="id5">Make your own EX-RAIL macro or command</a></p></li>
 </ul>
 </div>
 </aside>
-<p>Below are some tips and techniques you can implement to get the most out of EX-RAIL.</p>
-<section id="defining-names-for-any-id-numbers-aliases">
-<h2><a class="toc-backref" href="#id1">Defining names for any ID numbers (aliases)</a><a class="headerlink" href="#defining-names-for-any-id-numbers-aliases" title="Permalink to this heading"></a></h2>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">ALIAS()</span></code> command in your script to make IDs a bit more human friendly, and easier to refer to later. This can be defined before or after it is used.</p>
-<p>Refer to <a class="reference internal" href="EX-RAIL-reference.html#aliases"><span class="std std-ref">Aliases</span></a> for more information.</p>
-<p>Alias names:</p>
+<p>Below are some tips and techniques you can implement to get the most out of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
+<section id="comments">
+<h2><a class="toc-backref" href="#id1">Comments</a><a class="headerlink" href="#comments" title="Permalink to this heading"></a></h2>
+<p>Comments can be very helpful if you need to go back at a later time to make changes to your sequences, to help you remember what you did or why you did it.</p>
+<p>You can add comments to myAutomation.h in two ways:</p>
 <ul class="simple">
-<li><p><strong>Must not</strong> be an existing EX-RAIL command name or other reserved word.</p></li>
-<li><p><strong>Should be</strong> reasonably short but descriptive.</p></li>
-<li><p><strong>Must start</strong> with letters A-Z/a-z or underscore _ .</p></li>
-<li><p><strong>May then</strong> also contain numbers.</p></li>
-<li><p><strong>Must not</strong> contain spaces or special characters.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">//</span></code> occurs in the line, everything after that (including the slashes) is ignored.  i.e. a ‘Comment’</p></li>
+<li><p>If a line starts with <code class="docutils literal notranslate"><span class="pre">/*</span></code> then everything, including all subsequent lines an including the ‘/<em>’) is ignored until a ``</em>/`` is found.  i.e. a ‘Comment’</p></li>
 </ul>
-<p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">,</span><span class="mi">19</span><span class="p">)</span>
+</section>
+<section id="aliases-user-friendly-names-for-any-ids">
+<h2><a class="toc-backref" href="#id2">Aliases - User Friendly Names for any Ids</a><a class="headerlink" href="#aliases-user-friendly-names-for-any-ids" title="Permalink to this heading"></a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">ALIAS()</span></code> command in your script to make IDs a bit more human friendly, and easier to refer to later.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code> Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias “name” text.</p>
+<p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
+<div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//example</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">,</span><span class="mi">19</span><span class="p">)</span>
 <span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">,</span><span class="mi">27</span><span class="p">)</span>
 
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
@@ -447,9 +451,18 @@
    <span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Refer to <a class="reference internal" href="EX-RAIL-reference.html#aliases"><span class="std std-ref">Aliases</span></a> for more information.</p>
+<p>Alias names:</p>
+<ul class="simple">
+<li><p><strong>Must not</strong> be an existing EX-RAIL command name or other reserved word.</p></li>
+<li><p><strong>Should be</strong> reasonably short but descriptive.</p></li>
+<li><p><strong>Must start</strong> with letters A-Z/a-z, 0-9 or underscore _ .</p></li>
+<li><p><strong>May then</strong> also contain numbers.</p></li>
+<li><p><strong>Must not</strong> contain spaces or special characters.</p></li>
+</ul>
 </section>
 <section id="including-sub-files">
-<h2><a class="toc-backref" href="#id2">Including sub-files</a><a class="headerlink" href="#including-sub-files" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3">Including sub-files</a><a class="headerlink" href="#including-sub-files" title="Permalink to this heading"></a></h2>
 <p>If you find your myAutomation.h file becoming quite lengthy and cumbersome to scroll through and keep track of, you can break your items up into multiple smaller files, and include those in your myAutomation.h file instead.</p>
 <p>There are some rules that apply in this scenario:</p>
 <ul class="simple">
@@ -476,7 +489,7 @@
 </div>
 </section>
 <section id="realistic-turnout-sequences">
-<h2><a class="toc-backref" href="#id3">Realistic turnout sequences</a><a class="headerlink" href="#realistic-turnout-sequences" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4">Realistic turnout sequences</a><a class="headerlink" href="#realistic-turnout-sequences" title="Permalink to this heading"></a></h2>
 <p>Let’s say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:</p>
 <ol class="arabic simple">
 <li><p>An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p></li>
@@ -507,7 +520,7 @@
 <p>A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.</p>
 </section>
 <section id="make-your-own-ex-rail-macro-or-command">
-<h2><a class="toc-backref" href="#id4">Make your own EX-RAIL macro or command</a><a class="headerlink" href="#make-your-own-ex-rail-macro-or-command" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5">Make your own EX-RAIL macro or command</a><a class="headerlink" href="#make-your-own-ex-rail-macro-or-command" title="Permalink to this heading"></a></h2>
 <p>One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.</p>
 <p>To do this, you’re actually making use of some C++ code in addition to the clever programming in DCC++ EX.</p>
 <p>(Yes, we just called ourselves cunning and clever. Our talent is superceded only by our modesty ;) )</p>
@@ -573,7 +586,7 @@ ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &q
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="examples.html" class="btn btn-neutral float-left" title="Example Sequences" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-left" title="Example Objects and Sequences" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="EX-RAIL-reference.html" class="btn btn-neutral float-right" title="EX-RAIL Detailed Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

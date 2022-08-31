@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-********************
-Creating Sequences
-********************
+*************************
+Introduction to Sequences
+*************************
 
 |tinkerer| |conductor|
 
@@ -16,94 +16,23 @@ Creating Sequences
 
 This page is a limited introduction to the |EX-R| automation sequences.  For more comprehensive information refer to the :doc:`/ex-rail/EX-RAIL-reference` and :doc:`/ex-rail/EX-RAIL-summary` pages.
 
-----
-
-myAutomation.h - Editing Your Sequences
-=======================================
-
-The script containing all your sequences is added to your Command Station by creating a file called "myAutomation.h" in the same folder as CommandStation-EX.ino.
-
-Connecting your Arduino and pressing the :guilabel:`Upload` button in the usual way will save the file and upload your script into the Command Station.
-
-You can create and edit the myAutomation.h using a text editor (like Notepad), but if you are using the Arduino IDE (rather than the |EX-I|) you can create the myAutomation.h file in the Arduino IDE. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
-
-.. image:: /_static/images/ex-rail/setup1.jpg
-   :alt:  Setup pulldown button
-   :align: center
-   :scale: 100%
-   :target: #myautomation-h-editing-your-sequences
-
-.. image:: /_static/images/ex-rail/setup2.jpg
-   :alt:  Setup pulldown menu
-   :align: center
-   :scale: 100%
-   :target: #myautomation-h-editing-your-sequences
-
-Enter the file name "myAutomation.h" (This is case sensitive)
-
-.. image:: /_static/images/ex-rail/setup3.jpg
-   :alt:  Setup myAutomation.h
-   :align: center
-   :scale: 100%
-   :target: #myautomation-h-editing-your-sequences
-
-And type your script in.
-
-.. image:: /_static/images/ex-rail/setup4.jpg
-   :alt:  Setup Example file
-   :align: center
-   :scale: 100%
-   :target: #
-
-|
-
-Comments in in myAutomation.h
------------------------------
-
-You can add comments (text that does nothing) to myAutomation.h in two ways:
-
-* If ``//`` occurs in the line, everything after that (including the slashes) is ignored.  i.e. a 'Comment'
-* If a line starts with ``/*`` then everything, including all subsequent lines an including the '/*') is ignored until a ``*/`` is found.  i.e. a 'Comment'
+Before You start, generally you will need to have created some Key Objects (e.g. Turnouts/Points, Sensors, Signals) before you start writing sequences.  Refer to the previous page (:doc:`creating-elements`) for creating and adding those Objects.  Note that these objects don't have to be listed in the myAutomation.h file before the sequence in which you use it, but it is good practice to do so.
 
 ----
 
 The Automation Process
 ======================
 
-Once started, each 'sequence' will step through a list of simple keyword commands until they reach a ``DONE`` keyword.
+Once started, each 'sequence' will step through a list of simple keyword commands, in order, until they reach a ``DONE`` keyword.
 
 Multiple concurrent sequences are supported.
 
-For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.
+For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.  Only a subset are described on this page.
 
 ----
 
-Before You Start - Adding Objects
-==================================
-
-Generally you will need to have created some Key Objects before you start writing sequences.
-
-.. code-block:: cpp
-   :class: code-block-float-right
-
-   // Example
-   ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
-   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
-   SERVO_SIGNAL(102, 400, 250, 100)
-
-Refer to the :doc:`creating-elements` for creating and adding those Objects:
-
-* Roster Entries
-* Turnouts/Points
-* Sensors
-* Signals
-
-Note that these objects don't have to be added before the sequence in which you use it, but it is good practice to do so.
-
-----
-
-Structure of a Sequence
-=======================
+Structure of a 'Sequence'
+=========================
 
 In general, sequences follow the basic structure:
 
@@ -145,8 +74,8 @@ Sequences types fall in the following broad groups:
 * Triggered by another sequence
 * Triggered as a result of an event that has occurred on one of the turnouts/points, sensors, signals.
 
-Sequence Types - Manually Triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Manually Triggered Sequence Types
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. |engine driver| or |withrottle|). They are one of:
 
@@ -162,8 +91,8 @@ Manually triggered sequences are advertised to WiThrottles so you can activate t
 
 Note that these can also be invoked by other sequences.
 
-Sequence Types - Invoked
-^^^^^^^^^^^^^^^^^^^^^^^^
+Invoked Sequence Types
+^^^^^^^^^^^^^^^^^^^^^^
 
 Sequences that can only be triggered by other sequences have the following form:
 
@@ -175,8 +104,8 @@ Sequences that can only be triggered by other sequences have the following form:
     * - SEQUENCE( id ) 
       - A general purpose Sequence for scenic animations, etc.
 
-Sequence Types - Event Triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Event Triggered Sequence Types
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: cpp
    :class: code-block-float-right
@@ -215,18 +144,24 @@ If you want a sequence to start immediate the system powers up, add the ``AUTOST
 
 This is useful for sequences where you want to constantly monitor the state of sensors and switches.
 
-Contents of a Sequence
-----------------------
+----
 
-A sequence is made up of 'Commands'. Commands are usually written one per line or ease of reading, but you can put multiple commands on a single line.  
+Contents of a 'Sequence'
+------------------------
+
+A sequence is made up of 'Commands'. Commands are usually written one per line for ease of reading, but you can put multiple commands on a single line.  
 
 The commands fall into some basic categories:
 
 * `Actions <Action Commands - Getting EX-RAIL to 'do' something>`_ - Commands that 'do' something
-* `Sequence Flow / Flow Control Commands`_
-  * `Conditionals`_ & Branching - Commands that change the flow/order in which the commands are executed
-  * `Delays & Waits`_ - Commands that change the timing of the execution of the commands
-* `Command Station commands`_
+* `Flow Control Commands <Sequence Flow / Flow Control Commands>`_
+
+  * `Conditionals <Conditionals>`_ & Branching - Commands that change the flow/order in which the commands are executed
+  * `Delays & Waits <Delays & Waits>`_ - Commands that change the timing of the execution of the commands
+
+* `Command Station commands <Command Station commands>`_
+
+----
 
 Action Commands - Getting EX-RAIL to 'do' something
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -321,16 +256,16 @@ For a simple sequence, once triggered, the system steps though each and every in
 
 However there are a number of ways that the processing of a sequence can be changed:
 
-* `Conditionals`_
-* `Branching`_
+* `Conditionals <Conditionals>`_
+* `Branching <Branching>`_
    * `CALL <CALL and RETURN>`_ - Branch to a separate sequence expecting a RETURN
    * `RETURN <CALL and RETURN>`_ - Return to caller (see `CALL <CALL and RETURN>`_)
-   * `FOLLOW`_ - Branch or Follow a numbered sequence (think of “GOTO”)
+   * `FOLLOW <FOLLOW>`_ - Branch or Follow a numbered sequence (think of “GOTO”)
 
 The timing of the execution of the commands can be altered as well with 'Delay' and 'Wait' type commands.
 
 Conditionals
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 If a conditional is encountered, the following (enclosed) commands are only executed if the specified conditions are met.
 
@@ -437,10 +372,10 @@ Other Conditionals:
 see :doc:`EX-RAIL-summary` page for additional information.
 
 Branching
-'''''''''
+~~~~~~~~~
 
 CALL and RETURN
-_______________
+'''''''''''''''
 
 .. todo:: CALL and RETURN
 
@@ -449,7 +384,7 @@ _______________
 ``RETURN`` Return to the calling sequence when completed (no DONE required).
 
 FOLLOW
-______
+''''''
 
 .. todo:: FOLLOW
 
@@ -529,6 +464,8 @@ There are a substantial number of commands that you can explore on the :doc:`EX-
 
 See :doc:`EX-RAIL-summary` page for additional commands and additional information on these commands. 
 
+----
+
 Referencing Key Objects in Sequences
 ====================================
 
@@ -568,18 +505,11 @@ You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn
 Referencing Sensors
 -------------------
 
-- |EX-CS| allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-5)``.
+Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. 
 
-- Magnetic/Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.
+Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(5) LATCH(5)`` for example effectively latches the sensor 5 on when detected once.
 
-- Handling sensors in the automation is made easy because EX-RAIL throws away the concept of interrupts (“oh… sensor 5 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 5 triggers, and then carry on in the script”.
-
-- Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. 
-
-- Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(5) LATCH(5)`` for example effectively latches the sensor 5 on when detected once.
-
-- Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.
-
+Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.
 
 Outputs
 -------
@@ -613,3 +543,11 @@ Here for example is a launch sequence that has no predefined locos but allows lo
    FOLLOW(99) // keep doing this for another launch
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the ``INVERT_DIRECTION`` instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
+
+
+----
+
+Next Steps - Examples
+=====================
+
+Click :doc:`here <examples>` or click the "next" button to see some concrete examples of automation sequences.

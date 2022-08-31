@@ -149,9 +149,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../ex-webthrottle/index.html">EX-WebThrottle</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-RAIL (Automation)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating-elements.html">Adding Key Objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Creating Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Example Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html">Editing myAutomation.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-elements.html">Adding Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Introduction to Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">EX-RAIL Detailed Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command List</a></li>
@@ -464,7 +465,7 @@
 <section id="ex-rail">
 <h3>EX-RAIL<a class="headerlink" href="#ex-rail" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EXRAIL</span> <span class="pre">ON|OFF&gt;</span></code> When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).</p>
-<p>Example output from <a class="reference internal" href="examples.html#example-6-point-to-point-shuttle"><span class="std std-ref">Example 6: Point to Point Shuttle</span></a> running SEQUENCE(13) with loco ID 18:</p>
+<p>Example output from <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a> running SEQUENCE(13) with loco ID 18:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D EXRAIL ON&gt;
 &lt;p1 MAIN&gt;
 PPA1
@@ -494,7 +495,7 @@ PPA1
 <section id="task-info">
 <h3>Task info<a class="headerlink" href="#task-info" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> Displays EX-RAIL running task information</p>
-<p>Example outputs also using <a class="reference internal" href="examples.html#example-6-point-to-point-shuttle"><span class="std std-ref">Example 6: Point to Point Shuttle</span></a>:</p>
+<p>Example outputs also using <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a>:</p>
 <ul class="simple">
 <li><p>Leaving right side of the shuttle sequence with speed 50F (forward):</p></li>
 </ul>
@@ -538,9 +539,9 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <section id="script-definition-terms">
 <h3>Script Definition Terms<a class="headerlink" href="#script-definition-terms" title="Permalink to this heading"></a></h3>
 <p>There are three options to define these automation sequences:</p>
-<p><code class="docutils literal notranslate"><span class="pre">AUTOMATION(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code>     Define an automation sequence that is advertised to WiThrottles to send a train along. See <a class="reference internal" href="examples.html#example-4-stopping-at-a-station-simple-loop"><span class="std std-ref">Example 4: Stopping at a Station (simple loop)</span></a> for a simple example.</p>
-<p><code class="docutils literal notranslate"><span class="pre">ROUTE(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code>  Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See <a class="reference internal" href="examples.html#example-1-creating-routes"><span class="std std-ref">Example 1: Creating Routes</span></a> for various examples.</p>
-<p><code class="docutils literal notranslate"><span class="pre">SEQUENCE(</span> <span class="pre">id</span> <span class="pre">)</span></code>      A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See <a class="reference internal" href="examples.html#example-3-automating-various-non-track-items"><span class="std std-ref">Example 3: Automating various non-track items</span></a>, <a class="reference internal" href="examples.html#example-6-point-to-point-shuttle"><span class="std std-ref">Example 6: Point to Point Shuttle</span></a>, and <a class="reference internal" href="examples.html#example-7-multiple-inter-connected-trains"><span class="std std-ref">Example 7: Multiple inter-connected trains</span></a> for further examples.</p>
+<p><code class="docutils literal notranslate"><span class="pre">AUTOMATION(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code>     Define an automation sequence that is advertised to WiThrottles to send a train along. See <a class="reference internal" href="examples.html#stopping-at-a-station-simple-loop"><span class="std std-ref">Stopping at a Station (simple loop)</span></a> for a simple example.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ROUTE(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code>  Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See <a class="reference internal" href="examples.html#creating-routes"><span class="std std-ref">Creating Routes</span></a> for various examples.</p>
+<p><code class="docutils literal notranslate"><span class="pre">SEQUENCE(</span> <span class="pre">id</span> <span class="pre">)</span></code>      A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See <a class="reference internal" href="examples.html#automating-various-non-track-items"><span class="std std-ref">Automating various non-track items</span></a>, <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a>, and <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for further examples.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ENDTASK</span></code> or <code class="docutils literal notranslate"><span class="pre">DONE</span></code> Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the EX-RAIL documentation.</p>
 </section>
 </section>
@@ -786,7 +787,7 @@ DONE
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">DELAY(</span> <span class="pre">delay</span> <span class="pre">)</span></code>      Delay a number of milliseconds</p>
 <p><code class="docutils literal notranslate"><span class="pre">DELAYMINS(</span> <span class="pre">delay</span> <span class="pre">)</span></code>  Delay a number of minutes</p>
-<p><code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(</span> <span class="pre">min_delay,</span> <span class="pre">max_delay</span> <span class="pre">)</span></code> Delay a random time between min and max milliseconds, see <a class="reference internal" href="examples.html#example-7-multiple-inter-connected-trains"><span class="std std-ref">Example 7: Multiple inter-connected trains</span></a> for good examples.</p>
+<p><code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(</span> <span class="pre">min_delay,</span> <span class="pre">max_delay</span> <span class="pre">)</span></code> Delay a random time between min and max milliseconds, see <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for good examples.</p>
 <p>Delay examples:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>      <span class="c1">// When turnout 102 closed, wait 2 seconds, then set signal 101 green.</span>
   <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>

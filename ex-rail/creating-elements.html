@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adding Key Objects &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Adding Objects &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Creating Sequences" href="getting-started.html" />
-    <link rel="prev" title="Overview" href="overview.html" />
+    <link rel="next" title="Introduction to Sequences" href="getting-started.html" />
+    <link rel="prev" title="Editing myAutomation.h" href="editing.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -149,9 +149,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../ex-webthrottle/index.html">EX-WebThrottle</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-RAIL (Automation)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Adding Key Objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Creating Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Example Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html">Editing myAutomation.h</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Adding Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Introduction to Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command List</a></li>
@@ -392,7 +393,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">EX-RAIL (Automation)</a> &raquo;</li>
-      <li>Adding Key Objects</li>
+      <li>Adding Objects</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-rail/creating-elements.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -403,68 +404,66 @@
            <div itemprop="articleBody">
              
   <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-rail.png"><img alt="EX-RAIL" class="image-product-logo-float-right" src="../_images/product-logo-ex-rail.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="adding-key-objects">
-<h1>Adding Key Objects<a class="headerlink" href="#adding-key-objects" title="Permalink to this heading"></a></h1>
+<section id="adding-objects">
+<h1>Adding Objects<a class="headerlink" href="#adding-objects" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#adding-a-roster" id="id2">Adding a Roster</a></p>
+<li><p><a class="reference internal" href="#adding-a-roster" id="id4">Adding a Roster</a></p></li>
+<li><p><a class="reference internal" href="#adding-turnouts-points" id="id5">Adding Turnouts/Points</a></p>
 <ul>
-<li><p><a class="reference internal" href="#locos-with-unavailable-functions" id="id3">Locos with Unavailable Functions</a></p></li>
+<li><p><a class="reference internal" href="#dcc-turnouts-points" id="id6">DCC Turnouts/Points</a></p></li>
+<li><p><a class="reference internal" href="#pin-turnouts-points" id="id7">Pin Turnouts/Points</a></p></li>
+<li><p><a class="reference internal" href="#servo-turnouts-points" id="id8">Servo Turnouts/Points</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#adding-turnouts-points" id="id4">Adding Turnouts/Points</a></p>
+<li><p><a class="reference internal" href="#servos-for-signals-and-animations" id="id9">Servos for Signals and Animations</a></p>
 <ul>
-<li><p><a class="reference internal" href="#adding-the-hardware-turnouts-points" id="id5">Adding the Hardware -  Turnouts/points</a></p></li>
-<li><p><a class="reference internal" href="#configure-the-software-myautomation-h-turnouts-points" id="id6">Configure the software - myAutomation.h - Turnouts/Points</a></p></li>
+<li><p><a class="reference internal" href="#configure-myautomation-h-servos-for-signals-an-animations" id="id10">Configure myAutomation.h - Servos for Signals an Animations</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#adding-sensors" id="id7">Adding Sensors</a></p>
+<li><p><a class="reference internal" href="#adding-sensors" id="id11">Adding Sensors</a></p>
 <ul>
-<li><p><a class="reference internal" href="#adding-the-hardware-sensors" id="id8">Adding the Hardware -  Sensors</a></p></li>
-<li><p><a class="reference internal" href="#configure-the-software-myautomation-h-sensors" id="id9">Configure the software - myAutomation.h - Sensors</a></p></li>
+<li><p><a class="reference internal" href="#adding-the-hardware-sensors" id="id12">Adding the Hardware -  Sensors</a></p></li>
+<li><p><a class="reference internal" href="#configure-myautomation-h-sensors" id="id13">Configure myAutomation.h - Sensors</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#adding-signals" id="id10">Adding Signals</a></p>
+<li><p><a class="reference internal" href="#adding-signals" id="id14">Adding Signals</a></p>
 <ul>
-<li><p><a class="reference internal" href="#adding-the-hardware-signals" id="id11">Adding the Hardware - Signals</a></p></li>
-<li><p><a class="reference internal" href="#configure-the-software-myautomation-h-signals" id="id12">Configure the software - myAutomation.h - Signals</a></p></li>
+<li><p><a class="reference internal" href="#adding-the-hardware-signals" id="id15">Adding the Hardware - Signals</a></p></li>
+<li><p><a class="reference internal" href="#configure-myautomation-h-signals" id="id16">Configure myAutomation.h - Signals</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#re-upload-the-ex-commandstation-software" id="id13">Re-upload the EX-CommandStation software</a></p>
-<ul>
-<li><p><a class="reference internal" href="#using-ex-installer" id="id14">Using EX-Installer</a></p></li>
-<li><p><a class="reference internal" href="#using-the-arduino-ide" id="id15">Using the Arduino IDE</a></p></li>
-</ul>
-</li>
+<li><p><a class="reference internal" href="#next-steps-creating-sequences" id="id17">Next Steps - Creating Sequences</a></p></li>
 </ul>
 </div>
 </aside>
 <p>First we need the ‘objects’ that we will use for our automation sequences.</p>
-<p>There are four key objects that are important for creating sequences:</p>
+<p>There are a number key objects that are important for creating sequences:</p>
 <ul class="simple">
-<li><p>Roster Entries - Your locos</p></li>
-<li><p>Turnouts/Points</p></li>
-<li><p>Sensors</p></li>
-<li><p>Signals</p></li>
+<li><p><a class="reference external" href="AddingaRoster">Roster Entries - Your locos</a></p></li>
+<li><p><a class="reference external" href="AddingTurnouts/Points">Turnouts/Points</a></p></li>
+<li><p><a class="reference external" href="ServosforSignalsandAnimations">Servos for Semophores/Signals and Animations</a></p></li>
+<li><p><a class="reference external" href="Sensors">Sensors</a></p></li>
+<li><p><a class="reference external" href="Signals">Signals (Lights)</a></p></li>
 </ul>
-<p>The process for creating these objects consist of:</p>
+<p>The process for creating these objects consists of:</p>
 <ul class="simple">
-<li><p>Adding the hardware (not applicable to the roster)</p></li>
+<li><p>Adding the hardware (not strictly applicable to the roster)</p></li>
 <li><p>Configuring <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> by modifying ‘myAutomation.h’ so that it knows about the object</p></li>
 <li><p>Re-uploading the software to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
 </ul>
 <hr class="docutils" />
 <section id="adding-a-roster">
-<h2><a class="toc-backref" href="#id2">Adding a Roster</a><a class="headerlink" href="#adding-a-roster" title="Permalink to this heading"></a></h2>
-<p>EX-RAIL has a ROSTER() function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.</p>
+<h2><a class="toc-backref" href="#id4">Adding a Roster</a><a class="headerlink" href="#adding-a-roster" title="Permalink to this heading"></a></h2>
+<p>EX-RAIL has a <code class="docutils literal notranslate"><span class="pre">ROSTER()</span></code> function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.</p>
 <p>The functions can simply be listed as “F” numbers, or you can provide a text description of the function. Prefacing the function with a “*” indicates it is momentary, meaning it is only activated while holding that function button down.</p>
 <p>In a text editor (e.g. notepad) create a new text file named ‘myAutomation.h’. (Note the capital ‘A’ in the name.  The case of all the characters is important.)</p>
 <p>If you are already using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> and have a myAutomation.h, then just the add <code class="docutils literal notranslate"><span class="pre">ROSTER(...)</span></code> lines near the top of the file.</p>
 <p>Add a line that looks like:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROSTER(999,&quot;Loco Name&quot;,&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8&quot;)
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="s">&quot;Loco Name&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Where:</p>
@@ -493,9 +492,9 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1506</span><span class="p">,</span> <span class="s">&quot;HUSA&quot;</span><span class="p">,</span> <span class="s">&quot;Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<section id="locos-with-unavailable-functions">
-<h3><a class="toc-backref" href="#id3">Locos with Unavailable Functions</a><a class="headerlink" href="#locos-with-unavailable-functions" title="Permalink to this heading"></a></h3>
-<p>If a function is not available just leave the spot empty. (Don’t even have the space character.)</p>
+<p><strong>Locos with Unavailable Functions</strong></p>
+<blockquote>
+<div><p>If a function is not available just leave the spot empty. (Don’t even have the space character.)</p>
 <p>For example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2825</span><span class="p">,</span><span class="s">&quot;CN ES44AC&quot;</span><span class="p">,</span><span class="s">&quot;Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup &amp; Shutdown&quot;</span><span class="p">)</span>
 </pre></div>
@@ -506,16 +505,50 @@
 </pre></div>
 </div>
 <p>Note that it only has FO (the Headlight) and not following slashes.</p>
-</section>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="adding-turnouts-points">
-<h2><a class="toc-backref" href="#id4">Adding Turnouts/Points</a><a class="headerlink" href="#adding-turnouts-points" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5">Adding Turnouts/Points</a><a class="headerlink" href="#adding-turnouts-points" title="Permalink to this heading"></a></h2>
+<p>Turnouts/Points can included on your layout in one of the</p>
+<ul class="simple">
+<li><p>DCC turnouts/Points</p></li>
+<li><p>Servo Turnouts/Points</p></li>
+<li><p>Pin turnouts/Points</p></li>
+</ul>
+<section id="dcc-turnouts-points">
+<h3><a class="toc-backref" href="#id6">DCC Turnouts/Points</a><a class="headerlink" href="#dcc-turnouts-points" title="Permalink to this heading"></a></h3>
+<section id="adding-the-hardware-dcc-turnouts-points">
+<h4>Adding the Hardware -  DCC Turnouts/Points<a class="headerlink" href="#adding-the-hardware-dcc-turnouts-points" title="Permalink to this heading"></a></h4>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>DCC Turnouts/points</p>
+</div>
+</section>
+<section id="configure-myautomation-h-dcc-turnouts-points">
+<h4>Configure myAutomation.h - DCC Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-dcc-turnouts-points" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="pin-turnouts-points">
+<h3><a class="toc-backref" href="#id7">Pin Turnouts/Points</a><a class="headerlink" href="#pin-turnouts-points" title="Permalink to this heading"></a></h3>
+<section id="adding-the-hardware-pin-turnouts-points">
+<h4>Adding the Hardware -  Pin Turnouts/Points<a class="headerlink" href="#adding-the-hardware-pin-turnouts-points" title="Permalink to this heading"></a></h4>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>DCC Turnouts/points</p>
+</div>
+</section>
+<section id="configure-myautomation-h-pin-turnouts-points">
+<h4>Configure myAutomation.h - Pin Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-pin-turnouts-points" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="servo-turnouts-points">
+<h3><a class="toc-backref" href="#id8">Servo Turnouts/Points</a><a class="headerlink" href="#servo-turnouts-points" title="Permalink to this heading"></a></h3>
+<section id="adding-the-hardware-servo-turnouts-points">
+<h4>Adding the Hardware -  Servo Turnouts/Points<a class="headerlink" href="#adding-the-hardware-servo-turnouts-points" title="Permalink to this heading"></a></h4>
 <aside class="sidebar">
 <p>You can also refer to <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> for more information.</p>
 </aside>
-<section id="adding-the-hardware-turnouts-points">
-<h3><a class="toc-backref" href="#id5">Adding the Hardware -  Turnouts/points</a><a class="headerlink" href="#adding-the-hardware-turnouts-points" title="Permalink to this heading"></a></h3>
 <p>To connect a servo to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
@@ -534,8 +567,8 @@
 <p>And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <a class="reference internal image-reference" href="../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
 </section>
-<section id="configure-the-software-myautomation-h-turnouts-points">
-<h3><a class="toc-backref" href="#id6">Configure the software - myAutomation.h - Turnouts/Points</a><a class="headerlink" href="#configure-the-software-myautomation-h-turnouts-points" title="Permalink to this heading"></a></h3>
+<section id="configure-myautomation-h-servo-turnouts-points">
+<h4>Configure myAutomation.h - Servo Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-servo-turnouts-points" title="Permalink to this heading"></a></h4>
 <p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each Turnout/Point.</p>
 <p>EX-RAIL supports three methods of controlling servos:</p>
 <ul class="simple">
@@ -544,13 +577,19 @@
 <li><p>Animations via the SERVO or SERVO2 directives</p></li>
 </ul>
 <section id="controlling-servos-for-turnouts-points">
-<h4>Controlling Servos for Turnouts/Points<a class="headerlink" href="#controlling-servos-for-turnouts-points" title="Permalink to this heading"></a></h4>
+<h5>Controlling Servos for Turnouts/Points<a class="headerlink" href="#controlling-servos-for-turnouts-points" title="Permalink to this heading"></a></h5>
 <p>The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout within the CommandStation.</p>
 <p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts are defined with the following syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">pin</span><span class="p">,</span> <span class="n">active_angle</span><span class="p">,</span> <span class="n">inactive_angle</span><span class="p">,</span> <span class="n">profile</span> <span class="p">[,</span> <span class="s">&quot;description&quot;</span><span class="p">])</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">pin</span><span class="p">,</span> <span class="n">active_angle</span><span class="p">,</span> <span class="n">inactive_angle</span><span class="p">,</span> <span class="n">profile</span> <span class="p">[,</span> <span class="s">&quot;description&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>The valid parameters are:</p>
+<div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="n">Slow</span><span class="p">,</span> <span class="s">&quot;Example slow turnout definition&quot;</span><span class="p">)</span>
+
+<span class="cm">/* An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation: */</span><span class="n">The</span> <span class="n">valid</span> <span class="n">parameters</span> <span class="nl">are</span><span class="p">:</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>id = Unique ID within the CommandStation (note these are shared across turnouts, sensors, and outputs).</p></li>
 <li><p>pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
@@ -559,26 +598,47 @@
 <li><p>profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce (note we don’t recommend Bounce for a turnout definition).</p></li>
 <li><p>description = A human-friendly description of the turnout that will appear in WiThrottle apps and <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>. Note that this must be enclosed in quotes “”.</p></li>
 </ul>
-<p>An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="n">Slow</span><span class="p">,</span> <span class="s">&quot;Example slow turnout definition&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
 </section>
-<section id="controlling-servos-for-signals">
-<h4>Controlling Servos for Signals<a class="headerlink" href="#controlling-servos-for-signals" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="servos-for-signals-and-animations">
+<h2><a class="toc-backref" href="#id9">Servos for Signals and Animations</a><a class="headerlink" href="#servos-for-signals-and-animations" title="Permalink to this heading"></a></h2>
+<p>See above for information on installing the servo hardware (it is the same as for a turnout/point).</p>
+<section id="configure-myautomation-h-servos-for-signals-an-animations">
+<h3><a class="toc-backref" href="#id10">Configure myAutomation.h - Servos for Signals an Animations</a><a class="headerlink" href="#configure-myautomation-h-servos-for-signals-an-animations" title="Permalink to this heading"></a></h3>
+<p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each Turnout/Point.</p>
+<p>EX-RAIL supports three methods of controlling servos:</p>
+<ul class="simple">
+<li><p>Turnouts via the SERVO_TURNOUT directive</p></li>
+<li><p>Signals via the SERVO_SIGNAL directive</p></li>
+<li><p>Animations via the SERVO or SERVO2 directives</p></li>
+</ul>
+<section id="servos-for-signals">
+<h4>Servos for Signals<a class="headerlink" href="#servos-for-signals" title="Permalink to this heading"></a></h4>
 <p>The SERVO_SIGNAL directive defines a servo based signal in EX-RAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
 <p>Similar to pin based signals, servo signals are controlled by the ID of the red pin only.</p>
 <p>Unlike servo based turnouts, there is no ID or description (they don’t appear in throttles), and they use the “Bounce” profile with no other options available at the present time:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
 </pre></div>
 </div>
-<p>A simple example using the third control pins of the first PCA9685 connected to the CommandStation would be:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(102, 400, 250, 100)
+<div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
+<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="cm">/* A simple example using the third control pins of the first</span>
+<span class="cm">PCA9685 connected to the CommandStation would be: */</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p><strong>vpin</strong> = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
+<li><p><strong>redpos</strong> = The angle to which the servo will move to for the red position.</p></li>
+<li><p><strong>amberpos</strong> = The angle to which the servo will move to for the amber position.</p></li>
+<li><p><strong>greenpos</strong> = The angle to which the servo will move to for the green position.</p></li>
+</ul>
 </section>
-<section id="controlling-servos-for-animations">
-<h4>Controlling Servos for Animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this heading"></a></h4>
+<section id="servos-for-animations">
+<h4>Servos for Animations<a class="headerlink" href="#servos-for-animations" title="Permalink to this heading"></a></h4>
 <p>The SERVO and SERVO2 directives allow for servos to be used in various automations within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
 <p>Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> automations.</p>
 <p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, these are defined with the following syntax:</p>
@@ -588,32 +648,40 @@
 </div>
 <p>The valid parameters are:</p>
 <ul class="simple">
-<li><p>vpin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
-<li><p>position = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).</p></li>
-<li><p>profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce.</p></li>
-<li><p>duration = The time (in milliseconds (ms)) for the servo to be actively rotating.</p></li>
+<li><p><strong>vpin</strong> = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
+<li><p><strong>position</strong> = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).</p></li>
+<li><p><strong>profile</strong> = There are five profiles to choose from that determine the speed at which a servo will move: Instant, Fast, Medium, Slow, and Bounce.</p></li>
+<li><p><strong>duration</strong> = The time (in milliseconds (ms)) for the servo to be actively rotating.</p></li>
 </ul>
-<p>As an example, consider a lineside worker that needs to be moved away from the track when a train approaches, which is controlled by an infrared sensor.</p>
-<p>The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a sensor attached to VPin 164 (first pin on the first MCP23017):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
+<div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
 <span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="n">Fast</span><span class="p">)</span>
 <span class="n">DONE</span>
 
 <span class="n">AFTER</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
 <span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Slow</span><span class="p">)</span>
 <span class="n">DONE</span>
+
+<span class="cm">/* As an example, consider a lineside worker that needs to be moved away</span>
+<span class="cm">from the track when a train approaches, which is controlled by an infrared</span>
+<span class="cm">sensor.</span>
+<span class="cm">The SERVO is attached to VPin 101 (second control pin on first PCA9685),</span>
+<span class="cm">with a sensor attached to VPin 164 (first pin on the first MCP23017):</span>
+<span class="cm">This tells EX-RAIL that when the sensor at VPin 164 is activated, the</span>
+<span class="cm">lineside worker moves quickly back from the track for safety, and then</span>
+<span class="cm">after the sensor has been deactivated, he can leisurely move back to his</span>
+<span class="cm">working position (no one wants to rush back to work right?). */</span>
 </pre></div>
 </div>
-<p>This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).</p>
 </section>
 </section>
 </section>
 <hr class="docutils" />
 <section id="adding-sensors">
-<h2><a class="toc-backref" href="#id7">Adding Sensors</a><a class="headerlink" href="#adding-sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11">Adding Sensors</a><a class="headerlink" href="#adding-sensors" title="Permalink to this heading"></a></h2>
 <section id="adding-the-hardware-sensors">
-<h3><a class="toc-backref" href="#id8">Adding the Hardware -  Sensors</a><a class="headerlink" href="#adding-the-hardware-sensors" title="Permalink to this heading"></a></h3>
-<div class="admonition-todo admonition" id="id1">
+<h3><a class="toc-backref" href="#id12">Adding the Hardware -  Sensors</a><a class="headerlink" href="#adding-the-hardware-sensors" title="Permalink to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
 <p>MEDIUM - Stage 2 - Adding a Sensor - needs to be extended</p>
 </div>
@@ -623,17 +691,25 @@
 <p>On the Mega2560 Processor board:</p>
 <p>Place IR Infrared or Optical sensors Output wire on Dpins 22, 23, 24 … 62. One wire to Gnd and for the IR sensor a third wire to 5v pin.</p>
 </section>
-<section id="configure-the-software-myautomation-h-sensors">
-<h3><a class="toc-backref" href="#id9">Configure the software - myAutomation.h - Sensors</a><a class="headerlink" href="#configure-the-software-myautomation-h-sensors" title="Permalink to this heading"></a></h3>
-<p>You don’t actually require anything special to be configured in advance of using them in an automation.</p>
-<p>Use in automation as AT(DpinNo) or AT(-DpinNo)</p>
+<section id="configure-myautomation-h-sensors">
+<h3><a class="toc-backref" href="#id13">Configure myAutomation.h - Sensors</a><a class="headerlink" href="#configure-myautomation-h-sensors" title="Permalink to this heading"></a></h3>
+<p>You don’t actually require anything special to be added to myAutomation.h in advance of using them in an sequence.</p>
+<p>Handling sensors in sequences is made easy because <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> throws away the concept of interrupts (“oh… sensor 5 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 5 triggers, and then carry on in the script”.</p>
+<p>Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc.</p>
+<div class="note-float-right admonition note">
+<p class="admonition-title">Note</p>
+<p>Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.</p>
+</div>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> allows for sensors that are <strong>Active Low or Active High</strong>. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. <code class="docutils literal notranslate"><span class="pre">AT(-5)</span></code>.</p>
+<p>Sensors with ID’s 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so <code class="docutils literal notranslate"><span class="pre">AT(5)</span> <span class="pre">LATCH(5)</span></code> for example effectively latches the sensor 5 on when detected once.</p>
+<p>Sensor polling by JMRI is independent of this, and may continue if <code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> commands are used.</p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="adding-signals">
-<h2><a class="toc-backref" href="#id10">Adding Signals</a><a class="headerlink" href="#adding-signals" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14">Adding Signals</a><a class="headerlink" href="#adding-signals" title="Permalink to this heading"></a></h2>
 <section id="adding-the-hardware-signals">
-<h3><a class="toc-backref" href="#id11">Adding the Hardware - Signals</a><a class="headerlink" href="#adding-the-hardware-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id15">Adding the Hardware - Signals</a><a class="headerlink" href="#adding-the-hardware-signals" title="Permalink to this heading"></a></h3>
 <p>To connect a servo to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
@@ -646,8 +722,8 @@
 <li><p>Only use the -Gnd and Output+ vpins, NOT the center 5v pin</p></li>
 </ul>
 </section>
-<section id="configure-the-software-myautomation-h-signals">
-<h3><a class="toc-backref" href="#id12">Configure the software - myAutomation.h - Signals</a><a class="headerlink" href="#configure-the-software-myautomation-h-signals" title="Permalink to this heading"></a></h3>
+<section id="configure-myautomation-h-signals">
+<h3><a class="toc-backref" href="#id16">Configure myAutomation.h - Signals</a><a class="headerlink" href="#configure-myautomation-h-signals" title="Permalink to this heading"></a></h3>
 <p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each Signal.</p>
 <p>Signals setup on vpins 101, 102 … 115</p>
 <p>For each signal add a line in myAutomation.h in the form:</p>
@@ -666,28 +742,9 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close
 </section>
 </section>
 <hr class="docutils" />
-<section id="re-upload-the-ex-commandstation-software">
-<h2><a class="toc-backref" href="#id13">Re-upload the EX-CommandStation software</a><a class="headerlink" href="#re-upload-the-ex-commandstation-software" title="Permalink to this heading"></a></h2>
-<section id="using-ex-installer">
-<h3><a class="toc-backref" href="#id14">Using EX-Installer</a><a class="headerlink" href="#using-ex-installer" title="Permalink to this heading"></a></h3>
-<ol class="arabic simple">
-<li><p>Place your ‘myAutomation.h’ file in the <code class="docutils literal notranslate"><span class="pre">CommandStation-EX</span></code> subfolder of wherever you extracted the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> files.</p></li>
-<li><p>Re-Run <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span></p></li>
-<li><p>Select the same options that you originally chose and upload</p></li>
-</ol>
-<p>The Roster will be automatically loaded with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
-</section>
-<section id="using-the-arduino-ide">
-<h3><a class="toc-backref" href="#id15">Using the Arduino IDE</a><a class="headerlink" href="#using-the-arduino-ide" title="Permalink to this heading"></a></h3>
-<ol class="arabic simple">
-<li><p>Place your ‘myAutomation.h’ file in the <code class="docutils literal notranslate"><span class="pre">CommandStation-EX</span></code> subfolder of wherever you extracted the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> files from GitHub.</p></li>
-<li><p>Run the Arduino IDE</p></li>
-<li><p>Open the <code class="docutils literal notranslate"><span class="pre">CommandStation-EX</span></code> folder</p></li>
-<li><p>Select the Board, COM port etc. as before</p></li>
-<li><p>click <span class="guilabel">Upload</span></p></li>
-</ol>
-<p>The Roster will be automatically loaded with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
-</section>
+<section id="next-steps-creating-sequences">
+<h2><a class="toc-backref" href="#id17">Next Steps - Creating Sequences</a><a class="headerlink" href="#next-steps-creating-sequences" title="Permalink to this heading"></a></h2>
+<p>Click <a class="reference internal" href="getting-started.html"><span class="doc">here</span></a> or click the “next” button to learn how to create automation sequences.</p>
 </section>
 </section>
 
@@ -695,8 +752,8 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="getting-started.html" class="btn btn-neutral float-right" title="Creating Sequences" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="editing.html" class="btn btn-neutral float-left" title="Editing myAutomation.h" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="getting-started.html" class="btn btn-neutral float-right" title="Introduction to Sequences" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

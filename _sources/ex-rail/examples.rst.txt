@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-*****************
-Example Sequences
-*****************
+*****************************
+Example Objects and Sequences
+*****************************
 
 |tinkerer| |conductor|
 
@@ -12,14 +12,39 @@ Example Sequences
 
    .. contents:: On this page
       :depth: 2
-      :local:
+
+.. todo:: Also see the big picture...
+
+----
+
+|force-break|
+
+
+Add a Roster
+============
+
+
+.. code-block:: cpp
+   
+   ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
+   ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
+   ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
+   ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
+
+
+Adding Servo Turnouts
+=====================
+
+.. code-block:: cpp
+
+   todo
 
 .. todo:: 
 
    MEDIUM - Update these examples to use valid pins and vpins that are available on the Mega2560 or I/O expanders and servo modules.
 
-Example 1: Creating Routes
-==========================
+Creating Routes
+===============
 
 A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like
@@ -63,8 +88,8 @@ Of course, you may want to add signals, and time delays
       DONE
 
 
-Example 2: Automating Signals with Turnouts
-===========================================
+Automating Signals with Turnouts
+================================
 
 By intercepting a turnout change command, it's easy to automatically adjust signals or 
 automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE`` keyword to detect a particular turnout change:
@@ -86,8 +111,8 @@ automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE
      DONE
 
 
-Example 3: Automating various non-track items 
-=============================================
+Automating various non-track items 
+==================================
 
 This normally takes place in a timed loop, for example alternate flashing of a fire engine's lights. To do this use a SEQUENCE.
 
@@ -104,8 +129,8 @@ This normally takes place in a timed loop, for example alternate flashing of a f
      
 Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using ``START(66)``.
 
-Example 4: Stopping at a Station (simple loop)
-==============================================
+Stopping at a Station (simple loop)
+===================================
 
 Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.
 
@@ -133,8 +158,8 @@ The instructions are followed in sequence by the loco given to it; the ``AT`` co
 
 Notice that this automation does not specify the loco address. If you drive a loco with the throttle and then hand it over to this automation, then the automation will run with the loco you last drove.
 
-Example 5: Stopping at a Station - Adding Signals
-=================================================
+Stopping at a Station - Adding Signals
+======================================
 
 Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
 
@@ -153,8 +178,8 @@ Adding a station signal to the loop script is extremely simple, but it does requ
       RED(77)    // set signal #77 to Red
       FOLLOW(4)  // and continue to follow the automation
 
-Example 6: Point to Point Shuttle
-=================================
+Point to Point Shuttle
+======================
 
 Consider a single line, shuttling between stations A and B.
 
@@ -207,8 +232,8 @@ Although the above is trivial, the routes are designed to be independent of the 
 
 The example above assumes that loco 3 is sitting on the track and pointing in the right direction. A bit later you will see how to script an automatic process to take whatever loco is placed on the programming track, and send it on its way to join in the fun!
 
-Example 7: Multiple inter-connected trains
-==========================================
+Multiple inter-connected trains
+===============================
 
 So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout
@@ -363,3 +388,11 @@ Here for example is a launch sequence that has no predefined locos but allows lo
       FOLLOW(99) // keep doing this for another launch
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the ``INVERT_DIRECTION`` instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
+
+
+----
+
+Next Steps - Detailed Reference
+===============================
+
+The previous pages have only been a small taste of what is possible with |EX-R|. Click :doc:`here </ex-rail/EX-RAIL-reference>` or click the "next" button to explore the full capabilities of |EX-R|.

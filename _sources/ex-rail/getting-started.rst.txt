@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-*************************
-Introduction to Sequences
-*************************
+***************************
+Sequences - an Introduction
+***************************
 
 |tinkerer| |conductor|
 

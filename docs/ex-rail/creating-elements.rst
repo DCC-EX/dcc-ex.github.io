@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-**************
-Adding Objects
-**************
+*************************
+Objects - an Introduction
+*************************
 
 |tinkerer| |engineer|
 
@@ -161,7 +161,7 @@ The 16 columns of three pins along the bottom of the module are where you connec
 
 The servo module itself is powered from the Arduino, but the servos themselves contain motors that consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.
 
-Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
+Connections to the Arduino are made with four jumper wires (Arduino: +5V, GND, SCL, SDA to servo module: **VCC**, GND, SCL, SDA), as shown on the following diagram:
 
 .. image:: /_static/images/i2c/ArduinoMegaServo.png
    :alt: PCA9685 Servo Module
@@ -189,7 +189,6 @@ And in the next picture you can see a servo that operates a semaphore signal.  T
    :alt: Servo mount to operate a Semaphore Signal
    :scale: 60%
 
-
 Configure myAutomation.h - Servo Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -197,14 +196,14 @@ The myAutomation.h file needs to be altered so that the |EX-CS| knows about each
 
 EX-RAIL supports three methods of controlling servos:
 
-* Turnouts via the SERVO_TURNOUT directive
-* Signals via the SERVO_SIGNAL directive
-* Animations via the SERVO or SERVO2 directives
+* `Turnouts via the SERVO_TURNOUT directive <Controlling Servos for Turnouts/Points>`_
+* `Signals via the SERVO_SIGNAL directive <Servos for Signals>`_
+* `Animations via the SERVO or SERVO2 directives <Servos for Animations>`_
 
 Controlling Servos for Turnouts/Points
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
+The ``SERVO_TURNOUT`` directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
 
 As per the |EX-R| reference, turnouts are defined with the following syntax:
 
@@ -229,7 +228,6 @@ As per the |EX-R| reference, turnouts are defined with the following syntax:
 - profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout definition).
 - description = A human-friendly description of the turnout that will appear in WiThrottle apps and |Engine Driver|. Note that this must be enclosed in quotes "".
 
-
 ----
 
 Servos for Signals and Animations
@@ -240,19 +238,17 @@ See above for information on installing the servo hardware (it is the same as fo
 Configure myAutomation.h - Servos for Signals an Animations
 -----------------------------------------------------------
 
-The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Turnout/Point.
+The myAutomation.h file needs to be altered so that the |EX-CS| knows about each servo.
 
-EX-RAIL supports three methods of controlling servos:
+EX-RAIL supports two methods of controlling servos that are not related to turnouts/points:
 
-* Turnouts via the SERVO_TURNOUT directive
-* Signals via the SERVO_SIGNAL directive
-* Animations via the SERVO or SERVO2 directives
-
+* `Signals via the SERVO_SIGNAL directive <Servos for Signals>`_
+* `Animations via the SERVO or SERVO2 directives <Servos for Animations>`_
 
 Servos for Signals
 ^^^^^^^^^^^^^^^^^^
 
-The SERVO_SIGNAL directive defines a servo based signal in EX-RAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.
+The ``SERVO_SIGNAL`` directive defines a servo based signal in |EX-R| to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.
 
 Similar to pin based signals, servo signals are controlled by the ID of the red pin only.
 
@@ -280,9 +276,9 @@ Unlike servo based turnouts, there is no ID or description (they don't appear in
 Servos for Animations
 ^^^^^^^^^^^^^^^^^^^^^
 
-The SERVO and SERVO2 directives allow for servos to be used in various automations within |EX-R|.
+The ``SERVO`` and ``SERVO2`` directives allow for servos to be used in various automations within |EX-R|.
 
-Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, |Engine Driver|, or |JMRI|, but are instead actions designed to be used within |EX-R| automations.
+Note that unlike a ``SERVO_TURNOUT`` these are not definitions that appear within WiThrottle apps, |Engine Driver|, or |JMRI|, but are instead actions designed to be used within |EX-R| automations.
 
 As per the |EX-R| reference, these are defined with the following syntax:
 
@@ -328,15 +324,16 @@ Adding Sensors
 Adding the Hardware -  Sensors
 ------------------------------
 
-.. todo:: MEDIUM - Stage 2 - Adding a Sensor - needs to be extended
-
-.. sidebar:: 
-
-  Alternate is to use a :doc:`/reference/hardware/gpio-module`
-
 On the Mega2560 Processor board: 
 
-Place IR Infrared or Optical sensors Output wire on Dpins 22, 23, 24 ... 62. One wire to Gnd and for the IR sensor a third wire to 5v pin.
+Place IR Infrared or Optical Sensor's Output wire on Dpins 22, 23, 24 ... 62. Plus one wire to GND and a third wire to 5v.
+
+.. image:: /_static/images/ir-sensor/mega-with-ir-sensor.png
+   :alt: IR Sensor connected to Arduino mega
+   :scale: 30%
+
+If you need more sensors then there are available pins on the Mega, you use one or more :doc:`/reference/hardware/gpio-module`
+
 
 Configure myAutomation.h - Sensors
 ----------------------------------

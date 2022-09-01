@@ -8,9 +8,9 @@ Supported Connections
 
 |tinkerer| |engineer|
 
-.. todo:: LOW - supported connection methods text
+|EX-CS| supports multiple different connection types depending on the use case.
 
-|EX-CS| supports connecting to it using a variety of methods...
+These include both wired (direct and Ethernet) and wireless (Bluetooth and WiFi) options as outlined in the following pages.
 
 .. toctree::
     :maxdepth: 1
@@ -20,8 +20,9 @@ Supported Connections
     ethernet
     bluetooth
 
+|JMRi| actually uses one of the connection types above, but is worth discussion seperately. 
 
-|JMRI| actually uses one of the connection types above, but is worth discussion seperately. 
+If you plan on use |EX-CS| with |JMRi| only, then you just need to read the page below.
 
 .. toctree::
     :maxdepth: 1

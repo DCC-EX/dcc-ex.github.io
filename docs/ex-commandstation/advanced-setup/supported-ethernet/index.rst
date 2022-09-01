@@ -8,7 +8,7 @@ Supported Ethernet Boards
 
 |tinkerer| |engineer|
 
-.. todo:: LOW - text for supported ethernet boards
+If you prefer to connect to your |EX-CS| via a physical network cable rather than WiFi, there are several supported Ethernet options available as outlined on these pages.
 
 .. toctree::
     :maxdepth: 1

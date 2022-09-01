@@ -357,8 +357,39 @@ Going any further into the details and options of controlling SVGs via CSS is be
 Documents / Files
 =================
 
-.. todo:: LOW - Contributing - documents description
+If any documents or files need to be hosted for users to download (PDFs, spreadsheets, etc.), then these should be located in the ``_static/documents`` folder.
 
+It is also handy to include a small screen shot or preview of the file as well.
+
+For example, here is the code used to allow people to download the very handy DCC accessory decoder conversion spreadsheet.
+
+.. code-block:: rst
+
+  .. image:: ../../_static/documents/acc_conv_sheet_thumbnail.png
+    :alt: Accessory conversion sheet thumbnail
+    :scale: 30%
+    :align: left
+
+  .. rst-class:: dcclink
+
+    `Stationary Decoder Address Table </_static/documents/DCCpp-stationary-decoder-addresses.xlsx>`_
+
+  .. rst-class:: clearer
+
+That code ends up looking like this:
+
+.. image:: ../../../_static/documents/acc_conv_sheet_thumbnail.png
+   :alt: Accessory conversion sheet thumbnail
+   :scale: 30%
+   :align: left
+
+.. rst-class:: dcclink
+
+   `Stationary Decoder Address Table </_static/documents/DCCpp-stationary-decoder-addresses.xlsx>`_
+
+.. rst-class:: clearer
+
+Note the final ``.. rst-class:: clearer`` is required to ensure any following content is below the linked document.
 
 Image Artifacts / Original Grpahics
 ===================================

@@ -278,6 +278,7 @@
 <li class="toctree-l4"><a class="reference internal" href="hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware/wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware/wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hardware/wifi-boards/hc12-bridge.html">HC-12 Wireless Bridge</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="hardware/ethernet-boards.html">Ethernet Boards</a><ul>
@@ -407,10 +408,6 @@
 <section id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>MEDIUM - Glossary</p>
-</div>
 <table class="colwidths-given docutils align-default" style="width: 900px">
 <colgroup>
 <col style="width: 25%" />
@@ -426,7 +423,7 @@
 <td><p>Same as “Motor Shield” “Motor Board” “Motorboard” <br /> See <a class="reference internal" href="hardware/motor-boards.html"><span class="doc">Supported Motor Drivers</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Command Station <br /> DCC Command Station <br /> DCC Base Station</p></td>
-<td><p>see <a class="reference external" href="https://dccwiki.com/Command_Station">https://dccwiki.com/Command_Station</a></p></td>
+<td><p>See <a class="reference external" href="https://dccwiki.com/Command_Station">https://dccwiki.com/Command_Station</a></p></td>
 </tr>
 <tr class="row-even"><td><p>Consist <br /> Multiple Unit</p></td>
 <td><p>Multiple locos hauling a singe train. see <a class="reference external" href="https://dccwiki.com/Multiple_Unit_Consisting">https://dccwiki.com/Multiple_Unit_Consisting</a></p></td>
@@ -443,14 +440,14 @@
 <tr class="row-even"><td><p>JMRI</p></td>
 <td><p><a class="reference external" href="https://www.jmri.org/">Java Model Railroad Interface</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>Loco <br /> Locomotive <br /> Engine</p></td>
-<td><p>TODO</p></td>
+<tr class="row-odd"><td><p>Cab</p></td>
+<td><p>A Cab can refer to a throttle (or controller) as well as a loco or locomotive <br /> In the context of DCC-EX commands, <cite>cab</cite> refers to a loco</p></td>
 </tr>
 <tr class="row-even"><td><p>Switching <br /> Shunting</p></td>
 <td><p>The process of moving individual carriages to/from specific locations on yards or sidings.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Turnouts <br /> Points</p></td>
-<td><p>TODO</p></td>
+<td><p>A mechanical device to guide a train from one track to another</p></td>
 </tr>
 <tr class="row-even"><td><p>USB</p></td>
 <td><p>Universal Serial Bus</p></td>
@@ -459,10 +456,10 @@
 <td><p>1. Trademark owned by Brett Hoffman <br />2. proprietary iOS app developed by Brett Hoffman. See <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">WiThrottle</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>WiThrottle Protocol</p></td>
-<td><p>proprietary protocol developed by Brett Hoffman</p></td>
+<td><p>A proprietary protocol developed by Brett Hoffman</p></td>
 </tr>
 <tr class="row-odd"><td><p>WiThrottle Server</p></td>
-<td><p>TODO</p></td>
+<td><p>A piece of software that listens and acts on WiThrottle commands <br /> <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> contains a WiThrottle Server, as does <a class="reference internal" href="#"><span class="doc">JMRI</span></a></p></td>
 </tr>
 </tbody>
 </table>

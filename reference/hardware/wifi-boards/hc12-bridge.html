@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MiniIBT Motor Driver L6201P (single) &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>HC-12 Wireless Bridge &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="IBT_2 BTS7960 Motor Board" href="IBT_2-motor-board-setup.html" />
-    <link rel="prev" title="Pololu MC33926" href="pololu-mc33926.html" />
+    <link rel="next" title="Ethernet Boards" href="../ethernet-boards.html" />
+    <link rel="prev" title="ESP32_Ant-01 Breakout and Development Board (ESP32)" href="esp32-ant-01.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -59,7 +59,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../levels.html">Choose Your Comfort Level</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../ex-commandstation/index.html">EX-CommandStation</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-commandstation/index.html">EX-CommandStation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-commandstation/get-started/index.html">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
@@ -70,7 +70,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/diagnosing-issues.html">Diagnosing Issues (Troubleshooting)</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
@@ -80,23 +80,23 @@
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
-<li class="toctree-l4"><a class="reference internal" href="deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
-<li class="toctree-l4"><a class="reference internal" href="flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">MiniIBT L6201P (single) - 5A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="motor-board-config.html">Motor Driver Configuration Guide</a></li>
-<li class="toctree-l4"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/index.html">Supported Connections</a><ul>
@@ -108,10 +108,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mega-wifi.html">Mega+WiFi Combo Board</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
 </ul>
 </li>
@@ -251,34 +251,34 @@
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
-<li class="toctree-l4"><a class="reference internal" href="deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
-<li class="toctree-l4"><a class="reference internal" href="flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">MiniIBT L6201P (single) - 5A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
-<li class="toctree-l4"><a class="reference internal" href="motor-board-config.html">Motor Driver Configuration Guide</a></li>
-<li class="toctree-l4"><a class="reference internal" href="high-accuracy.html">High Accuracy Waveform Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../wifi-boards.html">WiFi Boards</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/wangtongze-board.html">WangTongze Board</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/hc12-bridge.html">HC-12 Wireless Bridge</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../wifi-boards.html">WiFi Boards</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wangtongze-board.html">WangTongze Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">HC-12 Wireless Bridge</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ethernet-boards.html">Ethernet Boards</a><ul>
@@ -393,12 +393,12 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../../ex-commandstation/index.html">EX-CommandStation</a> &raquo;</li>
-          <li><a href="../../../ex-commandstation/advanced-setup/index.html">Advanced Options</a> &raquo;</li>
-          <li><a href="../motor-boards.html">Supported Motor Drivers</a> &raquo;</li>
-      <li>MiniIBT Motor Driver L6201P (single)</li>
+          <li><a href="../../index.html">Reference</a> &raquo;</li>
+          <li><a href="../index.html">Hardware</a> &raquo;</li>
+          <li><a href="../wifi-boards.html">WiFi Boards</a> &raquo;</li>
+      <li>HC-12 Wireless Bridge</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/motorboards/miniibt-motor-driver-l6201p.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/wifi-boards/hc12-bridge.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -406,28 +406,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="miniibt-motor-driver-l6201p-single">
-<h1>MiniIBT Motor Driver L6201P (single)<a class="headerlink" href="#miniibt-motor-driver-l6201p-single" title="Permalink to this heading"></a></h1>
+  <p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+<section id="hc-12-wireless-bridge">
+<h1>HC-12 Wireless Bridge<a class="headerlink" href="#hc-12-wireless-bridge" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<p>Found on eBay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge chip and is rated for 5 Amps. With a fan and heat sink, it can handle 3 or 4 Amps at 12-14V. Search for MiniIBT or Wingxine to find it. Be careful to match the picture since there is another board that sometimes comes up in searches.</p>
-<a class="reference internal image-reference" href="../../../_images/wingxine.jpg"><img alt="L6201P Wingxine Motor Driver" src="../../../_images/wingxine.jpg" style="width: 167.1px; height: 149.1px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
+<aside class="sidebar">
+</aside>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>LOW - Update HC-12 wireless bridge page.</p>
+<p>This page needs content, images, etc.</p>
 </div>
-<p><a class="reference external" href="https://www.ebay.com/c/852876730">https://www.ebay.com/c/852876730</a>
-<a class="reference external" href="https://www.aliexpress.com/i/32790131503.html">https://www.aliexpress.com/i/32790131503.html</a>
-<a class="reference external" href="https://www.aliexpress.com/item/32722458131.html">https://www.aliexpress.com/item/32722458131.html</a>
-<a class="reference external" href="https://www.aliexpress.com/item/531569334.html">https://www.aliexpress.com/item/531569334.html</a></p>
-<p><strong>*Dave Bodnar Tested this board*</strong></p>
-<p><a class="reference external" href="http://trainelectronics.com/DCC_Arduino/DCC++/">http://trainelectronics.com/DCC_Arduino/DCC++/</a></p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pololu-mc33926.html" class="btn btn-neutral float-left" title="Pololu MC33926" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="IBT_2-motor-board-setup.html" class="btn btn-neutral float-right" title="IBT_2 BTS7960 Motor Board" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="esp32-ant-01.html" class="btn btn-neutral float-left" title="ESP32_Ant-01 Breakout and Development Board (ESP32)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ethernet-boards.html" class="btn btn-neutral float-right" title="Ethernet Boards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

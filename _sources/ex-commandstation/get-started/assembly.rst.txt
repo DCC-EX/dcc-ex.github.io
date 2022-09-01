@@ -45,8 +45,8 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
 
 ----
 
-1. Server Power Sharing - Arduino to Motor Driver
-=================================================
+1. Disable Power Sharing - Arduino to Motor Driver
+==================================================
 
 .. warning:: 
    :class: warning-float-right

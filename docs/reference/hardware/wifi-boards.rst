@@ -22,5 +22,6 @@ For more information on how to configure your Command Station to use the boards 
     /reference/hardware/wifi-boards/mega-wifi
     /reference/hardware/wifi-boards/sparkfun-thing-plus
     /reference/hardware/wifi-boards/esp32-ant-01
+    /reference/hardware/wifi-boards/hc12-bridge
 
 .. NOTE:: This is NOT to make a connection to |JMRI|. Use a USB cable instead. The WiFi and Ethernet solutions are designed to allow throttles to connect directly to the |EX-CS| without the need for any other software such as |JMRI|. While using a WiFi/Ethernet connection to |JMRI| will work, the overhead required internally will slow performance, take up valuable system memory, and prevent broadcast messages for sensors and power state.

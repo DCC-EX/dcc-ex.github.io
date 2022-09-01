@@ -334,6 +334,9 @@ Place IR Infrared or Optical Sensor's Output wire on Dpins 22, 23, 24 ... 62. Pl
 
 If you need more sensors then there are available pins on the Mega, you use one or more :doc:`/reference/hardware/gpio-module`
 
+.. image:: /_static/images/ir-sensor/mega-with-io-expander-and-ir-sensor.png
+   :alt: IR Sensor connected to Arduino mega via IO Expander
+   :scale: 30%
 
 Configure myAutomation.h - Sensors
 ----------------------------------

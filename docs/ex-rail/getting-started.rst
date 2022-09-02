@@ -237,7 +237,7 @@ Loco related commands include:
     * - STOP 
       - Set loco speed to 0 (same as SPEED(0) )
 
-Turnout related commands include:
+Turntable related commands include:
 
 .. list-table::
     :widths: auto

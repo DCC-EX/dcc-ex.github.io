@@ -192,6 +192,15 @@ svg {
   margin: 0px 0px 0px 24px;
 }
 
+.note {
+  background: #f7fcff !important;
+  clear: none !important;
+}
+
+.note p.admonition-title {
+  background: #cbe1ef !important;
+}
+
 
 /* *************************************** */
 

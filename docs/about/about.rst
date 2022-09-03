@@ -109,8 +109,6 @@ Hardware / Electronics
 * Neil McKechnie -  Worcestershire, UK
 * Fred Decker - Holly Springs NC, USA
 * Herb Morton - Kingwood Texas, USA (Ash++)
-* Paul Antoine - Western Australia (Paul Antoine)
-
 
 Documentation / Management
 ===========================

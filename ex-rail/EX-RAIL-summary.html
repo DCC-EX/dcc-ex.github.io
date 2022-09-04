@@ -437,6 +437,7 @@
 <section id="notes">
 <h2><a class="toc-backref" href="#id1">Notes</a><a class="headerlink" href="#notes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
+<li><p>COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not</p></li>
 <li><p><em>AUTOMATION</em>, <em>ROUTE</em>, and <em>SEQUENCE</em> use the same ID number space, so a <code class="docutils literal notranslate"><span class="pre">FOLLOW(n)</span></code> command can be used for any of them.</p></li>
 <li><p>Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.</p></li>
 <li><p>Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.</p></li>
@@ -689,10 +690,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>POWERON</p></td>
-<td><p>Power on track, will UNJOIN programming from main (not implemented yet)</p></td>
+<td><p>Power on track, will UNJOIN programming from main <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>POWEROFF</p></td>
-<td><p>Power off track</p></td>
+<td><p>Power off track <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
 </tr>
 <tr class="row-even"><td><p>JOIN</p></td>
 <td><p>Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks</p></td>
@@ -771,7 +772,7 @@
 <td><p>A task is automatically started at this point during startup</p></td>
 </tr>
 <tr class="row-even"><td><p>DRIVE( analog_pin )</p></td>
-<td><p><strong>*Under Construction*</strong> Not complete, DO NOT USE</p></td>
+<td><p><strong>*Under Construction*</strong> Not complete, DO NOT USE <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
 </tr>
 </tbody>
 </table>

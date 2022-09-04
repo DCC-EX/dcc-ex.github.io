@@ -29,6 +29,11 @@ Multiple concurrent sequences are supported.
 
 For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.  Only a subset are described on this page.
 
+
+.. note:: 
+
+   COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not.
+
 ----
 
 Structure of a 'Sequence'

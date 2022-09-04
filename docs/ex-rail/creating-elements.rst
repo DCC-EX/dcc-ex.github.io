@@ -30,6 +30,10 @@ The process for creating these objects consists of:
 * Configuring |EX-CS| by modifying 'myAutomation.h' so that it knows about the object
 * Re-uploading the software to the |EX-CS|
 
+.. note:: 
+
+   COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not
+
 ----
 
 Adding a Roster

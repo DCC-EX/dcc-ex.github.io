@@ -18,6 +18,8 @@ Notes
 ======
 
 
+
+- COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion.
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin.
@@ -202,9 +204,9 @@ Command Station functions
     * -  EX-RAIL Functions
       -  Description
     * -  POWERON
-      -  Power on track, will UNJOIN programming from main (not implemented yet)
+      -  Power on track, will UNJOIN programming from main |BR| |NOT-IN-PROD-VERSION|
     * -  POWEROFF
-      -  Power off track
+      -  Power off track |BR| |NOT-IN-PROD-VERSION|
     * -  JOIN
       -  Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
     * -  UNJOIN
@@ -257,7 +259,7 @@ EX-RAIL functions
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
     * -  DRIVE( analog_pin )
-      -  ***Under Construction*** Not complete, DO NOT USE
+      -  ***Under Construction*** Not complete, DO NOT USE |BR| |NOT-IN-PROD-VERSION|
 
 |
 

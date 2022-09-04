@@ -49,6 +49,10 @@
 
    <span style="font-weight: bold; font-style: italic; color: #767676;" >Note that you can click on any of the images to make them larger.</span>
 ..
+.. |NOT-IN-PROD-VERSION| raw:: html
+   
+   <span style="color:red">This feature is not available in the current 'Production' version</span>
+..
 .. ................................................
 ..
 .. |EX-CS-LOGO| image:: /_static/images/logos/product-logo-ex-commandstation.png

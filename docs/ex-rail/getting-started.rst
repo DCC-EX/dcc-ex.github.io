@@ -500,14 +500,16 @@ Signals can now simply be a decoration to be switched by the route process; they
 Referencing Locos
 -----------------
 
-.. todo:: Referencing Locos in Sequences
+To reference a loco in a sequence you only need to know it's DCC Address.  i.e. It does not need to be in the roster.
+
+Use the ``SETLOCO( loco_dcc_address )`` command to set the loco address for the sequence. Use ``SENDLOCO( ( loco_dcc_address, route_id )`` to activate a new route/sequence send a given loco along it.
+
+Following commands (e.g. ``SPEED (50)`` ) will be directed at the loco chosen.
 
 Referencing Loco Functions
 --------------------------
 
-.. todo:: Referencing Loco Functions in Sequences
-
-You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn.
+You can use ``FON( function_no )`` and ``FOFF( function_no )`` to activate and deactivate loco functions… eg sound horn.  The loco that the command will be directed to will be the one previously chosen using ``SETLOCO( loco_dcc_address )`` or ``SENDLOCO( ( loco_dcc_address, route_id )``.
 
 Referencing Sensors
 -------------------

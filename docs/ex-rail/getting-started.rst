@@ -158,13 +158,13 @@ A sequence is made up of 'Commands'. Commands are usually written one per line f
 
 The commands fall into some basic categories:
 
-* `Actions <Action Commands - Getting EX-RAIL to 'do' something>`_ - Commands that 'do' something
-* `Flow Control Commands <Sequence Flow / Flow Control Commands>`_
+* `Actions <#action-commands-getting-ex-rail-to-do-something>`_ - Commands that 'do' something
+* `Flow Control Commands <#sequence-flow-flow-control-commands>`_
 
-  * `Conditionals <Conditionals>`_ & Branching - Commands that change the flow/order in which the commands are executed
-  * `Delays & Waits <Delays & Waits>`_ - Commands that change the timing of the execution of the commands
+  * :ref:`Conditionals <getting-started-conditionals>` & `Branching`_ - Commands that change the flow/order in which the commands are executed
+  * `Delays & Waits`_ - Commands that change the timing of the execution of the commands
 
-* `Command Station commands <Command Station commands>`_
+* `Command Station commands`_
 
 ----
 
@@ -261,14 +261,16 @@ For a simple sequence, once triggered, the system steps though each and every in
 
 However there are a number of ways that the processing of a sequence can be changed:
 
-* `Conditionals <Conditionals>`_
-* `Branching <Branching>`_
-   * `CALL <CALL and RETURN>`_ - Branch to a separate sequence expecting a RETURN
-   * `RETURN <CALL and RETURN>`_ - Return to caller (see `CALL <CALL and RETURN>`_)
-   * `FOLLOW <FOLLOW>`_ - Branch or Follow a numbered sequence (think of “GOTO”)
+* :ref:`Conditionals <getting-started-conditionals>`
+* `Branching`_
+   * `CALL <#call-and-return>`_ - Branch to a separate sequence expecting a RETURN
+   * `RETURN <#call-and-return>`_ - Return to caller (see `CALL <#call-and-return>`_)
+   * `FOLLOW`_ - Branch or Follow a numbered sequence (think of “GOTO”)
 
 The timing of the execution of the commands can be altered as well with 'Delay' and 'Wait' type commands.
 
+.. _getting-started-conditionals:
+  
 Conditionals
 ~~~~~~~~~~~~~
 

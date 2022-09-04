@@ -29,6 +29,6 @@ Pinout for reference:
 
 :ref:`High Accuracy Waveform <reference/hardware/motorboards/motor-board-config:Using High Accuracy Waveform Mode>`
 
-.. Todo:: LOW - Give a link to how to handle the jumper reconfig
+.. Todo:: LOW - Hardware - Give a link to how to handle the jumper reconfig
 
 |

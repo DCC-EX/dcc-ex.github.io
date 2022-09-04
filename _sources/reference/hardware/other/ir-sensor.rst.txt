@@ -6,7 +6,7 @@ IR Sensor Boards
 
 |conductor|
 
-.. todo:: LOW - IR Sensor board details and options
+.. todo:: LOW - Hardware - IR Sensor board details and options
 
 
 .. image:: /_static/images/accessories/ir-sensor.png

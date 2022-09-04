@@ -104,7 +104,7 @@ https://enginedriver.mstevetodd.com/videos
 
 https://flash62au.github.io/EngineDriver_Home/operation/getting_started.html 
 
-.. TODO:: LOW - Give some setup tutorial here. Need a video to match since ED is the top used software
+.. TODO:: LOW - Software - Give some setup tutorial here. Need a video to match since ED is the top used software
 
 Using a Bluetooth Controller
 =============================

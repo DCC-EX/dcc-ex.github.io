@@ -8,4 +8,4 @@ Bluetooth Boards
 
 |tinkerer| |engineer|
 
-.. todo:: LOW Bluetooth boards
+.. todo:: LOW - Hardware - LOW Bluetooth boards

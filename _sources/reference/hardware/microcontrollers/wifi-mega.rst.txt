@@ -393,4 +393,4 @@ Suppliers
 
 https://www.amazon.com/SongHe-Mega2560-ATmega2560-ESP8266-Compatible/dp/B07THDDFSJ
 
-.. TODO:: LOW - show link for external antenna and how to cut the trace to the circuit trace antenna on the board.
+.. TODO:: LOW - Hardware - show link for external antenna and how to cut the trace to the circuit trace antenna on the board.

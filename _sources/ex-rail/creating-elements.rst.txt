@@ -124,7 +124,7 @@ DCC Turnouts/Points
 Adding the Hardware -  DCC Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: DCC Turnouts/points
+.. todo:: MEDIUM - DCC Turnouts/points
 
 Configure myAutomation.h - DCC Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -135,7 +135,7 @@ Pin Turnouts/Points
 Adding the Hardware -  Pin Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: DCC Turnouts/points
+.. todo:: LOW - Adding the Hardware -  Pin Turnouts/Points
 
 Configure myAutomation.h - Pin Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

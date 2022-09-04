@@ -443,10 +443,6 @@ There are a number of delay type commands that you can explore on the :doc:`EX-R
       - Wait until sensor is active/triggered, use negative values for active HIGH sensors
     * - ATTIMEOUT( sensor_id, timeout_ms )
       - Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors
-    * - ATGTE( analogpin, value)
-      - waits for analog pin to reach value
-    * - ATLT (analogpin,value)
-      - waits for analog pin to go below value
     * - AFTER( sensor_id )
       - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
 
@@ -463,9 +459,9 @@ There are a substantial number of commands that you can explore on the :doc:`EX-
     :class: command-table
 
     * -  POWERON
-      -  Power on track, will UNJOIN programming from main (not implemented yet)
+      -  Power on track, will UNJOIN programming from main |BR| |NOT-IN-PROD-VERSION|
     * -  POWEROFF
-      -  Power off track
+      -  Power off track |BR| |NOT-IN-PROD-VERSION|
     * -  READ_LOCO
       -  Read loco ID from Prog track
 
@@ -500,14 +496,27 @@ Signals can now simply be a decoration to be switched by the route process; they
 Referencing Locos
 -----------------
 
-.. todo:: Referencing Locos in Sequences
+.. code-block:: cpp
+  :class: code-block-float-right
+  
+  //Example
+  // If this is at the start of myConfiuration.h  
+  // this will act like an AUTOSTART sequence
+  // and automatically turn the track power on
+  SETLOCO(9999)   // select loco 9999
+  SPEED(0)        // set the speed to 0.  This will turn the tarck power on
+  DONE
+
+To reference a loco in a sequence you only need to know it's DCC Address.  i.e. It does not need to be in the roster.
+
+Use the ``SETLOCO( loco_dcc_address )`` command to set the loco address for the sequence. Use ``SENDLOCO( ( loco_dcc_address, route_id )`` to activate a new route/sequence send a given loco along it.
+
+Following commands (e.g. ``SPEED (50)`` ) will be directed at the loco chosen.
 
 Referencing Loco Functions
 --------------------------
 
-.. todo:: Referencing Loco Functions in Sequences
-
-You can use ``FON(n)`` and ``FOFF(n)`` to switch loco functions… eg sound horn.
+You can use ``FON( function_no )`` and ``FOFF( function_no )`` to activate and deactivate loco functions… eg sound horn.  The loco that the command will be directed to will be the one previously chosen using ``SETLOCO( loco_dcc_address )`` or ``SENDLOCO( ( loco_dcc_address, route_id )``.
 
 Referencing Sensors
 -------------------

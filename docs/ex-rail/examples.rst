@@ -13,11 +13,9 @@ Example Objects and Sequences
    .. contents:: On this page
       :depth: 2
 
-.. todo:: Also see the big picture...
+On this page are a number of examples of |EX-R| sequences that you can lean from.  :doc:`/big-picture/big-picture` section of this web site also contains numerous more complex examples, 
 
 ----
-
-|force-break|
 
 Turn Track Power On at Startup
 ==============================

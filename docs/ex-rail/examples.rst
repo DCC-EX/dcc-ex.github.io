@@ -22,7 +22,7 @@ Example Objects and Sequences
 Turn Track Power On at Startup
 ==============================
 
-The current production release of |EX-CS| dos not have commands for turning track power on or off, but if you assign a speed to a loco in a sequence it will automatically turn the track power on.  Using this feature we can fudge turning the track power on at startup.
+The current production release of |EX-R| does not have commands for turning track power on or off, but if you assign a speed to a loco in a sequence it will automatically turn the track power on.  Using this feature we can fudge turning the track power on at startup.
 
 .. code-block:: cpp
    

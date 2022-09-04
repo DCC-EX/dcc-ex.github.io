@@ -8,7 +8,7 @@
 
 |conductor| |tinkerer| |engineer|
 
-.. todo::  LOW - Text for the hardware index page
+.. todo::  LOW - Hardware - Text for the hardware index page
 
 
 |EX-CS| works with virtually any decoder using its proprietary programming and ACK detection features. Still, while running locos and sending commands to the main track will always work, you may run into issues during programming operations with ACK Detection. This page describes fixes for any of the decoders users or the |DCC-EX| team found.
@@ -31,4 +31,4 @@ mention "service mode" vs. "operations mode"
 
 Have a link to "Programming Mobile decoders, aka. Reading and Writing CVs" and write that document
 
-.. Todo:: LOW - Finish this page -  Decoder Notes
+.. Todo:: LOW - Hardware - Finish this page -  Decoder Notes

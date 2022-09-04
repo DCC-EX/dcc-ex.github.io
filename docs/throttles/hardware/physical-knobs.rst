@@ -10,4 +10,4 @@ Adding a Physical Knob
 
 |conductor| |tinkerer| |engineer|
 
-.. todo:: LOW - link needed for throttles/hardware/physical-knobs.rst
+.. todo:: LOW - Hardware - link needed for throttles/hardware/physical-knobs.rst

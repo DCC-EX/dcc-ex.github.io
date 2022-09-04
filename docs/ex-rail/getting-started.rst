@@ -384,7 +384,7 @@ Branching
 CALL and RETURN
 '''''''''''''''
 
-.. todo:: CALL and RETURN
+.. todo:: MEDIUM - CALL and RETURN
 
 ``CALL( route )`` Branch to a separate sequence, which will need to RETURN when complete.
 
@@ -393,7 +393,7 @@ CALL and RETURN
 FOLLOW
 ''''''
 
-.. todo:: FOLLOW
+.. todo:: MEDIUM - FOLLOW
 
 ``FOLLOW( route )`` Branch or Follow a numbered sequence. (The 'followed' sequence does not return to the sequence that invoked it.)
 
@@ -449,7 +449,7 @@ There are a number of delay type commands that you can explore on the :doc:`EX-R
 Command Station Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: Command Station Commands
+.. todo:: MEDIUM - Command Station Commands
 
 There are a substantial number of commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
 
@@ -530,7 +530,7 @@ Sensor polling by JMRI is independent of this, and may continue if ``<S>`` comma
 Outputs
 -------
 
-.. todo::  HIGH - Outputs - what is this?
+.. todo:: MEDIUM - Outputs - what is this?
 
 - Generic Outputs are mapped to VPINs on the HAL (as for sensors)
 - SIGNAL definitions are just groups of 3 Output pins that can be more easily managed.

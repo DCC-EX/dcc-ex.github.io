@@ -158,13 +158,13 @@ A sequence is made up of 'Commands'. Commands are usually written one per line f
 
 The commands fall into some basic categories:
 
-* `Actions <Action Commands - Getting EX-RAIL to 'do' something>`_ - Commands that 'do' something
-* `Flow Control Commands <Sequence Flow / Flow Control Commands>`_
+* `Actions <#action-commands-getting-ex-rail-to-do-something>`_ - Commands that 'do' something
+* `Flow Control Commands <#sequence-flow-flow-control-commands>`_
 
-  * `Conditionals <Conditionals>`_ & Branching - Commands that change the flow/order in which the commands are executed
-  * `Delays & Waits <Delays & Waits>`_ - Commands that change the timing of the execution of the commands
+  * `Conditionals <#id3>`_ & Branching - Commands that change the flow/order in which the commands are executed
+  * `Delays & Waits <#id8>`_ - Commands that change the timing of the execution of the commands
 
-* `Command Station commands <Command Station commands>`_
+* `Command Station commands <#id9>`_
 
 ----
 

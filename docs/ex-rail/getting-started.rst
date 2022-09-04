@@ -161,7 +161,7 @@ The commands fall into some basic categories:
 * `Actions <#action-commands-getting-ex-rail-to-do-something>`_ - Commands that 'do' something
 * `Flow Control Commands <#sequence-flow-flow-control-commands>`_
 
-  * `Conditionals`_ & Branching - Commands that change the flow/order in which the commands are executed
+  * :ref:`Conditionals <getting-started-conditionals>` & `Branching`_ - Commands that change the flow/order in which the commands are executed
   * `Delays & Waits`_ - Commands that change the timing of the execution of the commands
 
 * `Command Station commands`_
@@ -261,7 +261,7 @@ For a simple sequence, once triggered, the system steps though each and every in
 
 However there are a number of ways that the processing of a sequence can be changed:
 
-* `Conditionals`_
+* :ref:`Conditionals <getting-started-conditionals>`
 * `Branching`_
    * `CALL <#call-and-return>`_ - Branch to a separate sequence expecting a RETURN
    * `RETURN <#call-and-return>`_ - Return to caller (see `CALL <#call-and-return>`_)
@@ -269,6 +269,8 @@ However there are a number of ways that the processing of a sequence can be chan
 
 The timing of the execution of the commands can be altered as well with 'Delay' and 'Wait' type commands.
 
+.. _getting-started-conditionals:
+  
 Conditionals
 ~~~~~~~~~~~~~
 

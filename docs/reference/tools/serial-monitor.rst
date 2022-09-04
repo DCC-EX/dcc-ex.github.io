@@ -115,7 +115,7 @@ Connect with a Cell Phone
 
 .. NOTE:: You can also use Bluetooth if you have a Bluetooth board attached to your Command Station and make a small modification to the sketch (Command Station Software). We will cover how to do that in a **Project** tutorial
 
-.. todo:: LOW - show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar
+.. todo:: LOW - Hardware - show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar
 
 OTG Cable
 -----------

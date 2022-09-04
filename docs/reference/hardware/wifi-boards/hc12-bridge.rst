@@ -14,6 +14,6 @@ HC-12 Wireless Bridge
     :depth: 1
     :local:
 
-.. todo:: LOW - Update HC-12 wireless bridge page.
+.. todo:: LOW - Hardware - Update HC-12 wireless bridge page.
   
   This page needs content, images, etc.

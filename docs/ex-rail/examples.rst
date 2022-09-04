@@ -19,6 +19,18 @@ Example Objects and Sequences
 
 |force-break|
 
+Turn Track Power On at Startup
+==============================
+
+The current production release of |EX-CS| dos not have commands for turning track power on or off, but if you assign a speed to a loco in a sequence it will automatically turn the track power on.  Using this feature we can fudge turning the track power on at startup.
+
+.. code-block:: cpp
+   
+  // if this is at the start of myConfiuration.h  This will act like an AUTOSTART sequence
+  SETLOCO(9999)   // select loco 9999
+  SPEED(0)        // set the speed to 0.  This will turn the tarck power on
+  DONE
+
 
 Add a Roster
 ============

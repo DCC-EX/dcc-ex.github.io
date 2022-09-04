@@ -204,9 +204,9 @@ Command Station functions
     * -  EX-RAIL Functions
       -  Description
     * -  POWERON
-      -  Power on track, will UNJOIN programming from main (not implemented yet)
+      -  Power on track, will UNJOIN programming from main |BR| |NOT-IN-PROD-VERSION|
     * -  POWEROFF
-      -  Power off track
+      -  Power off track |BR| |NOT-IN-PROD-VERSION|
     * -  JOIN
       -  Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
     * -  UNJOIN
@@ -259,7 +259,7 @@ EX-RAIL functions
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
     * -  DRIVE( analog_pin )
-      -  ***Under Construction*** Not complete, DO NOT USE
+      -  ***Under Construction*** Not complete, DO NOT USE |BR| |NOT-IN-PROD-VERSION|
 
 |
 

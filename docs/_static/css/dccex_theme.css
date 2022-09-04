@@ -201,6 +201,25 @@ svg {
   background: #cbe1ef !important;
 }
 
+.tip {
+  background: #eef5f4 !important;
+  clear: none !important;
+}
+
+.tip p.admonition-title {
+  background: #9cd7cb !important;
+}
+
+.admonition-todo {
+  background: #f9f0e0 !important;
+  clear: none !important;
+}
+
+.admonition-todo p.admonition-title {
+  background: #f7d1b0 !important;
+}
+
+
 
 /* *************************************** */
 

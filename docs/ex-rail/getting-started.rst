@@ -443,10 +443,6 @@ There are a number of delay type commands that you can explore on the :doc:`EX-R
       - Wait until sensor is active/triggered, use negative values for active HIGH sensors
     * - ATTIMEOUT( sensor_id, timeout_ms )
       - Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors
-    * - ATGTE( analogpin, value)
-      - waits for analog pin to reach value
-    * - ATLT (analogpin,value)
-      - waits for analog pin to go below value
     * - AFTER( sensor_id )
       - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
 
@@ -463,9 +459,9 @@ There are a substantial number of commands that you can explore on the :doc:`EX-
     :class: command-table
 
     * -  POWERON
-      -  Power on track, will UNJOIN programming from main (not implemented yet)
+      -  Power on track, will UNJOIN programming from main |BR| |NOT-IN-PROD-VERSION|
     * -  POWEROFF
-      -  Power off track
+      -  Power off track |BR| |NOT-IN-PROD-VERSION|
     * -  READ_LOCO
       -  Read loco ID from Prog track
 
@@ -499,6 +495,17 @@ Signals can now simply be a decoration to be switched by the route process; they
 
 Referencing Locos
 -----------------
+
+.. code-block:: cpp
+  :class: code-block-float-right
+  
+  //Example
+  // If this is at the start of myConfiuration.h  
+  // this will act like an AUTOSTART sequence
+  // and automatically turn the track power on
+  SETLOCO(9999)   // select loco 9999
+  SPEED(0)        // set the speed to 0.  This will turn the tarck power on
+  DONE
 
 To reference a loco in a sequence you only need to know it's DCC Address.  i.e. It does not need to be in the roster.
 

@@ -18,11 +18,11 @@ First we need the 'objects' that we will use for our automation sequences.
 
 There are a number key objects that are important for creating sequences:
 
-* `Roster Entries - Your locos <Adding a Roster>`_
-* `Turnouts/Points <Adding Turnouts/Points>`_
-* `Servos for Semophores/Signals and Animations <Servos for Signals and Animations>`_
-* `Sensors <Sensors>`_
-* `Signals (Lights) <Signals>`_
+* `Roster Entries - Your locos <#adding-a-roster>`_
+* `Turnouts/Points <#adding-turnouts-points>`_
+* `Servos for Semophores/Signals and Animations <#servos-for-signals-and -animations>`_
+* `Sensors <#adding-sensors>`_
+* `Signals (Lights) <#adding-signals>`_
 
 The process for creating these objects consists of:
 
@@ -200,9 +200,9 @@ The myAutomation.h file needs to be altered so that the |EX-CS| knows about each
 
 EX-RAIL supports three methods of controlling servos:
 
-* `Turnouts via the SERVO_TURNOUT directive <Controlling Servos for Turnouts/Points>`_
-* `Signals via the SERVO_SIGNAL directive <Servos for Signals>`_
-* `Animations via the SERVO or SERVO2 directives <Servos for Animations>`_
+* `Turnouts via the SERVO_TURNOUT directive <#controlling-servos-for-turnouts-points>`_
+* `Signals via the SERVO_SIGNAL directive <#servos-for-signals>`_
+* `Animations via the SERVO or SERVO2 directives <#servos-for-animations>`_
 
 Controlling Servos for Turnouts/Points
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -246,8 +246,8 @@ The myAutomation.h file needs to be altered so that the |EX-CS| knows about each
 
 EX-RAIL supports two methods of controlling servos that are not related to turnouts/points:
 
-* `Signals via the SERVO_SIGNAL directive <Servos for Signals>`_
-* `Animations via the SERVO or SERVO2 directives <Servos for Animations>`_
+* `Signals via the SERVO_SIGNAL directive <#servos-for-signals>`_
+* `Animations via the SERVO or SERVO2 directives <#servos-for-animations>`_
 
 Servos for Signals
 ^^^^^^^^^^^^^^^^^^

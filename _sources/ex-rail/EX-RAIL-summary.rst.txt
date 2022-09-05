@@ -134,7 +134,7 @@ Object definitions
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
       -  Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts/points!)
     * -  VIRTUAL_TURNOUT( id [, "description"] )
-      -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.
+      -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout/point.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
       -  Define a servo signal
 
@@ -167,7 +167,7 @@ Flow control functions
     * -  IFNOT( sensor_id )
       -  If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors
     * -  IFCLOSED( turnout_id )
-      -  Check if turnout is closed
+      -  Check if turnout/point is closed
     * -  IFGTE( sensor_id, value )
       -  Test if analog pin reading is greater than or equal to value (>=)
     * -  IFLT( sensor_id, value )
@@ -175,7 +175,7 @@ Flow control functions
     * -  IFRANDOM( percent )
       -  Runs commands in IF block a random percentage of the time
     * -  IFTHROWN( turnout_id )
-      -  Test if turnout is thrown
+      -  Test if turnout/point is thrown
     * -  IFRESERVE( block )
       -  If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
     * -  IFTIMEOUT
@@ -334,9 +334,9 @@ Sensor event handlers
     * -  EX-RAIL Functions
       -  Description
     * -  ONCLOSE( turnout_id )
-      -  Event handler for turnout close
+      -  Event handler for turnout/point close
     * -  ONTHROW( turnout_id )
-      -  Event handler for turnout thrown
+      -  Event handler for turnout/point thrown
     * -  ONACTIVATE( addr, sub_addr )
       -  Event handler for 2 part DCC accessory packet value 1
     * -  ONACTIVATEL( linear )
@@ -363,9 +363,9 @@ Action output functions
     * -  RESET( pin )
       -  Reset output pin (set to LOW)
     * -  CLOSE( turnout_id )
-      -  Close a defined turnout
+      -  Close a defined turnout/point
     * -  THROW( id )
-      -  Throw a defined turnout
+      -  Throw a defined turnout/point
     * -  GREEN( signal_id )
       -  Set a defined signal to GREEN (see SIGNAL)
     * -  AMBER( signal_id )
@@ -379,9 +379,9 @@ Action output functions
     * -  MOVETT( vpin, steps, activity )
       -  Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
     * -  SERVO( id, position, profile )
-      -  Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)
+      -  Move an animation servo. Do NOT use for turnouts/points. (profile is one of Instant, Fast, Medium, Slow or Bounce)
     * -  SERVO2( id, position, duration )
-      -  Move an animation servo taking duration in ms. Do NOT use for Turnouts
+      -  Move an animation servo taking duration in ms. |BR| Do NOT use for turnouts/points
     * -  XFON( cab, func )
       -  Send DCC function ON to specific cab (eg coach lights) **Not for Loco use - use FON instead!**
     * -  XFOFF( cab, func )

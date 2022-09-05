@@ -293,7 +293,7 @@ Conditionals have the structure:
       ENDIF 
       FOLLOW(85)     // repeat forever
 
-.. code-block:: 
+.. code-block:: cpp
 
   ...
   IFxxx( id_or_condition, ... )  // where xxx is the type of 'IF' command (see below)
@@ -304,7 +304,7 @@ Conditionals have the structure:
 
 or
 
-.. code-block:: 
+.. code-block:: cpp
 
   ...
   IFxxx( id_or_condition, ...)  // where xxx is the type of 'IF' command (see below)
@@ -381,26 +381,34 @@ see :doc:`EX-RAIL-summary` page for additional information.
 Branching
 ~~~~~~~~~
 
+Sequences can invoke other sequences.  There are two ways this can be done.
+
 CALL and RETURN
 '''''''''''''''
 
-.. todo:: MEDIUM - CALL and RETURN
+To invoke another sequence, and return and execute the next command in the current sequence you can use the combination of the ``CALL( route_id )`` command in the main sequence, and in the called sequence, use the ``RETURN`` command to return.
 
-``CALL( route )`` Branch to a separate sequence, which will need to RETURN when complete.
+.. list-table::
+    :widths: auto
+    :header-rows: 0
+    :class: command-table
 
-``RETURN`` Return to the calling sequence when completed (no DONE required).
+    * - CALL( route_id )
+      - Branch to a separate sequence, which will need to RETURN when complete
+    * - RETURN
+      - Return to the calling sequence when completed (no DONE required).
 
 FOLLOW
 ''''''
 
-.. todo:: MEDIUM - FOLLOW
+To invoke another sequence, with no wish to return and execute any further commands in the current sequence you can use the ``FOLLOW( route_id )`` command in the main sequence.
 
-``FOLLOW( route )`` Branch or Follow a numbered sequence. (The 'followed' sequence does not return to the sequence that invoked it.)
+``FOLLOW( route_id )`` Branch or Follow a numbered sequence. (The 'followed' sequence does not return to the sequence that invoked it.)
 
 Delays & Waits
 ~~~~~~~~~~~~~~
 
-The timing of the execution of the commands can be altered with 'Delay' or 'Wait' type commands. i.e. they don't happen immediately on completion of the previous command.
+The timing of the execution of the commands in a sequence can be altered with 'Delay' or 'Wait' type commands. i.e. they don't happen immediately on completion of the previous command.
 
 There are a number of delay type commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
 
@@ -485,7 +493,6 @@ A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TU
  
 See the :doc:`/ex-rail/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
-
 Referencing Signals
 -------------------
 
@@ -527,13 +534,7 @@ Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor 
 
 Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.
 
-Outputs
--------
-
-.. todo:: MEDIUM - Outputs - what is this?
-
-- Generic Outputs are mapped to VPINs on the HAL (as for sensors)
-- SIGNAL definitions are just groups of 3 Output pins that can be more easily managed.
+----
 
 Drive-Away feature
 ==================

@@ -586,7 +586,7 @@
 <td><p>Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts/points!)</p></td>
 </tr>
 <tr class="row-even"><td><p>VIRTUAL_TURNOUT( id [, “description”] )</p></td>
-<td><p>Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout.</p></td>
+<td><p>Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout/point.</p></td>
 </tr>
 <tr class="row-odd"><td><p>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</p></td>
 <td><p>Define a servo signal</p></td>
@@ -635,7 +635,7 @@
 <td><p>If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors</p></td>
 </tr>
 <tr class="row-even"><td><p>IFCLOSED( turnout_id )</p></td>
-<td><p>Check if turnout is closed</p></td>
+<td><p>Check if turnout/point is closed</p></td>
 </tr>
 <tr class="row-odd"><td><p>IFGTE( sensor_id, value )</p></td>
 <td><p>Test if analog pin reading is greater than or equal to value (&gt;=)</p></td>
@@ -647,7 +647,7 @@
 <td><p>Runs commands in IF block a random percentage of the time</p></td>
 </tr>
 <tr class="row-even"><td><p>IFTHROWN( turnout_id )</p></td>
-<td><p>Test if turnout is thrown</p></td>
+<td><p>Test if turnout/point is thrown</p></td>
 </tr>
 <tr class="row-odd"><td><p>IFRESERVE( block )</p></td>
 <td><p>If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p></td>
@@ -883,10 +883,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>ONCLOSE( turnout_id )</p></td>
-<td><p>Event handler for turnout close</p></td>
+<td><p>Event handler for turnout/point close</p></td>
 </tr>
 <tr class="row-odd"><td><p>ONTHROW( turnout_id )</p></td>
-<td><p>Event handler for turnout thrown</p></td>
+<td><p>Event handler for turnout/point thrown</p></td>
 </tr>
 <tr class="row-even"><td><p>ONACTIVATE( addr, sub_addr )</p></td>
 <td><p>Event handler for 2 part DCC accessory packet value 1</p></td>
@@ -926,10 +926,10 @@
 <td><p>Reset output pin (set to LOW)</p></td>
 </tr>
 <tr class="row-even"><td><p>CLOSE( turnout_id )</p></td>
-<td><p>Close a defined turnout</p></td>
+<td><p>Close a defined turnout/point</p></td>
 </tr>
 <tr class="row-odd"><td><p>THROW( id )</p></td>
-<td><p>Throw a defined turnout</p></td>
+<td><p>Throw a defined turnout/point</p></td>
 </tr>
 <tr class="row-even"><td><p>GREEN( signal_id )</p></td>
 <td><p>Set a defined signal to GREEN (see SIGNAL)</p></td>
@@ -950,10 +950,10 @@
 <td><p>Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)</p></td>
 </tr>
 <tr class="row-even"><td><p>SERVO( id, position, profile )</p></td>
-<td><p>Move an animation servo. Do NOT use for Turnouts. (profile is one of Instant, Fast, Medium, Slow or Bounce)</p></td>
+<td><p>Move an animation servo. Do NOT use for turnouts/points. (profile is one of Instant, Fast, Medium, Slow or Bounce)</p></td>
 </tr>
 <tr class="row-odd"><td><p>SERVO2( id, position, duration )</p></td>
-<td><p>Move an animation servo taking duration in ms. Do NOT use for Turnouts</p></td>
+<td><p>Move an animation servo taking duration in ms. <br /> Do NOT use for turnouts/points</p></td>
 </tr>
 <tr class="row-even"><td><p>XFON( cab, func )</p></td>
 <td><p>Send DCC function ON to specific cab (eg coach lights) <strong>Not for Loco use - use FON instead!</strong></p></td>

@@ -124,7 +124,13 @@ DCC Turnouts/Points
 Adding the Hardware -  DCC Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: MEDIUM - DCC Turnouts/points
+If you have installed turnouts/points using DCC accessory decoders, you can config the |EX-CS| so that it knows about it and you can control in in your sequences.
+
+   .. code-block:: cpp
+
+    TURNOUT( id, addr, sub_addr [, "description"] )
+
+The ``TURNOUT`` command defines DCC accessory decoder turnout/point in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
 
 Configure myAutomation.h - DCC Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -139,7 +145,6 @@ Adding the Hardware -  Pin Turnouts/Points
 
 Configure myAutomation.h - Pin Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 Servo Turnouts/Points
 ---------------------
@@ -181,10 +186,10 @@ Enter `<D SERVO 100 110>` and this time it should definitely move.  For the last
 
 Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
-You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
+You can use the servo to control turnouts/points, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout/point.
 
 .. image:: /_static/images/i2c/TurnoutServoMount.jpg
-   :alt: Servo mount to operate a turnout
+   :alt: Servo mount to operate a turnout/point
    :scale: 60%
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
@@ -207,9 +212,9 @@ EX-RAIL supports three methods of controlling servos:
 Controlling Servos for Turnouts/Points
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``SERVO_TURNOUT`` directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
+The ``SERVO_TURNOUT`` directive defines a servo based turnout/point in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
 
-As per the |EX-R| reference, turnouts are defined with the following syntax:
+As per the |EX-R| reference, turnouts/points are defined with the following syntax:
 
 .. code-block:: cpp
 
@@ -221,16 +226,16 @@ As per the |EX-R| reference, turnouts are defined with the following syntax:
    :class: code-block-float-right
 
    // Example
-   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout definition")
+   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout/point definition")
 
    /* An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation: */The valid parameters are:
 
-- id = Unique ID within the CommandStation (note these are shared across turnouts, sensors, and outputs).
+- id = Unique ID within the CommandStation (note these are shared across turnouts/points, sensors, and outputs).
 - pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
-- active_angle = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
-- inactive_angle = The angle to which the servo will move when the turnout is closed (refer below for further detailed information).
-- profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout definition).
-- description = A human-friendly description of the turnout that will appear in WiThrottle apps and |Engine Driver|. Note that this must be enclosed in quotes "".
+- active_angle = The angle to which the servo will move when the turnout/point is thrown (refer below for further detailed information).
+- inactive_angle = The angle to which the servo will move when the turnout/point is closed (refer below for further detailed information).
+- profile = There are five profiles to choose from that determine the speed at which a turnout/point will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout/point definition).
+- description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and |Engine Driver|. Note that this must be enclosed in quotes "".
 
 ----
 
@@ -256,7 +261,7 @@ The ``SERVO_SIGNAL`` directive defines a servo based signal in |EX-R| to drive s
 
 Similar to pin based signals, servo signals are controlled by the ID of the red pin only.
 
-Unlike servo based turnouts, there is no ID or description (they don't appear in throttles), and they use the "Bounce" profile with no other options available at the present time:
+Unlike servo based turnouts/points, there is no ID or description (they don't appear in throttles), and they use the "Bounce" profile with no other options available at the present time:
 
 .. code-block:: 
 
@@ -294,7 +299,7 @@ As per the |EX-R| reference, these are defined with the following syntax:
 The valid parameters are:
 
 - **vpin** = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
-- **position** = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
+- **position** = The angle to which the servo will move when the turnout/point is thrown (refer below for further detailed information).
 - **profile** = There are five profiles to choose from that determine the speed at which a servo will move: Instant, Fast, Medium, Slow, and Bounce.
 - **duration** = The time (in milliseconds (ms)) for the servo to be actively rotating.
 
@@ -404,7 +409,7 @@ SIGNAL(red_pin, amber_pin, green_pin)
 .. code-block:: 
 
     // always use the first red_pin as the signal_id for All signal color changes)
-    SIGNAL(106, 0, 107) // Red, Amber, Green For turnout 1
+    SIGNAL(106, 0, 107) // Red, Amber, Green For turnout/point 1
 
 Combine the two commands Servo_Turnout and Signal (New 4.1:)
 
@@ -414,7 +419,7 @@ New 4.1 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
 
     // Use the first Red vpin# as the signal_id for All Signal color changes
     // Use this to Combine the two commands Servo_Turnout and Signal above into One Function 
-    SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for Turnout 1, Thrown=Red, Close = Green
+    SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red, Close = Green
 
 
 ----

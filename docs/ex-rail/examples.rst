@@ -42,18 +42,31 @@ Add a Roster
    ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
 
 
-Adding Servo Turnouts
-=====================
+Defining Servo Turnouts
+=======================
+
+As per the |EX-R| reference, turnouts/points are defined with the following syntax:
 
 .. code-block:: cpp
 
-   todo
+   // Example
+   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout/point definition")
 
-.. todo:: LOW - example - Adding Servo Turnouts
-
-.. todo:: 
-
-   MEDIUM - Update these examples to use valid pins and vpins that are available on the Mega2560 or I/O expanders and servo modules.
+   /* An example definition for a servo connected to the second control pins of the first PCA9685
+   connected to the CommandStation, using the slow profile for prototypical operation:
+   
+   The SERVO_TURNOUT parameters mean:   
+   '200' = Unique ID within the CommandStation (note these are shared across turnouts/points, 
+           sensors, and outputs)
+   '101' = The ID of the pin the servo is connected to, which would typically be the VPin ID 
+           of the PCA9685 controller board
+   '450' = The angle to which the servo will move when the turnout/point is thrown
+   '110' = The angle to which the servo will move when the turnout/point is closed
+   'Slow' = There are five profiles to choose from that determine the speed at which a 
+           turnout/point will move: Instant, Fast, Medium, Slow, and Bounce (note we don't 
+           recommend Bounce for a turnout/point definition).
+   "The description" = A human-friendly description of the turnout/point that will appear in 
+           WiThrottle apps and |Engine Driver|.*/
 
 Creating Routes
 ===============
@@ -401,6 +414,10 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the ``INVERT_DIRECTION`` instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
+
+.. todo:: 
+
+   LOW - Update the examples examples to use valid pins and vpins that are available on the Mega2560 or I/O expanders and servo modules.
 
 ----
 

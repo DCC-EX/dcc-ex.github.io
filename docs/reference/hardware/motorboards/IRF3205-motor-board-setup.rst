@@ -17,7 +17,7 @@ Dual Motor Driver Module H-bridge MOSFET IRF3205
 
 |tinkerer|
 
-.. warning:: This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply a 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.
+.. warning:: This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.
 
 You can use this board to handle both your MAIN and PROG track, or you can use one of the H-Bridges to power your MAIN track and use the Arduino Motor Shield for your PROG track. This board can provide up to 15A when you need more current than the 1.2-1.5A the Arduino Motor Shield can provide. IRF3205 is the model number of the N Channel MOSFETS used in the H-Bridge circuit. MOSFETS are a type of transistor, and rather than many other boards that use an integrated circuit for the H-Bridge, this board uses 4 discrete transistors per H-Bridge. This allows for a highly efficient motor controller with a negligible voltage drop.
 
@@ -140,7 +140,7 @@ It should look like following. Note we have included the Arduino Mega and have t
    :scale: 70%
    :align: center
 
-6. Select your IRF3205 board type in the config.h file. TODO: fnd XXX need to add this type in EX
+6. Configure the IRF3205 board type in the config.h file.
    
 .. Note:: We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.
 

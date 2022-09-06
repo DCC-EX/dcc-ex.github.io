@@ -219,7 +219,12 @@ svg {
   background: #f7d1b0 !important;
 }
 
+/* *************************************** */
 
+.menuselection {
+  font-style: italic;
+  font-weight: 700;
+}
 
 /* *************************************** */
 

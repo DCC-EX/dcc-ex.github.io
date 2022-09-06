@@ -98,7 +98,7 @@ Style Guidelines
 *	Avoid '(above)' or '(below)' in text.  Use hypertext links instead
 *	**``.. todo:: description...``** means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  If you want to to show in the page you will need add a separate line. 
 * Use **\`\`\literal text blocks\`\`** when describing preference values  - ``literal text blocks``
-* Use **\:menuselection\:\`Menu --> Preferences --> ..\`** for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
+* Use **\:menuselection\:\`Menu \-\-\> Preferences \-\-\> ..\`** for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
 * Use **\:guilabel\:\`\GUI labels\`** for buttons  - :guilabel:`GUI labels`
 * For dates, use dd-mmm-yyyy or yyyy-mm-dd to avoid confusion with the way dates are uniquely written in the US. |br|\ e.g. 2-Mar-2022 or 2022-3-2, not 2-3-2022 
 * Heading levels:

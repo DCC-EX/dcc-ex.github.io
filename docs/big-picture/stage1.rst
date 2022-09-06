@@ -124,6 +124,13 @@ See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on
 wiThrottle (iOS)
 ----------------
 
+.. note::
+  :class: note-float-right
+
+  The free version of wiThrottle ('wiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: EX-CommandStation can be configured to automatically turn the track power on. See the :ref:`EX-RAIL examples <ex-rail/examples:Turn Track Power On at Startup>`.)
+  
+  The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
+
 * If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
   
   * Open the network settings on you phone
@@ -197,6 +204,9 @@ JMRI (PC)
 Engine Driver (via JMRI)
 ------------------------
 
+Before |Engine Driver| or |wiThrottle| can be run via |JMRI|, the JMRI WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
+:menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A wiThrottle server window should open showing wiThrottle server is running.
+
 * Open the network settings on you phone
 * Change to same network of the PC that JMRI is on
 * Start the |engine driver| App
@@ -228,11 +238,20 @@ See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on
 wiThrottle (via JMRI)
 ---------------------
 
+.. note:: 
+  :class: note-float-right
+
+  The free version of wiThrottle ('wiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: JMRI can be configured to automatically turn the track power on.)
+  
+  The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
+
+Before |Engine Driver| or |wiThrottle| can be run via |JMRI|, the JMRI WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
+:menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A wiThrottle server window should open showing wiThrottle server is running.
+
 * Open the network settings on your phone
 * Change to same network of the PC that JMRI is on
 * Start the |wiThrottle| App
 * |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|
-* If you are using |Access Point Mode| 
 
   * It should find the |wiThrottle Server| in |JMRI| and automatically connect to it
 

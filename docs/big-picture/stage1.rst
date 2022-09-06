@@ -45,7 +45,7 @@ This is by far the simplest option to verify your |EX-CS| is set up and working 
 
 While there is a lot more detail on the :doc:`/ex-webthrottle/index` page, we will give you a very quick start guide here to get a single train running with your |EX-CS|.
 
-Firstly, launch :guilabel:`EX-WebThrottle` in your Chromium based web browser (Google Chrome, Microsoft Edge, or Opera):abbr:
+Firstly, launch :guilabel:`EX-WebThrottle` in your Chromium based web browser (Google Chrome, Microsoft Edge, or Opera).
 
 .. rst-class:: dcclink
 
@@ -103,7 +103,7 @@ Engine Driver (Android)
 
 * Turn on the power to the track via the menu 
    
-   * (The three dots or bars) then 'Power'.  Then click the power button till it goes green. 9may require more than one click)
+   * (The three dots or bars) then 'Power'.  Then click the :guilabel:`power` button till it goes green. (May require more than one click)
    * The four red LEDs on the Motor board will turn on
    * Click :guilabel:`Back`
 
@@ -143,10 +143,6 @@ wiThrottle (iOS)
 * |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|
 * If you are using |Access Point Mode| 
 
-  * It should find the |wiThrottle Server| and automatically connect to it
-
-* If you are using |Station Mode| 
-  
   * It will not find the |wiThrottle Server| automatically
   * Enter:
 
@@ -154,6 +150,10 @@ wiThrottle (iOS)
     * The Port: 2560
 
   * |wiThrottle| should then connect 
+
+* If you are using |Station Mode| 
+  
+  * It should find the |wiThrottle Server| and automatically connect to it
 
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``
@@ -184,9 +184,9 @@ If when you assembled your |EX-CS| configurated to Connect to JMRI, then you wil
 JMRI (PC)
 ---------
 
-* open PanelPro
+* open **DecoderPro**
 * Menu -> Actions -> New Throttle
-* Turn on the power to the track via the menu 
+* Turn on the power to the track via the button on the toolbar
   
   * Click the :guilabel:`Power` button till it turns green
 
@@ -329,18 +329,25 @@ For further information on programming in service mode, see `Service Mode Progra
 Programming on main (POM or ops mode)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you wish to set up a new roster entry for a loco that is already on your main track, or you don't have a programming track available, you can still do this through DecoderPro. You will, however, receive no acknowledgement that the changes have been written successfully.
+If you wish to set up a new roster entry for a loco that is already on your main track, or you don't have a programming track available, to a limited extent you can still do this through DecoderPro. You will, however, receive no acknowledgement that the changes have been written successfully.
 
 This is the process to add a roster entry and set the desired DCC address:
 
+Using POM only changes the loco you have selected, not all locos on the track.  Which is why you must select a loco first.  (Unlike the programming track where it changes everything on it)
+
+.. warning:: 
+  :class: warning-float-right
+
+  You can theoretically change the DCC address using POM, but *only short addresses* (below 127) and some decoders don't even allow that.
+
 * Use the :guilabel:`Power` button at the top of the window to turn track power on
 * Click the :guilabel:`New Loco` button on the menu bar at the top of the screen
-* Unlike the service mode process above, you will need to manually select the installed decoder
+* Unlike the service mode process above, you will need to manually select which decoder is installed in the loco
 * Once the decoder is selected, the "Create Basic Roster Entry" pane should appear to the right of the decoder list
 * Enter the desired name in "Roster ID", enter the current DCC address in the "Active Address" box, then click the :guilabel:`Save` to save your roster entry, then close the "New Loco" window
-* To set the desired DCC address, select the correct roster entry
+* To set the desired DCC address, select the correct roster entry  *(See Warning)*
 * Select "Programming on Main", then click the :guilabel:`Program` button
-* Click the "Basic" tab, set the desired DCC address in the "Active Address" text box, then click the :guilabel:`Write changes on sheet` button
+* Click the "Basic" tab, set the desired DCC address in the "Active Address" text box, then click the :guilabel:`Write changes on sheet` button  *(See Warning)*
 * Close the "Program" window and when prompted, click the :guilabel:`Save and close` button
 
 For further information on programming on the main track, see `Ops Mode Programming <https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml>`_ on the |JMRi| website.

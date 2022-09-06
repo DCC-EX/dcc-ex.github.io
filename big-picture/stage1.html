@@ -466,7 +466,7 @@
 <p>If you’re just starting out with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, or have a minimal system with no WiFi or Ethernet connection options, then a great way to start simply is by using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> via your direct USB connection.</p>
 <p>This is by far the simplest option to verify your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is set up and working correctly, as you don’t need to install any software or worry about any network connections to get your first train running on your layout.</p>
 <p>While there is a lot more detail on the <a class="reference internal" href="../ex-webthrottle/index.html"><span class="doc">EX-WebThrottle</span></a> page, we will give you a very quick start guide here to get a single train running with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
-<p>Firstly, launch <span class="guilabel">EX-WebThrottle</span> in your Chromium based web browser (Google Chrome, Microsoft Edge, or Opera):abbr:</p>
+<p>Firstly, launch <span class="guilabel">EX-WebThrottle</span> in your Chromium based web browser (Google Chrome, Microsoft Edge, or Opera).</p>
 <p class="dcclink"><a class="reference external" href="https://DCC-EX.github.io/WebThrottle-EX">Try It Now</a></p>
 <p>Once you have <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> opened in your browser, follow these steps to get your train running:</p>
 <ul class="simple">
@@ -525,7 +525,7 @@
 <li><p>Turn on the power to the track via the menu</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>(The three dots or bars) then ‘Power’.  Then click the power button till it goes green. 9may require more than one click)</p></li>
+<li><p>(The three dots or bars) then ‘Power’.  Then click the <span class="guilabel">power</span> button till it goes green. (May require more than one click)</p></li>
 <li><p>The four red LEDs on the Motor board will turn on</p></li>
 <li><p>Click <span class="guilabel">Back</span></p></li>
 </ul>
@@ -575,11 +575,6 @@
 <li><p><a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> will try to find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
 <li><p>If you are using <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point Mode</span></a></p>
 <ul class="simple">
-<li><p>It should find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> and automatically connect to it</p></li>
-</ul>
-</li>
-<li><p>If you are using <a class="reference internal" href="../reference/glossary.html"><span class="doc">Station Mode</span></a></p>
-<ul class="simple">
 <li><p>It will not find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> automatically</p></li>
 <li><p>Enter:</p>
 <ul>
@@ -588,6 +583,11 @@
 </ul>
 </li>
 <li><p><a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> should then connect</p></li>
+</ul>
+</li>
+<li><p>If you are using <a class="reference internal" href="../reference/glossary.html"><span class="doc">Station Mode</span></a></p>
+<ul class="simple">
+<li><p>It should find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> and automatically connect to it</p></li>
 </ul>
 </li>
 <li><p>You should then see the ‘Address Screen’</p></li>
@@ -621,9 +621,9 @@
 <section id="jmri-pc">
 <h3><a class="toc-backref" href="#id10">JMRI (PC)</a><a class="headerlink" href="#jmri-pc" title="Permalink to this heading"></a></h3>
 <ul class="simple">
-<li><p>open PanelPro</p></li>
+<li><p>open <strong>DecoderPro</strong></p></li>
 <li><p>Menu -&gt; Actions -&gt; New Throttle</p></li>
-<li><p>Turn on the power to the track via the menu</p>
+<li><p>Turn on the power to the track via the button on the toolbar</p>
 <ul>
 <li><p>Click the <span class="guilabel">Power</span> button till it turns green</p></li>
 </ul>
@@ -763,17 +763,22 @@
 </section>
 <section id="programming-on-main-pom-or-ops-mode">
 <h4>Programming on main (POM or ops mode)<a class="headerlink" href="#programming-on-main-pom-or-ops-mode" title="Permalink to this heading"></a></h4>
-<p>If you wish to set up a new roster entry for a loco that is already on your main track, or you don’t have a programming track available, you can still do this through DecoderPro. You will, however, receive no acknowledgement that the changes have been written successfully.</p>
+<p>If you wish to set up a new roster entry for a loco that is already on your main track, or you don’t have a programming track available, to a limited extent you can still do this through DecoderPro. You will, however, receive no acknowledgement that the changes have been written successfully.</p>
 <p>This is the process to add a roster entry and set the desired DCC address:</p>
+<p>Using POM only changes the loco you have selected, not all locos on the track.  Which is why you must select a loco first.  (Unlike the programming track where it changes everything on it)</p>
+<div class="warning-float-right admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You can theoretically change the DCC address using POM, but <em>only short addresses</em> (below 127) and some decoders don’t even allow that.</p>
+</div>
 <ul class="simple">
 <li><p>Use the <span class="guilabel">Power</span> button at the top of the window to turn track power on</p></li>
 <li><p>Click the <span class="guilabel">New Loco</span> button on the menu bar at the top of the screen</p></li>
-<li><p>Unlike the service mode process above, you will need to manually select the installed decoder</p></li>
+<li><p>Unlike the service mode process above, you will need to manually select which decoder is installed in the loco</p></li>
 <li><p>Once the decoder is selected, the “Create Basic Roster Entry” pane should appear to the right of the decoder list</p></li>
 <li><p>Enter the desired name in “Roster ID”, enter the current DCC address in the “Active Address” box, then click the <span class="guilabel">Save</span> to save your roster entry, then close the “New Loco” window</p></li>
-<li><p>To set the desired DCC address, select the correct roster entry</p></li>
+<li><p>To set the desired DCC address, select the correct roster entry  <em>(See Warning)</em></p></li>
 <li><p>Select “Programming on Main”, then click the <span class="guilabel">Program</span> button</p></li>
-<li><p>Click the “Basic” tab, set the desired DCC address in the “Active Address” text box, then click the <span class="guilabel">Write changes on sheet</span> button</p></li>
+<li><p>Click the “Basic” tab, set the desired DCC address in the “Active Address” text box, then click the <span class="guilabel">Write changes on sheet</span> button  <em>(See Warning)</em></p></li>
 <li><p>Close the “Program” window and when prompted, click the <span class="guilabel">Save and close</span> button</p></li>
 </ul>
 <p>For further information on programming on the main track, see <a class="reference external" href="https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml">Ops Mode Programming</a> on the <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> website.</p>

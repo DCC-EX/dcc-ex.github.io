@@ -22,6 +22,8 @@ Throughout these pages we will be using |EX-R| functionality extensively, not ju
 
 We will also be outlining the equivalent DCC-EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-reference` where necessary.
 
+.. todo:: MEDIUM - Sequences - Although this is covered pretty well in the :doc:`/ex-rail/getting-started` page it still makes sense to repeat a cut down version here.
+
 Notes
 =====
 

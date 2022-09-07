@@ -81,6 +81,23 @@ Here's a quick example to demonstrate the difference between the diagnostic and 
   <D TT 600 100 0>
   MOVETT(600, 100, Turn)
 
+Serial console testing
+----------------------
+
+As of version 0.5.0-Beta, the ability to test |EX-TT| directly via the serial console has been introduced.
+
+Similar to the |EX-CS| diagnostic command outlined previously, the syntax is ``<steps activity>``, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number.
+
+For example, sending the command ``<300 0>`` via the serial console will result in output similar to this:
+
+.. code-block:: 
+
+  Received serial input: 300 0
+  Test move 300 steps, activity ID 0
+  Received notification to move to step postion 300
+  Position steps: 300, Auto phase switch - moving 300 steps
+  Setting phase switch flag to: 0
+
 Testing EX-Turntable
 ====================
 

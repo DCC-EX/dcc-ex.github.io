@@ -657,21 +657,33 @@
 <p>Once the software is loaded successfully on to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, the stepper motor should automatically start rotating in an attempt to find its “home” position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.</p>
 <p>If you don’t have the magnet installed at this point, or if it is too far from the sensor, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.</p>
 <p>If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See <a class="reference internal" href="troubleshooting.html#troubleshooting-ex-turntable"><span class="std std-ref">Troubleshooting EX-Turntable</span></a> for further assistance if required.</p>
-<section id="automatic-calibration">
-<h4>Automatic calibration<a class="headerlink" href="#automatic-calibration" title="Permalink to this heading"></a></h4>
+<section id="first-start-and-automatic-calibration">
+<h4>First start and automatic calibration<a class="headerlink" href="#first-start-and-automatic-calibration" title="Permalink to this heading"></a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the <a class="reference internal" href="test-and-tune.html#ex-turntable-commands"><span class="std std-ref">Ex-Turntable commands</span></a> section.</p>
+<p>As of v0.5.0-Beta, you can also execute the command <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">3&gt;</span></code> in the serial console to initiate the calibration sequence.</p>
 <p>Also, if you have enabled the <cite>FULL_STEP_COUNT</cite> option in “config.h”, that will prevent automatic calibration occurring, refer to <a class="reference internal" href="configure.html#full-step-count"><span class="std std-ref">FULL_STEP_COUNT</span></a>.</p>
 </div>
 <p>When <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.</p>
 <p>Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in <a class="reference internal" href="test-and-tune.html#tuning-your-turntable-positions"><span class="std std-ref">Tuning your turntable positions</span></a>.</p>
-<p>The output in the serial console should look similar to the below:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Homing started
+<p>On the first start, the output in the serial console should look similar to the below:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>License GPLv3 fsf.org (c) dcc-ex.com
+EX-Turntable version 0.5.0-Beta
+Available at I2C address 0x60
+EX-Turntable in TURNTABLE mode
+EX-Turntable has not been calibrated yet
+Automatic phase switching enabled at 45 degrees
+Phase will switch at 0 steps from home, and revert at 0 steps from home
+Calibrating...
+Homing started
 Turntable homed successfully
 CALIBRATION: Phase 1, homing...
 CALIBRATION: Phase 2, counting full turn steps...
-CALIBRATION: Completed, storing full turn step count: 4097            &lt;&lt;== This is the step count to record
+CALIBRATION: Completed, storing full turn step count: 4100                    &lt;&lt;== This is the full turn step count to record for later reference
+EX-Turntable has been calibrated for 4100 steps per revolution
+Automatic phase switching enabled at 45 degrees
+Phase will switch at 495 steps from home, and revert at 2475 steps from home
 Turntable homed successfully
 </pre></div>
 </div>

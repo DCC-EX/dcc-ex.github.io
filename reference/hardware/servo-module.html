@@ -518,6 +518,10 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <h2><a class="toc-backref" href="#id2">Using a servo module for LEDs</a><a class="headerlink" href="#using-a-servo-module-for-leds" title="Permalink to this heading"></a></h2>
 <p>Another use case for the PCA9685 is to drive LEDs using PWM to control the intensity of the LEDs. The intensity of the LEDs can vary from 0 (off) to 4095 (100%).</p>
 <a class="reference internal image-reference" href="../../_images/led.png"><img alt="LED" src="../../_images/led.png" style="width: 130.79999999999998px; height: 97.8px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Credit to Joe Haydu for following up and summarising this info for us.</p>
+</div>
 <section id="connecting-leds-and-setting-intensity">
 <h3>Connecting LEDs and setting intensity<a class="headerlink" href="#connecting-leds-and-setting-intensity" title="Permalink to this heading"></a></h3>
 <p>LEDs can be connected with either the anode (postive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your “mySetup.h” file. Refer to <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">Startup Configuration</span></a> for further information on this file.</p>

@@ -152,6 +152,95 @@ The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a 
 
 This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
 
+Using a servo module for LEDs
+=============================
+
+Another use case for the PCA9685 is to drive LEDs using PWM to control the intensity of the LEDs. The intensity of the LEDs can vary from 0 (off) to 4095 (100%).
+
+.. image:: ../../_static/images/accessories/led.png
+   :alt: LED
+   :scale: 60%
+
+.. note:: 
+
+   Credit to Joe Haydu for following up and summarising this info for us.
+
+Connecting LEDs and setting intensity
+-------------------------------------
+
+LEDs can be connected with either the anode (postive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your "mySetup.h" file. Refer to :doc:`/ex-commandstation/advanced-setup/startup-config` for further information on this file.
+
+If connecting the anode (positive) side of the LED to the PWM pin, the cathode (negative) side connects to the ground pin, and you do not need a current limiting resistor in this scenario.
+
+If connecting the cathode (negative) side of the LED to the PWM pin, the anode (positive) side connects to the V+ pin of the PCA9685, and you will require a 330ohm current limiting resistor.
+
+You will need to add this line to "mySetup.h" for each LED you wish to configure:
+
+.. code-block:: cpp
+
+   IODevice::configureServo(vpin,OnValue,OffValue,PCA9685::NoPowerOff);
+
+The parameters required are:
+
+- vpin = The VPin the LED is connected to, eg. 101 for the second pin on the first PCA9685 servo module
+- OnValue = The desired intensity (brightness) of the LED when turned on, with 0 being off, and 4095 being 100%
+- OffValue = The desired intensity (brightness) of the LED when turned off
+
+Here are some examples:
+
+.. code-block:: cpp
+
+   // An LED with anode (positive) to PWM pin set for full intensity when turned on
+   IODevice::configureServo(101,4095,0,PCA9685::NoPowerOff);
+
+   // An LED with cathode (negative) to PWM pin set for full intensity when turned on
+   IODevice::configureServo(101,0,4095,PCA9685::NoPowerOff);
+
+   // An LED with anode (positive) to PWM pin set for half intensity when turned on
+   IODevice::configureServo(101,2048,0,PCA9685::NoPowerOff);
+
+   // An LED with anode (positive) to PWM pin set for full intensity turned on, and half intensity when turned off
+   IODevice::configureServo(101,4095,2048,PCA9685::NoPowerOff);
+
+Using these for JMRI signal heads and signal masts
+--------------------------------------------------
+
+If the LEDs are to be used for signal heads or signal masts in JMRI, they can be added to the Turnout Table by defining these as outputs also in "mySetup.h".
+
+An output is defined by using the ``<Z id vpin iflag>`` command. Refer to :ref:`reference/software/command-reference:outputs (dio pin) commands` for further information on this command.
+
+This command will associate the provided output ID with the LED connected to the VPin as defined in the configuration commands in the section above.
+
+To define an output with ID 101 to match the LED connected to VPin 101, add this line to "mySetup.h":
+
+.. code-block:: cpp
+
+   SETUP("<Z 101 101 0>");
+
+Using these with EX-RAIL
+------------------------
+
+|EX-R| includes the ``FADE(vpin, value, ms)`` command which can is used to adjust the LED's brightness to the provided value over the time specified in milliseconds.
+
+The example below simulates a camp fire by continuously varying the LED brightness for random delay times, and this starts automatically when the |EX-CS| starts by using the ``AUTOSTART`` directive.
+
+.. code-block:: 
+
+   SEQUENCE(3)
+      AUTOSTART
+      FADE(101, 100, 50)   DELAYRANDOM(200,800) // Use an Amber or Red LED
+      FADE(101, 500, 30)   DELAYRANDOM(200,1000)
+      FADE(101,  75, 75)   DELAYRANDOM(200,400)
+      FADE(101, 750, 30)   DELAYRANDOM( 50,500)
+      FADE(101,  75,100)   DELAYRANDOM(100,1500)
+      FADE(101, 250,100)   DELAYRANDOM(100,600)
+      FADE(101, 2500, 5)   DELAYRANDOM( 50,250)
+      FADE(101,  75, 75)   DELAYRANDOM(200,1000)
+      FADE(101, 400, 30)   DELAYRANDOM( 50,600)
+      FADE(101,  75,100)   DELAYRANDOM(200,1500)
+      FADE(101, 1500,10)   DELAYRANDOM( 50,250)
+      FOLLOW(3)
+
 Technical Discussion for Engineers
 ====================================
 

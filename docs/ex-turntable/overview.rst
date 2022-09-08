@@ -80,7 +80,7 @@ A stepper motor is able to be rotated one step at a time, which translates to de
 
 .. note:: 
 
-  You don't actually need to know the number of steps required to make a full rotation as this is calculated by |EX-TT| the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`ex-turntable/assembly:automatic calibration`.
+  You don't actually need to know the number of steps required to make a full rotation as this is calculated by |EX-TT| the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`ex-turntable/assembly:first start and automatic calibration`.
 
 In |EX-TT|, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.
 

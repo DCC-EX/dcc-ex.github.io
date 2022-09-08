@@ -415,7 +415,8 @@
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#using-servos-with-ex-rail" id="id1">Using Servos with EX-RAIL</a></p></li>
-<li><p><a class="reference internal" href="#technical-discussion-for-engineers" id="id2">Technical Discussion for Engineers</a></p></li>
+<li><p><a class="reference internal" href="#using-a-servo-module-for-leds" id="id2">Using a servo module for LEDs</a></p></li>
+<li><p><a class="reference internal" href="#technical-discussion-for-engineers" id="id3">Technical Discussion for Engineers</a></p></li>
 </ul>
 </div>
 </aside>
@@ -513,8 +514,74 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <p>This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).</p>
 </section>
 </section>
+<section id="using-a-servo-module-for-leds">
+<h2><a class="toc-backref" href="#id2">Using a servo module for LEDs</a><a class="headerlink" href="#using-a-servo-module-for-leds" title="Permalink to this heading"></a></h2>
+<p>Another use case for the PCA9685 is to drive LEDs using PWM to control the intensity of the LEDs. The intensity of the LEDs can vary from 0 (off) to 4095 (100%).</p>
+<a class="reference internal image-reference" href="../../_images/led.png"><img alt="LED" src="../../_images/led.png" style="width: 130.79999999999998px; height: 97.8px;" /></a>
+<section id="connecting-leds-and-setting-intensity">
+<h3>Connecting LEDs and setting intensity<a class="headerlink" href="#connecting-leds-and-setting-intensity" title="Permalink to this heading"></a></h3>
+<p>LEDs can be connected with either the anode (postive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your “mySetup.h” file. Refer to <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">Startup Configuration</span></a> for further information on this file.</p>
+<p>If connecting the anode (positive) side of the LED to the PWM pin, the cathode (negative) side connects to the ground pin, and you do not need a current limiting resistor in this scenario.</p>
+<p>If connecting the cathode (negative) side of the LED to the PWM pin, the anode (positive) side connects to the V+ pin of the PCA9685, and you will require a 330ohm current limiting resistor.</p>
+<p>You will need to add this line to “mySetup.h” for each LED you wish to configure:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">OnValue</span><span class="p">,</span><span class="n">OffValue</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The parameters required are:</p>
+<ul class="simple">
+<li><p>vpin = The VPin the LED is connected to, eg. 101 for the second pin on the first PCA9685 servo module</p></li>
+<li><p>OnValue = The desired intensity (brightness) of the LED when turned on, with 0 being off, and 4095 being 100%</p></li>
+<li><p>OffValue = The desired intensity (brightness) of the LED when turned off</p></li>
+</ul>
+<p>Here are some examples:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// An LED with anode (positive) to PWM pin set for full intensity when turned on</span>
+<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+
+<span class="c1">// An LED with cathode (negative) to PWM pin set for full intensity when turned on</span>
+<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+
+<span class="c1">// An LED with anode (positive) to PWM pin set for half intensity when turned on</span>
+<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+
+<span class="c1">// An LED with anode (positive) to PWM pin set for full intensity turned on, and half intensity when turned off</span>
+<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="using-these-for-jmri-signal-heads-and-signal-masts">
+<h3>Using these for JMRI signal heads and signal masts<a class="headerlink" href="#using-these-for-jmri-signal-heads-and-signal-masts" title="Permalink to this heading"></a></h3>
+<p>If the LEDs are to be used for signal heads or signal masts in JMRI, they can be added to the Turnout Table by defining these as outputs also in “mySetup.h”.</p>
+<p>An output is defined by using the <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> command. Refer to <a class="reference internal" href="../software/command-reference.html#outputs-dio-pin-commands"><span class="std std-ref">Outputs (DIO Pin) Commands</span></a> for further information on this command.</p>
+<p>This command will associate the provided output ID with the LED connected to the VPin as defined in the configuration commands in the section above.</p>
+<p>To define an output with ID 101 to match the LED connected to VPin 101, add this line to “mySetup.h”:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;Z 101 101 0&gt;&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="using-these-with-ex-rail">
+<h3>Using these with EX-RAIL<a class="headerlink" href="#using-these-with-ex-rail" title="Permalink to this heading"></a></h3>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> includes the <code class="docutils literal notranslate"><span class="pre">FADE(vpin,</span> <span class="pre">value,</span> <span class="pre">ms)</span></code> command which can is used to adjust the LED’s brightness to the provided value over the time specified in milliseconds.</p>
+<p>The example below simulates a camp fire by continuously varying the LED brightness for random delay times, and this starts automatically when the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> starts by using the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SEQUENCE(3)
+   AUTOSTART
+   FADE(101, 100, 50)   DELAYRANDOM(200,800) // Use an Amber or Red LED
+   FADE(101, 500, 30)   DELAYRANDOM(200,1000)
+   FADE(101,  75, 75)   DELAYRANDOM(200,400)
+   FADE(101, 750, 30)   DELAYRANDOM( 50,500)
+   FADE(101,  75,100)   DELAYRANDOM(100,1500)
+   FADE(101, 250,100)   DELAYRANDOM(100,600)
+   FADE(101, 2500, 5)   DELAYRANDOM( 50,250)
+   FADE(101,  75, 75)   DELAYRANDOM(200,1000)
+   FADE(101, 400, 30)   DELAYRANDOM( 50,600)
+   FADE(101,  75,100)   DELAYRANDOM(200,1500)
+   FADE(101, 1500,10)   DELAYRANDOM( 50,250)
+   FOLLOW(3)
+</pre></div>
+</div>
+</section>
+</section>
 <section id="technical-discussion-for-engineers">
-<h2><a class="toc-backref" href="#id2">Technical Discussion for Engineers</a><a class="headerlink" href="#technical-discussion-for-engineers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3">Technical Discussion for Engineers</a><a class="headerlink" href="#technical-discussion-for-engineers" title="Permalink to this heading"></a></h2>
 <p>There are three types of servos, standard or “Positional Rotation”, “Continuous Rotation” and “Linear”</p>
 <p><strong>A Standard, positional rotation servo</strong> allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo</p>
 <p><strong>A Continuous Rotation Servo</strong> can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counterclockwise.</p>

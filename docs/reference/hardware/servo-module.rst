@@ -161,6 +161,10 @@ Another use case for the PCA9685 is to drive LEDs using PWM to control the inten
    :alt: LED
    :scale: 60%
 
+.. note:: 
+
+   Credit to Joe Haydu for following up and summarising this info for us.
+
 Connecting LEDs and setting intensity
 -------------------------------------
 

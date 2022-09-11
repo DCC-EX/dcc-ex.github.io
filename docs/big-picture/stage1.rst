@@ -58,7 +58,7 @@ Once you have |EX-WT| opened in your browser, follow these steps to get your tra
 * A pop up window should appear, prompting you to choose your COM port
 * Select the COM port then click the :guilabel:`Connect` button, and the button in the top right corner should change to :guilabel:`Disconnect DCC++ EX` with a green circle to the left
 * Turn track power on with the :guilabel:`Power` button
-* Type the DCC address of your loco into the "Locomitive ID" text box, then click the :guilabel:`>` button to set it
+* Type the DCC address of your loco into the "Locomotive ID" text box, then click the :guilabel:`>` button to set it
 * You can now use the throttle slider or :guilabel:`+` and :guilabel:`-` buttons to set the speed, and the slider in the centre of the screen to set forward, reverse, stop, or EStop
 * The function buttons to the right can also be used to set the various functions supported by your decoder
 
@@ -104,7 +104,7 @@ Engine Driver (Android)
 * Turn on the power to the track via the menu 
    
    * (The three dots or bars) then 'Power'.  Then click the :guilabel:`power` button till it goes green. (May require more than one click)
-   * The four red LEDs on the Motor board will turn on
+   * The two red LEDs, for the main track, on the Motor board will turn on
    * Click :guilabel:`Back`
 
 * back on the 'Throttle screen'
@@ -165,7 +165,7 @@ wiThrottle (iOS)
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``
 
-   * The four red LEDs on the Motor board will turn on
+   * The two red LEDs, for the main track, on the Motor board will turn on
 
 * Go back to the 'Address' tab
 * Enter the DCC Address of the loco you put on the track in the ``Keypad`` field
@@ -207,7 +207,7 @@ Engine Driver (via JMRI)
 Before |Engine Driver| or |wiThrottle| can be run via |JMRI|, the JMRI WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
 :menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A wiThrottle server window should open showing wiThrottle server is running.
 
-* Open the network settings on you phone
+* Open the network settings on your phone
 * Change to same network of the PC that JMRI is on
 * Start the |engine driver| App
 * If needed, Go through the initial startup pages to set some basic configuration items

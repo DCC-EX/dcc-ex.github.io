@@ -22,6 +22,8 @@ This page is specifically written for someone who has installed *just* the recom
 Testing control of a loco
 =========================
 
+You need to test with a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the |EX-CS|.
+
 There are two simple options for testing your setup described below:
 
 * Using our |EX-WT| (recommended)

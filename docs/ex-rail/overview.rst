@@ -17,7 +17,7 @@ Overview
 Welcome to the home for |DCC-EX| Automation.
 
 |EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
-that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. **EX-Rail** will then run automatically on **EX-CommandStation** startup or if trigger manually or on occurrence of the specified events.
+that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. **EX-Rail** will then run automatically on **EX-CommandStation** startup, trigger manually, or on occurrence of the specified events.
 
 To begin, let's define a few terms:
 

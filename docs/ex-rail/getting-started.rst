@@ -457,23 +457,32 @@ There are a number of delay type commands that you can explore on the :doc:`EX-R
 Command Station Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: MEDIUM - Command Station Commands
-
 There are a substantial number of commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
+
+.. code-block:: cpp
+
+  // use the drive away feature to recginse the loco on the
+  // programming track and drive it onto the main track
+  SEQUENCE(99)    
+    READ_LOCO // identify the loco on the programming track
+    JOIN      // connect programming track to main
+    WAIT(30000) // wait 30 seconds
+    UNJOIN    // disconnect the programming track form the main
+    // see the 'Drive-Away Feature' on this page for more infomation
 
 .. list-table::
     :widths: auto
     :header-rows: 0
     :class: command-table
 
-    * -  POWERON
-      -  Power on track, will UNJOIN programming from main |BR| |NOT-IN-PROD-VERSION|
-    * -  POWEROFF
-      -  Power off track |BR| |NOT-IN-PROD-VERSION|
+    * -  JOIN
+      -  Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
+    * -  UNJOIN
+      -  Disconnect Prog track from Main DCC signal
     * -  READ_LOCO
       -  Read loco ID from Prog track
 
-See :doc:`EX-RAIL-summary` page for additional commands and additional information on these commands. 
+See :doc:`EX-RAIL-summary` page for additional Command Station Commands and additional information on the commands shown here.
 
 ----
 

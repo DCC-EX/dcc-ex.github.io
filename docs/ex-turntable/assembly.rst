@@ -306,12 +306,14 @@ If you don't have the magnet installed at this point, or if it is too far from t
 
 If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/troubleshooting:troubleshooting ex-turntable` for further assistance if required.
 
-Automatic calibration
-^^^^^^^^^^^^^^^^^^^^^
+First start and automatic calibration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
 
   If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/test-and-tune:ex-turntable commands` section.
+
+  As of v0.5.0-Beta, you can also execute the command ``<0 3>`` in the serial console to initiate the calibration sequence.
 
   Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`ex-turntable/configure:full_step_count`.
 
@@ -319,15 +321,26 @@ When |EX-TT| is first loaded onto your Arduino, and it has successfully performe
 
 Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in :ref:`ex-turntable/test-and-tune:tuning your turntable positions`.
 
-The output in the serial console should look similar to the below:
+On the first start, the output in the serial console should look similar to the below:
 
 .. code-block::
 
+  License GPLv3 fsf.org (c) dcc-ex.com
+  EX-Turntable version 0.5.0-Beta
+  Available at I2C address 0x60
+  EX-Turntable in TURNTABLE mode
+  EX-Turntable has not been calibrated yet
+  Automatic phase switching enabled at 45 degrees
+  Phase will switch at 0 steps from home, and revert at 0 steps from home
+  Calibrating...
   Homing started
   Turntable homed successfully
   CALIBRATION: Phase 1, homing...
   CALIBRATION: Phase 2, counting full turn steps...
-  CALIBRATION: Completed, storing full turn step count: 4097            <<== This is the step count to record
+  CALIBRATION: Completed, storing full turn step count: 4100                    <<== This is the full turn step count to record for later reference
+  EX-Turntable has been calibrated for 4100 steps per revolution
+  Automatic phase switching enabled at 45 degrees
+  Phase will switch at 495 steps from home, and revert at 2475 steps from home
   Turntable homed successfully
 
 At this point, the full turn step count is written to the Arduino's EEPROM so that it can be retrieved each time |EX-TT| starts up, preventing the need to repeat the calibration sequence at each subsequent start.

@@ -17,15 +17,15 @@ Glossary
     glossary
 
 Videos
-========
+======
 
 .. toctree::
     :maxdepth: 1
 
     videos/index
  
-Other
-=====
+Hardware, Software, tools
+=========================
 
 .. toctree::
     :maxdepth: 1

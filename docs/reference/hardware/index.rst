@@ -8,7 +8,13 @@ Hardware
 
 |conductor| |tinkerer| |engineer|
 
-.. todo::  MEDIUM - Text for the hardware index page
+.. toctree::
+    :maxdepth: 1
+    
+    wire-gauge
+    power-supplies
+
+|tinkerer| |engineer|
 
 .. toctree::
     :maxdepth: 1
@@ -19,7 +25,5 @@ Hardware
     ethernet-boards
     index-ic2
     other/index
-    power-supplies
     accessory-controllers
     index-decoder
-    wire-gauge

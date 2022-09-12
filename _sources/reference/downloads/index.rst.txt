@@ -1,18 +1,26 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*********
-Downloads
-*********
+************************
+Documents and Schematics
+************************
 
+Documents
+=========
 
-.. toctree::
-    :maxdepth: 2
-    
-    documents
-
+|conductor| |tinkerer| |engineer|
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 2
 
-    schematics
+   documents
+
+Schematics
+==========
+
+|tinkerer| |engineer|
+
+.. toctree::
+   :maxdepth: 2
+
+   schematics
    

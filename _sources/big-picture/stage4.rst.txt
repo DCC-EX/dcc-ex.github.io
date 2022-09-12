@@ -34,9 +34,9 @@ that can be used to describe sequential command 'sequences' to automatically tak
 
 Once started, each 'sequence' will step through a list of simple keyword commands, in order, until they reach a ``DONE`` keyword.  Multiple concurrent sequences are supported.  
 
-By using Conditional, Branching, Delay & Wait commands it is possible to design complex sequences with multiple outcomes to react to events on your layout.
+By using *Conditional*, *Branching*, *Delay* and *Wait* commands it is possible to design complex sequences with multiple outcomes which can drive your trains, operate your turnouts/points and signals, and react to events on your layout.
 
-See the :doc:`/ex-rail/examples` page and the following pages in the this section for examples of what is possible.
+See the :doc:`/ex-rail/examples` page and the following pages in this section for examples of what is possible.
 
 Structure of a 'Sequence'
 -------------------------

@@ -103,14 +103,14 @@ There are diagnostics to test CV reads and writes on the programming track, WiFi
 
 If you run into trouble, remember to send us a log by cutting and pasting the text from the Serial Monitor window to our support channel in Discord or one of the other methods of contacting us mentioned here: https://dcc-ex.com/support/index.html.
 
-Connect with a Cell Phone
+Connect with a Smart Phone
 =========================== 
 
 **What You Will Need**
 
-* A Cell Phone
+* A Smart Phone
 * A Terminal program (see below)
-* An "On The Go" Cable (aka. OTG Cable)
+* A USB "On The Go" Cable (aka. OTG Cable)
 * The USB Cable for your Arduino
 
 .. NOTE:: You can also use Bluetooth if you have a Bluetooth board attached to your Command Station and make a small modification to the sketch (Command Station Software). We will cover how to do that in a **Project** tutorial
@@ -134,7 +134,7 @@ And one for an iPad or iPhone:
 
 https://www.amazon.com/dp/B09KBZDDGL/
 
-Every cell phone OS such as Android or iOS has a program or two that will work as a serial monitor. For Android, here are a few:
+Every smart phone OS such as Android or iOS has a program or two that will work as a serial monitor. For Android, here are a few:
 
 * Serial USB Terminal by Kai Morich
 * `Serial Monitor by CSA <https://play.google.com/store/apps/details?id=com.csa.serialmonitor>`_
@@ -144,3 +144,5 @@ Serial Monitor by CSA
 -----------------------
 
 Light and Dark themes
+
+.. todo::  LOW - Serial Monitor by CSA - description and link missing

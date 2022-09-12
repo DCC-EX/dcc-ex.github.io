@@ -236,12 +236,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/videos/index.html">Videos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Documents and Schematics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../reference/downloads/documents.html">Documents</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wire-gauge.html">DCC Track Wiring Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
@@ -299,20 +301,18 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/other/ir-sensor.html">IR Sensor Boards</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-decoder.html">Decoders</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/decoder-list.html">List of Tested Decoders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/decoder-notes.html">Decoder Notes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wire-gauge.html">DCC Track Wiring Information</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/software/index.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/command-reference.html">DCC-EX Command Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary.html">DCC-EX Command Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/developers/index.html">Developer and API reference</a><ul>
@@ -427,8 +427,8 @@
 that can be used to describe sequential command ‘sequences’ to automatically take place on your model layout. These sequences are defined in a simple command script file, and uploaded to the Command Station once to configure it.</p>
 <p><strong>EX-Rail</strong> will then run the sequences <em>automatically</em> on EX-CommandStation startup, be triggered <em>manually</em> or run on occurrence of a <em>specified events</em>.</p>
 <p>Once started, each ‘sequence’ will step through a list of simple keyword commands, in order, until they reach a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> keyword.  Multiple concurrent sequences are supported.</p>
-<p>By using Conditional, Branching, Delay &amp; Wait commands it is possible to design complex sequences with multiple outcomes to react to events on your layout.</p>
-<p>See the <a class="reference internal" href="../ex-rail/examples.html"><span class="doc">Example Objects and Sequences</span></a> page and the following pages in the this section for examples of what is possible.</p>
+<p>By using <em>Conditional</em>, <em>Branching</em>, <em>Delay</em> and <em>Wait</em> commands it is possible to design complex sequences with multiple outcomes which can drive your trains, operate your turnouts/points and signals, and react to events on your layout.</p>
+<p>See the <a class="reference internal" href="../ex-rail/examples.html"><span class="doc">Example Objects and Sequences</span></a> page and the following pages in this section for examples of what is possible.</p>
 <section id="structure-of-a-sequence">
 <h3>Structure of a ‘Sequence’<a class="headerlink" href="#structure-of-a-sequence" title="Permalink to this heading"></a></h3>
 <p>In general, sequences follow the basic structure:</p>

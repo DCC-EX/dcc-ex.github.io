@@ -18,9 +18,12 @@ Testing your installation
 Using the Arduino IDE Serial Monitor
 -------------------------------------
 
+This page is a brief introduction to using the Arduino IDE Serial Monitor. For additional information see the :doc:`/reference/tools/serial-monitor` page.
+
 To test with the Arduino Serial Monitor, download the Arduino IDE from the following link and install it on your computer.
 
 `Download the Arduino IDE <https://www.arduino.cc/en/Main/software>`_
+
 
 To do a quick test, open the Arduino application:
 
@@ -48,7 +51,6 @@ You will see the following screen:
 
    Serial Monitor
 
-
 * Select "115200" as the baud rate in the dropdown in the lower right
 * Select "Both NL & CR" from the dropdown next to the baud rate
 
@@ -62,7 +64,7 @@ At the top of the serial monitor type ``<s>`` (lowercase "s") into the command t
 
 This is the "status" command and reports your version, types of boards you are using, and a build number.
 
-There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands.
+There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands or for additional information on using the serial monitor see the :doc:`/reference/tools/serial-monitor` page.
 
 Using EX-WebThrottle
 --------------------

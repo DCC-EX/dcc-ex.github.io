@@ -26,17 +26,18 @@ If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi
 .. _ed-platforms:
 
 Platforms
-===========
+=========
 
 .. image:: /_static/images/throttles/icon_android.png
    :alt: Android Logo
    :scale: 30%
    :align: left
 
-
-Please visit the Engine Driver Website: https://enginedriver.mstevetodd.com/
-
 `Get 'Engine Driver Throttle' from the Google Play Store <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_
+
+Visit the Engine Driver Website: `https://enginedriver.mstevetodd.com/ <https://enginedriver.mstevetodd.com/>`_ for more information.
+
+Extensive help is available at the `Engine Driver Home <https://flash62au.github.io/EngineDriver_Home/index.html>`_ site.
 
    .. raw:: html
       
@@ -57,7 +58,7 @@ Standard Features (all wiThrottle servers)
 * Able to use inexpensive Bluetooth gamepads for tactile control
 * Multiple theme, colours and throttle layout options 
 
-EX-CommandStation Specific or advantageous Features
+EX-CommandStation Specific or Advantageous Features
 ===================================================
 * DCC-EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons
 * Able to select local images for roster locos

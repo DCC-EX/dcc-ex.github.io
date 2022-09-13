@@ -270,18 +270,51 @@ Before |Engine Driver| or |wiThrottle| can be run via |JMRI|, the JMRI WiThrottl
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
 
+----
+
 Run more than one train (Individual or Consist/Multiple Units)
 ==============================================================
 
 Engine Driver (Multiple Trains)
 -------------------------------
 
-.. todo:: LOW - Stage 1 - Engine Driver - Multiple Trains
+|Engine Driver| can optionally show throttle screen layouts that can provide for between 1 and 6 separate throttles. Each throttle can control and unlimited number of loco as a Consist / Multiple Unit train.
+
+Multiple Throttles
+^^^^^^^^^^^^^^^^^^
+
+To have more than one throttle you need to select a Throttle Screen Layout that has more than one throttle on it.
+
+Use the ``Throttle Screen Layout`` preference to select a layout that supports more than one throttle (:menuselection:`menu --> Preferences --> Throttle Screen Appearance Preferences --> Throttle Screen Layout`).  The numbers in brackets after the Layout name are the number of throttles that the layout supports.
+
+Where a layout supports a range of throttles, select the number that you want to show with the ``Number of Throttles`` preference (:menuselection:`menu --> Preferences --> Throttle Screen Appearance Preferences --> Number of Throttles`).  
+
+See the `Throttle Screen Appearance Preferences <https://flash62au.github.io/EngineDriver_Home/configuration/preferences.html#throttle-screen-appearance-preferences>` page on the main |Engine Driver| help sites for detailed information on the options that each Throttle Screen Layout offers.
+
+Consist / Multiple Unit train
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Adding additional locos to the Consist / Multiple Unit train is identical to the process of selecting a single loco.  Simply click on the :guilabel:`Select` button, which will be showing the name or address of any locos already selected.
+
+After selecting each additional loco, the Consist Edit screen will be shown. This allows you to:
+
+* Change the facing of each loco (except the front loco)
+* Change the order of the locos in the Consist / Multiple Unit
+* Remove locos from the Consist / Multiple Unit
+
 
 wiThrottle (Multiple Trains)
 ----------------------------
 
+.. note:: 
+  :class: note-float-right
+
+  The free version of |WITHROTTLE| (WiThrottle Lite) does not provide any options for running multiple trains or Consisted / Multiple Unit trains.  You need to purchase the paid/full version.
+
 .. todo:: LOW - Stage 1 - wiThrottle - Multiple Trains
+
+
+----
 
 Program a decoder's DCC address
 ===============================

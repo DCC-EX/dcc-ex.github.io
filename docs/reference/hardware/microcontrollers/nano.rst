@@ -2,9 +2,9 @@
 .. include:: /include/include-l3.rst
 |EX-CS-LOGO|
    
-***********************
+******************
 Arduino Nano Setup
-***********************
+******************
 
 |tinkerer|
 
@@ -18,7 +18,7 @@ The Arduino Nano is an Uno in disguise. It has the same processor, the same spee
 
 .. NOTE:: Be sure to compare the Mega before using the Nano 
    
-.. TODO:: LOW - Hardware - add link to the comparison page
+Validate none of the limitations of a Nano will prevent you using features you will need by reading through the section on :ref:`ex-commandstation/advanced-setup/index:microcontrollers`.
 
 .. figure:: /_static/images/microcontrollers/nano.jpg
    :alt: Arduino Nano

@@ -79,3 +79,11 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - Default
     - 2.5/3
     - Half point deduction due to fewer options.
+  * - Märklin
+    - m83
+    - ACC
+    - Default
+    - Screw terminal
+    - Default
+    - 2/3
+    - 

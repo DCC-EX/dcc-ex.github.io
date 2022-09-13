@@ -397,7 +397,7 @@ Scrolling down towards the bottom of that file, you will also see this indented 
   //   Number of VPINs=1 (Note there is no reason to change this)
   //   I2C address=0x60
   //
-  // Note that the I2C address is defined in the EX-Turntable code, and 0x60 is the default.
+  // Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.
 
   //TurntableEX::create(600, 1, 0x60);
 
@@ -421,7 +421,7 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
     //   Number of VPINs=1 (Note there is no reason to change this)
     //   I2C address=0x60
     //
-    // Note that the I2C address is defined in the EX-Turntable code, and 0x60 is the default.
+    // Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.
   
     TurntableEX::create(600, 1, 0x60);
   }
@@ -429,7 +429,7 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
 
 - VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send |EX-TT| commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/developers/hal:overview`).
-- I2C address=0x60 - This is the default address on the I2C bus that the |EX-TT| is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myHal.cpp" and in "config.h" in the |EX-TT| software.
+- I2C address=0x60 - This is the default address on the i2c bus that the |EX-TT| is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myHal.cpp" and in "config.h" in the |EX-TT| software.
 
 If you already have an existing "myHal.cpp" file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the "#include" needs to be before "void halSetup() {" and the "TurntableEX::create..." needs to be before the final "}".
 
@@ -440,7 +440,7 @@ Note there is no point in checking the driver at this stage as |EX-TT| is not co
 9. Connect EX-Turntable to your EX-CommandStation
 -------------------------------------------------
 
-To control |EX-TT| from your CommandStation, you will need a connection to the I2C (SDA, SCL) pins.
+To control |EX-TT| from your CommandStation, you will need a connection to the i2c (SDA, SCL) pins.
 
 .. danger:: 
 
@@ -450,7 +450,7 @@ On the CommandStation, assuming this is a Mega2560 or Mega2560 + WiFi, the SDA (
 
 On an Arduino Nano (and Uno) however, the SDA and SCL pins are shared with analog pins A4 and A5, and therefore aren't explicitly labelled. The SDA pin is A4, and the SCL pin is A5.
 
-Connect these pins to your CommandStation as shown in the table below, noting that it is important to ensure the ground is also connected to ensure the I2C communication is reliable.
+Connect these pins to your CommandStation as shown in the table below, noting that it is important to ensure the ground is also connected to ensure the i2c communication is reliable.
 
 .. list-table::
     :widths: auto

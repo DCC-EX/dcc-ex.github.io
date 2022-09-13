@@ -23,7 +23,7 @@ Hardware
     motor-boards
     wifi-boards
     ethernet-boards
-    index-ic2
+    index-i2c
     other/index
     accessory-controllers
     index-decoder

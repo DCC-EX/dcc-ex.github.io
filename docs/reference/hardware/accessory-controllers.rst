@@ -17,12 +17,12 @@ Accessory Controllers
 Port Expanders
 ===============
 
-Port expanders allow you to control more devices that you may have as GPIO pins on your Arduino. While a Mega does have quite a few inputs for sensors and outputs for LEDs, Relays, etc., |EX-CS| allows you to control many devices through its HAL feature. I2C (pronounced "I squared C") is a serial bus that allows you to communicate with devices using only 2 pins on the Arduino. In this way, you can control 8 devices per board, times 8 boards. That gives you 64 pins from just 2!
+Port expanders allow you to control more devices that you may have as GPIO pins on your Arduino. While a Mega does have quite a few inputs for sensors and outputs for LEDs, Relays, etc., |EX-CS| allows you to control many devices through its HAL feature. i2c (pronounced "I squared C") is a serial bus that allows you to communicate with devices using only 2 pins on the Arduino. In this way, you can control 8 devices per board, times 8 boards. That gives you 64 pins from just 2!
 
 PCA8574 Port Expander
 ---------------------
 
-8-Bit parallel I2C I/O expander board. Provides 8 GPIO pins per board. It is the same chip used in the piggyback boards on most of the LCD displays. 
+8-Bit parallel i2c I/O expander board. Provides 8 GPIO pins per board. It is the same chip used in the piggyback boards on most of the LCD displays. 
 Be careful to NOT buy the piggyback boards as they have all the address pins pulled high and do not give access to the INT pin nor all of the GPIO pins - see below for more details.
 
 Each pin of the PCF8574 operates as an input or an output.  As an input, the pin is pulled up by
@@ -47,7 +47,7 @@ or
 
 
 The PCF8574 piggyback boards are designed for fitting to the back of an LCD screen, to allow the screen to be controlled via
-an I2C serial connection.  Consequently, there are some features which limit its usefulness for general purpose I/O.  
+an i2c serial connection.  Consequently, there are some features which limit its usefulness for general purpose I/O.  
 
 * Firstly, the address selectors (labelled A0-A2) are solder pads and so require a soldering iron to change them.  By default the address is set
   to 0x27 (no solder connection).

@@ -50,7 +50,7 @@ Teensy Specifications
 * 2 CAN Bus Ports 
 * 32 General Purpose DMA Channels 
 * 22 PWM Outputs 
-* 4 I2C Ports 
+* 4 i2c Ports 
 * 11 Touch Sensing Inputs 
 * 62 I/O Pins (42 breadboard friendly) 
 * 25 Analog Inputs to 2 ADCs with 13 bits resolution 
@@ -67,7 +67,7 @@ Teensy Specifications
 * CRC Computation Unit 
 * 6 Serial Ports (2 with FIFO & Fast Baud Rates) 
 * 3 SPI Ports (1 with FIFO) 
-* 4 I2C Ports Real Time Clock
+* 4 i2c Ports Real Time Clock
 
 The only downside is that PJRC is a very small company, it doesn't have the resources or the staff of Arduino or Espressif. The board is also 3.3V, so you have to be careful that anything connected to the GPIO ports is also 3.3V 
 

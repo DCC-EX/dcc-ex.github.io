@@ -3,7 +3,7 @@
 |EX-REF-LOGO|
 
 *************
-I2C Displays
+i2c Displays
 *************
 
 |tinkerer| |engineer|
@@ -15,10 +15,10 @@ I2C Displays
     :local:
 
 
-|EX-CS| is designed to accommodate a display. You don't need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I2C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.
+|EX-CS| is designed to accommodate a display. You don't need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any i2c (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.
 
 .. image:: /_static/images/display/I2C_LCD_Display_wired.jpg
-   :alt: Example: 4 line I2C Display
+   :alt: Example: 4 line i2c Display
    :scale: 80%
 
 We currently support LCDs based on the PCF8574 backpack:
@@ -28,7 +28,7 @@ We currently support LCDs based on the PCF8574 backpack:
 
 .. NOTE:: Do NOT modify any code related to displays without contacting us. We use our own included code, NOT an external library you have to download. The code was written to support LCD and OLED displays and to fit on a Mega *and* an Uno. It has a custom font table and the LCD macro works to output diagnostics even if there is no display. If your display is not supported, let us know and we can take a look.
 
-The LCD displays require a "backpack" that converts the raw display to I2C. I2C allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn't have enough pins, especially on an Uno, to use a display. 
+The LCD displays require a "backpack" that converts the raw display to i2c. i2c allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn't have enough pins, especially on an Uno, to use a display. 
 
 .. warning:: You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!
 
@@ -98,10 +98,10 @@ To upload the new sketch on your Command Station
 #. Open the Arduino IDE
 #. Open the CommandStation-EX project
 #. Open the config.h file (If you haven't renamed config.example.h to config.h do this now)
-#. Find the line that says: ``// define LCD_DRIVER for I2C LCD address 0x3f,16 cols, 2 rows
+#. Find the line that says: ``// define LCD_DRIVER for i2c LCD address 0x3f,16 cols, 2 rows
    #define LCD_DRIVER  0x3F,16,2`` 
 #. make sure to uncomment this line if it has 2 slashes in front of it by removing them.
-#. Find the 4 characters that start with ``0x`` and add the address for your I2C backpack after it. We default to 3F, but your display may be 27. The text would read ``0x27`` if that was the case.
+#. Find the 4 characters that start with ``0x`` and add the address for your i2c backpack after it. We default to 3F, but your display may be 27. The text would read ``0x27`` if that was the case.
 #. In the next field, enter the number of columns in your display. The default is 16. If you have a 20 column display, enter that instead.
 #. In the last field, enter the number of rows in your display. We default to a 2 row display. If you have a 4 row display, change this to 4.
 #. Save the file
@@ -141,10 +141,10 @@ Installing the Software (OLED)
 
 ** Not Finished. Coming soon! **
 
-Changing the I2C Address
+Changing the i2c Address
 ------------------------
 
-If you have other I2C devices, like an I2C bus to control turnouts or other accessories, you may need to change the address of your I2C display to avoid a conflict. The display should have instructions available for how to do this.
+If you have other i2C devices, like an i2C bus to control turnouts or other accessories, you may need to change the address of your i2c display to avoid a conflict. The display should have instructions available for how to do this.
 
 ** Not Finished. Coming soon! **
 

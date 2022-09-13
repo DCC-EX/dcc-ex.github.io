@@ -102,7 +102,7 @@ It is recommended, that:
 * If possible, data acquisition should be done in the `_loop()`
   function, so that the `_read()` and `_readAnalogue()` functions just return the 
   latest value acquired.
-* Where possible, non-blocking operations should be performed (e.g. in I2C) so that
+* Where possible, non-blocking operations should be performed (e.g. in i2c) so that
   an operation can be set up in one `_loop()` entry, and its status be checked in 
   subsequent `_loop()` entries for completion.
 

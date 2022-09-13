@@ -22,7 +22,7 @@ This page is a brief introduction to using the Arduino IDE Serial Monitor. For a
 
 To test with the Arduino Serial Monitor, download the Arduino IDE from the following link and install it on your computer.
 
-`Download the Arduino IDE <https://www.arduino.cc/en/Main/software>`_
+`Download the Arduino IDE <https://www.arduino.cc/en/software>`_
 
 
 To do a quick test, open the Arduino application:

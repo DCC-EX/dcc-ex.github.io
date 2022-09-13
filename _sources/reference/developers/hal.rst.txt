@@ -21,7 +21,7 @@ DCC-EX HAL Architecture
 Introduction
 ============
 
-Firstly, an apology.  The document below is mostly based on my activity log while developing the HAL software and other associated modules (I2C etc.).  
+Firstly, an apology.  The document below is mostly based on my activity log while developing the HAL software and other associated modules (i2c etc.).  
 Consequently, it is badly structured, random, and mostly extremely technical.  For that, I apologise.
 
 Now, on to the content.  You have been warned...
@@ -33,7 +33,7 @@ Overview
 
 The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from |EX-CS| code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.
 
-The external device may be connected directly to an Arduino pin, a pin on an I2C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user's configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a 'virtual pin' or vpin and is a reference to any kind of 'end-point' connected to a local or remote device.
+The external device may be connected directly to an Arduino pin, a pin on an i2c-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user's configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a 'virtual pin' or vpin and is a reference to any kind of 'end-point' connected to a local or remote device.
 
 When Command Station changes a turnout or output, the Command Station code issues calls in the form **IODevice::write(vpin,value)**.  
 The vpin is used to route the call to the correct device handler, and the device handler sends a command to 
@@ -104,7 +104,7 @@ configuration file in order to register the device driver and configure the spec
  
 MCP23017::create(firstVpin, 16, 0x20); *--- OR ---* MCP23017 device1(firstVpin, 16, 0x20);
   Create an instance of a HAL I/O driver for an MCP23017 GPIO Extender with 16 inputs/outputs (numbered from 
-  firstVpin to firstVpin+15), on I2C address 0x20.  The device input pins will be polled at a target rate of once every 4 milliseconds.
+  firstVpin to firstVpin+15), on i2c address 0x20.  The device input pins will be polled at a target rate of once every 4 milliseconds.
   The first syntax calls a function, so should be placed in executable code context (in a function).  The 
   second syntax is a declaration and should NOT be in a function.
 
@@ -116,16 +116,16 @@ MCP23017::create(firstVpin, 16, 0x20, 40); *--- OR ---* MCP23017 device1(firstVp
         
 
 PCF8574::create(firstVpin, 8, 0x23); *--- OR ---* PCF8574 device1(firstVpin, 8, 0x23);
-  Create an instance of a HAL I/O driver for an PCF8574 GPIO Extender with 8 inputs/outputs, on I2C address 0x23.  
+  Create an instance of a HAL I/O driver for an PCF8574 GPIO Extender with 8 inputs/outputs, on i2c address 0x23.  
   [An interrupt pin may be specified as for MCP23017.]
 
 MCP23008::create(firstVpin, 8, 0x21);  *--- OR ---*   MCP23008 device1(firstVpin, 8, 0x21);
   Create an instance of a HAL I/O driver for an MCP23008 GPIO Extender with 8 inputs/outputs (numbered from 
-  firstVpin to firstVpin+7), on I2C address 0x21.  
+  firstVpin to firstVpin+7), on i2c address 0x21.  
   [An interrupt pin may be specified as for MCP23017.]
     
 PCA9685::create(firstVpin, 16, 0x40);  *--- OR ---*  PCA9685 device1(firstVpin, 16, 0x40);
-  Create an instance of a PCA9685 servo interface module driver with 16 outputs (numbered from firstVpin to firstVpin+15), on I2C address 0x40.
+  Create an instance of a PCA9685 servo interface module driver with 16 outputs (numbered from firstVpin to firstVpin+15), on i2c address 0x40.
     
 DCCAccessoryDecoder::create(firstVpin, 4, addr, subaddr);  *--- OR ---*  DCCAccessoryDecoder device1(firstVpin, 4, addr, subaddr);
   Create a range of four DCC Accessory Decoder pins from firstVpin to firstVpin+3, starting at the specified decoder address/subaddress.  The addresses are treated as a linear address space, so multiple decoders on contiguous addresses may be configured by one statement.
@@ -199,20 +199,20 @@ IO_SWITCH_OFF_SERVO
   when the servo isn't moving.
 
 
-The following symbols may be defined in I2CManager.h or the platformio.ini file to adjust the behaviour of the I2C subsystem.
+The following symbols may be defined in I2CManager.h or the platformio.ini file to adjust the behaviour of the i2c subsystem.
 
 I2C_USE_WIRE
-  Direct the I2C Manager to use the 'Wire' library instead of the native AVR and 4809 drivers.  For platforms other 
+  Direct the i2c Manager to use the 'Wire' library instead of the native AVR and 4809 drivers.  For platforms other 
   than the AVR and 4809, the 'Wire' library will be used irrespective of this symbol.
-  The 'Wire' library is a blocking driver, i.e. the Command Station cannot run any useful code while I2C messages are being sent 
-  and received.  The native drivers are non-blocking and are able to perform I2C operations in parallel with other Command Station code.
+  The 'Wire' library is a blocking driver, i.e. the Command Station cannot run any useful code while i2c messages are being sent 
+  and received.  The native drivers are non-blocking and are able to perform i2c operations in parallel with other Command Station code.
 
 I2C_USE_INTERRUPTS
-  Configure the I2C Manager's non-blocking AVR and 4809 drivers to use interrupts to signal completion of an I2C 
+  Configure the i2c Manager's non-blocking AVR and 4809 drivers to use interrupts to signal completion of an i2c 
   operation (default unless I2C_NO_INTERRUPTS is defined).
 
 I2C_NO_INTERRUPTS
-  Don't use interrupts to signal completion of an I2C operation.  The I2C state is instead checked whenever the following functions are called:
+  Don't use interrupts to signal completion of an i2c operation.  The i2c state is instead checked whenever the following functions are called:
   
   .. code-block:: cpp
 
@@ -221,7 +221,7 @@ I2C_NO_INTERRUPTS
     I2CRB::isBusy();
 
   This option will reduce the amount of time spent in interrupt code, but not completely eliminate it (since interrupts 
-  are also used by the serial USB, clock and other components).  It will also slow down the I2C throughput as there will be increased latency between consecutive bytes sent and received.
+  are also used by the serial USB, clock and other components).  It will also slow down the i2c throughput as there will be increased latency between consecutive bytes sent and received.
 
 
 mySetup Files
@@ -327,7 +327,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 - Displays: Rationalise SSD1306 OLED driver to reduce RAM and FLASH usage, and to consolidate the 
   code into two source files (.SSD1306Ascii.h and SSD1306Ascii.cpp).
 - Displays: Rationalise LiquidCrystal_I2C driver to remove unnecessary code.
-- I2C: During I2CManager startup, detect and list I2C devices that are connected and responding.
+- i2c: During I2CManager startup, detect and list i2c devices that are connected and responding.
 - Sensors/Turnouts/Outputs: Revise memory layout for Sensor, Output and Turnout classes to optimise EEPROM usage and RAM usage.
 - Displays: Make SSD1306Ascii and LiquidCrystal_I2C into subclasses of LcdDisplay.
 - Displays: Enable upper-case only mode for SSD1306Ascii, optionally reducing FLASH usage for font storage.
@@ -362,35 +362,35 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 
 - Sensors/Turnouts/Outputs: Ensure that servo turnouts and outputs are driven to the correct position (as configured, 
   or as last saved in EEPROM) when the Command Station is powered on or reset.
-- I2C: Revise I2CManager class to add the following features:
+- i2c: Revise I2CManager class to add the following features:
   
-  - Add non-blocking I2C interface, using a request block structure to maintain the call context and completion status.  
+  - Add non-blocking i2c interface, using a request block structure to maintain the call context and completion status.  
     Request block is queued without the caller having to wait for completion.  The caller can later test for completion, 
     or wait for completion.  Supported operations are Write from RAM, Write from FLASH, Read. and Request (write 
     followed by read).  The benefit of non-blocking calls is that the Command Station doesn't spend so much of its time waiting 
-    for I2C operations to complete; the Command Station overall loop cycle time is reduced, making all the code more responsive.  
+    for i2c operations to complete; the Command Station overall loop cycle time is reduced, making all the code more responsive.  
     The queue is implemented as a linked list of request blocks, to optimise RAM use.
   - For convenience, provide blocking API equivalents for these operations for use where timing is less critical (e.g. during startup).
-  - Implementation of native I2C drivers for the ATmega328 (Arduino Nano and Uno), ATmega2560 (Arduino Mega) and the 
-    ATmega4809 (Arduino Nano Every and Uno WiFi).  This removes the dependency on the 'Wire' I2C library, reducing 
+  - Implementation of native i2c drivers for the ATmega328 (Arduino Nano and Uno), ATmega2560 (Arduino Mega) and the 
+    ATmega4809 (Arduino Nano Every and Uno WiFi).  This removes the dependency on the 'Wire' i2c library, reducing 
     RAM and FLASH usage significantly.
   - Retain and enhance the existing Wire-based back-end for the I2CManager interface, providing compatibility with non-Atmel 
     platforms.  With the Wire library, all calls are blocking (i.e. when the request is made, the calling code does not 
-    continue until the I2C operation has completed).
-  - The native I2C driver for the ATmega328, ATmega2560 and ATmega4809 based controllers supports use with interrupts 
-    (for high I2C throughput) or without interrupts (to minimise impact on the DCC waveform, when generated through software 
-    interrupts, at the expense of I2C throughput).  On the Arduino Mega with the standard motor driver pin usage, the 
-    native I2C driver has no impact whatsoever on the DCC signal, with or without interrupts.
+    continue until the i2c operation has completed).
+  - The native i2c driver for the ATmega328, ATmega2560 and ATmega4809 based controllers supports use with interrupts 
+    (for high i2c throughput) or without interrupts (to minimise impact on the DCC waveform, when generated through software 
+    interrupts, at the expense of i2c throughput).  On the Arduino Mega with the standard motor driver pin usage, the 
+    native i2c driver has no impact whatsoever on the DCC signal, with or without interrupts.
   - Performance figures:  With the current base device allocations of 32 x PCA9685 servo pins and 32 x MCP23017 GPIO pins, 
     the average loop time for the Command Station software (one throttle, no user actions, 16 sensors defined) is 120us.  During stress 
-    testing, a full I2C scan of 8 x 32-input I2C GPIO extenders (128 inputs in total) takes under 2.2 ms at an I2C clock speed of 400kHz.
+    testing, a full i2c scan of 8 x 32-input i2c GPIO extenders (128 inputs in total) takes under 2.2 ms at an i2c clock speed of 400kHz.
 
-- I2C: Revise modules that use I2C (currently SSD1306Ascii, LiquidCrystal_I2C, PCF8574, PCA9584, MCP23016 and MCP23008) 
-  to call the non-blocking I2C interface using the following model:
+- i2c: Revise modules that use i2c (currently SSD1306Ascii, LiquidCrystal_I2C, PCF8574, PCA9584, MCP23016 and MCP23008) 
+  to call the non-blocking i2c interface using the following model:
   
-  1.  During initialisation, use the original (blocking) I2CManager interface to set up the I2C device registers as required.  
+  1.  During initialisation, use the original (blocking) I2CManager interface to set up the i2c device registers as required.  
       Set up request block structures with parameters for the desired operations (which could be a data write to an output 
-      port, or a data read from an input port on the I2C device, for example).
+      port, or a data read from an input port on the i2c device, for example).
   2.  On first cyclic entry, the request block is added to the I2CManager queue.  Once it has been added to the queue, the 
       program does not have to wait for completion and can allow other functions to continue executing.  The requested
       operation will begin once any other pending operations have finished.
@@ -402,8 +402,8 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 
   When necessary, the operation may be repeated by requeueing the original request block (either unchanged or with different parameters or data).
 
-  If the non-blocking I2C driver is not available (e.g. on controllers other than ATmega328, ATmega2560 and ATmega4809), 
-  the blocking I2C functions in the Wire library are automatically used instead, without any changes to the Command Station code.
+  If the non-blocking i2c driver is not available (e.g. on controllers other than ATmega328, ATmega2560 and ATmega4809), 
+  the blocking i2c functions in the Wire library are automatically used instead, without any changes to the Command Station code.
 
 - Turnouts: Totally revised Turnout class and TurnoutData struct layout for more optimal storage and layout.  
   The struct is now optimised for access and for storage size.  Further optimisation is possible by writing (and reading) only 
@@ -471,7 +471,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   offThreshold are the distances (in centimetres) at which the vpin is to be set to 1 or 0 respectively (onThreshold < offThreshold).
 	
 - HAL: New function IODevice::readAnalogue(vpin) added to support analogue inputs on the Arduino pins and on external 
-  I2C analogue input modules.  Driver for ADS1113 and ADS1114 (both single input) and ADS1115 (4-input) added as class ADS111x.
+  i2c analogue input modules.  Driver for ADS1113 and ADS1114 (both single input) and ADS1115 (4-input) added as class ADS111x.
   The device is configured in myHal.cpp by
    
     .. code-block:: cpp
@@ -504,19 +504,19 @@ Future Enhancements
     pulling a pin down to earth.  Look at pushbuttons, microswitches, relays, hall effect sensors, and others.  So supplying a 
     pull-up, and inverting (0V=active=true, 5V=inactive=false), would seem to be the standard.  Pull-up+inversion is now default if not 
     configured otherwise.
-3.  I2C: The overall capacitance of an I2C bus is limited in the specification to 400pF.  Above this, the slew rate 
+3.  i2c: The overall capacitance of an i2c bus is limited in the specification to 400pF.  Above this, the slew rate 
     of the clock and data signals is too slow to achieve the expected performance.  Capacitance increases with bus length, 
-    and increases as devices are added to the bus.  Also, the I2C address choice for most devices is limited and using the 
-    same I2C address for two devices causes a conflict.  PROPOSAL: A bus multiplexer provides the capability to switch, 
-    under I2C control, one or more separate bus segments to be connected to the bus controller.  When a bus segment is not 
-    connected, its devices will not respond, and the capacitance of the bus segment does not contribute to the overall I2C 
-    bus capacitance.  Support for a bus multiplexer could readily be added in the I2CManager, by extending the I2C address 
-    field for each device to 16 bits (instead of 8 bits).  The low bits would contain the I2C address of the destination 
+    and increases as devices are added to the bus.  Also, the i2c address choice for most devices is limited and using the 
+    same i2c address for two devices causes a conflict.  PROPOSAL: A bus multiplexer provides the capability to switch, 
+    under i2c control, one or more separate bus segments to be connected to the bus controller.  When a bus segment is not 
+    connected, its devices will not respond, and the capacitance of the bus segment does not contribute to the overall i2c 
+    bus capacitance.  Support for a bus multiplexer could readily be added in the I2CManager, by extending the i2c address 
+    field for each device to 16 bits (instead of 8 bits).  The low bits would contain the i2c address of the destination 
     device.  The high bits would contain a selector for the multiplexer (1-8, as up to 8 multiplexers may be present), 
     and a sub-bus number (0-7) to be selected on the multiplexer.  A value of zero for the multiplexer and sub-bus number 
     would indicate that the device in question is connected to the primary bus and is not affected by the state of the 
-    multiplexer.  The impact on I2C traffic is minimal;  two additional bytes need to be sent if an I2C request requires 
-    to switch to a different sub-bus and the affect on the code is just the changes above to the I2C handling.
+    multiplexer.  The impact on i2c traffic is minimal;  two additional bytes need to be sent if an i2c request requires 
+    to switch to a different sub-bus and the affect on the code is just the changes above to the i2c handling.
 4.  Sensors/Turnouts/Outputs: I can't see anything in the existing code which checks whether the EEPROM writes 
     overrun the available EEPROM space.  If not, then when the address overflows, I think that the writes will wrap 
     around and overwrite the start of the EEPROM space.  This is, in fact, safe since the beginning of the EEPROM 
@@ -526,10 +526,10 @@ Future Enhancements
     is written when <E> command is executed.
 5.  Sensors: Sensor handling is not ideal.  When the Sensor class scans for changes in current 
     state by calling IODevice::read(), potentially each device (ArduinoPins, MCP23017 etc) needs to be checked to find 
-    the correct device, which takes time.  For a system with, say, three I2C devices, this means up to four devices being 
+    the correct device, which takes time.  For a system with, say, three i2c devices, this means up to four devices being 
     checked for each pin being read.  This can be mitigated by using the callback capability, but this also has its 
     problems.  When a change is detected and the callback is invoked, the relevant sensor object has to be located by 
-    scanning the sensor list, potentially to the end.  For the same three I2C devices each with 16 sensors, that's 
+    scanning the sensor list, potentially to the end.  For the same three i2c devices each with 16 sensors, that's 
     up to 48 sensor objects that need to be checked to find the appropriate sensor object, but this isn't as bad as 
     it sounds as it only happens on a sensor state change.  Also, the transmission of the <Q>/<q> message is deferred 
     to the checkAll() method which also has to scan through all of the sensor objects, partly because of the anti-bounce 

@@ -290,10 +290,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-ic2.html">iC2 Hardware</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">i2c Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">i2c Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">i2c Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -728,7 +728,7 @@ Turntable homed successfully
 <span class="c1">//   Number of VPINs=1 (Note there is no reason to change this)</span>
 <span class="c1">//   I2C address=0x60</span>
 <span class="c1">//</span>
-<span class="c1">// Note that the I2C address is defined in the EX-Turntable code, and 0x60 is the default.</span>
+<span class="c1">// Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.</span>
 
 <span class="c1">//TurntableEX::create(600, 1, 0x60);</span>
 </pre></div>
@@ -749,7 +749,7 @@ Turntable homed successfully
   <span class="c1">//   Number of VPINs=1 (Note there is no reason to change this)</span>
   <span class="c1">//   I2C address=0x60</span>
   <span class="c1">//</span>
-  <span class="c1">// Note that the I2C address is defined in the EX-Turntable code, and 0x60 is the default.</span>
+  <span class="c1">// Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.</span>
 
   <span class="n">TurntableEX</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">);</span>
 <span class="p">}</span>
@@ -758,7 +758,7 @@ Turntable homed successfully
 <p>In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:</p>
 <ul class="simple">
 <li><p>VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer <a class="reference internal" href="../reference/developers/hal.html#overview"><span class="std std-ref">Overview</span></a>).</p></li>
-<li><p>I2C address=0x60 - This is the default address on the I2C bus that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in “myHal.cpp” and in “config.h” in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> software.</p></li>
+<li><p>I2C address=0x60 - This is the default address on the i2c bus that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in “myHal.cpp” and in “config.h” in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> software.</p></li>
 </ul>
 <p>If you already have an existing “myHal.cpp” file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the “#include” needs to be before “void halSetup() {” and the “TurntableEX::create…” needs to be before the final “}”.</p>
 <p>Follow the rest of the directions for <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a> all the way through to the <a class="reference internal" href="../reference/developers/hal-config.html#upload-the-new-version-of-the-software"><span class="std std-ref">Upload the new version of the software</span></a> step to upload your newly configured CommandStation.</p>
@@ -766,14 +766,14 @@ Turntable homed successfully
 </section>
 <section id="connect-ex-turntable-to-your-ex-commandstation">
 <h3><a class="toc-backref" href="#id11">9. Connect EX-Turntable to your EX-CommandStation</a><a class="headerlink" href="#connect-ex-turntable-to-your-ex-commandstation" title="Permalink to this heading"></a></h3>
-<p>To control <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> from your CommandStation, you will need a connection to the I2C (SDA, SCL) pins.</p>
+<p>To control <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> from your CommandStation, you will need a connection to the i2c (SDA, SCL) pins.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>Ensure you turn the power off to both your CommandStation and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> prior to making any of these connections.</p>
 </div>
 <p>On the CommandStation, assuming this is a Mega2560 or Mega2560 + WiFi, the SDA (pin 20) and SCL (pin 21) pins are typically labelled as such, so should be easy to identify.</p>
 <p>On an Arduino Nano (and Uno) however, the SDA and SCL pins are shared with analog pins A4 and A5, and therefore aren’t explicitly labelled. The SDA pin is A4, and the SCL pin is A5.</p>
-<p>Connect these pins to your CommandStation as shown in the table below, noting that it is important to ensure the ground is also connected to ensure the I2C communication is reliable.</p>
+<p>Connect these pins to your CommandStation as shown in the table below, noting that it is important to ensure the ground is also connected to ensure the i2c communication is reliable.</p>
 <table class="colwidths-auto command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>CommandStation Pin</p></th>

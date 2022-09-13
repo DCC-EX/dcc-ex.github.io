@@ -24,5 +24,5 @@ Attributions
 * Announcement icon by `ColourCreatype <https://freeicons.io/profile/5790>`_ on https://freeicons.io
 * Download Icon by `master mind <https://freeicons.io/profile/229456>`_ on https://freeicons.io
 * Books icon by `www.wishforge.games <https://freeicons.io/profile/2257>`_ on https://freeicons.io
-* Control Icon by `Ic2icon <https://freeicons.io/profile/129933>`_ on https://freeicons.io
+* Control Icon by `i2c icon <https://freeicons.io/profile/129933>`_ on https://freeicons.io
 * Contributing Icon by `Chanut is Industries <https://freeicons.io/profile/135331>`_ on https://freeicons.io">freeicons.io

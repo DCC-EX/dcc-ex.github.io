@@ -290,10 +290,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../hardware/index-ic2.html">iC2 Hardware</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-devices.html">I2C Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index-i2c.html">i2c Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-displays.html">i2c Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-devices.html">i2c Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -413,7 +413,7 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#catching-the-i2c-bus" id="id5">Catching the I2C Bus</a></p></li>
+<li><p><a class="reference internal" href="#catching-the-i2c-bus" id="id5">Catching the i2c Bus</a></p></li>
 <li><p><a class="reference internal" href="#mcp23017-modules" id="id6">MCP23017 Modules</a></p></li>
 <li><p><a class="reference internal" href="#pca9685-modules" id="id7">PCA9685 Modules</a></p></li>
 <li><p><a class="reference internal" href="#other-drivers" id="id8">Other Drivers</a></p></li>
@@ -461,36 +461,36 @@ only for the Arduino digital input and output functions and analogue input funct
 It is theoretically possible to create an ‘on-line only’ version of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> which excludes the loco programming functions and
 therefore frees up FLASH on the Uno and Nano to allow the full HAL to operate, but this is not currently supported.</p>
 <section id="catching-the-i2c-bus">
-<h2><a class="toc-backref" href="#id5">Catching the I2C Bus</a><a class="headerlink" href="#catching-the-i2c-bus" title="Permalink to this heading"></a></h2>
-<p>Many of the external modules are connected to the Arduino via the I2C (Inter Integrated Circuit) interface.
+<h2><a class="toc-backref" href="#id5">Catching the i2c Bus</a><a class="headerlink" href="#catching-the-i2c-bus" title="Permalink to this heading"></a></h2>
+<p>Many of the external modules are connected to the Arduino via the i2c (Inter Integrated Circuit) interface.
 This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts).
-Your motor shield may have convenient connectors for I2C devices; for example, the DeekRobot shield has two sets of
-four I2C pins on the top.  If not, then check the Arduino’s data sheet to find the applicable I2C and power connections.
+Your motor shield may have convenient connectors for i2c devices; for example, the DeekRobot shield has two sets of
+four i2c pins on the top.  If not, then check the Arduino’s data sheet to find the applicable I2C and power connections.
 For an Arduino Mega, SCL and SDA are the two connectors nearest the reset button, in the connector block running along the edge of the Arduino.</p>
-<p><strong>WARNING</strong>  <em>There is no standard pin order for the I2C bus connectors, so be careful that you identify which pin is
+<p><strong>WARNING</strong>  <em>There is no standard pin order for the i2c bus connectors, so be careful that you identify which pin is
 which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/+5V.</em></p>
-<p>All I2C devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them.
+<p>All i2c devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them.
 However, only a device with a matching address will respond.  Each device attached to the bus should have a unique address.</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/i2cbus.png"><img alt="I2C Bus Topology" src="../../_images/i2cbus.png" style="width: 389.40000000000003px; height: 311.40000000000003px;" /></a>
+<a class="reference internal image-reference" href="../../_images/i2cbus.png"><img alt="i2c Bus Topology" src="../../_images/i2cbus.png" style="width: 389.40000000000003px; height: 311.40000000000003px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 97 </span><span class="caption-text">Example I2C Bus Topology with Arduino Mega and Three I2C modules</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 97 </span><span class="caption-text">Example i2c Bus Topology with Arduino Mega and Three i2c modules</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="pull-ups">
 <h3>Pull-Ups<a class="headerlink" href="#pull-ups" title="Permalink to this heading"></a></h3>
-<p>The I2C bus requires pull-up resistors in order for it to operate.  However, most I2C modules contain
+<p>The i2c bus requires pull-up resistors in order for it to operate.  However, most i2c modules contain
 10kOhm pull-up resistors built in, and the Arduino also has built-in pull-up resistors which are sufficient for
 installations with short bus cables, so you don’t have to be concerned about this unless you’re
 really <em>pushing the envelope</em>!</p>
-<p>For example, if you have 6 or more I2C modules connected to the same bus, you may need to remove the built-in
+<p>For example, if you have 6 or more i2c modules connected to the same bus, you may need to remove the built-in
 pull-up resistors from one or more of them since the minimum permitted pull-up is generally 1.7kOhm (at 5V supply), to avoid too much current flowing.
-Also, if your I2C bus cable is long then a pull-up value closer to the minimum is desirable.</p>
+Also, if your i2c bus cable is long then a pull-up value closer to the minimum is desirable.</p>
 </section>
 <section id="identifying-what-devices-are-connected">
 <h3>Identifying What Devices Are Connected<a class="headerlink" href="#identifying-what-devices-are-connected" title="Permalink to this heading"></a></h3>
-<p>During the startup phase of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, the I2C bus is queried to identify what (if any) devices are connected.
-The list of active I2C addresses is shown on the serial output during startup.  An example is shown below, with annotations.
+<p>During the startup phase of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, the i2c bus is queried to identify what (if any) devices are connected.
+The list of active i2c addresses is shown on the serial output during startup.  An example is shown below, with annotations.
 Note that the address does not necessarily tell you what the device is, since different modules may have the same default
 address.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;* License GPLv3 fsf.org (c) dcc-ex.com *&gt;
@@ -560,13 +560,13 @@ PCA9685 to do exactly this.</p>
 <h2><a class="toc-backref" href="#id8">Other Drivers</a><a class="headerlink" href="#other-drivers" title="Permalink to this heading"></a></h2>
 <p>There are also drivers included with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> for the following modules:</p>
 <ul class="simple">
-<li><p>PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I2C).</p></li>
+<li><p>PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (i2c).</p></li>
 <li><p>MCP23008 - Another 8-channel GPIO extender module.</p></li>
 <li><p>PCA/TCA9555 - Another 16-channel GPIO extender module (see notes below).</p></li>
 <li><p>DFPlayer - MP3 Media player with microSD card holder.  You can play different sounds from the player by activating or de-activating
 output VPINs from within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p></li>
-<li><p>ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.</p></li>
-<li><p>VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.</p></li>
+<li><p>ADS1115 - Four-channel analogue input module (i2c).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.</p></li>
+<li><p>VL53L0X - Laser Time-Of-Flight (TOF) range sensor (i2c).  Its VPIN activates when a reflecting object is within a defined distance of the sensor.</p></li>
 <li><p>HC-SR04 - Ultrasound ‘sonar’ range sensor.  Its VPIN activates when a reflecting object is within a defined distance of the sensor.</p></li>
 <li><p>EX-Turntable - Integrated, stepper motor based turntable controller, refer to <a class="reference internal" href="../../ex-turntable/index.html"><span class="doc">EX-Turntable</span></a>.</p></li>
 </ul>
@@ -575,7 +575,7 @@ output VPINs from within <span style="font-weight: bold; color: #00a3b9; font-si
 <p>The PCA9555 is made by Texas Instruments and NXP, the TCA9555 by Texas Instruments alone, and using these GPIO extenders is similar to the the MCP23017 with a few key differences.</p>
 <p>The PCA/TCA9555 has an always-on internal pull-up resistor for ports configured as an input, and the INT pin is always enabled, meaning it will always trigger on the rising and falling edge of an input port. The PCA/TCA9555 will work with either 3.3v or 5V.</p>
 <p>When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.</p>
-<p>The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I2C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.</p>
+<p>The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the i2c bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.</p>
 <p>If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">);</span>
 <span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">);</span>

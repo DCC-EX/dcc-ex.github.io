@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I2C GPIO Expander Modules &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>i2c GPIO Expander Modules &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
@@ -27,7 +27,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Connecting a Servo Module" href="servo-module.html" />
-    <link rel="prev" title="I2C Devices" href="i2c-devices.html" />
+    <link rel="prev" title="i2c Devices" href="i2c-devices.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -290,10 +290,10 @@
 <li class="toctree-l4"><a class="reference internal" href="ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="index-ic2.html">iC2 Hardware</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index-i2c.html">i2c Hardware</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="i2c-displays.html">i2c Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="i2c-devices.html">i2c Devices</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">i2c GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -395,8 +395,8 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">Reference</a> &raquo;</li>
           <li><a href="index.html">Hardware</a> &raquo;</li>
-          <li><a href="index-ic2.html">iC2 Hardware</a> &raquo;</li>
-      <li>I2C GPIO Expander Modules</li>
+          <li><a href="index-i2c.html">i2c Hardware</a> &raquo;</li>
+      <li>i2c GPIO Expander Modules</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/gpio-module.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -408,7 +408,7 @@
              
   <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="i2c-gpio-expander-modules">
-<h1>I2C GPIO Expander Modules<a class="headerlink" href="#i2c-gpio-expander-modules" title="Permalink to this heading"></a></h1>
+<h1>i2c GPIO Expander Modules<a class="headerlink" href="#i2c-gpio-expander-modules" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <div class="contents local topic" id="on-this-page">
@@ -444,7 +444,7 @@ Along the top-left and bottom-right edges are the sixteen GPIO pins, and two Vcc
 <p>This module has a row of three pin headers associated with each I/O pin; this allows
 each sensor to have its own GND, VCC and signal pin connection, so we can use three-way
 ribbon connectors for each sensor or output.  At the far left of the board are the
-I2C connector pins; there is also what appears to be a Grove connector at the right side of the board.</p>
+i2c connector pins; there is also what appears to be a Grove connector at the right side of the board.</p>
 <p>An example of circuit connections for a module is shown below:</p>
 <a class="reference internal image-reference" href="../../_images/ArduinoMega_MCP23017.png"><img alt="MCP23017 module connections" src="../../_images/ArduinoMega_MCP23017.png" style="width: 603.0px; height: 441.0px;" /></a>
 <p>This diagram also shows an infra-red sensor (3-pin device) connected to GPIO0 of the
@@ -452,7 +452,7 @@ MCP23017, and a push-button (2-pin) connected to GPIO1.</p>
 <p>Also generally available is the MCP23017 in IC form (28-pin DIL package).  This can be mounted on
 a breadboard for use, as shown below, or on stripboard if you want a more permanent solution.</p>
 <a class="reference internal image-reference" href="../../_images/ArduinoMega_MCP23017_breadboard.png"><img alt="MCP23017 on a Breadboard" src="../../_images/ArduinoMega_MCP23017_breadboard.png" style="width: 619.1999999999999px; height: 508.5px;" /></a>
-<p>Pins 15-17 of the MCP23017 allow selection of the I2C address.  If all three pins are connected
+<p>Pins 15-17 of the MCP23017 allow selection of the i2c address.  If all three pins are connected
 to ground (as shown in the diagram with cyan wires) then the address will be 0x20.
 In <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, the sixteen GPIO pins on MCP23017 address 0x20 are accessed using pin numbers
 164 to 179, so to associate a sensor object with the switch we would use a command in the form
@@ -463,7 +463,7 @@ pin is active.  When the switch is released, the input pin is pulled back to HIG
 <cite>&lt;q 165&gt;</cite> is generated to indicate that the pin is inactive.</p>
 <section id="interrupts">
 <h2><a class="toc-backref" href="#id1">Interrupts</a><a class="headerlink" href="#interrupts" title="Permalink to this heading"></a></h2>
-<p>Many I2C GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
+<p>Many i2c GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
 expander chip to notify the microcontroller that one or more inputs have changed state.</p>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports the use of these pins.  On controllers with INTA and INTB, the two pins should be connected together
 to make a common INT signal.</p>
@@ -482,7 +482,7 @@ basis.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="i2c-devices.html" class="btn btn-neutral float-left" title="I2C Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="i2c-devices.html" class="btn btn-neutral float-left" title="i2c Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="servo-module.html" class="btn btn-neutral float-right" title="Connecting a Servo Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

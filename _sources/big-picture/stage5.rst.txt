@@ -84,7 +84,7 @@ Now that the basics of |EX-TT| have been completed and it is ready to be added t
 
 Firstly, our |EX-CS| needs to be prepared by ensuring the |EX-TT| device driver is loaded. This is covered in :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation`.
 
-Next, we need to connect |EX-TT| to our |EX-CS| which requires a connection to the I2C interface, and it's a good idea to make sure |EX-TT| is turned on before |EX-CS| to ensure it's detected successfully at startup. This is covered in :ref:`ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`.
+Next, we need to connect |EX-TT| to our |EX-CS| which requires a connection to the i2c interface, and it's a good idea to make sure |EX-TT| is turned on before |EX-CS| to ensure it's detected successfully at startup. This is covered in :ref:`ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`.
 
 Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add the turntable.
 
@@ -129,9 +129,9 @@ Adding the traverser
 
   It is highly recommended to make use of the :ref:`ex-turntable/traverser:sensor testing mode` to validate both the home and limit sensors are working correctly when in traverser mode.
 
-Firstly, you will note in the list of assumptions above that we stopped one step earlier in the |EX-TT| assembly process at step 6, and that's because we need to ensure our traverser is available at a different I2C address and on a different Vpin to our turntable to ensure they are controlled independently of each other.
+Firstly, you will note in the list of assumptions above that we stopped one step earlier in the |EX-TT| assembly process at step 6, and that's because we need to ensure our traverser is available at a different i2c address and on a different Vpin to our turntable to ensure they are controlled independently of each other.
 
-To achieve this, we will be using the I2C address ``0x61`` and will be assigning the Vpin ``601``.
+To achieve this, we will be using the i2c address ``0x61`` and will be assigning the Vpin ``601``.
 
 So, in order to complete :ref:`ex-turntable/assembly:7. load the ex-turntable software`, the value for ``I2C_ADDRESS`` in the "config.h" file needs to be changed to ``0x61``, and of course the ``TURNTABLE_EX_MODE`` needs to be set to ``TRAVERSER``.
 
@@ -160,7 +160,7 @@ Expand "config.h" to see the |EX-TT| configuration file for the traverser, notin
 
 |
 
-Once again, as we did with the turntable, we need to add the traverser device to our |EX-CS|, and this is where we need to specify both the updated I2C address of ``0x61`` and the updated Vpin of ``601`` to ensure we are adding this as a second device that does not conflict with the turntable.
+Once again, as we did with the turntable, we need to add the traverser device to our |EX-CS|, and this is where we need to specify both the updated i2c address of ``0x61`` and the updated Vpin of ``601`` to ensure we are adding this as a second device that does not conflict with the turntable.
 
 As per the turntable section, these changes need to be incorporated into the process outlined in :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation` in order to add the traverser device driver to our |EX-CS|.
 

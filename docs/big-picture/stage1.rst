@@ -289,7 +289,7 @@ Use the ``Throttle Screen Layout`` preference to select a layout that supports m
 
 Where a layout supports a range of throttles, select the number that you want to show with the ``Number of Throttles`` preference (:menuselection:`menu --> Preferences --> Throttle Screen Appearance Preferences --> Number of Throttles`).  
 
-See the `Throttle Screen Appearance Preferences <https://flash62au.github.io/EngineDriver_Home/configuration/preferences.html#throttle-screen-appearance-preferences>` page on the main |Engine Driver| help sites for detailed information on the options that each Throttle Screen Layout offers.
+See the `Throttle Screen Appearance Preferences <https://flash62au.github.io/EngineDriver_Home/configuration/preferences.html#throttle-screen-appearance-preferences>`_ page on the main |Engine Driver| help sites for detailed information on the options that each Throttle Screen Layout offers.
 
 Consist / Multiple Unit train
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

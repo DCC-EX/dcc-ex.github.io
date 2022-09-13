@@ -13,7 +13,15 @@ Example Objects and Sequences
    .. contents:: On this page
       :depth: 2
 
-On this page are a number of examples of |EX-R| sequences that you can lean from.  :doc:`/big-picture/big-picture` section of this web site also contains numerous more complex examples, 
+On this page are a number of examples of |EX-R| sequences that you can lean from.  :doc:`/big-picture/big-picture` section of this web site also contains numerous more complex examples.
+
+We will be using these objects in the examples:
+
+- A three aspect signal connected to Mega2560 I/O pins 22 (red), 23 (amber), and 24 (green)
+- A two aspect signal connected to Mega2560 I/O pins 25 (red) and 26 (green)
+- LEDs connected to pins vpins 164 and 165 of an MCP23017 I/O extender
+- Active low IR sensors connected to Mega2560 I/O pins 40 through 46
+- An active low push button on Mega2560 I/O pin 30
 
 ----
 
@@ -101,15 +109,15 @@ Of course, you may want to add signals, and time delays
 
 .. code-block:: cpp
 
-   SIGNAL(77,78,79)  // see the Defining Signals section
-   SIGNAL(92,0,93)   //      below for details
+   SIGNAL(22,23,24)  // see the Defining Signals section
+   SIGNAL(25,0,26)   //      below for details
    
    ROUTE(1,"Coal Yard exit")
-      RED(77)
+      RED(22)
       THROW(1)
       CLOSE(7)
       DELAY(5000)  // this is a 5 second wait
-      GREEN(92)
+      GREEN(25)
       DONE
 
 
@@ -123,16 +131,16 @@ automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE
 
    ONTHROW(8)  // When turnout 8 is thrown,
       THROW(9)  // must also throw the facing turnout
-      RED(24)
+      RED(22)
       DELAY(2000)
-      GREEN(27)
+      GREEN(25)
       DONE
 
    ONCLOSE(8)  // When turnout 8 is closed
      CLOSE(9)
-     RED(27)
+     RED(25)
      DELAY(2000)
-     GREEN(24)
+     GREEN(22)
      DONE
 
 
@@ -144,11 +152,11 @@ This normally takes place in a timed loop, for example alternate flashing of a f
 .. code-block:: cpp
 
    SEQUENCE(66)  
-     SET(101)   // sets output 101 HIGH
-     RESET(102) // sets output 102 LOW
+     SET(164)   // sets output 164 HIGH
+     RESET(165) // sets output 165 LOW
      DELAY(500)   // wait 0.5 seconds
-     SET(102)   // swap the lights   
-     RESET(101) 
+     SET(165)   // swap the lights   
+     RESET(164) 
      DELAY(500)   // wait 0.5 seconds
      FOLLOW(66)  // follow sequence 66 continuously
      
@@ -190,17 +198,17 @@ Adding a station signal to the loop script is extremely simple, but it does requ
 
 .. code-block:: cpp
 
-   SIGNAL(77,78,79)  // see the Defining Signals section above for details
+   SIGNAL(22,23,24)  // see the Defining Signals section above for details
    AUTOMATION(4,"Round in circles")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)    // when you get to sensor on pin (40)
       STOP      // Stop the train 
       DELAYRANDOM(5000,20000) // delay somewhere between 5 and 20 seconds
-      GREEN(77)    // set signal #77 to Green
+      GREEN(22)    // set signal #22 to Green
       DELAY(2500)  // This is not Formula1!
       FWD(30)    // start a bit slower
       AFTER(40)  // until sensor on pin 40 has been passed
-      RED(77)    // set signal #77 to Red
+      RED(22)    // set signal #22 to Red
       FOLLOW(4)  // and continue to follow the automation
 
 Point to Point Shuttle
@@ -303,6 +311,10 @@ So we will need some extra sensors (hardware required) and some logical blocks (
    :align: center
    :scale: 100%
 
+.. todo:: 
+
+   LOW - Fix sensor IDs in diagram to match example
+
 We can use this diagram to plan routes. When we do so, it will be easier to imagine 4 separate mini routes, each passing from one block to the next. Then we can chain them together to form a full route, but also start from any block.
 
 So… lets take a look at the routes now. For convenience I have used route numbers that help remind us what the route is for.
@@ -314,9 +326,9 @@ So… lets take a look at the routes now. For convenience I have used route numb
       RESERVE(2) // we wish to enter block 2… so wait for it
       CLOSE(1) // Now we “own” the block, set the turnout
       FWD(30) // and proceed forward
-      AFTER(71) // Once we have reached AND passed sensor 71
+      AFTER(43) // Once we have reached AND passed sensor 43
       FREE(1) // we no longer occupy block 1
-      AT(72) // When we get to sensor 72
+      AT(44) // When we get to sensor 44
       FOLLOW(23) // follow route from block 2 to block 3
    
    SEQUENCE(23) // Travel from block 2 to block 3
@@ -333,9 +345,9 @@ So… lets take a look at the routes now. For convenience I have used route numb
       RESERVE(4)
       THROW(2)
       REV(20)
-      AFTER(73)
+      AFTER(45)
       FREE(3)
-      AT(74)
+      AT(46)
       FOLLOW(41)
    
    SEQUENCE(41)
@@ -399,25 +411,20 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 .. code-block:: cpp
 
    SEQUENCE(99)
-      SIGNAL(27,28,29)
-      RED(27)   // indicate launch not ready
-      AFTER(17) // user presses and releases launch button
+      SIGNAL(22,23,24)
+      RED(22)   // indicate launch not ready
+      AFTER(30) // user presses and releases launch button
       UNJOIN    // separate the programming track from main
       DELAY(2000)
-      AMBER(27) // Show amber, user may place loco
-      AFTER(17) // user places loco on track and presses “launch” again
+      AMBER(22) // Show amber, user may place loco
+      AFTER(30) // user places loco on track and presses “launch” again
       READ_LOCO // identify the loco
-      GREEN(27) // show green light to user
+      GREEN(22) // show green light to user
       JOIN      // connect prog track to main
       START(12) // send loco off along route 12
       FOLLOW(99) // keep doing this for another launch
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the ``INVERT_DIRECTION`` instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
-
-
-.. todo:: 
-
-   LOW - Update the examples examples to use valid pins and vpins that are available on the Mega2560 or I/O expanders and servo modules.
 
 ----
 

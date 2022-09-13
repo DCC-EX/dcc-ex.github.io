@@ -432,7 +432,15 @@
 </ul>
 </div>
 </aside>
-<p>On this page are a number of examples of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> sequences that you can lean from.  <a class="reference internal" href="../big-picture/big-picture.html"><span class="doc">How it All Works Together</span></a> section of this web site also contains numerous more complex examples,</p>
+<p>On this page are a number of examples of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> sequences that you can lean from.  <a class="reference internal" href="../big-picture/big-picture.html"><span class="doc">How it All Works Together</span></a> section of this web site also contains numerous more complex examples.</p>
+<p>We will be using these objects in the examples:</p>
+<ul class="simple">
+<li><p>A three aspect signal connected to Mega2560 I/O pins 22 (red), 23 (amber), and 24 (green)</p></li>
+<li><p>A two aspect signal connected to Mega2560 I/O pins 25 (red) and 26 (green)</p></li>
+<li><p>LEDs connected to pins vpins 164 and 165 of an MCP23017 I/O extender</p></li>
+<li><p>Active low IR sensors connected to Mega2560 I/O pins 40 through 46</p></li>
+<li><p>An active low push button on Mega2560 I/O pin 30</p></li>
+</ul>
 <hr class="docutils" />
 <section id="turn-track-power-on-at-startup">
 <h2><a class="toc-backref" href="#id3">Turn Track Power On at Startup</a><a class="headerlink" href="#turn-track-power-on-at-startup" title="Permalink to this heading"></a></h2>
@@ -500,15 +508,15 @@ The EX-RAIL instructions to do this might look like</p>
 </pre></div>
 </div>
 <p>Of course, you may want to add signals, and time delays</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">79</span><span class="p">)</span>  <span class="c1">// see the Defining Signals section</span>
-<span class="n">SIGNAL</span><span class="p">(</span><span class="mi">92</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">93</span><span class="p">)</span>   <span class="c1">//      below for details</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span>  <span class="c1">// see the Defining Signals section</span>
+<span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>   <span class="c1">//      below for details</span>
 
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>
-   <span class="n">RED</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span>
+   <span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
    <span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
    <span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
    <span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>  <span class="c1">// this is a 5 second wait</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span>
+   <span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
    <span class="n">DONE</span>
 </pre></div>
 </div>
@@ -519,16 +527,16 @@ The EX-RAIL instructions to do this might look like</p>
 automatically switch an adjacent facing turnout. Use an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code> or <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code> keyword to detect a particular turnout change:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>  <span class="c1">// When turnout 8 is thrown,</span>
    <span class="n">THROW</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1">// must also throw the facing turnout</span>
-   <span class="n">RED</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+   <span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
    <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
+   <span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
    <span class="n">DONE</span>
 
 <span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>  <span class="c1">// When turnout 8 is closed</span>
   <span class="n">CLOSE</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
-  <span class="n">RED</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
+  <span class="n">RED</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
   <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-  <span class="n">GREEN</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+  <span class="n">GREEN</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
   <span class="n">DONE</span>
 </pre></div>
 </div>
@@ -537,11 +545,11 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <h2><a class="toc-backref" href="#id8">Automating various non-track items</a><a class="headerlink" href="#automating-various-non-track-items" title="Permalink to this heading"></a></h2>
 <p>This normally takes place in a timed loop, for example alternate flashing of a fire engine’s lights. To do this use a SEQUENCE.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>
-  <span class="n">SET</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>   <span class="c1">// sets output 101 HIGH</span>
-  <span class="n">RESET</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span> <span class="c1">// sets output 102 LOW</span>
+  <span class="n">SET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>   <span class="c1">// sets output 164 HIGH</span>
+  <span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span> <span class="c1">// sets output 165 LOW</span>
   <span class="n">DELAY</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>   <span class="c1">// wait 0.5 seconds</span>
-  <span class="n">SET</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>   <span class="c1">// swap the lights</span>
-  <span class="n">RESET</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+  <span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>   <span class="c1">// swap the lights</span>
+  <span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
   <span class="n">DELAY</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>   <span class="c1">// wait 0.5 seconds</span>
   <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>  <span class="c1">// follow sequence 66 continuously</span>
 </pre></div>
@@ -570,17 +578,17 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <section id="stopping-at-a-station-adding-signals">
 <h2><a class="toc-backref" href="#id10">Stopping at a Station - Adding Signals</a><a class="headerlink" href="#stopping-at-a-station-adding-signals" title="Permalink to this heading"></a></h2>
 <p>Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">79</span><span class="p">)</span>  <span class="c1">// see the Defining Signals section above for details</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span>  <span class="c1">// see the Defining Signals section above for details</span>
 <span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span>
    <span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>   <span class="c1">// move forward at DCC speed 50 (out of 127)</span>
    <span class="n">AT</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>    <span class="c1">// when you get to sensor on pin (40)</span>
    <span class="n">STOP</span>      <span class="c1">// Stop the train</span>
    <span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span> <span class="c1">// delay somewhere between 5 and 20 seconds</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span>    <span class="c1">// set signal #77 to Green</span>
+   <span class="n">GREEN</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>    <span class="c1">// set signal #22 to Green</span>
    <span class="n">DELAY</span><span class="p">(</span><span class="mi">2500</span><span class="p">)</span>  <span class="c1">// This is not Formula1!</span>
    <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>    <span class="c1">// start a bit slower</span>
    <span class="n">AFTER</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>  <span class="c1">// until sensor on pin 40 has been passed</span>
-   <span class="n">RED</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span>    <span class="c1">// set signal #77 to Red</span>
+   <span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>    <span class="c1">// set signal #22 to Red</span>
    <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1">// and continue to follow the automation</span>
 </pre></div>
 </div>
@@ -652,6 +660,10 @@ number. So now our route looks like this:</p>
 </ul>
 <p>So we will need some extra sensors (hardware required) and some logical blocks (all in the mind!):</p>
 <a class="reference internal image-reference" href="../_images/Example_7b_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_7b_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>LOW - Fix sensor IDs in diagram to match example</p>
+</div>
 <p>We can use this diagram to plan routes. When we do so, it will be easier to imagine 4 separate mini routes, each passing from one block to the next. Then we can chain them together to form a full route, but also start from any block.</p>
 <p>So… lets take a look at the routes now. For convenience I have used route numbers that help remind us what the route is for.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1">// From block 1 to block 2</span>
@@ -659,9 +671,9 @@ number. So now our route looks like this:</p>
    <span class="n">RESERVE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// we wish to enter block 2… so wait for it</span>
    <span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// Now we “own” the block, set the turnout</span>
    <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="c1">// and proceed forward</span>
-   <span class="n">AFTER</span><span class="p">(</span><span class="mi">71</span><span class="p">)</span> <span class="c1">// Once we have reached AND passed sensor 71</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">43</span><span class="p">)</span> <span class="c1">// Once we have reached AND passed sensor 43</span>
    <span class="n">FREE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// we no longer occupy block 1</span>
-   <span class="n">AT</span><span class="p">(</span><span class="mi">72</span><span class="p">)</span> <span class="c1">// When we get to sensor 72</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">44</span><span class="p">)</span> <span class="c1">// When we get to sensor 44</span>
    <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span> <span class="c1">// follow route from block 2 to block 3</span>
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span> <span class="c1">// Travel from block 2 to block 3</span>
@@ -678,9 +690,9 @@ number. So now our route looks like this:</p>
    <span class="n">RESERVE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
    <span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
    <span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-   <span class="n">AFTER</span><span class="p">(</span><span class="mi">73</span><span class="p">)</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
    <span class="n">FREE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-   <span class="n">AT</span><span class="p">(</span><span class="mi">74</span><span class="p">)</span>
+   <span class="n">AT</span><span class="p">(</span><span class="mi">46</span><span class="p">)</span>
    <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
@@ -735,25 +747,21 @@ number. So now our route looks like this:</p>
 <p>EX-RAIL can switch a track section between programming and mainline.</p>
 <p>Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a ‘launch’ button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
-   <span class="n">SIGNAL</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">29</span><span class="p">)</span>
-   <span class="n">RED</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>   <span class="c1">// indicate launch not ready</span>
-   <span class="n">AFTER</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// user presses and releases launch button</span>
+   <span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span>
+   <span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>   <span class="c1">// indicate launch not ready</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="c1">// user presses and releases launch button</span>
    <span class="n">UNJOIN</span>    <span class="c1">// separate the programming track from main</span>
    <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-   <span class="n">AMBER</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1">// Show amber, user may place loco</span>
-   <span class="n">AFTER</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// user places loco on track and presses “launch” again</span>
+   <span class="n">AMBER</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span> <span class="c1">// Show amber, user may place loco</span>
+   <span class="n">AFTER</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="c1">// user places loco on track and presses “launch” again</span>
    <span class="n">READ_LOCO</span> <span class="c1">// identify the loco</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1">// show green light to user</span>
+   <span class="n">GREEN</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span> <span class="c1">// show green light to user</span>
    <span class="n">JOIN</span>      <span class="c1">// connect prog track to main</span>
    <span class="n">START</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1">// send loco off along route 12</span>
    <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span> <span class="c1">// keep doing this for another launch</span>
 </pre></div>
 </div>
 <p>The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the <code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code> instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>LOW - Update the examples examples to use valid pins and vpins that are available on the Mega2560 or I/O expanders and servo modules.</p>
-</div>
 </section>
 <hr class="docutils" />
 <section id="next-steps-detailed-reference">

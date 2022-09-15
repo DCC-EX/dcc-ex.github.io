@@ -85,6 +85,11 @@ Connect Everything:
 * You should now have full control over your loco
 * The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons
 
+.. image:: /_static/images/throttles/webthrottle_setup.png
+   :alt: EX-WebThrottle
+   :align: center
+   :scale: 40%
+
 .. sidebar:: 
 
     |EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
@@ -108,6 +113,11 @@ Connect Everything
 * Plug in the two power supplies (The one for the Arduino and the the one for the motor shield)
 * wait for about 30 seconds
 
+.. image:: /_static/images/throttles/throttle_wifi_direct.png
+   :alt:  WiFi Throttle Direct to CS
+   :align: center
+   :scale: 40%
+
 Using Engine Driver (Android)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -119,11 +129,6 @@ Using Engine Driver (Android)
    Engine Driver
 
 You will need to install |Engine Driver| on your mobile device and then connect to the |EX-CS|, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
-
-.. note:: 
-   :class: note-float-right
-
-   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
 * If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
   
@@ -139,6 +144,11 @@ You will need to install |Engine Driver| on your mobile device and then connect 
   * change to your home network
   
     * Use your normal home SSID (Network name) and Password to connect to the network 
+
+.. note:: 
+   :class: note-float-right
+
+   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
 * Start the |engine driver| App
 * Go through the initial startup pages to set some basic configuration items

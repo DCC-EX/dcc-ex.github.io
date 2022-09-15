@@ -69,7 +69,7 @@ Here is an image that represents a direct connection.
 .. image:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
    :align: center
-   :scale: 50%
+   :scale: 40%
 
 There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a wifi Throttle (Controller) for the |EX-CS|.  On this page we are only going to cover two. 
 
@@ -115,12 +115,12 @@ Basic use of |wiThrottle| will be covered on the following :doc:`/ex-commandstat
 Connecting via USB
 ------------------
 
-Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.
+Here are your connections, just a computer running a chromium-based browser (Chrome, Edge, Safari and others) a USB cable, and your |EX-CS|.
 
 .. image:: /_static/images/throttles/webthrottle_setup.png
    :alt: EX-WebThrottle
    :align: center
-   :scale: 45%
+   :scale: 40%
 
 Compatible USB Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -29,12 +29,17 @@ There are two simple options for testing your setup described below:
 * Using our |EX-WT| (recommended)
 * using the |Engine Driver| app installed on an Android device, |BR| or the |wiThrottle| app installed on an iOS device
 
+Using EX-WebThrottle
+--------------------
+
+.. image:: /_static/images/throttles/webthrottle_setup.png
+   :alt: EX-WebThrottle
+   :align: center
+   :scale: 40%
+
 .. sidebar:: 
 
     |tinkerer| |engineer| |BR| Additional options (throttles) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
-
-Using EX-WebThrottle
---------------------
 
 Connect Everything:
 
@@ -108,6 +113,11 @@ Connect Everything
 * Plug in the two power supplies (The one for the Arduino and the the one for the motor shield)
 * wait for about 30 seconds
 
+.. image:: /_static/images/throttles/throttle_wifi_direct.png
+   :alt:  WiFi Throttle Direct to CS
+   :align: center
+   :scale: 40%
+
 Using Engine Driver (Android)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -119,11 +129,6 @@ Using Engine Driver (Android)
    Engine Driver
 
 You will need to install |Engine Driver| on your mobile device and then connect to the |EX-CS|, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.
-
-.. note:: 
-   :class: note-float-right
-
-   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
 * If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
   
@@ -139,6 +144,11 @@ You will need to install |Engine Driver| on your mobile device and then connect 
   * change to your home network
   
     * Use your normal home SSID (Network name) and Password to connect to the network 
+
+.. note:: 
+   :class: note-float-right
+
+   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
 
 * Start the |engine driver| App
 * Go through the initial startup pages to set some basic configuration items

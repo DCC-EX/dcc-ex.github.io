@@ -29,12 +29,17 @@ There are two simple options for testing your setup described below:
 * Using our |EX-WT| (recommended)
 * using the |Engine Driver| app installed on an Android device, |BR| or the |wiThrottle| app installed on an iOS device
 
+Using EX-WebThrottle
+--------------------
+
+.. image:: /_static/images/throttles/webthrottle_setup.png
+   :alt: EX-WebThrottle
+   :align: center
+   :scale: 40%
+
 .. sidebar:: 
 
     |tinkerer| |engineer| |BR| Additional options (throttles) for testing and diagnosing issues are available and is described in the :doc:`/ex-commandstation/advanced-setup/controllers` page if needed .
-
-Using EX-WebThrottle
---------------------
 
 Connect Everything:
 
@@ -84,11 +89,6 @@ Connect Everything:
 * Then press the :guilabel:`Acquire` button
 * You should now have full control over your loco
 * The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons
-
-.. image:: /_static/images/throttles/webthrottle_setup.png
-   :alt: EX-WebThrottle
-   :align: center
-   :scale: 40%
 
 .. sidebar:: 
 

@@ -117,7 +117,7 @@ Connecting via USB
 
 Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.
 
-.. image:: /_static/images/throttles/webthrottle_setup.jpg
+.. image:: /_static/images/throttles/webthrottle_setup.png
    :alt: EX-WebThrottle
    :align: center
    :scale: 45%

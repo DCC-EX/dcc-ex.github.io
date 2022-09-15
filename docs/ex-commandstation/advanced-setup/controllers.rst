@@ -53,9 +53,23 @@ Direct (Without JMRI)
 For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a Command Station with a WiFi Shield or other type of WiFi board, or a Bluetooth board and a throttle that supports Bluetooth. Here is an image that represents a direct connection.
 
 .. image:: /_static/images/throttles/throttle_wifi_direct.png
-   :alt:  WiFi Throttle Direct to CS
+   :alt:  WiFi Throttle Direct to Command Station
    :align: center
    :scale: 50%
+
+|
+
+Indirect (Without JMRI)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+An equally simple way to connect from your wireless device to the |EX-CS| is by connecting your command station to you home network. You need a Command Station with a WiFi Shield or other type of WiFi board. Here is an image that represents a indirect connection.
+
+.. image:: /_static/images/throttles/throttle_wifi_indirect.png
+   :alt:  WiFi Throttle indirect to Command Station
+   :align: center
+   :scale: 50%
+
+|
 
 With JMRI
 ^^^^^^^^^^^^^
@@ -67,6 +81,7 @@ For those who want the power of |JMRI| to operate a complex layout, you would in
    :align: center
    :scale: 50%
 
+|
 
 Command Language (API)
 ======================
@@ -92,13 +107,14 @@ The simplest option is to just use a throttle connected directly to the |EX-CS|.
 
 Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.
 
-.. image:: /_static/images/throttles/webthrottle_setup.jpg
+.. image:: /_static/images/throttles/webthrottle_setup.png
    :alt: EX-WebThrottle
    :align: center
    :scale: 45%
 
 For operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`
 
+|
 
 Engine Driver (Android | WiThrottle | WiFi)
 --------------------------------------------

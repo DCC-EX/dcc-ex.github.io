@@ -1,5 +1,5 @@
 name: DCC Decoder Feedback
-about: Use this template to submit feedback on DCC decoders tested with EX-CommandStation
+description: Use this template to submit feedback on DCC decoders tested with EX-CommandStation
 title: "[Decoder Feedback]: "
 labels:
   - Needs Documentation

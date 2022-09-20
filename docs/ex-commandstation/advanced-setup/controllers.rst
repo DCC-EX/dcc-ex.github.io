@@ -74,7 +74,7 @@ An equally simple way to connect from your wireless device to the |EX-CS| is by 
 With JMRI
 ^^^^^^^^^^^^^
 
-For those who want the power of |JMRI| to operate a complex layout, you would install |JMRI| on a computer or Raspberry Pi and connect your throttle to JM|JMRI|RI wirelessly through its preferred method, usually the |WiThrottle Server| or Web Server Interface. Here is an image that shows connecting wirelessly to |JMRI|, and connecting |JMRI| via a USB cable to the Command Station.
+For those who want the power of |JMRI| to operate a complex layout, you would install |JMRI| on a computer or Raspberry Pi and connect your throttle to |JMRI| wirelessly through its preferred method, usually the |WiThrottle Server| or Web Server Interface. Here is an image that shows connecting wirelessly to |JMRI|, and connecting |JMRI| via a USB cable to the Command Station.
 
 .. image:: /_static/images/throttles/throttle_wifi_jmri.png
    :alt:  WiFi Throttle to JMRI and JMRI to CS with USB cable
@@ -86,7 +86,7 @@ For those who want the power of |JMRI| to operate a complex layout, you would in
 Command Language (API)
 ======================
 
-There are at least 3 ways for a throttle to connect to a Command Station; the DCC++ command language, |WiThrottle Protocol| command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC++, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own DCC++ API and the |WiThrottle Protocol| API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses DCC++ commands when speaking to the Command Station.
+There are at least 3 ways for a throttle to 'talk' to a Command Station; the DCC++ command language, |WiThrottle Protocol| command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC++, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own DCC++ API and the |WiThrottle Protocol| API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses DCC++ commands when speaking to the Command Station.
 
 Compatible Throttles (Controllers)
 ==================================
@@ -104,6 +104,8 @@ The simplest option is to just use a throttle connected directly to the |EX-CS|.
    :alt: EX-WebThrottle
    :align: center
    :scale: 40%
+
+|
 
 Here are your connections, just a computer running a chromium-based browser, a USB cable, and your |EX-CS|.
 

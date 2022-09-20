@@ -57,7 +57,7 @@ Throttle (Controller) Options
 
    You are welcome to explore the many other :doc:`/throttles/index`, but the the ones on this page are still recommended for initial testing. 
 
-Here is a list of  a small subset of the throttles you can use with the |EX-CS|. These options are simple and inexpensive (i.e. free) and are suitable for initial testing if you have installed *just* the recommended hardware (including WiFi). Namely **WiFi** (using a smart phone) and **Direct Connection**.
+Here is a small subset of the throttles you can use with the |EX-CS|. These options are simple and inexpensive (i.e. free) and are suitable for initial testing if you have installed *just* the recommended hardware (including WiFi). Namely **WiFi** (using a smart phone) and **Direct Connection**.
 
 Connecting via WiFi
 -------------------

@@ -160,17 +160,19 @@ table.intro-table {
   color: white;
   padding: 0.5em 0.5em;
   position: relative;
+  font-size: 90% !important;
   text-decoration: none;
   text-transform: none;
   border-radius: 5px;
 }
 
 .githublink-right a {
-  background-color: #c0780d;
+  background-color: #ff9900;
   box-shadow: 0 2px 0 #00353dff;
   color: white;
-  padding: 0.5em 0.5em;
+  padding: 1px 5px 0px 5px;
   position: relative;
+  font-size: 90% !important;
   text-decoration: none;
   text-transform: none;
   border-radius: 10px;

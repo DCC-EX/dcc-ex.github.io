@@ -154,28 +154,30 @@ table.intro-table {
 
 /* *************************************** */
 
-.githublink a {
-  background-color: #f1970f;
+a.githublink, .githublink a {
+  background-color: #f7b656;
   box-shadow: 0 2px 0 #00353dff;
   color: white;
-  padding: 0.5em 0.5em;
+  padding: 3px 5px 3px 5px;
   position: relative;
+  font-size: 90% !important;
   text-decoration: none;
   text-transform: none;
   border-radius: 5px;
 }
 
 .githublink-right a {
-  background-color: #c0780d;
+  background-color: #f7b656;
   box-shadow: 0 2px 0 #00353dff;
   color: white;
-  padding: 0.5em 0.5em;
+  padding: 3px 5px 3px 5px;
   position: relative;
+  font-size: 90% !important;
   text-decoration: none;
   text-transform: none;
   border-radius: 10px;
   float:right;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 0px 0px;
 }
 
 .githublink a:visited {

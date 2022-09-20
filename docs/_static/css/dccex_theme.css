@@ -154,6 +154,46 @@ table.intro-table {
 
 /* *************************************** */
 
+.githublink a {
+  background-color: #f0b37e;
+  box-shadow: 0 2px 0 #00353dff;
+  color: white;
+  padding: 0.5em 0.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: none;
+  border-radius: 5px;
+}
+
+.githublink-right a {
+  background-color: #ac805a;
+  box-shadow: 0 2px 0 #00353dff;
+  color: white;
+  padding: 0.5em 0.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: none;
+  border-radius: 10px;
+  float:right;
+  margin: 0px 0px 0px 10px;
+}
+
+.githublink a:visited {
+  color: whitesmoke
+}
+
+.githublink a:hover {
+  background-color: rgb(172, 95, 7);
+  cursor: pointer;
+}
+
+.githublink a:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+/* *************************************** */
+
 svg {
   max-width: 100%;
   height: auto;

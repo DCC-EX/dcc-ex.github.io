@@ -1,0 +1,117 @@
+name: DCC Decoder Feedback
+description: Use this template to submit feedback on DCC decoders tested with EX-CommandStation
+title: "[Decoder Feedback]: "
+labels:
+  - Needs Documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to submit feedback on a DCC decoder tested with EX-CommandStation.
+
+        This feedback will be captured and shared on our `List of tested decoders <https://dcc-ex.com/reference/hardware/decoder-list.html>` page on the website.
+  
+  - type: input
+    id: brand
+    attributes:
+      label: Brand
+      description: Provide the brand of the tested decoder.
+    validations:
+      required: true
+  
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      description: Provide the model of the tested decoder.
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: Select the type of decoder that was tested.
+      options:
+        - Multi-function (typically in locos)
+        - Multi-function with sound
+        - Accessory
+        - Sound only
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: type-other
+    attributes:
+      label: Type (other)
+      description: If "Other" selected above, please provide the decoder type here.
+  
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware
+      description: Provide the firmware version of the tested decoder.
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: connector
+    attributes:
+      label: Connector type
+      description: Select the connector type of the tested decoder.
+      options:
+        - NEM651
+        - NEM652
+        - 21MTC
+        - PLUX8
+        - PLUX12
+        - PLUX16
+        - PLUX22
+        - N/A (bare wires)
+        - Other
+    validations:
+      required: true
+    
+  - type: input
+    id: connector-other
+    attributes:
+      label: Connector type (other)
+      description: If "Other" selected above, please provide the connector type here.
+  
+  - type: input
+    id: ack
+    attributes:
+      label: ACK Settings
+      description: Provide any customised ACK settings required for the tested decoder (leave "Default" if none required).
+      value: Default
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Rating (out of 3)
+      description: |
+        Provide a rating out of 3 for the tested decoder.
+
+        1 - Can be quite difficult or complicated to get working or testing had inconsistent results.
+        2 - Works as expected, with some extra effort required such as unique ACK settings.
+        3 - Works exactly as expected.
+      options:
+        - 1
+        - 1.5
+        - 2
+        - 2.5
+        - 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: Comments
+      description: Provide commentary here on why the rating was chosen, or any other relevant information.
+      placeholder: Worked out-of-the-box, exactly as expected | Had to customise ACK settings after getting support from the team in Discord
+    validations:
+      required: true

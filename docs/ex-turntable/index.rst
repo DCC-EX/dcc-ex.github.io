@@ -23,3 +23,16 @@ Welcome to the home of |EX-TT|, a fully integrated turntable controller for |EX-
   configure
   troubleshooting
   traverser
+
+----
+
+Looking for some help with EX-Turntable?
+========================================
+
+To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates:
+
+.. rst-class:: githublink
+
+  `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
+
+|

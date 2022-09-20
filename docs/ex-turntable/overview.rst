@@ -9,10 +9,14 @@ Overview
 |tinkerer|
 
 .. sidebar:: 
-
+  
   .. contents:: On this page
     :depth: 2
     :local:
+
+  .. rst-class:: githublink
+
+    `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
 
 What is EX-Turntable?
 =====================

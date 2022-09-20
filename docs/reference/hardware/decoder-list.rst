@@ -14,7 +14,11 @@ As a result, we've started compiling a list of decoders that we've experienced w
 
 The table below is a growing list of multifunction decoders we've had reasons to support or test for ourselves with various supporting information, and a rating from one to three stars on how easy it is to use and program them.
 
-If you wish to add to this list, please fill out the `DCC Decoder Feedback <https://github.com/DCC-EX/dcc-ex.github.io/issues/new/choose/>`_ form and provide the details as per the table below.
+If you wish to add to this list, please fill out the DCC Decoder Feedback form and provide the details as per the table below.
+
+.. rst-class:: dcclink
+
+  `DCC Decoder Feedback <https://github.com/DCC-EX/dcc-ex.github.io/issues/new/choose/>`_
 
 * Brand - The brand/manufacturer of the decoder.
 * Model - The specific model or part number of the decoder.

@@ -7,7 +7,7 @@ Configuration options
 **********************
 
 
-|tinkerer| |githublink-ex-turntable|
+|tinkerer| |githublink-ex-turntable-button|
 
 .. sidebar::
 

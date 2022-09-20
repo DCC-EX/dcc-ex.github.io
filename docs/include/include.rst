@@ -176,5 +176,10 @@
 ..
 .. |githublink-ex-turntable| raw:: html
 
-   <a class="githublink" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature,  or request help">Bug/Feature/Support Requests</a>
+   <a class="githublink" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help">Bug/Feature/Support Requests</a>
+..
+.. |githublink-ex-turntable-button| image:: /_static/images/buttons/github-bug.png
+   :alt: Create a bug report, request a new feature, or request help
+   :scale: 40%
+   :target: https://github.com/DCC-EX/Turntable-EX/issues/new/choose
 ..

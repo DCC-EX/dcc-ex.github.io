@@ -13,6 +13,10 @@ Troubleshooting EX-Turntable
   .. contents:: On this page
     :depth: 1
     :local:
+  
+  .. rst-class:: githublink
+
+    `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
 
 Troubleshooting common EX-Turntable issues
 ===========================================

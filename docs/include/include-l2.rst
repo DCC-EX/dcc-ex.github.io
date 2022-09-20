@@ -95,3 +95,7 @@
 
    <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#engineer">Engineer</a>
 ..
+.. |githublink-ex-turntable-button2| raw:: html
+
+   <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../../_static/images/buttons/github-bug.png" style="width: 135.6px; height: 36.0px;" /></a>
+..

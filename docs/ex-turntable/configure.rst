@@ -6,11 +6,8 @@
 Configuration options
 **********************
 
-.. rst-class:: githublink-right
 
-  `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
-
-|tinkerer|
+|tinkerer| |githublink-ex-turntable|
 
 .. sidebar::
 

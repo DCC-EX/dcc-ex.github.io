@@ -118,4 +118,8 @@ Style Guidelines
 
   * Line break/new line use **\|br\|**
   * Non-breaking space use **\|_\|**
+  * Blank line use **\|** on its own line
   * Paragraph break that a 'float right' element must not be placed before a point use **\|force-break\|**  |br| useful if the 'float right' element is being placed beside another 'float right' element, rather than below.
+
+* To add a horizontal line, use **\-\-\-\-** (four hypens) on its own line
+* 

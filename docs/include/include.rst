@@ -172,3 +172,9 @@
 
     :doc:`Station Mode </reference/glossary>`
 ..
+.. ...............................................
+..
+.. |githublink-ex-turntable| raw:: html
+
+   <a class="githublink" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature,  or request help">Bug/Feature/Support Requests</a>
+..

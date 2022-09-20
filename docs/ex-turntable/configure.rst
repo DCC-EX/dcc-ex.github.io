@@ -6,17 +6,14 @@
 Configuration options
 **********************
 
-|tinkerer|
+
+|tinkerer| |githublink-ex-turntable|
 
 .. sidebar::
 
   .. contents:: On this page
     :depth: 1
     :local:
-
-  .. rst-class:: githublink
-
-    `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
 
 |EX-TT| has a number of different configuration options available to customise the behaviour to suit your needs.
 

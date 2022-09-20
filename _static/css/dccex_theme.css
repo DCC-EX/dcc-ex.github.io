@@ -406,6 +406,10 @@ div#on-this-page p {
   margin-bottom: 6px !important;
 }
 
+div#on-this-page {
+  margin-bottom: 10px !important;
+}
+
 /* sidebars */
 .rst-content .sidebar {
   padding: 12px 24px 12px 24px !important;

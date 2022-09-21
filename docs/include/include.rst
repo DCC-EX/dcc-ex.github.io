@@ -180,6 +180,6 @@
 ..
 .. |githublink-ex-turntable-button| image:: /_static/images/buttons/github-bug.png
    :alt: Create a bug report, request a new feature, or request help
-   :scale: 40%
+   :scale: 30%
    :target: https://github.com/DCC-EX/Turntable-EX/issues/new/choose
 ..

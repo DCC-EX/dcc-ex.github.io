@@ -427,4 +427,5 @@ div.rst-footer-buttons {
   background: #00a3b9ff;
   padding: 10px;
   border-radius: 10px;
+  transform: translateX(50%);
 }

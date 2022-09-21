@@ -29,10 +29,10 @@ Welcome to the home of |EX-TT|, a fully integrated turntable controller for |EX-
 Looking for some help with EX-Turntable?
 ========================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates:
+To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
 
-.. rst-class:: githublink
+|githublink-ex-turntable-button|
 
-  `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
+.. tip:: 
 
-|
+  Keep an eye out for the same button at the top of the other pages.

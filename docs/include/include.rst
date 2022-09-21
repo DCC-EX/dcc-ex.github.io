@@ -183,3 +183,8 @@
    :scale: 30%
    :target: https://github.com/DCC-EX/Turntable-EX/issues/new/choose
 ..
+.. |githublink-ex-dccinspector-button| image:: /_static/images/buttons/github-bug.png
+   :alt: Create a bug report, request a new feature, or request help
+   :scale: 30%
+   :target: https://github.com/DCC-EX/DCCInspector-EX/issues/new/choose
+..

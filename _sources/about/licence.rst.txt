@@ -20,9 +20,11 @@ Attributions
 
 
 * We would like to thank Alex Leão of Locontrol who as a personal favour created our comfort level icons
-* Puzzle icon by Satawat Foto Anukul - https://freeicons.io/profile/103766
+* Puzzle icon by `Satawat Foto Anukul <https://freeicons.io/profile/103766>`_ on https://freeicons.io
 * Announcement icon by `ColourCreatype <https://freeicons.io/profile/5790>`_ on https://freeicons.io
 * Download Icon by `master mind <https://freeicons.io/profile/229456>`_ on https://freeicons.io
 * Books icon by `www.wishforge.games <https://freeicons.io/profile/2257>`_ on https://freeicons.io
 * Control Icon by `i2c icon <https://freeicons.io/profile/129933>`_ on https://freeicons.io
-* Contributing Icon by `Chanut is Industries <https://freeicons.io/profile/135331>`_ on https://freeicons.io">freeicons.io
+* Contributing Icon by `Chanut is Industries <https://freeicons.io/profile/135331>`_ on https://freeicons.io
+* Bug Icon by `Fasil <a href="https://freeicons.io/profile/722">`_ on  https://freeicons.io
+

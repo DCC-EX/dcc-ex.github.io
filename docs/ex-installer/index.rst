@@ -24,3 +24,16 @@ To make it as simple as possible we have created the |EX-I| app.
 
     installing
     testing
+
+----
+
+Looking for some help with EX-Installer?
+========================================
+
+To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+
+|githublink-ex-installer-button|
+
+.. tip:: 
+
+  Keep an eye out for the same button at the top of the other pages.

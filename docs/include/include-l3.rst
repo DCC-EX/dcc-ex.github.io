@@ -101,5 +101,9 @@
 ..
 .. |githublink-ex-dccinspector-button2| raw:: html
 
-   <a href="https://github.com/DCC-EX/DCCInspector-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="./_static/images/buttons/github-bug.png" style="width: 178px; height: 36.0px;" /></a>
+   <a href="https://github.com/DCC-EX/DCCInspector-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../../../_static/images/buttons/github-bug.png" style="width: 178px; height: 36.0px;" /></a>
+..
+.. |githublink-ex-webthrottle-button2| raw:: html
+
+   <a href="https://github.com/DCC-EX/WebThrottle-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../../../_static/images/buttons/github-bug.png" style="width: 178px; height: 36.0px;" /></a>
 ..

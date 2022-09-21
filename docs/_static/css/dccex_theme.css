@@ -425,10 +425,15 @@ div#on-this-page {
     position: fixed;
     bottom:5px;
     width:350px;
-    background: #c9c9c990;
+    background: #c9c9c999;
     padding: 10px; 
     border-radius: 10px;
+    border-color: white !important;
+    border: 4px solid;
     transform: translateX(50%);
+  }
+  footer {
+    padding-bottom: 40px;
   }
 }
 

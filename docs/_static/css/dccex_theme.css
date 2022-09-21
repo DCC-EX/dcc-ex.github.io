@@ -421,7 +421,7 @@ div#on-this-page {
 /* *************************************** */
 
 div.rst-footer-buttons {
-  position:absolute;
+  position: fixed;
   right: 33%;
   bottom:10px;
 }

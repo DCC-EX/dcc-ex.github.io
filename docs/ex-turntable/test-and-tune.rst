@@ -6,7 +6,7 @@
 Testing, Tuning, and Control
 *****************************
 
-|tinkerer|
+|tinkerer| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
 
@@ -14,10 +14,6 @@ Testing, Tuning, and Control
     :depth: 2
     :local:
   
-  .. rst-class:: githublink
-
-    `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
-
 Ex-Turntable commands
 =====================
 

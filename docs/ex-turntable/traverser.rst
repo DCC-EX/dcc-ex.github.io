@@ -7,7 +7,7 @@
 Traversers and Limited Rotation Turntables
 *******************************************
 
-|tinkerer|
+|tinkerer| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
 
@@ -15,10 +15,6 @@ Traversers and Limited Rotation Turntables
     :depth: 1
     :local:
   
-  .. rst-class:: githublink
-
-    `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
-
 Overview
 =========
 

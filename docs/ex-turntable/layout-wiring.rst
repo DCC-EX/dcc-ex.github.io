@@ -6,17 +6,13 @@
 Layout Connections and Wiring
 ******************************
 
-|tinkerer|
+|tinkerer| |githublink-ex-turntable-button2|
 
 .. sidebar::
 
   .. contents:: On this page
     :depth: 1
     :local:
-
-  .. rst-class:: githublink
-
-    `Bug/Feature/Support Requests <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_
 
 On this page we hope to outline various different ways to connect your turntable to |EX-TT| and your layout to ensure correct DCC phase alignment with the surrounding tracks.
 

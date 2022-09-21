@@ -416,3 +416,12 @@ div#on-this-page {
 .rst-content .sidebar {
   padding: 12px 24px 12px 24px !important;
 }
+
+
+/* *************************************** */
+
+div.rst-footer-buttons {
+  position:absolute;
+  right: 33%;
+  bottom:10px;
+}

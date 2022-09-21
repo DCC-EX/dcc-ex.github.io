@@ -9,7 +9,7 @@
 Using the Installer 
 *******************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |githublink-ex-installer-button2|
 
 .. sidebar::
 

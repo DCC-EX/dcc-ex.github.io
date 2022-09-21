@@ -422,10 +422,9 @@ div#on-this-page {
 
 div.rst-footer-buttons {
   position: fixed;
-  bottom:10px;
-  width:70%;
-  max-width: 900px;
-  background: white;
-  padding-top: 10px;
-  padding-right:30px
+  bottom:5px;
+  width:350px;
+  background: #00a3b9ff;
+  padding: 10px;
+  border-radius: 10px;
 }

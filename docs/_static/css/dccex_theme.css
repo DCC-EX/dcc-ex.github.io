@@ -420,12 +420,20 @@ div#on-this-page {
 
 /* *************************************** */
 
-div.rst-footer-buttons {
-  position: fixed;
-  bottom:5px;
-  width:350px;
-  background: #c9c9c985;
-  padding: 10px;
-  border-radius: 10px;
-  transform: translateX(50%);
+@media not screen and (max-width: 900px) {
+  div.rst-footer-buttons {
+    position: fixed;
+    bottom:5px;
+    width:350px;
+    background: #c9c9c990;
+    padding: 10px; 
+    border-radius: 10px;
+    transform: translateX(50%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  div.rst-footer-buttons {
+    display:block;
+  }
 }

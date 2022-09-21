@@ -178,8 +178,19 @@
 
    <a class="githublink" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help">Bug/Feature/Support Requests</a>
 ..
-.. |githublink-ex-turntable-button| image:: /_static/images/buttons/github-bug.png
-   :alt: Create a bug report, request a new feature, or request help
-   :scale: 30%
-   :target: https://github.com/DCC-EX/Turntable-EX/issues/new/choose
+.. |githublink-ex-turntable-button| raw:: html
+
+   <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 196px; height: 40px;" /></a>
+..
+.. |githublink-ex-dccinspector-button| raw:: html
+
+   <a href="https://github.com/DCC-EX/DCCInspector-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 196px; height: 40px;" /></a>
+..
+.. |githublink-ex-webthrottle-button| raw:: html
+
+   <a href="https://github.com/DCC-EX/WebThrottle-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 196px; height: 40px;" /></a>
+..
+.. |githublink-ex-installer-button| raw:: html
+
+   <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 196px; height: 40px;" /></a>
 ..

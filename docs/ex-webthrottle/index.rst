@@ -154,3 +154,10 @@ Going Further / Developing
 If you want to really delve into how this works and help us improve it with your comments or your development skills, please contact us.
 
 To load the Chrome DevTools to look at logging and be able to manually enter "write" commands for testing, click on the Menu (the 3 vertical dots in the upper right hand corner of the Chrome Window), then select "more tools" and then "Developer Tools". Or you can just hit "Ctrl-Shift-I".
+
+Looking for some help with EX-WebThrottle?
+==========================================
+
+To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+
+|githublink-ex-webthrottle-button|

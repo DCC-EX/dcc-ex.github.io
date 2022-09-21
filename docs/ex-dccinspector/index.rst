@@ -27,3 +27,10 @@ EX-DCCInspector
 .. rst-class:: dcclink
 
    `EX-DCCInspector Github Repository <https://github.com/DCC-EX/DCCInspector-EX>`_
+
+Looking for some help with EX-DCCInspector?
+===========================================
+
+To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+
+|githublink-ex-dccinspector-button|

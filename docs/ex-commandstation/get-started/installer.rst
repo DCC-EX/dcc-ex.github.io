@@ -75,7 +75,7 @@ Requirements (for installing)
 
 * You will be presented with the following screen...
 
-1. The EX-Installer Window
+3. The EX-Installer Window
 ==========================
 
 .. warning:: **Wait!**

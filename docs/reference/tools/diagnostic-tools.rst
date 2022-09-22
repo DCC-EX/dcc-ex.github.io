@@ -25,7 +25,7 @@ There are many tools to help you operate your layout and find issues with your t
  
 
 Sniffer vs. Analyzer
-=====================
+====================
 
 Sniffer
 ----------
@@ -118,7 +118,7 @@ Connect directly to the Signal output (enable pin) of the Arduino CS
 Easy! You don't need an interface since you will bypass the track and connect to the Arduino signal pins that are already at 5V (or 3.3V for some Teensy's) and seeing only positive going pulses. You jumper wires directly to your command station logic-level direction signal pin to the input pin on your sniffer and from GND to GND on both devices. (DO NOT WIRE TO THE MOTOR BOARD OUTPUTS!!) See the  :doc:`EX-DCCInspector </download/ex-dccinspector>` download page for which pins to use.
 
 Connect to the track
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 With this option, you can connect to anywhere on your track. Wiring can be temporary with alligator clips. In order to connect directly to the track, we need something that can isolate the track voltage from your sniffer, rectify the DCC signal so we just get the positive (or negative) going pulses, and level shift the track voltage to a safe 5 Volts to connect to an Arduino. It turns out a diode, a resistor and an optoisolator (aka optocoupler) are all you need for the job! However, to do it right, we do recommend a few other components.
 
@@ -203,8 +203,6 @@ https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/
 
 and HERE:
 https://wakwak2popo.wordpress.com/2021/01/28/stand-alone-dcc-diagnostics/
-
-
 
 Logic Analyzer/Decoder
 =========================

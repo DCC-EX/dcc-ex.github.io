@@ -352,7 +352,6 @@ Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
 * ``ACTIVATE:`` (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)
 * ``>`` = End DCC-EX command
 
-
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
 Defining (Setting up) a Turnout

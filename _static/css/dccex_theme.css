@@ -11,14 +11,14 @@ h1, .h1 {
 h2, .h2 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   color: #00353d !important;
-  font-size: 160% !important;
+  font-size: 190% !important;
   text-shadow: 3px 3px #00a3b915;
 }
 
 h3, .h3 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   color: #00353d !important;
-  font-size: 150% !important;
+  font-size: 160% !important;
   font-style: italic !important;
 }
 
@@ -30,8 +30,14 @@ h4, .h4 {
 
 h5, .h5 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  color: #00353d !important;
-  font-size: 120% !important;
+  color: #00a3b9ff !important;
+  font-size: 110% !important;
+}
+
+h6, .h6 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  color: #00a3b9ff !important;
+  font-size: 90% !important;
   font-style: italic !important;
 }
 
@@ -40,7 +46,8 @@ h5, .h5 {
 }
 
 .wy-nav-top {
-  background:#00a3b9ff !important; 
+  background:#
+  font-size: 80% !important; !important; 
 }
 
 .wy-nav-top a {
@@ -434,11 +441,13 @@ div#on-this-page {
   }
   footer {
     padding-bottom: 40px;
+    font-size: 80% !important;
   }
 }
 
 @media screen and (max-width: 900px) {
   div.rst-footer-buttons {
     display:block;
+    font-size: 80% !important;
   }
 }

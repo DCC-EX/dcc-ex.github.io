@@ -1,8 +1,8 @@
-name: Docs - flash62au-restruct branch (manual)
+name: Docs - (manual)
 
 on:
   workflow_dispatch:
-    branches: [ flash62au-restruct ]
+    branches: [ sphinx ]
 
 jobs:
   build:

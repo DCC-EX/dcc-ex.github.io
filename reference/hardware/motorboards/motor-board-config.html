@@ -21,6 +21,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -550,11 +551,11 @@
 </div>
 <p>In order to calculate the current, we need to know the “Volts per Amp” reported by the motor board current sense circuit. For example, the Arduino Motor Shield, using the L298 dual H-Bridge, has a special circuit that gives us 1.65V/A (1.65 Volts per Amp) reported. In theory, that means this board would send 1.65V to our Arduino analog sense pin when 1A of current was flowing from the motor board. When 2A was flowing, we should see 3.3V on our sense pin.</p>
 <p>The Arduino has an ADC (Analog to Digital Converter) that reads this analog voltage, samples it, and converts it to a digital reading. Arduino pins have a 10 bit resolution, which means it can hold a maximum value of 1024, with current expressed as a number from 0 to 1023. Therefore, we need a senseFactor constant to help us convert the raw Arduino pin reading to a relevant current reading in milliAmps. Here is the formula we use to find this constant for a particular motor board:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">senseFactor</span> <span class="o">=</span> <span class="p">((</span><span class="mi">5</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span><span class="o">/</span><span class="n">Board</span> <span class="n">Volts</span><span class="o">/</span><span class="n">Amp</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">senseFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="mi">5</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span><span class="o">/</span><span class="n">Board</span><span class="w"> </span><span class="n">Volts</span><span class="o">/</span><span class="n">Amp</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The Arduino analog pin can go from 0 to 5V, and has 1024 possible levels, so we divide 5 by 1024, then divide by the V/A figure from the motor board current sense output, then multiply it by 1000 to make the number easier to work with. From our example of the Arduino motor shield above and its published 1.65V/A, we can compute the senseFactor as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">senseFactor</span> <span class="o">=</span> <span class="p">((</span><span class="mi">5</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span><span class="o">/</span><span class="mf">1.65</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span> <span class="o">=</span> <span class="mf">2.96</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">senseFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="mi">5</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span><span class="o">/</span><span class="mf">1.65</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.96</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You may notice that we actually use 2.99 in our code. You caught us! Through experimentation and measurement, we tweak these values to be more accurate. Nothing is ever 100% as reported in a data sheet.</p>

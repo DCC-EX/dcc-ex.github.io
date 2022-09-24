@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -454,7 +455,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <h3>Controlling servos for turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this heading"></a></h3>
 <p>The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in <a class="reference internal" href="../glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout within the CommandStation.</p>
 <p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts are defined with the following syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">pin</span><span class="p">,</span> <span class="n">active_angle</span><span class="p">,</span> <span class="n">inactive_angle</span><span class="p">,</span> <span class="n">profile</span> <span class="p">[,</span> <span class="s">&quot;description&quot;</span><span class="p">])</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The valid parameters are:</p>
@@ -467,7 +468,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <li><p>description = A human-friendly description of the turnout that will appear in WiThrottle apps and <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>. Note that this must be enclosed in quotes “”.</p></li>
 </ul>
 <p>An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="n">Slow</span><span class="p">,</span> <span class="s">&quot;Example slow turnout definition&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout definition&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -489,8 +490,8 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <p>The SERVO and SERVO2 directives allow for servos to be used in various automations within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
 <p>Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> automations.</p>
 <p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, these are defined with the following syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">profile</span><span class="p">)</span>
-<span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">)</span><span class="w"></span>
+<span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The valid parameters are:</p>
@@ -502,13 +503,13 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 </ul>
 <p>As an example, consider a lineside worker that needs to be moved away from the track when a train approaches, which is controlled by an infrared sensor.</p>
 <p>The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a sensor attached to VPin 164 (first pin on the first MCP23017):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="n">Fast</span><span class="p">)</span>
-<span class="n">DONE</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w"></span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="n">Fast</span><span class="p">)</span><span class="w"></span>
+<span class="n">DONE</span><span class="w"></span>
 
-<span class="n">AFTER</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Slow</span><span class="p">)</span>
-<span class="n">DONE</span>
+<span class="n">AFTER</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w"></span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">)</span><span class="w"></span>
+<span class="n">DONE</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).</p>
@@ -528,7 +529,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <p>If connecting the anode (positive) side of the LED to the PWM pin, the cathode (negative) side connects to the ground pin, and you do not need a current limiting resistor in this scenario.</p>
 <p>If connecting the cathode (negative) side of the LED to the PWM pin, the anode (positive) side connects to the V+ pin of the PCA9685, and you will require a 330ohm current limiting resistor.</p>
 <p>You will need to add this line to “mySetup.h” for each LED you wish to configure:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">OnValue</span><span class="p">,</span><span class="n">OffValue</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">OnValue</span><span class="p">,</span><span class="n">OffValue</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The parameters required are:</p>
@@ -539,16 +540,16 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 </ul>
 <p>Here are some examples:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// An LED with anode (positive) to PWM pin set for full intensity when turned on</span>
-<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">// An LED with cathode (negative) to PWM pin set for full intensity when turned on</span>
-<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">// An LED with anode (positive) to PWM pin set for half intensity when turned on</span>
-<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">// An LED with anode (positive) to PWM pin set for full intensity turned on, and half intensity when turned off</span>
-<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
+<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -558,7 +559,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <p>An output is defined by using the <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> command. Refer to <a class="reference internal" href="../software/command-reference.html#outputs-dio-pin-commands"><span class="std std-ref">Outputs (DIO Pin) Commands</span></a> for further information on this command.</p>
 <p>This command will associate the provided output ID with the LED connected to the VPin as defined in the configuration commands in the section above.</p>
 <p>To define an output with ID 101 to match the LED connected to VPin 101, add this line to “mySetup.h”:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;Z 101 101 0&gt;&quot;</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;Z 101 101 0&gt;&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

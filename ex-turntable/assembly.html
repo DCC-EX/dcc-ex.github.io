@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -709,10 +710,10 @@ Turntable homed successfully
 <p>Before continuing, refer to the file “myHal.cpp_example.txt” included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software, and note the following.</p>
 <p>At the top of the file there are a number of lines beginning with “#include”:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Include devices you need.</span>
-<span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;IO_HCSR04.h&quot;    // Ultrasonic range sensor</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;IO_VL53L0X.h&quot;   // Laser time-of-flight sensor</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;IO_DFPlayer.h&quot;  // MP3 sound player</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_HCSR04.h&quot;</span><span class="c1">    // Ultrasonic range sensor</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_VL53L0X.h&quot;</span><span class="c1">   // Laser time-of-flight sensor</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="c1">  // MP3 sound player</span><span class="cp"></span>
 <span class="c1">//#include &quot;IO_TurntableEX.h&quot;   // EX-Turntable turntable controller</span>
 </pre></div>
 </div>
@@ -722,7 +723,7 @@ Turntable homed successfully
 <span class="c1">// The following directive defines a EX-Turntable turntable instance.</span>
 <span class="c1">//=======================================================================</span>
 <span class="c1">// TurntableEX::create(VPIN, Number of VPINs, I2C Address)</span>
-  <span class="c1">//</span>
+<span class="w">  </span><span class="c1">//</span>
 <span class="c1">// The parameters are:</span>
 <span class="c1">//   VPIN=600</span>
 <span class="c1">//   Number of VPINs=1 (Note there is no reason to change this)</span>
@@ -735,24 +736,24 @@ Turntable homed successfully
 </div>
 <p>If you don’t have an existing “myHal.cpp” file, then follow these steps to create a new one: <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a>. Note that you don’t need to worry about copying or providing device driver files, as these are already included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
 <p>Copy and paste the relevant lines from the “myHal.cpp_example.txt” file as above, which should result in the following content in your new “myHal.cpp” file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;IO_TurntableEX.h&quot;   // EX-Turntable turntable controller</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_TurntableEX.h&quot;</span><span class="c1">   // EX-Turntable turntable controller</span><span class="cp"></span>
 
-<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">//=======================================================================</span>
-  <span class="c1">// The following directive defines a EX-Turntable turntable instance.</span>
-  <span class="c1">//=======================================================================</span>
-  <span class="c1">// TurntableEX::create(VPIN, Number of VPINs, I2C Address)</span>
-  <span class="c1">//</span>
-  <span class="c1">// The default parameters are:</span>
-  <span class="c1">//   VPIN=600</span>
-  <span class="c1">//   Number of VPINs=1 (Note there is no reason to change this)</span>
-  <span class="c1">//   I2C address=0x60</span>
-  <span class="c1">//</span>
-  <span class="c1">// Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//=======================================================================</span>
+<span class="w">  </span><span class="c1">// The following directive defines a EX-Turntable turntable instance.</span>
+<span class="w">  </span><span class="c1">//=======================================================================</span>
+<span class="w">  </span><span class="c1">// TurntableEX::create(VPIN, Number of VPINs, I2C Address)</span>
+<span class="w">  </span><span class="c1">//</span>
+<span class="w">  </span><span class="c1">// The default parameters are:</span>
+<span class="w">  </span><span class="c1">//   VPIN=600</span>
+<span class="w">  </span><span class="c1">//   Number of VPINs=1 (Note there is no reason to change this)</span>
+<span class="w">  </span><span class="c1">//   I2C address=0x60</span>
+<span class="w">  </span><span class="c1">//</span>
+<span class="w">  </span><span class="c1">// Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.</span>
 
-  <span class="n">TurntableEX</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="w">  </span><span class="n">TurntableEX</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:</p>

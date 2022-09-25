@@ -10,9 +10,9 @@ i2c Devices
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 With the advent of the Hardware Abstraction Layer (HAL), |EX-CS| now has the capability for
 support for new I/O devices to be added without any change to the base software.  By I/O

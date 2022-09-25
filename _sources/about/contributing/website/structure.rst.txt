@@ -10,9 +10,9 @@ Folder and Page Structure
 
 .. sidebar::
 
-   .. contents:: On this page
-      :depth: 4
-      :local:
+  .. contents:: On this page
+    :depth: 4
+    :local:
 
 This page aims to describe the preferred general structure of how files (pages, images, downloads etc.) should be arranged and named, along with the preferred structure of the individual pages.
 
@@ -208,8 +208,8 @@ Pages with multiple headings should generally have a Table of Contents.  The dep
   .. sidebar::
 
     .. contents:: On this page
-        :depth: 4
-        :local:
+      :depth: 4
+      :local:
 
 ----
 

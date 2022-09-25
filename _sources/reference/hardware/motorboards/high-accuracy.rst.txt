@@ -10,9 +10,9 @@ High Accuracy Waveform Mode
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 Do you need it? Most likely, you don't. But if you run into a problem with a particular decoder and all the usual settings don't help, you may want to try this mode. We have found that some older decoders do not adhere to the NMRA specification tolerances. They can fail to read bits that are within the proper range. While rare, this could occur. The High Accuracy mode makes the waveform, the pulse train of 1's and 0's, even tighter to the nominal values in the specification.
 

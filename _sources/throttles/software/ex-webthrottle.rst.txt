@@ -6,9 +6,9 @@ EX-WebThrottle
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 |conductor| |tinkerer| |engineer|
 

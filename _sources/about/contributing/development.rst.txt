@@ -10,9 +10,9 @@ Contributing to the Hardware & Software
 
 .. sidebar:: 
 
-   .. contents:: On this page
-      :depth: 2
-      :local:
+  .. contents:: On this page
+    :depth: 2
+    :local:
 
 This page aims to outline what's required for those who wish to contribute to software development.
 

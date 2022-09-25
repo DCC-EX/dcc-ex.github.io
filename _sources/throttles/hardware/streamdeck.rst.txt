@@ -8,9 +8,9 @@ Elgato Stream Deck
 
 .. sidebar:: 
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Tinkerer Level
 

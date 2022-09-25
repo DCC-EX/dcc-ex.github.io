@@ -10,9 +10,9 @@ EX-CommandStation
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+     :depth: 1
+     :local:
 
 Welcome to the |EX-CS| download page. You have several choices:
 

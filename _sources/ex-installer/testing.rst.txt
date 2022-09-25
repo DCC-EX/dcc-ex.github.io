@@ -11,9 +11,9 @@ Testing your installation
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 Using the Arduino IDE Serial Monitor
 -------------------------------------

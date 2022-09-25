@@ -10,9 +10,9 @@ Diagnostics ``<D ACK>`` Command
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 - :ref:`reference/tools/diagnostic-d-ack-command:\<D ACK ON\>` - Turn on Loco acknowledgement diagnostics
 - :ref:`reference/tools/diagnostic-d-ack-command:\<D ACK LIMIT mA\>` - Override ACK processing mA pulse size

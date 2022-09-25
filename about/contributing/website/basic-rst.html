@@ -21,7 +21,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -582,9 +581,9 @@ source file, define a target:</p>
 <p>There are two recommended table types to use within our website.</p>
 <p>The recommended option for tables that have CSS controlled formatting and are relatively easy to update, use the <code class="docutils literal notranslate"><span class="pre">list-table</span></code> reStructuredText directive.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
-  <span class="nc">:widths:</span> auto
-  <span class="nc">:header-rows:</span> 1
-  <span class="nc">:class:</span> command-table
+  <span class="nc">:widths:</span> <span class="nf">auto</span>
+  <span class="nc">:header-rows:</span> <span class="nf">1</span>
+  <span class="nc">:class:</span> <span class="nf">command-table</span>
 
   <span class="m">*</span> - Heading 1
     <span class="m">-</span> Heading 2
@@ -696,7 +695,7 @@ source file, define a target:</p>
 <p>Including SVG images within reStructuredText is a little more complex than a simple bitmap image, and will require some CSS to be used in addition to including the file. This section will be updated with further details when available.</p>
 <p>To include the SVG file, use the <code class="docutils literal notranslate"><span class="pre">raw::</span> <span class="pre">html</span></code> directive:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">raw</span><span class="p">::</span> html
-  <span class="nc">:file:</span> ../_static/images/image.svg
+  <span class="nc">:file:</span> <span class="nf">../_static/images/image.svg</span>
 </pre></div>
 </div>
 </section>
@@ -717,7 +716,7 @@ source file, define a target:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> svg-override
 
 <span class="p">  ..</span> <span class="ow">raw</span><span class="p">::</span> html
-    <span class="nc">:file:</span> ../_static/images/image.svg
+    <span class="nc">:file:</span> <span class="nf">../_static/images/image.svg</span>
 </pre></div>
 </div>
 <p>You would then need to add an appropriate CSS class to the theme:</p>
@@ -748,9 +747,9 @@ source file, define a target:</p>
 <p>It is also handy to include a small screen shot or preview of the file as well.</p>
 <p>For example, here is the code used to allow people to download the very handy DCC accessory decoder conversion spreadsheet.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> ../../_static/documents/acc_conv_sheet_thumbnail.png
-  <span class="nc">:alt:</span> Accessory conversion sheet thumbnail
-  <span class="nc">:scale:</span> 30%
-  <span class="nc">:align:</span> left
+  <span class="nc">:alt:</span> <span class="nf">Accessory conversion sheet thumbnail</span>
+  <span class="nc">:scale:</span> <span class="nf">30%</span>
+  <span class="nc">:align:</span> <span class="nf">left</span>
 
 <span class="p">..</span> <span class="ow">rst-class</span><span class="p">::</span> dcclink
 

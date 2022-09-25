@@ -21,7 +21,6 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -498,7 +497,7 @@ IF(-SNS1)         // If activie high sensor 1 is triggered
 </ul>
 <p>The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout within the CommandStation.</p>
 <p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts are defined with the following syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">pin</span><span class="p">,</span> <span class="n">active_angle</span><span class="p">,</span> <span class="n">inactive_angle</span><span class="p">,</span> <span class="n">profile</span> <span class="p">[,</span> <span class="s">&quot;description&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>The valid parameters are:</p>
@@ -511,7 +510,7 @@ IF(-SNS1)         // If activie high sensor 1 is triggered
 <li><p>description = A human-friendly description of the turnout that will appear in WiThrottle apps and <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>. Note that this must be enclosed in quotes “”.</p></li>
 </ul>
 <p>An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout definition&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="n">Slow</span><span class="p">,</span> <span class="s">&quot;Example slow turnout definition&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

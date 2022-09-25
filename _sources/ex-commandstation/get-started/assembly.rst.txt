@@ -13,9 +13,9 @@ Initial Assembly
 
 .. sidebar::
 
-  .. contents:: On this page
-    :local:
-    :depth: 1
+   .. contents:: On this page
+      :local:
+      :depth: 1
 
 |image-note|
 

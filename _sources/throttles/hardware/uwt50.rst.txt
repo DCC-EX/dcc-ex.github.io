@@ -8,9 +8,9 @@ TCS UWT-50 (Physical)
 
 .. sidebar:: 
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Train Control Systems (TCS) makes a nice line of physical hardware based controllers. Since they support the |WiThrottle protocol|, they work with the |EX-CS|. Currently, the UWT-50 is the only one we have tested.
 

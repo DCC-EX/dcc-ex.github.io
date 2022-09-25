@@ -21,7 +21,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -735,7 +734,7 @@ lower than 32kHz.</p>
 <h2><a class="toc-backref" href="#id21">Changing the Clock speed</a><a class="headerlink" href="#changing-the-clock-speed" title="Permalink to this heading"></a></h2>
 <p>In <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> the i2c clock speed is normally the highest speed supported by all configured devices.
 It may however be overridden within the mySetup.h or myHal.cpp file, with a command of the form:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="p">.</span><span class="n">forceClock</span><span class="p">(</span><span class="mi">100000</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I2CManager</span><span class="p">.</span><span class="n">forceClock</span><span class="p">(</span><span class="mi">100000</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>(this sets the clock speed to 100kHz.)</p>

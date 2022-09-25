@@ -10,9 +10,9 @@ Schematics
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+     :depth: 1
+     :local:
 
 Mega+WiFi Board
 ==================

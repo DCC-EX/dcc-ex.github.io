@@ -1,8 +1,8 @@
-name: Docs - flash62au-restruct branch (manual)
+name: Docs - (manual)
 
 on:
   workflow_dispatch:
-    branches: [ flash62au-restruct ]
+    branches: [ sphinx ]
 
 jobs:
   build:
@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Requirements
         run: |
+          pip3 install sphinx==5.1.1
           pip3 install sphinx-rtd-theme==1.0.0
           pip3 install sphinx-sitemap
           pip3 install sphinxcontrib-spelling

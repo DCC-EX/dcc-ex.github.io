@@ -11,7 +11,8 @@ Example Objects and Sequences
 .. sidebar:: 
 
    .. contents:: On this page
-      :depth: 2
+     :depth: 2
+     :local:
 
 On this page are a number of examples of |EX-R| sequences that you can lean from.  :doc:`/big-picture/big-picture` section of this web site also contains numerous more complex examples.
 

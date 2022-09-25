@@ -10,9 +10,9 @@ Startup Configuration
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 Sometimes, you will need to configure your |EX-CS| with settings which are not saved by the Command Station when restarted, for example the :ref:`ACK min <reference/tools/diagnostic-d-ack-command:\<D ACK LIMIT mA\>>` for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to `2600µS` to be recognised).
 

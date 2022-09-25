@@ -10,9 +10,9 @@ Stage 6 - Putting it all Together
 
 .. sidebar:: 
 
-   .. contents:: On this page
-      :depth: 2
-      :local:
+  .. contents:: On this page
+    :depth: 2
+    :local:
 
 Stage 6 of our RMFT layout is a simple loop including a single siding for a station, which allows for automated running of up to three trains including automated switching for entering and exiting the station siding.
 

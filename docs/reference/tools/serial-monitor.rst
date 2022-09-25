@@ -8,9 +8,9 @@ Using a Serial Monitor
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 What is a Serial Monitor and Why Do I Need One?
 ================================================

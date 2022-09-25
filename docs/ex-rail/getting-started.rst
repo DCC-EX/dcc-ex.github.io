@@ -10,9 +10,9 @@ Sequences - an Introduction
 
 .. sidebar:: 
 
-   .. contents:: On this page
-      :depth: 4
-      :local:
+  .. contents:: On this page
+    :depth: 4
+    :local:
 
 This page is a limited introduction to the |EX-R| automation sequences.  For more comprehensive information refer to the :doc:`/ex-rail/EX-RAIL-reference` and :doc:`/ex-rail/EX-RAIL-summary` pages.
 

@@ -8,9 +8,9 @@ Documents
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+     :depth: 1
+     :local:
 
 Java Model Railroad Interface JMRI with EX-CommandStation
 =========================================================

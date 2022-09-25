@@ -1,3 +1,4 @@
+.. include:: /include/include-ex-cs.rst
 .. meta::
    :keywords: EX-CommandStation Command Station diagnosing Issues Troubleshooting
 

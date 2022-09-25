@@ -10,9 +10,9 @@ Stage 1 - Running a Train
 
 .. sidebar:: 
 
-   .. contents:: On this page
-      :depth: 2
-      :local:
+  .. contents:: On this page
+    :depth: 2
+    :local:
 
 Throttle options
 ================

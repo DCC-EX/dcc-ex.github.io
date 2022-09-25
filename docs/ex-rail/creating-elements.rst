@@ -10,9 +10,9 @@ Objects - an Introduction
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 First we need the 'objects' that we will use for our automation sequences.
 

@@ -10,9 +10,9 @@ ReStructuredText Basics
 
 .. sidebar::
 
-   .. contents:: On this page
-      :depth: 4
-      :local:
+  .. contents:: On this page
+    :depth: 4
+    :local:
 
 This page aims to describe the basics of using ReStructuredText for the |DCC-EX| documentation/website to enhance the basic text.
 

@@ -10,9 +10,9 @@ WangTongze Board
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 
 AKA: Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board

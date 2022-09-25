@@ -10,9 +10,9 @@ Mega+WiFi Setup
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 **A WiFi EX-CommandStation on one Board**
 

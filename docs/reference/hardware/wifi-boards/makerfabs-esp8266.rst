@@ -10,9 +10,9 @@ Makerfabs ESP8266 WiFi Shield (recommended)
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 We like this board here at |DCC-EX|. It is simple, inexpensive, easy to use, and it works.
 

@@ -10,9 +10,9 @@ Advanced Options
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+    .. contents:: On this page
+        :depth: 1
+        :local:
 
 These pages describe the major supported hardware options for building a |EX-CS|, along with some guidance for some of the unsupported options. They are primarily targeted at |tinkerer-text| and |engineer-text| level.  However there are some options that are suitable for a |conductor-text|.  If however, you identify as a |conductor-text| and only wish to install the recommended hardware we suggest that you look at the simplified :doc:`/ex-commandstation/get-started/index` page.
 

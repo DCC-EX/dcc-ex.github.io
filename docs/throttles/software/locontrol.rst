@@ -8,9 +8,9 @@ Locontrol
 
 .. sidebar:: 
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 .. image:: /_static/images/throttles/icon_ios.png
    :alt: iOS Logo

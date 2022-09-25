@@ -10,7 +10,7 @@ Ethernet Boards
 
 .. sidebar::
 
-  .. contents:: On this page
+   .. contents:: On this page
     :depth: 1
     :local:
 

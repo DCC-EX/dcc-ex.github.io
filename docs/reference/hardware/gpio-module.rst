@@ -10,9 +10,9 @@ i2c GPIO Expander Modules
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+    .. contents:: On this page
+        :depth: 1
+        :local:
 
 GPIO Expander modules, as the name implies, expand the number of General Purpose Input/Output
 pins that you can use for interacting with your railway layout components.

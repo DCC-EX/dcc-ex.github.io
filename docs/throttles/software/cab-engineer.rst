@@ -8,9 +8,9 @@ Cab Engineer: DCC Throttle
 
 .. sidebar:: 
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 **Cab Engineer** is an Android App that uses the |WiThrottle Protocol| to either connect directly to the |EX-CS| or connect to the |JMRI| |WiThrottle Server| via WiFi. If you connect Cab Engineer to |JMRI|, you connect to the computer running |JMRI| via WiFi and connect the |JMRI| computer to the Command Station using a USB cable. If you connect Cab Engineer directly to |EX-CS|, you will to add a WiFi option to your |EX-CS| as explained here: :doc:`/ex-commandstation/get-started/wifi-setup`.
 

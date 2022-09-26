@@ -5,13 +5,25 @@
 .. include:: /include/include-l0.rst
 |donate-button|
 
-*************************
+****************
+Before You Begin
+****************
+
+.. sidebar:: 
+
+  .. contents:: On this page
+    :depth: 2
+    :local:
+
 Choose Your Comfort Level
-*************************
+==========================
 
-Our products are predominately Do-It-Yourself and range in difficulty from very simple to moderately complex. To work out you own personal comfort level, look at the descriptions of the categories below and see which one you most identify with. (A |Conductor-text|, a |Tinkerer-text|, or an |Engineer-text|.)
+Our products are predominately Do-It-Yourself and range in difficulty from very simple to moderately complex. 
 
-To help you navigate this web site the pages are tagged [#tags]_ with one or more of these 'Levels' to help identify its difficulty.  Don't worry, the paths are integrated and you can easily choose a slightly different path at any point. 
+To help you navigate this web site, the pages are all tagged [#tags]_ with one or more of 'Comfort Levels' to help identify the difficulty of the what is described on that page.  (Don't worry, the paths are integrated and you can easily choose a slightly different path at any point.)
+
+To work out your own personal comfort level, look at the descriptions of the levels below and see which one you most identify with. (A |Conductor-text|, a |Tinkerer-text|, or an |Engineer-text|.)
+
 
 ----
 
@@ -21,7 +33,7 @@ To help you navigate this web site the pages are tagged [#tags]_ with one or mor
    :align: right
 
 Conductor
-=========
+---------
 
 |force-break| 
 
@@ -45,7 +57,7 @@ Conductor
    :align: right
 
 Tinkerer
-========
+--------
 
 |force-break|
 
@@ -68,7 +80,7 @@ Tinkerer
    :align: right
 
 Engineer
-========
+--------
 
 |force-break|
 

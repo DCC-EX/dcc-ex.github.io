@@ -17,7 +17,7 @@ WiThrottle
    :scale: 30%
    :align: left
 
-This is an iOS App (with plans for iOS) from the USA. |WiThrottle| is probably the most popular iOS throttle since early on |JMRI| built a |WiThrottle Server| into its program. You can connect WiThrottle to |JMRI| and connect |JMRI| to |EX-CS|, or you if you are not going to use |JMRI|, you can connect directly to the Command Station if you install a WiFi board.
+This is an iOS App from the USA. |WiThrottle| is probably the most popular iOS throttle since early on when |JMRI| built a |WiThrottle Server| into its program. You can connect WiThrottle to |JMRI| and connect |JMRI| to |EX-CS|, or you if you are not going to use |JMRI|, you can connect directly to the Command Station if you install a WiFi board.
 
 Please visit their website: https://www.withrottle.com
 
@@ -31,9 +31,9 @@ Features
 =========
 
 * Supports WiThrottle Protocol
-* Connect to JMRI
-* Connect to |EX-CS| if not using JMRI
-* Connect via WiFi
+* Connects to JMRI
+* Connects to |EX-CS| if not using JMRI
+* Connects via WiFi
 * Read and Write CVs
 
 .. _withrottle-screenshots:
@@ -71,6 +71,11 @@ To use Wifi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:
 * If you are using |Access Point Mode| 
 
   * It should find the |wiThrottle Server| in |JMRI| and automatically connect to it
+
+.. warning:: 
+   :class: warning-float-right
+
+   |wiThrottle Lite| (the free version) does not have the ``Track Power`` function.  You need to purchase the full version.
 
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``

@@ -152,6 +152,10 @@
 
     :doc:`wiThrottle </throttles/software/withrottle>`
 ..
+.. |wiThrottle Lite| replace::
+
+    :doc:`wiThrottle Lite </throttles/software/withrottle>`
+..
 .. |wiThrottle Protocol| replace::
 
     :doc:`wiThrottle Protocol </reference/glossary>`

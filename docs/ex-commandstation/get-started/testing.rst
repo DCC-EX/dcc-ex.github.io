@@ -45,7 +45,7 @@ Using EX-WebThrottle
 Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
-* Connect MAIN Terminal from the motor shield (output A) to your **MAIN track**
+* Connect wires from the MAIN Terminals of the motor shield (output A) to your **MAIN track**
 * Plug in the power supply for the motor shield **only**
 * Reconnect the |EX-CS| to the computer
 * wait for about 30 seconds

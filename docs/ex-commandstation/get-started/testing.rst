@@ -219,6 +219,11 @@ Using wiThrottle (Apple iOS)
 
   * |wiThrottle| should then connect 
 
+.. warning:: 
+   :class: warning-float-right
+
+   |wiThrottle Lite| (the free version) does not have the ``Track Power`` function.  You need to purchase the full version.
+
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``
 

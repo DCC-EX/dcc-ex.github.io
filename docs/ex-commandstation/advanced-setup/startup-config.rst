@@ -19,6 +19,9 @@ Sometimes, you will need to configure your |EX-CS| with settings which are not s
 
 To automatically run commands at start up, a new file can be created called `mySetup.h` to contain these commands.
 
+.. todo:: MEDIUM - Explain how this can be be done using EX-Installer
+
+.. todo:: MEDIUM - Include example of automatically powering up the track
 
 
 Make sure you are running the Arduino IDE

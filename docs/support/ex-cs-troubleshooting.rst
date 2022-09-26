@@ -25,6 +25,37 @@ NOTE: This section is a very rough draft. More coming soon.
 
 There are a lot of optional settings and choices a user can make and sometimes things don't work as you expect them to. If you upload software to the Command Station, connect power to your motor controller and the Command Station and then connect the output to your track and don't see power or your train responding, here are the steps to follow.
 
+Cannot drive a locomotive
+=========================
+
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Symptoms
+    - Common Causes
+  * - Locomotive doesn't respond to throttle settings
+    - | Track power has not been turned on - Issue ``<1>`` in the serial console, or use power button in |Engine Driver| or |JMRi|
+      | Locomotive is on the programming track - Issue ``<1 JOIN>`` in the serial console
+      | Power has not been supplied to the motor shield - Check to ensure power supply is connected securely to the motor shield, is plugged in at the wall, and turned on
+
+Cannot connect to the EX-CommandStation over WiFi
+=================================================
+
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Symptoms
+    - Common Causes
+  * - | CommandStation does not appear in the available WiThrottle server list in |Engine Driver| or |wiThrottle| apps
+      | Manually entering the expected IP address and port does not successfully connect
+    - | CommandStation is configured for Access Point mode, but |Engine Driver| or |wiThrottle| device is connected to a different WiFi network - Connect the device directly the CommandStation's WiFi network
+      | CommandStation is configured for Station Mode and connects to the WiFi network, but |Engine Driver| or |wiThrottle| device is connected to a different WiFi network - Connect the device to the correct WiFi network
+      | WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
+
 Is it Plugged In, Is it Turned On?
 ===================================
 

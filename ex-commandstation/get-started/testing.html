@@ -444,14 +444,14 @@
 <p>Connect Everything:</p>
 <ul class="simple">
 <li><p>Disconnect the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> from the computer (that you used to load the software)</p></li>
-<li><p>Connect the wires from the motor shield to your main track</p></li>
-<li><p>Plug in the power supply for the Moto shield <strong>only</strong></p></li>
+<li><p>Connect wires from the MAIN Terminals of the motor shield (output A) to your <strong>MAIN track</strong></p></li>
+<li><p>Plug in the power supply for the motor shield <strong>only</strong></p></li>
 <li><p>Reconnect the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> to the computer</p></li>
 <li><p>wait for about 30 seconds</p></li>
 </ul>
 <div class="note-float-right-narrow admonition note">
 <p class="admonition-title">Note</p>
-<p>The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.</p>
+<p>The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.</p>
 </div>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/exwebthrottle.jpg"><img alt="EX-WebThrottle" src="../../_images/exwebthrottle.jpg" style="width: 480.0px; height: 351.20000000000005px;" /></a>
@@ -481,7 +481,7 @@
 </ul>
 </li>
 <li><p>Now you are ready to run trains! <br /> <br /></p></li>
-<li><p>Place your loco on the track</p></li>
+<li><p>Place your loco on the <strong>MAIN track</strong>, a loco will NOT run on a programming track</p></li>
 <li><p>Click the <span class="guilabel">Power Slider</span> button to turn on power to your track</p></li>
 <li><p>You should see lights on your Arduino Motor Shield and an indication that your loco has power</p></li>
 <li><p>Next go to the <code class="docutils literal notranslate"><span class="pre">Locomotive</span> <span class="pre">ID</span></code> textbox</p></li>
@@ -500,14 +500,14 @@
 <h3><a class="toc-backref" href="#id5">Using Engine Driver or WiThrottle - Requires WiFi</a><a class="headerlink" href="#using-engine-driver-or-withrottle-requires-wifi" title="Permalink to this heading"></a></h3>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
-<p>The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.</p>
+<p>The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.</p>
 </div>
-<p>Connect Everything</p>
+<p>Connect Everything:</p>
 <ul class="simple">
 <li><p>Disconnect the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> from the computer (that you used to load the software)</p></li>
-<li><p>Connect the wires from the ‘main’ terminals the motor shield to your main track</p></li>
+<li><p>Connect the wires from the ‘MAIN’ terminals of the motor shield (output A) to your MAIN track</p></li>
 <li><p>Plug in the two power supplies (The one for the Arduino and the the one for the motor shield)</p></li>
-<li><p>wait for about 30 seconds</p></li>
+<li><p>wait for about 30 seconds for the Arduino to run through the initial startup sequence</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/throttle_wifi_direct.png"><img alt="WiFi Throttle Direct to CS" class="align-center" src="../../_images/throttle_wifi_direct.png" style="width: 640.0px; height: 292.8px;" /></a>
 <section id="using-engine-driver-android">
@@ -523,7 +523,7 @@
 <li><p>If you have set up your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> in <a class="reference internal" href="../../reference/glossary.html"><span class="doc">Access Point Mode</span></a> (The Recommended approach)</p>
 <ul>
 <li><p>Open the network settings on you phone</p></li>
-<li><p>Change to the network of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p>
+<li><p>Disconnect from your normal network and change to the network of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p>
 <ul>
 <li><p>SSID (Network name): <code class="docutils literal notranslate"><span class="pre">DCCEX_xxxxxx</span></code> <br /> where the x’s are the last 6 digits of your device’ MAC address (unique to each device)</p></li>
 <li><p>Password: <code class="docutils literal notranslate"><span class="pre">PASS_xxxxxx</span></code> <br /> where the x’s are the last 6 digits of your device’ MAC address (same as above)</p></li>
@@ -577,7 +577,7 @@
 <li><p>Click <span class="guilabel">Aquire</span></p></li>
 </ul>
 </li>
-<li><p>Back on the ‘Throttle screen’ you can now use the sliders to move your train.</p></li>
+<li><p>Back on the ‘Throttle screen’ you can now use the sliders to move your train on the MAIN track.</p></li>
 </ul>
 <p>See <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver Page</span></a> for details on how to install and run <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>.</p>
 </section>
@@ -642,7 +642,7 @@
 <li><p>Click the <span class="guilabel">Set</span> button</p></li>
 <li><p>The address should appear in the green box at the top left.</p></li>
 <li><p>Select the ‘Throttle’ tab</p></li>
-<li><p>You can now use the sliders to move your train</p></li>
+<li><p>You can now use the sliders to move your train on the MAIN track</p></li>
 </ul>
 <p>See <a class="reference internal" href="../../throttles/software/withrottle.html"><span class="doc">WiThrottle Page</span></a> for details on how to install and run <a class="reference internal" href="../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>.</p>
 <div class="admonition warning">

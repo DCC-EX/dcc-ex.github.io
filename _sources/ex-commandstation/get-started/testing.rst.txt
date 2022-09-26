@@ -45,15 +45,15 @@ Using EX-WebThrottle
 Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
-* Connect the wires from the motor shield to your main track
-* Plug in the power supply for the Moto shield **only**
+* Connect wires from the MAIN Terminals of the motor shield (output A) to your **MAIN track**
+* Plug in the power supply for the motor shield **only**
 * Reconnect the |EX-CS| to the computer
 * wait for about 30 seconds
 
 .. NOTE:: 
    :class: note-float-right-narrow
 
-   The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
+   The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.
 
 .. figure:: /_static/images/installer/exwebthrottle.jpg
    :alt: EX-WebThrottle
@@ -82,7 +82,7 @@ Connect Everything:
   * You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information |BR| |BR|
 
 * Now you are ready to run trains! |BR| |BR|
-* Place your loco on the track 
+* Place your loco on the **MAIN track**, a loco will NOT run on a programming track 
 * Click the :guilabel:`Power Slider` button to turn on power to your track
 * You should see lights on your Arduino Motor Shield and an indication that your loco has power
 * Next go to the ``Locomotive ID`` textbox 
@@ -105,14 +105,14 @@ Using Engine Driver or WiThrottle - Requires WiFi
 .. NOTE:: 
    :class: note-float-right
 
-   The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
+   The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.
 
-Connect Everything
+Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
-* Connect the wires from the 'main' terminals the motor shield to your main track
+* Connect the wires from the 'MAIN' terminals of the motor shield (output A) to your MAIN track
 * Plug in the two power supplies (The one for the Arduino and the the one for the motor shield)
-* wait for about 30 seconds
+* wait for about 30 seconds for the Arduino to run through the initial startup sequence
 
 .. image:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
@@ -134,7 +134,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 * If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
   
   * Open the network settings on you phone
-  * Change to the network of the |EX-CS|
+  * Disconnect from your normal network and change to the network of the |EX-CS|
   
     * SSID (Network name): ``DCCEX_xxxxxx`` |BR| where the x's are the last 6 digits of your device' MAC address (unique to each device)
     * Password: ``PASS_xxxxxx`` |BR| where the x's are the last 6 digits of your device' MAC address (same as above)
@@ -176,7 +176,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
   * Select ``Short`` or ``Long`` (normally if the address is less than 127, it will automatically assume it is short) 
   * Click :guilabel:`Aquire`
 
-* Back on the 'Throttle screen' you can now use the sliders to move your train.
+* Back on the 'Throttle screen' you can now use the sliders to move your train on the MAIN track.
 
 See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |Engine Driver|.
 
@@ -230,7 +230,7 @@ Using wiThrottle (Apple iOS)
 * Click the :guilabel:`Set` button
 * The address should appear in the green box at the top left.
 * Select the 'Throttle' tab
-* You can now use the sliders to move your train 
+* You can now use the sliders to move your train on the MAIN track
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
 

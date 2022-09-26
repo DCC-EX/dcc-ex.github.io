@@ -21,7 +21,7 @@ Welcome to the home of |EX-TT|, a fully integrated turntable controller for |EX-
   test-and-tune
   layout-wiring
   configure
-  troubleshooting
+  /support/ex-tt-troubleshooting
   traverser
 
 ----

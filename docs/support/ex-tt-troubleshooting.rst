@@ -13,9 +13,6 @@ Troubleshooting EX-Turntable
   .. contents:: On this page
     :depth: 1
     :local:
-  
-Troubleshooting common EX-Turntable issues
-===========================================
 
 You will find resolutions to a number of common issues encountered with |EX-TT| on this page.
 

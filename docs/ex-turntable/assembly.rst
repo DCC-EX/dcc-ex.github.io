@@ -304,7 +304,7 @@ Once the software is loaded successfully on to |EX-TT|, the stepper motor should
 
 If you don't have the magnet installed at this point, or if it is too far from the sensor, |EX-TT| will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.
 
-If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`ex-turntable/troubleshooting:troubleshooting ex-turntable` for further assistance if required.
+If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :ref:`support/ex-tt-troubleshooting:troubleshooting ex-turntable` for further assistance if required.
 
 First start and automatic calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

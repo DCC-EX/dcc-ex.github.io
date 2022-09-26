@@ -161,7 +161,7 @@ Even if you didn't install a WiFi shield, we recommend that this box be checked.
 .. note::
    :class: note-float-right 
 
-   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
+   If you have any difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
 Compile and Upload
 ------------------

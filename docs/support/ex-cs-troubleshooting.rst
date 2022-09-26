@@ -6,9 +6,9 @@
 .. include:: /include/include-l2.rst
 |EX-CS-LOGO|
 
-**************************************
-Diagnosing Issues (Troubleshooting)
-**************************************
+*********************************
+Troubleshooting EX-CommandStation
+*********************************
 
 |conductor| 
 

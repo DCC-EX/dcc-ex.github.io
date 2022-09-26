@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-SUPPORT-LOGO|
    
-*****************
-Contact & Support
-*****************
+***********************************
+Troubleshooting, Contact, & Support
+***********************************
 
 |conductor| |tinkerer| |engineer|
 
@@ -70,3 +70,5 @@ You can also find us on TrainBoard:
 
   contact-us
   create-ticket
+  ex-cs-troubleshooting
+  ex-tt-troubleshooting

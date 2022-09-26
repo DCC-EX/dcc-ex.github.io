@@ -49,7 +49,7 @@ Our easy to use, do-it-yourself, affordable products are based on off-the-shelf 
     * - |EX-DCCI-LOGO-SMALL| 
       -  A DCC packet sniffing tool
 
-If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Choose Your Comfort Level <levels>` which will help guide you through this web site.
+If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Before You Begin <levels>` page to choose your comfort level, which will help guide you through this web site.
 
 ..
 

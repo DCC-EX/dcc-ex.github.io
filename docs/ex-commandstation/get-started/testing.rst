@@ -222,7 +222,7 @@ Using wiThrottle (Apple iOS)
 .. warning:: 
    :class: warning-float-right
 
-   |wiThrottle Lite| (the free version) does not have the ``Track Power`` function.  You need to purchase the full version.
+   |wiThrottle Lite| (the free version) does not have the ``Track Power`` function. You will either need to purchase the full version, or you can :doc:`add a startup command </ex-commandstation/advanced-setup/startup-config>`. 
 
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``

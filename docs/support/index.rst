@@ -2,22 +2,38 @@
 .. include:: /include/include-l1.rst
 |EX-SUPPORT-LOGO|
    
-***********************************
-Troubleshooting, Contact, & Support
-***********************************
+****************************************
+FAQ, Troubleshooting, Contact, & Support
+****************************************
 
 |conductor| |tinkerer| |engineer|
 
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
+
+Frequently Answered Questions and Troubleshooting
+=================================================
+
+We've done our best to capture a lot of common questions we've provided answers to via our various support methods, along with providing some troubleshooting tips on the various issues you may encounter with our products.
+
+The following pages provide these FAQs and troubleshooting guides, and the following sections on this page outline how to get help if these don't resolve the issue.
+
+.. toctree::
+  :maxdepth: 1
+
+  ex-cs-troubleshooting
+  ex-tt-troubleshooting
+
+Contact and Support options
+===========================
 
 There are several different ways to get in contact with the team and obtain help and support for |DCC-EX|.
 
 Preferred option: Discord
-==========================
+-------------------------
 
 The best way to reach us is on our Discord server. Usually there is a team member online to help with your issue, and if not you'll get a response within a few hours.
 
@@ -36,7 +52,7 @@ For those who wish to contribute to the project, this is by far the best option 
     <center><iframe src="https://ptb.discordapp.com/widget?id=713189617066836079&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></center><br>
 
 Raise a support ticket
-=======================
+----------------------
 
 The next best way to get our attention is to fill out a support ticket:
 
@@ -48,7 +64,7 @@ The next best way to get our attention is to fill out a support ticket:
 You can also send an email to support@dcc-ex.com.
 
 Other options
-==============
+-------------
 
 We try to follow FaceBook and JMRI groups, but there are just too many separate groups to see and respond to all the messages.
 
@@ -70,5 +86,3 @@ You can also find us on TrainBoard:
 
   contact-us
   create-ticket
-  ex-cs-troubleshooting
-  ex-tt-troubleshooting

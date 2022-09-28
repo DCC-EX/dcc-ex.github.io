@@ -211,7 +211,7 @@ Once you have configured your options, press this button to compile all the sour
 
 .. note:: 
 
-   If you have any difficulties check the :doc:`/ex-commandstation/get-started/diagnosing-issues` page for assistance.
+   If you have any difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
 ----
 

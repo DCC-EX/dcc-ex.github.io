@@ -6,27 +6,75 @@
 .. include:: /include/include-l2.rst
 |EX-CS-LOGO|
 
-**************************************
-Diagnosing Issues (Troubleshooting)
-**************************************
+*****************************************
+EX-CommandStation FAQ and Troubleshooting
+*****************************************
 
 |conductor| 
 
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 
-This is the "Help, it's not working!" page.
+Frequently Answered Questions
+=============================
 
-NOTE: This section is a very rough draft. More coming soon.
+This is a list of common questions that we answer by our various support channels:
 
-There are a lot of optional settings and choices a user can make and sometimes things don't work as you expect them to. If you upload software to the Command Station, connect power to your motor controller and the Command Station and then connect the output to your track and don't see power or your train responding, here are the steps to follow.
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Question
+    - Answer
+  * - Can I run a loco on the programming track?
+    - Yes, by issuing the command ``<1 JOIN>`` via the serial console
+
+Troubleshooting tips
+====================
+
+In this section, you will find some tips on troubleshooting the various issues encountered with |EX-CS|.
+
+Cannot drive a locomotive
+-------------------------
+
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Symptoms
+    - Common Causes
+  * - Locomotive doesn't respond to throttle settings
+    - | Track power has not been turned on - Issue ``<1>`` in the serial console, or use power button in |Engine Driver| or |JMRi|
+      | Locomotive is on the programming track - Issue ``<1 JOIN>`` in the serial console
+      | Power has not been supplied to the motor shield - Check to ensure power supply is connected securely to the motor shield, is plugged in at the wall, and turned on
+
+Cannot connect to the EX-CommandStation over WiFi
+-------------------------------------------------
+
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Symptoms
+    - Common Causes
+  * - | CommandStation does not appear in the available WiThrottle server list in |Engine Driver| or |wiThrottle| apps
+      | Manually entering the expected IP address and port does not successfully connect
+    - | CommandStation is configured for Access Point mode, but |Engine Driver| or |wiThrottle| device is connected to a different WiFi network - Connect the device directly the CommandStation's WiFi network
+      | CommandStation is configured for Station Mode and connects to the WiFi network, but |Engine Driver| or |wiThrottle| device is connected to a different WiFi network - Connect the device to the correct WiFi network
+      | WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
+
+Diagnostics
+===========
 
 Is it Plugged In, Is it Turned On?
-===================================
+----------------------------------
 
 Yes, we need to start with the basics. If you have 12V DC or less connected to the input power of the Arduino and did not cut the power connect trace underneath the Motor Controller, then the Motor Controller and the Arduino can be powered from the one power supply connected to the barrel jack of the Motor Shield. If you cut the trace (which we highly recommend), then you will need two power supplies, a 7-9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the Motor Controller.
 
@@ -34,15 +82,15 @@ Yes, we need to start with the basics. If you have 12V DC or less connected to t
 * If you have two power supplies, see above for the Motor Controller board and add a 7-9V DC power supply for the Arduino of at least 1 Amp. Anything less than 7 Volts will cause unreliable operation
 * Do you see a green led marked ```on``` on the Arduino board glowing to indicate the Arduino has power? If not, there is a power issue
 
-Diagnosing and Testing
-=============================
+Testing
+-------
 
 #. Remove the Motor Shield ---we are going to test just the Arduino first.
 #. Download and install the most current version of :ref:`EX-CommandStation <download/ex-commandstation:Latest EX-CommandStation Official Release>`
 #. Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to ``115200 baud`` and make sure you have set ``Both CR & NL`` from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see "DCC-EX" and the software version as well as other log lines that mention WiFi. If you don't see anything in the log, it could be that the software did not upload correctly, less than 7 Volts DC to the Arduino, or be an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.
 
 Testing the Arduino and EX-CommandStation code
-==============================================
+----------------------------------------------
 
 Validating the Arduino and |EX-CS| code is functional is a pretty straight forward exercise.
 
@@ -50,7 +98,7 @@ Validating the Arduino and |EX-CS| code is functional is a pretty straight forwa
 #. If there are obvious issues noted from these startup logs, review "config.h", make sure you have downloaded the correct version of |EX-CS|, and upload the software again. 
 
 Testing the Motor Shield
-==============================
+------------------------
 
 If first two tests pass, then the Arduino is functioning correctly and it's time to test the Motor Shield.  
 
@@ -69,7 +117,7 @@ If only one of the LEDs attached to the one of the output channels comes on when
 If you still need help, please find us on Discord or send an email to support@dcc-ex.com
 
 Testing the DCC signal
-=========================
+----------------------
 
 Now the fun part -- we are going to test the generation of the DCC signal itself.  
 

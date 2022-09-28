@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-TT-LOGO|
 
-****************************
-Troubleshooting EX-Turntable
-****************************
+************************************
+EX-Turntable FAQ and Troubleshooting
+************************************
 
 |tinkerer| |githublink-ex-turntable-button2|
 
@@ -14,10 +14,28 @@ Troubleshooting EX-Turntable
     :depth: 1
     :local:
 
-You will find resolutions to a number of common issues encountered with |EX-TT| on this page.
+Frequently Answered Questions
+=============================
+
+This is a list of common questions that we answer by our various support channels:
+
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Question
+    - Answer
+  * - 
+    - 
+
+Troubleshooting tips
+====================
+
+In this section, you will find some tips on troubleshooting the various issues encountered with |EX-TT|.
 
 Homing failure
-==============
+--------------
 
 .. list-table:: 
   :widths: auto
@@ -32,7 +50,7 @@ Homing failure
       | Hall effect sensor is connected incorrectly
 
 Calibration failure
-===================
+-------------------
 
 .. list-table:: 
   :widths: auto
@@ -48,7 +66,7 @@ Calibration failure
       | Hall effect sensor is connected incorrectly
 
 Turntable judders, stalls, or fails to rotate
-=============================================
+---------------------------------------------
 
 .. list-table:: 
   :widths: auto
@@ -59,13 +77,14 @@ Turntable judders, stalls, or fails to rotate
     - Common Causes
   * - When attempting to rotate, the turntable judders or shakes
     - | An incorrect stepper driver has been configured
+      | Stepper motor or driver is not connected correctly, ensure all wiring is securely connected
       | Something is physically interfering with the turntable or stepper operation, check for interference
   * - The turntable does not rotate at all
     - | An incorrect stepper driver has been configured
       | Something is physically interfering with the turntable or stepper operation, check for interference
 
 Track power is cut when locomotive enters turntable bridge track
-================================================================
+----------------------------------------------------------------
 
 .. list-table:: 
   :widths: auto
@@ -79,7 +98,7 @@ Track power is cut when locomotive enters turntable bridge track
       | Tracks opposite each other around the turntable are wired with inverted phases, wiring must be adjusted
 
 EX-CommandStation compile errors with device driver enabled
-===========================================================
+-----------------------------------------------------------
 
 .. list-table:: 
   :widths: auto
@@ -92,7 +111,7 @@ EX-CommandStation compile errors with device driver enabled
     - The version of EX-CommandStation is incorrect, you need the "add-turntable-controller" branch of `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_
 
 EX-Turntable showing as offline with <D HAL SHOW>
-=================================================
+-------------------------------------------------
 
 .. list-table:: 
   :widths: auto

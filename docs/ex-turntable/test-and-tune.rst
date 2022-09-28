@@ -114,7 +114,7 @@ Referring again to :ref:`reference/developers/hal-config:adding a new device`, s
   <* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *>
   <* TurntableEX I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, |EX-TT| is connected!
 
-If there is an "OFFLINE" at the end of the |EX-TT| line, it indicates something is not quite right. Refer to :ref:`ex-turntable/troubleshooting:ex-turntable showing as offline with \<d hal show\>`.
+If there is an "OFFLINE" at the end of the |EX-TT| line, it indicates something is not quite right. Refer to :ref:`support/ex-tt-troubleshooting:ex-turntable showing as offline with \<d hal show\>`.
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 

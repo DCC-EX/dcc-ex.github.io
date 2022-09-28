@@ -14,8 +14,8 @@ EX-Turntable FAQ and Troubleshooting
     :depth: 1
     :local:
 
-Frequently Answered Questions
-=============================
+Frequently Asked Questions
+==========================
 
 This is a list of common questions that we answer by our various support channels:
 

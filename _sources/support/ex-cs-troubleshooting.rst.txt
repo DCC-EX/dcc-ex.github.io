@@ -18,11 +18,14 @@ Troubleshooting
     :depth: 2
     :local:
 
+In this section, you will find some tips on troubleshooting the various issues encountered with |EX-CS|.
+
+If you have just assembled your |EX-CS| and it is not working as expected, we recommend you start with the :doc:`/support/ex-cs-diagnose` page.
+
+----
 
 Troubleshooting tips
 ====================
-
-In this section, you will find some tips on troubleshooting the various issues encountered with |EX-CS|.
 
 Cannot drive a locomotive
 -------------------------

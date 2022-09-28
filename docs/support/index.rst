@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-SUPPORT-LOGO|
    
-****************************************
-FAQ, Troubleshooting, Contact, & Support
-****************************************
+******************************
+Troubleshooting & Getting Help
+******************************
 
 |conductor| |tinkerer| |engineer|
 
@@ -14,21 +14,21 @@ FAQ, Troubleshooting, Contact, & Support
     :depth: 2
     :local:
 
-Frequently Answered Questions and Troubleshooting
-=================================================
+Frequently Asked Questions & Troubleshooting
+============================================
 
 We've done our best to capture a lot of common questions we've provided answers to via our various support methods, along with providing some troubleshooting tips on the various issues you may encounter with our products.
 
 The following pages provide these FAQs and troubleshooting guides, and the following sections on this page outline how to get help if these don't resolve the issue.
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
-  ex-cs-troubleshooting
+  index-ex-cs
   ex-tt-troubleshooting
 
-Contact and Support options
-===========================
+Contact & Support options
+=========================
 
 There are several different ways to get in contact with the team and obtain help and support for |DCC-EX|.
 

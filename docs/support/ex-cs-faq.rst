@@ -6,9 +6,9 @@
 .. include:: /include/include-l2.rst
 |EX-CS-LOGO|
 
-***********************************
-Frequently Answered Questions (FAQ)
-***********************************
+********************************
+Frequently Asked Questions (FAQ)
+********************************
 
 |conductor| 
 

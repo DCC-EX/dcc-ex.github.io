@@ -20,12 +20,12 @@ Using the "DriveAway(tm)" Feature
 
 A new feature enhancement with a Arduino Mega 2560 +WiFi enabled |EX-CS| directly connected to an |Engine Driver| Throttle on an Android smartphone. 
 
-Place a DCC Engine on a programming track spur or siding, use |Engine Driver| WiFi Throttle "Request Loco ID" to automatically acquire & load the loco# into the |Engine Driver| Throttle, then just throttle-up and "Drive Away" onto the main line tracks.
+Place a DCC Engine on a programming track spur or siding, use |Engine Driver| WiFi throttle :guilabel:`Request Loco ID` to automatically acquire & load the loco# into the |Engine Driver| Throttle, then just throttle-up and "Drive Away" onto the main line tracks.
 
 How to Use It
 =============
 
-Place any DCC Engine onto a insulated Programming track setup as spur or siding connected with dual plastic joiners to the Main layout track. On |Engine Driver| WiFi Throttle, touch "Select" loco as normal, choose "Request Loco ID" radio dial and press "Request Loco" button, it automatically acquires & loads the loco# into the |Engine Driver| WiFi Throttle, then sets and Joins the Programming track as a Mainline DCC signal, then you just throttle-up and "Drive Away" onto the main line tracks. 
+Place any DCC Engine onto a insulated Programming track setup as spur or siding connected with dual plastic joiners to the Main layout track. On |Engine Driver| WiFi Throttle, touch "Select" loco as normal, choose "Request Loco ID" radio dial and press :guilabel:`Request Loco ID` button, it automatically acquires & loads the loco# into the |Engine Driver| WiFi Throttle, then sets and Joins the Programming track as a Mainline DCC signal, then you just throttle-up and "Drive Away" onto the main line tracks. 
 
 Place a second engine on the programming track and repeat the steps as many times as you would like. 
 This is a New DCC WiFi Throttle client feature only found in |EX-CS| & |Engine Driver| WiFi App. 

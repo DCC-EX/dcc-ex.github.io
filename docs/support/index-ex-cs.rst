@@ -12,9 +12,9 @@ EX-CommandStation
 Frequently Answered Questions and Troubleshooting
 =================================================
 
-We've done our best to capture a lot of common questions we've provided answers to via our various support methods, along with providing some troubleshooting tips on the various issues you may encounter with our products.
+The following pages provide these FAQs and troubleshooting guides specific to the |EX-CS|.
 
-The following pages provide these FAQs and troubleshooting guides, and the following sections on this page outline how to get help if these don't resolve the issue.
+If you have just assembled your |EX-CS| and it is not working as expected, we recommend you start with the :doc:`/support/ex-cs-diagnose` page.
 
 .. toctree::
   :maxdepth: 2

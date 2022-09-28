@@ -22,4 +22,4 @@ This is a list of **Frequently Answered Questions** that we answer on our variou
   * - Question
     - Answer
   * - Can I run a loco on the programming track?
-    - Yes, by issuing the command ``<1 JOIN>`` via the serial console.  |BR| This is intended to be temporary, for running a loco from a programming track onto your layout, not for normal running of the layout. |BR| |BR| In |Engine driver| you can :guilabel:`Request Loco ID` which will also temporarily allow the loco to to be driven from the programming track. see :doc:`/throttles/driveaway` for more information.
+    - Yes, by issuing the command ``<1 JOIN>`` via the serial console.  |BR| This is intended to be temporary, for running a loco from a programming track onto your layout, not for normal running of the layout. |BR| |BR| (In |Engine driver| you can :guilabel:`Request Loco ID` which will also temporarily allow the loco to to be driven from the programming track. see :doc:`/throttles/driveaway` for more information.)

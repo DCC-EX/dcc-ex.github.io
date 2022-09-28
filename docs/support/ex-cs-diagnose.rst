@@ -18,13 +18,15 @@ Steps to Diagnose Basic Problems
     :depth: 2
     :local:
 
-Depending on how you have your |EX-CS| configure, the steps to diagnose problems are different:
+This page s intended to help you diagnose and fix the most common problems with the |EX-CS|.
+
+Depending on how you have your EX-CommandStation configured, the steps to diagnose problems are different:
 
 * `When Connected to a PC via USB`_
 * `When Configured as an Access Point`_
 * `When Configured in Station mode`_
 
-|
+----
 
 When Connected to a PC via USB
 ==============================

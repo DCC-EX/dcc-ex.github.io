@@ -24,7 +24,7 @@ The following pages provide these FAQs and troubleshooting guides, and the follo
 .. toctree::
   :maxdepth: 1
 
-  ex-cs-troubleshooting
+  index-ex-cs
   ex-tt-troubleshooting
 
 Contact and Support options

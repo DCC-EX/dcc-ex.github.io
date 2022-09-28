@@ -21,15 +21,33 @@ Steps to Diagnose a Problem
 
 ----
 
-If you have connected your EX-CommandStation to a PC via USB (including using JMRI)
-=========================================================================================
+When Connected to a PC via USB
+==============================
 
-- Is the light on the Arduino board on?
+**If you have connected your EX-CommandStation to a PC via USB (including using JMRI)**
+
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Question 
+    - If Yes
+    - If No
+  * - 1. Is the light on the Arduino board on?
+    - Go to Question 2.
+    - xx
+  * - 2. xx
+    - xx
+    - xx
+
 
 ----
 
-If you have configured your EX-CommandStation as an Access Point (separate network)
-=====================================================================================
+When Configured as an Access Point
+==================================
+
+**If you have configured your EX-CommandStation as an Access Point (separate network)**
 
 - Is the light on the Arduino board on?
 
@@ -56,7 +74,9 @@ If you have configured your EX-CommandStation as an Access Point (separate netwo
 
 ----
 
-If you have configured your EX-CommandStation in Station mode (connected to your home WiFi network)
-========================================================================================================
+When Configured in Station mode
+===============================
 
-- Is the light on the Arduino board on?
+**If you have configured your EX-CommandStation in Station mode (connected to your home WiFi network)**
+
+1. Is the light on the Arduino board on?

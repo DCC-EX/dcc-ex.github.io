@@ -12,13 +12,7 @@ Frequently Answered Questions (FAQ)
 
 |conductor| 
 
-.. sidebar::
-
-  .. contents:: On this page
-    :depth: 2
-    :local:
-
-This is a list of **Frequently Answered Questions** that we answer by our various support channels:
+This is a list of **Frequently Answered Questions** that we answer on our various support channels:
 
 .. list-table:: 
   :widths: auto
@@ -28,5 +22,4 @@ This is a list of **Frequently Answered Questions** that we answer by our variou
   * - Question
     - Answer
   * - Can I run a loco on the programming track?
-    - Yes, by issuing the command ``<1 JOIN>`` via the serial console
-
+    - Yes, by issuing the command ``<1 JOIN>`` via the serial console.  In |Engine driver| you can ``??``` which will also temporarily allow the loco to to be driven from the programming track.

@@ -7,7 +7,7 @@
 |EX-CS-LOGO|
 
 ********************************
-Steps to Diagnose basic Problems
+Steps to Diagnose Basic Problems
 ********************************
 
 |conductor| 
@@ -55,7 +55,7 @@ When Configured as an Access Point
 
 
 .. list-table:: 
-  :widths: 50 25 25
+  :widths: 45 20 35
   :header-rows: 1
   :class: command-table
 
@@ -71,12 +71,12 @@ When Configured as an Access Point
   * - 3. Can your phone connect the WiFi network of the EX-CommandStation
     - Go to Question 4
     - xx
-  * - 4. Can your throttle app connect the wiThrottle server of the EX-CommandStation |BR| |Engine Driver| should show you the wiThrottle server in the discovered servers list |BR| For |wiThrottle| you will need to type in the IP address and Port
+  * - 4. Can your throttle app connect the wiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the wiThrottle server in the discovered servers list |BR| For |wiThrottle| you will need to type in the IP address and Port
     - Go to Question 5
     - xx
-  * - 4. Can you turn the track power on?  |BR| Do the LEDs on the moto shield turn on?
-    - xx
-    - xx
+  * - 5. Can you turn the track power on?  |BR| Do the LEDs on the moto shield turn on?
+    - Go to Question 6
+    - Have you plugged in and turned on a 12-15v DC power supply into the moto shield |BR| OR |BR| Have you made sure the polarity of the power supply is correct. |BR| OR |BR| 
 
 |
 

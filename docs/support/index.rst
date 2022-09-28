@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-SUPPORT-LOGO|
    
-****************************************
-FAQ, Troubleshooting, Contact, & Support
-****************************************
+******************************
+Troubleshooting & Getting Help
+******************************
 
 |conductor| |tinkerer| |engineer|
 

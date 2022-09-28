@@ -8,11 +8,6 @@ EX-CommandStation
 
 |conductor| |tinkerer| |engineer|
 
-.. sidebar::
-
-  .. contents:: On this page
-    :depth: 2
-    :local:
 
 Frequently Answered Questions and Troubleshooting
 =================================================

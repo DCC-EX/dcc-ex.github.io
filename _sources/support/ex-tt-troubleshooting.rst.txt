@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-TT-LOGO|
 
-****************************
-Troubleshooting EX-Turntable
-****************************
+************************************
+EX-Turntable FAQ and Troubleshooting
+************************************
 
 |tinkerer| |githublink-ex-turntable-button2|
 
@@ -13,11 +13,26 @@ Troubleshooting EX-Turntable
   .. contents:: On this page
     :depth: 1
     :local:
-  
-Troubleshooting common EX-Turntable issues
-===========================================
 
-You will find resolutions to a number of common issues encountered with |EX-TT| on this page.
+Frequently Answered Questions
+=============================
+
+This is a list of common questions that we answer by our various support channels:
+
+.. list-table:: 
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Question
+    - Answer
+  * - 
+    - 
+
+Troubleshooting tips
+====================
+
+In this section, you will find some tips on troubleshooting the various issues encountered with |EX-TT|.
 
 Homing failure
 --------------
@@ -62,6 +77,7 @@ Turntable judders, stalls, or fails to rotate
     - Common Causes
   * - When attempting to rotate, the turntable judders or shakes
     - | An incorrect stepper driver has been configured
+      | Stepper motor or driver is not connected correctly, ensure all wiring is securely connected
       | Something is physically interfering with the turntable or stepper operation, check for interference
   * - The turntable does not rotate at all
     - | An incorrect stepper driver has been configured

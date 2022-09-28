@@ -94,4 +94,4 @@ Click :doc:`here <purchasing>` or click the "next" button to see what you need t
     installer
     controllers
     testing
-    diagnosing-issues
+    /support/ex-cs-troubleshooting

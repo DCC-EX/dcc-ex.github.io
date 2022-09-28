@@ -149,7 +149,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 .. note:: 
    :class: note-float-right
 
-   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
+   If you have any difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
 * Start the |engine driver| App
 * Go through the initial startup pages to set some basic configuration items
@@ -186,7 +186,7 @@ Using wiThrottle (Apple iOS)
 .. note:: 
    :class: note-float-right
 
-   If you have any difficulties check the :doc:`diagnosing-issues` page for assistance.
+   If you have any difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
 * If you have set up your |EX-CS| in |Access Point Mode| (The Recommended approach)
   

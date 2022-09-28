@@ -9,8 +9,8 @@ EX-CommandStation
 |conductor| |tinkerer| |engineer|
 
 
-Frequently Answered Questions and Troubleshooting
-=================================================
+Frequently Asked Questions and Troubleshooting
+==============================================
 
 The following pages provide these FAQs and troubleshooting guides specific to the |EX-CS|.
 

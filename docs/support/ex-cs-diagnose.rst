@@ -41,7 +41,7 @@ When Connected to a PC via USB
 **If you have connected your EX-CommandStation to a PC via USB (including using JMRI)**
 
 .. list-table:: 
-  :widths: 50 25 25
+  :widths: 40 20 40
   :header-rows: 1
   :class: command-table
 
@@ -50,13 +50,17 @@ When Connected to a PC via USB
     - If No
   * - 1. Is the light on the Arduino board on?
     - Go to Question 2.
-    - a) Software may not have loaded correctly. |BR| b) Possible dead Arduino board. |BR| In either case, try loading the EX-CommandStation software again.
+    - (a) Software may not have loaded correctly. 
+      (b) Possible dead Arduino board.
+      
+      In either case, try loading the EX-CommandStation software again.
   * - 2. Can you connect to it using EX-WebThrottle?
     - Go to Question 3.
-    - xx
-  * - 3. When you select a loco and move the throttle, do the LEDs on the Moto Board light up?
+    - (a)
+  * - 3. When you select a loco and move the throttle, do the LEDs on the Motor Board light up?
     - Go to Question 4.
-    - Have you plugged in and turned on a 12-15v DC power supply into the motor board |BR| OR |BR| Have you made sure the polarity of the power supply is correct. |BR| OR |BR|
+    - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
+      (b) Have you made sure the polarity of the power supply is correct.
 
 |
 
@@ -67,7 +71,7 @@ When Configured as an Access Point
 
 
 .. list-table:: 
-  :widths: 45 20 35
+  :widths: 40 20 40
   :header-rows: 1
   :class: command-table
 
@@ -76,7 +80,12 @@ When Configured as an Access Point
     - If No
   * - 1. Is the LED on the Arduino board on?
     - Go to Question 2.
-    - a) You have not connected a 7-9v DC power supply to Arduino Board |BR| OR |BR| b) You have not connected a USB cable connected to a power supply, to Arduino Board |BR| c) Software may not have loaded correctly. |BR| d) Possible dead Arduino board. |BR| For c & d, try loading the EX-CommandStation software again.
+    - (a) You have not connected a 7-9v DC power supply to Arduino Board
+      (b) You have not connected a USB cable connected to a power supply, to Arduino Board 
+      (c) Software may not have loaded correctly.
+      (d) Possible dead Arduino board. 
+
+      For c & d, try loading the EX-CommandStation software again.
   * - 2. Can your phone see the WiFi network of the EX-CommandStation in the phone's available network list?
     - Go to Question 3
     - xx
@@ -88,7 +97,8 @@ When Configured as an Access Point
     - xx
   * - 5. Can you turn the track power on?  |BR| Do the LEDs on the moto shield turn on?
     - Go to Question 6
-    - Have you plugged in and turned on a 12-15v DC power supply into the motor board |BR| OR |BR| Have you made sure the polarity of the power supply is correct. |BR| OR |BR| 
+    - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
+      (b) Have you made sure the polarity of the power supply is correct. |BR| OR |BR| 
 
 |
 
@@ -99,7 +109,7 @@ When Configured in Station mode
 
 
 .. list-table:: 
-  :widths: 50 25 25
+  :widths: 40 20 40
   :header-rows: 1
   :class: command-table
 
@@ -108,7 +118,12 @@ When Configured in Station mode
     - If No
   * - 1. Is the LED on the Arduino board on?
     - Go to Question 2.
-    - a) You have not connected a 7-9v DC power supply to Arduino Board |BR| OR |BR| b) You have not connected a USB cable connected to a power supply, to Arduino Board |BR| c) Software may not have loaded correctly. |BR| d) Possible dead Arduino board. |BR| For c & d, try loading the EX-CommandStation software again.
+    - (a) You have not connected a 7-9v DC power supply to Arduino Board
+      (b) You have not connected a USB cable connected to a power supply, to Arduino Board
+      (c) Software may not have loaded correctly.
+      (d) Possible dead Arduino board.
+      
+      For c & d, try loading the EX-CommandStation software again.
   * - 2. Can your throttle app connect to the wiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the wiThrottle server in the discovered servers list |BR| For |wiThrottle| It should connect automatically.
     - Go to Question 3
     - You may be on a different network to the EX-CommandStation (e.g. 2.5gHz VS 5gHz connection to you home router.) Try entering the IP address and Port manually.  To 

@@ -12,7 +12,7 @@ Frequently Asked Questions (FAQ)
 
 |conductor| 
 
-This is a list of **Frequently Answered Questions** that we answer on our various support channels:
+This is a list of **Frequently Asked Questions** that we answer on our various support channels:
 
 .. list-table:: 
   :widths: auto

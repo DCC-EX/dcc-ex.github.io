@@ -423,13 +423,14 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#when-connected-to-a-pc-via-usb" id="id1">When Connected to a PC via USB</a></p></li>
-<li><p><a class="reference internal" href="#when-configured-as-an-access-point" id="id2">When Configured as an Access Point</a></p></li>
-<li><p><a class="reference internal" href="#when-configured-in-station-mode" id="id3">When Configured in Station mode</a></p></li>
+<li><p><a class="reference internal" href="#ex-commandstation-software-fails-to-load" id="id2">EX-CommandStation Software fails to load</a></p></li>
+<li><p><a class="reference internal" href="#when-connected-to-a-pc-via-usb" id="id3">When Connected to a PC via USB</a></p></li>
+<li><p><a class="reference internal" href="#when-configured-as-an-access-point" id="id4">When Configured as an Access Point</a></p></li>
+<li><p><a class="reference internal" href="#when-configured-in-station-mode" id="id5">When Configured in Station mode</a></p></li>
 </ul>
 </div>
 </aside>
-<p>This page s intended to help you diagnose and fix the most common problems with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>This page is intended to help you diagnose and fix the most common problems with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <p>Depending on how you have your EX-CommandStation configured, the steps to diagnose problems are different:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#when-connected-to-a-pc-via-usb">When Connected to a PC via USB</a></p></li>
@@ -437,19 +438,27 @@
 <li><p><a class="reference internal" href="#when-configured-in-station-mode">When Configured in Station mode</a></p></li>
 </ul>
 <hr class="docutils" />
+<section id="ex-commandstation-software-fails-to-load">
+<h2><a class="toc-backref" href="#id2">EX-CommandStation Software fails to load</a><a class="headerlink" href="#ex-commandstation-software-fails-to-load" title="Permalink to this heading"></a></h2>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>EX-CommandStation Software fails to load</p>
+</div>
+</section>
+<hr class="docutils" />
 <section id="when-connected-to-a-pc-via-usb">
-<h2><a class="toc-backref" href="#id1">When Connected to a PC via USB</a><a class="headerlink" href="#when-connected-to-a-pc-via-usb" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3">When Connected to a PC via USB</a><a class="headerlink" href="#when-connected-to-a-pc-via-usb" title="Permalink to this heading"></a></h2>
 <p><strong>If you have connected your EX-CommandStation to a PC via USB (including using JMRI)</strong></p>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col style="width: 40%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Question</p></th>
 <th class="head"><p>If Yes</p></th>
-<th class="head"><p>If No</p></th>
+<th class="head"><p>If No - Possible reasons</p></th>
 </tr>
 </thead>
 <tbody>
@@ -458,14 +467,33 @@
 </ol>
 </td>
 <td><p>Go to Question 2.</p></td>
-<td><p>xx</p></td>
+<td><ol class="loweralpha simple">
+<li><p>Software may not have loaded correctly.</p></li>
+<li><p>Possible dead Arduino board.</p></li>
+</ol>
+<p>In either case, try loading the EX-CommandStation software again.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="2">
-<li><p>xx</p></li>
+<li><p>Can you connect to it using EX-WebThrottle?</p></li>
 </ol>
 </td>
-<td><p>xx</p></td>
-<td><p>xx</p></td>
+<td><p>Go to Question 3.</p></td>
+<td><ol class="loweralpha simple">
+<li></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>When you select a loco and move the throttle, do the LEDs on the Motor Board light up?</p></li>
+</ol>
+</td>
+<td><p>Go to Question 4.</p></td>
+<td><ol class="loweralpha simple">
+<li><p>Have you plugged in and turned on a 12-15v DC power supply into the motor board</p></li>
+<li><p>Have you made sure the polarity of the power supply is correct.</p></li>
+</ol>
+</td>
 </tr>
 </tbody>
 </table>
@@ -474,18 +502,18 @@
 </div>
 </section>
 <section id="when-configured-as-an-access-point">
-<h2><a class="toc-backref" href="#id2">When Configured as an Access Point</a><a class="headerlink" href="#when-configured-as-an-access-point" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4">When Configured as an Access Point</a><a class="headerlink" href="#when-configured-as-an-access-point" title="Permalink to this heading"></a></h2>
 <p><strong>If you have configured your EX-CommandStation as an Access Point (separate network)</strong></p>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
-<col style="width: 45%" />
+<col style="width: 40%" />
 <col style="width: 20%" />
-<col style="width: 35%" />
+<col style="width: 40%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Question</p></th>
 <th class="head"><p>If Yes</p></th>
-<th class="head"><p>If No</p></th>
+<th class="head"><p>If No - Possible reasons</p></th>
 </tr>
 </thead>
 <tbody>
@@ -494,7 +522,14 @@
 </ol>
 </td>
 <td><p>Go to Question 2.</p></td>
-<td><p>You have not connected a 7-9v DC power supply to Arduino Board <br /> OR <br /> You have not connected a USB cable connected to a power supply, to Arduino Board</p></td>
+<td><ol class="loweralpha simple">
+<li><p>You have not connected a 7-9v DC power supply to Arduino Board</p></li>
+<li><p>You have not connected a USB cable connected to a power supply, to Arduino Board</p></li>
+<li><p>Software may not have loaded correctly.</p></li>
+<li><p>Possible dead Arduino board.</p></li>
+</ol>
+<p>For c &amp; d, try loading the EX-CommandStation software again.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="2">
 <li><p>Can your phone see the WiFi network of the EX-CommandStation in the phone’s available network list?</p></li>
@@ -522,7 +557,11 @@
 </ol>
 </td>
 <td><p>Go to Question 6</p></td>
-<td><p>Have you plugged in and turned on a 12-15v DC power supply into the moto shield <br /> OR <br /> Have you made sure the polarity of the power supply is correct. <br /> OR <br /></p></td>
+<td><ol class="loweralpha simple">
+<li><p>Have you plugged in and turned on a 12-15v DC power supply into the motor board</p></li>
+<li><p>Have you made sure the polarity of the power supply is correct. <br /> OR <br /></p></li>
+</ol>
+</td>
 </tr>
 </tbody>
 </table>
@@ -531,34 +570,41 @@
 </div>
 </section>
 <section id="when-configured-in-station-mode">
-<h2><a class="toc-backref" href="#id3">When Configured in Station mode</a><a class="headerlink" href="#when-configured-in-station-mode" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5">When Configured in Station mode</a><a class="headerlink" href="#when-configured-in-station-mode" title="Permalink to this heading"></a></h2>
 <p><strong>If you have configured your EX-CommandStation in Station mode (connected to your home WiFi network)</strong></p>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col style="width: 40%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Question</p></th>
 <th class="head"><p>If Yes</p></th>
-<th class="head"><p>If No</p></th>
+<th class="head"><p>If No - Possible reasons</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><ol class="arabic simple">
-<li><p>Is the light on the Arduino board on?</p></li>
+<li><p>Is the LED on the Arduino board on?</p></li>
 </ol>
 </td>
 <td><p>Go to Question 2.</p></td>
-<td><p>xx</p></td>
+<td><ol class="loweralpha simple">
+<li><p>You have not connected a 7-9v DC power supply to Arduino Board</p></li>
+<li><p>You have not connected a USB cable connected to a power supply, to Arduino Board</p></li>
+<li><p>Software may not have loaded correctly.</p></li>
+<li><p>Possible dead Arduino board.</p></li>
+</ol>
+<p>For c &amp; d, try loading the EX-CommandStation software again.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="2">
-<li><p>xx</p></li>
+<li><p>Can your throttle app connect to the wiThrottle server of the EX-CommandStation <br /> <br /> <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> should show you the wiThrottle server in the discovered servers list <br /> For <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> It should connect automatically.</p></li>
 </ol>
 </td>
-<td><p>xx</p></td>
-<td><p>xx</p></td>
+<td><p>Go to Question 3</p></td>
+<td><p>You may be on a different network to the EX-CommandStation (e.g. 2.5gHz VS 5gHz connection to you home router.) Try entering the IP address and Port manually.  To</p></td>
 </tr>
 </tbody>
 </table>

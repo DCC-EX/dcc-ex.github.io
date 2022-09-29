@@ -47,7 +47,7 @@ When Connected to a PC via USB
 
   * - Question 
     - If Yes
-    - If No
+    - If No - Possible reasons
   * - 1. Is the light on the Arduino board on?
     - Go to Question 2.
     - (a) Software may not have loaded correctly. 
@@ -77,7 +77,7 @@ When Configured as an Access Point
 
   * - Question 
     - If Yes
-    - If No
+    - If No - Possible reasons
   * - 1. Is the LED on the Arduino board on?
     - Go to Question 2.
     - (a) You have not connected a 7-9v DC power supply to Arduino Board
@@ -115,7 +115,7 @@ When Configured in Station mode
 
   * - Question 
     - If Yes
-    - If No
+    - If No - Possible reasons
   * - 1. Is the LED on the Arduino board on?
     - Go to Question 2.
     - (a) You have not connected a 7-9v DC power supply to Arduino Board

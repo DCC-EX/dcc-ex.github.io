@@ -6,9 +6,9 @@
 .. include:: /include/include-l2.rst
 |EX-CS-LOGO|
 
-********************************
-Steps to Diagnose Basic Problems
-********************************
+*************************
+Diagnosing Basic Problems
+*************************
 
 |conductor| 
 
@@ -18,7 +18,7 @@ Steps to Diagnose Basic Problems
     :depth: 2
     :local:
 
-This page is intended to help you diagnose and fix the most common problems with the |EX-CS|.
+This page is intended to help you diagnose and fix some of the most common problems with the |EX-CS|.  If you have a more specific issue see the :doc:`ex-cs-troubleshooting` page.
 
 Depending on how you have your EX-CommandStation configured, the steps to diagnose problems are different:
 
@@ -31,14 +31,14 @@ Depending on how you have your EX-CommandStation configured, the steps to diagno
 EX-CommandStation Software fails to load
 ========================================
 
-.. todo:: EX-CommandStation Software fails to load
+.. todo:: Diagnosing - EX-CommandStation Software fails to load
 
 ----
 
 When Connected to a PC via USB
 ==============================
 
-**If you have connected your EX-CommandStation to a PC via USB (including using JMRI)**
+**If you have connected your EX-CommandStation to a PC via USB** (including for using JMRI).
 
 .. list-table:: 
   :widths: 40 20 40
@@ -56,7 +56,7 @@ When Connected to a PC via USB
       In either case, try loading the EX-CommandStation software again.
   * - 2. Can you connect to it using EX-WebThrottle?
     - Go to Question 3.
-    - (a)
+    - (a) xx
   * - 3. When you select a loco and move the throttle, do the LEDs on the Motor Board light up?
     - Go to Question 4.
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
@@ -67,7 +67,7 @@ When Connected to a PC via USB
 When Configured as an Access Point
 ==================================
 
-**If you have configured your EX-CommandStation as an Access Point (separate network)**
+**If you have configured your EX-CommandStation as an Access Point** (separate network)
 
 
 .. list-table:: 
@@ -80,25 +80,28 @@ When Configured as an Access Point
     - If No - Possible reasons
   * - 1. Is the LED on the Arduino board on?
     - Go to Question 2.
-    - (a) You have not connected a 7-9v DC power supply to Arduino Board
-      (b) You have not connected a USB cable connected to a power supply, to Arduino Board 
+    - (a) You have not connected a 7-9v DC power supply to Arduino Board. |BR| *or* |BR| 
+      (b) You have not connected a USB cable connected to a power supply, to Arduino Board. 
       (c) Software may not have loaded correctly.
       (d) Possible dead Arduino board. 
 
       For c & d, try loading the EX-CommandStation software again.
   * - 2. Can your phone see the WiFi network of the EX-CommandStation in the phone's available network list?
     - Go to Question 3
-    - xx
+    - (a) WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
+      (b) xx
   * - 3. Can your phone connect the WiFi network of the EX-CommandStation
     - Go to Question 4
-    - xx
+    - (a) xx
+      (b) xx
   * - 4. Can your throttle app connect the wiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the wiThrottle server in the discovered servers list |BR| For |wiThrottle| you will need to type in the IP address and Port
     - Go to Question 5
-    - xx
+    - (a) xx
+      (b) xx
   * - 5. Can you turn the track power on?  |BR| Do the LEDs on the moto shield turn on?
     - Go to Question 6
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
-      (b) Have you made sure the polarity of the power supply is correct. |BR| OR |BR| 
+      (b) Have you made sure the polarity of the power supply is correct. 
 
 |
 

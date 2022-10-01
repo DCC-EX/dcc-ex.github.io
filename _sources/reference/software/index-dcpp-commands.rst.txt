@@ -2,13 +2,14 @@
 .. include:: /include/include-l2.rst
 |EX-REF-LOGO|
 
-********
-Software
-********
+**************
+DCC++ Commands
+**************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer|
 
 .. toctree::
     :maxdepth: 1
 
-    programming-locos
+    command-reference
+    command-summary

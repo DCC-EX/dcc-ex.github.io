@@ -33,6 +33,7 @@ Hardware, Software, tools
     downloads/index
     hardware/index
     software/index
+    software/index-dcpp-commands
     developers/index
     accessories/index
     tools/index

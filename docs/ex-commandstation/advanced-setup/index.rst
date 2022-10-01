@@ -167,3 +167,12 @@ These tend to be aimed more at the |tinkerer-text| and |engineer-text| levels.
     
     controllers
 
+
+DCC++ Command Reference
+=======================
+
+.. toctree::
+    :maxdepth: 1
+
+    /reference/software/command-reference
+    /reference/software/command-summary

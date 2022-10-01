@@ -12,12 +12,3 @@ Software
     :maxdepth: 1
 
     programming-locos
-
-
-|tinkerer| |engineer|
-
-.. toctree::
-    :maxdepth: 1
-
-    command-reference
-    command-summary

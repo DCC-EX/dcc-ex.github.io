@@ -168,8 +168,8 @@ These tend to be aimed more at the |tinkerer-text| and |engineer-text| levels.
     controllers
 
 
-DCC++ Command Reference
-=======================
+DCC++ Commands
+==============
 
 .. toctree::
     :maxdepth: 1

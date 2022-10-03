@@ -5,7 +5,8 @@ h1, .h1 {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
   font-weight: 500 !important;
   color: #00353d !important;
-  font-size: 190% !important;
+  font-size: 200% !important;
+  text-shadow: 3px 3px #00a3b915;
 }
 
 h2, .h2 {

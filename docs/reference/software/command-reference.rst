@@ -814,6 +814,14 @@ Status
        RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
        Example: <iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab><H 1 0><H 2 0><H 3 0><H 4 0><Y 52 0><q 53><q 50>
 
+Individual states can be returned using sub-commands.
+
+* ``<s p>`` will return the current power states, e.g. ``<p1>``, ``<p1 JOIN>``.
+* ``<s v>`` will return the Command Station version, e.g. ``<iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab>``.
+* ``<s t>`` will return the turnout states, e.g. ``<H 1 0><H 2 0>``.
+* ``<s o>`` will return the output states, e.g. ``<Y 52 0>``.
+* ``<s s>`` will return the sensor states, e.g. ``<q 53><q 50>``.
+
 "D" Commands
 ------------
 

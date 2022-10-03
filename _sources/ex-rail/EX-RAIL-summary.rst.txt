@@ -258,8 +258,16 @@ EX-RAIL functions
       -  Start a new task send a given loco along given route/sequence
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
+    * -  PARSE ( command_string)
+      -  Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
+         
+         This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly.
+         
+         |NOT-IN-PROD-VERSION|
     * -  DRIVE( analog_pin )
-      -  ***Under Construction*** Not complete, DO NOT USE |BR| |NOT-IN-PROD-VERSION|
+      -  ***Under Construction*** Not complete, DO NOT USE 
+         
+         |NOT-IN-PROD-VERSION|
 
 |
 

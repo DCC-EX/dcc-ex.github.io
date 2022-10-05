@@ -483,6 +483,13 @@
 <td><p>ToDo</p></td>
 </tr>
 <tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Have you selected the correct Baud rate?</p></li>
+</ol>
+</td>
+<td><p>Go to Question 4.</p></td>
+<td><p>ToDo</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
 <li><p>ToDo?</p></li>
 </ol>
 </td>
@@ -498,6 +505,7 @@
 <p><strong>If you have connected your EX-CommandStation to a PC via USB</strong> (including for using JMRI).</p>
 <section id="initial-check">
 <h3><a class="toc-backref" href="#id5">Initial Check</a><a class="headerlink" href="#initial-check" title="Permalink to this heading"></a></h3>
+<p>As an initial check we recommend you should try to connect to your EX-CommandStation using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>, even if you plan to use it via <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> or a wifi throttle.</p>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 40%" />
@@ -517,10 +525,11 @@
 </td>
 <td><p>Go to Question 2.</p></td>
 <td><ol class="loweralpha simple">
-<li><p>Software may not have loaded correctly.</p></li>
+<li><p>EX-CommandStation not connected to PC via USB.</p></li>
+<li><p>CommandStation software may not have loaded correctly.</p></li>
 <li><p>Possible dead Arduino board.</p></li>
 </ol>
-<p>In either case, try loading the EX-CommandStation software again.</p>
+<p>For (b) or (c), try loading the EX-CommandStation software again.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="2">
@@ -529,8 +538,8 @@
 </td>
 <td><p>Go to Question 3.</p></td>
 <td><ol class="loweralpha simple">
-<li><p>EX-CommandStation not connected to PC via USB.</p></li>
-<li><p>Software may not have loaded correctly.</p></li>
+<li><p>EX-CommandStation not connected to your <strong>PC</strong> via USB.</p></li>
+<li><p>Software may not have loaded correctly. Try loading the EX-CommandStation software again.</p></li>
 </ol>
 </td>
 </tr>
@@ -538,7 +547,7 @@
 <li><p>When you select a loco and move the throttle, do the LEDs on the Motor Board light up?</p></li>
 </ol>
 </td>
-<td><p>TBA</p></td>
+<td><p>Congratulations, your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is essentially working.</p></td>
 <td><ol class="loweralpha simple">
 <li><p>Have you plugged in and turned on a 12-15v DC power supply into the motor board</p></li>
 <li><p>Have you made sure the polarity of the power supply is correct.</p></li>
@@ -575,14 +584,14 @@
 </ol>
 </td>
 <td><p>Go to Question 2.</p></td>
-<td><p>ToDo</p></td>
+<td><p>Select ‘DCC++’ as the System Manufacturer and ‘DCC++ Serial Port’ as the System connection in the preferences.</p></td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="2">
 <li><p>Have you selected the correct COM port?</p></li>
 </ol>
 </td>
 <td><p>Go to Question 3.</p></td>
-<td><p>ToDo</p></td>
+<td><p>Check which com port the EX-CommandStation is connected to. <br /> See <a class="reference internal" href="../ex-commandstation/get-started/installer.html#getting-ready"><span class="std std-ref">1. Getting Ready</span></a> for details on how to determine the correct com port.</p></td>
 </tr>
 <tr class="row-even"><td><ol class="arabic simple" start="3">
 <li><p>Can you turn the track power on?  <br /> Do the LEDs on the motor shield turn on?</p></li>
@@ -596,6 +605,16 @@
 </td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>When you open a throttle window in JMRI, select a loco and move the throttle, does the loco move?</p></li>
+</ol>
+</td>
+<td><p>Congratulations, your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is essentially working.</p></td>
+<td><ol class="loweralpha simple">
+<li><p>Have you connected the track to the ‘MAIN’ outputs of the Motor Board.  <br /> JMRI cannot directly control trains on the ‘PROGRAMMING’ outputs without using additional commands. See <a class="reference internal" href="ex-cs-troubleshooting.html#cannot-drive-a-locomotive"><span class="std std-ref">Cannot drive a locomotive</span></a> for more information.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
 <li><p>ToDo</p></li>
 </ol>
 </td>

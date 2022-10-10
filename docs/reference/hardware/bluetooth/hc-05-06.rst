@@ -1,0 +1,19 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l3.rst
+|EX-REF-LOGO|
+
+**************************
+HC-05/06 Bluetooth Modules
+**************************
+
+|tinkerer|
+
+
+
+.. image:: /_static/images/bluetooth/hc-05.jpg
+  :alt: HC-05
+  :scale: 20%
+
+.. image:: /_static/images/bluetooth/hc-06.jpg
+  :alt: HC-06
+  :scale: 50%

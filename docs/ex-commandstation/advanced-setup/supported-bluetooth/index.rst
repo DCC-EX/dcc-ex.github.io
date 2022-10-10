@@ -9,9 +9,9 @@ Supported Bluetooth Boards
 
 |tinkerer| |engineer|
 
-.. todo:: LOW - Hardware - text for supported Bluetooth boards
+If you wish to use Bluetooth to connect a throttle or controller to your |EX-CS|, then you will need a Bluetooth module connected to a serial port on your |EX-CS|.
 
 .. toctree::
-    :maxdepth: 1
+  :maxdepth: 1
 
-    /reference/hardware/bluetooth-boards
+  /reference/hardware/bluetooth/hc-05-06

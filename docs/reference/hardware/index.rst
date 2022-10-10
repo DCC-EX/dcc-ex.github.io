@@ -23,6 +23,7 @@ Hardware
     motor-boards
     wifi-boards
     ethernet-boards
+    bluetooth
     index-i2c
     other/index
     accessory-controllers

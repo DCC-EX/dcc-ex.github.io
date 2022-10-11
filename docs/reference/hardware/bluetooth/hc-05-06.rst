@@ -8,6 +8,12 @@ HC-05/06 Bluetooth Modules
 
 |tinkerer|
 
+.. sidebar::
+
+    .. contents:: On this page
+        :depth: 1
+        :local:
+
 .. todo:: HIGH - Finish this page.
 
 The ubiquitous HC-05/06 Bluetooth modules for Arduinos provide a relatively simple mechanism to add Bluetooth capability to your |EX-CS|, with some caveats, which puts these devices into the |Tinkerer-text| category.
@@ -42,7 +48,17 @@ Connecting a HC-05/06 to your EX-CommandStation
 
 It is recommended to connect a HC-05/06 device to an additional serial port on your |EX-CS| rather than the first serial port. If you have no choice (eg. you use an Uno with only one serial port), then you will need to disconnect it when uploading new versions of the |EX-CS| software.
 
+This diagram outlines connecting a HC-05 to serial port 1 on a Mega2560.
 
+.. image:: /_static/images/bluetooth/mega-cs-with-hc-05.png
+  :alt: Nano Bluetooth Programmer
+  :scale: 35%
+
+To enable communication via the HC-05 connected to serial port 1, you will also need to edit "config.h" and uncomment or add the following line (typically found towards the bottom) to ensure all DCC-EX API commands are sent/received from this serial port:
+
+.. code-block:: cpp
+
+  #define SERIAL1_COMMANDS
 
 Programming the modules
 =======================
@@ -50,6 +66,10 @@ Programming the modules
 .. danger:: 
 
   The HC-05/06 modules use 3.3V logic, so you must ensure that you use either a resistor divider or level shifter when connecting the Rx pin of the device you're using to program it.
+
+.. image:: /_static/images/bluetooth/nano-bluetooth-programmer.png
+  :alt: Nano Bluetooth Programmer
+  :scale: 35%
 
 HC-05 interactive programming sketch
 ------------------------------------

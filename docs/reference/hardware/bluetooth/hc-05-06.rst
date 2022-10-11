@@ -8,7 +8,9 @@ HC-05/06 Bluetooth Modules
 
 |tinkerer|
 
+.. todo:: HIGH - Finish this page.
 
+The ubiquitous HC-05/06 Bluetooth modules for Arduinos provide a relatively simple mechanism to add Bluetooth capability to your |EX-CS|, with some caveats, which puts these devices into the |Tinkerer-text| category.
 
 .. image:: /_static/images/bluetooth/hc-05.jpg
   :alt: HC-05
@@ -17,3 +19,72 @@ HC-05/06 Bluetooth Modules
 .. image:: /_static/images/bluetooth/hc-06.jpg
   :alt: HC-06
   :scale: 50%
+
+The main two items to take note of prior to using these is that they require some programming prior to use, and they are designed to work with 3.3V logic, meaning simply connecting these to a 5V microcontroller can lead to damage.
+
+HC-05 vs. HC-06
+===============
+
+.. tip:: 
+
+  TLDR: For price and simplicity's sake, we recommend sticking with the HC-05 device, as it is much simpler to program than the HC-06, and only costs a fraction more.
+
+The HC-05 and HC-06 modules are visually almost identical, however the HC-05 has 6 pins and is capable of being both a master and slave Bluetooth device, whereas the HC-06 has 4 pins and can only be a slave device.
+
+The HC-05 has a dedicated mode to send the AT commands to program it, while the HC-06 can be programmed via AT commands any time it is not paired. This makes it sound like the HC-06 is the simpler option to program, however to do so interactively means you have to be an incredibly fast typer, as there is a duration of about 1 second in which you have to type all characters of the programming command. This is challenging, but there is a way around this by using an Arduino sketch to program them.
+
+Connecting a HC-05/06 to your EX-CommandStation
+===============================================
+
+.. danger:: 
+
+  The HC-05/06 modules use 3.3V logic, so you must ensure that you use either a resistor divider or level shifter when connecting the Rx pin of the device to your |EX-CS|.
+
+It is recommended to connect a HC-05/06 device to an additional serial port on your |EX-CS| rather than the first serial port. If you have no choice (eg. you use an Uno with only one serial port), then you will need to disconnect it when uploading new versions of the |EX-CS| software.
+
+
+
+Programming the modules
+=======================
+
+.. danger:: 
+
+  The HC-05/06 modules use 3.3V logic, so you must ensure that you use either a resistor divider or level shifter when connecting the Rx pin of the device you're using to program it.
+
+HC-05 interactive programming sketch
+------------------------------------
+
+This sketch allows interactive programming of the HC-05 by entering AT commands in the serial console.
+
+.. code-block:: cpp
+
+  #include <Arduino.h>
+  #include <SoftwareSerial.h>
+
+  SoftwareSerial btSerial(2,3);
+
+  char c=' ';
+
+  void setup() {
+    Serial.begin(9600);
+    Serial.println("Ready to program");  
+    btSerial.begin(38400);
+    pinMode(4, OUTPUT);
+    digitalWrite(4, HIGH);
+  }
+
+  void loop() {
+    if (btSerial.available()) {
+      c = btSerial.read();
+      Serial.write(c);
+    }
+    if (Serial.available()) {
+      c = Serial.read();
+      btSerial.write(c);
+    }
+  }
+
+HC-05/06 automatic programming sketch
+-------------------------------------
+
+.. todo:: LOW - Share the source of a sketch to automatically program the modules via a sketch

@@ -16,6 +16,10 @@ HC-05/06 Bluetooth Modules
 
 .. todo:: HIGH - Finish this page.
 
+.. note:: 
+
+  Bluetooth connectivity is a one to one pairing only, meaning only one throttle or controller can connected at one time. If you want wireless connectivity for multiple throttles or controllers simultaneously, you will require WiFi or Ethernet connectivity.
+
 The ubiquitous HC-05/06 Bluetooth modules for Arduinos provide a relatively simple mechanism to add Bluetooth capability to your |EX-CS|, with some caveats, which puts these devices into the |Tinkerer-text| category.
 
 .. image:: /_static/images/bluetooth/hc-05.jpg
@@ -37,6 +41,8 @@ HC-05 vs. HC-06
 
 The HC-05 and HC-06 modules are visually almost identical, however the HC-05 has 6 pins and is capable of being both a master and slave Bluetooth device, whereas the HC-06 has 4 pins and can only be a slave device. The HC-05 has an extensive AT command set for programming, whereas the HC-06 is very limited, allowing changes only to the baud rate, name, and PIN (note that they are probably the only three items required for this application anyway).
 
+ARDUINO IDE - interactive programming
+
 The HC-05 has a dedicated mode to send the AT commands to program it, while the HC-06 can be programmed via AT commands any time it is not paired. This makes it sound like the HC-06 is the simpler option to program, however to do so interactively means you have to be an incredibly fast typer, as there is a duration of about 1 second in which you have to type all characters of the programming command. This is challenging, but there is a way around this by using an Arduino sketch to program them.
 
 This is why our recommendation is to stick with the HC-05 device, as they are typically only a little more expensive, but are much easier to program interactively.
@@ -56,13 +62,37 @@ If you are using a HC-06 module, the green "Key" connection is not required as t
   :alt: Nano Bluetooth Programmer
   :scale: 35%
 
-AT commands here
+HC-05 commands
+--------------
 
+Use Arduino IDE, make sure baud rate 38400 and new line set to "Both NL & CR".
 
-HC-05 interactive programming sketch
+Verify ready: AT
+Set preferred name: AT+NAME=<DEVICENAME> - OK
+Set preferred 4 digit PIN: AT+PSWD=<PIN> - OK
+Set slave mode: AT+ROLE=0 - OK
+Set baud rate to 115200: AT+UART=115200,0,0 - OK
+
+HC-06 commands
+--------------
+
+Use Arduino IDE, wait 1 second after entering command for OK confirmation, new line set to "No line ending".
+
+Settings take effect immediately, baud last.
+
+Verify ready: AT
+Set preferred name: AT+NAME<DEVICENAME> - OKsetname
+Set preferred 4 digit PIN: AT+PIN<PIN> - OKsetPIN
+Set baud rate to 115200: AT+BAUD8 - OK115200
+
+Interactive programming sketch
 ------------------------------------
 
-This sketch allows interactive programming of the HC-05 by entering AT commands in the serial console.
+This sketch allows interactive programming of either module by entering AT commands in the serial console.
+
+.. note:: 
+
+  For the HC-05, any console, for the HC-06, bulk send input only.
 
 .. code-block:: cpp
 
@@ -92,11 +122,6 @@ This sketch allows interactive programming of the HC-05 by entering AT commands 
     }
   }
 
-HC-05/06 automatic programming sketch
--------------------------------------
-
-.. todo:: LOW - Share the source of a sketch to automatically program the modules via a sketch
-
 Connecting a HC-05/06 to your EX-CommandStation
 ===============================================
 
@@ -120,3 +145,7 @@ To enable communication via the HC-05 connected to serial port 1, you will also 
 
   #define SERIAL1_COMMANDS
 
+Bonus material - How to pair a HC-05 with a HC-06
+=================================================
+
+For those writing throttle or control software that wish to connect to an |EX-CS| via Bluetooth, this outlines how to configure a HC-05 module connected to a throttle or controller serial port to pair with a slave HC-06 module.

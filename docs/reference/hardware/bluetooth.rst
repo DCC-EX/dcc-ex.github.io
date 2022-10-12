@@ -13,7 +13,9 @@ Bluetooth Boards
   :scale: 15%
   :align: left
 
-You can connect Bluetooth modules to a spare serial port on your |EX-CS| to enable Bluetooth connectivity from throttles/controllers including smartphone apps such as |Engine Driver| or |WiThrottle|.
+You can connect a Bluetooth module to a spare serial port on your |EX-CS| to enable Bluetooth connectivity from a single throttle or controller including smartphone apps such as |Engine Driver| or |WiThrottle|.
+
+If you require multiple throttles or controllers connected simultaneously, you will need to have WiFi or Ethernet connectivity instead.
 
 Refer to the following pages for the various supported Bluetooth options available.
 

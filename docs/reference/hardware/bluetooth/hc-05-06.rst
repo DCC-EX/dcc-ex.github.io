@@ -33,32 +33,13 @@ HC-05 vs. HC-06
 
 .. tip:: 
 
-  TLDR: For price and simplicity's sake, we recommend sticking with the HC-05 device, as it is much simpler to program than the HC-06, and only costs a fraction more.
+  For price and simplicity's sake, we recommend sticking with the HC-05 device, as it is much simpler to program than the HC-06, and only costs a fraction more.
 
-The HC-05 and HC-06 modules are visually almost identical, however the HC-05 has 6 pins and is capable of being both a master and slave Bluetooth device, whereas the HC-06 has 4 pins and can only be a slave device.
+The HC-05 and HC-06 modules are visually almost identical, however the HC-05 has 6 pins and is capable of being both a master and slave Bluetooth device, whereas the HC-06 has 4 pins and can only be a slave device. The HC-05 has an extensive AT command set for programming, whereas the HC-06 is very limited, allowing changes only to the baud rate, name, and PIN (note that they are probably the only three items required for this application anyway).
 
 The HC-05 has a dedicated mode to send the AT commands to program it, while the HC-06 can be programmed via AT commands any time it is not paired. This makes it sound like the HC-06 is the simpler option to program, however to do so interactively means you have to be an incredibly fast typer, as there is a duration of about 1 second in which you have to type all characters of the programming command. This is challenging, but there is a way around this by using an Arduino sketch to program them.
 
-Connecting a HC-05/06 to your EX-CommandStation
-===============================================
-
-.. danger:: 
-
-  The HC-05/06 modules use 3.3V logic, so you must ensure that you use either a resistor divider or level shifter when connecting the Rx pin of the device to your |EX-CS|.
-
-It is recommended to connect a HC-05/06 device to an additional serial port on your |EX-CS| rather than the first serial port. If you have no choice (eg. you use an Uno with only one serial port), then you will need to disconnect it when uploading new versions of the |EX-CS| software.
-
-This diagram outlines connecting a HC-05 to serial port 1 on a Mega2560.
-
-.. image:: /_static/images/bluetooth/mega-cs-with-hc-05.png
-  :alt: Nano Bluetooth Programmer
-  :scale: 35%
-
-To enable communication via the HC-05 connected to serial port 1, you will also need to edit "config.h" and uncomment or add the following line (typically found towards the bottom) to ensure all DCC-EX API commands are sent/received from this serial port:
-
-.. code-block:: cpp
-
-  #define SERIAL1_COMMANDS
+This is why our recommendation is to stick with the HC-05 device, as they are typically only a little more expensive, but are much easier to program interactively.
 
 Programming the modules
 =======================
@@ -67,9 +48,16 @@ Programming the modules
 
   The HC-05/06 modules use 3.3V logic, so you must ensure that you use either a resistor divider or level shifter when connecting the Rx pin of the device you're using to program it.
 
+The simplest method to program these modules is by using an additional microcontroller such as an Arduino Nano or Uno, connected as per the diagram below.
+
+If you are using a HC-06 module, the green "Key" connection is not required as this pin does not exist.
+
 .. image:: /_static/images/bluetooth/nano-bluetooth-programmer.png
   :alt: Nano Bluetooth Programmer
   :scale: 35%
+
+AT commands here
+
 
 HC-05 interactive programming sketch
 ------------------------------------
@@ -108,3 +96,27 @@ HC-05/06 automatic programming sketch
 -------------------------------------
 
 .. todo:: LOW - Share the source of a sketch to automatically program the modules via a sketch
+
+Connecting a HC-05/06 to your EX-CommandStation
+===============================================
+
+.. danger:: 
+
+  The HC-05/06 modules use 3.3V logic, so you must ensure that you use either a resistor divider or level shifter when connecting the Rx pin of the device to your |EX-CS|.
+
+Once your HC-05/06 module has been programmed for the correct baud rate, and has the appropriate device name and PIN set, you will need to connect it to your |EX-CS|.
+
+It is recommended to connect a HC-05/06 device to an additional serial port on your |EX-CS| rather than the first serial port. If you have no choice (eg. you use an Uno with only one serial port), then you will need to disconnect it when uploading new versions of the |EX-CS| software.
+
+This diagram outlines connecting a HC-05 to serial port 1 on a Mega2560.
+
+.. image:: /_static/images/bluetooth/mega-cs-with-hc-05.png
+  :alt: Nano Bluetooth Programmer
+  :scale: 35%
+
+To enable communication via the HC-05 connected to serial port 1, you will also need to edit "config.h" and uncomment or add the following line (typically found towards the bottom) to ensure all DCC-EX API commands are sent/received from this serial port:
+
+.. code-block:: cpp
+
+  #define SERIAL1_COMMANDS
+

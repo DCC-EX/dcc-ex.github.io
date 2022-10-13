@@ -131,12 +131,7 @@ When the HC-05 is in "AT" command mode, the blue and red LEDs should blink slowl
 
 If the HC-05 does not enter the "AT" command mode, ensure the "Key" pin is connected correctly, and try holding the button while powering on in case the "Key" pin is not connected internally within the module.
 
-To send the required "AT" commands to the module, open the Arduino IDE's serial monitor, set the new line option to "Both NL & CR", and set the baud rate to "38400".
-
-.. image:: /_static/images/bluetooth/hc-05-serial-monitor-config.png
-  :alt: Serial Monitor Config
-  :scale: 50%
-  :align: center
+To send the required "AT" commands to the module, open the Arduino IDE's serial monitor, set the new line option to "Both NL & CR", and set the baud rate to "9600".
 
 To verify the device is ready and in "AT" command mode, enter "AT" and click "Send" (or press the <Enter> key), and the response "OK" should appear in the serial monitor.
 
@@ -151,12 +146,16 @@ Providing this has been successful, enter the following commands one at a time t
 
 You may set <DEVICENAME> to be anything you wish (up to 31 characters), and <PASSWORD> can be up to a 16 character alpha-numeric password. The "AT+ROLE" command sets the HC-05 to "Slave" mode, and the "AT+UART" command sets the baud rate to 115200.
 
+.. note:: 
+
+  While the documentation says the password can be up to a 16 character alpha-numeric password, testing shows that it cannot be a mix of letters and numbers, so either choose numbers or letters for the password. Given the variety of modules on the market, this issue may be specific to the unit being tested and may not be the case with other brands.
+
 For example, to set the device name to "EX-CommandStation" and the password to "secret12345", the entire command list to send would be:
 
 .. code-block:: 
 
   AT+NAME=EX-CommandStation
-  AT+PSWD=secret12345
+  AT+PSWD=MySecret
   AT+ROLE=0
   AT+UART=115200,0,0
 
@@ -182,7 +181,7 @@ Providing this has been successful, enter the following commands one at a time t
 .. code-block:: 
 
   AT+NAME<DEVICENAME> (returns OKsetname)
-  AT+PSWD=<PIN> (returns OKsetPIN)
+  AT+PIN<PIN> (returns OKsetPIN)
   AT+BAUD8 (returns OK115200)
 
 You may set <DEVICENAME> to be anything you wish, whereas <PIN> must be a 4 digit number. The "AT+BAUD8" command sets the baud rate to 115200.
@@ -191,12 +190,13 @@ For example, to set the device name to "EX-CommandStation" and the PIN to "5432"
 
 .. code-block:: 
 
-  AT+NAME=EX-CommandStation
-  AT+PSWD=5432
-  AT+ROLE=0
-  AT+UART=115200,0,0
+  AT+NAMEEX-CommandStation
+  AT+PIN5432
+  AT+BAUD8
 
 You should now be able to pair to the device using the updated PIN, and be able to connect to your |EX-CS| via this interface (see :ref`reference/hardware/bluetooth/hc-05-06:connecting a hc-05/06 to your ex-commandstation`).
+
+Once the HC-06 is paired and a device actively connects to it, the blue and red LEDs should cease blinking rapidly and stay on.
 
 Other programming methods
 -------------------------
@@ -246,7 +246,7 @@ These are the "AT" commands you will need to execute to configure your HC-05 to 
 .. code-block:: 
 
   AT
-  AT+MODE=1
+  AT+ROLE=1
   AT+NAME=<DEVICENAME>          <<-- Set as desired
   AT+UART=<BAUD>,0,0            <<-- Set as required by your throttle/controller's serial port baud rate
   AT+PSWD=<PASSWORD|PIN>        <<-- Set to your slave device's password or PIN
@@ -257,7 +257,7 @@ These are the "AT" commands you will need to execute to configure your HC-05 to 
 In order, these commands will:
 
 1. Validate ready for programming
-2. Set master mode
+2. Set master role
 3. Set the device name
 4. Set the baud rate to match the throttle/controller baud rate
 5. Set the password to match the slave device's password (HC-05) or PIN (HC-06)
@@ -274,15 +274,20 @@ An example set of commands using HC-05 devices as both the master and slave:
   <Slave commands>
   AT
   AT+NAME=EX-CommandStation
-  AT+PSWD=MySecret12345
+  AT+PSWD=MySecret
   AT+UART=115200,0,0
 
   <Master commands>
   AT
-  AT+MODE=1
+  AT+ROLE=1
   AT+NAME=MyThrottle
   AT+UART=115200,0,0
-  AT+PSWD=MySecret12345
+  AT+PSWD=MySecret
   AT+CMODE=1
   <Pairing command(s)>
+  AT+INQ
+  +INQ:0021:11:012446,1F00,FF9C,EX-CommandStation
+  AT+PAIR=0021:11:012446,5
+
+
   AT+CMODE=0

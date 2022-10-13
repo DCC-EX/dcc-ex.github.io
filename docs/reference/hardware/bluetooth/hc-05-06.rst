@@ -11,7 +11,7 @@ HC-05/06 Bluetooth Modules
 .. sidebar::
 
     .. contents:: On this page
-        :depth: 1
+        :depth: 2
         :local:
 
 The ubiquitous HC-05/06 Bluetooth modules for Arduinos provide a relatively simple mechanism to add Bluetooth capability to your |EX-CS|, with some caveats, which puts these devices into the |Tinkerer-text| category.
@@ -30,12 +30,11 @@ The main two items to take note of prior to using these is that they require som
 
   Bluetooth connectivity is a one to one pairing only, meaning only one throttle or controller can be connected at one time. If you want wireless connectivity for multiple throttles or controllers simultaneously, you will require WiFi or Ethernet connectivity.
 
-JMRI users
-----------
+.. note:: 
 
-For those using |JMRi|, a Bluetooth connection can substitute for a USB cable if desired, provided the computer (or Raspberry Pi) running |JMRi| can pair with a HC-05/06 device.
+  For those using |JMRi|, a Bluetooth connection can substitute for a USB cable if desired, provided the computer (or Raspberry Pi) running |JMRi| can pair with a HC-05/06 device.
 
-Once paired, simply configure |JMRi| to use the serial port associated with the HC-05/06 device.
+  Once paired, simply configure |JMRi| to use the serial port associated with the HC-05/06 device.
 
 HC-05 vs. HC-06
 ===============
@@ -233,61 +232,84 @@ To enable communication via the HC-05 connected to serial port 1, you will also 
 Bonus material - How to pair a HC-05 with another HC-05/06
 ==========================================================
 
+.. note:: 
+
+  The best reference we have found for this is on `Martyn Currey's website <http://www.martyncurrey.com/connecting-2-arduinos-by-bluetooth-using-a-hc-05-and-a-hc-06-pair-bind-and-link/>`_.
+
+  We provide a fairly concise version of the process here, so it's best to refer to the excellent material provided on his website for further clarity.
+
 For those writing throttle or control software that wish to connect to an |EX-CS| via Bluetooth, this outlines how to configure a HC-05 module connected to a throttle or controller serial port to pair with a slave HC-05/06 module connected to an |EX-CS|.
 
 Firstly, you will need to program the slave device as per either :ref:`reference/hardware/bluetooth/hc-05-06:hc-05 programming` or :ref:`reference/hardware/bluetooth/hc-05-06:hc-06 programming`, and have it connected to your |EX-CS|.
 
 Once your slave HC-05/06 device is ready, you will need to put your HC-05 device into "AT" command mode as per :ref:`reference/hardware/bluetooth/hc-05-06:hc-05 programming` in order to configure it as a master device, and pair it with your HC-06 device.
 
-Validate your slave device is available with ``AT+INQ`` and note the address (eg. 00:02:72:0A:3C:7F). When specifying this device address in the "AT" commands below, it needs to be in "NAP,UAP,LAP" format, resulting in this example address becoming "0002,72,0A3C7F".
+Validate your slave device is available with ``AT+INQ`` and note the address (eg. 0002:72:0A3C7F). When specifying this device address in the "AT" commands below, it needs to be in "NAP,UAP,LAP" format, resulting in this example address becoming "0002,72,0A3C7F".
 
-These are the "AT" commands you will need to execute to configure your HC-05 to automatically pair with your slave HC-05/06 device:
+For the examples below, we will use a HC-05 pairing with a slave HC-06 using the same details from our examples above.
 
-.. code-block:: 
+Configure the slave HC-06
+-------------------------
 
-  AT
-  AT+ROLE=1
-  AT+NAME=<DEVICENAME>          <<-- Set as desired
-  AT+UART=<BAUD>,0,0            <<-- Set as required by your throttle/controller's serial port baud rate
-  AT+PSWD=<PASSWORD|PIN>        <<-- Set to your slave device's password or PIN
-  AT+CMODE=1                    <<-- Set to pair with any device
-  <Something here to pair with slave device>
-  AT+CMODE=0                    <<-- Set to pair with the slave device only
-
-In order, these commands will:
-
-1. Validate ready for programming
-2. Set master role
-3. Set the device name
-4. Set the baud rate to match the throttle/controller baud rate
-5. Set the password to match the slave device's password (HC-05) or PIN (HC-06)
-6. Set the device to pair with any Bluetooth device
-7. <Pair with the slave device somehow, need to figure this bit out>
-8. Set the device to pair with the slave device only
-
-Once these commands have been entered, you should be able to connect the HC-05 to your throttle/controller, and when power on it should automatically pair to the HC-05/06 connected to your |EX-CS|.
-
-An example set of commands using HC-05 devices as both the master and slave:
+The first step is to use these "AT" commands to configure your slave HC-06:
 
 .. code-block:: 
 
-  <Slave commands>
-  AT
-  AT+NAME=EX-CommandStation
-  AT+PSWD=MySecret
-  AT+UART=115200,0,0
+  AT+NAMEEX-CommandStation    <<-- Set the slave device name
+  AT+PIN5432                  <<-- Set the slave PIN
+  AT+BAUD8                    <<-- Set slave to 115200 baud rate
 
-  <Master commands>
-  AT
-  AT+ROLE=1
-  AT+NAME=MyThrottle
-  AT+UART=115200,0,0
-  AT+PSWD=MySecret
-  AT+CMODE=1
-  <Pairing command(s)>
-  AT+INQ
+At this point your HC-06 should be set ready to be paired with.
+
+Obtain the HC-06 address
+------------------------
+
+The next step is to use the master HC-05 to find the HC-06 address, which can be done with these commands, noting the HC-05 still needs to be in the "AT" command mode:
+
+.. code-block:: 
+
+  AT+RMAAD                    <<-- Clear any existing paired information
+  AT+ROLE=1                   <<-- Set master role
+  AT+RESET                    <<-- This reboots the HC-05, continue below when started again
+
+  AT+CMODE=1                  <<-- Pair with any device
+  AT+INQM=0,5,9               <<-- Set inquiry mode
+  AT+INIT                     <<-- Initialise profile
+  AT+INQ                      <<-- Discover available Bluetooth devices
+
+After the last command is sent, you should receive a list of up to 5 Bluetooth devices, and in the list should be the HC-06. In our example case, it should appear something like this:
+
+.. code-block:: 
+
   +INQ:0021:11:012446,1F00,FF9C,EX-CommandStation
-  AT+PAIR=0021:11:012446,5
 
+If the device name is not visible (the last part ",EX-CommandStation") you can find the name by using this command (remember you need to use the NAP,UAP,LAP addressing format):
 
-  AT+CMODE=0
+.. code-block:: 
+
+  AT+RNAME?0021,11,012446
+
+This should respond with ``+RNAME:EX-CommandStation`` if it's the correct device.
+
+Configure the master HC-05
+--------------------------
+
+Now that the slave HC-06 device is ready and you have obtained its address, the final step is to configure the HC-05 to pair with this device automatically.
+
+Again in "AT" command mode, these are the "AT" commands you will need to execute to configure your HC-05 to automatically pair with your slave HC-06 device:
+
+.. code-block:: 
+
+  AT+NAME=MyThrottle            <<-- Set as desired
+  AT+UART=115200,0,0            <<-- Set the same baud rate as our slave
+  AT+PSWD=5432                  <<-- Set the same as the slave
+  AT+PAIR=0021,11,012446,5      <<-- Pair with the slave address, 5 second timeout
+  AT+BIND=0021,11,012446        <<-- Bind to the slave address only
+  AT+CMODE=0                    <<-- Set to pair with the slave device only
+  AT+LINK=0021,11,012446        <<-- Link to our slave device
+
+Once these commands are run, the final "AT+LINK" command should respond with "OK", and then the HC-05 master LED should blink twice rapidly approximately every 2 seconds, and the HC-06 slave device's LED should be on and no longer blinking. These are the visual indicators that the devices are paired.
+
+At this point, your HC-06 is already connected to your |EX-CS| ready to go, and you can disconnect your HC-05 from the programmer and connect it to your throttle/controller (don't forget the resistor divider or level shifter for 5V devices!).
+
+ The next time it powers on, it should automatically pair with your |EX-CS| via the HC-06.

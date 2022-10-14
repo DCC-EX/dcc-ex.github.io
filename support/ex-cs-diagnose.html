@@ -474,28 +474,22 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><ol class="arabic simple">
-<li><p>Have you selected the correct COM port?</p></li>
+<tr class="row-even"><td><p>“Failed to upload because uploading error:”</p></td>
+<td><p>Go to Question 2.</p></td>
+<td><ol class="loweralpha simple">
+<li><p>Have you selected the correct COM port? <br /> See <a class="reference internal" href="../ex-installer/installing.html#getting-ready"><span class="std std-ref">1. Getting Ready</span></a> for information on finding the correct COM port.</p></li>
+<li><p>Have you selected the correct Arduino board type?</p></li>
 </ol>
 </td>
-<td><p>Go to Question 2.</p></td>
-<td><p>ToDo</p></td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="2">
-<li><p>Have you selected the correct Arduino board type?</p></li>
+<li><p>Have you selected the correct Baud rate?</p></li>
 </ol>
 </td>
 <td><p>Go to Question 3.</p></td>
 <td><p>ToDo</p></td>
 </tr>
 <tr class="row-even"><td><ol class="arabic simple" start="3">
-<li><p>Have you selected the correct Baud rate?</p></li>
-</ol>
-</td>
-<td><p>Go to Question 4.</p></td>
-<td><p>ToDo</p></td>
-</tr>
-<tr class="row-odd"><td><ol class="arabic simple" start="4">
 <li><p>ToDo?</p></li>
 </ol>
 </td>
@@ -557,6 +551,8 @@
 <td><ol class="loweralpha simple">
 <li><p>Have you plugged in and turned on a 12-15v DC power supply into the motor board</p></li>
 <li><p>Have you made sure the polarity of the power supply is correct.</p></li>
+<li><p>Wrong loco DCC Address selected.</p></li>
+<li><p>loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco is being damaged.)</p></li>
 </ol>
 </td>
 </tr>
@@ -590,14 +586,20 @@
 </ol>
 </td>
 <td><p>Go to Question 2.</p></td>
-<td><p>Select ‘DCC++’ as the System Manufacturer and ‘DCC++ Serial Port’ as the System connection in the preferences.</p></td>
+<td><ol class="loweralpha simple">
+<li><p>Select ‘DCC++’ as the System Manufacturer and ‘DCC++ Serial Port’ as the System connection in the preferences.</p></li>
+</ol>
+</td>
 </tr>
 <tr class="row-odd"><td><ol class="arabic simple" start="2">
 <li><p>Have you selected the correct COM port?</p></li>
 </ol>
 </td>
 <td><p>Go to Question 3.</p></td>
-<td><p>Check which com port the EX-CommandStation is connected to. <br /> See <a class="reference internal" href="../ex-commandstation/get-started/installer.html#getting-ready"><span class="std std-ref">1. Getting Ready</span></a> for details on how to determine the correct com port.</p></td>
+<td><ol class="loweralpha simple">
+<li><p>Check which com port the EX-CommandStation is connected to. <br /> See <a class="reference internal" href="../ex-commandstation/get-started/installer.html#getting-ready"><span class="std std-ref">1. Getting Ready</span></a> for details on how to determine the correct com port.</p></li>
+</ol>
+</td>
 </tr>
 <tr class="row-even"><td><ol class="arabic simple" start="3">
 <li><p>Can you turn the track power on?  <br /> Do the LEDs on the motor shield turn on?</p></li>
@@ -617,16 +619,8 @@
 <td><p>Congratulations, your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is essentially working.</p></td>
 <td><ol class="loweralpha simple">
 <li><p>Have you connected the track to the ‘MAIN’ outputs of the Motor Board.  <br /> JMRI cannot directly control trains on the ‘PROGRAMMING’ outputs without using additional commands. See <a class="reference internal" href="ex-cs-troubleshooting.html#cannot-drive-a-locomotive"><span class="std std-ref">Cannot drive a locomotive</span></a> for more information.</p></li>
-</ol>
-</td>
-</tr>
-<tr class="row-even"><td><ol class="arabic simple" start="5">
-<li><p>ToDo</p></li>
-</ol>
-</td>
-<td><p>ToDo</p></td>
-<td><ol class="loweralpha simple">
-<li><p>ToDo</p></li>
+<li><p>Wrong loco DCC Address selected.</p></li>
+<li><p>loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco is being damaged.)</p></li>
 </ol>
 </td>
 </tr>
@@ -704,10 +698,22 @@
 <li><p>Can you turn the track power on?  <br /> Do the LEDs on the motor shield turn on?</p></li>
 </ol>
 </td>
-<td><p>ToDo</p></td>
+<td><p>Go to Question 6.</p></td>
 <td><ol class="loweralpha simple">
 <li><p>Have you plugged in and turned on a 12-15v DC power supply into the motor board</p></li>
 <li><p>Have you made sure the polarity of the power supply is correct.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="6">
+<li><p>When select a loco in the throttle app and move the throttle, does the loco move?</p></li>
+</ol>
+</td>
+<td><p>Congratulations, your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is essentially working.</p></td>
+<td><ol class="loweralpha simple">
+<li><p>Have you connected the track to the ‘MAIN’ outputs of the Motor Board.  <br /> You cannot directly control trains on the ‘PROGRAMMING’ outputs without using additional commands which can be done in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> but not other WiFi throttle apps (Use the <span class="guilabel">Request Loco ID</span> button in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>.) <br /> recommend that the MAIN outputs be used to run a layout.</p></li>
+<li><p>Wrong loco DCC Address selected.</p></li>
+<li><p>loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco is being damaged.)</p></li>
 </ol>
 </td>
 </tr>
@@ -752,7 +758,10 @@
 </ol>
 </td>
 <td><p>ToDo</p></td>
-<td><p>You may be on a different network to the EX-CommandStation (e.g. 2.5gHz VS 5gHz connection to you home router.) Try entering the IP address and Port manually.  To</p></td>
+<td><ol class="loweralpha simple">
+<li><p>You may be on a different network to the EX-CommandStation (e.g. 2.5gHz VS 5gHz connection to you home router.) Try entering the IP address and Port manually.  To</p></li>
+</ol>
+</td>
 </tr>
 </tbody>
 </table>

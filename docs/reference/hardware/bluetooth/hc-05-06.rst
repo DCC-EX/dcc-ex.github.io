@@ -10,9 +10,9 @@ HC-05/06 Bluetooth Modules
 
 .. sidebar::
 
-    .. contents:: On this page
-        :depth: 2
-        :local:
+  .. contents:: On this page
+      :depth: 2
+      :local:
 
 The ubiquitous HC-05/06 Bluetooth modules for Arduinos provide a relatively simple mechanism to add Bluetooth capability to your |EX-CS|, with some caveats, which puts these devices into the |Tinkerer-text| category.
 

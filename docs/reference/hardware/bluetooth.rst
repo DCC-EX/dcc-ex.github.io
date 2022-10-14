@@ -23,3 +23,4 @@ Refer to the following pages for the various supported Bluetooth options availab
   :maxdepth: 1
 
   /reference/hardware/bluetooth/hc-05-06
+  /reference/hardware/bluetooth/esp32-bluetooth

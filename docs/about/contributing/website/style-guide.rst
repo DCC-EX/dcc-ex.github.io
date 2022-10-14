@@ -46,8 +46,6 @@ Style Guidelines
   * \|EX-DCCI\| for |EX-DCCI|
   * \|BSC\| for |BSC|
 
-.. todo:: PRIORITY IF FEEDBACK RECEIVED - Once the website is released, review feedback on when and where to use the Team and Product name expansions as they may take the reader's eyes away from the text if used too much, consider using them at the beginning of pages/sentences/paragraphs only perhaps.
-
 * Where possible, use the expansions for the level text (not possible in headings)
 
   * \|conductor-text\| |conductor-text|

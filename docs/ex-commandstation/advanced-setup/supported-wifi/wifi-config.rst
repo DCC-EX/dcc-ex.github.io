@@ -20,7 +20,7 @@ This page describes the software configuration options for using WiFi to connect
 As mentioned in the above link, you will need the following to proceed:
 
 * A |EX-CS| with Motor Driver
-* A WiFi board (for Bluetooth configuration, see :doc:`/ex-commandstation/advanced-setup/supported-bluetooth/index`)
+* A WiFi board (for Bluetooth configuration, see :doc:`/reference/hardware/bluetooth`)
   
 For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s>`_.
 
@@ -47,7 +47,7 @@ That said, there are two main wireless technologies that let you send commands t
 * WiFi
 * Bluetooth
 
-Your particular controller hardware (a separate controller or your cell phone) may be able to use either or both depending on the controller you choose. This tutorial covers WiFi configuration, for Bluetooth see :doc:`/ex-commandstation/advanced-setup/supported-bluetooth/index`.
+Your particular controller hardware (a separate controller or your cell phone) may be able to use either or both depending on the controller you choose. This tutorial covers WiFi configuration, for Bluetooth see :doc:`/reference/hardware/bluetooth`.
 
 Connection Type: Direct to Command Station or through JMRI
 ============================================================

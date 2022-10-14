@@ -103,6 +103,14 @@ table.intro-table {
   white-space: normal;
 }
 
+.command-table tbody tr td ol li p {
+  font-size: 100% !important;
+}
+
+.command-table tbody tr td ol {
+  margin-bottom: 0px !important;
+}
+
 .command-table .category {
   display: block;
   text-align: center;

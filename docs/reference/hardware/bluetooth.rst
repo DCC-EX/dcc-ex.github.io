@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |EX-REF-LOGO|
 
-****************
-Bluetooth Boards
-****************
+***************************
+Supported Bluetooth Devices
+***************************
 
 |tinkerer|
 

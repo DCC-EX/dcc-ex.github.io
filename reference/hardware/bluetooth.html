@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bluetooth Boards &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Supported Bluetooth Devices &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Installation Options" href="../../ex-commandstation/advanced-setup/installation-options/index.html" />
-    <link rel="prev" title="Supported Bluetooth Boards" href="../../ex-commandstation/advanced-setup/supported-bluetooth/index.html" />
+    <link rel="next" title="HC-05/06 Bluetooth Modules" href="bluetooth/hc-05-06.html" />
+    <link rel="prev" title="Nano Ethernet Shield" href="ethernet-boards/nano-ethernet-shield.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -122,8 +122,9 @@
 <li class="toctree-l4"><a class="reference internal" href="ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Bluetooth Boards</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
@@ -242,7 +243,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../download/ex-turntable.html">EX-Turntable</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Reference</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../videos/index.html">Videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Documents and Schematics</a><ul>
@@ -250,7 +251,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html">Hardware</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="wire-gauge.html">DCC Track Wiring Information</a></li>
 <li class="toctree-l3"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a><ul>
@@ -297,6 +298,11 @@
 <li class="toctree-l4"><a class="reference internal" href="ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index-i2c.html">i2c Hardware</a><ul>
@@ -407,10 +413,9 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../../ex-commandstation/index.html">EX-CommandStation</a> &raquo;</li>
           <li><a href="../../ex-commandstation/advanced-setup/index.html">Advanced Options</a> &raquo;</li>
-          <li><a href="../../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a> &raquo;</li>
-      <li>Bluetooth Boards</li>
+      <li>Supported Bluetooth Devices</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/bluetooth-boards.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/bluetooth.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -419,12 +424,18 @@
            <div itemprop="articleBody">
              
   <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="bluetooth-boards">
-<h1>Bluetooth Boards<a class="headerlink" href="#bluetooth-boards" title="Permalink to this heading"></a></h1>
-<p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>LOW - Hardware - LOW Bluetooth boards</p>
+<section id="supported-bluetooth-devices">
+<h1>Supported Bluetooth Devices<a class="headerlink" href="#supported-bluetooth-devices" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
+<a class="reference internal image-reference" href="../../_images/bluetooth.png"><img alt="Bluetooth Logo" class="align-left" src="../../_images/bluetooth.png" style="width: 27.3px; height: 41.55px;" /></a>
+<p>You can connect a Bluetooth module to a spare serial port on your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> to enable Bluetooth connectivity from a single throttle or controller including smartphone apps such as <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>.</p>
+<p>If you require multiple throttles or controllers connected simultaneously, you will need to have WiFi or Ethernet connectivity instead.</p>
+<p>Refer to the following pages for the various supported Bluetooth options available.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
+</ul>
 </div>
 </section>
 
@@ -432,8 +443,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../../ex-commandstation/advanced-setup/supported-bluetooth/index.html" class="btn btn-neutral float-left" title="Supported Bluetooth Boards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../ex-commandstation/advanced-setup/installation-options/index.html" class="btn btn-neutral float-right" title="Installation Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ethernet-boards/nano-ethernet-shield.html" class="btn btn-neutral float-left" title="Nano Ethernet Shield" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bluetooth/hc-05-06.html" class="btn btn-neutral float-right" title="HC-05/06 Bluetooth Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

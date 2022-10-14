@@ -117,7 +117,7 @@ Bluetooth
 .. toctree::
     :maxdepth: 1
     
-    supported-bluetooth/index
+    /reference/hardware/bluetooth
 
 LCD/OLED Screens
 ================

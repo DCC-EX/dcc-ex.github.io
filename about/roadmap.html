@@ -122,8 +122,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth-boards.html">Bluetooth Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/bluetooth.html">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
@@ -297,6 +298,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/bluetooth.html">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">i2c Hardware</a><ul>
@@ -501,11 +507,6 @@
 <h2>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h2>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
-<p>PRIORITY IF FEEDBACK RECEIVED - Once the website is released, review feedback on when and where to use the Team and Product name expansions as they may take the reader’s eyes away from the text if used too much, consider using them at the beginning of pages/sentences/paragraphs only perhaps.</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="contributing/website/style-guide.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/about/contributing/website/style-guide.rst, line 49.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
 <p>LOW - Stage 1 - wiThrottle - Multiple Trains</p>
 </div>
 <p class="todo-source">(The <a class="reference internal" href="../big-picture/stage1.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/big-picture/stage1.rst, line 314.)</p>
@@ -541,16 +542,6 @@
 <p class="todo-source">(The <a class="reference internal" href="../ex-commandstation/advanced-setup/controllers.html#id3"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/ex-commandstation/advanced-setup/controllers.rst, line 197.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
-<p>LOW - Hardware - text for supported Bluetooth boards</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="../ex-commandstation/advanced-setup/supported-bluetooth/index.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/ex-commandstation/advanced-setup/supported-bluetooth/index.rst, line 12.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p>LOW - Hardware - bluetooth connection text</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/bluetooth.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/ex-commandstation/advanced-setup/supported-connections/bluetooth.rst, line 12.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
 <p>LOW - Hardware - Ethernet connection</p>
 </div>
 <p class="todo-source">(The <a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/ethernet.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/ex-commandstation/advanced-setup/supported-connections/ethernet.rst, line 12.)</p>
@@ -569,11 +560,6 @@
 <p>LOW - Fix sensor IDs in diagram to match example</p>
 </div>
 <p class="todo-source">(The <a class="reference internal" href="../ex-rail/examples.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/ex-rail/examples.rst, line 315.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p>LOW - Hardware - LOW Bluetooth boards</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="../reference/hardware/bluetooth-boards.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/hardware/bluetooth-boards.rst, line 11.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
 <p>LOW - Hardware - Text for the hardware index page</p>
@@ -705,16 +691,6 @@
 <p>LOW - Hardware - Finish this above - Capture the samples in PulseView</p>
 </div>
 <p class="todo-source">(The <a class="reference internal" href="../reference/tools/diagnostic-tools.html#id2"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/tools/diagnostic-tools.rst, line 302.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p>LOW - Hardware - show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="../reference/tools/serial-monitor.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/tools/serial-monitor.rst, line 118.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p>LOW - Serial Monitor by CSA - description and link missing</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="../reference/tools/serial-monitor.html#id3"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/tools/serial-monitor.rst, line 148.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
 <p>Diagnosing - EX-CommandStation Software fails to load</p>

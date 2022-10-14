@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
+<meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HC-05/06 Bluetooth Modules &mdash; DCC-EX Model Railroading  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/platform.js"></script>
+        <script src="../../../_static/js/extra.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Using Bluetooth with your ESP32 EX-CommandStation" href="esp32-bluetooth.html" />
+    <link rel="prev" title="Supported Bluetooth Devices" href="../bluetooth.html" />
+ 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L5X0KNBF0W');
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../../../index.html">
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../levels.html">Before You Begin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../ex-commandstation/index.html">EX-CommandStation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-commandstation/get-started/index.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/wifi-setup.html">Adding WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/installer.html">Install the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/controllers.html">Choosing a Throttle (Controller)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/testing.html">Test Your Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/index.html">Supported Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/direct.html">Direct Connection (USB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/wifi-setup.html">WiFi Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/ethernet.html">Ethernet Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/bluetooth.html">Bluetooth Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-connections/jmri.html">JMRI Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../bluetooth.html">Supported Bluetooth Devices</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-installer/index.html">Install using EX-Installer</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html">Install using Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/command-summary.html">DCC-EX Command Summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-installer/index.html">EX-Installer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-installer/testing.html">Testing your installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-webthrottle/index.html">EX-WebThrottle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-rail/index.html">EX-RAIL (Automation)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/editing.html">Editing myAutomation.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/creating-elements.html">Objects - an Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/examples.html">Example Objects and Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/tips.html">Tips and Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/about.html">About and History</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ex-dccinspector/index.html">EX-DCCInspector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../support/index.html">Troubleshooting &amp; Getting Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/index-ex-cs.html">EX-CommandStation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../support/ex-cs-faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../support/ex-cs-diagnose.html">Diagnosing Basic Problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/contact-us.html">Contact Us</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../big-picture/index.html">The Big Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/big-picture.html">How it All Works Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage1.html">Stage 1 - Running a Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage2.html">Stage 2 - Adding a Roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage4.html">Stage 4 - Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage5.html">Stage 5 - Turntables &amp; Traversers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage5/turntable-example.html">Example - Turntable ROUTEs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage5/traverser-example.html">Example - Turntable and traverser ROUTEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../big-picture/stage6.html">Stage 6 - Putting it all Together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example1.html">Example 1 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example2.html">Example 2 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example3.html">Example 3 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example4.html">Example 4 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example5.html">Example 5 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example6.html">Example 6 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../big-picture/stage6/example7.html">Example 7 Full automation with turnouts &amp; signals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../throttles/index.html">Throttles (Controllers)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/protocols.html">WiThrottle Server, Web Server, DCC++ API Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/ex-webthrottle.html">EX-Web-Throttle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/jmri.html">JMRI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/engine-driver.html">Engine Driver (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/dccpp-cab.html">DCCpp CAB (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/digitrainspro.html">DigiTrainsPro (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/withrottle.html">WiThrottle (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/locontrol.html">Locontrol (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/rtdrive-dccpp.html">RtDtive DCC++ (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/physical-knobs.html">Adding a Physical Knob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/uwt50.html">TCS UWT-50 (Physical)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../download/index.html">Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-commandstation.html">EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-dccinspector.html">EX-DCCInspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../download/ex-turntable.html">EX-Turntable</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../videos/index.html">Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../downloads/index.html">Documents and Schematics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../wire-gauge.html">DCC Track Wiring Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../microcontroller-boards.html">Microcontroller Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano-every.html">Nano Every</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/teensy.html">Teensy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi-boards.html">WiFi Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/wangtongze-board.html">WangTongze Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wifi-boards/hc12-bridge.html">HC-12 Wireless Bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ethernet-boards.html">Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../bluetooth.html">Supported Bluetooth Devices</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index-i2c.html">i2c Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../i2c-displays.html">i2c Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../i2c-devices.html">i2c Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../servo-module.html">Connecting a Servo Module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../other/index.html">Other Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../other/ir-sensor.html">IR Sensor Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index-decoder.html">Decoders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../decoder-notes.html">Decoder Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/index.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/programming-locos.html">Programming Locos (CVs)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/index-dcpp-commands.html">DCC++ Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/command-summary.html">DCC-EX Command Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../developers/index.html">Developer and API reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/api.html">CommandStation-EX API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/hal.html">DCC-EX HAL Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developers/writing-hal-driver.html">Writing a HAL Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/index-diagnostics-d.html">Diagnostic d Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tools/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tools/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/index.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About, Press &amp; Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/press/index.html">Press / Announcements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/rewrite.html">DCC++ VS DCC-EX? [Oct 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/v40-announce.html">EX-CommandStation 4.0 Release [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/release-notes.html">Release Notes [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/press/new-name.html">Our New Name [Aug 2022]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contributing/donate.html">Donate to Our Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contributing/index.html">Contributing - Helping the DCC-EX Team</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/github.html">GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/requirements.html">What You Need to Know/Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/software.html">Recommended Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/contributing/website/index.html">Contributing to the Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/getting-started.html">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/structure.html">Folder and Page Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../about/contributing/website/style-guide.html">Style Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/licence.html">Licence &amp; Attributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/roadmap.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/site-map.html">Site Map</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DCC-EX Model Railroading</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../ex-commandstation/index.html">EX-CommandStation</a> &raquo;</li>
+          <li><a href="../../../ex-commandstation/advanced-setup/index.html">Advanced Options</a> &raquo;</li>
+          <li><a href="../bluetooth.html">Supported Bluetooth Devices</a> &raquo;</li>
+      <li>HC-05/06 Bluetooth Modules</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/bluetooth/hc-05-06.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+<section id="hc-05-06-bluetooth-modules">
+<h1>HC-05/06 Bluetooth Modules<a class="headerlink" href="#hc-05-06-bluetooth-modules" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
+<aside class="sidebar">
+<div class="contents local topic" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#hc-05-vs-hc-06" id="id1">HC-05 vs. HC-06</a></p></li>
+<li><p><a class="reference internal" href="#programming-the-modules" id="id2">Programming the modules</a></p>
+<ul>
+<li><p><a class="reference internal" href="#interactive-programming-sketch" id="id3">Interactive programming sketch</a></p></li>
+<li><p><a class="reference internal" href="#hc-05-programming" id="id4">HC-05 programming</a></p></li>
+<li><p><a class="reference internal" href="#hc-06-programming" id="id5">HC-06 programming</a></p></li>
+<li><p><a class="reference internal" href="#other-programming-methods" id="id6">Other programming methods</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#connecting-a-hc-05-06-to-your-ex-commandstation" id="id7">Connecting a HC-05/06 to your EX-CommandStation</a></p></li>
+<li><p><a class="reference internal" href="#bonus-material-how-to-pair-a-hc-05-with-another-hc-05-06" id="id8">Bonus material - How to pair a HC-05 with another HC-05/06</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configure-the-slave-hc-06" id="id9">Configure the slave HC-06</a></p></li>
+<li><p><a class="reference internal" href="#obtain-the-hc-06-address" id="id10">Obtain the HC-06 address</a></p></li>
+<li><p><a class="reference internal" href="#configure-the-master-hc-05" id="id11">Configure the master HC-05</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</aside>
+<p>The ubiquitous HC-05/06 Bluetooth modules for Arduinos provide a relatively simple mechanism to add Bluetooth capability to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, with some caveats, which puts these devices into the <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../levels.html#tinkerer">Tinkerer</a> category.</p>
+<a class="reference internal image-reference" href="../../../_images/hc-05.jpg"><img alt="HC-05" src="../../../_images/hc-05.jpg" style="width: 210.0px; height: 210.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/hc-06.jpg"><img alt="HC-06" src="../../../_images/hc-06.jpg" style="width: 192.0px; height: 192.0px;" /></a>
+<p>The main two items to take note of prior to using these is that they require some programming prior to use, and they are designed to work with 3.3V logic, meaning simply connecting these to a 5V microcontroller (such as a Mega2560) can lead to damage.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bluetooth connectivity is a one to one pairing only, meaning only one throttle or controller can be connected at one time. If you want wireless connectivity for multiple throttles or controllers simultaneously, you will require WiFi or Ethernet connectivity.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For those using <a class="reference internal" href="../../glossary.html"><span class="doc">JMRI</span></a>, a Bluetooth connection can substitute for a USB cable if desired, provided the computer (or Raspberry Pi) running <a class="reference internal" href="../../glossary.html"><span class="doc">JMRI</span></a> can pair with a HC-05/06 device.</p>
+<p>Once paired, simply configure <a class="reference internal" href="../../glossary.html"><span class="doc">JMRI</span></a> to use the serial port associated with the HC-05/06 device.</p>
+</div>
+<section id="hc-05-vs-hc-06">
+<h2><a class="toc-backref" href="#id1">HC-05 vs. HC-06</a><a class="headerlink" href="#hc-05-vs-hc-06" title="Permalink to this heading"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For price, capability, and simplicity’s sake, we recommend sticking with the HC-05 device, as it is much simpler to program than the HC-06, has far more capability, and only costs a fraction more.</p>
+<p>From a security perspective, the HC-05 allows up to a 16 character alpha-numeric password, whereas the HC-06 only supports a 4 digit PIN number.</p>
+</div>
+<p>The HC-05 and HC-06 modules are visually almost identical, however the HC-05 has 6 pins and is capable of being both a master and slave Bluetooth device, whereas the HC-06 has 4 pins and can only be a slave device. The HC-05 has an extensive AT command set for programming, whereas the HC-06 is very limited, allowing changes only to the baud rate, name, and PIN (note that they are probably the only three items required for this application anyway).</p>
+<p>The HC-05 has a dedicated mode to send the AT commands to program it, while the HC-06 can be programmed via AT commands any time it is not paired. This makes it sound like the HC-06 is the simpler option to program, however to do so interactively means you need to use a serial console that sends the entire command in one go within 1 second, and you cannot practically type the commands in fast enough. The Arduino IDE can be used for this.</p>
+<p>This is why our recommendation is to stick with the HC-05 device, as they are typically only a little more expensive, but are much easier to program interactively, and are far more capable devices.</p>
+</section>
+<section id="programming-the-modules">
+<h2><a class="toc-backref" href="#id2">Programming the modules</a><a class="headerlink" href="#programming-the-modules" title="Permalink to this heading"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>The HC-05/06 modules use 3.3V logic, so you must ensure that you use either a resistor divider or level shifter when connecting the Rx pin of the device you’re using to program it.</p>
+</div>
+<p>The simplest method to program these modules is by using an additional microcontroller such as an Arduino Nano or Uno, connected as per the diagram below. If you are using a HC-06 module, the green “Key” connection is not required as this pin does not exist.</p>
+<a class="reference internal image-reference" href="../../../_images/nano-bluetooth-programmer.png"><img alt="Nano Bluetooth Programmer" src="../../../_images/nano-bluetooth-programmer.png" style="width: 442.04999999999995px; height: 212.1px;" /></a>
+<p>The Arduino IDE’s Serial Monitor can be used to program either module successfully providing it is configured correctly for the specified module in the relevant section below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you wish to simply use the modules without configuring anything, you can do so for the device name and PIN, noting that the whole world will know the default pin, and anyone can therefore pair to your device.</p>
+<p>You will, however, have to set the baud rate to 115200 in order to be able to communicate successfully with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>The default settings are likely to be:</p>
+<ul class="simple">
+<li><p>Device name: HC-05 or HC-06</p></li>
+<li><p>Pin: 0000 or 1234</p></li>
+<li><p>Baud rate: 9600</p></li>
+</ul>
+</div>
+<section id="interactive-programming-sketch">
+<h3><a class="toc-backref" href="#id3">Interactive programming sketch</a><a class="headerlink" href="#interactive-programming-sketch" title="Permalink to this heading"></a></h3>
+<p>This sketch allows interactive programming of either module by entering AT commands in the Arduino IDE serial console.</p>
+<p>Given these devices are considered <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../levels.html#tinkerer">Tinkerer</a> level, we will assume you are familiar with uploading a sketch to an Arduino, and will not cover that detail here.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Arduino.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;SoftwareSerial.h&gt;</span><span class="cp"></span>
+
+<span class="n">SoftwareSerial</span> <span class="nf">btSerial</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+
+<span class="c1">// Default HC-05 baud rate is 38400, HC-06 is 9600</span>
+<span class="cp">#define BAUD_RATE 38400</span>
+<span class="c1">// #define BAUD_RATE 9600</span>
+
+<span class="kt">char</span> <span class="n">c</span><span class="o">=</span><span class="sc">&#39; &#39;</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ready to program&quot;</span><span class="p">);</span>
+  <span class="n">btSerial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">BAUD_RATE</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">btSerial</span><span class="p">.</span><span class="n">available</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">btSerial</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">Serial</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
+    <span class="n">btSerial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="hc-05-programming">
+<h3><a class="toc-backref" href="#id4">HC-05 programming</a><a class="headerlink" href="#hc-05-programming" title="Permalink to this heading"></a></h3>
+<p>To program the HC-05 successfully, it needs to be powered on with the “Key” pin set high to enter the “AT” command mode. Note that some devices have this pin labelled “EN” for enable, and others reportedly do not have the pin connected to a header pin at all. Most devices, however, have a tiny push button that can be held when powering the device on to enter “AT” command mode.</p>
+<p>The programming sketch in the previous section should place the HC-05 into “AT” command mode successfully, provided it is connected correctly, and your device has the “Key” pin available.</p>
+<p>When the HC-05 is in “AT” command mode, the blue and red LEDs should blink slowly, around 2 seconds on/off. When not in this mode, the blue and red LEDs will blink rapidly.</p>
+<p>If the HC-05 does not enter the “AT” command mode, ensure the “Key” pin is connected correctly, and try holding the button while powering on in case the “Key” pin is not connected internally within the module.</p>
+<p>To send the required “AT” commands to the module, open the Arduino IDE’s serial monitor, set the new line option to “Both NL &amp; CR”, and set the baud rate to “9600”.</p>
+<p>To verify the device is ready and in “AT” command mode, enter “AT” and click “Send” (or press the &lt;Enter&gt; key), and the response “OK” should appear in the serial monitor.</p>
+<p>Providing this has been successful, enter the following commands one at a time to configure the various options, and each one should return “OK” to confirm the command was received successfully:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+NAME=&lt;DEVICENAME&gt;
+AT+PSWD=&lt;PASSWORD&gt;
+AT+ROLE=0
+AT+UART=115200,0,0
+</pre></div>
+</div>
+<p>You may set &lt;DEVICENAME&gt; to be anything you wish (up to 31 characters), and &lt;PASSWORD&gt; can be up to a 16 character alpha-numeric password. The “AT+ROLE” command sets the HC-05 to “Slave” mode, and the “AT+UART” command sets the baud rate to 115200.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While the documentation says the password can be up to a 16 character alpha-numeric password, testing shows that it cannot be a mix of letters and numbers, so either choose numbers or letters for the password. Given the variety of modules on the market, this issue may be specific to the unit being tested and may not be the case with other brands.</p>
+</div>
+<p>For example, to set the device name to “EX-CommandStation” and the password to “secret12345”, the entire command list to send would be:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+NAME=EX-CommandStation
+AT+PSWD=MySecret
+AT+ROLE=0
+AT+UART=115200,0,0
+</pre></div>
+</div>
+<p>Once you have completed programming the device, it will need to be power cycled, with the “Key” pin left low in order for the settings to take affect, and to exit the “AT” command mode.</p>
+<p>You should be able to pair to the device using the updated PIN, and be able to connect to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via this interface (see :ref`reference/hardware/bluetooth/hc-05-06:connecting a hc-05/06 to your ex-commandstation`).</p>
+</section>
+<section id="hc-06-programming">
+<h3><a class="toc-backref" href="#id5">HC-06 programming</a><a class="headerlink" href="#hc-06-programming" title="Permalink to this heading"></a></h3>
+<p>Unlike the HC-05, the HC-06 module has no specific “AT” command mode, and can be programmed at any time it is not paired with another Bluetooth device. The HC-06 can only ever operate in “Slave” mode also.</p>
+<p>The other notable difference as previously mentioned is that programming commands must be entered within a 1 second duration. This means the only effective way to send them is by using a serial console that lets you enter the complete command string in one go, and the Arduino IDE can be used for this.</p>
+<p>To send the required “AT” commands to the module, open the Arduino IDE’s serial monitor, set the new line option to “No line ending”, and set the baud rate to “9600”.</p>
+<p>Note that these settings take effect immediately, and therefore you should send the baud rate command last, otherwise you will effectively be disconnected from the HC-06 module.</p>
+<p>To verify the device is ready and in “AT” command mode, enter “AT” and click “Send” (or press the &lt;Enter&gt; key), and the response “OK” should appear in the serial monitor.</p>
+<p>Providing this has been successful, enter the following commands one at a time to configure the various options:, and each one should return “OK” to confirm the command was received successfully. Note that unlike the HC-05, the return text is slightly different for each command as noted:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+NAME&lt;DEVICENAME&gt; (returns OKsetname)
+AT+PIN&lt;PIN&gt; (returns OKsetPIN)
+AT+BAUD8 (returns OK115200)
+</pre></div>
+</div>
+<p>You may set &lt;DEVICENAME&gt; to be anything you wish, whereas &lt;PIN&gt; must be a 4 digit number. The “AT+BAUD8” command sets the baud rate to 115200.</p>
+<p>For example, to set the device name to “EX-CommandStation” and the PIN to “5432”, the entire command list to send would be:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+NAMEEX-CommandStation
+AT+PIN5432
+AT+BAUD8
+</pre></div>
+</div>
+<p>You should now be able to pair to the device using the updated PIN, and be able to connect to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via this interface (see :ref`reference/hardware/bluetooth/hc-05-06:connecting a hc-05/06 to your ex-commandstation`).</p>
+<p>Once the HC-06 is paired and a device actively connects to it, the blue and red LEDs should cease blinking rapidly and stay on.</p>
+</section>
+<section id="other-programming-methods">
+<h3><a class="toc-backref" href="#id6">Other programming methods</a><a class="headerlink" href="#other-programming-methods" title="Permalink to this heading"></a></h3>
+<p>You can use other methods to program these devices, such as ESP01 programming modules, but documenting these in detail is outside the scope of this project.</p>
+<p>In essence, any device that converts USB to 3.3V TTL logic levels can be used, noting that the HC-05/06 modules require between 3.6 and 6V DC to power them, and you will need to ensure that the Rx pin is exposed to nothing higher than 3.3V. Connect the Tx pin of the USB device to the Rx pin of the HC-05/06, and Rx to Tx pin.</p>
+<p>If you do happen to use an ESP01 programming module for example, you will need to provide power to the HC-05/06 module separately, as it only provides 3.3V.</p>
+</section>
+</section>
+<section id="connecting-a-hc-05-06-to-your-ex-commandstation">
+<h2><a class="toc-backref" href="#id7">Connecting a HC-05/06 to your EX-CommandStation</a><a class="headerlink" href="#connecting-a-hc-05-06-to-your-ex-commandstation" title="Permalink to this heading"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>The HC-05/06 modules use 3.3V logic, so you must ensure that you use either a resistor divider or level shifter when connecting the Rx pin of the device to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+</div>
+<p>Once your HC-05/06 module has been programmed for the correct baud rate, and has the appropriate device name and PIN set, you will need to connect it to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>It is recommended to connect a HC-05/06 device to an additional serial port on your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> rather than the first serial port. If you have no choice (eg. you use an Uno with only one serial port), then you will need to disconnect it when uploading new versions of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
+<p>This diagram outlines connecting a HC-05 to serial port 1 on a Mega2560.</p>
+<a class="reference internal image-reference" href="../../../_images/mega-cs-with-hc-05.png"><img alt="EX-CommandStation Bluetooth Connection" src="../../../_images/mega-cs-with-hc-05.png" style="width: 669.1999999999999px; height: 287.34999999999997px;" /></a>
+<p>To enable communication via the HC-05 connected to serial port 1, you will also need to edit “config.h” and uncomment or add the following line (typically found towards the bottom) to ensure all DCC-EX API commands are sent/received from this serial port:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define SERIAL1_COMMANDS</span>
+</pre></div>
+</div>
+</section>
+<section id="bonus-material-how-to-pair-a-hc-05-with-another-hc-05-06">
+<h2><a class="toc-backref" href="#id8">Bonus material - How to pair a HC-05 with another HC-05/06</a><a class="headerlink" href="#bonus-material-how-to-pair-a-hc-05-with-another-hc-05-06" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The best reference we have found for this is on <a class="reference external" href="http://www.martyncurrey.com/connecting-2-arduinos-by-bluetooth-using-a-hc-05-and-a-hc-06-pair-bind-and-link/">Martyn Currey’s website</a>.</p>
+<p>We provide a fairly concise version of the process here, so it’s best to refer to the excellent material provided on his website for further clarity.</p>
+</div>
+<p>For those writing throttle or control software that wish to connect to an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via Bluetooth, this outlines how to configure a HC-05 module connected to a throttle or controller serial port to pair with a slave HC-05/06 module connected to an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>Firstly, you will need to program the slave device as per either <a class="reference internal" href="#hc-05-programming"><span class="std std-ref">HC-05 programming</span></a> or <a class="reference internal" href="#hc-06-programming"><span class="std std-ref">HC-06 programming</span></a>, and have it connected to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>Once your slave HC-05/06 device is ready, you will need to put your HC-05 device into “AT” command mode as per <a class="reference internal" href="#hc-05-programming"><span class="std std-ref">HC-05 programming</span></a> in order to configure it as a master device, and pair it with your HC-06 device.</p>
+<p>Validate your slave device is available with <code class="docutils literal notranslate"><span class="pre">AT+INQ</span></code> and note the address (eg. 0002:72:0A3C7F). When specifying this device address in the “AT” commands below, it needs to be in “NAP,UAP,LAP” format, resulting in this example address becoming “0002,72,0A3C7F”.</p>
+<p>For the examples below, we will use a HC-05 pairing with a slave HC-06 using the same details from our examples above.</p>
+<section id="configure-the-slave-hc-06">
+<h3><a class="toc-backref" href="#id9">Configure the slave HC-06</a><a class="headerlink" href="#configure-the-slave-hc-06" title="Permalink to this heading"></a></h3>
+<p>The first step is to use these “AT” commands to configure your slave HC-06:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+NAMEEX-CommandStation    &lt;&lt;-- Set the slave device name
+AT+PIN5432                  &lt;&lt;-- Set the slave PIN
+AT+BAUD8                    &lt;&lt;-- Set slave to 115200 baud rate
+</pre></div>
+</div>
+<p>At this point your HC-06 should be set ready to be paired with.</p>
+</section>
+<section id="obtain-the-hc-06-address">
+<h3><a class="toc-backref" href="#id10">Obtain the HC-06 address</a><a class="headerlink" href="#obtain-the-hc-06-address" title="Permalink to this heading"></a></h3>
+<p>The next step is to use the master HC-05 to find the HC-06 address, which can be done with these commands, noting the HC-05 still needs to be in the “AT” command mode:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+RMAAD                    &lt;&lt;-- Clear any existing paired information
+AT+ROLE=1                   &lt;&lt;-- Set master role
+AT+RESET                    &lt;&lt;-- This reboots the HC-05, continue below when started again
+
+AT+CMODE=1                  &lt;&lt;-- Pair with any device
+AT+INQM=0,5,9               &lt;&lt;-- Set inquiry mode
+AT+INIT                     &lt;&lt;-- Initialise profile
+AT+INQ                      &lt;&lt;-- Discover available Bluetooth devices
+</pre></div>
+</div>
+<p>After the last command is sent, you should receive a list of up to 5 Bluetooth devices, and in the list should be the HC-06. In our example case, it should appear something like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>+INQ:0021:11:012446,1F00,FF9C,EX-CommandStation
+</pre></div>
+</div>
+<p>If the device name is not visible (the last part “,EX-CommandStation”) you can find the name by using this command (remember you need to use the NAP,UAP,LAP addressing format):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+RNAME?0021,11,012446
+</pre></div>
+</div>
+<p>This should respond with <code class="docutils literal notranslate"><span class="pre">+RNAME:EX-CommandStation</span></code> if it’s the correct device.</p>
+</section>
+<section id="configure-the-master-hc-05">
+<h3><a class="toc-backref" href="#id11">Configure the master HC-05</a><a class="headerlink" href="#configure-the-master-hc-05" title="Permalink to this heading"></a></h3>
+<p>Now that the slave HC-06 device is ready and you have obtained its address, the final step is to configure the HC-05 to pair with this device automatically.</p>
+<p>Again in “AT” command mode, these are the “AT” commands you will need to execute to configure your HC-05 to automatically pair with your slave HC-06 device:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+NAME=MyThrottle            &lt;&lt;-- Set as desired
+AT+UART=115200,0,0            &lt;&lt;-- Set the same baud rate as our slave
+AT+PSWD=5432                  &lt;&lt;-- Set the same as the slave
+AT+PAIR=0021,11,012446,5      &lt;&lt;-- Pair with the slave address, 5 second timeout
+AT+BIND=0021,11,012446        &lt;&lt;-- Bind to the slave address only
+AT+CMODE=0                    &lt;&lt;-- Set to pair with the slave device only
+AT+LINK=0021,11,012446        &lt;&lt;-- Link to our slave device
+</pre></div>
+</div>
+<p>Once these commands are run, the final “AT+LINK” command should respond with “OK”, and then the HC-05 master LED should blink twice rapidly approximately every 2 seconds, and the HC-06 slave device’s LED should be on and no longer blinking. These are the visual indicators that the devices are paired.</p>
+<p>At this point, your HC-06 is already connected to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> ready to go, and you can disconnect your HC-05 from the programmer and connect it to your throttle/controller (don’t forget the resistor divider or level shifter for 5V devices!).</p>
+<blockquote>
+<div><p>The next time it powers on, it should automatically pair with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via the HC-06.</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../bluetooth.html" class="btn btn-neutral float-left" title="Supported Bluetooth Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="esp32-bluetooth.html" class="btn btn-neutral float-right" title="Using Bluetooth with your ESP32 EX-CommandStation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2022 - Fred Decker, Mani Kumar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

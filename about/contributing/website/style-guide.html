@@ -122,8 +122,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/bluetooth-boards.html">Bluetooth Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/bluetooth.html">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
@@ -299,6 +300,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/bluetooth.html">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/index-i2c.html">i2c Hardware</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/i2c-displays.html">i2c Displays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/i2c-devices.html">i2c Devices</a></li>
@@ -426,9 +432,9 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#text-and-style-standards" id="id2">Text and Style Standards</a></p>
+<li><p><a class="reference internal" href="#text-and-style-standards" id="id1">Text and Style Standards</a></p>
 <ul>
-<li><p><a class="reference internal" href="#style-guidelines" id="id3">Style Guidelines</a></p></li>
+<li><p><a class="reference internal" href="#style-guidelines" id="id2">Style Guidelines</a></p></li>
 </ul>
 </li>
 </ul>
@@ -436,14 +442,14 @@
 </aside>
 <p>This page aims to provide guidance for people contributing to the <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> website on how to write individual pages to a) provide a better user experience, and b) be easier to maintain the documentation.</p>
 <section id="text-and-style-standards">
-<h2><a class="toc-backref" href="#id2">Text and Style Standards</a><a class="headerlink" href="#text-and-style-standards" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1">Text and Style Standards</a><a class="headerlink" href="#text-and-style-standards" title="Permalink to this heading"></a></h2>
 <p>Please ensure to follow the standards below when creating or updating documentation to ensure the look and feel of the website remains consistent.</p>
 <section id="style-guidelines">
-<h3><a class="toc-backref" href="#id3">Style Guidelines</a><a class="headerlink" href="#style-guidelines" title="Permalink to this heading"></a></h3>
-<ul class="simple">
+<h3><a class="toc-backref" href="#id2">Style Guidelines</a><a class="headerlink" href="#style-guidelines" title="Permalink to this heading"></a></h3>
+<ul>
 <li><p>Every page (except a few pages like home, about, contact, etc.) MUST start with one or more level images (after the title) to indicate the intended base audience for the page.</p></li>
 <li><p>Where possible, use the expansions for the level images:</p>
-<ul>
+<ul class="simple">
 <li><p>|conductor| <a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p></li>
 <li><p>|tinkerer| <a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p></li>
 <li><p>|engineer| <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p></li>
@@ -453,7 +459,7 @@
 </ul>
 </li>
 <li><p>Where possible, use the Team and Product names the expansions (not possible in headings)</p>
-<ul>
+<ul class="simple">
 <li><p>|DCC-EX| for <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span></p></li>
 <li><p>|EX-CS| for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
 <li><p>|EX-I| for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span></p></li>
@@ -463,12 +469,6 @@
 <li><p>|BSC| for <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span></p></li>
 </ul>
 </li>
-</ul>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>PRIORITY IF FEEDBACK RECEIVED - Once the website is released, review feedback on when and where to use the Team and Product name expansions as they may take the reader’s eyes away from the text if used too much, consider using them at the beginning of pages/sentences/paragraphs only perhaps.</p>
-</div>
-<ul>
 <li><p>Where possible, use the expansions for the level text (not possible in headings)</p>
 <ul class="simple">
 <li><p>|conductor-text| <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#conductor">Conductor</a></p></li>

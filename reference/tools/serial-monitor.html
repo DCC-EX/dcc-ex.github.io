@@ -122,8 +122,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-bluetooth/index.html">Supported Bluetooth Boards</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/bluetooth-boards.html">Bluetooth Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/bluetooth.html">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
@@ -299,6 +300,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/bluetooth.html">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/index-i2c.html">i2c Hardware</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-displays.html">i2c Displays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-devices.html">i2c Devices</a></li>
@@ -424,14 +430,14 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#what-is-a-serial-monitor-and-why-do-i-need-one" id="id8">What is a Serial Monitor and Why Do I Need One?</a></p></li>
-<li><p><a class="reference internal" href="#connect-with-the-arduino-serial-monitor" id="id9">Connect with the Arduino Serial Monitor</a></p></li>
-<li><p><a class="reference internal" href="#connect-with-a-smart-phone" id="id10">Connect with a Smart Phone</a></p></li>
+<li><p><a class="reference internal" href="#what-is-a-serial-monitor-and-why-do-i-need-one" id="id5">What is a Serial Monitor and Why Do I Need One?</a></p></li>
+<li><p><a class="reference internal" href="#connect-with-the-arduino-serial-monitor" id="id6">Connect with the Arduino Serial Monitor</a></p></li>
+<li><p><a class="reference internal" href="#connect-with-a-smart-phone" id="id7">Connect with a Smart Phone</a></p></li>
 </ul>
 </div>
 </aside>
 <section id="what-is-a-serial-monitor-and-why-do-i-need-one">
-<h2><a class="toc-backref" href="#id8">What is a Serial Monitor and Why Do I Need One?</a><a class="headerlink" href="#what-is-a-serial-monitor-and-why-do-i-need-one" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5">What is a Serial Monitor and Why Do I Need One?</a><a class="headerlink" href="#what-is-a-serial-monitor-and-why-do-i-need-one" title="Permalink to this heading"></a></h2>
 <p>A Serial Monitor is another name for a “terminal” program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a “Swiss Army Knife” in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:</p>
 <ul class="simple">
 <li><p>Test your Command Station</p></li>
@@ -446,7 +452,7 @@
 <p>If you know how to use a terminal program it is as simple as connecting your device to the Command Station, opening a session and selecting the right baud rate (115200) and line endings (Carriage Return and Line Feed). For the rest of us, we will include detailed instructions on how to use a computer or a phone app to connect to your Command Station.</p>
 </section>
 <section id="connect-with-the-arduino-serial-monitor">
-<h2><a class="toc-backref" href="#id9">Connect with the Arduino Serial Monitor</a><a class="headerlink" href="#connect-with-the-arduino-serial-monitor" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6">Connect with the Arduino Serial Monitor</a><a class="headerlink" href="#connect-with-the-arduino-serial-monitor" title="Permalink to this heading"></a></h2>
 <p><strong>What You Will Need</strong></p>
 <ul class="simple">
 <li><p>The Arduino IDE</p></li>
@@ -461,37 +467,37 @@
 <section id="run-the-arduino-ide">
 <h3>Run the Arduino IDE<a class="headerlink" href="#run-the-arduino-ide" title="Permalink to this heading"></a></h3>
 <p>Start the Arduino IDE. You should see something like this:</p>
-<figure class="align-default" id="id4">
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/arduino_ide.jpg"><img alt="Arduino IDE" src="../../_images/arduino_ide.jpg" style="width: 576.0px; height: 536.4px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 101 </span><span class="caption-text">Arduino IDE</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 101 </span><span class="caption-text">Arduino IDE</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="select-the-correct-com-port">
 <h3>Select the Correct COM Port<a class="headerlink" href="#select-the-correct-com-port" title="Permalink to this heading"></a></h3>
 <p>Select “Port” and find the port on your computer that recognizes the Arduino. If you don’t see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">Drivers for the CH340</a></p>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/board_port_mega.jpg"><img alt="Select the COM Port" src="../../_images/board_port_mega.jpg" style="width: 720.0px; height: 261.90000000000003px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 102 </span><span class="caption-text">Select the correct COM Port</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 102 </span><span class="caption-text">Select the correct COM Port</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="open-the-serial-monitor">
 <h3>Open the Serial Monitor<a class="headerlink" href="#open-the-serial-monitor" title="Permalink to this heading"></a></h3>
 <p>The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select “Tools -&gt; Serial Monitor”, or click on the “serial monitor” icon near the upper right of the window.</p>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/arduino_ide2.jpg"><img alt="Open the Serial Monitor" src="../../_images/arduino_ide2.jpg" style="width: 488.7px; height: 497.7px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 103 </span><span class="caption-text">Open the Serial Monitor</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 103 </span><span class="caption-text">Open the Serial Monitor</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Make sure the <strong>baud rate at the lower right of the window is set to “115200”</strong>. This is the data communication speed, equivalent to 115.2kb/s! <strong>Make sure the dropdown next to that says “Both NL &amp; CR”</strong>. That makes sure you send a ‘new line’ command and ‘carriage return’ which the Arduino expects.</p>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/serial_monitor.jpg"><img alt="Serial Monitor" src="../../_images/serial_monitor.jpg" style="width: 579.6px; height: 454.5px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 104 </span><span class="caption-text">Serial Monitor - Note line ending and baud rate settings!</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 104 </span><span class="caption-text">Serial Monitor - Note line ending and baud rate settings!</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don’t have a network, that’s fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.</p>
@@ -507,7 +513,7 @@
 </section>
 </section>
 <section id="connect-with-a-smart-phone">
-<h2><a class="toc-backref" href="#id10">Connect with a Smart Phone</a><a class="headerlink" href="#connect-with-a-smart-phone" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7">Connect with a Smart Phone</a><a class="headerlink" href="#connect-with-a-smart-phone" title="Permalink to this heading"></a></h2>
 <p><strong>What You Will Need</strong></p>
 <ul class="simple">
 <li><p>A Smart Phone</p></li>
@@ -515,14 +521,6 @@
 <li><p>A USB “On The Go” Cable (aka. OTG Cable)</p></li>
 <li><p>The USB Cable for your Arduino</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can also use Bluetooth if you have a Bluetooth board attached to your Command Station and make a small modification to the sketch (Command Station Software). We will cover how to do that in a <strong>Project</strong> tutorial</p>
-</div>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>LOW - Hardware - show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar</p>
-</div>
 <section id="otg-cable">
 <h3>OTG Cable<a class="headerlink" href="#otg-cable" title="Permalink to this heading"></a></h3>
 <p>You will need to find one that is compatible with your phone. Some phones come with one. It is usually Micro USB or USB-C or Apple Lightning on one end and USB 2.0 Female on the other. It acts like an adapter to connect a regular cable that would normally plug into a computer or laptop, and let it connect to your phone instead.</p>
@@ -538,14 +536,6 @@
 <li><p><a class="reference external" href="https://play.google.com/store/apps/details?id=com.csa.serialmonitor">Serial Monitor by CSA</a></p></li>
 <li><p><a class="reference external" href="https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole">USB Serial Console by Felipe Herranz</a></p></li>
 </ul>
-</section>
-<section id="id2">
-<h3>Serial Monitor by CSA<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
-<p>Light and Dark themes</p>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>LOW - Serial Monitor by CSA - description and link missing</p>
-</div>
 </section>
 </section>
 </section>

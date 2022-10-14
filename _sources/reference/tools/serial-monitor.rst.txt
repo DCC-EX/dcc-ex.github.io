@@ -71,7 +71,6 @@ Open the Serial Monitor
 
 The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
-
 .. figure:: /_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
    :scale: 90%
@@ -113,10 +112,6 @@ Connect with a Smart Phone
 * A USB "On The Go" Cable (aka. OTG Cable)
 * The USB Cable for your Arduino
 
-.. NOTE:: You can also use Bluetooth if you have a Bluetooth board attached to your Command Station and make a small modification to the sketch (Command Station Software). We will cover how to do that in a **Project** tutorial
-
-.. todo:: LOW - Hardware - show how to use Bluetooth. There is Bluetooth serial monitor by CSA and Android Bluetooth serial monitor by Rupak Poddar
-
 OTG Cable
 -----------
 
@@ -139,10 +134,3 @@ Every smart phone OS such as Android or iOS has a program or two that will work 
 * Serial USB Terminal by Kai Morich
 * `Serial Monitor by CSA <https://play.google.com/store/apps/details?id=com.csa.serialmonitor>`_
 * `USB Serial Console by Felipe Herranz <https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole>`_
-
-Serial Monitor by CSA
------------------------
-
-Light and Dark themes
-
-.. todo::  LOW - Serial Monitor by CSA - description and link missing

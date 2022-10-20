@@ -13,6 +13,6 @@ Throttles (Hardware)
 
   minithrottle
   witcontroller
-  physical-knobs
+  engine-driver-physical-knobs
   streamdeck 
   uwt50

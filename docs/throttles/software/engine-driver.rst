@@ -138,6 +138,11 @@ And here is another Bluetooth controller that provides extra function buttons an
    :scale: 15%
    :align: center
 
+Adding a Physical Dial (Knob) 
+==============================
+
+It is possible to easily add a rotary dial (knob) to |Engine Driver|.  see :doc:`/throttles/hardware/engine-driver-physical-knobs` for more infomation.
+
 ====
 
 Footnotes

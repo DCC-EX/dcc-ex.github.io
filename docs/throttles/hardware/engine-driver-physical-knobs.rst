@@ -10,4 +10,7 @@ While it is easy to use a BlueTooth gamepad with the |Engine Driver| app that do
 
 It is possible to easily add a rotary dial (knob) to |Engine Driver| due its ability to control the throttle using the volume hardware buttons on the smart device (Phone / Tablet) and the ready availability of USB volume dials / knobs.
 
-An example of using this feature can be found at:  http://1fatgmc.com/RailRoad/DCC/page-3.html
+Examples of using this feature can be found at:  
+
+* http://1fatgmc.com/RailRoad/DCC/page-3.html
+* https://www.youtube.com/watch?v=qA9WiscD1gk

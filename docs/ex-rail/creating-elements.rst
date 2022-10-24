@@ -141,7 +141,7 @@ Pin Turnouts/Points
 Adding the Hardware -  Pin Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: LOW - Adding the Hardware -  Pin Turnouts/Points
+.. todo:: `LOW - Adding the Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/418>`_ -  Pin Turnouts/Points
 
 Configure myAutomation.h - Pin Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -179,4 +179,4 @@ Click :doc:`here <controllers>` or click the "next" button to learn how to selec
 
 ----
 
-.. todo:: LOW - need to update installer screenshots
+.. todo:: `LOW - need to update installer screenshots <https://github.com/DCC-EX/dcc-ex.github.io/issues/417>`_

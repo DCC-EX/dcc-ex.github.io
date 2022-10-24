@@ -21,7 +21,7 @@ that can easily be used to describe sequential command 'sequences' to automatica
 
 To begin, let's define a few terms:
 
-**OBJECT** - Things / devices on your layout that you want to interact with. these include: `Your locos <Adding a Roster>`_, `Turnouts/Points <Adding Turnouts/Points>`_, `Semophores/Signals <Servos for Signals and Animations>`_, `Servo based Animations <Servos for Signals and Animations>`_, `Sensors <Sensors>`_ and `Signals (Lights) <Signals>`_.
+**OBJECT** - Things / devices on your layout that you want to interact with. these include: :ref:`Your locos <ex-rail/creating-elements:adding a roster>`, :ref:`Turnouts/Points <ex-rail/creating-elements:adding the hardware - servo turnouts/points>`, :ref:`semaphores/Signals <ex-rail/creating-elements:adding the hardware - signals>`, :ref:`Servo based Animations <ex-rail/creating-elements:configure myautomation.h - servos for signals an animations>`, :ref:`Sensors <ex-rail/creating-elements:adding the hardware - sensors>` and :ref:`Signals (Lights) <ex-rail/creating-elements:configure myautomation.h - signals>`.
 
 **SEQUENCE** - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 

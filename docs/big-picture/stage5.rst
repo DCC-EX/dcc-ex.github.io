@@ -239,7 +239,7 @@ Once we have our steps per revolution, we can use that number with our formulas 
 Calculating EX-Turntable positions and DCC phase/polarity switching
 -------------------------------------------------------------------
 
-.. todo:: MEDIUM - Stage 5 - add diagram outlining angles for turntable position calculations and phase switching
+.. todo:: `MEDIUM - Stage 5 <https://github.com/DCC-EX/dcc-ex.github.io/issues/414>`_ - add diagram outlining angles for turntable position calculations and phase switching
 
 .. tip:: 
 
@@ -258,7 +258,7 @@ The home position has been set 10 degrees before position 1/roundhouse stall 1.
 Track wiring
 ^^^^^^^^^^^^
 
-.. todo:: MEDIUM - Stage 5 - track wiring diagram
+.. todo:: `MEDIUM - Stage 5 <https://github.com/DCC-EX/dcc-ex.github.io/issues/414>`_ - track wiring diagram
 
 In this layout, positions 1 through 6 are all somewhat opposite our connecting track at position 7, and therefore the simplest option for track wiring is to ensure they are all wired with the same polarity (this will be outlined in a diagram).
 
@@ -353,7 +353,7 @@ Using this formular results in these step counts (noting we round up or down to 
 Tuning the traverser
 --------------------
 
-.. todo:: LOW - Stage 5 - add diagram outlining steps for traverser position calculations
+.. todo:: `LOW - Stage 5 <https://github.com/DCC-EX/dcc-ex.github.io/issues/414>`_ - add diagram outlining steps for traverser position calculations
 
 .. tip:: 
 

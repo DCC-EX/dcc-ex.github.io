@@ -109,7 +109,7 @@ Unlike servo based turnouts, there is no ID or description (they don't appear in
 
    SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
 
-A simple example using the thrid control pins of the first PCA9685 connected to the CommandStation would be:
+A simple example using the third control pins of the first PCA9685 connected to the CommandStation would be:
 
 .. code-block:: 
 

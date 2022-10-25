@@ -129,7 +129,13 @@ Connecting Jumper Wires to the CS
 Installing the Software (OLED)
 ------------------------------
 
-** Not Finished. Coming soon! **
+** Not Finished **
+ Open the config.h tab
+ define OLED_DRIVER width,heightin pixels (address are auto detected)
+ The 128x32 or 128x64 I2C SSD1306-based devices are supported as well as 132x64 I2C SH1106 devices.
+ -  Locate the OLED displays and uncomment the #define to connect to the one you use. 
+  - //  #define OLED_DRIVER 128,32
+  - //  #define OLED_DRIVER 128,64
 
 .. todo:: 
 

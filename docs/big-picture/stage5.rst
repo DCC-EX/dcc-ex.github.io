@@ -375,7 +375,9 @@ Using this formula results in these step counts (noting we round up or down to t
 Tuning the traverser
 --------------------
 
-.. todo:: `LOW - Stage 5 <https://github.com/DCC-EX/dcc-ex.github.io/issues/414>`_ - add diagram outlining steps for traverser position calculations
+.. image:: /_static/images/big-picture/stage5-ex-traverser.png
+  :alt: Traverser Positions
+  :scale: 80%
 
 .. tip:: 
 

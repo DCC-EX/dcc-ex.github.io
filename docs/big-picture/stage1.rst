@@ -311,7 +311,7 @@ wiThrottle (Multiple Trains)
 
   The free version of |WITHROTTLE| (WiThrottle Lite) does not provide any options for running multiple trains or Consisted / Multiple Unit trains.  You need to purchase the paid/full version.
 
-.. todo:: LOW - Stage 1 - wiThrottle - Multiple Trains
+.. todo:: `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_ - wiThrottle - Multiple Trains
 
 
 ----

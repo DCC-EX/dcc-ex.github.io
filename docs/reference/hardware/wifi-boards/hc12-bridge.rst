@@ -14,6 +14,6 @@ HC-12 Wireless Bridge
     :depth: 1
     :local:
 
-.. todo:: LOW - Hardware - Update HC-12 wireless bridge page.
+.. todo:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/432>`_ - Update HC-12 wireless bridge page.
   
   This page needs content, images, etc.

@@ -80,20 +80,10 @@ To connect the Display to the Command Station, you will need 4 male to female ju
 
 .. Note:: Look closely on the Uno or Mega for markings, including on the inside or outside of the black header. SCA and SCL are usually clearly labeled.
 
-
-Controlling Brightness
-----------------------
-
-The LCD displays are usually very bright. We remove the jumper on the side of the backpack and create an open jumper from 2 DuPont connectors and stick a 470 Ohm resistor in it like this:
-
-.. TODO:: LOW - Hardware - Add image - Controlling Brightness
-
-
 Upload the sketch to your CS
 ----------------------------
 
 To upload the new sketch on your Command Station
-
 
 #. Open the Arduino IDE
 #. Open the CommandStation-EX project
@@ -141,10 +131,6 @@ Installing the Software (OLED)
 
 ** Not Finished. Coming soon! **
 
-Changing the i2c Address
-------------------------
+.. todo:: 
 
-If you have other i2C devices, like an i2C bus to control turnouts or other accessories, you may need to change the address of your i2c display to avoid a conflict. The display should have instructions available for how to do this.
-
-** Not Finished. Coming soon! **
-
+   `MEDIUM - OLED Information required <https://github.com/DCC-EX/dcc-ex.github.io/issues/421>`_ - need to outline how to connect an OLED to the CS, and how to configure in config.h

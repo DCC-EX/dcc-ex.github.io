@@ -314,7 +314,7 @@ So we will need some extra sensors (hardware required) and some logical blocks (
 
 .. todo:: 
 
-   LOW - Fix sensor IDs in diagram to match example
+   `LOW - Fix sensor IDs in diagram to match example <https://github.com/DCC-EX/dcc-ex.github.io/issues/419>`_
 
 We can use this diagram to plan routes. When we do so, it will be easier to imagine 4 separate mini routes, each passing from one block to the next. Then we can chain them together to form a full route, but also start from any block.
 

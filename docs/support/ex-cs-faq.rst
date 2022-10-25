@@ -26,4 +26,4 @@ This is a list of **Frequently Asked Questions** that we answer on our various s
   * - Why Can't I Put an EX-RAIL Script on an SDCard?
     - Being able to read an SD card on the Arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don’t have enough free memory on an Arduino to hold that code. |BR| |BR| See :ref:`ex-rail/about:why can't i put a script on an sdcard?` for more information.
 
-.. todo:: More FAQs to follow :-)
+.. todo:: `LOW - More FAQs to follow <https://github.com/DCC-EX/dcc-ex.github.io/issues/434>`_

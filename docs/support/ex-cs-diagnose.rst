@@ -31,7 +31,7 @@ Depending on how you have your EX-CommandStation configured, the steps to diagno
 EX-CommandStation Software fails to load
 ========================================
 
-.. todo:: Diagnosing - EX-CommandStation Software fails to load
+.. todo:: `MEDIUM - Diagnosing <https://github.com/DCC-EX/dcc-ex.github.io/issues/433>`_ - EX-CommandStation Software fails to load
 
 Either using the |EX-I| to the Arduino IDE.
 
@@ -102,7 +102,7 @@ As an initial check we recommend you should try to connect to your EX-CommandSta
 Using JMRI
 ----------
 
-.. todo:: Diagnosing - Using JMRI
+.. todo:: `MEDIUM - Diagnosing <https://github.com/DCC-EX/dcc-ex.github.io/issues/433>`_ - Using JMRI
 
 .. list-table:: 
   :widths: 40 20 40

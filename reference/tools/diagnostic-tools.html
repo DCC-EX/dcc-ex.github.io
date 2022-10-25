@@ -430,10 +430,10 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#sniffer-vs-analyzer" id="id21">Sniffer vs. Analyzer</a></p></li>
-<li><p><a class="reference internal" href="#dcc-sniffer-packet-analyzer" id="id22">DCC Sniffer (PACKET analyzer)</a></p></li>
-<li><p><a class="reference internal" href="#logic-analyzer-decoder" id="id23">Logic Analyzer/Decoder</a></p></li>
-<li><p><a class="reference internal" href="#dcc-track-phase-detector" id="id24">DCC Track Phase Detector</a></p></li>
+<li><p><a class="reference internal" href="#sniffer-vs-analyzer" id="id19">Sniffer vs. Analyzer</a></p></li>
+<li><p><a class="reference internal" href="#dcc-sniffer-packet-analyzer" id="id20">DCC Sniffer (PACKET analyzer)</a></p></li>
+<li><p><a class="reference internal" href="#logic-analyzer-decoder" id="id21">Logic Analyzer/Decoder</a></p></li>
+<li><p><a class="reference internal" href="#dcc-track-phase-detector" id="id22">DCC Track Phase Detector</a></p></li>
 </ul>
 </div>
 </aside>
@@ -447,14 +447,14 @@
 <li><p><a class="reference internal" href="#dcc-track-phase-detector"><span class="std std-ref">DCC Track Phase Detector</span></a></p></li>
 </ul>
 <section id="sniffer-vs-analyzer">
-<h2><a class="toc-backref" href="#id21">Sniffer vs. Analyzer</a><a class="headerlink" href="#sniffer-vs-analyzer" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id19">Sniffer vs. Analyzer</a><a class="headerlink" href="#sniffer-vs-analyzer" title="Permalink to this heading"></a></h2>
 <section id="sniffer">
 <h3>Sniffer<a class="headerlink" href="#sniffer" title="Permalink to this heading"></a></h3>
 <p>A “sniffer” is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a “PACKET analyzer” which shouldn’t be confused with “LOGIC analyzer” in the next section. We recommend using our <a class="reference internal" href="../../download/ex-dccinspector.html"><span class="doc">EX-DCCInspector</span></a> sketch.</p>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id1">
 <img alt="../../_images/pixel.png" src="../../_images/pixel.png" />
 <figcaption>
-<p><span class="caption-number">Figure 105 </span><span class="caption-text">Example outputs of a DCC Sniffer below. Click on any of the images to view them full size.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 105 </span><span class="caption-text">Example outputs of a DCC Sniffer below. Click on any of the images to view them full size.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 <div class="legend">
 <a class="reference internal image-reference" href="../../_images/sniffer_out1.png"><img alt="Example Sniffer Output 1" class="align-left" src="../../_images/sniffer_out1.png" style="width: 257.25px; height: 247.45px;" /></a>
 <a class="reference internal image-reference" href="../../_images/sniffer_out2.jpg"><img alt="Example Sniffer Output 2" class="align-left" src="../../_images/sniffer_out2.jpg" style="width: 279.5px; height: 181.5px;" /></a>
@@ -466,23 +466,23 @@
 <section class="clearer" id="analyzer">
 <h3>Analyzer<a class="headerlink" href="#analyzer" title="Permalink to this heading"></a></h3>
 <p>A logic analyzer is a device that connects to the Command Station signal pins and to a computer via a USB connection and uses software to capture the DCC waveform for a set period of time. The software can also decode the packets and display them along with the waveform. The display looks similar that what would appear on an oscilloscope. Since it captures the waveform, it can let you see details about the signal that may be causing issues like irregular pulses.</p>
-<figure class="align-center" id="id4">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/dccpp_ex_acc_packet.jpg"><img alt="DCC Signal Analyzer output" src="../../_images/dccpp_ex_acc_packet.jpg" style="width: 405.0px; height: 131.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 106 </span><span class="caption-text">Example Logic Analyzer output</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 106 </span><span class="caption-text">Example Logic Analyzer output</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="dcc-sniffer-packet-analyzer">
-<h2><a class="toc-backref" href="#id22">DCC Sniffer (PACKET analyzer)</a><a class="headerlink" href="#dcc-sniffer-packet-analyzer" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id20">DCC Sniffer (PACKET analyzer)</a><a class="headerlink" href="#dcc-sniffer-packet-analyzer" title="Permalink to this heading"></a></h2>
 <section id="buy-it">
 <h3>Buy it<a class="headerlink" href="#buy-it" title="Permalink to this heading"></a></h3>
 <p>Well it isn’t quite a turnkey solution, but it’s close. You need this shield and an Arduino Uno or Mega and then to download our free <a class="reference internal" href="../../download/ex-dccinspector.html"><span class="doc">DCCInspector-EX</span></a> file and upload it to your microcontroller with the Arduino IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.</p>
-<figure class="align-center" id="id5">
+<figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/iowa_scale_eng_dcc_board.jpg"><img alt="Iowa Scale Engineering DCC Sniffer/Decoder Board" src="../../_images/iowa_scale_eng_dcc_board.jpg" style="width: 300.0px; height: 300.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 107 </span><span class="caption-text">Iowa Scale Engineering DCC Sniffer/Decoder Board</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 107 </span><span class="caption-text">Iowa Scale Engineering DCC Sniffer/Decoder Board</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p><a class="reference external" href="https://www.iascaled.com/store/ARD-DCCSHIELD">https://www.iascaled.com/store/ARD-DCCSHIELD</a></p>
@@ -494,10 +494,10 @@
 <h3>Build It<a class="headerlink" href="#build-it" title="Permalink to this heading"></a></h3>
 <p>Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don’t even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> instead of to the track.</p>
 <p>You will need to upload our <a class="reference internal" href="../../download/ex-dccinspector.html"><span class="doc">EX-DCCInspector</span></a> software to whatever microcontroller you choose.</p>
-<figure class="align-center" id="id6">
+<figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/sniffer_block_diag.png"><img alt="Packet Sniffer Block Diagram" src="../../_images/sniffer_block_diag.png" style="width: 599.9px; height: 322.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 108 </span><span class="caption-text">DCC Packet Sniffer Block Diagram</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 108 </span><span class="caption-text">DCC Packet Sniffer Block Diagram</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -519,25 +519,25 @@
 <p>While you could substitute other optoisolator chips and get mixed results, the 6N137 was specifically chosen for it’s switching speed. This allows for more reliable decoding and can even check the accuracy of the DCC signal.</p>
 </div>
 <p><strong>Simplest circuit</strong></p>
-<figure class="align-center" id="id7">
+<figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/dcc_interface_1.png"><img alt="Minimum recommended circuit" src="../../_images/dcc_interface_1.png" style="width: 581.4px; height: 201.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 109 </span><span class="caption-text">Minimum recommended circuit</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 109 </span><span class="caption-text">Minimum recommended circuit</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1µF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span> sketch uses the pin 13 LED to provide the same function.</p>
 <p><strong>Another tested circuit (courtesy of Geoff Bunza)</strong></p>
-<figure class="align-center" id="id8">
+<figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/dcc_fe2_schematic.jpg"><img alt="Geoff Bunza DCC Interface Schematic" src="../../_images/dcc_fe2_schematic.jpg" style="width: 560.0px; height: 208.95px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 110 </span><span class="caption-text">Geoff Bunza DCC Interface Schematic</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 110 </span><span class="caption-text">Geoff Bunza DCC Interface Schematic</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like OSH Park) and have them make boards for you. <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> may be selling these, so keep checking back. Here is what the boards look like:</p>
-<figure class="align-center" id="id9">
+<figure class="align-center" id="id7">
 <a class="reference internal image-reference" href="../../_images/bunza_dcc_interface.jpg"><img alt="Geoff Bunza DCC Interface Board" src="../../_images/bunza_dcc_interface.jpg" style="width: 397.8px; height: 137.4px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 111 </span><span class="caption-text">Geoff Bunza DCC Interface Board</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 111 </span><span class="caption-text">Geoff Bunza DCC Interface Board</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the microcontroller and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.</p>
@@ -554,22 +554,13 @@
 <li><p>17 function decoder</p></li>
 </ul>
 <p><a class="reference external" href="http://www.modelrailroadcontrolsystems.com/improved-geoff-bunzas-low-cost-17-channel-dcc-decoder-bare-board/">http://www.modelrailroadcontrolsystems.com/improved-geoff-bunzas-low-cost-17-channel-dcc-decoder-bare-board/</a></p>
-<p>Have them fabricated</p>
-<ul class="simple">
-<li><p>DCC Interface board</p></li>
-</ul>
-<p>Fritzing diagram</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>LOW - Hardware - Add this board - Fritzing diagram</p>
-</div>
 <p><a class="reference external" href="https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/">https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/</a></p>
 <p><strong>Build it in a case with a display!</strong></p>
 <p>And if you want to get into the development of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span> and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> team member Neil McKechnie’s blog. This version has plans for a 3D printed case and uses an ESP32 development board with an OLED display attached.</p>
-<figure class="align-center" id="id10">
+<figure class="align-center" id="id8">
 <a class="reference internal image-reference" href="../../_images/neil_sniffer.png"><img alt="Neil's DCC-EX Sniffer" src="../../_images/neil_sniffer.png" style="width: 267.0px; height: 145.2px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 112 </span><span class="caption-text">Neil’s DCC-EX Sniffer in a 3D Printed Case</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 112 </span><span class="caption-text">Neil’s DCC-EX Sniffer in a 3D Printed Case</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>HERE:
@@ -581,11 +572,11 @@
 </section>
 </section>
 <section id="logic-analyzer-decoder">
-<h2><a class="toc-backref" href="#id23">Logic Analyzer/Decoder</a><a class="headerlink" href="#logic-analyzer-decoder" title="Permalink to this heading"></a></h2>
-<figure class="align-center" id="id11">
+<h2><a class="toc-backref" href="#id21">Logic Analyzer/Decoder</a><a class="headerlink" href="#logic-analyzer-decoder" title="Permalink to this heading"></a></h2>
+<figure class="align-center" id="id9">
 <a class="reference internal image-reference" href="../../_images/logic_analyzer.jpg"><img alt="Logic Analyzer" src="../../_images/logic_analyzer.jpg" style="width: 300.0px; height: 220.5px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 113 </span><span class="caption-text">Logic Analyzer</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 113 </span><span class="caption-text">Logic Analyzer</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. eBay and AliExpress are good sources:</p>
@@ -600,10 +591,10 @@
 <p>Search for the best source. As usual, you can often find the hardware items from online stores or Amazon, but also find them cheaper on eBay or AliExpress  or BangGood direct from China.</p>
 </div>
 <p>Any set of probes that will connect to the pins that are exposed between the Arduino and the Motor Shield will do, however we really like these “T” or “swept wing” probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.</p>
-<figure class="align-center" id="id12">
+<figure class="align-center" id="id10">
 <a class="reference internal image-reference" href="../../_images/logic_probes.jpg"><img alt="Logic probes" src="../../_images/logic_probes.jpg" style="width: 270.0px; height: 270.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 114 </span><span class="caption-text">Logic Probes</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 114 </span><span class="caption-text">Logic Probes</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="install-pulseview">
@@ -622,10 +613,10 @@
 </pre></div>
 </div>
 <p>It will look something line this. There will be just 2 files. The “cache” file will get created the first time you run PulseView and select the DCC decoder:</p>
-<figure class="align-center" id="id13">
+<figure class="align-center" id="id11">
 <a class="reference internal image-reference" href="../../_images/pv_install_folder.jpg"><img alt="Installing the DCC protocol decoder" src="../../_images/pv_install_folder.jpg" style="width: 551.0px; height: 153.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 115 </span><span class="caption-text">Installing the DCC protocol decoder</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 115 </span><span class="caption-text">Installing the DCC protocol decoder</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>On Linux:</p>
@@ -666,54 +657,50 @@ $ cp -r sigrok-DCC-Protocoll-master/dcc/ ~/.local/share/libsigrokdecode/decoders
 <li><p>Get ready to send whatever commands you want to monitor, then hit the “run” button in the upper left corner and run your tests for however many seconds you are capturing.</p></li>
 <li><p>Analyze the data. You may want to click the “zoom/+” button several times to be able to see the waveform pulses and to have the decoder.</p></li>
 </ul>
-<p>You can save your captures and display them again at any time. More details coming soon.</p>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>LOW - Hardware - Finish this above - Capture the samples in PulseView</p>
-</div>
+<p>You can save your captures and display them again at any time.</p>
 </section>
 </section>
 <section id="dcc-track-phase-detector">
-<h2><a class="toc-backref" href="#id24">DCC Track Phase Detector</a><a class="headerlink" href="#dcc-track-phase-detector" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id22">DCC Track Phase Detector</a><a class="headerlink" href="#dcc-track-phase-detector" title="Permalink to this heading"></a></h2>
 <p>If you aren’t using boosters or don’t have isolated track sections/blocks, then you usually won’t have to worry about the phase of your DCC Signal so you can skip this section. But if you do use boosters, this is am important tool to add to your arsenal. And the best part, is anyone can make one!</p>
 <section id="why-is-phase-important">
 <h3>Why is Phase Important?<a class="headerlink" href="#why-is-phase-important" title="Permalink to this heading"></a></h3>
 <p>The short answer is that if one block is out of phase with another and your loco bridges the gap, you will have a dangerous short circuit! Let’s look at this situation in a bit more detail for the Engineers.</p>
 <p>The DCC Signal energizes one track with a short voltage pulse (58us) for a “1” and a long one (116us)
 for a “0”. It then immediately switches and does the same thing on the other track. The “pulse train” looks a bit like this and is the way most people first “see” the DCC Waveform:</p>
-<figure class="align-center" id="id14">
+<figure class="align-center" id="id12">
 <a class="reference internal image-reference" href="../../_images/dcc_signal.png"><img alt="DCC Waveform" src="../../_images/dcc_signal.png" style="width: 440.65px; height: 281.04999999999995px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 116 </span><span class="caption-text">DCC Waveform</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 116 </span><span class="caption-text">DCC Waveform</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>But those familiar with how DC and AC voltage works might look at that and see a square wave where there is positive and negative voltage. That isn’t what is happening, there is never any negative voltage! Only the current changes direction inside something connected to the track, like the decoder in your loco. There is no “ground”, only the voltage present on one rail with respect to the other.</p>
 <p>In order to fully understand how this works, we have to stop thinking in terms of analog electronics and think in terms of the digital world. The DCC pulses provide both the voltage to operate locomotives and accessories connected to the tracks, and the data decoders need to operate them. Each rail carries the same information, just 180 degrees out of phase from the other. When one rail has a pulse of full voltage, the other is zero. We believe we are the first to present DCC in this fashion. Look at figure 8 and see that the pulses energize one rail with respect to the other back and forth.</p>
-<figure class="align-center" id="id15">
+<figure class="align-center" id="id13">
 <a class="reference internal image-reference" href="../../_images/dcc_pulse_train1.png"><img alt="DCC Pulse Train" src="../../_images/dcc_pulse_train1.png" style="width: 247.25px; height: 390.25px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 117 </span><span class="caption-text">DCC Pulse Train</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 117 </span><span class="caption-text">DCC Pulse Train</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Now let’s see things from a different perspective, both literally and figuratively by tilting the track away from you and imagining the pulse train operating like your model train and riding down the track.</p>
-<figure class="align-center" id="id16">
+<figure class="align-center" id="id14">
 <a class="reference internal image-reference" href="../../_images/dcc_pulse_train2.png"><img alt="DCC Pulse Train in Perspective" src="../../_images/dcc_pulse_train2.png" style="width: 500.0px; height: 375.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 118 </span><span class="caption-text">DCC Pulse Train in Perspective</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 118 </span><span class="caption-text">DCC Pulse Train in Perspective</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If it helps, you can think in the analog/DC world again for the purposes of connecting one piece of track in one block to a piece of track in another. Each rail is like a wire connected to our power supply, we have just cut it to length and are connecting to another piece that is connected to a different power supply. Here is the Command Station on the left connected to one section of track and a booster connected to another section of track with the two track sections isolated from each other by a small gap.</p>
-<figure class="align-center" id="id17">
+<figure class="align-center" id="id15">
 <a class="reference internal image-reference" href="../../_images/booster_setup.png"><img alt="DCC Booster Setup" src="../../_images/booster_setup.png" style="width: 603.5px; height: 364.75px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 119 </span><span class="caption-text">DCC Booster Setup</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 119 </span><span class="caption-text">DCC Booster Setup</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>At any given instant, one rail or the other is at our full 12-24 Volts and the other is at zero. If our loco is rolling over the gap from one block or power district to another, we need to make sure that the signal, and therefore voltage, is at the same level on both sides. We call this being “in phase”. So if there is +15V on Rail A of the first block, we need that same +15V on Rail A of the next block. If not, and rail A on block 1 is at 15V and Rail A on block 2 is at 0V, and the metal wheels of our loco temporarily connect those two rails as they roll over them, we have a short circuit. Thus, if the rails of two blocks are out of phase with each other, then they are always at at a the opposite potential (except for a tiny transition period) and will represent a short circuit when crossing from one to the other.</p>
-<figure class="align-center" id="id18">
+<figure class="align-center" id="id16">
 <a class="reference internal image-reference" href="../../_images/dcc_phasing.png"><img alt="DCC Phasing Diagram" src="../../_images/dcc_phasing.png" style="width: 674.0px; height: 404.75px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 120 </span><span class="caption-text">DCC Phasing Diagram</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 120 </span><span class="caption-text">DCC Phasing Diagram</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>So how can we check our phase? We can use any of the simple circuits below or a more complicated one listed at the end.</p>
@@ -757,10 +744,10 @@ for a “0”. It then immediately switches and does the same thing on the other
 <p><strong>Circuit Operation</strong> - The circuit works by only having a diode forward biased when the rail the probe end is attached to is out of phase with the corresponding rail on the known working block. With the red lead on Rail A of the known block and green lead on Rail B, when the probe is connected to Rail A on the opposite block, the red LED should light to indicate it is connected to the correct rail. The diode is reversed biased when the known Rail A is HIGH and the rail under test is LOW, so it blocks any current. But on the next half cycle when the known Rail A goes LOW and the test rail goes HIGH, the diode is forward biased and lights. In this way, the LEDs are only lit half the time, but do to our persistence of vision, and the approximately 8kHz frequency, we will just see a lit LED.</p>
 <p>The other LED won’t light because it is always in phase with the known track Rail B. When they are both HIGH at the same time (full track voltage) or both LOW, there is no potential difference across the LED.</p>
 <p>See the thread on the MRH blog here: <a class="reference external" href="https://model-railroad-hobbyist.com/node/17215?page=2">https://model-railroad-hobbyist.com/node/17215?page=2</a></p>
-<figure class="align-center" id="id19">
+<figure class="align-center" id="id17">
 <a class="reference internal image-reference" href="../../_images/dcc_phase_checker1.png"><img alt="2 Diode Phase Checker" src="../../_images/dcc_phase_checker1.png" style="width: 288.0px; height: 337.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 121 </span><span class="caption-text">2 Diode Phase Checker</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 121 </span><span class="caption-text">2 Diode Phase Checker</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>Pros</strong> - Just 4 components, small, simple</p>
@@ -768,10 +755,10 @@ for a “0”. It then immediately switches and does the same thing on the other
 </section>
 <section id="circuit-two">
 <h3>Circuit two<a class="headerlink" href="#circuit-two" title="Permalink to this heading"></a></h3>
-<figure class="align-center" id="id20">
+<figure class="align-center" id="id18">
 <a class="reference internal image-reference" href="../../_images/dcc_phase_checker2.png"><img alt="Diode Phase Checker" src="../../_images/dcc_phase_checker2.png" style="width: 248.0px; height: 316.5px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 122 </span><span class="caption-text">Diode Phase Checker</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 122 </span><span class="caption-text">Diode Phase Checker</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>

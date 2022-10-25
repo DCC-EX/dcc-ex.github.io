@@ -79,11 +79,11 @@ The Gravitech is available from RobotShop and direct from Gravitech for $29 US p
 To use this board, you simple plug the Nano into the motor shield (really a carrier board), upload the software and wire it to your track. It is just as easy as Using a Mega and an Arduino Motor shield.
 
 
-.. TODO:: LOW - Hardware - Finish the above and the below sections
+.. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/422>`_ - Finish the above and the below sections
 
-.. TODO:: LOW - Hardware - Show VCC power wiring option
+.. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/422>`_ - Show VCC power wiring option
 
-.. TODO:: LOW - Hardware - Show all the other Nano sized terminal boards and the ethernet board
+.. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/422>`_ - Show all the other Nano sized terminal boards and the ethernet board
 
 Wiring a Motor Shield
 =====================

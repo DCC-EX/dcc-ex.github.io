@@ -235,7 +235,7 @@ Method 2: Using An External Current Sense Board
 
 Coming Soon
 
-.. todo:: LOW - Hardware - finish this page
+.. todo:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/428>`_ - finish this page
 
 L298N for PROG and High Current IBT_2 for MAIN
 ================================================

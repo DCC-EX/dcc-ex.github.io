@@ -46,6 +46,10 @@ At the end of this stage, we expect you will have learnt the following:
 Add an EX-Turntable to your EX-CommandStation
 =============================================
 
+.. note:: 
+
+  All configuration items have been updated in line with |EX-TT| release 0.5.0-Beta and the associated updates to the "add-turntable-controller" branch of |EX-CS| which has the device driver and all entities renamed from "Turntable-EX" to the newly branded "EX-Turntable". If you have an earlier version of either |EX-CS| or |EX-TT|, these examples will differ in this regard.
+
 To add our turntable and traverser to the |EX-CS|, we need to ensure |EX-TT| is configured correctly for both items, and then add the device drivers with the correct configuration to our |EX-CS|.
 
 Adding the turntable
@@ -253,25 +257,45 @@ We will refer to our turntable positions from number 1 through to 7 moving in a 
 
 The home position has been set 10 degrees before position 1/roundhouse stall 1.
 
+As you can see by the diagram, we have identified the positions (in degrees) from the home position. The DCC phase inversion/reversal is also highlighted for reference when this is discussed a little further down the page.
+
+.. image:: ../_static/images/big-picture/stage5-ex-tt-positions.png
+  :alt: Turntable Positions
+  :scale: 80%
+
 Track wiring
 ^^^^^^^^^^^^
 
-.. todo:: `MEDIUM - Stage 5 <https://github.com/DCC-EX/dcc-ex.github.io/issues/414>`_ - track wiring diagram
-
-In this layout, positions 1 through 6 are all somewhat opposite our connecting track at position 7, and therefore the simplest option for track wiring is to ensure they are all wired with the same polarity (this will be outlined in a diagram).
+In this layout, positions 1 through 6 are all somewhat opposite our connecting track at position 7, and therefore the simplest option for track wiring is to ensure they are all wired with the same polarity.
 
 This means when the home sensor end of our turntable bridge is aligned with any of the roundhouse stall positions, we don't need to reverse the DCC phase/polarity.
 
-However, when the opposite end of the bridge aligns with any of these positions, the DCC phase/polarity must be reversed.
+However, when the bridge is rotated 180 degrees, the DCC phase/polarity must be reversed.
+
+We will assume we are using a slip ring for this turntable's physical connection to the bridge track, and therefore we need to ensure that EX-Turntable's dual relay board is switched via the automatic phase switching capability.
+
+You will note in the diagram that the motor shield's positive (+) output is connected to the bottom rail of the yard track and each stall's track, along with the normally closed (NC) terminal of relay 1, and the normally open (NC) of relay 2.
+
+The motor shield's negative (-) output is connected to the top rail of each track, and the normally open (NO) terminal of relay 1, and normally closed (NC) of relay 2.
+
+.. image:: ../_static/images/big-picture/stage5-ex-tt-wiring.png
+  :alt: Turntable Wiring
+  :scale: 60%
+
+In the scenario that the DCC phase is to be maintained (both relays turned off), this means the bridge track is kept aligned with the surrounding tracks, as relay 1 connects the brown wire to the positive (+) blue wire, and orange wire to the negative (-) green wire, so the bottom bridge rail is connected to the surrounding track's bottom rails, and likewise the top bridge rail to the surrounding track's top rails.
+
+When the relays turn on, these are reversed, resulting in the brown wire connecting to the negative (-) green wire, and orange wire connecting to the positive (+) blue wire.
 
 DCC phase/polarity switching angle calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Given our track wiring in combination with the home and roundhouse stall positions, we now know that between 0 (home) and 60 degrees (roundhouse stall 6), we need the DCC phase to be maintained in line with our track wiring, with phase switching occurring at some point after this, before reaching our connection track at position 7.
 
-Therefore, we will set our phase switching angle to 65 degrees, resulting in the phase automatically reverting at 245 degrees.
+Therefore, we will set our phase switching angle to 80 degrees, resulting in the phase automatically reverting at 260 degrees.
 
-The means, for our turntable |EX-TT|, we will need to update "config.h" and repeat :ref:`ex-turntable/assembly:7. load the ex-turntable software`.
+This is highlighted in the diagram above, with the yellow line indicating when the phase will switch and revert, and the yellow shaded area representing the 180 degrees in which the phase will be inverted.
+
+This means, for our turntable |EX-TT|, we will need to update "config.h" and repeat :ref:`ex-turntable/assembly:7. load the ex-turntable software`.
 
 Expand "config.h" to see the updated |EX-TT| configuration file for the turntable, noting we have removed all comments for brevity.
 
@@ -285,7 +309,7 @@ Expand "config.h" to see the updated |EX-TT| configuration file for the turntabl
     #define LIMIT_SENSOR_ACTIVE_STATE LOW
     #define RELAY_ACTIVE_STATE HIGH
     #define PHASE_SWITCHING AUTO
-    #define PHASE_SWITCH_ANGLE 65
+    #define PHASE_SWITCH_ANGLE 80
     #define STEPPER_DRIVER ULN2003_HALF_CW
     #define DISABLE_OUTPUTS_IDLE
     #define STEPPER_MAX_SPEED 200     // Maximum possible speed the stepper will reach
@@ -300,7 +324,7 @@ Turntable position calculation
 
 Since we know the angles of our positions as outlined when considering our DCC phase switching, we can now calculate the step counts required for the turntable bridge to align with these positions. We will use the formula outlined in :ref:`ex-turntable/test-and-tune:determine the positions` to calculate these step counts (full rotation step count / 360 degrees * position in degrees).
 
-Using this formular results in these step counts (noting we round up or down to the nearest full number):
+Using this formula results in these step counts (noting we round up or down to the nearest full number):
 
 .. list-table::
     :widths: auto

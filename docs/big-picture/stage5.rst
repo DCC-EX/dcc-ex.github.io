@@ -375,17 +375,23 @@ Using this formula results in these step counts (noting we round up or down to t
 Tuning the traverser
 --------------------
 
-.. image:: /_static/images/big-picture/stage5-ex-traverser.png
-  :alt: Traverser Positions
-  :scale: 80%
-
 .. tip:: 
 
   Now is a great time to revisit the :doc:`/ex-turntable/traverser` page, and in particular the section on :ref:`ex-turntable/traverser:considerations - turntable vs. traverser`.
 
-For our traverser positions, we will simply start with the fact we will have six evenly spaced tracks on the traverser. In addition, we need to ensure we leave a buffer between our home and limit sensors as they should provide some indication of when the traverser is reaching the physical limits of movement. We will use an arbitrary value of 100 steps for this buffer.
+One key item to note with a traverser vs. a turntable is that we don't have a single track that moves and aligns with multiple layout tracks, but rather the whole traverser bed moves, aligning with a single track that connects to the rest of the layout.
 
-This will mean our first position will be at step 100, and our last position will be at step 3097, and we will need an additional four positions divided equally between these two positions. Our effective step count between positions 1 and 6 becomes 2997 (3097 - 100) which needs to be divided by 5 to give us 4 evenly distributed positions, which is a gap of 599.4 steps between each.
+In our diagram, the grey outer rectangle represents the limit of movement for the traverser table, with the home sensor located at the top, and limit sensor at the bottom. This way, when the traverser moves beyond position 1, it will trigger the home sensor. Likewise, when moving beyond position 6, it will trigger the limit sensor.
+
+It is currently aligned with position 3.
+
+.. image:: /_static/images/big-picture/stage5-ex-traverser.png
+  :alt: Traverser Positions
+  :scale: 80%
+
+For our traverser positions, we have six evenly spaced tracks on the traverser. In addition, we need to ensure we leave a buffer between our home and limit sensors as they should provide some indication of when the traverser is reaching the physical limits of movement. We will use an arbitrary value of 100 steps for this buffer.
+
+This will mean our first position will be at step 100 (0 + buffer), our last position will be at step 3097 (4097 - buffer), and we will need an additional four positions divided equally between these two positions. Our effective step count between positions 1 and 6 becomes 2997 (3097 - 100) which needs to be divided by 5 to give us 4 evenly distributed positions, which is a gap of 599 steps between each.
 
 This results in these positions (noting we round up or down to the nearest full number):
 
@@ -422,6 +428,11 @@ This results in these positions (noting we round up or down to the nearest full 
       -  Staging 6
       -  4097 - 100 (limit - buffer)
       -  3097
+
+Traverser track wiring
+----------------------
+
+As there is no rotation with the traverser, there is no need for any DCC phase switching, and therefore you simply need to ensure the traverser is wired with the same polarity as the layout connection track.
 
 Control and automate your EX-Turntable
 ======================================

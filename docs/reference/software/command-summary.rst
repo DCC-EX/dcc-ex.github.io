@@ -154,6 +154,25 @@ WiFi Control
 
  ``<+X>`` Force the Command Station into "WiFi Connected" mode
 
+Throttle commands for developers
+================================
+
+Refer to :doc:`/reference/developers/tech-reference` for full details on these commands.
+
+``<JT>`` returns the defined turnout IDs
+
+``<JT id>`` returns the ID, state, and description of the specified turnout ID
+
+``<JA>`` Returns the defined automation and route IDs
+
+``<JA id>`` Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID
+
+``<JR>`` Returns the defined roster entry IDs
+
+``<JR id>`` Returns the ID, description, and function map of the specified roster entry ID
+
+``<t cabid>`` Requests a deliberate update of cab speed/functions in the same format as the cab broadcast
+
 Diagnostic traces
 ==================
 

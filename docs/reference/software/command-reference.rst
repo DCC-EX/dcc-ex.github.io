@@ -801,6 +801,27 @@ This command is designed to offer faster verification of the value held in a CV 
 * ``BIT:`` Reports the bit in the CV byte that was verified
 * ``BITVALUE:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 
 
+Throttle commands for developers
+================================
+
+These commands have been provided for those wishing to develop throttles that utilise the DCC-EX API.
+
+As there is existing detailed documentation for these, we will not elaborate here. Instead, refer to :doc:`/reference/developers/tech-reference` for full details on these commands.
+
+``<JT>`` returns the defined turnout IDs
+
+``<JT id>`` returns the ID, state, and description of the specified turnout ID
+
+``<JA>`` Returns the defined automation and route IDs
+
+``<JA id>`` Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID
+
+``<JR>`` Returns the defined roster entry IDs
+
+``<JR id>`` Returns the ID, description, and function map of the specified roster entry ID
+
+``<t cabid>`` Requests a deliberate update of cab speed/functions in the same format as the cab broadcas
+
 Diagnostic Commands
 =====================
 

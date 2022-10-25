@@ -272,13 +272,15 @@ At the time of writing, there is no installer for |EX-TT| like there is for the 
 
 As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-TT| folder, and neither should reside in the other (the |EX-TT| software is required in the next step):
 
+.. todo:: HIGH - Update EX-Turntable screenshots
+
 .. image:: /_static/images/turntable-ex/two-folders.png
   :alt: Two folders
   :scale: 60%
 
 The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
 
-When you get to the point of opening the sketch, ensure you open the Turntable-EX sketch:
+When you get to the point of opening the sketch, ensure you open the EX-Turntable sketch:
 
 .. image:: /_static/images/turntable-ex/open-turntable-ex-sketch.png
   :alt: Open EX-Turntable sketch
@@ -356,7 +358,7 @@ You can now safely power off |EX-TT| and remove the USB cable from your PC as it
 
   This will display in the serial console of your CommandStation as version 4.0.2.
   
-  If the "myHal.cpp_example.txt" is missing the lines referred to below, or if you receive compile errors that the file "IO_TurntableEX" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of |EX-CS|.
+  If the "myHal.cpp_example.txt" is missing the lines referred to below, or if you receive compile errors that the file "IO_EXTurntable" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of |EX-CS|.
 
   The zip file containing the correct version of |EX-CS| should also be attached to the |EX-TT| release.
 
@@ -379,7 +381,7 @@ At the top of the file there are a number of lines beginning with "#include":
   #include "IO_HCSR04.h"    // Ultrasonic range sensor
   #include "IO_VL53L0X.h"   // Laser time-of-flight sensor
   #include "IO_DFPlayer.h"  // MP3 sound player
-  //#include "IO_TurntableEX.h"   // EX-Turntable turntable controller
+  //#include "IO_EXTurntable.h"   // EX-Turntable turntable controller
 
 Note the last line, this is the device driver required to enable |EX-TT| support.
 
@@ -388,9 +390,9 @@ Scrolling down towards the bottom of that file, you will also see this indented 
 .. code-block:: cpp
 
   //=======================================================================
-  // The following directive defines a EX-Turntable turntable instance.
+  // The following directive defines an EX-Turntable turntable instance.
   //=======================================================================
-  // TurntableEX::create(VPIN, Number of VPINs, I2C Address)
+  // EXTurntable::create(VPIN, Number of VPINs, I2C Address)
     //
   // The parameters are:
   //   VPIN=600
@@ -399,7 +401,7 @@ Scrolling down towards the bottom of that file, you will also see this indented 
   //
   // Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.
 
-  //TurntableEX::create(600, 1, 0x60);
+  //EXTurntable::create(600, 1, 0x60);
 
 If you don't have an existing "myHal.cpp" file, then follow these steps to create a new one: :ref:`reference/developers/hal-config:adding a new device`. Note that you don't need to worry about copying or providing device driver files, as these are already included with the |EX-CS| software.
 
@@ -408,13 +410,13 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
 .. code-block:: cpp
 
   #include "IODevice.h"
-  #include "IO_TurntableEX.h"   // EX-Turntable turntable controller
+  #include "IO_EXTurntable.h"   // EX-Turntable turntable controller
 
   void halSetup() {
     //=======================================================================
     // The following directive defines a EX-Turntable turntable instance.
     //=======================================================================
-    // TurntableEX::create(VPIN, Number of VPINs, I2C Address)
+    // EXTurntable::create(VPIN, Number of VPINs, I2C Address)
     //
     // The default parameters are:
     //   VPIN=600
@@ -423,7 +425,7 @@ Copy and paste the relevant lines from the "myHal.cpp_example.txt" file as above
     //
     // Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.
   
-    TurntableEX::create(600, 1, 0x60);
+    EXTurntable::create(600, 1, 0x60);
   }
 
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
@@ -431,7 +433,7 @@ In the device setup above, there are three parameters provided, but only two may
 - VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send |EX-TT| commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/developers/hal:overview`).
 - I2C address=0x60 - This is the default address on the i2c bus that the |EX-TT| is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myHal.cpp" and in "config.h" in the |EX-TT| software.
 
-If you already have an existing "myHal.cpp" file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the "#include" needs to be before "void halSetup() {" and the "TurntableEX::create..." needs to be before the final "}".
+If you already have an existing "myHal.cpp" file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the "#include" needs to be before "void halSetup() {" and the "EXTurntable::create..." needs to be before the final "}".
 
 Follow the rest of the directions for :ref:`reference/developers/hal-config:adding a new device` all the way through to the :ref:`reference/developers/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
 

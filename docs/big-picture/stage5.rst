@@ -96,7 +96,7 @@ Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add the
 
     // Include devices you need.
     #include "IODevice.h"
-    #include "IO_TurntableEX.h"
+    #include "IO_EXTurntable.h"
 
     //==========================================================================
     // The function halSetup() is invoked from CS if it exists within the build.
@@ -105,7 +105,7 @@ Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add the
     //==========================================================================
 
     void halSetup() {
-      TurntableEX::create(600, 1, 0x60);
+      EXTurntable::create(600, 1, 0x60);
     }
 
     #endif
@@ -174,7 +174,7 @@ Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add bot
 
     // Include devices you need.
     #include "IODevice.h"
-    #include "IO_TurntableEX.h"
+    #include "IO_EXTurntable.h"
 
     //==========================================================================
     // The function halSetup() is invoked from CS if it exists within the build.
@@ -183,8 +183,8 @@ Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add bot
     //==========================================================================
 
     void halSetup() {
-      TurntableEX::create(600, 1, 0x60);  // This is our turntable device
-      TurntableEX::create(601, 1, 0x61);  // This is our traverser device
+      EXTurntable::create(600, 1, 0x60);  // This is our turntable device
+      EXTurntable::create(601, 1, 0x61);  // This is our traverser device
     }
 
     #endif
@@ -202,7 +202,7 @@ We'll use some basic mathematics to tune our turntable and traverser positions, 
 
 .. note:: 
 
-  When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in :ref:`ex-turntable/test-and-tune:tuning your turntable positions` to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks.
+  When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in :ref:`ex-turntable/test-and-tune:tuning your turntable positions` to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command ``<steps activity>`` as covered in :ref:`ex-turntable/test-and-tune:serial console testing`.
 
   We will be using the same steps per revolution number throughout this page (4097) for both the turntable and traverser, and are keeping this consistent with the examples in the |EX-TT| documentation for simplicity.
 
@@ -222,10 +222,10 @@ Ideally these should have been noted in :ref:`ex-turntable/assembly:7. load the 
   .. code-block:: 
 
     License GPLv3 fsf.org (c) dcc-ex.com
-    Turntable-EX version 0.4.0-Beta
+    EX-Turntable version 0.5.0-Beta
     Available at I2C address 0x60
-    Turntable-EX in TURNTABLE mode
-    Turntable-EX has been calibrated for 4097 steps per revolution
+    EX-Turntable in TURNTABLE mode
+    EX-Turntable has been calibrated for 4097 steps per revolution
     Automatic phase switching enabled at 45 degrees
     Phase will switch at 512 steps from home, and revert at 2560 steps from home
     Homing...
@@ -239,8 +239,6 @@ Once we have our steps per revolution, we can use that number with our formulas 
 Calculating EX-Turntable positions and DCC phase/polarity switching
 -------------------------------------------------------------------
 
-.. todo:: `MEDIUM - Stage 5 <https://github.com/DCC-EX/dcc-ex.github.io/issues/414>`_ - add diagram outlining angles for turntable position calculations and phase switching
-
 .. tip:: 
 
   It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with |EX-TT|. Refer to :ref:`ex-turntable/overview:important! phase (or polarity) switching` and :ref:`ex-turntable/overview:how does this work with ex-turntable?` for details.
@@ -251,7 +249,7 @@ Calculating EX-Turntable positions and DCC phase/polarity switching
 
 There are two aspects to tuning our turntable positions; one being the step counts of each track position around the turntable to ensure correct track alignment, and the other being when to swap our DCC phase/polarity to ensure locos can enter and exit the turntable without causing short circuits.
 
-We will refer to our turntable positions from number 1 through to 7 moving in a clockwise direction from our home position, with 1 through 6 being roundhouse stalls 1 through 6, and 7 being our track connecting to the switching/shunting yard.
+We will refer to our turntable positions from number 1 through to 7 moving in a clockwise direction from our home position, with 1 through 6 being roundhouse stalls 1 through 6, and 7 being our track connecting to the switching/shunting yard. The roundhouse stall tracks are separated by 10 degrees, and our switching/shunting yard connection track is 180 degrees from stall number 4.
 
 The home position has been set 10 degrees before position 1/roundhouse stall 1.
 
@@ -581,7 +579,7 @@ Here's the explanation:
 
 .. code-block:: 
 
-  #define EX-TURNTABLE...
+  #define EX_TURNTABLE...
 
 This macro is only defined once, and encapsulates all the activities you wish to configure and perform for each |EX-TT| position you want to define as a ROUTE.
 

@@ -440,10 +440,11 @@
 <li><p><a class="reference internal" href="#outputs" id="id7">Outputs</a></p></li>
 <li><p><a class="reference internal" href="#eeprom-management" id="id8">EEPROM management</a></p></li>
 <li><p><a class="reference internal" href="#wifi-control" id="id9">WiFi Control</a></p></li>
-<li><p><a class="reference internal" href="#diagnostic-traces" id="id10">Diagnostic traces</a></p></li>
-<li><p><a class="reference internal" href="#tuning" id="id11">Tuning</a></p></li>
-<li><p><a class="reference internal" href="#i-o-hal-diagnostics" id="id12">I/O (HAL) Diagnostics</a></p></li>
-<li><p><a class="reference internal" href="#other" id="id13">Other</a></p></li>
+<li><p><a class="reference internal" href="#throttle-commands-for-developers" id="id10">Throttle commands for developers</a></p></li>
+<li><p><a class="reference internal" href="#diagnostic-traces" id="id11">Diagnostic traces</a></p></li>
+<li><p><a class="reference internal" href="#tuning" id="id12">Tuning</a></p></li>
+<li><p><a class="reference internal" href="#i-o-hal-diagnostics" id="id13">I/O (HAL) Diagnostics</a></p></li>
+<li><p><a class="reference internal" href="#other" id="id14">Other</a></p></li>
 </ul>
 </div>
 </aside>
@@ -559,8 +560,19 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> Force the Command Station into “WiFi Connected” mode</p>
 </div></blockquote>
 </section>
+<section id="throttle-commands-for-developers">
+<h2><a class="toc-backref" href="#id10">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Permalink to this heading"></a></h2>
+<p>Refer to <a class="reference internal" href="../developers/tech-reference.html"><span class="doc">Technical Reference for Throttle Developers</span></a> for full details on these commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> returns the defined turnout IDs</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JT</span> <span class="pre">id&gt;</span></code> returns the ID, state, and description of the specified turnout ID</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code> Returns the defined automation and route IDs</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JA</span> <span class="pre">id&gt;</span></code> Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code> Returns the defined roster entry IDs</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JR</span> <span class="pre">id&gt;</span></code> Returns the ID, description, and function map of the specified roster entry ID</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> Requests a deliberate update of cab speed/functions in the same format as the cab broadcast</p>
+</section>
 <section id="diagnostic-traces">
-<h2><a class="toc-backref" href="#id10">Diagnostic traces</a><a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11">Diagnostic traces</a><a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Shows cab numbers and speed in reminder table</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Shows remaining RAM (Free Memory)</p>
@@ -576,7 +588,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </section>
 <section id="tuning">
-<h2><a class="toc-backref" href="#id11">Tuning</a><a class="headerlink" href="#tuning" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12">Tuning</a><a class="headerlink" href="#tuning" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code> Override ACK processing mA pulse size</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code> Override ACK processing minimum pulse width</p>
@@ -586,7 +598,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </section>
 <section id="i-o-hal-diagnostics">
-<h2><a class="toc-backref" href="#id12">I/O (HAL) Diagnostics</a><a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13">I/O (HAL) Diagnostics</a><a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> List HAL devices and allocated VPINs</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code> Set servo position to <cite>value</cite> on pin <cite>vpin</cite>.</p>
@@ -595,7 +607,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </section>
 <section id="other">
-<h2><a class="toc-backref" href="#id13">Other</a><a class="headerlink" href="#other" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14">Other</a><a class="headerlink" href="#other" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;U</span> <span class="pre">...&gt;</span></code> Is reserved for user commands (through user filter)</p>
 <dl class="simple">

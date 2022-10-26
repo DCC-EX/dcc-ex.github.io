@@ -12,3 +12,4 @@ Other Boards
     :maxdepth: 1
     
     ir-sensor
+    vl53l0x-tof-sensor

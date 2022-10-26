@@ -10,16 +10,16 @@ i2c Displays
 
 .. sidebar::
 
-   .. contents:: On this page
-      :depth: 1
-      :local:
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 
 |EX-CS| is designed to accommodate a display. You don't need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any i2c (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.
 
 .. image:: /_static/images/display/I2C_LCD_Display_wired.jpg
-   :alt: Example: 4 line i2c Display
-   :scale: 80%
+  :alt: Example: 4 line i2c Display
+  :scale: 80%
 
 We currently support LCDs based on the PCF8574 backpack:
 
@@ -38,20 +38,20 @@ Examples of compatible displays
 Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.
 
 
-.. figure:: /_static/images/display/lcd_20x4_backpack.jpg
-   :alt: 20 x 4 LCD
-   :scale: 80%
+.. image:: /_static/images/display/lcd_20x4_backpack.jpg
+  :alt: 20 x 4 LCD
+  :scale: 80%
 
-   20 x 4 LCD with backpack
+20 x 4 LCD with backpack
 
 And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:
 
 
-.. figure:: /_static/images/display/lcd_16x2_backpack.jpg
-   :alt: 16 x 2 LCD
-   :scale: 80%
+.. image:: /_static/images/display/lcd_16x2_backpack.jpg
+  :alt: 16 x 2 LCD
+  :scale: 80%
 
-   16 x 2 LCD with backpack
+16 x 2 LCD with backpack
 
 Connecting an LCD Display
 ==========================
@@ -62,11 +62,11 @@ Soldering on the Backpack (if you purchased separate pieces)
 And here is a picture of the board after soldering or if you purchase a board already soldered (or "welded" as some of the Chinese sites call it)
 
 
-.. figure:: /_static/images/display/lcd_soldered.jpg
-   :alt: Backpack Soldered to LCD
-   :scale: 80%
+.. image:: /_static/images/display/lcd_soldered.jpg
+  :alt: Backpack Soldered to LCD
+  :scale: 80%
 
-   LCD with backpack soldered to the back
+LCD with backpack soldered to the back
 
 Connecting the Jumper Wires
 ---------------------------
@@ -100,37 +100,50 @@ To upload the new sketch on your Command Station
 Connecting an OLED display
 ===========================
 
-OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO. You will require a Mega. Here are some examples of OLED displays:
+OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO and you will require a Mega. Here are some examples of OLED displays:
 
 
-.. figure:: /_static/images/display/adafruit_96in_oled_sm.jpg
-   :alt: Adafruit .96" OLED
-   :scale: 80%
+.. image:: /_static/images/display/adafruit_96in_oled_sm.jpg
+  :alt: Adafruit .96" OLED
+  :scale: 80%
 
-   Adafruit .96" OLED Display
+Adafruit .96" OLED Display
 
 
-.. figure:: /_static/images/display/makerfocus_oled_sm.jpg
-   :alt: Makerfocus OLED Display
-   :scale: 80%
+.. image:: /_static/images/display/makerfocus_oled_sm.jpg
+  :alt: Makerfocus OLED Display
+  :scale: 80%
 
-   Makerfocus 128x32 .91" OLED Display
+Makerfocus 128x32 .91" OLED Display
 
 Soldering Wires to the Display
 ------------------------------
 
 For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.
 
-Connecting Jumper Wires to the CS
----------------------------------
+Connecting to your EX-CommandStation
+------------------------------------
 
-** Not Finished. Coming soon! **
+.. todo:: `LOW - OLED <https://github.com/DCC-EX/dcc-ex.github.io/issues/442>`_ - Fritzing diagram for OLED display connection
 
-Installing the Software (OLED)
-------------------------------
+Configuring the software for an OLED
+------------------------------------
 
-** Not Finished. Coming soon! **
+To enable an OLED display with your |EX-CS|, you need to make some edits to your "config.h" file and then upload the software again.
 
-.. todo:: 
+Look for the LCD section in "config.h" which looks like this:
 
-   `MEDIUM - OLED Information required <https://github.com/DCC-EX/dcc-ex.github.io/issues/421>`_ - need to outline how to connect an OLED to the CS, and how to configure in config.h
+.. code-block:: cpp
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  //
+  // DEFINE LCD SCREEN USAGE BY THE BASE STATION
+
+Make sure any line beginning with ``#define LCD_DRIVER`` is commented out by adding ``//``.
+
+You will need to know if your OLED has a 128 x 64 or 128 x 32 pixel resolution, and add the appropriate line:
+
+.. code-block:: cpp
+
+  #define OLED_DRIVER 128,32      // Define for 128 x 32 displays
+  #define OLED_DRIVER 128,64      // Define for 128 x 64 displays

@@ -177,14 +177,6 @@ If you just need the power supply for your own board, use the schematic to get w
 
 http://www.modelrailroadcontrolsystems.com/improved-geoff-bunzas-low-cost-17-channel-dcc-decoder-bare-board/
 
-Have them fabricated
-
-- DCC Interface board
-
-Fritzing diagram
-
-.. TODO:: LOW - Hardware - Add this board - Fritzing diagram
-
 https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/
 
 **Build it in a case with a display!**
@@ -297,9 +289,7 @@ Capture the samples in PulseView
 * Get ready to send whatever commands you want to monitor, then hit the "run" button in the upper left corner and run your tests for however many seconds you are capturing.
 * Analyze the data. You may want to click the "zoom/+" button several times to be able to see the waveform pulses and to have the decoder.
 
-You can save your captures and display them again at any time. More details coming soon.
-
-.. TODO:: LOW - Hardware - Finish this above - Capture the samples in PulseView
+You can save your captures and display them again at any time.
 
 DCC Track Phase Detector
 ==========================

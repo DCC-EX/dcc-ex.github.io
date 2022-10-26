@@ -112,7 +112,7 @@ Referring again to :ref:`reference/developers/hal-config:adding a new device`, s
   <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE *>
   <* MCP23017 I2C:x20 Configured on Vpins:164-179 OFFLINE *>
   <* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *>
-  <* TurntableEX I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, |EX-TT| is connected!
+  <* EX-Turntable I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, |EX-TT| is connected!
 
 If there is an "OFFLINE" at the end of the |EX-TT| line, it indicates something is not quite right. Refer to :ref:`support/ex-tt-troubleshooting:ex-turntable showing as offline with \<d hal show\>`.
 
@@ -163,7 +163,7 @@ Finally, this command will cause the turntable to once again find its home posit
   
   <D TT 600 0 2>
 
-<TO DO: Add a video demonstrating these tests>
+.. todo:: `LOW - Add a video demonstrating diagnostic commands <https://github.com/DCC-EX/dcc-ex.github.io/issues/439>`_
 
 Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting |EX-TT| to good use.
 

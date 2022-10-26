@@ -46,6 +46,10 @@ At the end of this stage, we expect you will have learnt the following:
 Add an EX-Turntable to your EX-CommandStation
 =============================================
 
+.. note:: 
+
+  All configuration items have been updated in line with |EX-TT| release 0.5.0-Beta and the associated updates to the "add-turntable-controller" branch of |EX-CS| which has the device driver and all entities renamed from "Turntable-EX" to the newly branded "EX-Turntable". If you have an earlier version of either |EX-CS| or |EX-TT|, these examples will differ in this regard.
+
 To add our turntable and traverser to the |EX-CS|, we need to ensure |EX-TT| is configured correctly for both items, and then add the device drivers with the correct configuration to our |EX-CS|.
 
 Adding the turntable
@@ -96,7 +100,7 @@ Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add the
 
     // Include devices you need.
     #include "IODevice.h"
-    #include "IO_TurntableEX.h"
+    #include "IO_EXTurntable.h"
 
     //==========================================================================
     // The function halSetup() is invoked from CS if it exists within the build.
@@ -105,7 +109,7 @@ Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add the
     //==========================================================================
 
     void halSetup() {
-      TurntableEX::create(600, 1, 0x60);
+      EXTurntable::create(600, 1, 0x60);
     }
 
     #endif
@@ -174,7 +178,7 @@ Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add bot
 
     // Include devices you need.
     #include "IODevice.h"
-    #include "IO_TurntableEX.h"
+    #include "IO_EXTurntable.h"
 
     //==========================================================================
     // The function halSetup() is invoked from CS if it exists within the build.
@@ -183,8 +187,8 @@ Expand "myHal.cpp" to see the |EX-CS| HAL configuration file required to add bot
     //==========================================================================
 
     void halSetup() {
-      TurntableEX::create(600, 1, 0x60);  // This is our turntable device
-      TurntableEX::create(601, 1, 0x61);  // This is our traverser device
+      EXTurntable::create(600, 1, 0x60);  // This is our turntable device
+      EXTurntable::create(601, 1, 0x61);  // This is our traverser device
     }
 
     #endif
@@ -202,7 +206,7 @@ We'll use some basic mathematics to tune our turntable and traverser positions, 
 
 .. note:: 
 
-  When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in :ref:`ex-turntable/test-and-tune:tuning your turntable positions` to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks.
+  When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in :ref:`ex-turntable/test-and-tune:tuning your turntable positions` to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command ``<steps activity>`` as covered in :ref:`ex-turntable/test-and-tune:serial console testing`.
 
   We will be using the same steps per revolution number throughout this page (4097) for both the turntable and traverser, and are keeping this consistent with the examples in the |EX-TT| documentation for simplicity.
 
@@ -222,10 +226,10 @@ Ideally these should have been noted in :ref:`ex-turntable/assembly:7. load the 
   .. code-block:: 
 
     License GPLv3 fsf.org (c) dcc-ex.com
-    Turntable-EX version 0.4.0-Beta
+    EX-Turntable version 0.5.0-Beta
     Available at I2C address 0x60
-    Turntable-EX in TURNTABLE mode
-    Turntable-EX has been calibrated for 4097 steps per revolution
+    EX-Turntable in TURNTABLE mode
+    EX-Turntable has been calibrated for 4097 steps per revolution
     Automatic phase switching enabled at 45 degrees
     Phase will switch at 512 steps from home, and revert at 2560 steps from home
     Homing...
@@ -239,8 +243,6 @@ Once we have our steps per revolution, we can use that number with our formulas 
 Calculating EX-Turntable positions and DCC phase/polarity switching
 -------------------------------------------------------------------
 
-.. todo:: MEDIUM - Stage 5 - add diagram outlining angles for turntable position calculations and phase switching
-
 .. tip:: 
 
   It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with |EX-TT|. Refer to :ref:`ex-turntable/overview:important! phase (or polarity) switching` and :ref:`ex-turntable/overview:how does this work with ex-turntable?` for details.
@@ -251,29 +253,49 @@ Calculating EX-Turntable positions and DCC phase/polarity switching
 
 There are two aspects to tuning our turntable positions; one being the step counts of each track position around the turntable to ensure correct track alignment, and the other being when to swap our DCC phase/polarity to ensure locos can enter and exit the turntable without causing short circuits.
 
-We will refer to our turntable positions from number 1 through to 7 moving in a clockwise direction from our home position, with 1 through 6 being roundhouse stalls 1 through 6, and 7 being our track connecting to the switching/shunting yard.
+We will refer to our turntable positions from number 1 through to 7 moving in a clockwise direction from our home position, with 1 through 6 being roundhouse stalls 1 through 6, and 7 being our track connecting to the switching/shunting yard. The roundhouse stall tracks are separated by 10 degrees, and our switching/shunting yard connection track is 180 degrees from stall number 4.
 
 The home position has been set 10 degrees before position 1/roundhouse stall 1.
+
+As you can see by the diagram, we have identified the positions (in degrees) from the home position. The DCC phase inversion/reversal is also highlighted for reference when this is discussed a little further down the page.
+
+.. image:: ../_static/images/big-picture/stage5-ex-tt-positions.png
+  :alt: Turntable Positions
+  :scale: 80%
 
 Track wiring
 ^^^^^^^^^^^^
 
-.. todo:: MEDIUM - Stage 5 - track wiring diagram
-
-In this layout, positions 1 through 6 are all somewhat opposite our connecting track at position 7, and therefore the simplest option for track wiring is to ensure they are all wired with the same polarity (this will be outlined in a diagram).
+In this layout, positions 1 through 6 are all somewhat opposite our connecting track at position 7, and therefore the simplest option for track wiring is to ensure they are all wired with the same polarity.
 
 This means when the home sensor end of our turntable bridge is aligned with any of the roundhouse stall positions, we don't need to reverse the DCC phase/polarity.
 
-However, when the opposite end of the bridge aligns with any of these positions, the DCC phase/polarity must be reversed.
+However, when the bridge is rotated 180 degrees, the DCC phase/polarity must be reversed.
+
+We will assume we are using a slip ring for this turntable's physical connection to the bridge track, and therefore we need to ensure that EX-Turntable's dual relay board is switched via the automatic phase switching capability.
+
+You will note in the diagram that the motor shield's positive (+) output is connected to the bottom rail of the yard track and each stall's track, along with the normally closed (NC) terminal of relay 1, and the normally open (NC) of relay 2.
+
+The motor shield's negative (-) output is connected to the top rail of each track, and the normally open (NO) terminal of relay 1, and normally closed (NC) of relay 2.
+
+.. image:: ../_static/images/big-picture/stage5-ex-tt-wiring.png
+  :alt: Turntable Wiring
+  :scale: 60%
+
+In the scenario that the DCC phase is to be maintained (both relays turned off), this means the bridge track is kept aligned with the surrounding tracks, as relay 1 connects the brown wire to the positive (+) blue wire, and orange wire to the negative (-) green wire, so the bottom bridge rail is connected to the surrounding track's bottom rails, and likewise the top bridge rail to the surrounding track's top rails.
+
+When the relays turn on, these are reversed, resulting in the brown wire connecting to the negative (-) green wire, and orange wire connecting to the positive (+) blue wire.
 
 DCC phase/polarity switching angle calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Given our track wiring in combination with the home and roundhouse stall positions, we now know that between 0 (home) and 60 degrees (roundhouse stall 6), we need the DCC phase to be maintained in line with our track wiring, with phase switching occurring at some point after this, before reaching our connection track at position 7.
 
-Therefore, we will set our phase switching angle to 65 degrees, resulting in the phase automatically reverting at 245 degrees.
+Therefore, we will set our phase switching angle to 80 degrees, resulting in the phase automatically reverting at 260 degrees.
 
-The means, for our turntable |EX-TT|, we will need to update "config.h" and repeat :ref:`ex-turntable/assembly:7. load the ex-turntable software`.
+This is highlighted in the diagram above, with the yellow line indicating when the phase will switch and revert, and the yellow shaded area representing the 180 degrees in which the phase will be inverted.
+
+This means, for our turntable |EX-TT|, we will need to update "config.h" and repeat :ref:`ex-turntable/assembly:7. load the ex-turntable software`.
 
 Expand "config.h" to see the updated |EX-TT| configuration file for the turntable, noting we have removed all comments for brevity.
 
@@ -287,7 +309,7 @@ Expand "config.h" to see the updated |EX-TT| configuration file for the turntabl
     #define LIMIT_SENSOR_ACTIVE_STATE LOW
     #define RELAY_ACTIVE_STATE HIGH
     #define PHASE_SWITCHING AUTO
-    #define PHASE_SWITCH_ANGLE 65
+    #define PHASE_SWITCH_ANGLE 80
     #define STEPPER_DRIVER ULN2003_HALF_CW
     #define DISABLE_OUTPUTS_IDLE
     #define STEPPER_MAX_SPEED 200     // Maximum possible speed the stepper will reach
@@ -302,7 +324,7 @@ Turntable position calculation
 
 Since we know the angles of our positions as outlined when considering our DCC phase switching, we can now calculate the step counts required for the turntable bridge to align with these positions. We will use the formula outlined in :ref:`ex-turntable/test-and-tune:determine the positions` to calculate these step counts (full rotation step count / 360 degrees * position in degrees).
 
-Using this formular results in these step counts (noting we round up or down to the nearest full number):
+Using this formula results in these step counts (noting we round up or down to the nearest full number):
 
 .. list-table::
     :widths: auto
@@ -353,15 +375,23 @@ Using this formular results in these step counts (noting we round up or down to 
 Tuning the traverser
 --------------------
 
-.. todo:: LOW - Stage 5 - add diagram outlining steps for traverser position calculations
-
 .. tip:: 
 
   Now is a great time to revisit the :doc:`/ex-turntable/traverser` page, and in particular the section on :ref:`ex-turntable/traverser:considerations - turntable vs. traverser`.
 
-For our traverser positions, we will simply start with the fact we will have six evenly spaced tracks on the traverser. In addition, we need to ensure we leave a buffer between our home and limit sensors as they should provide some indication of when the traverser is reaching the physical limits of movement. We will use an arbitrary value of 100 steps for this buffer.
+One key item to note with a traverser vs. a turntable is that we don't have a single track that moves and aligns with multiple layout tracks, but rather the whole traverser bed moves, aligning with a single track that connects to the rest of the layout.
 
-This will mean our first position will be at step 100, and our last position will be at step 3097, and we will need an additional four positions divided equally between these two positions. Our effective step count between positions 1 and 6 becomes 2997 (3097 - 100) which needs to be divided by 5 to give us 4 evenly distributed positions, which is a gap of 599.4 steps between each.
+In our diagram, the grey outer rectangle represents the limit of movement for the traverser table, with the home sensor located at the top, and limit sensor at the bottom. This way, when the traverser moves beyond position 1, it will trigger the home sensor. Likewise, when moving beyond position 6, it will trigger the limit sensor.
+
+It is currently aligned with position 3.
+
+.. image:: /_static/images/big-picture/stage5-ex-traverser.png
+  :alt: Traverser Positions
+  :scale: 80%
+
+For our traverser positions, we have six evenly spaced tracks on the traverser. In addition, we need to ensure we leave a buffer between our home and limit sensors as they should provide some indication of when the traverser is reaching the physical limits of movement. We will use an arbitrary value of 100 steps for this buffer.
+
+This will mean our first position will be at step 100 (0 + buffer), our last position will be at step 3097 (4097 - buffer), and we will need an additional four positions divided equally between these two positions. Our effective step count between positions 1 and 6 becomes 2997 (3097 - 100) which needs to be divided by 5 to give us 4 evenly distributed positions, which is a gap of 599 steps between each.
 
 This results in these positions (noting we round up or down to the nearest full number):
 
@@ -398,6 +428,11 @@ This results in these positions (noting we round up or down to the nearest full 
       -  Staging 6
       -  4097 - 100 (limit - buffer)
       -  3097
+
+Traverser track wiring
+----------------------
+
+As there is no rotation with the traverser, there is no need for any DCC phase switching, and therefore you simply need to ensure the traverser is wired with the same polarity as the layout connection track.
 
 Control and automate your EX-Turntable
 ======================================
@@ -581,7 +616,7 @@ Here's the explanation:
 
 .. code-block:: 
 
-  #define EX-TURNTABLE...
+  #define EX_TURNTABLE...
 
 This macro is only defined once, and encapsulates all the activities you wish to configure and perform for each |EX-TT| position you want to define as a ROUTE.
 

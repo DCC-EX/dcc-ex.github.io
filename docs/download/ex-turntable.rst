@@ -12,4 +12,4 @@ EX-Turntable
 
 .. rst-class:: dcclink
 
-   `EX-Turntable Github Repository <https://github.com/DCC-EX/Turntable-EX/releases>`_
+   `EX-Turntable Github Repository <https://github.com/DCC-EX/EX-Turntable/releases>`_

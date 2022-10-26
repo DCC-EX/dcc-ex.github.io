@@ -199,9 +199,9 @@ Once enabled, load the |EX-TT| software again, and once |EX-TT| starts you shoul
 .. code-block:: 
 
   License GPLv3 fsf.org (c) dcc-ex.com
-  Turntable-EX version 0.4.0-Beta
+  EX-TurntableX version 0.4.0-Beta
   Available at I2C address 0x60
-  Turntable-EX in TRAVERSER mode
+  EX-Turntable in TRAVERSER mode
   SENSOR TESTING ENABLED, Turntable-EX operations disabled        <<== This message confirms sensor testing is enabled
   Home/limit switch current state: 1/1
   Debounce delay: 10
@@ -237,10 +237,10 @@ When starting up for the first time, you should see output in the serial console
 .. code-block:: 
 
   License GPLv3 fsf.org (c) dcc-ex.com
-  Turntable-EX version 0.4.0-Beta
+  EX-Turntable version 0.4.0-Beta
   Available at I2C address 0x60
-  Turntable-EX in TRAVERSER mode
-  Turntable-EX has not been calibrated yet                                <<== Indicates calibration required
+  EX-Turntable in TRAVERSER mode
+  EX-Turntable has not been calibrated yet                                <<== Indicates calibration required
   Manual phase switching enabled
   Calibrating...
   Homing started
@@ -250,7 +250,7 @@ When starting up for the first time, you should see output in the serial console
   CALIBRATION: Phase 2, finding limit switch...
   CALIBRATION: Phase 3, counting limit steps...                           <<== Third phase to ensure full step count is reached prior to limit sensor
   CALIBRATION: Completed, storing full turn step count: 2508              <<== Step count to record
-  Turntable-EX has been calibrated for 2508 steps per revolution
+  EX-Turntable has been calibrated for 2508 steps per revolution
   Manual phase switching enabled
   Homing started
   Turntable homed successfully

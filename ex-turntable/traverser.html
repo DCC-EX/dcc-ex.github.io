@@ -596,9 +596,9 @@
 </div>
 <p>Once enabled, load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> software again, and once <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> starts you should see this displayed in the serial console:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>License GPLv3 fsf.org (c) dcc-ex.com
-Turntable-EX version 0.4.0-Beta
+EX-TurntableX version 0.4.0-Beta
 Available at I2C address 0x60
-Turntable-EX in TRAVERSER mode
+EX-Turntable in TRAVERSER mode
 SENSOR TESTING ENABLED, Turntable-EX operations disabled        &lt;&lt;== This message confirms sensor testing is enabled
 Home/limit switch current state: 1/1
 Debounce delay: 10
@@ -625,10 +625,10 @@ Limit sensor DEACTIVATED
 <p>In traverser mode, the calibration sequence has an additional phase that ensures the calculated step count is reached prior to activating the LIMIT sensor, ensuring this is a safeguard against moving too far.</p>
 <p>When starting up for the first time, you should see output in the serial console similar to the below. Note the full turn step count once calibration has completed.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>License GPLv3 fsf.org (c) dcc-ex.com
-Turntable-EX version 0.4.0-Beta
+EX-Turntable version 0.4.0-Beta
 Available at I2C address 0x60
-Turntable-EX in TRAVERSER mode
-Turntable-EX has not been calibrated yet                                &lt;&lt;== Indicates calibration required
+EX-Turntable in TRAVERSER mode
+EX-Turntable has not been calibrated yet                                &lt;&lt;== Indicates calibration required
 Manual phase switching enabled
 Calibrating...
 Homing started
@@ -638,7 +638,7 @@ Turntable already homed
 CALIBRATION: Phase 2, finding limit switch...
 CALIBRATION: Phase 3, counting limit steps...                           &lt;&lt;== Third phase to ensure full step count is reached prior to limit sensor
 CALIBRATION: Completed, storing full turn step count: 2508              &lt;&lt;== Step count to record
-Turntable-EX has been calibrated for 2508 steps per revolution
+EX-Turntable has been calibrated for 2508 steps per revolution
 Manual phase switching enabled
 Homing started
 Turntable homed successfully

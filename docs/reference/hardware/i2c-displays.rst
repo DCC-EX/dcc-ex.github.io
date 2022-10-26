@@ -124,7 +124,11 @@ For any of these boards you can buy male header pins (either straight or 90 angl
 Connecting to your EX-CommandStation
 ------------------------------------
 
-.. todo:: `LOW - OLED <https://github.com/DCC-EX/dcc-ex.github.io/issues/442>`_ - Fritzing diagram for OLED display connection
+Physically connecting an I2C OLED display to your |EX-CS| is relatively straight forward, with SDA connecting to the CommandStation's SDA pin, SCL to SCL, VCC to 5V, and GND to GND.
+
+.. image:: /_static/images/display/mega-with-i2c-oled.png
+  :alt: Mega2560 with I2C OLED
+  :scale: 30%
 
 Configuring the software for an OLED
 ------------------------------------

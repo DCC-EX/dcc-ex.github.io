@@ -2,13 +2,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Startup Configuration &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>EX-CommandStation 4.1.1 Release [Oct 2022] &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
@@ -28,8 +26,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Choosing a Throttle (Controller) - Advanced" href="controllers.html" />
-    <link rel="prev" title="Install using the Arduino IDE" href="installation-options/arduino-ide.html" />
+    <link rel="next" title="Donate to Our Project" href="../contributing/donate.html" />
+    <link rel="prev" title="Our New Name [Aug 2022]" href="new-name.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -61,19 +59,19 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../levels.html">Before You Begin</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">EX-CommandStation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../get-started/index.html">Getting Started</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../get-started/purchasing.html">Purchasing Parts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../get-started/assembly.html">Initial Assembly</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../get-started/wifi-setup.html">Adding WiFi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../get-started/installer.html">Install the Software</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../get-started/controllers.html">Choosing a Throttle (Controller)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../get-started/testing.html">Test Your Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-commandstation/index.html">EX-CommandStation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/get-started/index.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/wifi-setup.html">Adding WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/installer.html">Install the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/controllers.html">Choosing a Throttle (Controller)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/testing.html">Test Your Setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Advanced Options</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
@@ -101,23 +99,23 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="supported-connections/index.html">Supported Connections</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="supported-connections/direct.html">Direct Connection (USB)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="supported-connections/wifi-setup.html">WiFi Connection</a></li>
-<li class="toctree-l4"><a class="reference internal" href="supported-connections/ethernet.html">Ethernet Connection</a></li>
-<li class="toctree-l4"><a class="reference internal" href="supported-connections/bluetooth.html">Bluetooth Connection</a></li>
-<li class="toctree-l4"><a class="reference internal" href="supported-connections/jmri.html">JMRI Connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/index.html">Supported Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/direct.html">Direct Connection (USB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/wifi-setup.html">WiFi Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/ethernet.html">Ethernet Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/bluetooth.html">Bluetooth Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-connections/jmri.html">JMRI Connection</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/wifi-boards/makerfabs-esp8266.html">Makerfabs ESP8266 WiFi Shield (recommended)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
-<li class="toctree-l4"><a class="reference internal" href="supported-wifi/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
@@ -129,17 +127,17 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="installation-options/index.html">Installation Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ex-installer/index.html">Install using EX-Installer</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../ex-installer/installing.html">Using the Installer</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../ex-installer/testing.html">Testing your installation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="installation-options/arduino-ide.html">Install using Arduino IDE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html">Install using Arduino IDE</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Startup Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Command Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary.html">DCC-EX Command Summary</a></li>
 </ul>
@@ -367,35 +365,35 @@
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About, Press &amp; Contributing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About Us - Meet the Team</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/press/index.html">Press / Announcements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/press/rewrite.html">DCC++ VS DCC-EX? [Oct 2020]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/press/v40-announce.html">EX-CommandStation 4.0 Release [Feb 2022]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/press/release-notes.html">Release Notes [Feb 2022]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/press/new-name.html">Our New Name [Aug 2022]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/press/v411-announce.html">EX-CommandStation 4.1.1 Release [Oct 2022]</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">About, Press &amp; Contributing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../about.html">About Us - Meet the Team</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Press / Announcements</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="rewrite.html">DCC++ VS DCC-EX? [Oct 2020]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="v40-announce.html">EX-CommandStation 4.0 Release [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release-notes.html">Release Notes [Feb 2022]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new-name.html">Our New Name [Aug 2022]</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">EX-CommandStation 4.1.1 Release [Oct 2022]</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/contributing/donate.html">Donate to Our Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/contributing/index.html">Contributing - Helping the DCC-EX Team</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/overview.html">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/github.html">GitHub</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/requirements.html">What You Need to Know/Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/software.html">Recommended Software</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/website/index.html">Contributing to the Documentation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/getting-started.html">Getting Started</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/structure.html">Folder and Page Structure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/style-guide.html">Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/donate.html">Donate to Our Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/index.html">Contributing - Helping the DCC-EX Team</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/github.html">GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/requirements.html">What You Need to Know/Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/software.html">Recommended Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/website/index.html">Contributing to the Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing/website/getting-started.html">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing/website/structure.html">Folder and Page Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing/website/style-guide.html">Style Guide</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/roadmap.html">DCC-EX Roadmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/site-map.html">Site Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licence.html">Licence &amp; Attributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../site-map.html">Site Map</a></li>
 </ul>
 </li>
 </ul>
@@ -414,11 +412,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">EX-CommandStation</a> &raquo;</li>
-          <li><a href="index.html">Advanced Options</a> &raquo;</li>
-      <li>Startup Configuration</li>
+          <li><a href="../index.html">About, Press &amp; Contributing</a> &raquo;</li>
+          <li><a href="index.html">Press / Announcements</a> &raquo;</li>
+      <li>EX-CommandStation 4.1.1 Release [Oct 2022]</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-commandstation/advanced-setup/startup-config.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/about/press/v411-announce.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -426,135 +424,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="startup-configuration">
-<h1>Startup Configuration<a class="headerlink" href="#startup-configuration" title="Permalink to this heading"></a></h1>
-<p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
-<p class="topic-title">On this page</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#if-you-are-using-ex-installer" id="id3">If you are using EX-Installer</a></p></li>
-<li><p><a class="reference internal" href="#if-you-are-using-the-arduino-ide" id="id4">If you are using the Arduino IDE</a></p>
-<ul>
-<li><p><a class="reference internal" href="#create-a-new-tab" id="id5">Create a new tab</a></p></li>
-<li><p><a class="reference internal" href="#creating-the-mysetup-h-file" id="id6">Creating the mySetup.h file</a></p></li>
-<li><p><a class="reference internal" href="#adding-in-the-startup-commands" id="id7">Adding in the startup commands</a></p></li>
-<li><p><a class="reference internal" href="#adding-in-more-than-one-startup-command" id="id8">Adding in more than one startup command</a></p></li>
-<li><p><a class="reference internal" href="#upload-the-new-version-of-the-software" id="id9">Upload the new version of the software</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#examples" id="id10">Examples</a></p>
-<ul>
-<li><p><a class="reference internal" href="#automatically-turning-track-power-on-at-startup" id="id11">Automatically Turning Track Power on at Startup</a></p></li>
-</ul>
-</li>
-</ul>
+  <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-announcements.png"><img alt="Announcements" class="image-product-logo-float-right" src="../../_images/product-logo-announcements.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+<section id="ex-commandstation-4-1-1-release-oct-2022">
+<h1>EX-CommandStation 4.1.1 Release [Oct 2022]<a class="headerlink" href="#ex-commandstation-4-1-1-release-oct-2022" title="Permalink to this heading"></a></h1>
+<p>23 October 2022 - 21:00 USA - Eastern Standard Time</p>
+<p>With a drum roll playing in the background, I am please to announce that the DCC-EX team has released version 4.1.1.</p>
+<p>As of last night that is the new official version available for download from our web side. This is considered a minor update but it does include a few bug fixes, the primary one being able to read long loco id’s. Included as well are several technical updates and for the one percent that understand the meaning, I saw coding words such as ACK, ATGTE and ATLT. For the 99 percent of us out there, some of the new features include the ability to fade an led when using a pca9685 board, a KILLALL function that stops all EX-Rail as well as diagnostic command, and new commands to help throttle developers.</p>
+<p>To view a more complete list, here is a link to the <a class="reference external" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FDCC-EX%2FCommandStation-EX%2Fblob%2Fmaster%2Frelease_notes.md%3Ffbclid%3DIwAR3SJ32zJ02i6hfXorKLSy7ZEa2wB4xqOjGDh81cZmUV-xVo6kKYSu7dJdI&amp;h=AT2bkJ8YH8j2biSHaza17ChiNxi8YMsy_-gipPJniWo0kC4hoUaGjHRnggWNXkvXOTI0JBcMvdk0hWRMm_tAiPXZv3P2xN9yWygsScm_7Adga7GxlGKiqYKDj-A25Von45Zq&amp;__tn__=-UK-R&amp;c[0]=AT1xPz0gU4lK_ylQgYK2U2OFLbGrmD4rPfdSAnVSQMbvJQA3wjyh9zJelIA8fvJIy9N5Wt29Err36VGv9pzc8JLxq0N5ToPTdkFiVk27N4JnkOqZmaww9_3T0mkYQEBzbCNfU-_W7SEcahndiuCZ8F4aaS9NRz1QcWYDxbtAyOi9G4Kb7V3rVzSNmG8fwLMNCoWC-5c6KGfKmjPPuOEsET0">release notes</a>.</p>
+<p>An interesting thought occurred to me as I was planning the writing of the update. Before it is published it gets the approval from multiple team members. Looking at it in a different light, approval came from the United Kingdom, Sweden, Australia, Canada, as well as the United States. That illustrates why DCC-EX is becoming a dominant player in the control of model railroads. Keep the downloads coming!!</p>
+<div class="line-block">
+<div class="line">Contact info:</div>
+<div class="line">Name: Fred Decker</div>
+<div class="line">Organization: DCC-EX</div>
+<div class="line">Address: 113 Main Street #767, Holly Springs, NC 27540</div>
+<div class="line">Phone: +1 919-285-1576</div>
 </div>
-</aside>
-<p>Sometimes, you may want to configure your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> with settings which are not otherwise saved by the Command Station when restarted. For example the <a class="reference internal" href="../../reference/tools/diagnostic-d-ack-command.html#d-ack-limit-ma"><span class="std std-ref">ACK min</span></a> for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to <cite>2600µS</cite> to be recognised).</p>
-<p>To automatically run commands at start up, you can create a new file called <cite>mySetup.h</cite> to contain these commands.</p>
-<p>How you create the file will depend on how you load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software onto your Arduino.</p>
-<ul class="simple">
-<li><p>By using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span></p></li>
-<li><p>By using the Arduino IDE</p></li>
-</ul>
-<hr class="docutils" />
-<section id="if-you-are-using-ex-installer">
-<h2><a class="toc-backref" href="#id3">If you are using EX-Installer</a><a class="headerlink" href="#if-you-are-using-ex-installer" title="Permalink to this heading"></a></h2>
-<p>You need to create a text file in the <cite>CommandStation-EX</cite> folder below where you uncompressed the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> files, and rename it to <cite>mySetup.h</cite></p>
-<p>For example, in Microsoft Windows:</p>
-<ul class="simple">
-<li><p>Open the <cite>File Explorer</cite> app</p></li>
-<li><p>Navigate to where you unzipped the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> files that you downloaded from this site.</p></li>
-<li><p>Open the <cite>CommandStation-EX</cite> sub-folder</p></li>
-<li><p>In the ‘Home’ tab, click <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Item</span></code> and then <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code></p></li>
-<li><p>Replace the name with <cite>mySetup.h</cite> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>  It will warn you about chnaging the extension (the bit after the ‘.’). Click <code class="docutils literal notranslate"><span class="pre">yes</span></code>.</p></li>
-<li><p>[Right click] on the new file, and select <span class="menuselection">Open With ‣ Notepad</span></p></li>
-<li><p>The file will open in the ‘Notepad’ app</p></li>
-<li><p>Enter the commands you need to perform.  For Example:</p></li>
-</ul>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SETUP(&quot;&lt;1&gt;&quot;);  // Turn track power on at startup
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Select <span class="menuselection">File ‣ Exit</span>.  <br /> It will ask you the save the file.  Click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
-<li><p>You now need to upload the software using the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> jast the same as you originally did ( <a class="reference internal" href="../get-started/installer.html"><span class="doc">Install the Software</span></a>)</p></li>
-</ul>
-<p>See examples and information below for adding multiple instructions to <cite>mySetup.h</cite>.</p>
-<p>If you need to change the <cite>mySetup.h</cite> later, simply find the file you created above, then [Right click] on it, and select <span class="menuselection">Open With ‣ Notepad</span>.  Then follow the remaining steps.</p>
-</section>
-<hr class="docutils" />
-<section id="if-you-are-using-the-arduino-ide">
-<h2><a class="toc-backref" href="#id4">If you are using the Arduino IDE</a><a class="headerlink" href="#if-you-are-using-the-arduino-ide" title="Permalink to this heading"></a></h2>
-<p>This will need to be done in the <a class="reference internal" href="installation-options/arduino-ide.html"><span class="doc">Install using the Arduino IDE</span></a>, so first make sure you have followed these steps to load up the Arduino IDE.</p>
-<section id="create-a-new-tab">
-<h3><a class="toc-backref" href="#id5">Create a new tab</a><a class="headerlink" href="#create-a-new-tab" title="Permalink to this heading"></a></h3>
-<p>First you will need to add a new file, just like the <a class="reference internal" href="installation-options/arduino-ide.html#copy-the-config-example-h-file-or-rename-it"><span class="std std-ref">config.h file</span></a>. Create a new tab using the following menu option.</p>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/arduino_ide_newtab.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_newtab.jpg" style="width: 654.4000000000001px; height: 172.8px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 74 </span><span class="caption-text">Creating a new tab in the Arduino IDE</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="creating-the-mysetup-h-file">
-<h3><a class="toc-backref" href="#id6">Creating the mySetup.h file</a><a class="headerlink" href="#creating-the-mysetup-h-file" title="Permalink to this heading"></a></h3>
-<p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.h</span></code> (case sensitive, so upper case S in setup) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file.</p>
-<figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../../_images/arduino_ide_mysetup.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_mysetup.jpg" style="width: 503.20000000000005px; height: 161.60000000000002px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 75 </span><span class="caption-text">Choosing a file name for the new file</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="adding-in-the-startup-commands">
-<h3><a class="toc-backref" href="#id7">Adding in the startup commands</a><a class="headerlink" href="#adding-in-the-startup-commands" title="Permalink to this heading"></a></h3>
-<p>Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the following command each time your Command Station starts up:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK MIN 2600&gt;
-</pre></div>
-</div>
-<p>Then you would need to enter into the <cite>mySetup.h</cite> file:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SETUP(&quot;&lt;D ACK MIN 2600&gt;&quot;);
-</pre></div>
-</div>
-<p>Note the upper case word <code class="docutils literal notranslate"><span class="pre">SETUP</span></code> at the start.</p>
-</section>
-<section id="adding-in-more-than-one-startup-command">
-<h3><a class="toc-backref" href="#id8">Adding in more than one startup command</a><a class="headerlink" href="#adding-in-more-than-one-startup-command" title="Permalink to this heading"></a></h3>
-<p>If you need to have multiple commands run at start up, you will need to enter each additional command on a new line, so a longer <code class="docutils literal notranslate"><span class="pre">mySetup.h</span></code> file could look like:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SETUP(&quot;&lt;D ACK MAX 9200&gt;&quot;); // Set ACK detection to allow pulses up to 9200uS
-SETUP(&quot;&lt;D ACK LIMIT 60&gt;&quot;); // 60mA is the default
-SETUP(&quot;&lt;0&gt;&quot;); // tracks off at startup
-SETUP(&quot;&lt;D CMD 0&gt;&quot;); // can be set to ON for testing in the serial monitor
-</pre></div>
-</div>
-<p>Here you can add comments on each line, these can be added by using the double forward slash character <code class="docutils literal notranslate"><span class="pre">//</span></code> and then your comments. This makes it easier to remember why you added these start up commands.</p>
-</section>
-<section id="upload-the-new-version-of-the-software">
-<h3><a class="toc-backref" href="#id9">Upload the new version of the software</a><a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permalink to this heading"></a></h3>
-<p>Finally, upload the code to the Arduino as you would do during the standard <a class="reference internal" href="installation-options/arduino-ide.html#upload-the-software"><span class="std std-ref">Arduino IDE Setup</span></a>. Restart the Command Station and these commands will have run at start up.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="examples">
-<h2><a class="toc-backref" href="#id10">Examples</a><a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
-<section id="automatically-turning-track-power-on-at-startup">
-<h3><a class="toc-backref" href="#id11">Automatically Turning Track Power on at Startup</a><a class="headerlink" href="#automatically-turning-track-power-on-at-startup" title="Permalink to this heading"></a></h3>
-<p>Adding this line to <cite>mySetup.h</cite> will cause the track power to turn on automatically when the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> powers up.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SETUP(&quot;&lt;1&gt;&quot;);  // Turn track power on at startup
-</pre></div>
-</div>
-</section>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation-options/arduino-ide.html" class="btn btn-neutral float-left" title="Install using the Arduino IDE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="controllers.html" class="btn btn-neutral float-right" title="Choosing a Throttle (Controller) - Advanced" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="new-name.html" class="btn btn-neutral float-left" title="Our New Name [Aug 2022]" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../contributing/donate.html" class="btn btn-neutral float-right" title="Donate to Our Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

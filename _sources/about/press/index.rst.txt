@@ -13,3 +13,4 @@ Press / Announcements
     v40-announce
     release-notes
     new-name
+    v411-announce

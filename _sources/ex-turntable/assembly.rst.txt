@@ -272,8 +272,6 @@ At the time of writing, there is no installer for |EX-TT| like there is for the 
 
 As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-TT| folder, and neither should reside in the other (the |EX-TT| software is required in the next step):
 
-.. todo:: HIGH - Update EX-Turntable screenshots
-
 .. image:: /_static/images/turntable-ex/two-folders.png
   :alt: Two folders
   :scale: 60%

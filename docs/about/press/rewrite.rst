@@ -3,7 +3,7 @@
 |EX-AN-LOGO|
 
 ***************************
-DCC++ VS DCC-EX? [Oct 2022]
+DCC++ VS DCC-EX? [Oct 2020]
 ***************************
 
 Everything you loved is still there...

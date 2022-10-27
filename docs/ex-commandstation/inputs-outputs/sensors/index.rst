@@ -8,7 +8,7 @@ Sensors
 
 Sensors are a key item to add to your |EX-CS|, whether it's to fully realise the automation potential of |EX-R|, to know where trains are on your layout, or to trigger simple things such as road crossings.
 
-There is a vast majority of sensors available, and we aim to outline options here that we know work with |EX-CS|.
+There is quite a variety of sensors available, and we aim to outline options here that we know work with |EX-CS|.
 
 .. toctree::
   :maxdepth: 1

@@ -12,15 +12,19 @@ VL53L0X Time of Flight Sensor
     :depth: 2
     :local:
 
-.. image:: /_static/images/vl53l0x/vl53l0x.jpg
-  :alt: VL53L0X sensor
-  :scale: 25%
-
 Time of Flight (or ToF) sensors can provide a more reliable and accurate sensor than traditional IR sensors as they are not susceptible to interference from different and varying lighting conditions.
 
 Further to this, these sensors can be programmed to activate only within a specific distance range, enabling a large variety of use cases.
 
 |EX-CS| has support for the VL53L0X ToF sensor via the "IO_VL53L0X.h" HAL device driver which connects to the I2C bus of the CommandStation.
+
+.. image:: /_static/images/vl53l0x/vl53l0x.jpg
+  :alt: VL53L0X sensor
+  :scale: 25%
+
+.. image:: /_static/images/vl53l0x/adafruit-vl53l0x.jpg
+  :alt: Adafruit VL53L0X sensor
+  :scale: 25%
 
 Theory of operation
 ===================
@@ -31,8 +35,6 @@ For economy of memory and processing time, this driver includes only part of the
 
 Physical connection
 ===================
-
-.. todo:: `MEDIUM - VL53L0X <https://github.com/DCC-EX/dcc-ex.github.io/issues/266>`_ - add Fritzing diagram for single and multiple devices
 
 Each VL53L0X device will, by default, reside on the same I2C address of 0x29, and therefore connecting multiple devices to the same I2C bus requires consideration and planning.
 
@@ -47,12 +49,20 @@ Connecting a single device is a simple matter of connecting the SDA and SCL pins
 
 Once connected, you will need to configure the device driver as per :ref:`reference/hardware/other/vl53l0x-tof-sensor:configuring a single device`.
 
+.. image:: /_static/images/vl53l0x/mega2560-single-vl53l0x.png
+  :alt: Mega2560 with VL53L0X
+  :scale: 40%
+
 Connecting multiple devices
 ---------------------------
 
 Connecting multiple devices also require connecting each device to the SDA and SCL pins, however in addition to this, you will need to connect each device's XSHUT pin to an available I/O pin either directly on your |EX-CS|, or to an available I/O pin on an I/O expander such as an MCP23017. The XSHUT pin connection is required in order to be able to have each device addressed separately.
 
 Once connected, you will need to configure the device driver for each device as per :ref:`reference/hardware/other/vl53l0x-tof-sensor:connecting multiple devices`.
+
+.. image:: /_static/images/vl53l0x/mega2560-dual-vl53l0x.png
+  :alt: Mega2560 two VL53L0Xs
+  :scale: 40%
 
 Device driver configuration
 ===========================
@@ -140,7 +150,7 @@ Where:
 - highThreshold is the distance at which the digital vpin state is set to 0 (in mm)
 - xshutPin is the vpin number corresponding to either a direct I/O pin or an I/O pin on an I/O expander
 
-For example, these entries configure two devices on vpins 4000 and 4003, with I2C addresses 0x30 and 0x31. The device at 0x30 is connected directly to an Arduino Mega2560's digital pin 20, and the device at 0x31 is connected to the first digital I/O pin of the first MCP23017 device at vpin 164. A digital read of each of the device's vpins will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:
+For example, these entries configure two devices on vpins 4000 and 4003, with I2C addresses 0x30 and 0x31. The device at 0x30 is connected directly to an Arduino Mega2560's digital pin 22, and the device at 0x31 is connected to the first digital I/O pin of the first MCP23017 device at vpin 164. A digital read of each of the device's vpins will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:
 
 Note the second sensor starts at vpin 4003 as the first sensor consumes vpins 4000, 4001, and 4002.
 
@@ -149,7 +159,7 @@ Note the second sensor starts at vpin 4003 as the first sensor consumes vpins 40
   ...
   
   void halSetup() {
-    VL53L0X::create(4000, 3, 0x30, 200, 250, 20);
+    VL53L0X::create(4000, 3, 0x30, 200, 250, 22);
     VL53L0X::create(4003, 3, 0x31, 200, 250, 164);
     ...
 

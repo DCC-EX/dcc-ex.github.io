@@ -25,6 +25,5 @@ Hardware
     ethernet-boards
     bluetooth
     index-i2c
-    other/index
     accessory-controllers
     index-decoder

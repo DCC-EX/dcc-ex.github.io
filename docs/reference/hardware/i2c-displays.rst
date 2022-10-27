@@ -132,7 +132,7 @@ Physically connecting an I2C OLED display to your |EX-CS| is relatively straight
 
 You can also connect the display to the motor shield's I2C headers.
 
-.. image:: /_static/images/display/mega-with-i2c-oled.png
+.. image:: /_static/images/display/mega-with-i2c-oled-twi.png
   :alt: Mega2560 with I2C OLED
   :scale: 30%
 

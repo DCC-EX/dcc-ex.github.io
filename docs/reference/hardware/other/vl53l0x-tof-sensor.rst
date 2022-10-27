@@ -140,7 +140,9 @@ Where:
 - highThreshold is the distance at which the digital vpin state is set to 0 (in mm)
 - xshutPin is the vpin number corresponding to either a direct I/O pin or an I/O pin on an I/O expander
 
-For example, these entries configure two devices on vpins 4000 and 4001, with I2C addresses 0x30 and 0x31. The device at 0x30 is connected directly to an Arduino Mega2560's digital pin 20, and the device at 0x31 is connected to the first digital I/O pin of the first MCP23017 device at vpin 164. A digital read of each of the device's vpins will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:
+For example, these entries configure two devices on vpins 4000 and 4003, with I2C addresses 0x30 and 0x31. The device at 0x30 is connected directly to an Arduino Mega2560's digital pin 20, and the device at 0x31 is connected to the first digital I/O pin of the first MCP23017 device at vpin 164. A digital read of each of the device's vpins will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:
+
+Note the second sensor starts at vpin 4003 as the first sensor consumes vpins 4000, 4001, and 4002.
 
 .. code-block:: cpp
 
@@ -148,22 +150,62 @@ For example, these entries configure two devices on vpins 4000 and 4001, with I2
   
   void halSetup() {
     VL53L0X::create(4000, 3, 0x30, 200, 250, 20);
-    VL53L0X::create(4001, 3, 0x31, 200, 250, 164);
+    VL53L0X::create(4003, 3, 0x31, 200, 250, 164);
     ...
 
 Sensor configuration for JMRI
 =============================
 
-If you are using JMRI and require these to be available as sensors...
+If you are using |JMRi| and require these to be available as sensors, then they can be configured via the DCC-EX ``<Z id vpin iflag>`` command.
 
-Sensor::create(4000, 4000, 0);  // Create a sensor
+To create sensors for our examples above, the commands would be as shown below, and for simplicity we keep the sensor ID the same as the vpin ID in use.
 
-When an object comes within 200mm of the sensor, a message 
-<Q 4000>
-will be sent over the serial USB, and when the object moves more than 250mm from the sensor, 
-a message
-<q 4000>
-will be sent.
+.. code-block:: 
+
+  <Z 4000 4000 0>
+  <Z 4003 4003 0>
+
+With these definitions, when an object comes within 200mm of the sensors, a ``<Q id>`` message will be sent to all defined serial ports with the appropriate sensor ID:
+
+.. code-block:: 
+
+  <Q 4000>
+  <Q 4003>
+
+Conversely, when an object moves more than 250mm from the sensors, a ``<q id>`` message will be sent instead:
+
+.. code-block:: 
+
+  <q 4000>
+  <q 4003>
+
+To ensure sensors are defined at startup, refer to :doc:`/ex-commandstation/advanced-setup/startup-config`.
 
 EX-RAIL integration
 ===================
+
+|EX-R| enables utilising these devices as both digital and analogue sensors.
+
+Using the standard digital sensor commands (AT, AFTER, ATTIMEOUT, IF, IFNOT, IFTIMEOUT) operates as per any other digital sensor, using the ranges specified when configuring the devices.
+
+For example:
+
+.. code-block:: 
+
+  AT(4000)        // Will trigger when an object is within 200mm
+  AFTER(4003)     // Will trigger 0.5s after an object moves 250mm away
+
+.. todo:: `LOW - VL53L0X <https://github.com/DCC-EX/dcc-ex.github.io/issues/447>`_ - validate VL53L0X works with EX-RAIL's analogue sensor commands ATGTE, ATLT, IFGTE, IFLT
+
+.. note:: 
+
+  Using a VL53L0X with EX-RAIL's analogue sensor commands has not been validated, this may not work.
+
+With |EX-R|, you can also use the analogue sensor commands (ATGTE, ATLT, IFGTE, IFLT) to have automation based on the actual distance from the sensor, rather than it operating like a simple on/off switch.
+
+For example:
+
+.. code-block:: 
+
+  ATGTE(4000, 150)    // Will trigger when an object is 150mm or further away from the sensor
+  ATLT(4003, 100)     // Will trigger when an object is less than 100mm away

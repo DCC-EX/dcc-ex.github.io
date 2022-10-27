@@ -14,3 +14,4 @@ There is quite a variety of sensors available, and we aim to outline options her
   :maxdepth: 1
     
   ir-sensor
+  vl53l0x-tof-sensor

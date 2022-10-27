@@ -21,7 +21,7 @@ EX-CommandStation
 * Upgrade the WiFi option with possible ESP32 containing custom AT firmware with possible Ethernet upgrade and Web Interface for configuration and/or control.
 * OpenMRN on a co-processor?
 * Multiple simultaneous Motor Driver support (beyond the 2 we currently support).
-* Add EX-RAIL "Extended Railroad Automation Instruction Language". Automate your layout with a simple script. - Now in BETA
+* Add EX-RAIL "Extended Railroad Automation Instruction Language". Automate your layout with a simple script.
 
 EX-DCCInspector
 ^^^^^^^^^^^^^^^

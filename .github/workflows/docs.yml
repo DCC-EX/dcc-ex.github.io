@@ -19,7 +19,7 @@ jobs:
           pip3 install sphinxcontrib-spelling
           pip3 install sphinx-toolbox
       - name: Checkout repo
-        uses: actions/checkout@1.0.0
+        uses: actions/checkout@v3
       - name: Build docs
         run: |
           make github
@@ -27,7 +27,7 @@ jobs:
           touch docs/_build/html/.nojekyll
       - name: Deploy
         if: github.ref == 'refs/heads/sphinx'
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6  # v4.4.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages  # The branch the action should deploy to.

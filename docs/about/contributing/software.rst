@@ -80,7 +80,7 @@ For Windows users, follow the official Python documentation here: `Using Python 
 
 Note that you will need to ensure Python is added to your `PATH` environment variable which is outlined on that page also.
 
-Once installed, you will need to install three Python packages in order to successfully build the website locally. To do this, open a command prompt and run the following command:
+Once installed, you will need to install some Python packages in order to successfully build the website locally. To do this, open a command prompt and run the following command:
 
 .. code-block:: 
 
@@ -88,6 +88,7 @@ Once installed, you will need to install three Python packages in order to succe
   pip install sphinx 
   pip install sphinx_rtd_theme
   pip install sphinxcontrib-spelling
+  pip install myst-parser
 
 Recommended editor (VSCode)
 ============================

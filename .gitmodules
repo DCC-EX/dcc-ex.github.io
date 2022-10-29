@@ -1,0 +1,3 @@
+[submodule "products/CommandStation-EX"]
+	path = products/CommandStation-EX
+	url = https://github.com/DCC-EX/CommandStation-EX.git

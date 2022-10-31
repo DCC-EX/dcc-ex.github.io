@@ -157,3 +157,43 @@ You will need to know if your OLED has a 128 x 64 or 128 x 32 pixel resolution, 
 
   #define OLED_DRIVER 128,32      // Define for 128 x 32 displays
   #define OLED_DRIVER 128,64      // Define for 128 x 64 displays
+
+Combine IP address and port on OLED
+===================================
+
+|tinkerer| |engineer|
+
+To use OLED displays with your |EX-CS|, you can save line LCD5 used for the port number and combine it with line LCD4 IP address.
+
+Be aware that the combined IP address and port number can easily exceed 20 characters, which will exceed the display width.
+
+To accomplish this, you will need to edit "WifiInterface.cpp" included with the |EX-CS| software. Each time you want to upgrade the software, you will need to repeat this edit.
+
+In "WifiInterface.cpp", you need to locate the ``LCD(4...)`` line (should be around line #313):
+
+.. code-block:: cpp
+
+  LCD(4,F("%s"),ipString);  // There is not enough room on some LCDs to put a title to this
+
+Comment out this line by adding ``//`` at the beginning, and add this new line immediately below:
+
+.. code-block:: cpp
+
+  // LCD(4,F("%s"),ipString);  // There is not enough room on some LCDs to put a title to this
+  LCD(4,F("%s:%d"),ipString,port); // *** Single IP:Port
+
+You will also need to comment out the ``LCD(5...)`` line by adding ``//`` to the beginning (should be around line 317):
+
+.. code-block:: cpp
+
+  // LCD(5,F("PORT=%d"),port);
+
+Once this is done, line 5 onwards are free to use as you wish.
+
+If you have custom messages you wish to display, you can do this by adding the lines to "mySetup.h":
+
+.. code-block:: cpp
+
+  LCD(5,F("Line 5 custom text"));
+  LCD(6,F("Line 6 custom text"));
+  LCD(7,F("Line 7 custom text"));

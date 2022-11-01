@@ -453,7 +453,7 @@
 <li><p><a class="reference internal" href="#aliases" id="id6">Aliases</a></p></li>
 <li><p><a class="reference internal" href="#signals" id="id7">Signals</a></p></li>
 <li><p><a class="reference internal" href="#turnouts-points" id="id8">Turnouts/Points</a></p></li>
-<li><p><a class="reference internal" href="#sensors" id="id9">Sensors</a></p></li>
+<li><p><a class="reference internal" href="#sensors-inputs" id="id9">Sensors/inputs</a></p></li>
 <li><p><a class="reference internal" href="#output-and-servo-commands" id="id10">Output and servo commands</a></p></li>
 <li><p><a class="reference internal" href="#flow-control-functions" id="id11">Flow Control Functions</a></p></li>
 <li><p><a class="reference internal" href="#blocks" id="id12">Blocks</a></p></li>
@@ -576,7 +576,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <h3>LATCH/UNLATCH<a class="headerlink" href="#latch-unlatch" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">LATCH</span> <span class="pre">sensor_id&gt;</span></code> Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 255.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">UNLATCH</span> <span class="pre">sensor_id&gt;</span></code>       Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.</p>
-<p>Refer to the LATCH/UNLATCH commands in the <a class="reference internal" href="#sensors">sensors</a> section below for further details.</p>
+<p>Refer to the LATCH/UNLATCH commands in the <a class="reference internal" href="#sensors-inputs"><span class="std std-ref">Sensors/inputs</span></a> section below for further details.</p>
 </section>
 </section>
 <section id="routes-automations-and-sequences">
@@ -668,8 +668,8 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </pre></div>
 </div>
 </section>
-<section id="sensors">
-<h2><a class="toc-backref" href="#id9">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h2>
+<section id="sensors-inputs">
+<h2><a class="toc-backref" href="#id9">Sensors/inputs</a><a class="headerlink" href="#sensors-inputs" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> An event handler that defines what to do when a sensor is active/triggered.</p>
 <p><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code>  A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable “timed out” flag.</p>
@@ -687,6 +687,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p><code class="docutils literal notranslate"><span class="pre">IFGTE(</span> <span class="pre">sensor_id,</span> <span class="pre">value</span> <span class="pre">)</span></code>   Test if analog pin reading is greater than or equal to value (&gt;=).</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFLT(</span> <span class="pre">sensor_id,</span> <span class="pre">value</span> <span class="pre">)</span></code>    Test if analog pin reading is less than value (&lt;).</p>
 <p>All the <cite>IFGTE()</cite>, <cite>IFLT()</cite>, <cite>ATGTE()`and `ATLT()</cite> commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.</p>
+<p><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">id,</span> <span class="pre">value</span> <span class="pre">)</span></code> Test if a rotary encoder has been set to the specified value <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p>Sensor examples:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>          <span class="c1">// If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.</span>
   <span class="n">RED</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
@@ -708,6 +709,10 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
   <span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
 <span class="n">ELSE</span>
   <span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
+<span class="n">ENDIF</span>
+
+<span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1">// If a rotary encoder is at position 1, start ROUTE with ID 123</span>
+  <span class="n">START</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
 <span class="n">ENDIF</span>
 </pre></div>
 </div>
@@ -733,6 +738,18 @@ ROUTE(11, &quot;Bay to Shed&quot;)
     LATCH(ROUTE_TOGGLE)         // LATCH ROUTE_TOGGLE to indicate route set
   ENDIF
 DONE
+</pre></div>
+</div>
+<p>ONCHANGE() is an event handler that can be used to detect if a sensor has changed state. Note this is only in use by the rotary encoder device driver at present. <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">ONCHANGE(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> Detects a change in state for the specified sensor ID.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
+  IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
+    START(123)
+  ENDIF
+  IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
+    START(124)
+  ENDIF
+  DONE
 </pre></div>
 </div>
 </section>

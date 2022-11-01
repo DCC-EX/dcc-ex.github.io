@@ -459,7 +459,7 @@
 <li><p><a class="reference internal" href="#ex-rail-functions" id="id10">EX-RAIL functions</a></p></li>
 <li><p><a class="reference internal" href="#loco-dcc-functions" id="id11">Loco DCC functions</a></p></li>
 <li><p><a class="reference internal" href="#sensor-input" id="id12">Sensor input</a></p></li>
-<li><p><a class="reference internal" href="#sensor-event-handlers" id="id13">Sensor event handlers</a></p></li>
+<li><p><a class="reference internal" href="#event-handlers" id="id13">Event handlers</a></p></li>
 <li><p><a class="reference internal" href="#action-output-functions" id="id14">Action output functions</a></p></li>
 </ul>
 </li>
@@ -708,10 +708,13 @@
 <tr class="row-odd"><td><p>IFGREEN( signal_id )</p></td>
 <td><p>Tests if signal is green</p></td>
 </tr>
-<tr class="row-even"><td><p>ELSE</p></td>
+<tr class="row-even"><td><p>IFRE( id, value )</p></td>
+<td><p>Tests if a rotary encoder is at the specified position <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>ELSE</p></td>
 <td><p>Provides alternative logic to any IF related command returning False</p></td>
 </tr>
-<tr class="row-odd"><td><p>ENDIF</p></td>
+<tr class="row-even"><td><p>ENDIF</p></td>
 <td><p>Required to end an IF/IFNOT/etc (Used in all IF.. functions)</p></td>
 </tr>
 </tbody>
@@ -921,8 +924,8 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="sensor-event-handlers">
-<h4><a class="toc-backref" href="#id13">Sensor event handlers</a><a class="headerlink" href="#sensor-event-handlers" title="Permalink to this heading"></a></h4>
+<section id="event-handlers">
+<h4><a class="toc-backref" href="#id13">Event handlers</a><a class="headerlink" href="#event-handlers" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -951,6 +954,9 @@
 </tr>
 <tr class="row-odd"><td><p>ONDEACTIVATEL( linear )</p></td>
 <td><p>Event handler for linear DCC accessory packet value 0</p></td>
+</tr>
+<tr class="row-even"><td><p>ONCHANGE( id )</p></td>
+<td><p>Event handler for a sensor changing state <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
 </tr>
 </tbody>
 </table>

@@ -193,6 +193,8 @@ Flow control functions
       -  Tests if signal is amber
     * -  IFGREEN( signal_id )
       -  Tests if signal is green
+    * -  IFRE( id, value )
+      -  Tests if a rotary encoder is at the specified position |BR| |NOT-IN-PROD-VERSION|
     * -  ELSE
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
@@ -338,8 +340,8 @@ Sensor input
   
 |
 
-Sensor event handlers
-^^^^^^^^^^^^^^^^^^^^^
+Event handlers
+^^^^^^^^^^^^^^
 
 .. list-table::
     :widths: 30 70
@@ -360,6 +362,8 @@ Sensor event handlers
       -  Event handler for 2 part DCC accessory packet value 0
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
+    * -  ONCHANGE( id )
+      -  Event handler for a sensor changing state |BR| |NOT-IN-PROD-VERSION|
 
 |
 

@@ -446,20 +446,21 @@
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#notes" id="id1">Notes</a></p></li>
-<li><p><a class="reference internal" href="#interactive-diagnostics-and-control" id="id2">Interactive diagnostics and control</a></p></li>
-<li><p><a class="reference internal" href="#routes-automations-and-sequences" id="id3">Routes, automations, and sequences</a></p></li>
-<li><p><a class="reference internal" href="#conditional-statements" id="id4">Conditional statements</a></p></li>
-<li><p><a class="reference internal" href="#aliases" id="id5">Aliases</a></p></li>
-<li><p><a class="reference internal" href="#signals" id="id6">Signals</a></p></li>
-<li><p><a class="reference internal" href="#turnouts-points" id="id7">Turnouts/Points</a></p></li>
-<li><p><a class="reference internal" href="#sensors" id="id8">Sensors</a></p></li>
-<li><p><a class="reference internal" href="#output-and-servo-commands" id="id9">Output and servo commands</a></p></li>
-<li><p><a class="reference internal" href="#flow-control-functions" id="id10">Flow Control Functions</a></p></li>
-<li><p><a class="reference internal" href="#blocks" id="id11">Blocks</a></p></li>
-<li><p><a class="reference internal" href="#command-station-functions" id="id12">Command Station Functions</a></p></li>
-<li><p><a class="reference internal" href="#ex-rail-functions" id="id13">EX-RAIL Functions</a></p></li>
-<li><p><a class="reference internal" href="#loco-dcc-functions" id="id14">Loco DCC Functions</a></p></li>
-<li><p><a class="reference internal" href="#dcc-accessory-decoder-commands" id="id15">DCC Accessory decoder commands</a></p></li>
+<li><p><a class="reference internal" href="#conventions-used-on-this-page" id="id2">Conventions used on this page</a></p></li>
+<li><p><a class="reference internal" href="#interactive-diagnostics-and-control" id="id3">Interactive diagnostics and control</a></p></li>
+<li><p><a class="reference internal" href="#routes-automations-and-sequences" id="id4">Routes, automations, and sequences</a></p></li>
+<li><p><a class="reference internal" href="#conditional-statements" id="id5">Conditional statements</a></p></li>
+<li><p><a class="reference internal" href="#aliases" id="id6">Aliases</a></p></li>
+<li><p><a class="reference internal" href="#signals" id="id7">Signals</a></p></li>
+<li><p><a class="reference internal" href="#turnouts-points" id="id8">Turnouts/Points</a></p></li>
+<li><p><a class="reference internal" href="#sensors" id="id9">Sensors</a></p></li>
+<li><p><a class="reference internal" href="#output-and-servo-commands" id="id10">Output and servo commands</a></p></li>
+<li><p><a class="reference internal" href="#flow-control-functions" id="id11">Flow Control Functions</a></p></li>
+<li><p><a class="reference internal" href="#blocks" id="id12">Blocks</a></p></li>
+<li><p><a class="reference internal" href="#command-station-functions" id="id13">Command Station Functions</a></p></li>
+<li><p><a class="reference internal" href="#ex-rail-functions" id="id14">EX-RAIL Functions</a></p></li>
+<li><p><a class="reference internal" href="#loco-dcc-functions" id="id15">Loco DCC Functions</a></p></li>
+<li><p><a class="reference internal" href="#dcc-accessory-decoder-commands" id="id16">DCC Accessory decoder commands</a></p></li>
 </ul>
 </div>
 </aside>
@@ -493,8 +494,18 @@
 <p>Therefore, you can have an AUTOMATION, a turnout/point, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.</p>
 </div>
 </section>
+<section id="conventions-used-on-this-page">
+<h2><a class="toc-backref" href="#id2">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>CAPITALISED words - These are EX-RAIL commands and are case sensitive</p></li>
+<li><p>lowercase words within () - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma “,”, for example SEQUENCE(id) or DELAYRANDOM(min_delay, max_delay)</p></li>
+<li><p>Quoted “text” - Text within quote marks “” are used as descriptions, and must include the quote characters, for example ROUTE(id, “description”) becomes ROUTE(1, “This is the route description”)</p></li>
+<li><p>Square brackets [] - Parameters within square brackets [] are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)</p></li>
+<li><p>| - Use of the | character means you need to provide one of the provided options only, for example <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">ON|OFF&gt;</span></code> becomes either <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">ON&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">OFF&gt;</span></code></p></li>
+</ul>
+</section>
 <section id="interactive-diagnostics-and-control">
-<h2><a class="toc-backref" href="#id2">Interactive diagnostics and control</a><a class="headerlink" href="#interactive-diagnostics-and-control" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3">Interactive diagnostics and control</a><a class="headerlink" href="#interactive-diagnostics-and-control" title="Permalink to this heading"></a></h2>
 <p>There are some diagnostic and control commands added to the &lt;tag&gt; language normally used to control the Command Station over USB, WiFi, or Ethernet.</p>
 <p>These can be used in the same manner as other CommandStation directives to interact with EX-RAIL sequences and objects once they have been defined in myAutomation.h and are uploaded to the CommandStation.</p>
 <section id="ex-rail">
@@ -569,7 +580,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </section>
 </section>
 <section id="routes-automations-and-sequences">
-<h2><a class="toc-backref" href="#id3">Routes, automations, and sequences</a><a class="headerlink" href="#routes-automations-and-sequences" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4">Routes, automations, and sequences</a><a class="headerlink" href="#routes-automations-and-sequences" title="Permalink to this heading"></a></h2>
 <p>EX-RAIL provides many commands to allow you to create automated sequences and routes that locomotives can follow that may involve turnouts/points, signals, etc. that can be automatically set to react when the loco trips a sensor.</p>
 <section id="script-definition-terms">
 <h3>Script Definition Terms<a class="headerlink" href="#script-definition-terms" title="Permalink to this heading"></a></h3>
@@ -581,7 +592,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </section>
 </section>
 <section id="conditional-statements">
-<h2><a class="toc-backref" href="#id4">Conditional statements</a><a class="headerlink" href="#conditional-statements" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5">Conditional statements</a><a class="headerlink" href="#conditional-statements" title="Permalink to this heading"></a></h2>
 <p>There is quite a variety of conditional statements available to influence activities based on the states of sensors, signals, turnouts/points, and other items.</p>
 <p>All conditional activities must be terminated with an <cite>ENDIF</cite> statement, and may optionally include an <cite>ELSE</cite> statement.</p>
 <p>If a conditional statement is part of an automation sequence, the sequence still needs to be terminated with a DONE statement.</p>
@@ -589,7 +600,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p><code class="docutils literal notranslate"><span class="pre">ENDIF</span></code>       Required to end an IF/IFNOT/etc. (Used in all IF.. functions).</p>
 </section>
 <section id="aliases">
-<h2><a class="toc-backref" href="#id5">Aliases</a><a class="headerlink" href="#aliases" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6">Aliases</a><a class="headerlink" href="#aliases" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code>      Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias “name” text.</p>
 <p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
 <p>If you simply need a unique identifier for an object used internally to the script, such as a turnout/point, route, automation, or sequence, you don’t even need to provide an ID, EX-RAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don’t have to try to remember or keep a list of numbers you’ve used. This also prevents you from assigning the same number to more than one object.</p>
@@ -618,7 +629,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p>In this simple example, aliases seem like overkill, however consider the case where you need to have the “Coal Yard” turnout/point closed or thrown in various different automation sequences, and you will soon see why it’s easier to understand you’re throwing the COAL_YARD turnout/point rather than turnout/point ID 12345.</p>
 </section>
 <section id="signals">
-<h2><a class="toc-backref" href="#id6">Signals</a><a class="headerlink" href="#signals" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7">Signals</a><a class="headerlink" href="#signals" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">SIGNAL(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code>     Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights.</p>
 <p><code class="docutils literal notranslate"><span class="pre">SIGNALH(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code> As above to define a pin based signal, but with active high pins instead.</p>
 <p>For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (eg. RED/GREEN), set the unused colour’s pin to 0.</p>
@@ -638,7 +649,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </div>
 </section>
 <section id="turnouts-points">
-<h2><a class="toc-backref" href="#id7">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h2>
 <p>All the below turnout/point definitions will define turnouts/points that are advertised to <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, unless the HIDDEN keyword is used.</p>
 <p>“description” is an optional parameter, and must be enclosed in quotes “”. If you don’t wish this turnout/point to be advertised to throttles, then substitute the word HIDDEN (with no “”) instead of the description.</p>
 <p><code class="docutils literal notranslate"><span class="pre">TURNOUT(</span> <span class="pre">id,</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>     Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the <a class="reference internal" href="../reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet"><span class="std std-ref">Stationary Decoder Address Table (xlsx Spreadsheet)</span></a> for help on these conversions.</p>
@@ -658,7 +669,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </div>
 </section>
 <section id="sensors">
-<h2><a class="toc-backref" href="#id8">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> An event handler that defines what to do when a sensor is active/triggered.</p>
 <p><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code>  A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable “timed out” flag.</p>
@@ -726,7 +737,7 @@ DONE
 </div>
 </section>
 <section id="output-and-servo-commands">
-<h2><a class="toc-backref" href="#id9">Output and servo commands</a><a class="headerlink" href="#output-and-servo-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10">Output and servo commands</a><a class="headerlink" href="#output-and-servo-commands" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">SET(</span> <span class="pre">pin</span> <span class="pre">)</span></code>  Set an output pin HIGH</p>
 <p><code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">pin</span> <span class="pre">)</span></code>        Reset output pin (set to LOW)</p>
 <p><code class="docutils literal notranslate"><span class="pre">CLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code> Close a defined turnout/point</p>
@@ -767,7 +778,7 @@ DONE
 </div>
 </section>
 <section id="flow-control-functions">
-<h2><a class="toc-backref" href="#id10">Flow Control Functions</a><a class="headerlink" href="#flow-control-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11">Flow Control Functions</a><a class="headerlink" href="#flow-control-functions" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">CALL(</span> <span class="pre">route</span> <span class="pre">)</span></code>       Branch to a separate sequence, which will need to RETURN when complete.</p>
 <p><code class="docutils literal notranslate"><span class="pre">RETURN</span></code>      Return to the calling sequence when completed (no DONE required).</p>
 <p>Say, for example, you have an AUTOMATION you initiate the sends a train through your layout with multiple station stops, and you want to do the same things at each station.</p>
@@ -848,13 +859,13 @@ DONE
 </div>
 </section>
 <section id="blocks">
-<h2><a class="toc-backref" href="#id11">Blocks</a><a class="headerlink" href="#blocks" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12">Blocks</a><a class="headerlink" href="#blocks" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free</p>
 <p><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code>    Free previously reserved block</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code>  If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p>
 </section>
 <section id="command-station-functions">
-<h2><a class="toc-backref" href="#id12">Command Station Functions</a><a class="headerlink" href="#command-station-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13">Command Station Functions</a><a class="headerlink" href="#command-station-functions" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of EX-CommandStation</p>
 <p><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code>    Power off track</p>
 <p><code class="docutils literal notranslate"><span class="pre">JOIN</span></code>        Joins PROG and MAIN track outputs to send the same MAIN DCC signal</p>
@@ -870,7 +881,7 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">msg</span> <span class="pre">)</span></code>      Writes direct to Serial3</p>
 </section>
 <section id="ex-rail-functions">
-<h2><a class="toc-backref" href="#id13">EX-RAIL Functions</a><a class="headerlink" href="#ex-rail-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14">EX-RAIL Functions</a><a class="headerlink" href="#ex-rail-functions" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">PAUSE</span></code>       E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd</p>
 <p><code class="docutils literal notranslate"><span class="pre">RESUME</span></code>      Resume all paused tasks, including loco movement</p>
 <p><code class="docutils literal notranslate"><span class="pre">START(</span> <span class="pre">sequence_id</span> <span class="pre">)</span></code>        Start a new task to execute a route or sequence</p>
@@ -881,7 +892,7 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">ROSTER(</span> <span class="pre">cab,</span> <span class="pre">name,</span> <span class="pre">func_map</span> <span class="pre">)</span></code>       Provide roster info for WiThrottle</p>
 </section>
 <section id="loco-dcc-functions">
-<h2><a class="toc-backref" href="#id14">Loco DCC Functions</a><a class="headerlink" href="#loco-dcc-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15">Loco DCC Functions</a><a class="headerlink" href="#loco-dcc-functions" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code>       Emergency stop loco</p>
 <p><code class="docutils literal notranslate"><span class="pre">FWD(</span> <span class="pre">speed</span> <span class="pre">)</span></code>        Drive loco forward at DCC speed 0-127 (1=ESTOP)</p>
 <p><code class="docutils literal notranslate"><span class="pre">REV(</span> <span class="pre">speed</span> <span class="pre">)</span></code>        Drive logo in reverse at DCC speed 0-127 (1=ESTOP)</p>
@@ -892,7 +903,7 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code>    Switches FWD/REV meaning for this loco</p>
 </section>
 <section id="dcc-accessory-decoder-commands">
-<h2><a class="toc-backref" href="#id15">DCC Accessory decoder commands</a><a class="headerlink" href="#dcc-accessory-decoder-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16">DCC Accessory decoder commands</a><a class="headerlink" href="#dcc-accessory-decoder-commands" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ONACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>        Event handler for 2 part DCC accessory packet value 1</p>
 <p><code class="docutils literal notranslate"><span class="pre">ONACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code>       Event handler for linear DCC accessory packet value 1</p>
 <p><code class="docutils literal notranslate"><span class="pre">ONDEACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>      Event handler for 2 part DCC accessory packet value 0</p>

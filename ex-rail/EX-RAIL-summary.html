@@ -446,20 +446,21 @@
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#notes" id="id1">Notes</a></p></li>
-<li><p><a class="reference internal" href="#command-summary" id="id2">Command Summary</a></p>
+<li><p><a class="reference internal" href="#conventions-used-on-this-page" id="id2">Conventions used on this page</a></p></li>
+<li><p><a class="reference internal" href="#command-summary" id="id3">Command Summary</a></p>
 <ul>
-<li><p><a class="reference internal" href="#diagnostics-control" id="id3">Diagnostics &amp; Control</a></p></li>
-<li><p><a class="reference internal" href="#automations-routes-and-sequences" id="id4">Automations, Routes and Sequences</a></p>
+<li><p><a class="reference internal" href="#diagnostics-control" id="id4">Diagnostics &amp; Control</a></p></li>
+<li><p><a class="reference internal" href="#automations-routes-and-sequences" id="id5">Automations, Routes and Sequences</a></p>
 <ul>
-<li><p><a class="reference internal" href="#script-definition-items" id="id5">Script Definition Items</a></p></li>
-<li><p><a class="reference internal" href="#object-definitions" id="id6">Object definitions</a></p></li>
-<li><p><a class="reference internal" href="#flow-control-functions" id="id7">Flow control functions</a></p></li>
-<li><p><a class="reference internal" href="#command-station-functions" id="id8">Command Station functions</a></p></li>
-<li><p><a class="reference internal" href="#ex-rail-functions" id="id9">EX-RAIL functions</a></p></li>
-<li><p><a class="reference internal" href="#loco-dcc-functions" id="id10">Loco DCC functions</a></p></li>
-<li><p><a class="reference internal" href="#sensor-input" id="id11">Sensor input</a></p></li>
-<li><p><a class="reference internal" href="#sensor-event-handlers" id="id12">Sensor event handlers</a></p></li>
-<li><p><a class="reference internal" href="#action-output-functions" id="id13">Action output functions</a></p></li>
+<li><p><a class="reference internal" href="#script-definition-items" id="id6">Script Definition Items</a></p></li>
+<li><p><a class="reference internal" href="#object-definitions" id="id7">Object definitions</a></p></li>
+<li><p><a class="reference internal" href="#flow-control-functions" id="id8">Flow control functions</a></p></li>
+<li><p><a class="reference internal" href="#command-station-functions" id="id9">Command Station functions</a></p></li>
+<li><p><a class="reference internal" href="#ex-rail-functions" id="id10">EX-RAIL functions</a></p></li>
+<li><p><a class="reference internal" href="#loco-dcc-functions" id="id11">Loco DCC functions</a></p></li>
+<li><p><a class="reference internal" href="#sensor-input" id="id12">Sensor input</a></p></li>
+<li><p><a class="reference internal" href="#sensor-event-handlers" id="id13">Sensor event handlers</a></p></li>
+<li><p><a class="reference internal" href="#action-output-functions" id="id14">Action output functions</a></p></li>
 </ul>
 </li>
 </ul>
@@ -490,10 +491,20 @@
 <p>Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.</p>
 </div>
 </section>
+<section id="conventions-used-on-this-page">
+<h2><a class="toc-backref" href="#id2">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>CAPITALISED words - These are EX-RAIL commands and are case sensitive</p></li>
+<li><p>lowercase words within () - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma “,”, for example SEQUENCE(id) or DELAYRANDOM(min_delay, max_delay)</p></li>
+<li><p>Quoted “text” - Text within quote marks “” are used as descriptions, and must include the quote characters, for example ROUTE(id, “description”) becomes ROUTE(1, “This is the route description”)</p></li>
+<li><p>Square brackets [] - Parameters within square brackets [] are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)</p></li>
+<li><p>| - Use of the | character means you need to provide one of the provided options only, for example <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">ON|OFF&gt;</span></code> becomes either <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">ON&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">OFF&gt;</span></code></p></li>
+</ul>
+</section>
 <section id="command-summary">
-<h2><a class="toc-backref" href="#id2">Command Summary</a><a class="headerlink" href="#command-summary" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3">Command Summary</a><a class="headerlink" href="#command-summary" title="Permalink to this heading"></a></h2>
 <section id="diagnostics-control">
-<h3><a class="toc-backref" href="#id3">Diagnostics &amp; Control</a><a class="headerlink" href="#diagnostics-control" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4">Diagnostics &amp; Control</a><a class="headerlink" href="#diagnostics-control" title="Permalink to this heading"></a></h3>
 <p>There are some diagnostic and control commands added to the &lt;tag&gt; language normally used to control the Command Station over USB, WiFi or Ethernet. You can enter these Commands &lt; &gt; through both the Arduino IDE Serial Monitor and the <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> Send DCC++ Command pane.</p>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
@@ -555,9 +566,9 @@
 </div>
 </section>
 <section id="automations-routes-and-sequences">
-<h3><a class="toc-backref" href="#id4">Automations, Routes and Sequences</a><a class="headerlink" href="#automations-routes-and-sequences" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5">Automations, Routes and Sequences</a><a class="headerlink" href="#automations-routes-and-sequences" title="Permalink to this heading"></a></h3>
 <section id="script-definition-items">
-<h4><a class="toc-backref" href="#id5">Script Definition Items</a><a class="headerlink" href="#script-definition-items" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id6">Script Definition Items</a><a class="headerlink" href="#script-definition-items" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -588,7 +599,7 @@
 </div>
 </section>
 <section id="object-definitions">
-<h4><a class="toc-backref" href="#id6">Object definitions</a><a class="headerlink" href="#object-definitions" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id7">Object definitions</a><a class="headerlink" href="#object-definitions" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -631,7 +642,7 @@
 </div>
 </section>
 <section id="flow-control-functions">
-<h4><a class="toc-backref" href="#id7">Flow control functions</a><a class="headerlink" href="#flow-control-functions" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id8">Flow control functions</a><a class="headerlink" href="#flow-control-functions" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -710,7 +721,7 @@
 </div>
 </section>
 <section id="command-station-functions">
-<h4><a class="toc-backref" href="#id8">Command Station functions</a><a class="headerlink" href="#command-station-functions" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id9">Command Station functions</a><a class="headerlink" href="#command-station-functions" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -768,7 +779,7 @@
 </div>
 </section>
 <section id="ex-rail-functions">
-<h4><a class="toc-backref" href="#id9">EX-RAIL functions</a><a class="headerlink" href="#ex-rail-functions" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id10">EX-RAIL functions</a><a class="headerlink" href="#ex-rail-functions" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -822,7 +833,7 @@
 </div>
 </section>
 <section id="loco-dcc-functions">
-<h4><a class="toc-backref" href="#id10">Loco DCC functions</a><a class="headerlink" href="#loco-dcc-functions" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id11">Loco DCC functions</a><a class="headerlink" href="#loco-dcc-functions" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -868,7 +879,7 @@
 </div>
 </section>
 <section id="sensor-input">
-<h4><a class="toc-backref" href="#id11">Sensor input</a><a class="headerlink" href="#sensor-input" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id12">Sensor input</a><a class="headerlink" href="#sensor-input" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -911,7 +922,7 @@
 </div>
 </section>
 <section id="sensor-event-handlers">
-<h4><a class="toc-backref" href="#id12">Sensor event handlers</a><a class="headerlink" href="#sensor-event-handlers" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id13">Sensor event handlers</a><a class="headerlink" href="#sensor-event-handlers" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -948,7 +959,7 @@
 </div>
 </section>
 <section id="action-output-functions">
-<h4><a class="toc-backref" href="#id13">Action output functions</a><a class="headerlink" href="#action-output-functions" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id14">Action output functions</a><a class="headerlink" href="#action-output-functions" title="Permalink to this heading"></a></h4>
 <table class="colwidths-given command-table docutils align-default">
 <colgroup>
 <col style="width: 30%" />

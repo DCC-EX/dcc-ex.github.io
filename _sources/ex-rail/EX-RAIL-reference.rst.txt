@@ -46,6 +46,15 @@ Notes
 
   Therefore, you can have an AUTOMATION, a turnout/point, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
+Conventions used on this page
+=============================
+
+- CAPITALISED words - These are EX-RAIL commands and are case sensitive
+- lowercase words within () - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma ",", for example SEQUENCE(id) or DELAYRANDOM(min_delay, max_delay)
+- Quoted "text" - Text within quote marks "" are used as descriptions, and must include the quote characters, for example ROUTE(id, "description") becomes ROUTE(1, "This is the route description")
+- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)
+- \| - Use of the \| character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
+
 Interactive diagnostics and control
 ====================================
 

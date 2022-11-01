@@ -32,6 +32,14 @@ This reference explains the available command structure, and for commands that p
 
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC-EX Webpage <https://dcc-ex.com>`_.  
 
+Conventions used on this page
+=============================
+
+- CAPITALISED words - These are called OPCODES, are case sensitive, and must be specified as directed, eg. MAIN
+- lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", eg. cabid
+- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted, and if specifying these parameters, do not include the square brackets themselves
+- \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``
+
 Track Power Commands
 =====================
 

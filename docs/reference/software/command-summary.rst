@@ -17,6 +17,14 @@ DCC-EX Command Summary
 **This is a summary, for a detailed command, see...**
   :doc:`Command Reference <command-reference>`
 
+Conventions used on this page
+=============================
+
+- CAPITALISED words - These are called OPCODES, are case sensitive, and must be specified as directed, eg. MAIN
+- lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", eg. cabid
+- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted, and if specifying these parameters, do not include the square brackets themselves
+- \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``
+
 Power management
 =================
 

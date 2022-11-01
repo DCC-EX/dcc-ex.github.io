@@ -147,7 +147,7 @@ LATCH/UNLATCH
 
 ``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
-Refer to the LATCH/UNLATCH commands in the `sensors`_ section below for further details.
+Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/ex-rail-reference:sensors/inputs` section below for further details.
 
 Routes, automations, and sequences
 ===================================
@@ -344,8 +344,8 @@ Sensor examples:
     SET(165)
   ENDIF
 
-  IFRE(700, 1)  // If a rotary encoder is at position 1, rotate a turntable to step postion 1000
-    MOVETT(600, 1000, Turn)
+  IFRE(700, 1)  // If a rotary encoder is at position 1, start ROUTE with ID 123
+    START(123)
   ENDIF
 
 LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
@@ -384,11 +384,11 @@ ONCHANGE() is an event handler that can be used to detect if a sensor has change
 .. code-block:: 
 
   ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
-    IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, rotate turntable to step 1000
-      MOVETT(600, 1000, Turn)
+    IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
+      START(123)
     ENDIF
-    IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, rotate turntable to step 2000
-      MOVETT(600, 2000, Turn)
+    IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
+      START(124)
     ENDIF
     DONE
 

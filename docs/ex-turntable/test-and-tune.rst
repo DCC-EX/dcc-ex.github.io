@@ -339,3 +339,147 @@ The EX-RAIL equivalent to the above would be:
 .. danger:: 
 
   If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in a short circuit when a locomotive attempts to enter or exit the turntable bridge track.
+
+Controlling EX-Turntable with a rotary encoder
+==============================================
+
+.. note:: 
+
+  The rotary encoder software is not official DCC-EX software and is maintained separately, although the device driver and EX-RAIL commands will be included with a future release of |EX-CS|.
+
+  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/index.html>`_.
+  
+  |NOT-IN-PROD-VERSION|
+
+It is possible to use a rotary encoder to select turntable positions if desired, which is handy for use with mimic panels and so forth.
+
+There is an additional device driver available "IO_RotaryEncoder.h" which can be used with the rotary encoder software installed on a separate Arduino Nano or Uno that has the rotary encoder and an OLED display connected to it.
+
+In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to the |EX-CS| via I2C.
+
+Required software
+-----------------
+
+The rotary encoder software can be downloaded from:
+
+.. rst-class:: dcclink
+
+  `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_
+
+To enable using the rotary encoder with your |EX-CS| you need to be running the "rotary-encoder" branch, which is based on the current development branch.
+
+This can be downloaded from:
+
+.. rst-class:: dcclink
+
+  `EX-CommandStation GitHub repository <https://github.com/DCC-EX/CommandStation-EX/tree/rotary-encoder>`_
+
+Enabling the device driver
+--------------------------
+
+The default I2C address for the rotary encoder is 0x80, and to enable this in your |EX-CS|, you need to ensure "myHal.ccp" has entries similar to this:
+
+.. code-block:: cpp
+
+  #include "IO_RotaryEncoder.h"
+
+  void halSetup() {
+    RotaryEncoder::create(700, 1, 0x80);
+  }
+
+You need to follow the same process as :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation` to load the updated software on your |EX-CS|.
+
+EX-RAIL automation
+------------------
+
+There are two EX-RAIL commands available for using the rotary encoder:
+
+- ``ONCHANGE(vpin)`` - Event handler that is activated when a position change is sent
+- ``IFRE(vpin, position)`` - A test to see if the rotary encoder is at a specific position
+
+These two commands can be combined in a sequence to respond to the various rotary encoder positions.
+
+Negative position numbers can be used as well as positive.
+
+For example, we could take the :ref:`big-picture/stage5/turntable-example:example - turntable routes` included in Stage 5 of the Big Picture and have these selected by a rotary encoder. The roundhouse stall positions would be rotating counter-clockwise which will have negative position values, whereas the yard connection has a positive value.
+
+.. code-block:: 
+
+  // On startup, ensure our turntable moves automatically to the first position
+  MOVETT(600, 114, Turn)
+  DONE
+
+  // Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.
+  // This includes RESERVE()/FREE() to protect any automation activities.
+  //
+  #define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \
+    ROUTE(route_id, desc) \
+      RESERVE(reserve_id) \
+      MOVETT(vpin, steps, activity) \
+      WAITFOR(vpin) \
+      FREE(reserve_id) \
+      DONE
+
+  /**************************************************************************************************
+  * TURNTABLE POSITION DEFINITIONS
+  *************************************************************************************************/
+  // EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc)
+  //
+  // route_id = A unique number for each defined route, the route is what appears in throttles
+  // reserve_id = A unique reservation number (0 - 255) to ensure nothing interferes with automation
+  // vpin = The Vpin defined for the Turntable-EX device driver, default is 600
+  // steps = The target step position
+  // activity = The activity performed for this ROUTE (Note do not enclose in quotes "")
+  // desc = Description that will appear in throttles (Must use quotes "")
+  //
+  EX_TURNTABLE(TTRoute1, Turntable, 600, 114, Turn, "Roundhouse stall 1")
+  EX_TURNTABLE(TTRoute2, Turntable, 600, 228, Turn, "Roundhouse stall 2")
+  EX_TURNTABLE(TTRoute3, Turntable, 600, 344, Turn, "Roundhouse stall 3")
+  EX_TURNTABLE(TTRoute4, Turntable, 600, 459, Turn, "Roundhouse stall 4")
+  EX_TURNTABLE(TTRoute5, Turntable, 600, 573, Turn, "Roundhouse stall 5")
+  EX_TURNTABLE(TTRoute6, Turntable, 600, 688, Turn, "Roundhouse stall 6")
+  EX_TURNTABLE(TTRoute7, Turntable, 600, 2523, Turn, "Yard connection")
+  EX_TURNTABLE(TTRoute8, Turntable, 600, 0, Home, "Home turntable")
+
+  // Pre-defined aliases to ensure unique IDs are used.
+  ALIAS(Turntable, 255)
+
+  // Turntable ROUTE ID reservations, using <? TTRouteX> for uniqueness:
+  ALIAS(TTRoute1)
+  ALIAS(TTRoute2)
+  ALIAS(TTRoute3)
+  ALIAS(TTRoute4)
+  ALIAS(TTRoute5)
+  ALIAS(TTRoute6)
+  ALIAS(TTRoute7)
+  ALIAS(TTRoute8)
+
+  /**************************************************************************************************
+  * Rotary encoder sequence to select the turntable positions
+  *************************************************************************************************/
+  ONCHANGE(700)
+    IFRE(700, -6)
+      START(TTRoute1)
+    ENDIF
+    IFRE(700, -5)
+      START(TTRoute2)
+    ENDIF
+    IFRE(700, -4)
+      START(TTRoute3)
+    ENDIF
+    IFRE(700, -3)
+      START(TTRoute4)
+    ENDIF
+    IFRE(700, -2)
+      START(TTRoute5)
+    ENDIF
+    IFRE(700, -1)
+      START(TTRoute6)
+    ENDIF
+    IFRE(700, 7)
+      START(TTRoute7)
+    ENDIF
+    IFRE(700, 0)
+      START(TTRoute8)
+    ENDIF
+  DONE

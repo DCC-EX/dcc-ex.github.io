@@ -17,7 +17,7 @@ Overview
 What is EX-Turntable?
 =====================
 
-|EX-TT| is a fully integrated turntable controller, using an additional Arduino microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for |EX-TT|.
+|EX-TT| is a fully integrated turntable controller, using an additional Arduino (Nano or Uno) microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for |EX-TT|.
 
 The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :ref:`levels:choose your comfort level` guide for |EX-CS| (|conductor-text|, |tinkerer-text|, and |engineer-text|).
 

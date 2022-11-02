@@ -446,16 +446,17 @@
 <div class="contents local topic" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#track-power-commands" id="id2">Track Power Commands</a></p></li>
-<li><p><a class="reference internal" href="#engine-decoder-cab-operation-commands" id="id3">Engine Decoder (CAB) Operation Commands</a></p></li>
-<li><p><a class="reference internal" href="#sensors-input-commands" id="id4">Sensors (Input) Commands</a></p></li>
-<li><p><a class="reference internal" href="#outputs-dio-pin-commands" id="id5">Outputs (DIO Pin) Commands</a></p></li>
-<li><p><a class="reference internal" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" id="id6">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</a></p></li>
-<li><p><a class="reference internal" href="#engine-decoder-programming-commands" id="id7">Engine Decoder Programming Commands</a></p></li>
-<li><p><a class="reference internal" href="#throttle-commands-for-developers" id="id8">Throttle commands for developers</a></p></li>
-<li><p><a class="reference internal" href="#diagnostic-commands" id="id9">Diagnostic Commands</a></p></li>
-<li><p><a class="reference internal" href="#wifi-at-commands" id="id10">WiFi “AT” Commands</a></p></li>
-<li><p><a class="reference internal" href="#user-commands" id="id11">User Commands</a></p></li>
+<li><p><a class="reference internal" href="#conventions-used-on-this-page" id="id2">Conventions used on this page</a></p></li>
+<li><p><a class="reference internal" href="#track-power-commands" id="id3">Track Power Commands</a></p></li>
+<li><p><a class="reference internal" href="#engine-decoder-cab-operation-commands" id="id4">Engine Decoder (CAB) Operation Commands</a></p></li>
+<li><p><a class="reference internal" href="#sensors-input-commands" id="id5">Sensors (Input) Commands</a></p></li>
+<li><p><a class="reference internal" href="#outputs-dio-pin-commands" id="id6">Outputs (DIO Pin) Commands</a></p></li>
+<li><p><a class="reference internal" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" id="id7">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</a></p></li>
+<li><p><a class="reference internal" href="#engine-decoder-programming-commands" id="id8">Engine Decoder Programming Commands</a></p></li>
+<li><p><a class="reference internal" href="#throttle-commands-for-developers" id="id9">Throttle commands for developers</a></p></li>
+<li><p><a class="reference internal" href="#diagnostic-commands" id="id10">Diagnostic Commands</a></p></li>
+<li><p><a class="reference internal" href="#wifi-at-commands" id="id11">WiFi “AT” Commands</a></p></li>
+<li><p><a class="reference internal" href="#user-commands" id="id12">User Commands</a></p></li>
 </ul>
 </div>
 </aside>
@@ -470,8 +471,19 @@
 </ul>
 <p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation Firmware</a>.</p>
 <p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/DCC-EX">GitHub</a>. If you are new to we suggest you start with the <a class="reference external" href="https://dcc-ex.com">DCC-EX Webpage</a>.</p>
+<section id="conventions-used-on-this-page">
+<h2><a class="toc-backref" href="#id2">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>“&lt;” and “&gt;” - All DCC-EX API commands are surrounded by these characters to indicate the beginning and end, these must always be included</p></li>
+<li><p>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. 1, c, or -</p></li>
+<li><p>CAPITALISED words - These are also called OPCODES, are case sensitive, and must be specified as directed, eg. MAIN</p></li>
+<li><p>lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space, eg. cabid</p></li>
+<li><p>Square brackets [] - Parameters within square brackets [] are optional and may be ommitted, and if specifying these parameters, do not include the square brackets themselves</p></li>
+<li><p>| - Use of the | character means you need to provide one of the provided options only, for example <code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> becomes either <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">MAIN&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code></p></li>
+</ul>
+</section>
 <section id="track-power-commands">
-<h2><a class="toc-backref" href="#id2">Track Power Commands</a><a class="headerlink" href="#track-power-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3">Track Power Commands</a><a class="headerlink" href="#track-power-commands" title="Permalink to this heading"></a></h2>
 <p>The following commands provide control over power to the MAIN and PROG tracks (voltage), as well as monitoring the current used.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
 <blockquote>
@@ -495,7 +507,7 @@
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code> Lower case c: Displays the instantaneous current on the MAIN Track</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;c &quot;CurrentMAIN&quot; CURRENT C &quot;Milli&quot; &quot;0&quot; MAX_MA &quot;1&quot; TRIP_MA &gt;
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;c &quot;CurrentMAIN&quot; current C &quot;Milli&quot; &quot;0&quot; max_ma &quot;1&quot; trip_ma&gt;
 </pre></div>
 </div>
 <p>Example &lt;c CurrentMAIN 120 C Milli 0 1996 1 1800&gt;</p>
@@ -503,36 +515,32 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> - the current response indicator</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CurrentMAIN</span></code> - Static text for software like JMRI</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CURRENT</span></code> - Current in MilliAmps</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">current</span></code> - Current in MilliAmps</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> - Designator to signify this is a current meter (V would be for voltage)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Milli</span></code> - Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - numbered parameter for external software (1,2,3, etc.)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MAX_MA</span></code> - The maximum current handling of the motor controller in MilliAmps</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_ma</span></code> - The maximum current handling of the motor controller in MilliAmps</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - number parameter for external software (we use 2 parameters here, 0 and 1)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">TRIP_MA</span></code> - The overcurrent limit that will trip the software circuit breaker in mA</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trip_ma</span></code> - The overcurrent limit that will trip the software circuit breaker in mA</p></li>
 </ul>
 </div></blockquote>
 </section>
 <section id="engine-decoder-cab-operation-commands">
-<h2><a class="toc-backref" href="#id3">Engine Decoder (CAB) Operation Commands</a><a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this heading"></a></h2>
-<p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">REGISTER</span> <span class="pre">CAB</span> <span class="pre">SPEED</span> <span class="pre">DIRECTION&gt;</span></code></p>
+<h2><a class="toc-backref" href="#id4">Engine Decoder (CAB) Operation Commands</a><a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this heading"></a></h2>
+<p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">register</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">direction&gt;</span></code></p>
 <p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">1</span> <span class="pre">03</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code> is:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Start delimiter of a DCC-EX command. (A space after <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> is not required but acceptable)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> = (lower case t) This command is for a Decoder installed in a engine or simply a “cab”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">03</span></code> = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">20</span></code> = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = I am the end of this command</p></li>
 </ul>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &quot;&lt;T 1 20 1&gt;&quot; if the command was successful, meaning :
-&quot;&lt;&quot; = Begin DCC-EX command
 &quot;T&quot; = (upper case T) DCC++ EX Cab command was sent from the Command Station
 &quot;1&quot; = register 1 was changed
 &quot;20&quot; = set to speed 20
 &quot;1&quot; = forward direction
-&quot;&gt;&quot; = End DCC-EX command
 </pre></div>
 </div>
 <p><strong>Show number of supported cabs</strong></p>
@@ -541,7 +549,7 @@
 </ul>
 <p><strong>Forget Locos</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[CAB]&gt;</span></code> - (Minus symbol as in “subtract”) Forgets one or all locos. The “CAB” parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">CAB&gt;</span></code> will forget/clear that loco. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> will clear all the locos. This doesn’t do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[cab]&gt;</span></code> - (Minus symbol as in “subtract”) Forgets one or all locos. The “cab” parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">cab&gt;</span></code> will forget/clear that loco. Sending <code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> will clear all the locos. This doesn’t do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.</p></li>
 </ul>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: NONE
 </pre></div>
@@ -571,16 +579,14 @@
 <li><p>Using the new F command, the command station knows about the previous
 settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2.</p></li>
 </ul>
-<p><strong>CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">1|0&gt;</span></code></p>
+<p><strong>CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">func</span> <span class="pre">1|0&gt;</span></code></p>
 <section id="to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1">
-<h4>To set functions <strong>F0-F68</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">CAB</span> <span class="pre">FUNC</span> <span class="pre">0|1&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F0-F68</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">func</span> <span class="pre">0|1&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1" title="Permalink to this heading"></a></h4>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> = (upper case F) This command is for a CAB function i.e.: Lights, horn, bell</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code>  : the short (1-127) or long (128-10293) address of the engine decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">FUNC</span></code> : the CAB function number (0-28) whose function is defined by your decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cab</span></code>  : the short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">func</span></code> : the CAB function number (0-28) whose function is defined by your decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">0|1</span></code> : a value of 0 to set the function OFF and 1 to set the function ON</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
 </ul>
 <p>Examples:</p>
 <ul class="simple">
@@ -588,15 +594,14 @@ settings in the same group and will not, for example, unset F2 because you chang
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">126</span> <span class="pre">0</span> <span class="pre">0&gt;</span></code> Turns the headlight OFF for CAB 126</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">1330</span> <span class="pre">1</span> <span class="pre">1&gt;</span></code> Turns the horn ON for CAB 1330</p></li>
 </ul>
-<p><strong>The Legacy CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">CAB</span> <span class="pre">BYTE1</span> <span class="pre">[BYTE2]&gt;</span></code></p>
+<p><strong>The Legacy CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]&gt;</span></code></p>
 </section>
 <section id="to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F0-F4</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">CAB</span> <span class="pre">BYTE1</span> <span class="pre">[BYTE2]&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F0-F4</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB function i.e.: Lights, horn, bell</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1</span></code> :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cab</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte1</span></code> :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16</p>
 <ul>
 <li><p>ADD the ones you want <strong>ON</strong> together</p></li>
 <li><p>Add 1 for F1 ON</p></li>
@@ -607,10 +612,9 @@ settings in the same group and will not, for example, unset F2 because you chang
 <li><p>128 Alone Turns OFF <strong>F0-F4</strong></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2</span></code> :  omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte2</span></code> :  omitted</p></li>
 </ul>
-<p>To make BYTE1 add the values of what you want ON together, the ones that you want OFF do not get added to the base value of 128.</p>
+<p>To make “byte1” add the values of what you want ON together, the ones that you want OFF do not get added to the base value of 128.</p>
 <ul class="simple">
 <li><p>F0 (Light)=16, F1 (Bell)=1, F2 (Horn)=2, F3=4, F4=8</p></li>
 <li><p>All off = 128</p></li>
@@ -622,19 +626,16 @@ settings in the same group and will not, for example, unset F2 because you chang
 </ul>
 <p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">3265</span> <span class="pre">144&gt;</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function i.e.: Lights, horn, bell</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">3265</span></code> = CAB: the short (1-127) or long (128-10293) address of the engine decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">144</span></code> = Turn on headlight</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
 </ul>
 </section>
 <section id="to-set-functions-f5-f8-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F5-F8</strong> on=(1) or off=(0): <strong>&lt;f CAB BYTE1 [BYTE2]&gt;</strong><a class="headerlink" href="#to-set-functions-f5-f8-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F5-F8</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f5-f8-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1</span></code> :  176 + F5*1 + F6*2 + F7*4 + F8*8</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte1</span></code> :  176 + F5*1 + F6*2 + F7*4 + F8*8</p>
 <ul>
 <li><p>ADD 176 + the ones you want <strong>ON</strong> together</p></li>
 <li><p>Add 1 for F5 ON</p></li>
@@ -644,16 +645,14 @@ settings in the same group and will not, for example, unset F2 because you chang
 <li><p>176 Alone Turns OFF <strong>F5-F8</strong></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2</span></code> :  omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte2</span></code> :  omitted</p></li>
 </ul>
 </section>
 <section id="to-set-functions-f9-f12-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F9-F12</strong> on=(1) or off=(0): <strong>&lt;f CAB BYTE1 [BYTE2]&gt;</strong><a class="headerlink" href="#to-set-functions-f9-f12-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F9-F12</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f9-f12-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1:</span></code>  160 + F9*1 +F10*2 + F11*4 + F12*8</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte1:</span></code>  160 + F9*1 +F10*2 + F11*4 + F12*8</p>
 <ul>
 <li><p>ADD 160 + the ones you want <strong>ON</strong> together</p></li>
 <li><p>Add 1 for F9 ON</p></li>
@@ -663,17 +662,15 @@ settings in the same group and will not, for example, unset F2 because you chang
 <li><p>160 Alone Turns OFF <strong>F9-F12</strong></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2:</span></code>  omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte2:</span></code>  omitted</p></li>
 </ul>
 </section>
 <section id="to-set-functions-f13-f20-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F13-F20</strong> on=(1) or off=(0): <strong>&lt;f CAB BYTE1 [BYTE2]&gt;</strong><a class="headerlink" href="#to-set-functions-f13-f20-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F13-F20</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f13-f20-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1:</span></code> 222</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2:</span></code> F13*1 + F14*2 + F15*4 + F16*8 + F17*16 + F18*32 + F19*64 + F20*128</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte1:</span></code> 222</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte2:</span></code> F13*1 + F14*2 + F15*4 + F16*8 + F17*16 + F18*32 + F19*64 + F20*128</p>
 <ul>
 <li><p>ADD the ones you want <strong>ON</strong> together</p></li>
 <li><p>Add 1 for F13 ON</p></li>
@@ -687,16 +684,14 @@ settings in the same group and will not, for example, unset F2 because you chang
 <li><p>0 Alone Turns OFF <strong>F13-F20</strong></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
 </ul>
 </section>
 <section id="to-set-functions-f21-f28-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F21-F28</strong> on=(1) or off=(0): <strong>&lt;f CAB BYTE1 [BYTE2]&gt;</strong><a class="headerlink" href="#to-set-functions-f21-f28-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F21-F28</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f21-f28-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE1:</span></code> 223</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTE2:</span></code> F21*1 + F22*2 + F23*4 + F24*8 + F25*16 + F26*32 + F27*64 + F28*128</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte1:</span></code> 223</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte2:</span></code> F21*1 + F22*2 + F23*4 + F24*8 + F25*16 + F26*32 + F27*64 + F28*128</p>
 <ul>
 <li><p>ADD the ones you want <strong>ON</strong> together</p></li>
 <li><p>Add 1 for F21 ON</p></li>
@@ -710,20 +705,19 @@ settings in the same group and will not, for example, unset F2 because you chang
 <li><p>0 Alone Turns OFF <strong>F21-F28</strong></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
 </ul>
-<p><strong>RETURNS:</strong> &lt;l CAB SLOT SPEED/DIR FUNC&gt;</p>
+<p><strong>RETURNS:</strong> &lt;l cab slot speed/dir func&gt;</p>
 <p>Where:</p>
 <ul class="simple">
-<li><p>CAB is the loco DCC address/CAB ID.</p></li>
-<li><p>SLOT is the slot assignment for the CAB.</p></li>
-<li><p>SPEED/DIR is the 8 bit speed byte:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cab</span></code> is the loco DCC address/CAB ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slot</span></code> is the slot assignment for the CAB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">speed/dir</span></code> is the 8 bit speed byte:</p>
 <ul>
 <li><p>Bit 7 provides the direction (1 = Fwd, 0 = Rev).</p></li>
 <li><p>Bits 0 to 6 provide the speed (0 - 128).</p></li>
 </ul>
 </li>
-<li><p>FUNC is the bit pattern for the functions that are set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">func</span></code> is the bit pattern for the functions that are set.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -752,24 +746,20 @@ If your decoder does not respond on the expected linear address, try adding and 
 <p>Here is a spreadsheet in .XLSX format to help you: <a class="reference internal" href="../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet"><span class="std std-ref">Decoder Address Decoder Table</span></a></p>
 <p>NOTE: Both the following commands do the same thing. Pick the one that works for your needs.</p>
 <section id="controlling-an-accessory-with-a-linear-address-activate">
-<h5>Controlling an Accessory with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">LINEAR_ADDRESS</span> <span class="pre">ACTIVATE&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-with-a-linear-address-activate" title="Permalink to this heading"></a></h5>
+<h5>Controlling an Accessory with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">linear_address</span> <span class="pre">activate&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-with-a-linear-address-activate" title="Permalink to this heading"></a></h5>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Accessory Decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">LINEAR_ADDRESS:</span></code>  the linear address of the decoder controlling this turnout (1-2044)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ACTIVATE:</span></code> (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linear_address</span></code> is the linear address of the decoder controlling this turnout (1-2044)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activate</span></code> is either (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)</p></li>
 </ul>
 </section>
 <section id="controlling-an-accessory-decoder-with-a-address-subaddress-activate">
-<h5>Controlling an Accessory Decoder with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">ACTIVATE&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-decoder-with-a-address-subaddress-activate" title="Permalink to this heading"></a></h5>
+<h5>Controlling an Accessory Decoder with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">address</span> <span class="pre">subaddress</span> <span class="pre">activate&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-decoder-with-a-address-subaddress-activate" title="Permalink to this heading"></a></h5>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> = Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Accessory Decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ADDRESS:</span></code>  the primary address of the decoder controlling this turnout (0-511)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SUBADDRESS:</span></code> the subaddress of the decoder controlling this turnout (0-3)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ACTIVATE:</span></code> (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> = End DCC-EX command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> is the primary address of the decoder controlling this turnout (0-511)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subaddress</span></code> is the subaddress of the decoder controlling this turnout (0-3)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activate</span></code> is either (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -782,57 +772,45 @@ If your decoder does not respond on the expected linear address, try adding and 
 <p>The Turnout commands provide a more flexible and more functional way of operating turnouts.  It requires that the turnout be pre-defined through the <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">...&gt;</span></code> commands, described below.</p>
 <p>Turnouts may be in either of two states:  Closed or Thrown.  The turnout commands below use the values <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">Throw</span></code> or <code class="docutils literal notranslate"><span class="pre">Thrown</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">Close</span></code> or <code class="docutils literal notranslate"><span class="pre">Closed</span></code>.</p>
 <ul>
-<li><p>Command to define a DCC Accessory Turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code> :</p>
+<li><p>Command to define a DCC Accessory Decoder turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code> :</p>
 <ul class="simple">
-<li><p>Creates a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code>, with specified <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code> if turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> already exists, it is updated (overwritten) with the new specified <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code></p></li>
-<li><p>Example:  <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">23</span> <span class="pre">5</span> <span class="pre">0&gt;</span></code></p></li>
-<li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
-<li><p>From Version 3.2.0, this command is deprecated and has been replaced by <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">DCC</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code>.</p></li>
-</ul>
-</li>
-<li><p>Command to define a DCC Accessory Decoder turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">DCC</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS&gt;</span></code> :</p>
-<ul class="simple">
-<li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> which operates the DCC Accessory Decoder configured for the <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code>.
-<code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> ranges from 0 to 511 and <code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code> ranges from 0 to 3.</p></li>
+<li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">id</span></code> which operates the DCC Accessory Decoder configured for the <code class="docutils literal notranslate"><span class="pre">address</span></code> and <code class="docutils literal notranslate"><span class="pre">subaddress</span></code>.
+<code class="docutils literal notranslate"><span class="pre">address</span></code> ranges from 0 to 511 and <code class="docutils literal notranslate"><span class="pre">subaddress</span></code> ranges from 0 to 3.</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">23</span> <span class="pre">DCC</span> <span class="pre">5</span> <span class="pre">0&gt;</span></code></p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
-<li><p>This command is available from Version 3.2.0</p></li>
 </ul>
 </li>
-<li><p>Command to define a DCC Accessory Decoder turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">DCC</span> <span class="pre">LINEARADDRESS&gt;</span></code> :</p>
+<li><p>Command to define a DCC Accessory Decoder turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linear_address&gt;</span></code> :</p>
 <ul class="simple">
-<li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> which operates the DCC Accessory Decoder configured for the <code class="docutils literal notranslate"><span class="pre">LINEARADDRESS</span></code>.
-<code class="docutils literal notranslate"><span class="pre">LINEARADDRESS</span></code> ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).</p></li>
+<li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">id</span></code> which operates the DCC Accessory Decoder configured for the <code class="docutils literal notranslate"><span class="pre">linear_address</span></code>.
+<code class="docutils literal notranslate"><span class="pre">linear_address</span></code> ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">23</span> <span class="pre">DCC</span> <span class="pre">44&gt;</span></code> (corresponds to address 11 subaddress 3).</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
-<li><p>This command is available from Version 3.2.0</p></li>
 </ul>
 </li>
-<li><p>Command to define a Servo-based turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">SERVO</span> <span class="pre">PIN</span> <span class="pre">THROWNPOSITION</span> <span class="pre">CLOSEDPOSITION</span> <span class="pre">PROFILE&gt;</span></code> :</p>
+<li><p>Command to define a Servo-based turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrown_position</span> <span class="pre">closed_position</span> <span class="pre">profile&gt;</span></code> :</p>
 <ul class="simple">
-<li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> using the servo output pin <code class="docutils literal notranslate"><span class="pre">PIN</span></code>.  The positions for thrown and closed states are <code class="docutils literal notranslate"><span class="pre">THROWNPOSITION</span></code> and <code class="docutils literal notranslate"><span class="pre">CLOSEDPOSITION</span></code>
+<li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">id</span></code> using the servo output pin <code class="docutils literal notranslate"><span class="pre">vpin</span></code>.  The positions for thrown and closed states are <code class="docutils literal notranslate"><span class="pre">thrown_position</span></code> and <code class="docutils literal notranslate"><span class="pre">closed_position</span></code>
 respectively.  For an SG90 servo, positions in the range of 102-490 will give up to 180 degrees motion, but the range of 205-410 (corresponding to
 1.0-2.0 millisecond pulses) is recommended for the SG90.
-The transition between states is defined by <code class="docutils literal notranslate"><span class="pre">PROFILE</span></code>, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).</p></li>
+The transition between states is defined by <code class="docutils literal notranslate"><span class="pre">profile</span></code>, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">24</span> <span class="pre">SERVO</span> <span class="pre">100</span> <span class="pre">410</span> <span class="pre">205</span> <span class="pre">2&gt;</span></code>  defines a servo turnout on the first PCA9685 pin, moving at medium speed between positions 205 and 410.</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
-<li><p>This command is available from Version 3.2.0.</p></li>
 </ul>
 </li>
-<li><p>Command to define a VPIN-based turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID</span> <span class="pre">VPIN</span> <span class="pre">PIN&gt;</span></code> :</p>
+<li><p>Command to define a VPIN-based turnout: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code> :</p>
 <ul class="simple">
-<li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">ID</span></code> which operates the output defined by <code class="docutils literal notranslate"><span class="pre">PIN</span></code>.  If <code class="docutils literal notranslate"><span class="pre">PIN</span></code> is in the range of Arduino digital output pins, then
-throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If <code class="docutils literal notranslate"><span class="pre">PIN</span></code> is associated
+<li><p>Create a new turnout <code class="docutils literal notranslate"><span class="pre">id</span></code> which operates the output defined by <code class="docutils literal notranslate"><span class="pre">vpin</span></code>.  If <code class="docutils literal notranslate"><span class="pre">vpin</span></code> is in the range of Arduino digital output pins, then
+throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If <code class="docutils literal notranslate"><span class="pre">vpin</span></code> is associated
 with an external device, then the device will be operated accordingly.</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">25</span> <span class="pre">VPIN</span> <span class="pre">30&gt;</span></code> defines a turnout that operates Arduino digital output pin D30.</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">26</span> <span class="pre">VPIN</span> <span class="pre">164&gt;</span></code> defines a turnout that operates the first pin on the first MCP23017 GPIO expander (if present).</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
-<li><p>This command is available from Version 3.2.0.</p></li>
 </ul>
 </li>
-<li><p>Command to Delete a turnout <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">ID&gt;</span></code> :</p>
+<li><p>Command to Delete a turnout <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code> :</p>
 <ul class="simple">
-<li><p>Deletes the definition of a turnout with this <code class="docutils literal notranslate"><span class="pre">ID</span></code>.</p></li>
+<li><p>Deletes the definition of a turnout with this <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
 <li><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">25&gt;</span></code> deletes the previously defined turnout number 25.</p></li>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. ID does not exist)</p></li>
 </ul>
@@ -840,14 +818,13 @@ with an external device, then the device will be operated accordingly.</p></li>
 <li><p>Command to List all defined turnouts: <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> :</p>
 <ul>
 <li><p>Lists all defined turnouts.</p></li>
-<li><p>Before Version 3.2.0: Returns: <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">ID</span> <span class="pre">ADDRESS</span> <span class="pre">SUBADDRESS</span> <span class="pre">THROWN&gt;</span></code> for each defined DCC Accessory Turnout or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no turnouts have beed defined or saved.</p></li>
-<li><p>After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the <code class="docutils literal notranslate"><span class="pre">THROWN</span></code> state (1=thrown, 0=closed) appended.</p>
+<li><p>Returns the parameters that would be used to create the turnout, with the <code class="docutils literal notranslate"><span class="pre">thrown</span></code> state (1=thrown, 0=closed) appended.</p>
 <blockquote>
 <div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: One of the following for each defined turnout or &lt;X&gt; if no turnouts defined.
-&lt;H ID DCC ADDRESS SUBADDRESS THROWN&gt;     -- DCC Accessory Turnouts
-&lt;H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN&gt;  -- Servo Turnouts
-&lt;H ID VPIN PIN THROWN&gt;  -- VPIN Turnouts
-&lt;H ID LCN THROWN&gt;  -- LCN Turnouts
+&lt;H id DCC address subaddress thrown&gt;     -- DCC Accessory Turnouts
+&lt;H id SERVO vpin thrown_position closed_position profile thrown&gt;  -- Servo Turnouts
+&lt;H id VPIN vpin thrown&gt;  -- VPIN Turnouts
+&lt;H id LCN thrown&gt;  -- LCN Turnouts
 </pre></div>
 </div>
 <p>The rest of the parameters are as defined for the turnout definition commands.</p>
@@ -855,20 +832,20 @@ with an external device, then the device will be operated accordingly.</p></li>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the turnout to control.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : The numeric ID (0-32767) of the turnout to control.</p>
 <ul class="simple">
 <li><p>(NOTE: You pick the ID. IDs are shared between Turnouts, Sensors and Outputs)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> :  the primary address of a DCC accessory decoder controlling a turnout (0-511)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SUBADDRESS</span></code> : the subaddress of a DCC accessory decoder controlling a turnout (0-3)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> is the primary address of a DCC accessory decoder controlling a turnout (0-511)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subaddress</span></code> is the subaddress of a DCC accessory decoder controlling a turnout (0-3)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpin</span></code> is the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For
 servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">THROWN</span></code> - “0” is closed.  “1” is thrown.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">THROWNPOSITION</span></code> : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CLOSEDPOSITION</span></code> : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">PROFILE</span></code> : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thrown</span></code> - “0” is closed.  “1” is thrown.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thrown_position</span></code> : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">closed_position</span></code> : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).</p></li>
 </ul>
 <p>Once all turnouts have been properly defined, Use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the turnout definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> command if you want those new definitions updated in the EEPROM.
@@ -881,13 +858,11 @@ You would send the following command to the <span style="font-weight: bold; colo
 <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">10</span> <span class="pre">DCC</span> <span class="pre">123</span> <span class="pre">3&gt;</span></code></p>
 <ul class="simple">
 <li><p>This Command means:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> : (Upper case T) Define a Turnout</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DCC</span></code> : The turnout is DCC Accessory Decoder based</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> : ID number I am setting to use this turnout</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">123</span></code> : The accessory decoders address</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> : The turnout is wired to output 3</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> : End DCC-EX command</p></li>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code>  Meaning Command Successful</p></li>
 </ul>
 </div></blockquote>
@@ -898,9 +873,7 @@ You would send the following command to the <span style="font-weight: bold; colo
 <blockquote>
 <div><ul class="simple">
 <li><p>This Command means:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">E</span></code> : (Upper case E) Store (save) this definition to EEPROM</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> : End DCC-EX command</p></li>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code>  Meaning Command Successful</p></li>
 </ul>
 </div></blockquote>
@@ -923,12 +896,10 @@ To throw turnout 10 so an engine can go to the warehouse siding you would send t
 <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">10</span> <span class="pre">1&gt;</span></code></p>
 <ul>
 <li><p>This Command means:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : Begin DCC-EX command</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> : (Upper case T) Throw a turnout.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> : ID number of the defined turnout I want to control.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> : Set turnout to Thrown (turned, on) position.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> : End DCC-EX command
-<span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> should return <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">10</span> <span class="pre">1&gt;</span></code>  Meaning Command was Successful</p>
+<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> should return <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">10</span> <span class="pre">1&gt;</span></code>  Meaning Command was Successful</p>
 <p>NOTE: The <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> command by itself with no parameters will list all turnout definitions and their directions</p>
 </li>
 </ul>
@@ -939,7 +910,7 @@ To throw turnout 10 so an engine can go to the warehouse siding you would send t
 </section>
 </section>
 <section id="sensors-input-commands">
-<h2><a class="toc-backref" href="#id4">Sensors (Input) Commands</a><a class="headerlink" href="#sensors-input-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5">Sensors (Input) Commands</a><a class="headerlink" href="#sensors-input-commands" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
 and other devices.
 Physical sensors can be of any type (infrared, magnetic, mechanical…).  They may be configured to pull-up or not.
@@ -953,27 +924,26 @@ You may need to change the parameters in Sensor.cpp through trial and error for 
 but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.</p>
 <p>To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> command:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">PULLUP&gt;</span></code> : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).</p>
 <ul>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">ID&gt;</span></code> : Deletes definition of sensor ID</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code> : Deletes definition of sensor ID</p>
 <ul>
 <li><p>Returns: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. ID does not exist)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> : Lists all defined sensors</p>
 <ul>
-<li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">PULLUP&gt;</span></code> for each defined sensor or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no sensors defined</p></li>
+<li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> for each defined sensor or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no sensors defined</p></li>
 </ul>
 </li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the sensor
+<p><code class="docutils literal notranslate"><span class="pre">id</span></code> : The numeric ID (0-32767) of the sensor
 (You pick the ID &amp; they are shared between Turnouts, Sensors and Outputs)</p>
-<p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the input to be controlled by the sensor object.  For Arduino input pins, this is the same as the digital pin number.  For
-servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p>
-<p><code class="docutils literal notranslate"><span class="pre">PULLUP</span></code> : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don’t use internal pull-up resistor for PIN (ACTIVE=HIGH).</p>
+<p><code class="docutils literal notranslate"><span class="pre">vpin</span></code> : the pin number of the input to be controlled by the sensor object.  For Arduino input pins, this is the same as the digital pin number.  For servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pullup</span></code> : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don’t use internal pull-up resistor for PIN (ACTIVE=HIGH).</p>
 <p>Once all sensors have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command if you want those new definitions updated in the EEPROM.
 You can also clear <strong>everything (turnouts, sensors, and outputs)</strong> stored in the EEPROM by invoking the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> (lower case e) command.
@@ -981,13 +951,13 @@ You can also clear <strong>everything (turnouts, sensors, and outputs)</strong> 
 <p>All sensors defined as per above are repeatedly and sequentially checked within the main loop of this sketch. If a Sensor Pin is
 found to have transitioned from one state to another, one of the following serial messages are generated:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">ID&gt;</span></code> - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">ID&gt;</span></code> - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)</p></li>
 </ul>
-<p>Depending on whether the physical sensor is acting as an “event-trigger” or a “detection-sensor,” you may decide to ignore the <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">ID&gt;</span></code> return and only react to <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">ID&gt;</span></code> triggers.</p>
+<p>Depending on whether the physical sensor is acting as an “event-trigger” or a “detection-sensor,” you may decide to ignore the <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> return and only react to <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> triggers.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> - List the status of all defined sensors</p></li>
-<li><p>RETURNS: &lt;Q ID&gt; (active) or &lt;q ID&gt; (not active)</p></li>
+<li><p>RETURNS: &lt;Q id&gt; (active) or &lt;q id&gt; (not active)</p></li>
 </ul>
 <p>Example: This shows sensors 1 and 2 are tripped or active while 3 and 4 are not.</p>
 <blockquote>
@@ -995,7 +965,7 @@ found to have transitioned from one state to another, one of the following seria
 </div></blockquote>
 </section>
 <section id="outputs-dio-pin-commands">
-<h2><a class="toc-backref" href="#id5">Outputs (DIO Pin) Commands</a><a class="headerlink" href="#outputs-dio-pin-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6">Outputs (DIO Pin) Commands</a><a class="headerlink" href="#outputs-dio-pin-commands" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated.
 The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</p>
 <p>Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
@@ -1003,40 +973,38 @@ The default is to set each defined pin to active or inactive according to its re
 However, the default behavior can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.</p>
 <p>To have <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> command:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">IFLAG&gt;</span></code> : Creates a new output ID, with specified PIN and IFLAG values.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> : Creates a new output ID, with specified <code class="docutils literal notranslate"><span class="pre">vpin</span></code> and <code class="docutils literal notranslate"><span class="pre">iflag</span></code> values.</p>
 <ul>
-<li><p>if output ID already exists, it is updated with specified PIN and IFLAG.</p></li>
-<li><p>Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specified (see below).</p></li>
+<li><p>if output ID already exists, it is updated with specified <code class="docutils literal notranslate"><span class="pre">vpin</span></code> and <code class="docutils literal notranslate"><span class="pre">iflag</span></code>.</p></li>
+<li><p>Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to <code class="docutils literal notranslate"><span class="pre">iflag</span></code> value specified (see below).</p></li>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. out of memory).</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID&gt;</span></code> : Deletes definition of output ID</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id&gt;</span></code>: Deletes definition of output ID</p>
 <ul>
 <li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> if successful and <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if unsuccessful (e.g. ID does not exist)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> : Lists all defined output pins</p>
 <ul>
-<li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">ID</span> <span class="pre">PIN</span> <span class="pre">IFLAG</span> <span class="pre">STATE&gt;</span></code> for each defined output pin or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no output pins defined.</p></li>
+<li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag</span> <span class="pre">state&gt;</span></code> for each defined output pin or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if no output pins defined.</p></li>
 </ul>
 </li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the output
-(You pick the ID &amp; they are shared between Turnouts, Sensors and Outputs)</p>
-<p><code class="docutils literal notranslate"><span class="pre">PIN</span></code> : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For
-servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p>
-<p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p>
-<p><code class="docutils literal notranslate"><span class="pre">IFLAG</span></code> : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
+<p><code class="docutils literal notranslate"><span class="pre">id</span></code> : The numeric ID (0-32767) of the output
+(You pick the <code class="docutils literal notranslate"><span class="pre">id</span></code> &amp; they are shared between Turnouts, Sensors and Outputs)</p>
+<p><code class="docutils literal notranslate"><span class="pre">vpin</span></code> : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p>
+<p><code class="docutils literal notranslate"><span class="pre">state</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p>
+<p><code class="docutils literal notranslate"><span class="pre">iflag</span></code> : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``iflag``, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
               1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
 
-IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE
+``iflag``, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE
                   depending on state before power-down.
               1 = state of pin set on power-up, or when first created,
                   to either ACTIVE of INACTIVE depending on IFLAG, bit 2
 
-IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
+``iflag``, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
               1 = state of pin set to ACTIVE upon power-up or when first created
 </pre></div>
 </div>
@@ -1046,20 +1014,20 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <strong>(There is no Un-Delete)</strong></p>
 <p>To change the state of outputs that have been defined use:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">ID</span> <span class="pre">STATE&gt;</span></code> : Sets output ID to either ACTIVE or INACTIVE state</p></li>
-<li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">ID</span> <span class="pre">STATE&gt;</span></code> , or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if output ID does not exist</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> : Sets output <code class="docutils literal notranslate"><span class="pre">id</span></code> to either ACTIVE or INACTIVE state</p></li>
+<li><p>RETURNS: <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> , or <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if output ID does not exist</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ID</span></code> : The numeric ID (0-32767) of the defined output to control</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">STATE</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : The numeric ID (0-32767) of the defined output to control</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p></li>
 </ul>
 </li>
 </ul>
 <p>When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power.
-A list of the current states of each output in the form <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">ID</span> <span class="pre">STATE&gt;</span></code> is generated by <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> whenever the <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code>
+A list of the current states of each output in the form <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> is generated by <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> whenever the <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code>
 status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.</p>
 </section>
 <section id="storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom">
-<h2><a class="toc-backref" href="#id6">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</a><a class="headerlink" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</a><a class="headerlink" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM, returns the number of stored turnouts, sensors, and outputs.</p>
 <blockquote>
@@ -1077,17 +1045,17 @@ status command is invoked. This provides an efficient way of initializing the st
 </div></blockquote>
 </section>
 <section id="engine-decoder-programming-commands">
-<h2><a class="toc-backref" href="#id7">Engine Decoder Programming Commands</a><a class="headerlink" href="#engine-decoder-programming-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8">Engine Decoder Programming Commands</a><a class="headerlink" href="#engine-decoder-programming-commands" title="Permalink to this heading"></a></h2>
 <section id="programming-main-track">
 <h3>PROGRAMMING-MAIN TRACK<a class="headerlink" href="#programming-main-track" title="Permalink to this heading"></a></h3>
 <section id="write-cv-byte-to-engine-decoder-on-main-track">
 <h4>WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK<a class="headerlink" href="#write-cv-byte-to-engine-decoder-on-main-track" title="Permalink to this heading"></a></h4>
 <p>Writes, without any verification, a Configuration Variable BYTE to the decoder of an engine on the main operations track.</p>
 <ul class="simple">
-<li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">CAB</span> <span class="pre">CV</span> <span class="pre">VALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> : The short (1-127) or long (128-10293) address of the engine decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value to be written to the Configuration Variable memory location (0-255)</p></li>
+<li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">cab</span> <span class="pre">cv</span> <span class="pre">valule&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cab</span></code> : The short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> : The value to be written to the Configuration Variable memory location (0-255)</p></li>
 <li><p>RETURNS: NONE</p></li>
 </ul>
 </section>
@@ -1095,11 +1063,11 @@ status command is invoked. This provides an efficient way of initializing the st
 <h4>WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK<a class="headerlink" href="#write-cv-bit-to-engine-decoder-on-main-track" title="Permalink to this heading"></a></h4>
 <p>Writes, without any verification, a single bit within a Configuration Variable BIT to the decoder of an engine on the main operations track.</p>
 <ul class="simple">
-<li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">CAB</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">VALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CAB</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : the number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : the bit number of the Configuration Variable register to write (0-7)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : the value of the bit to be written (0-1)</p>
+<li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">cab</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cab</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span></code> : the number of the Configuration Variable memory location in the decoder to write to (1-1024)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bit</span></code> : the bit number of the Configuration Variable register to write (0-7)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> : the value of the bit to be written (0-1)</p>
 <ul>
 <li><p>RETURNS: NONE</p></li>
 </ul>
@@ -1117,7 +1085,7 @@ status command is invoked. This provides an efficient way of initializing the st
 <h4>READ LOCO ADDRESS ON PROGRAMMING TRACK<a class="headerlink" href="#read-loco-address-on-programming-track" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only)</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;r ADDRESS&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;r address&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
 </pre></div>
 </div>
 </div></blockquote>
@@ -1126,33 +1094,33 @@ status command is invoked. This provides an efficient way of initializing the st
 <section id="write-loco-address-to-engine-decoder-on-programming-track">
 <h4>WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-loco-address-to-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
 <p>Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track.</p>
-<p>Write loco address Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">ADDRESS&gt;</span></code>
+<p>Write loco address Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">address&gt;</span></code>
 ADDRESS: The loco address to be written (1-10239).</p>
 </section>
 <section id="write-cv-byte-to-engine-decoder-on-programming-track">
 <h4>WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-cv-byte-to-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
 <p>Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track</p>
 <ul class="simple">
-<li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">CV</span> <span class="pre">VALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value to be written to the Configuration Variable memory location (0-255).</p>
+<li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> : The value to be written to the Configuration Variable memory location (0-255).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CV</span> <span class="pre">Value&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV:</span></code> The number of the Configuration Variable memory location written to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Value:</span></code> Is a number from 0-255 as read from the CV, or -1 if verification read fails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv:</span></code> The number of the Configuration Variable memory location written to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value:</span></code> Is a number from 0-255 as read from the CV, or -1 if verification read fails.</p></li>
 </ul>
 </li>
 </ul>
 <p><strong>Deprecated old format below, please use the new, brief &lt;W CV VALUE&gt; command instead</strong></p>
 <ul class="simple">
-<li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">CV</span> <span class="pre">VALUE</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value to be written to the Configuration Variable memory location (0-255).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code> : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.</p>
+<li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> : The value to be written to the Configuration Variable memory location (0-255).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbacknum</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbacksub</span></code> : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CALLBACKNUM|CALLBACKSUB|CV</span> <span class="pre">Value&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span> <span class="pre">VALUE:</span></code> Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">callbacknum|callbacksub|cv</span> <span class="pre">value&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span> <span class="pre">value:</span></code> Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.</p></li>
 </ul>
 </li>
 </ul>
@@ -1161,15 +1129,15 @@ ADDRESS: The loco address to be written (1-10239).</p>
 <h4>WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-cv-bit-to-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
 <p>Writes, and then verifies, a Configuration Variable BIT to the decoder of an engine on the programming track</p>
 <ul class="simple">
-<li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">VALUE</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : The bit number of the Configuration Variable memory location to write (0-7).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">VALUE</span></code> : The value of the bit to be written (0-1).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code> : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.</p>
+<li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span></code> : The number of the Configuration Variable memory location in the decoder to write to (1-1024).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bit</span></code> : The bit number of the Configuration Variable memory location to write (0-7).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> : The value of the bit to be written (0-1).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbacknum</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbacksub</span></code> : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CALLBACKNUM|CALLBACKSUB|CV</span> <span class="pre">BIT</span> <span class="pre">VALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span> <span class="pre">VALUE</span></code> is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">callbacknum|callbacksub|cv</span> <span class="pre">bit</span> <span class="pre">value&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span> <span class="pre">value</span></code> is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.</p></li>
 </ul>
 </li>
 </ul>
@@ -1177,20 +1145,20 @@ ADDRESS: The loco address to be written (1-10239).</p>
 <section id="read-configuration-variable-byte-from-engine-decoder-on-programming-track">
 <h4>READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#read-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
 <p>If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programming track.</p>
-<p>Read CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">CV</span> <span class="pre">CALLBACKNUM</span> <span class="pre">CALLBACKSUB&gt;</span></code></p>
+<p>Read CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">cv</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKNUM</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CALLBACKSUB</span></code> : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbacknum</span></code> : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbacksub</span></code> : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">CALLBACKNUM|CALLBACKSUB|CV</span> <span class="pre">VALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span> <span class="pre">VALUE</span></code> is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">callbacknum|callbacksub|cv</span> <span class="pre">value&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span> <span class="pre">value</span></code> is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.</p></li>
 </ul>
 </li>
 </ul>
 <p>Read Engine address format is simply: <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">ADDRESS&gt;</span></code> when successful and <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">-1&gt;</span></code> if it is not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">address&gt;</span></code> when successful and <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">-1&gt;</span></code> if it is not.</p></li>
 </ul>
 <p><strong>IMPORTANT: If the loco is on a consist, the address returned will be the consist address</strong></p>
 <div class="admonition note">
@@ -1202,30 +1170,30 @@ ADDRESS: The loco address to be written (1-10239).</p>
 <h4>VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
 <p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read byte command (see above) and return the value read.</p>
 <ul class="simple">
-<li><p>Verify CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">CV</span> <span class="pre">BYTEVALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTEVALUE</span></code> : The value of they byte expected to be in the CV</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">CV</span> <span class="pre">BYTEVALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BYTEVALUE:</span></code> reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation</p></li>
+<li><p>Verify CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bytevalue&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bytevalue</span></code> : The value of they byte expected to be in the CV</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">cv</span> <span class="pre">bytevalue&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bytevalue:</span></code> reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation</p></li>
 </ul>
 </section>
 <section id="verify-configuration-variable-bit-from-engine-decoder-on-programming-track">
 <h4>VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-bit-from-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
 <p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read bit command (see above) and return the value read.</p>
 <ul class="simple">
-<li><p>Verify CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">BITVALUE&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CV</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT</span></code> : The bit position of the bit in the CV byte being validated (0-7)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BITVALUE</span></code> : 0 or 1 indicating the expected value</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">CV</span> <span class="pre">BIT</span> <span class="pre">BITVALUE&gt;</span></code> A return value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BIT:</span></code> Reports the bit in the CV byte that was verified</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">BITVALUE:</span></code> reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation.</p></li>
+<li><p>Verify CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">bitvalue&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv</span></code> : The number of the Configuration Variable memory location in the decoder to read from (1-1024).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bit</span></code> : The bit position of the bit in the CV byte being validated (0-7)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitvalue</span></code> : 0 or 1 indicating the expected value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RETURNS:</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">bitvalue&gt;</span></code> A return value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bit:</span></code> Reports the bit in the CV byte that was verified</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitvalue:</span></code> reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation.</p></li>
 </ul>
 </section>
 </section>
 </section>
 <section id="throttle-commands-for-developers">
-<h2><a class="toc-backref" href="#id8">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Permalink to this heading"></a></h2>
 <p>These commands have been provided for those wishing to develop throttles that utilise the DCC-EX API.</p>
 <p>As there is existing detailed documentation for these, we will not elaborate here. Instead, refer to <a class="reference internal" href="../developers/tech-reference.html"><span class="doc">Technical Reference for Throttle Developers</span></a> for full details on these commands.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> returns the defined turnout IDs</p>
@@ -1237,7 +1205,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> Requests a deliberate update of cab speed/functions in the same format as the cab broadcas</p>
 </section>
 <section id="diagnostic-commands">
-<h2><a class="toc-backref" href="#id9">Diagnostic Commands</a><a class="headerlink" href="#diagnostic-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10">Diagnostic Commands</a><a class="headerlink" href="#diagnostic-commands" title="Permalink to this heading"></a></h2>
 <section id="status">
 <h3>Status<a class="headerlink" href="#status" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: EX-CommandStation Status</p>
@@ -1336,14 +1304,14 @@ analogue read operations.  This command is available from Version 3.2.0.</p></li
 </div>
 <p>Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track</p>
 <blockquote>
-<div><p><strong>FORMAT:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;M|P</span> <span class="pre">REGISTER</span> <span class="pre">BYTE1</span> <span class="pre">BYTE2</span> <span class="pre">[BYTE3]</span> <span class="pre">[BYTE4]</span> <span class="pre">[BYTE5]&gt;</span></code></p>
+<div><p><strong>FORMAT:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;M|P</span> <span class="pre">register</span> <span class="pre">byte1</span> <span class="pre">byte2</span> <span class="pre">[byte3]</span> <span class="pre">[byte4]</span> <span class="pre">[byte5]&gt;</span></code></p>
 </div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``REGISTER:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER&gt;0) the packet
-``BYTE1:``  first hexadecimal byte in the packet
-``BYTE2:``  second hexadecimal byte in the packet
-``BYTE3:``  optional third hexadecimal byte in the packet
-``BYTE4:``  optional fourth hexadecimal byte in the packet
-``BYTE5:``  optional fifth hexadecimal byte in the packet
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``register:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER&gt;0) the packet
+``byte1:``  first hexadecimal byte in the packet
+``byte2:``  second hexadecimal byte in the packet
+``byte3:``  optional third hexadecimal byte in the packet
+``byte4:``  optional fourth hexadecimal byte in the packet
+``byte5:``  optional fifth hexadecimal byte in the packet
 
 returns: NONE
 </pre></div>
@@ -1351,7 +1319,7 @@ returns: NONE
 </section>
 </section>
 <section id="wifi-at-commands">
-<h2><a class="toc-backref" href="#id10">WiFi “AT” Commands</a><a class="headerlink" href="#wifi-at-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11">WiFi “AT” Commands</a><a class="headerlink" href="#wifi-at-commands" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the “+” and the command.</p>
 <p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag (WiFi Connected Mode) to on inside the Command Station so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the Command Station that it needs to process commands on a connection you created and so you can send your own AT commands.</p>
@@ -1365,7 +1333,7 @@ returns: NONE
 <p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf">Espressif AT Command Set PDF File (Exressif makes the ESP8266)</a></p>
 </section>
 <section id="user-commands">
-<h2><a class="toc-backref" href="#id11">User Commands</a><a class="headerlink" href="#user-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12">User Commands</a><a class="headerlink" href="#user-commands" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;U&gt;</span></code> Is reserved for user commands.</p>
 </section>
 </section>

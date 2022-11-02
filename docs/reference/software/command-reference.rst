@@ -699,15 +699,15 @@ WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK
 Writes, and then verifies, a Configuration Variable BIT to the decoder of an engine on the programming track  
 
 
-* Write CV BIT Format is: ``<B CV BIT VALUE CALLBACKNUM CALLBACKSUB>``  
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024).  
-* ``BIT`` : The bit number of the Configuration Variable memory location to write (0-7).  
-* ``VALUE`` : The value of the bit to be written (0-1).  
-* ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.  
+* Write CV BIT Format is: ``<B cv bit value callbacknum callbacksub>``  
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024).  
+* ``bit`` : The bit number of the Configuration Variable memory location to write (0-7).  
+* ``value`` : The value of the bit to be written (0-1).  
+* ``callbacknum`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
+* ``callbacksub`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.  
 
-  * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV BIT VALUE>``  
-  * ``CV VALUE`` is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.  
+  * ``RETURNS:`` ``<r callbacknum|callbacksub|cv bit value>``  
+  * ``cv value`` is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.  
 
 READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -715,18 +715,18 @@ READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programming track.
 
 
-Read CV BYTE Format is: ``<R CV CALLBACKNUM CALLBACKSUB>``  
+Read CV BYTE Format is: ``<R cv callbacknum callbacksub>``
 
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).  
-* ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function. 
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).  
+* ``callbacknum`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
+* ``callbacksub`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function. 
 
-  * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV VALUE>``  
-  * ``CV VALUE`` is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.
+  * ``RETURNS:`` ``<r callbacknum|callbacksub|cv value>``
+  * ``cv value`` is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.
 
 Read Engine address format is simply: ``<R>``
 
-* ``RETURNS:`` ``<r ADDRESS>`` when successful and ``<r -1>`` if it is not.
+* ``RETURNS:`` ``<r address>`` when successful and ``<r -1>`` if it is not.
 
 **IMPORTANT: If the loco is on a consist, the address returned will be the consist address**
 
@@ -738,11 +738,11 @@ VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read byte command (see above) and return the value read.
 
 
-* Verify CV BYTE Format is: ``<V CV BYTEVALUE>``
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
-* ``BYTEVALUE`` : The value of they byte expected to be in the CV
-* ``RETURNS:`` ``<v CV BYTEVALUE>`` 
-* ``BYTEVALUE:`` reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
+* Verify CV BYTE Format is: ``<V cv bytevalue>``
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
+* ``bytevalue`` : The value of they byte expected to be in the CV
+* ``RETURNS:`` ``<v cv bytevalue>`` 
+* ``bytevalue:`` reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
 
 VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -750,13 +750,13 @@ VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK
 This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read bit command (see above) and return the value read.
 
 
-* Verify CV BIT Format is: ``<V CV BIT BITVALUE>``
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
-* ``BIT`` : The bit position of the bit in the CV byte being validated (0-7)
-* ``BITVALUE`` : 0 or 1 indicating the expected value
-* ``RETURNS:`` ``<v CV BIT BITVALUE>`` A return value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
-* ``BIT:`` Reports the bit in the CV byte that was verified
-* ``BITVALUE:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 
+* Verify CV BIT Format is: ``<V cv bit bitvalue>``
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
+* ``bit`` : The bit position of the bit in the CV byte being validated (0-7)
+* ``bitvalue`` : 0 or 1 indicating the expected value
+* ``RETURNS:`` ``<v cv bit bitvalue>`` A return value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
+* ``bit:`` Reports the bit in the CV byte that was verified
+* ``bitvalue:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 
 
 Throttle commands for developers
 ================================
@@ -884,16 +884,16 @@ SEND PACKET TO THE TRACK
 
 Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track
 
-  **FORMAT:** ``<M|P REGISTER BYTE1 BYTE2 [BYTE3] [BYTE4] [BYTE5]>``
+  **FORMAT:** ``<M|P register byte1 byte2 [byte3] [byte4] [byte5]>``
 
 .. code-block::
 
-   ``REGISTER:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER>0) the packet
-   ``BYTE1:``  first hexadecimal byte in the packet
-   ``BYTE2:``  second hexadecimal byte in the packet
-   ``BYTE3:``  optional third hexadecimal byte in the packet
-   ``BYTE4:``  optional fourth hexadecimal byte in the packet
-   ``BYTE5:``  optional fifth hexadecimal byte in the packet
+   ``register:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER>0) the packet
+   ``byte1:``  first hexadecimal byte in the packet
+   ``byte2:``  second hexadecimal byte in the packet
+   ``byte3:``  optional third hexadecimal byte in the packet
+   ``byte4:``  optional fourth hexadecimal byte in the packet
+   ``byte5:``  optional fifth hexadecimal byte in the packet
 
    returns: NONE
 

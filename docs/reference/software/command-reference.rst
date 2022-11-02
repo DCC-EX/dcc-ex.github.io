@@ -405,9 +405,9 @@ Turnouts may be in either of two states:  Closed or Thrown.  The turnout command
   servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
   116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 * ``thrown`` - "0" is closed.  "1" is thrown.
-* ``THROWNPOSITION`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
-* ``CLOSEDPOSITION`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
-* ``PROFILE`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).
+* ``thrown_position`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
+* ``closed_position`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
+* ``profile`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).
 
 Once all turnouts have been properly defined, Use the ``<E>`` command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the turnout definitions, you must invoke the ``<E>`` command if you want those new definitions updated in the EEPROM.
@@ -419,32 +419,26 @@ You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in th
    ``<T 10 DCC 123 3>``  
 
    * This Command means:  
-   * ``<`` : Begin DCC-EX command  
    * ``T`` : (Upper case T) Define a Turnout  
    * ``DCC`` : The turnout is DCC Accessory Decoder based
    * ``10`` : ID number I am setting to use this turnout  
    * ``123`` : The accessory decoders address  
    * ``3`` : The turnout is wired to output 3  
-   * ``>`` : End DCC-EX command
    * RETURNS: ``<O>``  Meaning Command Successful
 
  |    Next you would send the following command to the |EX-CS|:
      ``<E>``
 
    * This Command means:  
-   * ``<`` : Begin DCC-EX command  
    * ``E`` : (Upper case E) Store (save) this definition to EEPROM  
-   * ``>`` : End DCC-EX command
    * RETURNS: ``<O>``  Meaning Command Successful  
 
 If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.  
 Consequently, when the |EX-CS| is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
 This is intended so that the servos don't perform a sweep on power-on when their physical position does not match initial position in the CommandStation.
 
-
 Controlling a Defined Turnout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * Sets turnout ID to either the "closed" (turned) or "thrown" (closed) position  
 * The Turnout format is ``<T id throw>``  
@@ -459,14 +453,11 @@ Controlling a Defined Turnout
      To throw turnout 10 so an engine can go to the warehouse siding you would send the following command.
      ``<T 10 1>``  
 
-
      * This Command means:  
-     * ``<`` : Begin DCC-EX command  
      * ``T`` : (Upper case T) Throw a turnout.  
      * ``10`` : ID number of the defined turnout I want to control.  
      * ``1`` : Set turnout to Thrown (turned, on) position.  
      * 
-       ``>`` : End DCC-EX command
        |EX-CS| should return ``<H 10 1>``  Meaning Command was Successful
 
        NOTE: The ``<T>`` command by itself with no parameters will list all turnout definitions and their directions
@@ -493,25 +484,24 @@ but the default parameters protect against contact bounces for up to 20 millisec
 To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the ``<S>`` command:  
 
 
-* ``<S ID PIN PULLUP>`` : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).  
+* ``<S id vpin pullup>`` : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).  
 
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
 
-* ``<S ID>`` : Deletes definition of sensor ID  
+* ``<S id>`` : Deletes definition of sensor ID  
 
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)  
 
 * ``<S>`` : Lists all defined sensors  
 
-  * RETURNS: ``<Q ID PIN PULLUP>`` for each defined sensor or ``<X>`` if no sensors defined
+  * RETURNS: ``<Q id vpin pullup>`` for each defined sensor or ``<X>`` if no sensors defined
 
-``ID`` : The numeric ID (0-32767) of the sensor
+``id`` : The numeric ID (0-32767) of the sensor
 (You pick the ID & they are shared between Turnouts, Sensors and Outputs)
 
-``PIN`` : the pin number of the input to be controlled by the sensor object.  For Arduino input pins, this is the same as the digital pin number.  For 
-servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
+``vpin`` : the pin number of the input to be controlled by the sensor object.  For Arduino input pins, this is the same as the digital pin number.  For servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 
-``PULLUP`` : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don't use internal pull-up resistor for PIN (ACTIVE=HIGH).
+``pullup`` : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don't use internal pull-up resistor for PIN (ACTIVE=HIGH).
 
 Once all sensors have been properly defined, use the ``<E>`` (upper case E) command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the sensor definitions, you must invoke the ``<E>`` (upper case E) command if you want those new definitions updated in the EEPROM.
@@ -522,14 +512,14 @@ All sensors defined as per above are repeatedly and sequentially checked within 
 found to have transitioned from one state to another, one of the following serial messages are generated:  
 
 
-* ``<Q ID>`` - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)  
-* ``<q ID>`` - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)  
+* ``<Q id>`` - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)  
+* ``<q id>`` - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)  
 
-Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor," you may decide to ignore the ``<q ID>`` return and only react to ``<Q ID>`` triggers.
+Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor," you may decide to ignore the ``<q id>`` return and only react to ``<Q id>`` triggers.
 
 * ``<Q>`` - List the status of all defined sensors
 *   
-      RETURNS: <Q ID> (active) or <q ID> (not active)
+      RETURNS: <Q id> (active) or <q id> (not active)
 
 Example: This shows sensors 1 and 2 are tripped or active while 3 and 4 are not.
 
@@ -549,42 +539,40 @@ However, the default behavior can be modified so that any pin can be forced to b
 To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
 
 
-* ``<Z ID PIN IFLAG>`` : Creates a new output ID, with specified PIN and IFLAG values.  
+* ``<Z id vpin iflag>`` : Creates a new output ID, with specified ``vpin`` and ``iflag`` values.
 
-  * if output ID already exists, it is updated with specified PIN and IFLAG.  
-  * Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specified (see below).  
-  * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory).  
+  * if output ID already exists, it is updated with specified ``vpin`` and ``iflag``.
+  * Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to ``iflag`` value specified (see below).
+  * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory).
 
-* ``<Z ID>`` : Deletes definition of output ID  
+* ``<Z id>``: Deletes definition of output ID
 
   * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)  
 
 * ``<Z>`` : Lists all defined output pins
 
-  * RETURNS: ``<Y ID PIN IFLAG STATE>`` for each defined output pin or ``<X>`` if no output pins defined.
+  * RETURNS: ``<Y id vpin iflag state>`` for each defined output pin or ``<X>`` if no output pins defined.
 
-``ID`` : The numeric ID (0-32767) of the output
-(You pick the ID & they are shared between Turnouts, Sensors and Outputs)
+``id`` : The numeric ID (0-32767) of the output
+(You pick the ``id`` & they are shared between Turnouts, Sensors and Outputs)
 
-``PIN`` : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For 
-servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
+``vpin`` : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 
-``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)
+``state`` : The state of the output (0=INACTIVE / 1=ACTIVE)
 
-``IFLAG`` : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:  
+``iflag`` : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:  
 
 .. code-block::
 
-   IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
+   ``iflag``, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
                  1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
 
-   IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE 
+   ``iflag``, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE 
                      depending on state before power-down. 
                  1 = state of pin set on power-up, or when first created,
                      to either ACTIVE of INACTIVE depending on IFLAG, bit 2
 
-   IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
+   ``iflag``, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
                  1 = state of pin set to ACTIVE upon power-up or when first created 
 
 Once all outputs have been properly defined, use the ``<E>`` Upper Case "E" command to store their definitions to EEPROM.
@@ -595,11 +583,11 @@ You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the
 To change the state of outputs that have been defined use:  
 
 
-* ``<Z ID STATE>`` : Sets output ID to either ACTIVE or INACTIVE state  
-* RETURNS: ``<Y ID STATE>`` , or ``<X>`` if output ID does not exist  
+* ``<Z id state>`` : Sets output ``id`` to either ACTIVE or INACTIVE state  
+* RETURNS: ``<Y id state>`` , or ``<X>`` if output ID does not exist  
 
-  * ``ID`` : The numeric ID (0-32767) of the defined output to control  
-  * ``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)  
+  * ``id`` : The numeric ID (0-32767) of the defined output to control  
+  * ``state`` : The state of the output (0=INACTIVE / 1=ACTIVE)  
 
 When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power. 
 A list of the current states of each output in the form ``<Y ID STATE>`` is generated by |EX-CS| whenever the ``<s>`` 

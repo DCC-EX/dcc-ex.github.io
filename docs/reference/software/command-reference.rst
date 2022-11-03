@@ -32,6 +32,16 @@ This reference explains the available command structure, and for commands that p
 
 You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC-EX Webpage <https://dcc-ex.com>`_.  
 
+Conventions used on this page
+=============================
+
+- "<" and ">" - All DCC-EX API commands are surrounded by these characters to indicate the beginning and end, these must always be included
+- First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. 1, c, or -
+- CAPITALISED words - These are also called OPCODES, are case sensitive, and must be specified as directed, eg. MAIN
+- lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space, eg. cabid
+- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted, and if specifying these parameters, do not include the square brackets themselves
+- \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``
+
 Track Power Commands
 =====================
 
@@ -64,7 +74,7 @@ Examples:
 
   .. code-block::
 
-      RETURNS: <c "CurrentMAIN" CURRENT C "Milli" "0" MAX_MA "1" TRIP_MA >
+      RETURNS: <c "CurrentMAIN" current C "Milli" "0" max_ma "1" trip_ma>
       
 
   Example <c CurrentMAIN 120 C Milli 0 1996 1 1800>
@@ -73,40 +83,36 @@ Examples:
 
   * ``c`` - the current response indicator
   * ``CurrentMAIN`` - Static text for software like JMRI
-  *  ``CURRENT`` - Current in MilliAmps
+  *  ``current`` - Current in MilliAmps
   *  ``C`` - Designator to signify this is a current meter (V would be for voltage)
   *  ``Milli`` - Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.)
   *  ``0`` - numbered parameter for external software (1,2,3, etc.)
-  *  ``MAX_MA`` - The maximum current handling of the motor controller in MilliAmps
+  *  ``max_ma`` - The maximum current handling of the motor controller in MilliAmps
   *  ``1`` - number parameter for external software (we use 2 parameters here, 0 and 1)
-  *  ``TRIP_MA`` - The overcurrent limit that will trip the software circuit breaker in mA
+  *  ``trip_ma`` - The overcurrent limit that will trip the software circuit breaker in mA
     
 
 Engine Decoder (CAB) Operation Commands
 ========================================
 
 
-**The CAB throttle format**  is ``<t REGISTER CAB SPEED DIRECTION>``  
+**The CAB throttle format**  is ``<t register cab speed direction>``  
 
 Breakdown for this example ``<t 1 03 20 1>`` is:
 
-* ``<`` = Start delimiter of a DCC-EX command. (A space after ``<`` is not required but acceptable)
 * ``t`` = (lower case t) This command is for a Decoder installed in a engine or simply a "cab".
 * ``1`` = deprecated. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
 * ``03`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder  (this has to be already programmed in the decoder) See Programming Commands bellow.
 * ``20`` = SPEED: throttle speed from 0-126, or -1 for emergency stop (resets SPEED to 0)
 * ``1`` = DIRECTION: 1=forward, 0=reverse. Setting direction when speed=0 or speed=-1 only effects directionality of cab lighting for a stopped train
-* ``>`` = I am the end of this command
 
 .. code-block::
 
    RETURNS: "<T 1 20 1>" if the command was successful, meaning :
-   "<" = Begin DCC-EX command
    "T" = (upper case T) DCC++ EX Cab command was sent from the Command Station
    "1" = register 1 was changed
    "20" = set to speed 20
    "1" = forward direction
-   ">" = End DCC-EX command
 
 **Show number of supported cabs**
 
@@ -114,7 +120,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 
 **Forget Locos**
 
-* ``<- [CAB]>`` - (Minus symbol as in "subtract") Forgets one or all locos. The "CAB" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- CAB>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
+* ``<- [cab]>`` - (Minus symbol as in "subtract") Forgets one or all locos. The "cab" parameter is optional. Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending ``<- cab>`` will forget/clear that loco. Sending ``<->`` will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
 
 .. code-block::
 
@@ -148,18 +154,15 @@ There are two formats for setting CAB functions, the DCC++ Classic legacy method
 * Using the new F command, the command station knows about the previous
   settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2.     
 
-**CAB Functions format** is ``<F CAB FUNC 1|0>``
+**CAB Functions format** is ``<F cab func 1|0>``
 
-To set functions **F0-F68** on=(1) or off=(0): ``<F CAB FUNC 0|1>``
+To set functions **F0-F68** on=(1) or off=(0): ``<F cab func 0|1>``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-* ``<`` = Begin DCC-EX command
 * ``F`` = (upper case F) This command is for a CAB function i.e.: Lights, horn, bell  
-* ``CAB``  : the short (1-127) or long (128-10293) address of the engine decoder
-* ``FUNC`` : the CAB function number (0-28) whose function is defined by your decoder
+* ``cab``  : the short (1-127) or long (128-10293) address of the engine decoder
+* ``func`` : the CAB function number (0-28) whose function is defined by your decoder
 * ``0|1`` : a value of 0 to set the function OFF and 1 to set the function ON
-* ``>`` = End DCC-EX command
 
 Examples:
 
@@ -167,16 +170,14 @@ Examples:
 *  ``<F 126 0 0>`` Turns the headlight OFF for CAB 126
 *  ``<F 1330 1 1>`` Turns the horn ON for CAB 1330
 
-**The Legacy CAB Functions format** is ``<f CAB BYTE1 [BYTE2]>``
+**The Legacy CAB Functions format** is ``<f cab byte1 [byte2]>``
 
-To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
+To set functions **F0-F4** on=(1) or off=(0): ``<f cab byte1 [byte2]>``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB function i.e.: Lights, horn, bell  
-* ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder
-* ``BYTE1`` :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16
+* ``cab`` :  the short (1-127) or long (128-10293) address of the engine decoder
+* ``byte1`` :  128 + F1*1 + F2*2 + F3*4 + F4*8 + F0*16
 
   * ADD the ones you want **ON** together
   * Add 1 for F1 ON
@@ -186,10 +187,9 @@ To set functions **F0-F4** on=(1) or off=(0): ``<f CAB BYTE1 [BYTE2]>``
   * Add 16 for F0 ON
   * 128 Alone Turns OFF **F0-F4**
 
-* ``BYTE2`` :  omitted
-* ``>`` = End DCC-EX command
+* ``byte2`` :  omitted
 
-To make BYTE1 add the values of what you want ON together, the ones that you want OFF do not get added to the base value of 128.
+To make "byte1" add the values of what you want ON together, the ones that you want OFF do not get added to the base value of 128.
 
 * F0 (Light)=16, F1 (Bell)=1, F2 (Horn)=2, F3=4, F4=8
 * All off = 128
@@ -202,19 +202,15 @@ To make BYTE1 add the values of what you want ON together, the ones that you wan
 
 Breakdown for this example ``<f 3265 144>``
 
-* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function i.e.: Lights, horn, bell
 * ``3265`` = CAB: the short (1-127) or long (128-10293) address of the engine decoder
 * ``144`` = Turn on headlight
-* ``>`` = End DCC-EX command  
 
-To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
+To set functions **F5-F8** on=(1) or off=(0): **<f cab byte1 [byte2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
-* ``BYTE1`` :  176 + F5*1 + F6*2 + F7*4 + F8*8
+* ``byte1`` :  176 + F5*1 + F6*2 + F7*4 + F8*8
 
   * ADD 176 + the ones you want **ON** together
   * Add 1 for F5 ON
@@ -223,16 +219,13 @@ To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 8 for F8 ON
   * 176 Alone Turns OFF **F5-F8**
 
-* ``BYTE2`` :  omitted
-* ``>`` = End DCC-EX command  
+* ``byte2`` :  omitted
 
-To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
+To set functions **F9-F12** on=(1) or off=(0): **<f cab byte1 [byte2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
-* ``BYTE1:``  160 + F9*1 +F10*2 + F11*4 + F12*8
+* ``byte1:``  160 + F9*1 +F10*2 + F11*4 + F12*8
 
   * ADD 160 + the ones you want **ON** together
   * Add 1 for F9 ON
@@ -241,17 +234,14 @@ To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 8 for F12 ON
   * 160 Alone Turns OFF **F9-F12**
 
-* ``BYTE2:``  omitted
-* ``>`` = End DCC-EX command  
+* ``byte2:``  omitted
 
-To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
+To set functions **F13-F20** on=(1) or off=(0): **<f cab byte1 [byte2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB,s function.
-* ``BYTE1:`` 222 
-* ``BYTE2:`` F13*1 + F14*2 + F15*4 + F16*8 + F17*16 + F18*32 + F19*64 + F20*128
+* ``byte1:`` 222 
+* ``byte2:`` F13*1 + F14*2 + F15*4 + F16*8 + F17*16 + F18*32 + F19*64 + F20*128
 
   * ADD the ones you want **ON** together
   * Add 1 for F13 ON
@@ -264,15 +254,12 @@ To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 128 for F20 ON
   * 0 Alone Turns OFF **F13-F20**
 
-* ``>`` = End DCC-EX command  
-
-To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
+To set functions **F21-F28** on=(1) or off=(0): **<f cab byte1 [byte2]>**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* ``<`` = Begin DCC-EX command
 * ``f`` = (lower case f) This command is for a CAB function.
-* ``BYTE1:`` 223
-* ``BYTE2:`` F21*1 + F22*2 + F23*4 + F24*8 + F25*16 + F26*32 + F27*64 + F28*128
+* ``byte1:`` 223
+* ``byte2:`` F21*1 + F22*2 + F23*4 + F24*8 + F25*16 + F26*32 + F27*64 + F28*128
 
   * ADD the ones you want **ON** together
   * Add 1 for F21 ON
@@ -285,20 +272,18 @@ To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**
   * Add 128 for F28 ON
   * 0 Alone Turns OFF **F21-F28**
 
-* ``>`` = End DCC-EX command  
-
-**RETURNS:** <l CAB SLOT SPEED/DIR FUNC>
+**RETURNS:** <l cab slot speed/dir func>
 
 Where:
 
-* CAB is the loco DCC address/CAB ID.
-* SLOT is the slot assignment for the CAB.
-* SPEED/DIR is the 8 bit speed byte:
+* ``cab`` is the loco DCC address/CAB ID.
+* ``slot`` is the slot assignment for the CAB.
+* ``speed/dir`` is the 8 bit speed byte:
 
   * Bit 7 provides the direction (1 = Fwd, 0 = Rev).
   * Bits 0 to 6 provide the speed (0 - 128).
 
-* FUNC is the bit pattern for the functions that are set.
+* ``func`` is the bit pattern for the functions that are set.
 
 .. note:: 
 
@@ -333,24 +318,20 @@ Here is a spreadsheet in .XLSX format to help you: :ref:`Decoder Address Decoder
 
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 
-Controlling an Accessory with ``<a LINEAR_ADDRESS ACTIVATE>``
+Controlling an Accessory with ``<a linear_address activate>``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ``<`` = Begin DCC-EX command
 * ``a`` (lower case a) this command is for a Accessory Decoder
-* ``LINEAR_ADDRESS:``  the linear address of the decoder controlling this turnout (1-2044)
-* ``ACTIVATE:`` (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)
-* ``>`` = End DCC-EX command
+* ``linear_address`` is the linear address of the decoder controlling this turnout (1-2044)
+* ``activate`` is either (0 or OFF) (for Deactivate, Straight, Closed) or (1 or ON) (for Activate, Turn, Thrown)
 
-Controlling an Accessory Decoder with ``<a ADDRESS SUBADDRESS ACTIVATE>``
+Controlling an Accessory Decoder with ``<a address subaddress activate>``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ``<`` = Begin DCC-EX command
 * ``a`` (lower case a) this command is for a Accessory Decoder
-* ``ADDRESS:``  the primary address of the decoder controlling this turnout (0-511)
-* ``SUBADDRESS:`` the subaddress of the decoder controlling this turnout (0-3)
-* ``ACTIVATE:`` (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)
-* ``>`` = End DCC-EX command
+* ``address`` is the primary address of the decoder controlling this turnout (0-511)
+* ``subaddress`` is the subaddress of the decoder controlling this turnout (0-3)
+* ``activate`` is either (0) (Deactivate, Straight, Closed) or (1) (Activate, Turn, Thrown)
 
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
@@ -361,84 +342,72 @@ The Turnout commands provide a more flexible and more functional way of operatin
 
 Turnouts may be in either of two states:  Closed or Thrown.  The turnout commands below use the values ``1`` for ``Throw`` or ``Thrown`` and ``0`` for ``Close`` or ``Closed``.
 
-* Command to define a DCC Accessory Turnout: ``<T ID ADDRESS SUBADDRESS>`` :
+* Command to define a DCC Accessory Decoder turnout: ``<T id DCC address subaddress>`` :
 
-  * Creates a new turnout ``ID``, with specified ``ADDRESS`` and ``SUBADDRESS`` if turnout ``ID`` already exists, it is updated (overwritten) with the new specified ``ADDRESS`` and ``SUBADDRESS``
-  * Example:  ``<T 23 5 0>``
-  * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * From Version 3.2.0, this command is deprecated and has been replaced by ``<T ID DCC ADDRESS SUBADDRESS>``.
-
-* Command to define a DCC Accessory Decoder turnout: ``<T ID DCC ADDRESS SUBADDRESS>`` :
-
-  * Create a new turnout ``ID`` which operates the DCC Accessory Decoder configured for the ``ADDRESS`` and ``SUBADDRESS``. 
-    ``ADDRESS`` ranges from 0 to 511 and ``SUBADDRESS`` ranges from 0 to 3. 
+  * Create a new turnout ``id`` which operates the DCC Accessory Decoder configured for the ``address`` and ``subaddress``. 
+    ``address`` ranges from 0 to 511 and ``subaddress`` ranges from 0 to 3. 
   * Example: ``<T 23 DCC 5 0>``
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * This command is available from Version 3.2.0
   
-* Command to define a DCC Accessory Decoder turnout: ``<T ID DCC LINEARADDRESS>`` :
+* Command to define a DCC Accessory Decoder turnout: ``<T id DCC linear_address>`` :
 
-  * Create a new turnout ``ID`` which operates the DCC Accessory Decoder configured for the ``LINEARADDRESS``. 
-    ``LINEARADDRESS`` ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).
+  * Create a new turnout ``id`` which operates the DCC Accessory Decoder configured for the ``linear_address``. 
+    ``linear_address`` ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).
   * Example: ``<T 23 DCC 44>`` (corresponds to address 11 subaddress 3).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * This command is available from Version 3.2.0
   
-* Command to define a Servo-based turnout: ``<T ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE>`` :
+* Command to define a Servo-based turnout: ``<T id SERVO vpin thrown_position closed_position profile>`` :
 
-  * Create a new turnout ``ID`` using the servo output pin ``PIN``.  The positions for thrown and closed states are ``THROWNPOSITION`` and ``CLOSEDPOSITION`` 
+  * Create a new turnout ``id`` using the servo output pin ``vpin``.  The positions for thrown and closed states are ``thrown_position`` and ``closed_position`` 
     respectively.  For an SG90 servo, positions in the range of 102-490 will give up to 180 degrees motion, but the range of 205-410 (corresponding to
     1.0-2.0 millisecond pulses) is recommended for the SG90.  
-    The transition between states is defined by ``PROFILE``, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).
+    The transition between states is defined by ``profile``, as 0 (immediate), 1 (fast=0.5 sec), 2 (medium=1 sec), 3 (slow=2 sec) or 4 (bounce, for semaphore signals).
   * Example: ``<T 24 SERVO 100 410 205 2>``  defines a servo turnout on the first PCA9685 pin, moving at medium speed between positions 205 and 410.
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * This command is available from Version 3.2.0.
 
-* Command to define a VPIN-based turnout: ``<T ID VPIN PIN>`` :
+* Command to define a VPIN-based turnout: ``<T id VPIN vpin>`` :
 
-  * Create a new turnout ``ID`` which operates the output defined by ``PIN``.  If ``PIN`` is in the range of Arduino digital output pins, then 
-    throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If ``PIN`` is associated 
+  * Create a new turnout ``id`` which operates the output defined by ``vpin``.  If ``vpin`` is in the range of Arduino digital output pins, then 
+    throwing the turnout will cause the specified pin to be set to HIGH, and closing the turnout will set the pin to LOW.  If ``vpin`` is associated 
     with an external device, then the device will be operated accordingly.
   * Example: ``<T 25 VPIN 30>`` defines a turnout that operates Arduino digital output pin D30.  
   * Example: ``<T 26 VPIN 164>`` defines a turnout that operates the first pin on the first MCP23017 GPIO expander (if present).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  * This command is available from Version 3.2.0.
   
-* Command to Delete a turnout ``<T ID>`` :
+* Command to Delete a turnout ``<T id>`` :
 
-  * Deletes the definition of a turnout with this ``ID``.
+  * Deletes the definition of a turnout with this ``id``.
   * Example: ``<T 25>`` deletes the previously defined turnout number 25.
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)
 
 * Command to List all defined turnouts: ``<T>`` :
 
   * Lists all defined turnouts.
-  * Before Version 3.2.0: Returns: ``<H ID ADDRESS SUBADDRESS THROWN>`` for each defined DCC Accessory Turnout or ``<X>`` if no turnouts have beed defined or saved.  
-  * After Version 3.2.0: Returns the parameters that would be used to create the turnout, with the ``THROWN`` state (1=thrown, 0=closed) appended.
+  * Returns the parameters that would be used to create the turnout, with the ``thrown`` state (1=thrown, 0=closed) appended.
 
       .. code-block::
 
           RETURNS: One of the following for each defined turnout or <X> if no turnouts defined.
-          <H ID DCC ADDRESS SUBADDRESS THROWN>     -- DCC Accessory Turnouts
-          <H ID SERVO PIN THROWNPOSITION CLOSEDPOSITION PROFILE THROWN>  -- Servo Turnouts
-          <H ID VPIN PIN THROWN>  -- VPIN Turnouts
-          <H ID LCN THROWN>  -- LCN Turnouts
+          <H id DCC address subaddress thrown>     -- DCC Accessory Turnouts
+          <H id SERVO vpin thrown_position closed_position profile thrown>  -- Servo Turnouts
+          <H id VPIN vpin thrown>  -- VPIN Turnouts
+          <H id LCN thrown>  -- LCN Turnouts
      
       The rest of the parameters are as defined for the turnout definition commands.
 
-* ``ID`` : The numeric ID (0-32767) of the turnout to control.  
+* ``id`` : The numeric ID (0-32767) of the turnout to control.  
 
   * (NOTE: You pick the ID. IDs are shared between Turnouts, Sensors and Outputs)
 
-* ``ADDRESS`` :  the primary address of a DCC accessory decoder controlling a turnout (0-511)
-* ``SUBADDRESS`` : the subaddress of a DCC accessory decoder controlling a turnout (0-3)
-* ``PIN`` : the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
+* ``address`` is the primary address of a DCC accessory decoder controlling a turnout (0-511)
+* ``subaddress`` is the subaddress of a DCC accessory decoder controlling a turnout (0-3)
+* ``vpin`` is the pin number of the output to be controlled by the turnout object.  For Arduino output pins, this is the same as the digital pin number.  For 
   servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
   116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
-* ``THROWN`` - "0" is closed.  "1" is thrown.
-* ``THROWNPOSITION`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
-* ``CLOSEDPOSITION`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
-* ``PROFILE`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).
+* ``thrown`` - "0" is closed.  "1" is thrown.
+* ``thrown_position`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
+* ``closed_position`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
+* ``profile`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).
 
 Once all turnouts have been properly defined, Use the ``<E>`` command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the turnout definitions, you must invoke the ``<E>`` command if you want those new definitions updated in the EEPROM.
@@ -450,32 +419,26 @@ You can also **ERASE everything; (turnouts, sensors, and outputs)** stored in th
    ``<T 10 DCC 123 3>``  
 
    * This Command means:  
-   * ``<`` : Begin DCC-EX command  
    * ``T`` : (Upper case T) Define a Turnout  
    * ``DCC`` : The turnout is DCC Accessory Decoder based
    * ``10`` : ID number I am setting to use this turnout  
    * ``123`` : The accessory decoders address  
    * ``3`` : The turnout is wired to output 3  
-   * ``>`` : End DCC-EX command
    * RETURNS: ``<O>``  Meaning Command Successful
 
  |    Next you would send the following command to the |EX-CS|:
      ``<E>``
 
    * This Command means:  
-   * ``<`` : Begin DCC-EX command  
    * ``E`` : (Upper case E) Store (save) this definition to EEPROM  
-   * ``>`` : End DCC-EX command
    * RETURNS: ``<O>``  Meaning Command Successful  
 
 If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.  
 Consequently, when the |EX-CS| is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
 This is intended so that the servos don't perform a sweep on power-on when their physical position does not match initial position in the CommandStation.
 
-
 Controlling a Defined Turnout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * Sets turnout ID to either the "closed" (turned) or "thrown" (closed) position  
 * The Turnout format is ``<T id throw>``  
@@ -490,14 +453,11 @@ Controlling a Defined Turnout
      To throw turnout 10 so an engine can go to the warehouse siding you would send the following command.
      ``<T 10 1>``  
 
-
      * This Command means:  
-     * ``<`` : Begin DCC-EX command  
      * ``T`` : (Upper case T) Throw a turnout.  
      * ``10`` : ID number of the defined turnout I want to control.  
      * ``1`` : Set turnout to Thrown (turned, on) position.  
      * 
-       ``>`` : End DCC-EX command
        |EX-CS| should return ``<H 10 1>``  Meaning Command was Successful
 
        NOTE: The ``<T>`` command by itself with no parameters will list all turnout definitions and their directions
@@ -524,25 +484,24 @@ but the default parameters protect against contact bounces for up to 20 millisec
 To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the ``<S>`` command:  
 
 
-* ``<S ID PIN PULLUP>`` : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).  
+* ``<S id vpin pullup>`` : Creates a new sensor ID, with specified PIN and PULLUP if sensor ID already exists, it is updated with specified PIN and PULLUP (You choose the number).  
 
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
 
-* ``<S ID>`` : Deletes definition of sensor ID  
+* ``<S id>`` : Deletes definition of sensor ID  
 
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)  
 
 * ``<S>`` : Lists all defined sensors  
 
-  * RETURNS: ``<Q ID PIN PULLUP>`` for each defined sensor or ``<X>`` if no sensors defined
+  * RETURNS: ``<Q id vpin pullup>`` for each defined sensor or ``<X>`` if no sensors defined
 
-``ID`` : The numeric ID (0-32767) of the sensor
+``id`` : The numeric ID (0-32767) of the sensor
 (You pick the ID & they are shared between Turnouts, Sensors and Outputs)
 
-``PIN`` : the pin number of the input to be controlled by the sensor object.  For Arduino input pins, this is the same as the digital pin number.  For 
-servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
+``vpin`` : the pin number of the input to be controlled by the sensor object.  For Arduino input pins, this is the same as the digital pin number.  For servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 
-``PULLUP`` : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don't use internal pull-up resistor for PIN (ACTIVE=HIGH).
+``pullup`` : 1 = Use internal pull-up resistor for PIN (ACTIVE=LOW), 0 = don't use internal pull-up resistor for PIN (ACTIVE=HIGH).
 
 Once all sensors have been properly defined, use the ``<E>`` (upper case E) command to store their definitions to EEPROM.
 If you later make edits/additions/deletions to the sensor definitions, you must invoke the ``<E>`` (upper case E) command if you want those new definitions updated in the EEPROM.
@@ -553,14 +512,14 @@ All sensors defined as per above are repeatedly and sequentially checked within 
 found to have transitioned from one state to another, one of the following serial messages are generated:  
 
 
-* ``<Q ID>`` - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)  
-* ``<q ID>`` - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)  
+* ``<Q id>`` - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)  
+* ``<q id>`` - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)  
 
-Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor," you may decide to ignore the ``<q ID>`` return and only react to ``<Q ID>`` triggers.
+Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor," you may decide to ignore the ``<q id>`` return and only react to ``<Q id>`` triggers.
 
 * ``<Q>`` - List the status of all defined sensors
 *   
-      RETURNS: <Q ID> (active) or <q ID> (not active)
+      RETURNS: <Q id> (active) or <q id> (not active)
 
 Example: This shows sensors 1 and 2 are tripped or active while 3 and 4 are not.
 
@@ -580,42 +539,40 @@ However, the default behavior can be modified so that any pin can be forced to b
 To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
 
 
-* ``<Z ID PIN IFLAG>`` : Creates a new output ID, with specified PIN and IFLAG values.  
+* ``<Z id vpin iflag>`` : Creates a new output ID, with specified ``vpin`` and ``iflag`` values.
 
-  * if output ID already exists, it is updated with specified PIN and IFLAG.  
-  * Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to IFLAG value specified (see below).  
-  * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory).  
+  * if output ID already exists, it is updated with specified ``vpin`` and ``iflag``.
+  * Note: output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to ``iflag`` value specified (see below).
+  * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory).
 
-* ``<Z ID>`` : Deletes definition of output ID  
+* ``<Z id>``: Deletes definition of output ID
 
   * RETURNS: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. ID does not exist)  
 
 * ``<Z>`` : Lists all defined output pins
 
-  * RETURNS: ``<Y ID PIN IFLAG STATE>`` for each defined output pin or ``<X>`` if no output pins defined.
+  * RETURNS: ``<Y id vpin iflag state>`` for each defined output pin or ``<X>`` if no output pins defined.
 
-``ID`` : The numeric ID (0-32767) of the output
-(You pick the ID & they are shared between Turnouts, Sensors and Outputs)
+``id`` : The numeric ID (0-32767) of the output
+(You pick the ``id`` & they are shared between Turnouts, Sensors and Outputs)
 
-``PIN`` : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For 
-servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
+``vpin`` : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 
-``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)
+``state`` : The state of the output (0=INACTIVE / 1=ACTIVE)
 
-``IFLAG`` : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:  
+``iflag`` : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:  
 
 .. code-block::
 
-   IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
+   ``iflag``, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
                  1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
 
-   IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE 
+   ``iflag``, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE 
                      depending on state before power-down. 
                  1 = state of pin set on power-up, or when first created,
                      to either ACTIVE of INACTIVE depending on IFLAG, bit 2
 
-   IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
+   ``iflag``, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
                  1 = state of pin set to ACTIVE upon power-up or when first created 
 
 Once all outputs have been properly defined, use the ``<E>`` Upper Case "E" command to store their definitions to EEPROM.
@@ -626,14 +583,14 @@ You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the
 To change the state of outputs that have been defined use:  
 
 
-* ``<Z ID STATE>`` : Sets output ID to either ACTIVE or INACTIVE state  
-* RETURNS: ``<Y ID STATE>`` , or ``<X>`` if output ID does not exist  
+* ``<Z id state>`` : Sets output ``id`` to either ACTIVE or INACTIVE state  
+* RETURNS: ``<Y id state>`` , or ``<X>`` if output ID does not exist  
 
-  * ``ID`` : The numeric ID (0-32767) of the defined output to control  
-  * ``STATE`` : The state of the output (0=INACTIVE / 1=ACTIVE)  
+  * ``id`` : The numeric ID (0-32767) of the defined output to control  
+  * ``state`` : The state of the output (0=INACTIVE / 1=ACTIVE)  
 
 When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power. 
-A list of the current states of each output in the form ``<Y ID STATE>`` is generated by |EX-CS| whenever the ``<s>`` 
+A list of the current states of each output in the form ``<Y id state>`` is generated by |EX-CS| whenever the ``<s>`` 
 status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program. 
 
 Storing and Erasing Turnouts, Sensors and Outputs in EEPROM
@@ -666,10 +623,10 @@ WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK
 Writes, without any verification, a Configuration Variable BYTE to the decoder of an engine on the main operations track. 
 
 
-* Write CV BYTE Format is: ``<w CAB CV VALUE>``  
-* ``CAB`` : The short (1-127) or long (128-10293) address of the engine decoder  
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024)  
-* ``VALUE`` : The value to be written to the Configuration Variable memory location (0-255)  
+* Write CV BYTE Format is: ``<w cab cv valule>``  
+* ``cab`` : The short (1-127) or long (128-10293) address of the engine decoder  
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024)  
+* ``value`` : The value to be written to the Configuration Variable memory location (0-255)  
 * RETURNS: NONE
 
 WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK
@@ -678,11 +635,11 @@ WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK
 Writes, without any verification, a single bit within a Configuration Variable BIT to the decoder of an engine on the main operations track. 
 
 
-* Write CV BIT Format is: ``<b CAB CV BIT VALUE>``
-* ``CAB`` :  the short (1-127) or long (128-10293) address of the engine decoder  
-* ``CV`` : the number of the Configuration Variable memory location in the decoder to write to (1-1024)  
-* ``BIT`` : the bit number of the Configuration Variable register to write (0-7)  
-* ``VALUE`` : the value of the bit to be written (0-1)  
+* Write CV BIT Format is: ``<b cab cv bit value>``
+* ``cab`` :  the short (1-127) or long (128-10293) address of the engine decoder  
+* ``cv`` : the number of the Configuration Variable memory location in the decoder to write to (1-1024)  
+* ``bit`` : the bit number of the Configuration Variable register to write (0-7)  
+* ``value`` : the value of the bit to be written (0-1)  
 
   * RETURNS: NONE
 
@@ -698,7 +655,7 @@ READ LOCO ADDRESS ON PROGRAMMING TRACK
 
   .. code-block::
 
-      RETURNS: <r ADDRESS> where it finds the address of our loco or <r -1> for a read failure.
+      RETURNS: <r address> where it finds the address of our loco or <r -1> for a read failure.
 
 Example: <r 3450> shows that Loco with ID 3450 is on the programming track.
 
@@ -708,7 +665,7 @@ WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK
 
 Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track.
 
-Write loco address Format is: ``<W ADDRESS>``
+Write loco address Format is: ``<W address>``
 ADDRESS: The loco address to be written (1-10239).
 
 
@@ -717,24 +674,24 @@ WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK
 
 Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track  
 
-* Write CV BYTE Format is: ``<W CV VALUE>``
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  
-* ``VALUE`` : The value to be written to the Configuration Variable memory location (0-255).
+* Write CV BYTE Format is: ``<W cv value>``
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  
+* ``value`` : The value to be written to the Configuration Variable memory location (0-255).
 
-  * ``RETURNS:`` ``<r CV Value>``
-  * ``CV:`` The number of the Configuration Variable memory location written to.
-  * ``Value:`` Is a number from 0-255 as read from the CV, or -1 if verification read fails.
+  * ``RETURNS:`` ``<r cv value>``
+  * ``cv:`` The number of the Configuration Variable memory location written to.
+  * ``value:`` Is a number from 0-255 as read from the CV, or -1 if verification read fails.
 
 **Deprecated old format below, please use the new, brief <W CV VALUE> command instead**
 
-* Write CV BYTE Format is: ``<W CV VALUE CALLBACKNUM CALLBACKSUB>``
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  
-* ``VALUE`` : The value to be written to the Configuration Variable memory location (0-255).  
-* ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.  
+* Write CV BYTE Format is: ``<W cv value callbacknum callbacksub>``
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024  ).  
+* ``value`` : The value to be written to the Configuration Variable memory location (0-255).  
+* ``callbacknum`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
+* ``callbacksub`` : a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.  
 
-  * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV Value>``  
-  * ``CV VALUE:`` Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.  
+  * ``RETURNS:`` ``<r callbacknum|callbacksub|cv value>``
+  * ``cv value:`` Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.  
 
 WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -742,15 +699,15 @@ WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK
 Writes, and then verifies, a Configuration Variable BIT to the decoder of an engine on the programming track  
 
 
-* Write CV BIT Format is: ``<B CV BIT VALUE CALLBACKNUM CALLBACKSUB>``  
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024).  
-* ``BIT`` : The bit number of the Configuration Variable memory location to write (0-7).  
-* ``VALUE`` : The value of the bit to be written (0-1).  
-* ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.  
+* Write CV BIT Format is: ``<B cv bit value callbacknum callbacksub>``  
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024).  
+* ``bit`` : The bit number of the Configuration Variable memory location to write (0-7).  
+* ``value`` : The value of the bit to be written (0-1).  
+* ``callbacknum`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
+* ``callbacksub`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.  
 
-  * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV BIT VALUE>``  
-  * ``CV VALUE`` is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.  
+  * ``RETURNS:`` ``<r callbacknum|callbacksub|cv bit value>``  
+  * ``cv value`` is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.  
 
 READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -758,18 +715,18 @@ READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programming track.
 
 
-Read CV BYTE Format is: ``<R CV CALLBACKNUM CALLBACKSUB>``  
+Read CV BYTE Format is: ``<R cv callbacknum callbacksub>``
 
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).  
-* ``CALLBACKNUM`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
-* ``CALLBACKSUB`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function. 
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).  
+* ``callbacknum`` : An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function.  
+* ``callbacksub`` : A second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function. 
 
-  * ``RETURNS:`` ``<r CALLBACKNUM|CALLBACKSUB|CV VALUE>``  
-  * ``CV VALUE`` is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.
+  * ``RETURNS:`` ``<r callbacknum|callbacksub|cv value>``
+  * ``cv value`` is a number from 0-255 as read from the requested CV, or -1 if read could not be verified.
 
 Read Engine address format is simply: ``<R>``
 
-* ``RETURNS:`` ``<r ADDRESS>`` when successful and ``<r -1>`` if it is not.
+* ``RETURNS:`` ``<r address>`` when successful and ``<r -1>`` if it is not.
 
 **IMPORTANT: If the loco is on a consist, the address returned will be the consist address**
 
@@ -781,11 +738,11 @@ VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK
 This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read byte command (see above) and return the value read.
 
 
-* Verify CV BYTE Format is: ``<V CV BYTEVALUE>``
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
-* ``BYTEVALUE`` : The value of they byte expected to be in the CV
-* ``RETURNS:`` ``<v CV BYTEVALUE>`` 
-* ``BYTEVALUE:`` reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
+* Verify CV BYTE Format is: ``<V cv bytevalue>``
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
+* ``bytevalue`` : The value of they byte expected to be in the CV
+* ``RETURNS:`` ``<v cv bytevalue>`` 
+* ``bytevalue:`` reports the value of the byte if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
 
 VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -793,13 +750,13 @@ VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK
 This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply "read". If the verify fails, it will perform a read bit command (see above) and return the value read.
 
 
-* Verify CV BIT Format is: ``<V CV BIT BITVALUE>``
-* ``CV`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
-* ``BIT`` : The bit position of the bit in the CV byte being validated (0-7)
-* ``BITVALUE`` : 0 or 1 indicating the expected value
-* ``RETURNS:`` ``<v CV BIT BITVALUE>`` A return value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
-* ``BIT:`` Reports the bit in the CV byte that was verified
-* ``BITVALUE:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 
+* Verify CV BIT Format is: ``<V cv bit bitvalue>``
+* ``cv`` : The number of the Configuration Variable memory location in the decoder to read from (1-1024).
+* ``bit`` : The bit position of the bit in the CV byte being validated (0-7)
+* ``bitvalue`` : 0 or 1 indicating the expected value
+* ``RETURNS:`` ``<v cv bit bitvalue>`` A return value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation 
+* ``bit:`` Reports the bit in the CV byte that was verified
+* ``bitvalue:`` reports the value of the individual bit in the CV byte being verified if the verify was successful. A value of -1 indicates a fault condition such as no loco, no power, no ACK etc., not a bad validation. 
 
 Throttle commands for developers
 ================================
@@ -927,16 +884,16 @@ SEND PACKET TO THE TRACK
 
 Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track
 
-  **FORMAT:** ``<M|P REGISTER BYTE1 BYTE2 [BYTE3] [BYTE4] [BYTE5]>``
+  **FORMAT:** ``<M|P register byte1 byte2 [byte3] [byte4] [byte5]>``
 
 .. code-block::
 
-   ``REGISTER:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER>0) the packet
-   ``BYTE1:``  first hexadecimal byte in the packet
-   ``BYTE2:``  second hexadecimal byte in the packet
-   ``BYTE3:``  optional third hexadecimal byte in the packet
-   ``BYTE4:``  optional fourth hexadecimal byte in the packet
-   ``BYTE5:``  optional fifth hexadecimal byte in the packet
+   ``register:`` an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER>0) the packet
+   ``byte1:``  first hexadecimal byte in the packet
+   ``byte2:``  second hexadecimal byte in the packet
+   ``byte3:``  optional third hexadecimal byte in the packet
+   ``byte4:``  optional fourth hexadecimal byte in the packet
+   ``byte5:``  optional fifth hexadecimal byte in the packet
 
    returns: NONE
 

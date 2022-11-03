@@ -17,8 +17,6 @@ EX-RAIL Command List
 Notes
 ======
 
-
-
 - COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them.
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by i2c expansion.
@@ -37,6 +35,15 @@ Notes
   - Virtual block IDs as used in RESERVE/FREE
 
   Therefore, you can have an AUTOMATION, a turnout, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
+
+Conventions used on this page
+=============================
+
+- CAPITALISED words - These are EX-RAIL commands and are case sensitive
+- lowercase words within () - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma ",", for example SEQUENCE(id) or DELAYRANDOM(min_delay, max_delay)
+- Quoted "text" - Text within quote marks "" are used as descriptions, and must include the quote characters, for example ROUTE(id, "description") becomes ROUTE(1, "This is the route description")
+- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)
+- \| - Use of the \| character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
 
 Command Summary
 ==================
@@ -186,6 +193,8 @@ Flow control functions
       -  Tests if signal is amber
     * -  IFGREEN( signal_id )
       -  Tests if signal is green
+    * -  IFRE( id, value )
+      -  Tests if a rotary encoder is at the specified position |BR| |NOT-IN-PROD-VERSION|
     * -  ELSE
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
@@ -331,8 +340,8 @@ Sensor input
   
 |
 
-Sensor event handlers
-^^^^^^^^^^^^^^^^^^^^^
+Event handlers
+^^^^^^^^^^^^^^
 
 .. list-table::
     :widths: 30 70
@@ -353,6 +362,8 @@ Sensor event handlers
       -  Event handler for 2 part DCC accessory packet value 0
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
+    * -  ONCHANGE( id )
+      -  Event handler for a sensor changing state |BR| |NOT-IN-PROD-VERSION|
 
 |
 

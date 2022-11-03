@@ -46,6 +46,15 @@ Notes
 
   Therefore, you can have an AUTOMATION, a turnout/point, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
+Conventions used on this page
+=============================
+
+- CAPITALISED words - These are EX-RAIL commands and are case sensitive
+- lowercase words within () - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma ",", for example SEQUENCE(id) or DELAYRANDOM(min_delay, max_delay)
+- Quoted "text" - Text within quote marks "" are used as descriptions, and must include the quote characters, for example ROUTE(id, "description") becomes ROUTE(1, "This is the route description")
+- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)
+- \| - Use of the \| character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
+
 Interactive diagnostics and control
 ====================================
 
@@ -138,7 +147,7 @@ LATCH/UNLATCH
 
 ``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
-Refer to the LATCH/UNLATCH commands in the `sensors`_ section below for further details.
+Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/ex-rail-reference:sensors/inputs` section below for further details.
 
 Routes, automations, and sequences
 ===================================
@@ -273,8 +282,8 @@ Examples:
   SERVO_TURNOUT(102, 102, 400, 100, Slow, HIDDEN)   // A servo turnout on a PCA9685 servo module that is hidden from throttles.
   VIRTUAL_TURNOUT(103, "Lumber Yard")               // A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.
 
-Sensors
-========
+Sensors/inputs
+==============
 
 ``AT( sensor_id )`` An event handler that defines what to do when a sensor is active/triggered.
 
@@ -307,6 +316,8 @@ For example:
 
 All the `IFGTE()`, `IFLT()`, `ATGTE()`and `ATLT()` commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
 
+``IFRE ( id, value )`` Test if a rotary encoder has been set to the specified value |BR| |NOT-IN-PROD-VERSION|
+
 Sensor examples:
 
 .. code-block:: cpp
@@ -331,6 +342,10 @@ Sensor examples:
     RESET(165)
   ELSE
     SET(165)
+  ENDIF
+
+  IFRE(700, 1)  // If a rotary encoder is at position 1, start ROUTE with ID 123
+    START(123)
   ENDIF
 
 LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
@@ -361,6 +376,21 @@ In this example, LATCH/UNLATCH is used to toggle between two different activitie
       LATCH(ROUTE_TOGGLE)         // LATCH ROUTE_TOGGLE to indicate route set
     ENDIF
   DONE
+
+ONCHANGE() is an event handler that can be used to detect if a sensor has changed state. Note this is only in use by the rotary encoder device driver at present. |BR| |NOT-IN-PROD-VERSION|
+
+``ONCHANGE( sensor_id )`` Detects a change in state for the specified sensor ID.
+
+.. code-block:: 
+
+  ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
+    IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
+      START(123)
+    ENDIF
+    IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
+      START(124)
+    ENDIF
+    DONE
 
 Output and servo commands
 ==========================

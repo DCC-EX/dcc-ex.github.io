@@ -16,6 +16,41 @@ Technical Reference for Throttle Developers
 
 This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS|.
 
+Considerations for throttle developers
+======================================
+
+For anyone developing a throttle or controller application, these considerations must be taken into account:
+
+- Refer to the :doc:`/reference/developers/api`
+- A throttle/controller MUST accept and ignore anything it does not understand
+- Track power state has three possible states: On, Off, and Unknown
+
+Working with track power states
+-------------------------------
+
+As above, track power can be On, Off, or Unknown. There is no broadcast of an Unknown power state though, meaning a throttle/controller must start with track power flagged as Unknown.
+
+The throttle should only flag the power state as On or Off when either:
+
+- A power broadcast is received from the |EX-CS| ``<p...>``
+- The throttle user selects to turn track power on or off
+
+Responding to appropriate information
+-------------------------------------
+
+The other important consideration is ensuring a throttle responds to the appropriate information sent by the |EX-CS|.
+
+The |EX-CS| will broadcast changes from other throttles/controllers, as well as changes to track power state, throttle reminders, and turnout and sensor state changes.
+
+These items must be responded to:
+
+- Throttle reminders for locos/cabs that the throttle is controlling (it's possible for another throttle to control the same loco)
+- Power broadcasts ``<p...>``
+- Turnout throw/close ``<H...>`` (if the throttle doesn't control turnouts, this can be ignored)
+- Defined sensor changes ``<q|Q...>`` (if the throttle doesn't respond to sensors, this can be ignored)
+
+Remember, however, that a throttle/controller MUST accept and ignore anything it does not understand
+
 Additional throttle commands
 =============================
 

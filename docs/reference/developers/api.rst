@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |EX-REF-LOGO|
 
-********************************
-CommandStation-EX API Reference
-********************************
+*******************************
+EX-CommandStation API Reference
+*******************************
 
 |engineer|
 

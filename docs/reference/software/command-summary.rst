@@ -22,7 +22,7 @@ Conventions used on this page
 
 - "<" and ">" - All DCC-EX API commands are surrounded by these characters to indicate the beginning and end, these must always be included
 - First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. 1, c, or -
-- CAPITALISED words - These are also called OPCODES, are case sensitive, and must be specified as directed, eg. MAIN
+- CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, eg. MAIN (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)
 - lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", eg. cabid
 - Square brackets [] - Parameters within square brackets [] are optional and may be ommitted, and if specifying these parameters, do not include the square brackets themselves
 - \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``

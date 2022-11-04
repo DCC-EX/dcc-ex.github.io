@@ -60,6 +60,8 @@ Throttle (Controller) Options
 
 Here is a small subset of the throttles you can use with the |EX-CS|. These options are simple and inexpensive (i.e. free) and are suitable for initial testing if you have installed *just* the recommended hardware (including WiFi). Namely **WiFi** (using a smart phone) and **Direct Connection**.
 
+For further throttle and connection options, refer to :doc:`/ex-commandstation/advanced-setup/controllers`.
+
 Connecting via WiFi
 -------------------
 

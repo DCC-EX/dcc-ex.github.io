@@ -2,7 +2,6 @@
 .. include:: /include/include-l2.rst
 |EX-CONTRIBUTING-LOGO|
 
-
 *******************************
 Contributing to EX-WebThrottle2
 *******************************
@@ -26,7 +25,6 @@ This page should give a step by step guide to contributing, from getting the too
 - Create commits
 - Open a pull request
 
-===============
 Developer tools
 ===============
 
@@ -69,7 +67,6 @@ Then to run the code locally:
 
 	npm run dev
 
---------------
 Code standards
 --------------
 
@@ -83,23 +80,19 @@ You can also find (and fix some) problems using the following command:
 
 	npm run lint
 
-===================
 Development process
 ===================
 
---------
 Branches
 --------
 Here is a summary of what different branches are used for.
 
-^^^^^^^^^^^^^
 Main branches
 ^^^^^^^^^^^^^
 
 There are two 'main' branches, ``main`` and ``next-release``. These branches can't be pushed to directly, instead you need to create a pull request.
 ``main`` is the branch for the current release cycle and ``next-release`` is for the next release cycle. You should only open a pull request to ``main`` if you are submitting a fix for bugfix release.
 
-^^^^^^^^^^^^^^^^^^^^
 Development branches
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -112,7 +105,6 @@ If you are developing a patch for the current release, you can use the same nami
 
 It doesn't really matter how you work in your fork, just make sure you open your pull request to the right branch (discussed further down in :ref:`about/contributing/webthrottle:opening a pull request`).
 
--------
 Commits
 -------
 
@@ -132,7 +124,6 @@ Or |br|
 If you feel able to, please consider signing your commits (See this guide if you want to have a go: `Verified commits - GitHub <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification>`_).
 
 
-======================
 Opening a pull request
 ======================
 

@@ -454,6 +454,7 @@
 <li><p><a class="reference internal" href="#command-language-api" id="id9">Command Language (API)</a></p></li>
 <li><p><a class="reference internal" href="#compatible-throttles-controllers" id="id10">Compatible Throttles (Controllers)</a></p></li>
 <li><p><a class="reference internal" href="#usb-wireless-bridge" id="id11">USB Wireless Bridge</a></p></li>
+<li><p><a class="reference internal" href="#wires-to-arduino-serial-port" id="id12">2 Wires to Arduino serial port</a></p></li>
 </ul>
 </div>
 </aside>
@@ -518,8 +519,8 @@
 <h2><a class="toc-backref" href="#id10">Compatible Throttles (Controllers)</a><a class="headerlink" href="#compatible-throttles-controllers" title="Permalink to this heading"></a></h2>
 <p>Here is a list of some of the throttles you can use with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. We work closely with developers to help them maintain compatibility with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. Check back on occasion, as new devices are being added all the time.</p>
 <p>For more information on any of these throttles, you can click on their links below or see our <a class="reference internal" href="../../throttles/index.html"><span class="doc">Throttles Page Index</span></a>.</p>
-<section id="our-webthrottle-ex-dcc-usb-serial">
-<h3>Our WebThrottle-EX (DCC++ | USB/Serial)<a class="headerlink" href="#our-webthrottle-ex-dcc-usb-serial" title="Permalink to this heading"></a></h3>
+<section id="our-ex-webthrottle-dcc-ex-usb-serial">
+<h3>Our EX-WebThrottle (DCC-EX | USB/Serial)<a class="headerlink" href="#our-ex-webthrottle-dcc-ex-usb-serial" title="Permalink to this heading"></a></h3>
 <p>The simplest option is to just use a throttle connected directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. The simplest of all is arguably <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> with the side menu open. You can click on the image to see it full size.</p>
 <a class="reference internal image-reference" href="../../_images/webthrottle1.jpg"><img alt="EX-WebThrottle" class="align-center" src="../../_images/webthrottle1.jpg" style="width: 546.4px; height: 307.20000000000005px;" /></a>
 <div class="line-block">
@@ -597,6 +598,26 @@
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/416">LOW - Controllers</a> - diagram needed for USB Wireless Bridge</p>
 </div>
 <p>For more information about all the throttles, see the <a class="reference internal" href="../../throttles/index.html"><span class="doc">Throttles Section</span></a>&gt;</p>
+</section>
+<section id="wires-to-arduino-serial-port">
+<h2><a class="toc-backref" href="#id12">2 Wires to Arduino serial port</a><a class="headerlink" href="#wires-to-arduino-serial-port" title="Permalink to this heading"></a></h2>
+<p>It’s also possible to connect a throttle or controller directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> serial port Tx/Rx pins if it uses a logic level serial connection. This would be a common option for DIY throttles based on other Arduino platforms.</p>
+<p>This is also the same method when using HC05/06 bluetooth devices, as outlined in <a class="reference internal" href="../../reference/hardware/bluetooth/hc-05-06.html"><span class="doc">HC-05/06 Bluetooth Modules</span></a>.</p>
+<p>If connecting to serial ports other than the default (eg. serial port 0 on the Mega2560), you will need to enable API commands for that specific serial port by editing your “config.h” file, and uncommenting the appropriate line. For example, to enable API commands on serial port 2, you need to uncomment this line:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define SERIAL2_COMMANDS</span>
+</pre></div>
+</div>
+<p>Once you have uploaded the software again with this defined in “config.h” and your throttle is connected correctly, it will be able to perform all normal throttle functions via serial port 2.</p>
+<p>Outside of physical connectivity considerations outlined below, the throttle developer should provide whatever other information is necessary to connect and use their throttle with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<section id="physical-connectivity-considerations">
+<h3>Physical connectivity considerations<a class="headerlink" href="#physical-connectivity-considerations" title="Permalink to this heading"></a></h3>
+<p>If connecting directly to Arduino pin serial ports, you need to ensure that the logic levels are compatible between the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and throttle. A 5V microcontroller connecting to a 3.3V microcontroller will likely lead to damage for the 3.3V microcontroller., so care must be taken here.</p>
+<p>A common microcontroller used for DIY throttles is the ESP32, which is a 3.3V device, so therefore care must be taken when connecting to a Mega2560 <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> as these are 5V devices.</p>
+<p>A simple resistor divider using a 1K and 2K resistor can solve this problem as per the provided diagram. Note, also, that the Tx pin of the throttle must connect to the Rx pin of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, and likewise the Rx pin to Tx pin.</p>
+<p>In this example, the ESP32’s pin 32 is used as the serial Tx pin, which connects directly to the Mega2560’s Rx2 pin. This doesn’t need a voltage divider, as the ESP32’s 3.3V output is sufficient to communicate with the Mega2560’s 5V input.</p>
+<p>The ESP32’s pin 33 is used as the serial Rx pin, which requires the resistor divider to protect it from the Mega2560’s 5V output. The 1K resistor connects to the Mega’s Tx2 pin with the 2K resistor to ground, and the ESP32’s pin 33 connecting to where the two resistors join.</p>
+<a class="reference internal image-reference" href="../../_images/mega-esp32-serial-connection.png"><img alt="Mega2560 serial to ESP32" src="../../_images/mega-esp32-serial-connection.png" style="width: 789.6px; height: 318.40000000000003px;" /></a>
+</section>
 </section>
 </section>
 

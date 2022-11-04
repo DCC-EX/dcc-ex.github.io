@@ -50,7 +50,7 @@ To make full use of |EX-TT|, you will need a basic understanding of :doc:`EX-RAI
 The |EX-TT| integration includes:
 
 * Support for an Arduino Nano or Uno
-* i2c device driver
+* |I2C| device driver
 * EX-RAIL automation support
 * Debug/test command (handy for tuning step positions)
 * Out-of-the-box support for several common stepper drivers and motors

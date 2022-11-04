@@ -42,10 +42,16 @@ Once VSCode has loaded the workspace, you should see a popup in the bottom right
 It's recommended you install these and they are:
 
 - `Volar <https://marketplace.visualstudio.com/items?itemName=Vue.volar>`_
-- `TypeScript Vue Plugin <https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin>`_
 - `Vuetify <https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode>`_
 - `ESLint <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>`_
 - `Spell Checker <https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker>`_
+
+You'll need to set up Volar to handle TypeScript, instead of the built in TypeScript extension. To do this, follow these steps:
+
+#. Open the command palette (:menuselection:`View --> Command Palette`)
+#. Run Extensions: Show Built-in Extensions command
+#. Find TypeScript and JavaScript Language Features, right click and select `Disable (Workspace)`
+#. Reload VSCode, and then open any vue file to trigger Volar activation (no longer need in 0.28.4).
 
 Next you'll need to install Node.js to run the development tools. Again, you can download it from their website `here <https://nodejs.org/en/>`_.
 We recommend you use the LTS version of Node.

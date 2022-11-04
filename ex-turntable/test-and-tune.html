@@ -148,9 +148,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -317,10 +317,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">i2c Hardware</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">I2C Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -764,7 +764,7 @@ Setting phase switch flag to: 0
 </div>
 <p>It is possible to use a rotary encoder to select turntable positions if desired, which is handy for use with mimic panels and so forth.</p>
 <p>There is an additional device driver available “IO_RotaryEncoder.h” which can be used with the rotary encoder software installed on a separate Arduino Nano or Uno that has the rotary encoder and an OLED display connected to it.</p>
-<p>In a similar manner to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> itself, the rotary encoder Arduino connects to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via I2C.</p>
+<p>In a similar manner to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> itself, the rotary encoder Arduino connects to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via I<sup>2</sup>C.</p>
 <section id="required-software">
 <h3><a class="toc-backref" href="#id13">Required software</a><a class="headerlink" href="#required-software" title="Permalink to this heading"></a></h3>
 <p>The rotary encoder software can be downloaded from:</p>
@@ -775,7 +775,7 @@ Setting phase switch flag to: 0
 </section>
 <section id="enabling-the-device-driver">
 <h3><a class="toc-backref" href="#id14">Enabling the device driver</a><a class="headerlink" href="#enabling-the-device-driver" title="Permalink to this heading"></a></h3>
-<p>The default I2C address for the rotary encoder is 0x80, and to enable this in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you need to ensure “myHal.ccp” has entries similar to this:</p>
+<p>The default I<sup>2</sup>C address for the rotary encoder is 0x80, and to enable this in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you need to ensure “myHal.ccp” has entries similar to this:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IO_RotaryEncoder.h&quot;</span><span class="cp"></span>
 
 <span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>

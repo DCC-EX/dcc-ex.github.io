@@ -148,9 +148,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -317,10 +317,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/index-i2c.html">i2c Hardware</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/index-i2c.html">I2C Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -498,7 +498,7 @@
 <section id="details-to-make-engineer-s-propellers-spin">
 <h2>Details to Make Engineer’s Propellers Spin<a class="headerlink" href="#details-to-make-engineer-s-propellers-spin" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<p>We needed a platform that would allow us to grow into the future. The first thing we found was that in order to allow easy changes and to be able to adapt to technology we might want to use going forward, the code needed to be more modular. Each unit needed to be a “black box” that either did just one task and did it well, or take input and generate output without having to know anything about the module it was communicating with. Therefore, we created an internal API through which the modules could communicate. By simply unplugging one unit and plugging in another we could continue to work using different devices. An example of this is input and output. It doesn’t matter whether <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> is sending commands to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> or if it is a wireless Cab Controller. It doesn’t matter if the output device is the serial monitor or an i2c display. It doesn’t matter if you want to use a serial port or a network device to route data. This makes it very easy to implement new features with new devices. We just have to create a small interface for whatever new device we want to implement. This has the side benefit of allowing the code to be more readable.</p>
+<p>We needed a platform that would allow us to grow into the future. The first thing we found was that in order to allow easy changes and to be able to adapt to technology we might want to use going forward, the code needed to be more modular. Each unit needed to be a “black box” that either did just one task and did it well, or take input and generate output without having to know anything about the module it was communicating with. Therefore, we created an internal API through which the modules could communicate. By simply unplugging one unit and plugging in another we could continue to work using different devices. An example of this is input and output. It doesn’t matter whether <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> is sending commands to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> or if it is a wireless Cab Controller. It doesn’t matter if the output device is the serial monitor or an I<sup>2</sup>C display. It doesn’t matter if you want to use a serial port or a network device to route data. This makes it very easy to implement new features with new devices. We just have to create a small interface for whatever new device we want to implement. This has the side benefit of allowing the code to be more readable.</p>
 <p>Next, the Waveform Generator needed 2 timers and interrupts, one for the Main track signal and one for the Programming track. The Uno only has 3 timers. So 2 of them were already tied up for sending the DCC signal. Since the programming track sits idle most of the time, and both signals were always being generated to the input of the motor board, processing power was being wasted that could be put to use for something else. In addition, because of the way the Arduino is designed, we were forced to use jumpers to connect pins on the Arduino to those on the motor board. Our new design eliminates the need for jumpers!</p>
 <p>The packet generation routine was complex, hard to maintain, and limited us with regard to the hardware we could run on and new features we could implement (like the Railcom cut-out). We replaced the slow DigitalRead() and DigitalWrite() routines with a fast write library. The packet generation is now streamlined, fast (which allows us to be able to use only 1 timer to create signals for 2 tracks), and much easier to read.</p>
 <p>We made a huge effort to streamline the code and optimize it for microcontrollers to use the limited memory we have available in the most efficient manner. The code is now object oriented and utilizes classes for readability and reusability. We eliminated almost all use of strings.</p>

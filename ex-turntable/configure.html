@@ -148,9 +148,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -317,10 +317,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">i2c Hardware</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">I2C Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -459,9 +459,9 @@
 <section id="i2c-address">
 <h3>I2C_ADDRESS<a class="headerlink" href="#i2c-address" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 0x60</cite></p>
-<p>This is the address that <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> will occupy on the i2c bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known i2c devices.</p>
-<p>If you need to change this for any reason, ensure that the i2c address in “myHal.cpp” in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software is also changed to the same value.</p>
-<p>Multiple instances of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> can be controlled by the same CommandStation by ensuring each has its own unique i2c address.</p>
+<p>This is the address that <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> will occupy on the I<sup>2</sup>C bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known i2c devices.</p>
+<p>If you need to change this for any reason, ensure that the I<sup>2</sup>C address in “myHal.cpp” in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software is also changed to the same value.</p>
+<p>Multiple instances of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> can be controlled by the same CommandStation by ensuring each has its own unique I<sup>2</sup>C address.</p>
 </section>
 <section id="turntable-ex-mode">
 <h3>TURNTABLE_EX_MODE<a class="headerlink" href="#turntable-ex-mode" title="Permalink to this heading"></a></h3>

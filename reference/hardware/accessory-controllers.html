@@ -27,7 +27,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Decoders" href="index-decoder.html" />
-    <link rel="prev" title="i2c Hardware" href="index-i2c.html" />
+    <link rel="prev" title="I2C Hardware" href="index-i2c.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -148,9 +148,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -317,10 +317,10 @@
 <li class="toctree-l4"><a class="reference internal" href="bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index-i2c.html">i2c Hardware</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index-i2c.html">I2C Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -452,10 +452,10 @@
 </aside>
 <section id="port-expanders">
 <h2><a class="toc-backref" href="#id1">Port Expanders</a><a class="headerlink" href="#port-expanders" title="Permalink to this heading"></a></h2>
-<p>Port expanders allow you to control more devices that you may have as GPIO pins on your Arduino. While a Mega does have quite a few inputs for sensors and outputs for LEDs, Relays, etc., <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> allows you to control many devices through its HAL feature. i2c (pronounced “I squared C”) is a serial bus that allows you to communicate with devices using only 2 pins on the Arduino. In this way, you can control 8 devices per board, times 8 boards. That gives you 64 pins from just 2!</p>
+<p>Port expanders allow you to control more devices that you may have as GPIO pins on your Arduino. While a Mega does have quite a few inputs for sensors and outputs for LEDs, Relays, etc., <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> allows you to control many devices through its HAL feature. I<sup>2</sup>C (pronounced “I squared C”) is a serial bus that allows you to communicate with devices using only 2 pins on the Arduino. In this way, you can control 8 devices per board, times 8 boards. That gives you 64 pins from just 2!</p>
 <section id="pca8574-port-expander">
 <h3>PCA8574 Port Expander<a class="headerlink" href="#pca8574-port-expander" title="Permalink to this heading"></a></h3>
-<p>8-Bit parallel i2c I/O expander board. Provides 8 GPIO pins per board. It is the same chip used in the piggyback boards on most of the LCD displays.
+<p>8-Bit parallel I<sup>2</sup>C I/O expander board. Provides 8 GPIO pins per board. It is the same chip used in the piggyback boards on most of the LCD displays.
 Be careful to NOT buy the piggyback boards as they have all the address pins pulled high and do not give access to the INT pin nor all of the GPIO pins - see below for more details.</p>
 <p>Each pin of the PCF8574 operates as an input or an output.  As an input, the pin is pulled up by
 a weak current source which cannot be turned off and should be pulled down to ground by the
@@ -470,7 +470,7 @@ be inverted (the LED will illuminate when the output is LOW and extinguish when 
 <p>or</p>
 <p><a class="reference external" href="https://www.diymore.cc/products/pcf8574-i2c-bus-evaluation-development-module-io-expansion-board-i-o-expander">DIYMORE PCF8574 IO Expansion Board</a></p>
 <p>The PCF8574 piggyback boards are designed for fitting to the back of an LCD screen, to allow the screen to be controlled via
-an i2c serial connection.  Consequently, there are some features which limit its usefulness for general purpose I/O.</p>
+an I<sup>2</sup>C serial connection.  Consequently, there are some features which limit its usefulness for general purpose I/O.</p>
 <ul class="simple">
 <li><p>Firstly, the address selectors (labelled A0-A2) are solder pads and so require a soldering iron to change them.  By default the address is set
 to 0x27 (no solder connection).</p></li>
@@ -496,7 +496,7 @@ pin is capable of directly (absolute maximum ratings 25V and 1.5A according to t
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index-i2c.html" class="btn btn-neutral float-left" title="i2c Hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index-i2c.html" class="btn btn-neutral float-left" title="I2C Hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="index-decoder.html" class="btn btn-neutral float-right" title="Decoders" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

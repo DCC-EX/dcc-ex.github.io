@@ -16,7 +16,7 @@ Time of Flight (or ToF) sensors can provide a more reliable and accurate sensor 
 
 Further to this, these sensors can be programmed to activate only within a specific distance range, enabling a large variety of use cases.
 
-|EX-CS| has support for the VL53L0X ToF sensor via the "IO_VL53L0X.h" HAL device driver which connects to the I2C bus of the CommandStation.
+|EX-CS| has support for the VL53L0X ToF sensor via the "IO_VL53L0X.h" HAL device driver which connects to the |I2C| bus of the CommandStation.
 
 .. image:: /_static/images/vl53l0x/vl53l0x.jpg
   :alt: VL53L0X sensor
@@ -36,12 +36,12 @@ For economy of memory and processing time, this driver includes only part of the
 Physical connection
 ===================
 
-Each VL53L0X device will, by default, reside on the same I2C address of 0x29, and therefore connecting multiple devices to the same I2C bus requires consideration and planning.
+Each VL53L0X device will, by default, reside on the same |I2C| address of 0x29, and therefore connecting multiple devices to the same |I2C| bus requires consideration and planning.
 
 Connecting a single device
 --------------------------
 
-Connecting a single device is a simple matter of connecting the SDA and SCL pins to the SDA and SCL pins of your |EX-CS|, or your I2C bus if you have multiple other devices connected.
+Connecting a single device is a simple matter of connecting the SDA and SCL pins to the SDA and SCL pins of your |EX-CS|, or your |I2C| bus if you have multiple other devices connected.
 
 .. warning:: 
 
@@ -78,7 +78,7 @@ The device driver allocates up to 3 vpins to each device:
 
 By default, the device takes around 60ms to complete a ranging operation, so we do a 100ms cycle (10 samples per second).
 
-The VL53L0X is initially set to respond to I2C address 0x29.  If you only have one module, you can use this address. However, the address can be modified by software.  If you select another address, that address will be written to the device and used until the device is reset.
+The VL53L0X is initially set to respond to |I2C| address 0x29.  If you only have one module, you can use this address. However, the address can be modified by software.  If you select another address, that address will be written to the device and used until the device is reset.
 
 To enable support for one or more devices, ensure the "IO_VL53L0X.h" device driver is included at the beginning of your "myHal.cpp" file:
 
@@ -108,7 +108,7 @@ Where:
 
 - firstVpin is an available vpin reserved for reading the device
 - nPins is 1, 2 or 3
-- i2cAddress is the address of the device (normally 0x29 - should be no need to change this for a single device)
+- i2cAddress is the |I2C| address of the device (normally 0x29 - should be no need to change this for a single device)
 - lowThreshold is the distance at which the digital vpin state is set to 1 (in mm)
 - highThreshold is the distance at which the digital vpin state is set to 0 (in mm)
 
@@ -127,9 +127,9 @@ Configuring multiple devices
 
 .. note:: 
 
-  When using multiple devices, do not configure any device to use the default I2C address of 0x29, as this address needs to be free in order to configure each device on startup.
+  When using multiple devices, do not configure any device to use the default |I2C| address of 0x29, as this address needs to be free in order to configure each device on startup.
 
-If you have more than one module, then you will need to specify a digital vpin (Arduino digital output or I/O expander pin) which you connect to the module's XSHUT pin.  When the device driver starts, the XSHUT pin is set LOW to turn the module off.  Once all VL53L0X modules are turned off, the driver works through each module in turn by setting XSHUT to HIGH to turn the module on, then writes the module's desired I2C address. In this way, many VL53L0X modules can be connected to the one I2C bus, each one using a distinct I2C address.
+If you have more than one module, then you will need to specify a digital vpin (Arduino digital output or I/O expander pin) which you connect to the module's XSHUT pin.  When the device driver starts, the XSHUT pin is set LOW to turn the module off.  Once all VL53L0X modules are turned off, the driver works through each module in turn by setting XSHUT to HIGH to turn the module on, then writes the module's desired |I2C| address. In this way, many VL53L0X modules can be connected to the one |I2C| bus, each one using a distinct |I2C| address.
 
 Each device needs its own specific entry in "myHal.cpp", and requires an additional argument to specify the digital vpin that connects to the device's XSHUT pin.
 
@@ -150,7 +150,7 @@ Where:
 - highThreshold is the distance at which the digital vpin state is set to 0 (in mm)
 - xshutPin is the vpin number corresponding to either a direct I/O pin or an I/O pin on an I/O expander
 
-For example, these entries configure two devices on vpins 4000 and 4003, with I2C addresses 0x30 and 0x31. The device at 0x30 is connected directly to an Arduino Mega2560's digital pin 22, and the device at 0x31 is connected to the first digital I/O pin of the first MCP23017 device at vpin 164. A digital read of each of the device's vpins will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:
+For example, these entries configure two devices on vpins 4000 and 4003, with |I2C| addresses 0x30 and 0x31. The device at 0x30 is connected directly to an Arduino Mega2560's digital pin 22, and the device at 0x31 is connected to the first digital I/O pin of the first MCP23017 device at vpin 164. A digital read of each of the device's vpins will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:
 
 Note the second sensor starts at vpin 4003 as the first sensor consumes vpins 4000, 4001, and 4002.
 

@@ -3,7 +3,7 @@
 |EX-REF-LOGO|
 
 ************
-i2c Hardware
+I2C Hardware
 ************
 
 .. toctree::

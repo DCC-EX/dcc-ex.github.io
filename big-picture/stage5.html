@@ -148,9 +148,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -317,10 +317,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">i2c Hardware</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">i2c Displays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">i2c Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">i2c GPIO Expander Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">I2C Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 </ul>
 </li>
@@ -531,7 +531,7 @@
 </div>
 <p>Now that the basics of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> have been completed and it is ready to be added to our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, we need to get it connected ready for action.</p>
 <p>Firstly, our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> needs to be prepared by ensuring the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> device driver is loaded. This is covered in <a class="reference internal" href="../ex-turntable/assembly.html#add-the-ex-turntable-device-driver-to-ex-commandstation"><span class="std std-ref">8. Add the EX-Turntable device driver to EX-CommandStation</span></a>.</p>
-<p>Next, we need to connect <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> to our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> which requires a connection to the i2c interface, and it’s a good idea to make sure <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is turned on before <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> to ensure it’s detected successfully at startup. This is covered in <a class="reference internal" href="../ex-turntable/assembly.html#connect-ex-turntable-to-your-ex-commandstation"><span class="std std-ref">9. Connect EX-Turntable to your EX-CommandStation</span></a>.</p>
+<p>Next, we need to connect <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> to our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> which requires a connection to the I<sup>2</sup>C interface, and it’s a good idea to make sure <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is turned on before <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> to ensure it’s detected successfully at startup. This is covered in <a class="reference internal" href="../ex-turntable/assembly.html#connect-ex-turntable-to-your-ex-commandstation"><span class="std std-ref">9. Connect EX-Turntable to your EX-CommandStation</span></a>.</p>
 <p>Expand “myHal.cpp” to see the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> HAL configuration file required to add the turntable.</p>
 <details class="summary-myhal-cpp-for-the-turntable">
 <summary>"myHal.cpp" for the turntable</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if !defined(IO_NO_HAL)</span>
@@ -571,8 +571,8 @@
 <p class="admonition-title">Tip</p>
 <p>It is highly recommended to make use of the <a class="reference internal" href="../ex-turntable/traverser.html#sensor-testing-mode"><span class="std std-ref">Sensor testing mode</span></a> to validate both the home and limit sensors are working correctly when in traverser mode.</p>
 </div>
-<p>Firstly, you will note in the list of assumptions above that we stopped one step earlier in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> assembly process at step 6, and that’s because we need to ensure our traverser is available at a different i2c address and on a different Vpin to our turntable to ensure they are controlled independently of each other.</p>
-<p>To achieve this, we will be using the i2c address <code class="docutils literal notranslate"><span class="pre">0x61</span></code> and will be assigning the Vpin <code class="docutils literal notranslate"><span class="pre">601</span></code>.</p>
+<p>Firstly, you will note in the list of assumptions above that we stopped one step earlier in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> assembly process at step 6, and that’s because we need to ensure our traverser is available at a different I<sup>2</sup>C address and on a different Vpin to our turntable to ensure they are controlled independently of each other.</p>
+<p>To achieve this, we will be using the I<sup>2</sup>C address <code class="docutils literal notranslate"><span class="pre">0x61</span></code> and will be assigning the Vpin <code class="docutils literal notranslate"><span class="pre">601</span></code>.</p>
 <p>So, in order to complete <a class="reference internal" href="../ex-turntable/assembly.html#load-the-ex-turntable-software"><span class="std std-ref">7. Load the EX-Turntable software</span></a>, the value for <code class="docutils literal notranslate"><span class="pre">I2C_ADDRESS</span></code> in the “config.h” file needs to be changed to <code class="docutils literal notranslate"><span class="pre">0x61</span></code>, and of course the <code class="docutils literal notranslate"><span class="pre">TURNTABLE_EX_MODE</span></code> needs to be set to <code class="docutils literal notranslate"><span class="pre">TRAVERSER</span></code>.</p>
 <p>As we are continuing to use the default ULN2003/28BYJ-48 stepper driver and motor combo for our traverser, nothing else needs to change.</p>
 <p>Once we have noted these changes, we can proceed with <a class="reference internal" href="../ex-turntable/assembly.html#load-the-ex-turntable-software"><span class="std std-ref">7. Load the EX-Turntable software</span></a>, using the updated values in the “config.h” file.</p>
@@ -595,7 +595,7 @@
 </details><div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Once again, as we did with the turntable, we need to add the traverser device to our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, and this is where we need to specify both the updated i2c address of <code class="docutils literal notranslate"><span class="pre">0x61</span></code> and the updated Vpin of <code class="docutils literal notranslate"><span class="pre">601</span></code> to ensure we are adding this as a second device that does not conflict with the turntable.</p>
+<p>Once again, as we did with the turntable, we need to add the traverser device to our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, and this is where we need to specify both the updated I<sup>2</sup>C address of <code class="docutils literal notranslate"><span class="pre">0x61</span></code> and the updated Vpin of <code class="docutils literal notranslate"><span class="pre">601</span></code> to ensure we are adding this as a second device that does not conflict with the turntable.</p>
 <p>As per the turntable section, these changes need to be incorporated into the process outlined in <a class="reference internal" href="../ex-turntable/assembly.html#add-the-ex-turntable-device-driver-to-ex-commandstation"><span class="std std-ref">8. Add the EX-Turntable device driver to EX-CommandStation</span></a> in order to add the traverser device driver to our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <p>Expand “myHal.cpp” to see the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> HAL configuration file required to add both the turntable and traverser.</p>
 <details class="summary-myhal-cpp-for-the-turntable-and-traverser">

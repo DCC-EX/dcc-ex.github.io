@@ -355,7 +355,7 @@ It is possible to use a rotary encoder to select turntable positions if desired,
 
 There is an additional device driver available "IO_RotaryEncoder.h" which can be used with the rotary encoder software installed on a separate Arduino Nano or Uno that has the rotary encoder and an OLED display connected to it.
 
-In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to the |EX-CS| via I2C.
+In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to the |EX-CS| via |I2C|.
 
 Required software
 -----------------
@@ -377,7 +377,7 @@ This can be downloaded from:
 Enabling the device driver
 --------------------------
 
-The default I2C address for the rotary encoder is 0x80, and to enable this in your |EX-CS|, you need to ensure "myHal.ccp" has entries similar to this:
+The default |I2C| address for the rotary encoder is 0x80, and to enable this in your |EX-CS|, you need to ensure "myHal.ccp" has entries similar to this:
 
 .. code-block:: cpp
 

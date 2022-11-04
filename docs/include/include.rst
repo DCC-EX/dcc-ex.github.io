@@ -53,6 +53,8 @@
    
    <span style="color:red">This feature is not available in the current 'Production' version</span>
 ..
+.. |I2C| replace:: I\ :sup:`2`\ C
+..
 .. ................................................
 ..
 .. |EX-CS-LOGO| image:: /_static/images/logos/product-logo-ex-commandstation.png

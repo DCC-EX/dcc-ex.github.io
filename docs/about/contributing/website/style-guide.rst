@@ -63,6 +63,7 @@ Style Guidelines
   * \|Access Point\|
   * \|Access Point Mode\|
   * \|Station Mode\|
+  * \|I2C\| (note this has no link, it simply replaces 'I2C' with |I2C|)
 
 * Avoid abbreviations that would not be easily recognised by 'Conductors'.  
 

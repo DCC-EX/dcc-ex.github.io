@@ -29,11 +29,11 @@ I2C_ADDRESS
 
 `Default: 0x60`
 
-This is the address that |EX-TT| will occupy on the i2c bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known i2c devices.
+This is the address that |EX-TT| will occupy on the |I2C| bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known i2c devices.
 
-If you need to change this for any reason, ensure that the i2c address in "myHal.cpp" in the |EX-CS| software is also changed to the same value.
+If you need to change this for any reason, ensure that the |I2C| address in "myHal.cpp" in the |EX-CS| software is also changed to the same value.
 
-Multiple instances of |EX-TT| can be controlled by the same CommandStation by ensuring each has its own unique i2c address.
+Multiple instances of |EX-TT| can be controlled by the same CommandStation by ensuring each has its own unique |I2C| address.
 
 TURNTABLE_EX_MODE
 -----------------

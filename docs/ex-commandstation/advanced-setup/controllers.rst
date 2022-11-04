@@ -224,4 +224,10 @@ A common microcontroller used for DIY throttles is the ESP32, which is a 3.3V de
 
 A simple resistor divider using a 1K and 2K resistor can solve this problem as per the provided diagram. Note, also, that the Tx pin of the throttle must connect to the Rx pin of the |EX-CS|, and likewise the Rx pin to Tx pin.
 
-<Fritzing here>
+In this example, the ESP32's pin 32 is used as the serial Tx pin, which connects directly to the Mega2560's Rx2 pin. This doesn't need a voltage divider, as the ESP32's 3.3V output is sufficient to communicate with the Mega2560's 5V input.
+
+The ESP32's pin 33 is used as the serial Rx pin, which requires the resistor divider to protect it from the Mega2560's 5V output. The 1K resistor connects to the Mega's Tx2 pin with the 2K resistor to ground, and the ESP32's pin 33 connecting to where the two resistors join.
+
+.. image:: /_static/images/throttles/mega-esp32-serial-connection.png
+   :alt: Mega2560 serial to ESP32
+   :scale: 40%

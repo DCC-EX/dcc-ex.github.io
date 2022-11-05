@@ -2,7 +2,6 @@
 .. include:: /include/include-l2.rst
 |EX-CONTRIBUTING-LOGO|
 
-
 *******************************
 Contributing to EX-WebThrottle2
 *******************************
@@ -26,7 +25,6 @@ This page should give a step by step guide to contributing, from getting the too
 - Create commits
 - Open a pull request
 
-===============
 Developer tools
 ===============
 
@@ -34,17 +32,17 @@ Developer tools
 	You may want to have a look at our page on :doc:`/about/contributing/software` and also our page on :doc:`/about/contributing/github` if you've never used git or GitHub before
 
 We strongly recommend using Visual Studio Code (VSCode) to work on EX-WebThrottle2. 
-You can download it from Microsoft's website `here <https://code.visualstudio.com/>`_.
+You can download it from Microsoft's website `here <https://code.visualstudio.com/>`__.
 Whilst you are waiting for it to install, you can be getting a local copy of the code.
 
 Once you have downloaded VSCode and installed it, open VSCode then click :menuselection:`File --> Open Workspace from file...` then find your local copy of the code and select "EX-WebThrottle2.code-workspace". 
 Once VSCode has loaded the workspace, you should see a popup in the bottom right asking you if you want to install the recommended extensions. 
 It's recommended you install these and they are:
 
-- `Volar <https://marketplace.visualstudio.com/items?itemName=Vue.volar>`_
-- `Vuetify <https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode>`_
-- `ESLint <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>`_
-- `Spell Checker <https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker>`_
+- `Volar <https://marketplace.visualstudio.com/items?itemName=Vue.volar>`__
+- `Vuetify <https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode>`__
+- `ESLint <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>`__
+- `Spell Checker <https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker>`__
 
 You'll need to set up Volar to handle TypeScript, instead of the built in TypeScript extension. To do this, follow these steps:
 
@@ -53,7 +51,7 @@ You'll need to set up Volar to handle TypeScript, instead of the built in TypeSc
 #. Find TypeScript and JavaScript Language Features, right click and select `Disable (Workspace)`
 #. Reload VSCode, and then open any vue file to trigger Volar activation (no longer need in 0.28.4).
 
-Next you'll need to install Node.js to run the development tools. Again, you can download it from their website `here <https://nodejs.org/en/>`_.
+Next you'll need to install Node.js to run the development tools. Again, you can download it from their website `here <https://nodejs.org/en/>`__.
 We recommend you use the LTS version of Node.
 
 Once Node is installed, open a terminal in VSCode (:menuselection:`Terminal --> New terminal`) and run the following command to install all the dependencies:
@@ -69,11 +67,10 @@ Then to run the code locally:
 
 	npm run dev
 
---------------
 Code standards
 --------------
 
-For EX-WebThrottle2, we follow the `Google Style Guides <https://google.github.io/styleguide/>`_, specifically the `HTML/CSS <https://google.github.io/styleguide/htmlcssguide.html>`_ and `TypeScript <https://google.github.io/styleguide/tsguide.html>`_ style guides. 
+For EX-WebThrottle2, we follow the `Google Style Guides <https://google.github.io/styleguide/>`__, specifically the `HTML/CSS <https://google.github.io/styleguide/htmlcssguide.html>`__ and `TypeScript <https://google.github.io/styleguide/tsguide.html>`__ style guides. 
 This means we use a indent of two spaces and single quotes for strings. 
 Also, although semicolons are optional in Javascript, we have configured the linter to enforce semicolons. 
 If you have installed the recommended extensions, VSCode should highlight problems for you. 
@@ -83,23 +80,19 @@ You can also find (and fix some) problems using the following command:
 
 	npm run lint
 
-===================
 Development process
 ===================
 
---------
 Branches
 --------
 Here is a summary of what different branches are used for.
 
-^^^^^^^^^^^^^
 Main branches
 ^^^^^^^^^^^^^
 
 There are two 'main' branches, ``main`` and ``next-release``. These branches can't be pushed to directly, instead you need to create a pull request.
 ``main`` is the branch for the current release cycle and ``next-release`` is for the next release cycle. You should only open a pull request to ``main`` if you are submitting a fix for bugfix release.
 
-^^^^^^^^^^^^^^^^^^^^
 Development branches
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -112,7 +105,6 @@ If you are developing a patch for the current release, you can use the same nami
 
 It doesn't really matter how you work in your fork, just make sure you open your pull request to the right branch (discussed further down in :ref:`about/contributing/webthrottle:opening a pull request`).
 
--------
 Commits
 -------
 
@@ -129,10 +121,9 @@ An example would be: |br|
 Or |br|
 *Fix: button now works (#52)*
 
-If you feel able to, please consider signing your commits (See this guide if you want to have a go: `Verified commits - GitHub <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification>`_).
+If you feel able to, please consider signing your commits (See this guide if you want to have a go: `Verified commits - GitHub <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification>`__).
 
 
-======================
 Opening a pull request
 ======================
 

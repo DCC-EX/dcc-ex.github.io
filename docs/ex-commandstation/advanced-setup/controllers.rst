@@ -96,7 +96,7 @@ Here is a list of some of the throttles you can use with |EX-CS|. We work closel
 
 For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.
 
-Our WebThrottle-EX (DCC++ | USB/Serial)
+Our EX-WebThrottle (DCC-EX | USB/Serial)
 ----------------------------------------
 
 The simplest option is to just use a throttle connected directly to the |EX-CS|. The simplest of all is arguably |EX-WT|, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of |EX-WT| with the side menu open. You can click on the image to see it full size.
@@ -197,3 +197,37 @@ The USB Wireless Bridge is a pair of small, inexpensive devices that let you rep
 .. todo:: `LOW - Controllers <https://github.com/DCC-EX/dcc-ex.github.io/issues/416>`_ - diagram needed for USB Wireless Bridge
 
 For more information about all the throttles, see the :doc:`Throttles Section </throttles/index>`>
+
+2 Wires to Arduino serial port
+==============================
+
+It's also possible to connect a throttle or controller directly to the |EX-CS| serial port Tx/Rx pins if it uses a logic level serial connection. This would be a common option for DIY throttles based on other Arduino platforms.
+
+This is also the same method when using HC05/06 bluetooth devices, as outlined in :doc:`/reference/hardware/bluetooth/hc-05-06`.
+
+If connecting to serial ports other than the default (eg. serial port 0 on the Mega2560), you will need to enable API commands for that specific serial port by editing your "config.h" file, and uncommenting the appropriate line. For example, to enable API commands on serial port 2, you need to uncomment this line:
+
+.. code-block:: cpp
+
+   #define SERIAL2_COMMANDS
+
+Once you have uploaded the software again with this defined in "config.h" and your throttle is connected correctly, it will be able to perform all normal throttle functions via serial port 2.
+
+Outside of physical connectivity considerations outlined below, the throttle developer should provide whatever other information is necessary to connect and use their throttle with your |EX-CS|.
+
+Physical connectivity considerations
+------------------------------------
+
+If connecting directly to Arduino pin serial ports, you need to ensure that the logic levels are compatible between the |EX-CS| and throttle. A 5V microcontroller connecting to a 3.3V microcontroller will likely lead to damage for the 3.3V microcontroller., so care must be taken here.
+
+A common microcontroller used for DIY throttles is the ESP32, which is a 3.3V device, so therefore care must be taken when connecting to a Mega2560 |EX-CS| as these are 5V devices.
+
+A simple resistor divider using a 1K and 2K resistor can solve this problem as per the provided diagram. Note, also, that the Tx pin of the throttle must connect to the Rx pin of the |EX-CS|, and likewise the Rx pin to Tx pin.
+
+In this example, the ESP32's pin 32 is used as the serial Tx pin, which connects directly to the Mega2560's Rx2 pin. This doesn't need a voltage divider, as the ESP32's 3.3V output is sufficient to communicate with the Mega2560's 5V input.
+
+The ESP32's pin 33 is used as the serial Rx pin, which requires the resistor divider to protect it from the Mega2560's 5V output. The 1K resistor connects to the Mega's Tx2 pin with the 2K resistor to ground, and the ESP32's pin 33 connecting to where the two resistors join.
+
+.. image:: /_static/images/throttles/mega-esp32-serial-connection.png
+   :alt: Mega2560 serial to ESP32
+   :scale: 40%

@@ -53,7 +53,12 @@ Either using the |EX-I| to the Arduino IDE.
     - Go to Question 3.
     - ToDo
   
-  * - 3. ToDo?
+  * - 3. Do you receive a message starts with "Failed to download..."
+    - Go to Question 4.
+    - (a) Your PC may not have an internet connection. 
+      (b) Your PC's firewall software may be stopping the installer from accessing the internet. Temporarily disable the firewall, or create an exception for EX-Installer. |br| |br| An internet connection is required to download some files.      
+  
+  * - 4. ToDo?
     - ToDo.
     - ToDo
 

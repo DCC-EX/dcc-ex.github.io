@@ -58,7 +58,7 @@ New all-in-one EX-CommandStation
   * Manufactured in different countries with partners
   * WiFi, Bluetooth onboard
   * Use ESP32 as WiFi and optional Ethernet bridge using AT commands
-  * i2c, CAN and SPI onboard
+  * |I2C|, CAN and SPI onboard
   * Add RailCom support - Combine main and prog RX signals
   * Add Layout Bus support for LCC
   * Work with Smart Hobby to release LCN (Layout Control Nodes)

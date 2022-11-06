@@ -18,4 +18,5 @@ Here you'll find all the necessary resources and information for contributing to
   requirements
   software
   development
+  webthrottle
   website/index

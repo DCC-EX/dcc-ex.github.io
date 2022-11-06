@@ -3,7 +3,7 @@
 |EX-REF-LOGO|
 
 ***************************
-i2c GPIO Expander Modules
+I2C GPIO Expander Modules
 ***************************
 
 |tinkerer| |engineer|
@@ -53,7 +53,7 @@ Here is another module, from DFRobot:
 This module has a row of three pin headers associated with each I/O pin; this allows
 each sensor to have its own GND, VCC and signal pin connection, so we can use three-way 
 ribbon connectors for each sensor or output.  At the far left of the board are the 
-i2c connector pins; there is also what appears to be a Grove connector at the right side of the board.
+|I2C| connector pins; there is also what appears to be a Grove connector at the right side of the board.
 
 An example of circuit connections for a module is shown below:
 
@@ -71,7 +71,7 @@ a breadboard for use, as shown below, or on stripboard if you want a more perman
     :alt: MCP23017 on a Breadboard
     :scale: 30%
  
-Pins 15-17 of the MCP23017 allow selection of the i2c address.  If all three pins are connected
+Pins 15-17 of the MCP23017 allow selection of the |I2C| address.  If all three pins are connected
 to ground (as shown in the diagram with cyan wires) then the address will be 0x20.
 In |EX-CS|, the sixteen GPIO pins on MCP23017 address 0x20 are accessed using pin numbers
 164 to 179, so to associate a sensor object with the switch we would use a command in the form 
@@ -84,7 +84,7 @@ pin is active.  When the switch is released, the input pin is pulled back to HIG
 Interrupts
 ===========
 
-Many i2c GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
+Many |I2C| GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
 expander chip to notify the microcontroller that one or more inputs have changed state.
 
 |EX-CS| supports the use of these pins.  On controllers with INTA and INTB, the two pins should be connected together

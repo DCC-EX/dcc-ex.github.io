@@ -142,7 +142,7 @@ Summary table of all connections required during assembly:
       - A5 S or SCL
     * - CommandStation GND
       - GND
-      - A4 G or I2C GND
+      - A4 G or |I2C| GND
 
 Loading EX-Turntable for traverser mode
 ========================================

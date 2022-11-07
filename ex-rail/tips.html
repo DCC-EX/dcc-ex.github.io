@@ -570,8 +570,8 @@
 <p>Firstly, note the “#define”. This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.</p>
 <p>The entire macro needs to be on a single line, hence the addition of the backslash “\” at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line while allowing things to be more readable for us humans.</p>
 <p>Here’s an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Define a pulse time of 25ms to activate the coil
-#define PULSE 2
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Define a pulse time of 50ms to activate the coil
+#define PULSE 50
 
 // Define a macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
 // This macro:
@@ -598,7 +598,7 @@ ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &q
 <p>Typically, you would define a pin turnout with the PIN_TURNOUT command, however in this example we need a CLOSE or THROW sent to these turnouts to do more than just set a pin high or low, hence the need for the macro.</p>
 <p>Here’s the line by line explanation:</p>
 <ul class="simple">
-<li><p>A pulse time of 25ms reliably switches the turnouts.</p></li>
+<li><p>A pulse time of 50ms reliably switches the turnouts.</p></li>
 <li><p>Define the ROKUHANTURNOUT macro, providing parameters for the turnout ID, direction pin, enable or pulse pin, a description, and an alias name.</p></li>
 <li><p>Create a PIN_TURNOUT that is advertised to WiThrottles using the provided turnout ID and description, with the pin set to 0 as this is not used.</p></li>
 <li><p>Create the provided alias for the turnout ID.</p></li>

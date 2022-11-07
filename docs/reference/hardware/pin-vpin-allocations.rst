@@ -26,6 +26,16 @@ Mega2560
   :alt: Mega2560 Pin Recommendations
   :scale: 40%
 
+.. list-table:: Pins to avoid
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Pin(s)
+    - Description
+  * - 1
+    - A pin
+
 Uno
 ---
 

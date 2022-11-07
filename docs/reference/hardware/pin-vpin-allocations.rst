@@ -19,14 +19,62 @@ On this page, we aim to outline and summarise the various default and recommende
 Microcontrollers
 ================
 
+This section outlines pins to avoid, pins that are free to use, and pins that are to be used with caution for each of our primary supported microcontrollers.
+
+.. image:: /_static/images/pinouts/pin-legend.png
+  :alt: Pinout legend
+  :scale: 100%
+
 Mega2560
 --------
 
-.. image:: /_static/images/pinouts/mega2560-pin-recommendations.png
-  :alt: Mega2560 Pin Recommendations
-  :scale: 40%
+.. raw:: html
+  :file: ../../_static/images/pinouts/mega2560-pins.svg
 
-.. list-table:: Pins to avoid
+.. list-table:: Mega2560 Pins to avoid
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Pin(s)
+    - Details
+  * - A0 - A1
+    - Analogue I/O pins used for current sensing
+  * - 3 - 4
+    - Digital I/O pins commonly used by...
+  * - 10 - 13
+    - Digial I/O pins commonly used by...
+  * - 50 - 53
+    - Digital I/O pins reserved for...
+
+
+.. list-table:: Mega2560 Pins to use
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Pin(s)
+    - Details
+  * - 1
+    - A pin
+
+.. list-table:: Mega2560 Pins to use with caution
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Pin(s)
+    - Details
+  * - 1
+    - A pin
+
+Uno
+---
+
+.. raw:: html
+  :file: ../../_static/images/pinouts/uno-pins.svg
+
+.. list-table:: Uno Pins to avoid
   :widths: auto
   :header-rows: 1
   :class: command-table
@@ -36,12 +84,25 @@ Mega2560
   * - 1
     - A pin
 
-Uno
----
+.. list-table:: Uno Pins to use
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
 
-.. image:: /_static/images/pinouts/uno-pin-recommendations.png
-  :alt: Uno Pin Recommendations
-  :scale: 40%
+  * - Pin(s)
+    - Description
+  * - 1
+    - A pin
+
+.. list-table:: Uno Pins to use with caution
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Pin(s)
+    - Description
+  * - 1
+    - A pin
 
 I/O expanders
 =============

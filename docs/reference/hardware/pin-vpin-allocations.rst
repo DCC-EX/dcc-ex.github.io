@@ -19,7 +19,7 @@ On this page, we aim to outline and summarise the various default and recommende
 Microcontrollers
 ================
 
-This section outlines pins to avoid, pins that are free to use, and pins that are to be used with caution for each of our primary supported microcontrollers.
+This section outlines pins to avoid, pins that are free to use, and pins that are to be used with caution for each of our primary supported microcontrollers. The pins are grouped as such:
 
 .. image:: /_static/images/pinouts/pin-legend.png
   :alt: Pinout legend
@@ -39,13 +39,13 @@ Mega2560
   * - Pin(s)
     - Details
   * - A0 - A1
-    - Analogue I/O pins used for current sensing
+    - Analogue I/O pins used for main and program track current sensing
   * - 3 - 4
-    - Digital I/O pins commonly used by...
+    - Digital I/O pins commonly used by motor shields or Ethernet shields
   * - 10 - 13
-    - Digial I/O pins commonly used by...
+    - Digial I/O pins commonly used by motor shields
   * - 50 - 53
-    - Digital I/O pins reserved for...
+    - Digital I/O pins reserved for special system utilities
 
 
 .. list-table:: Mega2560 Pins to use
@@ -55,8 +55,16 @@ Mega2560
 
   * - Pin(s)
     - Details
-  * - 1
-    - A pin
+  * - SDA/SCL
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+  * - Tx1/Rx1/Tx2/Rx2/Tx3/Rx3
+    - Additional serial ports available for use
+  * - A8 - A15
+    - Analogue I/O pins available for use
+  * - 2
+    - Digital I/O pin available for use
+  * - 22 - 49
+    - Digital I/O pins available for use
 
 .. list-table:: Mega2560 Pins to use with caution
   :widths: auto
@@ -65,8 +73,14 @@ Mega2560
 
   * - Pin(s)
     - Details
-  * - 1
-    - A pin
+  * - A2 - A7
+    - Analogue I/O pins available by default, but may be in use for additional current sensing
+  * - Tx0/Rx0
+    - Can be used for WiFi or Bluetooth adapters but coexists with onboard USB and will need to be disconnected for software uploads
+  * - 5 - 9
+    - Digital I/O pins available by default, but some motor shields or other peripherals use these
+
+-
 
 Uno
 ---

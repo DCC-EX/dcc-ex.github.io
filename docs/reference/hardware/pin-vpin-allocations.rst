@@ -133,6 +133,12 @@ Arduino Uno
 I/O expanders
 =============
 
+.. note:: 
+
+  If using an |I2C| LCD display with the PCF8574 backpack, it is possible that it resides at |I2C| address 0x27. If this is the case, you need to either not use any other devices at this address, change the PCF8574 address to 0x3F (if possible), or replace it. OLEDs typically use address 0x3C, so should not cause issues.
+
+  Refer to :doc:`/reference/hardware/i2c-displays` for further information.
+
 MCP23017 digital I/O expander
 -----------------------------
 

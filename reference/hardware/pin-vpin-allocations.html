@@ -619,6 +619,11 @@
 <hr class="docutils" />
 <section id="i-o-expanders">
 <h2><a class="toc-backref" href="#id19">I/O expanders</a><a class="headerlink" href="#i-o-expanders" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If using an I<sup>2</sup>C LCD display with the PCF8574 backpack, it is possible that it resides at I<sup>2</sup>C address 0x27. If this is the case, you need to either not use any other devices at this address, change the PCF8574 address to 0x3F (if possible), or replace it. OLEDs typically use address 0x3C, so should not cause issues.</p>
+<p>Refer to <a class="reference internal" href="i2c-displays.html"><span class="doc">I2C Displays</span></a> for further information.</p>
+</div>
 <section id="mcp23017-digital-i-o-expander">
 <h3><a class="toc-backref" href="#id20">MCP23017 digital I/O expander</a><a class="headerlink" href="#mcp23017-digital-i-o-expander" title="Permalink to this heading"></a></h3>
 <p>MCP23017 I/O expanders have 16 digital I/O pins and 8 available I<sup>2</sup>C addresses from 0x20 to 0x27.</p>

@@ -194,7 +194,8 @@ Flow control functions
     * -  IFGREEN( signal_id )
       -  Tests if signal is green
     * -  IFRE( id, value )
-      -  Tests if a rotary encoder is at the specified position |BR| |NOT-IN-PROD-VERSION|
+      -  | Tests if a rotary encoder is at the specified position
+         | |NOT-IN-PROD-VERSION|
     * -  ELSE
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
@@ -213,9 +214,11 @@ Command Station functions
     * -  EX-RAIL Functions
       -  Description
     * -  POWERON
-      -  Power on track, will UNJOIN programming from main |BR| |NOT-IN-PROD-VERSION|
+      -  | Power on track, will UNJOIN programming from main
+         | |NOT-IN-PROD-VERSION|
     * -  POWEROFF
-      -  Power off track |BR| |NOT-IN-PROD-VERSION|
+      -  | Power off track
+         | |NOT-IN-PROD-VERSION|
     * -  JOIN
       -  Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
     * -  UNJOIN
@@ -268,15 +271,12 @@ EX-RAIL functions
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
     * -  PARSE ( command_string)
-      -  Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
-         
-         This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly.
-         
-         |NOT-IN-PROD-VERSION|
+      -  | Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
+         | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly.
+         | |NOT-IN-PROD-VERSION|     
     * -  DRIVE( analog_pin )
-      -  ***Under Construction*** Not complete, DO NOT USE 
-         
-         |NOT-IN-PROD-VERSION|
+      -  | ***Under Construction*** Not complete, DO NOT USE 
+         | |NOT-IN-PROD-VERSION|
 
 |
 
@@ -363,7 +363,8 @@ Event handlers
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
     * -  ONCHANGE( id )
-      -  Event handler for a sensor changing state |BR| |NOT-IN-PROD-VERSION|
+      -  | Event handler for a sensor changing state
+         | |NOT-IN-PROD-VERSION|
 
 |
 

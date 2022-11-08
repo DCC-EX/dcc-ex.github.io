@@ -154,7 +154,8 @@ Refer to :ref:`reference/developers/hal-config:mcp23017 modules` and :ref:`refer
     - Comments
   * - 0x20
     - 164 - 179
-    - Defined by default, typically default |I2C| address on breakout boards
+    - | Defined by default, default |I2C| address on some breakout boards
+      | Some breakout boards (eg. Waveshare) have 0x27 as default and will need to be changed
   * - 0x21
     - 180 - 195
     - Defined by default, address typically needs to be configured on breakout boards

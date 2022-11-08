@@ -596,7 +596,7 @@ EX-RAIL Functions
 
 ``AUTOSTART``	A task is automatically started at this point during startup
 
-``DRIVE( analog_pin )``	Not complete, DO NOT USE
+``DRIVE( analog_pin )``	Not complete, DO NOT USE |BR| |NOT-IN-PROD-VERSION|
 
 ``ROSTER( cab, name, func_map )``	Provide roster info for WiThrottle
 

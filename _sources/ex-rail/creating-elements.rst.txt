@@ -335,7 +335,7 @@ Adding the Hardware -  Sensors
 
 On the Mega2560 Processor board: 
 
-Place IR Infrared or Optical Sensor's Output wire on Dpins 22, 23, 24 ... 62. Plus one wire to GND and a third wire to 5v.
+Place IR Infrared or Optical Sensor's Output wire on Dpins 22, 23, 24 ... 49. Plus one wire to GND and a third wire to 5v.
 
 .. image:: /_static/images/ir-sensor/mega-with-ir-sensor.png
    :alt: IR Sensor connected to Arduino mega
@@ -347,12 +347,14 @@ If you need more sensors then there are available pins on the Mega, you use one 
    :alt: IR Sensor connected to Arduino mega via IO Expander
    :scale: 30%
 
+.. todo:: HIGH - Link here to recommended pin/vpin allocations etc.
+
 Configure myAutomation.h - Sensors
 ----------------------------------
 
 You don't actually require anything special to be added to myAutomation.h in advance of using them in an sequence.
 
-Handling sensors in sequences is made easy because |EX-R| throws away the concept of interrupts (“oh… sensor 5 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 5 triggers, and then carry on in the script”.
+Handling sensors in sequences is made easy because |EX-R| throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.
 
 Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. 
 
@@ -361,12 +363,11 @@ Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardw
    
    Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.
 
-|EX-CS| allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-5)``.
+|EX-CS| allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-22)``.
 
-Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(5) LATCH(5)`` for example effectively latches the sensor 5 on when detected once.
+Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(22) LATCH(22)`` for example effectively latches the sensor 22 on when detected once.
 
 Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.
-
 
 ----
 

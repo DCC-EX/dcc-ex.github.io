@@ -194,7 +194,8 @@ Flow control functions
     * -  IFGREEN( signal_id )
       -  Tests if signal is green
     * -  IFRE( id, value )
-      -  Tests if a rotary encoder is at the specified position |BR| |NOT-IN-PROD-VERSION|
+      -  | Tests if a rotary encoder is at the specified position
+         | |NOT-IN-PROD-VERSION|
     * -  ELSE
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
@@ -213,9 +214,11 @@ Command Station functions
     * -  EX-RAIL Functions
       -  Description
     * -  POWERON
-      -  Power on track, will UNJOIN programming from main
+      -  | Power on track, will UNJOIN programming from main
+         | |NOT-IN-PROD-VERSION|
     * -  POWEROFF
-      -  Power off track
+      -  | Power off track
+         | |NOT-IN-PROD-VERSION|
     * -  JOIN
       -  Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
     * -  UNJOIN
@@ -362,7 +365,8 @@ Event handlers
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
     * -  ONCHANGE( id )
-      -  Event handler for a sensor changing state |BR| |NOT-IN-PROD-VERSION|
+      -  | Event handler for a sensor changing state
+         | |NOT-IN-PROD-VERSION|
 
 |
 

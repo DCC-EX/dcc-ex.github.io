@@ -555,9 +555,9 @@ Blocks
 Command Station Functions
 ==========================
 
-``POWERON`` Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of EX-CommandStation
+``POWERON`` Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of EX-CommandStation |BR| |NOT-IN-PROD-VERSION|
 
-``POWEROFF``	Power off track
+``POWEROFF``	Power off track |BR| |NOT-IN-PROD-VERSION|
 
 ``JOIN``	Joins PROG and MAIN track outputs to send the same MAIN DCC signal
 

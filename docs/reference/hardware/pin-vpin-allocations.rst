@@ -80,6 +80,8 @@ Arduino Mega2560
   * - 5 - 9
     - Digital I/O pins available by default, but some motor shields or other peripherals use these
 
+----
+
 Arduino Uno
 -----------
 
@@ -126,6 +128,8 @@ Arduino Uno
   * - 5 - 9
     - Digital I/O pins available by default, but some motor shields or other peripherals use these
 
+----
+
 I/O expanders
 =============
 
@@ -166,6 +170,8 @@ When adding more MCP23017s, select an unused VPin that allows a total of 16 cons
     - 16
     - Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
 
+----
+
 MCP23008 digital I/O expander
 -----------------------------
 
@@ -189,6 +195,8 @@ When adding MCP23008s, select an unused VPin that allows a total of 8 consecutiv
     - | Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
       | May need to disable default MCP23017s if 0x20/0x21 are used
 
+----
+
 PCF8574 digital I/O expander
 ----------------------------
 
@@ -211,6 +219,8 @@ When adding PCF8574s, select an unused VPin that allows a total of 8 consecutive
     - 8
     - | Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
       | May need to disable default MCP23017s if 0x20/0x21 are used
+
+----
 
 PCA9685 PWM servo module
 ------------------------
@@ -249,37 +259,84 @@ When adding more PCA9685s, select an unused VPin that allows a total of 16 conse
     - 16
     - Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
 
+----
+
 Sensors
 =======
-
-HCSR04 ultrasonic sensor
-------------------------
-
-.. todo:: `LOW - HCSR04 details <https://github.com/DCC-EX/dcc-ex.github.io/issues/477>`_ - need to understand how this connects etc.
 
 VL53L0X time-of-flight sensor
 -----------------------------
 
 VL53L0X time-of-flight sensors have a default |I2C| address of 0x29, however this address is programmable by software.
 
+The device driver name is "IO_VL53L0X.h" and will need to be included in "myHal.cpp".
+
 Refer to :doc:`/ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor` for further information.
 
-Other
-=====
+.. list-table:: Adding VL53L0Xs
 
-DFPlayer MP3 player
--------------------
+  * - |I2C| address range
+    - Suggested first VPin
+    - VPin count
+    - Comments
+  * - 0x29 - 0x7F
+    - 4000
+    - 3
+    - Need to add to myHal.cpp, do not use |I2C| address 0x29 if using multiple devices
+
+----
+
+Other devices
+=================
 
 EX-Turntable
 ------------
 
-0x60
-600
+.. note:: 
+
+  |EX-TT| is in Beta testing, however the device driver is unlikely to change much if at all.
+
+|EX-TT| is configured with a default |I2C| address of 0x60, however this address is configurable by the software.
+
+The device driver name is "IO_EXTurntable.h" and will need to be included in "myHal.cpp".
+
+Refer to :doc:`/ex-turntable/index` for further information.
+
+.. list-table:: Adding EX-Turntable
+
+  * - |I2C| address and range
+    - Suggested VPin
+    - VPin count
+    - Comments
+  * - 0x60 default, any valid and available |I2C| address
+    - 600
+    - 1
+    - Need to add to myHal.cpp, and use the specified version of |EX-CS|
+
+----
 
 DCC-EX rotary encoder
 ---------------------
 
 |NOT-IN-PROD-VERSION|
 
-0x80
-700
+.. note:: 
+
+  The rotary encoder device driver is in early development and is likely to change.
+
+The DCC-EX rotary encoder is configured with a default |I2C| address of 0x80, however this address is configurable by the software.
+
+The device driver name is "IO_RotaryEncoder.h" and will need to be included in "myHal.cpp".
+
+Refer to :ref:`ex-turntable/test-and-tune:controlling ex-turntable with a rotary encoder` and the `project page <https://petegsx-projects.github.io/rotary-encoder/index.html>`_ for further information.
+
+.. list-table:: Adding DCC-EX rotary encoder
+
+  * - |I2C| address and range
+    - Suggested VPin
+    - VPin count
+    - Comments
+  * - 0x80 default, any valid and available |I2C| address
+    - 800
+    - 1
+    - Need to add to myHal.cpp, and use the specified version of |EX-CS|

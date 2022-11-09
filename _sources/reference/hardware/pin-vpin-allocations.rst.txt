@@ -55,7 +55,9 @@ Arduino Mega2560
 
   * - Pin(s)
     - Details
-  * - SDA/SCL
+  * - SDA/SCL (20/21)
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+  * - SDA/SCL (near USB)
     - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
   * - Tx1/Rx1/Tx2/Rx2/Tx3/Rx3
     - Additional serial ports available for use
@@ -109,7 +111,9 @@ Arduino Uno
 
   * - Pin(s)
     - Details
-  * - SDA/SCL
+  * - SDA/SCL (A4/A5)
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+  * - SDA/SCL (near USB)
     - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
   * - 2
     - Digital I/O pin available for use
@@ -121,7 +125,7 @@ Arduino Uno
 
   * - Pin(s)
     - Details
-  * - A2 - A5
+  * - A2 - A3
     - Analogue I/O pins available by default, but may be in use for additional current sensing
   * - Tx0/Rx0
     - Can be used for WiFi or Bluetooth adapters but coexists with onboard USB and will need to be disconnected for software uploads
@@ -232,7 +236,7 @@ When adding PCF8574s, select an unused VPin that allows a total of 8 consecutive
 PCA9685 PWM servo module
 ------------------------
 
-PCA9685 servo modules (or I/O expanders) have 16 PWM output pins and 8 available |I2C| addresses from 0x40 to 0x47.
+PCA9685 servo modules (or I/O expanders) have 16 PWM output pins and 62 available |I2C| addresses from 0x40 to 0x7D.
 
 The device driver name is "IO_PCA9685.cpp", however this is loaded by default and does not need to be added to "myHal.cpp".
 
@@ -262,7 +266,7 @@ When adding more PCA9685s, select an unused VPin that allows a total of 16 conse
   * - |I2C| address range
     - VPin count
     - Comments
-  * - 0x42 - 0x47
+  * - 0x42 - 0x7D
     - 16
     - Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
 

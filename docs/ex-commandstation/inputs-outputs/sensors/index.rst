@@ -13,5 +13,6 @@ There is quite a variety of sensors available, and we aim to outline options her
 .. toctree::
   :maxdepth: 1
     
+  which-sensor-type
   ir-sensor
   vl53l0x-tof-sensor

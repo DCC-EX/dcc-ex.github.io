@@ -15,6 +15,7 @@ These pages outline the various different options available to expand the capabi
 .. toctree:: 
   :maxdepth: 1
 
+  /reference/hardware/pin-vpin-allocations
   sensors/index
   /reference/hardware/i2c-devices
   /reference/hardware/i2c-displays

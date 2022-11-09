@@ -159,8 +159,8 @@ Here's an example for driving single coil Rokuhan turnouts that require the coil
 
 .. code-block::
 
-  // Define a pulse time of 25ms to activate the coil
-  #define PULSE 2
+  // Define a pulse time of 50ms to activate the coil
+  #define PULSE 50
 
   // Define a macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
   // This macro:
@@ -187,7 +187,7 @@ Typically, you would define a pin turnout with the PIN_TURNOUT command, however 
 
 Here's the line by line explanation:
 
-* A pulse time of 25ms reliably switches the turnouts.
+* A pulse time of 50ms reliably switches the turnouts.
 * Define the ROKUHANTURNOUT macro, providing parameters for the turnout ID, direction pin, enable or pulse pin, a description, and an alias name.
 * Create a PIN_TURNOUT that is advertised to WiThrottles using the provided turnout ID and description, with the pin set to 0 as this is not used.
 * Create the provided alias for the turnout ID.

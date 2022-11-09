@@ -20,6 +20,7 @@ Hardware
     :maxdepth: 1
     
     microcontroller-boards
+    pin-vpin-allocations
     motor-boards
     wifi-boards
     ethernet-boards

@@ -95,12 +95,20 @@ As an initial check we recommend you should try to connect to your EX-CommandSta
     - (a) EX-CommandStation not connected to your **PC** via USB.
       (b) Software may not have loaded correctly. Try loading the EX-CommandStation software again.
 
-  * - 3. When you select a loco and move the throttle, do the LEDs on the Motor Board light up?
-    - Congratulations, your |EX-CS| is essentially working.
+  * - 3. When you click the power on slider, it should say power on. |br| Do the 4 LEDs on the motor board turn on and stay on?
+    - Go to Question 4.
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
       (b) Have you made sure the polarity of the power supply is correct.
-      (c) Wrong loco DCC Address selected.
-      (d) loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco is being damaged.)
+
+      |br| Do the 4 LEDs on the motor board turn on briefly, then turn off?
+
+      (c) there is a short circuit on the track.
+      (d) there is a short circuit in the loco.
+
+  * - 5. When you select a loco and move the throttle, does the loco move?
+    - Congratulations, your |EX-CS| is essentially working.
+    - (a) Wrong loco DCC Address selected.
+      (b) loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco is being damaged.)
 
 |
 

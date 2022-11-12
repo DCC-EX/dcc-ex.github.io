@@ -63,6 +63,7 @@ Pages *generally* follow the basic structure:
   * `Product Icon`_ (where appropriate)
   * `Page Heading`_
   * `Comfort Level Logos`_
+  * `GitHub Issues Link`_
   * `On This Page - Table of Contents`_ (on longer pages with multiple headings)
   * `Page Content`_
     * `Page Heading <Headings and Sub Headings>`_
@@ -195,6 +196,25 @@ Only if really necessary use image tags:
     :scale: 40%
 
 Refer to :ref:`about/contributing/website/basic-rst:images` below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the |EX-TT| :doc:`/ex-turntable/assembly` page.
+
+----
+
+GitHub Issues Link
+------------------
+
+It is recommended to include links to the appropriate product's GitHub issue templates by using the appropriate expansion on the same line as the comfort level expansions.
+
+* \|githublink-ex-turntable\|
+* \|githublink-ex-turntable-button\|
+* \|githublink-ex-turntable-button2\|
+* \|githublink-ex-dccinspector-button\|
+* \|githublink-ex-dccinspector-button2\|
+* \|githublink-ex-webthrottle-button\|
+* \|githublink-ex-webthrottle-button2\|
+* \|githublink-ex-installer-button\|
+* \|githublink-ex-installer-button2\|
+* \|githublink-ex-commandstation-button\|
+* \|githublink-ex-commandstation-button2\|
 
 ----
 

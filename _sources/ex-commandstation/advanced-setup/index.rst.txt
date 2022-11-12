@@ -7,13 +7,13 @@
 Advanced Options
 ****************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |githublink-ex-commandstation-button2|
 
 .. sidebar::
 
-    .. contents:: On this page
-        :depth: 1
-        :local:
+  .. contents:: On this page
+      :depth: 1
+      :local:
 
 These pages describe the major supported hardware options for building a |EX-CS|, along with some guidance for some of the unsupported options. They are primarily targeted at |tinkerer-text| and |engineer-text| level.  However there are some options that are suitable for a |conductor-text|.  If however, you identify as a |conductor-text| and only wish to install the recommended hardware we suggest that you look at the simplified :doc:`/ex-commandstation/get-started/index` page.
 
@@ -51,9 +51,9 @@ Whilst the Uno and Nano options are fairly popular and also relatively simple, t
 The other item of specific note is the Mega2560 + WiFi which, while appearing a good alternative to a standard Mega2560, suffers from quality control issues, and numerous users have had poor experiences getting this to function correctly. While this option is supported, it is definitely *buyer beware!*
 
 .. toctree::
-    :maxdepth: 2
-    
-    supported-microcontrollers/index
+  :maxdepth: 2
+  
+  supported-microcontrollers/index
 
 
 Motor Drivers
@@ -64,9 +64,9 @@ As with microcontrollers, there is a selection of supported motor drivers to cho
 However, if you need more current than these can provide, then you need to consider the IBT_2 or IRF3205 options.
 
 .. toctree::
-    :maxdepth: 2
-    
-    /reference/hardware/motor-boards
+  :maxdepth: 2
+  
+  /reference/hardware/motor-boards
 
 Connection Options
 ==================
@@ -96,10 +96,10 @@ A WiFi connection can provide this network connection, either in |Access Point M
 To use WiFi, you will need something other than an Uno or Nano with a connected WiFi shield or board. Follow the links below to understand the supported options.
 
 .. toctree::
-    :maxdepth: 2
-    
-    supported-connections/index
-    supported-wifi/index
+  :maxdepth: 2
+  
+  supported-connections/index
+  supported-wifi/index
 
 Ethernet
 --------
@@ -107,17 +107,17 @@ Ethernet
 If you prefer a physical network connection, you will need an Ethernet shield or board to provide a network connection for |wiThrottle| apps or |Engine Driver| to connect to.
 
 .. toctree::
-    :maxdepth: 2
-    
-    supported-ethernet/index
+  :maxdepth: 2
+  
+  supported-ethernet/index
 
 Bluetooth
 ---------
 
 .. toctree::
-    :maxdepth: 1
-    
-    /reference/hardware/bluetooth
+  :maxdepth: 1
+  
+  /reference/hardware/bluetooth
 
 LCD/OLED Screens
 ================
@@ -138,9 +138,9 @@ The simplest option, requiring only a simple download, is to use |EX-I|. There a
 The Arduino IDE requires some software to be installed on your computer, however due to the flexibility this provides can be a better alternative than |EX-I|.
 
 .. toctree::
-    :maxdepth: 2
-    
-    installation-options/index
+  :maxdepth: 2
+  
+  installation-options/index
 
 
 Startup Configuration
@@ -151,9 +151,9 @@ In general, modifying the startup configuration should not be required.
 However, there are occasions when the startup configuration does need modification to ensure any changed parameters persist after the |EX-CS| is shutdown or restarted. These changes are usually as a result of a conversation with the developers.
 
 .. toctree::
-    :maxdepth: 1
-    
-    startup-config
+  :maxdepth: 1
+  
+  startup-config
 
 Throttle (Controller) Options
 =============================
@@ -163,16 +163,32 @@ If you wish to take your |EX-CS| experience further, then there are various diff
 These tend to be aimed more at the |tinkerer-text| and |engineer-text| levels.
 
 .. toctree::
-    :maxdepth: 2
-    
-    controllers
+  :maxdepth: 2
+  
+  controllers
 
 
-DCC++ Commands
-==============
+DCC-EX Commands
+===============
 
 .. toctree::
-    :maxdepth: 1
+  :maxdepth: 1
 
-    /reference/software/command-reference
-    /reference/software/command-summary
+  /reference/software/command-reference
+  /reference/software/command-summary
+
+*Under Development:* Track Manager (formerly DC Districts)
+==========================================================
+
+.. note:: 
+
+  |NOT-IN-PROD-VERSION|
+  
+  Track Manager (formerly known as DC Districts) is a new feature under development to control up to 8 tracks (or districts) with the option to run each as either a DCC main or programming track, or a DC track.
+
+  As this is under active development, changes will happen regularly, so it's best to keep up to date with any discussions via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
+
+.. toctree:: 
+  :maxdepth: 1
+
+  track-manager

@@ -76,35 +76,39 @@
    :target: ../levels.html#tinkerer
 ..
 .. |engineer-no-text| image:: /_static/images/level_icons/engineer.png
-   :alt: Engineer Hat
-   :scale: 40%
-   :target: ../levels.html#engineer
+  :alt: Engineer Hat
+  :scale: 40%
+  :target: ../levels.html#engineer
 ..
 .. |conductor-text| raw:: html
 
-   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#conductor">Conductor</a>
+  <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#conductor">Conductor</a>
 ..
 .. |tinkerer-text| raw:: html
 
-   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#tinkerer">Tinkerer</a>
+  <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#tinkerer">Tinkerer</a>
 ..
 .. |engineer-text| raw:: html
 
-   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#engineer">Engineer</a>
+  <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../levels.html#engineer">Engineer</a>
 ..
 .. |githublink-ex-turntable-button2| raw:: html
 
-   <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
+  <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
 ..
 .. |githublink-ex-dccinspector-button2| raw:: html
 
-   <a href="https://github.com/DCC-EX/DCCInspector-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
+  <a href="https://github.com/DCC-EX/DCCInspector-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
 ..
 .. |githublink-ex-webthrottle-button2| raw:: html
 
-   <a href="https://github.com/DCC-EX/WebThrottle-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
+  <a href="https://github.com/DCC-EX/WebThrottle-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
 ..
 .. |githublink-ex-installer-button2| raw:: html
 
-   <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
+  <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
+..
+.. |githublink-ex-commandstation-button2| raw:: html
+
+  <a href="https://github.com/DCC-EX/CommandStation-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
 ..

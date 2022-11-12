@@ -80,6 +80,12 @@ Hall effect sensors consist of a hall effect device mounted between the track ra
   * - Can be used to detect a train entering or exiting a specific point on a layout (caveat being the point at which the magnet is attached)
     - Can only detect the point at which the magnet is attached, not the front/rear of a train
 
+.. note:: 
+
+  It's been observed that the reliability of hall effect sensors can be improved by connecting them to MCP23017 I/O expanders and using the interrupt capability rather than simply letting the polling cycles detect the sensor changes.
+
+  Refer to :ref:`reference/developers/hal:hal programming interface` for further information on using the interrupt pin.
+
 Block occupancy detectors
 =========================
 

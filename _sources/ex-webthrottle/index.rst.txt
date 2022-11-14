@@ -151,7 +151,7 @@ The options button lets you save labels to go on your function buttons for each 
 Going Further / Developing
 ===========================
 
-If you want to really delve into how this works and help us improve it with your comments or your development skills, please contact us.
+If you want to really delve into how this works and help us improve it with your comments or your development skills, please contact us. You can also read through our :doc:`/about/contributing/webthrottle` page for info on preparing to view and contribute to the code.
 
 To load the Chrome DevTools to look at logging and be able to manually enter "write" commands for testing, click on the Menu (the 3 vertical dots in the upper right hand corner of the Chrome Window), then select "more tools" and then "Developer Tools". Or you can just hit "Ctrl-Shift-I".
 

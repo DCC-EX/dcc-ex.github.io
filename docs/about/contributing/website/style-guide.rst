@@ -121,4 +121,3 @@ Style Guidelines
   * Paragraph break that a 'float right' element must not be placed before a point use **\|force-break\|**  |br| useful if the 'float right' element is being placed beside another 'float right' element, rather than below.
 
 * To add a horizontal line, use **\-\-\-\-** (four hypens) on its own line
-* 

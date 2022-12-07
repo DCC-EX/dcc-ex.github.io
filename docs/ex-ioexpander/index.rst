@@ -124,6 +124,18 @@ DIAG
 
 Uncommenting this line will enable extra diagnostic output to the serial console to help with diagnosis and troubleshooting in the event issues are encountered.
 
+DIAG_CONFIG_DELAY
+-----------------
+
+.. code-block:: cpp
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  //  Delay between dumping the status of the port config if DIAG enabled
+  // 
+  #define DIAG_CONFIG_DELAY 3000
+
+When :ref:`ex-ioexpander/index:diag` is enabled, the configuration of each pin is displayed continuously to be able to monitor the configuration and state of each pin. By default, this will display every 3 seconds (3000ms). This configuration item allows the delay between updates to be increased or decreased.
+
 Looking for some help with EX-IOExpander?
 ===========================================
 

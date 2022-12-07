@@ -28,6 +28,7 @@ breaking |EX-CS| for other users.  So there are various drivers available for yo
 * |I2C|-connected Analogue input modules (ADS111x);
 * Serial-port-connected DFPlayer MP3 player;
 * Ultrasound proximity detector (HC-SR04);
+* :doc:`/ex-ioexpander/index`
 
 and others.
 

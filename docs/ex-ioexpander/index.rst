@@ -15,7 +15,11 @@ EX-IOExpander
 
   |EX-IO| is currently in its infancy and as such is considered to be in Alpha testing, so could (and likely will) change without notice, and possibly even be broken in some scenarios.
 
-|EX-IO| is an additional microcontroller utilised to expand the I/O port capability of an |EX-CS|, currently emulating the functionality of the MCP23017 I/O expander, and connecting to the |EX-CS| via |I2C|.
+|NOT-IN-PROD-VERSION|
+
+|EX-IO| is an additional microcontroller utilised to expand the I/O port capability of an |EX-CS| and connecting via |I2C|.
+
+|EX-IO| can utilise digital input and output pins as well as analogue input pins, depending on the chosen microcontroller.
 
 .. sidebar:: Credits
 
@@ -24,7 +28,14 @@ EX-IOExpander
 Software requirements
 =====================
 
-There are currently no special requirements for the |EX-CS| version, and the |EX-IO| software can be found here:
+To utilise |EX-IO|, you must be running the "add-ex-ioexpander" branch of |EX-CS| which is available here:
+
+.. rst-class:: dcclink
+
+  `EX-CommandStation with EX-IOExpander device driver <https://github.com/DCC-EX/CommandStation-EX/tree/add-ex-ioexpander>`_
+
+
+In addition, you will require the |EX-IO| software which can be found here:
 
 .. rst-class:: dcclink
 
@@ -33,36 +44,57 @@ There are currently no special requirements for the |EX-CS| version, and the |EX
 Hardware requirements
 =====================
 
-|EX-IO| needs a dedicated, AVR based microcontroller (Arduino Uno or Nano at present) with up to 16 I/O pins available.
+|EX-IO| needs a dedicated microcontroller connected to the |I2C| bus of your |EX-CS|.
 
-Using microcontrollers with less than 16 pins is possible, as the pins in use are configurable, however, microcontrollers with more than 16 pins will currently only be able to utilise up to 16 pins.
-
-By implementing items such as the :ref:`ex-ioexpander/index:pin map` to disconnect the physical pin numbers from the virtual pins (VPins) used in the device driver, it is expected that this would be portable to other hardware platforms in due course.
+In the current implementation, the only supported microcontrollers are Arduino Uno, Nano, and Mega. The device driver and |EX-IO| software are being written in such a way that should enable porting to other microcontroller architectures, and is expected to support up to 256 I/O pins.
 
 Theory of operation
 ===================
 
-In the current implementation, |EX-IO| simply replicates the functionality of an MCP23017, however it does not have interrupt capability enabled, so it must operate in polling mode only in the same manner as the default defined MCP23017 devices.
+In the current implementation, |EX-IO| can utilise digital pins in both input and output mode, and analogue pins in input mode. Digital pins in input mode can have pullups enabled or disabled.
 
-This means inputs and outputs can be defined, configured, and connected in the same manner as an MCP23017. Inputs can be utilised with or without pullups enabled.
+Pins capable of both digital and analogue can be used for either purpose.
 
 Configuration
 =============
 
-Like |EX-CS|, |EX-TT|, and other |DCC-EX| products, configuration changes for |EX-IO| are made by editing "config.h". Again, like other products, an example "config.example.h" file is included that can be copied and edited to suit.
+Aside from configuring the |I2C| address of your |EX-IO| device, the device driver loaded in your |EX-CS| will perform the necessary run time configuration at startup, meaning you should only ever need to update the |EX-IO| software when a new version is available.
+
+Configuration changes for |EX-IO| are made by editing a "myConfig.h" file. An example "myConfig.example.h" file is included that can be copied and edited to suit. The only configuration item you should really need to consider is :ref:`ex-ioexpander/index:i2c_address`.
 
 EX-CommandStation device driver
 -------------------------------
 
-To enable support for |EX-IO|, you need to enable this via "myHal.cpp" in your |EX-CS|. This simply utilises the existing "IO_MCP23017.h" device driver, so the only modification required is to add the entry to create the device:
+To enable support for |EX-IO|, you need to enable this via "myHal.cpp" in your |EX-CS|. You will need to load the |EX-IO| device driver in addition to creating the device(s).
+
+To create the |EX-IO| device, the syntax is `EXIOExpander::create(vpin, npins, address, digital_pins, analogue_pins);` where:
+
+- vpin = An unused vpin
+- npins = Total number of vpins to assign to the device (must equal digital_pins + analogue_pins)
+- address = An available |I2C| address (default 0x65)
+- digital_pins = The number of digital pins to enable
+- analogue_pins = The number of analogue pins to enable
+
+To use default configurations for the various supported platforms, macros have been defined to utilise all available digital and analogue pins for these platforms:
+
+- EXIO_UNO_DIGITAL_PINS - D2 - D13 on Uno
+- EXIO_UNO_ANALOGUE_PINS - A0 - A3 on Uno
+- EXIO_NANO_DIGITAL_PINS - D2 - D13 on Nano
+- EXIO_NANO_ANALOGUE_PINS - A0 - A3, A6/A7 on Nano
+- EXIO_MEGA_DIGITAL_PINS - D2 - D19, D22 - D49 on Mega
+- EXIO_MEGA_ANALOGUE_PINS - A0 - A15 on Mega
+
+In the example below, we will configure an Arduino Nano using the default pin counts at address 0x65, with an additional device using all available digital capable pins and no analogue pins at address 0x66.
 
 .. code-block:: cpp
 
-  MCP23017::create(800, 16, 0x90);
+  #include "IO_EXIOExpander.h"
 
-In this example, unused VPin 800 is used as the first VPin, with all 16 pins assigned, and using the default |I2C| address of 0x90.
-
-Note that the number of pins defined here must match :ref:`ex-ioexpander/index:number_of_pins`.
+  void halSetup() {
+    ...
+    EXIOExpander::create(800, 18, 0x65, EXIO_NANO_DIGITAL_PINS, EXIO_NANO_ANALOGUE_PINS);
+    EXIOExpander::create(820, 16, 0x66, 16, 0);
+  }
 
 I2C_ADDRESS
 -----------
@@ -71,46 +103,11 @@ I2C_ADDRESS
 
   /////////////////////////////////////////////////////////////////////////////////////
   //  Define I2C address
-  //  Default 0x90, can be any valid, available I2C address
+  //  Default 0x65, can be any valid, available I2C address
   // 
-  #define I2C_ADDRESS 0x90
+  #define I2C_ADDRESS 0x65
 
-The default |I2C| address of 0x90 should be available, however this can be changed to any available address, and must match the device driver configuration in "myHal.cpp".
-
-NUMBER_OF_PINS
---------------
-
-.. code-block:: cpp
-
-  /////////////////////////////////////////////////////////////////////////////////////
-  //  Define the number of I/O pins to use
-  //  16 pins is the maximum here
-  #define NUMBER_OF_PINS 16
-
-The default is 16 pins, which is also the maximum. If using less, reduce this number to suit, noting it must match the number of pins specified in :ref:`ex-ioexpander/index:ex-commandstation device driver`, and you must specify the correct number of pins in :ref:`ex-ioexpander/index:pin map`.
-
-If simply utilising an Uno or Nano as a direct MCP23017 replacement, you should not need to adjust this.
-
-Pin map
--------
-
-.. code-block:: cpp
-
-  /////////////////////////////////////////////////////////////////////////////////////
-  //  Define the pin map
-  //  Defining a pin map should allow portability to other platforms
-  // 
-  //  You must define the correct number of ports as per NUMBER_OF_PINS above
-  //
-  static uint8_t pinMap[NUMBER_OF_PINS] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, A0, A1, A2, A3};
-
-This is used to map the physical microcontroller pins to the VPins defined by the device driver.
-
-From left to right maps from the first to last VPin, so in our example in :ref:`ex-ioexpander/index:ex-commandstation device driver` starting with VPin 800, this will map to pin 2, with the last VPin 815 mapping to pin A3.
-
-Note that this line contains a specific C++ syntax, and the only values that should be touched are the pin numbers themselves.
-
-If simply utilising an Uno or Nano as a direct MCP23017 replacement, you should not need to adjust this.
+The default |I2C| address of 0x65 should be available, however this can be changed to any available address, and must match the device driver configuration in "myHal.cpp".
 
 DIAG
 ----

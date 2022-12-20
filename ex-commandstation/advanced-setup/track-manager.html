@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
+<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Under Development: Track Manager &mdash; DCC-EX Model Railroading  documentation</title>
@@ -23,6 +23,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -451,14 +452,14 @@
 <h1><em>Under Development:</em> Track Manager<a class="headerlink" href="#under-development-track-manager" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="https://github.com/DCC-EX/CommandStation-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#hardware-requirements" id="id1">Hardware requirements</a></p></li>
 <li><p><a class="reference internal" href="#track-manager-commands" id="id2">Track Manager commands</a></p></li>
 <li><p><a class="reference internal" href="#note-on-pwm-frequency" id="id3">Note on PWM frequency</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -469,13 +470,13 @@
 <p>Formerly referred to as “DC Districts”, Track Manager is a new feature under active development to allow an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> with the correct hardware and software to control up to 8 separate tracks in different modes including DCC main, DCC programming, and DC.</p>
 <p>One key item to note with DC vs. DCC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.</p>
 <section id="hardware-requirements">
-<h2><a class="toc-backref" href="#id1">Hardware requirements</a><a class="headerlink" href="#hardware-requirements" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Hardware requirements</a><a class="headerlink" href="#hardware-requirements" title="Permalink to this heading"></a></h2>
 <p>In order to utilise Track Manager’s DC mode, your motor shield must have a brake pin, and this must be defined in your “config.h” motor shield definition.</p>
 <p>If you are using a non-standard motor shield, you will need to validate if it is capable of this configuration. We will populate the list of compatible motor shields over time.</p>
 <p>If your intention is only to have multiple DCC main or programming tracks, this is not required.</p>
 </section>
 <section id="track-manager-commands">
-<h2><a class="toc-backref" href="#id2">Track Manager commands</a><a class="headerlink" href="#track-manager-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Track Manager commands</a><a class="headerlink" href="#track-manager-commands" title="Permalink to this heading"></a></h2>
 <p>To configure Track Manager, a new command <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">mode</span> <span class="pre">[id]&gt;</span></code> has been added, where:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">trackletter</span></code> is A through H</p></li>
@@ -496,7 +497,7 @@
 </div>
 </section>
 <section id="note-on-pwm-frequency">
-<h2><a class="toc-backref" href="#id3">Note on PWM frequency</a><a class="headerlink" href="#note-on-pwm-frequency" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Note on PWM frequency</a><a class="headerlink" href="#note-on-pwm-frequency" title="Permalink to this heading"></a></h2>
 <p>Different microcontrollers utilise different PWM frequencies, and at present, these default frequencies are in use rather than using software to define them.</p>
 <p>The side effect of these differing frequencies is that you may notice humming or sometimes squealing noises from older DC motors.</p>
 <p>The known PWM frequencies are:</p>

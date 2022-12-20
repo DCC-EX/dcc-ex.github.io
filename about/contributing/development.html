@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>Contributing to the Hardware &amp; Software<a class="headerlink" href="#contributing-to-the-hardware-software" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#bug-fixes-features-and-releases" id="id1">Bug fixes, features, and releases</a></p></li>
@@ -463,12 +464,12 @@
 </li>
 <li><p><a class="reference internal" href="#third-party-libraries" id="id7">Third-party libraries</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This page aims to outline what’s required for those who wish to contribute to software development.</p>
 <p>If you haven’t done so already, make sure you are familiar with how we use <a class="reference internal" href="github.html"><span class="doc">GitHub</span></a> and are familiar with our <a class="reference internal" href="software.html"><span class="doc">Recommended Software</span></a>.</p>
 <section id="bug-fixes-features-and-releases">
-<h2><a class="toc-backref" href="#id1">Bug fixes, features, and releases</a><a class="headerlink" href="#bug-fixes-features-and-releases" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Bug fixes, features, and releases</a><a class="headerlink" href="#bug-fixes-features-and-releases" title="Permalink to this heading"></a></h2>
 <p>As mentioned earlier, we expect contributors to follow Git best practices when working on our various repositories.</p>
 <ul class="simple">
 <li><p>When working on new features or bug fixes, create a branch.</p></li>
@@ -477,7 +478,7 @@
 </ul>
 </section>
 <section id="level-of-c-understanding-required">
-<h2><a class="toc-backref" href="#id2">Level of C++ understanding required</a><a class="headerlink" href="#level-of-c-understanding-required" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Level of C++ understanding required</a><a class="headerlink" href="#level-of-c-understanding-required" title="Permalink to this heading"></a></h2>
 <p>As a general rule, writing software in C++ for the Arduino platform is fairly simple, with plenty of tutorials and guides available on the internet to help get started.</p>
 <p>However, the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> codebase is written using various techniques to fit as much capability as possible into the very limited Arduino AVR architecture and memory limits that are available, and it’s important to understand the various techniques in use to support this and avoid adding any dependencies that would compromise this approach.</p>
 <div class="admonition tip">
@@ -485,7 +486,7 @@
 <p>Anyone wishing to read our code is welcome, and we will do our best to explain anything that’s not obvious, but we will expect “basic” C++ skills and a general understanding of Arduinos and DCC which are extensively documented on the web, otherwise you are unlikely to understand our answers.</p>
 </div>
 <section id="reading-and-understanding-our-code">
-<h3><a class="toc-backref" href="#id3">Reading and understanding our code</a><a class="headerlink" href="#reading-and-understanding-our-code" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Reading and understanding our code</a><a class="headerlink" href="#reading-and-understanding-our-code" title="Permalink to this heading"></a></h3>
 <p>Reading any code in any language is always going to require a basic understanding of the language and features in addition to an understanding of the environment (Arduino in this case, and various CPU versions), plus an understanding of the program features the author is trying to implement (Command parsing and DCC in our case).</p>
 <p>The level of C++ that we use is a relatively small subset of the language as we don’t need or use many of the more complex C++ features such as studio, templates, lambdas, operator overloading, multiple inheritance etc., but we DO make significant use of the C++ compiler’s pre-processor features to automatically customise the code to various CPU or user feature requirements (Wifi, Ethernet etc).</p>
 <p>EX-RAIL in particular pulls some very cunning, but legitimate, stunts with the pre-processor to weave your automations into the code as it’s compiled.</p>
@@ -493,7 +494,7 @@
 <p>Comments in our code could be better but excessive commenting often leads to confusion as things change and in most cases the use of meaningful function and variable names conveys all the information a comment could.</p>
 </section>
 <section id="c-concepts-to-understand">
-<h3><a class="toc-backref" href="#id4">C++ concepts to understand</a><a class="headerlink" href="#c-concepts-to-understand" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">C++ concepts to understand</a><a class="headerlink" href="#c-concepts-to-understand" title="Permalink to this heading"></a></h3>
 <p>The following subsets of C++ are good to understand:</p>
 <ul class="simple">
 <li><p>Pointers instead of the String class: For speed and resource usage the String class is frowned upon and all “strings” are classical null terminated C strings. So it is recommended to read up on how those work.</p></li>
@@ -503,12 +504,12 @@
 </ul>
 </section>
 <section id="reliance-on-the-c-pre-processor">
-<h3><a class="toc-backref" href="#id5">Reliance on the C++ pre-processor</a><a class="headerlink" href="#reliance-on-the-c-pre-processor" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Reliance on the C++ pre-processor</a><a class="headerlink" href="#reliance-on-the-c-pre-processor" title="Permalink to this heading"></a></h3>
 <p>We rely on the ability of the compiler/linker to remove functions that are never called so the resulting binary image is as small as possible. This avoids having to manage separate code for large and small cpus.</p>
 <p>We also rely on the compiler to propagate constants. This, for example, allows us to use a floating point value for motor shield definitions but have the float to integer calculation performed by the compiler, meaning the large floating point library is not needed at run time.</p>
 </section>
 <section id="other-concepts-and-techniques">
-<h3><a class="toc-backref" href="#id6">Other concepts and techniques</a><a class="headerlink" href="#other-concepts-and-techniques" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Other concepts and techniques</a><a class="headerlink" href="#other-concepts-and-techniques" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Use of bit manipulation operators to pack multiple flags into a byte.</p></li>
 <li><p>EX-RAIL and the DCC ACK manager use “virtual machine” techniques to implement multitasking.</p></li>
@@ -516,7 +517,7 @@
 </section>
 </section>
 <section id="third-party-libraries">
-<h2><a class="toc-backref" href="#id7">Third-party libraries</a><a class="headerlink" href="#third-party-libraries" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Third-party libraries</a><a class="headerlink" href="#third-party-libraries" title="Permalink to this heading"></a></h2>
 <p>We avoid third party libraries where possible because they involve additional installation steps, can introduce version issues, and support related problems are outside our control.</p>
 <p>Further to this, we need to take into account the licensing used by libraries as not all open source licenses are the same.</p>
 <p>If there is no choice but to utilise a third-party library in some form, then this is the recommended approach:</p>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -450,7 +451,7 @@
 <h1>Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command<a class="headerlink" href="#diagnostics-d-ack-command" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#d-ack-on" id="id1">&lt;D ACK ON&gt;</a></p></li>
@@ -460,7 +461,7 @@
 <li><p><a class="reference internal" href="#d-progboost" id="id5">&lt;D PROGBOOST&gt;</a></p></li>
 <li><p><a class="reference internal" href="#making-the-changes-permanent" id="id6">Making the Changes Permanent</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <ul class="simple">
 <li><p><a class="reference internal" href="#d-ack-on"><span class="std std-ref">&lt;D ACK ON&gt;</span></a> - Turn on Loco acknowledgement diagnostics</p></li>
@@ -470,7 +471,7 @@
 <li><p><a class="reference internal" href="#d-progboost"><span class="std std-ref">&lt;D PROGBOOST&gt;</span></a> - Override 250mA prog track limit while idle.</p></li>
 </ul>
 <section id="d-ack-on">
-<h2><a class="toc-backref" href="#id1">&lt;D ACK ON&gt;</a><a class="headerlink" href="#d-ack-on" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">&lt;D ACK ON&gt;</a><a class="headerlink" href="#d-ack-on" title="Permalink to this heading"></a></h2>
 <p>If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands followed by pressing “send”:</p>
 <div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code></div>
@@ -516,7 +517,7 @@ Callback(145)
 </section>
 </section>
 <section id="d-ack-limit-ma">
-<h2><a class="toc-backref" href="#id2">&lt;D ACK LIMIT mA&gt;</a><a class="headerlink" href="#d-ack-limit-ma" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">&lt;D ACK LIMIT mA&gt;</a><a class="headerlink" href="#d-ack-limit-ma" title="Permalink to this heading"></a></h2>
 <p>The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK LIMIT 30&gt;
 </pre></div>
@@ -529,10 +530,10 @@ Callback(145)
 <p>The custom ack limit will be effective until you restart the Command Station (it will not “stick” in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">mySetup.h</span></a> file.</p>
 </section>
 <section id="d-ack-min-s">
-<h2><a class="toc-backref" href="#id3">&lt;D ACK MIN µS&gt;</a><a class="headerlink" href="#d-ack-min-s" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">&lt;D ACK MIN µS&gt;</a><a class="headerlink" href="#d-ack-min-s" title="Permalink to this heading"></a></h2>
 </section>
 <section id="d-ack-max-s">
-<h2><a class="toc-backref" href="#id4">&lt;D ACK MAX µS&gt;</a><a class="headerlink" href="#d-ack-max-s" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">&lt;D ACK MAX µS&gt;</a><a class="headerlink" href="#d-ack-max-s" title="Permalink to this heading"></a></h2>
 <p>The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.</p>
 <p>Example 1: You use the &lt;D ACK ON&gt; and &lt;R&gt; commands described above to generate a test log from a loco on your programming track. You see that there are ACK pulses but that their durations are less than 4000 microseconds. The log shows the shortest one was 3450. You might then choose a setting a little bit lower than your lowest reading:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK MIN 3300&gt;
@@ -546,12 +547,12 @@ Pick a setting a little bit higher than your highest reading like this:</p>
 </div>
 </section>
 <section id="d-progboost">
-<h2><a class="toc-backref" href="#id5">&lt;D PROGBOOST&gt;</a><a class="headerlink" href="#d-progboost" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">&lt;D PROGBOOST&gt;</a><a class="headerlink" href="#d-progboost" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> - Override 250mA prog track limit while idle.</p>
 <p>When the programming track is switched on with <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">PROG&gt;</span></code> it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">PROG&gt;</span></code> or the Command Station is reset.</p>
 </section>
 <section id="making-the-changes-permanent">
-<h2><a class="toc-backref" href="#id6">Making the Changes Permanent</a><a class="headerlink" href="#making-the-changes-permanent" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Making the Changes Permanent</a><a class="headerlink" href="#making-the-changes-permanent" title="Permalink to this heading"></a></h2>
 <p>To make these settings permanent, you can create a <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">Startup Configuration</span></a> by adding or editing an existing <em>mySetup.h</em>. You simply add the appropriate commands in the correct format and upload the Command Station software again. Click on the link in this paragraph for detailed instructions.</p>
 </section>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -450,26 +451,26 @@
 <h1>Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command<a class="headerlink" href="#diagnostics-d-command" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#speed-step-configuration" id="id1">Speed Step Configuration</a></p></li>
 <li><p><a class="reference internal" href="#the-following-commands-turn-on-1-or-off-0-various-diagnostic-traces" id="id2">The following commands turn ON(1) or OFF(0) various diagnostic traces</a></p></li>
 <li><p><a class="reference internal" href="#the-following-commands-might-help-in-exceptional-circumstances" id="id3">The following commands might help in exceptional circumstances</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>These commands either enable diagnostics or allow settings to be changed. There are a number of diagnostic facilities under the  <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> command, most are harmless but caution is advised.</p>
 <p><strong>The</strong> <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> <strong>commands are intended for diagnostics only which means that their behaviour can change from one release to another without warning</strong></p>
 <p>These commands can be entered directly via the USB serial console or through a Wifi connection to the command station with a tool such as Telnet or Putty. <a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a> includes the DCC++ traffic monitor which lets you insert DCC++ serial commands as well. (links required)</p>
 <section id="speed-step-configuration">
-<h2><a class="toc-backref" href="#id1">Speed Step Configuration</a><a class="headerlink" href="#speed-step-configuration" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Speed Step Configuration</a><a class="headerlink" href="#speed-step-configuration" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SPEED28|SPEED128&gt;</span></code> By default, the Command Station sends speed commands in 128 steps. You can change to 28 speed steps and back again with this command. If speed steps are set to 28, you can still use 128 speed step locos, they will just have a resolution of 28 steps also instead of 128.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Lists the locomotives which the command station is currently managing.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Displays the free RAM on your Arduino.</p>
 </section>
 <section id="the-following-commands-turn-on-1-or-off-0-various-diagnostic-traces">
-<h2><a class="toc-backref" href="#id2">The following commands turn ON(1) or OFF(0) various diagnostic traces</a><a class="headerlink" href="#the-following-commands-turn-on-1-or-off-0-various-diagnostic-traces" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">The following commands turn ON(1) or OFF(0) various diagnostic traces</a><a class="headerlink" href="#the-following-commands-turn-on-1-or-off-0-various-diagnostic-traces" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON|OFF&gt;</span></code> trace DCC ACK processing when reading/writing on the prog track. See <a class="reference internal" href="diagnostic-d-ack-command.html"><span class="doc">Diagnostics &lt;D ACK&gt; Command</span></a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">ON|OFF&gt;</span></code> trace received JMRI commands.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">ON|OFF&gt;</span></code> trace Wifi protocol AT command conversation between Arduino and Wifi hardware.</p>
@@ -478,7 +479,7 @@
 <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> display information about configured HAL devices (servo controllers, GPIO Extenders) including address and pins used</p>
 </section>
 <section id="the-following-commands-might-help-in-exceptional-circumstances">
-<h2><a class="toc-backref" href="#id3">The following commands might help in exceptional circumstances</a><a class="headerlink" href="#the-following-commands-might-help-in-exceptional-circumstances" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">The following commands might help in exceptional circumstances</a><a class="headerlink" href="#the-following-commands-might-help-in-exceptional-circumstances" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code>  When the programming track is switched on with <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">PROG&gt;</span></code> it will normally be restricted
 to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code>
 temporarily removes this limit to allow the decoder more power. The normal limit will be re-imposed when the programming track

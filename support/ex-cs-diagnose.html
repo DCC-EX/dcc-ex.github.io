@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
-<meta content="EX-CommandStation Command Station diagnosing Issues Troubleshooting" name="keywords" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+<meta content="EX-CommandStation Command Station diagnosing Issues Troubleshooting" name="keywords" />
+<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
+<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diagnosing Basic Problems &mdash; DCC-EX Model Railroading  documentation</title>
@@ -24,6 +24,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -452,7 +453,7 @@
 <h1>Diagnosing Basic Problems<a class="headerlink" href="#diagnosing-basic-problems" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ex-commandstation-software-fails-to-load" id="id4">EX-CommandStation Software fails to load</a></p></li>
@@ -465,7 +466,7 @@
 <li><p><a class="reference internal" href="#when-configured-as-an-access-point" id="id8">When Configured as an Access Point</a></p></li>
 <li><p><a class="reference internal" href="#when-configured-in-station-mode" id="id9">When Configured in Station mode</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This page is intended to help you diagnose and fix some of the most common problems with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.  If you have a more specific issue see the <a class="reference internal" href="ex-cs-troubleshooting.html"><span class="doc">Troubleshooting</span></a> page.</p>
 <p>Depending on how you have your EX-CommandStation configured, the steps to diagnose problems are different:</p>
@@ -476,13 +477,13 @@
 </ul>
 <hr class="docutils" />
 <section id="ex-commandstation-software-fails-to-load">
-<h2><a class="toc-backref" href="#id4">EX-CommandStation Software fails to load</a><a class="headerlink" href="#ex-commandstation-software-fails-to-load" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">EX-CommandStation Software fails to load</a><a class="headerlink" href="#ex-commandstation-software-fails-to-load" title="Permalink to this heading"></a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/433">MEDIUM - Diagnosing</a> - EX-CommandStation Software fails to load</p>
 </div>
 <p>Either using the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> to the Arduino IDE.</p>
-<table class="colwidths-given command-table docutils align-default">
+<table class="command-table docutils align-default">
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 20%" />
@@ -533,12 +534,12 @@
 </section>
 <hr class="docutils" />
 <section id="when-connected-to-a-pc-via-usb">
-<h2><a class="toc-backref" href="#id5">When Connected to a PC via USB</a><a class="headerlink" href="#when-connected-to-a-pc-via-usb" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">When Connected to a PC via USB</a><a class="headerlink" href="#when-connected-to-a-pc-via-usb" title="Permalink to this heading"></a></h2>
 <p><strong>If you have connected your EX-CommandStation to a PC via USB</strong> (including for using JMRI).</p>
 <section id="initial-check">
-<h3><a class="toc-backref" href="#id6">Initial Check</a><a class="headerlink" href="#initial-check" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Initial Check</a><a class="headerlink" href="#initial-check" title="Permalink to this heading"></a></h3>
 <p>As an initial check we recommend you should try to connect to your EX-CommandStation using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>, even if you plan to use it via <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> or a wifi throttle.</p>
-<table class="colwidths-given command-table docutils align-default">
+<table class="command-table docutils align-default">
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 20%" />
@@ -609,12 +610,12 @@
 </div>
 </section>
 <section id="using-jmri">
-<h3><a class="toc-backref" href="#id7">Using JMRI</a><a class="headerlink" href="#using-jmri" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Using JMRI</a><a class="headerlink" href="#using-jmri" title="Permalink to this heading"></a></h3>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/433">MEDIUM - Diagnosing</a> - Using JMRI</p>
 </div>
-<table class="colwidths-given command-table docutils align-default">
+<table class="command-table docutils align-default">
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 20%" />
@@ -678,9 +679,9 @@
 </section>
 </section>
 <section id="when-configured-as-an-access-point">
-<h2><a class="toc-backref" href="#id8">When Configured as an Access Point</a><a class="headerlink" href="#when-configured-as-an-access-point" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">When Configured as an Access Point</a><a class="headerlink" href="#when-configured-as-an-access-point" title="Permalink to this heading"></a></h2>
 <p><strong>If you have configured your EX-CommandStation as an Access Point</strong> (separate network)</p>
-<table class="colwidths-given command-table docutils align-default">
+<table class="command-table docutils align-default">
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 20%" />
@@ -770,9 +771,9 @@
 </div>
 </section>
 <section id="when-configured-in-station-mode">
-<h2><a class="toc-backref" href="#id9">When Configured in Station mode</a><a class="headerlink" href="#when-configured-in-station-mode" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">When Configured in Station mode</a><a class="headerlink" href="#when-configured-in-station-mode" title="Permalink to this heading"></a></h2>
 <p><strong>If you have configured your EX-CommandStation in Station mode (connected to your home WiFi network)</strong></p>
-<table class="colwidths-given command-table docutils align-default">
+<table class="command-table docutils align-default">
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 20%" />

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>IBT_2 BTS7960 Motor Board<a class="headerlink" href="#ibt-2-bts7960-motor-board" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#what-you-will-need-ibt-2" id="id6">What You Will Need (IBT_2)</a></p></li>
@@ -461,7 +462,7 @@
 <li><p><a class="reference internal" href="#parts-list-ibt-2" id="id12">Parts List (IBT_2)</a></p></li>
 <li><p><a class="reference internal" href="#tech-notes-ibt-2" id="id13">Tech Notes (IBT_2)</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -473,7 +474,7 @@
 <p>See the <a class="reference internal" href="#parts-list-ibt-2">Parts list (IBT_2)</a></p>
 <a class="reference internal image-reference" href="../../../_images/ibt_2_bts7960_2.jpg"><img alt="IBT_2 Motor driver" class="align-center" src="../../../_images/ibt_2_bts7960_2.jpg" style="width: 225.0px; height: 225.0px;" /></a>
 <section id="what-you-will-need-ibt-2">
-<h2><a class="toc-backref" href="#id6">What You Will Need (IBT_2)</a><a class="headerlink" href="#what-you-will-need-ibt-2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">What You Will Need (IBT_2)</a><a class="headerlink" href="#what-you-will-need-ibt-2" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>An Arduino Mega or clone (or an Uno if you don’t need WiFi or Ethernet)</p></li>
 <li><p>An Arduino Motor Shield (or another board for your service track for the upgrade option)</p></li>
@@ -495,7 +496,7 @@
 <p>Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means <strong>there is no voltage drop to the tracks</strong> like there is for those boards. Keep that in mind because that means <strong>there can be an extra 2 to 3 volts to your track</strong>. Your trains will run faster than they did before and things could overheat if they were able to handle the 12V reaching the track from a 14.5V power supply, but don’t like the full 14+ volts.</p>
 </section>
 <section id="which-option-should-you-choose-ibt-2">
-<h2><a class="toc-backref" href="#id7">Which Option Should You Choose? (IBT_2)</a><a class="headerlink" href="#which-option-should-you-choose-ibt-2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Which Option Should You Choose? (IBT_2)</a><a class="headerlink" href="#which-option-should-you-choose-ibt-2" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These options both use the “standard accuracy” waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like EX-DCCInspector). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use “high accuracy” mode because you need to free an Arduino pin or some other reason, and you like to solder, please see <a class="reference internal" href="high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a>.</p>
@@ -513,7 +514,7 @@
 </section>
 </section>
 <section id="upgrading-use-the-arduino-motor-shield-and-the-ibt-2">
-<h2><a class="toc-backref" href="#id8">Upgrading (Use the Arduino Motor Shield AND the IBT_2)</a><a class="headerlink" href="#upgrading-use-the-arduino-motor-shield-and-the-ibt-2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Upgrading (Use the Arduino Motor Shield AND the IBT_2)</a><a class="headerlink" href="#upgrading-use-the-arduino-motor-shield-and-the-ibt-2" title="Permalink to this heading"></a></h2>
 <p>For this installation we are going to assume you already have a working Command Station or at least have all the parts you need as listed above.</p>
 <p>If you need instructions on how to install the Arduino Motor Shield, see <a class="reference internal" href="../../../ex-commandstation/get-started/assembly.html"><span class="doc">Arduino Motor Shield Assembly</span></a></p>
 <section id="what-we-are-going-to-do-upgrade">
@@ -544,10 +545,6 @@
 <p>Use the following diagrams to connect pins from the Arduino Mega to the IBT_2:</p>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-number">Table 3 </span><span class="caption-text">Wiring diagram</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Arduino</p></th>
 <th class="head"><p>IBT_2</p></th>
@@ -614,7 +611,7 @@
 </section>
 </section>
 <section id="replacing-using-one-ibt-2-for-main-and-another-for-prog">
-<h2><a class="toc-backref" href="#id9">Replacing (Using One IBT_2 for MAIN and another for PROG)</a><a class="headerlink" href="#replacing-using-one-ibt-2-for-main-and-another-for-prog" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Replacing (Using One IBT_2 for MAIN and another for PROG)</a><a class="headerlink" href="#replacing-using-one-ibt-2-for-main-and-another-for-prog" title="Permalink to this heading"></a></h2>
 <p>This section will cover how to use 2 IBT_2 boards, one for MAIN and one for PROG if you do not already have an Arduino Motor Shield or clone. Be careful as the IBT_2 can deliver much more current than you need for a programming track. If you install 1 Amp fuses in between the IBT_2 outputs and both rails of your programming track, that and the lower trip current we set in the Command Station for the programming track should protect your layout.</p>
 <section id="what-we-are-going-to-do-replace">
 <h3>What We Are Going to Do (Replace)<a class="headerlink" href="#what-we-are-going-to-do-replace" title="Permalink to this heading"></a></h3>
@@ -639,10 +636,6 @@
 </div>
 <p>Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 for your MAIN track:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Arduino</p></th>
 <th class="head"><p>IBT_2 MAIN</p></th>
@@ -671,10 +664,6 @@
 </table>
 <p>Use the following diagrams to connect pins from the Arduino Mega to the IBT_2 for your PROG track:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Arduino</p></th>
 <th class="head"><p>IBT_2 PROG</p></th>
@@ -704,7 +693,7 @@
 </section>
 </section>
 <section id="important-notes-on-current-sensing-ibt-2">
-<h2><a class="toc-backref" href="#id10">Important Notes on Current Sensing (IBT_2)</a><a class="headerlink" href="#important-notes-on-current-sensing-ibt-2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Important Notes on Current Sensing (IBT_2)</a><a class="headerlink" href="#important-notes-on-current-sensing-ibt-2" title="Permalink to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Make sure your board has the expected current sensing resistors (see below) and that their value is correct for the maximum current you expect to use. Also, make sure you don’t apply more than 5V to the Arduino Analog pin. Our calculations use NOMINAL values, but these chips can vary widely in how much voltage they report per Amp of current at the output. The value of your resistor will also affect this.</p>
@@ -734,7 +723,7 @@
 </section>
 </section>
 <section id="using-external-current-sense">
-<h2><a class="toc-backref" href="#id11">Using External Current Sense</a><a class="headerlink" href="#using-external-current-sense" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Using External Current Sense</a><a class="headerlink" href="#using-external-current-sense" title="Permalink to this heading"></a></h2>
 <p>Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (5A or 10A boards), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.</p>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
@@ -742,7 +731,7 @@
 </div>
 </section>
 <section id="parts-list-ibt-2">
-<h2><a class="toc-backref" href="#id12">Parts List (IBT_2)</a><a class="headerlink" href="#parts-list-ibt-2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Parts List (IBT_2)</a><a class="headerlink" href="#parts-list-ibt-2" title="Permalink to this heading"></a></h2>
 <p>Mean Well LRS-150-15
 Enclosed Switchable Power Supply 1U Profile, 150W 15V 10A
 <a class="reference external" href="http://amazon.com/gp/product/B019GYOPSS/">http://amazon.com/gp/product/B019GYOPSS/</a>
@@ -763,7 +752,7 @@ Here is a pack of two:
 $15.51 +tax; prime shipping</p>
 </section>
 <section id="tech-notes-ibt-2">
-<h2><a class="toc-backref" href="#id13">Tech Notes (IBT_2)</a><a class="headerlink" href="#tech-notes-ibt-2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Tech Notes (IBT_2)</a><a class="headerlink" href="#tech-notes-ibt-2" title="Permalink to this heading"></a></h2>
 <section id="motor-board-definitions-ibt-2">
 <h3>Motor Board Definitions (IBT_2)<a class="headerlink" href="#motor-board-definitions-ibt-2" title="Permalink to this heading"></a></h3>
 <p>The choice of motor driver is set in the config.h file. It is set in the following line:</p>

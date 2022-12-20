@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>Tips and Techniques<a class="headerlink" href="#tips-and-techniques" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#comments" id="id1">Comments</a></p></li>
@@ -457,11 +458,11 @@
 <li><p><a class="reference internal" href="#realistic-turnout-sequences" id="id4">Realistic turnout sequences</a></p></li>
 <li><p><a class="reference internal" href="#make-your-own-ex-rail-macro-or-command" id="id5">Make your own EX-RAIL macro or command</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>Below are some tips and techniques you can implement to get the most out of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
 <section id="comments">
-<h2><a class="toc-backref" href="#id1">Comments</a><a class="headerlink" href="#comments" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Comments</a><a class="headerlink" href="#comments" title="Permalink to this heading"></a></h2>
 <p>Comments can be very helpful if you need to go back at a later time to make changes to your sequences, to help you remember what you did or why you did it.</p>
 <p>You can add comments to myAutomation.h in two ways:</p>
 <ul class="simple">
@@ -470,25 +471,25 @@
 </ul>
 </section>
 <section id="aliases-user-friendly-names-for-any-ids">
-<h2><a class="toc-backref" href="#id2">Aliases - User Friendly Names for any Ids</a><a class="headerlink" href="#aliases-user-friendly-names-for-any-ids" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Aliases - User Friendly Names for any Ids</a><a class="headerlink" href="#aliases-user-friendly-names-for-any-ids" title="Permalink to this heading"></a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">ALIAS()</span></code> command in your script to make IDs a bit more human friendly, and easier to refer to later.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code> Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias “name” text.</p>
 <p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//example</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">,</span><span class="mi">19</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">,</span><span class="mi">27</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">,</span><span class="mi">19</span><span class="p">)</span><span class="w"></span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">,</span><span class="mi">27</span><span class="p">)</span><span class="w"></span>
 
-<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-   <span class="n">THROW</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span><span class="w"></span>
 
 <span class="c1">// As above with auto generated IDs</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span><span class="w"></span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span><span class="w"></span>
 
-<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-   <span class="n">THROW</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="n">COAL_YARD_TURNOUT</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="n">COAL_YARD_SIGNAL_3</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Refer to <a class="reference internal" href="EX-RAIL-reference.html#aliases"><span class="std std-ref">Aliases</span></a> for more information.</p>
@@ -502,7 +503,7 @@
 </ul>
 </section>
 <section id="including-sub-files">
-<h2><a class="toc-backref" href="#id3">Including sub-files</a><a class="headerlink" href="#including-sub-files" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Including sub-files</a><a class="headerlink" href="#including-sub-files" title="Permalink to this heading"></a></h2>
 <p>If you find your myAutomation.h file becoming quite lengthy and cumbersome to scroll through and keep track of, you can break your items up into multiple smaller files, and include those in your myAutomation.h file instead.</p>
 <p>There are some rules that apply in this scenario:</p>
 <ul class="simple">
@@ -519,17 +520,17 @@
 <li><p>Remember the rules and ensure files are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.</p></li>
 </ul>
 <p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-   <span class="n">THROW</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span>
-   <span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
-   <span class="n">DONE</span>
-<span class="cp">#include</span> <span class="cpf">&quot;myFireEngineLights.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;myShuttle.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">DONE</span><span class="w"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myFireEngineLights.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myShuttle.h&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
 </section>
 <section id="realistic-turnout-sequences">
-<h2><a class="toc-backref" href="#id4">Realistic turnout sequences</a><a class="headerlink" href="#realistic-turnout-sequences" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Realistic turnout sequences</a><a class="headerlink" href="#realistic-turnout-sequences" title="Permalink to this heading"></a></h2>
 <p>Let’s say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:</p>
 <ol class="arabic simple">
 <li><p>An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p></li>
@@ -537,30 +538,30 @@
 </ol>
 <p>Once these are defined, you can then use EX-RAIL’s ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EX-RAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.</p>
 <p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">456</span><span class="p">,</span> <span class="n">HIDDEN</span><span class="p">)</span>    <span class="c1">// Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.</span>
-<span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">9101</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>       <span class="c1">// Define the virtual turnout, which will be visible to throttles/JMRI.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w"> </span><span class="mi">133</span><span class="p">,</span><span class="w"> </span><span class="mi">456</span><span class="p">,</span><span class="w"> </span><span class="n">HIDDEN</span><span class="p">)</span><span class="w">    </span><span class="c1">// Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.</span>
+<span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">9101</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span><span class="w">       </span><span class="c1">// Define the virtual turnout, which will be visible to throttles/JMRI.</span>
 
-<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span>                                <span class="c1">// When throwing the virtual turnout:</span>
-<span class="n">RED</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span>                          <span class="c1">// Set a red signal.</span>
-<span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>                                  <span class="c1">// Wait for the signalman to move to the turnout lever.</span>
-<span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                                   <span class="c1">// Throw the real turnout.</span>
-<span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span>                                  <span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
-<span class="n">GREEN</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span>                        <span class="c1">// Set a green signal.</span>
-<span class="n">DONE</span>
+<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span><span class="w">                                </span><span class="c1">// When throwing the virtual turnout:</span>
+<span class="n">RED</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span><span class="w">                          </span><span class="c1">// Set a red signal.</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w">                                  </span><span class="c1">// Wait for the signalman to move to the turnout lever.</span>
+<span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">                                   </span><span class="c1">// Throw the real turnout.</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span><span class="w">                                  </span><span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span><span class="w">                        </span><span class="c1">// Set a green signal.</span>
+<span class="n">DONE</span><span class="w"></span>
 
-<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span>                                <span class="c1">// When closing the virtual turnout:</span>
-<span class="n">GREEN</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span>                        <span class="c1">// Set a green signal.</span>
-<span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>                                  <span class="c1">// Wait for the signalman to move to the turnout lever.</span>
-<span class="n">CLOSE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                                   <span class="c1">// Close the real turnout.</span>
-<span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span>                                  <span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
-<span class="n">RED</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span>                          <span class="c1">// Set a red signal.</span>
-<span class="n">DONE</span>
+<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span><span class="w">                                </span><span class="c1">// When closing the virtual turnout:</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span><span class="w">                        </span><span class="c1">// Set a green signal.</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w">                                  </span><span class="c1">// Wait for the signalman to move to the turnout lever.</span>
+<span class="n">CLOSE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">                                   </span><span class="c1">// Close the real turnout.</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span><span class="w">                                  </span><span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
+<span class="n">RED</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span><span class="w">                          </span><span class="c1">// Set a red signal.</span>
+<span class="n">DONE</span><span class="w"></span>
 </pre></div>
 </div>
 <p>A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.</p>
 </section>
 <section id="make-your-own-ex-rail-macro-or-command">
-<h2><a class="toc-backref" href="#id5">Make your own EX-RAIL macro or command</a><a class="headerlink" href="#make-your-own-ex-rail-macro-or-command" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Make your own EX-RAIL macro or command</a><a class="headerlink" href="#make-your-own-ex-rail-macro-or-command" title="Permalink to this heading"></a></h2>
 <p>One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.</p>
 <p>To do this, you’re actually making use of some C++ code in addition to the clever programming in DCC++ EX.</p>
 <p>(Yes, we just called ourselves cunning and clever. Our talent is superseded only by our modesty ;) )</p>

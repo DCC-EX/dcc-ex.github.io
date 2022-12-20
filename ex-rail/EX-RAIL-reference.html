@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>EX-RAIL Detailed Reference<a class="headerlink" href="#ex-rail-detailed-reference" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#notes" id="id1">Notes</a></p></li>
@@ -468,7 +469,7 @@
 <li><p><a class="reference internal" href="#loco-dcc-functions" id="id15">Loco DCC Functions</a></p></li>
 <li><p><a class="reference internal" href="#dcc-accessory-decoder-commands" id="id16">DCC Accessory decoder commands</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a>.</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation</a> Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation Firmware</a>.</p>
@@ -478,7 +479,7 @@
 <li><p><a class="reference internal" href="EX-RAIL-summary.html"><span class="doc">EX-RAIL Command Summary</span></a></p></li>
 </ul>
 <section id="notes">
-<h2><a class="toc-backref" href="#id1">Notes</a><a class="headerlink" href="#notes" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Notes</a><a class="headerlink" href="#notes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not</p></li>
 <li><p><em>AUTOMATION</em>, <em>ROUTE</em>, and <em>SEQUENCE</em> use the same ID number space, so a <code class="docutils literal notranslate"><span class="pre">FOLLOW(n)</span></code> command can be used for any of them</p></li>
@@ -501,7 +502,7 @@
 </div>
 </section>
 <section id="conventions-used-on-this-page">
-<h2><a class="toc-backref" href="#id2">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>CAPITALISED words - These are EX-RAIL commands and are case sensitive</p></li>
 <li><p>lowercase words within () - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma “,”, for example SEQUENCE(id) or DELAYRANDOM(min_delay, max_delay)</p></li>
@@ -511,7 +512,7 @@
 </ul>
 </section>
 <section id="interactive-diagnostics-and-control">
-<h2><a class="toc-backref" href="#id3">Interactive diagnostics and control</a><a class="headerlink" href="#interactive-diagnostics-and-control" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Interactive diagnostics and control</a><a class="headerlink" href="#interactive-diagnostics-and-control" title="Permalink to this heading"></a></h2>
 <p>There are some diagnostic and control commands added to the &lt;tag&gt; language normally used to control the Command Station over USB, WiFi, or Ethernet.</p>
 <p>These can be used in the same manner as other CommandStation directives to interact with EX-RAIL sequences and objects once they have been defined in myAutomation.h and are uploaded to the CommandStation.</p>
 <section id="ex-rail">
@@ -586,7 +587,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </section>
 </section>
 <section id="routes-automations-and-sequences">
-<h2><a class="toc-backref" href="#id4">Routes, automations, and sequences</a><a class="headerlink" href="#routes-automations-and-sequences" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Routes, automations, and sequences</a><a class="headerlink" href="#routes-automations-and-sequences" title="Permalink to this heading"></a></h2>
 <p>EX-RAIL provides many commands to allow you to create automated sequences and routes that locomotives can follow that may involve turnouts/points, signals, etc. that can be automatically set to react when the loco trips a sensor.</p>
 <section id="script-definition-terms">
 <h3>Script Definition Terms<a class="headerlink" href="#script-definition-terms" title="Permalink to this heading"></a></h3>
@@ -598,7 +599,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </section>
 </section>
 <section id="conditional-statements">
-<h2><a class="toc-backref" href="#id5">Conditional statements</a><a class="headerlink" href="#conditional-statements" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Conditional statements</a><a class="headerlink" href="#conditional-statements" title="Permalink to this heading"></a></h2>
 <p>There is quite a variety of conditional statements available to influence activities based on the states of sensors, signals, turnouts/points, and other items.</p>
 <p>All conditional activities must be terminated with an <cite>ENDIF</cite> statement, and may optionally include an <cite>ELSE</cite> statement.</p>
 <p>If a conditional statement is part of an automation sequence, the sequence still needs to be terminated with a DONE statement.</p>
@@ -606,7 +607,7 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p><code class="docutils literal notranslate"><span class="pre">ENDIF</span></code>       Required to end an IF/IFNOT/etc. (Used in all IF.. functions).</p>
 </section>
 <section id="aliases">
-<h2><a class="toc-backref" href="#id6">Aliases</a><a class="headerlink" href="#aliases" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Aliases</a><a class="headerlink" href="#aliases" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code>      Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias “name” text.</p>
 <p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
 <p>If you simply need a unique identifier for an object used internally to the script, such as a turnout/point, route, automation, or sequence, you don’t even need to provide an ID, EX-RAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don’t have to try to remember or keep a list of numbers you’ve used. This also prevents you from assigning the same number to more than one object.</p>
@@ -622,20 +623,20 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </ul>
 <p>Examples:</p>
 <p>Defining a pin turnout/point without an alias:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Defining a pin turnout/point with aliases:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_PIN</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">,</span> <span class="n">COAL_YARD_PIN</span><span class="p">,</span> <span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">)</span><span class="w"></span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
+<span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">,</span><span class="w"> </span><span class="n">COAL_YARD_PIN</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Note that you could have used the command <cite>ALIAS(COAL_YARD, 1)</cite> in the example above to explicity set the number, but unless you have a reason to use specific numbers, let the Command Station do it for you.</p>
 <p>In this simple example, aliases seem like overkill, however consider the case where you need to have the “Coal Yard” turnout/point closed or thrown in various different automation sequences, and you will soon see why it’s easier to understand you’re throwing the COAL_YARD turnout/point rather than turnout/point ID 12345.</p>
 </section>
 <section id="signals">
-<h2><a class="toc-backref" href="#id7">Signals</a><a class="headerlink" href="#signals" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Signals</a><a class="headerlink" href="#signals" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">SIGNAL(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code>     Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights.</p>
 <p><code class="docutils literal notranslate"><span class="pre">SIGNALH(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code> As above to define a pin based signal, but with active high pins instead.</p>
 <p>For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (eg. RED/GREEN), set the unused colour’s pin to 0.</p>
@@ -644,18 +645,18 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p><code class="docutils literal notranslate"><span class="pre">IFAMBER(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code> Test if signal is amber.</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFGREEN(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code> Test if signal is green.</p>
 <p>Signal examples:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">)</span>                <span class="c1">// Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.</span>
-<span class="n">SIGNALH</span><span class="p">(</span><span class="mi">164</span> <span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">165</span><span class="p">)</span>              <span class="c1">// Active high red/green signal using the first two pins of an MCP23017 I/O expander module.</span>
-<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>  <span class="c1">// Servo based signal using the first PCA9685 servo module.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span><span class="w">                </span><span class="c1">// Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.</span>
+<span class="n">SIGNALH</span><span class="p">(</span><span class="mi">164</span><span class="w"> </span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">165</span><span class="p">)</span><span class="w">              </span><span class="c1">// Active high red/green signal using the first two pins of an MCP23017 I/O expander module.</span>
+<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span><span class="w">  </span><span class="c1">// Servo based signal using the first PCA9685 servo module.</span>
 
-<span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>                         <span class="c1">// Sets our active low signal to green.</span>
-<span class="n">GREEN</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>                         <span class="c1">// Sets our active high signal to green.</span>
-<span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                        <span class="c1">// Sets our servo based signal to green.</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Sets our active low signal to green.</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Sets our active high signal to green.</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">                        </span><span class="c1">// Sets our servo based signal to green.</span>
 </pre></div>
 </div>
 </section>
 <section id="turnouts-points">
-<h2><a class="toc-backref" href="#id8">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h2>
 <p>All the below turnout/point definitions will define turnouts/points that are advertised to <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, unless the HIDDEN keyword is used.</p>
 <p>“description” is an optional parameter, and must be enclosed in quotes “”. If you don’t wish this turnout/point to be advertised to throttles, then substitute the word HIDDEN (with no “”) instead of the description.</p>
 <p><code class="docutils literal notranslate"><span class="pre">TURNOUT(</span> <span class="pre">id,</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code>     Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the <a class="reference internal" href="../reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet"><span class="std std-ref">Stationary Decoder Address Table (xlsx Spreadsheet)</span></a> for help on these conversions.</p>
@@ -667,15 +668,15 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p><code class="docutils literal notranslate"><span class="pre">ONCLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for when a turnout/point is sent a close command. Note that there can be only one defined ONCLOSE event for a specific turnout/point.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ONTHROW(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code>       Event handler for when a turnout/point is sent a throw command. Note that there can be only one defined ONTHROW event for a specific turnout/point.</p>
 <p>Examples:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>                  <span class="c1">// DCC accessory turnout at linear address 101.</span>
-<span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="s">&quot;Switching Yard&quot;</span><span class="p">)</span>           <span class="c1">// Pin turnout on an MCP23017 I/O expander module.</span>
-<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Slow</span><span class="p">,</span> <span class="n">HIDDEN</span><span class="p">)</span>   <span class="c1">// A servo turnout on a PCA9685 servo module that is hidden from throttles.</span>
-<span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">103</span><span class="p">,</span> <span class="s">&quot;Lumber Yard&quot;</span><span class="p">)</span>               <span class="c1">// A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span><span class="w">                  </span><span class="c1">// DCC accessory turnout at linear address 101.</span>
+<span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">164</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Switching Yard&quot;</span><span class="p">)</span><span class="w">           </span><span class="c1">// Pin turnout on an MCP23017 I/O expander module.</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="n">HIDDEN</span><span class="p">)</span><span class="w">   </span><span class="c1">// A servo turnout on a PCA9685 servo module that is hidden from throttles.</span>
+<span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">103</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lumber Yard&quot;</span><span class="p">)</span><span class="w">               </span><span class="c1">// A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.</span>
 </pre></div>
 </div>
 </section>
 <section id="sensors-inputs">
-<h2><a class="toc-backref" href="#id9">Sensors/inputs</a><a class="headerlink" href="#sensors-inputs" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Sensors/inputs</a><a class="headerlink" href="#sensors-inputs" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> An event handler that defines what to do when a sensor is active/triggered.</p>
 <p><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code>  An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code>  A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable “timed out” flag.</p>
@@ -684,8 +685,8 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p><code class="docutils literal notranslate"><span class="pre">IFTIMEOUT</span></code>   Tests if “timed out” flag has been set by an ATTIMEOUT() sensor reading attempt.</p>
 <p>Note that with the sensor commands <cite>IF()</cite>, <cite>IFNOT()</cite>, <cite>IFTIMEOUT()</cite>, <cite>AT()</cite>, <cite>ATTIMEOUT()</cite>, and <cite>AFTER()</cite>, you can use negative values to enable the use of active HIGH sensors.</p>
 <p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>        <span class="c1">// Wait for pin 40 to go low.</span>
-<span class="n">AT</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">)</span>       <span class="c1">// Wait for pin 40 to go high.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">        </span><span class="c1">// Wait for pin 40 to go low.</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">-40</span><span class="p">)</span><span class="w">       </span><span class="c1">// Wait for pin 40 to go high.</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">ATGTE(</span> <span class="pre">analogpin,</span> <span class="pre">value</span> <span class="pre">)</span></code>  Waits for an analog pin to reach the specified value.</p>
@@ -695,31 +696,31 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p>All the <cite>IFGTE()</cite>, <cite>IFLT()</cite>, <cite>ATGTE()`and `ATLT()</cite> commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">id,</span> <span class="pre">value</span> <span class="pre">)</span></code> Test if a rotary encoder has been set to the specified value <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p>Sensor examples:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>          <span class="c1">// If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.</span>
-  <span class="n">RED</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
-  <span class="n">DELAY</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-  <span class="n">CLOSE</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">ENDIF</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w">          </span><span class="c1">// If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.</span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"></span>
+<span class="n">ENDIF</span><span class="w"></span>
 
-<span class="n">IFNOT</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span>       <span class="c1">// If sensor on the Command Station pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.</span>
-  <span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
-<span class="n">ELSE</span>
-  <span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
-<span class="n">ENDIF</span>
+<span class="n">IFNOT</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span><span class="w">       </span><span class="c1">// If sensor on the Command Station pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
+<span class="n">ELSE</span><span class="w"></span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
+<span class="n">ENDIF</span><span class="w"></span>
 
-<span class="n">IFGTE</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>  <span class="c1">// If reading the analog input from a photoelectric light sensor exceeds 512, it&#39;s bright enough to turn the street lights off.</span>
-  <span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">ENDIF</span>
+<span class="n">IFGTE</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="w"> </span><span class="mi">512</span><span class="p">)</span><span class="w">  </span><span class="c1">// If reading the analog input from a photoelectric light sensor exceeds 512, it&#39;s bright enough to turn the street lights off.</span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w"></span>
+<span class="n">ENDIF</span><span class="w"></span>
 
-<span class="n">IFLT</span><span class="p">(</span><span class="n">A3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>   <span class="c1">// If current sensing from an analog occupancy detector had dropped below the threshold, turn off our mimic panel light, otherwise turn it on.</span>
-  <span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
-<span class="n">ELSE</span>
-  <span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
-<span class="n">ENDIF</span>
+<span class="n">IFLT</span><span class="p">(</span><span class="n">A3</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w">   </span><span class="c1">// If current sensing from an analog occupancy detector had dropped below the threshold, turn off our mimic panel light, otherwise turn it on.</span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w"></span>
+<span class="n">ELSE</span><span class="w"></span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w"></span>
+<span class="n">ENDIF</span><span class="w"></span>
 
-<span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1">// If a rotary encoder is at position 1, start ROUTE with ID 123</span>
-  <span class="n">START</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="n">ENDIF</span>
+<span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w">  </span><span class="c1">// If a rotary encoder is at position 1, start ROUTE with ID 123</span>
+<span class="w">  </span><span class="n">START</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span><span class="w"></span>
+<span class="n">ENDIF</span><span class="w"></span>
 </pre></div>
 </div>
 <p>LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.</p>
@@ -760,7 +761,7 @@ DONE
 </div>
 </section>
 <section id="output-and-servo-commands">
-<h2><a class="toc-backref" href="#id10">Output and servo commands</a><a class="headerlink" href="#output-and-servo-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Output and servo commands</a><a class="headerlink" href="#output-and-servo-commands" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">SET(</span> <span class="pre">pin</span> <span class="pre">)</span></code>  Set an output pin HIGH</p>
 <p><code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">pin</span> <span class="pre">)</span></code>        Reset output pin (set to LOW)</p>
 <p><code class="docutils literal notranslate"><span class="pre">CLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code> Close a defined turnout/point</p>
@@ -775,120 +776,120 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">WAITFOR(</span> <span class="pre">pin</span> <span class="pre">)</span></code>      The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.</p>
 <p>A couple of examples:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// First example defines a servo turnout/point for the coal yard and a signal for the main line.</span>
-<span class="n">TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
-<span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">)</span>
+<span class="n">TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span><span class="w"></span>
 
 <span class="c1">// When our turnout/point is closed, the main line is open, so the signal is green.</span>
-<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-  <span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">DONE</span>
+<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
+<span class="n">DONE</span><span class="w"></span>
 
 <span class="c1">// When our turnout is closed, the main line is interrupted, so the signal is red.</span>
-<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-  <span class="n">RED</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">DONE</span>
+<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
+<span class="n">DONE</span><span class="w"></span>
 
 <span class="c1">// This example triggers an automation sequence when a DCC accessory decoder is activated, including waiting for SERVO motions to complete.</span>
-<span class="n">ONACTIVATEL</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>            <span class="c1">// Activating DCC accessory decoder with linear address 100 commences the sequence.</span>
-  <span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="n">Slow</span><span class="p">)</span>     <span class="c1">// Move the first servo and wait.</span>
-  <span class="n">WAITFOR</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
-  <span class="n">SERVO</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="n">Medium</span><span class="p">)</span>   <span class="c1">// Move the second servo and wait.</span>
-  <span class="n">WAITFOR</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
-  <span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>                  <span class="c1">// Activate a Vpin to turn an LED on.</span>
-  <span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>                  <span class="c1">// Activate a second Vpin to turn a second LED on.</span>
-<span class="n">DONE</span>
+<span class="n">ONACTIVATEL</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w">            </span><span class="c1">// Activating DCC accessory decoder with linear address 100 commences the sequence.</span>
+<span class="w">  </span><span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">)</span><span class="w">     </span><span class="c1">// Move the first servo and wait.</span>
+<span class="w">  </span><span class="n">WAITFOR</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">SERVO</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="n">Medium</span><span class="p">)</span><span class="w">   </span><span class="c1">// Move the second servo and wait.</span>
+<span class="w">  </span><span class="n">WAITFOR</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w">                  </span><span class="c1">// Activate a Vpin to turn an LED on.</span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span><span class="w">                  </span><span class="c1">// Activate a second Vpin to turn a second LED on.</span>
+<span class="n">DONE</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="flow-control-functions">
-<h2><a class="toc-backref" href="#id11">Flow Control Functions</a><a class="headerlink" href="#flow-control-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Flow Control Functions</a><a class="headerlink" href="#flow-control-functions" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">CALL(</span> <span class="pre">route</span> <span class="pre">)</span></code>       Branch to a separate sequence, which will need to RETURN when complete.</p>
 <p><code class="docutils literal notranslate"><span class="pre">RETURN</span></code>      Return to the calling sequence when completed (no DONE required).</p>
 <p>Say, for example, you have an AUTOMATION you initiate the sends a train through your layout with multiple station stops, and you want to do the same things at each station.</p>
 <p>You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="s">&quot;Station loop&quot;</span><span class="p">)</span>    <span class="c1">// Our station loop sequence</span>
-  <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-  <span class="n">AT</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>                         <span class="c1">// At station 1 entrance sensor, call our sequence</span>
-  <span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-  <span class="n">AT</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>                         <span class="c1">// At station 2 entrance sensor, call our sequence</span>
-  <span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-  <span class="n">AT</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span>                         <span class="c1">// At station 3 entrance sensor, call our sequence</span>
-  <span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-  <span class="n">AT</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span>                         <span class="c1">// At station 4 entrance sensor, call our sequence</span>
-  <span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-  <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>                      <span class="c1">// Keep looping through the stations (see FOLLOW command reference below)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station loop&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// Our station loop sequence</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 1 entrance sensor, call our sequence</span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 2 entrance sensor, call our sequence</span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 3 entrance sensor, call our sequence</span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 4 entrance sensor, call our sequence</span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span><span class="w">                      </span><span class="c1">// Keep looping through the stations (see FOLLOW command reference below)</span>
 
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="s">&quot;Station sequence&quot;</span><span class="p">)</span>  <span class="c1">// Our station sequence</span>
-  <span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                         <span class="c1">// Blow the horn</span>
-  <span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>                         <span class="c1">// Break squeal</span>
-  <span class="n">STOP</span>                            <span class="c1">// Stop at the station</span>
-  <span class="n">FON</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>                         <span class="c1">// Let out a hiss from the air breaks for a second</span>
-  <span class="n">DELAY</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-  <span class="n">FOFF</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-  <span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>        <span class="c1">// Wait between 2 and 10 seconds for passengers</span>
-  <span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                         <span class="c1">// Blow the horn again</span>
-  <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>                         <span class="c1">// On our way to the next station</span>
-  <span class="n">RETURN</span>                          <span class="c1">// Return to the calling sequence</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station sequence&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Our station sequence</span>
+<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Blow the horn</span>
+<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Break squeal</span>
+<span class="w">  </span><span class="n">STOP</span><span class="w">                            </span><span class="c1">// Stop at the station</span>
+<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Let out a hiss from the air breaks for a second</span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">FOFF</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span><span class="w">        </span><span class="c1">// Wait between 2 and 10 seconds for passengers</span>
+<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Blow the horn again</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w">                         </span><span class="c1">// On our way to the next station</span>
+<span class="w">  </span><span class="n">RETURN</span><span class="w">                          </span><span class="c1">// Return to the calling sequence</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">FOLLOW(</span> <span class="pre">route</span> <span class="pre">)</span></code>     Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout/point is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.</p>
 <p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="s">&quot;Choose your own adventure&quot;</span><span class="p">)</span> <span class="c1">// This let&#39;s someone control the sequence by throwing a turnout/point (or not)</span>
-  <span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-  <span class="n">AFTER</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span>
-  <span class="n">IFTHROWN</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span>
-    <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
-  <span class="n">ELSE</span>
-    <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-  <span class="n">ENDIF</span>
-  <span class="n">DONE</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Choose your own adventure&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// This let&#39;s someone control the sequence by throwing a turnout/point (or not)</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">ELSE</span><span class="w"></span>
+<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">ENDIF</span><span class="w"></span>
+<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
 
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="s">&quot;Adventure 1&quot;</span><span class="p">)</span>                 <span class="c1">// Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated</span>
-  <span class="n">AFTER</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span>
-  <span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-  <span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-  <span class="n">STOP</span>
-  <span class="n">DONE</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adventure 1&quot;</span><span class="p">)</span><span class="w">                 </span><span class="c1">// Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">STOP</span><span class="w"></span>
+<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
 
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="s">&quot;Adventure 2&quot;</span><span class="p">)</span>                 <span class="c1">// If we don&#39;t throw the turnout/point, let&#39;s do our station loop from the example above</span>
-  <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adventure 2&quot;</span><span class="p">)</span><span class="w">                 </span><span class="c1">// If we don&#39;t throw the turnout/point, let&#39;s do our station loop from the example above</span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">DELAY(</span> <span class="pre">delay</span> <span class="pre">)</span></code>      Delay a number of milliseconds</p>
 <p><code class="docutils literal notranslate"><span class="pre">DELAYMINS(</span> <span class="pre">delay</span> <span class="pre">)</span></code>  Delay a number of minutes</p>
 <p><code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(</span> <span class="pre">min_delay,</span> <span class="pre">max_delay</span> <span class="pre">)</span></code> Delay a random time between min and max milliseconds, see <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for good examples.</p>
 <p>Delay examples:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>      <span class="c1">// When turnout 102 closed, wait 2 seconds, then set signal 101 green.</span>
-  <span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-  <span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
-  <span class="n">DONE</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w">      </span><span class="c1">// When turnout 102 closed, wait 2 seconds, then set signal 101 green.</span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
 
-<span class="n">AT</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>           <span class="c1">// When sensor 123 is activated, set signal 102 red, wait 1 minute, then set signal 102 green.</span>
-  <span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
-  <span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
-  <span class="n">DONE</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span><span class="w">           </span><span class="c1">// When sensor 123 is activated, set signal 102 red, wait 1 minute, then set signal 102 green.</span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">IFRANDOM(</span> <span class="pre">percent</span> <span class="pre">)</span></code> Runs commands in IF block a random percentage of the time. This is handy for more realism by enabling automations that don’t have to run on a schedule.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>           <span class="c1">// When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.</span>
-  <span class="n">IFRANDOM</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-    <span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
-    <span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">RESET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
-  <span class="n">ENDIF</span>
-  <span class="n">DONE</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w">           </span><span class="c1">// When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.</span>
+<span class="w">  </span><span class="n">IFRANDOM</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">RESET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">ENDIF</span><span class="w"></span>
+<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="blocks">
-<h2><a class="toc-backref" href="#id12">Blocks</a><a class="headerlink" href="#blocks" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Blocks</a><a class="headerlink" href="#blocks" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free</p>
 <p><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code>    Free previously reserved block</p>
 <p><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code>  If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p>
 </section>
 <section id="command-station-functions">
-<h2><a class="toc-backref" href="#id13">Command Station Functions</a><a class="headerlink" href="#command-station-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Command Station Functions</a><a class="headerlink" href="#command-station-functions" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> Power on track and UNJOIN (not yet implemented) - this command will be available in a future release of EX-CommandStation <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code>    Power off track <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">JOIN</span></code>        Joins PROG and MAIN track outputs to send the same MAIN DCC signal</p>
@@ -904,7 +905,7 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">msg</span> <span class="pre">)</span></code>      Writes direct to Serial3</p>
 </section>
 <section id="ex-rail-functions">
-<h2><a class="toc-backref" href="#id14">EX-RAIL Functions</a><a class="headerlink" href="#ex-rail-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">EX-RAIL Functions</a><a class="headerlink" href="#ex-rail-functions" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">PAUSE</span></code>       E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd</p>
 <p><code class="docutils literal notranslate"><span class="pre">RESUME</span></code>      Resume all paused tasks, including loco movement</p>
 <p><code class="docutils literal notranslate"><span class="pre">START(</span> <span class="pre">sequence_id</span> <span class="pre">)</span></code>        Start a new task to execute a route or sequence</p>
@@ -915,7 +916,7 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">ROSTER(</span> <span class="pre">cab,</span> <span class="pre">name,</span> <span class="pre">func_map</span> <span class="pre">)</span></code>       Provide roster info for WiThrottle</p>
 </section>
 <section id="loco-dcc-functions">
-<h2><a class="toc-backref" href="#id15">Loco DCC Functions</a><a class="headerlink" href="#loco-dcc-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Loco DCC Functions</a><a class="headerlink" href="#loco-dcc-functions" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code>       Emergency stop loco</p>
 <p><code class="docutils literal notranslate"><span class="pre">FWD(</span> <span class="pre">speed</span> <span class="pre">)</span></code>        Drive loco forward at DCC speed 0-127 (1=ESTOP)</p>
 <p><code class="docutils literal notranslate"><span class="pre">REV(</span> <span class="pre">speed</span> <span class="pre">)</span></code>        Drive logo in reverse at DCC speed 0-127 (1=ESTOP)</p>
@@ -926,7 +927,7 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code>    Switches FWD/REV meaning for this loco</p>
 </section>
 <section id="dcc-accessory-decoder-commands">
-<h2><a class="toc-backref" href="#id16">DCC Accessory decoder commands</a><a class="headerlink" href="#dcc-accessory-decoder-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">DCC Accessory decoder commands</a><a class="headerlink" href="#dcc-accessory-decoder-commands" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ONACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>        Event handler for 2 part DCC accessory packet value 1</p>
 <p><code class="docutils literal notranslate"><span class="pre">ONACTIVATEL(</span> <span class="pre">linear</span> <span class="pre">)</span></code>       Event handler for linear DCC accessory packet value 1</p>
 <p><code class="docutils literal notranslate"><span class="pre">ONDEACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code>      Event handler for 2 part DCC accessory packet value 0</p>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>Which sensor type to use?<a class="headerlink" href="#which-sensor-type-to-use" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../../levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#infrared-sensors" id="id1">Infrared sensors</a></p></li>
@@ -457,7 +458,7 @@
 <li><p><a class="reference internal" href="#block-occupancy-detectors" id="id3">Block occupancy detectors</a></p></li>
 <li><p><a class="reference internal" href="#proximity-sensors" id="id4">Proximity sensors</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>A common topic that arises in support chats in Discord is which sensor type to use in various scenarios.</p>
 <p>There are a number of different advantages and disadvantages to the various sensor types which we aim to cover on this page.</p>
@@ -469,14 +470,14 @@
 <li><p>Proximity (and time-of-flight) sensors</p></li>
 </ul>
 <section id="infrared-sensors">
-<h2><a class="toc-backref" href="#id1">Infrared sensors</a><a class="headerlink" href="#infrared-sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Infrared sensors</a><a class="headerlink" href="#infrared-sensors" title="Permalink to this heading"></a></h2>
 <p>Infrared sensors consist of a light emitting source and receiver to detect when an object passes over or through the beam of infrared light.</p>
 <p>There are two different ways to have these configured:</p>
 <ul class="simple">
 <li><p>Using reflection, whereby the emitter/receiver are side-by-side and are activated by the infrared light reflecting back to the receiver (typically the default option when purchasing)</p></li>
 <li><p>Using beam break, whereby the emitter/receiver are facing each other, and are activated by an object breaking the beam (typically requires modification by desoldering and relocating the transmitter and receiver)</p></li>
 </ul>
-<table class="colwidths-given command-table docutils align-center" style="width: 100%">
+<table class="command-table docutils align-center" style="width: 100%">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -511,9 +512,9 @@
 <p>Refer to <a class="reference internal" href="ir-sensor.html"><span class="doc">IR Sensor Boards</span></a> for further information on infrared sensors.</p>
 </section>
 <section id="hall-effect-sensors">
-<h2><a class="toc-backref" href="#id2">Hall effect sensors</a><a class="headerlink" href="#hall-effect-sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Hall effect sensors</a><a class="headerlink" href="#hall-effect-sensors" title="Permalink to this heading"></a></h2>
 <p>Hall effect sensors consist of a hall effect device mounted between the track rails, and a suitable magnet located on the underside of locomotives and rolling stock.</p>
-<table class="colwidths-given command-table docutils align-center" style="width: 100%">
+<table class="command-table docutils align-center" style="width: 100%">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -542,10 +543,10 @@
 </div>
 </section>
 <section id="block-occupancy-detectors">
-<h2><a class="toc-backref" href="#id3">Block occupancy detectors</a><a class="headerlink" href="#block-occupancy-detectors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Block occupancy detectors</a><a class="headerlink" href="#block-occupancy-detectors" title="Permalink to this heading"></a></h2>
 <p>Block occupancy detectors are quite commonly found in DC layouts and have been a very popular method for detecting when a locomotive and/or rolling stock is occupying a DC power district or a specific, isolated section of track.</p>
 <p>These typically work by detecting current being drawn through the track power wiring, requiring resistor wheelsets to be installed on rolling stock. A locomotive requires no modification as the motor (or DCC decoder) will enable this detection.</p>
-<table class="colwidths-given command-table docutils align-center" style="width: 100%">
+<table class="command-table docutils align-center" style="width: 100%">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -569,10 +570,10 @@
 </table>
 </section>
 <section id="proximity-sensors">
-<h2><a class="toc-backref" href="#id4">Proximity sensors</a><a class="headerlink" href="#proximity-sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Proximity sensors</a><a class="headerlink" href="#proximity-sensors" title="Permalink to this heading"></a></h2>
 <p>Proximity sensors work by detecting objects within a specific distance range from the sensor, and are also able to measure the specific distance to objects, improving detection reliability.</p>
 <p>There are various types of proximity sensors available, with the most commonly available on breakout boards being time-of-flight sensors such as the VL53L0X.</p>
-<table class="colwidths-given command-table docutils align-center" style="width: 100%">
+<table class="command-table docutils align-center" style="width: 100%">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

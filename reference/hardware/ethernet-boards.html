@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>Ethernet Boards<a class="headerlink" href="#ethernet-boards" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#arduino-network-shield-2" id="id1">Arduino Network Shield 2</a></p></li>
@@ -457,7 +458,7 @@
 <li><p><a class="reference internal" href="#sunfounder-ethernet-shield" id="id3">Sunfounder Ethernet Shield</a></p></li>
 <li><p><a class="reference internal" href="#nano-ethernet-shield" id="id4">Nano Ethernet Shield</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the <a class="reference internal" href="wifi-boards.html"><span class="doc">WiFi Boards Section</span></a>.</p>
 <p>To use Ethernet instead of WiFi, follow these simple steps:</p>
@@ -484,22 +485,22 @@
 <li><p><a class="reference internal" href="#nano-ethernet-shield"><span class="std std-ref">Nano Ethernet Shield</span></a></p></li>
 </ul>
 <section id="arduino-network-shield-2">
-<h2><a class="toc-backref" href="#id1">Arduino Network Shield 2</a><a class="headerlink" href="#arduino-network-shield-2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Arduino Network Shield 2</a><a class="headerlink" href="#arduino-network-shield-2" title="Permalink to this heading"></a></h2>
 <p>There have been different revisions for the Arduino Network Shields, the main difference is the version of the WiFi chip on the board. The “2” board uses the Wiznet W5500, other versions used the older W5100 chip. The only supported chip currently is the W5500, but the other boards may work as well. The W5500 can handle 8 simultaneous socket connections while the W5100 can handle 4. These boards provide a network (IP) stack capable of both TCP and UDP. This board also has an SDCard which can be used for your own custom features or for storing settings with a possible future version of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <a class="reference internal image-reference" href="../../_images/arduino_ethernet_shield_2.jpg"><img alt="Arduino Ethernet Shield 2" src="../../_images/arduino_ethernet_shield_2.jpg" style="width: 425.0px; height: 425.0px;" /></a>
 </section>
 <section id="wiznet-wiz850io">
-<h2><a class="toc-backref" href="#id2">Wiznet WIZ850IO</a><a class="headerlink" href="#wiznet-wiz850io" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Wiznet WIZ850IO</a><a class="headerlink" href="#wiznet-wiz850io" title="Permalink to this heading"></a></h2>
 <p>This is a micro Ethernet board no bigger than the RJ45 connector it is attached to.  You have to wire this with jumpers or solder it to a prototyping PCB.</p>
 <a class="reference internal image-reference" href="../../_images/WIZ850IO.png"><img alt="WIZ850IO Ethernet Adapter" src="../../_images/WIZ850IO.png" style="width: 160.0px; height: 160.0px;" /></a>
 </section>
 <section id="sunfounder-ethernet-shield">
-<h2><a class="toc-backref" href="#id3">Sunfounder Ethernet Shield</a><a class="headerlink" href="#sunfounder-ethernet-shield" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Sunfounder Ethernet Shield</a><a class="headerlink" href="#sunfounder-ethernet-shield" title="Permalink to this heading"></a></h2>
 <p>This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500.</p>
 <a class="reference internal image-reference" href="../../_images/sunfounder_ethernet_shield.jpg"><img alt="Sunfounder Ethernet Shield" src="../../_images/sunfounder_ethernet_shield.jpg" style="width: 375.0px; height: 375.0px;" /></a>
 </section>
 <section id="nano-ethernet-shield">
-<h2><a class="toc-backref" href="#id4">Nano Ethernet Shield</a><a class="headerlink" href="#nano-ethernet-shield" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Nano Ethernet Shield</a><a class="headerlink" href="#nano-ethernet-shield" title="Permalink to this heading"></a></h2>
 <p>This board actually works with an Arduino Nano, you can plug your Nano directly onto this board or create a stack with the matching motor shield. This board will work with an Uno or Mega also, but you have to connect it with jumpers.</p>
 <a class="reference internal image-reference" href="../../_images/nano_ethernet_shield.jpg"><img alt="Sunfounder Ethernet Shield" src="../../_images/nano_ethernet_shield.jpg" style="width: 250.0px; height: 250.0px;" /></a>
 </section>

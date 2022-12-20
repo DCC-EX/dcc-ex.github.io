@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>Supported Motor Drivers<a class="headerlink" href="#supported-motor-drivers" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#what-is-a-motor-controller" id="id1">What is a Motor Controller?</a></p></li>
@@ -465,7 +466,7 @@
 <li><p><a class="reference internal" href="#configuring-motor-drivers" id="id8">Configuring Motor Drivers</a></p></li>
 <li><p><a class="reference internal" href="#high-accuracy-waveform" id="id9">High Accuracy Waveform</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is compatible with a wide variety of motor boards, also known as “dual H-bridges” and “motor shields”. We’ve sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.</p>
 <p>If you have trouble finding a particular board from the list, try searching based on it’s name or the type of chip on the board and the terms “H-Bridge” or “Motor Shield”. There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.</p>
@@ -476,14 +477,14 @@
 <p>Where appropriate, we have used the terms “single” and “dual” to indicate on the non-shield type boards, which ones have just a single H-Bridge for one track and which ones have two. A single H-Bridge board will power your main track, but you will then need another board of some kind to connect to your programming track</p>
 </div>
 <section id="what-is-a-motor-controller">
-<h2><a class="toc-backref" href="#id1">What is a Motor Controller?</a><a class="headerlink" href="#what-is-a-motor-controller" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">What is a Motor Controller?</a><a class="headerlink" href="#what-is-a-motor-controller" title="Permalink to this heading"></a></h2>
 <p>A motor controller (aka shield, aka board) is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (PWM) signal would be applied to a motor with the PWM pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the PWM pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polar square wave. In this way, we use the 5V DC (or 3.3V) microcontroller output to switch the voltage from separate 12-18V DC power supply connected to the motor controller, and create a pulse train signal of 1’s and 0’s that a mobile decoder can interpret as commands.</p>
 </section>
 <section id="current-list-of-boards">
-<h2><a class="toc-backref" href="#id2">Current list of boards</a><a class="headerlink" href="#current-list-of-boards" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Current list of boards</a><a class="headerlink" href="#current-list-of-boards" title="Permalink to this heading"></a></h2>
 <p>Below we outline the various details that we know of related to each of the different boards that we’ve either tested, or know to work based on user feedback.</p>
 <section id="easy-to-use-boards">
-<h3><a class="toc-backref" href="#id3">Easy to use boards</a><a class="headerlink" href="#easy-to-use-boards" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Easy to use boards</a><a class="headerlink" href="#easy-to-use-boards" title="Permalink to this heading"></a></h3>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -496,7 +497,7 @@
 </div>
 </section>
 <section id="intermediate-boards">
-<h3><a class="toc-backref" href="#id4">Intermediate boards</a><a class="headerlink" href="#intermediate-boards" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Intermediate boards</a><a class="headerlink" href="#intermediate-boards" title="Permalink to this heading"></a></h3>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>These boards require wiring.</p>
 <div class="toctree-wrapper compound">
@@ -510,7 +511,7 @@
 </div>
 </section>
 <section id="expert-level-boards">
-<h3><a class="toc-backref" href="#id5">Expert Level Boards</a><a class="headerlink" href="#expert-level-boards" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Expert Level Boards</a><a class="headerlink" href="#expert-level-boards" title="Permalink to this heading"></a></h3>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>These boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)</p>
 <div class="toctree-wrapper compound">
@@ -523,7 +524,7 @@
 </div>
 </section>
 <section id="incompatible-boards">
-<h3><a class="toc-backref" href="#id6">Incompatible boards</a><a class="headerlink" href="#incompatible-boards" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Incompatible boards</a><a class="headerlink" href="#incompatible-boards" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>VNH2SP30 - SparkFun Monster Moto and others. It can’t switch fast enough to generate a reliable DCC signal</p></li>
 <li><p>IFX9202ED - Infineon Dual H-Bridge. Can’t switch fast enough.</p></li>
@@ -533,7 +534,7 @@
 </ul>
 </section>
 <section id="other-boards">
-<h3><a class="toc-backref" href="#id7">Other boards</a><a class="headerlink" href="#other-boards" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Other boards</a><a class="headerlink" href="#other-boards" title="Permalink to this heading"></a></h3>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>While not fully supported and tested, other boards can potentially be used. Look for the following criteria:</p>
 <ul class="simple">
@@ -550,7 +551,7 @@
 </section>
 </section>
 <section id="configuring-motor-drivers">
-<h2><a class="toc-backref" href="#id8">Configuring Motor Drivers</a><a class="headerlink" href="#configuring-motor-drivers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Configuring Motor Drivers</a><a class="headerlink" href="#configuring-motor-drivers" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>If your board is not in the list of supported motor board types, or if you need to make changes or have more information about how motor boards are configured in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, see:</p>
 <div class="toctree-wrapper compound">
@@ -560,7 +561,7 @@
 </div>
 </section>
 <section id="high-accuracy-waveform">
-<h2><a class="toc-backref" href="#id9">High Accuracy Waveform</a><a class="headerlink" href="#high-accuracy-waveform" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">High Accuracy Waveform</a><a class="headerlink" href="#high-accuracy-waveform" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>If you’re experiencing issues with specific decoders and all attempts to get them working are failing, you may need to enable the high accuracy waveform functionality (providing your motor driver supports it).</p>
 <div class="toctree-wrapper compound">

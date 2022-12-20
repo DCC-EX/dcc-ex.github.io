@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>I/O Device Drivers and HAL<a class="headerlink" href="#i-o-device-drivers-and-hal" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#catching-the-i2c-bus" id="id5">Catching the I2C Bus</a></p></li>
@@ -459,7 +460,7 @@
 <li><p><a class="reference internal" href="#adding-a-new-device" id="id9">Adding a New Device</a></p></li>
 <li><p><a class="reference internal" href="#adding-a-new-device-configuration-file" id="id10">Adding A New Device Configuration File</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>The DCC-EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may
 outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller
@@ -500,7 +501,7 @@ only for the Arduino digital input and output functions and analogue input funct
 It is theoretically possible to create an ‘on-line only’ version of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> which excludes the loco programming functions and
 therefore frees up FLASH on the Uno and Nano to allow the full HAL to operate, but this is not currently supported.</p>
 <section id="catching-the-i2c-bus">
-<h2><a class="toc-backref" href="#id5">Catching the I2C Bus</a><a class="headerlink" href="#catching-the-i2c-bus" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Catching the I2C Bus</a><a class="headerlink" href="#catching-the-i2c-bus" title="Permalink to this heading"></a></h2>
 <p>Many of the external modules are connected to the Arduino via the I<sup>2</sup>C (Inter Integrated Circuit) interface.
 This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts).
 Your motor shield may have convenient connectors for I<sup>2</sup>C devices; for example, the DeekRobot shield has two sets of four I<sup>2</sup>C pins on the top.  If not, then check the Arduino’s data sheet to find the applicable I<sup>2</sup>C and power connections.
@@ -541,7 +542,7 @@ address.</p>
 </section>
 </section>
 <section id="mcp23017-modules">
-<h2><a class="toc-backref" href="#id6">MCP23017 Modules</a><a class="headerlink" href="#mcp23017-modules" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">MCP23017 Modules</a><a class="headerlink" href="#mcp23017-modules" title="Permalink to this heading"></a></h2>
 <p>The MCP23017 GPIO Extender module has 16 input/output pins.  Like the Arduino input/output pins, you can access any of these in input mode (as a sensor input)
 or output mode (driving a digital output and illuminating an LED or switching some external hardware).  Each module has an address associated with it, which
 is generally either 0x20, 0x21, 0x22 or 0x23.  By default, the module is usually 0x20.  The address will only need to be changed if you have more
@@ -563,7 +564,7 @@ the current stops flowing.  This is just the same as the Arduino digital GPIO pi
 </div>
 </section>
 <section id="pca9685-modules">
-<h2><a class="toc-backref" href="#id7">PCA9685 Modules</a><a class="headerlink" href="#pca9685-modules" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">PCA9685 Modules</a><a class="headerlink" href="#pca9685-modules" title="Permalink to this heading"></a></h2>
 <p>The PCA9685 PWM (servo) controller module has 16 input/output pins.  In addition, next to each PWM pin is a +5V and a GND pin, so that a servo connector may
 be directly plugged onto the group of three pins.  Even better, the pins are usually colour-coded to match the colours of the servo cables!</p>
 <p>Like the MCP23017 module, each PCA9685 has an address.  The default address is 0x40, and may be changed, for example to 0x41, 0x42 or 0x43 for the second, third and fourth module
@@ -595,7 +596,7 @@ to different brightness levels.  the EX-RAIL automation has a command <strong>FA
 PCA9685 to do exactly this.</p>
 </section>
 <section id="other-drivers">
-<h2><a class="toc-backref" href="#id8">Other Drivers</a><a class="headerlink" href="#other-drivers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Other Drivers</a><a class="headerlink" href="#other-drivers" title="Permalink to this heading"></a></h2>
 <p>There are also drivers included with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> for the following modules:</p>
 <ul class="simple">
 <li><p>PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I<sup>2</sup>C).</p></li>
@@ -615,8 +616,8 @@ output VPINs from within <span style="font-weight: bold; color: #00a3b9; font-si
 <p>When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.</p>
 <p>The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I<sup>2</sup>C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.</p>
 <p>If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">);</span>
-<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">);</span><span class="w"></span>
+<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x21</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>To configure an input pin using the DCC-EX Sensor commands, use the &lt;S&gt; command:</p>
@@ -631,7 +632,7 @@ output VPINs from within <span style="font-weight: bold; color: #00a3b9; font-si
 </section>
 </section>
 <section id="adding-a-new-device">
-<h2><a class="toc-backref" href="#id9">Adding a New Device</a><a class="headerlink" href="#adding-a-new-device" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Adding a New Device</a><a class="headerlink" href="#adding-a-new-device" title="Permalink to this heading"></a></h2>
 <p>If you want to add a device that is not handled by <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> ‘out-of-the-box’, then you will need to create a device
 configuration file, with details of the device driver and how to access the device.</p>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> already has a few useful device drivers for different types of sensors, and new ones are appearing regularly.  The
@@ -650,7 +651,7 @@ In fact, the file can have any name you like.  You could use <code class="docuti
 list of files in the Arduino IDE.</p>
 </section>
 <section id="adding-a-new-device-configuration-file">
-<h2><a class="toc-backref" href="#id10">Adding A New Device Configuration File</a><a class="headerlink" href="#adding-a-new-device-configuration-file" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Adding A New Device Configuration File</a><a class="headerlink" href="#adding-a-new-device-configuration-file" title="Permalink to this heading"></a></h2>
 <p>This will need to be done in the <a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino-IDE</span></a>, so first make sure you have followed these steps to load up the Arduino IDE.</p>
 <section id="create-a-new-tab">
 <h3>Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permalink to this heading"></a></h3>
@@ -677,12 +678,12 @@ and click <code class="docutils literal notranslate"><span class="pre">OK</span>
 <section id="adding-in-the-configuration-commands">
 <h3>Adding in the configuration commands<a class="headerlink" href="#adding-in-the-configuration-commands" title="Permalink to this heading"></a></h3>
 <p>Within the new file that has been created, you can add in the definitions of new devices.  But first you need to add the following lines:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
 
-<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Insert your commands here...</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Insert your commands here...</span>
 
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be
@@ -700,23 +701,23 @@ The names of the files are not used, but best keep them below 8 characters (excl
 card, including hidden files - the DFPlayer may find them and attempt to play them!  When you’re done, insert the card into the DFPlayer.</p>
 <p>Now you’re ready to set up the software.</p>
 <p>Add the following line to the top of the <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code> file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
 <p>This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the <code class="docutils literal notranslate"><span class="pre">halSetup()</span> <span class="pre">{</span> <span class="pre">}</span></code> function definition:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">Serial3</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial3, and allocates 5 virtual pins (VPINs) to interface
 with it.  Save the file.</p>
 <p>The file contents should now look like:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
 
-<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Insert your commands here...</span>
-  <span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">Serial3</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Insert your commands here...</span>
+<span class="w">  </span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

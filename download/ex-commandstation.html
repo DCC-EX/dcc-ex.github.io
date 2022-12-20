@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>EX-CommandStation<a class="headerlink" href="#ex-commandstation" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ex-installer" id="id1">EX-Installer</a></p></li>
@@ -457,7 +458,7 @@
 <li><p><a class="reference internal" href="#ex-commandstation-repository-project-source-files" id="id4">EX-CommandStation Repository (project source files)</a></p></li>
 <li><p><a class="reference internal" href="#getting-basestation-classic" id="id5">Getting BaseStation-Classic</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>Welcome to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> download page. You have several choices:</p>
 <ul class="simple">
@@ -468,7 +469,7 @@
 <li><p>If you’re still looking for <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>, go to the <a class="reference internal" href="#getting-basestation-classic">Getting BaseStation-Classic</a> section.</p></li>
 </ul>
 <section id="ex-installer">
-<h2><a class="toc-backref" href="#id1">EX-Installer</a><a class="headerlink" href="#ex-installer" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">EX-Installer</a><a class="headerlink" href="#ex-installer" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Clicking on the link below will automatically find the correct version for your Computer and Operating system (Windows, Mac, Linux) and download it. After unzipping the files to a folder on your computer and running the “EX-Installer” program, you will have the opportunity to select either <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> or BaseStation-Classic, and options, such as your Arduino type and motor driver type. It will automatically upload the software to your Arduino or other supported board. Click here for <a class="reference internal" href="../ex-commandstation/get-started/installer.html"><span class="doc">EX-Installer installation instructions</span></a>. If you have an issue with the web page getting you the correct version, click on the <a class="reference internal" href="#latest-ex-commandstation-official-release">Latest EX-CommandStation Official Release</a> button in the next section to manually download the correct version.</p>
@@ -478,7 +479,7 @@
 </div>
 </section>
 <section id="latest-ex-commandstation-official-release">
-<h2><a class="toc-backref" href="#id2">Latest EX-CommandStation Official Release</a><a class="headerlink" href="#latest-ex-commandstation-official-release" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Latest EX-CommandStation Official Release</a><a class="headerlink" href="#latest-ex-commandstation-official-release" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for <cite>Arduino IDE installation instructions :doc:`&lt;/ex-commandstation/advanced-setup/installation-options/arduino-ide&gt;</cite>.</p>
@@ -489,7 +490,7 @@
 </div>
 </section>
 <section id="latest-ex-commandstation-unreleased-development-version">
-<h2><a class="toc-backref" href="#id3">Latest EX-CommandStation Unreleased Development Version</a><a class="headerlink" href="#latest-ex-commandstation-unreleased-development-version" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Latest EX-CommandStation Unreleased Development Version</a><a class="headerlink" href="#latest-ex-commandstation-unreleased-development-version" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The link below will download the latest <em>unreleased</em> development version in zip file format. Please open the zip file, go into the “CommandStation-EX-master” folder, and unzip all the files in that folder into your “EX-CommandStation-EX” sketch folder. Make sure you <strong>DO NOT</strong> just unzip the entire zip file, since it will have the incorrect folder name. The Arduino IDE requires that the folder name and the .ino file inside that folder match names exactly, i.e.: “CommandStation-EX” not “CommandStation-EX-master”.</p>
@@ -504,7 +505,7 @@
 </div>
 </section>
 <section id="ex-commandstation-repository-project-source-files">
-<h2><a class="toc-backref" href="#id4">EX-CommandStation Repository (project source files)</a><a class="headerlink" href="#ex-commandstation-repository-project-source-files" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">EX-CommandStation Repository (project source files)</a><a class="headerlink" href="#ex-commandstation-repository-project-source-files" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The link below will take you the the EX-CommandStation GitHub repository, where you can clone the project to your computer. Click on the green button to get a clone link or to download the zip file. We have made sure that you can still use the Arduino IDE if you like, but we recommend developers use the PlatformIO development environment. See the <a class="reference internal" href="../about/contributing/index.html"><span class="doc">Contributing Page</span></a> for more information.</p>
@@ -516,7 +517,7 @@
 <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-basestationclassic.png"><img alt="BaseStationClassic" class="image-product-logo-float-right" src="../_images/product-logo-basestationclassic.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 </section>
 <section id="getting-basestation-classic">
-<h2><a class="toc-backref" href="#id5">Getting BaseStation-Classic</a><a class="headerlink" href="#getting-basestation-classic" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Getting BaseStation-Classic</a><a class="headerlink" href="#getting-basestation-classic" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> will allow you to install BaseStation-Classic. However, we recommend using the newer <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> as it will run on the same hardware and is better supported.</p>
 <p>If you are looking for the original source for the project (with some minor bug fixes and improvements), see the links below.</p>
 <div class="admonition warning">

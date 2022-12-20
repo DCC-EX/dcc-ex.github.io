@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -449,14 +450,14 @@
 <h1>L298N Motor Driver Setup<a class="headerlink" href="#l298n-motor-driver-setup" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#when-is-the-l298n-a-good-option" id="id8">When is the L298N a Good Option?</a></p></li>
 <li><p><a class="reference internal" href="#l298n-for-main-and-prog-with-current-sense" id="id9">L298N for MAIN and PROG with Current Sense</a></p></li>
 <li><p><a class="reference internal" href="#l298n-for-prog-and-high-current-ibt-2-for-main" id="id10">L298N for PROG and High Current IBT_2 for MAIN</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are the key differences:</p>
 <ul class="simple">
@@ -472,7 +473,7 @@
 </figcaption>
 </figure>
 <section id="when-is-the-l298n-a-good-option">
-<h2><a class="toc-backref" href="#id8">When is the L298N a Good Option?</a><a class="headerlink" href="#when-is-the-l298n-a-good-option" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">When is the L298N a Good Option?</a><a class="headerlink" href="#when-is-the-l298n-a-good-option" title="Permalink to this heading"></a></h2>
 <p>You may wonder why one would go through the trouble of using this board when the Arduino / Deek-Robot Motor Shield already has what we need and is a recommended option. The answer is you may want to use this board because:</p>
 <ul class="simple">
 <li><p>You already have one in your parts box</p></li>
@@ -488,7 +489,7 @@
 </ul>
 </section>
 <section id="l298n-for-main-and-prog-with-current-sense">
-<h2><a class="toc-backref" href="#id9">L298N for MAIN and PROG with Current Sense</a><a class="headerlink" href="#l298n-for-main-and-prog-with-current-sense" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">L298N for MAIN and PROG with Current Sense</a><a class="headerlink" href="#l298n-for-main-and-prog-with-current-sense" title="Permalink to this heading"></a></h2>
 <p>You will need to have currense sense in order to program locos on the programming (service) track. In addition, current sense is necessary to provide short-circuit detection for each track. There are two methods to add current sensing to this board, the first method requires cutting two leads on the IC and soldering in current sense resistors. The other method is to use an external current sense board to measure the current going into the board.</p>
 <section id="method-1-adding-current-sense-resistors">
 <h3>Method 1: Adding Current Sense Resistors<a class="headerlink" href="#method-1-adding-current-sense-resistors" title="Permalink to this heading"></a></h3>
@@ -563,10 +564,6 @@
 </figure>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">2 Signal Pin Wiring diagram</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Arduino</p></th>
 <th class="head"><p>L298N</p></th>
@@ -630,10 +627,6 @@
 <p>To wire the board, connect the pins as follows:</p>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">1 Signal Pin Wiring diagram</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Arduino</p></th>
 <th class="head"><p>L298N</p></th>
@@ -689,7 +682,7 @@
 </section>
 </section>
 <section id="l298n-for-prog-and-high-current-ibt-2-for-main">
-<h2><a class="toc-backref" href="#id10">L298N for PROG and High Current IBT_2 for MAIN</a><a class="headerlink" href="#l298n-for-prog-and-high-current-ibt-2-for-main" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">L298N for PROG and High Current IBT_2 for MAIN</a><a class="headerlink" href="#l298n-for-prog-and-high-current-ibt-2-for-main" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 

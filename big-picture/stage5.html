@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>Stage 5 - Turntables &amp; Traversers<a class="headerlink" href="#stage-5-turntables-traversers" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#what-to-expect-to-learn-from-stage-5" id="id1">What to expect to learn from stage 5</a></p></li>
@@ -477,7 +478,7 @@
 <li><p><a class="reference internal" href="#ex-turntable-is-ready-to-use" id="id15">EX-Turntable is ready to use</a></p></li>
 <li><p><a class="reference internal" href="#complete-myautomation-h-examples" id="id16">Complete myAutomation.h examples</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>A turntable can add significant interest to a layout, especially when involved in operations sessions, and when depicting realistic engine yards.</p>
 <p>In addition, turntables can be a real space saver compared to reversing loops, and traversers can also be significant space savers for staging tracks, allowing multiple trains to be staged ready for action without taking up spurs or sidings on the main layout when not in use.</p>
@@ -491,7 +492,7 @@
 <p>Having both a turntable and traverser will require two separate instances of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, meaning two Arduinos, two stepper drivers/motors, and so forth.</p>
 </div>
 <section id="what-to-expect-to-learn-from-stage-5">
-<h2><a class="toc-backref" href="#id1">What to expect to learn from stage 5</a><a class="headerlink" href="#what-to-expect-to-learn-from-stage-5" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">What to expect to learn from stage 5</a><a class="headerlink" href="#what-to-expect-to-learn-from-stage-5" title="Permalink to this heading"></a></h2>
 <p>At the end of this stage, we expect you will have learnt the following:</p>
 <ul class="simple">
 <li><p>How to add an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> in both turntable and traverser modes</p></li>
@@ -501,14 +502,14 @@
 </section>
 <hr class="docutils" />
 <section id="add-an-ex-turntable-to-your-ex-commandstation">
-<h2><a class="toc-backref" href="#id2">Add an EX-Turntable to your EX-CommandStation</a><a class="headerlink" href="#add-an-ex-turntable-to-your-ex-commandstation" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Add an EX-Turntable to your EX-CommandStation</a><a class="headerlink" href="#add-an-ex-turntable-to-your-ex-commandstation" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>All configuration items have been updated in line with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> release 0.5.0-Beta and the associated updates to the “add-turntable-controller” branch of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> which has the device driver and all entities renamed from “Turntable-EX” to the newly branded “EX-Turntable”. If you have an earlier version of either <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> or <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, these examples will differ in this regard.</p>
 </div>
 <p>To add our turntable and traverser to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, we need to ensure <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is configured correctly for both items, and then add the device drivers with the correct configuration to our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <section id="adding-the-turntable">
-<h3><a class="toc-backref" href="#id3">Adding the turntable</a><a class="headerlink" href="#adding-the-turntable" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Adding the turntable</a><a class="headerlink" href="#adding-the-turntable" title="Permalink to this heading"></a></h3>
 <p><em>For the purposes of this exercise, we will assume:</em></p>
 <ul class="simple">
 <li><p>Everything needed from the <a class="reference internal" href="../ex-turntable/purchasing.html"><span class="doc">Purchasing</span></a> page is available</p></li>
@@ -543,8 +544,8 @@
 <summary>"myHal.cpp" for the turntable</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if !defined(IO_NO_HAL)</span>
 
 <span class="c1">// Include devices you need.</span>
-<span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;IO_EXTurntable.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXTurntable.h&quot;</span><span class="cp"></span>
 
 <span class="c1">//==========================================================================</span>
 <span class="c1">// The function halSetup() is invoked from CS if it exists within the build.</span>
@@ -552,9 +553,9 @@
 <span class="c1">// Comments (lines preceded by &quot;//&quot;) are optional.</span>
 <span class="c1">//==========================================================================</span>
 
-<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
 <span class="cp">#endif</span>
 </pre></div>
@@ -566,7 +567,7 @@
 <p>Now, we are ready to move on to adding the traverser, then tuning the positions for both.</p>
 </section>
 <section id="adding-the-traverser">
-<h3><a class="toc-backref" href="#id4">Adding the traverser</a><a class="headerlink" href="#adding-the-traverser" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Adding the traverser</a><a class="headerlink" href="#adding-the-traverser" title="Permalink to this heading"></a></h3>
 <p><em>For the purposes of this exercise, we will assume:</em></p>
 <ul class="simple">
 <li><p>Everything needed from the <a class="reference internal" href="../ex-turntable/purchasing.html"><span class="doc">Purchasing</span></a> page including the considerations as outlined in <a class="reference internal" href="../ex-turntable/traverser.html#what-you-need-for-traverser-mode"><span class="std std-ref">What you need for traverser mode</span></a> is available</p></li>
@@ -608,8 +609,8 @@
 <summary>"myHal.cpp" for the turntable and traverser</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if !defined(IO_NO_HAL)</span>
 
 <span class="c1">// Include devices you need.</span>
-<span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;IO_EXTurntable.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXTurntable.h&quot;</span><span class="cp"></span>
 
 <span class="c1">//==========================================================================</span>
 <span class="c1">// The function halSetup() is invoked from CS if it exists within the build.</span>
@@ -617,10 +618,10 @@
 <span class="c1">// Comments (lines preceded by &quot;//&quot;) are optional.</span>
 <span class="c1">//==========================================================================</span>
 
-<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">);</span>  <span class="c1">// This is our turntable device</span>
-  <span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">601</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">);</span>  <span class="c1">// This is our traverser device</span>
-<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">);</span><span class="w">  </span><span class="c1">// This is our turntable device</span>
+<span class="w">  </span><span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">601</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x61</span><span class="p">);</span><span class="w">  </span><span class="c1">// This is our traverser device</span>
+<span class="p">}</span><span class="w"></span>
 
 <span class="cp">#endif</span>
 </pre></div>
@@ -633,7 +634,7 @@
 </section>
 </section>
 <section id="tune-your-turntable-and-traverser-positions">
-<h2><a class="toc-backref" href="#id5">Tune your turntable and traverser positions</a><a class="headerlink" href="#tune-your-turntable-and-traverser-positions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Tune your turntable and traverser positions</a><a class="headerlink" href="#tune-your-turntable-and-traverser-positions" title="Permalink to this heading"></a></h2>
 <p>We’ll use some basic mathematics to tune our turntable and traverser positions, however in a real layout, some experimentation will be required for fine tuning to ensure proper track alignment.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -643,7 +644,7 @@
 <p>However, when it comes to DCC phase/polarity switching, it’s important to get this right in order to prevent short circuits when locos enter and exit the turntable bridge track.</p>
 </div>
 <section id="obtain-the-steps-per-revolution">
-<h3><a class="toc-backref" href="#id6">Obtain the steps per revolution</a><a class="headerlink" href="#obtain-the-steps-per-revolution" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Obtain the steps per revolution</a><a class="headerlink" href="#obtain-the-steps-per-revolution" title="Permalink to this heading"></a></h3>
 <p>Before attempting any tuning, the first thing we need to obtain is the steps per revolution for both our turntable and traverser.</p>
 <p>Ideally these should have been noted in <a class="reference internal" href="../ex-turntable/assembly.html#load-the-ex-turntable-software"><span class="std std-ref">7. Load the EX-Turntable software</span></a>, however this value can also be obtained by monitoring the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> serial console on startup where the steps per revolution are reported along with the other configuration details.</p>
 <details class="summary-expand-to-see-an-example-startup-screen">
@@ -665,7 +666,7 @@ Turntable homed successfully
 <p>Once we have our steps per revolution, we can use that number with our formulas to calculate the steps required to move to each desired position.</p>
 </section>
 <section id="calculating-ex-turntable-positions-and-dcc-phase-polarity-switching">
-<h3><a class="toc-backref" href="#id7">Calculating EX-Turntable positions and DCC phase/polarity switching</a><a class="headerlink" href="#calculating-ex-turntable-positions-and-dcc-phase-polarity-switching" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Calculating EX-Turntable positions and DCC phase/polarity switching</a><a class="headerlink" href="#calculating-ex-turntable-positions-and-dcc-phase-polarity-switching" title="Permalink to this heading"></a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>It’s a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>. Refer to <a class="reference internal" href="../ex-turntable/overview.html#important-phase-or-polarity-switching"><span class="std std-ref">Important! Phase (or polarity) switching</span></a> and <a class="reference internal" href="../ex-turntable/overview.html#how-does-this-work-with-ex-turntable"><span class="std std-ref">How does this work with EX-Turntable?</span></a> for details.</p>
@@ -722,7 +723,7 @@ Turntable homed successfully
 <h4>Turntable position calculation<a class="headerlink" href="#turntable-position-calculation" title="Permalink to this heading"></a></h4>
 <p>Since we know the angles of our positions as outlined when considering our DCC phase switching, we can now calculate the step counts required for the turntable bridge to align with these positions. We will use the formula outlined in <a class="reference internal" href="../ex-turntable/test-and-tune.html#determine-the-positions"><span class="std std-ref">Determine the positions</span></a> to calculate these step counts (full rotation step count / 360 degrees * position in degrees).</p>
 <p>Using this formula results in these step counts (noting we round up or down to the nearest full number):</p>
-<table class="colwidths-auto command-table docutils align-default">
+<table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Position</p></th>
 <th class="head"><p>Description</p></th>
@@ -779,7 +780,7 @@ Turntable homed successfully
 </section>
 </section>
 <section id="tuning-the-traverser">
-<h3><a class="toc-backref" href="#id8">Tuning the traverser</a><a class="headerlink" href="#tuning-the-traverser" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Tuning the traverser</a><a class="headerlink" href="#tuning-the-traverser" title="Permalink to this heading"></a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Now is a great time to revisit the <a class="reference internal" href="../ex-turntable/traverser.html"><span class="doc">Traversers and Limited Rotation Turntables</span></a> page, and in particular the section on <a class="reference internal" href="../ex-turntable/traverser.html#considerations-turntable-vs-traverser"><span class="std std-ref">Considerations - turntable vs. traverser</span></a>.</p>
@@ -791,7 +792,7 @@ Turntable homed successfully
 <p>For our traverser positions, we have six evenly spaced tracks on the traverser. In addition, we need to ensure we leave a buffer between our home and limit sensors as they should provide some indication of when the traverser is reaching the physical limits of movement. We will use an arbitrary value of 100 steps for this buffer.</p>
 <p>This will mean our first position will be at step 100 (0 + buffer), our last position will be at step 3097 (4097 - buffer), and we will need an additional four positions divided equally between these two positions. Our effective step count between positions 1 and 6 becomes 2997 (3097 - 100) which needs to be divided by 5 to give us 4 evenly distributed positions, which is a gap of 599 steps between each.</p>
 <p>This results in these positions (noting we round up or down to the nearest full number):</p>
-<table class="colwidths-auto command-table docutils align-default">
+<table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Position</p></th>
 <th class="head"><p>Description</p></th>
@@ -834,18 +835,18 @@ Turntable homed successfully
 </table>
 </section>
 <section id="traverser-track-wiring">
-<h3><a class="toc-backref" href="#id9">Traverser track wiring</a><a class="headerlink" href="#traverser-track-wiring" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Traverser track wiring</a><a class="headerlink" href="#traverser-track-wiring" title="Permalink to this heading"></a></h3>
 <p>As there is no rotation with the traverser, there is no need for any DCC phase switching, and therefore you simply need to ensure the traverser is wired with the same polarity as the layout connection track.</p>
 </section>
 </section>
 <section id="control-and-automate-your-ex-turntable">
-<h2><a class="toc-backref" href="#id10">Control and automate your EX-Turntable</a><a class="headerlink" href="#control-and-automate-your-ex-turntable" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Control and automate your EX-Turntable</a><a class="headerlink" href="#control-and-automate-your-ex-turntable" title="Permalink to this heading"></a></h2>
 <p>Now we have determined our various turntable and traverser positions and have calculated the correct angle at which to switch our DCC phase/polarity, it’s time to put this all into place so we can control and automate our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>.</p>
 <section id="control-via-diagnostic-commands">
-<h3><a class="toc-backref" href="#id11">Control via diagnostic commands</a><a class="headerlink" href="#control-via-diagnostic-commands" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Control via diagnostic commands</a><a class="headerlink" href="#control-via-diagnostic-commands" title="Permalink to this heading"></a></h3>
 <p>For basic control and validation of the turntable and traverser positions, this can be accomplished using the diagostic command <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TT</span> <span class="pre">vpin</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code> via the serial console of you <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <details class="summary-expand-to-see-the-diagnostic-commands-to-move-to-our-calculated-turntable-positions">
-<summary>Expand to see the diagnostic commands to move to our calculated turntable positions.</summary><table class="colwidths-auto command-table docutils align-default">
+<summary>Expand to see the diagnostic commands to move to our calculated turntable positions.</summary><table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Position</p></th>
 <th class="head"><p>Description</p></th>
@@ -892,7 +893,7 @@ Turntable homed successfully
 <div class="line"><br /></div>
 </div>
 <details class="summary-expand-to-see-the-diagnostic-commands-to-move-to-our-calculated-traverser-positions">
-<summary>Expand to see the diagnostic commands to move to our calculated traverser positions.</summary><table class="colwidths-auto command-table docutils align-default">
+<summary>Expand to see the diagnostic commands to move to our calculated traverser positions.</summary><table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Position</p></th>
 <th class="head"><p>Description</p></th>
@@ -936,15 +937,15 @@ Turntable homed successfully
 </div>
 </section>
 <section id="control-and-automation-with-ex-rail">
-<h3><a class="toc-backref" href="#id12">Control and automation with EX-RAIL</a><a class="headerlink" href="#control-and-automation-with-ex-rail" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Control and automation with EX-RAIL</a><a class="headerlink" href="#control-and-automation-with-ex-rail" title="Permalink to this heading"></a></h3>
 <p>While controlling <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> via the diagnostic command is great for testing and tuning our various <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> positions, it’s not exactly the friendliest way to control the turntable during normal use of our layout.</p>
 <p>There is a much better way to do this by using the <code class="docutils literal notranslate"><span class="pre">MOVETT(vpin,</span> <span class="pre">steps,</span> <span class="pre">activity)</span></code> command available in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> as part of a route definition that is advertised to <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> apps and <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>. This allows you to simply select the appropriate route from the route list, and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> will do their things, rotating or moving to the provided position. This is also covered in <a class="reference internal" href="../ex-turntable/test-and-tune.html#advertising-positions-to-engine-driver-and-withrottle-applications"><span class="std std-ref">Advertising positions to Engine Driver and WiThrottle applications</span></a>.</p>
 <p>Controlling your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> this way also allows you to incorporate other automated activities associated with turntable or traverser movements, such as using the virtual block commands <code class="docutils literal notranslate"><span class="pre">&lt;RESERVE&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;FREE&gt;</span></code> to ensure no other automation sequences attempt to drive a loco on to the turntable while it is moving, to control auxiliary warning LEDs to indicate movements are happening, and so forth.</p>
 </section>
 <section id="ex-rail-commands-for-ex-turntable">
-<h3><a class="toc-backref" href="#id13">EX-RAIL commands for EX-Turntable</a><a class="headerlink" href="#ex-rail-commands-for-ex-turntable" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">EX-RAIL commands for EX-Turntable</a><a class="headerlink" href="#ex-rail-commands-for-ex-turntable" title="Permalink to this heading"></a></h3>
 <details class="summary-expand-to-see-the-ex-r-version-of-our-diagnostic-commands">
-<summary>Expand to see the |EX-R| version of our diagnostic commands.</summary><table class="colwidths-auto command-table docutils align-default">
+<summary>Expand to see the |EX-R| version of our diagnostic commands.</summary><table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Position</p></th>
 <th class="head"><p>Description</p></th>
@@ -1019,7 +1020,7 @@ Turntable homed successfully
 </div>
 </section>
 <section id="ex-rail-routes-for-ex-turntable">
-<h3><a class="toc-backref" href="#id14">EX-RAIL ROUTEs for EX-Turntable</a><a class="headerlink" href="#ex-rail-routes-for-ex-turntable" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">EX-RAIL ROUTEs for EX-Turntable</a><a class="headerlink" href="#ex-rail-routes-for-ex-turntable" title="Permalink to this heading"></a></h3>
 <p>Here is an example of what you can do to control an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> via a ROUTE using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> (you will note this is based on the example provided in myEX-Turntable.example.h provided with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.
 // This includes RESERVE()/FREE() to protect any automation activities.
@@ -1059,14 +1060,14 @@ ALIAS(TTRoute1)
 </section>
 </section>
 <section id="ex-turntable-is-ready-to-use">
-<h2><a class="toc-backref" href="#id15">EX-Turntable is ready to use</a><a class="headerlink" href="#ex-turntable-is-ready-to-use" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">EX-Turntable is ready to use</a><a class="headerlink" href="#ex-turntable-is-ready-to-use" title="Permalink to this heading"></a></h2>
 <p>That’s really all there is to it!</p>
 <p>We’ve successfully added <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> to our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> in both turntable and traverser modes.</p>
 <p>We’ve successfully calculated our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> positions and DCC phase/polarity switching angles, and we know how to tune the individual positions as well.</p>
 <p>We also know how to control our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> by both the interactive diagnostic commands as well as via <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
 </section>
 <section id="complete-myautomation-h-examples">
-<h2><a class="toc-backref" href="#id16">Complete myAutomation.h examples</a><a class="headerlink" href="#complete-myautomation-h-examples" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Complete myAutomation.h examples</a><a class="headerlink" href="#complete-myautomation-h-examples" title="Permalink to this heading"></a></h2>
 <p>To finish up, here are two complete myAutomation.h examples to peruse.</p>
 <p>The first is <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> in turntable mode only, and the second has the traverser mode added as well.</p>
 <p>As per our our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> routes explanation, these are based on the “myEX-Turntable.example.h” included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>

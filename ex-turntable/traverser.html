@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>Traversers and Limited Rotation Turntables<a class="headerlink" href="#traversers-and-limited-rotation-turntables" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#overview" id="id2">Overview</a></p></li>
@@ -457,10 +458,10 @@
 <li><p><a class="reference internal" href="#loading-ex-turntable-for-traverser-mode" id="id5">Loading EX-Turntable for traverser mode</a></p></li>
 <li><p><a class="reference internal" href="#traverser-mode-is-ready" id="id6">Traverser mode is ready!</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <section id="overview">
-<h2><a class="toc-backref" href="#id2">Overview</a><a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.</p>
 <p>The primary difference from the standard full rotation turntable mode is the addition of a limit sensor to indicate when the traverser or limited rotation turntable reaches the end of its range of movement.</p>
 <figure class="align-right" id="id1">
@@ -491,7 +492,7 @@
 </section>
 </section>
 <section id="considerations-turntable-vs-traverser">
-<h2><a class="toc-backref" href="#id3">Considerations - turntable vs. traverser</a><a class="headerlink" href="#considerations-turntable-vs-traverser" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Considerations - turntable vs. traverser</a><a class="headerlink" href="#considerations-turntable-vs-traverser" title="Permalink to this heading"></a></h2>
 <p>In turntable mode, if the home sensor fails or is not adjusted correctly, the worst that will happen is that the turntable will not home, and will not be able to automatically calibrate the steps per rotation. There is no risk of damage if the turntable continues to rotate while attempting to home.</p>
 <p>In traverser mode, however, there is risk of physical damage if a stepper motor attempts to drive the traverser beyond the physical limits. Depending on the physical construction, it may damage traverser components, or it may cause the stepper motor to fail. If it causes excess current consumption by the stepper motor, the stepper driver may also overheat and cause electrical damage.</p>
 <p><strong>Therefore, it’s imperative that care is taken to ensure the stepper motor rotates in the correct direction, and both home and limit sensors are functional and connected in the right order.</strong></p>
@@ -506,7 +507,7 @@
 <p>For a method to test and validate this, see <a class="reference internal" href="#sensor-testing-mode"><span class="std std-ref">Sensor testing mode</span></a> below.</p>
 </section>
 <section id="assembly">
-<h2><a class="toc-backref" href="#id4">Assembly</a><a class="headerlink" href="#assembly" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Assembly</a><a class="headerlink" href="#assembly" title="Permalink to this heading"></a></h2>
 <p>General assembly is as per the <a class="reference internal" href="assembly.html"><span class="doc">Assembly &amp; Setup</span></a> page, with the aforementioned limit sensor being connected to the Arduino’s pin 2.</p>
 <p>Refer to the connection summary below, which makes the assumption that DCC phase switching is not required.</p>
 <p>If using micro switches for the home and limit sensors, the best way is to connect the common terminal of the switch to ground, and the normally open (NO) terminal to the Arduino’s pin. This allows the default “config.h” setting for <cite>HOME_SENSOR_ACTIVE_STATE</cite> and <cite>LIMIT_SENSOR_ACTIVE_STATE</cite> to remain unchanged as “LOW”.</p>
@@ -515,7 +516,7 @@
 <h3>Traverser mode connection summary<a class="headerlink" href="#traverser-mode-connection-summary" title="Permalink to this heading"></a></h3>
 <p>Summary table of all connections required during assembly:</p>
 <a class="reference internal image-reference" href="../_images/traverser-assembly.png"><img alt="Traverser Assembly Fritzing" class="align-right" src="../_images/traverser-assembly.png" style="width: 665.6999999999999px; height: 457.8px;" /></a>
-<table class="colwidths-auto command-table docutils align-default">
+<table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Device Pin</p></th>
 <th class="head"><p>Arduino Pin</p></th>
@@ -580,7 +581,7 @@
 </section>
 </section>
 <section id="loading-ex-turntable-for-traverser-mode">
-<h2><a class="toc-backref" href="#id5">Loading EX-Turntable for traverser mode</a><a class="headerlink" href="#loading-ex-turntable-for-traverser-mode" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Loading EX-Turntable for traverser mode</a><a class="headerlink" href="#loading-ex-turntable-for-traverser-mode" title="Permalink to this heading"></a></h2>
 <p>Prepare to load the software as per <a class="reference internal" href="assembly.html#load-the-ex-turntable-software"><span class="std std-ref">7. Load the EX-Turntable software</span></a>, and ensure “config.h” has been created by copying or renaming “config.example.h”.</p>
 <p>There is also an example “config.traverser.h” file included with the software that can be renamed to “config.h” instead.</p>
 <p>Edit “config.h”, add “//” at the beginning of the <cite>#define TURNTABLE_EX_MODE TURNTABLE</cite> line, and remove the “//” from the beginning of the <cite>#define TURNTABLE_EX_MODE TRAVERSER</cite>:</p>
@@ -668,7 +669,7 @@ Turntable homed successfully
 </section>
 </section>
 <section id="traverser-mode-is-ready">
-<h2><a class="toc-backref" href="#id6">Traverser mode is ready!</a><a class="headerlink" href="#traverser-mode-is-ready" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Traverser mode is ready!</a><a class="headerlink" href="#traverser-mode-is-ready" title="Permalink to this heading"></a></h2>
 <p>Now that you have enabled traverser mode in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to <a class="reference internal" href="test-and-tune.html"><span class="doc">Testing, Tuning, and Control</span></a> as the tuning steps and control commands are the same in both turntable and traverser modes.</p>
 </section>
 </section>

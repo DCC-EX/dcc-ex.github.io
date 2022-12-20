@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -450,13 +451,13 @@
 <h1>High Accuracy Waveform Mode<a class="headerlink" href="#high-accuracy-waveform-mode" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#the-motor-board-config" id="id2">The Motor Board Config</a></p></li>
 <li><p><a class="reference internal" href="#inverter-circuit" id="id3">Inverter Circuit</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>Do you need it? Most likely, you don’t. But if you run into a problem with a particular decoder and all the usual settings don’t help, you may want to try this mode. We have found that some older decoders do not adhere to the NMRA specification tolerances. They can fail to read bits that are within the proper range. While rare, this could occur. The High Accuracy mode makes the waveform, the pulse train of 1’s and 0’s, even tighter to the nominal values in the specification.</p>
 <p>The nominal spec asks for 58us ‘1’ bits and 100us ‘0’ bits, with a few microseconds leeway in either direction. We opted to use 116us ‘0’ bits since it is exactly twice a ‘1’ bit, and made it easy for us to use one timer to generate both bits. On occasion, with all the other things going on inside the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, and the way we use timers and interrupts in normal accuracy mode, it is possible for there also to be a little jitter. That’s when the bit durations from bit to bit can vary a few microseconds. High Accuracy Mode uses the hardware timers instead of just our software routine, to tighten up any jitter.</p>
@@ -470,7 +471,7 @@
 <p>You do not have to do anything to enable High Accuracy Waveform Mode. If your motor board config meets the above two criteria, it will be enabled automatically and report that in the serial monitor boot log.</p>
 </div>
 <section id="the-motor-board-config">
-<h2><a class="toc-backref" href="#id2">The Motor Board Config</a><a class="headerlink" href="#the-motor-board-config" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">The Motor Board Config</a><a class="headerlink" href="#the-motor-board-config" title="Permalink to this heading"></a></h2>
 <p>You will notice that your motor driver type is set in the <em>config.h</em> file. This line sets a standard motor shield compatible with the Arduino Motor Driver:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
 </pre></div>
@@ -482,7 +483,7 @@
 </pre></div>
 </div>
 <p>The first line after setting the name and display text is for the Main (operations) track and the next line is for the programming (service) track. The parameters are as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MotorDriver</span><span class="p">(</span><span class="n">power_pin</span><span class="p">,</span> <span class="n">signal_pin</span><span class="p">,</span> <span class="n">signal_pin2</span><span class="p">,</span> <span class="n">brake_pin</span><span class="p">,</span> <span class="n">current_pin</span><span class="p">,</span> <span class="n">senseFactor</span><span class="p">,</span> <span class="n">tripMilliamps</span><span class="p">,</span> <span class="n">faultPin</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MotorDriver</span><span class="p">(</span><span class="n">power_pin</span><span class="p">,</span><span class="w"> </span><span class="n">signal_pin</span><span class="p">,</span><span class="w"> </span><span class="n">signal_pin2</span><span class="p">,</span><span class="w"> </span><span class="n">brake_pin</span><span class="p">,</span><span class="w"> </span><span class="n">current_pin</span><span class="p">,</span><span class="w"> </span><span class="n">senseFactor</span><span class="p">,</span><span class="w"> </span><span class="n">tripMilliamps</span><span class="p">,</span><span class="w"> </span><span class="n">faultPin</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Therefore, the second and third parameters are the signal pins. Some boards have 2 direction pins (e.g. IBT_2 Motor Driver Board). These are sometimes labelled CW and CCW for clockwise and counter-clockwise, or LPWM and RPWM for left and right pulse width modulation. If you want to use two pins, so that you don’t need a transistor or integrated circuit inverter to take one output from the Command Station and split it into two, then you can’t use the high accuracy waveform.</p>
@@ -501,7 +502,7 @@
 </div>
 </section>
 <section id="inverter-circuit">
-<h2><a class="toc-backref" href="#id3">Inverter Circuit</a><a class="headerlink" href="#inverter-circuit" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Inverter Circuit</a><a class="headerlink" href="#inverter-circuit" title="Permalink to this heading"></a></h2>
 <p>Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your Command Station, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../../../_images/inverter1.jpg"><img alt="Transistor inverter circuit" src="../../../_images/inverter1.jpg" style="width: 449.4px; height: 224.0px;" /></a>

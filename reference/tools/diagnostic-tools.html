@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>DCC Diagnostic Tools<a class="headerlink" href="#dcc-diagnostic-tools" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#sniffer-vs-analyzer" id="id19">Sniffer vs. Analyzer</a></p></li>
@@ -456,7 +457,7 @@
 <li><p><a class="reference internal" href="#logic-analyzer-decoder" id="id21">Logic Analyzer/Decoder</a></p></li>
 <li><p><a class="reference internal" href="#dcc-track-phase-detector" id="id22">DCC Track Phase Detector</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p><strong>*Work in Progress. More detail and pictures soon!*</strong></p>
 <p><strong>LEVEL: Engineers or Serious Tinkerers</strong></p>
@@ -468,7 +469,7 @@
 <li><p><a class="reference internal" href="#dcc-track-phase-detector"><span class="std std-ref">DCC Track Phase Detector</span></a></p></li>
 </ul>
 <section id="sniffer-vs-analyzer">
-<h2><a class="toc-backref" href="#id19">Sniffer vs. Analyzer</a><a class="headerlink" href="#sniffer-vs-analyzer" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">Sniffer vs. Analyzer</a><a class="headerlink" href="#sniffer-vs-analyzer" title="Permalink to this heading"></a></h2>
 <section id="sniffer">
 <h3>Sniffer<a class="headerlink" href="#sniffer" title="Permalink to this heading"></a></h3>
 <p>A “sniffer” is a device (often made with an Arduino) that connects to the track to read the data packets and display them as the human readable DCC commands on a serial monitor. It is also sometimes called a “PACKET analyzer” which shouldn’t be confused with “LOGIC analyzer” in the next section. We recommend using our <a class="reference internal" href="../../download/ex-dccinspector.html"><span class="doc">EX-DCCInspector</span></a> sketch.</p>
@@ -496,7 +497,7 @@
 </section>
 </section>
 <section id="dcc-sniffer-packet-analyzer">
-<h2><a class="toc-backref" href="#id20">DCC Sniffer (PACKET analyzer)</a><a class="headerlink" href="#dcc-sniffer-packet-analyzer" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">DCC Sniffer (PACKET analyzer)</a><a class="headerlink" href="#dcc-sniffer-packet-analyzer" title="Permalink to this heading"></a></h2>
 <section id="buy-it">
 <h3>Buy it<a class="headerlink" href="#buy-it" title="Permalink to this heading"></a></h3>
 <p>Well it isn’t quite a turnkey solution, but it’s close. You need this shield and an Arduino Uno or Mega and then to download our free <a class="reference internal" href="../../download/ex-dccinspector.html"><span class="doc">DCCInspector-EX</span></a> file and upload it to your microcontroller with the Arduino IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.</p>
@@ -593,7 +594,7 @@
 </section>
 </section>
 <section id="logic-analyzer-decoder">
-<h2><a class="toc-backref" href="#id21">Logic Analyzer/Decoder</a><a class="headerlink" href="#logic-analyzer-decoder" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Logic Analyzer/Decoder</a><a class="headerlink" href="#logic-analyzer-decoder" title="Permalink to this heading"></a></h2>
 <figure class="align-center" id="id9">
 <a class="reference internal image-reference" href="../../_images/logic_analyzer.jpg"><img alt="Logic Analyzer" src="../../_images/logic_analyzer.jpg" style="width: 300.0px; height: 220.5px;" /></a>
 <figcaption>
@@ -682,7 +683,7 @@ $ cp -r sigrok-DCC-Protocoll-master/dcc/ ~/.local/share/libsigrokdecode/decoders
 </section>
 </section>
 <section id="dcc-track-phase-detector">
-<h2><a class="toc-backref" href="#id22">DCC Track Phase Detector</a><a class="headerlink" href="#dcc-track-phase-detector" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">DCC Track Phase Detector</a><a class="headerlink" href="#dcc-track-phase-detector" title="Permalink to this heading"></a></h2>
 <p>If you aren’t using boosters or don’t have isolated track sections/blocks, then you usually won’t have to worry about the phase of your DCC Signal so you can skip this section. But if you do use boosters, this is am important tool to add to your arsenal. And the best part, is anyone can make one!</p>
 <section id="why-is-phase-important">
 <h3>Why is Phase Important?<a class="headerlink" href="#why-is-phase-important" title="Permalink to this heading"></a></h3>

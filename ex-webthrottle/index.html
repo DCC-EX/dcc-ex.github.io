@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -447,7 +448,7 @@
 <h1>EX-WebThrottle<a class="headerlink" href="#ex-webthrottle" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#what-you-need-to-run-ex-webthrottle" id="id2">What you need to run EX-WebThrottle</a></p></li>
@@ -459,14 +460,14 @@
 <li><p><a class="reference internal" href="#going-further-developing" id="id8">Going Further / Developing</a></p></li>
 <li><p><a class="reference internal" href="#looking-for-some-help-with-ex-webthrottle" id="id9">Looking for some help with EX-WebThrottle?</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This is our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> throttle/controller that can connect to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> directly through the USB port of a computer.</p>
 <p>For a video on how to install and use <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> click below.</p>
 <blockquote>
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/BkgsEOjxWaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
 <section id="what-you-need-to-run-ex-webthrottle">
-<h2><a class="toc-backref" href="#id2">What you need to run EX-WebThrottle</a><a class="headerlink" href="#what-you-need-to-run-ex-webthrottle" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">What you need to run EX-WebThrottle</a><a class="headerlink" href="#what-you-need-to-run-ex-webthrottle" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Chromium-Based Browser version 89 or above (March 2021)
 (Chrome, Opera, Edge)</p></li>
@@ -479,7 +480,7 @@
 </ul>
 </section>
 <section id="getting-started">
-<h2><a class="toc-backref" href="#id3">Getting started</a><a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Getting started</a><a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
 <p>If you don’t have your hardware yet or just want to play with the throttle and see commands being sent to the log window, you can skip the part about connecting your Command Station.</p>
@@ -488,17 +489,17 @@
 <p>To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.</p>
 </section>
 <section id="run-or-install-ex-webthrottle">
-<h2><a class="toc-backref" href="#id4">Run or Install EX-WebThrottle</a><a class="headerlink" href="#run-or-install-ex-webthrottle" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Run or Install EX-WebThrottle</a><a class="headerlink" href="#run-or-install-ex-webthrottle" title="Permalink to this heading"></a></h2>
 <p>You have an option for how you would like to run <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.</p>
 </section>
 <section id="try-it-now-run-from-the-cloud">
-<h2><a class="toc-backref" href="#id5">Try it now (Run from the cloud)</a><a class="headerlink" href="#try-it-now-run-from-the-cloud" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Try it now (Run from the cloud)</a><a class="headerlink" href="#try-it-now-run-from-the-cloud" title="Permalink to this heading"></a></h2>
 <p>Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> or just run it in emulator mode where you don’t have to have any hardware. Please read the requirements above for what you need in order to run WebThrottle-EX in your browser. If you want to remember the link to run the throttle, it is <a class="reference external" href="https://dcc-ex.github.io/WebThrottle-EX">https://dcc-ex.github.io/WebThrottle-EX</a>.</p>
 <p class="dcclink"><a class="reference external" href="https://DCC-EX.github.io/WebThrottle-EX">Try It Now</a></p>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> settings panel (click the 3 line “hamburger menu” at the top left), you will find a “Settings” menu. Click on “Apps” and then select “Install as an App”. You can now work offline and always find <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> with your other Apps!</p>
 </section>
 <section id="download">
-<h2><a class="toc-backref" href="#id6">Download</a><a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Download</a><a class="headerlink" href="#download" title="Permalink to this heading"></a></h2>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
 <p>We recommend using the version hosted on our servers as this will auto-update whenever we release a new update!</p>
@@ -507,7 +508,7 @@
 <p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/WebThrottle-EX/releases">Download</a></p>
 </section>
 <section id="operation">
-<h2><a class="toc-backref" href="#id7">Operation</a><a class="headerlink" href="#operation" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Operation</a><a class="headerlink" href="#operation" title="Permalink to this heading"></a></h2>
 <p>To use the program, you can either click on the “Serial” dropdown button and select “Emulator” to run in emulator mode or after making sure your hardware is properly connected, select “Serial”.</p>
 <p>Next, click on the “Connect DCC++ EX” button.</p>
 <p>If you are in “emulator mode”, you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as “Arduino Mega 2560 (COM3)”. Your com port may vary. Click on your board to select it and then click the “Connect DCC++ EX” button.</p>
@@ -529,12 +530,12 @@
 </div>
 </section>
 <section id="going-further-developing">
-<h2><a class="toc-backref" href="#id8">Going Further / Developing</a><a class="headerlink" href="#going-further-developing" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Going Further / Developing</a><a class="headerlink" href="#going-further-developing" title="Permalink to this heading"></a></h2>
 <p>If you want to really delve into how this works and help us improve it with your comments or your development skills, please contact us. You can also read through our <a class="reference internal" href="../about/contributing/webthrottle.html"><span class="doc">Contributing to EX-WebThrottle2</span></a> page for info on preparing to view and contribute to the code.</p>
 <p>To load the Chrome DevTools to look at logging and be able to manually enter “write” commands for testing, click on the Menu (the 3 vertical dots in the upper right hand corner of the Chrome Window), then select “more tools” and then “Developer Tools”. Or you can just hit “Ctrl-Shift-I”.</p>
 </section>
 <section id="looking-for-some-help-with-ex-webthrottle">
-<h2><a class="toc-backref" href="#id9">Looking for some help with EX-WebThrottle?</a><a class="headerlink" href="#looking-for-some-help-with-ex-webthrottle" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Looking for some help with EX-WebThrottle?</a><a class="headerlink" href="#looking-for-some-help-with-ex-webthrottle" title="Permalink to this heading"></a></h2>
 <p>To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:</p>
 <p><a href="https://github.com/DCC-EX/WebThrottle-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a></p>
 </section>

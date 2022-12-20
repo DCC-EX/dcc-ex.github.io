@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>Technical Reference for Throttle Developers<a class="headerlink" href="#technical-reference-for-throttle-developers" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#considerations-for-throttle-developers" id="id1">Considerations for throttle developers</a></p>
@@ -470,11 +471,11 @@
 </li>
 <li><p><a class="reference internal" href="#commands-to-avoid" id="id11">Commands to avoid</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This page is intended to capture relevant information to assist those who develop throttles compatible with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <section id="considerations-for-throttle-developers">
-<h2><a class="toc-backref" href="#id1">Considerations for throttle developers</a><a class="headerlink" href="#considerations-for-throttle-developers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Considerations for throttle developers</a><a class="headerlink" href="#considerations-for-throttle-developers" title="Permalink to this heading"></a></h2>
 <p>For anyone developing a throttle or controller application, these considerations must be taken into account:</p>
 <ul class="simple">
 <li><p>Refer to the <a class="reference internal" href="api.html"><span class="doc">EX-CommandStation API Reference</span></a></p></li>
@@ -482,7 +483,7 @@
 <li><p>Track power state has three possible states: On, Off, and Unknown</p></li>
 </ul>
 <section id="working-with-track-power-states">
-<h3><a class="toc-backref" href="#id2">Working with track power states</a><a class="headerlink" href="#working-with-track-power-states" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">Working with track power states</a><a class="headerlink" href="#working-with-track-power-states" title="Permalink to this heading"></a></h3>
 <p>As above, track power can be On, Off, or Unknown. There is no broadcast of an Unknown power state though, meaning a throttle/controller must start with track power flagged as Unknown.</p>
 <p>The throttle should only flag the power state as On or Off when either:</p>
 <ul class="simple">
@@ -491,7 +492,7 @@
 </ul>
 </section>
 <section id="responding-to-appropriate-information">
-<h3><a class="toc-backref" href="#id3">Responding to appropriate information</a><a class="headerlink" href="#responding-to-appropriate-information" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Responding to appropriate information</a><a class="headerlink" href="#responding-to-appropriate-information" title="Permalink to this heading"></a></h3>
 <p>The other important consideration is ensuring a throttle responds to the appropriate information sent by the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <p>The <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> will broadcast changes from other throttles/controllers, as well as changes to track power state, throttle reminders, and turnout and sensor state changes.</p>
 <p>These items must be responded to:</p>
@@ -505,14 +506,14 @@
 </section>
 </section>
 <section id="additional-throttle-commands">
-<h2><a class="toc-backref" href="#id4">Additional throttle commands</a><a class="headerlink" href="#additional-throttle-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Additional throttle commands</a><a class="headerlink" href="#additional-throttle-commands" title="Permalink to this heading"></a></h2>
 <p>Release 4.0.2 provides a number of additional throttle information commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation, and roster features which are already found in the wiThrottle implementations.</p>
 <p>These commands are new and do not overlap with the existing commands (which are probably due to be obsoleted as they are over complex and unfit for purpose).</p>
 </section>
 <section id="throttle-command-summary">
-<h2><a class="toc-backref" href="#id5">Throttle command summary</a><a class="headerlink" href="#throttle-command-summary" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Throttle command summary</a><a class="headerlink" href="#throttle-command-summary" title="Permalink to this heading"></a></h2>
 <p>All throttle specific commands are summarised here, refer below for elaboration on the details with examples.</p>
-<table class="colwidths-auto command-table docutils align-default">
+<table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
 <th class="head"><p>Response</p></th>
@@ -552,9 +553,9 @@
 </table>
 </section>
 <section id="detailed-command-reference">
-<h2><a class="toc-backref" href="#id6">Detailed command reference</a><a class="headerlink" href="#detailed-command-reference" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Detailed command reference</a><a class="headerlink" href="#detailed-command-reference" title="Permalink to this heading"></a></h2>
 <section id="turnouts">
-<h3><a class="toc-backref" href="#id7">Turnouts</a><a class="headerlink" href="#turnouts" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Turnouts</a><a class="headerlink" href="#turnouts" title="Permalink to this heading"></a></h3>
 <p>The conventional turnout definition commands and the <code class="docutils literal notranslate"><span class="pre">&lt;H&gt;</span></code> responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.</p>
 <p>Example response:</p>
@@ -580,7 +581,7 @@
 </div>
 </section>
 <section id="automations-routes">
-<h3><a class="toc-backref" href="#id8">Automations/Routes</a><a class="headerlink" href="#automations-routes" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Automations/Routes</a><a class="headerlink" href="#automations-routes" title="Permalink to this heading"></a></h3>
 <p>A throttle needs to know which EX-RAIL Automations and Routes it can show the user.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code> - Returns a list of Automations/Routes.</p>
 <p>Example response:</p>
@@ -607,7 +608,7 @@
 </section>
 </section>
 <section id="roster-information">
-<h3><a class="toc-backref" href="#id9">Roster Information</a><a class="headerlink" href="#roster-information" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Roster Information</a><a class="headerlink" href="#roster-information" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code> - Requests a list of cab IDs from the roster.</p>
 <p>Example responses:</p>
 <ul class="simple">
@@ -621,7 +622,7 @@
 </ul>
 </section>
 <section id="obtaining-throttle-status">
-<h3><a class="toc-backref" href="#id10">Obtaining throttle status</a><a class="headerlink" href="#obtaining-throttle-status" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Obtaining throttle status</a><a class="headerlink" href="#obtaining-throttle-status" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.</p>
 <p>Example response:</p>
 <ul class="simple">
@@ -637,7 +638,7 @@
 </section>
 </section>
 <section id="commands-to-avoid">
-<h2><a class="toc-backref" href="#id11">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">func1</span> <span class="pre">func2&gt;</span></code> - Use <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1/0&gt;</span></code> instead</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span>&#160; <span class="pre">slot</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - Just drop the slot number</p></li>

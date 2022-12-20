@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>Power Supplies<a class="headerlink" href="#power-supplies" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#do-i-need-two-power-supplies" id="id1">Do I need two power supplies?</a></p></li>
@@ -461,7 +462,7 @@
 <li><p><a class="reference internal" href="#using-one-power-supply-with-cheap-converters-to-power-everything" id="id7">Using one power supply with cheap converters to power everything</a></p></li>
 <li><p><a class="reference internal" href="#using-diodes-to-reduce-voltage" id="id8">Using Diodes to Reduce Voltage</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>The power supply is one of the most important parts of your setup. You need to select a clean, filtered power supply that can supply the correct voltage and deliver the amount of current required by your devices.</p>
 <p><strong>What’s covered here:</strong></p>
@@ -479,7 +480,7 @@
 <li><p><a class="reference internal" href="#using-diodes-to-reduce-voltage"><span class="std std-ref">Using Diodes to Reduce Voltage</span></a></p></li>
 </ul>
 <section id="do-i-need-two-power-supplies">
-<h2><a class="toc-backref" href="#id1">Do I need two power supplies?</a><a class="headerlink" href="#do-i-need-two-power-supplies" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Do I need two power supplies?</a><a class="headerlink" href="#do-i-need-two-power-supplies" title="Permalink to this heading"></a></h2>
 <p>Well, you at least need two voltages. It is possible to get multiple voltages from one power supply, how to do that is covered below in the <a class="reference internal" href="#using-one-power-supply-with-cheap-converters-to-power-everything"><span class="std std-ref">Using one power supply with cheap converters to power everything</span></a>. Both your microcontroller (the Arduino) and the motor controller need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. The voltage requirement to the motor controller does not change based on how you power your Arduino, you need the correct voltage and amperage for your gauge and layout.</p>
 <section id="four-ways-to-power-the-arduino">
 <h3>Four ways to power the Arduino<a class="headerlink" href="#four-ways-to-power-the-arduino" title="Permalink to this heading"></a></h3>
@@ -514,14 +515,14 @@
 </section>
 </section>
 <section id="wall-warts">
-<h2><a class="toc-backref" href="#id2">Wall Warts</a><a class="headerlink" href="#wall-warts" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Wall Warts</a><a class="headerlink" href="#wall-warts" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Wall warts are a good choice for beginners and those not comfortable with mains wiring. You can get a 12V, 3A, relatively small one for around $8 US.</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/12v-3A-wall-wart-sm.jpg"><img alt="12V Wall Wart" src="../../_images/12v-3A-wall-wart-sm.jpg" style="width: 205.0px; height: 218.0px;" /></a>
 </section>
 <section id="bricks-laptop-style">
-<h2><a class="toc-backref" href="#id3">Bricks (Laptop Style)</a><a class="headerlink" href="#bricks-laptop-style" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Bricks (Laptop Style)</a><a class="headerlink" href="#bricks-laptop-style" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>You can also find plenty of laptop type “brick” power supplies. They come in ranges from 12V to 19.5V and 3-5 Amps.</p></li>
 </ul>
@@ -534,7 +535,7 @@
 <p>Since many people have old laptop power supplies that can be 18-19.5V DC, you can use the diode or buck converter method listed below to reduce the voltage.</p>
 </section>
 <section id="adjustable-power-supplies">
-<h2><a class="toc-backref" href="#id4">Adjustable Power Supplies</a><a class="headerlink" href="#adjustable-power-supplies" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Adjustable Power Supplies</a><a class="headerlink" href="#adjustable-power-supplies" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>These have a selector switch to choose the voltage. Be careful to get a model that can deliver the current you need at the voltage you want. Sometimes the maximum output current will vary depending on the voltage selected.</p></li>
 </ul>
@@ -544,7 +545,7 @@
 <p><a class="reference external" href="https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU">https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU</a></p>
 </section>
 <section id="cage-power-supplies">
-<h2><a class="toc-backref" href="#id5">Cage Power Supplies</a><a class="headerlink" href="#cage-power-supplies" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Cage Power Supplies</a><a class="headerlink" href="#cage-power-supplies" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>The Meanwell LRS-100-15 power supply is a good choice for larger scales. It supplies 15V and 105W (that’s 7 amps), so it is plenty for running two channels simultaneously. At only $18, it is an inexpensive and solid option.</p></li>
 </ul>
@@ -556,7 +557,7 @@
 </div>
 </section>
 <section id="dual-voltage-power-supplies">
-<h2><a class="toc-backref" href="#id6">Dual voltage power supplies</a><a class="headerlink" href="#dual-voltage-power-supplies" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Dual voltage power supplies</a><a class="headerlink" href="#dual-voltage-power-supplies" title="Permalink to this heading"></a></h2>
 <p>With a dual voltage power supply, you can provide 12V for the motor controller and 5V for the Arduino. You may also be able to find higher voltage units if you need such as 14-15V if your scale trains require it.</p>
 <ul class="simple">
 <li><p>Mean Well Dual Voltage Power Supply (5V and 12V)</p></li>
@@ -569,7 +570,7 @@
 </div>
 </section>
 <section id="using-one-power-supply-with-cheap-converters-to-power-everything">
-<h2><a class="toc-backref" href="#id7">Using one power supply with cheap converters to power everything</a><a class="headerlink" href="#using-one-power-supply-with-cheap-converters-to-power-everything" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Using one power supply with cheap converters to power everything</a><a class="headerlink" href="#using-one-power-supply-with-cheap-converters-to-power-everything" title="Permalink to this heading"></a></h2>
 <p><strong>Tinkerers and Engineers</strong></p>
 <ul class="simple">
 <li><p>Using this method, you select a power supply that can power the track (or your highest voltage devices) and deliver enough Amps to power everything you will connect to it. This includes the DC-DC downconverters (Buck Converters) that take your higher voltage and reduce it to 5V, 7V, 9V, etc. Note that most buck converters are also boost converters, then can take a lower voltage and raise it to a higher one. We will just cover the first option here.</p></li>
@@ -610,7 +611,7 @@
 </section>
 </section>
 <section id="using-diodes-to-reduce-voltage">
-<h2><a class="toc-backref" href="#id8">Using Diodes to Reduce Voltage</a><a class="headerlink" href="#using-diodes-to-reduce-voltage" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Using Diodes to Reduce Voltage</a><a class="headerlink" href="#using-diodes-to-reduce-voltage" title="Permalink to this heading"></a></h2>
 <p>If you are like us and save your old power adapters when you recycle old equipment, you may have old wall warts or power supplies laying around that are perfectly fine, but have too high a voltage. You can use diodes to easily step the voltage down to a usable level if you only need to drop a few volts. Silicon diodes drop .6 - .7 volts across them in a ciruit at our currents. We can take advantage of this property to create a very inexpensive voltage step down circuit. Be careful to use the correct type of diode with the correct current rating. LEDs and signal diodes like a Schottky won’t work for this. Diodes in the 1N5400 series will work perfectly for up to 3A. Simply connect however many diodes you need in series to drop the voltage. For example, a 6A1 diode will drop 0.7V. Putting 5 in series beteen the positive wire of the power supply and the input to the motor driver will therefor reduce an 18V power supply to 14.5V (18 - 3.5). If you use an Arduino Motor Shield or other L298 based motor driver with an additional 2V voltage drop, that will give you 12.7 at the track. Work out the math to provide the voltage your track needs.</p>
 <p>Needed:</p>
 <p>5 6A1 Diodes (1N5401 can work also)

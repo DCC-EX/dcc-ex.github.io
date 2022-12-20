@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -450,7 +451,7 @@
 <h1>Folder and Page Structure<a class="headerlink" href="#folder-and-page-structure" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#restructuredtext-standards" id="id2">reStructuredText Standards</a></p></li>
@@ -475,16 +476,16 @@
 </li>
 <li><p><a class="reference internal" href="#next-steps-restucturedtext-basics" id="id16">Next steps - ReStucturedText Basics</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This page aims to describe the preferred general structure of how files (pages, images, downloads etc.) should be arranged and named, along with the preferred structure of the individual pages.</p>
 <p>By being consistent with these, it will be a) a better user experience, and b) be easier to maintain the documentation.</p>
 <section id="restructuredtext-standards">
-<h2><a class="toc-backref" href="#id2">reStructuredText Standards</a><a class="headerlink" href="#restructuredtext-standards" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">reStructuredText Standards</a><a class="headerlink" href="#restructuredtext-standards" title="Permalink to this heading"></a></h2>
 <p>Please ensure to follow the standards below when creating or updating documentation to ensure the look and feel of the website remains consistent.</p>
 </section>
 <section id="elements">
-<h2><a class="toc-backref" href="#id3">Elements</a><a class="headerlink" href="#elements" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Elements</a><a class="headerlink" href="#elements" title="Permalink to this heading"></a></h2>
 <p>The elements of the documentation fall into the following broad categories:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#folders">Folders</a></p></li>
@@ -495,7 +496,7 @@
 </ul>
 </section>
 <section id="folders">
-<h2><a class="toc-backref" href="#id4">Folders</a><a class="headerlink" href="#folders" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Folders</a><a class="headerlink" href="#folders" title="Permalink to this heading"></a></h2>
 <p>Folders <em>follow</em> the basic structure:</p>
 <ul class="simple">
 <li><p>Folder name</p>
@@ -510,7 +511,7 @@
 <p>Every folder SHOULD have either a ‘getting-started.rst’ OR and ‘overview.rst’ file which is the second navigation point for the pages in the folder <br /> There are exceptions to this rule (e.g. the Throttle options), but use them carefully.</p>
 </section>
 <section id="pages">
-<h2><a class="toc-backref" href="#id5">Pages</a><a class="headerlink" href="#pages" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Pages</a><a class="headerlink" href="#pages" title="Permalink to this heading"></a></h2>
 <p>Pages <em>generally</em> follow the basic structure:</p>
 <ul>
 <li><p>Page Name (.rst file)</p>
@@ -540,7 +541,7 @@
 </li>
 </ul>
 <section id="meta-keywords">
-<h3><a class="toc-backref" href="#id6">Meta Keywords</a><a class="headerlink" href="#meta-keywords" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Meta Keywords</a><a class="headerlink" href="#meta-keywords" title="Permalink to this heading"></a></h3>
 <p>The meta keywords help search entries find find the page based on key words.</p>
 <p>By using the recommended includes (below) several key meta keywords are included in all pages.  i.e. <code class="docutils literal notranslate"><span class="pre">DCC</span> <span class="pre">DCC++</span> <span class="pre">EX</span> <span class="pre">DCC++EX</span> <span class="pre">DCC-EX</span></code>
 Generally each page should start with any additional meta keywords that are appropriate to the page.</p>
@@ -548,13 +549,13 @@ Generally each page should start with any additional meta keywords that are appr
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">meta</span><span class="p">::</span>
-<span class="nc">:keywords:</span> <span class="nf">Comfort Levels Conductor Tinkerer Engineer</span>
+<span class="nc">:keywords:</span> Comfort Levels Conductor Tinkerer Engineer
 </pre></div>
 </div>
 </div>
 </section>
 <section id="includes">
-<h3><a class="toc-backref" href="#id7">Includes</a><a class="headerlink" href="#includes" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Includes</a><a class="headerlink" href="#includes" title="Permalink to this heading"></a></h3>
 <p>All pages MUST include two standard include files. <code class="docutils literal notranslate"><span class="pre">/include/include.rst</span></code> and, depending on the depth in the folder structure, one of following as the second file:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">/include/include-l0.rst</span></code></p></li>
@@ -576,7 +577,7 @@ Generally each page should start with any additional meta keywords that are appr
 </div>
 </section>
 <section id="product-icon">
-<h3><a class="toc-backref" href="#id8">Product Icon</a><a class="headerlink" href="#product-icon" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Product Icon</a><a class="headerlink" href="#product-icon" title="Permalink to this heading"></a></h3>
 <p>If the page specifically, and only, relates to one of the <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> products, then specify the product icon immediately after include files, by using the appropriate expansion:</p>
 <p>For example:</p>
 <div class="admonition-example admonition">
@@ -591,7 +592,7 @@ Generally each page should start with any additional meta keywords that are appr
 </div>
 </section>
 <section id="id1">
-<h3><a class="toc-backref" href="#id9">Page Heading</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Page Heading</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
 <p>Each page must have a Main Heading. Main Headings MUST have asterisks above and below them:</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
@@ -604,7 +605,7 @@ Generally each page should start with any additional meta keywords that are appr
 <p>See below for more information about heading.</p>
 </section>
 <section id="comfort-level-logos">
-<h3><a class="toc-backref" href="#id10">Comfort level logos</a><a class="headerlink" href="#comfort-level-logos" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Comfort level logos</a><a class="headerlink" href="#comfort-level-logos" title="Permalink to this heading"></a></h3>
 <p>On our <a class="reference internal" href="../../../levels.html"><span class="doc">Before You Begin</span></a> page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.</p>
 <p>There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.</p>
 <ul class="simple">
@@ -639,19 +640,19 @@ Generally each page should start with any additional meta keywords that are appr
 </ul>
 <p>Only if really necessary use image tags:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /_static/images/conductor.png
-  <span class="nc">:alt:</span> <span class="nf">Conductor Level</span>
-  <span class="nc">:scale:</span> <span class="nf">40%</span>
+  <span class="nc">:alt:</span> Conductor Level
+  <span class="nc">:scale:</span> 40%
 
 <span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /_static/images/conductor-level.png
-  <span class="nc">:alt:</span> <span class="nf">Conductor Level</span>
-  <span class="nc">:scale:</span> <span class="nf">40%</span>
+  <span class="nc">:alt:</span> Conductor Level
+  <span class="nc">:scale:</span> 40%
 </pre></div>
 </div>
 <p>Refer to <a class="reference internal" href="basic-rst.html#images"><span class="std std-ref">Images</span></a> below for details on how to include images, and set the scale as appropriate. A good example of the use of the different types of logos is the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> <a class="reference internal" href="../../../ex-turntable/assembly.html"><span class="doc">Assembly &amp; Setup</span></a> page.</p>
 </section>
 <hr class="docutils" />
 <section id="github-issues-link">
-<h3><a class="toc-backref" href="#id11">GitHub Issues Link</a><a class="headerlink" href="#github-issues-link" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">GitHub Issues Link</a><a class="headerlink" href="#github-issues-link" title="Permalink to this heading"></a></h3>
 <p>It is recommended to include links to the appropriate product’s GitHub issue templates by using the appropriate expansion on the same line as the comfort level expansions.</p>
 <ul class="simple">
 <li><p>|githublink-ex-turntable|</p></li>
@@ -669,19 +670,19 @@ Generally each page should start with any additional meta keywords that are appr
 </section>
 <hr class="docutils" />
 <section id="on-this-page-table-of-contents">
-<h3><a class="toc-backref" href="#id12">On This Page - Table of Contents</a><a class="headerlink" href="#on-this-page-table-of-contents" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">On This Page - Table of Contents</a><a class="headerlink" href="#on-this-page-table-of-contents" title="Permalink to this heading"></a></h3>
 <p>Pages with multiple headings should generally have a Table of Contents.  The depth of the table is a subjective decision.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">sidebar</span><span class="p">::</span>
 
 <span class="p">  ..</span> <span class="ow">contents</span><span class="p">::</span> On this page
-    <span class="nc">:depth:</span> <span class="nf">4</span>
+    <span class="nc">:depth:</span> 4
     <span class="nc">:local:</span>
 </pre></div>
 </div>
 </section>
 <hr class="docutils" />
 <section id="page-content">
-<h3><a class="toc-backref" href="#id13">Page Content</a><a class="headerlink" href="#page-content" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Page Content</a><a class="headerlink" href="#page-content" title="Permalink to this heading"></a></h3>
 <p>Page content can include:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#headings-and-sub-headings">Headings and Sub Headings</a></p></li>
@@ -692,7 +693,7 @@ Generally each page should start with any additional meta keywords that are appr
 </ul>
 <p>After the heading, the page should start with an explanation of the purpose of the page.</p>
 <section id="headings-and-sub-headings">
-<h4><a class="toc-backref" href="#id14">Headings and Sub Headings</a><a class="headerlink" href="#headings-and-sub-headings" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id14" role="doc-backlink">Headings and Sub Headings</a><a class="headerlink" href="#headings-and-sub-headings" title="Permalink to this heading"></a></h4>
 <ul>
 <li><p>Main Headings have asterisks above and below them:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">************</span>
@@ -736,14 +737,14 @@ Generally each page should start with any additional meta keywords that are appr
 </section>
 <hr class="docutils" />
 <section id="text">
-<h4><a class="toc-backref" href="#id15">Text</a><a class="headerlink" href="#text" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id15" role="doc-backlink">Text</a><a class="headerlink" href="#text" title="Permalink to this heading"></a></h4>
 <p>Refer to the <a class="reference internal" href="basic-rst.html"><span class="doc">ReStructuredText Basics</span></a> and <a class="reference internal" href="style-guide.html"><span class="doc">Style Guide</span></a></p>
 </section>
 </section>
 </section>
 <hr class="docutils" />
 <section id="next-steps-restucturedtext-basics">
-<h2><a class="toc-backref" href="#id16">Next steps - ReStucturedText Basics</a><a class="headerlink" href="#next-steps-restucturedtext-basics" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Next steps - ReStucturedText Basics</a><a class="headerlink" href="#next-steps-restucturedtext-basics" title="Permalink to this heading"></a></h2>
 <p>Click next to learn how to enhance your content with links, tales, images, etc.</p>
 </section>
 </section>

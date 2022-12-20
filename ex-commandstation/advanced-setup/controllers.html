@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
+<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Choosing a Throttle (Controller) - Advanced &mdash; DCC-EX Model Railroading  documentation</title>
@@ -23,6 +23,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -451,7 +452,7 @@
 <h1>Choosing a Throttle (Controller) - Advanced<a class="headerlink" href="#choosing-a-throttle-controller-advanced" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#the-ex-commandstation" id="id6">The EX-CommandStation</a></p></li>
@@ -462,7 +463,7 @@
 <li><p><a class="reference internal" href="#usb-wireless-bridge" id="id11">USB Wireless Bridge</a></p></li>
 <li><p><a class="reference internal" href="#wires-to-arduino-serial-port" id="id12">2 Wires to Arduino serial port</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>You need just two things that work together to operate your model railroad:</p>
 <ul class="simple">
@@ -470,15 +471,15 @@
 <li><p>A Controller (aka Front-end, Cab, or Throttle)</p></li>
 </ul>
 <section id="the-ex-commandstation">
-<h2><a class="toc-backref" href="#id6">The EX-CommandStation</a><a class="headerlink" href="#the-ex-commandstation" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">The EX-CommandStation</a><a class="headerlink" href="#the-ex-commandstation" title="Permalink to this heading"></a></h2>
 <p>The Command Station is covered in the <a class="reference internal" href="index.html"><span class="doc">Getting Started</span></a> section, and is usually an Arduino microcontroller and a motor driver. The Command Station accepts instructions from a controller and generates packets that are transmitted to your track.</p>
 </section>
 <section id="the-controller">
-<h2><a class="toc-backref" href="#id7">The Controller</a><a class="headerlink" href="#the-controller" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">The Controller</a><a class="headerlink" href="#the-controller" title="Permalink to this heading"></a></h2>
 <p>Since the Command Station simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. It isn’t very practical to type something like &lt;t 1 3 75 1&gt; into a serial monitor to tell your train to move each time! 😉  A controller can be a hardware device like a handheld throttle (also called a Cab), an App that runs on your phone, a Web Page, or front-end software like <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> or Rocrail that runs on a computer or Raspberry Pi.</p>
 </section>
 <section id="connection-types">
-<h2><a class="toc-backref" href="#id8">Connection Types</a><a class="headerlink" href="#connection-types" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Connection Types</a><a class="headerlink" href="#connection-types" title="Permalink to this heading"></a></h2>
 <p>Your controller can connect to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> several different ways, such as:</p>
 <ul class="simple">
 <li><p>Direct connection using a USB cable</p></li>
@@ -518,11 +519,11 @@
 </section>
 </section>
 <section id="command-language-api">
-<h2><a class="toc-backref" href="#id9">Command Language (API)</a><a class="headerlink" href="#command-language-api" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Command Language (API)</a><a class="headerlink" href="#command-language-api" title="Permalink to this heading"></a></h2>
 <p>There are at least 3 ways for a throttle to ‘talk’ to a Command Station; the DCC++ command language, <a class="reference internal" href="../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> command language, and via the <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> Web Server command language. For an explanation of what these terms mean, and what that means to you, please see <a class="reference internal" href="../../throttles/protocols.html"><span class="doc">Protocols: WiThrottle, DCC++, and Web Servers Explained</span></a>. <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> natively understands our own DCC++ API and the <a class="reference internal" href="../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a>, and use <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> as the middleware to send commands to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> uses DCC++ commands when speaking to the Command Station.</p>
 </section>
 <section id="compatible-throttles-controllers">
-<h2><a class="toc-backref" href="#id10">Compatible Throttles (Controllers)</a><a class="headerlink" href="#compatible-throttles-controllers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Compatible Throttles (Controllers)</a><a class="headerlink" href="#compatible-throttles-controllers" title="Permalink to this heading"></a></h2>
 <p>Here is a list of some of the throttles you can use with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. We work closely with developers to help them maintain compatibility with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. Check back on occasion, as new devices are being added all the time.</p>
 <p>For more information on any of these throttles, you can click on their links below or see our <a class="reference internal" href="../../throttles/index.html"><span class="doc">Throttles Page Index</span></a>.</p>
 <section id="our-ex-webthrottle-dcc-ex-usb-serial">
@@ -592,7 +593,7 @@
 </section>
 </section>
 <section id="usb-wireless-bridge">
-<h2><a class="toc-backref" href="#id11">USB Wireless Bridge</a><a class="headerlink" href="#usb-wireless-bridge" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">USB Wireless Bridge</a><a class="headerlink" href="#usb-wireless-bridge" title="Permalink to this heading"></a></h2>
 <p>The USB Wireless Bridge is a pair of small, inexpensive devices that let you replace a USB cable with a wireless connection. You really could connect any two devices that would normally connect with a USB cable. The power of this system is that there is little or no configuration, and no changes need to be made to your controller or the CS. In our world, here are some of the ways you can use it:</p>
 <ul class="simple">
 <li><p>Connect WebThrottle-EX running on a laptop or tablet wirelessly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
@@ -606,7 +607,7 @@
 <p>For more information about all the throttles, see the <a class="reference internal" href="../../throttles/index.html"><span class="doc">Throttles Section</span></a>&gt;</p>
 </section>
 <section id="wires-to-arduino-serial-port">
-<h2><a class="toc-backref" href="#id12">2 Wires to Arduino serial port</a><a class="headerlink" href="#wires-to-arduino-serial-port" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">2 Wires to Arduino serial port</a><a class="headerlink" href="#wires-to-arduino-serial-port" title="Permalink to this heading"></a></h2>
 <p>It’s also possible to connect a throttle or controller directly to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> serial port Tx/Rx pins if it uses a logic level serial connection. This would be a common option for DIY throttles based on other Arduino platforms.</p>
 <p>This is also the same method when using HC05/06 bluetooth devices, as outlined in <a class="reference internal" href="../../reference/hardware/bluetooth/hc-05-06.html"><span class="doc">HC-05/06 Bluetooth Modules</span></a>.</p>
 <p>If connecting to serial ports other than the default (eg. serial port 0 on the Mega2560), you will need to enable API commands for that specific serial port by editing your “config.h” file, and uncommenting the appropriate line. For example, to enable API commands on serial port 2, you need to uncomment this line:</p>

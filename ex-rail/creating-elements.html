@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>Objects - an Introduction<a class="headerlink" href="#objects-an-introduction" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#adding-a-roster" id="id5">Adding a Roster</a></p></li>
@@ -478,7 +479,7 @@
 </li>
 <li><p><a class="reference internal" href="#next-steps-creating-sequences" id="id18">Next Steps - Creating Sequences</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>First we need the ‘objects’ that we will use for our automation sequences.</p>
 <p>There are a number key objects that are important for creating sequences:</p>
@@ -501,13 +502,13 @@
 </div>
 <hr class="docutils" />
 <section id="adding-a-roster">
-<h2><a class="toc-backref" href="#id5">Adding a Roster</a><a class="headerlink" href="#adding-a-roster" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Adding a Roster</a><a class="headerlink" href="#adding-a-roster" title="Permalink to this heading"></a></h2>
 <p>EX-RAIL has a <code class="docutils literal notranslate"><span class="pre">ROSTER()</span></code> function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.</p>
 <p>The functions can simply be listed as “F” numbers, or you can provide a text description of the function. Prefacing the function with a “*” indicates it is momentary, meaning it is only activated while holding that function button down.</p>
 <p>In a text editor (e.g. notepad) create a new text file named ‘myAutomation.h’. (Note the capital ‘A’ in the name.  The case of all the characters is important.)</p>
 <p>If you are already using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> and have a myAutomation.h, then just the add <code class="docutils literal notranslate"><span class="pre">ROSTER(...)</span></code> lines near the top of the file.</p>
 <p>Add a line that looks like:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="s">&quot;Loco Name&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="s">&quot;Loco Name&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Where:</p>
@@ -518,34 +519,34 @@
 <li><p><strong>*F2</strong> - note that if the function is ‘momentary’ rather than ‘latching’ (On/Off) then start the function label with a asterisk (*).  The most common example of this is the Horn/Whistle which is commonly on F2.</p></li>
 </ul>
 <p>Some more realistic examples might look like:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span> <span class="p">(</span>  <span class="mi">3</span><span class="p">,</span><span class="s">&quot;Eng 3&quot;</span><span class="p">,</span> <span class="s">&quot;F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//&quot;</span><span class="p">)</span> <span class="c1">// Address 3, Eng 3, Function keys F0-F10</span>
-<span class="n">ROSTER</span><span class="p">(</span><span class="mi">1224</span><span class="p">,</span><span class="s">&quot;PE 1224&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span> <span class="c1">// Motor Only Decoder, But use Engine Driver &#39;Preferences &gt;In Phone Loco &#39;Sound&#39;</span>
-<span class="n">ROSTER</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;PE 1225&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute&quot;</span><span class="p">)</span>
-<span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Eng 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Address 3, Eng 3, Function keys F0-F10</span>
+<span class="n">ROSTER</span><span class="p">(</span><span class="mi">1224</span><span class="p">,</span><span class="s">&quot;PE 1224&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Motor Only Decoder, But use Engine Driver &#39;Preferences &gt;In Phone Loco &#39;Sound&#39;</span>
+<span class="n">ROSTER</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;PE 1225&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Note: Add additional ‘ROSTER(…)’ lines for all your locos</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1506</span><span class="p">,</span> <span class="s">&quot;HUSA&quot;</span><span class="p">,</span> <span class="s">&quot;Light/Bell/*Horn&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1506</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HUSA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Light/Bell/*Horn&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>A more complex example with generic functions for the same loco (note the momentary F2 for horn):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1506</span><span class="p">,</span> <span class="s">&quot;HUSA&quot;</span><span class="p">,</span> <span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1506</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HUSA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The same again, with more text functions defined to represent a number of different sounds:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1506</span><span class="p">,</span> <span class="s">&quot;HUSA&quot;</span><span class="p">,</span> <span class="s">&quot;Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1506</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HUSA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lights/Bell/*Horn/Air/Brake/Coupling/Compressor/Sand/Mute/F9/F10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/F27/F28&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p><strong>Locos with Unavailable Functions</strong></p>
 <blockquote>
 <div><p>If a function is not available just leave the spot empty. (Don’t even have the space character.)</p>
 <p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2825</span><span class="p">,</span><span class="s">&quot;CN ES44AC&quot;</span><span class="p">,</span><span class="s">&quot;Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup &amp; Shutdown&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2825</span><span class="p">,</span><span class="s">&quot;CN ES44AC&quot;</span><span class="p">,</span><span class="s">&quot;Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup &amp; Shutdown&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Note the two missing text labels for positions F5 and F6. Engine Driver will skip those buttons and not display them at all in the interface since they do nothing for that loco.</p>
 <p>Example of loco without sound:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2405</span><span class="p">,</span><span class="s">&quot;AT&amp;SF 2-8-0 2405&quot;</span><span class="p">,</span><span class="s">&quot;Headlight&quot;</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2405</span><span class="p">,</span><span class="s">&quot;AT&amp;SF 2-8-0 2405&quot;</span><span class="p">,</span><span class="s">&quot;Headlight&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Note that it only has FO (the Headlight) and not following slashes.</p>
@@ -553,7 +554,7 @@
 </section>
 <hr class="docutils" />
 <section id="adding-turnouts-points">
-<h2><a class="toc-backref" href="#id6">Adding Turnouts/Points</a><a class="headerlink" href="#adding-turnouts-points" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Adding Turnouts/Points</a><a class="headerlink" href="#adding-turnouts-points" title="Permalink to this heading"></a></h2>
 <p>Turnouts/Points can included on your layout in one of the</p>
 <ul class="simple">
 <li><p>DCC turnouts/Points</p></li>
@@ -561,12 +562,12 @@
 <li><p>Pin turnouts/Points</p></li>
 </ul>
 <section id="dcc-turnouts-points">
-<h3><a class="toc-backref" href="#id7">DCC Turnouts/Points</a><a class="headerlink" href="#dcc-turnouts-points" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">DCC Turnouts/Points</a><a class="headerlink" href="#dcc-turnouts-points" title="Permalink to this heading"></a></h3>
 <section id="adding-the-hardware-dcc-turnouts-points">
 <h4>Adding the Hardware -  DCC Turnouts/Points<a class="headerlink" href="#adding-the-hardware-dcc-turnouts-points" title="Permalink to this heading"></a></h4>
 <p>If you have installed turnouts/points using DCC accessory decoders, you can config the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> so that it knows about it and you can control in in your sequences.</p>
 <blockquote>
-<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TURNOUT</span><span class="p">(</span> <span class="n">id</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">sub_addr</span> <span class="p">[,</span> <span class="s">&quot;description&quot;</span><span class="p">]</span> <span class="p">)</span>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TURNOUT</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="n">sub_addr</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -577,7 +578,7 @@
 </section>
 </section>
 <section id="pin-turnouts-points">
-<h3><a class="toc-backref" href="#id8">Pin Turnouts/Points</a><a class="headerlink" href="#pin-turnouts-points" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Pin Turnouts/Points</a><a class="headerlink" href="#pin-turnouts-points" title="Permalink to this heading"></a></h3>
 <section id="adding-the-hardware-pin-turnouts-points">
 <h4>Adding the Hardware -  Pin Turnouts/Points<a class="headerlink" href="#adding-the-hardware-pin-turnouts-points" title="Permalink to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id1">
@@ -590,7 +591,7 @@
 </section>
 </section>
 <section id="servo-turnouts-points">
-<h3><a class="toc-backref" href="#id9">Servo Turnouts/Points</a><a class="headerlink" href="#servo-turnouts-points" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Servo Turnouts/Points</a><a class="headerlink" href="#servo-turnouts-points" title="Permalink to this heading"></a></h3>
 <section id="adding-the-hardware-servo-turnouts-points">
 <h4>Adding the Hardware -  Servo Turnouts/Points<a class="headerlink" href="#adding-the-hardware-servo-turnouts-points" title="Permalink to this heading"></a></h4>
 <aside class="sidebar">
@@ -628,13 +629,13 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> directive defines a servo based turnout/point in EX-RAIL, which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout/point within the CommandStation.</p>
 <p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts/points are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
-<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">pin</span><span class="p">,</span> <span class="n">active_angle</span><span class="p">,</span> <span class="n">inactive_angle</span><span class="p">,</span> <span class="n">profile</span> <span class="p">[,</span> <span class="s">&quot;description&quot;</span><span class="p">])</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
-<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="n">Slow</span><span class="p">,</span> <span class="s">&quot;Example slow turnout/point definition&quot;</span><span class="p">)</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout/point definition&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="cm">/* An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation: */</span><span class="n">The</span> <span class="n">valid</span> <span class="n">parameters</span> <span class="nl">are</span><span class="p">:</span>
+<span class="cm">/* An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation: */</span><span class="n">The</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">are</span><span class="o">:</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -651,10 +652,10 @@
 </section>
 <hr class="docutils" />
 <section id="servos-for-signals-and-animations">
-<h2><a class="toc-backref" href="#id10">Servos for Signals and Animations</a><a class="headerlink" href="#servos-for-signals-and-animations" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Servos for Signals and Animations</a><a class="headerlink" href="#servos-for-signals-and-animations" title="Permalink to this heading"></a></h2>
 <p>See above for information on installing the servo hardware (it is the same as for a turnout/point).</p>
 <section id="configure-myautomation-h-servos-for-signals-an-animations">
-<h3><a class="toc-backref" href="#id11">Configure myAutomation.h - Servos for Signals an Animations</a><a class="headerlink" href="#configure-myautomation-h-servos-for-signals-an-animations" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Configure myAutomation.h - Servos for Signals an Animations</a><a class="headerlink" href="#configure-myautomation-h-servos-for-signals-an-animations" title="Permalink to this heading"></a></h3>
 <p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each servo.</p>
 <p>EX-RAIL supports two methods of controlling servos that are not related to turnouts/points:</p>
 <ul class="simple">
@@ -670,10 +671,10 @@
 </pre></div>
 </div>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
-<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
 
 <span class="cm">/* A simple example using the third control pins of the first</span>
-<span class="cm">PCA9685 connected to the CommandStation would be: */</span>
+<span class="cm">PCA9685 connected to the CommandStation would be: */</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -688,8 +689,8 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">SERVO</span></code> and <code class="docutils literal notranslate"><span class="pre">SERVO2</span></code> directives allow for servos to be used in various automations within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
 <p>Note that unlike a <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> automations.</p>
 <p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, these are defined with the following syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">profile</span><span class="p">)</span>
-<span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">)</span><span class="w"></span>
+<span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The valid parameters are:</p>
@@ -700,13 +701,13 @@
 <li><p><strong>duration</strong> = The time (in milliseconds (ms)) for the servo to be actively rotating.</p></li>
 </ul>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
-<span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="n">Fast</span><span class="p">)</span>
-<span class="n">DONE</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w"></span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="n">Fast</span><span class="p">)</span><span class="w"></span>
+<span class="n">DONE</span><span class="w"></span>
 
-<span class="n">AFTER</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">Slow</span><span class="p">)</span>
-<span class="n">DONE</span>
+<span class="n">AFTER</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w"></span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">)</span><span class="w"></span>
+<span class="n">DONE</span><span class="w"></span>
 
 <span class="cm">/* As an example, consider a lineside worker that needs to be moved away</span>
 <span class="cm">from the track when a train approaches, which is controlled by an infrared</span>
@@ -716,7 +717,7 @@
 <span class="cm">This tells EX-RAIL that when the sensor at VPin 164 is activated, the</span>
 <span class="cm">lineside worker moves quickly back from the track for safety, and then</span>
 <span class="cm">after the sensor has been deactivated, he can leisurely move back to his</span>
-<span class="cm">working position (no one wants to rush back to work right?). */</span>
+<span class="cm">working position (no one wants to rush back to work right?). */</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -724,9 +725,9 @@
 </section>
 <hr class="docutils" />
 <section id="adding-sensors">
-<h2><a class="toc-backref" href="#id12">Adding Sensors</a><a class="headerlink" href="#adding-sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Adding Sensors</a><a class="headerlink" href="#adding-sensors" title="Permalink to this heading"></a></h2>
 <section id="adding-the-hardware-sensors">
-<h3><a class="toc-backref" href="#id13">Adding the Hardware -  Sensors</a><a class="headerlink" href="#adding-the-hardware-sensors" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Adding the Hardware -  Sensors</a><a class="headerlink" href="#adding-the-hardware-sensors" title="Permalink to this heading"></a></h3>
 <p>On the Mega2560 Processor board:</p>
 <p>Place IR Infrared or Optical Sensor’s Output wire on Dpins 22, 23, 24 … 49. Plus one wire to GND and a third wire to 5v.</p>
 <a class="reference internal image-reference" href="../_images/mega-with-ir-sensor.png"><img alt="IR Sensor connected to Arduino mega" src="../_images/mega-with-ir-sensor.png" style="width: 518.4px; height: 234.89999999999998px;" /></a>
@@ -738,7 +739,7 @@
 </div>
 </section>
 <section id="configure-myautomation-h-sensors">
-<h3><a class="toc-backref" href="#id14">Configure myAutomation.h - Sensors</a><a class="headerlink" href="#configure-myautomation-h-sensors" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Configure myAutomation.h - Sensors</a><a class="headerlink" href="#configure-myautomation-h-sensors" title="Permalink to this heading"></a></h3>
 <p>You don’t actually require anything special to be added to myAutomation.h in advance of using them in an sequence.</p>
 <p>Handling sensors in sequences is made easy because <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.</p>
 <p>Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc.</p>
@@ -753,9 +754,9 @@
 </section>
 <hr class="docutils" />
 <section id="adding-signals">
-<h2><a class="toc-backref" href="#id15">Adding Signals</a><a class="headerlink" href="#adding-signals" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Adding Signals</a><a class="headerlink" href="#adding-signals" title="Permalink to this heading"></a></h2>
 <section id="adding-the-hardware-signals">
-<h3><a class="toc-backref" href="#id16">Adding the Hardware - Signals</a><a class="headerlink" href="#adding-the-hardware-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Adding the Hardware - Signals</a><a class="headerlink" href="#adding-the-hardware-signals" title="Permalink to this heading"></a></h3>
 <p>To connect a servo to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
@@ -769,7 +770,7 @@
 </ul>
 </section>
 <section id="configure-myautomation-h-signals">
-<h3><a class="toc-backref" href="#id17">Configure myAutomation.h - Signals</a><a class="headerlink" href="#configure-myautomation-h-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Configure myAutomation.h - Signals</a><a class="headerlink" href="#configure-myautomation-h-signals" title="Permalink to this heading"></a></h3>
 <p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each Signal.</p>
 <p>Signals setup on vpins 101, 102 … 115</p>
 <p>For each signal add a line in myAutomation.h in the form:</p>
@@ -789,7 +790,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
 </section>
 <hr class="docutils" />
 <section id="next-steps-creating-sequences">
-<h2><a class="toc-backref" href="#id18">Next Steps - Creating Sequences</a><a class="headerlink" href="#next-steps-creating-sequences" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">Next Steps - Creating Sequences</a><a class="headerlink" href="#next-steps-creating-sequences" title="Permalink to this heading"></a></h2>
 <p>Click <a class="reference internal" href="getting-started.html"><span class="doc">here</span></a> or click the <span class="guilabel">Next</span> button to learn how to create automation sequences.</p>
 </section>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,26 +449,26 @@
 <h1>Layout Connections and Wiring<a class="headerlink" href="#layout-connections-and-wiring" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#split-ring-connection" id="id1">Split ring connection</a></p></li>
 <li><p><a class="reference internal" href="#centre-connection-rings" id="id2">Centre connection rings</a></p></li>
 <li><p><a class="reference internal" href="#pit-rail-with-centre-rings" id="id3">Pit rail with centre rings</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>On this page we hope to outline various different ways to connect your turntable to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> and your layout to ensure correct DCC phase alignment with the surrounding tracks.</p>
 <p>Given <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is in its infancy at the time of writing, there will likely be plenty of other options available or in use that we’ve not been made aware of as yet. We will capture those here in due course.</p>
 <section id="split-ring-connection">
-<h2><a class="toc-backref" href="#id1">Split ring connection</a><a class="headerlink" href="#split-ring-connection" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Split ring connection</a><a class="headerlink" href="#split-ring-connection" title="Permalink to this heading"></a></h2>
 <p>This first example demonstrates the connection commonly used in commercial turntables, whereby the connection from the track to the turntable bridge is provided by a centre wiper ring or contact that is split into two 180 degree halves.</p>
 <p>Wiring these turntables is straight forward, and there is no requirement for either phase switching relays or an auto reverser of any sort.</p>
 <p>Phase switching happens automatically with the rotation of the turntable.</p>
 <a class="reference internal image-reference" href="../_images/layout-connection-split-ring.png"><img alt="Layout connection with split centre ring" src="../_images/layout-connection-split-ring.png" style="width: 587.5px; height: 480.0px;" /></a>
 </section>
 <section id="centre-connection-rings">
-<h2><a class="toc-backref" href="#id2">Centre connection rings</a><a class="headerlink" href="#centre-connection-rings" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Centre connection rings</a><a class="headerlink" href="#centre-connection-rings" title="Permalink to this heading"></a></h2>
 <p>This next example uses a pair of wiper rings or contacts in the centre of the turntable similar to the above scenario, except that both rings cover the full 360 degree rotation, and as such do not provide automatic phase switching.</p>
 <p>In this example, we have demonstrated the use of the phase switching relays to solve this problem.</p>
 <p>The main track positive (+ blue) connection from your CommandStation gets connected to the normally closed (NC) input of relay 1, and the normally open (NO) input of relay 2.</p>
@@ -478,7 +479,7 @@
 <a class="reference internal image-reference" href="../_images/layout-connection-centre-rings.png"><img alt="Layout connection with centre rings" src="../_images/layout-connection-centre-rings.png" style="width: 550.0px; height: 469.0px;" /></a>
 </section>
 <section id="pit-rail-with-centre-rings">
-<h2><a class="toc-backref" href="#id3">Pit rail with centre rings</a><a class="headerlink" href="#pit-rail-with-centre-rings" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Pit rail with centre rings</a><a class="headerlink" href="#pit-rail-with-centre-rings" title="Permalink to this heading"></a></h2>
 <p>This third example is very similar to the above scenario, except that the pit rail itself is active, with wheel wipers on the bridge deck forming the connection in addition to the central wiper ring or contact.</p>
 <p>Again, this scenario does not provide automatic phase switching, and the phase switching relays are used to solve this problem.</p>
 <p>As above, the main track positive (+ blue) connection from your CommandStation gets connected to the normally closed (NC) input of relay 1, and the normally open (NO) input of relay 2.</p>

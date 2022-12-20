@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -450,7 +451,7 @@
 <h1>Makerfabs ESP8266 WiFi Shield (recommended)<a class="headerlink" href="#makerfabs-esp8266-wifi-shield-recommended" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../../levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#remove-the-plastic-jumpers" id="id5">Remove the plastic jumpers</a></p></li>
@@ -458,7 +459,7 @@
 <li><p><a class="reference internal" href="#seat-the-boards" id="id7">Seat the boards</a></p></li>
 <li><p><a class="reference internal" href="#install-the-jumper-wires" id="id8">Install the jumper wires</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>We like this board here at <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>. It is simple, inexpensive, easy to use, and it works.</p>
 <figure class="align-default" id="id1">
@@ -469,7 +470,7 @@
 </figure>
 <p>Installing the board follows the same procedure in the <a class="reference internal" href="../../../ex-commandstation/get-started/assembly.html"><span class="doc">section on assembly</span></a>. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.</p>
 <section id="remove-the-plastic-jumpers">
-<h2><a class="toc-backref" href="#id5">Remove the plastic jumpers</a><a class="headerlink" href="#remove-the-plastic-jumpers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Remove the plastic jumpers</a><a class="headerlink" href="#remove-the-plastic-jumpers" title="Permalink to this heading"></a></h2>
 <p>Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../../_images/wifi_pins.jpg"><img alt="Remove the plastic jumpers" src="../../../_images/wifi_pins.jpg" style="width: 450.0px; height: 435.75px;" /></a>
@@ -479,7 +480,7 @@
 </figure>
 </section>
 <section id="align-the-boards">
-<h2><a class="toc-backref" href="#id6">Align the boards</a><a class="headerlink" href="#align-the-boards" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Align the boards</a><a class="headerlink" href="#align-the-boards" title="Permalink to this heading"></a></h2>
 <p>Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Rx, Tx, 2, 3, 4, 5, 6, 7 pins on the Motor Shield line up with the 0 through 7 pins on the Makerfabs WiFi Board. Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.</p>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../../_images/wifi_seat1.jpg"><img alt="Get the left side pins aligned" src="../../../_images/wifi_seat1.jpg" style="width: 450.0px; height: 300.0px;" /></a>
@@ -489,7 +490,7 @@
 </figure>
 </section>
 <section id="seat-the-boards">
-<h2><a class="toc-backref" href="#id7">Seat the boards</a><a class="headerlink" href="#seat-the-boards" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Seat the boards</a><a class="headerlink" href="#seat-the-boards" title="Permalink to this heading"></a></h2>
 <p>Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (<a class="reference internal" href="#wifi-right-side-pins-aligned-advanced"><span class="std std-numref">Figure 45</span></a>). Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see <a class="reference internal" href="#wifi-fully-seated-boards-advanced"><span class="std std-numref">Figure 46</span></a>).</p>
 <figure class="align-default" id="wifi-right-side-pins-aligned-advanced">
 <a class="reference internal image-reference" href="../../../_images/wifi_seat2a.jpg"><img alt="Get the right side pins aligned" src="../../../_images/wifi_seat2a.jpg" style="width: 450.0px; height: 300.0px;" /></a>
@@ -505,7 +506,7 @@
 </figure>
 </section>
 <section id="install-the-jumper-wires">
-<h2><a class="toc-backref" href="#id8">Install the jumper wires</a><a class="headerlink" href="#install-the-jumper-wires" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Install the jumper wires</a><a class="headerlink" href="#install-the-jumper-wires" title="Permalink to this heading"></a></h2>
 <p>We now need to connect The Transmit (Tx) and Receive (Rx) pins on the ESP8266 to the Rx and Tx pins for Serial1 on the Mega. The Mega has one serial port connected to the USB port, and then 3 extra ones we can access from pins on the board. You can think of Tx as “talking” and Rx as “listening”. That will help you remember that if one thing is talking, the other has to use its ears to listen. So we must connect the Tx of the WiFi board to Rx1 on the Mega and the Rx pin on the WiFi Board to Tx1 on the Mega.</p>
 <p>There are three rows of pins on the Makerfabs WiFi shield. The middle pins each connect to one of the first 8 pins on the header. Pin 0 goes to header pin 0, pin 1 goes to header pin 1, and so on. We aren’t going to need those. With the plastic jumpers removed, nothing will be connected to any of those pins on the WiFi Board, and therefore not connected down to the Mega through the Motor Shield.</p>
 <p>ALL of the pins in the row marked Tx (the row closest to the header) are connected to the Tx pin of the ESP8266. ALL of the pins in the row marked Rx (the row closest to the middle of the board) are connected to the Rx pin on the ESP8266.</p>

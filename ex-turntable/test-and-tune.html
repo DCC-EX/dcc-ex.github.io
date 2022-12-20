@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>Testing, Tuning, and Control<a class="headerlink" href="#testing-tuning-and-control" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ex-turntable-commands" id="id2">Ex-Turntable commands</a></p>
@@ -478,22 +479,22 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 </aside>
 <section id="ex-turntable-commands">
-<h2><a class="toc-backref" href="#id2">Ex-Turntable commands</a><a class="headerlink" href="#ex-turntable-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Ex-Turntable commands</a><a class="headerlink" href="#ex-turntable-commands" title="Permalink to this heading"></a></h2>
 <p>Before proceeding with testing or any configuration, it’s important to understand the two commands available for controlling <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>.</p>
 <p>This is a debug or diagnostic command that can be executed via the serial terminal of the CommandStation:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT vpin steps activity&gt;
 </pre></div>
 </div>
 <p>This is the EX-RAIL command to be included in myAutomation.h:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">activity</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">steps</span><span class="p">,</span><span class="w"> </span><span class="n">activity</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For both of these commands, “vpin” is as defined in your “myHal.cpp” file, and “steps” is the number of steps from the home position, not the number of steps the turntable has to travel.</p>
 <p>For the diagnostic command, “activity” needs to be defined as a number, whereas for the EX-RAIL command, this is defined as text based on the table below. Sound confusing? The reason for using text in the EX-RAIL command is to make your automation sequences more “human-friendly” when reading what they do later. It’s much easier for us humans to remember words rather than numbers.</p>
-<table class="colwidths-auto command-table docutils align-default">
+<table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Diagnostic activity</p></th>
 <th class="head"><p>EX-RAIL activity</p></th>
@@ -549,7 +550,7 @@ MOVETT(600, 100, Turn)
 </pre></div>
 </div>
 <section id="serial-console-testing">
-<h3><a class="toc-backref" href="#id3">Serial console testing</a><a class="headerlink" href="#serial-console-testing" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Serial console testing</a><a class="headerlink" href="#serial-console-testing" title="Permalink to this heading"></a></h3>
 <p>As of version 0.5.0-Beta, the ability to test <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> directly via the serial console has been introduced.</p>
 <p>Similar to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> diagnostic command outlined previously, the syntax is <code class="docutils literal notranslate"><span class="pre">&lt;steps</span> <span class="pre">activity&gt;</span></code>, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number.</p>
 <p>For example, sending the command <code class="docutils literal notranslate"><span class="pre">&lt;300</span> <span class="pre">0&gt;</span></code> via the serial console will result in output similar to this:</p>
@@ -563,7 +564,7 @@ Setting phase switch flag to: 0
 </section>
 </section>
 <section id="testing-ex-turntable">
-<h2><a class="toc-backref" href="#id4">Testing EX-Turntable</a><a class="headerlink" href="#testing-ex-turntable" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Testing EX-Turntable</a><a class="headerlink" href="#testing-ex-turntable" title="Permalink to this heading"></a></h2>
 <p>Firstly, power on <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, followed by your CommandStation. By powering these on in that order, you will ensure that <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as “OFFLINE”, and commands will fail.</p>
 <p>Referring again to <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a>, skip ahead to <a class="reference internal" href="../reference/developers/hal-config.html#checking-the-driver"><span class="std std-ref">Checking the Driver</span></a>, and the output you’re looking for to validate the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> device driver is loaded and connected successfully is below:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D HAL SHOW&gt;&lt;* Arduino Vpins:2-69 *&gt;
@@ -622,14 +623,14 @@ Setting phase switch flag to: 0
 <p>Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> to good use.</p>
 </section>
 <section id="tuning-your-turntable-positions">
-<h2><a class="toc-backref" href="#id5">Tuning your turntable positions</a><a class="headerlink" href="#tuning-your-turntable-positions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Tuning your turntable positions</a><a class="headerlink" href="#tuning-your-turntable-positions" title="Permalink to this heading"></a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To determine your starting positions, you will need the full turn step count as recorded in <a class="reference internal" href="assembly.html#first-start-and-automatic-calibration"><span class="std std-ref">First start and automatic calibration</span></a>.</p>
 </div>
 <p>To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).</p>
 <section id="determine-the-positions">
-<h3><a class="toc-backref" href="#id6">Determine the positions</a><a class="headerlink" href="#determine-the-positions" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Determine the positions</a><a class="headerlink" href="#determine-the-positions" title="Permalink to this heading"></a></h3>
 <p>At this point, you should either have a layout you’re fitting <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> into, or a layout design that you’re working to, with the various turntable connection tracks defined.</p>
 <p>The simplest way to devise the approximate number of steps for each turntable position is to calculate these based on the degrees each step will turn.</p>
 <p>For the default <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).</p>
@@ -637,7 +638,7 @@ Setting phase switch flag to: 0
 <p>In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.</p>
 <a class="reference internal image-reference" href="../_images/six-pos-example-degrees.png"><img alt="Six Postion Example" src="../_images/six-pos-example-degrees.png" style="width: 436.79999999999995px; height: 342.29999999999995px;" /></a>
 <p>Therefore, using our formula, the starting point for each position will be:</p>
-<table class="colwidths-auto command-table docutils align-default">
+<table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Position</p></th>
 <th class="head"><p>Degrees from home</p></th>
@@ -673,7 +674,7 @@ Setting phase switch flag to: 0
 </table>
 </section>
 <section id="example-tuning-commands">
-<h3><a class="toc-backref" href="#id7">Example tuning commands</a><a class="headerlink" href="#example-tuning-commands" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Example tuning commands</a><a class="headerlink" href="#example-tuning-commands" title="Permalink to this heading"></a></h3>
 <p>To validate the above calculated positions, the following six diagnostic commands should be executed in the serial terminal of the CommandStation, which will allow you to visually inspect the alignment with your layout tracks and adjust accordingly:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D TT 600 114 0&gt;
 &lt;D TT 600 227 0&gt;
@@ -687,13 +688,13 @@ Setting phase switch flag to: 0
 <p>Note that due to the automatic phase inversion, the last three positions will automatically active the phase inversion relays due to being within the 45 to 225 degree angles that activates phase inversion.</p>
 </section>
 <section id="apply-to-your-layout">
-<h3><a class="toc-backref" href="#id8">Apply to your layout</a><a class="headerlink" href="#apply-to-your-layout" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Apply to your layout</a><a class="headerlink" href="#apply-to-your-layout" title="Permalink to this heading"></a></h3>
 <p>At this point, you should be able to apply the above calculations to your own layout and come up with the step count required for each position.</p>
 <p>Use appropriate diagnostic commands to test and tune each position for that perfect alignment, and providing your layout is functional, you should be able to drive a locomotive on and off your turntable in each position.</p>
 </section>
 </section>
 <section id="advertising-positions-to-engine-driver-and-withrottle-applications">
-<h2><a class="toc-backref" href="#id9">Advertising positions to Engine Driver and WiThrottle applications</a><a class="headerlink" href="#advertising-positions-to-engine-driver-and-withrottle-applications" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Advertising positions to Engine Driver and WiThrottle applications</a><a class="headerlink" href="#advertising-positions-to-engine-driver-and-withrottle-applications" title="Permalink to this heading"></a></h2>
 <p>Now that you have defined all of your turntable positions with appropriate phase/polarity switching, it’s time to get these advertised to <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> applications.</p>
 <p>The method to advertise these is to use EX-RAIL’s ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> Routes sections.</p>
 <p>If this is your first experience with EX-RAIL and the “myAutomation.h” file, familiarise yourself with EX-RAIL by reading through <a class="reference internal" href="../ex-rail/index.html"><span class="doc">EX-RAIL (Automation)</span></a>.</p>
@@ -711,23 +712,23 @@ Setting phase switch flag to: 0
 </div>
 <p>That’s it! Once you have created “myAutomation.h” and uploaded it to your CommandStation as per the process on the <a class="reference internal" href="../ex-rail/index.html"><span class="doc">EX-RAIL (Automation)</span></a> page, the routes for each turntable position should automatically be visible in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> applications.</p>
 <section id="my-turntable-moves-on-startup">
-<h3><a class="toc-backref" href="#id10">My turntable moves on startup!</a><a class="headerlink" href="#my-turntable-moves-on-startup" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">My turntable moves on startup!</a><a class="headerlink" href="#my-turntable-moves-on-startup" title="Permalink to this heading"></a></h3>
 <p>There is one “catch” with the above “myAutomation.h” example. When your CommandStation starts up and EX-RAIL starts, it will automatically execute everything in “myAutomation.h” up until the first “DONE” statement it encounters.</p>
 <p>In this scenario, that means on startup, the turntable will automatically move to position 1.</p>
 <p>If you wish to leave the turntable at the home position on startup, you can simply comment out the first MOVETT() command:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="n">Turn</span><span class="p">)</span>        <span class="o">&lt;&lt;==</span> <span class="n">This</span> <span class="n">line</span> <span class="n">here</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w">        </span><span class="o">&lt;&lt;==</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="n">here</span><span class="w"></span>
 <span class="c1">// MOVETT(600, 114 Turn)      &lt;&lt;== Becomes this, add // to comment lines out</span>
 </pre></div>
 </div>
 <p>In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by simply changing the steps in that same MOVETT() command:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="n">Turn</span><span class="p">)</span>            <span class="c1">// Default moves to position one, edit this line to look like the below</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">2386</span><span class="p">,</span> <span class="n">Turn</span><span class="p">)</span>           <span class="c1">// Move instead to position six</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">167</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w">            </span><span class="c1">// Default moves to position one, edit this line to look like the below</span>
+<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2386</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w">           </span><span class="c1">// Move instead to position six</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="manual-phase-switching">
-<h2><a class="toc-backref" href="#id11">Manual phase switching</a><a class="headerlink" href="#manual-phase-switching" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Manual phase switching</a><a class="headerlink" href="#manual-phase-switching" title="Permalink to this heading"></a></h2>
 <p>So far, all the examples, testing, and tuning have relied on automatic phase switching.</p>
 <p>There may be times where manual phase switching is required, whether due to awkward track wiring, layouts that have tracks at angles that make it hard to determine the correct angles at which to automatically switch the phase, or (in an upcoming release) when traversers are used rather than traditional turntables, that don’t actually required phase switching at all.</p>
 <p>To enable manual phase switching, you must edit “config.h” and set <a class="reference internal" href="configure.html#phase-switching"><span class="std std-ref">PHASE_SWITCHING</span></a> to “MANUAL”.</p>
@@ -747,12 +748,12 @@ Setting phase switch flag to: 0
 </pre></div>
 </div>
 <p>The EX-RAIL equivalent to the above would be:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="n">Turn</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">227</span><span class="p">,</span> <span class="n">Turn</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">341</span><span class="p">,</span> <span class="n">Turn</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">2159</span><span class="p">,</span> <span class="n">Turn_PInvert</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">2273</span><span class="p">,</span> <span class="n">Turn_PInvert</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">2386</span><span class="p">,</span> <span class="n">Turn_PInvert</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w"></span>
+<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">227</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w"></span>
+<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">341</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w"></span>
+<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2159</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span><span class="w"></span>
+<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2273</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span><span class="w"></span>
+<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2386</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition danger">
@@ -761,7 +762,7 @@ Setting phase switch flag to: 0
 </div>
 </section>
 <section id="controlling-ex-turntable-with-a-rotary-encoder">
-<h2><a class="toc-backref" href="#id12">Controlling EX-Turntable with a rotary encoder</a><a class="headerlink" href="#controlling-ex-turntable-with-a-rotary-encoder" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Controlling EX-Turntable with a rotary encoder</a><a class="headerlink" href="#controlling-ex-turntable-with-a-rotary-encoder" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The rotary encoder software is not official DCC-EX software and is maintained separately, although the device driver and EX-RAIL commands will be included with a future release of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
@@ -772,7 +773,7 @@ Setting phase switch flag to: 0
 <p>There is an additional device driver available “IO_RotaryEncoder.h” which can be used with the rotary encoder software installed on a separate Arduino Nano or Uno that has the rotary encoder and an OLED display connected to it.</p>
 <p>In a similar manner to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> itself, the rotary encoder Arduino connects to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via I<sup>2</sup>C.</p>
 <section id="required-software">
-<h3><a class="toc-backref" href="#id13">Required software</a><a class="headerlink" href="#required-software" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Required software</a><a class="headerlink" href="#required-software" title="Permalink to this heading"></a></h3>
 <p>The rotary encoder software can be downloaded from:</p>
 <p class="dcclink"><a class="reference external" href="https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder">dcc-ex-rotary-encoder GitHub repository</a></p>
 <p>To enable using the rotary encoder with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> you need to be running the “rotary-encoder” branch, which is based on the current development branch.</p>
@@ -780,19 +781,19 @@ Setting phase switch flag to: 0
 <p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/rotary-encoder">EX-CommandStation GitHub repository</a></p>
 </section>
 <section id="enabling-the-device-driver">
-<h3><a class="toc-backref" href="#id14">Enabling the device driver</a><a class="headerlink" href="#enabling-the-device-driver" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Enabling the device driver</a><a class="headerlink" href="#enabling-the-device-driver" title="Permalink to this heading"></a></h3>
 <p>The default I<sup>2</sup>C address for the rotary encoder is 0x80, and to enable this in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you need to ensure “myHal.ccp” has entries similar to this:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IO_RotaryEncoder.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_RotaryEncoder.h&quot;</span><span class="cp"></span>
 
-<span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">RotaryEncoder</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">RotaryEncoder</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x80</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You need to follow the same process as <a class="reference internal" href="assembly.html#add-the-ex-turntable-device-driver-to-ex-commandstation"><span class="std std-ref">8. Add the EX-Turntable device driver to EX-CommandStation</span></a> to load the updated software on your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 </section>
 <section id="ex-rail-automation">
-<h3><a class="toc-backref" href="#id15">EX-RAIL automation</a><a class="headerlink" href="#ex-rail-automation" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">EX-RAIL automation</a><a class="headerlink" href="#ex-rail-automation" title="Permalink to this heading"></a></h3>
 <p>There are two EX-RAIL commands available for using the rotary encoder:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ONCHANGE(vpin)</span></code> - Event handler that is activated when a position change is sent</p></li>

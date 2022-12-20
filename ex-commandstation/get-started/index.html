@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
-<meta content="EX-CommandStation Command Station EX-CS" name="keywords" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+<meta content="EX-CommandStation Command Station EX-CS" name="keywords" />
+<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
+<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Getting Started &mdash; DCC-EX Model Railroading  documentation</title>
@@ -24,6 +24,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -451,18 +452,18 @@
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#what-is-ex-commandstation" id="id3">What is EX-CommandStation?</a></p></li>
 <li><p><a class="reference internal" href="#the-components-of-a-full-system" id="id4">The Components of a Full System</a></p></li>
 <li><p><a class="reference internal" href="#next-steps-purchasing-parts" id="id5">Next Steps - Purchasing Parts</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>The following pages will instruct you on how to build an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> including assembling your hardware, installing software, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.</p>
 <section id="what-is-ex-commandstation">
-<h2><a class="toc-backref" href="#id3">What is EX-CommandStation?</a><a class="headerlink" href="#what-is-ex-commandstation" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">What is EX-CommandStation?</a><a class="headerlink" href="#what-is-ex-commandstation" title="Permalink to this heading"></a></h2>
 <p>An <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards. It supports much of the NMRA Digital Command Control (DCC) standards, including:</p>
 <ul class="simple">
 <li><p>Simultaneous control of multiple locomotives</p></li>
@@ -479,7 +480,7 @@
 </ul>
 </section>
 <section id="the-components-of-a-full-system">
-<h2><a class="toc-backref" href="#id4">The Components of a Full System</a><a class="headerlink" href="#the-components-of-a-full-system" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">The Components of a Full System</a><a class="headerlink" href="#the-components-of-a-full-system" title="Permalink to this heading"></a></h2>
 <p>To actually run your model railroad you will need a few items:</p>
 <a class="reference internal image-reference" href="../../_images/wangtongze_jumpered.png"><img alt="EX-CommandStation" class="align-right" src="../../_images/wangtongze_jumpered.png" style="width: 218.4px; height: 158.85px;" /></a>
 <ol class="arabic simple">
@@ -491,10 +492,10 @@
 <li><p>a <strong>Motor Driver</strong> board / motor shield,</p></li>
 <li><p>Optionally:</p>
 <ul>
-<li><p>a <strong>WiFi shield (Recommended)</strong> <a class="footnote-reference brackets" href="#inst" id="id1">1</a> (<em>This option is described on the following pages</em>), or</p></li>
+<li><p>a <strong>WiFi shield (Recommended)</strong> <a class="footnote-reference brackets" href="#inst" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> (<em>This option is described on the following pages</em>), or</p></li>
 <li><p>an ethernet shield, or</p></li>
 <li><p>a Bluetooth board, or</p></li>
-<li><p>direct connection to a PC <a class="footnote-reference brackets" href="#jmri" id="id2">2</a>, and</p></li>
+<li><p>direct connection to a PC <a class="footnote-reference brackets" href="#jmri" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, and</p></li>
 </ul>
 </li>
 <li><p>our free, open source, custom software</p></li>
@@ -518,17 +519,19 @@
 </ol>
 </section>
 <section id="next-steps-purchasing-parts">
-<h2><a class="toc-backref" href="#id5">Next Steps - Purchasing Parts</a><a class="headerlink" href="#next-steps-purchasing-parts" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Next Steps - Purchasing Parts</a><a class="headerlink" href="#next-steps-purchasing-parts" title="Permalink to this heading"></a></h2>
 <p>Click <a class="reference internal" href="purchasing.html"><span class="doc">here</span></a> or click the “next” button to see what you need to aquire to create your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <hr class="docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="inst"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>The Instructions on the following pages assume that that you will use a WiFi Shield.</p>
-</dd>
-<dt class="label" id="jmri"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Requires <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> installed on a computer.</p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="inst" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>The Instructions on the following pages assume that that you will use a WiFi Shield.</p>
+</aside>
+<aside class="footnote brackets" id="jmri" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Requires <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> installed on a computer.</p>
+</aside>
+</aside>
 <div class="toctree-wrapper compound">
 </div>
 </section>

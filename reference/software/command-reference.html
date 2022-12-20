@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>DCC-EX Command Reference<a class="headerlink" href="#dcc-ex-command-reference" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#conventions-used-on-this-page" id="id2">Conventions used on this page</a></p></li>
@@ -464,7 +465,7 @@
 <li><p><a class="reference internal" href="#wifi-at-commands" id="id11">WiFi “AT” Commands</a></p></li>
 <li><p><a class="reference internal" href="#user-commands" id="id12">User Commands</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="command-summary.html"><span class="doc">Command Summary</span></a></p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
@@ -478,7 +479,7 @@
 <p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation Firmware</a>.</p>
 <p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/DCC-EX">GitHub</a>. If you are new to we suggest you start with the <a class="reference external" href="https://dcc-ex.com">DCC-EX Webpage</a>.</p>
 <section id="conventions-used-on-this-page">
-<h2><a class="toc-backref" href="#id2">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>“&lt;” and “&gt;” - All DCC-EX API commands are surrounded by these characters to indicate the beginning and end, these must always be included</p></li>
 <li><p>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. 1, c, or -</p></li>
@@ -489,7 +490,7 @@
 </ul>
 </section>
 <section id="track-power-commands">
-<h2><a class="toc-backref" href="#id3">Track Power Commands</a><a class="headerlink" href="#track-power-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Track Power Commands</a><a class="headerlink" href="#track-power-commands" title="Permalink to this heading"></a></h2>
 <p>The following commands provide control over power to the MAIN and PROG tracks (voltage), as well as monitoring the current used.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
 <blockquote>
@@ -532,7 +533,7 @@
 </div></blockquote>
 </section>
 <section id="engine-decoder-cab-operation-commands">
-<h2><a class="toc-backref" href="#id4">Engine Decoder (CAB) Operation Commands</a><a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Engine Decoder (CAB) Operation Commands</a><a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this heading"></a></h2>
 <p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">register</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">direction&gt;</span></code></p>
 <p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">1</span> <span class="pre">03</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code> is:</p>
 <ul class="simple">
@@ -916,7 +917,7 @@ To throw turnout 10 so an engine can go to the warehouse siding you would send t
 </section>
 </section>
 <section id="sensors-input-commands">
-<h2><a class="toc-backref" href="#id5">Sensors (Input) Commands</a><a class="headerlink" href="#sensors-input-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Sensors (Input) Commands</a><a class="headerlink" href="#sensors-input-commands" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
 and other devices.
 Physical sensors can be of any type (infrared, magnetic, mechanical…).  They may be configured to pull-up or not.
@@ -971,7 +972,7 @@ found to have transitioned from one state to another, one of the following seria
 </div></blockquote>
 </section>
 <section id="outputs-dio-pin-commands">
-<h2><a class="toc-backref" href="#id6">Outputs (DIO Pin) Commands</a><a class="headerlink" href="#outputs-dio-pin-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Outputs (DIO Pin) Commands</a><a class="headerlink" href="#outputs-dio-pin-commands" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated.
 The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</p>
 <p>Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
@@ -1033,7 +1034,7 @@ A list of the current states of each output in the form <code class="docutils li
 status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.</p>
 </section>
 <section id="storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom">
-<h2><a class="toc-backref" href="#id7">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</a><a class="headerlink" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</a><a class="headerlink" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM, returns the number of stored turnouts, sensors, and outputs.</p>
 <blockquote>
@@ -1051,7 +1052,7 @@ status command is invoked. This provides an efficient way of initializing the st
 </div></blockquote>
 </section>
 <section id="engine-decoder-programming-commands">
-<h2><a class="toc-backref" href="#id8">Engine Decoder Programming Commands</a><a class="headerlink" href="#engine-decoder-programming-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Engine Decoder Programming Commands</a><a class="headerlink" href="#engine-decoder-programming-commands" title="Permalink to this heading"></a></h2>
 <section id="programming-main-track">
 <h3>PROGRAMMING-MAIN TRACK<a class="headerlink" href="#programming-main-track" title="Permalink to this heading"></a></h3>
 <section id="write-cv-byte-to-engine-decoder-on-main-track">
@@ -1199,7 +1200,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </section>
 </section>
 <section id="throttle-commands-for-developers">
-<h2><a class="toc-backref" href="#id9">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Permalink to this heading"></a></h2>
 <p>These commands have been provided for those wishing to develop throttles that utilise the DCC-EX API.</p>
 <p>As there is existing detailed documentation for these, we will not elaborate here. Instead, refer to <a class="reference internal" href="../developers/tech-reference.html"><span class="doc">Technical Reference for Throttle Developers</span></a> for full details on these commands.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> returns the defined turnout IDs</p>
@@ -1211,7 +1212,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> Requests a deliberate update of cab speed/functions in the same format as the cab broadcas</p>
 </section>
 <section id="diagnostic-commands">
-<h2><a class="toc-backref" href="#id10">Diagnostic Commands</a><a class="headerlink" href="#diagnostic-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Diagnostic Commands</a><a class="headerlink" href="#diagnostic-commands" title="Permalink to this heading"></a></h2>
 <section id="status">
 <h3>Status<a class="headerlink" href="#status" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: EX-CommandStation Status</p>
@@ -1325,7 +1326,7 @@ returns: NONE
 </section>
 </section>
 <section id="wifi-at-commands">
-<h2><a class="toc-backref" href="#id11">WiFi “AT” Commands</a><a class="headerlink" href="#wifi-at-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">WiFi “AT” Commands</a><a class="headerlink" href="#wifi-at-commands" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the “+” and the command.</p>
 <p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag (WiFi Connected Mode) to on inside the Command Station so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the Command Station that it needs to process commands on a connection you created and so you can send your own AT commands.</p>
@@ -1339,7 +1340,7 @@ returns: NONE
 <p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf">Espressif AT Command Set PDF File (Exressif makes the ESP8266)</a></p>
 </section>
 <section id="user-commands">
-<h2><a class="toc-backref" href="#id12">User Commands</a><a class="headerlink" href="#user-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">User Commands</a><a class="headerlink" href="#user-commands" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;U&gt;</span></code> Is reserved for user commands.</p>
 </section>
 </section>

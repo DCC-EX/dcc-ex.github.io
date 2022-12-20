@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -450,7 +451,7 @@
 <h1>Motor Driver Configuration<a class="headerlink" href="#motor-driver-configuration" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#configure-using-the-installer" id="id1">Configure Using the Installer</a></p></li>
@@ -469,7 +470,7 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 </aside>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.</p>
 <div class="admonition note">
@@ -477,11 +478,11 @@
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use “high accuracy waveform” mode if you need it. See below for more information on high accuracy mode.</p>
 </div>
 <section id="configure-using-the-installer">
-<h2><a class="toc-backref" href="#id1">Configure Using the Installer</a><a class="headerlink" href="#configure-using-the-installer" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Configure Using the Installer</a><a class="headerlink" href="#configure-using-the-installer" title="Permalink to this heading"></a></h2>
 <p>A <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#tinkerer">Tinkerer</a> and even a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#conductor">Conductor</a> should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 </section>
 <section id="configure-by-editing-the-config-h-file">
-<h2><a class="toc-backref" href="#id2">Configure By Editing the config.h File</a><a class="headerlink" href="#configure-by-editing-the-config-h-file" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Configure By Editing the config.h File</a><a class="headerlink" href="#configure-by-editing-the-config-h-file" title="Permalink to this heading"></a></h2>
 <p>Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of <a class="reference internal" href="../motor-boards.html"><span class="doc">Currently supported boards</span></a></p>
 <p>Open the config.h file in your editor. If this is the first time configuring your system, you may need to copy the “config.example.h” file and name the copy “config.h”.</p>
 <p>Find this section in the file:</p>
@@ -500,7 +501,7 @@
 </div>
 <p>You will see a list of supported boards with their type and the “STANDARD_MOTOR_SHIELD” defined as the default. Continue below.</p>
 <section id="if-your-board-is-in-the-supported-list">
-<h3><a class="toc-backref" href="#id3">If Your Board is in the Supported List</a><a class="headerlink" href="#if-your-board-is-in-the-supported-list" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">If Your Board is in the Supported List</a><a class="headerlink" href="#if-your-board-is-in-the-supported-list" title="Permalink to this heading"></a></h3>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
 <p>The Arduino Motor Shield, Deek-Robot Motor Shield, DIY More Motor Shield and any other shield or board that is 100% compatible with the Arduino Motor Shield is defined as a “STANDARD_MOTOR_SHIELD”</p>
@@ -517,7 +518,7 @@
 </div>
 </section>
 <section id="if-your-board-is-not-in-the-supported-list">
-<h3><a class="toc-backref" href="#id4">If Your board is NOT in the Supported List</a><a class="headerlink" href="#if-your-board-is-not-in-the-supported-list" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">If Your board is NOT in the Supported List</a><a class="headerlink" href="#if-your-board-is-not-in-the-supported-list" title="Permalink to this heading"></a></h3>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>If your board is not in the list (remember many boards are considered a “STANDARD_MOTOR_SHIELD”), you can easily add it. In your config.h file, find the line that looks like this:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
@@ -571,12 +572,12 @@
 </section>
 </section>
 <section id="using-high-accuracy-waveform-mode">
-<h2><a class="toc-backref" href="#id5">Using High Accuracy Waveform Mode</a><a class="headerlink" href="#using-high-accuracy-waveform-mode" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Using High Accuracy Waveform Mode</a><a class="headerlink" href="#using-high-accuracy-waveform-mode" title="Permalink to this heading"></a></h2>
 <p>You may ask, “Do I need high accuracy waveforms?” and the answer is probably not. But we are engineers, and we love to spend our days trying to eke out every bit of performance from the system, and maintain bragging rights for thinking of something 5% more clever than the other members of our team! Even our “standard” waveform is within the NMRA specification. For purists, or if you find a particular decoder that is not in spec and needs to have tighter timing on the DCC waveform, you can make sure you are using high accuracy mode.</p>
 <p>If you are using the STANDARD_MOTOR_SHIELD configuration on a Mega, high accuracy is on by default. For an Uno, Nano or Pro Mini, you would need to change which pins you use, and use jumpers. Basically, for any track for which you want the higher accuracy, you need to make sure that the signal pin is one of the timer pins on the board. For a Mega, those are pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how this works, see <a class="reference internal" href="high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a>.</p>
 </section>
 <section id="current-sense-and-sense-factor">
-<h2><a class="toc-backref" href="#id6">Current Sense and Sense factor</a><a class="headerlink" href="#current-sense-and-sense-factor" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Current Sense and Sense factor</a><a class="headerlink" href="#current-sense-and-sense-factor" title="Permalink to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It is VERY important to connect some form of current sensing! Without it, you cannot program decoders on the programming track, and you will not have any short circuit protection on either track!</p>
@@ -589,11 +590,11 @@
 </div>
 <p>In order to calculate the current, we need to know the “Volts per Amp” reported by the motor board current sense circuit. For example, the Arduino Motor Shield, using the L298 dual H-Bridge, has a special circuit that gives us 1.65V/A (1.65 Volts per Amp) reported. In theory, that means this board would send 1.65V to our Arduino analog sense pin when 1A of current was flowing from the motor board. When 2A was flowing, we should see 3.3V on our sense pin.</p>
 <p>The Arduino has an ADC (Analog to Digital Converter) that reads this analog voltage, samples it, and converts it to a digital reading. Arduino pins have a 10 bit resolution, which means it can hold a maximum value of 1024, with current expressed as a number from 0 to 1023. Therefore, we need a senseFactor constant to help us convert the raw Arduino pin reading to a relevant current reading in milliAmps. Here is the formula we use to find this constant for a particular motor board:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">senseFactor</span> <span class="o">=</span> <span class="p">((</span><span class="mi">5</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span><span class="o">/</span><span class="n">Board</span> <span class="n">Volts</span><span class="o">/</span><span class="n">Amp</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">senseFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="mi">5</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span><span class="o">/</span><span class="n">Board</span><span class="w"> </span><span class="n">Volts</span><span class="o">/</span><span class="n">Amp</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The Arduino analog pin can go from 0 to 5V, and has 1024 possible levels, so we divide 5 by 1024, then divide by the V/A figure from the motor board current sense output, then multiply it by 1000 to make the number easier to work with. From our example of the Arduino motor shield above and its published 1.65V/A, we can compute the senseFactor as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">senseFactor</span> <span class="o">=</span> <span class="p">((</span><span class="mi">5</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span><span class="o">/</span><span class="mf">1.65</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span> <span class="o">=</span> <span class="mf">2.96</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">senseFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="mi">5</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span><span class="o">/</span><span class="mf">1.65</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.96</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You may notice that we actually use 2.99 in our code. You caught us! Through experimentation and measurement, we tweak these values to be more accurate. Nothing is ever 100% as reported in a data sheet.</p>
@@ -605,16 +606,16 @@
 <p>Choose your current sense resistor or circuit carefully! You need to account for all the factors mentioned above, and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).</p>
 </div>
 <section id="how-do-i-find-volts-per-amp">
-<h3><a class="toc-backref" href="#id7">How Do I Find Volts per Amp?</a><a class="headerlink" href="#how-do-i-find-volts-per-amp" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">How Do I Find Volts per Amp?</a><a class="headerlink" href="#how-do-i-find-volts-per-amp" title="Permalink to this heading"></a></h3>
 <p>In some cases, the datasheet for your motor shield will list it. If the board or chip only provides a raw output, you are going to have to figure it out using Ohm’s law. For a board like the IBT_2 that can handle 30 or more Amps, you are going to have to choose a useful range and design your current sense circuit to handle that range. We recommend using no more than 5 Amps on your main track. If you need more than 5 Amps, you should use separate power districts and separate boosters. Be sure to set your motor board tripCurrent value to 5000, and be sure that the voltage from your motor board sense resistor/circuit does not exceed the Arduino pin input of 5V. For each motor board we test, we provide what you need to know on the page for that device. See the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-motorboards/index.html"><span class="doc">Advanced Setup Section</span></a> for more info.</p>
 </section>
 <section id="just-buy-a-current-sense-board-instead">
-<h3><a class="toc-backref" href="#id8">Just Buy a Current Sense Board Instead</a><a class="headerlink" href="#just-buy-a-current-sense-board-instead" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Just Buy a Current Sense Board Instead</a><a class="headerlink" href="#just-buy-a-current-sense-board-instead" title="Permalink to this heading"></a></h3>
 <p>A <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#tinkerer">Tinkerer</a> or <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#conductor">Conductor</a> who doesn’t mind connecting a few jumper wires may like this option.</p>
 <p>This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards for sale.</p>
 </section>
 <section id="where-do-i-measure-the-current">
-<h3><a class="toc-backref" href="#id9">Where do I measure the current?</a><a class="headerlink" href="#where-do-i-measure-the-current" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Where do I measure the current?</a><a class="headerlink" href="#where-do-i-measure-the-current" title="Permalink to this heading"></a></h3>
 <p>Another way to ask the question is, “How do I connect a current sensor?” There are 2 ways to connect a current sensor board, listed here by ease of use:</p>
 <ol class="arabic simple">
 <li><p>Insert the board in the current path of the Voltage going into the motor board.</p></li>

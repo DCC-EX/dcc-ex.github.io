@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,17 +450,17 @@
 <h1>Microcontroller Boards<a class="headerlink" href="#microcontroller-boards" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#current-list-of-microcontrollers" id="id1">Current list of Microcontrollers</a></p></li>
 <li><p><a class="reference internal" href="#will-you-support-other-microcontrollers-in-the-future" id="id2">Will you support other microcontrollers in the future?</a></p></li>
 <li><p><a class="reference internal" href="#boards-that-will-not-work" id="id3">Boards that will NOT work</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <section id="current-list-of-microcontrollers">
-<h2><a class="toc-backref" href="#id1">Current list of Microcontrollers</a><a class="headerlink" href="#current-list-of-microcontrollers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Current list of Microcontrollers</a><a class="headerlink" href="#current-list-of-microcontrollers" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> currently is designed for Arduino and select microcontrollers. Out of the box, it is compatible with the following boards:</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -473,11 +474,11 @@
 </div>
 </section>
 <section id="will-you-support-other-microcontrollers-in-the-future">
-<h2><a class="toc-backref" href="#id2">Will you support other microcontrollers in the future?</a><a class="headerlink" href="#will-you-support-other-microcontrollers-in-the-future" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Will you support other microcontrollers in the future?</a><a class="headerlink" href="#will-you-support-other-microcontrollers-in-the-future" title="Permalink to this heading"></a></h2>
 <p>Yes, that is on our <a class="reference internal" href="../../about/roadmap.html"><span class="doc">roadmap</span></a>.</p>
 </section>
 <section id="boards-that-will-not-work">
-<h2><a class="toc-backref" href="#id3">Boards that will NOT work</a><a class="headerlink" href="#boards-that-will-not-work" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Boards that will NOT work</a><a class="headerlink" href="#boards-that-will-not-work" title="Permalink to this heading"></a></h2>
 <p><strong>WAVGAT Uno clone</strong> - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called “Logic Green”. It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen correctly and compile sketches. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a Command Station with more testing and some code changes, but we will leave that to someone else to attempt. Megas and Mega clones offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.</p>
 <p><strong>ESP32</strong> - Great little board, however it is a completely different architecture so the same code will not work on it. It is made by Espressif. We currently support only the Atmel family of processors and the PJRC Teensy. It also is a smaller board so shields would have to be connected with jumpers.</p>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>Purchasing<a class="headerlink" href="#purchasing" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#what-you-need-for-ex-turntable" id="id1">What you need for EX-Turntable</a></p>
@@ -459,10 +460,10 @@
 <li><p><a class="reference internal" href="#supported-stepper-drivers-and-motors" id="id3">Supported stepper drivers and motors</a></p></li>
 <li><p><a class="reference internal" href="#next-steps" id="id4">Next Steps</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <section id="what-you-need-for-ex-turntable">
-<h2><a class="toc-backref" href="#id1">What you need for EX-Turntable</a><a class="headerlink" href="#what-you-need-for-ex-turntable" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">What you need for EX-Turntable</a><a class="headerlink" href="#what-you-need-for-ex-turntable" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>An <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> running the “add-turntable-controller” branch of <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller">EX-CommandStation</a> (this displays as version 4.0.2)</p></li>
 <li><p>An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)</p></li>
@@ -485,7 +486,7 @@
 <a class="reference internal image-reference" href="../_images/nano-shield1.png"><img alt="Nano Prototype Shield" src="../_images/nano-shield1.png" style="width: 160.0px; height: 125.2px;" /></a>
 <a class="reference internal image-reference" href="../_images/dupont.png"><img alt="Dupont male to female" src="../_images/dupont.png" style="width: 142.2px; height: 97.2px;" /></a>
 <section id="power-supplies">
-<h3><a class="toc-backref" href="#id2">Power supplies</a><a class="headerlink" href="#power-supplies" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">Power supplies</a><a class="headerlink" href="#power-supplies" title="Permalink to this heading"></a></h3>
 <p>Choosing the right power supply for your Arduino and stepper motor is important to get right.</p>
 <p>If you are using the default ULN2003/28BYJ-48 it is technically possible to power the driver and stepper directly from the 5V output on an Arduino, however this is not recommended and should be avoided.</p>
 <p>Given that this combo requires 5V, you can use a single, regulated 5V DC power supply rated for at least 500mA to power both the Arduino and the ULN2003/28BYJ-48.</p>
@@ -494,7 +495,7 @@
 </section>
 </section>
 <section id="supported-stepper-drivers-and-motors">
-<h2><a class="toc-backref" href="#id3">Supported stepper drivers and motors</a><a class="headerlink" href="#supported-stepper-drivers-and-motors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Supported stepper drivers and motors</a><a class="headerlink" href="#supported-stepper-drivers-and-motors" title="Permalink to this heading"></a></h2>
 <p>The default configuration of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.</p>
 <aside class="sidebar">
 <p class="sidebar-title">Unsupported stepper drivers and motors</p>
@@ -513,7 +514,7 @@
 </ul>
 </section>
 <section id="next-steps">
-<h2><a class="toc-backref" href="#id4">Next Steps</a><a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Next Steps</a><a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
 <p>Now that you know what you need, click the “next” button see what is needed to create an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>.</p>
 </section>
 </section>

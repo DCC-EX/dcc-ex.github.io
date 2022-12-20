@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>EX-CommandStation API Reference<a class="headerlink" href="#ex-commandstation-api-reference" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#api-client-definition" id="id1">1. API Client definition</a></p></li>
@@ -462,9 +463,9 @@
 <li><p><a class="reference internal" href="#appendix-b-suggested-parameter-parsing-sequence" id="id8">Appendix B. Suggested parameter parsing sequence</a></p></li>
 <li><p><a class="reference internal" href="#appendix-c-further-information" id="id9">Appendix C. Further information</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><th class="stub"><p>Document status</p></th>
 <td><p>Draft</p></td>
@@ -486,7 +487,7 @@
 <p>If you are looking for information on the WiThrottle protocol, you will find that documented on the <a class="reference external" href="https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml">JMRI website</a>.</p>
 <p>For detailed information on the various commands and responses available with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, refer to the <a class="reference internal" href="../software/command-reference.html"><span class="doc">DCC-EX Command Reference</span></a> page.</p>
 <section id="api-client-definition">
-<h2><a class="toc-backref" href="#id1">1. API Client definition</a><a class="headerlink" href="#api-client-definition" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">1. API Client definition</a><a class="headerlink" href="#api-client-definition" title="Permalink to this heading"></a></h2>
 <p>This API reference applies to any API client that makes use of these commands and responses.</p>
 <p>API clients may include:</p>
 <ul class="simple">
@@ -496,13 +497,13 @@
 </ul>
 </section>
 <section id="serial-port-and-wifi-ethernet-monitoring">
-<h2><a class="toc-backref" href="#id2">2. Serial port and WiFi/Ethernet monitoring</a><a class="headerlink" href="#serial-port-and-wifi-ethernet-monitoring" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">2. Serial port and WiFi/Ethernet monitoring</a><a class="headerlink" href="#serial-port-and-wifi-ethernet-monitoring" title="Permalink to this heading"></a></h2>
 <p>The input collectors must monitor the serial ports on a byte by byte basis, look for a beginning <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> with ending <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, and ignore anything outside that before passing commands in for parsing.</p>
 <p>The WiFI or ethernet collectors work on a per-transmission basis and the first byte of input determines whether the transmitted block gets sent for parsing as an API or WiThrottle command or response.</p>
 <p><strong>Any input received that an API client does not understand must be discarded and ignored.</strong></p>
 </section>
 <section id="general-api-command-usage-and-responses">
-<h2><a class="toc-backref" href="#id3">3. General API command usage and responses</a><a class="headerlink" href="#general-api-command-usage-and-responses" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">3. General API command usage and responses</a><a class="headerlink" href="#general-api-command-usage-and-responses" title="Permalink to this heading"></a></h2>
 <p>API commands are to be sent using the message format outlined below, with responses conforming to the same format.</p>
 <p>Due to the nature of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> being able to be operated by multiple API clients concurrently combined with the fact there is no unique client identifier, there is no guarantee that a response received directly after a command is sent is related. Care must be taken to take this into account.</p>
 <p>To repeat from above, any input received that an API client does not understand should be discarded and ignored.</p>
@@ -523,18 +524,18 @@
 </section>
 </section>
 <section id="general-message-format">
-<h2><a class="toc-backref" href="#id4">4. General Message Format</a><a class="headerlink" href="#general-message-format" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">4. General Message Format</a><a class="headerlink" href="#general-message-format" title="Permalink to this heading"></a></h2>
 <p>A DCC-EX API message consists of a leading <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> symbol, a single character OPCODE, zero to n parameters separated by spaces, and a terminating <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> symbol:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;OPCODE</span> <span class="pre">Param1</span> <span class="pre">Param2</span> <span class="pre">…</span> <span class="pre">ParamX&gt;</span></code></p>
 <p>Messages cannot be nested, and a second <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> inside a message constitutes a syntax error.</p>
 </section>
 <section id="error-and-empty-responses">
-<h2><a class="toc-backref" href="#id5">5. Error and empty responses</a><a class="headerlink" href="#error-and-empty-responses" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">5. Error and empty responses</a><a class="headerlink" href="#error-and-empty-responses" title="Permalink to this heading"></a></h2>
 <p>A command sent that is invalid has a response of <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code>.</p>
 <p>Memory limitations prohibit more detailed error messages.</p>
 </section>
 <section id="parameter-values">
-<h2><a class="toc-backref" href="#id6">6. Parameter values</a><a class="headerlink" href="#parameter-values" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">6. Parameter values</a><a class="headerlink" href="#parameter-values" title="Permalink to this heading"></a></h2>
 <p>There are three types of parameters in use:</p>
 <section id="keyword">
 <h3>6.1. Keyword<a class="headerlink" href="#keyword" title="Permalink to this heading"></a></h3>
@@ -552,7 +553,7 @@
 </section>
 </section>
 <section id="appendix-a-exceptions">
-<h2><a class="toc-backref" href="#id7">Appendix A. Exceptions</a><a class="headerlink" href="#appendix-a-exceptions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Appendix A. Exceptions</a><a class="headerlink" href="#appendix-a-exceptions" title="Permalink to this heading"></a></h2>
 <section id="a-1-parameter-values">
 <h3>A.1. Parameter values<a class="headerlink" href="#a-1-parameter-values" title="Permalink to this heading"></a></h3>
 <p>Due to legacy code and backwards compatibility requirements, there are two OPCODES that expect hexadecimal parameter values.</p>
@@ -560,7 +561,7 @@
 </section>
 </section>
 <section id="appendix-b-suggested-parameter-parsing-sequence">
-<h2><a class="toc-backref" href="#id8">Appendix B. Suggested parameter parsing sequence</a><a class="headerlink" href="#appendix-b-suggested-parameter-parsing-sequence" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Appendix B. Suggested parameter parsing sequence</a><a class="headerlink" href="#appendix-b-suggested-parameter-parsing-sequence" title="Permalink to this heading"></a></h2>
 <p>To obtain the parameters:</p>
 <section id="b-1-obtain-the-opcode">
 <h3>B.1. Obtain the OPCODE<a class="headerlink" href="#b-1-obtain-the-opcode" title="Permalink to this heading"></a></h3>
@@ -580,7 +581,7 @@
 </section>
 </section>
 <section id="appendix-c-further-information">
-<h2><a class="toc-backref" href="#id9">Appendix C. Further information</a><a class="headerlink" href="#appendix-c-further-information" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Appendix C. Further information</a><a class="headerlink" href="#appendix-c-further-information" title="Permalink to this heading"></a></h2>
 <section id="c-1-keyword-parameters-are-not-case-sensitive">
 <h3>C.1. Keyword parameters are not case sensitive<a class="headerlink" href="#c-1-keyword-parameters-are-not-case-sensitive" title="Permalink to this heading"></a></h3>
 <p>Unlike OPCODES, keyword parameters are not case sensitive.</p>

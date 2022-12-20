@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
-<meta content="EX-CommandStation Command Station purchasing" name="keywords" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+<meta content="EX-CommandStation Command Station purchasing" name="keywords" />
+<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
+<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Purchasing Parts &mdash; DCC-EX Model Railroading  documentation</title>
@@ -24,6 +24,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -452,7 +453,7 @@
 <h1>Purchasing Parts<a class="headerlink" href="#purchasing-parts" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#what-you-need-to-acquire" id="id2">What you need to Acquire</a></p>
@@ -464,12 +465,12 @@
 </li>
 <li><p><a class="reference internal" href="#next-steps" id="id6">Next Steps</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This page explains what you will need to acquire to build a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> using the recommended parts for a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#conductor">Conductor</a>.</p>
 <p>Some of the parts (like track and some wire) you will likely already have on hand.</p>
 <section class="clearer" id="what-you-need-to-acquire">
-<h2><a class="toc-backref" href="#id2">What you need to Acquire</a><a class="headerlink" href="#what-you-need-to-acquire" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">What you need to Acquire</a><a class="headerlink" href="#what-you-need-to-acquire" title="Permalink to this heading"></a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">Optional configuration</p>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <br /> <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> can be configured in an additional ‘Conductor friendly’, without wifi, but it requires that <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> installed on a computer.</p>
@@ -482,7 +483,7 @@
 </ul>
 </aside>
 <section id="hardware">
-<h3><a class="toc-backref" href="#id3">Hardware</a><a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Hardware</a><a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h3>
 <p>You will need to find or purchase:</p>
 <ol class="arabic simple">
 <li><p>a supported <strong>Arduino board</strong> <br /> We recommend the <a class="reference external" href="https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/">Elegoo Mega 2560</a> <br /> <br /></p></li>
@@ -495,7 +496,7 @@
 <li><p>any <strong>computer</strong> running Windows, macOS, or Linux (only needed for the initial install of the software) <br /> <br /></p></li>
 <li><p>a <strong>USB Cable</strong> from the computer to the Arduino <br /> <br /></p></li>
 <li><p>a <strong>piece of track</strong> to run trains or program on <br /> <br /></p></li>
-<li><p>some <strong>wire</strong> (18 to 16 AWG twisted pair recommended <a class="footnote-reference brackets" href="#wire" id="id1">1</a>.) <br /> <br /></p></li>
+<li><p>some <strong>wire</strong> (18 to 16 AWG twisted pair recommended <a class="footnote-reference brackets" href="#wire" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.) <br /> <br /></p></li>
 <li><p>a ‘known’ working <strong>DCC-equipped locomotive</strong></p></li>
 </ol>
 <div class="admonition note">
@@ -504,28 +505,29 @@
 </div>
 </section>
 <section id="software">
-<h3><a class="toc-backref" href="#id4">Software</a><a class="headerlink" href="#software" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Software</a><a class="headerlink" href="#software" title="Permalink to this heading"></a></h3>
 <p>Our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> app is recommended for most users as it automatically downloads and installs the required software.</p>
 <ol class="arabic simple" start="13">
 <li><p>See the <a class="reference internal" href="../../download/ex-commandstation.html"><span class="doc">Command Station download page</span></a> to download a copy to your computer.</p></li>
 </ol>
 </section>
 <section id="a-throttle-controller">
-<h3><a class="toc-backref" href="#id5">A Throttle (Controller)</a><a class="headerlink" href="#a-throttle-controller" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">A Throttle (Controller)</a><a class="headerlink" href="#a-throttle-controller" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple" start="14">
 <li><p>You’ll also need something to control your trains. <br /> There are several options. We will discuss these following the system setup, but the introductory configuration covered in the following pages lends itself to using a smart phone (Android or Apple iOS).</p></li>
 </ol>
 </section>
 </section>
 <section id="next-steps">
-<h2><a class="toc-backref" href="#id6">Next Steps</a><a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Next Steps</a><a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
 <p>Click the “next” button to see how to assemble your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <hr class="docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="wire"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><strong>Wire Gauge</strong> - The recommended Arduino <a class="reference internal" href="../../reference/glossary.html"><span class="doc">Motor Driver</span></a> can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different <a class="reference internal" href="../../reference/glossary.html"><span class="doc">Motor Driver</span></a> and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="wire" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><strong>Wire Gauge</strong> - The recommended Arduino <a class="reference internal" href="../../reference/glossary.html"><span class="doc">Motor Driver</span></a> can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different <a class="reference internal" href="../../reference/glossary.html"><span class="doc">Motor Driver</span></a> and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
+</aside>
+</aside>
 </section>
 </section>
 

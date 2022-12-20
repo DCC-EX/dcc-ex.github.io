@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>DCC-EX Command Summary<a class="headerlink" href="#dcc-ex-command-summary" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#conventions-used-on-this-page" id="id1">Conventions used on this page</a></p></li>
@@ -468,14 +469,14 @@
 <li><p><a class="reference internal" href="#i-o-hal-diagnostics" id="id14">I/O (HAL) Diagnostics</a></p></li>
 <li><p><a class="reference internal" href="#other" id="id15">Other</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <dl class="simple">
 <dt><strong>This is a summary, for a detailed command, see…</strong></dt><dd><p><a class="reference internal" href="command-reference.html"><span class="doc">Command Reference</span></a></p>
 </dd>
 </dl>
 <section id="conventions-used-on-this-page">
-<h2><a class="toc-backref" href="#id1">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>“&lt;” and “&gt;” - All DCC-EX API commands are surrounded by these characters to indicate the beginning and end, these must always be included</p></li>
 <li><p>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. 1, c, or -</p></li>
@@ -486,7 +487,7 @@
 </ul>
 </section>
 <section id="power-management">
-<h2><a class="toc-backref" href="#id2">Power management</a><a class="headerlink" href="#power-management" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Power management</a><a class="headerlink" href="#power-management" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">[MAIN</span> <span class="pre">|</span> <span class="pre">PROG]</span> <span class="pre">&gt;</span></code> Power Off</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">[MAIN</span> <span class="pre">|</span> <span class="pre">PROG</span> <span class="pre">|</span> <span class="pre">JOIN]</span> <span class="pre">&gt;</span></code> Power On</p>
@@ -496,7 +497,7 @@
 </div></blockquote>
 </section>
 <section id="cab-functions">
-<h2><a class="toc-backref" href="#id3">Cab functions</a><a class="headerlink" href="#cab-functions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Cab functions</a><a class="headerlink" href="#cab-functions" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code> EMERGENCY STOP</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">[ignored]</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">1|0&gt;</span></code>  Throttle speed&lt;127 direction 1=forward</p>
@@ -511,7 +512,7 @@
 </div></blockquote>
 </section>
 <section id="programming-track">
-<h2><a class="toc-backref" href="#id4">Programming track</a><a class="headerlink" href="#programming-track" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Programming track</a><a class="headerlink" href="#programming-track" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Read Loco address (programming track only)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cab&gt;</span></code> write cab address to loco on prog track</p>
@@ -527,14 +528,14 @@
 </div></blockquote>
 </section>
 <section id="dcc-accessories">
-<h2><a class="toc-backref" href="#id5">DCC Accessories</a><a class="headerlink" href="#dcc-accessories" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">DCC Accessories</a><a class="headerlink" href="#dcc-accessories" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">linear_address</span> <span class="pre">1|0&gt;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">addr</span> <span class="pre">subaddr</span> <span class="pre">1|0&gt;</span></code></p>
 </div></blockquote>
 </section>
 <section id="turnouts">
-<h2><a class="toc-backref" href="#id6">Turnouts</a><a class="headerlink" href="#turnouts" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Turnouts</a><a class="headerlink" href="#turnouts" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code> Define DCC turnout</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linear_address&gt;</span></code> Define DCC turnout</p>
@@ -546,7 +547,7 @@
 </div></blockquote>
 </section>
 <section id="sensors">
-<h2><a class="toc-backref" href="#id7">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code> Lists Status of all sensors.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> Lists definition all defined sensors.</p>
@@ -555,7 +556,7 @@
 </div></blockquote>
 </section>
 <section id="outputs">
-<h2><a class="toc-backref" href="#id8">Outputs</a><a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Outputs</a><a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> Lists all defined output pins</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">iflag&gt;</span></code> : Creates a new output ID, with specified PIN and IFLAG values.</p>
@@ -578,7 +579,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </section>
 <section id="eeprom-management">
-<h2><a class="toc-backref" href="#id9">EEPROM management</a><a class="headerlink" href="#eeprom-management" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">EEPROM management</a><a class="headerlink" href="#eeprom-management" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Store definitions to EEPROM</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> Erase ALL (turnouts, sensors, and outputs) from EEPROM</p>
@@ -586,14 +587,14 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </section>
 <section id="wifi-control">
-<h2><a class="toc-backref" href="#id10">WiFi Control</a><a class="headerlink" href="#wifi-control" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">WiFi Control</a><a class="headerlink" href="#wifi-control" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code> Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> Force the Command Station into “WiFi Connected” mode</p>
 </div></blockquote>
 </section>
 <section id="throttle-commands-for-developers">
-<h2><a class="toc-backref" href="#id11">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Permalink to this heading"></a></h2>
 <p>Refer to <a class="reference internal" href="../developers/tech-reference.html"><span class="doc">Technical Reference for Throttle Developers</span></a> for full details on these commands.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> returns the defined turnout IDs</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT</span> <span class="pre">id&gt;</span></code> returns the ID, state, and description of the specified turnout ID</p>
@@ -604,7 +605,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> Requests a deliberate update of cab speed/functions in the same format as the cab broadcast</p>
 </section>
 <section id="diagnostic-traces">
-<h2><a class="toc-backref" href="#id12">Diagnostic traces</a><a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Diagnostic traces</a><a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code> Shows cab numbers and speed in reminder table</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> Shows remaining RAM (Free Memory)</p>
@@ -620,7 +621,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </section>
 <section id="tuning">
-<h2><a class="toc-backref" href="#id13">Tuning</a><a class="headerlink" href="#tuning" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Tuning</a><a class="headerlink" href="#tuning" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code> Override ACK processing mA pulse size</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code> Override ACK processing minimum pulse width</p>
@@ -630,7 +631,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </section>
 <section id="i-o-hal-diagnostics">
-<h2><a class="toc-backref" href="#id14">I/O (HAL) Diagnostics</a><a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">I/O (HAL) Diagnostics</a><a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> List HAL devices and allocated VPINs</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code> Set servo position to <cite>value</cite> on pin <cite>vpin</cite>.</p>
@@ -639,7 +640,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </div></blockquote>
 </section>
 <section id="other">
-<h2><a class="toc-backref" href="#id15">Other</a><a class="headerlink" href="#other" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Other</a><a class="headerlink" href="#other" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;U</span> <span class="pre">...&gt;</span></code> Is reserved for user commands (through user filter)</p>
 <dl class="simple">

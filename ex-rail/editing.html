@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,7 +449,7 @@
 <h1>Editing myAutomation.h<a class="headerlink" href="#editing-myautomation-h" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#content" id="id1">Content</a></p></li>
@@ -460,7 +461,7 @@
 </li>
 <li><p><a class="reference internal" href="#next-steps-objects" id="id5">Next Steps - Objects</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>The instructions containing all your objects and sequences is added to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> by creating a file called <strong>‘myAutomation.h’</strong> in the same folder as ‘CommandStation-EX.ino’.</p>
 <p>Connecting your Arduino and pressing the <span class="guilabel">Upload</span> button in the usual way will save the file and upload your script into the Command Station.</p>
@@ -475,7 +476,7 @@
 <div class="line"><br /></div>
 </div>
 <section id="content">
-<h2><a class="toc-backref" href="#id1">Content</a><a class="headerlink" href="#content" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Content</a><a class="headerlink" href="#content" title="Permalink to this heading"></a></h2>
 <p>What you will need to add to your <strong>myAutomation.h</strong> file will be explained in the next few pages, but can be catogorised as:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="creating-elements.html"><span class="doc">Objects</span></a></p></li>
@@ -484,9 +485,9 @@
 </section>
 <hr class="docutils" />
 <section id="re-upload-the-ex-commandstation-software">
-<h2><a class="toc-backref" href="#id2">Re-upload the EX-CommandStation software</a><a class="headerlink" href="#re-upload-the-ex-commandstation-software" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Re-upload the EX-CommandStation software</a><a class="headerlink" href="#re-upload-the-ex-commandstation-software" title="Permalink to this heading"></a></h2>
 <section id="using-ex-installer">
-<h3><a class="toc-backref" href="#id3">Using EX-Installer</a><a class="headerlink" href="#using-ex-installer" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Using EX-Installer</a><a class="headerlink" href="#using-ex-installer" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Place your ‘myAutomation.h’ file in the <code class="docutils literal notranslate"><span class="pre">CommandStation-EX</span></code> subfolder of wherever you extracted the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> files.</p></li>
 <li><p>Re-Run <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span></p></li>
@@ -495,7 +496,7 @@
 <p>The Roster will be automatically loaded with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
 </section>
 <section id="using-the-arduino-ide">
-<h3><a class="toc-backref" href="#id4">Using the Arduino IDE</a><a class="headerlink" href="#using-the-arduino-ide" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Using the Arduino IDE</a><a class="headerlink" href="#using-the-arduino-ide" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Place your ‘myAutomation.h’ file in the <code class="docutils literal notranslate"><span class="pre">CommandStation-EX</span></code> subfolder of wherever you extracted the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> files from GitHub.</p></li>
 <li><p>Run the Arduino IDE</p></li>
@@ -508,7 +509,7 @@
 </section>
 <hr class="docutils" />
 <section id="next-steps-objects">
-<h2><a class="toc-backref" href="#id5">Next Steps - Objects</a><a class="headerlink" href="#next-steps-objects" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Next Steps - Objects</a><a class="headerlink" href="#next-steps-objects" title="Permalink to this heading"></a></h2>
 <p>Click <a class="reference internal" href="creating-elements.html"><span class="doc">here</span></a> or click the <span class="guilabel">Next</span> button to learn how to add the key objects you will need to create your automation sequences.</p>
 </section>
 </section>

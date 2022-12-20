@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
+<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Startup Configuration &mdash; DCC-EX Model Railroading  documentation</title>
@@ -23,6 +23,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -451,7 +452,7 @@
 <h1>Startup Configuration<a class="headerlink" href="#startup-configuration" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#if-you-are-using-ex-installer" id="id3">If you are using EX-Installer</a></p></li>
@@ -470,7 +471,7 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>Sometimes, you may want to configure your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> with settings which are not otherwise saved by the Command Station when restarted. For example the <a class="reference internal" href="../../reference/tools/diagnostic-d-ack-command.html#d-ack-limit-ma"><span class="std std-ref">ACK min</span></a> for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to <cite>2600µS</cite> to be recognised).</p>
 <p>To automatically run commands at start up, you can create a new file called <cite>mySetup.h</cite> to contain these commands.</p>
@@ -481,7 +482,7 @@
 </ul>
 <hr class="docutils" />
 <section id="if-you-are-using-ex-installer">
-<h2><a class="toc-backref" href="#id3">If you are using EX-Installer</a><a class="headerlink" href="#if-you-are-using-ex-installer" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">If you are using EX-Installer</a><a class="headerlink" href="#if-you-are-using-ex-installer" title="Permalink to this heading"></a></h2>
 <p>You need to create a text file in the <cite>CommandStation-EX</cite> folder below where you uncompressed the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> files, and rename it to <cite>mySetup.h</cite></p>
 <p>For example, in Microsoft Windows:</p>
 <ul class="simple">
@@ -506,10 +507,10 @@
 </section>
 <hr class="docutils" />
 <section id="if-you-are-using-the-arduino-ide">
-<h2><a class="toc-backref" href="#id4">If you are using the Arduino IDE</a><a class="headerlink" href="#if-you-are-using-the-arduino-ide" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">If you are using the Arduino IDE</a><a class="headerlink" href="#if-you-are-using-the-arduino-ide" title="Permalink to this heading"></a></h2>
 <p>This will need to be done in the <a class="reference internal" href="installation-options/arduino-ide.html"><span class="doc">Install using the Arduino IDE</span></a>, so first make sure you have followed these steps to load up the Arduino IDE.</p>
 <section id="create-a-new-tab">
-<h3><a class="toc-backref" href="#id5">Create a new tab</a><a class="headerlink" href="#create-a-new-tab" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Create a new tab</a><a class="headerlink" href="#create-a-new-tab" title="Permalink to this heading"></a></h3>
 <p>First you will need to add a new file, just like the <a class="reference internal" href="installation-options/arduino-ide.html#copy-the-config-example-h-file-or-rename-it"><span class="std std-ref">config.h file</span></a>. Create a new tab using the following menu option.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/arduino_ide_newtab.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_newtab.jpg" style="width: 654.4000000000001px; height: 172.8px;" /></a>
@@ -519,7 +520,7 @@
 </figure>
 </section>
 <section id="creating-the-mysetup-h-file">
-<h3><a class="toc-backref" href="#id6">Creating the mySetup.h file</a><a class="headerlink" href="#creating-the-mysetup-h-file" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Creating the mySetup.h file</a><a class="headerlink" href="#creating-the-mysetup-h-file" title="Permalink to this heading"></a></h3>
 <p>At the bottom of the IDE window, a yellow bar will appear asking for a <cite>Name for new file</cite>, here make sure to enter <code class="docutils literal notranslate"><span class="pre">mySetup.h</span></code> (case sensitive, so upper case S in setup) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to create the new file.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/arduino_ide_mysetup.jpg"><img alt="Arduino IDE New Tab" src="../../_images/arduino_ide_mysetup.jpg" style="width: 503.20000000000005px; height: 161.60000000000002px;" /></a>
@@ -529,7 +530,7 @@
 </figure>
 </section>
 <section id="adding-in-the-startup-commands">
-<h3><a class="toc-backref" href="#id7">Adding in the startup commands</a><a class="headerlink" href="#adding-in-the-startup-commands" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Adding in the startup commands</a><a class="headerlink" href="#adding-in-the-startup-commands" title="Permalink to this heading"></a></h3>
 <p>Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the following command each time your Command Station starts up:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ACK MIN 2600&gt;
 </pre></div>
@@ -541,7 +542,7 @@
 <p>Note the upper case word <code class="docutils literal notranslate"><span class="pre">SETUP</span></code> at the start.</p>
 </section>
 <section id="adding-in-more-than-one-startup-command">
-<h3><a class="toc-backref" href="#id8">Adding in more than one startup command</a><a class="headerlink" href="#adding-in-more-than-one-startup-command" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Adding in more than one startup command</a><a class="headerlink" href="#adding-in-more-than-one-startup-command" title="Permalink to this heading"></a></h3>
 <p>If you need to have multiple commands run at start up, you will need to enter each additional command on a new line, so a longer <code class="docutils literal notranslate"><span class="pre">mySetup.h</span></code> file could look like:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SETUP(&quot;&lt;D ACK MAX 9200&gt;&quot;); // Set ACK detection to allow pulses up to 9200uS
 SETUP(&quot;&lt;D ACK LIMIT 60&gt;&quot;); // 60mA is the default
@@ -552,15 +553,15 @@ SETUP(&quot;&lt;D CMD 0&gt;&quot;); // can be set to ON for testing in the seria
 <p>Here you can add comments on each line, these can be added by using the double forward slash character <code class="docutils literal notranslate"><span class="pre">//</span></code> and then your comments. This makes it easier to remember why you added these start up commands.</p>
 </section>
 <section id="upload-the-new-version-of-the-software">
-<h3><a class="toc-backref" href="#id9">Upload the new version of the software</a><a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Upload the new version of the software</a><a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permalink to this heading"></a></h3>
 <p>Finally, upload the code to the Arduino as you would do during the standard <a class="reference internal" href="installation-options/arduino-ide.html#upload-the-software"><span class="std std-ref">Arduino IDE Setup</span></a>. Restart the Command Station and these commands will have run at start up.</p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="examples">
-<h2><a class="toc-backref" href="#id10">Examples</a><a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Examples</a><a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
 <section id="automatically-turning-track-power-on-at-startup">
-<h3><a class="toc-backref" href="#id11">Automatically Turning Track Power on at Startup</a><a class="headerlink" href="#automatically-turning-track-power-on-at-startup" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Automatically Turning Track Power on at Startup</a><a class="headerlink" href="#automatically-turning-track-power-on-at-startup" title="Permalink to this heading"></a></h3>
 <p>Adding this line to <cite>mySetup.h</cite> will cause the track power to turn on automatically when the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> powers up.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SETUP(&quot;&lt;1&gt;&quot;);  // Turn track power on at startup
 </pre></div>

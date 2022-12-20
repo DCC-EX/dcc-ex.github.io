@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>Contributing to EX-WebThrottle2<a class="headerlink" href="#contributing-to-ex-webthrottle2" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#developer-tools" id="id1">Developer tools</a></p>
@@ -470,7 +471,7 @@
 </li>
 <li><p><a class="reference internal" href="#opening-a-pull-request" id="id8">Opening a pull request</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>Firstly, thank you for wanting to get involved with EX-WebThrottle2! Any contribution, no matter how big or small, is very much appreciated!</p>
 <p>This page should give a step by step guide to contributing, from getting the tools you’ll need to making the pull request. These steps are:</p>
@@ -482,7 +483,7 @@
 <li><p>Open a pull request</p></li>
 </ul>
 <section id="developer-tools">
-<h2><a class="toc-backref" href="#id1">Developer tools</a><a class="headerlink" href="#developer-tools" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Developer tools</a><a class="headerlink" href="#developer-tools" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You may want to have a look at our page on <a class="reference internal" href="software.html"><span class="doc">Recommended Software</span></a> and also our page on <a class="reference internal" href="github.html"><span class="doc">GitHub</span></a> if you’ve never used git or GitHub before</p>
@@ -517,7 +518,7 @@ We recommend you use the LTS version of Node.</p>
 </pre></div>
 </div>
 <section id="code-standards">
-<h3><a class="toc-backref" href="#id2">Code standards</a><a class="headerlink" href="#code-standards" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">Code standards</a><a class="headerlink" href="#code-standards" title="Permalink to this heading"></a></h3>
 <p>For EX-WebThrottle2, we follow the <a class="reference external" href="https://google.github.io/styleguide/">Google Style Guides</a>, specifically the <a class="reference external" href="https://google.github.io/styleguide/htmlcssguide.html">HTML/CSS</a> and <a class="reference external" href="https://google.github.io/styleguide/tsguide.html">TypeScript</a> style guides.
 This means we use a indent of two spaces and single quotes for strings.
 Also, although semicolons are optional in Javascript, we have configured the linter to enforce semicolons.
@@ -529,17 +530,17 @@ You can also find (and fix some) problems using the following command:</p>
 </section>
 </section>
 <section id="development-process">
-<h2><a class="toc-backref" href="#id3">Development process</a><a class="headerlink" href="#development-process" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Development process</a><a class="headerlink" href="#development-process" title="Permalink to this heading"></a></h2>
 <section id="branches">
-<h3><a class="toc-backref" href="#id4">Branches</a><a class="headerlink" href="#branches" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Branches</a><a class="headerlink" href="#branches" title="Permalink to this heading"></a></h3>
 <p>Here is a summary of what different branches are used for.</p>
 <section id="main-branches">
-<h4><a class="toc-backref" href="#id5">Main branches</a><a class="headerlink" href="#main-branches" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id5" role="doc-backlink">Main branches</a><a class="headerlink" href="#main-branches" title="Permalink to this heading"></a></h4>
 <p>There are two ‘main’ branches, <code class="docutils literal notranslate"><span class="pre">main</span></code> and <code class="docutils literal notranslate"><span class="pre">next-release</span></code>. These branches can’t be pushed to directly, instead you need to create a pull request.
 <code class="docutils literal notranslate"><span class="pre">main</span></code> is the branch for the current release cycle and <code class="docutils literal notranslate"><span class="pre">next-release</span></code> is for the next release cycle. You should only open a pull request to <code class="docutils literal notranslate"><span class="pre">main</span></code> if you are submitting a fix for bugfix release.</p>
 </section>
 <section id="development-branches">
-<h4><a class="toc-backref" href="#id6">Development branches</a><a class="headerlink" href="#development-branches" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id6" role="doc-backlink">Development branches</a><a class="headerlink" href="#development-branches" title="Permalink to this heading"></a></h4>
 <p><strong>Members of DCC-EX</strong></p>
 <p>Branches should be named based off the feature they are for, and if multiple people are working on the same feature, you can make branches named <code class="docutils literal notranslate"><span class="pre">feature-name/username</span></code>.
 If you are developing a patch for the current release, you can use the same naming scheme but branch from <code class="docutils literal notranslate"><span class="pre">main</span></code> instead.</p>
@@ -548,7 +549,7 @@ If you are developing a patch for the current release, you can use the same nami
 </section>
 </section>
 <section id="commits">
-<h3><a class="toc-backref" href="#id7">Commits</a><a class="headerlink" href="#commits" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Commits</a><a class="headerlink" href="#commits" title="Permalink to this heading"></a></h3>
 <p>Please make sure that when you name a commit it accurately describes the contents of the commit and has a prefix to describe the type of the commit.
 These prefixes are:</p>
 <ul class="simple">
@@ -565,7 +566,7 @@ Or <br />
 </section>
 </section>
 <section id="opening-a-pull-request">
-<h2><a class="toc-backref" href="#id8">Opening a pull request</a><a class="headerlink" href="#opening-a-pull-request" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Opening a pull request</a><a class="headerlink" href="#opening-a-pull-request" title="Permalink to this heading"></a></h2>
 <p>Before you open a pull request, consider running the following commands:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm run test:unit
 npm run test:e2e

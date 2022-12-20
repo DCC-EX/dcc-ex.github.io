@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -448,17 +449,17 @@
 <h1>About and History<a class="headerlink" href="#about-and-history" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#how-it-works" id="id1">How It Works</a></p></li>
 <li><p><a class="reference internal" href="#history-a-note-from-the-author" id="id2">History - A note from the Author</a></p></li>
 <li><p><a class="reference internal" href="#why-can-t-i-put-a-script-on-an-sdcard" id="id3">Why Can’t I Put a Script on an SDCard?</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <section id="how-it-works">
-<h2><a class="toc-backref" href="#id1">How It Works</a><a class="headerlink" href="#how-it-works" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">How It Works</a><a class="headerlink" href="#how-it-works" title="Permalink to this heading"></a></h2>
 <p>A small amount of code in the Command Station, the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> executor, lets you write an automation script in the form of simple, easy to use text commands that it interprets and runs on your layout. You don’t have to be a programmer and you don’t have to learn code. You simply add your own myAutomation.h file in the same program you use to upload the Command Station Software to your Arduino (the Arduino IDE, PlatformIO, etc). This means that you already have all the tools you will need, and there is nothing else to download or install. The method of creating your script file is described in the next section.</p>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
@@ -468,7 +469,7 @@
 <p>EX-RAIL automation is <em>much</em> (perhaps 2 orders of magnitude) more time efficient than the code required to process incoming requests from an external automation processor, or the continuous polling of every sensor.</p>
 </section>
 <section id="history-a-note-from-the-author">
-<h2><a class="toc-backref" href="#id2">History - A note from the Author</a><a class="headerlink" href="#history-a-note-from-the-author" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">History - A note from the Author</a><a class="headerlink" href="#history-a-note-from-the-author" title="Permalink to this heading"></a></h2>
 <p>My original aim was to see if I could create an automated layout with lots going on, that didn’t just run around in circles. Having looked at <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.</p>
 <p>Some of the automation techniques I read about, using Jython scripts in JRMI, seem to require extensive programming skills and complex table configurations which appeared awkward to me, despite my years of programming in dozens of languages.</p>
 <p>It seemed to me that basing an automation on block occupancy detection leaves a lot of complex technical problems to be solved… and wanting to be cheap, I didn’t want to invest in a range of block occupancy detectors, or ABC braking modules, which are all very well on circular layouts, but not good at complex crossings or single line operations with passing places. Also, I didn’t want the automation to be an obvious cycle of movements… some random timings and decisions need to be introduced so that two trains don’t always arrive at the same place in the same order, nor go on the same journey in a predictable cycle.</p>
@@ -479,7 +480,7 @@
 </ul>
 </section>
 <section id="why-can-t-i-put-a-script-on-an-sdcard">
-<h2><a class="toc-backref" href="#id3">Why Can’t I Put a Script on an SDCard?</a><a class="headerlink" href="#why-can-t-i-put-a-script-on-an-sdcard" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Why Can’t I Put a Script on an SDCard?</a><a class="headerlink" href="#why-can-t-i-put-a-script-on-an-sdcard" title="Permalink to this heading"></a></h2>
 <p>From time to time, we are asked why we can’t put automation scripts (the contents of a myAutomation.h file) on an SDCard or load it into EEPROM storage on the Arduino. This is not possible, and as you will see in the last paragraph of this section, would not provide much of a benefit. For you Engineers and advanced Tinkerers:</p>
 <ol class="arabic simple">
 <li><p>Being able to read an SD card on the Arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don’t have enough free memory on an Arduino to hold that code. The same problems exist for using EEPROM.</p></li>

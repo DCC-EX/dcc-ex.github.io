@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
-<meta content="EX-CommandStation Command Station WiFi setup" name="keywords" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+<meta content="EX-CommandStation Command Station WiFi setup" name="keywords" />
+<meta content="An EX‑CommandStation is a simple, but powerful, DCC Command Station which you can assemble yourself and which is made using widely available Arduino boards." name="description" />
+<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adding WiFi &mdash; DCC-EX Model Railroading  documentation</title>
@@ -24,6 +24,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -452,7 +453,7 @@
 <h1>Adding WiFi<a class="headerlink" href="#adding-wifi" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#why-use-wifi" id="id5">Why Use WiFi?</a></p></li>
@@ -460,7 +461,7 @@
 <li><p><a class="reference internal" href="#makerfabs-esp8266-wifi-shield-installation-instructions" id="id7">Makerfabs ESP8266 WiFi Shield -  installation instructions</a></p></li>
 <li><p><a class="reference internal" href="#next-steps-install-the-software" id="id8">Next Steps - Install the Software</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p>This page is specifically intended for a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#conductor">Conductor</a> who intends to install <em>just</em> the recommended hardware. If you are a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#tinkerer">Tinkerer</a> or <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#engineer">Engineer</a> or want to install some of the additional, or different, hardware from that recommended for a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../levels.html#conductor">Conductor</a> then we suggest that you look at the <a class="reference internal" href="../advanced-setup/supported-connections/wifi-setup.html"><span class="doc">WiFi Connection</span></a> page for the full list of WiFi options.</p>
 <hr class="docutils" />
@@ -476,7 +477,7 @@
 <blockquote>
 <div><iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></blockquote>
 <section id="why-use-wifi">
-<h2><a class="toc-backref" href="#id5">Why Use WiFi?</a><a class="headerlink" href="#why-use-wifi" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Why Use WiFi?</a><a class="headerlink" href="#why-use-wifi" title="Permalink to this heading"></a></h2>
 <aside class="sidebar">
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <br /> Using Wifi (OR Ethernet) to talk between <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.</p>
 </aside>
@@ -492,7 +493,7 @@
 </aside>
 </section>
 <section id="what-you-will-need-for-wifi">
-<h2><a class="toc-backref" href="#id6">What you will need (for WiFi)</a><a class="headerlink" href="#what-you-will-need-for-wifi" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">What you will need (for WiFi)</a><a class="headerlink" href="#what-you-will-need-for-wifi" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>A <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> made on the from an <strong>Arduino Mega</strong> and a Motor Driver (from the previous page)</p></li>
 <li><p>A WiFi board</p></li>
@@ -500,7 +501,7 @@
 </ul>
 </section>
 <section class="clearer" id="makerfabs-esp8266-wifi-shield-installation-instructions">
-<h2><a class="toc-backref" href="#id7">Makerfabs ESP8266 WiFi Shield -  installation instructions</a><a class="headerlink" href="#makerfabs-esp8266-wifi-shield-installation-instructions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Makerfabs ESP8266 WiFi Shield -  installation instructions</a><a class="headerlink" href="#makerfabs-esp8266-wifi-shield-installation-instructions" title="Permalink to this heading"></a></h2>
 <aside class="sidebar">
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p><strong>Alternate WiFi boards</strong> <br /> For more boards you can be to used, see the <a class="reference internal" href="../../reference/hardware/wifi-boards.html"><span class="doc">WiFi Boards Section</span></a></p>
@@ -573,7 +574,7 @@
 </section>
 </section>
 <section id="next-steps-install-the-software">
-<h2><a class="toc-backref" href="#id8">Next Steps - Install the Software</a><a class="headerlink" href="#next-steps-install-the-software" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Next Steps - Install the Software</a><a class="headerlink" href="#next-steps-install-the-software" title="Permalink to this heading"></a></h2>
 <p>Click <a class="reference internal" href="installer.html"><span class="doc">here</span></a> or click the “next” button to learn how to install the software on your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 </section>
 </section>

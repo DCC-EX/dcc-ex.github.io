@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
@@ -21,6 +21,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -449,7 +450,7 @@
 <h1>I2C Displays<a class="headerlink" href="#i2c-displays" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
-<div class="contents local topic" id="on-this-page">
+<nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#examples-of-compatible-displays" id="id1">Examples of compatible displays</a></p></li>
@@ -457,7 +458,7 @@
 <li><p><a class="reference internal" href="#connecting-an-oled-display" id="id3">Connecting an OLED display</a></p></li>
 <li><p><a class="reference internal" href="#combine-ip-address-and-port-on-oled" id="id4">Combine IP address and port on OLED</a></p></li>
 </ul>
-</div>
+</nav>
 </aside>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is designed to accommodate a display. You don’t need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I<sup>2</sup>C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.</p>
 <a class="reference internal image-reference" href="../../_images/I2C_LCD_Display_wired.jpg"><img alt="Example: 4 line |I2C| Display" src="../../_images/I2C_LCD_Display_wired.jpg" style="width: 512.0px; height: 331.20000000000005px;" /></a>
@@ -476,7 +477,7 @@
 <p>You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!</p>
 </div>
 <section id="examples-of-compatible-displays">
-<h2><a class="toc-backref" href="#id1">Examples of compatible displays</a><a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Examples of compatible displays</a><a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this heading"></a></h2>
 <p>Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
 <a class="reference internal image-reference" href="../../_images/lcd_20x4_backpack.jpg"><img alt="20 x 4 LCD" src="../../_images/lcd_20x4_backpack.jpg" style="width: 320.0px; height: 291.2px;" /></a>
 <p>20 x 4 LCD with backpack</p>
@@ -485,7 +486,7 @@
 <p>16 x 2 LCD with backpack</p>
 </section>
 <section id="connecting-an-lcd-display">
-<h2><a class="toc-backref" href="#id2">Connecting an LCD Display</a><a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Connecting an LCD Display</a><a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this heading"></a></h2>
 <section id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
 <h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this heading"></a></h3>
 <p>And here is a picture of the board after soldering or if you purchase a board already soldered (or “welded” as some of the Chinese sites call it)</p>
@@ -525,7 +526,7 @@
 </section>
 </section>
 <section id="connecting-an-oled-display">
-<h2><a class="toc-backref" href="#id3">Connecting an OLED display</a><a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Connecting an OLED display</a><a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this heading"></a></h2>
 <p>OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won’t work with an UNO and you will require a Mega. Here are some examples of OLED displays:</p>
 <a class="reference internal image-reference" href="../../_images/adafruit_96in_oled_sm.jpg"><img alt="Adafruit .96&quot; OLED" src="../../_images/adafruit_96in_oled_sm.jpg" style="width: 160.0px; height: 153.60000000000002px;" /></a>
 <p>Adafruit .96” OLED Display</p>
@@ -560,18 +561,18 @@
 </section>
 </section>
 <section id="combine-ip-address-and-port-on-oled">
-<h2><a class="toc-backref" href="#id4">Combine IP address and port on OLED</a><a class="headerlink" href="#combine-ip-address-and-port-on-oled" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Combine IP address and port on OLED</a><a class="headerlink" href="#combine-ip-address-and-port-on-oled" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>To use OLED displays with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you can save line LCD5 used for the port number and combine it with line LCD4 IP address.</p>
 <p>Be aware that the combined IP address and port number can easily exceed 20 characters, which will exceed the display width.</p>
 <p>To accomplish this, you will need to edit “WifiInterface.cpp” included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software. Each time you want to upgrade the software, you will need to repeat this edit.</p>
 <p>In “WifiInterface.cpp”, you need to locate the <code class="docutils literal notranslate"><span class="pre">LCD(4...)</span></code> line (should be around line #313):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">LCD</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">),</span><span class="n">ipString</span><span class="p">);</span>  <span class="c1">// There is not enough room on some LCDs to put a title to this</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">LCD</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">),</span><span class="n">ipString</span><span class="p">);</span><span class="w">  </span><span class="c1">// There is not enough room on some LCDs to put a title to this</span>
 </pre></div>
 </div>
 <p>Comment out this line by adding <code class="docutils literal notranslate"><span class="pre">//</span></code> at the beginning, and add this new line immediately below:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// LCD(4,F(&quot;%s&quot;),ipString);  // There is not enough room on some LCDs to put a title to this</span>
-<span class="n">LCD</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;%s:%d&quot;</span><span class="p">),</span><span class="n">ipString</span><span class="p">,</span><span class="n">port</span><span class="p">);</span> <span class="c1">// *** Single IP:Port</span>
+<span class="n">LCD</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;%s:%d&quot;</span><span class="p">),</span><span class="n">ipString</span><span class="p">,</span><span class="n">port</span><span class="p">);</span><span class="w"> </span><span class="c1">// *** Single IP:Port</span>
 </pre></div>
 </div>
 <p>You will also need to comment out the <code class="docutils literal notranslate"><span class="pre">LCD(5...)</span></code> line by adding <code class="docutils literal notranslate"><span class="pre">//</span></code> to the beginning (should be around line 317):</p>
@@ -580,9 +581,9 @@
 </div>
 <p>Once this is done, line 5 onwards are free to use as you wish.</p>
 <p>If you have custom messages you wish to display, you can do this by adding the lines to “mySetup.h”:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">LCD</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Line 5 custom text&quot;</span><span class="p">));</span>
-<span class="n">LCD</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Line 6 custom text&quot;</span><span class="p">));</span>
-<span class="n">LCD</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Line 7 custom text&quot;</span><span class="p">));</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">LCD</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Line 5 custom text&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="n">LCD</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Line 6 custom text&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="n">LCD</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Line 7 custom text&quot;</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

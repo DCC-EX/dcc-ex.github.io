@@ -19,7 +19,7 @@ Supported Devices
 
 This page outlines the microcontrollers that are supported for use with |EX-IO|, including outlining the pins available for use.
 
-When uploading the |EX-IO| software, the device type is detected by the compiler in either the Arduino IDE or PlatformIO, so no configuration is necessary on the |EX-IO| device itself relating to configuring which pins are in use for some.
+When uploading the |EX-IO| software, the device type is detected by the compiler in either the Arduino IDE or PlatformIO, so no configuration is necessary on the |EX-IO| device itself (aside from the |I2C| address of course).
 
 All allocation of pins is done via the device driver (see :ref:`ex-ioexpander/overview:ex-commandstation device driver`).
 

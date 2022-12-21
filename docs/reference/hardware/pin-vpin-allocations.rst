@@ -272,6 +272,28 @@ When adding more PCA9685s, select an unused VPin that allows a total of 16 conse
 
 ----
 
+EX-IOExpander - digital and analogue I/O expander
+-------------------------------------------------
+
+EX-IOExpander is designed to support up to 256 pins and is currently in testing. The default |I2C| address is 0x65, however any valid and available address can be used.
+
+The device driver name is "IO_EXIOExpander.h" and will need to be included in "myHal.cpp".
+
+Refer to :doc:`/ex-ioexpander/index` for further information.
+
+When adding EX-IOExpander devices, select an unused VPin that allows for the appropriate number of consecutive vpins for all I/O pins.
+
+.. list-table:: Additional MCP23017s
+
+  * - |I2C| address range
+    - VPin count
+    - Comments
+  * - Any valid/available (default 0x65)
+    - 16 - 256
+    - Need to add to myHal.cpp, and |I2C| address needs to be configured in software
+
+----
+
 Sensors
 =======
 

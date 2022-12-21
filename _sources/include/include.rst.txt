@@ -30,6 +30,10 @@
 
    <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span>
 ..
+.. |EX-IO| raw:: html
+
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>
+..
 .. |BSC| raw:: html
 
    <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
@@ -203,4 +207,8 @@
 .. |githublink-ex-commandstation-button| raw:: html
 
    <a href="https://github.com/DCC-EX/CommandStation-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
+..
+.. |githublink-ex-ioexpander-button| raw:: html
+
+   <a href="https://github.com/DCC-EX/EX-IOExpander/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
 ..

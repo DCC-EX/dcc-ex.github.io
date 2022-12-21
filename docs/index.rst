@@ -65,6 +65,7 @@ If you are just starting your journey with |DCC-EX| we recommend you look at our
    ex-webthrottle/index
    ex-rail/index
    ex-turntable/index
+   ex-ioexpander/index
    ex-dccinspector/index
    support/index
    big-picture/index

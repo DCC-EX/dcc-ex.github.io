@@ -519,10 +519,12 @@
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Pin/Vpin allocation</a><a class="headerlink" href="#pin-vpin-allocation" title="Permalink to this heading"></a></h3>
 <p>All available pins on the chosen <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device must be allocated as either digital or analogue pins. Details of the pins available for use are outlined on the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page.</p>
 <p>Vpins are allocated by the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> device driver, with digital pins allocated by incrementing from the first Vpin, and analogue pins decrementing from the highest allocated Vpin number.</p>
-<p>For example, an Arduino Nano has a total of 20 I/O pins (D2 - D13, A0 - A7). Not all of these pins are available, and there are limitations on some pins:</p>
+<p>For example, an Arduino Nano has a total of 22 I/O pins (D0 - D13, A0 - A7). Not all of these pins are available, and there are limitations on some pins:</p>
 <ul class="simple">
+<li><p>D0 and D1 are used for the serial Tx/Rx pins and are therefore not available</p></li>
+<li><p>D2 - D13 are the digital pins which are all available</p></li>
 <li><p>A0 - A3 can be utilised as either digital or analogue pins</p></li>
-<li><p>A4 and A5 are reserved for the I<sup>2</sup>C interface (and are therefore not available)</p></li>
+<li><p>A4 and A5 are reserved for the I<sup>2</sup>C interface and are therefore not available</p></li>
 <li><p>A6 and A7 can only be utilised as analogue inputs</p></li>
 </ul>
 <p>This results in 18 pins total, with 2 pins (A6/A7) only available as analogue inputs, resulting in our defined total, minimum, and maximium values as seen on the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page:</p>
@@ -552,7 +554,12 @@
 <li><p>Digital pins D2 - D13 as Vpins 800 - 811</p></li>
 <li><p>Analogue pins A0 - A3, A6 - A7 as Vpins 812 - 817</p></li>
 </ul>
-<p>Once <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> has been configured as below, you can review the digial and analogue Vpin allocations by running the diag command <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> at the serial console, which will display this information.</p>
+<p>Once <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> has been configured as per the sections below, you can review the digial and analogue Vpin allocations by running the diag command <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> at the serial console, which will display this information. Here is a sample output for EX-IOExpander on an Arduino Uno using the default 12 digital and 4 analogue pins:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;* EX-IOExpander I2C:x65 Configured on Vpins:800-815  *&gt;
+&lt;* EX-IOExpander x65 using driver version 0.0.1alpha *&gt;
+&lt;* EX-IOExpander x65: Digital Vpins 800-811, Analogue Vpins 812-815 *&gt;
+</pre></div>
+</div>
 </section>
 <section id="ex-commandstation-device-driver">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">EX-CommandStation device driver</a><a class="headerlink" href="#ex-commandstation-device-driver" title="Permalink to this heading"></a></h3>
@@ -568,6 +575,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You need to ensure the total pins available for the device are assigned as either digital or analogue pins. Defining less or more than the total pins will result in a configuration error, and the device will be taken offline.</p>
+<p>If this occurs, you will see a message like this in the startup log: <code class="docutils literal notranslate"><span class="pre">&lt;*</span> <span class="pre">ERROR</span> <span class="pre">configuring</span> <span class="pre">EX-IOExpander</span> <span class="pre">device,</span> <span class="pre">I2C:x65</span> <span class="pre">*&gt;</span></code></p>
 </div>
 <p>Refer to the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page to see the available pin numbers and predefined macros that are available for each of the supported devices.</p>
 <p>In the example below, we will configure an Arduino Nano using the default pin counts at address 0x65, with an additional Arduino Uno device using all available digital capable pins and no analogue pins at address 0x66.</p>

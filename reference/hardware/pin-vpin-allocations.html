@@ -264,6 +264,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/ex-dccinspector.html">EX-DCCInspector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/ex-turntable.html">EX-Turntable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/ex-ioexpander.html">EX-IOExpander</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
@@ -460,29 +461,30 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#microcontrollers" id="id16">Microcontrollers</a></p>
+<li><p><a class="reference internal" href="#microcontrollers" id="id17">Microcontrollers</a></p>
 <ul>
-<li><p><a class="reference internal" href="#arduino-mega2560" id="id17">Arduino Mega2560</a></p></li>
-<li><p><a class="reference internal" href="#arduino-uno" id="id18">Arduino Uno</a></p></li>
+<li><p><a class="reference internal" href="#arduino-mega2560" id="id18">Arduino Mega2560</a></p></li>
+<li><p><a class="reference internal" href="#arduino-uno" id="id19">Arduino Uno</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#i-o-expanders" id="id19">I/O expanders</a></p>
+<li><p><a class="reference internal" href="#i-o-expanders" id="id20">I/O expanders</a></p>
 <ul>
-<li><p><a class="reference internal" href="#mcp23017-digital-i-o-expander" id="id20">MCP23017 digital I/O expander</a></p></li>
-<li><p><a class="reference internal" href="#mcp23008-digital-i-o-expander" id="id21">MCP23008 digital I/O expander</a></p></li>
-<li><p><a class="reference internal" href="#pcf8574-digital-i-o-expander" id="id22">PCF8574 digital I/O expander</a></p></li>
-<li><p><a class="reference internal" href="#pca9685-pwm-servo-module" id="id23">PCA9685 PWM servo module</a></p></li>
+<li><p><a class="reference internal" href="#mcp23017-digital-i-o-expander" id="id21">MCP23017 digital I/O expander</a></p></li>
+<li><p><a class="reference internal" href="#mcp23008-digital-i-o-expander" id="id22">MCP23008 digital I/O expander</a></p></li>
+<li><p><a class="reference internal" href="#pcf8574-digital-i-o-expander" id="id23">PCF8574 digital I/O expander</a></p></li>
+<li><p><a class="reference internal" href="#pca9685-pwm-servo-module" id="id24">PCA9685 PWM servo module</a></p></li>
+<li><p><a class="reference internal" href="#ex-ioexpander-digital-and-analogue-i-o-expander" id="id25">EX-IOExpander - digital and analogue I/O expander</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#sensors" id="id24">Sensors</a></p>
+<li><p><a class="reference internal" href="#sensors" id="id26">Sensors</a></p>
 <ul>
-<li><p><a class="reference internal" href="#vl53l0x-time-of-flight-sensor" id="id25">VL53L0X time-of-flight sensor</a></p></li>
+<li><p><a class="reference internal" href="#vl53l0x-time-of-flight-sensor" id="id27">VL53L0X time-of-flight sensor</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#other-devices" id="id26">Other devices</a></p>
+<li><p><a class="reference internal" href="#other-devices" id="id28">Other devices</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ex-turntable" id="id27">EX-Turntable</a></p></li>
-<li><p><a class="reference internal" href="#dcc-ex-rotary-encoder" id="id28">DCC-EX rotary encoder</a></p></li>
+<li><p><a class="reference internal" href="#ex-turntable" id="id29">EX-Turntable</a></p></li>
+<li><p><a class="reference internal" href="#dcc-ex-rotary-encoder" id="id30">DCC-EX rotary encoder</a></p></li>
 </ul>
 </li>
 </ul>
@@ -490,11 +492,11 @@
 </aside>
 <p>On this page, we aim to outline and summarise the various default and recommended pins (and vpins for I/O expanders) for use with various input and output devices for our primary suported microcontrollers and I/O devices and expanders. We will also include the default I<sup>2</sup>C addresses where appropriate.</p>
 <section id="microcontrollers">
-<h2><a class="toc-backref" href="#id16" role="doc-backlink">Microcontrollers</a><a class="headerlink" href="#microcontrollers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Microcontrollers</a><a class="headerlink" href="#microcontrollers" title="Permalink to this heading"></a></h2>
 <p>This section outlines pins to avoid, pins that are free to use, and pins that are to be used with caution for each of our primary supported microcontrollers. The pins are grouped as such:</p>
 <a class="reference internal image-reference" href="../../_images/pin-legend.png"><img alt="Pinout legend" src="../../_images/pin-legend.png" style="width: 201.0px; height: 132.0px;" /></a>
 <section id="arduino-mega2560">
-<h3><a class="toc-backref" href="#id17" role="doc-backlink">Arduino Mega2560</a><a class="headerlink" href="#arduino-mega2560" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Arduino Mega2560</a><a class="headerlink" href="#arduino-mega2560" title="Permalink to this heading"></a></h3>
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Do not edit this file with editors other than diagrams.net -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -570,7 +572,7 @@
 </section>
 <hr class="docutils" />
 <section id="arduino-uno">
-<h3><a class="toc-backref" href="#id18" role="doc-backlink">Arduino Uno</a><a class="headerlink" href="#arduino-uno" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Arduino Uno</a><a class="headerlink" href="#arduino-uno" title="Permalink to this heading"></a></h3>
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Do not edit this file with editors other than diagrams.net -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -635,14 +637,14 @@
 </section>
 <hr class="docutils" />
 <section id="i-o-expanders">
-<h2><a class="toc-backref" href="#id19" role="doc-backlink">I/O expanders</a><a class="headerlink" href="#i-o-expanders" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">I/O expanders</a><a class="headerlink" href="#i-o-expanders" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If using an I<sup>2</sup>C LCD display with the PCF8574 backpack, it is possible that it resides at I<sup>2</sup>C address 0x27. If this is the case, you need to either not use any other devices at this address, change the PCF8574 address to 0x3F (if possible), or replace it. OLEDs typically use address 0x3C, so should not cause issues.</p>
 <p>Refer to <a class="reference internal" href="i2c-displays.html"><span class="doc">I2C Displays</span></a> for further information.</p>
 </div>
 <section id="mcp23017-digital-i-o-expander">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink">MCP23017 digital I/O expander</a><a class="headerlink" href="#mcp23017-digital-i-o-expander" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">MCP23017 digital I/O expander</a><a class="headerlink" href="#mcp23017-digital-i-o-expander" title="Permalink to this heading"></a></h3>
 <p>MCP23017 I/O expanders have 16 digital I/O pins and 8 available I<sup>2</sup>C addresses from 0x20 to 0x27.</p>
 <p>The device driver name is “IO_MCP23017.h”, however this is included by default and does not need to be added to “myHal.cpp”.</p>
 <p>Two devices are defined by default.</p>
@@ -687,7 +689,7 @@
 </section>
 <hr class="docutils" />
 <section id="mcp23008-digital-i-o-expander">
-<h3><a class="toc-backref" href="#id21" role="doc-backlink">MCP23008 digital I/O expander</a><a class="headerlink" href="#mcp23008-digital-i-o-expander" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">MCP23008 digital I/O expander</a><a class="headerlink" href="#mcp23008-digital-i-o-expander" title="Permalink to this heading"></a></h3>
 <p>MCP23008 I/O expanders have 8 digital I/O pins and 8 available I<sup>2</sup>C addresses from 0x20 to 0x27.</p>
 <p>The device driver name is “IO_MCP23008.h” and will need to be included in “myHal.cpp”.</p>
 <p>Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, and you will need to edit “IODevice.cpp” in order to disable these.</p>
@@ -713,7 +715,7 @@
 </section>
 <hr class="docutils" />
 <section id="pcf8574-digital-i-o-expander">
-<h3><a class="toc-backref" href="#id22" role="doc-backlink">PCF8574 digital I/O expander</a><a class="headerlink" href="#pcf8574-digital-i-o-expander" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">PCF8574 digital I/O expander</a><a class="headerlink" href="#pcf8574-digital-i-o-expander" title="Permalink to this heading"></a></h3>
 <p>PCF8574 I/O expanders have 8 digital I/O pins and 8 available I<sup>2</sup>C addresses from 0x20 to 0x27.</p>
 <p>The device driver name is “IO_PCF8574.h” and will need to be included in “myHal.cpp”.</p>
 <p>Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, and you will need to edit “IODevice.cpp” in order to disable these.</p>
@@ -739,7 +741,7 @@
 </section>
 <hr class="docutils" />
 <section id="pca9685-pwm-servo-module">
-<h3><a class="toc-backref" href="#id23" role="doc-backlink">PCA9685 PWM servo module</a><a class="headerlink" href="#pca9685-pwm-servo-module" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">PCA9685 PWM servo module</a><a class="headerlink" href="#pca9685-pwm-servo-module" title="Permalink to this heading"></a></h3>
 <p>PCA9685 servo modules (or I/O expanders) have 16 PWM output pins and 62 available I<sup>2</sup>C addresses from 0x40 to 0x7D.</p>
 <p>The device driver name is “IO_PCA9685.cpp”, however this is loaded by default and does not need to be added to “myHal.cpp”.</p>
 <p>Two devices are defined by default.</p>
@@ -778,17 +780,38 @@
 </tbody>
 </table>
 </section>
+<hr class="docutils" />
+<section id="ex-ioexpander-digital-and-analogue-i-o-expander">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">EX-IOExpander - digital and analogue I/O expander</a><a class="headerlink" href="#ex-ioexpander-digital-and-analogue-i-o-expander" title="Permalink to this heading"></a></h3>
+<p>EX-IOExpander is designed to support up to 256 pins and is currently in testing. The default I<sup>2</sup>C address is 0x65, however any valid and available address can be used.</p>
+<p>The device driver name is “IO_EXIOExpander.h” and will need to be included in “myHal.cpp”.</p>
+<p>Refer to <a class="reference internal" href="../../ex-ioexpander/index.html"><span class="doc">EX-IOExpander</span></a> for further information.</p>
+<p>When adding EX-IOExpander devices, select an unused VPin that allows for the appropriate number of consecutive vpins for all I/O pins.</p>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Additional MCP23017s</span><a class="headerlink" href="#id13" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p>I<sup>2</sup>C address range</p></td>
+<td><p>VPin count</p></td>
+<td><p>Comments</p></td>
+</tr>
+<tr class="row-even"><td><p>Any valid/available (default 0x65)</p></td>
+<td><p>16 - 256</p></td>
+<td><p>Need to add to myHal.cpp, and I<sup>2</sup>C address needs to be configured in software</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <hr class="docutils" />
 <section id="sensors">
-<h2><a class="toc-backref" href="#id24" role="doc-backlink">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id26" role="doc-backlink">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h2>
 <section id="vl53l0x-time-of-flight-sensor">
-<h3><a class="toc-backref" href="#id25" role="doc-backlink">VL53L0X time-of-flight sensor</a><a class="headerlink" href="#vl53l0x-time-of-flight-sensor" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">VL53L0X time-of-flight sensor</a><a class="headerlink" href="#vl53l0x-time-of-flight-sensor" title="Permalink to this heading"></a></h3>
 <p>VL53L0X time-of-flight sensors have a default I<sup>2</sup>C address of 0x29, however this address is programmable by software.</p>
 <p>The device driver name is “IO_VL53L0X.h” and will need to be included in “myHal.cpp”.</p>
 <p>Refer to <a class="reference internal" href="../../ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor.html"><span class="doc">VL53L0X Time of Flight Sensor</span></a> for further information.</p>
-<table class="docutils align-default" id="id13">
-<caption><span class="caption-number">Table 16 </span><span class="caption-text">Adding VL53L0Xs</span><a class="headerlink" href="#id13" title="Permalink to this table"></a></caption>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-number">Table 17 </span><span class="caption-text">Adding VL53L0Xs</span><a class="headerlink" href="#id14" title="Permalink to this table"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p>I<sup>2</sup>C address range</p></td>
 <td><p>Suggested first VPin</p></td>
@@ -806,9 +829,9 @@
 </section>
 <hr class="docutils" />
 <section id="other-devices">
-<h2><a class="toc-backref" href="#id26" role="doc-backlink">Other devices</a><a class="headerlink" href="#other-devices" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id28" role="doc-backlink">Other devices</a><a class="headerlink" href="#other-devices" title="Permalink to this heading"></a></h2>
 <section id="ex-turntable">
-<h3><a class="toc-backref" href="#id27" role="doc-backlink">EX-Turntable</a><a class="headerlink" href="#ex-turntable" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">EX-Turntable</a><a class="headerlink" href="#ex-turntable" title="Permalink to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is in Beta testing, however the device driver is unlikely to change much if at all.</p>
@@ -816,8 +839,8 @@
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is configured with a default I<sup>2</sup>C address of 0x60, however this address is configurable by the software.</p>
 <p>The device driver name is “IO_EXTurntable.h” and will need to be included in “myHal.cpp”.</p>
 <p>Refer to <a class="reference internal" href="../../ex-turntable/index.html"><span class="doc">EX-Turntable</span></a> for further information.</p>
-<table class="docutils align-default" id="id14">
-<caption><span class="caption-number">Table 17 </span><span class="caption-text">Adding EX-Turntable</span><a class="headerlink" href="#id14" title="Permalink to this table"></a></caption>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">Adding EX-Turntable</span><a class="headerlink" href="#id15" title="Permalink to this table"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p>I<sup>2</sup>C address and range</p></td>
 <td><p>Suggested VPin</p></td>
@@ -834,7 +857,7 @@
 </section>
 <hr class="docutils" />
 <section id="dcc-ex-rotary-encoder">
-<h3><a class="toc-backref" href="#id28" role="doc-backlink">DCC-EX rotary encoder</a><a class="headerlink" href="#dcc-ex-rotary-encoder" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id30" role="doc-backlink">DCC-EX rotary encoder</a><a class="headerlink" href="#dcc-ex-rotary-encoder" title="Permalink to this heading"></a></h3>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -843,8 +866,8 @@
 <p>The DCC-EX rotary encoder is configured with a default I<sup>2</sup>C address of 0x80, however this address is configurable by the software.</p>
 <p>The device driver name is “IO_RotaryEncoder.h” and will need to be included in “myHal.cpp”.</p>
 <p>Refer to <a class="reference internal" href="../../ex-turntable/test-and-tune.html#controlling-ex-turntable-with-a-rotary-encoder"><span class="std std-ref">Controlling EX-Turntable with a rotary encoder</span></a> and the <a class="reference external" href="https://petegsx-projects.github.io/rotary-encoder/index.html">project page</a> for further information.</p>
-<table class="docutils align-default" id="id15">
-<caption><span class="caption-number">Table 18 </span><span class="caption-text">Adding DCC-EX rotary encoder</span><a class="headerlink" href="#id15" title="Permalink to this table"></a></caption>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">Adding DCC-EX rotary encoder</span><a class="headerlink" href="#id16" title="Permalink to this table"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p>I<sup>2</sup>C address and range</p></td>
 <td><p>Suggested VPin</p></td>

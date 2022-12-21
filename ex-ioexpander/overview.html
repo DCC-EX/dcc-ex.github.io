@@ -265,6 +265,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../download/ex-dccinspector.html">EX-DCCInspector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../download/ex-turntable.html">EX-Turntable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-ioexpander.html">EX-IOExpander</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
@@ -557,7 +558,6 @@
 </ul>
 <p>Once <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> has been configured as per the sections below, you can review the digial and analogue Vpin allocations by running the diag command <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> at the serial console, which will display this information. Here is a sample output for EX-IOExpander on an Arduino Uno using the default 12 digital and 4 analogue pins:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;* EX-IOExpander I2C:x65 Configured on Vpins:800-815  *&gt;
-&lt;* EX-IOExpander x65 using driver version 0.0.1alpha *&gt;
 &lt;* EX-IOExpander x65: Digital Vpins 800-811, Analogue Vpins 812-815 *&gt;
 </pre></div>
 </div>
@@ -565,6 +565,7 @@
 <section id="ex-commandstation-device-driver">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">EX-CommandStation device driver</a><a class="headerlink" href="#ex-commandstation-device-driver" title="Permalink to this heading"></a></h3>
 <p>To enable support for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you need to configure “myHal.cpp” in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. You will need to load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device driver in addition to creating the device(s).</p>
+<p>You will find an example included in the “myHal.cpp_example.txt” file included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
 <p>To create the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, the syntax is <cite>EXIOExpander::create(vpin, npins, address, digital_pins, analogue_pins);</cite> where:</p>
 <ul class="simple">
 <li><p>vpin = An unused vpin</p></li>

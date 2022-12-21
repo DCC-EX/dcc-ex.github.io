@@ -26,10 +26,12 @@ All allocation of pins is done via the device driver (see :ref:`ex-ioexpander/ov
 
   When configuring the device driver, all available pins must be accounted for as either digital or analogue pins, even if there is no intended use.
 
-.. todo:: LOW - `Add supported device Fritzing diagrams <https://github.com/DCC-EX/EX-IOExpander/issues/7>`_
-
 Arduino Nano
 ============
+
+.. image:: /_static/images/ex-ioexpander/ex-ioexpander-nano.png
+  :alt: EX-IOExpander on Arduino Nano
+  :scale: 5%
 
 Device driver macros available:
 
@@ -58,6 +60,10 @@ Device driver macros available:
 Arduino Uno
 ===========
 
+.. image:: /_static/images/ex-ioexpander/ex-ioexpander-uno.png
+  :alt: EX-IOExpander on Arduino Uno
+  :scale: 5%
+
 Device driver macros available:
 
 - EXIO_UNO_DIGITAL_PINS - 12
@@ -84,6 +90,10 @@ Device driver macros available:
 
 Arduino Mega2560
 ================
+
+.. image:: /_static/images/ex-ioexpander/ex-ioexpander-mega.png
+  :alt: EX-IOExpander on Arduino Mega2560
+  :scale: 5%
 
 Device driver macros available:
 

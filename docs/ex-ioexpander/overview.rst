@@ -85,10 +85,12 @@ All available pins on the chosen |EX-IO| device must be allocated as either digi
 
 Vpins are allocated by the |EX-CS| device driver, with digital pins allocated by incrementing from the first Vpin, and analogue pins decrementing from the highest allocated Vpin number.
 
-For example, an Arduino Nano has a total of 20 I/O pins (D2 - D13, A0 - A7). Not all of these pins are available, and there are limitations on some pins:
+For example, an Arduino Nano has a total of 22 I/O pins (D0 - D13, A0 - A7). Not all of these pins are available, and there are limitations on some pins:
 
+- D0 and D1 are used for the serial Tx/Rx pins and are therefore not available
+- D2 - D13 are the digital pins which are all available
 - A0 - A3 can be utilised as either digital or analogue pins
-- A4 and A5 are reserved for the |I2C| interface (and are therefore not available)
+- A4 and A5 are reserved for the |I2C| interface and are therefore not available
 - A6 and A7 can only be utilised as analogue inputs
 
 This results in 18 pins total, with 2 pins (A6/A7) only available as analogue inputs, resulting in our defined total, minimum, and maximium values as seen on the :doc:`/ex-ioexpander/supported-devices` page:
@@ -117,7 +119,13 @@ In the case we use the default of 12 digital pins and 6 analogue pins using the 
 - Digital pins D2 - D13 as Vpins 800 - 811
 - Analogue pins A0 - A3, A6 - A7 as Vpins 812 - 817
 
-Once |EX-IO| has been configured as below, you can review the digial and analogue Vpin allocations by running the diag command ``<D HAL SHOW>`` at the serial console, which will display this information.
+Once |EX-IO| has been configured as per the sections below, you can review the digial and analogue Vpin allocations by running the diag command ``<D HAL SHOW>`` at the serial console, which will display this information. Here is a sample output for EX-IOExpander on an Arduino Uno using the default 12 digital and 4 analogue pins:
+
+.. code-block:: 
+
+  <* EX-IOExpander I2C:x65 Configured on Vpins:800-815  *>
+  <* EX-IOExpander x65 using driver version 0.0.1alpha *>
+  <* EX-IOExpander x65: Digital Vpins 800-811, Analogue Vpins 812-815 *>
 
 EX-CommandStation device driver
 -------------------------------
@@ -135,6 +143,8 @@ To create the |EX-IO| device, the syntax is `EXIOExpander::create(vpin, npins, a
 .. note:: 
 
   You need to ensure the total pins available for the device are assigned as either digital or analogue pins. Defining less or more than the total pins will result in a configuration error, and the device will be taken offline.
+
+  If this occurs, you will see a message like this in the startup log: ``<* ERROR configuring EX-IOExpander device, I2C:x65 *>``
 
 Refer to the :doc:`/ex-ioexpander/supported-devices` page to see the available pin numbers and predefined macros that are available for each of the supported devices.
 

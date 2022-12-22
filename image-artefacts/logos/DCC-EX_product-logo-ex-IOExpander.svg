@@ -291,11 +291,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1617"><tspan
+       id="tspan1687"><tspan
          style="fill:#00a3b9"
-         id="tspan1613">EX-</tspan><tspan
+         id="tspan1683">EX-</tspan><tspan
          style="fill:#00353d"
-         id="tspan1615">IOExpander</tspan></tspan></text>
+         id="tspan1685">IOExpander</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -306,11 +306,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1623"><tspan
+       id="tspan1693"><tspan
          style="fill:#00353d"
-         id="tspan1619">DCC-</tspan><tspan
+         id="tspan1689">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan1621">EX</tspan></tspan></text>
+         id="tspan1691">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"
@@ -369,9 +369,9 @@
   <text
      xml:space="preserve"
      id="text1727"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.02853px;line-height:1.25;font-family:Stencil;-inkscape-font-specification:'Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1729-6);fill:#e6e6e6;fill-opacity:1;stroke:#333333;stroke-width:0.0770739;stroke-miterlimit:4;stroke-dasharray:none"
-     transform="matrix(36.970019,18.89477,-18.89477,36.970019,-104444.44,-25701.327)"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.02853px;line-height:1.25;font-family:Stencil;-inkscape-font-specification:'Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1729-6);display:inline;fill:#e6e6e6;fill-opacity:1;stroke:#333333;stroke-width:0.0770739;stroke-miterlimit:4;stroke-dasharray:none"
+     transform="matrix(36.970019,18.89477,-18.89477,36.970019,-104520.44,-25751.327)"><tspan
        x="2598.668"
        y="-622.92884"
-       id="tspan1625">Beta</tspan></text>
+       id="tspan1695">ALPHA</tspan></text>
 </svg>

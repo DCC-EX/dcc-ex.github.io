@@ -29,12 +29,12 @@ Our easy to use, do-it-yourself, affordable products are based on off-the-shelf 
       - |EX-IO-LOGO-SMALL|
     * - A simple web based throttle for your command station
       - A separate stepper based turntable controller
-      - A separate I/O expander for your command station
-    * - 
-      - |EX-DCCI-LOGO-SMALL|
+      - Use additional microcontrollers to expand I/O port capability
+    * - |EX-DCCI-LOGO-SMALL|
       - 
-    * - 
-      - A separate DCC packet sniffing tool
+      - 
+    * - A separate DCC packet sniffing tool
+      - 
       - 
 
 .. list-table::
@@ -53,9 +53,9 @@ Our easy to use, do-it-yourself, affordable products are based on off-the-shelf 
     * - |EX-TT-LOGO-SMALL| 
       - A separate stepper based turntable controller
     * - |EX-IO-LOGO-SMALL| 
-      - A separate I/O expander for your command station
+      - Use additional microcontrollers to expand I/O port capability
     * - |EX-DCCI-LOGO-SMALL| 
-      - A DCC packet sniffing tool
+      -  A DCC packet sniffing tool
 
 If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Before You Begin <levels>` page to choose your comfort level, which will help guide you through this web site.
 

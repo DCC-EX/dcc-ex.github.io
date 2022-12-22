@@ -36,17 +36,17 @@
       :class: image-min-width-144
       :target: ./ex-dccinspector/index.html
 ..
+.. |EX-IO-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-ioexpander.png
+      :alt: EX-IOExpander
+      :scale: 30%
+      :class: image-product-logo-float-right
+      :target: ./ex-ioexpander/index.html
+..
 .. |EX-BSC-LOGO-SMALL| image:: /_static/images/logos/product-logo-basestationclassic.png
       :alt: baseStationClassic
       :scale: 30%
       :class: image-min-width-144
       :target: ../download/ex-commandstation.html#getting-basestation-classic
-..
-.. |EX-IO-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-ioexpander.png
-      :alt: EX-IOExpander
-      :scale: 30%
-      :class: image-min-width-144
-      :target: ./ex-ioexpander/index.html
 ..
 .. ................................................
 ..

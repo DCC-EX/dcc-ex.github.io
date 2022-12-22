@@ -125,13 +125,14 @@ Once |EX-IO| has been configured as per the sections below, you can review the d
 .. code-block:: 
 
   <* EX-IOExpander I2C:x65 Configured on Vpins:800-815  *>
-  <* EX-IOExpander x65 using driver version 0.0.1alpha *>
   <* EX-IOExpander x65: Digital Vpins 800-811, Analogue Vpins 812-815 *>
 
 EX-CommandStation device driver
 -------------------------------
 
 To enable support for |EX-IO|, you need to configure "myHal.cpp" in your |EX-CS|. You will need to load the |EX-IO| device driver in addition to creating the device(s).
+
+You will find an example included in the "myHal.cpp_example.txt" file included with the |EX-CS| software.
 
 To create the |EX-IO| device, the syntax is `EXIOExpander::create(vpin, npins, address, digital_pins, analogue_pins);` where:
 

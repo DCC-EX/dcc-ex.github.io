@@ -48,6 +48,12 @@
       :class: image-min-width-144
       :target: ../download/ex-commandstation.html#getting-basestation-classic
 ..
+.. |EX-IO-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-ioexpander.png
+      :alt: EX-IOExpander
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ./ex-ioexpander/index.html
+..
 .. ................................................
 ..
 .. |donate-button| image:: /_static/images/icons/donate_button_blue.png

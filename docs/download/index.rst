@@ -17,3 +17,4 @@ Welcome to the central downloads page for all |DCC-EX| software solutions. Pleas
     esp8266
     ex-dccinspector
     ex-turntable
+    ex-ioexpander

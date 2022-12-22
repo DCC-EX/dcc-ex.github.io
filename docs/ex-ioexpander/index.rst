@@ -33,3 +33,7 @@ Looking for some help with EX-IOExpander?
 To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
 
 |githublink-ex-ioexpander-button|
+
+.. tip:: 
+
+  Keep an eye out for the same button at the top of the other pages.

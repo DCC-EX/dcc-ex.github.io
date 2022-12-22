@@ -133,7 +133,7 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
-.. |EX-IOEXPANDERLOGO| image:: /_static/images/logos/product-logo-ex-ioexpander.png
+.. |EX-IO-LOGO| image:: /_static/images/logos/product-logo-ex-ioexpander.png
       :alt: EX-IOExpander
       :scale: 40%
       :class: image-product-logo-float-right

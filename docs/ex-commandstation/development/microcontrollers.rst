@@ -76,7 +76,7 @@ There are two of the larger NUCLEO devices being tested; the NUCLEO-F412ZG and N
 
 Both of these have a much larger footprint while still retaining the Uno compatible header sockets, with 114 I/O pins.
 
-The F412ZG is potentially suitable as a larger replacement for a Mega, with more I/O pins available, refer to the `arm MBED F412ZG <https://os.mbed.com/platforms/ST-Nucleo-F412ZG/>` page.
+The F412ZG is potentially suitable as a larger replacement for a Mega, with more I/O pins available, refer to the `arm MBED F412ZG <https://os.mbed.com/platforms/ST-Nucleo-F412ZG/>`_ page.
 
 The F429ZI has the same large footprint, however it has the added benefit of onboard Ethernet, which makes it potentially suitable for larger layouts where the WiFi limitations of the ESP01 firmware comes in to play. Note, however, that the Ethernet support for this board is currently not implemented. Refer to the `arm MBED F429ZI <https://os.mbed.com/platforms/ST-Nucleo-F429ZI/>`_ page.
 

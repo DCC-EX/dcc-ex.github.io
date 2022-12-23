@@ -49,3 +49,5 @@ EX-IOExpander device offline
       | |EX-CS| turned on before |EX-IO| - ensure |EX-IO| is turned on before |EX-CS|
       | Incorrect |I2C| address defined - ensure the |I2C| address is correct in myHal.cpp on |EX-CS| and myConfig.h on |EX-IO|
       | Incorrect number of digital/analogue pins defined - ensure the pins defined in myHal.cpp are valid according to :doc:`/ex-ioexpander/supported-devices`
+  * - Digital pin 13 is always low in input mode
+    - On non-genuine Uno devices (possibly Nano also), the onboard LED can cause this behaviour when pullups are enabled, with a suggested workaround of adding an external 1K pullup resistor

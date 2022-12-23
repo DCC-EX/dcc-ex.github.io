@@ -27,7 +27,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="EX-DCCInspector" href="../ex-dccinspector/index.html" />
+    <link rel="next" title="EX-WebThrottle" href="../ex-webthrottle/index.html" />
     <link rel="prev" title="Supported Devices" href="../ex-ioexpander/supported-devices.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -60,7 +60,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../levels.html">Before You Begin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ex-commandstation/index.html">EX-CommandStation</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../ex-commandstation/index.html">EX-CommandStation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/get-started/index.html">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
@@ -141,10 +141,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/command-reference.html">DCC-EX Command Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary.html">DCC-EX Command Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/development/index.html">Features under development</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/development/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/inputs-outputs/index.html">Input and Output Devices</a><ul>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ex-commandstation/inputs-outputs/index.html">Input and Output Devices</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/index.html">Sensors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/which-sensor-type.html">Which sensor type to use?</a></li>
@@ -156,6 +160,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ex-ioexpander/index.html">EX-IOExpander</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../ex-ioexpander/overview.html">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">EX-IOExpander FAQ and Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/development/index.html">Features under development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/development/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
 </ul>
 </li>
 </ul>
@@ -441,6 +456,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../ex-commandstation/index.html">EX-CommandStation</a> &raquo;</li>
+          <li><a href="../ex-commandstation/inputs-outputs/index.html">Input and Output Devices</a> &raquo;</li>
           <li><a href="../ex-ioexpander/index.html">EX-IOExpander</a> &raquo;</li>
       <li>EX-IOExpander FAQ and Troubleshooting</li>
       <li class="wy-breadcrumbs-aside">
@@ -505,6 +522,9 @@
 </div>
 </td>
 </tr>
+<tr class="row-odd"><td><p>Digital pin 13 is always low in input mode</p></td>
+<td><p>On non-genuine Uno devices (possibly Nano also), the onboard LED can cause this behaviour when pullups are enabled, with a suggested workaround of adding an external 1K pullup resistor</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -516,7 +536,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../ex-ioexpander/supported-devices.html" class="btn btn-neutral float-left" title="Supported Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../ex-dccinspector/index.html" class="btn btn-neutral float-right" title="EX-DCCInspector" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../ex-webthrottle/index.html" class="btn btn-neutral float-right" title="EX-WebThrottle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

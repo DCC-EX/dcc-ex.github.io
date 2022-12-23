@@ -115,3 +115,19 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - Default
     - 2.5/3
     - Still a degree of uncertainty as to the full capabilities of this decoder this decoder
+  * - D&H
+    - PD10MU
+    - MF
+    - 3.12
+    - N/A (bare wires)
+    - Default
+    - 3
+    - Works perfectly, was my first decoder testet with DCC++EX. Reported it because I couldn't find this decoder in the list yet.
+  * - Digitrax
+    - DH166D
+    - MF
+    - 51
+    - N/A (bare wires)
+    - Default
+    - 3
+    - Worked exactly as expected. No problems with programming or operation.

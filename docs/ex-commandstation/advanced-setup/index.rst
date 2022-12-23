@@ -177,18 +177,16 @@ DCC-EX Commands
   /reference/software/command-reference
   /reference/software/command-summary
 
-*Under Development:* Track Manager (formerly DC Districts)
-==========================================================
+Features under development
+==========================
 
-.. note:: 
-
-  |NOT-IN-PROD-VERSION|
+|NOT-IN-PROD-VERSION|
   
-  Track Manager (formerly known as DC Districts) is a new feature under development to control up to 8 tracks (or districts) with the option to run each as either a DCC main or programming track, or a DC track.
+We always have new features under development for |EX-CS| and |EX-R|, and as these features get incorporated into the development branch of the software, we will endeavour to keep these documented in our development pages.
 
-  As this is under active development, changes will happen regularly, so it's best to keep up to date with any discussions via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
+Remember that these features will continue to change and evolve as bugs are found and fixed, and better ways of doing things are discovered, so it's best to keep up to date with any discussions via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
 
 .. toctree:: 
   :maxdepth: 1
 
-  track-manager
+  /ex-commandstation/development/index

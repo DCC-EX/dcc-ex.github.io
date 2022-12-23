@@ -82,6 +82,10 @@ Configuration changes for |EX-IO| are made by editing a "myConfig.h" file. An ex
 Pin/Vpin allocation
 -------------------
 
+.. note:: 
+
+  It has been reported that on non-genuine Arduino Uno devices (and potentially Nano), that using pin D13 as an input may not work as expected due to the onboard LED causing the pin to remain low when using it as an input pin with pullups enabled. A suggested workaround is to add an external 1K pullup resistor to 5V for this pin if this is experienced.
+
 All available pins on the chosen |EX-IO| device must be allocated as either digital or analogue pins. Details of the pins available for use are outlined on the :doc:`/ex-ioexpander/supported-devices` page.
 
 Vpins are allocated by the |EX-CS| device driver, with digital pins allocated by incrementing from the first Vpin, and analogue pins decrementing from the highest allocated Vpin number.

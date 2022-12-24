@@ -101,6 +101,8 @@ There are three serial commands available to set, read, and erase the configured
     - This will read and display the |I2C| address stored in EEPROM
   * - <E>
     - This will erase the |I2C| address stored in EEPROM
+  * - <Z>
+    - This will reboot to allow activating address changes
 
 Pin/Vpin allocation
 -------------------

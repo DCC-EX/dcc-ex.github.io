@@ -173,4 +173,10 @@ To do this, navigate to "File" -> "Preferences" and add this URL to the "Additio
   :alt: Arduino IDE Preferences
   :scale: 50%
 
+You will then need to navigate to "Tools" -> "Board" -> "Boards Manager", search for "stm32", and install the support for these boards.
+
+.. image:: /_static/images/nucleo/arduino-install-stm32.png
+  :alt: Arduino STM32 board install
+  :scale: 50%
+
 Once this has been performed, the NUCLEO devices should be available to be selected in the Arduino IDE.

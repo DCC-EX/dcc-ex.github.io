@@ -20,12 +20,6 @@ Newer, faster, better
 
 As technology progresses, newer, faster, and better microcontrollers become available, and therefore there is a never-ending cycle of testing and development of newer generations of microcontrollers that might suit the |DCC-EX| project.
 
-A further driver to this continued experimentation is that the Arduino AVR series microcontrollers are very limited in terms of RAM, meaning as new features and capabilites are added to |EX-CS|, we are nearing the limits of what we can incorporate.
-
-There will come a time, probably sooner rather than later, where we will need to deprecate the Arduino AVR series of microcontrollers in order to be able to continue the expansion of features in |EX-CS|.
-
-On the plus side, we now have |EX-IO| which means there is a future use for those Arduino AVRs once they are no longer in use.
-
 Note on 3v3 vs. 5V microcontrollers
 -----------------------------------
 

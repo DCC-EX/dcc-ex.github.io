@@ -7,7 +7,7 @@
 <meta content="EX-CommandStation Command Station EX-IOExpander" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overview &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Overview and configuration &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
@@ -162,7 +162,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">EX-IOExpander</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Overview and configuration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="supported-devices.html">Supported Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
@@ -206,7 +206,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-IOExpander</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview and configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supported-devices.html">Supported Devices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
@@ -460,7 +460,7 @@
           <li><a href="../ex-commandstation/index.html">EX-CommandStation</a> &raquo;</li>
           <li><a href="../ex-commandstation/inputs-outputs/index.html">Input and Output Devices</a> &raquo;</li>
           <li><a href="index.html">EX-IOExpander</a> &raquo;</li>
-      <li>Overview</li>
+      <li>Overview and configuration</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-ioexpander/overview.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -471,8 +471,8 @@
            <div itemprop="articleBody">
              
   <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-ioexpander.png"><img alt="EX-IOExpander" class="image-product-logo-float-right" src="../_images/product-logo-ex-ioexpander.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
+<section id="overview-and-configuration">
+<h1>Overview and configuration<a class="headerlink" href="#overview-and-configuration" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="https://github.com/DCC-EX/EX-IOExpander/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -489,11 +489,12 @@
 <li><p><a class="reference internal" href="#theory-of-operation" id="id4">Theory of operation</a></p></li>
 <li><p><a class="reference internal" href="#configuration" id="id5">Configuration</a></p>
 <ul>
-<li><p><a class="reference internal" href="#pin-vpin-allocation" id="id6">Pin/Vpin allocation</a></p></li>
-<li><p><a class="reference internal" href="#ex-commandstation-device-driver" id="id7">EX-CommandStation device driver</a></p></li>
-<li><p><a class="reference internal" href="#i2c-address" id="id8">I2C_ADDRESS</a></p></li>
-<li><p><a class="reference internal" href="#diag" id="id9">DIAG</a></p></li>
-<li><p><a class="reference internal" href="#diag-config-delay" id="id10">DIAG_CONFIG_DELAY</a></p></li>
+<li><p><a class="reference internal" href="#configure-i2c-address-via-serial" id="id6">Configure I2C address via serial</a></p></li>
+<li><p><a class="reference internal" href="#pin-vpin-allocation" id="id7">Pin/Vpin allocation</a></p></li>
+<li><p><a class="reference internal" href="#ex-commandstation-device-driver" id="id8">EX-CommandStation device driver</a></p></li>
+<li><p><a class="reference internal" href="#i2c-address" id="id9">I2C_ADDRESS</a></p></li>
+<li><p><a class="reference internal" href="#diag" id="id10">DIAG</a></p></li>
+<li><p><a class="reference internal" href="#diag-config-delay" id="id11">DIAG_CONFIG_DELAY</a></p></li>
 </ul>
 </li>
 </ul>
@@ -534,11 +535,35 @@
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Aside from configuring the I<sup>2</sup>C address of your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, the device driver loaded in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> will perform the necessary run time configuration at startup, meaning you should only ever need to update the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software when a new version is available.</p>
 <p>Configuration changes for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> are made by editing a “myConfig.h” file. An example “myConfig.example.h” file is included that can be copied and edited to suit. The only configuration item you should really need to consider is <a class="reference internal" href="#i2c-address"><span class="std std-ref">I2C_ADDRESS</span></a>.</p>
+<section id="configure-i2c-address-via-serial">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Configure I2C address via serial</a><a class="headerlink" href="#configure-i2c-address-via-serial" title="Permalink to this heading"></a></h3>
+<p>For devices with EEPROM support (Arduino Uno, Nano, and Mega), it is possible to configure the I<sup>2</sup>C address via the serial console rather than having to update “myConfig.h”, and therefore you should be able to simply upload the software without needing to edit any files at all.</p>
+<p>Be aware that this address will override any address defined in “myConfig.h”.</p>
+<p>There are three serial commands available to set, read, and erase the configured address:</p>
+<table class="command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt;W address&gt;</p></td>
+<td><p>This command writes the I<sup>2</sup>C address to EEPROM, for example &lt;W 50&gt; will set it to 0x50</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;R&gt;</p></td>
+<td><p>This will read and display the I<sup>2</sup>C address stored in EEPROM</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;E&gt;</p></td>
+<td><p>This will erase the I<sup>2</sup>C address stored in EEPROM</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="pin-vpin-allocation">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Pin/Vpin allocation</a><a class="headerlink" href="#pin-vpin-allocation" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Pin/Vpin allocation</a><a class="headerlink" href="#pin-vpin-allocation" title="Permalink to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It has been reported that on non-genuine Arduino Uno devices (and potentially Nano), that using pin D13 as an input may not work as expected due to the onboard LED causing the pin to remain low when using it as an input pin with pullups enabled. A suggested workaround is to add an external 1K pullup resistor to 5V for this pin if this is experienced.</p>
+<p>It has been reported that on non-genuine Arduino Uno devices (and potentially Nano) using pin D13 as an input may not work as expected due to the onboard LED causing the pin to remain low when using it as an input pin with pullups enabled. A suggested workaround is to add an external 1K pullup resistor to 5V for this pin if this is experienced.</p>
 </div>
 <p>All available pins on the chosen <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device must be allocated as either digital or analogue pins. Details of the pins available for use are outlined on the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page.</p>
 <p>Vpins are allocated by the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> device driver, with digital pins allocated by incrementing from the first Vpin, and analogue pins decrementing from the highest allocated Vpin number.</p>
@@ -584,7 +609,7 @@
 </div>
 </section>
 <section id="ex-commandstation-device-driver">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">EX-CommandStation device driver</a><a class="headerlink" href="#ex-commandstation-device-driver" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">EX-CommandStation device driver</a><a class="headerlink" href="#ex-commandstation-device-driver" title="Permalink to this heading"></a></h3>
 <p>To enable support for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you need to configure “myHal.cpp” in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. You will need to load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device driver in addition to creating the device(s).</p>
 <p>You will find an example included in the “myHal.cpp_example.txt” file included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
 <p>To create the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, the syntax is <cite>EXIOExpander::create(vpin, npins, address, digital_pins, analogue_pins);</cite> where:</p>
@@ -613,7 +638,7 @@
 </div>
 </section>
 <section id="i2c-address">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">I2C_ADDRESS</a><a class="headerlink" href="#i2c-address" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">I2C_ADDRESS</a><a class="headerlink" href="#i2c-address" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Define I2C address</span>
 <span class="c1">//  Default 0x65, can be any valid, available I2C address</span>
@@ -624,7 +649,7 @@
 <p>The default I<sup>2</sup>C address of 0x65 should be available, however this can be changed to any available address, and must match the device driver configuration in “myHal.cpp”.</p>
 </section>
 <section id="diag">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">DIAG</a><a class="headerlink" href="#diag" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">DIAG</a><a class="headerlink" href="#diag" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Uncomment to enable diag output</span>
 <span class="c1">//</span>
@@ -634,7 +659,7 @@
 <p>Uncommenting this line will enable extra diagnostic output to the serial console to help with diagnosis and troubleshooting in the event issues are encountered.</p>
 </section>
 <section id="diag-config-delay">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">DIAG_CONFIG_DELAY</a><a class="headerlink" href="#diag-config-delay" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">DIAG_CONFIG_DELAY</a><a class="headerlink" href="#diag-config-delay" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Delay between dumping the status of the port config if DIAG enabled</span>
 <span class="c1">//</span>

@@ -5,9 +5,9 @@
 .. include:: /include/include-l1.rst
 |EX-IO-LOGO|
 
-********
-Overview
-********
+**************************
+Overview and configuration
+**************************
 
 |tinkerer| |githublink-ex-ioexpander-button2|
 
@@ -79,12 +79,35 @@ Aside from configuring the |I2C| address of your |EX-IO| device, the device driv
 
 Configuration changes for |EX-IO| are made by editing a "myConfig.h" file. An example "myConfig.example.h" file is included that can be copied and edited to suit. The only configuration item you should really need to consider is :ref:`ex-ioexpander/overview:i2c_address`.
 
+Configure I2C address via serial
+--------------------------------
+
+For devices with EEPROM support (Arduino Uno, Nano, and Mega), it is possible to configure the |I2C| address via the serial console rather than having to update "myConfig.h", and therefore you should be able to simply upload the software without needing to edit any files at all.
+
+Be aware that this address will override any address defined in "myConfig.h".
+
+There are three serial commands available to set, read, and erase the configured address:
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - Command
+    - Purpose
+  * - <W address>
+    - This command writes the |I2C| address to EEPROM, for example <W 50> will set it to 0x50
+  * - <R>
+    - This will read and display the |I2C| address stored in EEPROM
+  * - <E>
+    - This will erase the |I2C| address stored in EEPROM
+
 Pin/Vpin allocation
 -------------------
 
 .. note:: 
 
-  It has been reported that on non-genuine Arduino Uno devices (and potentially Nano), that using pin D13 as an input may not work as expected due to the onboard LED causing the pin to remain low when using it as an input pin with pullups enabled. A suggested workaround is to add an external 1K pullup resistor to 5V for this pin if this is experienced.
+  It has been reported that on non-genuine Arduino Uno devices (and potentially Nano) using pin D13 as an input may not work as expected due to the onboard LED causing the pin to remain low when using it as an input pin with pullups enabled. A suggested workaround is to add an external 1K pullup resistor to 5V for this pin if this is experienced.
 
 All available pins on the chosen |EX-IO| device must be allocated as either digital or analogue pins. Details of the pins available for use are outlined on the :doc:`/ex-ioexpander/supported-devices` page.
 

@@ -538,7 +538,7 @@
 <section id="configure-i2c-address-via-serial">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Configure I2C address via serial</a><a class="headerlink" href="#configure-i2c-address-via-serial" title="Permalink to this heading"></a></h3>
 <p>For devices with EEPROM support (Arduino Uno, Nano, and Mega), it is possible to configure the I<sup>2</sup>C address via the serial console rather than having to update “myConfig.h”, and therefore you should be able to simply upload the software without needing to edit any files at all.</p>
-<p>Be aware that this address will override any address defined in “myConfig.h”.</p>
+<p>Be aware that this address will override any address defined in “myConfig.h”, and if using these devices, you do not need a “myConfig.h” file at all for normal operation.</p>
 <p>There are three serial commands available to set, read, and erase the configured address:</p>
 <table class="command-table docutils align-default">
 <thead>

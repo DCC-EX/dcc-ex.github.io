@@ -84,7 +84,7 @@ Configure I2C address via serial
 
 For devices with EEPROM support (Arduino Uno, Nano, and Mega), it is possible to configure the |I2C| address via the serial console rather than having to update "myConfig.h", and therefore you should be able to simply upload the software without needing to edit any files at all.
 
-Be aware that this address will override any address defined in "myConfig.h".
+Be aware that this address will override any address defined in "myConfig.h", and if using these devices, you do not need a "myConfig.h" file at all for normal operation.
 
 There are three serial commands available to set, read, and erase the configured address:
 

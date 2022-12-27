@@ -522,24 +522,28 @@
 <section id="hardware-requirements">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Hardware requirements</a><a class="headerlink" href="#hardware-requirements" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> needs a dedicated microcontroller connected to the I<sup>2</sup>C bus of your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
-<p>In the current implementation, the only supported microcontrollers are Arduino Uno, Nano, and Mega. The device driver and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software are being written in such a way that should enable porting to other microcontroller architectures, and is expected to support up to 256 I/O pins.</p>
+<p>The currently supported microcontrollers are Arduino Uno, Nano, and Mega, with experimental support for the Nucleo F411RE. The device driver and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software are being written in such a way that should enable porting to other microcontroller architectures, and is expected to support up to 256 I/O pins. As more devices are tested and/or requested, additional devices will be supported.</p>
 <p>Refer to <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> for the specific list, including which pins are available for use.</p>
 </section>
 <section id="theory-of-operation">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Theory of operation</a><a class="headerlink" href="#theory-of-operation" title="Permalink to this heading"></a></h2>
-<p>In the current implementation, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> can utilise digital pins in both input and output mode, and analogue pins in input mode. Digital pins in input mode can have pullups enabled or disabled.</p>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> can utilise digital pins in both input and output mode, and analogue pins in input mode. Digital pins in input mode can have pullups enabled or disabled.</p>
 <p>Pins capable of both digital and analogue can be used for either purpose.</p>
 <p>As per other I/O devices, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> can function with both the <code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">...&gt;</span></code> sensor/input and <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">...&gt;</span></code> output <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> commands, as well as the various <code class="docutils literal notranslate"><span class="pre">AT(),</span> <span class="pre">IF(),</span> <span class="pre">ATGTE(),</span> <span class="pre">IFGTE()</span></code> type <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> commands.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To ensure the devices start with I/O pins in the safest possible state, all defined pins are set to input mode with pullups disabled by default. The pins stay in this state until they are configured explicitly via the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> device driver.</p>
+</div>
 </section>
 <section id="configuration">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Aside from configuring the I<sup>2</sup>C address of your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, the device driver loaded in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> will perform the necessary run time configuration at startup, meaning you should only ever need to update the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software when a new version is available.</p>
-<p>Configuration changes for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> are made by editing a “myConfig.h” file. An example “myConfig.example.h” file is included that can be copied and edited to suit. The only configuration item you should really need to consider is <a class="reference internal" href="#i2c-address"><span class="std std-ref">I2C_ADDRESS</span></a>.</p>
+<p>Configuration changes for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> are made by editing a “myConfig.h” file or writing to EEPROM if supported. An example “myConfig.example.h” file is included that can be copied and edited to suit. The only configuration item you should really need to consider is <a class="reference internal" href="#i2c-address"><span class="std std-ref">I2C_ADDRESS</span></a>.</p>
 <section id="configure-i2c-address-via-serial">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Configure I2C address via serial</a><a class="headerlink" href="#configure-i2c-address-via-serial" title="Permalink to this heading"></a></h3>
 <p>For devices with EEPROM support (Arduino Uno, Nano, and Mega), it is possible to configure the I<sup>2</sup>C address via the serial console rather than having to update “myConfig.h”, and therefore you should be able to simply upload the software without needing to edit any files at all.</p>
 <p>Be aware that this address will override any address defined in “myConfig.h”, and if using these devices, you do not need a “myConfig.h” file at all for normal operation.</p>
-<p>There are three serial commands available to set, read, and erase the configured address:</p>
+<p>There are three serial commands available to set, read, and erase the configured address, with an additional command to reboot the device:</p>
 <table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
@@ -605,15 +609,20 @@
 <li><p>Digital pins D2 - D13 as Vpins 800 - 811</p></li>
 <li><p>Analogue pins A0 - A3, A6 - A7 as Vpins 812 - 817</p></li>
 </ul>
-<p>Once <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> has been configured as per the sections below, you can review the digial and analogue Vpin allocations by running the diag command <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> at the serial console, which will display this information. Here is a sample output for EX-IOExpander on an Arduino Uno using the default 12 digital and 4 analogue pins:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;* EX-IOExpander I2C:x65 Configured on Vpins:800-815  *&gt;
-&lt;* EX-IOExpander x65: Digital Vpins 800-811, Analogue Vpins 812-815 *&gt;
+<p>Once <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> has been configured as per the sections below, you can review the digial and analogue Vpin allocations by running the diag command <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code> at the serial console, which will display this information.</p>
+<p>This sample output is for EX-IOExpander on an Arduino Nano at the default 0x65 address using the default 12 digital and 8 analogue pins, and an Arduino Uno at 0x66 using all 16 pins as digital pins:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;* EX-IOExpander I2C:x65 v0.0.6: 12 Digital Vpins 800-811, 6 Analogue Vpins 812-817  *&gt;
+&lt;* EX-IOExpander I2C:x66 v0.0.6: 16 Digital Vpins 820-835, 0 Analogue Vpins 0-0  *&gt;
 </pre></div>
 </div>
 </section>
 <section id="ex-commandstation-device-driver">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">EX-CommandStation device driver</a><a class="headerlink" href="#ex-commandstation-device-driver" title="Permalink to this heading"></a></h3>
 <p>To enable support for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you need to configure “myHal.cpp” in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. You will need to load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device driver in addition to creating the device(s).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For those using earlier releases of this device driver, the default pin macros (eg. EXIO_NANO_ANALOGUE_PINS) have been removed to simplify adding support for new devices.</p>
+</div>
 <p>You will find an example included in the “myHal.cpp_example.txt” file included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
 <p>To create the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, the syntax is <cite>EXIOExpander::create(vpin, npins, address, digital_pins, analogue_pins);</cite> where:</p>
 <ul class="simple">
@@ -628,13 +637,13 @@
 <p>You need to ensure the total pins available for the device are assigned as either digital or analogue pins. Defining less or more than the total pins will result in a configuration error, and the device will be taken offline.</p>
 <p>If this occurs, you will see a message like this in the startup log: <code class="docutils literal notranslate"><span class="pre">&lt;*</span> <span class="pre">ERROR</span> <span class="pre">configuring</span> <span class="pre">EX-IOExpander</span> <span class="pre">device,</span> <span class="pre">I2C:x65</span> <span class="pre">*&gt;</span></code></p>
 </div>
-<p>Refer to the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page to see the available pin numbers and predefined macros that are available for each of the supported devices.</p>
-<p>In the example below, we will configure an Arduino Nano using the default pin counts at address 0x65, with an additional Arduino Uno device using all available digital capable pins and no analogue pins at address 0x66.</p>
+<p>Refer to the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page to see the available pin numbers for each of the supported devices.</p>
+<p>In the example below, we will configure an Arduino Nano using the default pin counts at address 0x65, with an additional Arduino Uno device using all available digital capable pins and no analogue pins at address 0x66 (note this is what provides the output seen in the previous section).</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXIOExpander.h&quot;</span><span class="cp"></span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="p">...</span><span class="w"></span>
-<span class="w">  </span><span class="n">EXIOExpander</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mh">0x65</span><span class="p">,</span><span class="w"> </span><span class="n">EXIO_NANO_DIGITAL_PINS</span><span class="p">,</span><span class="w"> </span><span class="n">EXIO_NANO_ANALOGUE_PINS</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">EXIOExpander</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mh">0x65</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="n">EXIOExpander</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">820</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x66</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
@@ -650,6 +659,7 @@
 </pre></div>
 </div>
 <p>The default I<sup>2</sup>C address of 0x65 should be available, however this can be changed to any available address, and must match the device driver configuration in “myHal.cpp”.</p>
+<p>If the device has EEPROM support, and a valid address is defined in EEPROM, the address defined in EEPROM will always override the address defined in “myConfig.h”.</p>
 </section>
 <section id="diag">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">DIAG</a><a class="headerlink" href="#diag" title="Permalink to this heading"></a></h3>

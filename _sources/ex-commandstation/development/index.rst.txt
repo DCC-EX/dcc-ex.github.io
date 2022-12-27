@@ -29,6 +29,7 @@ To obtain the development branch code, refer to :ref:`download/ex-commandstation
 
   microcontrollers
   track-manager
+  duinonodes
 
 Looking for some help with EX-CommandStation?
 =============================================

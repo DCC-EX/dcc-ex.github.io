@@ -9,11 +9,17 @@
 
 |tinkerer| |engineer| |githublink-ex-commandstation-button2|
 
+|NOT-IN-PROD-VERSION|
+
 .. sidebar::
 
    .. contents:: On this page
       :depth: 2
       :local:
+
+Formerly referred to as "DC Districts", Track Manager is a new feature under active development to allow an |EX-CS| with the correct hardware and software to control up to 8 separate tracks in different modes including DCC main, DCC programming, and DC.
+
+One key item to note with DC vs. DCC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
 
 .. warning:: 
 
@@ -22,10 +28,6 @@
   If using our development release and, especially, the Track Manager feature, we highly recommend keeping in touch with conversations and developments via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
 
   You can also use our new GitHub issue templates to report a bug: |githublink-ex-commandstation-button2|
-
-Formerly referred to as "DC Districts", Track Manager is a new feature under active development to allow an |EX-CS| with the correct hardware and software to control up to 8 separate tracks in different modes including DCC main, DCC programming, and DC.
-
-One key item to note with DC vs. DCC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
 
 Hardware requirements
 =====================

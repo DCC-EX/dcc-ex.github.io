@@ -41,11 +41,7 @@ The DNOU8/DNOU8K operate in a similar manner to the input modules, but are for o
 
 These must be connected in a separate chain to either DNIN8 or DNIN8K chains, and therefore require an additional three available direct I/O pins on your |EX-CS|.
 
-In the current implementation, there is only a driver for the DNOU8 boards.
-
-.. note::
-  
-  While DNOU8K boards can be connected together on the same chain and can use the same device driver, the output pins will be in a different sequence to the board numbering.
+DNOU8 and DNOU8K boards can be connected together on the same chain and use the same device driver.
 
 Vpin allocation
 ===============
@@ -73,11 +69,11 @@ The valid formats for "myAutomation.h" are outlined below with examples:
 
   HAL(IO_DNIN8, firstVpin, numPins, clockPin, latchPin, dataPin)    // DNIN8 boards only
   HAL(IO_DNIN8K, firstVpin, numPins, clockPin, latchPin, dataPin)   // DNIN8K boards only
-  HAL(IO_DNOU8, firstVpin, numPins, clockPin, latchPin, dataPin)    // DNOU8 boards only
+  HAL(IO_DNOU8, firstVpin, numPins, clockPin, latchPin, dataPin)    // DNOU8/DNOU8K boards
 
   HAL(IO_DNIN8, 400, 16, 40, 42, 44)    // Create a chain for two DNIN8 boards
   HAL(IO_DNIN8K, 420, 16, 39, 41, 43)   // Create a chain for two DNIN8K boards
-  HAL(IO_DNOU8, 450, 16, 45, 47, 49)    // Create a chain for two DNOU8 boards
+  HAL(IO_DNOU8, 450, 16, 45, 47, 49)    // Create a chain for two DNOU8/DNOU8K boards
 
 The formats for "myHal.cpp" are outlined below with examples:
 
@@ -85,14 +81,14 @@ The formats for "myHal.cpp" are outlined below with examples:
 
   IO_DNIN8::create(firstVpin, numPins, clockPin, latchPin, dataPin);    // DNIN8 boards only
   IO_DNIN8K::create(firstVpin, numPins, clockPin, latchPin, dataPin);   // DNIN8K boards only
-  IO_DNOU8::create(firstVpin, numPins, clockPin, latchPin, dataPin);    // DNOU8 boards only
+  IO_DNOU8::create(firstVpin, numPins, clockPin, latchPin, dataPin);    // DNOU8/DNOU8K boards
 
   IO_DNIN8::create(400, 16, 40, 42, 44);    // Create a chain for two DNIN8 boards only
   IO_DNIN8K::create(420, 16, 39, 41, 43);   // Create a chain for two DNIN8K boards only
-  IO_DNOU8::create(450, 16, 45, 47, 49);    // Create a chain for two DNOU8 boards only
+  IO_DNOU8::create(450, 16, 45, 47, 49);    // Create a chain for two DNOU8/DNOU8K boards
 
 The examples above will result in:
 
 - Two DNIN8 boards with the first board (closest to your |EX-CS|) available on Vpins 400 - 407, and the second on Vpins 408 - 415
 - Two DNIN8K boards with the first board (closest to your |EX-CS|) available on Vpins 420 - 427, and the second on Vpins 428 - 435
-- Two DNOU8 boards with the first board (closest to your |EX-CS|) available on Vpins 450 - 457, and the second on Vpins 458 - 465
+- Two DNOU8/DNOU8K boards with the first board (closest to your |EX-CS|) available on Vpins 450 - 457, and the second on Vpins 458 - 465

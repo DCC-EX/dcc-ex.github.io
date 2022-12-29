@@ -165,7 +165,7 @@ This sample output is for EX-IOExpander on an Arduino Nano at the default 0x65 a
 EX-CommandStation device driver
 -------------------------------
 
-To enable support for |EX-IO|, you need to configure "myHal.cpp" in your |EX-CS|. You will need to load the |EX-IO| device driver in addition to creating the device(s).
+To enable support for |EX-IO|, you need to configure "myHal.cpp" in your |EX-CS|. The device driver is included by default, so you simply need to create the device(s).
 
 .. note:: 
 

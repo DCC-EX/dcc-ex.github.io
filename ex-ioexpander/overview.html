@@ -620,7 +620,7 @@
 </section>
 <section id="ex-commandstation-device-driver">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">EX-CommandStation device driver</a><a class="headerlink" href="#ex-commandstation-device-driver" title="Permalink to this heading"></a></h3>
-<p>To enable support for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you need to configure “myHal.cpp” in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. You will need to load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device driver in addition to creating the device(s).</p>
+<p>To enable support for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you need to configure “myHal.cpp” in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. The device driver is included by default, so you simply need to create the device(s).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For those using earlier releases of this device driver, the default pin macros (eg. EXIO_NANO_ANALOGUE_PINS) have been removed to simplify adding support for new devices.</p>

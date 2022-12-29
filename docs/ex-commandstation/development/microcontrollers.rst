@@ -78,7 +78,7 @@ The F429ZI has the same large footprint, however it has the added benefit of onb
 
 .. note:: 
 
-  Both of these boards will not compile from the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev time via Discord.
+  While the F429ZI is supported by the Arduino IDE, the F412ZG cannot be selected from within the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev time via Discord. The plan is to submit the F412ZG variant files to the STM32duino GitHub repo for inclusion once they are validated and debugged.
 
 Install the STLink drivers
 --------------------------

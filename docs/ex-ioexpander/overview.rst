@@ -41,12 +41,9 @@ This page provides the general overview of |EX-IO|, as well as outlining the con
 Software requirements
 =====================
 
-To utilise |EX-IO|, you must be running the "add-ex-ioexpander" branch of |EX-CS| which is available here:
+To utilise |EX-IO|, you must be running the latest unreleased Development version of |EX-CS|.
 
-.. rst-class:: dcclink
-
-  `EX-CommandStation with EX-IOExpander device driver <https://github.com/DCC-EX/CommandStation-EX/tree/add-ex-ioexpander>`_
-
+Refer to :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version` on how to obtain this.
 
 In addition, you will require the |EX-IO| software which can be found here:
 
@@ -192,8 +189,6 @@ Refer to the :doc:`/ex-ioexpander/supported-devices` page to see the available p
 In the example below, we will configure an Arduino Nano using the default pin counts at address 0x65, with an additional Arduino Uno device using all available digital capable pins and no analogue pins at address 0x66 (note this is what provides the output seen in the previous section).
 
 .. code-block:: cpp
-
-  #include "IO_EXIOExpander.h"
 
   void halSetup() {
     ...

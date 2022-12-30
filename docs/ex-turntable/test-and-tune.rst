@@ -343,19 +343,19 @@ The EX-RAIL equivalent to the above would be:
 Controlling EX-Turntable with a rotary encoder
 ==============================================
 
-.. note:: 
-
-  The rotary encoder software is not official DCC-EX software and is maintained separately, although the device driver and EX-RAIL commands will be included with a future release of |EX-CS|.
-
-  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/index.html>`_.
-  
-  |NOT-IN-PROD-VERSION|
+|NOT-IN-PROD-VERSION|
 
 It is possible to use a rotary encoder to select turntable positions if desired, which is handy for use with mimic panels and so forth.
 
 There is an additional device driver available "IO_RotaryEncoder.h" which can be used with the rotary encoder software installed on a separate Arduino Nano or Uno that has the rotary encoder and an OLED display connected to it.
 
 In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to the |EX-CS| via |I2C|.
+
+.. note:: 
+
+  The rotary encoder software is not official DCC-EX software and is maintained separately, although the device driver and EX-RAIL commands will be included with a future release of |EX-CS|.
+
+  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/index.html>`_.
 
 Required software
 -----------------
@@ -366,25 +366,28 @@ The rotary encoder software can be downloaded from:
 
   `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_
 
-To enable using the rotary encoder with your |EX-CS| you need to be running the "rotary-encoder" branch, which is based on the current development branch.
+To enable using the rotary encoder with your |EX-CS| you need to be running the "add-rotary-encoder" branch, which is based on the current development branch.
 
 This can be downloaded from:
 
 .. rst-class:: dcclink
 
-  `EX-CommandStation GitHub repository <https://github.com/DCC-EX/CommandStation-EX/tree/rotary-encoder>`_
+  `EX-CommandStation GitHub repository <https://github.com/DCC-EX/CommandStation-EX/tree/add-rotary-encoder>`_
 
 Enabling the device driver
 --------------------------
 
-The default |I2C| address for the rotary encoder is 0x80, and to enable this in your |EX-CS|, you need to ensure "myHal.ccp" has entries similar to this:
+The default |I2C| address for the rotary encoder is 0x70, and you will need to create the device in "myHal.cpp" on your |EX-CS|.
+
+Note you can create the device using 1 or 2 Vpins, and if you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/index.html>`_ documentation for more information on this feature.
 
 .. code-block:: cpp
 
   #include "IO_RotaryEncoder.h"
 
   void halSetup() {
-    RotaryEncoder::create(700, 1, 0x80);
+    RotaryEncoder::create(700, 1, 0x70);
+    RotaryEncoder::create(701, 2, 0x71);
   }
 
 You need to follow the same process as :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation` to load the updated software on your |EX-CS|.

@@ -25,7 +25,7 @@ All allocation of pins is done via the device driver (see :ref:`ex-ioexpander/ov
 
 .. note:: 
 
-  When configuring the device driver, all available pins must be accounted for as either digital or analogue pins, even if there is no intended use.
+  When configuring the device driver, all available pins must be accounted for as either digital or analogue pins, even if there is no intended use for every individual pin.
 
 Arduino Nano
 ============
@@ -33,11 +33,6 @@ Arduino Nano
 .. image:: /_static/images/ex-ioexpander/ex-ioexpander-nano.png
   :alt: EX-IOExpander on Arduino Nano
   :scale: 5%
-
-Device driver macros available:
-
-- EXIO_NANO_DIGITAL_PINS - 12
-- EXIO_NANO_ANALOGUE_PINS - 6
 
 .. list-table:: Arduino Nano pin allocations
   :widths: auto
@@ -65,11 +60,6 @@ Arduino Uno
   :alt: EX-IOExpander on Arduino Uno
   :scale: 5%
 
-Device driver macros available:
-
-- EXIO_UNO_DIGITAL_PINS - 12
-- EXIO_UNO_ANALOGUE_PINS - 4
-
 .. list-table:: Arduino Uno pin allocations
   :widths: auto
   :header-rows: 1
@@ -96,12 +86,7 @@ Arduino Mega2560
   :alt: EX-IOExpander on Arduino Mega2560
   :scale: 5%
 
-Device driver macros available:
-
-- EXIO_MEGA_DIGITAL_PINS - 46
-- EXIO_MEGA_ANALOGUE_PINS - 16
-
-.. list-table:: Arduino Nano pin allocations
+.. list-table:: Arduino Mega pin allocations
   :widths: auto
   :header-rows: 1
   :stub-columns: 1
@@ -119,3 +104,39 @@ Device driver macros available:
     - 0
     - 16
     - A0 - A15
+  
+STMicroelectronics NUCLEO-F411RE
+================================
+
+.. warning:: 
+
+  Support for the F411RE is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.
+
+.. image:: /_static/images/nucleo/nucleo-f411re-pinout.png
+  :alt: Nucleo F411RE pin out
+  :scale: 60%
+
+The Nucleo F411RE is a 3v3 microcontroller with more available I/O pins than an Arduino Uno. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren't sequential.
+
+Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
+
+.. list-table:: NUCLEO-F411RE pin allocations
+  :widths: auto
+  :header-rows: 1
+  :stub-columns: 1
+  :class: command-table
+
+  * - Total pins 37
+    - Minimum
+    - Maximum
+    - Notes
+  * - Digital pins
+    - 25
+    - 37
+    - | PC_10,PC_11,PC_12,PD_2,PC_13,PC_14,PC_15,PH_0,PH_1 - CN7
+      | PC_9,PC_8,PC_6,PA_12,PA_11,PB_12,PC_7,PA_9,PB_2,PA_8,PB_10,PB_15,PB_14,PB_5,PB_13,PA_10 - CN10
+  * - Analogue pins
+    - 0
+    - 12
+    - | PA_4,PB_0,PC_2,PC_1,PC_3,PC_0 - CN7
+      | PC_5,PA_5,PA_6,PA_7,PB_1,PC_4 - CN10

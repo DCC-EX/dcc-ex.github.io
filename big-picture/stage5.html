@@ -569,8 +569,8 @@
 <summary>"myHal.cpp" for the turntable</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if !defined(IO_NO_HAL)</span>
 
 <span class="c1">// Include devices you need.</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXTurntable.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXTurntable.h&quot;</span>
 
 <span class="c1">//==========================================================================</span>
 <span class="c1">// The function halSetup() is invoked from CS if it exists within the build.</span>
@@ -578,9 +578,9 @@
 <span class="c1">// Comments (lines preceded by &quot;//&quot;) are optional.</span>
 <span class="c1">//==========================================================================</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">);</span>
+<span class="p">}</span>
 
 <span class="cp">#endif</span>
 </pre></div>
@@ -634,8 +634,8 @@
 <summary>"myHal.cpp" for the turntable and traverser</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if !defined(IO_NO_HAL)</span>
 
 <span class="c1">// Include devices you need.</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXTurntable.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXTurntable.h&quot;</span>
 
 <span class="c1">//==========================================================================</span>
 <span class="c1">// The function halSetup() is invoked from CS if it exists within the build.</span>
@@ -643,10 +643,10 @@
 <span class="c1">// Comments (lines preceded by &quot;//&quot;) are optional.</span>
 <span class="c1">//==========================================================================</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">);</span><span class="w">  </span><span class="c1">// This is our turntable device</span>
 <span class="w">  </span><span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">601</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x61</span><span class="p">);</span><span class="w">  </span><span class="c1">// This is our traverser device</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
 <span class="cp">#endif</span>
 </pre></div>

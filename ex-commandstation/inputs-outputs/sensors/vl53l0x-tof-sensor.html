@@ -542,19 +542,19 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if !defined(IO_NO_HAL)</span>
 
 <span class="c1">// Include devices you need.</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_VL53L0X.h&quot;</span><span class="c1">   // Laser time-of-flight sensor</span><span class="cp"></span>
-<span class="p">...</span><span class="w"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_VL53L0X.h&quot;</span><span class="c1">   // Laser time-of-flight sensor</span>
+<span class="p">...</span>
 </pre></div>
 </div>
 <section id="configuring-a-single-device">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">Configuring a single device</a><a class="headerlink" href="#configuring-a-single-device" title="Permalink to this heading"></a></h3>
 <p>For a single device, you need a single entry to create the device also in “myHal.cpp”:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">,</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">,</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
 </pre></div>
 </div>
 <p>Where:</p>
@@ -566,11 +566,11 @@
 <li><p>highThreshold is the distance at which the digital vpin state is set to 0 (in mm)</p></li>
 </ul>
 <p>For example, this entry configures a device on vpin 4000 using the default address of 0x29. A digital read of this vpin will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x29</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x29</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
 </pre></div>
 </div>
 </section>
@@ -582,11 +582,11 @@
 </div>
 <p>If you have more than one module, then you will need to specify a digital vpin (Arduino digital output or I/O expander pin) which you connect to the module’s XSHUT pin.  When the device driver starts, the XSHUT pin is set LOW to turn the module off.  Once all VL53L0X modules are turned off, the driver works through each module in turn by setting XSHUT to HIGH to turn the module on, then writes the module’s desired I<sup>2</sup>C address. In this way, many VL53L0X modules can be connected to the one I<sup>2</sup>C bus, each one using a distinct I<sup>2</sup>C address.</p>
 <p>Each device needs its own specific entry in “myHal.cpp”, and requires an additional argument to specify the digital vpin that connects to the device’s XSHUT pin.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">,</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">xshutPin</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">,</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">xshutPin</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
 </pre></div>
 </div>
 <p>Where:</p>
@@ -600,12 +600,12 @@
 </ul>
 <p>For example, these entries configure two devices on vpins 4000 and 4003, with I<sup>2</sup>C addresses 0x30 and 0x31. The device at 0x30 is connected directly to an Arduino Mega2560’s digital pin 22, and the device at 0x31 is connected to the first digital I/O pin of the first MCP23017 device at vpin 164. A digital read of each of the device’s vpins will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:</p>
 <p>Note the second sensor starts at vpin 4003 as the first sensor consumes vpins 4000, 4001, and 4002.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4003</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x31</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">164</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4003</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x31</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">164</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
 </pre></div>
 </div>
 </section>

@@ -498,21 +498,21 @@ that can be used to describe sequential command ‘sequences’ to automatically
 <h3>Structure of a ‘Sequence’<a class="headerlink" href="#structure-of-a-sequence" title="Permalink to this heading"></a></h3>
 <p>In general, sequences follow the basic structure:</p>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
-<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>
 <span class="w">   </span><span class="n">RED</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span><span class="w">      </span><span class="c1">// signal 77 to Red</span>
 <span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">     </span><span class="c1">// throw turnout/point 1</span>
 <span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w">     </span><span class="c1">// close turnout/point 7</span>
 <span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w">  </span><span class="c1">// 5 second wait</span>
 <span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span><span class="w">    </span><span class="c1">// signal 92 to Green</span>
-<span class="w">   </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">   </span><span class="n">DONE</span>
 </pre></div>
 </div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">sequence</span><span class="o">-</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">parameter</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">parameter</span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"></span>
-<span class="w">  </span><span class="o">&lt;</span><span class="n">command</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="o">&lt;</span><span class="n">command</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
-<span class="w">  </span><span class="o">&lt;</span><span class="n">command</span><span class="w"> </span><span class="n">n</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="n">DONE</span><span class="w">     </span><span class="n">or</span><span class="w">     </span><span class="n">RETURN</span><span class="w">     </span><span class="n">or</span><span class="w">     </span><span class="n">FOLLOW</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">sequence</span><span class="o">-</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">parameter</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">parameter</span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">command</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">command</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">command</span><span class="w"> </span><span class="n">n</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="n">DONE</span><span class="w">     </span><span class="n">or</span><span class="w">     </span><span class="n">RETURN</span><span class="w">     </span><span class="n">or</span><span class="w">     </span><span class="n">FOLLOW</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

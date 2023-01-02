@@ -648,13 +648,13 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 </ul>
 <p>Examples:</p>
 <p>Defining a pin turnout/point without an alias:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Defining a pin turnout/point with aliases:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">)</span><span class="w"></span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
-<span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">,</span><span class="w"> </span><span class="n">COAL_YARD_PIN</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">COAL_YARD_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span>
+<span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">,</span><span class="w"> </span><span class="n">COAL_YARD_PIN</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note that you could have used the command <cite>ALIAS(COAL_YARD, 1)</cite> in the example above to explicity set the number, but unless you have a reason to use specific numbers, let the Command Station do it for you.</p>
@@ -722,30 +722,30 @@ PRL]\[R1}|{Example 1: Coal Yard exit}|{2]\[A4}|{Example 4: Round in circles}|{4]
 <p><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">id,</span> <span class="pre">value</span> <span class="pre">)</span></code> Test if a rotary encoder has been set to the specified value <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p>Sensor examples:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w">          </span><span class="c1">// If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.</span>
-<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"></span>
-<span class="n">ENDIF</span><span class="w"></span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">ENDIF</span>
 
 <span class="n">IFNOT</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span><span class="w">       </span><span class="c1">// If sensor on the Command Station pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.</span>
-<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
-<span class="n">ELSE</span><span class="w"></span>
-<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
-<span class="n">ENDIF</span><span class="w"></span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+<span class="n">ELSE</span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+<span class="n">ENDIF</span>
 
 <span class="n">IFGTE</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="w"> </span><span class="mi">512</span><span class="p">)</span><span class="w">  </span><span class="c1">// If reading the analog input from a photoelectric light sensor exceeds 512, it&#39;s bright enough to turn the street lights off.</span>
-<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w"></span>
-<span class="n">ENDIF</span><span class="w"></span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
+<span class="n">ENDIF</span>
 
 <span class="n">IFLT</span><span class="p">(</span><span class="n">A3</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w">   </span><span class="c1">// If current sensing from an analog occupancy detector had dropped below the threshold, turn off our mimic panel light, otherwise turn it on.</span>
-<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w"></span>
-<span class="n">ELSE</span><span class="w"></span>
-<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w"></span>
-<span class="n">ENDIF</span><span class="w"></span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
+<span class="n">ELSE</span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
+<span class="n">ENDIF</span>
 
 <span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w">  </span><span class="c1">// If a rotary encoder is at position 1, start ROUTE with ID 123</span>
-<span class="w">  </span><span class="n">START</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span><span class="w"></span>
-<span class="n">ENDIF</span><span class="w"></span>
+<span class="w">  </span><span class="n">START</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="n">ENDIF</span>
 </pre></div>
 </div>
 <p>LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.</p>
@@ -801,28 +801,28 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">WAITFOR(</span> <span class="pre">pin</span> <span class="pre">)</span></code>      The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.</p>
 <p>A couple of examples:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// First example defines a servo turnout/point for the coal yard and a signal for the main line.</span>
-<span class="n">TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span><span class="w"></span>
+<span class="n">TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
+<span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span>
 
 <span class="c1">// When our turnout/point is closed, the main line is open, so the signal is green.</span>
-<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
-<span class="n">DONE</span><span class="w"></span>
+<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">DONE</span>
 
 <span class="c1">// When our turnout is closed, the main line is interrupted, so the signal is red.</span>
-<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
-<span class="n">DONE</span><span class="w"></span>
+<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">DONE</span>
 
 <span class="c1">// This example triggers an automation sequence when a DCC accessory decoder is activated, including waiting for SERVO motions to complete.</span>
 <span class="n">ONACTIVATEL</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w">            </span><span class="c1">// Activating DCC accessory decoder with linear address 100 commences the sequence.</span>
 <span class="w">  </span><span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">)</span><span class="w">     </span><span class="c1">// Move the first servo and wait.</span>
-<span class="w">  </span><span class="n">WAITFOR</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">WAITFOR</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SERVO</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="n">Medium</span><span class="p">)</span><span class="w">   </span><span class="c1">// Move the second servo and wait.</span>
-<span class="w">  </span><span class="n">WAITFOR</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">WAITFOR</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w">                  </span><span class="c1">// Activate a Vpin to turn an LED on.</span>
 <span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span><span class="w">                  </span><span class="c1">// Activate a second Vpin to turn a second LED on.</span>
-<span class="n">DONE</span><span class="w"></span>
+<span class="n">DONE</span>
 </pre></div>
 </div>
 </section>
@@ -833,15 +833,15 @@ DONE
 <p>Say, for example, you have an AUTOMATION you initiate the sends a train through your layout with multiple station stops, and you want to do the same things at each station.</p>
 <p>You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station loop&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// Our station loop sequence</span>
-<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 1 entrance sensor, call our sequence</span>
-<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 2 entrance sensor, call our sequence</span>
-<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 3 entrance sensor, call our sequence</span>
-<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 4 entrance sensor, call our sequence</span>
-<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
 <span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span><span class="w">                      </span><span class="c1">// Keep looping through the stations (see FOLLOW command reference below)</span>
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station sequence&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Our station sequence</span>
@@ -849,8 +849,8 @@ DONE
 <span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Break squeal</span>
 <span class="w">  </span><span class="n">STOP</span><span class="w">                            </span><span class="c1">// Stop at the station</span>
 <span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Let out a hiss from the air breaks for a second</span>
-<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">FOFF</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FOFF</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span><span class="w">        </span><span class="c1">// Wait between 2 and 10 seconds for passengers</span>
 <span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Blow the horn again</span>
 <span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w">                         </span><span class="c1">// On our way to the next station</span>
@@ -860,24 +860,24 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">FOLLOW(</span> <span class="pre">route</span> <span class="pre">)</span></code>     Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout/point is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.</p>
 <p>For example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Choose your own adventure&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// This let&#39;s someone control the sequence by throwing a turnout/point (or not)</span>
-<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">ELSE</span><span class="w"></span>
-<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">ENDIF</span><span class="w"></span>
-<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span>
+<span class="w">  </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span>
+<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ELSE</span>
+<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">DONE</span>
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adventure 1&quot;</span><span class="p">)</span><span class="w">                 </span><span class="c1">// Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated</span>
-<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">STOP</span><span class="w"></span>
-<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">106</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">  </span><span class="n">STOP</span>
+<span class="w">  </span><span class="n">DONE</span>
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adventure 2&quot;</span><span class="p">)</span><span class="w">                 </span><span class="c1">// If we don&#39;t throw the turnout/point, let&#39;s do our station loop from the example above</span>
-<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">DELAY(</span> <span class="pre">delay</span> <span class="pre">)</span></code>      Delay a number of milliseconds</p>
@@ -885,25 +885,25 @@ DONE
 <p><code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(</span> <span class="pre">min_delay,</span> <span class="pre">max_delay</span> <span class="pre">)</span></code> Delay a random time between min and max milliseconds, see <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for good examples.</p>
 <p>Delay examples:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w">      </span><span class="c1">// When turnout 102 closed, wait 2 seconds, then set signal 101 green.</span>
-<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DONE</span>
 
 <span class="n">AT</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span><span class="w">           </span><span class="c1">// When sensor 123 is activated, set signal 102 red, wait 1 minute, then set signal 102 green.</span>
-<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">IFRANDOM(</span> <span class="pre">percent</span> <span class="pre">)</span></code> Runs commands in IF block a random percentage of the time. This is handy for more realism by enabling automations that don’t have to run on a schedule.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w">           </span><span class="c1">// When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.</span>
-<span class="w">  </span><span class="n">IFRANDOM</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">RESET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">ENDIF</span><span class="w"></span>
-<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">  </span><span class="n">IFRANDOM</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAYMINS</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RESET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
 </section>

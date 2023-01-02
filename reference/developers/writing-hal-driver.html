@@ -490,56 +490,56 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef IO_MYDEVICE_H</span>
 <span class="cp">#define IO_MYDEVICE_H</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DIAG.h&quot;</span><span class="c1">  // for DIAG calls</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DIAG.h&quot;</span><span class="c1">  // for DIAG calls</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">MyDevice</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">IODevice</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyDevice</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">IODevice</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
 <span class="w">  </span><span class="c1">// Constructor</span>
-<span class="w">  </span><span class="n">MyDevice</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nPins</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">_firstVpin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">_nPins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">nPins</span><span class="p">,</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">MyDevice</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nPins</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">_firstVpin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_nPins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">nPins</span><span class="p">,</span><span class="mi">16</span><span class="p">);</span>
 <span class="w">    </span><span class="c1">// Other object initialisation here</span>
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="w">    </span><span class="n">addDevice</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">create</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MyDevice</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="k">private</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_begin</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">addDevice</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">create</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MyDevice</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_begin</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Initialise device</span>
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_loop</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">currentMicros</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_loop</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">currentMicros</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Regular operations, e.g. acquire data</span>
 <span class="w">    </span><span class="c1">// ...</span>
 <span class="w">    </span><span class="n">delayUntil</span><span class="p">(</span><span class="n">currentMicros</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">1000UL</span><span class="p">);</span><span class="w">  </span><span class="c1">// 10ms till next entry</span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">_readAnalogue</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">_readAnalogue</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Return acquired data value, e.g.</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">_firstVpin</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_value</span><span class="p">[</span><span class="n">pin</span><span class="p">];</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">_read</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">_firstVpin</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_value</span><span class="p">[</span><span class="n">pin</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">_read</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Return acquired data value, e.g.</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">_firstVpin</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_value</span><span class="p">[</span><span class="n">pin</span><span class="p">];</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">write</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">_firstVpin</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_value</span><span class="p">[</span><span class="n">pin</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">write</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Do something with value , e.g. write to device.</span>
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">writeAnalogue</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">writeAnalogue</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Do something with value, e.g. write to device.</span>
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_display</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;MyDevice Configured on Vpins:%d-%d %S&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">_firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">_firstVpin</span><span class="o">+</span><span class="n">_nPins</span><span class="mi">-1</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="n">_deviceState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVSTATE_FAILED</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;OFFLINE&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">));</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">_value</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_display</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">DIAG</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;MyDevice Configured on Vpins:%d-%d %S&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">_firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">_firstVpin</span><span class="o">+</span><span class="n">_nPins</span><span class="mi">-1</span><span class="p">,</span>
+<span class="w">      </span><span class="n">_deviceState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVSTATE_FAILED</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;OFFLINE&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">_value</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+<span class="p">};</span>
 <span class="cp">#endif </span><span class="c1">// IO_MYDEVICE_H</span>
 </pre></div>
 </div>

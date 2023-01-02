@@ -535,11 +535,11 @@ It’s recommended you install these and they are:</p>
 <p>Next you’ll need to install Node.js to run the development tools. Again, you can download it from their website <a class="reference external" href="https://nodejs.org/en/">here</a>.
 We recommend you use the LTS version of Node.</p>
 <p>Once Node is installed, open a terminal in VSCode (<span class="menuselection">Terminal ‣ New terminal</span>) and run the following command to install all the dependencies:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm install
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install
 </pre></div>
 </div>
 <p>Then to run the code locally:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm run dev
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>run<span class="w"> </span>dev
 </pre></div>
 </div>
 <section id="code-standards">
@@ -549,7 +549,7 @@ This means we use a indent of two spaces and single quotes for strings.
 Also, although semicolons are optional in Javascript, we have configured the linter to enforce semicolons.
 If you have installed the recommended extensions, VSCode should highlight problems for you.
 You can also find (and fix some) problems using the following command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm run lint
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>run<span class="w"> </span>lint
 </pre></div>
 </div>
 </section>
@@ -593,8 +593,8 @@ Or <br />
 <section id="opening-a-pull-request">
 <h2><a class="toc-backref" href="#id8" role="doc-backlink">Opening a pull request</a><a class="headerlink" href="#opening-a-pull-request" title="Permalink to this heading"></a></h2>
 <p>Before you open a pull request, consider running the following commands:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm run test:unit
-npm run test:e2e
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>run<span class="w"> </span>test:unit
+npm<span class="w"> </span>run<span class="w"> </span>test:e2e
 </pre></div>
 </div>
 <p>These commands run our automated tests and should highlight if you have broken any other code.

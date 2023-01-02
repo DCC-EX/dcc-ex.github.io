@@ -641,8 +641,8 @@ output VPINs from within <span style="font-weight: bold; color: #00a3b9; font-si
 <p>When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.</p>
 <p>The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I<sup>2</sup>C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.</p>
 <p>If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">);</span><span class="w"></span>
-<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x21</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">);</span>
+<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x21</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>To configure an input pin using the DCC-EX Sensor commands, use the &lt;S&gt; command:</p>
@@ -703,12 +703,12 @@ and click <code class="docutils literal notranslate"><span class="pre">OK</span>
 <section id="adding-in-the-configuration-commands">
 <h3>Adding in the configuration commands<a class="headerlink" href="#adding-in-the-configuration-commands" title="Permalink to this heading"></a></h3>
 <p>Within the new file that has been created, you can add in the definitions of new devices.  But first you need to add the following lines:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Insert your commands here...</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be
@@ -726,23 +726,23 @@ The names of the files are not used, but best keep them below 8 characters (excl
 card, including hidden files - the DFPlayer may find them and attempt to play them!  When you’re done, insert the card into the DFPlayer.</p>
 <p>Now you’re ready to set up the software.</p>
 <p>Add the following line to the top of the <code class="docutils literal notranslate"><span class="pre">myHal.cpp</span></code> file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span>
 </pre></div>
 </div>
 <p>This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the <code class="docutils literal notranslate"><span class="pre">halSetup()</span> <span class="pre">{</span> <span class="pre">}</span></code> function definition:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This instructs the HAL to create a driver for the DFPlayer module configured to communicate on Serial3, and allocates 5 virtual pins (VPINs) to interface
 with it.  Save the file.</p>
 <p>The file contents should now look like:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Insert your commands here...</span>
-<span class="w">  </span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>

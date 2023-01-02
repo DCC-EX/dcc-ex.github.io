@@ -131,3 +131,19 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - Default
     - 3
     - Worked exactly as expected. No problems with programming or operation.
+  * - LaisDCC
+    - 860011
+    - Accessory
+    - Unknown
+    - N/A (bare wires)
+    - Default
+    - 3
+    - Using this in an unpowered loco B unit to provide lighting functions to mimic the powered unit. Works exactly as expected.
+  * - LaisDCC
+    - 860015
+    - MF
+    - Unknown
+    - NEXT18
+    - Default
+    - 3
+    - Worked as expected. This is in the powered A unit that complements the unpowered B unit.

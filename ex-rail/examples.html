@@ -509,7 +509,7 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// if this is at the start of myConfiuration.h  This will act like an AUTOSTART sequence</span>
 <span class="n">SETLOCO</span><span class="p">(</span><span class="mi">9999</span><span class="p">)</span><span class="w">   </span><span class="c1">// select loco 9999</span>
 <span class="n">SPEED</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w">        </span><span class="c1">// set the speed to 0.  This will turn the tarck power on</span>
-<span class="n">DONE</span><span class="w"></span>
+<span class="n">DONE</span>
 </pre></div>
 </div>
 </section>
@@ -517,8 +517,8 @@
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Add a Roster</a><a class="headerlink" href="#add-a-roster" title="Permalink to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Eng 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Address 3, Eng 3, Function keys F0-F10</span>
 <span class="n">ROSTER</span><span class="p">(</span><span class="mi">1224</span><span class="p">,</span><span class="s">&quot;PE 1224&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Motor Only Decoder, But use Engine Driver &#39;Preferences &gt;In Phone Loco &#39;Sound&#39;</span>
-<span class="n">ROSTER</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;PE 1225&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ROSTER</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;PE 1225&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute&quot;</span><span class="p">)</span>
+<span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -526,7 +526,7 @@
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Defining Servo Turnouts</a><a class="headerlink" href="#defining-servo-turnouts" title="Permalink to this heading"></a></h2>
 <p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts/points are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
-<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout/point definition&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout/point definition&quot;</span><span class="p">)</span>
 
 <span class="cm">/* An example definition for a servo connected to the second control pins of the first PCA9685</span>
 <span class="cm">connected to the CommandStation, using the slow profile for prototypical operation:</span>
@@ -542,7 +542,7 @@
 <span class="cm">        turnout/point will move: Instant, Fast, Medium, Slow, and Bounce (note we don&#39;t</span>
 <span class="cm">        recommend Bounce for a turnout/point definition).</span>
 <span class="cm">&quot;The description&quot; = A human-friendly description of the turnout/point that will appear in</span>
-<span class="cm">        WiThrottle apps and |Engine Driver|.*/</span><span class="w"></span>
+<span class="cm">        WiThrottle apps and |Engine Driver|.*/</span>
 </pre></div>
 </div>
 </section>
@@ -550,14 +550,14 @@
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Creating Routes</a><a class="headerlink" href="#creating-routes" title="Permalink to this heading"></a></h2>
 <p>A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
 The EX-RAIL instructions to do this might look like</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
 <p>Or you can write it like this</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span><span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w">  </span><span class="n">DONE</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span><span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
 <p>Or add comments</p>
@@ -572,13 +572,13 @@ The EX-RAIL instructions to do this might look like</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span><span class="w">  </span><span class="c1">// see the Defining Signals section</span>
 <span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span><span class="w">   </span><span class="c1">//      below for details</span>
 
-<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"></span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
+<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w">  </span><span class="c1">// this is a 5 second wait</span>
-<span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="w">   </span><span class="n">DONE</span>
 </pre></div>
 </div>
 </section>
@@ -588,29 +588,29 @@ The EX-RAIL instructions to do this might look like</p>
 automatically switch an adjacent facing turnout. Use an <code class="docutils literal notranslate"><span class="pre">ONTHROW</span></code> or <code class="docutils literal notranslate"><span class="pre">ONCLOSE</span></code> keyword to detect a particular turnout change:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">  </span><span class="c1">// When turnout 8 is thrown,</span>
 <span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w">  </span><span class="c1">// must also throw the facing turnout</span>
-<span class="w">   </span><span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">   </span><span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
+<span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="w">   </span><span class="n">DONE</span>
 
 <span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">  </span><span class="c1">// When turnout 8 is closed</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">DONE</span><span class="w"></span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
 </section>
 <section id="automating-various-non-track-items">
 <h2><a class="toc-backref" href="#id7" role="doc-backlink">Automating various non-track items</a><a class="headerlink" href="#automating-various-non-track-items" title="Permalink to this heading"></a></h2>
 <p>This normally takes place in a timed loop, for example alternate flashing of a fire engine’s lights. To do this use a SEQUENCE.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w">   </span><span class="c1">// sets output 164 HIGH</span>
 <span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w"> </span><span class="c1">// sets output 165 LOW</span>
 <span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span><span class="w">   </span><span class="c1">// wait 0.5 seconds</span>
 <span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w">   </span><span class="c1">// swap the lights</span>
-<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
 <span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span><span class="w">   </span><span class="c1">// wait 0.5 seconds</span>
 <span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span><span class="w">  </span><span class="c1">// follow sequence 66 continuously</span>
 </pre></div>
@@ -623,7 +623,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <a class="reference internal image-reference" href="../_images/Example_4_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_4_diagram.png" style="width: 915.0px; height: 191.0px;" /></a>
 <p>Using an <code class="docutils literal notranslate"><span class="pre">AUTOMATION</span></code> keyword means that this automation will appear in the throttle so you can drive the train manually, and then hand it over to the automation at the press of a button.</p>
 <p>* Technically, an automation can independently run multiple locos along the same path through the layout, but this is discussed later…</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span>
 <span class="w">   </span><span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w">   </span><span class="c1">// move forward at DCC speed 50 (out of 127)</span>
 <span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">     </span><span class="c1">// when you get to sensor on pin (40)</span>
 <span class="w">   </span><span class="n">STOP</span><span class="w">      </span><span class="c1">// stop the train</span>
@@ -640,7 +640,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Stopping at a Station - Adding Signals</a><a class="headerlink" href="#stopping-at-a-station-adding-signals" title="Permalink to this heading"></a></h2>
 <p>Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span><span class="w">  </span><span class="c1">// see the Defining Signals section above for details</span>
-<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span>
 <span class="w">   </span><span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w">   </span><span class="c1">// move forward at DCC speed 50 (out of 127)</span>
 <span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// when you get to sensor on pin (40)</span>
 <span class="w">   </span><span class="n">STOP</span><span class="w">      </span><span class="c1">// Stop the train</span>
@@ -668,15 +668,15 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 <li><p>When I get to A, stop.</p></li>
 </ul>
 <p>Notice that the sensors at A and B are near the ends of the track (allowing for braking distance, but don’t care about train length or whether the engine is at the front or back.) We have wired sensor A on pin 41, and sensor B on pin 42 for this example.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
 <span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span><span class="w"> </span><span class="c1">// random wait between 10 and 20 seconds</span>
-<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="w"> </span><span class="c1">// sensor 42 is at the far end of platform B</span>
-<span class="w">  </span><span class="n">STOP</span><span class="w"></span>
-<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">STOP</span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span>
 <span class="w">  </span><span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="c1">// Reverse at DCC speed 20 (out of 127)</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span><span class="w"> </span><span class="c1">// far end of platform A</span>
-<span class="w">  </span><span class="n">STOP</span><span class="w"></span>
+<span class="w">  </span><span class="n">STOP</span>
 <span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span><span class="w"> </span><span class="c1">// follows sequence 13 again… forever</span>
 </pre></div>
 </div>
@@ -698,19 +698,19 @@ Let’s add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:</p>
 <a class="reference internal image-reference" href="../_images/Example_7a_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_7a_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
 <p>Assuming that you have defined your turnouts with <a class="reference internal" href="EX-RAIL-summary.html#automations-routes-and-sequences"><span class="std std-ref">TURNOUT commands.</span></a></p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
 <span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span><span class="w"> </span><span class="c1">// random wait between 10 and 20 seconds</span>
-<span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="w"> </span><span class="c1">// sensor 42 is at the far end of platform B</span>
-<span class="w">   </span><span class="n">STOP</span><span class="w"></span>
-<span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">STOP</span><span class="w"></span>
+<span class="w">   </span><span class="n">STOP</span>
+<span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span>
+<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">   </span><span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+<span class="w">   </span><span class="n">STOP</span>
 <span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="c1">// follows sequence 11 again… forever</span>
 </pre></div>
 </div>
@@ -742,27 +742,27 @@ number. So now our route looks like this:</p>
 <span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// Now we have the block, we can set turnouts</span>
 <span class="w">   </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="c1">// we may or may not have stopped at the RESERVE</span>
 <span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="w"> </span><span class="c1">// sensor 2 is at the far end of platform B</span>
-<span class="w">   </span><span class="n">STOP</span><span class="w"></span>
-<span class="w">   </span><span class="n">FREE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">STOP</span>
+<span class="w">   </span><span class="n">FREE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span>
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span><span class="w"> </span><span class="c1">// you get the idea</span>
-<span class="w">   </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">FREE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">46</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">   </span><span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">   </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FREE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">46</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
 
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">STOP</span><span class="w"></span>
-<span class="w">   </span><span class="n">FREE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+<span class="w">   </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">   </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">   </span><span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+<span class="w">   </span><span class="n">STOP</span>
+<span class="w">   </span><span class="n">FREE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="c1">// follows Route 12 again… forever</span>
 </pre></div>
 </div>
@@ -807,12 +807,12 @@ number. So now our route looks like this:</p>
 <h2><a class="toc-backref" href="#id13" role="doc-backlink">Drive-Away feature</a><a class="headerlink" href="#drive-away-feature" title="Permalink to this heading"></a></h2>
 <p>EX-RAIL can switch a track section between programming and mainline.</p>
 <p>Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a ‘launch’ button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+<span class="w">   </span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span>
 <span class="w">   </span><span class="n">RED</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w">   </span><span class="c1">// indicate launch not ready</span>
 <span class="w">   </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="c1">// user presses and releases launch button</span>
 <span class="w">   </span><span class="n">UNJOIN</span><span class="w">    </span><span class="c1">// separate the programming track from main</span>
-<span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
 <span class="w">   </span><span class="n">AMBER</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"> </span><span class="c1">// Show amber, user may place loco</span>
 <span class="w">   </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="c1">// user places loco on track and presses “launch” again</span>
 <span class="w">   </span><span class="n">READ_LOCO</span><span class="w"> </span><span class="c1">// identify the loco</span>

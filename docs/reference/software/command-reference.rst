@@ -318,7 +318,7 @@ Here is a spreadsheet in .XLSX format to help you: :ref:`Decoder Address Decoder
 
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 
-Controlling an Accessory with ``<a linear_address activate>``
+Controlling an Accessory Decoder with ``<a linear_address activate>``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * ``a`` (lower case a) this command is for a Accessory Decoder
@@ -342,20 +342,20 @@ The Turnout commands provide a more flexible and more functional way of operatin
 
 Turnouts may be in either of two states:  Closed or Thrown.  The turnout commands below use the values ``1`` for ``Throw`` or ``Thrown`` and ``0`` for ``Close`` or ``Closed``.
 
-* Command to define a DCC Accessory Decoder turnout: ``<T id DCC address subaddress>`` :
-
-  * Create a new turnout ``id`` which operates the DCC Accessory Decoder configured for the ``address`` and ``subaddress``. 
-    ``address`` ranges from 0 to 511 and ``subaddress`` ranges from 0 to 3. 
-  * Example: ``<T 23 DCC 5 0>``
-  * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  
-* Command to define a DCC Accessory Decoder turnout: ``<T id DCC linear_address>`` :
+* Command to define a DCC Accessory Decoder turnout (linear addressing): ``<T id DCC linear_address>`` :
 
   * Create a new turnout ``id`` which operates the DCC Accessory Decoder configured for the ``linear_address``. 
     ``linear_address`` ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).
   * Example: ``<T 23 DCC 44>`` (corresponds to address 11 subaddress 3).
   * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
-  
+
+* Command to define a DCC Accessory Decoder turnout (address/subaddress addressing): ``<T id DCC address subaddress>`` :
+
+  * Create a new turnout ``id`` which operates the DCC Accessory Decoder configured for the ``address`` and ``subaddress``. 
+    ``address`` ranges from 0 to 511 and ``subaddress`` ranges from 0 to 3. 
+  * Example: ``<T 23 DCC 5 0>``
+  * Returns: ``<O>`` if successful and ``<X>`` if unsuccessful (e.g. out of memory)
+
 * Command to define a Servo-based turnout: ``<T id SERVO vpin thrown_position closed_position profile>`` :
 
   * Create a new turnout ``id`` using the servo output pin ``vpin``.  The positions for thrown and closed states are ``thrown_position`` and ``closed_position`` 

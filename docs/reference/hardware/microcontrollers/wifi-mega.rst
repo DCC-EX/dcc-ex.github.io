@@ -230,11 +230,7 @@ Skip ahead to :ref:`reference/hardware/microcontrollers/wifi-mega:c. Set the swi
 With esptool.py
 ~~~~~~~~~~~~~~~
 
-Unzip the firmware files found in the "bin" folder and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on macOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected:
-
-   esptool.py write_flash --flash_mode dio --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
-
-If it does not find your ESP, see these examples for how to select the port.
+Unzip the firmware files found in the "bin" folder and put them in a folder so that they are easy to find. Go to a command prompt (Windows Key+R then type "cmd" and click OK, or run "terminal" on macOS) and navigate to the folder where you unzipped the firmware files. Execute the full command below from the prompt. esptool.py should be in your path and will automatically find your ESP8266 if it is connected, but we have included in the examples how to select the port. Make sure to substitute your correct port.
 
 Linux/macOS::
 
@@ -242,7 +238,7 @@ Linux/macOS::
 
 Windows::
 
-   esptool.exe -p COM5 --baud 115200 write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
+   esptool.exe -p COM5 write_flash --flash_size 2MB-c1 0x0 boot_v1.7.bin 0x01000 at/1024+1024/user1.2048.new.5.bin 0x1fb000 blank.bin 0x1fc000 esp_init_data_default_v08.bin 0xfe000 blank.bin 0x1fe000 blank.bin
 
 If there is an error, press and hold the mode button, then press and release the reset button while still holding down the mode button. Press enter to send the esptool command and let go of the mode button.
 

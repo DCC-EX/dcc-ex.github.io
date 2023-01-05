@@ -57,8 +57,8 @@ It includes advanced features such as:
     :hidden:
 
     get-started/index
-    advanced-setup/index
-    inputs-outputs/index
     turnouts/index
+    signals/index
     sensors/index
-    development/index
+    inputs-outputs/index
+    advanced-setup/index

@@ -319,7 +319,7 @@ Here is a spreadsheet in .XLSX format to help you: :ref:`Decoder Address Decoder
 NOTE: Both the following commands do the same thing. Pick the one that works for your needs.
 
 Controlling an Accessory Decoder with ``<a linear_address activate>``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * ``a`` (lower case a) this command is for a Accessory Decoder
 * ``linear_address`` is the linear address of the decoder controlling this turnout (1-2044)

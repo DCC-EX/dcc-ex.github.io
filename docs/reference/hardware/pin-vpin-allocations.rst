@@ -304,7 +304,7 @@ VL53L0X time-of-flight sensors have a default |I2C| address of 0x29, however thi
 
 The device driver name is "IO_VL53L0X.h" and will need to be included in "myHal.cpp".
 
-Refer to :doc:`/ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor` for further information.
+Refer to :doc:`/ex-commandstation/sensors/vl53l0x-tof-sensor` for further information.
 
 .. list-table:: Adding VL53L0Xs
 

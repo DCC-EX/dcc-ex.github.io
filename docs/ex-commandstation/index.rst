@@ -59,4 +59,6 @@ It includes advanced features such as:
     get-started/index
     advanced-setup/index
     inputs-outputs/index
+    turnouts/index
+    sensors/index
     development/index

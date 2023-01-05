@@ -105,6 +105,12 @@ table.intro-table {
 
 .command-table tbody td {
   white-space: normal;
+  margin: 10px;
+  padding: 8px 8px 8px 8px !important;
+}
+
+.command-table tbody tr:first-child td p code {
+  white-space: nowrap !important;
 }
 
 .command-table tbody tr td p {

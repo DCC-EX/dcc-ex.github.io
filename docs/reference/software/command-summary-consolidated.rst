@@ -34,12 +34,14 @@ Conventions used on this page
 
 - ``cab`` - DCC Address. i.e. a Loco. (eg. 3-9999)
 - ``speed`` - 0-127
-- ``direction`` - 1=forward 0=reverse
+- ``dir`` ``direction`` - 1=forward 0=reverse
 - ``speedByte`` - 0=stopped 1-127=reverse 128-256=forward
-- ``function`` - function number related to a specific DCC decoder/ loco (e.g. 0-27)
-- ``functionMap`` - individual bits of the returned number represent the state of the specific functions
+- ``funct`` ``function`` - function number related to a specific DCC decoder/ loco (e.g. 0-27)
+- ``functMap`` ``functionMap`` - individual bits of the returned number represent the state of the specific functions
 - ``slot`` - redundant parameter.  This needs to be included but is ignored by the EX-CommandStation
-- ``register`` - redundant parameter.  This needs to be included but is ignored by the EX-CommandStation
+- ``reg`` ``register`` - redundant parameter.  This needs to be included but is ignored by the EX-CommandStation
+- ``desc`` ``description`` - 
+- ``byte`` - 
 
 Controlling the EX-CommandStation
 =================================
@@ -55,9 +57,9 @@ Power management
 
   * - Command
     - Description / Response
-  * - ``<onOff [MAIN | PROG | JOIN] >`` 
+  * - ``<onOff [MAIN|PROG|JOIN] >`` 
     - **Track Power** |BR| |BR|
-      Response: ``<pX [MAIN\|PROG\|JOIN]>`` |BR|
+      Response: ``<pX [MAIN|PROG|JOIN]>`` |BR|
       Where "X" is 1=on \| 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. |BR|
       Turns power on and off to the MAIN and PROG tracks independently from each other. Also allows joining the MAIN and PROG tracks together |BR| |BR|
       **onOff**: 1=on 0=off
@@ -76,17 +78,17 @@ Loco (Cab) Commands
 
   * - Command
     - Description / Response 
-  * - ``<t register cab speed 1|0>``  
+  * - ``<t reg cab speed dir>``  
     - **Set the speed and direction of a loco** |BR| |BR|
-      Response: ``<l cab register speedByte functionMap>`` |BR|
+      Response: ``<l cab reg speedByte functMap>`` |BR|
       **speed** - 0-127 |BR| 
-      **direction** - 1=forward 0=reverse |BR| 
+      **dir** - 1=forward 0=reverse |BR| 
       Note: this starts a reminder process for any external updates to the loco's status. |BR| |BR|
       Legacy response: **Deprecated** |BR|
-      ``<T register speed direction>`` - do not rely on this response
+      ``<T reg speed dir>`` - do not rely on this response
   * - ``<t cab>``
     - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.|BR|
-      Response: ``<l cab register speedByte functionMap>`` |BR| |BR| 
+      Response: ``<l cab reg speedByte functMap>`` |BR| |BR| 
       Note: |BR|
       If the cab (loco) is not in the reminders table. The Command Station will not return a valid response until a speed is applied to the cab. In this case ``<l -1>`` will be returned.
   * -  ``<- [cab]>`` 
@@ -94,17 +96,17 @@ Loco (Cab) Commands
       Response: *n/a* 
   * - ``<!>`` 
     - **Emergency Stop** |BR| |BR|
-      Response: ``<l cab register speedByte functionMap>`` (For each loco in the reminders list.)
+      Response: ``<l cab reg speedByte functMap>`` (For each loco in the reminders list.)
   * - ``<F cab function 1|0>`` 
     - **Turns loco decoder functions ON and OFF** |BR| |BR|
-      Response ``<l cab register speedByte functionMap>``
+      Response ``<l cab reg speedByte functMap>``
   * - ``<JR>`` 
     - **Request the list defined Roster Entry IDs** |BR| |BR|
       Response: ``<jR id1 id2 id3 ...>`` |BR|
       Returns the list of defined roster entry IDs
   * - ``<JR id>`` 
     - **Request details of a specific Roster Entry** |BR| |BR|
-      Response: ``<jR id "description" "function1/function2/function3/...">`` |BR|
+      Response: ``<jR id "desc" "funct1/funct2/funct3/...">`` |BR|
       Returns the ID, description, and function map of the specified roster entry ID
   * - ``<JT>`` 
     - **Request the list of Turnout/Point IDs** |BR| |BR|
@@ -112,7 +114,7 @@ Loco (Cab) Commands
       Returns the list of defined turnout/Point IDs
   * - ``<JT id>`` 
     - **Request details of a specific Turnout/Point** |BR| |BR|
-      Response: ``<jT id state "[description]">`` |BR|
+      Response: ``<jT id state "[desc]">`` |BR|
       Returns the ID, state, and description of the specified Turnout/Point ID
   * - ``<JA>`` 
     - **Request the list of Automation and Route IDs** |BR| |BR|
@@ -120,12 +122,12 @@ Loco (Cab) Commands
       Returns the defined automation and route IDs
   * - ``<JA id>`` 
     - **Request details of a specific Automation or Route** |BR| |BR|
-      Response: ``<jA id type "[description]">`` |BR|
+      Response: ``<jA id type "[desc]">`` |BR|
       Returns the ID, type, and description of the specified automation/route ID |BR|
       **type**: 'A'=automation 'R'=route
   * - ``<t cabid>`` 
     - **Request a deliberate update of cab** |BR| |BR|
-      Response: ``<l cab register speedByte functionMap>`` |BR|
+      Response: ``<l cab reg speedByte functMap>`` |BR|
       Returns an update of cab speed, directions and functions in the same format as the cab broadcast
   * - ``<f cab byte1 [byte2]]>`` 
     - **Deprecated** |BR|
@@ -178,13 +180,13 @@ Writing CVs - Program on the main
   * - ``<M ignored hex1 hex2 [hex3 [hex4 [hex5]]]>`` 
     - **Write a DCC packet the MAIN track** |BR| |BR|
   * - ``<w cab cv value>`` 
-    - Write CV on main track   
+    - **Write CV on main track** |BR| |BR|
   * - ``<b cab cv bit value>`` 
-    - Write CV bit on main track
+    - **Write CV bit on main track** |BR| |BR|
   * - ``<W cv value callbacknum callbacksub>`` 
-    - Write CV. **Deprecated, please use <W cv value> instead**
+    - Write CV |BR| **Deprecated, please use <W cv value> instead**
   * - ``<B cv bit value callbacknum callbacksub>`` 
-    - Write bit to cv. **Deprecated, please use <W cv value> instead**  
+    - Write bit to CV |BR| **Deprecated, please use <W cv value> instead**  
 
 Writing CVs - Programming track
 -------------------------------
@@ -198,19 +200,19 @@ Writing CVs - Programming track
   * - Command
     - Description / Response 
   * - ``<R>`` 
-    - Read Loco address (programming track only)
+    - **Read Loco address (programming track only)** |BR| |BR|
   * - ``<W cab>`` 
-    - write cab address to loco on prog track 
+    - **W**rite cab address to loco on prog track** |BR| |BR|
   * - ``<W cv value >`` 
-    - write CV
+    - **Write CV** |BR| |BR|
   * - ``<B cv bit 0|1>`` 
-    - Write bit to cv.
+    - **Write bit to CV** |BR| |BR|
   * - ``<V cv value>`` 
-    - Verify/Read of cv with guessed value
+    - **Verify/Read of CV with guessed value** |BR| |BR|
   * - ``<V cv bit 0|1>`` 
-    - Verify/Read bit of cv with guessed value
+    - **Verify/Read bit of CV with guessed value** |BR| |BR|
   * - ``<P ignored hex1 hex2 [hex3 [hex4 [hex5]]]>`` 
-    - Writes a DCC packet to the PROG track
+    - **Writes a DCC packet to the PROG track** |BR| |BR|
 
 Writing CVs - Programming track - Tuning
 ----------------------------------------
@@ -224,15 +226,15 @@ Writing CVs - Programming track - Tuning
   * - Command
     - Description / Response 
   * - ``<D ACK LIMIT mA>`` 
-    - Override ACK processing mA pulse size
+    - **8Override ACK processing mA pulse size** |BR| |BR|
   * - ``<D ACK MIN uS>`` 
-    - Override ACK processing minimum pulse width
+    - **Override ACK processing minimum pulse width** |BR| |BR|
   * - ``<D ACK MAX uS>`` 
-    - Override ACK processing max pulse width
+    - **Override ACK processing max pulse width** |BR| |BR|
   * - ``<D ACK RETRY x>`` 
-    - Adjust ACK retries to number x (default is 2)
+    - **Adjust ACK retries to number x (default is 2)** |BR| |BR|
   * - ``<D PROGBOOST>``  
-    - Override 250mA prog track limit while idle.
+    - **Override 250mA prog track limit while idle** |BR| |BR|
 
 DCC Accessories
 ---------------
@@ -246,9 +248,9 @@ DCC Accessories
   * - Command
     - Description / Response 
   * - ``<a linear_address 1|0>``
-    -
+    - **???** |BR| |BR|
   * - ``<a addr subaddr 1|0>``
-    -
+    - **???** |BR| |BR|
 
 Turnouts/Points
 ---------------
@@ -262,9 +264,9 @@ Turnouts/Points
   * - Command
     - Description / Response 
   * - ``<T>`` 
-    - List defined turnouts
+    - **List defined turnouts** |BR| |BR|
   * - ``<T id 0|1|C|T>`` 
-    - Throw (1 or T) or close(0 or C) a defined turnout 
+    - **Throw (1 or T) or close(0 or C) a defined turnout** |BR| |BR|
 
 Sensors
 -------
@@ -278,9 +280,9 @@ Sensors
   * - Command
     - Description / Response 
   * - ``<Q>`` 
-    - Lists Status of all sensors.
+    - **Lists Status of all sensors** |BR| |BR|
   * - ``<S>`` 
-    - Lists definition all defined sensors. 
+    - **Lists definition all defined sensors** |BR| |BR|
 
 WiFi Control
 ------------
@@ -294,9 +296,9 @@ WiFi Control
   * - Command
     - Description / Response 
   * - ``<+command>`` 
-    - Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
+    - **Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)** |BR| |BR|
   * - ``<+X>`` 
-    - Force the Command Station into "WiFi Connected" mode
+    - **Force the Command Station into "WiFi Connected" mode** |BR| |BR|
 
 
 Configuring the EX-CommandStation
@@ -314,7 +316,7 @@ TBA
   * - Command
     - Description / Response 
   * - ``<D SPEED28|SPEED128>`` 
-    - Switch between 28 and 128 speed steps
+    - **Switch between 28 and 128 speed steps** |BR| |BR|
 
 Turnouts/Points - Configuration
 -------------------------------
@@ -327,16 +329,16 @@ Turnouts/Points - Configuration
 
   * - Command
     - Description / Response 
-  * - ``<T id DCC address subaddress>`` 
-    - Define DCC turnout
-  * - ``<T id DCC linear_address>`` 
-    - Define DCC turnout
+  * - ``<T id DCC addr subaddr>`` 
+    - **Define DCC turnout** |BR| |BR|
+  * - ``<T id DCC linear_addr>`` 
+    - **Define DCC turnout** |BR| |BR|
   * - ``<T id SERVO vpin thrownPos closedPos profile>`` 
-    - Define servo turnout
+    - **Define servo turnout** |BR| |BR|
   * - ``<T id VPIN vpin>`` 
-    - Define VPIN turnout
+    - **Define VPIN turnout** |BR| |BR|
   * - ``<T id>`` 
-    - Delete turnout
+    - **Delete turnout** |BR| |BR|
 
 Sensors - Configuration
 -----------------------
@@ -350,9 +352,9 @@ Sensors - Configuration
   * - Command
     - Description / Response 
   * - ``<S id pin 0|1>`` 
-    - Creates a new sensor ID, with specified PIN and PULLUP
+    - **Creates a new sensor ID, with specified PIN and PULLUP** |BR| |BR|
   * - ``<S id>``
-    - Deletes definition of sensor ID  
+    - **Deletes definition of sensor ID** |BR| |BR|
 
 Outputs
 -------
@@ -366,23 +368,22 @@ Outputs
   * - Command
     - Description / Response 
   * - ``<Z>`` 
-    - Lists all defined output pins
+    - **Lists all defined output pins** |BR| |BR|
   * - ``<Z id pin iflag>``
-    - Creates a new output ID, with specified PIN and IFLAG values.  
+    - **Creates a new output ID, with specified PIN and IFLAG values** |BR| |BR|
 
+      .. code-block::
 
-.. code-block::
+        IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
+                      1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
 
-  IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
-                1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
+        IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE 
+                          depending on state before power-down. 
+                      1 = state of pin set on power-up, or when first created,
+                          to either ACTIVE of INACTIVE depending on IFLAG, bit 2
 
-  IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE 
-                    depending on state before power-down. 
-                1 = state of pin set on power-up, or when first created,
-                    to either ACTIVE of INACTIVE depending on IFLAG, bit 2
-
-  IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
-                1 = state of pin set to ACTIVE upon power-up or when first created
+        IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
+                      1 = state of pin set to ACTIVE upon power-up or when first created
 
 ..
 
@@ -402,11 +403,11 @@ EEPROM management
   * - Command
     - Description / Response 
   * - ``<E>``
-    - Store definitions to EEPROM
+    - **Store definitions to EEPROM** |BR| |BR|
   * - ``<e>``
-    - Erase ALL (turnouts, sensors, and outputs) from EEPROM 
+    - **Erase ALL (turnouts, sensors, and outputs) from EEPROM** |BR| |BR|
   * - ``<D EEPROM>``
-    - Diagnostic dump eeprom contents
+    - **Diagnostic dump eeprom contents** |BR| |BR|
 
 Diagnostic traces
 -----------------
@@ -420,23 +421,23 @@ Diagnostic traces
   * - Command
     - Description / Response 
   * - ``<D CABS>`` 
-    - Shows cab numbers and speed in reminder table
+    - **Shows cab numbers and speed in reminder table** |BR| |BR|
   * - ``<D RAM>``
-    - Shows remaining RAM (Free Memory)
+    - **Shows remaining RAM (Free Memory)** |BR| |BR|
   * - ``<D ACK ON|OFF>``
-    - Enables ACK diagnostics
+    - **Enables ACK diagnostics** |BR| |BR|
   * - ``<D CMD ON|OFF>``
-    - Enables Command Parser diagnostics
+    - **Enables Command Parser diagnostics** |BR| |BR|
   * - ``<D ETHERNET ON|OFF>``
-    - Enables Ethernet diagnostics
+    - **Enables Ethernet diagnostics** |BR| |BR|
   * - ``<D LCN ON|OFF>``
-    - Enables LCN interface diagnostics
+    - **Enables LCN interface diagnostics** |BR| |BR|
   * - ``<D WIFI ON|OFF>``
-    - Enables WiFi diagnostics
+    - **Enables WiFi diagnostics** |BR| |BR|
   * - ``<D WIT ON|OFF>``
-    - Enables WiThrottle diagnostics
+    - **Enables WiThrottle diagnostics** |BR| |BR|
   * - ``<D HAL SHOW>``
-    - Shows configured servo board and GPIO extender board config and used pins
+    - **Shows configured servo board and GPIO extender board config and used pins** |BR| |BR|
 
 I/O (HAL) Diagnostics
 ---------------------
@@ -450,7 +451,7 @@ I/O (HAL) Diagnostics
   * - Command
     - Description / Response 
   * - ``<D HAL SHOW>``
-    - List HAL devices and allocated VPINs
+    - **List HAL devices and allocated VPINs** |BR| |BR|
   * - ``<D SERVO vpin value [profile]>``
     - Set servo position to `value` on pin `vpin`.
   * - ``<D ANOUT vpin value [param2]>``

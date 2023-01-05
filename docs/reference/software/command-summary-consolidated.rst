@@ -58,11 +58,11 @@ Power management
   * - Command
     - Description / Response
   * - ``<onOff [MAIN|PROG|JOIN] >`` 
-    - **Track Power** |BR| |BR|
+    - **Track Power** |BR|
+      Turns power on and off to the MAIN and PROG tracks independently from each other. Also allows joining the MAIN and PROG tracks together |BR|
+      **onOff**: 1=on 0=off |BR| |BR|
       Response: ``<pX [MAIN|PROG|JOIN]>`` |BR|
       Where "X" is 1=on \| 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. |BR|
-      Turns power on and off to the MAIN and PROG tracks independently from each other. Also allows joining the MAIN and PROG tracks together |BR| |BR|
-      **onOff**: 1=on 0=off
   * - ``<D RESET>``
     - **Re-boot the command Station** |BR|
       Response: *n/a* 
@@ -97,7 +97,7 @@ Loco (Cab) Commands
   * - ``<!>`` 
     - **Emergency Stop** |BR| |BR|
       Response: ``<l cab reg speedByte functMap>`` (For each loco in the reminders list.)
-  * - ``<F cab function 1|0>`` 
+  * - ``<F cab funct 1|0>`` 
     - **Turns loco decoder functions ON and OFF** |BR| |BR|
       Response ``<l cab reg speedByte functMap>``
   * - ``<JR>`` 
@@ -130,8 +130,8 @@ Loco (Cab) Commands
       Response: ``<l cab reg speedByte functMap>`` |BR|
       Returns an update of cab speed, directions and functions in the same format as the cab broadcast
   * - ``<f cab byte1 [byte2]]>`` 
-    - **Deprecated** |BR|
-      legacy function. **Deprecated, please use <W cv value> instead**
+    - legacy function. |BR| 
+      **Deprecated, please use <W cv value> instead**
 
 
 System Information
@@ -147,8 +147,8 @@ System Information
     - Description / Response 
   * - ``<s>`` 
     - **Request CommandStation Status** |BR| |BR|
-      Response: ``<iDCCEX version / microprocessorType / MotorControllerType / buildNumber>`` |BR|
-      Response (for each): ``<H id state>``
+      Response (single): ``<iDCCEX version / microprocessorType / MotorControllerType / buildNumber>`` |BR|
+      Response (for each defined Turnout/Point): ``<H id state>``
   * - ``<c>`` 
     - **Request Current on the MAIN Track** |BR| |BR|
       Response: ``<c "CurrentMAIN" current C "Milli" "0" max_ma "1" trip_ma>`` |BR|
@@ -200,9 +200,9 @@ Writing CVs - Programming track
   * - Command
     - Description / Response 
   * - ``<R>`` 
-    - **Read Loco address (programming track only)** |BR| |BR|
+    - **Read DCC decoder address** |BR| |BR|
   * - ``<W cab>`` 
-    - **W**rite cab address to loco on prog track** |BR| |BR|
+    - **Write DCC address to cab (loco)** |BR| |BR|
   * - ``<W cv value >`` 
     - **Write CV** |BR| |BR|
   * - ``<B cv bit 0|1>`` 
@@ -371,19 +371,15 @@ Outputs
     - **Lists all defined output pins** |BR| |BR|
   * - ``<Z id pin iflag>``
     - **Creates a new output ID, with specified PIN and IFLAG values** |BR| |BR|
-
-      .. code-block::
-
-        IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
-                      1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
-
-        IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE 
-                          depending on state before power-down. 
-                      1 = state of pin set on power-up, or when first created,
-                          to either ACTIVE of INACTIVE depending on IFLAG, bit 2
-
-        IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
-                      1 = state of pin set to ACTIVE upon power-up or when first created
+      **IFLAG, bit 0**: |BR|
+      0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) |BR|
+      1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) |BR| |BR|
+      **IFLAG, bit 1**: |BR|
+      0 = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down.  |BR|
+      1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 |BR| |BR|
+      **IFLAG, bit 2**: 
+      0 = state of pin set to INACTIVE upon power-up or when first created |BR|
+      1 = state of pin set to ACTIVE upon power-up or when first created
 
 ..
 

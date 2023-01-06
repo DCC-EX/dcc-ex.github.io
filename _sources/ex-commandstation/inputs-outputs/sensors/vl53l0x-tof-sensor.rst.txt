@@ -172,8 +172,8 @@ To create sensors for our examples above, the commands would be as shown below, 
 
 .. code-block:: 
 
-  <Z 4000 4000 0>
-  <Z 4003 4003 0>
+  <S 4000 4000 0>
+  <S 4003 4003 0>
 
 With these definitions, when an object comes within 200mm of the sensors, a ``<Q id>`` message will be sent to all defined serial ports with the appropriate sensor ID:
 

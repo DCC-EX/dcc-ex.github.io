@@ -614,8 +614,8 @@
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Sensor configuration for JMRI</a><a class="headerlink" href="#sensor-configuration-for-jmri" title="Permalink to this heading"></a></h2>
 <p>If you are using <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> and require these to be available as sensors, then they can be configured via the DCC-EX <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> command.</p>
 <p>To create sensors for our examples above, the commands would be as shown below, and for simplicity we keep the sensor ID the same as the vpin ID in use.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 4000 4000 0&gt;
-&lt;Z 4003 4003 0&gt;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 4000 4000 0&gt;
+&lt;S 4003 4003 0&gt;
 </pre></div>
 </div>
 <p>With these definitions, when an object comes within 200mm of the sensors, a <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> message will be sent to all defined serial ports with the appropriate sensor ID:</p>

@@ -6,6 +6,12 @@ Servo driven turnouts/points
 
 |conductor| |tinkerer|
 
+.. sidebar:: 
+
+  .. contents:: On this page
+    :depth: 2
+    :local:
+
 While there is already a reasonable amount of information available for servo driven turnouts/points within our documentation, it is distributed among other pages, so this page will primarily be a central location pointing to the existing documentation, along with any other considerations that need to be taken into account that may not be covered elsewhere.
 
 Important considerations for servo operation

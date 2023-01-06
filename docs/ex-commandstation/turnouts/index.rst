@@ -6,6 +6,12 @@
 Turnouts/points
 ***************
 
+.. sidebar:: 
+
+  .. contents:: On this page
+    :depth: 2
+    :local:
+
 Turnouts or points are an integral part of almost every layout in operation, and with the variety of turnout/point types and control options available, these require their own special section to help our users understand which is the best option for their layout and level of comfort.
 
 This section will focus on the types of turnouts/points supported by |EX-CS| with the common hardware configurations required to support them. Where possible, we will outline known and tested brands and combinations of items commonly encountered by our users.
@@ -55,7 +61,7 @@ For information on using the |EX-R| commands in "myAutomation.h" refer to the :d
 Turnout/point hardware and configuration
 ========================================
 
-Continue to the next pages for further details on the hardware and configuration required for the specific turnout/point types outlined above.
+Continue to the next pages for more specific information on controlling, connecting hardware, and configuration of the specific turnout/point types outlined above.
 
 .. toctree::
   :maxdepth: 1

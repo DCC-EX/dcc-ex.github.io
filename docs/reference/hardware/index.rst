@@ -28,5 +28,3 @@ Hardware
     index-i2c
     accessory-controllers
     index-decoder
-    /ex-commandstation/turnouts/index
-    /ex-commandstation/sensors/index

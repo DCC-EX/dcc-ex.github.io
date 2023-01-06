@@ -335,10 +335,6 @@ WiFi Control
   * - ``<+X>`` 
     - **Force the Command Station into "WiFi Connected" mode** |BR| |BR|
 
-
-Configuring the EX-CommandStation
-=================================
-
 TBA
 ---
 
@@ -352,6 +348,10 @@ TBA
     - Description / Response 
   * - ``<D SPEED28|SPEED128>`` 
     - **Switch between 28 and 128 speed steps** |BR| |BR|
+
+
+Configuring the EX-CommandStation
+=================================
 
 Turnouts/Points - Configuration
 -------------------------------

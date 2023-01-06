@@ -11,7 +11,7 @@ DCC-EX Command Reference
 .. sidebar:: 
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`
@@ -336,7 +336,7 @@ Controlling an Accessory Decoder with ``<a address subaddress activate>``
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
 Defining (Setting up) a Turnout
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------
 
 The Turnout commands provide a more flexible and more functional way of operating turnouts.  It requires that the turnout be pre-defined through the ``<T ...>`` commands, described below.
 

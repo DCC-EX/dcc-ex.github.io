@@ -87,6 +87,12 @@ For devices with EEPROM support (Arduino Uno, Nano, and Mega), it is possible to
 
 Be aware that this address will override any address defined in "myConfig.h", and if using these devices, you do not need a "myConfig.h" file at all for normal operation.
 
+.. warning:: 
+
+  Using the reboot ``<Z>`` command on an Arduino Nano with the old bootloader will cause it to enter into an endless reboot cycle, requiring a power cycle to recover. Pressing the reset button will not recover from the condition. Nanos with the new bootloader are fine with this command.
+
+  When using the old bootloader, use the reset button rather than the ``<Z>`` command to reboot.
+
 There are three serial commands available to set, read, and erase the configured address, with an additional command to reboot the device:
 
 .. list-table::
@@ -223,6 +229,8 @@ DIAG
 
 Uncommenting this line will enable extra diagnostic output to the serial console to help with diagnosis and troubleshooting in the event issues are encountered.
 
+You can also configure this via the serial console using the ``<D>`` command (see :ref:`ex-ioexpander/testing:diagnostic commands`).
+
 DIAG_CONFIG_DELAY
 -----------------
 
@@ -231,6 +239,8 @@ DIAG_CONFIG_DELAY
   /////////////////////////////////////////////////////////////////////////////////////
   //  Delay between dumping the status of the port config if DIAG enabled
   // 
-  #define DIAG_CONFIG_DELAY 3000
+  #define DIAG_CONFIG_DELAY 5
 
-When :ref:`ex-ioexpander/overview:diag` is enabled, the configuration of each pin is displayed continuously to be able to monitor the configuration and state of each pin. By default, this will display every 3 seconds (3000ms). This configuration item allows the delay between updates to be increased or decreased.
+When :ref:`ex-ioexpander/overview:diag` is enabled, the configuration of each pin is displayed continuously to be able to monitor the configuration and state of each pin. By default, this will display every 5 seconds. This configuration item allows the delay between updates to be increased or decreased.
+
+You can also configure this via the serial console using the ``<D delay>`` command (see :ref:`ex-ioexpander/testing:diagnostic commands`).

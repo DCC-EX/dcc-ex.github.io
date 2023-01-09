@@ -1,5 +1,5 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: /include/include-l3.rst
 *************************
 Which sensor type to use?
 *************************
@@ -57,7 +57,7 @@ There are two different ways to have these configured:
 
   There are options for using modulation or sending data streams via infrared to make these sensors more reliable, but these are commonly either DIY options or are more expensive than the bulk buy options available on eBay or AliExpress.
 
-Refer to :doc:`/ex-commandstation/sensors/ir-sensor` for further information on infrared sensors.
+Refer to :doc:`/ex-commandstation/accessories/sensors/ir-sensor` for further information on infrared sensors.
 
 Hall effect sensors
 ===================
@@ -134,4 +134,4 @@ There are various types of proximity sensors available, with the most commonly a
   * - Can be used to detect a train entering or exiting a specific point on a layout
     - 
 
-Refer to :doc:`/ex-commandstation/sensors/vl53l0x-tof-sensor` for further information on the VL53L0X time-of-flight sensor.
+Refer to :doc:`/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor` for further information on the VL53L0X time-of-flight sensor.

@@ -12,7 +12,14 @@ Turnouts/points
     :depth: 2
     :local:
 
+What is a turnout or point?
+===========================
+
 Turnouts or points are an integral part of almost every layout in operation, and with the variety of turnout/point types and control options available, these require their own special section to help our users understand which is the best option for their layout and level of comfort.
+
+To go back to basics, a turnout or point on either a real or model railway allows a train to move from one track to another.
+
+When moving in to the land of digital control for model railways, to operate turnouts or points without having to manually switch them with our hands, the concept of a turnout object has been introduced.
 
 This section will focus on the types of turnouts/points supported by |EX-CS| with the common hardware configurations required to support them. Where possible, we will outline known and tested brands and combinations of items commonly encountered by our users.
 

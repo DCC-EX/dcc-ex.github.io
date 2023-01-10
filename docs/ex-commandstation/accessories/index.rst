@@ -14,7 +14,6 @@ Read on through the following sections to understand which accessory items can b
 
 .. toctree::
     :maxdepth: 1
-    :hidden:
 
     turnouts/index
     signals/index

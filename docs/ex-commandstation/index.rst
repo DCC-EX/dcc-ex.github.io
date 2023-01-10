@@ -47,7 +47,9 @@ It includes advanced features such as:
     :class: table-wrap-text
     :width: 900
 
-    * - |tinkerer| |engineer|
+    * - | |tinkerer|
+        |
+        | |engineer|
       - If you wish to discover more you can look at the :doc:`Advanced Options <advanced-setup/index>`, however if you are just starting on the |DCC-EX| journey we also recommend you start with the |br| :doc:`Getting started Page <get-started/index>`, but also look at the :doc:`/ex-commandstation/advanced-setup/index` pages for additional options that may be of interest.
 
 ----

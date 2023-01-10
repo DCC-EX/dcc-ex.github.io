@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |EX-CS-LOGO|
 
-******************
-Adding Accessories
-******************
+**********************************
+Adding and Controlling Accessories
+**********************************
 
 |conductor| |tinkerer| |engineer|
 

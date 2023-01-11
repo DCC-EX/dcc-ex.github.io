@@ -196,12 +196,12 @@ Writing CVs - Program on the main
       Response: 
   * - ``<w cab cv value>`` 
     - **Write CV on main track** |BR| |_| |BR|
-      Response: 
+      Response: N/A
   * - ``<b cab cv bit value>`` 
     - **Write CV bit on main track** |BR| |_| |BR|
       Response: 
   * - ``<W cv value callbacknum callbacksub>`` 
-    - Write CV |BR| **Deprecated, please use <W cv value> instead**
+    - Write CV |BR| **Deprecated, please use <w cv value> instead**
   * - ``<B cv bit value callbacknum callbacksub>`` 
     - Write bit to CV |BR| **Deprecated, please use <W cv value> instead**  
 
@@ -218,7 +218,7 @@ Reading/Writing CVs - Programming track
     - Description / Response 
   * - ``<R>`` 
     - **Read DCC decoder address** |BR| |_| |BR|
-      Response (successful): ``<r cab>``|BR|
+      Response (successful): ``<r cab>`` |BR|
       Response (fail): ``<r -1>`` 
   * - ``<W cab>`` 
     - **Write DCC address to cab (loco)** |BR| |_| |BR|
@@ -261,15 +261,25 @@ Writing CVs - Programming track - Tuning
   * - Command
     - Description / Response 
   * - ``<D ACK LIMIT mA>`` 
-    - **8Override ACK processing mA pulse size** |BR| |BR|
+    - **Override ACK processing mA pulse size** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D ACK MIN uS>`` 
     - **Override ACK processing minimum pulse width** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D ACK MAX uS>`` 
     - **Override ACK processing max pulse width** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D ACK RETRY x>`` 
     - **Adjust ACK retries to number x (default is 2)** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D PROGBOOST>``  
     - **Override 250mA prog track limit while idle** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 DCC Accessories
 ---------------
@@ -282,10 +292,19 @@ DCC Accessories
 
   * - Command
     - Description / Response 
-  * - ``<a linear_address 1|0>``
-    - **???** |BR| |BR|
-  * - ``<a addr subaddr 1|0>``
-    - **???** |BR| |BR|
+  * - ``<a linear_addr activate>``
+    - **Control an Accessory Decoder** |BR| 
+      **linear_addr** is the linear address of the decoder controlling this turnout (1-2044) |BR|
+      **activate** 0=off, deactivate, straight or Closed 1=on, activate, turn or thrown |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ``?``
+  * - ``<a addr subaddr activate>``
+    - **Control an Accessory Decoder** |BR|
+      **addr** is the primary address of the decoder controlling this turnout (0-511) |BR|
+      **subaddr** is the subaddress of the decoder controlling this turnout (0-3) |BR|
+      **activate** 0=off, deactivate, straight or Closed 1=on, activate, turn or thrown |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ``?``
 
 Turnouts/Points
 ---------------
@@ -299,9 +318,26 @@ Turnouts/Points
   * - Command
     - Description / Response 
   * - ``<T>`` 
-    - **List defined turnouts** |BR| |BR|
+    - **List all defined turnouts/Points** |BR| |BR|
+      Repeated for each defined Turnout/Point |BR|
+      Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
+      Response (Servos): ``<H id SERVO vpin thrown_position closed_position profile state>`` |BR|
+      Response (VPIN): ``<H id VPIN vpin state>`` |BR|
+      Response (LCN): ``<H id LCN state>``` |BR|
+      Response (fail): ``?`` |BR|
+      Response (no defined turnouts/points):  ``?`` |BR| |BR|
+      **state** - 0=closed 1=thrown
   * - ``<T id 0|1|C|T>`` 
-    - **Throw (1 or T) or close(0 or C) a defined turnout** |BR| |BR|
+    - **Throw (1 or T) or close(0 or C) a defined turnout/point** |BR| |BR|
+      Response (successful): ``<H id 0|1>``` |BR|
+      Response (fail):  ``<X>``
+  * - ``<T id>`` 
+    - **Delete defined turnout/point** |BR| |BR|
+      Response (successful): ``?``` |BR|
+      Response (fail):  ``?``
+
+Once all turnout/points have been properly defined, use the <E> (upper case E) command to store their definitions to EEPROM. 
+
 
 Sensors
 -------
@@ -316,8 +352,25 @@ Sensors
     - Description / Response 
   * - ``<Q>`` 
     - **Lists Status of all sensors** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<S>`` 
     - **Lists definition all defined sensors** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
+  * - ``<S id vpin pullup>``
+    - **Create a new sensor ID** |BR|
+      **id** numeric ID 0-32767 of the sensor |BR|
+      **vpin** pin number of the input to be controlled by the sensor object |BR|
+      **pullup** 1=Use pull-up resistor ACTIVE=LOW 0=don't use pull-up resistor ACTIVE=HIGH |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ``?``
+  * - ``<S id>``
+    - **Delete defined sensor** |BR| |BR| 
+      Response (successful): ``?`` |BR| 
+      Response (fail): ``?``
+
+Once all sensors have been properly defined, use the <E> (upper case E) command to store their definitions to EEPROM. 
 
 WiFi Control
 ------------
@@ -332,8 +385,12 @@ WiFi Control
     - Description / Response 
   * - ``<+command>`` 
     - **Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<+X>`` 
     - **Force the Command Station into "WiFi Connected" mode** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 TBA
 ---
@@ -348,7 +405,11 @@ TBA
     - Description / Response 
   * - ``<D SPEED28|SPEED128>`` 
     - **Switch between 28 and 128 speed steps** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
+---
+---
 
 Configuring the EX-CommandStation
 =================================
@@ -366,14 +427,24 @@ Turnouts/Points - Configuration
     - Description / Response 
   * - ``<T id DCC addr subaddr>`` 
     - **Define DCC turnout** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<T id DCC linear_addr>`` 
     - **Define DCC turnout** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<T id SERVO vpin thrownPos closedPos profile>`` 
     - **Define servo turnout** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<T id VPIN vpin>`` 
     - **Define VPIN turnout** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<T id>`` 
     - **Delete turnout** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 Sensors - Configuration
 -----------------------
@@ -388,8 +459,12 @@ Sensors - Configuration
     - Description / Response 
   * - ``<S id pin 0|1>`` 
     - **Creates a new sensor ID, with specified PIN and PULLUP** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<S id>``
     - **Deletes definition of sensor ID** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 Outputs
 -------
@@ -404,8 +479,10 @@ Outputs
     - Description / Response 
   * - ``<Z>`` 
     - **Lists all defined output pins** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<Z id pin iflag>``
-    - **Creates a new output ID, with specified PIN and IFLAG values** |BR| |BR|
+    - **Creates a new output ID, with specified PIN and IFLAG values** |BR|
       **IFLAG, bit 0**: |BR|
       0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) |BR|
       1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) |BR| |BR|
@@ -414,7 +491,9 @@ Outputs
       1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 |BR| |BR|
       **IFLAG, bit 2**: 
       0 = state of pin set to INACTIVE upon power-up or when first created |BR|
-      1 = state of pin set to ACTIVE upon power-up or when first created
+      1 = state of pin set to ACTIVE upon power-up or when first created |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 ..
 
@@ -435,10 +514,16 @@ EEPROM management
     - Description / Response 
   * - ``<E>``
     - **Store definitions to EEPROM** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<e>``
     - **Erase ALL (turnouts, sensors, and outputs) from EEPROM** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D EEPROM>``
     - **Diagnostic dump eeprom contents** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 Diagnostic traces
 -----------------
@@ -453,22 +538,40 @@ Diagnostic traces
     - Description / Response 
   * - ``<D CABS>`` 
     - **Shows cab numbers and speed in reminder table** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D RAM>``
     - **Shows remaining RAM (Free Memory)** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D ACK ON|OFF>``
     - **Enables ACK diagnostics** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D CMD ON|OFF>``
     - **Enables Command Parser diagnostics** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D ETHERNET ON|OFF>``
     - **Enables Ethernet diagnostics** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D LCN ON|OFF>``
     - **Enables LCN interface diagnostics** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D WIFI ON|OFF>``
     - **Enables WiFi diagnostics** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D WIT ON|OFF>``
     - **Enables WiThrottle diagnostics** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D HAL SHOW>``
     - **Shows configured servo board and GPIO extender board config and used pins** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 I/O (HAL) Diagnostics
 ---------------------
@@ -483,12 +586,20 @@ I/O (HAL) Diagnostics
     - Description / Response 
   * - ``<D HAL SHOW>``
     - **List HAL devices and allocated VPINs** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D SERVO vpin value [profile]>``
-    - Set servo position to `value` on pin `vpin`.
+    - Set servo position to `value` on pin `vpin`. |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D ANOUT vpin value [param2]>``
-    - Write `value` to analogue pin `vpin`, supplying `param2` to the driver.
+    - Write `value` to analogue pin `vpin`, supplying `param2` to the driver. |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
   * - ``<D ANIN vpin>``
-    - Read and display pin `vpin`'s analogue value.
+    - Read and display pin `vpin`'s analogue value. |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 Other
 -----
@@ -502,7 +613,9 @@ Other
   * - Command
     - Description / Response 
   * -  ``<U ...>`` 
-    - Is reserved for user commands (through user filter)
+    - **Is reserved for user commands (through user filter)** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
 
 More Information
 ================

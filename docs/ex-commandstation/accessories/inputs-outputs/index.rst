@@ -1,10 +1,10 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: /include/include-l3.rst
 |EX-CS-LOGO|
 
-************************
-Input and Output Devices
-************************
+******************************************
+Input and Output Accessories and Expanders
+******************************************
 
 |conductor| |tinkerer| |engineer|
 
@@ -16,7 +16,6 @@ These pages outline the various different options available to expand the capabi
   :maxdepth: 1
 
   /reference/hardware/pin-vpin-allocations
-  sensors/index
   /reference/hardware/i2c-devices
   /reference/hardware/i2c-displays
   /reference/hardware/gpio-module

@@ -80,12 +80,31 @@ Aside from configuring the |I2C| address of your |EX-IO| device, the device driv
 
 Configuration changes for |EX-IO| are made by editing a "myConfig.h" file or writing to EEPROM if supported. An example "myConfig.example.h" file is included that can be copied and edited to suit. The only configuration item you should really need to consider is :ref:`ex-ioexpander/overview:i2c_address`.
 
+Software installation process
+-----------------------------
+
+This is a brief overview of the software installation and configuration process:
+
+1. Download the "main" branch of |EX-IO|
+2. If running Nucleo or any other device without EEPROM, copy "myConfig.example.h" to "myConfig.h" and set the |I2C| address
+3. Upload |EX-IO| to your Arduino (note, this does not get uploaded to your CommandStation)
+4. For Arduino Nano, Uno, or Mega, use the serial console to set the |I2C| address
+5. Download the "devel" branch of |EX-CS|
+6. Configure "config.h", "myHal.cpp", and apply any required configuration changes
+7. Upload |EX-CS| to your CommandStation
+
 Configure I2C address via serial
 --------------------------------
 
 For devices with EEPROM support (Arduino Uno, Nano, and Mega), it is possible to configure the |I2C| address via the serial console rather than having to update "myConfig.h", and therefore you should be able to simply upload the software without needing to edit any files at all.
 
 Be aware that this address will override any address defined in "myConfig.h", and if using these devices, you do not need a "myConfig.h" file at all for normal operation.
+
+.. warning:: 
+
+  Using the reboot ``<Z>`` command on an Arduino Nano with the old bootloader will cause it to enter into an endless reboot cycle, requiring a power cycle to recover. Pressing the reset button will not recover from the condition. Nanos with the new bootloader are fine with this command.
+
+  When using the old bootloader, use the reset button rather than the ``<Z>`` command to reboot.
 
 There are three serial commands available to set, read, and erase the configured address, with an additional command to reboot the device:
 
@@ -223,6 +242,8 @@ DIAG
 
 Uncommenting this line will enable extra diagnostic output to the serial console to help with diagnosis and troubleshooting in the event issues are encountered.
 
+You can also configure this via the serial console using the ``<D>`` command (see :ref:`ex-ioexpander/testing:diagnostic commands`).
+
 DIAG_CONFIG_DELAY
 -----------------
 
@@ -231,6 +252,8 @@ DIAG_CONFIG_DELAY
   /////////////////////////////////////////////////////////////////////////////////////
   //  Delay between dumping the status of the port config if DIAG enabled
   // 
-  #define DIAG_CONFIG_DELAY 3000
+  #define DIAG_CONFIG_DELAY 5
 
-When :ref:`ex-ioexpander/overview:diag` is enabled, the configuration of each pin is displayed continuously to be able to monitor the configuration and state of each pin. By default, this will display every 3 seconds (3000ms). This configuration item allows the delay between updates to be increased or decreased.
+When :ref:`ex-ioexpander/overview:diag` is enabled, the configuration of each pin is displayed continuously to be able to monitor the configuration and state of each pin. By default, this will display every 5 seconds. This configuration item allows the delay between updates to be increased or decreased.
+
+You can also configure this via the serial console using the ``<D delay>`` command (see :ref:`ex-ioexpander/testing:diagnostic commands`).

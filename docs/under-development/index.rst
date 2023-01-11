@@ -1,10 +1,5 @@
-.. include:: /include/include-ex-cs.rst
-.. meta::
-   :keywords: EX-CommandStation Command Station EX-CS
-
-.. include:: ../../include/include.rst
-.. include:: ../../include/include-l2.rst
-|EX-CS-LOGO|
+.. include:: /include/include.rst
+.. include:: /include/include-l1.rst
 
 **************************
 Features under development

@@ -47,7 +47,7 @@ Connecting a single device is a simple matter of connecting the SDA and SCL pins
 
   If the device's XSHUT pin is not connected, then it is very prone to noise, and the device may even reset when handled.  If you're not using XSHUT, then it's best to tie it to +5V.
 
-Once connected, you will need to configure the device driver as per :ref:`ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor:configuring a single device`.
+Once connected, you will need to configure the device driver as per :ref:`ex-commandstation/accessories/sensors/vl53l0x-tof-sensor:configuring a single device`.
 
 .. image:: /_static/images/vl53l0x/mega2560-single-vl53l0x.png
   :alt: Mega2560 with VL53L0X
@@ -58,7 +58,7 @@ Connecting multiple devices
 
 Connecting multiple devices also require connecting each device to the SDA and SCL pins, however in addition to this, you will need to connect each device's XSHUT pin to an available I/O pin either directly on your |EX-CS|, or to an available I/O pin on an I/O expander such as an MCP23017. The XSHUT pin connection is required in order to be able to have each device addressed separately.
 
-Once connected, you will need to configure the device driver for each device as per :ref:`ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor:configuring multiple devices`.
+Once connected, you will need to configure the device driver for each device as per :ref:`ex-commandstation/accessories/sensors/vl53l0x-tof-sensor:configuring multiple devices`.
 
 .. image:: /_static/images/vl53l0x/mega2560-dual-vl53l0x.png
   :alt: Mega2560 two VL53L0Xs
@@ -172,8 +172,8 @@ To create sensors for our examples above, the commands would be as shown below, 
 
 .. code-block:: 
 
-  <Z 4000 4000 0>
-  <Z 4003 4003 0>
+  <S 4000 4000 0>
+  <S 4003 4003 0>
 
 With these definitions, when an object comes within 200mm of the sensors, a ``<Q id>`` message will be sent to all defined serial ports with the appropriate sensor ID:
 

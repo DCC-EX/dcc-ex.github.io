@@ -1,7 +1,5 @@
-.. include:: /include/include-ex-cs.rst 
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
-|EX-CS-LOGO|
+.. include:: /include/include-l1.rst
   
 **********************************
 *Under Development:* Track Manager

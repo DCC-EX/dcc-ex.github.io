@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Input and Output Devices &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Adding and Controlling Accessories &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
@@ -27,8 +27,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Default Pin/VPin Allocations and Recommendations" href="../../reference/hardware/pin-vpin-allocations.html" />
-    <link rel="prev" title="Under Development: Lew’s Duino Gear duinoNodes" href="../development/duinonodes.html" />
+    <link rel="next" title="Turnouts/points" href="turnouts/index.html" />
+    <link rel="prev" title="DCC-EX Command Summary" href="../../reference/software/command-summary.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -141,39 +141,48 @@
 <li class="toctree-l3"><a class="reference internal" href="../advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Command Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary.html">DCC-EX Command Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../development/index.html">Features under development</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../development/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Adding and Controlling Accessories</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="turnouts/index.html">Turnouts/points</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="turnouts/overview.html">Overview - types and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="turnouts/servo-turnouts.html">Servo driven turnouts/points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="turnouts/solenoid-turnouts.html">Solenoid or coil turnouts/points</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Input and Output Devices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="signals/index.html">Signals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sensors/index.html">Sensors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="sensors/which-sensor-type.html">Which sensor type to use?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sensors/ir-sensor.html">IR Sensor Boards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ex-ioexpander/index.html">EX-IOExpander</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../ex-ioexpander/overview.html">Overview and configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inputs-outputs/index.html">Input and Output Accessories and Expanders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-ioexpander/index.html">EX-IOExpander</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../ex-ioexpander/overview.html">Overview and configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../development/index.html">Features under development</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../development/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -286,6 +295,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../download/ex-ioexpander.html">EX-IOExpander</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../under-development/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/videos/index.html">Videos</a></li>
@@ -360,12 +375,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/index-decoder.html">Decoders</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/decoder-list.html">List of Tested Decoders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/decoder-notes.html">Decoder Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="sensors/index.html">Sensors</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="sensors/which-sensor-type.html">Which sensor type to use?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sensors/ir-sensor.html">IR Sensor Boards</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
 </ul>
@@ -461,9 +470,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">EX-CommandStation</a> &raquo;</li>
-      <li>Input and Output Devices</li>
+      <li>Adding and Controlling Accessories</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-commandstation/inputs-outputs/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-commandstation/accessories/index.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -472,20 +481,18 @@
            <div itemprop="articleBody">
              
   <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="input-and-output-devices">
-<h1>Input and Output Devices<a class="headerlink" href="#input-and-output-devices" title="Permalink to this heading"></a></h1>
+<section id="adding-and-controlling-accessories">
+<h1>Adding and Controlling Accessories<a class="headerlink" href="#adding-and-controlling-accessories" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<p>There are various different input and output devices you can connect to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, such as sensors, displays, various types of I/O expanders, and servo controllers.</p>
-<p>These pages outline the various different options available to expand the capabilities of your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, and how to connect and configure these devices.</p>
+<p>Once your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is up and running, you will likely want to add the ability to control accessory items such as turnouts/points, signals, and turntables, along with being able to receive input from various sensor types to know where trains are, when buttons on mimic panels are pushed, and so forth.</p>
+<p>Read on through the following sections to understand which accessory items can be added, how they are physically connected, and how they can be controlled or responded to.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="turnouts/index.html">Turnouts/points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signals/index.html">Signals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sensors/index.html">Sensors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/hardware/i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ex-ioexpander/index.html">EX-IOExpander</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs-outputs/index.html">Input and Output Accessories and Expanders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a></li>
 </ul>
 </div>
 </section>
@@ -494,8 +501,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../development/duinonodes.html" class="btn btn-neutral float-left" title="Under Development: Lew’s Duino Gear duinoNodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../reference/hardware/pin-vpin-allocations.html" class="btn btn-neutral float-right" title="Default Pin/VPin Allocations and Recommendations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../reference/software/command-summary.html" class="btn btn-neutral float-left" title="DCC-EX Command Summary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="turnouts/index.html" class="btn btn-neutral float-right" title="Turnouts/points" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

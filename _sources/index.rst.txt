@@ -79,6 +79,7 @@ If you are just starting your journey with |DCC-EX| we recommend you look at our
    big-picture/index
    throttles/index
    download/index
+   under-development/index
    reference/index
    projects/index
    about/index

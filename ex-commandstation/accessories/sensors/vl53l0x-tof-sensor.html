@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Which sensor type to use? &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>VL53L0X Time of Flight Sensor &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
@@ -27,8 +27,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="IR Sensor Boards" href="ir-sensor.html" />
-    <link rel="prev" title="Sensors" href="index.html" />
+    <link rel="next" title="Input and Output Accessories and Expanders" href="../inputs-outputs/index.html" />
+    <link rel="prev" title="IR Sensor Boards" href="ir-sensor.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -141,39 +141,48 @@
 <li class="toctree-l3"><a class="reference internal" href="../../advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../reference/software/command-reference.html">DCC-EX Command Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../reference/software/command-summary.html">DCC-EX Command Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../development/index.html">Features under development</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../development/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Adding and Controlling Accessories</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../turnouts/index.html">Turnouts/points</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../turnouts/overview.html">Overview - types and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../turnouts/servo-turnouts.html">Servo driven turnouts/points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../turnouts/solenoid-turnouts.html">Solenoid or coil turnouts/points</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Input and Output Devices</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../signals/index.html">Signals</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Sensors</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Which sensor type to use?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="which-sensor-type.html">Which sensor type to use?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ir-sensor.html">IR Sensor Boards</a></li>
-<li class="toctree-l4"><a class="reference internal" href="vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/i2c-displays.html">I2C Displays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../ex-ioexpander/index.html">EX-IOExpander</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../ex-ioexpander/overview.html">Overview and configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs-outputs/index.html">Input and Output Accessories and Expanders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-ioexpander/index.html">EX-IOExpander</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../ex-ioexpander/overview.html">Overview and configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../development/index.html">Features under development</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../development/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -286,7 +295,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../download/ex-ioexpander.html">EX-IOExpander</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../reference/index.html">Reference</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../under-development/index.html">Features under development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../under-development/track-manager.html"><em>Under Development:</em> Track Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../reference/glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../reference/videos/index.html">Videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../reference/downloads/index.html">Documents and Schematics</a><ul>
@@ -294,7 +309,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../reference/downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../reference/hardware/index.html">Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/hardware/index.html">Hardware</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/wire-gauge.html">DCC Track Wiring Information</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a><ul>
@@ -360,12 +375,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../reference/hardware/index-decoder.html">Decoders</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/decoder-list.html">List of Tested Decoders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../reference/hardware/decoder-notes.html">Decoder Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Sensors</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Which sensor type to use?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ir-sensor.html">IR Sensor Boards</a></li>
-<li class="toctree-l4"><a class="reference internal" href="vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
 </ul>
@@ -461,11 +470,11 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../../index.html">EX-CommandStation</a> &raquo;</li>
-          <li><a href="../index.html">Input and Output Devices</a> &raquo;</li>
+          <li><a href="../index.html">Adding and Controlling Accessories</a> &raquo;</li>
           <li><a href="index.html">Sensors</a> &raquo;</li>
-      <li>Which sensor type to use?</li>
+      <li>VL53L0X Time of Flight Sensor</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-commandstation/inputs-outputs/sensors/which-sensor-type.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -473,159 +482,188 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="which-sensor-type-to-use">
-<h1>Which sensor type to use?<a class="headerlink" href="#which-sensor-type-to-use" title="Permalink to this heading"></a></h1>
-<p><a class="reference external" href="../../../levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
+  <section id="vl53l0x-time-of-flight-sensor">
+<h1>VL53L0X Time of Flight Sensor<a class="headerlink" href="#vl53l0x-time-of-flight-sensor" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../../levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#infrared-sensors" id="id1">Infrared sensors</a></p></li>
-<li><p><a class="reference internal" href="#hall-effect-sensors" id="id2">Hall effect sensors</a></p></li>
-<li><p><a class="reference internal" href="#block-occupancy-detectors" id="id3">Block occupancy detectors</a></p></li>
-<li><p><a class="reference internal" href="#proximity-sensors" id="id4">Proximity sensors</a></p></li>
+<li><p><a class="reference internal" href="#theory-of-operation" id="id2">Theory of operation</a></p></li>
+<li><p><a class="reference internal" href="#physical-connection" id="id3">Physical connection</a></p>
+<ul>
+<li><p><a class="reference internal" href="#connecting-a-single-device" id="id4">Connecting a single device</a></p></li>
+<li><p><a class="reference internal" href="#connecting-multiple-devices" id="id5">Connecting multiple devices</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#device-driver-configuration" id="id6">Device driver configuration</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configuring-a-single-device" id="id7">Configuring a single device</a></p></li>
+<li><p><a class="reference internal" href="#configuring-multiple-devices" id="id8">Configuring multiple devices</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sensor-configuration-for-jmri" id="id9">Sensor configuration for JMRI</a></p></li>
+<li><p><a class="reference internal" href="#ex-rail-integration" id="id10">EX-RAIL integration</a></p></li>
 </ul>
 </nav>
 </aside>
-<p>A common topic that arises in support chats in Discord is which sensor type to use in various scenarios.</p>
-<p>There are a number of different advantages and disadvantages to the various sensor types which we aim to cover on this page.</p>
-<p>There are four types of sensors we will cover here:</p>
-<ul class="simple">
-<li><p>Infrared sensors</p></li>
-<li><p>Hall effect sensors</p></li>
-<li><p>Block occupancy detectors</p></li>
-<li><p>Proximity (and time-of-flight) sensors</p></li>
-</ul>
-<section id="infrared-sensors">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Infrared sensors</a><a class="headerlink" href="#infrared-sensors" title="Permalink to this heading"></a></h2>
-<p>Infrared sensors consist of a light emitting source and receiver to detect when an object passes over or through the beam of infrared light.</p>
-<p>There are two different ways to have these configured:</p>
-<ul class="simple">
-<li><p>Using reflection, whereby the emitter/receiver are side-by-side and are activated by the infrared light reflecting back to the receiver (typically the default option when purchasing)</p></li>
-<li><p>Using beam break, whereby the emitter/receiver are facing each other, and are activated by an object breaking the beam (typically requires modification by desoldering and relocating the transmitter and receiver)</p></li>
-</ul>
-<table class="command-table docutils align-center" style="width: 100%">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Advantages</p></th>
-<th class="head"><p>Disadvantages</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Inexpensive, can be purchased in bulk at very low prices</p></td>
-<td><p>Are affected by room and natural lighting changes, although beam break can combat this</p></td>
-</tr>
-<tr class="row-odd"><td><p>Simple to setup and use</p></td>
-<td><p>Can be difficult to hide in beam break configuration</p></td>
-</tr>
-<tr class="row-even"><td><p>No locomotive or rolling stock modifications required (eg. resistor wheels or magnets)</p></td>
-<td><p>Can be difficult to install under track in smaller scales (N and Z)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Can be used to detect both ends of a train</p></td>
-<td><p>Typically require modification to use in beam break configuration</p></td>
-</tr>
-<tr class="row-even"><td><p>Can be used to detect a train entering or exiting a specific point on a layout</p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There are options for using modulation or sending data streams via infrared to make these sensors more reliable, but these are commonly either DIY options or are more expensive than the bulk buy options available on eBay or AliExpress.</p>
-</div>
-<p>Refer to <a class="reference internal" href="ir-sensor.html"><span class="doc">IR Sensor Boards</span></a> for further information on infrared sensors.</p>
+<p>Time of Flight (or ToF) sensors can provide a more reliable and accurate sensor than traditional IR sensors as they are not susceptible to interference from different and varying lighting conditions.</p>
+<p>Further to this, these sensors can be programmed to activate only within a specific distance range, enabling a large variety of use cases.</p>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> has support for the VL53L0X ToF sensor via the “IO_VL53L0X.h” HAL device driver which connects to the I<sup>2</sup>C bus of the CommandStation.</p>
+<a class="reference internal image-reference" href="../../../_images/vl53l0x.jpg"><img alt="VL53L0X sensor" src="../../../_images/vl53l0x.jpg" style="width: 283.5px; height: 283.5px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/adafruit-vl53l0x.jpg"><img alt="Adafruit VL53L0X sensor" src="../../../_images/adafruit-vl53l0x.jpg" style="width: 300.0px; height: 225.0px;" /></a>
+<section id="theory-of-operation">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Theory of operation</a><a class="headerlink" href="#theory-of-operation" title="Permalink to this heading"></a></h2>
+<p>The VL53L0X Time-Of-Flight sensor operates by sending a short laser pulse and detecting the reflection of the pulse.  The time between the pulse and the receipt of reflections is measured and used to determine the distance to the reflecting object.</p>
+<p>For economy of memory and processing time, this driver includes only part of the code that ST provide in their API.  Also, the API code isn’t very clear and it is not easy to identify what operations are useful and what are not. The operation shown here doesn’t include any calibration, so is probably not as accurate as using the full driver, but it’s probably accurate enough for the purpose.</p>
 </section>
-<section id="hall-effect-sensors">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Hall effect sensors</a><a class="headerlink" href="#hall-effect-sensors" title="Permalink to this heading"></a></h2>
-<p>Hall effect sensors consist of a hall effect device mounted between the track rails, and a suitable magnet located on the underside of locomotives and rolling stock.</p>
-<table class="command-table docutils align-center" style="width: 100%">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Advantages</p></th>
-<th class="head"><p>Disadvantages</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Inexpensive, can be purchased in bulk at very low prices</p></td>
-<td><p>Requires suitable magnets to be attached to locomotives and rolling stock</p></td>
-</tr>
-<tr class="row-odd"><td><p>Not prone to interference from changes to light sources</p></td>
-<td><p>Can be unreliable at faster train speeds</p></td>
-</tr>
-<tr class="row-even"><td><p>Can be used to detect a train entering or exiting a specific point on a layout (caveat being the point at which the magnet is attached)</p></td>
-<td><p>Can only detect the point at which the magnet is attached, not the front/rear of a train</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It’s been observed that the reliability of hall effect sensors can be improved by connecting them to MCP23017 I/O expanders and using the interrupt capability rather than simply letting the polling cycles detect the sensor changes.</p>
-<p>Refer to <a class="reference internal" href="../../../reference/developers/hal.html#hal-programming-interface"><span class="std std-ref">HAL Programming Interface</span></a> for further information on using the interrupt pin.</p>
+<section id="physical-connection">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Physical connection</a><a class="headerlink" href="#physical-connection" title="Permalink to this heading"></a></h2>
+<p>Each VL53L0X device will, by default, reside on the same I<sup>2</sup>C address of 0x29, and therefore connecting multiple devices to the same I<sup>2</sup>C bus requires consideration and planning.</p>
+<section id="connecting-a-single-device">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Connecting a single device</a><a class="headerlink" href="#connecting-a-single-device" title="Permalink to this heading"></a></h3>
+<p>Connecting a single device is a simple matter of connecting the SDA and SCL pins to the SDA and SCL pins of your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, or your I<sup>2</sup>C bus if you have multiple other devices connected.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the device’s XSHUT pin is not connected, then it is very prone to noise, and the device may even reset when handled.  If you’re not using XSHUT, then it’s best to tie it to +5V.</p>
+</div>
+<p>Once connected, you will need to configure the device driver as per <a class="reference internal" href="#configuring-a-single-device"><span class="std std-ref">Configuring a single device</span></a>.</p>
+<a class="reference internal image-reference" href="../../../_images/mega2560-single-vl53l0x.png"><img alt="Mega2560 with VL53L0X" src="../../../_images/mega2560-single-vl53l0x.png" style="width: 496.0px; height: 475.6px;" /></a>
+</section>
+<section id="connecting-multiple-devices">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Connecting multiple devices</a><a class="headerlink" href="#connecting-multiple-devices" title="Permalink to this heading"></a></h3>
+<p>Connecting multiple devices also require connecting each device to the SDA and SCL pins, however in addition to this, you will need to connect each device’s XSHUT pin to an available I/O pin either directly on your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, or to an available I/O pin on an I/O expander such as an MCP23017. The XSHUT pin connection is required in order to be able to have each device addressed separately.</p>
+<p>Once connected, you will need to configure the device driver for each device as per <a class="reference internal" href="#configuring-multiple-devices"><span class="std std-ref">Configuring multiple devices</span></a>.</p>
+<a class="reference internal image-reference" href="../../../_images/mega2560-dual-vl53l0x.png"><img alt="Mega2560 two VL53L0Xs" src="../../../_images/mega2560-dual-vl53l0x.png" style="width: 722.8000000000001px; height: 475.6px;" /></a>
+</section>
+</section>
+<section id="device-driver-configuration">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Device driver configuration</a><a class="headerlink" href="#device-driver-configuration" title="Permalink to this heading"></a></h2>
+<p>Configuring support for one or more VL53L0X devices requires modifying “myHal.cpp” to include the device driver “IO_VL53L0X.h” and add an entry for each device to be configured.</p>
+<p>The device driver allocates up to 3 vpins to each device:</p>
+<ul class="simple">
+<li><p>A digital read on the first pin will return a value that indicates whether an object is within the threshold range, and the return value will be 1 for true, or 0 for false</p></li>
+<li><p>An analogue read on the first pin returns the last measured distance (in mm)</p></li>
+<li><p>An analogue read on the second pin returns the signal strength</p></li>
+<li><p>An analogue read on the third pin returns detected ambient light level</p></li>
+</ul>
+<p>By default, the device takes around 60ms to complete a ranging operation, so we do a 100ms cycle (10 samples per second).</p>
+<p>The VL53L0X is initially set to respond to I<sup>2</sup>C address 0x29.  If you only have one module, you can use this address. However, the address can be modified by software.  If you select another address, that address will be written to the device and used until the device is reset.</p>
+<p>To enable support for one or more devices, ensure the “IO_VL53L0X.h” device driver is included at the beginning of your “myHal.cpp” file:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#if !defined(IO_NO_HAL)</span>
+
+<span class="c1">// Include devices you need.</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_VL53L0X.h&quot;</span><span class="c1">   // Laser time-of-flight sensor</span>
+<span class="p">...</span>
+</pre></div>
+</div>
+<section id="configuring-a-single-device">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Configuring a single device</a><a class="headerlink" href="#configuring-a-single-device" title="Permalink to this heading"></a></h3>
+<p>For a single device, you need a single entry to create the device also in “myHal.cpp”:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">,</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p>firstVpin is an available vpin reserved for reading the device</p></li>
+<li><p>nPins is 1, 2 or 3</p></li>
+<li><p>i2cAddress is the I<sup>2</sup>C address of the device (normally 0x29 - should be no need to change this for a single device)</p></li>
+<li><p>lowThreshold is the distance at which the digital vpin state is set to 1 (in mm)</p></li>
+<li><p>highThreshold is the distance at which the digital vpin state is set to 0 (in mm)</p></li>
+</ul>
+<p>For example, this entry configures a device on vpin 4000 using the default address of 0x29. A digital read of this vpin will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x29</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+</pre></div>
 </div>
 </section>
-<section id="block-occupancy-detectors">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Block occupancy detectors</a><a class="headerlink" href="#block-occupancy-detectors" title="Permalink to this heading"></a></h2>
-<p>Block occupancy detectors are quite commonly found in DC layouts and have been a very popular method for detecting when a locomotive and/or rolling stock is occupying a DC power district or a specific, isolated section of track.</p>
-<p>These typically work by detecting current being drawn through the track power wiring, requiring resistor wheelsets to be installed on rolling stock. A locomotive requires no modification as the motor (or DCC decoder) will enable this detection.</p>
-<table class="command-table docutils align-center" style="width: 100%">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Advantages</p></th>
-<th class="head"><p>Disadvantages</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>No locomotive modifications required</p></td>
-<td><p>Rolling stock requires resistor wheelsets to be detected</p></td>
-</tr>
-<tr class="row-odd"><td><p>DC layouts converting to DCC may already have these in place</p></td>
-<td><p>May require track wiring alterations</p></td>
-</tr>
-<tr class="row-even"><td></td>
-<td><p>Cannot detect the front or rear of a train, nor a specific point on a layout</p></td>
-</tr>
-</tbody>
-</table>
+<section id="configuring-multiple-devices">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Configuring multiple devices</a><a class="headerlink" href="#configuring-multiple-devices" title="Permalink to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using multiple devices, do not configure any device to use the default I<sup>2</sup>C address of 0x29, as this address needs to be free in order to configure each device on startup.</p>
+</div>
+<p>If you have more than one module, then you will need to specify a digital vpin (Arduino digital output or I/O expander pin) which you connect to the module’s XSHUT pin.  When the device driver starts, the XSHUT pin is set LOW to turn the module off.  Once all VL53L0X modules are turned off, the driver works through each module in turn by setting XSHUT to HIGH to turn the module on, then writes the module’s desired I<sup>2</sup>C address. In this way, many VL53L0X modules can be connected to the one I<sup>2</sup>C bus, each one using a distinct I<sup>2</sup>C address.</p>
+<p>Each device needs its own specific entry in “myHal.cpp”, and requires an additional argument to specify the digital vpin that connects to the device’s XSHUT pin.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">nPins</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">,</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">,</span><span class="w"> </span><span class="n">xshutPin</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p>firstVpin is an available vpin reserved for reading the device</p></li>
+<li><p>nPins is 1, 2 or 3</p></li>
+<li><p>i2cAddress is the address of the device (normally 0x29 - should be no need to change this for a single device)</p></li>
+<li><p>lowThreshold is the distance at which the digital vpin state is set to 1 (in mm)</p></li>
+<li><p>highThreshold is the distance at which the digital vpin state is set to 0 (in mm)</p></li>
+<li><p>xshutPin is the vpin number corresponding to either a direct I/O pin or an I/O pin on an I/O expander</p></li>
+</ul>
+<p>For example, these entries configure two devices on vpins 4000 and 4003, with I<sup>2</sup>C addresses 0x30 and 0x31. The device at 0x30 is connected directly to an Arduino Mega2560’s digital pin 22, and the device at 0x31 is connected to the first digital I/O pin of the first MCP23017 device at vpin 164. A digital read of each of the device’s vpins will return a 1 if an object is within 200mm, and will return a 0 if an object moves more than 250mm from the sensor:</p>
+<p>Note the second sensor starts at vpin 4003 as the first sensor consumes vpins 4000, 4001, and 4002.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
+<span class="w">  </span><span class="n">VL53L0X</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">4003</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x31</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">164</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+</pre></div>
+</div>
 </section>
-<section id="proximity-sensors">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Proximity sensors</a><a class="headerlink" href="#proximity-sensors" title="Permalink to this heading"></a></h2>
-<p>Proximity sensors work by detecting objects within a specific distance range from the sensor, and are also able to measure the specific distance to objects, improving detection reliability.</p>
-<p>There are various types of proximity sensors available, with the most commonly available on breakout boards being time-of-flight sensors such as the VL53L0X.</p>
-<table class="command-table docutils align-center" style="width: 100%">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Advantages</p></th>
-<th class="head"><p>Disadvantages</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Can typically work reliably in all lighting situations</p></td>
-<td><p>Typically a more expensive option</p></td>
-</tr>
-<tr class="row-odd"><td><p>No locomotive or rolling stock modifications required (eg. resistor wheels or magnets)</p></td>
-<td><p>More complex to setup and configure than infrared sensors</p></td>
-</tr>
-<tr class="row-even"><td><p>Can be used to detect both ends of a train</p></td>
-<td><p>Limited options on breakout boards, other sensors are a DIY option</p></td>
-</tr>
-<tr class="row-odd"><td><p>Can be used to detect a train entering or exiting a specific point on a layout</p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Refer to <a class="reference internal" href="vl53l0x-tof-sensor.html"><span class="doc">VL53L0X Time of Flight Sensor</span></a> for further information on the VL53L0X time-of-flight sensor.</p>
+</section>
+<section id="sensor-configuration-for-jmri">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Sensor configuration for JMRI</a><a class="headerlink" href="#sensor-configuration-for-jmri" title="Permalink to this heading"></a></h2>
+<p>If you are using <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> and require these to be available as sensors, then they can be configured via the DCC-EX <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> command.</p>
+<p>To create sensors for our examples above, the commands would be as shown below, and for simplicity we keep the sensor ID the same as the vpin ID in use.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 4000 4000 0&gt;
+&lt;S 4003 4003 0&gt;
+</pre></div>
+</div>
+<p>With these definitions, when an object comes within 200mm of the sensors, a <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> message will be sent to all defined serial ports with the appropriate sensor ID:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Q 4000&gt;
+&lt;Q 4003&gt;
+</pre></div>
+</div>
+<p>Conversely, when an object moves more than 250mm from the sensors, a <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> message will be sent instead:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;q 4000&gt;
+&lt;q 4003&gt;
+</pre></div>
+</div>
+<p>To ensure sensors are defined at startup, refer to <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">Startup Configuration</span></a>.</p>
+</section>
+<section id="ex-rail-integration">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">EX-RAIL integration</a><a class="headerlink" href="#ex-rail-integration" title="Permalink to this heading"></a></h2>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> enables utilising these devices as both digital and analogue sensors.</p>
+<p>Using the standard digital sensor commands (AT, AFTER, ATTIMEOUT, IF, IFNOT, IFTIMEOUT) operates as per any other digital sensor, using the ranges specified when configuring the devices.</p>
+<p>For example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT(4000)        // Will trigger when an object is within 200mm
+AFTER(4003)     // Will trigger 0.5s after an object moves 250mm away
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/447">LOW - VL53L0X</a> - validate VL53L0X works with EX-RAIL’s analogue sensor commands ATGTE, ATLT, IFGTE, IFLT</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using a VL53L0X with EX-RAIL’s analogue sensor commands has not been validated, this may not work.</p>
+</div>
+<p>With <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>, you can also use the analogue sensor commands (ATGTE, ATLT, IFGTE, IFLT) to have automation based on the actual distance from the sensor, rather than it operating like a simple on/off switch.</p>
+<p>For example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ATGTE(4000, 150)    // Will trigger when an object is 150mm or further away from the sensor
+ATLT(4003, 100)     // Will trigger when an object is less than 100mm away
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -633,8 +671,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Sensors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ir-sensor.html" class="btn btn-neutral float-right" title="IR Sensor Boards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ir-sensor.html" class="btn btn-neutral float-left" title="IR Sensor Boards" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../inputs-outputs/index.html" class="btn btn-neutral float-right" title="Input and Output Accessories and Expanders" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -140,3 +140,20 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
     - 12
     - | PA_4,PB_0,PC_2,PC_1,PC_3,PC_0 - CN7
       | PC_5,PA_5,PA_6,PA_7,PB_1,PC_4 - CN10
+
+Adding new devices
+==================
+
+You need to know:
+
+- Platform/architecture/processor specific define for the preprocessor eg. "ARDUINO_ARCH_AVR" for reset functionality ``<Z>``
+- Board specific define for the pin map eg. "ARDUINO_NUCLEO_F412ZG"
+- If it's not in use already, requires an addition to the reset() function in EX-IOExpander.ino, otherwise no ``<Z>``
+
+Pin map:
+
+- Pin maps defined in SupportedDevices.h
+- All pins capable of being digital inputs/outputs need to be included in "digitalPinMap", including analogue capable pins
+- All pins capable of being analogue inputs need to be included in "analoguePinMap"
+- The pin maps must be ordered in the same way, meaning pins in both pin maps need to be at the end of digital, beginning of analogue
+- Macros must be defined accurately for digital and analogue pin maps

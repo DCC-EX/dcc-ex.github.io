@@ -20,22 +20,9 @@
 Newer, faster, better
 =====================
 
-As technology progresses, newer, faster, and better microcontrollers become available, and therefore there is a never-ending cycle of testing and development of newer generations of microcontrollers that might suit the |DCC-EX| project.
+As technology progresses, newer, faster, and better microcontrollers become available, and therefore the dev team works in the background on porting and testing of |DCC-EX| on newer generations of microcontrollers to see if they might better suit the |DCC-EX| project.
 
-Note on 3v3 vs. 5V microcontrollers
------------------------------------
-
-It's important to note that the newer generations of microcontrollers almost always operate at 3.3 volts rather than 5 volts.
-
-For some, like the STM32F4xx range, this is a non-issue as their digital I/O pins are designed to be 5V tolerant, meaning your existing sensors, serial devices, and |I2C| devices running at 5V are expected to be compatible. Outputs may need further consideration though, as while a "high" signal at 3v3 will trigger most 5V input logic devices, in some rare instances it can potentially not provide a high enough voltage. Using level shifters for digital outputs will resolve these issues, and if you want an extra layer of caution, you can use level shifters for the digital inputs as well.
-
-For others that are not 5V tolerant, using 5V accessories will cause damage to the microcontroller, so using digital I/O level shifters is mandatory with these.
-
-ALL 3v3 microcontrollers require analog inputs to be restricted to no more than 3.3V. This means only some Motor Driver boards are compatible unmodified with 3v3 microcontrollers to read output current. For the moment we recommend the genuine Ardiuno Motor Driver R3, and only the R3 version of it. Motor Drivers such as the Deek Robot can be modified readily enough. We will document this, but in the meantime ask on the Discord server.
-
-.. note::  
-
-  Some devices such as the ESP01 WiFi board and HC05/06 Bluetooth boards are already 3v3 devices, so if you have set these up with level shifters, the level shifters will no longer be required when using 3v3 microcontrollers.
+This is never done lightly, as the effort to support a new microcontroller might be high and the benefits may be too inconsequential, or indeed may mean loss of functionality.
 
 Considerations for new microcontrollers
 ---------------------------------------
@@ -49,15 +36,30 @@ When considering new microcontrollers to test and experiment with as potential c
 - Price - is it available at a price point that would encourage users to adopt it readily?
 - Quality - is it available with a sufficient build quality to make it reliable?
 
+Notes on 3v3 vs. 5V microcontrollers
+------------------------------------
+
+It's important to note that the newer generations of microcontrollers almost always operate at 3.3 volts rather than 5 volts.
+
+For some, like the STM32F4xx range, this is a non-issue as their digital I/O pins are designed to be 5V tolerant, meaning your existing sensors, serial devices, and |I2C| devices running at 5V are expected to be compatible. Outputs may need further consideration though, as while a "high" signal at 3v3 will trigger most 5V input logic devices, in some rare instances it can potentially not provide a high enough voltage. Using level shifters for digital outputs will resolve these issues, and if you want an extra layer of caution, you can use level shifters for the digital inputs as well.
+
+For others that are not 5V tolerant, using 5V accessories will cause damage to the microcontroller, so using digital I/O level shifters is mandatory with these.
+
+ALL 3v3 microcontrollers require analog inputs to be restricted to no more than 3.3V. This means only some Motor Driver boards are compatible unmodified with 3v3 microcontrollers to read output current. For the moment we recommend the genuine Ardiuno Motor Driver R3, and only the R3 version of it. Motor Drivers such as the Deek Robot can be modified readily enough. We will document this, but in the meantime ask on the Discord server.
+
+.. note::  
+
+  Some devices such as the ESP01 WiFi board and HC05/06 Bluetooth boards are already 3v3 devices, so if you have set these up with level shifters, the level shifters will no longer be required when using 3v3 microcontrollers.
+
 STMicroelectronics STM32 NUCLEO series
 ======================================
 
-STMicroelectronics has a range of ARM based microcontrollers that are generally available, sold from reputable global resellers such as Digi-Key and Mouser, and have exceptional build quality for their price.
+STMicroelectronics has a range of ARM based microcontrollers that are generally available, sold from reputable global resellers such as Digi-Key and Mouser, and have exceptional build quality for their price (often lower than clone Arduino models!)
 
 Further to this, the NUCLEO series of development boards also provide Arduino Uno compatible header sockets, meaning existing motor (and other) shields can just plug straight in, providing they are 3v3 compatible (see note above).
 
-NUCLEO-F411RE
--------------
+NUCLEO-F411RE and NUCLEO-F446RE
+-------------------------------
 
 The majority of the current development work with the Nucleo series has been focused on the NUCLEO-F411RE as it most closely resembles the ubiquitous Arduino Uno form factor, including having Uno compatible header sockets in addition to Morpho pins for a larger I/O footprint than the Uno. It has 50 I/O pins compared with the Uno's 20.
 
@@ -65,16 +67,22 @@ For most use cases, this is also a suitable substitution for an Arduino Mega, as
 
 A good summary if the F411RE is available on the `arm MBED Nucleo-F411RE <https://os.mbed.com/platforms/st-nucleo-f411re/>`_ page.
 
-NUCLEO-F412ZG and NUCLEO-F429ZI
--------------------------------
+The NUCLEO-F446RE is the same Nucleo-64 size as the F411RE, but with a faster processor and other features. As one of our more advanced early alpha test users has this board, it's now also supported as a build target and being tested.
 
-There are two of the larger NUCLEO devices being tested in the Nucleo-144 form factor; the NUCLEO-F412ZG and NUCLEO-F429ZI.
+A good summary if the F446RE is available on the `arm MBED Nucleo-F446RE <https://os.mbed.com/platforms/st-nucleo-f446re/>`_ page.
 
-Both of these have a much larger footprint while still retaining the Uno compatible header sockets, with 114 I/O pins.
+NUCLEO-F412ZG, NUCLEO-F446ZE and NUCLEO-F429ZI
+----------------------------------------------
+
+These are three of the larger NUCLEO devices being tested in the Nucleo-144 form factor; the NUCLEO-F412ZG, NUCLEO-F446ZE and NUCLEO-F429ZI.
+
+Each of these have a much larger footprint while still retaining the Uno compatible header sockets, with 114 I/O pins.
 
 The F412ZG is potentially suitable as a larger replacement for a Mega, with more I/O pins available, refer to the `arm MBED F412ZG <https://os.mbed.com/platforms/ST-Nucleo-F412ZG/>`_ page.
 
-The F429ZI has the same large footprint, however it has the added benefit of onboard Ethernet, which makes it potentially suitable for larger layouts where the WiFi limitations of the ESP01 firmware come in to play. Note, however, that the Ethernet support for this board in |EX-CS| is currently not implemented. Refer to the `arm MBED F429ZI <https://os.mbed.com/platforms/ST-Nucleo-F429ZI/>`_ page.
+The F446ZE has the same large footprint, however it has a significantly faster CPU and a USB OTG port. Refer to the `arm MBED F429ZI <https://os.mbed.com/platforms/ST-Nucleo-F429ZI/>`_ page.
+
+The F429ZI has the same large footprint, however it has the added benefit of onboard Ethernet, which makes it potentially suitable for larger or exhibition layouts where the WiFi limitations of the ESP01 firmware come in to play. Note, however, that the Ethernet support for this board in |EX-CS| is currently not implemented. It too has a USB OTG port. Refer to the `arm MBED F429ZI <https://os.mbed.com/platforms/ST-Nucleo-F429ZI/>`_ page.
 
 .. note:: 
 
@@ -182,3 +190,17 @@ You will then need to navigate to "Tools" -> "Board" -> "Boards Manager", search
   :scale: 50%
 
 Once this has been performed, the NUCLEO devices should be available to be selected in the Arduino IDE.
+
+Adding NUCLEO support to VS Code/PlatformIO
+-------------------------------------------
+
+In order to compile for the STM32 NUCLEO platforms you need do nothing when using Microsoft VS Code and PlatformIO. PlatformIO will automatically download the required tool chains and frameworks for platform support based on the entries in platformio.ini inclued in the |EX-CS| source tree.
+
+Just select "Nucleo-F411RE" as the build target, and hit build. Be sure to do this after installing the drivers (for Windows) and upgrading the debugger firmware per the instructions above.
+
+Hardware setup notes for a NUCLEO |EX-CS|
+-----------------------------------------
+
+Here is how the NUCLEO-F411RE looks bare:
+
+.. image:: /_static/images/nucleo/

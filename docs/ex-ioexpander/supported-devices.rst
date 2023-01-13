@@ -144,16 +144,67 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 Adding new devices
 ==================
 
-You need to know:
+|tinkerer| |engineer|
 
-- Platform/architecture/processor specific define for the preprocessor eg. "ARDUINO_ARCH_AVR" for reset functionality ``<Z>``
-- Board specific define for the pin map eg. "ARDUINO_NUCLEO_F412ZG"
-- If it's not in use already, requires an addition to the reset() function in EX-IOExpander.ino, otherwise no ``<Z>``
+Adding new devices to the |EX-IO| software is fairly straight forward, and only requires additional information in the |EX-IO| software itself, with no changes required to the device driver loaded in your |EX-CS|.
 
-Pin map:
+In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to specify how the Vpins defined in the device driver map to the physical pins of the |EX-IO| device.
 
-- Pin maps defined in SupportedDevices.h
+For example, the AVR series (Uno, Mega, Nano) have the architure or platform macro defined as "ARDUINO_ARCH_AVR", with the Nano having the variant or board specific macro "ARDUINO_AVR_NANO", and there is a pin map defined that maps to this macro definition.
+
+Enabling software reboots
+-------------------------
+
+The architecture or platform macro is used to determine the correct method to reboot the device via the ``<Z>`` command, whereas the variant or board specific macro is used to define the actual pins in use.
+
+If a new architecture or platform is being added, then "EX-IOExpander.ino" will need to be updated with the suitable software command in the "reset()" function, otherwise a reboot via ``<Z>`` will not be available.
+
+If the architecture or platform already exists, or there is no desire to reboot via software, then the only change required is to add the variant or board specific information to "SupportedDevices.h".
+
+Defining the device and pin map in SupportedDevices.h
+-----------------------------------------------------
+
+A pin map is used to map the Vpins from the device driver in the |EX-CS| to the appropriate physical pins on the |EX-IO| device, and therefore defining this in the correct order in the |EX-IO| software is critical. It is equally critical to ensure that the correct variant or board macro is used to ensure the correct pin map is used when compiling and uploading the software to the |EX-IO| device.
+
+Pin maps are defined in the file "SupportedDevices.h".
+
+As per :ref:`ex-ioexpander/overview:pin/vpin allocation`, digital pins are allocated first, incrementing from the first Vpin, and analogue pins are allocated in reverse, starting from the last Vpin.
+
+These are the considerations when defining the pin map:
+
 - All pins capable of being digital inputs/outputs need to be included in "digitalPinMap", including analogue capable pins
-- All pins capable of being analogue inputs need to be included in "analoguePinMap"
-- The pin maps must be ordered in the same way, meaning pins in both pin maps need to be at the end of digital, beginning of analogue
-- Macros must be defined accurately for digital and analogue pin maps
+- All pins capable of being analogue inputs need to be included in "analoguePinMap" (don't include dual digital/analogue pins here)
+- Pins included in both pin maps need to be in the same order, with analogue pins at the end of the digital pin map
+- Macros for the number of pins in each pin map must be defined accurately
+- NUMBER_OF_DIGITAL_PINS is the number of digital only pins
+- NUMBER_OF_ANALOGUE_PINS is the number of pins capable of analogue input, whether or not they can be used as digital also
+- Any pins that are only capable of analogue inputs must be at the end of the analogue pin map
+
+Further to this, if EEPROM is available, this needs to be defined, along with a description that is presented in the serial console when starting the device.
+
+To use the Arduino Nano as the example, this is the definition in "SupportedDevices.h":
+
+.. code-block:: cpp
+
+  // Arduino Nano
+  #elif defined(ARDUINO_AVR_NANO)
+  #define BOARD_TYPE F("Nano")
+  #define HAS_EEPROM
+  #define NUMBER_OF_DIGITAL_PINS 12   // D2 - D13
+  #define NUMBER_OF_ANALOGUE_PINS 6     // A0 - A3, A6/A7, cannot use A4/A5
+  static const uint8_t digitalPinMap[NUMBER_OF_DIGITAL_PINS + NUMBER_OF_ANALOGUE_PINS] = {
+    2,3,4,5,6,7,8,9,10,11,12,13,A0,A1,A2,A3
+  };
+  static const uint8_t analoguePinMap[NUMBER_OF_ANALOGUE_PINS] = {
+    A0,A1,A2,A3,A6,A7
+  };
+
+- The variant or board macro definition is "ARDUINO_AVR_NANO".
+- The "BOARD_TYPE" is displayed in the serial console at startup as "Nano".
+- The Nano has EEPROM support to allow storing the |I2C| address
+- There are 12 digital pins
+- There are 6 analogue pins
+- All digital pins and the 4 analogue pins capable of digital are defined in "digitalPinMap"
+- All analogue pins are defined in "analoguePinMap"
+- The analogue pins defined in both pin maps are added in the same order, with analogue pins at the end of the digital pin map
+- Analogue pins A6/A7 are analogue only, are therefore not included in digitalPinMap, and are defined at the end of analoguePinMap

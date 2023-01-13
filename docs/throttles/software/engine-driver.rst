@@ -149,4 +149,4 @@ Footnotes
 ---------
 .. [#] the Web server is required if you want to show the Loco images in Engine Deiver.
 
-* The |WiThrottle Protocol| is the proprietary protocol developed by Matt Hoffman at https://www.WiThrottle.com
+* The |WiThrottle Protocol| is the proprietary protocol developed by Brett Hoffman at https://www.WiThrottle.com

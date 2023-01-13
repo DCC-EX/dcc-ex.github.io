@@ -146,6 +146,12 @@ Adding new devices
 
 |tinkerer| |engineer|
 
+.. warning:: 
+
+  When considering adding new devices to |EX-IO|, be sure to take into account whether they are 5V or 3.3V devices, and whether their I/O and |I2C| pins are 5V tolerant if they are 3.3V devices. New generation microcontrollers tend to be 3.3V, and some have 5V tolerant I/O pins (eg. STM32 Nucleo), but some are not 5V tolerant (eg. SAMD).
+
+  To connect 3.3V devices to a 5V |EX-CS|, they need to either be 5V tolerant, or you will need to use a level shifter to avoid letting the magic smoke out.
+
 Adding new devices to the |EX-IO| software is fairly straight forward, and only requires additional information in the |EX-IO| software itself, with no changes required to the device driver loaded in your |EX-CS|.
 
 In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to specify how the Vpins defined in the device driver map to the physical pins of the |EX-IO| device.

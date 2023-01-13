@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
 
-*********************
-EX-RAIL (Automation)
-*********************
+******************************
+EX-RAIL (Automation/Animation)
+******************************
 
 |tinkerer| |engineer|
 

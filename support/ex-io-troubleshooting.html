@@ -28,7 +28,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="EX-Turntable" href="../ex-turntable/index.html" />
-    <link rel="prev" title="Testing EX-IOExpander" href="../ex-ioexpander/testing.html" />
+    <link rel="prev" title="Using other devices" href="../ex-ioexpander/other-devices.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -167,6 +167,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/overview.html">Overview and configuration</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/other-devices.html">Using other devices</a></li>
 <li class="toctree-l5 current"><a class="current reference internal" href="#">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
@@ -183,6 +184,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/animation.html">Automation and Animation</a></li>
 </ul>
 </li>
 </ul>
@@ -193,7 +195,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-webthrottle/index.html">EX-WebThrottle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ex-rail/index.html">EX-RAIL (Automation)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../ex-rail/index.html">EX-RAIL (Automation/Animation)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/editing.html">Editing myAutomation.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/creating-elements.html">Objects - an Introduction</a></li>
@@ -220,6 +222,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/overview.html">Overview and configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/other-devices.html">Using other devices</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
@@ -533,6 +536,7 @@
 <div class="line"><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> turned on before <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> - ensure <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> is turned on before <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></div>
 <div class="line">Incorrect I<sup>2</sup>C address defined - ensure the I<sup>2</sup>C address is correct in myHal.cpp on <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and myConfig.h on <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span></div>
 <div class="line">Incorrect number of digital/analogue pins defined - ensure the pins defined in myHal.cpp are valid according to <a class="reference internal" href="../ex-ioexpander/supported-devices.html"><span class="doc">Supported Devices</span></a></div>
+<div class="line">I<sup>2</sup>C clock speed issue, define slower clock speed in myHal.cpp: <a class="reference internal" href="../reference/hardware/i2c-devices.html#changing-the-clock-speed"><span class="std std-ref">Changing the Clock speed</span></a></div>
 </div>
 </td>
 </tr>
@@ -549,7 +553,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../ex-ioexpander/testing.html" class="btn btn-neutral float-left" title="Testing EX-IOExpander" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ex-ioexpander/other-devices.html" class="btn btn-neutral float-left" title="Using other devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../ex-turntable/index.html" class="btn btn-neutral float-right" title="EX-Turntable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

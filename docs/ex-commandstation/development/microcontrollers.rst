@@ -58,12 +58,18 @@ STMicroelectronics has a range of ARM based microcontrollers that are generally 
 
 Further to this, the NUCLEO series of development boards also provide Arduino Uno compatible header sockets, meaning existing motor (and other) shields can just plug straight in, providing they are 3v3 compatible (see note above).
 
+All of the NUCLEO series being considered as a future |DCC-EX| platform have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz) than the current AVR-based UNO and Mega.
+
+With those attributes comes the potential to support much larger EX-RAIL scripts, more Withrottle connections, and many new features.
+
 NUCLEO-F411RE and NUCLEO-F446RE
 -------------------------------
 
-The majority of the current development work with the Nucleo series has been focused on the NUCLEO-F411RE as it most closely resembles the ubiquitous Arduino Uno form factor, including having Uno compatible header sockets in addition to Morpho pins for a larger I/O footprint than the Uno. It has 50 I/O pins compared with the Uno's 20.
+The majority of the current development work with the Nucleo series has been focused on the NUCLEO-F411RE as it most closely resembles the ubiquitous Arduino Uno form factor, including having Uno compatible header sockets in addition to Morpho pins for a larger I/O footprint than the Uno.
 
-For most use cases, this is also a suitable substitution for an Arduino Mega, as despite its larger footprint, the Mega only provides 20 more I/O pins than the F411RE. There are larger NUCLEO footprints available (see below), which have many more pins than an Arduino Mega.
+The F411RE has 50 I/O pins compared with the Uno's 20, and only 20 less than the Mega despite its diminuitive size. For most use cases it is therefore a suitable substitute for an Arduino Mega.
+
+There are larger NUCLEO footprints available (see below), which have many more pins than an Arduino Mega.
 
 A good summary if the F411RE is available on the `arm MBED Nucleo-F411RE <https://os.mbed.com/platforms/st-nucleo-f411re/>`_ page.
 
@@ -76,17 +82,17 @@ NUCLEO-F412ZG, NUCLEO-F446ZE and NUCLEO-F429ZI
 
 These are three of the larger NUCLEO devices being tested in the Nucleo-144 form factor; the NUCLEO-F412ZG, NUCLEO-F446ZE and NUCLEO-F429ZI.
 
-Each of these have a much larger footprint while still retaining the Uno compatible header sockets, with 114 I/O pins.
+Each of these has a larger footprint than the Nucleo-64 series, while still retaining the Uno compatible header sockets, with 114 I/O pins. That said, they are only slightly larger (20mm wider, 33mm longer) than an Arduino Mega 2560.
 
 The F412ZG is potentially suitable as a larger replacement for a Mega, with more I/O pins available, refer to the `arm MBED F412ZG <https://os.mbed.com/platforms/ST-Nucleo-F412ZG/>`_ page.
 
-The F446ZE has the same large footprint, however it has a significantly faster CPU and a USB OTG port. Refer to the `arm MBED F429ZI <https://os.mbed.com/platforms/ST-Nucleo-F429ZI/>`_ page.
+The F446ZE has the same large footprint, however it has a significantly faster CPU and a USB OTG port. Refer to the `arm MBED F446ZE <https://os.mbed.com/platforms/ST-Nucleo-F446ZE/>`_ page.
 
 The F429ZI has the same large footprint, however it has the added benefit of onboard Ethernet, which makes it potentially suitable for larger or exhibition layouts where the WiFi limitations of the ESP01 firmware come in to play. Note, however, that the Ethernet support for this board in |EX-CS| is currently not implemented. It too has a USB OTG port. Refer to the `arm MBED F429ZI <https://os.mbed.com/platforms/ST-Nucleo-F429ZI/>`_ page.
 
 .. note:: 
 
-  While the F429ZI is supported by the Arduino IDE, the F412ZG cannot be selected from within the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev team via Discord. The plan is to submit the F412ZG variant files to the STM32duino GitHub repo for inclusion once they are validated and debugged.
+  While the F429ZI is supported by the Arduino IDE, the F412ZG and F446ZE cannot be selected as build targets from within the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev team via Discord. The plan is to submit the F412ZG and F446ZE variant files to the STM32duino GitHub repo for inclusion once they are validated and debugged.
 
 Install the STLink drivers
 --------------------------

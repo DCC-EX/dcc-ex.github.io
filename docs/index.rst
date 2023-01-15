@@ -10,8 +10,13 @@ DCC-EX Model Railroading
 
   `Version 4.1.2 Released <about/press/v412-announce.html>`_
 
-Welcome! |BR|\ |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout.  
-Our easy to use, do-it-yourself, affordable products are based on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more. |BR| They currently include:
+Welcome!
+
+|DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and affordable products are based on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+
+If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`/begin/index` page which will help guide you through this web site and understand how our products might suit your needs.
+
+Our products currently include:
 
 .. list-table::
     :widths: 33 33 33
@@ -57,17 +62,11 @@ Our easy to use, do-it-yourself, affordable products are based on off-the-shelf 
     * - |EX-DCCI-LOGO-SMALL| 
       -  A DCC packet sniffing tool
 
-If you are just starting your journey with |DCC-EX| we recommend you look at our :doc:`Before You Begin <levels>` page to choose your comfort level, which will help guide you through this web site.
-
-..
-
-   .. [ # b c s] |EX-CS| is a :doc:`major rewrite <about/press/rewrite>` to the original |BSC| code. No active development. Bug fixes only. |br| If you are still using DCC++, we recommend that you move to |EX-CS|.  It will run on the same hardware.
-
 .. toctree::
    :hidden:
    :maxdepth: 4
 
-   levels
+   begin/index
    ex-commandstation/index
    ex-installer/index
    ex-webthrottle/index

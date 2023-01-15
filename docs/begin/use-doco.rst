@@ -5,6 +5,6 @@
 .. include:: /include/include-l1.rst
 |donate-button|
 
-*****************************
-How to use this documentation
-*****************************
+***************************************
+How to use find what you're looking for
+***************************************

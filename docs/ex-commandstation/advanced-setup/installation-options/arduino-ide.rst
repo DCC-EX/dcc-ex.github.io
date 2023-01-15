@@ -17,7 +17,7 @@ Install using the Arduino IDE
 
 The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our |EX-CS| Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
 
-Those on the Tinkerer or Engineer path—see :doc:`Choose Your Path (levels) </levels>` may want to make changes to the code, or just learn more about how the |EX-CS| software works. At a minimum, you may need to change options in the config.h file, or use the IDE's "Serial Monitor" to monitor your Command Station, get logs if something is not working, or enter commands to test out features.
+Those on the Tinkerer or Engineer path (see :doc:`/begin/levels`) may want to make changes to the code, or just learn more about how the |EX-CS| software works. At a minimum, you may need to change options in the config.h file, or use the IDE's "Serial Monitor" to monitor your Command Station, get logs if something is not working, or enter commands to test out features.
 
 **You can click on most of the images below to enlarge them**
 

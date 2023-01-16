@@ -21,14 +21,17 @@ Q1 2023
   - Fast clock support
   - Additional automation and animation features with |EX-R|
 
-- Release a new EX-WebThrottle version supporting accessories, routes, etc.
-- Add wireless I/O expansion to |EX-IO|
+- Add additional connection methods to |EX-IO| beyond |I2C|
 
 Looking ahead
 =============
 
+- Add |I2C| multiplexer support to the HAL
+- Expand wireless connectivity between |EX-CS| and accessories beyond just throttles
 - Design an all-in-one |EX-CS| hardware platform that can be purchased through resellers, or assembled at home
 - Develop a new installer that can maintain pace with the development of the |EX-CS| software
+- Release a new EX-WebThrottle version supporting accessories, routes, etc.
+- Complete the Big Picture fictional layout with components and |EX-R| scripts
 
 ----
 

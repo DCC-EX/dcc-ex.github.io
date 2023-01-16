@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: Requirements
         run: |
+          pip3 install docutils==0.18
           pip3 install sphinx==5.1.1
           pip3 install sphinx-rtd-theme==1.0.0
           pip3 install sphinx-sitemap

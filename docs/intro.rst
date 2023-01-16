@@ -2,12 +2,90 @@
    :keywords: Comfort Levels Conductor Tinkerer Engineer
 
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
+.. include:: /include/include-l0.rst
 |donate-button|
 
-*************************
+***********************
+What is DCC and DCC-EX?
+***********************
+
+.. sidebar:: 
+
+  .. contents:: On this page
+    :depth: 2
+    :local:
+
+What is DCC?
+============
+
+For those who have come across our website and don't really know or understand what Digital Command Control (DCC) is or does, then in a very short summary, it is essentially a way to control multiple trains on the same piece of track independently of one another (it is also much, much more than that).
+
+With DCC, there is no need for multiple electrically isolated blocks to control multiple trains independently any more.
+
+To get a more in depth introduction to the DCC standand and protocol, you can read the `Wikipedia <https://en.wikipedia.org/wiki/Digital_Command_Control>`_ and `DCC Wiki <https://dccwiki.com/Introduction_to_DCC>`_ introduction pages.
+
+However, if you just want to know how DCC, and in particular |DCC-EX|, can help you run your trains and also add more realism to your layouts, then continue reading here.
+
+DCC is for more than just controlling trains
+--------------------------------------------
+
+DCC, and in particular our flagship product |EX-CS|, can also be used to control accessories (think turnouts/points, signals, sensors to monitor things, and lineside feature animation to name a few). DCC is not just about running trains!
+
+Of course you don't need to use any of these features if you simply want to run trains.
+
+Read on to understand which of our products and features will help you achieve your DCC dreams...
+
+DCC-EX Products
+===============
+
+Our products currently include:
+
+.. list-table::
+    :widths: 33 33 33
+    :header-rows: 0
+    :class: table-grid-homepage
+
+    * - |EX-CS-LOGO-SMALL|
+      - |EX-I-LOGO-SMALL|
+      - |EX-R-LOGO-SMALL|
+    * - Our DCC command station for controlling your model railroad
+      - Our user friendly command station software installer
+      - The in-built scripting language for automating your model railroad
+    * - |EX-WT-LOGO-SMALL|
+      - |EX-TT-LOGO-SMALL|
+      - |EX-IO-LOGO-SMALL|
+    * - A simple web based throttle for your command station
+      - A separate stepper based turntable controller
+      - Use additional microcontrollers to expand I/O port capability
+    * - |EX-DCCI-LOGO-SMALL|
+      - 
+      - 
+    * - A separate DCC packet sniffing tool
+      - 
+      - 
+
+.. list-table::
+    :widths: 50 50
+    :header-rows: 0
+    :class: table-list-homepage
+
+    * - |EX-CS-LOGO-SMALL| 
+      - Our DCC command station for controlling your model railroad
+    * - |EX-I-LOGO-SMALL| 
+      - Our user friendly command station software installer
+    * - |EX-R-LOGO-SMALL| 
+      - The in-built scripting language for automating your model railroad
+    * - |EX-WT-LOGO-SMALL| 
+      - A simple web based throttle for your command station
+    * - |EX-TT-LOGO-SMALL| 
+      - A separate stepper based turntable controller
+    * - |EX-IO-LOGO-SMALL| 
+      - Use additional microcontrollers to expand I/O port capability
+    * - |EX-DCCI-LOGO-SMALL| 
+      -  A DCC packet sniffing tool
+
 Choose Your Comfort Level
-*************************
+=========================
 
 Our products are predominately Do-It-Yourself and range in difficulty from very simple to moderately complex. 
 

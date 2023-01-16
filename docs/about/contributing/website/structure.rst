@@ -154,7 +154,7 @@ See below for more information about heading.
 Comfort level logos
 -------------------
 
-On our :doc:`/begin/levels` page, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
+In our :ref:`intro:choose your comfort level` section, we refer to Conductor, Tinkerer, and Engineer level users, and where possible, we should be using these logos to help users understand what level the documentation is targeted at.
 
 There are two types of logos available, one suitable for callouts or panels which are simply a square graphic, and one suitable for page headings that contains the graphic and the text.
 

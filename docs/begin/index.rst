@@ -17,7 +17,8 @@ Click the "Next" button below to read through the introduction and start your jo
 
 .. toctree::
   :hidden:
-  :maxdepth: 1
+  :maxdepth: 4
 
   intro
+  find-things
   levels

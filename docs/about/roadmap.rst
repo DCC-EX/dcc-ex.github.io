@@ -18,6 +18,7 @@ Q1 2023
   
   - Track Manager/DC districts
   - Support for newer generation microcontrollers
+  - Fast clock support
   - Additional automation and animation features with |EX-R|
 
 - Release a new EX-WebThrottle version supporting accessories, routes, etc.

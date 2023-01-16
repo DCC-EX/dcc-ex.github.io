@@ -262,7 +262,7 @@ Writing CVs - Programming track - Tuning
     - Description / Response 
   * - ``<D ACK LIMIT mA>`` 
     - **Override ACK processing mA pulse size** |BR| |BR|
-      Response (successful): |BR|
+      Response (successful): N/A |BR|
       Response (fail):  
   * - ``<D ACK MIN uS>`` 
     - **Override ACK processing minimum pulse width** |BR| |BR|
@@ -278,7 +278,7 @@ Writing CVs - Programming track - Tuning
       Response (fail):  
   * - ``<D PROGBOOST>``  
     - **Override 250mA prog track limit while idle** |BR| |BR|
-      Response (successful): |BR|
+      Response (successful): ```` |BR|
       Response (fail):  
 
 DCC Accessories
@@ -323,17 +323,17 @@ Turnouts/Points
       Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
       Response (Servos): ``<H id SERVO vpin thrown_position closed_position profile state>`` |BR|
       Response (VPIN): ``<H id VPIN vpin state>`` |BR|
-      Response (LCN): ``<H id LCN state>``` |BR|
+      Response (LCN): ``<H id LCN state>`` |BR|
       Response (fail): ``?`` |BR|
       Response (no defined turnouts/points):  ``?`` |BR| |BR|
       **state** - 0=closed 1=thrown
   * - ``<T id 0|1|C|T>`` 
     - **Throw (1 or T) or close(0 or C) a defined turnout/point** |BR| |BR|
-      Response (successful): ``<H id 0|1>``` |BR|
+      Response (successful): ``<H id 0|1>`` |BR|
       Response (fail):  ``<X>``
   * - ``<T id>`` 
     - **Delete defined turnout/point** |BR| |BR|
-      Response (successful): ``?``` |BR|
+      Response (successful): ``?`` |BR|
       Response (fail):  ``?``
 
 Once all turnout/points have been properly defined, use the <E> (upper case E) command to store their definitions to EEPROM. 
@@ -352,23 +352,23 @@ Sensors
     - Description / Response 
   * - ``<Q>`` 
     - **Lists Status of all sensors** |BR| |BR|
-      Response (successful): |BR|
-      Response (fail):  
+      Response (successful) Repeat for each defined sensor: ``<q id>`` |BR|
+      Response (fail):  N/A
   * - ``<S>`` 
     - **Lists definition all defined sensors** |BR| |BR|
-      Response (successful): |BR|
-      Response (fail):  
+      Response (successful) Repeat for each defined sensor: ``<Q id ?? state>`` |BR|
+      Response (fail): ``<X>``
   * - ``<S id vpin pullup>``
     - **Create a new sensor ID** |BR|
       **id** numeric ID 0-32767 of the sensor |BR|
       **vpin** pin number of the input to be controlled by the sensor object |BR|
       **pullup** 1=Use pull-up resistor ACTIVE=LOW 0=don't use pull-up resistor ACTIVE=HIGH |BR| |BR|
-      Response (successful): ``?`` |BR|
-      Response (fail):  ``?``
+      Response (successful): ``<O>`` |BR|
+      Response (fail):  ?
   * - ``<S id>``
     - **Delete defined sensor** |BR| |BR| 
-      Response (successful): ``?`` |BR| 
-      Response (fail): ``?``
+      Response (successful): ``<O>`` |BR| 
+      Response (fail): ``<X>``
 
 Once all sensors have been properly defined, use the <E> (upper case E) command to store their definitions to EEPROM. 
 
@@ -386,11 +386,11 @@ WiFi Control
   * - ``<+command>`` 
     - **Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)** |BR| |BR|
       Response (successful): |BR|
-      Response (fail):  
+      Response (fail):  ?
   * - ``<+X>`` 
     - **Force the Command Station into "WiFi Connected" mode** |BR| |BR|
       Response (successful): |BR|
-      Response (fail):  
+      Response (fail):  ?
 
 TBA
 ---
@@ -405,8 +405,8 @@ TBA
     - Description / Response 
   * - ``<D SPEED28|SPEED128>`` 
     - **Switch between 28 and 128 speed steps** |BR| |BR|
-      Response (successful): |BR|
-      Response (fail):  
+      Response (successful): ```` |BR|
+      Response (fail):  ?
 
 ---
 ---
@@ -539,7 +539,7 @@ Diagnostic traces
   * - ``<D CABS>`` 
     - **Shows cab numbers and speed in reminder table** |BR| |BR|
       Response (successful): |BR|
-      Response (fail):  
+      Response (fail / no cabs in table):  
   * - ``<D RAM>``
     - **Shows remaining RAM (Free Memory)** |BR| |BR|
       Response (successful): |BR|

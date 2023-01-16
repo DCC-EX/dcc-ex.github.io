@@ -20,6 +20,7 @@ Q1 2023
   - Support for newer generation microcontrollers
   - Fast clock support
   - Additional automation and animation features with |EX-R|
+  - See :doc:`/under-development/index`
 
 - Add additional connection methods to |EX-IO| beyond |I2C|
 

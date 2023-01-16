@@ -48,8 +48,8 @@ If you want your turnouts/points to also be controlled by |DCC-EX|, then this sa
 
 In addition to what you need to be familiar with for just running trains above, there is further information available on how to add and control turnouts/points in the :doc:`/ex-commandstation/accessories/turnouts/index` section.
 
-I want some extra automated/animated realism when operating my layout
-=====================================================================
+I want some extra automated/animated realism
+============================================
 
 To start adding extra realism to your layout, such as controlling signal aspects when turnouts/points are closed or thrown, activating level crossing boom gates and lights as trains approach, or turning street lights off or on according to the time of day, this can be accomplished using the automation/animation capabilities of |EX-CS| which we call |EX-R|.
 

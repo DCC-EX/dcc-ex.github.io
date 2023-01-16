@@ -20,5 +20,4 @@ Click the "Next" button below to read through the introduction and start your jo
   :maxdepth: 1
 
   intro
-  use-doco
   levels

@@ -4,9 +4,9 @@
 
 |conductor| |tinkerer| |engineer|
 
-*************
-Light signals
-*************
+*********************
+DCC accessory signals
+*********************
 
 .. sidebar:: 
 
@@ -14,8 +14,5 @@ Light signals
     :depth: 2
     :local:
 
-What are signals?
-=================
-
-
-
+DCC signals
+===========

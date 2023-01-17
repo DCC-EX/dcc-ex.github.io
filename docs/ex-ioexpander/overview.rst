@@ -1,9 +1,4 @@
-.. meta::
-  :keywords: EX-CommandStation Command Station EX-IOExpander
-
-.. include:: /include/include.rst
-.. include:: /include/include-l1.rst
-|EX-IO-LOGO|
+ z
 
 **************************
 Overview and configuration
@@ -257,3 +252,28 @@ DIAG_CONFIG_DELAY
 When :ref:`ex-ioexpander/overview:diag` is enabled, the configuration of each pin is displayed continuously to be able to monitor the configuration and state of each pin. By default, this will display every 5 seconds. This configuration item allows the delay between updates to be increased or decreased.
 
 You can also configure this via the serial console using the ``<D delay>`` command (see :ref:`ex-ioexpander/testing:diagnostic commands`).
+
+TEST_MODE
+---------
+
+.. code-block:: cpp
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  //  Enable test mode - ensure only one test mode is active at one time.
+  //  This is handy if serial input doesn't work for commands for some reason. 
+  // 
+  //  ANALOGUE - equivalent of <A>
+  //  INPUT - equivalent of <I>
+  //  OUTPUT - equivalent of <O>
+  //  PULLUP - equivalent of <P>
+  // 
+  // #define TEST_MODE ANALOGUE_TEST
+  // #define TEST_MODE INPUT_TEST
+  // #define TEST_MODE OUTPUT_TEST
+  // #define TEST_MODE PULLUP_TEST
+
+If for some reason serial input is not working as expected, test modes can be enabled via this option in "myConfig.h".
+
+Only enable one test mode at a time. If multiple are enabled, only the last one defined will take effect.
+
+Refer to :ref:`ex-ioexpander/testing:testing commands` for details on the testing each option enables.

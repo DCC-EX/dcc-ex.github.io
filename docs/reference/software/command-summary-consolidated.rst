@@ -65,6 +65,12 @@ Power management
       **track**: <blank>= Both Main and Programming Tracks 'MAIN'= Main track  'PROG'=Programming Track 'JOIN'=Join the Main and Programming tracks temporarily |BR| |_| |BR|
       Response: ``<pX [MAIN|PROG|JOIN]>`` |BR|
       Where "X" is 1=on \| 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. |BR|
+      e.g. |BR|
+      Response (Both Main and Prog on): ``<p1>`` |BR|
+      Response (Main on only): ``<p1 MAIN>``
+      Response (Prog on only): ``<p1 PROG>``
+      Response (Joined - Main and Prog on): ``<p1 JOIN>``
+      Response (All off): ``<p0>``
   * - ``<D RESET>``
     - **Re-boot the command Station** |BR| |_| |BR|
       Response: *n/a* 
@@ -263,22 +269,22 @@ Writing CVs - Programming track - Tuning
   * - ``<D ACK LIMIT mA>`` 
     - **Override ACK processing mA pulse size** |BR| |BR|
       Response (successful): N/A |BR|
-      Response (fail):  
+      Response (fail): N/A
   * - ``<D ACK MIN uS>`` 
     - **Override ACK processing minimum pulse width** |BR| |BR|
-      Response (successful): |BR|
-      Response (fail):  
+      Response (successful): N/A |BR|
+      Response (fail): N/A
   * - ``<D ACK MAX uS>`` 
     - **Override ACK processing max pulse width** |BR| |BR|
-      Response (successful): |BR|
-      Response (fail):  
+      Response (successful): N/A |BR|
+      Response (fail): N/A 
   * - ``<D ACK RETRY x>`` 
     - **Adjust ACK retries to number x (default is 2)** |BR| |BR|
       Response (successful): |BR|
       Response (fail):  
   * - ``<D PROGBOOST>``  
     - **Override 250mA prog track limit while idle** |BR| |BR|
-      Response (successful): ```` |BR|
+      Response (successful): ``?`` |BR|
       Response (fail):  
 
 DCC Accessories
@@ -405,7 +411,7 @@ TBA
     - Description / Response 
   * - ``<D SPEED28|SPEED128>`` 
     - **Switch between 28 and 128 speed steps** |BR| |BR|
-      Response (successful): ```` |BR|
+      Response (successful): ``?`` |BR|
       Response (fail):  ?
 
 ---

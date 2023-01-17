@@ -124,6 +124,8 @@ This uses a very simple to understand series of commands that can animate and au
 
 Anyone can use |EX-R|, and over time we are building out practical examples to demonstrate how you can use this to automate or animate various aspects of your layout. We will also be publishing a series of "recipes" on this website as a sort of building block approach.
 
+In addition to having your |EX-CS| up and running, with some sort of throttle or controller (see :doc:`/throttles/index`) to control your trains, you'll also need to add some accessories to use with your automation/animation sequences as outlined in :doc:`/ex-commandstation/accessories/index`.
+
 To make the most of |EX-R| you should read through the :doc:`/ex-rail/index` section as well as see the practical examples in :doc:`/big-picture/index`.
 
 I want a fully automated exhibition layout for my club
@@ -134,5 +136,7 @@ Are your club members sick and tired of having to perform repetitive, manual ope
 To take your demonstration layouts to the next level, spend more time talking to your visitors and potential club members by using |EX-R| to automate your layout.
 
 This can be anywhere from a simple loop to stop and start trains at stations with automated arrival and departure announcements all the way through to multiple trains running throughout the layout, closing/throwing turnouts/points as required, setting signals, and crossing paths without collisions.
+
+To achieve this level of automation, you'll need to understand more than just how to get your |EX-CS| up and running, and will also need to have a good understanding of the accessories that can be added as outlined in :doc:`/ex-commandstation/accessories/index`.
 
 As per our automated/animated realism information above, be sure to familiarise yourself with :doc:`/ex-rail/index` and :doc:`/big-picture/index`.

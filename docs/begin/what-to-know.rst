@@ -50,11 +50,11 @@ Our products currently include:
       - |EX-R-LOGO-SMALL|
     * - Our DCC command station for controlling your model railroad
       - Our user friendly command station software installer
-      - The in-built scripting language for automating your model railroad
+      - The built-in scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
       - |EX-TT-LOGO-SMALL|
       - |EX-IO-LOGO-SMALL|
-    * - A simple web based throttle for your command station
+    * - A simple web browser based throttle for your command station
       - A separate stepper based turntable controller
       - Use additional microcontrollers to expand I/O port capability
     * - |EX-DCCI-LOGO-SMALL|
@@ -74,9 +74,9 @@ Our products currently include:
     * - |EX-I-LOGO-SMALL| 
       - Our user friendly command station software installer
     * - |EX-R-LOGO-SMALL| 
-      - The in-built scripting language for automating your model railroad
+      - The built-in scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL| 
-      - A simple web based throttle for your command station
+      - A simple web browser based throttle for your command station
     * - |EX-TT-LOGO-SMALL| 
       - A separate stepper based turntable controller
     * - |EX-IO-LOGO-SMALL| 
@@ -91,7 +91,7 @@ The |DCC-EX| project is free and open source software, using consumer grade, ine
 
 You will get more features from our software than you will from many commercial DCC controllers, with the hardware components able to be purchased at a fraction of the price of these commercial systems.
 
-At the moment, we don't offer ready-to-run solutions, but may do so in partnership with resellers down the track, so for the moment a willingness to do some DIY is required.
+At the moment, we don't offer our own ready-to-run solutions, but may do so in partnership with more resellers down the track, so for the moment a willingness to do some DIY is required. There is currently one option we know of in the UK who may be able to help you with this. See :doc:`/projects/railsnail-bluetooth` for details.
 
 The only things we can't help you with are the layout and the DCC equiped locos!
 
@@ -120,7 +120,7 @@ I want some extra automated/animated realism
 
 To start adding extra realism to your layout, such as controlling signal aspects when turnouts/points are closed or thrown, activating level crossing boom gates and lights as trains approach, or turning street lights off or on according to the time of day, this can be accomplished using the automation/animation capabilities of |EX-CS| which we call |EX-R|.
 
-This uses a very simple to understand series of commands that can animate and automate various aspects of your layout.
+|EX-R| is an acronym for "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage", and is an easy and powerful way to create simple to complex animation/automation sequences to control locos, sensors, signals, turnouts/points, and other layout or scenic accessories. |EX-R|'s English based commands and functions are designed for all levels of experience, from novice or non-programmers to experienced users, to have fun in making their layouts come to life.
 
 Anyone can use |EX-R|, and over time we are building out practical examples to demonstrate how you can use this to automate or animate various aspects of your layout. We will also be publishing a series of "recipes" on this website as a sort of building block approach.
 

@@ -59,7 +59,8 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../levels.html">Before You Begin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../begin/what-to-know.html">What do I need to know?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../begin/levels.html">Choose Your Comfort Level</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-commandstation/index.html">EX-CommandStation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/get-started/index.html">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
@@ -452,7 +453,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/roadmap.html">DCC-EX Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/roadmap.html">DCC-EX 2023 Roadmap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/site-map.html">Site Map</a></li>
 </ul>
 </li>
@@ -577,7 +578,7 @@
 </ol>
 <p>Once these are defined, you can then use EX-RAIL’s ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EX-RAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.</p>
 <p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w"> </span><span class="mi">133</span><span class="p">,</span><span class="w"> </span><span class="mi">456</span><span class="p">,</span><span class="w"> </span><span class="n">HIDDEN</span><span class="p">)</span><span class="w">    </span><span class="c1">// Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w"> </span><span class="mi">133</span><span class="p">,</span><span class="w"> </span><span class="mi">456</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="n">HIDDEN</span><span class="p">)</span><span class="w">    </span><span class="c1">// Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.</span>
 <span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">9101</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span><span class="w">       </span><span class="c1">// Define the virtual turnout, which will be visible to throttles/JMRI.</span>
 
 <span class="n">ONTHROW</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span><span class="w">                                </span><span class="c1">// When throwing the virtual turnout:</span>

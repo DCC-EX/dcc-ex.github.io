@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DCC-EX Roadmap &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>DCC-EX 2023 Roadmap &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
@@ -59,7 +59,8 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../levels.html">Before You Begin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../begin/what-to-know.html">What do I need to know?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../begin/levels.html">Choose Your Comfort Level</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-commandstation/index.html">EX-CommandStation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/get-started/index.html">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
@@ -452,7 +453,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">DCC-EX Roadmap</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DCC-EX 2023 Roadmap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="site-map.html">Site Map</a></li>
 </ul>
 </li>
@@ -473,7 +474,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">About, Press &amp; Contributing</a> &raquo;</li>
-      <li>DCC-EX Roadmap</li>
+      <li>DCC-EX 2023 Roadmap</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/about/roadmap.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -484,88 +485,45 @@
            <div itemprop="articleBody">
              
   <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-announcements.png"><img alt="Announcements" class="image-product-logo-float-right" src="../_images/product-logo-announcements.png" style="width: 320.0px; height: 64.0px;" /></a> <a class="reference external" href="../../about/contributing/donate.html"><img alt="Donate Button" class="float-right" src="../_images/donate_button_blue.png" style="width: 124.5px; height: 40.0px;" /></a></p>
-<section id="dcc-ex-roadmap">
-<h1>DCC-EX Roadmap<a class="headerlink" href="#dcc-ex-roadmap" title="Permalink to this heading"></a></h1>
-<section id="id1">
-<h2>2022<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
-<section id="software">
-<h3>Software<a class="headerlink" href="#software" title="Permalink to this heading"></a></h3>
-<section id="ex-commandstation">
-<h4>EX-CommandStation<a class="headerlink" href="#ex-commandstation" title="Permalink to this heading"></a></h4>
+<section id="dcc-ex-2023-roadmap">
+<h1>DCC-EX 2023 Roadmap<a class="headerlink" href="#dcc-ex-2023-roadmap" title="Permalink to this heading"></a></h1>
+<section id="q1-2023">
+<h2>Q1 2023<a class="headerlink" href="#q1-2023" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Add support for an ESP-32 or equivalent to remove resource limitations.</p></li>
-<li><p>Remove need to have any conditional compilation of features. This means the binary can be built and downloaded directly without a compiler or IDE. Customisation can take place through the command language API and mySetup.h file.</p></li>
-<li><p>Program the WiFi solution with our own code that implements a “true” network connection, still has the AT command set, and can handle at least 12 sockets.</p></li>
-<li><p>Upgrade the WiFi option with possible ESP32 containing custom AT firmware with possible Ethernet upgrade and Web Interface for configuration and/or control.</p></li>
-<li><p>OpenMRN on a co-processor?</p></li>
-<li><p>Multiple simultaneous Motor Driver support (beyond the 2 we currently support).</p></li>
-<li><p>Add EX-RAIL “Extended Railroad Automation Instruction Language”. Automate your layout with a simple script.</p></li>
+<li><p>Documentation enhancements:</p>
+<ul>
+<li><p>Continuing to make information easier to find especially for new users</p></li>
+<li><p>Add an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> Cookbook, with Recipes as building blocks</p></li>
+</ul>
+</li>
+<li><p>Release <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> v5.0.0 including:</p>
+<ul>
+<li><p>Track Manager/DC districts</p></li>
+<li><p>Support for newer generation microcontrollers</p></li>
+<li><p>Fast clock support</p></li>
+<li><p>Additional automation and animation features with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span></p></li>
+<li><p>See <a class="reference internal" href="../under-development/index.html"><span class="doc">Features under development</span></a></p></li>
+</ul>
+</li>
+<li><p>Add additional connection methods to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> beyond I<sup>2</sup>C</p></li>
 </ul>
 </section>
-<section id="ex-dccinspector">
-<h4>EX-DCCInspector<a class="headerlink" href="#ex-dccinspector" title="Permalink to this heading"></a></h4>
+<section id="looking-ahead">
+<h2>Looking ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Add other report formatting options</p></li>
+<li><p>Add I<sup>2</sup>C multiplexer support to the HAL</p></li>
+<li><p>Expand wireless connectivity between <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and accessories beyond just throttles</p></li>
+<li><p>Design an all-in-one <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> hardware platform that can be purchased through resellers, or assembled at home</p></li>
+<li><p>Develop a new installer that can maintain pace with the development of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software</p></li>
+<li><p>Release a new EX-WebThrottle version supporting accessories, routes, etc.</p></li>
+<li><p>Complete the Big Picture fictional layout with components and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> scripts</p></li>
 </ul>
-</section>
-<section id="ex-webthrottle">
-<h4>EX-WebThrottle<a class="headerlink" href="#ex-webthrottle" title="Permalink to this heading"></a></h4>
-<ul class="simple">
-<li><p>Add Turnout support</p></li>
-<li><p>Add capability to use as an installer/updater/configurer for <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span></p></li>
-</ul>
-</section>
-</section>
-<section id="hardware">
-<h3>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h3>
-<section id="new-motor-driver">
-<h4>New Motor Driver<a class="headerlink" href="#new-motor-driver" title="Permalink to this heading"></a></h4>
-</section>
-<section id="new-all-in-one-ex-commandstation">
-<h4>New all-in-one EX-CommandStation<a class="headerlink" href="#new-all-in-one-ex-commandstation" title="Permalink to this heading"></a></h4>
-<blockquote>
-<div><ul class="simple">
-<li><p>Provide a self-contained, yet expandable custom developed Command Station Features (perhaps revive FireBox)</p></li>
-<li><p>Based on a powerful processor to be chosen from ESP32, Teensy, Xtensa, SAMC21, etc</p></li>
-<li><p>At least 20 GPIO Pins</p></li>
-<li><p>More efficient, higher current capacity Motor Driver chip or independent MOSFETS</p></li>
-<li><p>Dual H-Bridge with sustained current of 5A, peaks to 10</p></li>
-<li><p>Processor should have at least 2 x 12bit ADCs for current sense</p></li>
-<li><p>High-Side current sense with amplifier for measurements down to 10mA on the service track</p></li>
-<li><p>Track voltage reading from a resistor voltage divider</p></li>
-<li><p>One USB with 3 or more additional UARTS (hardware serial ports)</p></li>
-<li><p>Computer Interface using the USB port (USB-C or B. Micro too flimsy)</p></li>
-<li><p>5V Operation through a 5V regulator, 1A output</p></li>
-<li><p>3.3V Operation through a 3.3V regulator, 800 mA output</p></li>
-<li><p>Manufactured in different countries with partners</p></li>
-<li><p>WiFi, Bluetooth onboard</p></li>
-<li><p>Use ESP32 as WiFi and optional Ethernet bridge using AT commands</p></li>
-<li><p>I<sup>2</sup>C, CAN and SPI onboard</p></li>
-<li><p>Add RailCom support - Combine main and prog RX signals</p></li>
-<li><p>Add Layout Bus support for LCC</p></li>
-<li><p>Work with Smart Hobby to release LCN (Layout Control Nodes)</p></li>
-<li><p>Define footprint or header(s) for options/add-ons/FireBits</p></li>
-<li><p>Accessible reset button</p></li>
-<li><p>Standard interconnect for pluggable expansion options</p></li>
-<li><p>Display?</p></li>
-<li><p>SDCard?</p></li>
-<li><p>Snap on Raspberry Pi to run <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>?</p></li>
-</ul>
-</div></blockquote>
-</section>
-<section id="firebit-modules">
-<h4>Firebit Modules<a class="headerlink" href="#firebit-modules" title="Permalink to this heading"></a></h4>
-<p>Based on standard interconnect created for the Command Station, examples would be separate co-processors, boosters, motor controllers, etc.</p>
-</section>
-</section>
-<section id="outreach-partnering-evangelizing">
-<h3>Outreach/Partnering/Evangelizing<a class="headerlink" href="#outreach-partnering-evangelizing" title="Permalink to this heading"></a></h3>
-<p>Work with other manufacturers to get their hardware, accessories, motor drives, etc. to market and to gain support for <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>. Add more throttles to the list that support the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> directly or through <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p>
-</section>
 </section>
 <hr class="docutils" />
-<section id="todo">
-<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h2>
+<section id="list-of-outstanding-documentation-issues">
+<h2>List of outstanding documentation issues<a class="headerlink" href="#list-of-outstanding-documentation-issues" title="Permalink to this heading"></a></h2>
+<p>This is our “to do” list of outstanding documentation issues.</p>
+<p>If you have content that can help cover these off, then please feel free to add it to the linked GitHub issues so we can incorporate it into the website.</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/415">LOW - Stage 1</a> - wiThrottle - Multiple Trains</p>

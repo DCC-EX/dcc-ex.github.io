@@ -35,10 +35,10 @@ Of course you don't need to use any of these features if you simply want to run 
 
 Read on to understand which of our products and features will help you achieve your DCC dreams...
 
-DCC-EX Products
----------------
+DCC-EX free and Open Source products
+------------------------------------
 
-Our products currently include:
+Our list of free, open source software products currently include:
 
 .. list-table::
     :widths: 33 33 33
@@ -104,7 +104,7 @@ If you simply want a system to run your DCC trains, then you only need to concer
 
 Note that you will need some sort of throttle or controller to connect to it also.
 
-You will need to read through the :doc:`/ex-commandstation/index` documentation, and it will be helpful also to read through the :doc:`/throttles/index` section to become familiar with what throttle options are available.
+You will need to read through the :doc:`/ex-commandstation/index` documentation, and it will be helpful also to read through the :doc:`/throttles/index` section to become familiar with what throttle options are available (including our very own open source |EX-WT|).
 
 This provides a very cost effective introduction to DCC train control using inexpensive consumer grade hardware and our (free) open source |EX-CS| software.
 
@@ -114,6 +114,13 @@ I want to operate my turnouts/points and run DCC trains
 If you want your turnouts/points to also be controlled by |DCC-EX|, then this same |EX-CS| product has the capability to enable this also.
 
 In addition to what you need to be familiar with for just running trains above, there is further information available on how to add and control turnouts/points in the :doc:`/ex-commandstation/accessories/turnouts/index` section.
+
+I want to control all my accessories and run DCC trains
+=======================================================
+
+Further to just operating turnouts/points, |EX-CS| has the capability to control all your other various accessories including signals, turntables (including our own |EX-TT|), loco and rolling stock lighting, scenic accessories, and pretty much anything else that can be controlled digitally.
+
+This is simply an extension of operating trains and controlling turnouts/points covered above, with further information available in our :doc:`/ex-commandstation/accessories/index` section.
 
 I want some extra automated/animated realism
 ============================================

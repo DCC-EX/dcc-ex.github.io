@@ -10,7 +10,7 @@ DCC-EX Model Railroading
 
   `Version 4.1.2 Released <about/press/v412-announce.html>`_
 
-|DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and affordable products are based on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+|DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 
 If you are just starting your journey with |DCC-EX| then the sections below are designed to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
 
@@ -18,6 +18,7 @@ If you are just starting your journey with |DCC-EX| then the sections below are 
 - :ref:`begin/what-to-know:i'm interested in dcc but have a very small budget`
 - :ref:`begin/what-to-know:i just want to run my trains`
 - :ref:`begin/what-to-know:i want to operate my turnouts/points and run dcc trains`
+- :ref:`begin/what-to-know:i want to control all my accessories and run dcc trains`
 - :ref:`begin/what-to-know:i want some extra automated/animated realism`
 - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
 

@@ -12,4 +12,9 @@ Adding signals to your layout can add an extra level of realism and interest, an
 
 This section will focus on the types of signals supported by |EX-CS| with the common hardware configurations required to support them.
 
-.. todo:: `MEDIUM - add signal section <https://github.com/DCC-EX/dcc-ex.github.io/issues/531>`_
+.. toctree::
+  :maxdepth: 1
+    
+  signal-overview
+  light-signals
+  servo-signals

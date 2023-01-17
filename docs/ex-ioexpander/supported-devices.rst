@@ -53,6 +53,21 @@ Arduino Nano
     - 6
     - A0 - A3, A6 - A7, note A4/A5 are |I2C|, and A6/A7 analogue only
 
+|
+
+Arduino Pro Mini
+================
+
+The Arduino Pro Mini comes in two variations; a 3.3V running at 8MHz, and a 5V running at 16MHz.
+
+.. warning:: 
+
+  The 8MHz 3.3V Pro Mini is not 5V tolerant
+
+The Pro Mini uses an identical pin map to the :ref:`ex-ioexpander/supported-devices:arduino nano`.
+
+|
+
 Arduino Uno
 ===========
 
@@ -79,6 +94,8 @@ Arduino Uno
     - 4
     - A0 - A3, note A4/A5 are |I2C|
 
+|
+
 Arduino Mega2560
 ================
 
@@ -104,7 +121,9 @@ Arduino Mega2560
     - 0
     - 16
     - A0 - A15
-  
+
+|
+
 STMicroelectronics NUCLEO-F411RE
 ================================
 
@@ -140,6 +159,8 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
     - 12
     - | PA_4,PB_0,PC_2,PC_1,PC_3,PC_0 - CN7
       | PC_5,PA_5,PA_6,PA_7,PB_1,PC_4 - CN10
+
+|
 
 Adding new devices
 ==================

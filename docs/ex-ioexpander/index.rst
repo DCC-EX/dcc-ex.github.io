@@ -26,6 +26,7 @@ EX-IOExpander
   overview
   supported-devices
   testing
+  other-devices
   /support/ex-io-troubleshooting
 
 Looking for some help with EX-IOExpander?

@@ -32,6 +32,6 @@ The whole CommandStation is powered by one DC power supply (+15V DC) fitted with
    :scale: 60%
    :align: left
 
-For complete details, see:
+For complete details and purchasing options, see:
 
-`Railsnail's Bluetooh DCC-EX Command  <https://railsnail.uk/>`_
+`Railsnail's Bluetooth EX-CommandStation <https://railsnail.uk/>`_

@@ -80,6 +80,19 @@ Aside from configuring the |I2C| address of your |EX-IO| device, the device driv
 
 Configuration changes for |EX-IO| are made by editing a "myConfig.h" file or writing to EEPROM if supported. An example "myConfig.example.h" file is included that can be copied and edited to suit. The only configuration item you should really need to consider is :ref:`ex-ioexpander/overview:i2c_address`.
 
+Software installation process
+-----------------------------
+
+This is a brief overview of the software installation and configuration process:
+
+1. Download the "main" branch of |EX-IO|
+2. If running Nucleo or any other device without EEPROM, copy "myConfig.example.h" to "myConfig.h" and set the |I2C| address
+3. Upload |EX-IO| to your Arduino (note, this does not get uploaded to your CommandStation)
+4. For Arduino Nano, Uno, or Mega, use the serial console to set the |I2C| address
+5. Download the "devel" branch of |EX-CS|
+6. Configure "config.h", "myHal.cpp", and apply any required configuration changes
+7. Upload |EX-CS| to your CommandStation
+
 Configure I2C address via serial
 --------------------------------
 

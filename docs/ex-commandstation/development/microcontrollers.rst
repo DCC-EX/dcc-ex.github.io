@@ -58,24 +58,26 @@ STMicroelectronics has a range of ARM based microcontrollers that are generally 
 
 Further to this, the NUCLEO series of development boards also provide Arduino Uno compatible header sockets, meaning existing motor (and other) shields can just plug straight in, providing they are 3v3 compatible (see note above).
 
-All of the NUCLEO series being considered as a future |DCC-EX| platform have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz) than the current AVR-based UNO and Mega.
+All of the NUCLEO series being considered as a future |DCC-EX| platform have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz vs 16Mhz) than the current AVR-based UNO and Mega.
 
 With those attributes comes the potential to support much larger EX-RAIL scripts, more Withrottle connections, and many new features.
 
 NUCLEO-F411RE and NUCLEO-F446RE
 -------------------------------
 
-The majority of the current development work with the Nucleo series has been focused on the NUCLEO-F411RE as it most closely resembles the ubiquitous Arduino Uno form factor, including having Uno compatible header sockets in addition to Morpho pins for a larger I/O footprint than the Uno.
+The majority of the current development work with the Nucleo series has been focused on the NUCLEO-F411RE as it most closely resembles the ubiquitous Arduino Uno form factor, including having Uno compatible header sockets in addition to Morpho pins for a much larger I/O capability than an Uno.
 
-The F411RE has 50 I/O pins compared with the Uno's 20, and only 20 less than the Mega despite its diminuitive size. For most use cases it is therefore a suitable substitute for an Arduino Mega.
+The F411RE has 50 I/O pins compared with the Uno's 20, and only 20 less than the Arduino Mega despite its diminuitive size. For most use cases it is therefore a suitable substitute for a Mega.
 
 There are larger NUCLEO footprints available (see below), which have many more pins than an Arduino Mega.
 
 A good summary if the F411RE is available on the `arm MBED Nucleo-F411RE <https://os.mbed.com/platforms/st-nucleo-f411re/>`_ page.
 
-The NUCLEO-F446RE is the same Nucleo-64 size as the F411RE, but with a faster processor and other features. As one of our more advanced early alpha test users has this board, it's now also supported as a build target and being tested.
+The NUCLEO-F446RE is the same Nucleo-64 size as the F411RE, but with a faster processor and other features. As one of our more advanced early alpha test users has this board, it's now also supported as a build target for |DCC-EX| and being actively tested.
 
 A good summary if the F446RE is available on the `arm MBED Nucleo-F446RE <https://os.mbed.com/platforms/st-nucleo-f446re/>`_ page.
+
+Both the F411RE and F446RE are supported in the Arduino IDE.
 
 NUCLEO-F412ZG, NUCLEO-F446ZE and NUCLEO-F429ZI
 ----------------------------------------------
@@ -202,11 +204,54 @@ Adding NUCLEO support to VS Code/PlatformIO
 
 In order to compile for the STM32 NUCLEO platforms you need do nothing when using Microsoft VS Code and PlatformIO. PlatformIO will automatically download the required tool chains and frameworks for platform support based on the entries in platformio.ini inclued in the |EX-CS| source tree.
 
-Just select "Nucleo-F411RE" as the build target, and hit build. Be sure to do this after installing the drivers (for Windows) and upgrading the debugger firmware per the instructions above.
+Just select "Nucleo-F411RE" or "Nucleo-F446RE" as the build target, and hit build. Be sure to do this after installing the drivers (for Windows) and upgrading the debugger firmware per the instructions above.
 
 Hardware setup notes for a NUCLEO |EX-CS|
 -----------------------------------------
 
-Here is how the NUCLEO-F411RE looks bare:
+Here is how the NUCLEO-F411RE looks when new, with a top view, and the pinouts. The NUCLEO-F446RE board looks near identical, pinouts are exactly the same, however some of their I/O functions map slightly differently as the F411RE and F446RE microcontrollers are different internally.
 
-.. image:: /_static/images/nucleo/
+.. image:: /_static/images/nucleo/nucleo-f411re-top.png
+  :alt: STM Nucleo-F411RE top face
+  :scale: 10%
+
+.. image:: /_static/images/nucleo/nucleo-f411re-pinout.png
+  :alt: STM Nucleo-F411RE connector pinouts
+  :scale: 50%
+
+You will notice that the Ardiuno connectors are slightly inboard of the dual-row headers called the Morpho connectors.
+
+Notes on the Arduino connectors on the NUCLEO range
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Whilst the I/O pins are 5v-tolerant for digital IO, for the moment we recommend using 3v3 friendly Arduino R3 spec shields where you can.
+- The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the genuine Ardiuno Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.
+- By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO's pins. There are jumpers underneath to connect them to Serial2, but this isn't recommended (see steps for serial connection below)
+- The Morpho pins extend both above AND below the Nucleo-64 series boards! Please be very wary of shorting any of these pins, especially those that protrude below. We recommend mounting 10mm M3 screw hex standoffs into the 3 mounting holes on the main PCB for your safety. See pic here:
+
+.. image:: /_static/images/nucleo/nucleo-f411re-bottom-spacers.png
+  :alt: STM Nucleo-F411RE underneath face with 10mm M3 standoffs
+  :scale: 25%
+
+
+Here is the NUCLEO-F411RE with a genuine Arduino Motor Shield R3 installed:
+
+.. image:: /_static/images/nucleo/nucleo-f411re-with-motor-shield.png
+  :alt: STM Nucleo-F411RE with genuine Arduino Motor Shield R3 installed
+  :scale: 10%
+
+Serial for WiFi, for F411RE and F446RE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The default serial port used for console communications for the F411RE and F446RE is Serial2, which has open solder pads to the Arduino Rx/Tx pins of D0/D1. Therefore there is no serial port connected to Arduino pins D0/D1 by default, and in any case we cannot use Serial2 for WiFi. As D0/D1 are completely unconnected, they do not interfere with any jumpers you install on a WiFi shield per the instructions below.
+
+To connect an ESP8266 via either a WiFi shield or ESP01 module, you must use Serial1, which appears on different Morpho pins for the F411RE and F446RE.
+
+The |DCC-EX| source code currently maps the Serial1 port pins to:
+
+- F411RE: Rx CN7 pin 17, Tx CN7 pin 21
+- F446RE: Rx CN10 pin 33, Tx CN10 pin 17
+
+You will need to connect the Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. Below are pics of the positions of each:
+
+.. image:: /_static/images/nucleo/nucleo-f411re-f446re-wifi-serial1.png

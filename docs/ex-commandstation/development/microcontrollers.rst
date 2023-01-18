@@ -213,7 +213,7 @@ Here is how the NUCLEO-F411RE looks when new, with a top view, and the pinouts. 
 
 .. image:: /_static/images/nucleo/nucleo-f411re-top.png
   :alt: STM Nucleo-F411RE top face
-  :scale: 10%
+  :scale: 25%
 
 .. image:: /_static/images/nucleo/nucleo-f411re-pinout.png
   :alt: STM Nucleo-F411RE connector pinouts
@@ -238,7 +238,7 @@ Here is the NUCLEO-F411RE with a genuine Arduino Motor Shield R3 installed:
 
 .. image:: /_static/images/nucleo/nucleo-f411re-with-motor-shield.png
   :alt: STM Nucleo-F411RE with genuine Arduino Motor Shield R3 installed
-  :scale: 10%
+  :scale: 25%
 
 Serial for WiFi, for F411RE and F446RE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -255,3 +255,5 @@ The |DCC-EX| source code currently maps the Serial1 port pins to:
 You will need to connect the Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. Below are pics of the positions of each:
 
 .. image:: /_static/images/nucleo/nucleo-f411re-f446re-wifi-serial1.png
+  :alt: NUCLEO F411RE/F446RE Serial1 Rx/Tx Connections
+  :scale: 50%

@@ -21,6 +21,8 @@ To go back to basics, a signal is used to provide clear indication to engineers 
 
 When moving in to the land of digital control for model railways, there needs to be a way to control signals electronically and, where desired, via automation.
 
+When referring to signals, the colour of the light or position of a semaphore arm is referred to as the aspect of the signal.
+
 This section will focus on the types of signals supported by |EX-CS| with the common hardware configurations required to support them, along with the available methods to control them.
 
 Signal types

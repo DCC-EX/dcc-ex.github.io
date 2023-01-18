@@ -14,6 +14,13 @@ Light signals
     :depth: 2
     :local:
 
+Important considerations for light signals
+==========================================
+
+When operating LEDs from any digital pins on microcontrollers or I/O expanders, it is essential that an appropriate **current limiting resistor** is used to protect the device from trying to source or sink too much current.
+
+Not using a current limiting resistor will let the magic smoke out, and your digital pin will become an ex-pin permanently.
+
 Defining light signal objects
 =============================
 
@@ -70,7 +77,7 @@ Coversely, use the ``SIGNALH(red_pin, amber_pin, green_pin)`` command when the a
 
 .. image:: /_static/images/signals/signal-3aspect-active-high.png
   :alt: 3 Aspect active high signal
-  :scale: 20%
+  :scale: 30%
 
 In the diagram above, the red aspect is connected to pin 28, amber to 30, and green to 32.
 

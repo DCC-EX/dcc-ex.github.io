@@ -36,7 +36,7 @@ Refer to :ref:`reference/software/command-reference:defining (setting up) a turn
 To define servo based turnouts using |EX-R| (whether or not they are to be automated) via the "myAutomation.h" file, use the appropriate one of these commands:
 
 - ``SERVO_TURNOUT(id, vpin, active_angle, inactive_angle, profile [, "description"])`` - use this command when using a servo module connected to your |EX-CS|
-- ``TURNTOUT(id, addr, sub_addr [, "description"])`` - use this command when using DCC accessory decoders to control the servos
+- ``TURNOUT(id, addr, sub_addr [, "description"])`` - use this command when using DCC accessory decoders to control the servos
 
 Refer to :ref:`ex-rail/ex-rail-reference:turnouts/points` for details on these commands, along with :ref:`ex-rail/examples:defining servo turnouts`, :doc:`/big-picture/stage3`, and :ref:`ex-rail/creating-elements:adding turnouts/points` for some further information and examples.
 

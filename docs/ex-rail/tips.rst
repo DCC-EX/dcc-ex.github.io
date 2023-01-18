@@ -111,7 +111,7 @@ For example:
 
 .. code-block:: cpp
 
-   SERVO_TURNOUT(101, 121, 133, 456, HIDDEN)    // Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.
+   SERVO_TURNOUT(101, 121, 133, 456, Slow, HIDDEN)    // Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.
    VIRTUAL_TURNOUT(9101,"Coal yard exit")       // Define the virtual turnout, which will be visible to throttles/JMRI.
 
    ONTHROW(9101)                                // When throwing the virtual turnout:

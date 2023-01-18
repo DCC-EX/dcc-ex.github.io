@@ -38,14 +38,16 @@ It's imperative to get the correct servo positions defined for the aspects in us
 
 To do this, you can use the ``<D SERVO vpin position profile>`` command via the serial console of your |EX-CS|, which will move the servo arm to the defined position, using the specified profile.
 
-It is recommended to test all positions required for the aspects to ensure the signal operates as desired, and to perform these tests **before** physically connecting the servo to the signal. When specifying a profile, use profile 4 for "Bounce", which is what is used by the ``SERVO_SIGNAL(...)`` command and will give you an accurate indication of the servo movement for each tested position. For example, a suitable test command might be ``<D SERVO 101 400 4>`` to test the servo connected to the second row of headers on the PCA9685 module, using the "Bounce" profile.
+It is recommended to test all positions required for the aspects to ensure the signal operates as desired, and to perform these tests **before** physically connecting the servo to the signal. When specifying a profile, use profile 4 for "Bounce", which is what is used by the ``SERVO_SIGNAL(...)`` command and will give you an accurate indication of the servo movement for each tested position. For example, a suitable test command might be ``<D SERVO 100 400 4>`` to test the servo connected to the first row of headers on the PCA9685 module, using the "Bounce" profile.
 
 For more information on servo modules and servos, refer to the information on the :doc:`/reference/hardware/servo-module` page.
 
 What if I don't have three aspect signals?
 ------------------------------------------
 
-If you only have two aspect signals, amber = 0 gives red/green only, green 0 = red/amber, red 0 = green/amber
+If you only have two aspect signals, you specify "0" for the unused aspect.
+
+For example, ``SERVO_SIGNAL(100, 100, 0, 400)`` will operate only the red or green aspects, ``SERVO_SIGNAL(100, 100, 250, 0)`` will operate only the red or amber aspects, and ``SERVO_SIGNAL(100, 0, 250, 400)`` will operate only the amber and green aspects.
 
 Connecting the signals
 ======================
@@ -61,6 +63,8 @@ While the focus of this section is on the electronic connections and software co
 .. image:: /_static/images/i2c/SemaphoreSignal.jpg
    :alt: Servo mount to operate a Semaphore Signal
    :scale: 60%
+
+For more information on servo modules and servos, refer to the information on the :doc:`/reference/hardware/servo-module` page.
 
 Controlling semaphore or servo signals
 ======================================

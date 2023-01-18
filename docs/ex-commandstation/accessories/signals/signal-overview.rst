@@ -45,9 +45,9 @@ Light signals support up to three aspects (colours) to indicate whether an appro
 
 Light signals are controlled by activating or deactivating digital pins either directly on your |EX-CS| or attached to I/O expanders.
 
-All control of light signals is performed by the pin defined as the "Red" aspect, regardless if the signal actually has a red aspect or not.
+All control of light signals is performed by the pin defined as the "Red" aspect.
 
-Continue to :doc:`/ex-commandstation/accessories/signals/light-signals` for details on how to connect and control light signals.
+Continue to :doc:`/ex-commandstation/accessories/signals/light-signals` for details on how to define and connect light signals.
 
 Semaphore (or servo) signals
 ----------------------------
@@ -58,13 +58,11 @@ Semaphore signals are controlled by the position of servos attached to a PCA9685
 
 All control of semaphore signals is performed by the defined control pin, moving the servo to the specified angle according to the chosen aspect.
 
-Continue to :doc:`/ex-commandstation/accessories/signals/servo-signals` for details on how to connect and control semaphore/servo signals.
+Continue to :doc:`/ex-commandstation/accessories/signals/servo-signals` for details on how to define and connect semaphore/servo signals.
 
 DCC accessory signals
 ---------------------
 
 In the current implementation, there is no specific signal object that defines and controls signals as DCC accessory items, and these can be operated the same as any other DCC accessory.
 
-However, if you wish, it is possible to use signal event handlers available in our development branch (see :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version`) that allow you to define custom actions for signals that would enable the use of DCC accessory type signals.
-
-Continue to :doc:`/ex-commandstation/accessories/signals/dcc-signals` for details on how to control DCC accessory signals.
+Continue to :doc:`/ex-commandstation/accessories/signals/dcc-signals` for considerations and options for DCC accessory signals.

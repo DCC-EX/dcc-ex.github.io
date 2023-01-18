@@ -38,7 +38,7 @@ It's imperative to get the correct servo positions defined for the aspects in us
 
 To do this, you can use the ``<D SERVO vpin position profile>`` command via the serial console of your |EX-CS|, which will move the servo arm to the defined position, using the specified profile.
 
-It is recommended to test all positions required for the aspects with the chosen profile to ensure the signal operates as desired, and to perform these tests **before** physically connecting the servo to the signal.
+It is recommended to test all positions required for the aspects to ensure the signal operates as desired, and to perform these tests **before** physically connecting the servo to the signal. When specifying a profile, use profile 4 for "Bounce", which is what is used by the ``SERVO_SIGNAL(...)`` command and will give you an accurate indication of the servo movement for each tested position. For example, a suitable test command might be ``<D SERVO 101 400 4>`` to test the servo connected to the second row of headers on the PCA9685 module, using the "Bounce" profile.
 
 For more information on servo modules and servos, refer to the information on the :doc:`/reference/hardware/servo-module` page.
 

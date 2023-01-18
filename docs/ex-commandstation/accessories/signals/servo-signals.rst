@@ -45,7 +45,7 @@ For more information on servo modules and servos, refer to the information on th
 What if I don't have three aspect signals?
 ------------------------------------------
 
-If you only have two aspect signals, ...
+If you only have two aspect signals, amber = 0 gives red/green only, green 0 = red/amber, red 0 = green/amber
 
 Connecting the signals
 ======================

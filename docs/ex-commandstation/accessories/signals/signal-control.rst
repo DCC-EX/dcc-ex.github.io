@@ -33,3 +33,14 @@ For a simple example, to set a signal at pin 28 red when turnout ID 1 is thrown,
   DONE
 
 For further information on controlling signals refer to :ref:`ex-rail/ex-rail-reference:signals`, and for some examples refer to :doc:`/big-picture/index`.
+
+Controlling DCC signals
+=======================
+
+If, instead your signals will be controlled as per any other DCC accessory device, you will need to familiarise yourself with the :ref:`ex-rail/ex-rail-reference:dcc accessory decoder commands` as outlined in the |EX-R| reference.
+
+.. code-block:: cpp
+
+  red 101
+  amber 102
+  green 103

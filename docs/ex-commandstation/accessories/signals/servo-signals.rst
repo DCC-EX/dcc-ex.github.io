@@ -17,3 +17,9 @@ Semaphore or servo signals
 What are signals?
 =================
 
+
+
+Controlling semaphore or servo signals
+======================================
+
+Controlling semaphore/servo signals is exactly the same as light signals, skip to :doc:`/ex-commandstation/accessories/signals/signal-control` for information on controlling signals.

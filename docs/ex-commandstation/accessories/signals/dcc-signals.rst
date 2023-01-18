@@ -14,5 +14,9 @@ DCC accessory signals
     :depth: 2
     :local:
 
-DCC signals
-===========
+
+
+Controlling DCC signals
+=======================
+
+If you have defined your DCC accessory signals as light signals, then controlling these is exactly the same as light or semaphore signals, skip to :doc:`/ex-commandstation/accessories/signals/signal-control` for information on controlling signals.

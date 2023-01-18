@@ -19,3 +19,4 @@ This section will focus on the types of signals supported by |EX-CS| with the co
   light-signals
   servo-signals
   dcc-signals
+  signal-control

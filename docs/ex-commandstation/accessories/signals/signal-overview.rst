@@ -32,7 +32,7 @@ The application of these signals differs by country, region, track purpose, and 
 
 In terms of our software, |EX-R| can control the aspects of signals by defining them as a signal object, which allows for the correct signal aspect to be set when operating turnouts/points, by push buttons on a mimic panel, by triggering a sensor as a train approaches, or by many other activities on your layout.
 
-Nnote that while the control of signals within |EX-CS| uses "RED", "AMBER", and "GREEN", there is no reason you can't adapt these to suit your requirements, whereby sending "RED" could in fact activate white lights indicating a train will be deviating to a spur or siding.
+Note that while the control of signals within |EX-CS| uses "RED", "AMBER", and "GREEN", there is no reason you can't adapt these to suit your requirements, whereby sending "RED" could in fact activate white lights indicating a train will be deviating to a spur or siding.
 
 Further to this, signals supporting only three aspects is not a limiting factor, as there are ways you can automatically set other signals' aspects based on various activities, allowing for complex signalling scenarios.
 
@@ -61,8 +61,8 @@ Continue to :doc:`/ex-commandstation/accessories/signals/servo-signals` for deta
 DCC accessory signals
 ---------------------
 
-In the current implementation, there is no specific signal object that defines and controls signals as DCC accessory items.
+In the current implementation, there is no specific signal object that defines and controls signals as DCC accessory items, and these can be operated the same as any other DCC accessory.
 
-However, it is possible to use event handlers available in our development branch (see :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version`) that allow you to define custom actions for signals that would enable the use of DCC accessory type signals.
+However, if you wish, it is possible to use signal event handlers available in our development branch (see :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version`) that allow you to define custom actions for signals that would enable the use of DCC accessory type signals.
 
 Continue to :doc:`/ex-commandstation/accessories/signals/dcc-signals` for details on how to control DCC accessory signals.

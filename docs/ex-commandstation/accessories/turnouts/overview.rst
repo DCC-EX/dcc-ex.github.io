@@ -50,6 +50,13 @@ Further to this, and depending on the brand of turnout/point, these will either 
 
 Solenoid/coil operated turnouts/points are commonly found in set track from brands such as Kato, Micro-Trains, and Rokuhan.
 
+DCC accessory turnouts/points
+-----------------------------
+
+While the sections on solenoid/coil or servo operated turnouts cover DCC accessory turnouts as well, it's worth calling this out explicitly to ensure people wishing to use these on their layout know exactly where to look.
+
+So, for users of DCC accessory based turnouts, simply look at either the solenoid/coil or servo turnout/point pages depending on the type of physical turnout in use, as those pages will also cover off how to operate those as DCC accessories.
+
 Turnout/point control options
 =============================
 

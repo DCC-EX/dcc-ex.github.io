@@ -259,6 +259,8 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 ``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions.
 
+Note when providing the name of the profile that the profile names are case sensitive, and must be written exactly as they appear (eg. Bounce, not bounce or BOUNCE).
+
 ``PIN_TURNOUT( id, pin [, "description"] )``	Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.
 
 ``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )``	Define a servo turnout/point. "active_angle" is for THROW, "inactive_angle" is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don't recommend Bounce for turnouts/points!). Refer to :doc:`/reference/hardware/servo-module` for more information.

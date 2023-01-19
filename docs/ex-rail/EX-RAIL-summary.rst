@@ -139,7 +139,7 @@ Object definitions
     * -  PIN_TURNOUT( id, pin [, "description"] )
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
-      -  Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts/points!)
+      -  Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts/points!), noting the profile name is case sensitive
     * -  VIRTUAL_TURNOUT( id [, "description"] )
       -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout/point.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)

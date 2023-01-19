@@ -42,7 +42,7 @@ Conventions used on this page
 - ``reg`` ``register`` - redundant parameter.  This needs to be included but is ignored by the EX-CommandStation
 - ``desc`` ``description`` - 
 - ``byte`` - 
-- ``track`` -
+- ``track`` - 'MAIN'=Main track  'PROG'=Programming Track 'JOIN'=Main and Programming tracks temporarily joined
 
 Controlling the EX-CommandStation
 =================================
@@ -62,14 +62,14 @@ Power management
     - **Track Power** |BR|
       Turns power on and off to the MAIN and PROG tracks together or independently. Also allows joining the MAIN and PROG tracks together. |BR|
       **onOff**: 1=on 0=off |BR|
-      **track**: <blank>= Both Main and Programming Tracks 'MAIN'= Main track  'PROG'=Programming Track 'JOIN'=Join the Main and Programming tracks temporarily |BR| |_| |BR|
+      **track**: <blank>= Both Main and Programming Tracks 'MAIN'=Main track  'PROG'=Programming Track 'JOIN'=Join the Main and Programming tracks temporarily |BR| |_| |BR|
       Response: ``<pX [MAIN|PROG|JOIN]>`` |BR|
       Where "X" is 1=on \| 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. |BR|
       e.g. |BR|
       Response (Both Main and Prog on): ``<p1>`` |BR|
-      Response (Main on only): ``<p1 MAIN>``
-      Response (Prog on only): ``<p1 PROG>``
-      Response (Joined - Main and Prog on): ``<p1 JOIN>``
+      Response (Main on only): ``<p1 MAIN>`` |BR|
+      Response (Prog on only): ``<p1 PROG>`` |BR|
+      Response (Joined - Main and Prog on): ``<p1 JOIN>`` |BR|
       Response (All off): ``<p0>``
   * - ``<D RESET>``
     - **Re-boot the command Station** |BR| |_| |BR|
@@ -397,6 +397,31 @@ WiFi Control
     - **Force the Command Station into "WiFi Connected" mode** |BR| |BR|
       Response (successful): |BR|
       Response (fail):  ?
+
+Track Manager (Formally DC-District)
+------------------------------------
+
+Note: this is not available yet in the Production release of |EX-CS|
+
+.. list-table:: 
+  :widths: 25 75
+  :header-rows: 1
+  :width: 100%
+  :class: command-table
+
+  * - Command
+    - Description / Response 
+  * - ``<= trackletter mode [id]>`` 
+    - **Configure Track Manager** |BR|
+      **trackletter** is A through H and represents one of the outputs of the/a motor shield.  |BR|
+      **mode** is one of MAIN, PROG, DC, DCX, or OFF (DCX is DC with reversed polarity) |BR|
+      **id** is the cab ID required when specifying DC or DCX |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``<=>``
+    - **Display the current Track Manager configuration** |BR| |BR|
+      Response : ``?``
+
 
 TBA
 ---

@@ -43,15 +43,27 @@ Arduino Nano
   * - Total pins 18
     - Minimum
     - Maximum
-    - Notes
   * - Digital pins
     - 12
     - 16
-    - D2 - D13, A0 - A3
   * - Analogue pins
     - 2
     - 6
-    - A0 - A3, A6 - A7, note A4/A5 are |I2C|, and A6/A7 analogue only
+
+.. note:: 
+
+  On Arduino Nano, the additional analogue pins A6/7 are analogue only can cannot be used as digital inputs or outputs.
+
+.. csv-table:: Arduino Nano and Pro Mini EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805
+  Digital Pins,D2,D3,D4,D5,D6,D7
+  Vpins,806,807,808,809,810,811
+  Digital Pins,D8,D9,D10,D11,D12,D13
+  Vpins,812,813,814,815,816,817
+  Analogue Pins,A0,A1,A2,A3,A6,A7
 
 |
 
@@ -84,15 +96,23 @@ Arduino Uno
   * - Total pins 16
     - Minimum
     - Maximum
-    - Notes
   * - Digital pins
     - 12
     - 16
-    - D2 - D13, A0 - A3
   * - Analogue pins
     - 0
     - 4
-    - A0 - A3, note A4/A5 are |I2C|
+
+.. csv-table:: Arduino Uno EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805
+  Digital Pins,D2,D3,D4,D5,D6,D7
+  Vpins,806,807,808,809,810,811
+  Digital Pins,D8,D9,D10,D11,D12,D13
+  Vpins,812,813,814,815
+  Analogue Pins,A0,A1,A2,A3
 
 |
 

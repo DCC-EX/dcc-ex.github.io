@@ -522,6 +522,7 @@
 <li><p><a class="reference internal" href="#i2c-address" id="id10">I2C_ADDRESS</a></p></li>
 <li><p><a class="reference internal" href="#diag" id="id11">DIAG</a></p></li>
 <li><p><a class="reference internal" href="#diag-config-delay" id="id12">DIAG_CONFIG_DELAY</a></p></li>
+<li><p><a class="reference internal" href="#test-mode" id="id13">TEST_MODE</a></p></li>
 </ul>
 </li>
 </ul>
@@ -725,6 +726,27 @@
 </div>
 <p>When <a class="reference internal" href="#diag"><span class="std std-ref">DIAG</span></a> is enabled, the configuration of each pin is displayed continuously to be able to monitor the configuration and state of each pin. By default, this will display every 5 seconds. This configuration item allows the delay between updates to be increased or decreased.</p>
 <p>You can also configure this via the serial console using the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">delay&gt;</span></code> command (see <a class="reference internal" href="testing.html#diagnostic-commands"><span class="std std-ref">Diagnostic commands</span></a>).</p>
+</section>
+<section id="test-mode">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">TEST_MODE</a><a class="headerlink" href="#test-mode" title="Permalink to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">//  Enable test mode - ensure only one test mode is active at one time.</span>
+<span class="c1">//  This is handy if serial input doesn&#39;t work for commands for some reason.</span>
+<span class="c1">//</span>
+<span class="c1">//  ANALOGUE - equivalent of &lt;A&gt;</span>
+<span class="c1">//  INPUT - equivalent of &lt;I&gt;</span>
+<span class="c1">//  OUTPUT - equivalent of &lt;O&gt;</span>
+<span class="c1">//  PULLUP - equivalent of &lt;P&gt;</span>
+<span class="c1">//</span>
+<span class="c1">// #define TEST_MODE ANALOGUE_TEST</span>
+<span class="c1">// #define TEST_MODE INPUT_TEST</span>
+<span class="c1">// #define TEST_MODE OUTPUT_TEST</span>
+<span class="c1">// #define TEST_MODE PULLUP_TEST</span>
+</pre></div>
+</div>
+<p>If for some reason serial input is not working as expected, test modes can be enabled via this option in “myConfig.h”.</p>
+<p>Only enable one test mode at a time. If multiple are enabled, only the last one defined will take effect.</p>
+<p>Refer to <a class="reference internal" href="testing.html#testing-commands"><span class="std std-ref">Testing commands</span></a> for details on the testing each option enables.</p>
 </section>
 </section>
 </section>

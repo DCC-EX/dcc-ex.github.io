@@ -504,14 +504,16 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#arduino-nano" id="id5">Arduino Nano</a></p></li>
-<li><p><a class="reference internal" href="#arduino-uno" id="id6">Arduino Uno</a></p></li>
-<li><p><a class="reference internal" href="#arduino-mega2560" id="id7">Arduino Mega2560</a></p></li>
-<li><p><a class="reference internal" href="#stmicroelectronics-nucleo-f411re" id="id8">STMicroelectronics NUCLEO-F411RE</a></p></li>
-<li><p><a class="reference internal" href="#adding-new-devices" id="id9">Adding new devices</a></p>
+<li><p><a class="reference internal" href="#arduino-nano" id="id6">Arduino Nano</a></p></li>
+<li><p><a class="reference internal" href="#arduino-pro-mini" id="id7">Arduino Pro Mini</a></p></li>
+<li><p><a class="reference internal" href="#arduino-uno" id="id8">Arduino Uno</a></p></li>
+<li><p><a class="reference internal" href="#arduino-mega2560" id="id9">Arduino Mega2560</a></p></li>
+<li><p><a class="reference internal" href="#stmicroelectronics-nucleo-f411re" id="id10">STMicroelectronics NUCLEO-F411RE</a></p></li>
+<li><p><a class="reference internal" href="#stmicroelectronics-nucleo-f412zg" id="id11">STMicroelectronics NUCLEO-F412ZG</a></p></li>
+<li><p><a class="reference internal" href="#adding-new-devices" id="id12">Adding new devices</a></p>
 <ul>
-<li><p><a class="reference internal" href="#enabling-software-reboots" id="id10">Enabling software reboots</a></p></li>
-<li><p><a class="reference internal" href="#defining-the-device-and-pin-map-in-supporteddevices-h" id="id11">Defining the device and pin map in SupportedDevices.h</a></p></li>
+<li><p><a class="reference internal" href="#enabling-software-reboots" id="id13">Enabling software reboots</a></p></li>
+<li><p><a class="reference internal" href="#defining-the-device-and-pin-map-in-supporteddevices-h" id="id14">Defining the device and pin map in SupportedDevices.h</a></p></li>
 </ul>
 </li>
 </ul>
@@ -525,7 +527,7 @@
 <p>When configuring the device driver, all available pins must be accounted for as either digital or analogue pins, even if there is no intended use for every individual pin.</p>
 </div>
 <section id="arduino-nano">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Arduino Nano</a><a class="headerlink" href="#arduino-nano" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Arduino Nano</a><a class="headerlink" href="#arduino-nano" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="../_images/ex-ioexpander-nano.png"><img alt="EX-IOExpander on Arduino Nano" src="../_images/ex-ioexpander-nano.png" style="width: 590.35px; height: 225.05px;" /></a>
 <table class="command-table docutils align-default" id="id1">
 <caption><span class="caption-number">Table 21 </span><span class="caption-text">Arduino Nano pin allocations</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
@@ -549,9 +551,24 @@
 </tr>
 </tbody>
 </table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="arduino-pro-mini">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Arduino Pro Mini</a><a class="headerlink" href="#arduino-pro-mini" title="Permalink to this heading"></a></h2>
+<p>The Arduino Pro Mini comes in two variations; a 3.3V running at 8MHz, and a 5V running at 16MHz.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The 8MHz 3.3V Pro Mini is not 5V tolerant</p>
+</div>
+<p>The Pro Mini uses an identical pin map to the <a class="reference internal" href="#arduino-nano"><span class="std std-ref">Arduino Nano</span></a>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
 <section id="arduino-uno">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Arduino Uno</a><a class="headerlink" href="#arduino-uno" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Arduino Uno</a><a class="headerlink" href="#arduino-uno" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="../_images/ex-ioexpander-uno.png"><img alt="EX-IOExpander on Arduino Uno" src="../_images/ex-ioexpander-uno.png" style="width: 607.8000000000001px; height: 232.4px;" /></a>
 <table class="command-table docutils align-default" id="id2">
 <caption><span class="caption-number">Table 22 </span><span class="caption-text">Arduino Uno pin allocations</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
@@ -575,9 +592,12 @@
 </tr>
 </tbody>
 </table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
 <section id="arduino-mega2560">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Arduino Mega2560</a><a class="headerlink" href="#arduino-mega2560" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Arduino Mega2560</a><a class="headerlink" href="#arduino-mega2560" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="../_images/ex-ioexpander-mega.png"><img alt="EX-IOExpander on Arduino Mega2560" src="../_images/ex-ioexpander-mega.png" style="width: 701.2px; height: 250.55px;" /></a>
 <table class="command-table docutils align-default" id="id3">
 <caption><span class="caption-number">Table 23 </span><span class="caption-text">Arduino Mega pin allocations</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
@@ -601,9 +621,12 @@
 </tr>
 </tbody>
 </table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
 <section id="stmicroelectronics-nucleo-f411re">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">STMicroelectronics NUCLEO-F411RE</a><a class="headerlink" href="#stmicroelectronics-nucleo-f411re" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">STMicroelectronics NUCLEO-F411RE</a><a class="headerlink" href="#stmicroelectronics-nucleo-f411re" title="Permalink to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Support for the F411RE is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.</p>
@@ -611,10 +634,14 @@
 <a class="reference internal image-reference" href="../_images/nucleo-f411re-pinout.png"><img alt="Nucleo F411RE pin out" src="../_images/nucleo-f411re-pinout.png" style="width: 402.59999999999997px; height: 341.4px;" /></a>
 <p>The Nucleo F411RE is a 3v3 microcontroller with more available I/O pins than an Arduino Uno. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren’t sequential.</p>
 <p>Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PC13 has a switch (blue button) with pullup resistor attached, so this is suitable as an input only (without pullups enabled) unless you disconnect SB17.</p>
+</div>
 <table class="command-table docutils align-default" id="id4">
 <caption><span class="caption-number">Table 24 </span><span class="caption-text">NUCLEO-F411RE pin allocations</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
 <thead>
-<tr class="row-odd"><th class="head stub"><p>Total pins 37</p></th>
+<tr class="row-odd"><th class="head stub"><p>Total pins 40</p></th>
 <th class="head"><p>Minimum</p></th>
 <th class="head"><p>Maximum</p></th>
 <th class="head"><p>Notes</p></th>
@@ -622,28 +649,83 @@
 </thead>
 <tbody>
 <tr class="row-even"><th class="stub"><p>Digital pins</p></th>
-<td><p>25</p></td>
-<td><p>37</p></td>
+<td><p>26</p></td>
+<td><p>40</p></td>
 <td><div class="line-block">
-<div class="line">PC_10,PC_11,PC_12,PD_2,PC_13,PC_14,PC_15,PH_0,PH_1 - CN7</div>
-<div class="line">PC_9,PC_8,PC_6,PA_12,PA_11,PB_12,PC_7,PA_9,PB_2,PA_8,PB_10,PB_15,PB_14,PB_5,PB_13,PA_10 - CN10</div>
+<div class="line">PC10,PC11,PC12,PD2,PA15,PB7,PC13 - CN7</div>
+<div class="line">PC9,PC8,PC6,PA12,PA11,PB12,PB6,PC7,PA9,PB2,PA8,PB10,PB15,PB4,PB14,PB5,PB13,PB3,PA10 - CN10</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><th class="stub"><p>Analogue pins</p></th>
 <td><p>0</p></td>
-<td><p>12</p></td>
+<td><p>14</p></td>
 <td><div class="line-block">
-<div class="line">PA_4,PB_0,PC_2,PC_1,PC_3,PC_0 - CN7</div>
-<div class="line">PC_5,PA_5,PA_6,PA_7,PB_1,PC_4 - CN10</div>
+<div class="line">PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0 - CN7</div>
+<div class="line">PC5,PA5,PA6,PA7,PB1,PC4 - CN10</div>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="stmicroelectronics-nucleo-f412zg">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">STMicroelectronics NUCLEO-F412ZG</a><a class="headerlink" href="#stmicroelectronics-nucleo-f412zg" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Support for the F412ZG is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.</p>
+</div>
+<p>The Nucleo F412ZG is a 3v3 microcontroller with significantly more available I/O pins than an Arduino Mega. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren’t sequential.</p>
+<p>Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PC13 has a switch (blue button) with pullup resistor attached, so this is suitable as an input only (without pullups enabled) unless you disconnect SB17.</p>
+<p>In addition, PB0 is the green LED, PB7 is the blue LED, and PB14 in the red LED.</p>
+</div>
+<table class="command-table docutils align-default" id="id5">
+<caption><span class="caption-number">Table 25 </span><span class="caption-text">NUCLEO-F412ZG pin allocations</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Total pins 98</p></th>
+<th class="head"><p>Minimum</p></th>
+<th class="head"><p>Maximum</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Digital pins</p></th>
+<td><p>82</p></td>
+<td><p>98</p></td>
+<td><div class="line-block">
+<div class="line">PC10,PC11,PC12,PD2,PF6,PF7,PA15,PB7,PC13</div>
+<div class="line">PD4,PD3,PD5,PG2,PD6,PG3,PD7,PE2,PE3,PE4,PE5,PF1,PF2,PF0</div>
+<div class="line">PF8,PD1,PF9,PD0,PG1,PG0,PE1,PE6,PG9,PG15,PG12,PG10,PH_2,PG13,PG11 - CN11</div>
+<div class="line">PC9,PC8,PC6,PB12,PB6,PB11,PC7</div>
+<div class="line">PB2,PB10,PB15,PB4,PB14,PB5,PB13,PB_3,PF5,PF4,PE8</div>
+<div class="line">PD13,PF10,PD12,PE7,PD11,PD14,PE10,PD15,PE12,PF14,PE14,PE9,PE15,PE13,PE11</div>
+<div class="line">PF13,PF3,PF12,PF15,PG14,PF11,PE0,PD10,PG8,PG5,PG4 - CN10</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Analogue pins</p></th>
+<td><p>0</p></td>
+<td><p>16</p></td>
+<td><div class="line-block">
+<div class="line">PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0 - CN11</div>
+<div class="line">PC5,PA5,PA6,PA7,PB1,PC4,PA2,PA3 - CN12</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
 <section id="adding-new-devices">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Adding new devices</a><a class="headerlink" href="#adding-new-devices" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Adding new devices</a><a class="headerlink" href="#adding-new-devices" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -654,13 +736,13 @@
 <p>In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to specify how the Vpins defined in the device driver map to the physical pins of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device.</p>
 <p>For example, the AVR series (Uno, Mega, Nano) have the architure or platform macro defined as “ARDUINO_ARCH_AVR”, with the Nano having the variant or board specific macro “ARDUINO_AVR_NANO”, and there is a pin map defined that maps to this macro definition.</p>
 <section id="enabling-software-reboots">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Enabling software reboots</a><a class="headerlink" href="#enabling-software-reboots" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Enabling software reboots</a><a class="headerlink" href="#enabling-software-reboots" title="Permalink to this heading"></a></h3>
 <p>The architecture or platform macro is used to determine the correct method to reboot the device via the <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> command, whereas the variant or board specific macro is used to define the actual pins in use.</p>
 <p>If a new architecture or platform is being added, then “EX-IOExpander.ino” will need to be updated with the suitable software command in the “reset()” function, otherwise a reboot via <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> will not be available.</p>
 <p>If the architecture or platform already exists, or there is no desire to reboot via software, then the only change required is to add the variant or board specific information to “SupportedDevices.h”.</p>
 </section>
 <section id="defining-the-device-and-pin-map-in-supporteddevices-h">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Defining the device and pin map in SupportedDevices.h</a><a class="headerlink" href="#defining-the-device-and-pin-map-in-supporteddevices-h" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Defining the device and pin map in SupportedDevices.h</a><a class="headerlink" href="#defining-the-device-and-pin-map-in-supporteddevices-h" title="Permalink to this heading"></a></h3>
 <p>A pin map is used to map the Vpins from the device driver in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> to the appropriate physical pins on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, and therefore defining this in the correct order in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software is critical. It is equally critical to ensure that the correct variant or board macro is used to ensure the correct pin map is used when compiling and uploading the software to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device.</p>
 <p>Pin maps are defined in the file “SupportedDevices.h”.</p>
 <p>As per <a class="reference internal" href="overview.html#pin-vpin-allocation"><span class="std std-ref">Pin/Vpin allocation</span></a>, digital pins are allocated first, incrementing from the first Vpin, and analogue pins are allocated in reverse, starting from the last Vpin.</p>

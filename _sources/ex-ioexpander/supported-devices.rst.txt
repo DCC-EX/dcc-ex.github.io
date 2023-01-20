@@ -53,6 +53,21 @@ Arduino Nano
     - 6
     - A0 - A3, A6 - A7, note A4/A5 are |I2C|, and A6/A7 analogue only
 
+|
+
+Arduino Pro Mini
+================
+
+The Arduino Pro Mini comes in two variations; a 3.3V running at 8MHz, and a 5V running at 16MHz.
+
+.. warning:: 
+
+  The 8MHz 3.3V Pro Mini is not 5V tolerant
+
+The Pro Mini uses an identical pin map to the :ref:`ex-ioexpander/supported-devices:arduino nano`.
+
+|
+
 Arduino Uno
 ===========
 
@@ -79,6 +94,8 @@ Arduino Uno
     - 4
     - A0 - A3, note A4/A5 are |I2C|
 
+|
+
 Arduino Mega2560
 ================
 
@@ -104,7 +121,9 @@ Arduino Mega2560
     - 0
     - 16
     - A0 - A15
-  
+
+|
+
 STMicroelectronics NUCLEO-F411RE
 ================================
 
@@ -120,26 +139,77 @@ The Nucleo F411RE is a 3v3 microcontroller with more available I/O pins than an 
 
 Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
 
+.. note:: 
+
+  PC13 has a switch (blue button) with pullup resistor attached, so this is suitable as an input only (without pullups enabled) unless you disconnect SB17.
+
 .. list-table:: NUCLEO-F411RE pin allocations
   :widths: auto
   :header-rows: 1
   :stub-columns: 1
   :class: command-table
 
-  * - Total pins 37
+  * - Total pins 40
     - Minimum
     - Maximum
     - Notes
   * - Digital pins
-    - 25
-    - 37
-    - | PC_10,PC_11,PC_12,PD_2,PC_13,PC_14,PC_15,PH_0,PH_1 - CN7
-      | PC_9,PC_8,PC_6,PA_12,PA_11,PB_12,PC_7,PA_9,PB_2,PA_8,PB_10,PB_15,PB_14,PB_5,PB_13,PA_10 - CN10
+    - 26
+    - 40
+    - | PC10,PC11,PC12,PD2,PA15,PB7,PC13 - CN7
+      | PC9,PC8,PC6,PA12,PA11,PB12,PB6,PC7,PA9,PB2,PA8,PB10,PB15,PB4,PB14,PB5,PB13,PB3,PA10 - CN10
   * - Analogue pins
     - 0
-    - 12
-    - | PA_4,PB_0,PC_2,PC_1,PC_3,PC_0 - CN7
-      | PC_5,PA_5,PA_6,PA_7,PB_1,PC_4 - CN10
+    - 14
+    - | PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0 - CN7
+      | PC5,PA5,PA6,PA7,PB1,PC4 - CN10
+
+|
+
+STMicroelectronics NUCLEO-F412ZG
+================================
+
+.. warning:: 
+
+  Support for the F412ZG is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.
+
+The Nucleo F412ZG is a 3v3 microcontroller with significantly more available I/O pins than an Arduino Mega. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren't sequential.
+
+Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
+
+.. note:: 
+
+  PC13 has a switch (blue button) with pullup resistor attached, so this is suitable as an input only (without pullups enabled) unless you disconnect SB17.
+
+  In addition, PB0 is the green LED, PB7 is the blue LED, and PB14 in the red LED.
+
+.. list-table:: NUCLEO-F412ZG pin allocations
+  :widths: auto
+  :header-rows: 1
+  :stub-columns: 1
+  :class: command-table
+
+  * - Total pins 98
+    - Minimum
+    - Maximum
+    - Notes
+  * - Digital pins
+    - 82
+    - 98
+    - | PC10,PC11,PC12,PD2,PF6,PF7,PA15,PB7,PC13
+      | PD4,PD3,PD5,PG2,PD6,PG3,PD7,PE2,PE3,PE4,PE5,PF1,PF2,PF0
+      | PF8,PD1,PF9,PD0,PG1,PG0,PE1,PE6,PG9,PG15,PG12,PG10,PH_2,PG13,PG11 - CN11
+      | PC9,PC8,PC6,PB12,PB6,PB11,PC7
+      | PB2,PB10,PB15,PB4,PB14,PB5,PB13,PB_3,PF5,PF4,PE8
+      | PD13,PF10,PD12,PE7,PD11,PD14,PE10,PD15,PE12,PF14,PE14,PE9,PE15,PE13,PE11
+      | PF13,PF3,PF12,PF15,PG14,PF11,PE0,PD10,PG8,PG5,PG4 - CN10
+  * - Analogue pins
+    - 0
+    - 16
+    - | PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0 - CN11
+      | PC5,PA5,PA6,PA7,PB1,PC4,PA2,PA3 - CN12
+
+|
 
 Adding new devices
 ==================

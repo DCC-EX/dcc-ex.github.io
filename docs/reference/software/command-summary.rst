@@ -165,7 +165,7 @@ WiFi Control
 Throttle commands for developers
 ================================
 
-Refer to :doc:`/reference/developers/tech-reference` for full details on these commands.
+Refer to :doc:`/throttles/tech-reference` for full details on these commands.
 
 ``<JT>`` returns the defined turnout IDs
 

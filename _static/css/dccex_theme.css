@@ -86,6 +86,10 @@ h6, .h6 {
   background-color: #E0E0E0;
 }
 
+.rst-content code {
+  font-size: 90% !important;
+}
+
 table.intro-table {
   max-width: 600px;
 }
@@ -106,10 +110,20 @@ table.intro-table {
 
 .command-table tbody td {
   white-space: normal;
+  margin: 10px;
+  padding: 8px 8px 8px 8px !important;
+}
+
+.command-table tbody tr:first-child td p code {
+  white-space: nowrap !important;
+}
+
+.command-table tbody tr td p {
+  font-size: 90% !important;
 }
 
 .command-table tbody tr td ol li p {
-  font-size: 100% !important;
+  font-size: 90% !important;
 }
 
 .command-table tbody tr td ol {

@@ -13,3 +13,4 @@ DCC++ Commands
 
     command-reference
     command-summary
+    command-summary-consolidated

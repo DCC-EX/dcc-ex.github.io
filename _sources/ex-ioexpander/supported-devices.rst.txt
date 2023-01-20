@@ -143,6 +143,8 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 
   PC13 has a switch (blue button) with pullup resistor attached, so this is suitable as an input only (without pullups enabled) unless you disconnect SB17.
 
+  In addition, PA5 is the green LED.
+
 .. list-table:: NUCLEO-F411RE pin allocations
   :widths: auto
   :header-rows: 1

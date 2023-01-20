@@ -13,7 +13,7 @@ This section contains detailed information relevant for those who wish to utilis
 .. toctree::
     :maxdepth: 1
 
-    tech-reference
+    /throttles/tech-reference
     api
     hal
     hal-config

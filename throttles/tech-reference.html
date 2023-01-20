@@ -312,7 +312,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference/index.html">Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/videos/index.html">Videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Documents and Schematics</a><ul>
@@ -399,8 +399,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary.html">DCC-EX Command Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/developers/index.html">Developer and API reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../reference/developers/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../reference/developers/index.html">Developer and API reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Technical Reference for Throttle Developers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/api.html">EX-CommandStation API Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal.html">DCC-EX HAL Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal-config.html">I/O Device Drivers and HAL</a></li>
@@ -499,28 +499,67 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#additional-throttle-commands" id="id1">Additional throttle commands</a></p></li>
-<li><p><a class="reference internal" href="#throttle-command-summary" id="id2">Throttle command summary</a></p></li>
-<li><p><a class="reference internal" href="#detailed-command-reference" id="id3">Detailed Command Reference</a></p>
+<li><p><a class="reference internal" href="#considerations-for-throttle-developers" id="id1">Considerations for throttle developers</a></p></li>
+<li><p><a class="reference internal" href="#responding-to-appropriate-information" id="id2">Responding to appropriate information</a></p>
 <ul>
-<li><p><a class="reference internal" href="#turnouts" id="id4">Turnouts</a></p></li>
-<li><p><a class="reference internal" href="#automations-routes" id="id5">Automations/Routes</a></p></li>
-<li><p><a class="reference internal" href="#roster-information" id="id6">Roster Information</a></p></li>
-<li><p><a class="reference internal" href="#obtaining-throttle-status" id="id7">Obtaining throttle status</a></p></li>
-<li><p><a class="reference internal" href="#commands-to-avoid" id="id8">Commands to avoid</a></p></li>
+<li><p><a class="reference internal" href="#working-with-track-power-states" id="id3">Working with track power states</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#additional-throttle-commands" id="id4">Additional throttle commands</a></p>
+<ul>
+<li><p><a class="reference internal" href="#throttle-command-summary" id="id5">Throttle command summary</a></p></li>
+<li><p><a class="reference internal" href="#detailed-command-reference" id="id6">Detailed Command Reference</a></p>
+<ul>
+<li><p><a class="reference internal" href="#turnouts" id="id7">Turnouts</a></p></li>
+<li><p><a class="reference internal" href="#automations-routes" id="id8">Automations/Routes</a></p></li>
+<li><p><a class="reference internal" href="#roster-information" id="id9">Roster Information</a></p></li>
+<li><p><a class="reference internal" href="#obtaining-throttle-status" id="id10">Obtaining throttle status</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#commands-to-avoid" id="id11">Commands to avoid</a></p></li>
 </ul>
 </nav>
 </aside>
 <p>This page is intended to capture relevant information to assist those who develop throttles compatible with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>This page should be read in conjunction with the <a class="reference internal" href="../reference/developers/api.html"><span class="doc">EX-CommandStation API Reference</span></a> in order to understand how to send and parse <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> API commands correctly, and ignore any irrelevant commands.</p>
+<section id="considerations-for-throttle-developers">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Considerations for throttle developers</a><a class="headerlink" href="#considerations-for-throttle-developers" title="Permalink to this heading"></a></h2>
+<p>For anyone developing a throttle or controller application, these considerations must be taken into account:</p>
+<ul class="simple">
+<li><p>Refer to the <a class="reference internal" href="../reference/developers/api.html"><span class="doc">EX-CommandStation API Reference</span></a></p></li>
+<li><p>A throttle/controller MUST accept and ignore anything it does not understand</p></li>
+<li><p>Track power state has three possible states: On, Off, and Unknown</p></li>
+</ul>
+</section>
+<section id="responding-to-appropriate-information">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Responding to appropriate information</a><a class="headerlink" href="#responding-to-appropriate-information" title="Permalink to this heading"></a></h2>
+<p>In addition to understanding the specific throttle commands details on this page, throttles/controllers also must understand and respond appropriately to broadcasts sent from the <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> API.</p>
+<p>These are the broadcast commands that should be understood if used by the throttle, or discarded if irrelevant:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;p</span> <span class="pre">X</span> <span class="pre">[MAIN|PROG|JOIN]&gt;</span></code> - When a throttle issues a track power command, this response is sent as a broadcast (see <a class="reference internal" href="../reference/software/command-reference.html#track-power-commands"><span class="std std-ref">Track Power Commands</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">address&gt;</span></code> - When a loco address is read on the programming track, the address is sent as a broadcast (see <a class="reference internal" href="../reference/software/command-reference.html#read-loco-address-on-programming-track"><span class="std std-ref">READ LOCO ADDRESS ON PROGRAMMING TRACK</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">slot</span> <span class="pre">speed/dir</span> <span class="pre">func&gt;</span></code> - When throttles send loco commands, this is sent as a broadcast (see <a class="reference internal" href="../reference/software/command-reference.html#cab-functions"><span class="std std-ref">CAB FUNCTIONS</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">[DCC|SERVO|VPIN|LCN]</span> <span class="pre">...</span> <span class="pre">[0|1]&gt;</span></code> - When turnouts are closed/thrown, this response is broadcast (see <a class="reference internal" href="../reference/software/command-reference.html#defining-setting-up-a-turnout"><span class="std std-ref">Defining (Setting up) a Turnout</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;[q|Q]</span> <span class="pre">id&gt;</span></code> - When sensors are deactivated/activated, this response is broadcast (see <a class="reference internal" href="../reference/software/command-reference.html#sensors-input-commands"><span class="std std-ref">Sensors (Input) Commands</span></a>)</p></li>
+</ul>
+<section id="working-with-track-power-states">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Working with track power states</a><a class="headerlink" href="#working-with-track-power-states" title="Permalink to this heading"></a></h3>
+<p>As above, track power can be On, Off, or Unknown. There is no broadcast of an Unknown power state though, meaning a throttle/controller must start with track power flagged as Unknown.</p>
+<p>The throttle should only flag the power state as On or Off when either:</p>
+<ul class="simple">
+<li><p>A power broadcast is received from the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> <code class="docutils literal notranslate"><span class="pre">&lt;p...&gt;</span></code></p></li>
+<li><p>The throttle user selects to turn track power on or off</p></li>
+</ul>
+</section>
+</section>
 <section id="additional-throttle-commands">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Additional throttle commands</a><a class="headerlink" href="#additional-throttle-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Additional throttle commands</a><a class="headerlink" href="#additional-throttle-commands" title="Permalink to this heading"></a></h2>
 <p>Release 4.0.2 provides a number of additional throttle information commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation, and roster features which are already found in the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> implementations.</p>
 <p>These commands are new and do not overlap with the existing commands (which are probably due to be obsoleted as they are over complex and unfit for purpose).</p>
-</section>
 <section id="throttle-command-summary">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Throttle command summary</a><a class="headerlink" href="#throttle-command-summary" title="Permalink to this heading"></a></h2>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Throttle command summary</a><a class="headerlink" href="#throttle-command-summary" title="Permalink to this heading"></a></h3>
 <p>All throttle specific commands are summarised here, refer below for elaboration on the details with examples.</p>
 <table class="command-table docutils align-default">
 <thead>
@@ -562,9 +601,9 @@
 </table>
 </section>
 <section id="detailed-command-reference">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Detailed Command Reference</a><a class="headerlink" href="#detailed-command-reference" title="Permalink to this heading"></a></h2>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Detailed Command Reference</a><a class="headerlink" href="#detailed-command-reference" title="Permalink to this heading"></a></h3>
 <section id="turnouts">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Turnouts</a><a class="headerlink" href="#turnouts" title="Permalink to this heading"></a></h3>
+<h4><a class="toc-backref" href="#id7" role="doc-backlink">Turnouts</a><a class="headerlink" href="#turnouts" title="Permalink to this heading"></a></h4>
 <p>The conventional turnout definition commands and the <code class="docutils literal notranslate"><span class="pre">&lt;H&gt;</span></code> responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.</p>
 <p>Example response:</p>
@@ -590,7 +629,7 @@
 </div>
 </section>
 <section id="automations-routes">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Automations/Routes</a><a class="headerlink" href="#automations-routes" title="Permalink to this heading"></a></h3>
+<h4><a class="toc-backref" href="#id8" role="doc-backlink">Automations/Routes</a><a class="headerlink" href="#automations-routes" title="Permalink to this heading"></a></h4>
 <p>A throttle needs to know which EX-RAIL Automations and Routes it can show the user.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code> - Returns a list of Automations/Routes.</p>
 <p>Example response:</p>
@@ -605,7 +644,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">13</span> <span class="pre">X&gt;</span></code> - Indicates ID 13 is not found.</p></li>
 </ul>
 <section id="what-s-the-difference">
-<h4>What’s the difference?<a class="headerlink" href="#what-s-the-difference" title="Permalink to this heading"></a></h4>
+<h5>What’s the difference?<a class="headerlink" href="#what-s-the-difference" title="Permalink to this heading"></a></h5>
 <p>A <strong>ROUTE</strong> is just a call to an EX-RAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EX-RAIL function, but is not expecting to know the loco ID.</p>
 <ul class="simple">
 <li><p>A route can be triggered by sending, for example, <code class="docutils literal notranslate"><span class="pre">&lt;/START</span> <span class="pre">13&gt;</span></code>.</p></li>
@@ -617,7 +656,7 @@
 </section>
 </section>
 <section id="roster-information">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Roster Information</a><a class="headerlink" href="#roster-information" title="Permalink to this heading"></a></h3>
+<h4><a class="toc-backref" href="#id9" role="doc-backlink">Roster Information</a><a class="headerlink" href="#roster-information" title="Permalink to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code> - Requests a list of cab IDs from the roster.</p>
 <p>Example responses:</p>
 <ul class="simple">
@@ -631,7 +670,7 @@
 </ul>
 </section>
 <section id="obtaining-throttle-status">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Obtaining throttle status</a><a class="headerlink" href="#obtaining-throttle-status" title="Permalink to this heading"></a></h3>
+<h4><a class="toc-backref" href="#id10" role="doc-backlink">Obtaining throttle status</a><a class="headerlink" href="#obtaining-throttle-status" title="Permalink to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.</p>
 <p>Example response:</p>
 <ul class="simple">
@@ -645,8 +684,10 @@
 <li><p>functionmap = Binary map of which functions are ON ( 1=F0, 2=F1, 3=F0&amp;F1   etc.)</p></li>
 </ul>
 </section>
+</section>
+</section>
 <section id="commands-to-avoid">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h3>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">func1</span> <span class="pre">func2&gt;</span></code> - Use <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1/0&gt;</span></code> instead</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span>&#160; <span class="pre">slot</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - Just drop the slot number</p></li>
@@ -655,7 +696,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code> - This may need to change in the future to support new features</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> - If the throttle developer sees the need to obtain info which is &lt;D&gt; only please contact us to get a better way to do it</p></li>
 </ul>
-</section>
 </section>
 </section>
 

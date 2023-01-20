@@ -763,7 +763,7 @@ Throttle commands for developers
 
 These commands have been provided for those wishing to develop throttles that utilise the DCC-EX API.
 
-As there is existing detailed documentation for these, we will not elaborate here. Instead, refer to :doc:`/reference/developers/tech-reference` for full details on these commands.
+As there is existing detailed documentation for these, we will not elaborate here. Instead, refer to :doc:`/throttles/tech-reference` for full details on these commands.
 
 ``<JT>`` returns the defined turnout IDs
 

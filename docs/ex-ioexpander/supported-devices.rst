@@ -132,15 +132,31 @@ Arduino Mega2560
   * - Total pins 62
     - Minimum
     - Maximum
-    - Notes
   * - Digital pins
     - 46
     - 62
-    - D2 - D19, D22 - D49, A0 - A15, noting D20/D21 and D50 - D53 are reserved
   * - Analogue pins
     - 0
     - 16
-    - A0 - A15
+
+.. csv-table:: Arduino Mega EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805,806,807,808,809
+  Digital Pins,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11
+  Vpins,810,811,812,813,814,815,816,817,818,819
+  Digital Pins,D12,D13,D14,D15,D16,D17,D18,D19,D22,D23
+  Vpins,820,821,822,823,824,825,826,827,828,829
+  Digital Pins,D24,D25,D26,D27,D28,D29,D30,D31,D32,D33
+  Vpins,830,831,832,833,834,835,836,837,838,839
+  Digital Pins,D34,D35,D36,D37,D38,D39,D40,D41,D42,D43
+  Vpins,840,841,842,843,844,845
+  Digital Pins,D44,D45,D46,D47,D48,D49
+  Vpins,846,847,848,849,850,851,852,853,854,855
+  Analogue Pins,A0,A1,A2,A3,A4,A5,A6,A7,A8,A9
+  Vpins,856,857,858,859,860,861
+  Analogue Pins,A10,A11,A12,A13,A14,A15
 
 |
 

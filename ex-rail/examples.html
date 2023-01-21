@@ -529,7 +529,7 @@
 <section id="turn-track-power-on-at-startup">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Turn Track Power On at Startup</a><a class="headerlink" href="#turn-track-power-on-at-startup" title="Permalink to this heading"></a></h2>
 <p>The current production release of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> does not have commands for turning track power on or off, but if you assign a speed to a loco in a sequence it will automatically turn the track power on.  Using this feature we can fudge turning the track power on at startup.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// if this is at the start of myConfiuration.h  This will act like an AUTOSTART sequence</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// if this is at the start of myAutomation.h  This will act like an AUTOSTART sequence</span>
 <span class="n">SETLOCO</span><span class="p">(</span><span class="mi">9999</span><span class="p">)</span><span class="w">   </span><span class="c1">// select loco 9999</span>
 <span class="n">SPEED</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w">        </span><span class="c1">// set the speed to 0.  This will turn the tarck power on</span>
 <span class="n">DONE</span>

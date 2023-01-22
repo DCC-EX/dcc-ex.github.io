@@ -237,12 +237,12 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
   :stub-columns: 1
   :class: command-table
 
-  * - Total pins 98
+  * - Total pins 97
     - Minimum
     - Maximum
   * - Digital pins
-    - 82
-    - 98
+    - 81
+    - 97
   * - Analogue pins
     - 0
     - 16
@@ -257,21 +257,21 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
   CN11 Digital Pins,PD3,PD5,PG2,PD6,PG3,PD7,PE2,PE3,PE4,PE5
   Vpins,820,821,822,823,824,825,826,827,828,829
   CN11 Digital Pins,PF1,PF2,PF0,PF8,PD1,PF9,PD0,PG1,PG0,PE1
-  Vpins,830,831,832,833,834,835,836,837
-  CN11 Digital Pins,PE6,PG9,PG15,PG12,PG10,PH_2,PG13,PG11
-  Vpins,838,839,840,841,842,843,844,845,846,847
+  Vpins,830,831,832,833,834,835,836
+  CN11 Digital Pins,PE6,PG9,PG15,PG12,PG10,PG13,PG11
+  Vpins,837,838,839,840,841,842,843,844,845,846
   CN12 Digital Pins,PC9,PC8,PC6,PB12,PB6,PB11,PC7,PB2,PB10,PB15
-  Vpins,848,849,850,851,852,853,854,855,856,857
+  Vpins,847,848,849,850,851,852,853,854,855,856
   CN12 Digital Pins,PB4,PB14,PB5,PB13,PB3,PF5,PF4,PE8,PD13,PF10
-  Vpins,858,859,860,861,862,863,864,865,866,867
+  Vpins,857,858,859,860,861,862,863,864,865,866
   CN12 Digital Pins,PD12,PE7,PD11,PD14,PE10,PD15,PE12,PF14,PE14,PE9
-  Vpins,868,869,870,871,872,873,874,875,876,877
+  Vpins,867,868,869,870,871,872,873,874,875,876
   CN12 Digital Pins,PE15,PE13,PE11,PF13,PF3,PF12,PF15,PG14,PF11,PE0
-  Vpins,878,879,880,881
+  Vpins,877,878,879,880
   CN12 Digital Pins,PD10,PG8,PG5,PG4
-  Vpins,882,883,884,885,886,887,888,889
+  Vpins,881,882,883,884,885,886,887,888
   CN11 Analogue Pins,PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0
-  Vpins,890,891,892,893,894,895,896,897
+  Vpins,889,890,891,892,893,894,895,896
   CN12 Analogue Pins,PC5,PA5,PA6,PA7,PB1,PC4,PA2,PA3
 
 |

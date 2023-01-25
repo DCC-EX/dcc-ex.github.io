@@ -26,6 +26,10 @@
 
    <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>
 ..
+.. |EX-FC| raw:: html
+
+   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;FastClock</span></span>
+..
 .. |EX-DCCI| raw:: html
 
    <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span>
@@ -82,6 +86,11 @@
       :class: image-product-logo-float-right
 ..
 .. |EX-TT-LOGO| image:: /_static/images/logos/product-logo-ex-turntable.png
+      :alt: EX-Turntable
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
+.. |EX-FC-LOGO| image:: /_static/images/logos/product-logo-ex-fastclock.png
       :alt: EX-Turntable
       :scale: 40%
       :class: image-product-logo-float-right

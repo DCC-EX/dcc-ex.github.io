@@ -30,6 +30,12 @@
       :class: image-min-width-144
       :target: ../../ex-turntable/index.html
 ..
+.. |EX-FC-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-fastclock.png
+      :alt: EX-Turntable
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ./ex-turntable/index.html
+..
 .. |EX-DCCI-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-DCCInspector
       :scale: 30%

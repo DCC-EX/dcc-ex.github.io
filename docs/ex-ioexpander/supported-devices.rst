@@ -43,15 +43,42 @@ Arduino Nano
   * - Total pins 18
     - Minimum
     - Maximum
-    - Notes
   * - Digital pins
     - 12
     - 16
-    - D2 - D13, A0 - A3
   * - Analogue pins
     - 2
     - 6
-    - A0 - A3, A6 - A7, note A4/A5 are |I2C|, and A6/A7 analogue only
+
+.. note:: 
+
+  On Arduino Nano, the additional analogue pins A6/7 are analogue only can cannot be used as digital inputs or outputs.
+
+.. csv-table:: Arduino Nano and Pro Mini EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805
+  Digital Pins,D2,D3,D4,D5,D6,D7
+  Vpins,806,807,808,809,810,811
+  Digital Pins,D8,D9,D10,D11,D12,D13
+  Vpins,812,813,814,815,816,817
+  Analogue Pins,A0,A1,A2,A3,A6,A7
+
+|
+
+Arduino Pro Mini
+================
+
+The Arduino Pro Mini comes in two variations; a 3.3V running at 8MHz, and a 5V running at 16MHz.
+
+.. warning:: 
+
+  The 8MHz 3.3V Pro Mini is not 5V tolerant
+
+The Pro Mini uses an identical pin map to the :ref:`ex-ioexpander/supported-devices:arduino nano`.
+
+|
 
 Arduino Uno
 ===========
@@ -69,15 +96,25 @@ Arduino Uno
   * - Total pins 16
     - Minimum
     - Maximum
-    - Notes
   * - Digital pins
     - 12
     - 16
-    - D2 - D13, A0 - A3
   * - Analogue pins
     - 0
     - 4
-    - A0 - A3, note A4/A5 are |I2C|
+
+.. csv-table:: Arduino Uno EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805
+  Digital Pins,D2,D3,D4,D5,D6,D7
+  Vpins,806,807,808,809,810,811
+  Digital Pins,D8,D9,D10,D11,D12,D13
+  Vpins,812,813,814,815
+  Analogue Pins,A0,A1,A2,A3
+
+|
 
 Arduino Mega2560
 ================
@@ -95,16 +132,34 @@ Arduino Mega2560
   * - Total pins 62
     - Minimum
     - Maximum
-    - Notes
   * - Digital pins
     - 46
     - 62
-    - D2 - D19, D22 - D49, A0 - A15, noting D20/D21 and D50 - D53 are reserved
   * - Analogue pins
     - 0
     - 16
-    - A0 - A15
-  
+
+.. csv-table:: Arduino Mega EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805,806,807,808,809
+  Digital Pins,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11
+  Vpins,810,811,812,813,814,815,816,817,818,819
+  Digital Pins,D12,D13,D14,D15,D16,D17,D18,D19,D22,D23
+  Vpins,820,821,822,823,824,825,826,827,828,829
+  Digital Pins,D24,D25,D26,D27,D28,D29,D30,D31,D32,D33
+  Vpins,830,831,832,833,834,835,836,837,838,839
+  Digital Pins,D34,D35,D36,D37,D38,D39,D40,D41,D42,D43
+  Vpins,840,841,842,843,844,845
+  Digital Pins,D44,D45,D46,D47,D48,D49
+  Vpins,846,847,848,849,850,851,852,853,854,855
+  Analogue Pins,A0,A1,A2,A3,A4,A5,A6,A7,A8,A9
+  Vpins,856,857,858,859,860,861
+  Analogue Pins,A10,A11,A12,A13,A14,A15
+
+|
+
 STMicroelectronics NUCLEO-F411RE
 ================================
 
@@ -120,26 +175,106 @@ The Nucleo F411RE is a 3v3 microcontroller with more available I/O pins than an 
 
 Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
 
+.. note:: 
+
+  PC13 has a switch (blue button) with pullup resistor attached, so this is suitable as an input only (without pullups enabled) unless you disconnect SB17.
+
+  In addition, PA5 is the green LED.
+
 .. list-table:: NUCLEO-F411RE pin allocations
   :widths: auto
   :header-rows: 1
   :stub-columns: 1
   :class: command-table
 
-  * - Total pins 37
+  * - Total pins 40
     - Minimum
     - Maximum
-    - Notes
   * - Digital pins
-    - 25
-    - 37
-    - | PC_10,PC_11,PC_12,PD_2,PC_13,PC_14,PC_15,PH_0,PH_1 - CN7
-      | PC_9,PC_8,PC_6,PA_12,PA_11,PB_12,PC_7,PA_9,PB_2,PA_8,PB_10,PB_15,PB_14,PB_5,PB_13,PA_10 - CN10
+    - 26
+    - 40
   * - Analogue pins
     - 0
-    - 12
-    - | PA_4,PB_0,PC_2,PC_1,PC_3,PC_0 - CN7
-      | PC_5,PA_5,PA_6,PA_7,PB_1,PC_4 - CN10
+    - 14
+
+.. csv-table:: F411RE EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805,806
+  CN7 Digital Pins,PC10,PC11,PC12,PD2,PA15,PB7,PC13
+  Vpins,807,808,809,810,811,812,813,814,815,816
+  CN10 Digital Pins,PC9,PC8,PC6,PA12,PA11,PB12,PB6,PC7,PA9,PB2
+  Vpins,817,818,819,820,821,822,823,824,825
+  CN10 Digital Pins,PA8,PB10,PB15,PB4,PB14,PB5,PB13,PB3,PA10
+  Vpins,826,827,828,829,830,831,832,833
+  CN7 Analogue Pins,PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0
+  Vpins,834,835,836,837,838,839
+  CN10 Analogue Pins,PC5,PA5,PA6,PA7,PB1,PC4
+
+|
+
+STMicroelectronics NUCLEO-F412ZG
+================================
+
+.. warning:: 
+
+  Support for the F412ZG is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.
+
+The Nucleo F412ZG is a 3v3 microcontroller with significantly more available I/O pins than an Arduino Mega. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren't sequential.
+
+Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
+
+.. note:: 
+
+  PC13 has a switch (blue button) with pullup resistor attached, so this is suitable as an input only (without pullups enabled) unless you disconnect SB17.
+
+  In addition, PB0 is the green LED, PB7 is the blue LED, and PB14 in the red LED.
+
+.. list-table:: NUCLEO-F412ZG pin allocations
+  :widths: auto
+  :header-rows: 1
+  :stub-columns: 1
+  :class: command-table
+
+  * - Total pins 97
+    - Minimum
+    - Maximum
+  * - Digital pins
+    - 81
+    - 97
+  * - Analogue pins
+    - 0
+    - 16
+
+.. csv-table:: F412ZG EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805,806,807,808,809
+  CN11 Digital Pins,PC10,PC11,PC12,PD2,PF6,PF7,PA15,PB7,PC13,PD4
+  Vpins,810,811,812,813,814,815,816,817,818,819
+  CN11 Digital Pins,PD3,PD5,PG2,PD6,PG3,PD7,PE2,PE3,PE4,PE5
+  Vpins,820,821,822,823,824,825,826,827,828,829
+  CN11 Digital Pins,PF1,PF2,PF0,PF8,PD1,PF9,PD0,PG1,PG0,PE1
+  Vpins,830,831,832,833,834,835,836
+  CN11 Digital Pins,PE6,PG9,PG15,PG12,PG10,PG13,PG11
+  Vpins,837,838,839,840,841,842,843,844,845,846
+  CN12 Digital Pins,PC9,PC8,PC6,PB12,PB6,PB11,PC7,PB2,PB10,PB15
+  Vpins,847,848,849,850,851,852,853,854,855,856
+  CN12 Digital Pins,PB4,PB14,PB5,PB13,PB3,PF5,PF4,PE8,PD13,PF10
+  Vpins,857,858,859,860,861,862,863,864,865,866
+  CN12 Digital Pins,PD12,PE7,PD11,PD14,PE10,PD15,PE12,PF14,PE14,PE9
+  Vpins,867,868,869,870,871,872,873,874,875,876
+  CN12 Digital Pins,PE15,PE13,PE11,PF13,PF3,PF12,PF15,PG14,PF11,PE0
+  Vpins,877,878,879,880
+  CN12 Digital Pins,PD10,PG8,PG5,PG4
+  Vpins,881,882,883,884,885,886,887,888
+  CN11 Analogue Pins,PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0
+  Vpins,889,890,891,892,893,894,895,896
+  CN12 Analogue Pins,PC5,PA5,PA6,PA7,PB1,PC4,PA2,PA3
+
+|
 
 Adding new devices
 ==================

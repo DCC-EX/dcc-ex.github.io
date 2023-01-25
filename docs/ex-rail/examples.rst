@@ -33,7 +33,7 @@ The current production release of |EX-R| does not have commands for turning trac
 
 .. code-block:: cpp
    
-  // if this is at the start of myConfiuration.h  This will act like an AUTOSTART sequence
+  // if this is at the start of myAutomation.h  This will act like an AUTOSTART sequence
   SETLOCO(9999)   // select loco 9999
   SPEED(0)        // set the speed to 0.  This will turn the tarck power on
   DONE

@@ -20,8 +20,10 @@ Diagnostics ``<D ACK>`` Command
 - :ref:`reference/tools/diagnostic-d-ack-command:\<D ACK MAX µS\>` - Override ACK processing max pulse width
 - :ref:`reference/tools/diagnostic-d-ack-command:\<D PROGBOOST\>` - Override 250mA prog track limit while idle.
 
+.. _D ACK ON:
+
 <D ACK ON>
-============
+==========
 
 If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands followed by pressing "send":
 
@@ -31,7 +33,7 @@ If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) an
 This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. If you don't see your loco address at the end of the report (it could be incorrect or <r -1>), send us the log (see below for an example), and we can help you diagnose the problem. 
 
 More Detail
--------------
+-----------
 
 When the ACK processing on the prog track does not work as expected, you may want to use the ``<D ACK ON>`` command in a serial command window. This is an example how to read CV8 with diagnostics on. You enter the first 2 lines, ``<D ACK ON>`` followed by ``send``, then ``<R 8 1 1>`` followed by ``send``. DCC-EX does not echo what you write, but your serial command window may. With diag on you get the extra 11 lines of output compared to if you just entered the command with diagnostics off. The last line is the answer, CV8=145:
 
@@ -81,9 +83,10 @@ To turn off the ack diagnostics use any parameter that is not "ON" or "LIMIT".
 
 Diag messages off.
 
+.. _D ACK LIMIT:
 
 <D ACK LIMIT mA>
-==================
+================
 
 The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too "trigger happy" you can make it less sensitive by raising this limit.
 
@@ -100,6 +103,10 @@ would set the ack limit to 30mA (more sensitive).
 would set the limit to 100mA (less sensitive). 
 
 The custom ack limit will be effective until you restart the Command Station (it will not "stick" in EEPROM). If you wish to permanently set the ACK LIMIT, you may enter it as a command in the :doc:`mySetup.h </ex-commandstation/advanced-setup/startup-config>` file.
+
+.. _D ACK MIN:
+
+.. _D ACK MAX:
 
 <D ACK MIN µS>
 ================
@@ -122,6 +129,8 @@ Pick a setting a little bit higher than your highest reading like this:
 .. code-block:: none
 
    <D ACK MAX 10500>
+
+.. _D ACK PROGBOOST:
 
 <D PROGBOOST>
 ===============

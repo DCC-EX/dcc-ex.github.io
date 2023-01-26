@@ -342,7 +342,27 @@ Turnouts/Points
       Response (successful): ``?`` |BR|
       Response (fail):  ``?``
 
-Once all turnout/points have been properly defined, use the <E> (upper case E) command to store their definitions to EEPROM. 
+Routes/Automations
+------------------
+
+.. list-table:: 
+  :widths: 25 75
+  :header-rows: 1
+  :width: 100%
+  :class: command-table
+
+  * - Command
+    - Description / Response 
+  * - ``<JA>`` 
+    - **Returns a list of Automations/Routes** |BR| |BR|
+      Response (successful): ``<jA id0 id1 id2 ..>`` |BR|
+      Response (fail): 
+  * - ``<JA id>`` 
+    - **Returns information for a route/automation** |BR| |BR|
+      Response (successful): ``<jA id type "desc">`` |BR|
+      Response (fail - is not defined):  ``<jA id X>`` |BR|
+      **type** 'R'= Route 'A'=Automation |BR|
+      **"desc"** Textual description of the route/automation always surrounded in quotes (")
 
 
 Sensors
@@ -375,8 +395,6 @@ Sensors
     - **Delete defined sensor** |BR| |BR| 
       Response (successful): ``<O>`` |BR| 
       Response (fail): ``<X>``
-
-Once all sensors have been properly defined, use the <E> (upper case E) command to store their definitions to EEPROM. 
 
 WiFi Control
 ------------
@@ -439,7 +457,7 @@ TBA
       Response (successful): ``?`` |BR|
       Response (fail):  ?
 
----
+
 ---
 
 Configuring the EX-CommandStation
@@ -457,25 +475,41 @@ Turnouts/Points - Configuration
   * - Command
     - Description / Response 
   * - ``<T id DCC addr subaddr>`` 
-    - **Define DCC turnout** |BR| |BR|
+    - **Define DCC turnout** |BR| 
+      Define turnout on a DCC Accessory Decoder with the specified address and subaddress. |BR| |BR|
       Response (successful): |BR|
       Response (fail):  
   * - ``<T id DCC linear_addr>`` 
-    - **Define DCC turnout** |BR| |BR|
+    - **Define DCC turnout** |BR| 
+      Define turnout on a DCC Accessory Decoder with the specified linear address. |BR| |BR|
       Response (successful): |BR|
       Response (fail):  
   * - ``<T id SERVO vpin thrownPos closedPos profile>`` 
-    - **Define servo turnout** |BR| |BR|
+    - **Define servo turnout** |BR| 
+      Define turnout servo (PWM) on specified vpin. The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision). Note: Servos are not supported on the minimal HAL (Uno or Nano target). |BR| |BR|
       Response (successful): |BR|
       Response (fail):  
   * - ``<T id VPIN vpin>`` 
-    - **Define VPIN turnout** |BR| |BR|
+    - **Define VPIN turnout** |BR| 
+      Define turnout output on specified vpin. This may be used for controlling Arduino digital output pins or pins on an I/O Extender. |BR| |BR|
       Response (successful): |BR|
       Response (fail):  
   * - ``<T id>`` 
     - **Delete turnout** |BR| |BR|
       Response (successful): |BR|
       Response (fail):  
+  * - ``<T id addr subaddr>`` 
+    - **Deprecated** |BR| 
+      Legacy command format for defining a turnout on a DCC Accessory Decoder with the specified address and subaddress. |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
+  * - ``<T id vpin activePos inactivePos>`` 
+    - **Deprecated** |BR| 
+      Legacy command format for defining a turnout servo on specified vpin. The positions are the same as for the turnout servo command above. Note: Servos are not supported on the minimal HAL (Uno or Nano target). |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  
+
+Once all turnout/points have been properly defined, you can use the ``<E>`` (upper case E) command to store their definitions to EEPROM. 
 
 Sensors - Configuration
 -----------------------
@@ -496,6 +530,8 @@ Sensors - Configuration
     - **Deletes definition of sensor ID** |BR| |BR|
       Response (successful): |BR|
       Response (fail):  
+
+Once all sensors have been properly defined, you can use the ``<E>`` (upper case E) command to store their definitions to EEPROM. 
 
 Outputs
 -------
@@ -576,13 +612,15 @@ Diagnostic traces
       Response (successful): |BR|
       Response (fail):  
   * - ``<D ACK ON|OFF>``
-    - **Enables ACK diagnostics** |BR| |BR|
+    - **Enables ACK diagnostics** |BR| 
+      This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. |BR| |BR|
       Response (successful): |BR|
-      Response (fail):  
+      Response (fail):  |BR|
+      :ref:`Also see <D ACK ON>`
   * - ``<D CMD ON|OFF>``
     - **Enables Command Parser diagnostics** |BR| |BR|
       Response (successful): |BR|
-      Response (fail):  
+      Response (fail): 
   * - ``<D ETHERNET ON|OFF>``
     - **Enables Ethernet diagnostics** |BR| |BR|
       Response (successful): |BR|
@@ -603,6 +641,44 @@ Diagnostic traces
     - **Shows configured servo board and GPIO extender board config and used pins** |BR| |BR|
       Response (successful): |BR|
       Response (fail):  
+
+Diagnostic programming commands
+-------------------------------
+
+.. list-table:: 
+  :widths: 25 75
+  :header-rows: 1
+  :width: 100%
+  :class: command-table
+
+  * - Command
+    - Description / Response 
+  * - ``<D ACK LIMIT mA>``
+    - **Sets the ACK limit** |BR|
+      The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit. |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  |BR|
+      :ref:`Also see <D ACK LIMIT>`
+  * - ``<D ACK MIN µS>``
+    - **Sets the ACK pulse minimum** |BR| 
+      The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters. |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  |BR|
+  * - ``<D ACK MAX µS>``
+    - **Sets the ACK pulse maximum** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  |BR|
+      :ref:`Also see <D ACK MAX>`
+  * - ``<D ACK MIN µS>``
+    - **Sets the ACK pulse maximum** |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  |BR|
+  * - ``<D PROGBOOST>``
+    - **Override 250mA prog track limit while idle** |BR| 
+      When the programming track is switched on with <1> or <1 PROG> it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. **<D PROGBOOST>** temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with **<0>** or **<0 PROG>** or the Command Station is reset. |BR| |BR|
+      Response (successful): |BR|
+      Response (fail):  |BR|
+      :ref:`Also see <D ACK PROGBOOST>`
 
 I/O (HAL) Diagnostics
 ---------------------

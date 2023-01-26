@@ -48,6 +48,11 @@
       :class: image-min-width-144
       :target: ../download/ex-commandstation.html#getting-basestation-classic
 ..
+.. |EX-FC-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-fastclock.png
+      :alt: EX-IOExpander
+      :scale: 30%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |donate-button| image:: /_static/images/icons/donate_button_blue.png

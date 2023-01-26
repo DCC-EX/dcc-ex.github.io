@@ -138,6 +138,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |EX-FC-LOGO| image:: /_static/images/logos/product-logo-ex-fastclock.png
+      :alt: EX-IOExpander
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png

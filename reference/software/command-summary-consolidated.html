@@ -501,31 +501,32 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#conventions-used-on-this-page" id="id2">Conventions used on this page</a></p></li>
-<li><p><a class="reference internal" href="#controlling-the-ex-commandstation" id="id3">Controlling the EX-CommandStation</a></p>
+<li><p><a class="reference internal" href="#conventions-used-on-this-page" id="id1">Conventions used on this page</a></p></li>
+<li><p><a class="reference internal" href="#controlling-the-ex-commandstation" id="id2">Controlling the EX-CommandStation</a></p>
 <ul>
-<li><p><a class="reference internal" href="#power-management" id="id4">Power management</a></p></li>
-<li><p><a class="reference internal" href="#cab-loco-commands" id="id5">Cab (Loco) Commands</a></p></li>
-<li><p><a class="reference internal" href="#system-information" id="id6">System Information</a></p></li>
-<li><p><a class="reference internal" href="#writing-cvs-program-on-the-main" id="id7">Writing CVs - Program on the main</a></p></li>
-<li><p><a class="reference internal" href="#reading-writing-cvs-programming-track" id="id8">Reading/Writing CVs - Programming track</a></p></li>
-<li><p><a class="reference internal" href="#writing-cvs-programming-track-tuning" id="id9">Writing CVs - Programming track - Tuning</a></p></li>
-<li><p><a class="reference internal" href="#dcc-accessories" id="id10">DCC Accessories</a></p></li>
-<li><p><a class="reference internal" href="#turnouts-points" id="id11">Turnouts/Points</a></p></li>
+<li><p><a class="reference internal" href="#power-management" id="id3">Power management</a></p></li>
+<li><p><a class="reference internal" href="#cab-loco-commands" id="id4">Cab (Loco) Commands</a></p></li>
+<li><p><a class="reference internal" href="#system-information" id="id5">System Information</a></p></li>
+<li><p><a class="reference internal" href="#writing-cvs-program-on-the-main" id="id6">Writing CVs - Program on the main</a></p></li>
+<li><p><a class="reference internal" href="#reading-writing-cvs-programming-track" id="id7">Reading/Writing CVs - Programming track</a></p></li>
+<li><p><a class="reference internal" href="#writing-cvs-programming-track-tuning" id="id8">Writing CVs - Programming track - Tuning</a></p></li>
+<li><p><a class="reference internal" href="#dcc-accessories" id="id9">DCC Accessories</a></p></li>
+<li><p><a class="reference internal" href="#turnouts-points" id="id10">Turnouts/Points</a></p></li>
+<li><p><a class="reference internal" href="#routes-automations" id="id11">Routes/Automations</a></p></li>
 <li><p><a class="reference internal" href="#sensors" id="id12">Sensors</a></p></li>
 <li><p><a class="reference internal" href="#wifi-control" id="id13">WiFi Control</a></p></li>
 <li><p><a class="reference internal" href="#track-manager-formally-dc-district" id="id14">Track Manager (Formally DC-District)</a></p></li>
 <li><p><a class="reference internal" href="#tba" id="id15">TBA</a></p></li>
-<li><p><a class="reference internal" href="#id1" id="id16">—</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#configuring-the-ex-commandstation" id="id17">Configuring the EX-CommandStation</a></p>
+<li><p><a class="reference internal" href="#configuring-the-ex-commandstation" id="id16">Configuring the EX-CommandStation</a></p>
 <ul>
-<li><p><a class="reference internal" href="#turnouts-points-configuration" id="id18">Turnouts/Points - Configuration</a></p></li>
-<li><p><a class="reference internal" href="#sensors-configuration" id="id19">Sensors - Configuration</a></p></li>
-<li><p><a class="reference internal" href="#outputs" id="id20">Outputs</a></p></li>
-<li><p><a class="reference internal" href="#eeprom-management" id="id21">EEPROM management</a></p></li>
-<li><p><a class="reference internal" href="#diagnostic-traces" id="id22">Diagnostic traces</a></p></li>
+<li><p><a class="reference internal" href="#turnouts-points-configuration" id="id17">Turnouts/Points - Configuration</a></p></li>
+<li><p><a class="reference internal" href="#sensors-configuration" id="id18">Sensors - Configuration</a></p></li>
+<li><p><a class="reference internal" href="#outputs" id="id19">Outputs</a></p></li>
+<li><p><a class="reference internal" href="#eeprom-management" id="id20">EEPROM management</a></p></li>
+<li><p><a class="reference internal" href="#diagnostic-traces" id="id21">Diagnostic traces</a></p></li>
+<li><p><a class="reference internal" href="#diagnostic-programming-commands" id="id22">Diagnostic programming commands</a></p></li>
 <li><p><a class="reference internal" href="#i-o-hal-diagnostics" id="id23">I/O (HAL) Diagnostics</a></p></li>
 <li><p><a class="reference internal" href="#other" id="id24">Other</a></p></li>
 </ul>
@@ -540,7 +541,7 @@
 </dl>
 <p>This page describes all the DCC-EX commands that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports.</p>
 <section id="conventions-used-on-this-page">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> - All DCC-EX commands are surrounded by these characters to indicate the beginning and end, these must always be included</p></li>
 <li><p>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code>, or <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
@@ -566,9 +567,9 @@
 </ul>
 </section>
 <section id="controlling-the-ex-commandstation">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Controlling the EX-CommandStation</a><a class="headerlink" href="#controlling-the-ex-commandstation" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Controlling the EX-CommandStation</a><a class="headerlink" href="#controlling-the-ex-commandstation" title="Permalink to this heading"></a></h2>
 <section id="power-management">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Power management</a><a class="headerlink" href="#power-management" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Power management</a><a class="headerlink" href="#power-management" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -602,7 +603,7 @@ Response: <em>n/a</em></p></td>
 </table>
 </section>
 <section id="cab-loco-commands">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Cab (Loco) Commands</a><a class="headerlink" href="#cab-loco-commands" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Cab (Loco) Commands</a><a class="headerlink" href="#cab-loco-commands" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -697,7 +698,7 @@ Returns an update of cab speed, directions and functions in the same format as t
 </table>
 </section>
 <section id="system-information">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">System Information</a><a class="headerlink" href="#system-information" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">System Information</a><a class="headerlink" href="#system-information" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -735,7 +736,7 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </table>
 </section>
 <section id="writing-cvs-program-on-the-main">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Writing CVs - Program on the main</a><a class="headerlink" href="#writing-cvs-program-on-the-main" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Writing CVs - Program on the main</a><a class="headerlink" href="#writing-cvs-program-on-the-main" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -769,7 +770,7 @@ Response:</p></td>
 </table>
 </section>
 <section id="reading-writing-cvs-programming-track">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Reading/Writing CVs - Programming track</a><a class="headerlink" href="#reading-writing-cvs-programming-track" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Reading/Writing CVs - Programming track</a><a class="headerlink" href="#reading-writing-cvs-programming-track" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -825,7 +826,7 @@ Response (fail):</p></td>
 </table>
 </section>
 <section id="writing-cvs-programming-track-tuning">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">Writing CVs - Programming track - Tuning</a><a class="headerlink" href="#writing-cvs-programming-track-tuning" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Writing CVs - Programming track - Tuning</a><a class="headerlink" href="#writing-cvs-programming-track-tuning" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -866,7 +867,7 @@ Response (fail):</p></td>
 </table>
 </section>
 <section id="dcc-accessories">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">DCC Accessories</a><a class="headerlink" href="#dcc-accessories" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">DCC Accessories</a><a class="headerlink" href="#dcc-accessories" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -897,7 +898,7 @@ Response (fail):  <code class="docutils literal notranslate"><span class="pre">?
 </table>
 </section>
 <section id="turnouts-points">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -932,7 +933,34 @@ Response (fail):  <code class="docutils literal notranslate"><span class="pre">?
 </tr>
 </tbody>
 </table>
-<p>Once all turnout/points have been properly defined, use the &lt;E&gt; (upper case E) command to store their definitions to EEPROM.</p>
+</section>
+<section id="routes-automations">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Routes/Automations</a><a class="headerlink" href="#routes-automations" title="Permalink to this heading"></a></h3>
+<table class="command-table docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description / Response</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code></p></td>
+<td><p><strong>Returns a list of Automations/Routes</strong> <br /> <br />
+Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id0</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">..&gt;</span></code> <br />
+Response (fail):</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><strong>Returns information for a route/automation</strong> <br /> <br />
+Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">&quot;desc&quot;&gt;</span></code> <br />
+Response (fail - is not defined):  <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code> <br />
+<strong>type</strong> ‘R’= Route ‘A’=Automation <br />
+<strong>“desc”</strong> Textual description of the route/automation always surrounded in quotes (“)</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="sensors">
 <h3><a class="toc-backref" href="#id12" role="doc-backlink">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h3>
@@ -972,7 +1000,6 @@ Response (fail): <code class="docutils literal notranslate"><span class="pre">&l
 </tr>
 </tbody>
 </table>
-<p>Once all sensors have been properly defined, use the &lt;E&gt; (upper case E) command to store their definitions to EEPROM.</p>
 </section>
 <section id="wifi-control">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">WiFi Control</a><a class="headerlink" href="#wifi-control" title="Permalink to this heading"></a></h3>
@@ -1049,15 +1076,13 @@ Response (fail):  ?</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="id1">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">—</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>—</p>
 </section>
 </section>
 <section id="configuring-the-ex-commandstation">
-<h2><a class="toc-backref" href="#id17" role="doc-backlink">Configuring the EX-CommandStation</a><a class="headerlink" href="#configuring-the-ex-commandstation" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Configuring the EX-CommandStation</a><a class="headerlink" href="#configuring-the-ex-commandstation" title="Permalink to this heading"></a></h2>
 <section id="turnouts-points-configuration">
-<h3><a class="toc-backref" href="#id18" role="doc-backlink">Turnouts/Points - Configuration</a><a class="headerlink" href="#turnouts-points-configuration" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Turnouts/Points - Configuration</a><a class="headerlink" href="#turnouts-points-configuration" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -1070,22 +1095,26 @@ Response (fail):  ?</p></td>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code></p></td>
-<td><p><strong>Define DCC turnout</strong> <br /> <br />
+<td><p><strong>Define DCC turnout</strong> <br />
+Define turnout on a DCC Accessory Decoder with the specified address and subaddress. <br /> <br />
 Response (successful): <br />
 Response (fail):</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linear_addr&gt;</span></code></p></td>
-<td><p><strong>Define DCC turnout</strong> <br /> <br />
+<td><p><strong>Define DCC turnout</strong> <br />
+Define turnout on a DCC Accessory Decoder with the specified linear address. <br /> <br />
 Response (successful): <br />
 Response (fail):</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrownPos</span> <span class="pre">closedPos</span> <span class="pre">profile&gt;</span></code></p></td>
-<td><p><strong>Define servo turnout</strong> <br /> <br />
+<td><p><strong>Define servo turnout</strong> <br />
+Define turnout servo (PWM) on specified vpin. The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision). Note: Servos are not supported on the minimal HAL (Uno or Nano target). <br /> <br />
 Response (successful): <br />
 Response (fail):</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code></p></td>
-<td><p><strong>Define VPIN turnout</strong> <br /> <br />
+<td><p><strong>Define VPIN turnout</strong> <br />
+Define turnout output on specified vpin. This may be used for controlling Arduino digital output pins or pins on an I/O Extender. <br /> <br />
 Response (successful): <br />
 Response (fail):</p></td>
 </tr>
@@ -1094,11 +1123,24 @@ Response (fail):</p></td>
 Response (successful): <br />
 Response (fail):</p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code></p></td>
+<td><p><strong>Deprecated</strong> <br />
+Legacy command format for defining a turnout on a DCC Accessory Decoder with the specified address and subaddress. <br /> <br />
+Response (successful): <br />
+Response (fail):</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">activePos</span> <span class="pre">inactivePos&gt;</span></code></p></td>
+<td><p><strong>Deprecated</strong> <br />
+Legacy command format for defining a turnout servo on specified vpin. The positions are the same as for the turnout servo command above. Note: Servos are not supported on the minimal HAL (Uno or Nano target). <br /> <br />
+Response (successful): <br />
+Response (fail):</p></td>
+</tr>
 </tbody>
 </table>
+<p>Once all turnout/points have been properly defined, you can use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.</p>
 </section>
 <section id="sensors-configuration">
-<h3><a class="toc-backref" href="#id19" role="doc-backlink">Sensors - Configuration</a><a class="headerlink" href="#sensors-configuration" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Sensors - Configuration</a><a class="headerlink" href="#sensors-configuration" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -1122,9 +1164,10 @@ Response (fail):</p></td>
 </tr>
 </tbody>
 </table>
+<p>Once all sensors have been properly defined, you can use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.</p>
 </section>
 <section id="outputs">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink">Outputs</a><a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Outputs</a><a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -1163,7 +1206,7 @@ Response (fail):</p></td>
 </div></blockquote>
 </section>
 <section id="eeprom-management">
-<h3><a class="toc-backref" href="#id21" role="doc-backlink">EEPROM management</a><a class="headerlink" href="#eeprom-management" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">EEPROM management</a><a class="headerlink" href="#eeprom-management" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -1194,7 +1237,7 @@ Response (fail):</p></td>
 </table>
 </section>
 <section id="diagnostic-traces">
-<h3><a class="toc-backref" href="#id22" role="doc-backlink">Diagnostic traces</a><a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Diagnostic traces</a><a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -1217,9 +1260,11 @@ Response (successful): <br />
 Response (fail):</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td><p><strong>Enables ACK diagnostics</strong> <br /> <br />
+<td><p><strong>Enables ACK diagnostics</strong> <br />
+This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. <br /> <br />
 Response (successful): <br />
-Response (fail):</p></td>
+Response (fail):  <br />
+<a class="reference internal" href="../tools/diagnostic-d-ack-command.html#d-ack-on"><span class="std std-ref">Also see</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
 <td><p><strong>Enables Command Parser diagnostics</strong> <br /> <br />
@@ -1250,6 +1295,53 @@ Response (fail):</p></td>
 <td><p><strong>Shows configured servo board and GPIO extender board config and used pins</strong> <br /> <br />
 Response (successful): <br />
 Response (fail):</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="diagnostic-programming-commands">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Diagnostic programming commands</a><a class="headerlink" href="#diagnostic-programming-commands" title="Permalink to this heading"></a></h3>
+<table class="command-table docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description / Response</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code></p></td>
+<td><p><strong>Sets the ACK limit</strong> <br />
+The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit. <br /> <br />
+Response (successful): <br />
+Response (fail):  <br />
+<a class="reference internal" href="../tools/diagnostic-d-ack-command.html#d-ack-limit"><span class="std std-ref">Also see</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">µS&gt;</span></code></p></td>
+<td><p><strong>Sets the ACK pulse minimum</strong> <br />
+The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters. <br /> <br />
+Response (successful): <br />
+Response (fail):  <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">µS&gt;</span></code></p></td>
+<td><p><strong>Sets the ACK pulse maximum</strong> <br /> <br />
+Response (successful): <br />
+Response (fail):  <br />
+<a class="reference internal" href="../tools/diagnostic-d-ack-command.html#d-ack-max"><span class="std std-ref">Also see</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">µS&gt;</span></code></p></td>
+<td><p><strong>Sets the ACK pulse maximum</strong> <br /> <br />
+Response (successful): <br />
+Response (fail):  <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code></p></td>
+<td><p><strong>Override 250mA prog track limit while idle</strong> <br />
+When the programming track is switched on with &lt;1&gt; or &lt;1 PROG&gt; it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. <strong>&lt;D PROGBOOST&gt;</strong> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <strong>&lt;0&gt;</strong> or <strong>&lt;0 PROG&gt;</strong> or the Command Station is reset. <br /> <br />
+Response (successful): <br />
+Response (fail):  <br />
+<a class="reference internal" href="../tools/diagnostic-d-ack-command.html#d-ack-progboost"><span class="std std-ref">Also see</span></a></p></td>
 </tr>
 </tbody>
 </table>

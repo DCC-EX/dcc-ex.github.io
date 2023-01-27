@@ -523,6 +523,7 @@
 <li><p><a class="reference internal" href="#diag" id="id11">DIAG</a></p></li>
 <li><p><a class="reference internal" href="#diag-config-delay" id="id12">DIAG_CONFIG_DELAY</a></p></li>
 <li><p><a class="reference internal" href="#test-mode" id="id13">TEST_MODE</a></p></li>
+<li><p><a class="reference internal" href="#disable-i2c-pullups" id="id14">DISABLE_I2C_PULLUPS</a></p></li>
 </ul>
 </li>
 </ul>
@@ -747,6 +748,18 @@
 <p>If for some reason serial input is not working as expected, test modes can be enabled via this option in “myConfig.h”.</p>
 <p>Only enable one test mode at a time. If multiple are enabled, only the last one defined will take effect.</p>
 <p>Refer to <a class="reference internal" href="testing.html#testing-commands"><span class="std std-ref">Testing commands</span></a> for details on the testing each option enables.</p>
+</section>
+<section id="disable-i2c-pullups">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">DISABLE_I2C_PULLUPS</a><a class="headerlink" href="#disable-i2c-pullups" title="Permalink to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">//  Uncomment to disable internal I2C pullup resistors</span>
+<span class="c1">//  NOTE: This will not apply to all supported devices, refer to the documentation</span>
+<span class="c1">// #define DISABLE_I2C_PULLUPS</span>
+</pre></div>
+</div>
+<p>In cases where multiple I<sup>2</sup>C devices exist on the same bus, the pullup resistors may cause issues with reliability even the resultant resistance across all devices is too low (see <a class="reference internal" href="../reference/hardware/i2c-devices.html#pull-ups"><span class="std std-ref">Pull-ups</span></a>).</p>
+<p>In these instances, if the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device does not have physical, external pullup resistors, the internal software pullups can be disabled by uncommenting this line.</p>
+<p>Some devices such as the Arduino Mega2560 have physical pullup resistors on the I<sup>2</sup>C pins, and therefore this configuration setting will have no effect on these devices.</p>
 </section>
 </section>
 </section>

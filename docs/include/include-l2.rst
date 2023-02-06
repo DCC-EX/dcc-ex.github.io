@@ -31,10 +31,10 @@
       :target: ../../ex-turntable/index.html
 ..
 .. |EX-FC-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-fastclock.png
-      :alt: EX-Turntable
+      :alt: EX-FastClock
       :scale: 30%
       :class: image-min-width-144
-      :target: ./ex-turntable/index.html
+      :target: ../../ex-fastclock/index.html
 ..
 .. |EX-DCCI-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-DCCInspector

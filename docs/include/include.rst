@@ -91,12 +91,12 @@
       :class: image-product-logo-float-right
 ..
 .. |EX-FC-LOGO| image:: /_static/images/logos/product-logo-ex-fastclock.png
-      :alt: EX-Turntable
+      :alt: EX-FastClock
       :scale: 40%
       :class: image-product-logo-float-right
 ..
 .. |EX-DCCI-LOGO| image:: /_static/images/logos/product-logo-ex-dccinspector.png
-      :alt: EX-SCCInspector
+      :alt: EX-DCCInspector
       :scale: 40%
       :class: image-product-logo-float-right
 ..

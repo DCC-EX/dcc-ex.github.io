@@ -1,109 +1,109 @@
 .. meta::
-   :description: DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.
-   :keywords: DCC DCC++ EX DCC++EX DCC-EX
+  :description: DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.
+  :keywords: DCC DCC++ EX DCC++EX DCC-EX
 ..
 .. |DCC-EX| raw:: html
 
-   <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>
+  <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>
 ..
 .. |EX-CS| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>
 ..
 .. |EX-WT| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>
 ..
 .. |EX-R| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>
 ..
 .. |EX-I| raw:: html
    
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span>
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span>
 ..
 .. |EX-TT| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>
 ..
 .. |EX-FC| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;FastClock</span></span>
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;FastClock</span></span>
 ..
 .. |EX-DCCI| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span>
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span>
 ..
 .. |EX-IO| raw:: html
 
-   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>
 ..
 .. |BSC| raw:: html
 
-   <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
+  <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
 ..
 .. |br| raw:: html
 
-   <br />
+  <br />
 ..
 .. |_| unicode:: 0xA0
-   :trim:
+  :trim:
 ..
 .. |force-break| raw:: html
 
-   <div style="display:block; box-sizing: border-box; clear: both;"> </div>
+  <div style="display:block; box-sizing: border-box; clear: both;"> </div>
 ..
 .. |image-note| raw:: html
 
-   <span style="font-weight: bold; font-style: italic; color: #767676;" >Note that you can click on any of the images to make them larger.</span>
+  <span style="font-weight: bold; font-style: italic; color: #767676;" >Note that you can click on any of the images to make them larger.</span>
 ..
 .. |NOT-IN-PROD-VERSION| raw:: html
    
-   <span style="color:red">This feature is not available in the current 'Production' version</span>
+  <span style="color:red">This feature is not available in the current 'Production' version</span>
 ..
 .. |I2C| replace:: I\ :sup:`2`\ C
 ..
 .. ................................................
 ..
 .. |EX-CS-LOGO| image:: /_static/images/logos/product-logo-ex-commandstation.png
-      :alt: EX-CommandStation
-      :scale: 40%
-      :class: image-product-logo-float-right
+  :alt: EX-CommandStation
+  :scale: 40%
+  :class: image-product-logo-float-right
 ..
 .. |EX-I-LOGO| image:: /_static/images/logos/product-logo-ex-installer.png
-      :alt: EX-Installer
-      :scale: 40%
-      :class: image-product-logo-float-right
+  :alt: EX-Installer
+  :scale: 40%
+  :class: image-product-logo-float-right
 ..
 .. |EX-WT-LOGO| image:: /_static/images/logos/product-logo-ex-webthrottle.png
-      :alt: EX-WebThrottle
-      :scale: 40%
-      :class: image-product-logo-float-right
+  :alt: EX-WebThrottle
+  :scale: 40%
+  :class: image-product-logo-float-right
 ..
 .. |EX-R-LOGO| image:: /_static/images/logos/product-logo-ex-rail.png
-      :alt: EX-RAIL
-      :scale: 40%
-      :class: image-product-logo-float-right
+  :alt: EX-RAIL
+  :scale: 40%
+  :class: image-product-logo-float-right
 ..
 .. |EX-TT-LOGO| image:: /_static/images/logos/product-logo-ex-turntable.png
-      :alt: EX-Turntable
-      :scale: 40%
-      :class: image-product-logo-float-right
+  :alt: EX-Turntable
+  :scale: 40%
+  :class: image-product-logo-float-right
 ..
 .. |EX-FC-LOGO| image:: /_static/images/logos/product-logo-ex-fastclock.png
-      :alt: EX-Turntable
-      :scale: 40%
-      :class: image-product-logo-float-right
+  :alt: EX-Turntable
+  :scale: 40%
+  :class: image-product-logo-float-right
 ..
 .. |EX-DCCI-LOGO| image:: /_static/images/logos/product-logo-ex-dccinspector.png
-      :alt: EX-SCCInspector
-      :scale: 40%
-      :class: image-product-logo-float-right
+  :alt: EX-SCCInspector
+  :scale: 40%
+  :class: image-product-logo-float-right
 ..
 .. |EX-BSC-LOGO| image:: /_static/images/logos/product-logo-basestationclassic.png
-      :alt: BaseStationClassic
-      :scale: 40%
-      :class: image-product-logo-float-right
+  :alt: BaseStationClassic
+  :scale: 40%
+  :class: image-product-logo-float-right
 ..
 .. ................................................
 ..
@@ -216,13 +216,17 @@
 ..
 .. |githublink-ex-installer-button| raw:: html
 
-   <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
+  <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
 ..
 .. |githublink-ex-commandstation-button| raw:: html
 
-   <a href="https://github.com/DCC-EX/CommandStation-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
+  <a href="https://github.com/DCC-EX/CommandStation-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
 ..
 .. |githublink-ex-ioexpander-button| raw:: html
 
-   <a href="https://github.com/DCC-EX/EX-IOExpander/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
+  <a href="https://github.com/DCC-EX/EX-IOExpander/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
+..
+.. |githublink-ex-fastclock-button| raw:: html
+
+  <a href="https://github.com/DCC-EX/EX-FastClock/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
 ..

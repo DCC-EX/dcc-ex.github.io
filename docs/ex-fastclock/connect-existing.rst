@@ -7,8 +7,7 @@
 Configuration options
 **********************
 
-
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |githublink-ex-fastclock-button2|
 
 .. sidebar::
 
@@ -16,7 +15,7 @@ Configuration options
     :depth: 1
     :local:
 
-If you already have a FastCLock |EX-FC| has a number of couple of configuration options which allow you to connect your own clock to a |CommandStation-EX|.
+If you already have a FastCLock |EX-FC| has a number of couple of configuration options which allow you to connect your own clock to a |EX-CS|.
 
 The various configuration options are outlined below
 
@@ -31,18 +30,23 @@ Connecting via Serial
 Connecting via Serial is the simplest option if available.  
 
 * Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the EX-CommandStation as  the FastClock is not receiving data back.
-* Find the Serial defines in the config.h file (or copy config.example.h toconfig.h if you dont have one) and locate the following lines:
-    //#define SERIAL1_COMMANDS
-    //#define SERIAL2_COMMANDS
-    //#define SERIAL3_COMMANDS
+* Find the Serial defines in the config.h file (or copy config.example.h to config.h if you dont have one), locate the following lines:
+    
+    .. code-block:: 
+
+      //#define SERIAL1_COMMANDS
+      //#define SERIAL2_COMMANDS
+      //#define SERIAL3_COMMANDS
+  
   and uncomment the appropriate one for the serial port you are using.
 * Add the following code to your Setup() function:
 
 .. code-block:: 
-    Serial.begin(115200);
-    while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-    }
+    
+  Serial.begin(115200);
+  while (!Serial) {
+  ; // wait for serial port to connect. Needed for native USB port only
+  }
 
 * Include the following routine within your code:
   
@@ -59,7 +63,7 @@ Connecting via Serial is the simplest option if available.
   
   .. code-block:: 
 
-     SendTime(HH, MM, clockSpeed);
+    SendTime(HH, MM, clockSpeed);
 
   where HH = the hour, MM = minutes and clockSpeed = the fast speed (e.g. at spped 4, 15 seconds represents a minute).
 
@@ -67,9 +71,9 @@ Connecting via Serial is the simplest option if available.
 Connecting via I2C
 ------------------
 
-Connecting via I2C involves a HAL driver file to the |EX-CS| as well as adding some code to the existing FastClock code.  Follow the follwing steps:
+Connecting via |I2C| involves a HAL driver file to the |EX-CS| as well as adding some code to the existing FastClock code.  Follow the follwing steps:
 
-* In the |CommandStation-EX| code copy the file myHal.cpp_example.txt to myHal.cpp.
+* In the |EX-CS| code copy the file myHal.cpp_example.txt to myHal.cpp.
 * Edit the file myHal.cpp and uncomment the following line near the beginning of the file
     
   //  #include "IO_EXFastClock.h"  // FastClock driver
@@ -77,7 +81,7 @@ Connecting via I2C involves a HAL driver file to the |EX-CS| as well as adding s
 * Uncomment the following line near the end of the file
   //  EXFastClock::create(0x55);
   0x55 (decimal 85) is the default address but needs to match that in the FastClock code (see below).
-* Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the |CommandStation-EX|
+* Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the |EX-CS|
 * Include the following code in your Fastlock code:
 
   Near the top of the sketch:

@@ -282,3 +282,19 @@ If for some reason serial input is not working as expected, test modes can be en
 Only enable one test mode at a time. If multiple are enabled, only the last one defined will take effect.
 
 Refer to :ref:`ex-ioexpander/testing:testing commands` for details on the testing each option enables.
+
+DISABLE_I2C_PULLUPS
+-------------------
+
+.. code-block:: cpp
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  //  Uncomment to disable internal I2C pullup resistors
+  //  NOTE: This will not apply to all supported devices, refer to the documentation
+  // #define DISABLE_I2C_PULLUPS
+
+In cases where multiple |I2C| devices exist on the same bus, the pullup resistors may cause issues with reliability even the resultant resistance across all devices is too low (see :ref:`reference/hardware/i2c-devices:pull-ups`).
+
+In these instances, if the |EX-IO| device does not have physical, external pullup resistors, the internal software pullups can be disabled by uncommenting this line.
+
+Some devices such as the Arduino Mega2560 have physical pullup resistors on the |I2C| pins, and therefore this configuration setting will have no effect on these devices.

@@ -276,6 +276,46 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 
 |
 
+Arduino Zero (or SAMD based clone)
+==================================
+
+.. warning:: 
+
+  The Arduino Zero (and SAMD based clones) are 3v3 only and **are not 5V tolerant**.
+  
+  Support for the Arduino Zero (or other SAMD clones) is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.
+
+.. list-table:: Arduino Zero pin allocations
+  :widths: auto
+  :header-rows: 1
+  :stub-columns: 1
+  :class: command-table
+
+  * - Total pins 27
+    - Minimum
+    - Maximum
+  * - Digital pins
+    - 21
+    - 27
+  * - Analogue pins
+    - 0
+    - 6
+
+.. csv-table:: Arduino Zero EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :stub-columns: 1
+
+  Vpins,800,801,802,803,804,805,806,807
+  Digital Pins,0,1,2,3,4,5,6,7
+  Vpins,808,809,810,811,812,813,814,815
+  Digital Pins,8,9,10,11,12,13,22,23
+  Vpins,812,813,814,815,816
+  Digital Pins,24,38,39,40,41
+  Vpins,817,818,819,820,821,822
+  Analogue Pins,A0,A1,A2,A3,A5,A6
+
+|
+
 Adding new devices
 ==================
 
@@ -302,6 +342,15 @@ If a new architecture or platform is being added, then "EX-IOExpander.ino" will 
 
 If the architecture or platform already exists, or there is no desire to reboot via software, then the only change required is to add the variant or board specific information to "SupportedDevices.h".
 
+Enabling serial input/output
+----------------------------
+
+Some microcontrollers have different serial implementations, and therefore it may be necessary to specify the type of USB or serial port in use.
+
+Currently, unless the device's architecture is defined as "ARDUINO_ARCH_SAMD", it will utilise the default Arduino "Serial" implementation. SAMD uses the "SerialUSB" implementation.
+
+If additional serial support is required, this will need to be defined in "EX-IOExpander.ino" as "USB_SERIAL", which is defined at the beginning of the file.
+
 Defining the device and pin map in SupportedDevices.h
 -----------------------------------------------------
 
@@ -323,6 +372,8 @@ These are the considerations when defining the pin map:
 
 Further to this, if EEPROM is available, this needs to be defined, along with a description that is presented in the serial console when starting the device.
 
+If the microcontroller utilises internal |I2C| pullup resistors rather than external, physical resistors, then the |I2C| pins can be defined to allow these to be disabled via "myConfig.h" (see :ref:`ex-ioexpander/overview:disable_i2c_pullups`).
+
 To use the Arduino Nano as the example, this is the definition in "SupportedDevices.h":
 
 .. code-block:: cpp
@@ -339,6 +390,8 @@ To use the Arduino Nano as the example, this is the definition in "SupportedDevi
   static const uint8_t analoguePinMap[NUMBER_OF_ANALOGUE_PINS] = {
     A0,A1,A2,A3,A6,A7
   };
+  #define I2C_SDA A4
+  #define I2C_SCL A5
 
 - The variant or board macro definition is "ARDUINO_AVR_NANO".
 - The "BOARD_TYPE" is displayed in the serial console at startup as "Nano".
@@ -349,3 +402,4 @@ To use the Arduino Nano as the example, this is the definition in "SupportedDevi
 - All analogue pins are defined in "analoguePinMap"
 - The analogue pins defined in both pin maps are added in the same order, with analogue pins at the end of the digital pin map
 - Analogue pins A6/A7 are analogue only, are therefore not included in digitalPinMap, and are defined at the end of analoguePinMap
+- Arduino Nano uses internal |I2C| pullup resistors, and therefore defining the |I2C| pins A4/A5 allows these to be disabled via "myConfig.H" if desired

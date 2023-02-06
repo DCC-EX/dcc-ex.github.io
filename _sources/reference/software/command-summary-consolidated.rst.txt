@@ -458,6 +458,64 @@ TBA
       Response (fail):  ?
 
 
+
+EX-RAIL
+-------
+
+.. list-table:: 
+  :widths: 25 75
+  :header-rows: 1
+  :width: 100%
+  :class: command-table
+
+  * - Command
+    - Description / Response 
+  * - ``<D EXRAIL ON|OFF>`` 
+    - **When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ PAUSE>`` 
+    - **Pauses ALL EX-RAIL automation activities, including sending an E-STOP to all locos.** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ RESUME>`` 
+    - **Resumes ALL EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</>`` 
+    - **Displays EX-RAIL running task information.** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ ROUTES>`` 
+    - **Returns the Routes & Automations control list in wiThrottle Protocol format.** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ START [loco_addr] route_id>`` 
+    - **Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ KILL task_id>`` 
+    - **Kills a currently running script task by ID (use to list task IDs)** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ RESERVE block_id>`` 
+    - **Manually reserves a virtual track Block, valid IDs are in the range 0-255** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ FREE block_id>`` 
+    - **Manually frees a virtual track Block, valid IDs are in the range 0-255.** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ LATCH sensor_id>`` 
+    - **Lock sensor ON, preventing external influence, valid IDs are in the range 0-255.** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+  * - ``</ UNLATCH sensor_id>`` 
+    - **Unlock sensor, returning to current external state, valid IDs are in the range 0-255.** |BR| |BR|
+      Response (successful): ``?`` |BR|
+      Response (fail):  ?
+
+
 ---
 
 Configuring the EX-CommandStation

@@ -30,6 +30,12 @@
       :class: image-min-width-144
       :target: ./ex-turntable/index.html
 ..
+.. |EX-FC-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-fastclock.png
+      :alt: EX-FastClock
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ./ex-fastclock/index.html
+..
 .. |EX-DCCI-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-dccinspector.png
       :alt: EX-DCCInspector
       :scale: 30%
@@ -47,11 +53,6 @@
       :scale: 30%
       :class: image-min-width-144
       :target: ../download/ex-commandstation.html#getting-basestation-classic
-..
-.. |EX-FC-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-fastclock.png
-      :alt: EX-IOExpander
-      :scale: 30%
-      :class: image-product-logo-float-right
 ..
 .. ................................................
 ..
@@ -122,4 +123,8 @@
 .. |githublink-ex-ioexpander-button2| raw:: html
 
    <a href="https://github.com/DCC-EX/EX-IOExpander/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="./_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
+..
+.. |githublink-ex-fastclock-button2| raw:: html
+
+  <a href="https://github.com/DCC-EX/EX-FastClock/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="./_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
 ..

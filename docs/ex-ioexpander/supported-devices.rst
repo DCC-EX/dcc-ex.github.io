@@ -23,9 +23,7 @@ When uploading the |EX-IO| software, the device type is detected by the compiler
 
 All allocation of pins is done via the device driver (see :ref:`ex-ioexpander/overview:ex-commandstation device driver`).
 
-.. note:: 
-
-  When configuring the device driver, all available pins must be accounted for as either digital or analogue pins, even if there is no intended use for every individual pin.
+All Vpins outlined on this page assume use of the default starting Vpin of 800, so you will need to review the Vpin map displayed in the |EX-IO| serial console if using a different starting Vpin.
 
 Arduino Nano
 ============
@@ -36,34 +34,41 @@ Arduino Nano
 
 .. list-table:: Arduino Nano pin allocations
   :widths: auto
-  :header-rows: 1
   :stub-columns: 1
   :class: command-table
 
-  * - Total pins 18
-    - Minimum
-    - Maximum
-  * - Digital pins
-    - 12
+  * - Total pins
+    - 18
+  * - Digital capable pins
     - 16
-  * - Analogue pins
-    - 2
+  * - Analogue capable pins
     - 6
-
-.. note:: 
-
-  On Arduino Nano, the additional analogue pins A6/7 are analogue only can cannot be used as digital inputs or outputs.
+  * - PWM capable pins
+    - 6
 
 .. csv-table:: Arduino Nano and Pro Mini EX-IOExpander pin map at Vpin 800
   :widths: auto
-  :stub-columns: 1
+  :header-rows: 1
 
-  Vpins,800,801,802,803,804,805
-  Digital Pins,D2,D3,D4,D5,D6,D7
-  Vpins,806,807,808,809,810,811
-  Digital Pins,D8,D9,D10,D11,D12,D13
-  Vpins,812,813,814,815,816,817
-  Analogue Pins,A0,A1,A2,A3,A6,A7
+  Vpin,Pin,Digital,Analogue,PWM
+  800,2,Y,N,N
+  801,3,Y,N,Y
+  802,4,Y,N,N
+  803,5,Y,N,Y
+  804,6,Y,N,Y
+  805,7,Y,N,N
+  806,8,Y,N,N
+  807,9,Y,N,Y
+  808,10,Y,N,Y
+  809,11,Y,N,Y
+  810,12,Y,N,N
+  811,13,Y,N,N
+  812,A0,Y,Y,N
+  813,A1,Y,Y,N
+  814,A2,Y,Y,N
+  815,A3,Y,Y,N
+  816,A6,N,Y,N
+  817,A7,N,Y,N
 
 |
 
@@ -89,30 +94,39 @@ Arduino Uno
 
 .. list-table:: Arduino Uno pin allocations
   :widths: auto
-  :header-rows: 1
   :stub-columns: 1
   :class: command-table
 
-  * - Total pins 16
-    - Minimum
-    - Maximum
-  * - Digital pins
-    - 12
+  * - Total pins
     - 16
-  * - Analogue pins
-    - 0
+  * - Digital capable pins
+    - 16
+  * - Analogue capable pins
     - 4
+  * - PWM capable pins
+    - 6
 
 .. csv-table:: Arduino Uno EX-IOExpander pin map at Vpin 800
   :widths: auto
-  :stub-columns: 1
+  :header-rows: 1
 
-  Vpins,800,801,802,803,804,805
-  Digital Pins,D2,D3,D4,D5,D6,D7
-  Vpins,806,807,808,809,810,811
-  Digital Pins,D8,D9,D10,D11,D12,D13
-  Vpins,812,813,814,815
-  Analogue Pins,A0,A1,A2,A3
+  Vpin,Pin,Digital,Analogue,PWM
+  800,2,Y,N,N
+  801,3,Y,N,Y
+  802,4,Y,N,N
+  803,5,Y,N,Y
+  804,6,Y,N,Y
+  805,7,Y,N,N
+  806,8,Y,N,N
+  807,9,Y,N,Y
+  808,10,Y,N,Y
+  809,11,Y,N,Y
+  810,12,Y,N,N
+  811,13,Y,N,N
+  812,A0,Y,Y,N
+  813,A1,Y,Y,N
+  814,A2,Y,Y,N
+  815,A3,Y,Y,N
 
 |
 
@@ -125,38 +139,85 @@ Arduino Mega2560
 
 .. list-table:: Arduino Mega pin allocations
   :widths: auto
-  :header-rows: 1
   :stub-columns: 1
   :class: command-table
 
-  * - Total pins 62
-    - Minimum
-    - Maximum
+  * - Total pins
+    - 62
   * - Digital pins
-    - 46
     - 62
   * - Analogue pins
-    - 0
     - 16
+  * - PWM pins
+    - 12
 
 .. csv-table:: Arduino Mega EX-IOExpander pin map at Vpin 800
   :widths: auto
-  :stub-columns: 1
+  :header-rows: 1
 
-  Vpins,800,801,802,803,804,805,806,807,808,809
-  Digital Pins,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11
-  Vpins,810,811,812,813,814,815,816,817,818,819
-  Digital Pins,D12,D13,D14,D15,D16,D17,D18,D19,D22,D23
-  Vpins,820,821,822,823,824,825,826,827,828,829
-  Digital Pins,D24,D25,D26,D27,D28,D29,D30,D31,D32,D33
-  Vpins,830,831,832,833,834,835,836,837,838,839
-  Digital Pins,D34,D35,D36,D37,D38,D39,D40,D41,D42,D43
-  Vpins,840,841,842,843,844,845
-  Digital Pins,D44,D45,D46,D47,D48,D49
-  Vpins,846,847,848,849,850,851,852,853,854,855
-  Analogue Pins,A0,A1,A2,A3,A4,A5,A6,A7,A8,A9
-  Vpins,856,857,858,859,860,861
-  Analogue Pins,A10,A11,A12,A13,A14,A15
+  Vpin,Pin,Digital,Analogue,PWM
+  800,2,Y,N,Y
+  801,3,Y,N,Y
+  802,4,Y,N,Y
+  803,5,Y,N,Y
+  804,6,Y,N,Y
+  805,7,Y,N,Y
+  806,8,Y,N,Y
+  807,9,Y,N,Y
+  808,10,Y,N,Y
+  809,11,Y,N,Y
+  810,12,Y,N,Y
+  811,13,Y,N,Y
+  812,14,Y,N,N
+  813,15,Y,N,N
+  814,16,Y,N,N
+  815,17,Y,N,N
+  816,18,Y,N,N
+  817,19,Y,N,N
+  818,22,Y,N,N
+  819,23,Y,N,N
+  820,24,Y,N,N
+  821,25,Y,N,N
+  822,26,Y,N,N
+  823,27,Y,N,N
+  824,28,Y,N,N
+  825,29,Y,N,N
+  826,30,Y,N,N
+  827,31,Y,N,N
+  828,32,Y,N,N
+  829,33,Y,N,N
+  830,34,Y,N,N
+  831,35,Y,N,N
+  832,36,Y,N,N
+  833,37,Y,N,N
+  834,38,Y,N,N
+  835,39,Y,N,N
+  836,40,Y,N,N
+  837,41,Y,N,N
+  838,42,Y,N,N
+  839,43,Y,N,N
+  840,44,Y,N,N
+  841,45,Y,N,N
+  842,46,Y,N,N
+  843,47,Y,N,N
+  844,48,Y,N,N
+  845,49,Y,N,N
+  846,A0,Y,Y,N
+  847,A1,Y,Y,N
+  848,A2,Y,Y,N
+  849,A3,Y,Y,N
+  850,A4,Y,Y,N
+  851,A5,Y,Y,N
+  852,A6,Y,Y,N
+  853,A7,Y,Y,N
+  854,A8,Y,Y,N
+  855,A9,Y,Y,N
+  856,A10,Y,Y,N
+  857,A11,Y,Y,N
+  858,A12,Y,Y,N
+  859,A13,Y,Y,N
+  860,A14,Y,Y,N
+  861,A15,Y,Y,N
 
 |
 

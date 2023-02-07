@@ -30,6 +30,8 @@ Introduction
 
 |EX-IO| can utilise digital input and output pins as well as analogue input pins, depending on the chosen microcontroller.
 
+There is also work in progress to enable using PWM capable pins to drive servos and control LED brightness.
+
 Rather than emulate any specific type of existing I/O expander, |EX-IO| has been written to integrate directly with |EX-CS| via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device.
 
 This page provides the general overview of |EX-IO|, as well as outlining the configuration options available.
@@ -56,9 +58,9 @@ Hardware requirements
 
 |EX-IO| needs a dedicated microcontroller connected to the |I2C| bus of your |EX-CS|.
 
-The currently supported microcontrollers are Arduino Uno, Nano, and Mega, with experimental support for the Nucleo F411RE. The device driver and |EX-IO| software are being written in such a way that should enable porting to other microcontroller architectures, and is expected to support up to 256 I/O pins. As more devices are tested and/or requested, additional devices will be supported.
+Refer to :doc:`/ex-ioexpander/supported-devices` for the currently supported microcontrollers, which includes details on the pins and features available for use.
 
-Refer to :doc:`/ex-ioexpander/supported-devices` for the specific list, including which pins are available for use.
+The device driver and |EX-IO| software are being written in such a way that should enable porting to other microcontroller architectures, and is expected to support up to 256 I/O pins. As more devices are tested and/or requested, additional devices will be supported.
 
 Theory of operation
 ===================
@@ -68,6 +70,8 @@ Theory of operation
 Pins capable of both digital and analogue can be used for either purpose.
 
 As per other I/O devices, |EX-IO| can function with both the ``<S ...>`` sensor/input and ``<Z ...>`` output |DCC-EX| commands, as well as the various ``AT(), IF(), ATGTE(), IFGTE()`` type |EX-R| commands.
+
+The work currently in progress will allow PWM capable pins to be used to drive servos and control LED brightness, enabling use of the ``<D SERVO ...>`` command, along with the ``SERVO()``, ``SERVO_TURNOUT()``, ``SERVO_SIGNAL()``, and ``FADE()`` |EX-R| commands.
 
 .. note:: 
 
@@ -131,9 +135,11 @@ Pin/Vpin allocation
 
   It has been reported that on non-genuine Arduino Uno devices (and potentially Nano) using pin D13 as an input may not work as expected due to the onboard LED causing the pin to remain low when using it as an input pin with pullups enabled. A suggested workaround is to add an external 1K pullup resistor to 5V for this pin if this is experienced.
 
-All available pins on the chosen |EX-IO| device must be allocated as either digital or analogue pins. Details of the pins available for use are outlined on the :doc:`/ex-ioexpander/supported-devices` page.
+When configuring your chosen |EX-IO| device, you need to know the total number of available pins, and the capability of each. Details of the pins available for use are outlined on the :doc:`/ex-ioexpander/supported-devices` page. Vpins are allocated by the |EX-CS| device driver in ascending order according to the device map on this page.
 
-Vpins are allocated by the |EX-CS| device driver, with digital pins allocated by incrementing from the first Vpin, and analogue pins decrementing from the highest allocated Vpin number.
+.. note:: 
+
+  When the |EX-IO| device receives its configuration from the |EX-CS|, the Vpin to physical pin map will be displayed in the serial console of the |EX-IO| device.
 
 For example, an Arduino Nano has a total of 22 I/O pins (D0 - D13, A0 - A7). Not all of these pins are available, and there are limitations on some pins:
 

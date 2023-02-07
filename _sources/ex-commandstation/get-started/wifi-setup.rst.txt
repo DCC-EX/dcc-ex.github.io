@@ -51,7 +51,7 @@ Why Use WiFi?
 
 **BEFORE you purchase a Wifi card, please consider whether you actually need it.**
 
-If you wish to trains from your phone, tablet or other |WiThrottle protocol| devices connected directly to the |EX-CS|, without a PC involved, then you **should follow the instructions below**.
+If you wish to run trains from your phone, tablet or other |WiThrottle protocol| devices connected directly to the |EX-CS|, without a PC involved, then you **should follow the instructions below**.
 
    However, with the base |EX-CS| without a WiFi shield, you can use a USB cable to connect to a computer to run |JMRI| or our web browser based |EX-WT|. So, if you intend to run trains from a PC, or by only using a web browser, |JMRI|, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. If this the case you can :doc:`skip ahead to the next page <installer>`.
 
@@ -66,7 +66,7 @@ If you wish to trains from your phone, tablet or other |WiThrottle protocol| dev
 What you will need (for WiFi)
 =============================
 
-* A |EX-CS| made on the from an **Arduino Mega** and a Motor Driver (from the previous page)
+* A |EX-CS| made from an **Arduino Mega** and a Motor Driver (from the previous page)
 * A WiFi board
 * Two (2) Male to Female Jumpers leads
 

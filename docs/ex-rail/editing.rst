@@ -70,7 +70,7 @@ Using EX-Installer
 #. Re-Run |EX-I|
 #. Select the same options that you originally chose and upload
 
-The Roster will be automatically loaded with the |EX-CS| software.
+The myAutomation.h file will be automatically loaded with the |EX-CS| software.
 
 Using the Arduino IDE
 ---------------------
@@ -81,7 +81,7 @@ Using the Arduino IDE
 #. Select the Board, COM port etc. as before
 #. click :guilabel:`Upload`
 
-The Roster will be automatically loaded with the |EX-CS| software.
+The myAutomation.h file will be automatically loaded with the |EX-CS| software.
 
 ----
 

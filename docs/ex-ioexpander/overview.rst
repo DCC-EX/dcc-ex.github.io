@@ -149,31 +149,45 @@ For example, an Arduino Nano has a total of 22 I/O pins (D0 - D13, A0 - A7). Not
 - A4 and A5 are reserved for the |I2C| interface and are therefore not available
 - A6 and A7 can only be utilised as analogue inputs
 
-This results in 18 pins total, with 2 pins (A6/A7) only available as analogue inputs, resulting in our defined total, minimum, and maximium values as seen on the :doc:`/ex-ioexpander/supported-devices` page:
+This results in 18 pins total, with 2 pins (A6/A7) only available as analogue inputs, resulting in our pin counts and Vpin to pin map as seen on the :doc:`/ex-ioexpander/supported-devices` page:
 
-.. list-table::
+.. list-table:: Arduino Nano pin allocations
   :widths: auto
-  :header-rows: 1
   :stub-columns: 1
   :class: command-table
 
-  * - Total pins 18
-    - Minimum
-    - Maximum
-    - Notes
-  * - Digital pins
-    - 12
+  * - Total pins
+    - 18
+  * - Digital capable pins
     - 16
-    - D2 - D13, A0 - A3
-  * - Analogue pins
-    - 2
+  * - Analogue capable pins
     - 6
-    - A0 - A3, A6 - A7, note A4/A5 are |I2C|, and A6/A7 analogue only
+  * - PWM capable pins
+    - 6
 
-In the case we use the default of 12 digital pins and 6 analogue pins using the starting Vpin of 800, this will result in these Vpin allocations:
+.. csv-table:: Arduino Nano and Pro Mini EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :header-rows: 1
 
-- Digital pins D2 - D13 as Vpins 800 - 811
-- Analogue pins A0 - A3, A6 - A7 as Vpins 812 - 817
+  Vpin,Pin,Digital,Analogue,PWM
+  800,2,Y,N,N
+  801,3,Y,N,Y
+  802,4,Y,N,N
+  803,5,Y,N,Y
+  804,6,Y,N,Y
+  805,7,Y,N,N
+  806,8,Y,N,N
+  807,9,Y,N,Y
+  808,10,Y,N,Y
+  809,11,Y,N,Y
+  810,12,Y,N,N
+  811,13,Y,N,N
+  812,A0,Y,Y,N
+  813,A1,Y,Y,N
+  814,A2,Y,Y,N
+  815,A3,Y,Y,N
+  816,A6,N,Y,N
+  817,A7,N,Y,N
 
 Once |EX-IO| has been configured as per the sections below, you can review the digial and analogue Vpin allocations by running the diag command ``<D HAL SHOW>`` at the serial console, which will display this information.
 

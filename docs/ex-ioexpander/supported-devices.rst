@@ -155,69 +155,38 @@ Arduino Mega2560
   :widths: auto
   :header-rows: 1
 
-  Vpin,Pin,Digital,Analogue,PWM
-  800,2,Y,N,Y
-  801,3,Y,N,Y
-  802,4,Y,N,Y
-  803,5,Y,N,Y
-  804,6,Y,N,Y
-  805,7,Y,N,Y
-  806,8,Y,N,Y
-  807,9,Y,N,Y
-  808,10,Y,N,Y
-  809,11,Y,N,Y
-  810,12,Y,N,Y
-  811,13,Y,N,Y
-  812,14,Y,N,N
-  813,15,Y,N,N
-  814,16,Y,N,N
-  815,17,Y,N,N
-  816,18,Y,N,N
-  817,19,Y,N,N
-  818,22,Y,N,N
-  819,23,Y,N,N
-  820,24,Y,N,N
-  821,25,Y,N,N
-  822,26,Y,N,N
-  823,27,Y,N,N
-  824,28,Y,N,N
-  825,29,Y,N,N
-  826,30,Y,N,N
-  827,31,Y,N,N
-  828,32,Y,N,N
-  829,33,Y,N,N
-  830,34,Y,N,N
-  831,35,Y,N,N
-  832,36,Y,N,N
-  833,37,Y,N,N
-  834,38,Y,N,N
-  835,39,Y,N,N
-  836,40,Y,N,N
-  837,41,Y,N,N
-  838,42,Y,N,N
-  839,43,Y,N,N
-  840,44,Y,N,N
-  841,45,Y,N,N
-  842,46,Y,N,N
-  843,47,Y,N,N
-  844,48,Y,N,N
-  845,49,Y,N,N
-  846,A0,Y,Y,N
-  847,A1,Y,Y,N
-  848,A2,Y,Y,N
-  849,A3,Y,Y,N
-  850,A4,Y,Y,N
-  851,A5,Y,Y,N
-  852,A6,Y,Y,N
-  853,A7,Y,Y,N
-  854,A8,Y,Y,N
-  855,A9,Y,Y,N
-  856,A10,Y,Y,N
-  857,A11,Y,Y,N
-  858,A12,Y,Y,N
-  859,A13,Y,Y,N
-  860,A14,Y,Y,N
-  861,A15,Y,Y,N
+  Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
+  800,2,Y,N,Y,831,35,Y,N,N
+  801,3,Y,N,Y,832,36,Y,N,N
+  802,4,Y,N,Y,833,37,Y,N,N
+  803,5,Y,N,Y,834,38,Y,N,N
+  804,6,Y,N,Y,835,39,Y,N,N
+  805,7,Y,N,Y,836,40,Y,N,N
+  806,8,Y,N,Y,837,41,Y,N,N
+  807,9,Y,N,Y,838,42,Y,N,N
+  808,10,Y,N,Y,839,43,Y,N,N
+  809,11,Y,N,Y,840,44,Y,N,N
+  810,12,Y,N,Y,841,45,Y,N,N
+  811,13,Y,N,Y,842,46,Y,N,N
+  812,14,Y,N,N,843,47,Y,N,N
+  813,15,Y,N,N,844,48,Y,N,N
+  814,16,Y,N,N,845,49,Y,N,N
+  815,17,Y,N,N,846,A0,Y,Y,N
+  816,18,Y,N,N,847,A1,Y,Y,N
+  817,19,Y,N,N,848,A2,Y,Y,N
+  818,22,Y,N,N,849,A3,Y,Y,N
+  819,23,Y,N,N,850,A4,Y,Y,N
+  820,24,Y,N,N,851,A5,Y,Y,N
+  821,25,Y,N,N,852,A6,Y,Y,N
+  822,26,Y,N,N,853,A7,Y,Y,N
+  823,27,Y,N,N,854,A8,Y,Y,N
+  824,28,Y,N,N,855,A9,Y,Y,N
+  825,29,Y,N,N,856,A10,Y,Y,N
+  826,30,Y,N,N,857,A11,Y,Y,N
+  827,31,Y,N,N,858,A12,Y,Y,N
+  828,32,Y,N,N,859,A13,Y,Y,N
+  829,33,Y,N,N,860,A14,Y,Y,N
+  830,34,Y,N,N,861,A15,Y,Y,N
 
 |
 
@@ -244,34 +213,43 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 
 .. list-table:: NUCLEO-F411RE pin allocations
   :widths: auto
-  :header-rows: 1
   :stub-columns: 1
   :class: command-table
 
-  * - Total pins 40
-    - Minimum
-    - Maximum
+  * - Total pins
+    - 40
   * - Digital pins
-    - 26
     - 40
   * - Analogue pins
-    - 0
     - 14
+  * - PWM pins
+    - 25
 
 .. csv-table:: F411RE EX-IOExpander pin map at Vpin 800
   :widths: auto
   :stub-columns: 1
 
-  Vpins,800,801,802,803,804,805,806
-  CN7 Digital Pins,PC10,PC11,PC12,PD2,PA15,PB7,PC13
-  Vpins,807,808,809,810,811,812,813,814,815,816
-  CN10 Digital Pins,PC9,PC8,PC6,PA12,PA11,PB12,PB6,PC7,PA9,PB2
-  Vpins,817,818,819,820,821,822,823,824,825
-  CN10 Digital Pins,PA8,PB10,PB15,PB4,PB14,PB5,PB13,PB3,PA10
-  Vpins,826,827,828,829,830,831,832,833
-  CN7 Analogue Pins,PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0
-  Vpins,834,835,836,837,838,839
-  CN10 Analogue Pins,PC5,PA5,PA6,PA7,PB1,PC4
+  Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
+  800,PC10,Y,N,N,820,PA12,Y,N,N
+  801,PC11,Y,N,N,821,PA6,Y,Y,Y
+  802,PC12,Y,N,N,822,PA11,Y,N,Y
+  803,PD2,Y,N,N,823,PA7,Y,N,Y
+  804,PA15,Y,N,Y,824,PB12,Y,N,N
+  805,PB7,Y,N,Y,825,PB6,Y,N,Y
+  806,PC15,Y,N,N,826,PC7,Y,N,Y
+  807,PA0,Y,Y,Y,827,PA9,Y,N,Y
+  808,PA1,Y,Y,Y,828,PB2,Y,N,N
+  809,PA4,Y,Y,N,829,PA8,Y,N,Y
+  810,PB0,Y,Y,Y,830,PB1,Y,Y,Y
+  811,PC2,Y,Y,N,831,PB10,Y,N,Y
+  812,PC1,Y,Y,N,832,PB15,Y,N,Y
+  813,PC3,Y,Y,N,833,PB4,Y,N,Y
+  814,PC0,Y,Y,N,834,PB14,Y,N,Y
+  815,PC9,Y,N,Y,835,PB5,Y,N,Y
+  816,PC8,Y,N,Y,836,PB13,Y,N,Y
+  817,PC6,Y,N,Y,837,PB3,Y,N,Y
+  818,PC5,Y,Y,N,838,PA10,Y,N,Y
+  819,PA5,Y,Y,Y,839,PC4,Y,Y,N
 
 |
 
@@ -294,46 +272,72 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 
 .. list-table:: NUCLEO-F412ZG pin allocations
   :widths: auto
-  :header-rows: 1
   :stub-columns: 1
   :class: command-table
 
   * - Total pins 97
-    - Minimum
-    - Maximum
+    - 97
   * - Digital pins
-    - 81
     - 97
   * - Analogue pins
-    - 0
     - 16
+  * - PWM pins
+    - 40
 
 .. csv-table:: F412ZG EX-IOExpander pin map at Vpin 800
   :widths: auto
   :stub-columns: 1
 
-  Vpins,800,801,802,803,804,805,806,807,808,809
-  CN11 Digital Pins,PC10,PC11,PC12,PD2,PF6,PF7,PA15,PB7,PC13,PD4
-  Vpins,810,811,812,813,814,815,816,817,818,819
-  CN11 Digital Pins,PD3,PD5,PG2,PD6,PG3,PD7,PE2,PE3,PE4,PE5
-  Vpins,820,821,822,823,824,825,826,827,828,829
-  CN11 Digital Pins,PF1,PF2,PF0,PF8,PD1,PF9,PD0,PG1,PG0,PE1
-  Vpins,830,831,832,833,834,835,836
-  CN11 Digital Pins,PE6,PG9,PG15,PG12,PG10,PG13,PG11
-  Vpins,837,838,839,840,841,842,843,844,845,846
-  CN12 Digital Pins,PC9,PC8,PC6,PB12,PB6,PB11,PC7,PB2,PB10,PB15
-  Vpins,847,848,849,850,851,852,853,854,855,856
-  CN12 Digital Pins,PB4,PB14,PB5,PB13,PB3,PF5,PF4,PE8,PD13,PF10
-  Vpins,857,858,859,860,861,862,863,864,865,866
-  CN12 Digital Pins,PD12,PE7,PD11,PD14,PE10,PD15,PE12,PF14,PE14,PE9
-  Vpins,867,868,869,870,871,872,873,874,875,876
-  CN12 Digital Pins,PE15,PE13,PE11,PF13,PF3,PF12,PF15,PG14,PF11,PE0
-  Vpins,877,878,879,880
-  CN12 Digital Pins,PD10,PG8,PG5,PG4
-  Vpins,881,882,883,884,885,886,887,888
-  CN11 Analogue Pins,PA0,PA1,PA4,PB0,PC2,PC1,PC3,PC0
-  Vpins,889,890,891,892,893,894,895,896
-  CN12 Analogue Pins,PC5,PA5,PA6,PA7,PB1,PC4,PA2,PA3
+  Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
+  800,PC10,Y,N,N,849,PA5,Y,Y,Y
+  801,PC11,Y,N,N,850,PA6,Y,Y,Y
+  802,PC12,Y,N,N,851,PA7,Y,Y,Y
+  803,PD2,Y,N,N,852,PB12,Y,N,N
+  804,PF6,Y,N,Y,853,PB6,Y,N,Y
+  805,PF7,Y,N,Y,854,PB11,Y,N,Y
+  806,PA15,Y,N,Y,855,PC7,Y,N,Y
+  807,PB7,Y,N,Y,856,PB2,Y,N,N
+  808,PC13,Y,N,N,857,PB1,Y,Y,Y
+  809,PA0,Y,Y,Y,858,PB10,Y,N,Y
+  810,PA1,Y,Y,Y,859,PB15,Y,N,Y
+  811,PA4,Y,Y,N,860,PB4,Y,N,Y
+  812,PB0,Y,Y,Y,861,PB14,Y,N,Y
+  813,PC2,Y,Y,N,862,PB5,Y,N,Y
+  814,PC1,Y,Y,N,863,PB13,Y,N,Y
+  815,PC3,Y,Y,N,864,PB3,Y,N,Y
+  816,PC0,Y,Y,N,865,PC4,Y,Y,N
+  817,PD4,Y,N,N,866,PA2,Y,Y,Y
+  818,PD3,Y,N,N,867,PF5,Y,N,N
+  819,PD5,Y,N,N,868,PA3,Y,Y,Y
+  820,PG2,Y,N,N,869,PF4,Y,N,N
+  821,PD6,Y,N,N,870,PE8,Y,N,Y
+  822,PG3,Y,N,N,871,PD13,Y,N,Y
+  823,PD7,Y,N,N,872,PF10,Y,N,N
+  824,PE2,Y,N,N,873,PD12,Y,N,Y
+  825,PE3,Y,N,N,874,PE7,Y,N,N
+  826,PE4,Y,N,N,875,PD11,Y,N,N
+  827,PE5,Y,N,Y,876,PD14,Y,N,Y
+  828,PF1,Y,N,N,877,PE10,Y,N,Y
+  829,PF2,Y,N,N,878,PD15,Y,N,Y
+  830,PF0,Y,N,N,879,PE12,Y,N,Y
+  831,PF8,Y,N,Y,880,PF14,Y,N,N
+  832,PD1,Y,N,N,881,PE14,Y,N,Y
+  833,PF9,Y,N,Y,882,PE9,Y,N,Y
+  834,PD0,Y,N,N,883,PE15,Y,N,N
+  835,PG1,Y,N,N,884,PE13,Y,N,Y
+  836,PG0,Y,N,N,885,PE11,Y,N,Y
+  837,PE1,Y,N,N,886,PF13,Y,N,N
+  838,PE6,Y,N,Y,887,PF3,Y,N,N
+  839,PG9,Y,N,N,888,PF12,Y,N,N
+  840,PG15,Y,N,N,889,PF15,Y,N,N
+  841,PG12,Y,N,N,890,PG14,Y,N,N
+  842,PG10,Y,N,N,891,PF11,Y,N,N
+  843,PG13,Y,N,N,892,PE0,Y,N,N
+  844,PG11,Y,N,N,893,PD10,Y,N,N
+  845,PC9,Y,N,Y,894,PG8,Y,N,N
+  846,PC8,Y,N,Y,895,PG5,Y,N,N
+  847,PC6,Y,N,Y,896,PG4,Y,N,N
+  848,PC5,Y,Y,N
 
 |
 
@@ -388,79 +392,131 @@ Adding new devices
 
   To connect 3.3V devices to a 5V |EX-CS|, they need to either be 5V tolerant, or you will need to use a level shifter to avoid letting the magic smoke out.
 
-Adding new devices to the |EX-IO| software is fairly straight forward, and only requires additional information in the |EX-IO| software itself, with no changes required to the device driver loaded in your |EX-CS|.
+Adding new devices to the |EX-IO| software only requires additional information in the |EX-IO| software itself, with no changes required to the device driver loaded in your |EX-CS|.
 
-In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to specify how the Vpins defined in the device driver map to the physical pins of the |EX-IO| device.
+In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to define the pins available for use on the |EX-IO| device, and define the capabilities available for each pin.
 
 For example, the AVR series (Uno, Mega, Nano) have the architure or platform macro defined as "ARDUINO_ARCH_AVR", with the Nano having the variant or board specific macro "ARDUINO_AVR_NANO", and there is a pin map defined that maps to this macro definition.
+
+Files to be created/modified
+----------------------------
+
+When adding new devices to |EX-IO|, there are potentially three files to be added or modified:
+
+- device_functions.cpp - Contains the architecture/platform specific function to reboot via software
+- defines.h - Contains some device specific macro definitions
+- <device_type>.h - Contains the device specific macro definitions and the pin map
 
 Enabling software reboots
 -------------------------
 
-The architecture or platform macro is used to determine the correct method to reboot the device via the ``<Z>`` command, whereas the variant or board specific macro is used to define the actual pins in use.
+The architecture or platform macro is used to determine the correct method to reboot the device via the ``<Z>`` command, which is defined in the file "device_functions.cpp".
 
-If a new architecture or platform is being added, then "EX-IOExpander.ino" will need to be updated with the suitable software command in the "reset()" function, otherwise a reboot via ``<Z>`` will not be available.
+If a new architecture or platform is being added, then this file will need to be updated with the suitable software command in the "reset()" function, otherwise a reboot via ``<Z>`` will not be available.
 
-If the architecture or platform already exists, or there is no desire to reboot via software, then the only change required is to add the variant or board specific information to "SupportedDevices.h".
+If the architecture or platform already exists, or there is no desire to reboot via software, then the only change required is to add the variant or board specific information.
 
-Enabling serial input/output
-----------------------------
+Enabling serial input/output in defines.h
+-----------------------------------------
 
 Some microcontrollers have different serial implementations, and therefore it may be necessary to specify the type of USB or serial port in use.
 
 Currently, unless the device's architecture is defined as "ARDUINO_ARCH_SAMD", it will utilise the default Arduino "Serial" implementation. SAMD uses the "SerialUSB" implementation.
 
-If additional serial support is required, this will need to be defined in "EX-IOExpander.ino" as "USB_SERIAL", which is defined at the beginning of the file.
+If additional serial support is required, this will need to be defined in "defines.h" as "USB_SERIAL".
 
-Defining the device and pin map in SupportedDevices.h
------------------------------------------------------
+Defining the device macros in defines.h
+---------------------------------------
 
-A pin map is used to map the Vpins from the device driver in the |EX-CS| to the appropriate physical pins on the |EX-IO| device, and therefore defining this in the correct order in the |EX-IO| software is critical. It is equally critical to ensure that the correct variant or board macro is used to ensure the correct pin map is used when compiling and uploading the software to the |EX-IO| device.
+There are three parameters to be defined in this file for each device type:
 
-Pin maps are defined in the file "SupportedDevices.h".
+- TOTAL_PINS - The total number of pins available on the device
+- NUM_PWM_PINS - The number of pins with PWM capability
+- HAS_EEPROM - Define only if the device has EEPROM capability
 
-As per :ref:`ex-ioexpander/overview:pin/vpin allocation`, digital pins are allocated first, incrementing from the first Vpin, and analogue pins are allocated in reverse, starting from the last Vpin.
-
-These are the considerations when defining the pin map:
-
-- All pins capable of being digital inputs/outputs need to be included in "digitalPinMap", including analogue capable pins
-- All pins capable of being analogue inputs need to be included in "analoguePinMap" (don't include dual digital/analogue pins here)
-- Pins included in both pin maps need to be in the same order, with analogue pins at the end of the digital pin map
-- Macros for the number of pins in each pin map must be defined accurately
-- NUMBER_OF_DIGITAL_PINS is the number of digital only pins
-- NUMBER_OF_ANALOGUE_PINS is the number of pins capable of analogue input, whether or not they can be used as digital also
-- Any pins that are only capable of analogue inputs must be at the end of the analogue pin map
-
-Further to this, if EEPROM is available, this needs to be defined, along with a description that is presented in the serial console when starting the device.
-
-If the microcontroller utilises internal |I2C| pullup resistors rather than external, physical resistors, then the |I2C| pins can be defined to allow these to be disabled via "myConfig.h" (see :ref:`ex-ioexpander/overview:disable_i2c_pullups`).
-
-To use the Arduino Nano as the example, this is the definition in "SupportedDevices.h":
+These need to be defined according to the CPU type macro definition. For example an Arduino Uno is defined as:
 
 .. code-block:: cpp
 
-  // Arduino Nano
-  #elif defined(ARDUINO_AVR_NANO)
-  #define BOARD_TYPE F("Nano")
+  //  Arduino Uno
+  #elif defined(ARDUINO_AVR_UNO)
+  #define TOTAL_PINS 16
+  #define NUM_PWM_PINS 6
   #define HAS_EEPROM
-  #define NUMBER_OF_DIGITAL_PINS 12   // D2 - D13
-  #define NUMBER_OF_ANALOGUE_PINS 6     // A0 - A3, A6/A7, cannot use A4/A5
-  static const uint8_t digitalPinMap[NUMBER_OF_DIGITAL_PINS + NUMBER_OF_ANALOGUE_PINS] = {
-    2,3,4,5,6,7,8,9,10,11,12,13,A0,A1,A2,A3
-  };
-  static const uint8_t analoguePinMap[NUMBER_OF_ANALOGUE_PINS] = {
-    A0,A1,A2,A3,A6,A7
+  #elif ...
+
+Defining the device type and pin map in <device_name>.h
+-------------------------------------------------------
+
+A pin map is used to map the Vpins from the device driver in the |EX-CS| to the appropriate physical pins on the |EX-IO| device, and therefore defining this in the correct order in the |EX-IO| software is critical. It is equally critical to ensure that the correct variant or board macro is used to ensure the correct pin map is used when compiling and uploading the software to the |EX-IO| device.
+
+Each unique device needs a file created containing the "BOARD_TYPE" macro definition and the device specific pin map.
+
+Files should be named according to the platform and CPU type eg. "arduino_avr_nano.h" or "arduino_nucleo_f412zg.h".
+
+As per :ref:`ex-ioexpander/overview:pin/vpin allocation`, Vpins are allocated to physical pins in ascending order.
+
+These are the considerations when defining the pin map:
+
+- All pins available for use must be represented in a logical order to provide the simplest user experience
+- The capability for each pin must be provided according to the :ref:`ex-ioexpander/supported-devices:pin capability table`
+- The number of defined pins must match "TOTAL_PINS" as defined in "defines.h"
+- The number of pins defined with PWM capability must match "NUM_PWM_PINS" as defined in "defines.h"
+
+Further to this, if the microcontroller utilises internal |I2C| pullup resistors rather than external, physical resistors, then the |I2C| pins can be defined to allow these to be disabled via "myConfig.h" (see :ref:`ex-ioexpander/overview:disable_i2c_pullups`).
+
+To use the Arduino Uno as the example, the file "arduino_avr_uno.h" would be created with these contents:
+
+.. code-block:: cpp
+
+  #ifndef ARDUINO_AVR_UNO_H
+  #define ARDUINO_AVR_UNO_H
+
+  #include <Arduino.h>
+  #include "globals.h"
+
+  #define BOARD_TYPE F("Uno")
+  pinDefinition pinMap[TOTAL_PINS] = {
+    {2,DIO},{3,DIOP},{4,DIO},{5,DIOP},{6,DIOP},{7,DIO},
+    {8,DIO},{9,DIOP},{10,DIOP},{11,DIOP},{12,DIO},{13,DIO},
+    {A0,AIDIO},{A1,AIDIO},{A2,AIDIO},{A3,AIDIO},
   };
   #define I2C_SDA A4
   #define I2C_SCL A5
 
-- The variant or board macro definition is "ARDUINO_AVR_NANO".
-- The "BOARD_TYPE" is displayed in the serial console at startup as "Nano".
-- The Nano has EEPROM support to allow storing the |I2C| address
-- There are 12 digital pins
-- There are 6 analogue pins
-- All digital pins and the 4 analogue pins capable of digital are defined in "digitalPinMap"
-- All analogue pins are defined in "analoguePinMap"
-- The analogue pins defined in both pin maps are added in the same order, with analogue pins at the end of the digital pin map
-- Analogue pins A6/A7 are analogue only, are therefore not included in digitalPinMap, and are defined at the end of analoguePinMap
+  #endif
+
+- All C++ header (.h) files should include a header guard, which is the first two lines, and file "#ifdef"
+- You must include the Arduino library and "globals.h" file
+- The "BOARD_TYPE" is displayed in the serial console at startup as "Uno"
+- All available pins are defined with their capability
 - Arduino Nano uses internal |I2C| pullup resistors, and therefore defining the |I2C| pins A4/A5 allows these to be disabled via "myConfig.H" if desired
+
+Pin capability table
+--------------------
+
+When defining the capabilities available for a specific pin, one of these macros from this table must be utilised. These capability macros are defined in "defines.h".
+
+This ensures attempting to use a pin for something it's not capable of will generate an error rather than try to drive a pin with capability that is not possible, as depending on the scenario, this may let the magic smoke out.
+
+.. csv-table:: Pin capability table
+  :widths: auto
+  :header-rows: 1
+
+  Macro,Capabilities
+  NA,Not suitable for use
+  DI,Digital input only
+  DO,Digital output only
+  DIO,Digital input and output
+  AI,Analogue input only
+  AIDI,Analogue and digital input
+  AIDO,Analogue input and digital output
+  AIDIO,Analogue input with digital input and output
+  P,PWM output only
+  DIP,Digital input and PWM output
+  DOP,Digital output and PWM output
+  DIOP,Digital input and output with PWM output
+  AIP,Analogue input and PWM output
+  AIDIP,Analogue input with digital input and PWM output
+  AIDOP,Analogue input with digital output and PWM output
+  AIDIOP,Analogue input with digital input and output and PWM output

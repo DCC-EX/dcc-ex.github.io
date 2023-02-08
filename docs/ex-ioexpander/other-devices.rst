@@ -29,6 +29,11 @@ There are seven registers or instructions used in this procotol:
 - EXIORDAN = 0xE4 - Read an analogue input
 - EXIOWRD = 0xE5 - Send a digital write
 - EXIORDD = 0xE6 - Read a digital input
+- EXIOENAN = 0xE7 - Enable an analogue input
+- EXIOINITA = 0xE8 - Request/receive analogue pin mappings
+- EXIOPINS = 0xE9 - Request/receive buffer counts
+- EXIOWRAN = 0xEA - Send an analogue write (PWM)
+- EXIOERR = 0xEF - Error sent/received
 
 Device setup
 ------------

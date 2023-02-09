@@ -544,10 +544,12 @@ Turnouts/Points - Configuration
       Response (fail):  
   * - ``<T id SERVO vpin thrownPos closedPos profile>`` 
     - **Define servo turnout** |BR| 
-      Define turnout servo (PWM) on specified vpin. The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision). Note: Servos are not supported on the minimal HAL (Uno or Nano target). |BR| |BR|
-      Response (successful): |BR|
-      Response (fail):  
-  * - ``<T id VPIN vpin>`` 
+      Define turnout servo (PWM) on specified vpin. The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. |br| 
+      Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision). |br| 
+      Note: Servos are not supported on the minimal HAL (Uno or Nano target). |BR| |BR|
+      Response (successful): **<O>** |BR|
+      Response (fail):  **<X>**
+  * - ``<T id VPIN vpin>``
     - **Define VPIN turnout** |BR| 
       Define turnout output on specified vpin. This may be used for controlling Arduino digital output pins or pins on an I/O Extender. |BR| |BR|
       Response (successful): |BR|
@@ -639,11 +641,11 @@ EEPROM management
     - Description / Response 
   * - ``<E>``
     - **Store definitions to EEPROM** |BR| |BR|
-      Response (successful): |BR|
+      Response (successful): **<O>** |BR|
       Response (fail):  
   * - ``<e>``
     - **Erase ALL (turnouts, sensors, and outputs) from EEPROM** |BR| |BR|
-      Response (successful): |BR|
+      Response (successful): **<O>** |BR|
       Response (fail):  
   * - ``<D EEPROM>``
     - **Diagnostic dump eeprom contents** |BR| |BR|

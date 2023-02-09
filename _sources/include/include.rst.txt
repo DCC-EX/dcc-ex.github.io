@@ -143,7 +143,7 @@
       :class: image-product-logo-float-right
 ..
 .. |EX-IO-LOGO| image:: /_static/images/logos/product-logo-ex-ioexpander.png
-      :alt: EX-IOExpander
+      :alt: EX-FastClock
       :scale: 40%
       :class: image-product-logo-float-right
 ..

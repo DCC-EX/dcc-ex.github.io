@@ -1187,9 +1187,11 @@ Response (fail):</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrownPos</span> <span class="pre">closedPos</span> <span class="pre">profile&gt;</span></code></p></td>
 <td><p><strong>Define servo turnout</strong> <br />
-Define turnout servo (PWM) on specified vpin. The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision). Note: Servos are not supported on the minimal HAL (Uno or Nano target). <br /> <br />
-Response (successful): <br />
-Response (fail):</p></td>
+Define turnout servo (PWM) on specified vpin. The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. <br />
+Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision). <br />
+Note: Servos are not supported on the minimal HAL (Uno or Nano target). <br /> <br />
+Response (successful): <strong>&lt;O&gt;</strong> <br />
+Response (fail):  <strong>&lt;X&gt;</strong></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code></p></td>
 <td><p><strong>Define VPIN turnout</strong> <br />
@@ -1299,12 +1301,12 @@ Response (fail):</p></td>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code></p></td>
 <td><p><strong>Store definitions to EEPROM</strong> <br /> <br />
-Response (successful): <br />
+Response (successful): <strong>&lt;O&gt;</strong> <br />
 Response (fail):</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code></p></td>
 <td><p><strong>Erase ALL (turnouts, sensors, and outputs) from EEPROM</strong> <br /> <br />
-Response (successful): <br />
+Response (successful): <strong>&lt;O&gt;</strong> <br />
 Response (fail):</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EEPROM&gt;</span></code></p></td>

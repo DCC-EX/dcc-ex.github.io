@@ -511,18 +511,21 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#arduino-nano" id="id13">Arduino Nano</a></p></li>
-<li><p><a class="reference internal" href="#arduino-pro-mini" id="id14">Arduino Pro Mini</a></p></li>
-<li><p><a class="reference internal" href="#arduino-uno" id="id15">Arduino Uno</a></p></li>
-<li><p><a class="reference internal" href="#arduino-mega2560" id="id16">Arduino Mega2560</a></p></li>
-<li><p><a class="reference internal" href="#stmicroelectronics-nucleo-f411re" id="id17">STMicroelectronics NUCLEO-F411RE</a></p></li>
-<li><p><a class="reference internal" href="#stmicroelectronics-nucleo-f412zg" id="id18">STMicroelectronics NUCLEO-F412ZG</a></p></li>
-<li><p><a class="reference internal" href="#arduino-zero-or-samd-based-clone" id="id19">Arduino Zero (or SAMD based clone)</a></p></li>
-<li><p><a class="reference internal" href="#adding-new-devices" id="id20">Adding new devices</a></p>
+<li><p><a class="reference internal" href="#arduino-nano" id="id14">Arduino Nano</a></p></li>
+<li><p><a class="reference internal" href="#arduino-pro-mini" id="id15">Arduino Pro Mini</a></p></li>
+<li><p><a class="reference internal" href="#arduino-uno" id="id16">Arduino Uno</a></p></li>
+<li><p><a class="reference internal" href="#arduino-mega2560" id="id17">Arduino Mega2560</a></p></li>
+<li><p><a class="reference internal" href="#stmicroelectronics-nucleo-f411re" id="id18">STMicroelectronics NUCLEO-F411RE</a></p></li>
+<li><p><a class="reference internal" href="#stmicroelectronics-nucleo-f412zg" id="id19">STMicroelectronics NUCLEO-F412ZG</a></p></li>
+<li><p><a class="reference internal" href="#arduino-zero-or-samd-based-clone" id="id20">Arduino Zero (or SAMD based clone)</a></p></li>
+<li><p><a class="reference internal" href="#adding-new-devices" id="id21">Adding new devices</a></p>
 <ul>
-<li><p><a class="reference internal" href="#enabling-software-reboots" id="id21">Enabling software reboots</a></p></li>
-<li><p><a class="reference internal" href="#enabling-serial-input-output" id="id22">Enabling serial input/output</a></p></li>
-<li><p><a class="reference internal" href="#defining-the-device-and-pin-map-in-supporteddevices-h" id="id23">Defining the device and pin map in SupportedDevices.h</a></p></li>
+<li><p><a class="reference internal" href="#files-to-be-created-modified" id="id22">Files to be created/modified</a></p></li>
+<li><p><a class="reference internal" href="#enabling-software-reboots" id="id23">Enabling software reboots</a></p></li>
+<li><p><a class="reference internal" href="#enabling-serial-input-output-in-defines-h" id="id24">Enabling serial input/output in defines.h</a></p></li>
+<li><p><a class="reference internal" href="#defining-the-device-macros-in-defines-h" id="id25">Defining the device macros in defines.h</a></p></li>
+<li><p><a class="reference internal" href="#defining-the-device-type-and-pin-map-in-device-name-h" id="id26">Defining the device type and pin map in &lt;device_name&gt;.h</a></p></li>
+<li><p><a class="reference internal" href="#pin-capability-table" id="id27">Pin capability table</a></p></li>
 </ul>
 </li>
 </ul>
@@ -531,86 +534,145 @@
 <p>This page outlines the microcontrollers that are supported for use with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, including outlining the pins available for use.</p>
 <p>When uploading the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software, the device type is detected by the compiler in either the Arduino IDE or PlatformIO, so no configuration is necessary on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device itself (aside from the I<sup>2</sup>C address of course).</p>
 <p>All allocation of pins is done via the device driver (see <a class="reference internal" href="overview.html#ex-commandstation-device-driver"><span class="std std-ref">EX-CommandStation device driver</span></a>).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When configuring the device driver, all available pins must be accounted for as either digital or analogue pins, even if there is no intended use for every individual pin.</p>
-</div>
+<p>All Vpins outlined on this page assume use of the default starting Vpin of 800, so you will need to review the Vpin map displayed in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> serial console if using a different starting Vpin.</p>
 <section id="arduino-nano">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">Arduino Nano</a><a class="headerlink" href="#arduino-nano" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Arduino Nano</a><a class="headerlink" href="#arduino-nano" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="../_images/ex-ioexpander-nano.png"><img alt="EX-IOExpander on Arduino Nano" src="../_images/ex-ioexpander-nano.png" style="width: 590.35px; height: 225.05px;" /></a>
 <table class="command-table docutils align-default" id="id1">
-<caption><span class="caption-number">Table 21 </span><span class="caption-text">Arduino Nano pin allocations</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
-<thead>
-<tr class="row-odd"><th class="head stub"><p>Total pins 18</p></th>
-<th class="head"><p>Minimum</p></th>
-<th class="head"><p>Maximum</p></th>
-</tr>
-</thead>
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">Arduino Nano pin allocations</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <tbody>
-<tr class="row-even"><th class="stub"><p>Digital pins</p></th>
-<td><p>12</p></td>
+<tr class="row-odd"><th class="stub"><p>Total pins</p></th>
+<td><p>18</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Digital capable pins</p></th>
 <td><p>16</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p>Analogue pins</p></th>
-<td><p>2</p></td>
+<tr class="row-odd"><th class="stub"><p>Analogue capable pins</p></th>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>PWM capable pins</p></th>
 <td><p>6</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On Arduino Nano, the additional analogue pins A6/7 are analogue only can cannot be used as digital inputs or outputs.</p>
-</div>
 <table class="docutils align-default" id="id2">
-<caption><span class="caption-number">Table 22 </span><span class="caption-text">Arduino Nano and Pro Mini EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 24 </span><span class="caption-text">Arduino Nano and Pro Mini EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Vpin</p></th>
+<th class="head"><p>Pin</p></th>
+<th class="head"><p>Digital</p></th>
+<th class="head"><p>Analogue</p></th>
+<th class="head"><p>PWM</p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>800</p></td>
-<td><p>801</p></td>
-<td><p>802</p></td>
-<td><p>803</p></td>
-<td><p>804</p></td>
-<td><p>805</p></td>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D2</p></td>
-<td><p>D3</p></td>
-<td><p>D4</p></td>
-<td><p>D5</p></td>
-<td><p>D6</p></td>
-<td><p>D7</p></td>
+<tr class="row-odd"><td><p>801</p></td>
+<td><p>3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>806</p></td>
-<td><p>807</p></td>
-<td><p>808</p></td>
-<td><p>809</p></td>
-<td><p>810</p></td>
-<td><p>811</p></td>
+<tr class="row-even"><td><p>802</p></td>
+<td><p>4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D8</p></td>
-<td><p>D9</p></td>
-<td><p>D10</p></td>
-<td><p>D11</p></td>
-<td><p>D12</p></td>
-<td><p>D13</p></td>
+<tr class="row-odd"><td><p>803</p></td>
+<td><p>5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>812</p></td>
-<td><p>813</p></td>
-<td><p>814</p></td>
-<td><p>815</p></td>
-<td><p>816</p></td>
-<td><p>817</p></td>
+<tr class="row-even"><td><p>804</p></td>
+<td><p>6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>Analogue Pins</p></th>
+<tr class="row-odd"><td><p>805</p></td>
+<td><p>7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>806</p></td>
+<td><p>8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>807</p></td>
+<td><p>9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>808</p></td>
+<td><p>10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>809</p></td>
+<td><p>11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>810</p></td>
+<td><p>12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>811</p></td>
+<td><p>13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>812</p></td>
 <td><p>A0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>813</p></td>
 <td><p>A1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>814</p></td>
 <td><p>A2</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>815</p></td>
 <td><p>A3</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>816</p></td>
 <td><p>A6</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>817</p></td>
 <td><p>A7</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
 </tr>
 </tbody>
 </table>
@@ -619,7 +681,7 @@
 </div>
 </section>
 <section id="arduino-pro-mini">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Arduino Pro Mini</a><a class="headerlink" href="#arduino-pro-mini" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Arduino Pro Mini</a><a class="headerlink" href="#arduino-pro-mini" title="Permalink to this heading"></a></h2>
 <p>The Arduino Pro Mini comes in two variations; a 3.3V running at 8MHz, and a 5V running at 16MHz.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -631,77 +693,131 @@
 </div>
 </section>
 <section id="arduino-uno">
-<h2><a class="toc-backref" href="#id15" role="doc-backlink">Arduino Uno</a><a class="headerlink" href="#arduino-uno" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Arduino Uno</a><a class="headerlink" href="#arduino-uno" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="../_images/ex-ioexpander-uno.png"><img alt="EX-IOExpander on Arduino Uno" src="../_images/ex-ioexpander-uno.png" style="width: 607.8000000000001px; height: 232.4px;" /></a>
 <table class="command-table docutils align-default" id="id3">
-<caption><span class="caption-number">Table 23 </span><span class="caption-text">Arduino Uno pin allocations</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
-<thead>
-<tr class="row-odd"><th class="head stub"><p>Total pins 16</p></th>
-<th class="head"><p>Minimum</p></th>
-<th class="head"><p>Maximum</p></th>
-</tr>
-</thead>
+<caption><span class="caption-number">Table 25 </span><span class="caption-text">Arduino Uno pin allocations</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
 <tbody>
-<tr class="row-even"><th class="stub"><p>Digital pins</p></th>
-<td><p>12</p></td>
+<tr class="row-odd"><th class="stub"><p>Total pins</p></th>
 <td><p>16</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p>Analogue pins</p></th>
-<td><p>0</p></td>
+<tr class="row-even"><th class="stub"><p>Digital capable pins</p></th>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Analogue capable pins</p></th>
 <td><p>4</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>PWM capable pins</p></th>
+<td><p>6</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id4">
-<caption><span class="caption-number">Table 24 </span><span class="caption-text">Arduino Uno EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 26 </span><span class="caption-text">Arduino Uno EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Vpin</p></th>
+<th class="head"><p>Pin</p></th>
+<th class="head"><p>Digital</p></th>
+<th class="head"><p>Analogue</p></th>
+<th class="head"><p>PWM</p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>800</p></td>
-<td><p>801</p></td>
-<td><p>802</p></td>
-<td><p>803</p></td>
-<td><p>804</p></td>
-<td><p>805</p></td>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D2</p></td>
-<td><p>D3</p></td>
-<td><p>D4</p></td>
-<td><p>D5</p></td>
-<td><p>D6</p></td>
-<td><p>D7</p></td>
+<tr class="row-odd"><td><p>801</p></td>
+<td><p>3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>806</p></td>
-<td><p>807</p></td>
-<td><p>808</p></td>
-<td><p>809</p></td>
-<td><p>810</p></td>
-<td><p>811</p></td>
+<tr class="row-even"><td><p>802</p></td>
+<td><p>4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D8</p></td>
-<td><p>D9</p></td>
-<td><p>D10</p></td>
-<td><p>D11</p></td>
-<td><p>D12</p></td>
-<td><p>D13</p></td>
+<tr class="row-odd"><td><p>803</p></td>
+<td><p>5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>812</p></td>
-<td><p>813</p></td>
-<td><p>814</p></td>
-<td><p>815</p></td>
-<td></td>
-<td></td>
+<tr class="row-even"><td><p>804</p></td>
+<td><p>6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>Analogue Pins</p></th>
+<tr class="row-odd"><td><p>805</p></td>
+<td><p>7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>806</p></td>
+<td><p>8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>807</p></td>
+<td><p>9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>808</p></td>
+<td><p>10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>809</p></td>
+<td><p>11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>810</p></td>
+<td><p>12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>811</p></td>
+<td><p>13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>812</p></td>
 <td><p>A0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>813</p></td>
 <td><p>A1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>814</p></td>
 <td><p>A2</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>815</p></td>
 <td><p>A3</p></td>
-<td></td>
-<td></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
 </tr>
 </tbody>
 </table>
@@ -710,197 +826,381 @@
 </div>
 </section>
 <section id="arduino-mega2560">
-<h2><a class="toc-backref" href="#id16" role="doc-backlink">Arduino Mega2560</a><a class="headerlink" href="#arduino-mega2560" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Arduino Mega2560</a><a class="headerlink" href="#arduino-mega2560" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="../_images/ex-ioexpander-mega.png"><img alt="EX-IOExpander on Arduino Mega2560" src="../_images/ex-ioexpander-mega.png" style="width: 701.2px; height: 250.55px;" /></a>
 <table class="command-table docutils align-default" id="id5">
-<caption><span class="caption-number">Table 25 </span><span class="caption-text">Arduino Mega pin allocations</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
-<thead>
-<tr class="row-odd"><th class="head stub"><p>Total pins 62</p></th>
-<th class="head"><p>Minimum</p></th>
-<th class="head"><p>Maximum</p></th>
-</tr>
-</thead>
+<caption><span class="caption-number">Table 27 </span><span class="caption-text">Arduino Mega pin allocations</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
 <tbody>
+<tr class="row-odd"><th class="stub"><p>Total pins</p></th>
+<td><p>62</p></td>
+</tr>
 <tr class="row-even"><th class="stub"><p>Digital pins</p></th>
-<td><p>46</p></td>
 <td><p>62</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p>Analogue pins</p></th>
-<td><p>0</p></td>
 <td><p>16</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>PWM pins</p></th>
+<td><p>12</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id6">
-<caption><span class="caption-number">Table 26 </span><span class="caption-text">Arduino Mega EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 28 </span><span class="caption-text">Arduino Mega EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Vpin</p></th>
+<th class="head"><p>Pin</p></th>
+<th class="head"><p>Digital</p></th>
+<th class="head"><p>Analogue</p></th>
+<th class="head"><p>PWM</p></th>
+<th class="head"><p>Vpin</p></th>
+<th class="head"><p>Pin</p></th>
+<th class="head"><p>Digital</p></th>
+<th class="head"><p>Analogue</p></th>
+<th class="head"><p>PWM</p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>800</p></td>
-<td><p>801</p></td>
-<td><p>802</p></td>
-<td><p>803</p></td>
-<td><p>804</p></td>
-<td><p>805</p></td>
-<td><p>806</p></td>
-<td><p>807</p></td>
-<td><p>808</p></td>
-<td><p>809</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D2</p></td>
-<td><p>D3</p></td>
-<td><p>D4</p></td>
-<td><p>D5</p></td>
-<td><p>D6</p></td>
-<td><p>D7</p></td>
-<td><p>D8</p></td>
-<td><p>D9</p></td>
-<td><p>D10</p></td>
-<td><p>D11</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>810</p></td>
-<td><p>811</p></td>
-<td><p>812</p></td>
-<td><p>813</p></td>
-<td><p>814</p></td>
-<td><p>815</p></td>
-<td><p>816</p></td>
-<td><p>817</p></td>
-<td><p>818</p></td>
-<td><p>819</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D12</p></td>
-<td><p>D13</p></td>
-<td><p>D14</p></td>
-<td><p>D15</p></td>
-<td><p>D16</p></td>
-<td><p>D17</p></td>
-<td><p>D18</p></td>
-<td><p>D19</p></td>
-<td><p>D22</p></td>
-<td><p>D23</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>820</p></td>
-<td><p>821</p></td>
-<td><p>822</p></td>
-<td><p>823</p></td>
-<td><p>824</p></td>
-<td><p>825</p></td>
-<td><p>826</p></td>
-<td><p>827</p></td>
-<td><p>828</p></td>
-<td><p>829</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D24</p></td>
-<td><p>D25</p></td>
-<td><p>D26</p></td>
-<td><p>D27</p></td>
-<td><p>D28</p></td>
-<td><p>D29</p></td>
-<td><p>D30</p></td>
-<td><p>D31</p></td>
-<td><p>D32</p></td>
-<td><p>D33</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>830</p></td>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>831</p></td>
+<td><p>35</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>801</p></td>
+<td><p>3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>832</p></td>
+<td><p>36</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>802</p></td>
+<td><p>4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>833</p></td>
+<td><p>37</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>803</p></td>
+<td><p>5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>834</p></td>
+<td><p>38</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>804</p></td>
+<td><p>6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>835</p></td>
+<td><p>39</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>805</p></td>
+<td><p>7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>836</p></td>
+<td><p>40</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>806</p></td>
+<td><p>8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>837</p></td>
+<td><p>41</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>807</p></td>
+<td><p>9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>838</p></td>
+<td><p>42</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>808</p></td>
+<td><p>10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>839</p></td>
+<td><p>43</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D34</p></td>
-<td><p>D35</p></td>
-<td><p>D36</p></td>
-<td><p>D37</p></td>
-<td><p>D38</p></td>
-<td><p>D39</p></td>
-<td><p>D40</p></td>
-<td><p>D41</p></td>
-<td><p>D42</p></td>
-<td><p>D43</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
+<tr class="row-odd"><td><p>809</p></td>
+<td><p>11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>840</p></td>
+<td><p>44</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>810</p></td>
+<td><p>12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>841</p></td>
+<td><p>45</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>811</p></td>
+<td><p>13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
 <td><p>842</p></td>
+<td><p>46</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>812</p></td>
+<td><p>14</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 <td><p>843</p></td>
+<td><p>47</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>813</p></td>
+<td><p>15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 <td><p>844</p></td>
+<td><p>48</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>814</p></td>
+<td><p>16</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 <td><p>845</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><p>49</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>Digital Pins</p></th>
-<td><p>D44</p></td>
-<td><p>D45</p></td>
-<td><p>D46</p></td>
-<td><p>D47</p></td>
-<td><p>D48</p></td>
-<td><p>D49</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
+<tr class="row-odd"><td><p>815</p></td>
+<td><p>17</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 <td><p>846</p></td>
-<td><p>847</p></td>
-<td><p>848</p></td>
-<td><p>849</p></td>
-<td><p>850</p></td>
-<td><p>851</p></td>
-<td><p>852</p></td>
-<td><p>853</p></td>
-<td><p>854</p></td>
-<td><p>855</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>Analogue Pins</p></th>
 <td><p>A0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>816</p></td>
+<td><p>18</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>847</p></td>
 <td><p>A1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>817</p></td>
+<td><p>19</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>848</p></td>
 <td><p>A2</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>818</p></td>
+<td><p>22</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>849</p></td>
 <td><p>A3</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>819</p></td>
+<td><p>23</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>850</p></td>
 <td><p>A4</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>820</p></td>
+<td><p>24</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>851</p></td>
 <td><p>A5</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>821</p></td>
+<td><p>25</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>852</p></td>
 <td><p>A6</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>822</p></td>
+<td><p>26</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>853</p></td>
 <td><p>A7</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>823</p></td>
+<td><p>27</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>854</p></td>
 <td><p>A8</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>824</p></td>
+<td><p>28</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>855</p></td>
 <td><p>A9</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
+<tr class="row-odd"><td><p>825</p></td>
+<td><p>29</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 <td><p>856</p></td>
-<td><p>857</p></td>
-<td><p>858</p></td>
-<td><p>859</p></td>
-<td><p>860</p></td>
-<td><p>861</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>Analogue Pins</p></th>
 <td><p>A10</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>826</p></td>
+<td><p>30</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>857</p></td>
 <td><p>A11</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>827</p></td>
+<td><p>31</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>858</p></td>
 <td><p>A12</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>828</p></td>
+<td><p>32</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>859</p></td>
 <td><p>A13</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>829</p></td>
+<td><p>33</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>860</p></td>
 <td><p>A14</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>830</p></td>
+<td><p>34</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>861</p></td>
 <td><p>A15</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
 </tr>
 </tbody>
 </table>
@@ -909,7 +1209,7 @@
 </div>
 </section>
 <section id="stmicroelectronics-nucleo-f411re">
-<h2><a class="toc-backref" href="#id17" role="doc-backlink">STMicroelectronics NUCLEO-F411RE</a><a class="headerlink" href="#stmicroelectronics-nucleo-f411re" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">STMicroelectronics NUCLEO-F411RE</a><a class="headerlink" href="#stmicroelectronics-nucleo-f411re" title="Permalink to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Support for the F411RE is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.</p>
@@ -923,146 +1223,255 @@
 <p>In addition, PA5 is the green LED.</p>
 </div>
 <table class="command-table docutils align-default" id="id7">
-<caption><span class="caption-number">Table 27 </span><span class="caption-text">NUCLEO-F411RE pin allocations</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
-<thead>
-<tr class="row-odd"><th class="head stub"><p>Total pins 40</p></th>
-<th class="head"><p>Minimum</p></th>
-<th class="head"><p>Maximum</p></th>
-</tr>
-</thead>
+<caption><span class="caption-number">Table 29 </span><span class="caption-text">NUCLEO-F411RE pin allocations</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
 <tbody>
+<tr class="row-odd"><th class="stub"><p>Total pins</p></th>
+<td><p>40</p></td>
+</tr>
 <tr class="row-even"><th class="stub"><p>Digital pins</p></th>
-<td><p>26</p></td>
 <td><p>40</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p>Analogue pins</p></th>
-<td><p>0</p></td>
 <td><p>14</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>PWM pins</p></th>
+<td><p>25</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id8">
-<caption><span class="caption-number">Table 28 </span><span class="caption-text">F411RE EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 30 </span><span class="caption-text">F411RE EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
 <tbody>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>800</p></td>
-<td><p>801</p></td>
-<td><p>802</p></td>
-<td><p>803</p></td>
-<td><p>804</p></td>
-<td><p>805</p></td>
-<td><p>806</p></td>
-<td></td>
-<td></td>
-<td></td>
+<tr class="row-odd"><th class="stub"><p>Vpin</p></th>
+<td><p>Pin</p></td>
+<td><p>Digital</p></td>
+<td><p>Analogue</p></td>
+<td><p>PWM</p></td>
+<td><p>Vpin</p></td>
+<td><p>Pin</p></td>
+<td><p>Digital</p></td>
+<td><p>Analogue</p></td>
+<td><p>PWM</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>CN7 Digital Pins</p></th>
+<tr class="row-even"><th class="stub"><p>800</p></th>
 <td><p>PC10</p></td>
-<td><p>PC11</p></td>
-<td><p>PC12</p></td>
-<td><p>PD2</p></td>
-<td><p>PA15</p></td>
-<td><p>PB7</p></td>
-<td><p>PC13</p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>807</p></td>
-<td><p>808</p></td>
-<td><p>809</p></td>
-<td><p>810</p></td>
-<td><p>811</p></td>
-<td><p>812</p></td>
-<td><p>813</p></td>
-<td><p>814</p></td>
-<td><p>815</p></td>
-<td><p>816</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN10 Digital Pins</p></th>
-<td><p>PC9</p></td>
-<td><p>PC8</p></td>
-<td><p>PC6</p></td>
-<td><p>PA12</p></td>
-<td><p>PA11</p></td>
-<td><p>PB12</p></td>
-<td><p>PB6</p></td>
-<td><p>PC7</p></td>
-<td><p>PA9</p></td>
-<td><p>PB2</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>817</p></td>
-<td><p>818</p></td>
-<td><p>819</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 <td><p>820</p></td>
+<td><p>PA12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>801</p></th>
+<td><p>PC11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 <td><p>821</p></td>
-<td><p>822</p></td>
-<td><p>823</p></td>
-<td><p>824</p></td>
-<td><p>825</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN10 Digital Pins</p></th>
-<td><p>PA8</p></td>
-<td><p>PB10</p></td>
-<td><p>PB15</p></td>
-<td><p>PB4</p></td>
-<td><p>PB14</p></td>
-<td><p>PB5</p></td>
-<td><p>PB13</p></td>
-<td><p>PB3</p></td>
-<td><p>PA10</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>826</p></td>
-<td><p>827</p></td>
-<td><p>828</p></td>
-<td><p>829</p></td>
-<td><p>830</p></td>
-<td><p>831</p></td>
-<td><p>832</p></td>
-<td><p>833</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN7 Analogue Pins</p></th>
-<td><p>PA0</p></td>
-<td><p>PA1</p></td>
-<td><p>PA4</p></td>
-<td><p>PB0</p></td>
-<td><p>PC2</p></td>
-<td><p>PC1</p></td>
-<td><p>PC3</p></td>
-<td><p>PC0</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>834</p></td>
-<td><p>835</p></td>
-<td><p>836</p></td>
-<td><p>837</p></td>
-<td><p>838</p></td>
-<td><p>839</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN10 Analogue Pins</p></th>
-<td><p>PC5</p></td>
-<td><p>PA5</p></td>
 <td><p>PA6</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>802</p></th>
+<td><p>PC12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>822</p></td>
+<td><p>PA11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>803</p></th>
+<td><p>PD2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>823</p></td>
 <td><p>PA7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>804</p></th>
+<td><p>PA15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>824</p></td>
+<td><p>PB12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>805</p></th>
+<td><p>PB7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>825</p></td>
+<td><p>PB6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>806</p></th>
+<td><p>PC15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>826</p></td>
+<td><p>PC7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>807</p></th>
+<td><p>PA0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>827</p></td>
+<td><p>PA9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>808</p></th>
+<td><p>PA1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>828</p></td>
+<td><p>PB2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>809</p></th>
+<td><p>PA4</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>829</p></td>
+<td><p>PA8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>810</p></th>
+<td><p>PB0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>830</p></td>
 <td><p>PB1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>811</p></th>
+<td><p>PC2</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>831</p></td>
+<td><p>PB10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>812</p></th>
+<td><p>PC1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>832</p></td>
+<td><p>PB15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>813</p></th>
+<td><p>PC3</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>833</p></td>
+<td><p>PB4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>814</p></th>
+<td><p>PC0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>834</p></td>
+<td><p>PB14</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>815</p></th>
+<td><p>PC9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>835</p></td>
+<td><p>PB5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>816</p></th>
+<td><p>PC8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>836</p></td>
+<td><p>PB13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>817</p></th>
+<td><p>PC6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>837</p></td>
+<td><p>PB3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>818</p></th>
+<td><p>PC5</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>838</p></td>
+<td><p>PA10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>819</p></th>
+<td><p>PA5</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>839</p></td>
 <td><p>PC4</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
 </tr>
 </tbody>
 </table>
@@ -1071,7 +1480,7 @@
 </div>
 </section>
 <section id="stmicroelectronics-nucleo-f412zg">
-<h2><a class="toc-backref" href="#id18" role="doc-backlink">STMicroelectronics NUCLEO-F412ZG</a><a class="headerlink" href="#stmicroelectronics-nucleo-f412zg" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">STMicroelectronics NUCLEO-F412ZG</a><a class="headerlink" href="#stmicroelectronics-nucleo-f412zg" title="Permalink to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Support for the F412ZG is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.</p>
@@ -1084,288 +1493,572 @@
 <p>In addition, PB0 is the green LED, PB7 is the blue LED, and PB14 in the red LED.</p>
 </div>
 <table class="command-table docutils align-default" id="id9">
-<caption><span class="caption-number">Table 29 </span><span class="caption-text">NUCLEO-F412ZG pin allocations</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
-<thead>
-<tr class="row-odd"><th class="head stub"><p>Total pins 97</p></th>
-<th class="head"><p>Minimum</p></th>
-<th class="head"><p>Maximum</p></th>
-</tr>
-</thead>
+<caption><span class="caption-number">Table 31 </span><span class="caption-text">NUCLEO-F412ZG pin allocations</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
 <tbody>
+<tr class="row-odd"><th class="stub"><p>Total pins 97</p></th>
+<td><p>97</p></td>
+</tr>
 <tr class="row-even"><th class="stub"><p>Digital pins</p></th>
-<td><p>81</p></td>
 <td><p>97</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p>Analogue pins</p></th>
-<td><p>0</p></td>
 <td><p>16</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>PWM pins</p></th>
+<td><p>40</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default" id="id10">
-<caption><span class="caption-number">Table 30 </span><span class="caption-text">F412ZG EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 32 </span><span class="caption-text">F412ZG EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
 <tbody>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>800</p></td>
-<td><p>801</p></td>
-<td><p>802</p></td>
-<td><p>803</p></td>
-<td><p>804</p></td>
-<td><p>805</p></td>
-<td><p>806</p></td>
-<td><p>807</p></td>
-<td><p>808</p></td>
-<td><p>809</p></td>
+<tr class="row-odd"><th class="stub"><p>Vpin</p></th>
+<td><p>Pin</p></td>
+<td><p>Digital</p></td>
+<td><p>Analogue</p></td>
+<td><p>PWM</p></td>
+<td><p>Vpin</p></td>
+<td><p>Pin</p></td>
+<td><p>Digital</p></td>
+<td><p>Analogue</p></td>
+<td><p>PWM</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p>CN11 Digital Pins</p></th>
+<tr class="row-even"><th class="stub"><p>800</p></th>
 <td><p>PC10</p></td>
-<td><p>PC11</p></td>
-<td><p>PC12</p></td>
-<td><p>PD2</p></td>
-<td><p>PF6</p></td>
-<td><p>PF7</p></td>
-<td><p>PA15</p></td>
-<td><p>PB7</p></td>
-<td><p>PC13</p></td>
-<td><p>PD4</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>810</p></td>
-<td><p>811</p></td>
-<td><p>812</p></td>
-<td><p>813</p></td>
-<td><p>814</p></td>
-<td><p>815</p></td>
-<td><p>816</p></td>
-<td><p>817</p></td>
-<td><p>818</p></td>
-<td><p>819</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN11 Digital Pins</p></th>
-<td><p>PD3</p></td>
-<td><p>PD5</p></td>
-<td><p>PG2</p></td>
-<td><p>PD6</p></td>
-<td><p>PG3</p></td>
-<td><p>PD7</p></td>
-<td><p>PE2</p></td>
-<td><p>PE3</p></td>
-<td><p>PE4</p></td>
-<td><p>PE5</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>820</p></td>
-<td><p>821</p></td>
-<td><p>822</p></td>
-<td><p>823</p></td>
-<td><p>824</p></td>
-<td><p>825</p></td>
-<td><p>826</p></td>
-<td><p>827</p></td>
-<td><p>828</p></td>
-<td><p>829</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN11 Digital Pins</p></th>
-<td><p>PF1</p></td>
-<td><p>PF2</p></td>
-<td><p>PF0</p></td>
-<td><p>PF8</p></td>
-<td><p>PD1</p></td>
-<td><p>PF9</p></td>
-<td><p>PD0</p></td>
-<td><p>PG1</p></td>
-<td><p>PG0</p></td>
-<td><p>PE1</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>830</p></td>
-<td><p>831</p></td>
-<td><p>832</p></td>
-<td><p>833</p></td>
-<td><p>834</p></td>
-<td><p>835</p></td>
-<td><p>836</p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN11 Digital Pins</p></th>
-<td><p>PE6</p></td>
-<td><p>PG9</p></td>
-<td><p>PG15</p></td>
-<td><p>PG12</p></td>
-<td><p>PG10</p></td>
-<td><p>PG13</p></td>
-<td><p>PG11</p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>837</p></td>
-<td><p>838</p></td>
-<td><p>839</p></td>
-<td><p>840</p></td>
-<td><p>841</p></td>
-<td><p>842</p></td>
-<td><p>843</p></td>
-<td><p>844</p></td>
-<td><p>845</p></td>
-<td><p>846</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN12 Digital Pins</p></th>
-<td><p>PC9</p></td>
-<td><p>PC8</p></td>
-<td><p>PC6</p></td>
-<td><p>PB12</p></td>
-<td><p>PB6</p></td>
-<td><p>PB11</p></td>
-<td><p>PC7</p></td>
-<td><p>PB2</p></td>
-<td><p>PB10</p></td>
-<td><p>PB15</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>847</p></td>
-<td><p>848</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
 <td><p>849</p></td>
-<td><p>850</p></td>
-<td><p>851</p></td>
-<td><p>852</p></td>
-<td><p>853</p></td>
-<td><p>854</p></td>
-<td><p>855</p></td>
-<td><p>856</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN12 Digital Pins</p></th>
-<td><p>PB4</p></td>
-<td><p>PB14</p></td>
-<td><p>PB5</p></td>
-<td><p>PB13</p></td>
-<td><p>PB3</p></td>
-<td><p>PF5</p></td>
-<td><p>PF4</p></td>
-<td><p>PE8</p></td>
-<td><p>PD13</p></td>
-<td><p>PF10</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>857</p></td>
-<td><p>858</p></td>
-<td><p>859</p></td>
-<td><p>860</p></td>
-<td><p>861</p></td>
-<td><p>862</p></td>
-<td><p>863</p></td>
-<td><p>864</p></td>
-<td><p>865</p></td>
-<td><p>866</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN12 Digital Pins</p></th>
-<td><p>PD12</p></td>
-<td><p>PE7</p></td>
-<td><p>PD11</p></td>
-<td><p>PD14</p></td>
-<td><p>PE10</p></td>
-<td><p>PD15</p></td>
-<td><p>PE12</p></td>
-<td><p>PF14</p></td>
-<td><p>PE14</p></td>
-<td><p>PE9</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>867</p></td>
-<td><p>868</p></td>
-<td><p>869</p></td>
-<td><p>870</p></td>
-<td><p>871</p></td>
-<td><p>872</p></td>
-<td><p>873</p></td>
-<td><p>874</p></td>
-<td><p>875</p></td>
-<td><p>876</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN12 Digital Pins</p></th>
-<td><p>PE15</p></td>
-<td><p>PE13</p></td>
-<td><p>PE11</p></td>
-<td><p>PF13</p></td>
-<td><p>PF3</p></td>
-<td><p>PF12</p></td>
-<td><p>PF15</p></td>
-<td><p>PG14</p></td>
-<td><p>PF11</p></td>
-<td><p>PE0</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>877</p></td>
-<td><p>878</p></td>
-<td><p>879</p></td>
-<td><p>880</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN12 Digital Pins</p></th>
-<td><p>PD10</p></td>
-<td><p>PG8</p></td>
-<td><p>PG5</p></td>
-<td><p>PG4</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>881</p></td>
-<td><p>882</p></td>
-<td><p>883</p></td>
-<td><p>884</p></td>
-<td><p>885</p></td>
-<td><p>886</p></td>
-<td><p>887</p></td>
-<td><p>888</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN11 Analogue Pins</p></th>
-<td><p>PA0</p></td>
-<td><p>PA1</p></td>
-<td><p>PA4</p></td>
-<td><p>PB0</p></td>
-<td><p>PC2</p></td>
-<td><p>PC1</p></td>
-<td><p>PC3</p></td>
-<td><p>PC0</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Vpins</p></th>
-<td><p>889</p></td>
-<td><p>890</p></td>
-<td><p>891</p></td>
-<td><p>892</p></td>
-<td><p>893</p></td>
-<td><p>894</p></td>
-<td><p>895</p></td>
-<td><p>896</p></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>CN12 Analogue Pins</p></th>
-<td><p>PC5</p></td>
 <td><p>PA5</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>801</p></th>
+<td><p>PC11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>850</p></td>
 <td><p>PA6</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>802</p></th>
+<td><p>PC12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>851</p></td>
 <td><p>PA7</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>803</p></th>
+<td><p>PD2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>852</p></td>
+<td><p>PB12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>804</p></th>
+<td><p>PF6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>853</p></td>
+<td><p>PB6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>805</p></th>
+<td><p>PF7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>854</p></td>
+<td><p>PB11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>806</p></th>
+<td><p>PA15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>855</p></td>
+<td><p>PC7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>807</p></th>
+<td><p>PB7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>856</p></td>
+<td><p>PB2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>808</p></th>
+<td><p>PC13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>857</p></td>
 <td><p>PB1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>809</p></th>
+<td><p>PA0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>858</p></td>
+<td><p>PB10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>810</p></th>
+<td><p>PA1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>859</p></td>
+<td><p>PB15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>811</p></th>
+<td><p>PA4</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>860</p></td>
+<td><p>PB4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>812</p></th>
+<td><p>PB0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>861</p></td>
+<td><p>PB14</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>813</p></th>
+<td><p>PC2</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>862</p></td>
+<td><p>PB5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>814</p></th>
+<td><p>PC1</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>863</p></td>
+<td><p>PB13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>815</p></th>
+<td><p>PC3</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>864</p></td>
+<td><p>PB3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>816</p></th>
+<td><p>PC0</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>865</p></td>
 <td><p>PC4</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>817</p></th>
+<td><p>PD4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>866</p></td>
 <td><p>PA2</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>818</p></th>
+<td><p>PD3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>867</p></td>
+<td><p>PF5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>819</p></th>
+<td><p>PD5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>868</p></td>
 <td><p>PA3</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>820</p></th>
+<td><p>PG2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>869</p></td>
+<td><p>PF4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>821</p></th>
+<td><p>PD6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>870</p></td>
+<td><p>PE8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>822</p></th>
+<td><p>PG3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>871</p></td>
+<td><p>PD13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>823</p></th>
+<td><p>PD7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>872</p></td>
+<td><p>PF10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>824</p></th>
+<td><p>PE2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>873</p></td>
+<td><p>PD12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>825</p></th>
+<td><p>PE3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>874</p></td>
+<td><p>PE7</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>826</p></th>
+<td><p>PE4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>875</p></td>
+<td><p>PD11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>827</p></th>
+<td><p>PE5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>876</p></td>
+<td><p>PD14</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>828</p></th>
+<td><p>PF1</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>877</p></td>
+<td><p>PE10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>829</p></th>
+<td><p>PF2</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>878</p></td>
+<td><p>PD15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>830</p></th>
+<td><p>PF0</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>879</p></td>
+<td><p>PE12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>831</p></th>
+<td><p>PF8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>880</p></td>
+<td><p>PF14</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>832</p></th>
+<td><p>PD1</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>881</p></td>
+<td><p>PE14</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>833</p></th>
+<td><p>PF9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>882</p></td>
+<td><p>PE9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>834</p></th>
+<td><p>PD0</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>883</p></td>
+<td><p>PE15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>835</p></th>
+<td><p>PG1</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>884</p></td>
+<td><p>PE13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>836</p></th>
+<td><p>PG0</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>885</p></td>
+<td><p>PE11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>837</p></th>
+<td><p>PE1</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>886</p></td>
+<td><p>PF13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>838</p></th>
+<td><p>PE6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>887</p></td>
+<td><p>PF3</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>839</p></th>
+<td><p>PG9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>888</p></td>
+<td><p>PF12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>840</p></th>
+<td><p>PG15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>889</p></td>
+<td><p>PF15</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>841</p></th>
+<td><p>PG12</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>890</p></td>
+<td><p>PG14</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>842</p></th>
+<td><p>PG10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>891</p></td>
+<td><p>PF11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>843</p></th>
+<td><p>PG13</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>892</p></td>
+<td><p>PE0</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>844</p></th>
+<td><p>PG11</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>893</p></td>
+<td><p>PD10</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>845</p></th>
+<td><p>PC9</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>894</p></td>
+<td><p>PG8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>846</p></th>
+<td><p>PC8</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>895</p></td>
+<td><p>PG5</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>847</p></th>
+<td><p>PC6</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>896</p></td>
+<td><p>PG4</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>848</p></th>
+<td><p>PC5</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1376,14 +2069,14 @@
 </div>
 </section>
 <section id="arduino-zero-or-samd-based-clone">
-<h2><a class="toc-backref" href="#id19" role="doc-backlink">Arduino Zero (or SAMD based clone)</a><a class="headerlink" href="#arduino-zero-or-samd-based-clone" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Arduino Zero (or SAMD based clone)</a><a class="headerlink" href="#arduino-zero-or-samd-based-clone" title="Permalink to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The Arduino Zero (and SAMD based clones) are 3v3 only and <strong>are not 5V tolerant</strong>.</p>
 <p>Support for the Arduino Zero (or other SAMD clones) is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.</p>
 </div>
 <table class="command-table docutils align-default" id="id11">
-<caption><span class="caption-number">Table 31 </span><span class="caption-text">Arduino Zero pin allocations</span><a class="headerlink" href="#id11" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 33 </span><span class="caption-text">Arduino Zero pin allocations</span><a class="headerlink" href="#id11" title="Permalink to this table"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head stub"><p>Total pins 27</p></th>
 <th class="head"><p>Minimum</p></th>
@@ -1402,7 +2095,7 @@
 </tbody>
 </table>
 <table class="docutils align-default" id="id12">
-<caption><span class="caption-number">Table 32 </span><span class="caption-text">Arduino Zero EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id12" title="Permalink to this table"></a></caption>
+<caption><span class="caption-number">Table 34 </span><span class="caption-text">Arduino Zero EX-IOExpander pin map at Vpin 800</span><a class="headerlink" href="#id12" title="Permalink to this table"></a></caption>
 <tbody>
 <tr class="row-odd"><th class="stub"><p>Vpins</p></th>
 <td><p>800</p></td>
@@ -1491,74 +2184,158 @@
 </div>
 </section>
 <section id="adding-new-devices">
-<h2><a class="toc-backref" href="#id20" role="doc-backlink">Adding new devices</a><a class="headerlink" href="#adding-new-devices" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Adding new devices</a><a class="headerlink" href="#adding-new-devices" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>When considering adding new devices to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, be sure to take into account whether they are 5V or 3.3V devices, and whether their I/O and I<sup>2</sup>C pins are 5V tolerant if they are 3.3V devices. New generation microcontrollers tend to be 3.3V, and some have 5V tolerant I/O pins (eg. STM32 Nucleo), but some are not 5V tolerant (eg. SAMD).</p>
 <p>To connect 3.3V devices to a 5V <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, they need to either be 5V tolerant, or you will need to use a level shifter to avoid letting the magic smoke out.</p>
 </div>
-<p>Adding new devices to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software is fairly straight forward, and only requires additional information in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software itself, with no changes required to the device driver loaded in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
-<p>In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to specify how the Vpins defined in the device driver map to the physical pins of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device.</p>
+<p>Adding new devices to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software only requires additional information in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software itself, with no changes required to the device driver loaded in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to define the pins available for use on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, and define the capabilities available for each pin.</p>
 <p>For example, the AVR series (Uno, Mega, Nano) have the architure or platform macro defined as “ARDUINO_ARCH_AVR”, with the Nano having the variant or board specific macro “ARDUINO_AVR_NANO”, and there is a pin map defined that maps to this macro definition.</p>
-<section id="enabling-software-reboots">
-<h3><a class="toc-backref" href="#id21" role="doc-backlink">Enabling software reboots</a><a class="headerlink" href="#enabling-software-reboots" title="Permalink to this heading"></a></h3>
-<p>The architecture or platform macro is used to determine the correct method to reboot the device via the <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> command, whereas the variant or board specific macro is used to define the actual pins in use.</p>
-<p>If a new architecture or platform is being added, then “EX-IOExpander.ino” will need to be updated with the suitable software command in the “reset()” function, otherwise a reboot via <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> will not be available.</p>
-<p>If the architecture or platform already exists, or there is no desire to reboot via software, then the only change required is to add the variant or board specific information to “SupportedDevices.h”.</p>
+<section id="files-to-be-created-modified">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Files to be created/modified</a><a class="headerlink" href="#files-to-be-created-modified" title="Permalink to this heading"></a></h3>
+<p>When adding new devices to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, there are potentially three files to be added or modified:</p>
+<ul class="simple">
+<li><p>device_functions.cpp - Contains the architecture/platform specific function to reboot via software</p></li>
+<li><p>defines.h - Contains some device specific macro definitions</p></li>
+<li><p>&lt;device_type&gt;.h - Contains the device specific macro definitions and the pin map</p></li>
+</ul>
 </section>
-<section id="enabling-serial-input-output">
-<h3><a class="toc-backref" href="#id22" role="doc-backlink">Enabling serial input/output</a><a class="headerlink" href="#enabling-serial-input-output" title="Permalink to this heading"></a></h3>
+<section id="enabling-software-reboots">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Enabling software reboots</a><a class="headerlink" href="#enabling-software-reboots" title="Permalink to this heading"></a></h3>
+<p>The architecture or platform macro is used to determine the correct method to reboot the device via the <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> command, which is defined in the file “device_functions.cpp”.</p>
+<p>If a new architecture or platform is being added, then this file will need to be updated with the suitable software command in the “reset()” function, otherwise a reboot via <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> will not be available.</p>
+<p>If the architecture or platform already exists, or there is no desire to reboot via software, then the only change required is to add the variant or board specific information.</p>
+</section>
+<section id="enabling-serial-input-output-in-defines-h">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">Enabling serial input/output in defines.h</a><a class="headerlink" href="#enabling-serial-input-output-in-defines-h" title="Permalink to this heading"></a></h3>
 <p>Some microcontrollers have different serial implementations, and therefore it may be necessary to specify the type of USB or serial port in use.</p>
 <p>Currently, unless the device’s architecture is defined as “ARDUINO_ARCH_SAMD”, it will utilise the default Arduino “Serial” implementation. SAMD uses the “SerialUSB” implementation.</p>
-<p>If additional serial support is required, this will need to be defined in “EX-IOExpander.ino” as “USB_SERIAL”, which is defined at the beginning of the file.</p>
+<p>If additional serial support is required, this will need to be defined in “defines.h” as “USB_SERIAL”.</p>
 </section>
-<section id="defining-the-device-and-pin-map-in-supporteddevices-h">
-<h3><a class="toc-backref" href="#id23" role="doc-backlink">Defining the device and pin map in SupportedDevices.h</a><a class="headerlink" href="#defining-the-device-and-pin-map-in-supporteddevices-h" title="Permalink to this heading"></a></h3>
+<section id="defining-the-device-macros-in-defines-h">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">Defining the device macros in defines.h</a><a class="headerlink" href="#defining-the-device-macros-in-defines-h" title="Permalink to this heading"></a></h3>
+<p>There are three parameters to be defined in this file for each device type:</p>
+<ul class="simple">
+<li><p>TOTAL_PINS - The total number of pins available on the device</p></li>
+<li><p>NUM_PWM_PINS - The number of pins with PWM capability</p></li>
+<li><p>HAS_EEPROM - Define only if the device has EEPROM capability</p></li>
+</ul>
+<p>These need to be defined according to the CPU type macro definition. For example an Arduino Uno is defined as:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  Arduino Uno</span>
+<span class="cp">#elif defined(ARDUINO_AVR_UNO)</span>
+<span class="cp">#define TOTAL_PINS 16</span>
+<span class="cp">#define NUM_PWM_PINS 6</span>
+<span class="cp">#define HAS_EEPROM</span>
+<span class="cp">#elif ...</span>
+</pre></div>
+</div>
+</section>
+<section id="defining-the-device-type-and-pin-map-in-device-name-h">
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">Defining the device type and pin map in &lt;device_name&gt;.h</a><a class="headerlink" href="#defining-the-device-type-and-pin-map-in-device-name-h" title="Permalink to this heading"></a></h3>
 <p>A pin map is used to map the Vpins from the device driver in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> to the appropriate physical pins on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, and therefore defining this in the correct order in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software is critical. It is equally critical to ensure that the correct variant or board macro is used to ensure the correct pin map is used when compiling and uploading the software to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device.</p>
-<p>Pin maps are defined in the file “SupportedDevices.h”.</p>
-<p>As per <a class="reference internal" href="overview.html#pin-vpin-allocation"><span class="std std-ref">Pin/Vpin allocation</span></a>, digital pins are allocated first, incrementing from the first Vpin, and analogue pins are allocated in reverse, starting from the last Vpin.</p>
+<p>Each unique device needs a file created containing the “BOARD_TYPE” macro definition and the device specific pin map.</p>
+<p>Files should be named according to the platform and CPU type eg. “arduino_avr_nano.h” or “arduino_nucleo_f412zg.h”.</p>
+<p>As per <a class="reference internal" href="overview.html#pin-vpin-allocation"><span class="std std-ref">Pin/Vpin allocation</span></a>, Vpins are allocated to physical pins in ascending order.</p>
 <p>These are the considerations when defining the pin map:</p>
 <ul class="simple">
-<li><p>All pins capable of being digital inputs/outputs need to be included in “digitalPinMap”, including analogue capable pins</p></li>
-<li><p>All pins capable of being analogue inputs need to be included in “analoguePinMap” (don’t include dual digital/analogue pins here)</p></li>
-<li><p>Pins included in both pin maps need to be in the same order, with analogue pins at the end of the digital pin map</p></li>
-<li><p>Macros for the number of pins in each pin map must be defined accurately</p></li>
-<li><p>NUMBER_OF_DIGITAL_PINS is the number of digital only pins</p></li>
-<li><p>NUMBER_OF_ANALOGUE_PINS is the number of pins capable of analogue input, whether or not they can be used as digital also</p></li>
-<li><p>Any pins that are only capable of analogue inputs must be at the end of the analogue pin map</p></li>
+<li><p>All pins available for use must be represented in a logical order to provide the simplest user experience</p></li>
+<li><p>The capability for each pin must be provided according to the <a class="reference internal" href="#pin-capability-table"><span class="std std-ref">Pin capability table</span></a></p></li>
+<li><p>The number of defined pins must match “TOTAL_PINS” as defined in “defines.h”</p></li>
+<li><p>The number of pins defined with PWM capability must match “NUM_PWM_PINS” as defined in “defines.h”</p></li>
 </ul>
-<p>Further to this, if EEPROM is available, this needs to be defined, along with a description that is presented in the serial console when starting the device.</p>
-<p>If the microcontroller utilises internal I<sup>2</sup>C pullup resistors rather than external, physical resistors, then the I<sup>2</sup>C pins can be defined to allow these to be disabled via “myConfig.h” (see <a class="reference internal" href="overview.html#disable-i2c-pullups"><span class="std std-ref">DISABLE_I2C_PULLUPS</span></a>).</p>
-<p>To use the Arduino Nano as the example, this is the definition in “SupportedDevices.h”:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Arduino Nano</span>
-<span class="cp">#elif defined(ARDUINO_AVR_NANO)</span>
-<span class="cp">#define BOARD_TYPE F(&quot;Nano&quot;)</span>
-<span class="cp">#define HAS_EEPROM</span>
-<span class="cp">#define NUMBER_OF_DIGITAL_PINS 12   </span><span class="c1">// D2 - D13</span>
-<span class="cp">#define NUMBER_OF_ANALOGUE_PINS 6     </span><span class="c1">// A0 - A3, A6/A7, cannot use A4/A5</span>
-<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">digitalPinMap</span><span class="p">[</span><span class="n">NUMBER_OF_DIGITAL_PINS</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NUMBER_OF_ANALOGUE_PINS</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="n">A0</span><span class="p">,</span><span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span><span class="n">A3</span>
-<span class="p">};</span>
-<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">analoguePinMap</span><span class="p">[</span><span class="n">NUMBER_OF_ANALOGUE_PINS</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">A0</span><span class="p">,</span><span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span><span class="n">A3</span><span class="p">,</span><span class="n">A6</span><span class="p">,</span><span class="n">A7</span>
+<p>Further to this, if the microcontroller utilises internal I<sup>2</sup>C pullup resistors rather than external, physical resistors, then the I<sup>2</sup>C pins can be defined to allow these to be disabled via “myConfig.h” (see <a class="reference internal" href="overview.html#disable-i2c-pullups"><span class="std std-ref">DISABLE_I2C_PULLUPS</span></a>).</p>
+<p>To use the Arduino Uno as the example, the file “arduino_avr_uno.h” would be created with these contents:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef ARDUINO_AVR_UNO_H</span>
+<span class="cp">#define ARDUINO_AVR_UNO_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;globals.h&quot;</span>
+
+<span class="cp">#define BOARD_TYPE F(&quot;Uno&quot;)</span>
+<span class="n">pinDefinition</span><span class="w"> </span><span class="n">pinMap</span><span class="p">[</span><span class="n">TOTAL_PINS</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="n">DIO</span><span class="p">},{</span><span class="mi">3</span><span class="p">,</span><span class="n">DIOP</span><span class="p">},{</span><span class="mi">4</span><span class="p">,</span><span class="n">DIO</span><span class="p">},{</span><span class="mi">5</span><span class="p">,</span><span class="n">DIOP</span><span class="p">},{</span><span class="mi">6</span><span class="p">,</span><span class="n">DIOP</span><span class="p">},{</span><span class="mi">7</span><span class="p">,</span><span class="n">DIO</span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="n">DIO</span><span class="p">},{</span><span class="mi">9</span><span class="p">,</span><span class="n">DIOP</span><span class="p">},{</span><span class="mi">10</span><span class="p">,</span><span class="n">DIOP</span><span class="p">},{</span><span class="mi">11</span><span class="p">,</span><span class="n">DIOP</span><span class="p">},{</span><span class="mi">12</span><span class="p">,</span><span class="n">DIO</span><span class="p">},{</span><span class="mi">13</span><span class="p">,</span><span class="n">DIO</span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="n">A0</span><span class="p">,</span><span class="n">AIDIO</span><span class="p">},{</span><span class="n">A1</span><span class="p">,</span><span class="n">AIDIO</span><span class="p">},{</span><span class="n">A2</span><span class="p">,</span><span class="n">AIDIO</span><span class="p">},{</span><span class="n">A3</span><span class="p">,</span><span class="n">AIDIO</span><span class="p">},</span>
 <span class="p">};</span>
 <span class="cp">#define I2C_SDA A4</span>
 <span class="cp">#define I2C_SCL A5</span>
+
+<span class="cp">#endif</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>The variant or board macro definition is “ARDUINO_AVR_NANO”.</p></li>
-<li><p>The “BOARD_TYPE” is displayed in the serial console at startup as “Nano”.</p></li>
-<li><p>The Nano has EEPROM support to allow storing the I<sup>2</sup>C address</p></li>
-<li><p>There are 12 digital pins</p></li>
-<li><p>There are 6 analogue pins</p></li>
-<li><p>All digital pins and the 4 analogue pins capable of digital are defined in “digitalPinMap”</p></li>
-<li><p>All analogue pins are defined in “analoguePinMap”</p></li>
-<li><p>The analogue pins defined in both pin maps are added in the same order, with analogue pins at the end of the digital pin map</p></li>
-<li><p>Analogue pins A6/A7 are analogue only, are therefore not included in digitalPinMap, and are defined at the end of analoguePinMap</p></li>
+<li><p>All C++ header (.h) files should include a header guard, which is the first two lines, and file “#ifdef”</p></li>
+<li><p>You must include the Arduino library and “globals.h” file</p></li>
+<li><p>The “BOARD_TYPE” is displayed in the serial console at startup as “Uno”</p></li>
+<li><p>All available pins are defined with their capability</p></li>
 <li><p>Arduino Nano uses internal I<sup>2</sup>C pullup resistors, and therefore defining the I<sup>2</sup>C pins A4/A5 allows these to be disabled via “myConfig.H” if desired</p></li>
 </ul>
+</section>
+<section id="pin-capability-table">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">Pin capability table</a><a class="headerlink" href="#pin-capability-table" title="Permalink to this heading"></a></h3>
+<p>When defining the capabilities available for a specific pin, one of these macros from this table must be utilised. These capability macros are defined in “defines.h”.</p>
+<p>This ensures attempting to use a pin for something it’s not capable of will generate an error rather than try to drive a pin with capability that is not possible, as depending on the scenario, this may let the magic smoke out.</p>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-number">Table 35 </span><span class="caption-text">Pin capability table</span><a class="headerlink" href="#id13" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Macro</p></th>
+<th class="head"><p>Capabilities</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NA</p></td>
+<td><p>Not suitable for use</p></td>
+</tr>
+<tr class="row-odd"><td><p>DI</p></td>
+<td><p>Digital input only</p></td>
+</tr>
+<tr class="row-even"><td><p>DO</p></td>
+<td><p>Digital output only</p></td>
+</tr>
+<tr class="row-odd"><td><p>DIO</p></td>
+<td><p>Digital input and output</p></td>
+</tr>
+<tr class="row-even"><td><p>AI</p></td>
+<td><p>Analogue input only</p></td>
+</tr>
+<tr class="row-odd"><td><p>AIDI</p></td>
+<td><p>Analogue and digital input</p></td>
+</tr>
+<tr class="row-even"><td><p>AIDO</p></td>
+<td><p>Analogue input and digital output</p></td>
+</tr>
+<tr class="row-odd"><td><p>AIDIO</p></td>
+<td><p>Analogue input with digital input and output</p></td>
+</tr>
+<tr class="row-even"><td><p>P</p></td>
+<td><p>PWM output only</p></td>
+</tr>
+<tr class="row-odd"><td><p>DIP</p></td>
+<td><p>Digital input and PWM output</p></td>
+</tr>
+<tr class="row-even"><td><p>DOP</p></td>
+<td><p>Digital output and PWM output</p></td>
+</tr>
+<tr class="row-odd"><td><p>DIOP</p></td>
+<td><p>Digital input and output with PWM output</p></td>
+</tr>
+<tr class="row-even"><td><p>AIP</p></td>
+<td><p>Analogue input and PWM output</p></td>
+</tr>
+<tr class="row-odd"><td><p>AIDIP</p></td>
+<td><p>Analogue input with digital input and PWM output</p></td>
+</tr>
+<tr class="row-even"><td><p>AIDOP</p></td>
+<td><p>Analogue input with digital output and PWM output</p></td>
+</tr>
+<tr class="row-odd"><td><p>AIDIOP</p></td>
+<td><p>Analogue input with digital input and output and PWM output</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 </section>

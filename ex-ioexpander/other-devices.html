@@ -521,6 +521,11 @@
 <li><p>EXIORDAN = 0xE4 - Read an analogue input</p></li>
 <li><p>EXIOWRD = 0xE5 - Send a digital write</p></li>
 <li><p>EXIORDD = 0xE6 - Read a digital input</p></li>
+<li><p>EXIOENAN = 0xE7 - Enable an analogue input</p></li>
+<li><p>EXIOINITA = 0xE8 - Request/receive analogue pin mappings</p></li>
+<li><p>EXIOPINS = 0xE9 - Request/receive buffer counts</p></li>
+<li><p>EXIOWRAN = 0xEA - Send an analogue write (PWM)</p></li>
+<li><p>EXIOERR = 0xEF - Error sent/received</p></li>
 </ul>
 <section id="device-setup">
 <h3>Device setup<a class="headerlink" href="#device-setup" title="Permalink to this heading"></a></h3>
@@ -529,18 +534,53 @@
 <li><p>Check no overlaps in Vpin allocation</p></li>
 <li><p>Create the device object</p></li>
 <li><p>Check that the I<sup>2</sup>C device is online</p></li>
-<li><p>Device driver sends “EXIOINIT” with digital and analogue pin counts</p></li>
-<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> must respond with “EXIORDY” otherwise device marked offline</p></li>
+<li><p>Device driver sends “EXIOINIT” with the number of defined pins and the first allocated Vpin</p></li>
+<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> validates pin count and must respond with “EXIOPINS” along with the number of digital and analogue pins</p></li>
+<li><p>Device will be marked offline if response is not correct</p></li>
+<li><p>Device driver sends “EXIOINITA” to obtain the mapping of analogue pins</p></li>
+<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> must respond with the map of analogue pins to bytes in the analogue input buffer</p></li>
 <li><p>Device driver sends “EXIOVER” and expects a three byte response with the major, minor, and patch version</p></li>
 </ul>
 </section>
-<section id="digital-pin-configuration">
-<h3>Digital pin configuration<a class="headerlink" href="#digital-pin-configuration" title="Permalink to this heading"></a></h3>
-<p>When a digital input is defined via either <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> (eg. <code class="docutils literal notranslate"><span class="pre">AT(vpin)</span></code>, <code class="docutils literal notranslate"><span class="pre">AFTER(vpin)</span></code>, <code class="docutils literal notranslate"><span class="pre">IF(vpin)</span></code>) or the <code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> DCC-EX command, this triggers the configuration function which sends that information to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device:</p>
+<section id="digital-input-configuration">
+<h3>Digital input configuration<a class="headerlink" href="#digital-input-configuration" title="Permalink to this heading"></a></h3>
+<p>When a digital input is defined via either <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> (eg. <code class="docutils literal notranslate"><span class="pre">AT(vpin)</span></code>, <code class="docutils literal notranslate"><span class="pre">AFTER(vpin)</span></code>, <code class="docutils literal notranslate"><span class="pre">IF(vpin)</span></code>) or the <code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> DCC-EX command, this triggers the configuration function which sends that information to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device and must trigger it to start monitoring the pin and sending the data back to the device driver:</p>
 <ul class="simple">
 <li><p>Validates the digital pin hasn’t already been defined as an analogue pin elsewhere</p></li>
 <li><p>Device driver sends “EXIODPUP” with the pin number and pullup flag (0 no pullup, 1 pullup)</p></li>
-<li><p>There is no return/acknowledgement required</p></li>
+<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> must respond with “EXIORDY”</p></li>
+</ul>
+</section>
+<section id="analogue-input-configuration">
+<h3>Analogue input configuration<a class="headerlink" href="#analogue-input-configuration" title="Permalink to this heading"></a></h3>
+<p>When an analogue input is defined in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> using commands such as <code class="docutils literal notranslate"><span class="pre">ATGTE(vpin,</span> <span class="pre">value)</span></code> or <code class="docutils literal notranslate"><span class="pre">IFLT(vpin,</span> <span class="pre">value)</span></code>, this triggers the analogue input configuration function which sends the pin number to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device and must trigger it to start monitoring the pin and sending the data back to the device driver:</p>
+<ul class="simple">
+<li><p>Validates the analogue pin hasn’t already been defined as a digital pin elsewhere</p></li>
+<li><p>Device driver sends “EXIOENAN” with the pin number</p></li>
+<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> must respond with “EXIORDY”</p></li>
+</ul>
+</section>
+<section id="continuous-receiving-of-input-data">
+<h3>Continuous receiving of input data<a class="headerlink" href="#continuous-receiving-of-input-data" title="Permalink to this heading"></a></h3>
+<p>The <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device must continuously send the digital and analogue input pin values to the device driver, as this is requested continuously by the device driver’s loop function. This must be sent by using one buffer for digital pin states, and a separate buffer for analogue input values.</p>
+<ul class="simple">
+<li><p>Device driver sends “EXIORDD”</p></li>
+<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device must send a buffer containing all digital input pin states:</p>
+<ul>
+<li><p>Each byte in the buffer represents up to 8 pin states</p></li>
+<li><p>The buffer must contain the correct number of bytes to represent the number of all digital pins</p></li>
+<li><p>The buffer bytes must be sent in ascending order, ie. the first byte contains the first 8 digital pin states</p></li>
+</ul>
+</li>
+<li><p>Device driver sends “EXIORDAN”</p></li>
+<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> must send a buffer containing all analogue input pin values:</p>
+<ul>
+<li><p>Each input pin is represented by two bytes in the buffer</p></li>
+<li><p>The least significant byte of the pin’s value is received first, followed by the most significant byte</p></li>
+<li><p>The buffer must contain the correct number of bytes to represent the number of all analogue pins</p></li>
+<li><p>The buffer bytes must be sent in ascending order, ie. the first byte contains the least significant byte of the first pin’s value, with the second byte containing the most significant byte of the first pin’s value</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="digital-reads">
@@ -556,19 +596,24 @@
 <h3>Digital writes<a class="headerlink" href="#digital-writes" title="Permalink to this heading"></a></h3>
 <p>When a digital write occurs:</p>
 <ul class="simple">
-<li><p>Validates the digital pin hasn’t already been defined as an analogue pin elsewhere</p></li>
-<li><p>Device driver sends “EXIOWRD” with the pin number and write value (0 inactive, 1 active)</p></li>
-<li><p>There is no return/acknowledgement required</p></li>
+<li><p>There is no interaction with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, the bit is read from the digital pin buffer</p></li>
 </ul>
 </section>
 <section id="analogue-reads">
 <h3>Analogue reads<a class="headerlink" href="#analogue-reads" title="Permalink to this heading"></a></h3>
 <p>When an analogue read occurs:</p>
 <ul class="simple">
-<li><p>Validates the analogue pin hasn’t already been defined as a digital pin elsewhere</p></li>
-<li><p>Device driver sends “EXIORDAN” with the pin number</p></li>
-<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> must return two bytes containing the most significant and least significant 8 bits of the 16 bit integer value</p></li>
-<li><p>These are bit shifted together to return the full 16 bit integer value to whatever called the analogue read</p></li>
+<li><p>There is no interaction with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, the lease and most significant bytes are read from the analogue pin buffer</p></li>
+<li><p>These are bit shifted together to return the full 16 bit integer value</p></li>
+</ul>
+</section>
+<section id="analogue-writes-pwm">
+<h3>Analogue writes (PWM)<a class="headerlink" href="#analogue-writes-pwm" title="Permalink to this heading"></a></h3>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">profile&gt;</span></code> command, or the various <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT(...)</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(..)</span></code> <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> servo commands, or the <code class="docutils literal notranslate"><span class="pre">FADE(...)</span></code> <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> LED command will generate an analogue write to send the associated PWM value to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device:</p>
+<ul class="simple">
+<li><p>Device driver calculates servo/PWM parameters</p></li>
+<li><p>Device driver sends “EXIOWRAN” with the pin number and least and most significant bytes of the 16 bit value</p></li>
+<li><p>No response is required from the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device</p></li>
 </ul>
 </section>
 </section>

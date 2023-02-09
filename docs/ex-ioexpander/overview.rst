@@ -32,7 +32,7 @@ Introduction
 
 There is also work in progress to enable using PWM capable pins to drive servos and control LED brightness.
 
-Rather than emulate any specific type of existing I/O expander, |EX-IO| has been written to integrate directly with |EX-CS| via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device.
+Rather than emulate any specific type of existing I/O expander, |EX-IO| has been written to integrate directly with |EX-CS| via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device, as well as utilising a device's PWM capability to control servos and variable brightness LEDs.
 
 This page provides the general overview of |EX-IO|, as well as outlining the configuration options available.
 
@@ -71,7 +71,7 @@ Pins capable of both digital and analogue can be used for either purpose.
 
 As per other I/O devices, |EX-IO| can function with both the ``<S ...>`` sensor/input and ``<Z ...>`` output |DCC-EX| commands, as well as the various ``AT(), IF(), ATGTE(), IFGTE()`` type |EX-R| commands.
 
-The work currently in progress will allow PWM capable pins to be used to drive servos and control LED brightness, enabling use of the ``<D SERVO ...>`` command, along with the ``SERVO()``, ``SERVO_TURNOUT()``, ``SERVO_SIGNAL()``, and ``FADE()`` |EX-R| commands.
+There is experimental PWM support to be used to drive servos and control LED brightness, enabling use of the ``<D SERVO ...>`` command, along with the ``SERVO()``, ``SERVO_TURNOUT()``, ``SERVO_SIGNAL()``, and ``FADE()`` |EX-R| commands.
 
 .. note:: 
 
@@ -189,50 +189,68 @@ This results in 18 pins total, with 2 pins (A6/A7) only available as analogue in
   816,A6,N,Y,N
   817,A7,N,Y,N
 
-Once |EX-IO| has been configured as per the sections below, you can review the digial and analogue Vpin allocations by running the diag command ``<D HAL SHOW>`` at the serial console, which will display this information.
+Once |EX-IO| has been configured as per the sections below, you can review the Vpin allocations by running the diag command ``<D HAL SHOW>`` at the serial console, which will display this information.
 
-This sample output is for EX-IOExpander on an Arduino Nano at the default 0x65 address using the default 12 digital and 8 analogue pins, and an Arduino Uno at 0x66 using all 16 pins as digital pins:
+This sample output is for EX-IOExpander on an Arduino Nano at the default 0x65 address and an Arduino Uno at 0x66:
 
 .. code-block:: 
 
-  <* EX-IOExpander I2C:x65 v0.0.6: 12 Digital Vpins 800-811, 6 Analogue Vpins 812-817  *>
-  <* EX-IOExpander I2C:x66 v0.0.6: 16 Digital Vpins 820-835, 0 Analogue Vpins 0-0  *>
+  <* EX-IOExpander I2C:x65 v0.0.14 Vpins 800-817  *>
+  <* EX-IOExpander I2C:x66 v0.0.14: Vpins 820-835  *>
+
+Providing the device driver is configured correctly and the |EX-IO| device is online, the serial console of the |EX-IO| device will also display the Vpin to physical pin map once the configuration information is successfully received from the device driver.
+
+This example is for an Arduino Nano configured starting at Vpin 800:
+
+.. code-block:: 
+
+  DCC-EX EX-IOExpander v0.0.14
+  Detected device: Nano
+  Available at I2C address 0x71
+  Initialised all pins as input only
+  Received correct pin count: 18, starting at Vpin: 800
+  Vpin to physical pin mappings (Vpin => physical pin):
+  |800 =>   2|801 =>   3|802 =>   4|803 =>   5|804 =>   6|805 =>   7|806 =>   8|807 =>   9|
+  |808 =>  10|809 =>  11|810 =>  12|811 =>  13|812 =>  14|813 =>  15|814 =>  16|815 =>  17|
+  |816 =>  20|817 =>  21|
 
 EX-CommandStation device driver
 -------------------------------
 
-To enable support for |EX-IO|, you need to configure "myHal.cpp" in your |EX-CS|. The device driver is included by default, so you simply need to create the device(s).
-
-.. note:: 
-
-  For those using earlier releases of this device driver, the default pin macros (eg. EXIO_NANO_ANALOGUE_PINS) have been removed to simplify adding support for new devices.
+To enable support for |EX-IO|, you need to create the device in either "myHal.cpp" or "myAutomation.h" in your |EX-CS|. The device driver is included by default, so you simply need to create the device(s).
 
 You will find an example included in the "myHal.cpp_example.txt" file included with the |EX-CS| software.
 
-To create the |EX-IO| device, the syntax is `EXIOExpander::create(vpin, npins, address, digital_pins, analogue_pins);` where:
+To create the |EX-IO| device in "myHal.cpp", the syntax is ``EXIOExpander::create(vpin, npins, address);`` where:
 
 - vpin = An unused vpin
-- npins = Total number of vpins to assign to the device (must equal digital_pins + analogue_pins)
+- npins = Total number of vpins to assign to the device
 - address = An available |I2C| address (default 0x65)
-- digital_pins = The number of digital pins to enable
-- analogue_pins = The number of analogue pins to enable
 
-.. note:: 
-
-  You need to ensure the total pins available for the device are assigned as either digital or analogue pins. Defining less or more than the total pins will result in a configuration error, and the device will be taken offline.
-
-  If this occurs, you will see a message like this in the startup log: ``<* ERROR configuring EX-IOExpander device, I2C:x65 *>``
+Similarly, you can create the device directly in "myAutomation.h" with the command ``HAL(EXIOExpander, vpin, npins, address)``, using the same variables listed above.
 
 Refer to the :doc:`/ex-ioexpander/supported-devices` page to see the available pin numbers for each of the supported devices.
 
-In the example below, we will configure an Arduino Nano using the default pin counts at address 0x65, with an additional Arduino Uno device using all available digital capable pins and no analogue pins at address 0x66 (note this is what provides the output seen in the previous section).
+In the examples below, we will configure an Arduino Nano at address 0x65, with an additional Arduino Uno device at address 0x66 (note this is what provides the output seen in the previous section).
+
+Using "myHal.cpp":
 
 .. code-block:: cpp
 
   void halSetup() {
     ...
-    EXIOExpander::create(800, 18, 0x65, 12, 8);
-    EXIOExpander::create(820, 16, 0x66, 16, 0);
+    EXIOExpander::create(800, 18, 0x65);
+    EXIOExpander::create(820, 16, 0x66);
+  }
+
+Using "myAutomation.h":
+
+.. code-block:: cpp
+
+  void halSetup() {
+    ...
+    HAL(EXIOExpander, 800, 18, 0x65)
+    HAL(EXIOExpander, 820, 16, 0x66)
   }
 
 I2C_ADDRESS

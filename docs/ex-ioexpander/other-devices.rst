@@ -43,18 +43,50 @@ This is the device setup/configuration process:
 - Check no overlaps in Vpin allocation
 - Create the device object
 - Check that the |I2C| device is online
-- Device driver sends "EXIOINIT" with digital and analogue pin counts
-- |EX-IO| must respond with "EXIORDY" otherwise device marked offline
+- Device driver sends "EXIOINIT" with the number of defined pins and the first allocated Vpin
+- |EX-IO| validates pin count and must respond with "EXIOPINS" along with the number of digital and analogue pins
+- Device will be marked offline if response is not correct
+- Device driver sends "EXIOINITA" to obtain the mapping of analogue pins
+- |EX-IO| must respond with the map of analogue pins to bytes in the analogue input buffer
 - Device driver sends "EXIOVER" and expects a three byte response with the major, minor, and patch version
 
-Digital pin configuration
--------------------------
+Digital input configuration
+---------------------------
 
-When a digital input is defined via either |EX-R| (eg. ``AT(vpin)``, ``AFTER(vpin)``, ``IF(vpin)``) or the ``<S id vpin pullup>`` DCC-EX command, this triggers the configuration function which sends that information to the |EX-IO| device:
+When a digital input is defined via either |EX-R| (eg. ``AT(vpin)``, ``AFTER(vpin)``, ``IF(vpin)``) or the ``<S id vpin pullup>`` DCC-EX command, this triggers the configuration function which sends that information to the |EX-IO| device and must trigger it to start monitoring the pin and sending the data back to the device driver:
 
 - Validates the digital pin hasn't already been defined as an analogue pin elsewhere
 - Device driver sends "EXIODPUP" with the pin number and pullup flag (0 no pullup, 1 pullup)
-- There is no return/acknowledgement required
+- |EX-IO| must respond with "EXIORDY"
+
+Analogue input configuration
+----------------------------
+
+When an analogue input is defined in |EX-R| using commands such as ``ATGTE(vpin, value)`` or ``IFLT(vpin, value)``, this triggers the analogue input configuration function which sends the pin number to the |EX-IO| device and must trigger it to start monitoring the pin and sending the data back to the device driver:
+
+- Validates the analogue pin hasn't already been defined as a digital pin elsewhere
+- Device driver sends "EXIOENAN" with the pin number
+- |EX-IO| must respond with "EXIORDY"
+
+Continuous receiving of input data
+----------------------------------
+
+The |EX-IO| device must continuously send the digital and analogue input pin values to the device driver, as this is requested continuously by the device driver's loop function. This must be sent by using one buffer for digital pin states, and a separate buffer for analogue input values.
+
+- Device driver sends "EXIORDD"
+- |EX-IO| device must send a buffer containing all digital input pin states:
+
+  - Each byte in the buffer represents up to 8 pin states
+  - The buffer must contain the correct number of bytes to represent the number of all digital pins
+  - The buffer bytes must be sent in ascending order, ie. the first byte contains the first 8 digital pin states
+
+- Device driver sends "EXIORDAN"
+- |EX-IO| must send a buffer containing all analogue input pin values:
+
+  - Each input pin is represented by two bytes in the buffer
+  - The least significant byte of the pin's value is received first, followed by the most significant byte
+  - The buffer must contain the correct number of bytes to represent the number of all analogue pins
+  - The buffer bytes must be sent in ascending order, ie. the first byte contains the least significant byte of the first pin's value, with the second byte containing the most significant byte of the first pin's value
 
 Digital reads
 -------------
@@ -70,16 +102,21 @@ Digital writes
 
 When a digital write occurs:
 
-- Validates the digital pin hasn't already been defined as an analogue pin elsewhere
-- Device driver sends "EXIOWRD" with the pin number and write value (0 inactive, 1 active)
-- There is no return/acknowledgement required
+- There is no interaction with the |EX-IO| device, the bit is read from the digital pin buffer
 
 Analogue reads
 --------------
 
 When an analogue read occurs:
 
-- Validates the analogue pin hasn't already been defined as a digital pin elsewhere
-- Device driver sends "EXIORDAN" with the pin number
-- |EX-IO| must return two bytes containing the most significant and least significant 8 bits of the 16 bit integer value
-- These are bit shifted together to return the full 16 bit integer value to whatever called the analogue read
+- There is no interaction with the |EX-IO| device, the lease and most significant bytes are read from the analogue pin buffer
+- These are bit shifted together to return the full 16 bit integer value
+
+Analogue writes (PWM)
+---------------------
+
+Using the ``<D SERVO vpin value profile>`` command, or the various ``SERVO_TURNOUT(...)``, ``SERVO_SIGNAL(..)`` |EX-R| servo commands, or the ``FADE(...)`` |EX-R| LED command will generate an analogue write to send the associated PWM value to the |EX-IO| device:
+
+- Device driver calculates servo/PWM parameters
+- Device driver sends "EXIOWRAN" with the pin number and least and most significant bytes of the 16 bit value
+- No response is required from the |EX-IO| device

@@ -381,6 +381,9 @@ Arduino Zero (or SAMD based clone)
 
 |
 
+STMicroelectronics STM32F103C8Tx (Bluepill)
+===========================================
+
 Adding new devices
 ==================
 
@@ -406,6 +409,7 @@ When adding new devices to |EX-IO|, there are potentially three files to be adde
 - device_functions.cpp - Contains the architecture/platform specific function to reboot via software
 - defines.h - Contains some device specific macro definitions
 - <device_type>.h - Contains the device specific macro definitions and the pin map
+- EX-IOExpander.ino - Loads the device specific files
 
 Enabling software reboots
 -------------------------
@@ -520,3 +524,6 @@ This ensures attempting to use a pin for something it's not capable of will gene
   AIDIP,Analogue input with digital input and PWM output
   AIDOP,Analogue input with digital output and PWM output
   AIDIOP,Analogue input with digital input and output and PWM output
+
+Including the device specific file in EX-IOExpander.ino
+-------------------------------------------------------

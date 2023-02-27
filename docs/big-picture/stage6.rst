@@ -728,7 +728,7 @@ Complete myAutomation.h examples
   Example 1 ROUTEs with turnouts/signals <stage6/example1>
   Example 2 ROUTEs with turnouts/signals <stage6/example2>
   Example 3 ROUTEs with turnouts/signals <stage6/example3>
-  Example 4 Full automation with turnouts & signals<stage6/example4>
+  Example 4 ROUTEs with turnouts/signals <stage6/example4>
   Example 5 Full automation with turnouts & signals<stage6/example5>
   Example 6 Full automation with turnouts & signals<stage6/example6>
   Example 7 Full automation with turnouts & signals<stage6/example7>

@@ -382,7 +382,7 @@ Sensors
       Response (fail):  N/A
   * - ``<S>`` 
     - **Lists definition all defined sensors** |BR| |BR|
-      Response (successful) Repeat for each defined sensor: ``<Q id ?? state>`` |BR|
+      Response (successful) Repeated for each defined sensor: ``<Q id vpin pullup>`` |BR|
       Response (fail): ``<X>``
   * - ``<S id vpin pullup>``
     - **Create a new sensor ID** |BR|
@@ -390,7 +390,9 @@ Sensors
       **vpin** pin number of the input to be controlled by the sensor object |BR|
       **pullup** 1=Use pull-up resistor ACTIVE=LOW 0=don't use pull-up resistor ACTIVE=HIGH |BR| |BR|
       Response (successful): ``<O>`` |BR|
-      Response (fail):  ?
+      Response (fail):  ? |BR|
+      Note: Once defined, the EX-CS will send a ``<Q id>`` response anytime the sensor is activated, 
+      and a ``<q id>`` response when deactivated.
   * - ``<S id>``
     - **Delete defined sensor** |BR| |BR| 
       Response (successful): ``<O>`` |BR| 

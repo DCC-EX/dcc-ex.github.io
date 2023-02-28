@@ -11,15 +11,11 @@
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/js/platform.js"></script>
@@ -47,8 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
-            <a href="../../index.html">
-            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+            <a href="../../index.html" class="icon icon-home"> DCC-EX Model Railroading
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -990,7 +985,7 @@ Response (fail):  N/A</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code></p></td>
 <td><p><strong>Lists definition all defined sensors</strong> <br /> <br />
-Response (successful) Repeat for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">??</span> <span class="pre">state&gt;</span></code> <br />
+Response (successful) Repeated for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> <br />
 Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code></p></td>
@@ -999,7 +994,9 @@ Response (fail): <code class="docutils literal notranslate"><span class="pre">&l
 <strong>vpin</strong> pin number of the input to be controlled by the sensor object <br />
 <strong>pullup</strong> 1=Use pull-up resistor ACTIVE=LOW 0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br />
 Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br />
-Response (fail):  ?</p></td>
+Response (fail):  ? <br />
+Note: Once defined, the EX-CS will send a <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> response anytime the sensor is activated,
+and a <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> response when deactivated.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Delete defined sensor</strong> <br /> <br />

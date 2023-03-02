@@ -18,7 +18,8 @@ jobs:
           pip3 install sphinx-rtd-theme==1.2.0
           pip3 install sphinx-sitemap
           pip3 install sphinxcontrib-spelling
-          pip3 install sphinx-toolbox
+          pip3 install sphinx-tabs==3.4.1
+          pip3 install sphinx-toolbox==3.4.0
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Build docs

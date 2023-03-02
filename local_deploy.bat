@@ -18,6 +18,6 @@ call .\venv\Scripts\activate.bat^
  & python_packages.bat^
  & make clean^
  & make github^
- $ pip3 list^
+ & pip3 list^
  & .\venv\Scripts\deactivate.bat^
  & rmdir /S /Q venv

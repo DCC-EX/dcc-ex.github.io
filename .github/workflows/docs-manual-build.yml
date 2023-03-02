@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Requirements
         run: |
-          pip3 install autodocsumm==0.2.0
+          pip3 install autodocsumm<0.2.0
           pip3 install docutils<=0.18
           pip3 install sphinx<=5.3.0
           pip3 install sphinx-rtd-theme==1.0.0

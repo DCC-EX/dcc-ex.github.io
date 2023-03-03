@@ -422,7 +422,7 @@ You can hide notes or searchable placeholders by putting placing the text on a l
 
 .. note:: 
 
-  Remember to perform a :ref:`about/contributing/website/getting-started:sphinx build` prior to submitting any pull requests.
+  Remember to perform a :ref:`about/contributing/website/getting-started:Local sphinx build` prior to submitting any pull requests.
 
 At this point, go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it's merged in by one of the admins, your changes will go live!
 

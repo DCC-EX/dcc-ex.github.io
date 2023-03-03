@@ -65,44 +65,44 @@
 .. |conductor| image:: /_static/images/level_icons/conductor-level.png
    :alt: Conductor Hat
    :scale: 40%
-   :target: ./levels.html#conductor
+   :target: ./begin/levels.html#conductor
 ..
 .. |tinkerer| image:: /_static/images/level_icons/tinkerer-level.png
    :alt: Propeller Beanie
    :scale: 40%
-   :target: ./levels.html#tinkerer
+   :target: ./begin/levels.html#tinkerer
 ..
 .. |engineer| image:: /_static/images/level_icons/engineer-level.png
    :alt: Engineer Hat
    :scale: 40%
-   :target: ./levels.html#engineer
+   :target: ./begin/levels.html#engineer
 ..
 .. |conductor-no-text| image:: /_static/images/level_icons/conductor.png
    :alt: Conductor Hat
    :scale: 40%
-   :target: ./levels.html#conductor
+   :target: ./begin/levels.html#conductor
 ..
 .. |tinkerer-no-text| image:: /_static/images/level_icons/tinkerer.png
    :alt: Propeller Beanie
    :scale: 40%
-   :target: ./levels.html#tinkerer
+   :target: ./begin/levels.html#tinkerer
 ..
 .. |engineer-no-text| image:: /_static/images/level_icons/engineer.png
    :alt: Engineer Hat
    :scale: 40%
-   :target: ./levels.html#engineer
+   :target: ./begin/levels.html#engineer
 ..
 .. |conductor-text| raw:: html
 
-   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="./levels.html#conductor">Conductor</a>
+   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="./begin/levels.html#conductor">Conductor</a>
 ..
 .. |tinkerer-text| raw:: html
 
-   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="./levels.html#tinkerer">Tinkerer</a>
+   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="./begin/levels.html#tinkerer">Tinkerer</a>
 ..
 .. |engineer-text| raw:: html
 
-   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="./levels.html#engineer">Engineer</a>
+   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="./begin/levels.html#engineer">Engineer</a>
 ..
 .. |githublink-ex-turntable-button2| raw:: html
 

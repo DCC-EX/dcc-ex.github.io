@@ -49,7 +49,7 @@ You will need to find or purchase:
 #. Two (2) Male to Female **Jumpers leads** |BR| |BR|
 #. a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield |BR| We recommend `12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/>`_ |BR| |BR|
 #. a 2.5mm x 5.5mm Female DC Plug to **Screw Terminal (optional, but recommended)** to connect the motor shield power supply |BR| |BR|
-#. a **7-9v DC power supply** |BR| for the Arduino (while it is connected to the PC, this is not needed) |BR| |BR|
+#. a **7-9v DC power supply** |BR| for the Arduino - be sure it is **tip positive** such as `this one on amazon <https://www.amazon.com/Adapter-Arduino-Schwinn-Elliptical-Recumbent/dp/B06Y1LF8T5/ref=sr_1_2_sspa>`_ (while it is connected to the PC, this is not needed) |BR| |BR|
 #. any **computer** running Windows, macOS, or Linux (only needed for the initial install of the software) |BR| |BR|
 #. a **USB Cable** from the computer to the Arduino |BR| |BR|
 #. a **piece of track** to run trains or program on |BR| |BR|

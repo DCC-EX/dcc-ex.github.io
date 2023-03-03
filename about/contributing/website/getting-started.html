@@ -16,10 +16,8 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/sphinx_highlight.js"></script>
         <script src="../../../_static/js/platform.js"></script>
@@ -47,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: white" >
-            <a href="../../../index.html">
-            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -487,11 +489,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">About, Press &amp; Contributing</a> &raquo;</li>
-          <li><a href="../index.html">Contributing - Helping the DCC-EX Team</a> &raquo;</li>
-          <li><a href="index.html">Contributing to the Documentation</a> &raquo;</li>
-      <li>Getting Started</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">About, Press &amp; Contributing</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Contributing - Helping the DCC-EX Team</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Contributing to the Documentation</a></li>
+      <li class="breadcrumb-item active">Getting Started</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/about/contributing/website/getting-started.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -518,11 +520,12 @@
 </li>
 <li><p><a class="reference internal" href="#live-previews" id="id5">Live previews</a></p>
 <ul>
-<li><p><a class="reference internal" href="#esbonio-language-server" id="id6">Esbonio Language server</a></p></li>
-<li><p><a class="reference internal" href="#sphinx-build" id="id7">Sphinx build</a></p></li>
+<li><p><a class="reference internal" href="#emulate-github-pages-deployment" id="id6">Emulate GitHub Pages deployment</a></p></li>
+<li><p><a class="reference internal" href="#esbonio-language-server" id="id7">Esbonio Language server</a></p></li>
+<li><p><a class="reference internal" href="#local-sphinx-build" id="id8">Local Sphinx build</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#submission-procedure" id="id8">Submission Procedure</a></p></li>
+<li><p><a class="reference internal" href="#submission-procedure" id="id9">Submission Procedure</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -565,15 +568,31 @@
 </section>
 <section id="live-previews">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Live previews</a><a class="headerlink" href="#live-previews" title="Permalink to this heading"></a></h2>
-<p>Providing you followed the installation guide for VSCode on the <a class="reference internal" href="../software.html"><span class="doc">Recommended Software</span></a> page accurately, there are two methods available for generating live previews as you are editing the reStructuredText code.</p>
-<section id="esbonio-language-server">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Esbonio Language server</a><a class="headerlink" href="#esbonio-language-server" title="Permalink to this heading"></a></h3>
-<p>The first option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.</p>
-<p>To view the preview, press &lt;Ctrl&gt; + &lt;Shift&gt; + “r” and it will open the live preview in a new tab in VSCode. In addition to this method, you can also press &lt;Ctrl&gt; + “k” followed immediately by &lt;Ctrl&gt; + “r” which will generate the live preview in a split pane within VSCode. Every time you save the page you are working on, the live preview will automatically update.</p>
-<p>The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process in the next section to ensure the entire website is still able to be built successfully after any updates.</p>
+<p>Providing you followed the installation guide for VSCode on the <a class="reference internal" href="../software.html"><span class="doc">Recommended Software</span></a> page accurately, there are three methods available for generating live previews as you are editing the reStructuredText code.</p>
+<section id="emulate-github-pages-deployment">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Emulate GitHub Pages deployment</a><a class="headerlink" href="#emulate-github-pages-deployment" title="Permalink to this heading"></a></h3>
+<p>The recommended method for local previews of the website documentation is to emulate the GitHub Pages deployment process, as this will not only generate a preview of the content, but will also ensure the same versions of the various Python packages are used to generate the preview, which will highlight any functionality issues arising out of new or different versions.</p>
+<p>Right now this can only be done on Windows until a suitable bash script is created for Linux.</p>
+<ol class="arabic simple">
+<li><p>Open a command prompt.</p></li>
+<li><p>Change to the directory where the “dcc-ex.github.io” repository has been cloned.</p></li>
+<li><p>Run the command “local_deploy.bat”.</p></li>
+<li><p>You will need to scroll up to review the output and ensure no errors are reported.</p></li>
+<li><p>The list of installed package versions is also output which is of help if issues are observed when previewing.</p></li>
+<li><p>If any errors have been generated, these must be resolved prior to submitting a pull request.</p></li>
+</ol>
+<p>Once the build of the website completes successfully, preview it locally by opening the main “index.html” file locally in a web browser.</p>
+<p>This file can be found in the “docs\_build\html” folder within the “dcc-ex.github.io” folder.</p>
 </section>
-<section id="sphinx-build">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Sphinx build</a><a class="headerlink" href="#sphinx-build" title="Permalink to this heading"></a></h3>
+<section id="esbonio-language-server">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Esbonio Language server</a><a class="headerlink" href="#esbonio-language-server" title="Permalink to this heading"></a></h3>
+<p>The next option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.</p>
+<p>To view the preview, press &lt;Ctrl&gt; + &lt;Shift&gt; + “r” and it will open the live preview in a new tab in VSCode. In addition to this method, you can also press &lt;Ctrl&gt; + “k” followed immediately by &lt;Ctrl&gt; + “r” which will generate the live preview in a split pane within VSCode. Every time you save the page you are working on, the live preview will automatically update.</p>
+<p>The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process either as outlined above to emulate the GitHub Pages deployment, or in following section.</p>
+<p>This will ensure the entire website is still able to be built successfully after any updates.</p>
+</section>
+<section id="local-sphinx-build">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Local Sphinx build</a><a class="headerlink" href="#local-sphinx-build" title="Permalink to this heading"></a></h3>
 <p>To refresh the entire website while editing, it is necessary to run the equivalent commands that the GitHub publishing workflow runs to ensure no issues have been introduced.</p>
 <p>To build the website using Sphinx, follow these steps:</p>
 <ol class="arabic simple">
@@ -588,7 +607,7 @@
 </section>
 </section>
 <section id="submission-procedure">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Submission Procedure</a><a class="headerlink" href="#submission-procedure" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Submission Procedure</a><a class="headerlink" href="#submission-procedure" title="Permalink to this heading"></a></h2>
 <p>Once you are finished editing and are ready to have your updates published you will need to submit a pull request for one of the team members to approve and review.</p>
 </section>
 </section>

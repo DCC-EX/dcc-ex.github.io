@@ -80,14 +80,13 @@ For Windows users, follow the official Python documentation here: `Using Python 
 
 Note that you will need to ensure Python is added to your `PATH` environment variable which is outlined on that page also.
 
-Once installed, you will need to install three Python packages in order to successfully build the website locally. To do this, open a command prompt and run the following command:
+The recommended approach to build a local preview is to use a virtual environment that replicates the GitHub pages deployment process, which is outlined in :ref:`about/contributing/website/getting-started:Emulate GitHub Pages deployment`.
+
+If you wish, however, to manually install the packages, you can open a command prompt and run the following command:
 
 .. code-block:: 
 
-  pip install sphinx-toolbox
-  pip install sphinx 
-  pip install sphinx_rtd_theme
-  pip install sphinxcontrib-spelling
+  pip install sphinx_rtd_theme==1.2.0 sphinx-toolbox install sphinx sphinxcontrib-spelling
 
 Recommended editor (VSCode)
 ============================

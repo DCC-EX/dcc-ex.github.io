@@ -66,19 +66,39 @@ While editing, be sure to save often, stage and commit your changes, and publish
 Live previews
 =============
 
-Providing you followed the installation guide for VSCode on the :doc:`/about/contributing/software` page accurately, there are two methods available for generating live previews as you are editing the reStructuredText code.
+Providing you followed the installation guide for VSCode on the :doc:`/about/contributing/software` page accurately, there are three methods available for generating live previews as you are editing the reStructuredText code.
+
+Emulate GitHub Pages deployment
+-------------------------------
+
+The recommended method for local previews of the website documentation is to emulate the GitHub Pages deployment process, as this will not only generate a preview of the content, but will also ensure the same versions of the various Python packages are used to generate the preview, which will highlight any functionality issues arising out of new or different versions.
+
+Right now this can only be done on Windows until a suitable bash script is created for Linux.
+
+1. Open a command prompt.
+2. Change to the directory where the "dcc-ex.github.io" repository has been cloned.
+3. Run the command "local_deploy.bat".
+4. You will need to scroll up to review the output and ensure no errors are reported.
+5. The list of installed package versions is also output which is of help if issues are observed when previewing.
+6. If any errors have been generated, these must be resolved prior to submitting a pull request.
+
+Once the build of the website completes successfully, preview it locally by opening the main "index.html" file locally in a web browser.
+
+This file can be found in the "docs\\_build\\html" folder within the "dcc-ex.github.io" folder.
 
 Esbonio Language server
 -----------------------
 
-The first option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.
+The next option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.
 
 To view the preview, press <Ctrl> + <Shift> + "r" and it will open the live preview in a new tab in VSCode. In addition to this method, you can also press <Ctrl> + "k" followed immediately by <Ctrl> + "r" which will generate the live preview in a split pane within VSCode. Every time you save the page you are working on, the live preview will automatically update.
 
-The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process in the next section to ensure the entire website is still able to be built successfully after any updates.
+The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process either as outlined above to emulate the GitHub Pages deployment, or in following section.
 
-Sphinx build
-------------
+This will ensure the entire website is still able to be built successfully after any updates.
+
+Local Sphinx build
+------------------
 
 To refresh the entire website while editing, it is necessary to run the equivalent commands that the GitHub publishing workflow runs to ensure no issues have been introduced.
 

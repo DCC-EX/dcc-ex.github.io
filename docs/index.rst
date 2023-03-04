@@ -53,4 +53,5 @@ Continue to the :doc:`/begin/levels` page, and keep an eye out on our pages to s
    reference/index
    projects/index
    about/index
+   glossary
 ..

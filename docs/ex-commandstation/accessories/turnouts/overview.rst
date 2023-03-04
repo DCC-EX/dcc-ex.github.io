@@ -17,7 +17,9 @@ Overview - types and options
 What is a turnout or point?
 ===========================
 
-To go back to basics, a turnout or point on either a real or model railway allows a train to move from one track to another.
+.. index:: turnout, point
+
+To go back to basics, a :term:`turnout<Turnout>` or :term:`point<Point>` on either a real or model railway allows a train to move from one track to another.
 
 When moving in to the land of digital control for model railways, there needs to be a way to control turnouts or points electronically and, where desired, via automation.
 
@@ -63,6 +65,8 @@ This means if a locomotive has caused a short by entering a turnout/point that i
 
 Turnout/point control options
 =============================
+
+.. index:: turnout, point
 
 Turnouts or points can be controlled by your |EX-CS| in several different ways, including mimic panels, throttles/controllers, |EX-R| automation, and |JMRi|.
 

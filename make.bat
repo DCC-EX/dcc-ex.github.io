@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=docs\.
 set BUILDDIR=docs\_build
-REM set SPHINXOPTS=
+set SPHINXOPTS=-E -a
 
 if "%1" == "" goto help
 
@@ -21,9 +21,9 @@ if "%1" == "github" (
 )
 
 if "%1" == "clean" (
-    echo.CLEAN BUILD with -E -a
-REM    %SPHINXOPTS% = "-E -a"
-    %SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% -E -a
+		rmdir /S /Q %BUILDDIR%
+		mkdir %BUILDDIR%
+		%SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
 	echo "dcc-ex.com" /y > docs\_build\html\CNAME
 	echo "" /y > docs\_build\html\.nojekyll
     goto end

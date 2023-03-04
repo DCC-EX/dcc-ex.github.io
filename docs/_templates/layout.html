@@ -1,14 +1,24 @@
 {% extends "!layout.html" %}
 
-{% block extrahead %}
-{{ super() }}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  {% block menu %}
+    {{ super() }}
+    <p class="caption">
+      <span class="caption-text">Indices</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a href="{{pathto('genindex.html', 1)}}">Site Index</a></li>
+    </ul>
+  {% endblock %}
 
-    gtag('config', 'G-L5X0KNBF0W');
-    </script>
-{% endblock %}
+  {% block extrahead %}
+    {{ super() }}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L5X0KNBF0W');
+      </script>
+  {% endblock %}

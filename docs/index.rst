@@ -35,7 +35,7 @@ Continue to the :doc:`/begin/levels` page, and keep an eye out on our pages to s
    :hidden:
    :maxdepth: 4
 
-   blog
+   blog/index
    begin/what-to-know
    begin/levels
    ex-commandstation/index

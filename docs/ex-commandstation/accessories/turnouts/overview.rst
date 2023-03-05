@@ -55,6 +55,11 @@ Solenoid/coil operated turnouts/points are commonly found in set track from bran
 DCC accessory turnouts/points
 -----------------------------
 
+.. index:: turnout, point
+  see: turnout; point
+  seealso: point; turnout
+  triple: turnout; point; switch
+
 While the sections on solenoid/coil or servo operated turnouts cover DCC accessory turnouts as well, it's worth calling this out explicitly to ensure people wishing to use these on their layout know exactly where to look.
 
 So, for users of DCC accessory based turnouts, simply look at either the solenoid/coil or servo turnout/point pages depending on the type of physical turnout in use, as those pages will also cover off how to operate those as DCC accessories.
@@ -90,5 +95,10 @@ For information on using the |EX-R| commands in "myAutomation.h" refer to the :d
 
 Turnout/point control, hardware, and configuration
 ==================================================
+
+.. index::
+  triple: turnout; point; control
+  see: turnout; point
+  seealso: point; turnout
 
 Continue to the next pages for more specific information on controlling, connecting hardware, and configuration of the specific turnout/point types outlined above.

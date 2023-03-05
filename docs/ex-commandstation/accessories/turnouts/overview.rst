@@ -17,9 +17,7 @@ Overview - types and options
 What is a turnout or point?
 ===========================
 
-.. index:: turnout, point
-
-To go back to basics, a :term:`turnout<Turnout>` or :term:`point<Point>` on either a real or model railway allows a train to move from one track to another.
+To go back to basics, a turnout or point on either a real or model railway allows a train to move from one track to another.
 
 When moving in to the land of digital control for model railways, there needs to be a way to control turnouts or points electronically and, where desired, via automation.
 
@@ -55,11 +53,6 @@ Solenoid/coil operated turnouts/points are commonly found in set track from bran
 DCC accessory turnouts/points
 -----------------------------
 
-.. index:: turnout, point
-  see: turnout; point
-  seealso: point; turnout
-  triple: turnout; point; switch
-
 While the sections on solenoid/coil or servo operated turnouts cover DCC accessory turnouts as well, it's worth calling this out explicitly to ensure people wishing to use these on their layout know exactly where to look.
 
 So, for users of DCC accessory based turnouts, simply look at either the solenoid/coil or servo turnout/point pages depending on the type of physical turnout in use, as those pages will also cover off how to operate those as DCC accessories.
@@ -70,8 +63,6 @@ This means if a locomotive has caused a short by entering a turnout/point that i
 
 Turnout/point control options
 =============================
-
-.. index:: turnout, point
 
 Turnouts or points can be controlled by your |EX-CS| in several different ways, including mimic panels, throttles/controllers, |EX-R| automation, and |JMRi|.
 
@@ -95,10 +86,5 @@ For information on using the |EX-R| commands in "myAutomation.h" refer to the :d
 
 Turnout/point control, hardware, and configuration
 ==================================================
-
-.. index::
-  triple: turnout; point; control
-  see: turnout; point
-  seealso: point; turnout
 
 Continue to the next pages for more specific information on controlling, connecting hardware, and configuration of the specific turnout/point types outlined above.

@@ -1,15 +1,5 @@
 {% extends "!layout.html" %}
 
-  {% block menu %}
-    {{ super() }}
-    <!-- <p class="caption">
-      <span class="caption-text">Site navigation</span>
-    </p> -->
-    <ul>
-      <li class="toctree-l1"><a href="{{pathto('genindex.html', 1)}}">Site Index</a></li>
-    </ul>
-  {% endblock %}
-
   {% block extrahead %}
     {{ super() }}
       <!-- Global site tag (gtag.js) - Google Analytics -->

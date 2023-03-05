@@ -42,6 +42,8 @@ extensions = [
    # 'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.spelling',
     'sphinx_toolbox.collapse',
+    'ablog',
+    'sphinx.ext.intersphinx',
 ]
 
 autosectionlabel_prefix_document = True
@@ -134,3 +136,9 @@ html_js_files = [
 #    'js/roundslider.min.js',
 #    'js/storageController.js'
 ]
+
+# ABlog options here
+blog_path = 'docs/blog/'
+blog_title = 'DCC-EX Blog'
+blog_baseurl = 'https://dcc-ex.com/blog'
+post_auto_image = 1

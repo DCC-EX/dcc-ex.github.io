@@ -79,13 +79,13 @@ Requirements (for installing)
 ==========================
 
 .. warning:: **Wait!**
-   :class: warning-float-right-narrow
+   :class: warning-float-right
    
    The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
 
-.. figure:: /_static/images/installer/installer.jpg
+.. figure:: /_static/images/installer/installer.png
    :alt: EX-Installer
-   :scale: 50%
+   :scale: 30%
 
    Installer Window
 
@@ -97,9 +97,9 @@ Choose your options
 
 In the left side options pane, use the dropdown selector boxes to choose the following options:
 
-.. figure:: /_static/images/installer/inst_options.jpg
+.. figure:: /_static/images/installer/installer-options.png
    :alt: Options Pane
-   :scale: 75%
+   :scale: 60%
 
    Options Pane
 
@@ -126,9 +126,9 @@ If you have installed a WiFi board, |EX-CS| will scan all the serial ports on yo
 If you wish to connect to your home network instead (connect to your router using "Station Mode"), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:
 
 
-.. figure:: /_static/images/installer/wifi.jpg
+.. figure:: /_static/images/installer/wifi.png
    :alt: WiFi Options
-   :scale: 90%
+   :scale: 30%
 
    Wifi Options
 

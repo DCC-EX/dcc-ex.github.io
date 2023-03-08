@@ -38,7 +38,7 @@ extensions = [
    # 'sphinx.ext.ifconfig',
    # 'sphinx.ext.viewcode',
    # 'sphinx.ext.graphviz',
-   # 'sphinx_sitemap',
+    'sphinx_sitemap',
    # 'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.spelling',
     'sphinx_toolbox.collapse',
@@ -137,8 +137,18 @@ html_js_files = [
 #    'js/storageController.js'
 ]
 
+# Sphinx sitemap
+html_baseurl = 'https://dcc-ex.com/'
+html_extra_path = [
+  'robots.txt',
+  ]
+
 # ABlog options here
-blog_path = 'docs/blog/'
+blog_path = 'blog'
 blog_title = 'DCC-EX Blog'
-blog_baseurl = 'https://dcc-ex.com/blog'
+blog_baseurl = 'https://dcc-ex.com'
+post_auto_excerpt = 1
 post_auto_image = 1
+blog_post_pattern = "blog/posts/*"
+blog_feed_fulltext = True
+fontawesome_included = True

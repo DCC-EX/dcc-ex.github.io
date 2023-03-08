@@ -1,5 +1,10 @@
 {% extends "!layout.html" %}
 
+  {% block menu %}
+    {{ super() }}  
+    <li class="toctree-l1"><a href="https://dcc-ex.com/blog.html">DCC-EX Blog</a></li>
+  {% endblock %}
+
   {% block extrahead %}
     {{ super() }}
       <!-- Global site tag (gtag.js) - Google Analytics -->

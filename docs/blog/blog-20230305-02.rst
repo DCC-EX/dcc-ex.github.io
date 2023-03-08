@@ -1,9 +1,0 @@
-Test entry
-==========
-
-.. post:: 5 March 2023
-  :tags: test
-  :category: Testing
-  :author: peteGSX
-
-Second blog entry, this is just a test.

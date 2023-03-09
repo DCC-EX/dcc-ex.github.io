@@ -15,4 +15,4 @@ Contributing to the Documentation
     structure
     basic-rst
     style-guide
-    in-the-know
+    publishing-news

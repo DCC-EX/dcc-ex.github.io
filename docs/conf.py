@@ -144,11 +144,11 @@ html_extra_path = [
   ]
 
 # ABlog options here
-blog_path = 'in-the-know'
-blog_title = 'DCC-EX In the Know'
+blog_path = 'news'
+blog_title = 'DCC-EX News'
 blog_baseurl = 'https://dcc-ex.com'
 post_auto_excerpt = 1
 post_auto_image = 0
-blog_post_pattern = "in-the-know/posts/*"
+blog_post_pattern = "news/posts/*"
 blog_feed_fulltext = True
 fontawesome_included = True

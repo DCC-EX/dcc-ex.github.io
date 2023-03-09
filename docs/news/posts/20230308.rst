@@ -8,10 +8,10 @@
 :tags: dcc-ex, news
 :excerpt: 1
 
-Introducing DCC-EX In the Know
-==============================
+Introducing DCC-EX News
+=======================
 
-Yep, that's right, the DCC-EX team are now publishing news regularly with our new "DCC-EX In the Know" feed!
+Yep, that's right, the DCC-EX team are now publishing updates regularly with our new "DCC-EX News" feed!
 
 We've come to realise we can do much better in communicating the various different projects the team is working on, when we are releasing new versions, when we've found/fixed bugs, and when we have news or announcements to share with all our users.
 
@@ -26,11 +26,11 @@ Here's what's happening at the moment:
   - Improvements to |I2C| connectivity including better timeout handling, the ability to reset the bus without rebooting the |EX-CS|, and support for multiplexors
   - Included device drivers for |EX-TT|, |EX-FC|, and |EX-IO|
 
-- We're continuing to review and improve our website and ways to keep you informed (hence this blog)
+- We're continuing to review and improve our website and ways to keep you informed (hence this news feed)
 - We're working on new, open source hardware options to make the entry point to DCC-EX simpler for those who aren't up to the level of DIY currently required
 
-If you wish to follow "DCC-EX In the Know", we will have the latest few posts published on the front page of our website, along with the `complete list here <https://dcc-ex.com/blog.html>`_.
+If you wish to follow "DCC-EX News", we will have the latest few posts published on the front page of our website, along with the `complete list here <https://dcc-ex.com/news.html>`_.
 
-If you use an RSS/Atom feed reader, you can add "DCC-EX In the Know" by adding our website "https://dcc-ex.com".
+If you use an RSS/Atom feed reader, you can add "DCC-EX News" by adding our website "https://dcc-ex.com".
 
 We look forward to sharing more news and information with you all!

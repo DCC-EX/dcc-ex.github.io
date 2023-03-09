@@ -14,6 +14,17 @@ DCC-EX Model Railroading
 
 If you are just starting your journey with |DCC-EX| then the sections below are designed to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
 
+.. sidebar:: DCC-EX News
+
+  .. postlist:: 3
+    :format: {date} - {title}
+    :date: %b %d %Y
+    :list-style: none
+    :excerpts:
+    :expand: Continue reading...
+
+  `View the entire "DCC-EX News" feed <news.html>`_.
+
 - :ref:`begin/what-to-know:what is dcc and dcc-ex?`
 - :ref:`begin/what-to-know:i'm interested in dcc but have a very small budget`
 - :ref:`begin/what-to-know:i just want to run my trains`
@@ -54,4 +65,3 @@ Continue to the :doc:`/begin/levels` page, and keep an eye out on our pages to s
    reference/index
    projects/index
    about/index
-..

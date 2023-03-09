@@ -1,14 +1,19 @@
 {% extends "!layout.html" %}
 
-{% block extrahead %}
-{{ super() }}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  {% block menu %}
+    {{ super() }}  
+    <li class="toctree-l1"><a href="https://dcc-ex.com/news.html">DCC-EX News</a></li>
+  {% endblock %}
 
-    gtag('config', 'G-L5X0KNBF0W');
-    </script>
-{% endblock %}
+  {% block extrahead %}
+    {{ super() }}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L5X0KNBF0W');
+      </script>
+  {% endblock %}

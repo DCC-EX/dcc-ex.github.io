@@ -11,7 +11,7 @@ EX-Toolbox - Overview
 
 |EX-TB| is a free, open source, Android app to help setup and configure your |EX-CS|. It is intended for setup, configuration, debugging you Command Station rather than continuous use.
 
-It can only function if you |EX-CS| is configured with wifi (either Access Point mode or Station mode). It cannot connect to a |EX-CS| though USB, wired ethernet or JMRI.
+It can only function if your |EX-CS| is configured with wifi (either Access Point mode or Station mode). It cannot connect to a |EX-CS| though USB, wired Ethernet or JMRI.
 
 .. image:: /_static/images/ex-toolbox/ex_toolbox_icon.png
    :alt: EX-Toolbox
@@ -20,7 +20,7 @@ It can only function if you |EX-CS| is configured with wifi (either Access Point
 
 |EX-Tb| is installed on you phone or tablet from the Play Store.
 
-|EX-TB| can:
+With |EX-TB| you can perform:
 
 * CV Programming in the programming track (Service Mode)
 * CV Programming in the main track (Operation Mode)

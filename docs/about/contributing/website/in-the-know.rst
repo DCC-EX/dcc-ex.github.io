@@ -67,6 +67,10 @@ The `:date:`, `:author:`, `:category:`, and `:tags:` metadata fields must be upd
 - `:author` - Your Discord or GitHub username, or full name if you're comfortable with that eg. `:author: peteGSX` or `:author: Peter Cole`
 - `:category:` - One or more categories the post falls into, can be a comma separated list eg. `:category: News` or `:category: News, Release` (see :ref:`about/contributing/website/in-the-know:Valid categories and tags`)
 - `:tags:` - One or more tags related to the post eg. `:tags: release, ex-commandstation` (see :ref:`about/contributing/website/in-the-know:Valid categories and tags`)
+  
+.. note::
+
+  All other metadata/RST directives must remain intact as provided in the template, including the ".. include" lines, `:blogpost:`, and `:excerpt:`.
 
 Valid categories and tags
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -1,0 +1,18 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+
+:blogpost: true
+:date: <date in format day month, year eg. 8 March, 2023>
+:author: <Your name, either Discord/GitHub username or real name>
+:category: <Refer to the doco for the category>
+:tags: <Refer to the doco for tags to use (comma separated list)>
+:excerpt: 1
+
+Post title
+==========
+
+A catchy one-liner here to get people's interest, and this will show on the front page and in RSS/Atom feeds.
+
+The rest of the content goes here.
+
+Feel free to use our product shortcuts such as |DCC-EX|, |EX-CS|, |EX-TT|, |EX-R|, |EX-IO|, |EX-DCCI|, |EX-FC|.

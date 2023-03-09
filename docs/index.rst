@@ -14,7 +14,7 @@ DCC-EX Model Railroading
 
 If you are just starting your journey with |DCC-EX| then the sections below are designed to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
 
-.. sidebar:: DCC-EX Blog
+.. sidebar:: DCC-EX In the Know
 
   .. postlist:: 3
     :format: {date} - {title}
@@ -23,7 +23,7 @@ If you are just starting your journey with |DCC-EX| then the sections below are 
     :excerpts:
     :expand: Continue reading...
 
-  You can view the whole blog `here <blog.html>`_.
+  `View the entire "DCC-EX In the Know" feed <in-the-know.html>`_.
 
 - :ref:`begin/what-to-know:what is dcc and dcc-ex?`
 - :ref:`begin/what-to-know:i'm interested in dcc but have a very small budget`

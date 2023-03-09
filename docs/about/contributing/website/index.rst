@@ -15,3 +15,4 @@ Contributing to the Documentation
     structure
     basic-rst
     style-guide
+    publishing-news

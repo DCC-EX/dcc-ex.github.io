@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'DCC-EX Model Railroading'
-copyright = '2020-2022 - Fred Decker, Mani Kumar'
+copyright = '2020-2023 - Fred Decker, Mani Kumar'
 author = 'Dave Cutting, Fred Decker, Mani Kumar'
 
 
@@ -38,10 +38,12 @@ extensions = [
    # 'sphinx.ext.ifconfig',
    # 'sphinx.ext.viewcode',
    # 'sphinx.ext.graphviz',
-   # 'sphinx_sitemap',
+    'sphinx_sitemap',
    # 'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.spelling',
     'sphinx_toolbox.collapse',
+    'ablog',
+    'sphinx.ext.intersphinx',
 ]
 
 autosectionlabel_prefix_document = True
@@ -134,3 +136,19 @@ html_js_files = [
 #    'js/roundslider.min.js',
 #    'js/storageController.js'
 ]
+
+# Sphinx sitemap
+html_baseurl = 'https://dcc-ex.com/'
+html_extra_path = [
+  'robots.txt',
+  ]
+
+# ABlog options here
+blog_path = 'news'
+blog_title = 'DCC-EX News'
+blog_baseurl = 'https://dcc-ex.com'
+post_auto_excerpt = 1
+post_auto_image = 0
+blog_post_pattern = "news/posts/*"
+blog_feed_fulltext = True
+fontawesome_included = True

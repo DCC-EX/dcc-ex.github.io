@@ -38,6 +38,10 @@
 
   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>
 ..
+.. |EX-TB| raw:: html
+
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Toolbox</span></span>
+..
 .. |BSC| raw:: html
 
   <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
@@ -102,6 +106,11 @@
 ..
 .. |EX-BSC-LOGO| image:: /_static/images/logos/product-logo-basestationclassic.png
       :alt: BaseStationClassic
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
+.. |EX-TB-LOGO| image:: /_static/images/logos/product-logo-ex-toolbox.png
+      :alt: EX-Toolbox
       :scale: 40%
       :class: image-product-logo-float-right
 ..

@@ -45,6 +45,7 @@ Continue to the :doc:`/begin/levels` page, and keep an eye out on our pages to s
    ex-ioexpander/index
    ex-dccinspector/index
    ex-fastclock/index
+   ex-toolbox/index
    support/index
    big-picture/index
    throttles/index

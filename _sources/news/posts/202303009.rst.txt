@@ -1,0 +1,36 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+
+:blogpost: true
+:date: 9 March, 2023
+:author: peteGSX
+:category: News
+:tags: dcc-ex, news
+:excerpt: 1
+
+Extra, extra, read all about it! Introducing DCC-EX News!
+=========================================================
+
+Yep, that's right, the DCC-EX team are now publishing updates regularly with our new "DCC-EX News" feed!
+
+We've come to realise we can do much better in communicating the various different projects the team is working on, when we are releasing new versions, when we've found/fixed bugs, and when we have news or announcements to share with all our users.
+
+So, without further adieu, we are sharing this very first post, and these will continue regularly as we have news to share.
+
+Here's what's happening at the moment:
+
+- We're continuing to work towards our next major release which will be v5.0.0, and will include some great new features:
+
+  - Track Manager (formerly called DC Districts), allowing you to run more than two motor driver outputs in DCC, DC, or programming track modes
+  - Support for newer generation, 32bit microcontrollers from STMicroelectronics
+  - Improvements to |I2C| connectivity including better timeout handling, the ability to reset the bus without rebooting the |EX-CS|, and support for multiplexors
+  - Included device drivers for |EX-TT|, |EX-FC|, and |EX-IO|
+
+- We're continuing to review and improve our website and ways to keep you informed (hence this news feed)
+- We're working on new, open source hardware options to make the entry point to DCC-EX simpler for those who aren't up to the level of DIY currently required
+
+If you wish to follow "DCC-EX News", we will have the latest few posts published on the front page of our website, along with the `complete list here <https://dcc-ex.com/news.html>`_.
+
+If you use an RSS/Atom feed reader, you can add "DCC-EX News" by adding our website "https://dcc-ex.com".
+
+We look forward to sharing more news and information with you all!

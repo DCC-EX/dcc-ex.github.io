@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://dcc-ex.com</id>
+  <title>DCC-EX News</title>
+  <updated>2023-03-09T21:37:46.206373+00:00</updated>
+  <link href="https://dcc-ex.com"/>
+  <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/202303009.html</id>
+    <title>Extra, extra, read all about it! Introducing DCC-EX News!</title>
+    <updated>2023-03-09T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;section id="extra-extra-read-all-about-it-introducing-dcc-ex-news"&gt;
+
+&lt;p&gt;Yep, that’s right, the DCC-EX team are now publishing updates regularly with our new “DCC-EX News” feed!&lt;/p&gt;
+&lt;p&gt;We’ve come to realise we can do much better in communicating the various different projects the team is working on, when we are releasing new versions, when we’ve found/fixed bugs, and when we have news or announcements to share with all our users.&lt;/p&gt;
+&lt;p&gt;So, without further adieu, we are sharing this very first post, and these will continue regularly as we have news to share.&lt;/p&gt;
+&lt;p&gt;Here’s what’s happening at the moment:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;We’re continuing to work towards our next major release which will be v5.0.0, and will include some great new features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Track Manager (formerly called DC Districts), allowing you to run more than two motor driver outputs in DCC, DC, or programming track modes&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support for newer generation, 32bit microcontrollers from STMicroelectronics&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improvements to I&lt;sup&gt;2&lt;/sup&gt;C connectivity including better timeout handling, the ability to reset the bus without rebooting the &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt;, and support for multiplexors&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Included device drivers for &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/span&gt;, &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/span&gt;, and &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We’re continuing to review and improve our website and ways to keep you informed (hence this news feed)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We’re working on new, open source hardware options to make the entry point to DCC-EX simpler for those who aren’t up to the level of DIY currently required&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you wish to follow “DCC-EX News”, we will have the latest few posts published on the front page of our website, along with the &lt;a class="reference external" href="https://dcc-ex.com/news.html"&gt;complete list here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you use an RSS/Atom feed reader, you can add “DCC-EX News” by adding our website “&lt;a class="reference external" href="https://dcc-ex.com"&gt;https://dcc-ex.com&lt;/a&gt;”.&lt;/p&gt;
+&lt;p&gt;We look forward to sharing more news and information with you all!&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/202303009.html" rel="alternate"/>
+    <summary>Yep, that’s right, the DCC-EX team are now publishing updates regularly with our new “DCC-EX News” feed!</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <category term="news" label="news"/>
+    <published>2023-03-09T00:00:00+00:00</published>
+  </entry>
+</feed>

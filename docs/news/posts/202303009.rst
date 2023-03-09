@@ -8,8 +8,8 @@
 :tags: dcc-ex, news
 :excerpt: 1
 
-Introducing DCC-EX News
-=======================
+Extra, extra, read all about it! Introducing DCC-EX News!
+=========================================================
 
 Yep, that's right, the DCC-EX team are now publishing updates regularly with our new "DCC-EX News" feed!
 

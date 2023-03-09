@@ -54,6 +54,12 @@
       :class: image-min-width-144
       :target: ../../download/ex-commandstation.html#getting-basestation-classic
 ..
+.. |EX-TB-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-toolbox.png
+      :alt: EX-Toolbox
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ../../ex-toolbox/index.html
+..
 .. ................................................
 ..
 .. |donate-button| image:: /_static/images/icons/donate_button_blue.png

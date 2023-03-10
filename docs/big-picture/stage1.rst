@@ -319,11 +319,15 @@ wiThrottle (Multiple Trains)
 Program a decoder's DCC address
 ===============================
 
-|DCC-EX| does not currently provide any apps with a user friendly interface for programming DCC decoders.
+|DCC-EX| provides an Android app |EX-TB| with a basic interface for programming DCC decoders, but it requires that you connect to the |EX-CS| over wifi or Ethernet. (USB is not supported.)
 
-At least one Smart Phone App (:doc:`/throttles/software/rtdrive-dccpp`) can program decoders on |EX-CS| but it is not particularly user friendly to do so.
+There are three Android apps that can program decoders:
 
-As a result, we recommend using |JMRi| DecoderPro for programming decoders.  It provides plain English descriptions of all the CVs of a huge number of different decoders, is very well supported, runs on the major PC operating systems, and is free and open source.
+* :doc:`/ex-toolbox/index` can program decoders over wifi or Ethernet.
+* :doc:`/throttles/software/engine-driver` can program decoders over wifi or Ethernet.
+* :doc:`/throttles/software/rtdrive-dccpp` can program decoders but it is not particularly user friendly to do so.
+
+We also recommend using |JMRi| DecoderPro for programming decoders.  It works for USB connected a |EX-CS| and it provides plain English descriptions of all the CVs of a huge number of different decoders, is very well supported, runs on the major PC operating systems, and is free and open source.
 
 Programming options
 -------------------

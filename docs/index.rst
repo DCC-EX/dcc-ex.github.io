@@ -14,11 +14,11 @@ DCC-EX Model Railroading
 
 If you are just starting your journey with |DCC-EX| then the sections below are designed to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
 
-.. sidebar:: DCC-EX News
+.. sidebar:: DCC-EX News 
 
   .. postlist:: 3
     :format: {date} - {title}
-    :date: %b %d %Y
+    :date: %d %b %Y
     :list-style: none
     :excerpts:
     :expand: Continue reading...

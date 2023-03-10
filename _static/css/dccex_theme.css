@@ -456,7 +456,9 @@ nav#on-this-page {
 section#dcc-ex-model-railroading aside p.sidebar-title {	
   font-size: 110% !important;
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;  
+  color: #00a3b9ff;
+  text-shadow: 1px 1px 0 #00353dff;
   margin: -24px -24px 12px !important;
 }
 

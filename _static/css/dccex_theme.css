@@ -452,6 +452,27 @@ nav#on-this-page {
   padding: 12px 24px 12px 24px !important;
 }
 
+/* news */
+section#dcc-ex-model-railroading aside p.sidebar-title {	
+  font-size: 110% !important;
+  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
+  font-weight: 700 !important;
+  margin: -24px -24px 12px !important;
+}
+
+/* news */
+p.ablog-post-title {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-size: 100% !important;
+  line-height: 150% !important;
+  margin-bottom: 0px !important;
+}
+
+p.ablog-post-excerpt {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  line-height: 150% !important;
+  margin-bottom: 0px !important;
+}
 
 /* *************************************** */
 

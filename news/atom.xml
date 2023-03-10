@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-03-09T23:01:43.470687+00:00</updated>
+  <updated>2023-03-10T07:24:48.427128+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
@@ -15,7 +15,7 @@
     </author>
     <content type="html">&lt;section id="ex-toolbox-released-on-the-play-store"&gt;
 
-&lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.&lt;/p&gt;
 &lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; can be installed on you phone or table via the &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox"&gt;Google Play Store&lt;/a&gt; . (Or search in the Play Store for “EX-Toolbox”, including the quotes.)&lt;/p&gt;
 &lt;p&gt;With &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; you can perform:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -29,7 +29,7 @@
 &lt;/section&gt;
 </content>
     <link href="https://dcc-ex.com/news/posts/20230309a.html" rel="alternate"/>
-    <summary>&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt;.</summary>
+    <summary>&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.</summary>
     <category term="ex-toolbox" label="ex-toolbox"/>
     <published>2023-03-09T00:00:00+00:00</published>
   </entry>

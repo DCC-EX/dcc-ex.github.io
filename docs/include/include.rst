@@ -156,6 +156,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |EX-NEWS-LOGO| image:: /_static/images/logos/product-logo-news.png
+      :alt: DCC-EX News
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png

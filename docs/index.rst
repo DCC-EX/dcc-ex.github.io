@@ -7,17 +7,19 @@ DCC-EX Model Railroading
 ************************
 
 .. grid::  1 1 2 2
-  :gutter: 3
+  :gutter: 2
   :margin: 0
   :padding: 0
 
   .. grid-item-card:: 
     :columns: 9
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
     |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 
   .. grid-item-card:: Releases
     :columns: 3
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto sd-text-center
 
     .. rst-class:: dcclink
 
@@ -27,6 +29,7 @@ DCC-EX Model Railroading
 
   .. grid-item-card:: 
     :columns: 7
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
     If you are just starting your journey with |DCC-EX| then the sections below are designed to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
 
@@ -42,6 +45,7 @@ DCC-EX Model Railroading
 
   .. grid-item-card:: DCC-EX News
     :columns: 5
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
     .. postlist:: 3
       :format: {date} - {title}
@@ -54,6 +58,7 @@ DCC-EX Model Railroading
 
   .. grid-item-card:: Where to next?
     :columns: 12
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
     Once you have an understanding of what |DCC-EX| is all about, it will be helpful to understand that our documentation is aimed at different levels of users, from those who are brand new and don't know much about electronics or software, through to those with a lot of knowledge.
 

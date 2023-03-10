@@ -85,7 +85,7 @@ https://dccwiki.com/Wire_Sizes_and_Spacing
 
 https://tonystrains.com/news/wire-sizes-to-use-in-dcc/
 
-https://sites.google.com/site/markgurries/home/technical-discussions/track-wire-gauge-selection
+https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/track-wire-gauge-selection
 
 http://www.sumidacrossing.org/LayoutControl/DCC/DCCLayoutPower/
 

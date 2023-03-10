@@ -44,6 +44,7 @@ extensions = [
     'sphinx_toolbox.collapse',
     'ablog',
     'sphinx.ext.intersphinx',
+    'sphinx_design',
 ]
 
 autosectionlabel_prefix_document = True

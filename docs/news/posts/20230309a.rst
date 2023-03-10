@@ -11,7 +11,7 @@
 EX-Toolbox released on the Play Store
 =====================================
 
-|EX-TB| is a free, open source, Android app to help setup and configure your |EX-CS|. 
+|EX-TB| is a free, open source, Android app to help setup and configure your EX-CommandStation. 
 
 |EX-TB| can be installed on you phone or table via the `Google Play Store <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ . (Or search in the Play Store for "EX-Toolbox", including the quotes.)
 

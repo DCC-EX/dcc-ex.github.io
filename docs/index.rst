@@ -20,9 +20,6 @@ DCC-EX Model Railroading
   .. grid-item-card:: 
     :columns: 12 12 12 4
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto sd-text-center
-    :link: /download/ex-commandstation
-    :link-type: doc
-    :link-alt: Downloads
 
     Releases
     ^^^
@@ -52,9 +49,6 @@ DCC-EX Model Railroading
   .. grid-item-card:: 
     :columns: 12 12 12 5
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
-    :link: news.html
-    :link-type: url
-    :link-alt: DCC-EX News
 
     DCC-EX News
     ^^^

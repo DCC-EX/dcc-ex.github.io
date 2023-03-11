@@ -66,9 +66,10 @@ Pages *generally* follow the basic structure:
   * `GitHub Issues Link`_
   * `On This Page - Table of Contents`_ (on longer pages with multiple headings)
   * `Page Content`_
-    * `Page Heading <Headings and Sub Headings>`_
+
+    * :ref:`about/contributing/website/structure:page heading`
     * Description or purpose of the page
-    * `Other Headings <Headings and Sub Headings>`_
+    * :ref:`Other headings <about/contributing/website/structure:page heading>`
 
       * Text, links, images, etc.
       * ...

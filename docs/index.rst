@@ -6,41 +6,70 @@
 DCC-EX Model Railroading 
 ************************
 
-.. rst-class:: dcclink-right
+.. grid::  1 1 1 2
+  :gutter: 2
+  :margin: 0
+  :padding: 1
 
-  `Version 4.1.2 Released <about/press/v412-announce.html>`_
+  .. grid-item-card:: 
+    :columns: 12 12 12 8
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
-|DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+    |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 
-If you are just starting your journey with |DCC-EX| then the sections below are designed to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
+  .. grid-item-card:: 
+    :columns: 12 12 12 4
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto sd-text-center
 
-.. sidebar:: DCC-EX News 
+    Releases
+    ^^^
+    
+    .. rst-class:: dcclink
 
-  .. postlist:: 3
-    :format: {date} - {title}
-    :date: %d %b %Y
-    :list-style: none
-    :excerpts:
-    :expand: Continue reading...
+      :ref:`Production 4.1.5 <download/ex-commandstation:latest ex-commandstation official release>`
 
-  `View the entire "DCC-EX News" feed <news.html>`_.
+      :ref:`Developer 4.2.24 <download/ex-commandstation:latest ex-commandstation unreleased development version>`
 
-- :ref:`begin/what-to-know:what is dcc and dcc-ex?`
-- :ref:`begin/what-to-know:i'm interested in dcc but have a very small budget`
-- :ref:`begin/what-to-know:i just want to run my trains`
-- :ref:`begin/what-to-know:i want to operate my turnouts/points and run dcc trains`
-- :ref:`begin/what-to-know:i want to control all my accessories and run dcc trains`
-- :ref:`begin/what-to-know:i want some extra automated/animated realism`
-- :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
+  .. grid-item-card:: 
+    :columns: 12 12 12 7
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
-If none of these sections have helped, or you've read them and are still confused as to how |DCC-EX| might help you, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. You can find the contact methods on our :doc:`/support/contact-us` page.
+    If you are just starting your journey with |DCC-EX| then the sections below are designed to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
 
-Where to next?
-==============
+    - :ref:`begin/what-to-know:what is dcc and dcc-ex?`
+    - :ref:`begin/what-to-know:i'm interested in dcc but have a very small budget`
+    - :ref:`begin/what-to-know:i just want to run my trains`
+    - :ref:`begin/what-to-know:i want to operate my turnouts/points and run dcc trains`
+    - :ref:`begin/what-to-know:i want to control all my accessories and run dcc trains`
+    - :ref:`begin/what-to-know:i want some extra automated/animated realism`
+    - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
 
-Once you have an understanding of what |DCC-EX| is all about, it will be helpful to understand that our documentation is aimed at different levels of users, from those who are brand new and don't know much about electronics or software, through to those with a lot of knowledge.
+    If none of these sections have helped, or you've read them and are still confused as to how |DCC-EX| might help you, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. You can find the contact methods on our :doc:`/support/contact-us` page.
 
-Continue to the :doc:`/begin/levels` page, and keep an eye out on our pages to see at which level of experience our documentation is aimed at.
+  .. grid-item-card:: 
+    :columns: 12 12 12 5
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
+
+    DCC-EX News
+    ^^^
+    
+    .. postlist:: 3
+      :format: {date} - {title}
+      :date: %d %b %Y
+      :list-style: none
+      :excerpts:
+      :expand: Continue reading...
+
+  .. grid-item-card:: 
+    :columns: 12
+    :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
+
+    Where to next?
+    ^^^
+    
+    Once you have an understanding of what |DCC-EX| is all about, it will be helpful to understand that our documentation is aimed at different levels of users, from those who are brand new and don't know much about electronics or software, through to those with a lot of knowledge.
+
+    Continue to the :doc:`/begin/levels` page, and keep an eye out on our pages to see at which level of experience our documentation is aimed at.
 
 .. toctree::
    :hidden:

@@ -44,6 +44,7 @@ extensions = [
     'sphinx_toolbox.collapse',
     'ablog',
     'sphinx.ext.intersphinx',
+    'sphinx_design',
 ]
 
 autosectionlabel_prefix_document = True
@@ -120,6 +121,7 @@ todo_include_todos = True
 html_css_files = [
     'css/dccex_theme.css',
     'css/big_picture_theme.css',
+    'css/sphinx_design_overrides.css',
 #    'css/layout.css',
 #    'css/roundslider.min.css',
 #    'css/throttle.css' 

@@ -57,4 +57,4 @@ Scroll through the list and select the one that begins with DCCEX:
 
 |
    
-Visit the TCS website here: https://tcsdcc.com/mini-throttle
+Visit the TCS website here: https://tcsdcc.com/uwt-50

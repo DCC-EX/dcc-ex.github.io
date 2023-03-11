@@ -9,18 +9,23 @@
   <title>ESP-01 and ESP-01s &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/sphinx_design_overrides.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/hardware/wifi-boards/esp-01.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -598,7 +603,7 @@ Rx   -----&gt; Tx
 </figure>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don’t need any additional circuitry. However, to be safe, you can use a small <a class="reference external" href="https://www.mouser.com/ProductDetail/SparkFun/BOB-12009?qs=WyAARYrbSnb%252BGYLWggQnjQ%3D%3D&amp;gclid=Cj0KCQiAzZL-BRDnARIsAPCJs73SnsmU-CTIk9V0XE6qjxY2WKlnxI0sLhT_rY5MYTbIOBmHne50Eh4aAm5ZEALw_wcB">level shifter board</a>, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.</p>
+<p>The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don’t need any additional circuitry. However, to be safe, you can use a small <a class="reference external" href="https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all">level shifter board</a>, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.</p>
 </div>
 </section>
 </section>

@@ -116,7 +116,7 @@ This is the one Steve Todd uses himself on a lanyard. It leaves both hands free 
    :scale: 50%
    :align: center
 
-`Wireless Bluetooth Gamepad/Joystick Controller <https://www.ebay.com.au/itm/Wireless-Controller-Rechargeable-Selfie-Remote-Shutter-Gamepad-Joystick-/174852677119>`_
+`Wireless Bluetooth Gamepad/Joystick Controller <https://www.amazon.com/Wireless-Gamepad-Bluetooth-Controller-Shutter/dp/B07WFH2HB9>`_
 
 |
 

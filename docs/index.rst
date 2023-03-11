@@ -6,29 +6,32 @@
 DCC-EX Model Railroading 
 ************************
 
-.. grid::  1 1 2 2
+.. grid::  1 1 1 2
   :gutter: 2
   :margin: 0
-  :padding: 0
+  :padding: 1
 
   .. grid-item-card:: 
-    :columns: 9
+    :columns: 12 12 12 8
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
     |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 
-  .. grid-item-card:: Releases
-    :columns: 3
+  .. grid-item-card:: 
+    :columns: 12 12 12 4
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto sd-text-center
 
+    Releases
+    ^^^
+    
     .. rst-class:: dcclink
 
       `Production v4.1.2 <about/press/v412-announce.html>`_
 
-      `Development v4.2.24 <https://github.com/DCC-EX/CommandStation-EX/tree/devel>`_
+      `Developer v4.2.24 <https://github.com/DCC-EX/CommandStation-EX/tree/devel>`_
 
   .. grid-item-card:: 
-    :columns: 7
+    :columns: 12 12 12 7
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
     If you are just starting your journey with |DCC-EX| then the sections below are designed to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
@@ -43,10 +46,13 @@ DCC-EX Model Railroading
 
     If none of these sections have helped, or you've read them and are still confused as to how |DCC-EX| might help you, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. You can find the contact methods on our :doc:`/support/contact-us` page.
 
-  .. grid-item-card:: DCC-EX News
-    :columns: 5
+  .. grid-item-card:: 
+    :columns: 12 12 12 5
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
+    DCC-EX News
+    ^^^
+    
     .. postlist:: 3
       :format: {date} - {title}
       :date: %d %b %Y
@@ -56,10 +62,13 @@ DCC-EX Model Railroading
 
     `View the entire "DCC-EX News" feed <news.html>`_.
 
-  .. grid-item-card:: Where to next?
+  .. grid-item-card:: 
     :columns: 12
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
+    Where to next?
+    ^^^
+    
     Once you have an understanding of what |DCC-EX| is all about, it will be helpful to understand that our documentation is aimed at different levels of users, from those who are brand new and don't know much about electronics or software, through to those with a lot of knowledge.
 
     Continue to the :doc:`/begin/levels` page, and keep an eye out on our pages to see at which level of experience our documentation is aimed at.

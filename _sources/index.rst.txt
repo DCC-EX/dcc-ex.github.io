@@ -60,6 +60,8 @@ DCC-EX Model Railroading
       :excerpts:
       :expand: Continue reading...
 
+    Read the full DCC-EX News feed `here <news.html>`_.
+
   .. grid-item-card:: 
     :columns: 12
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto

@@ -26,9 +26,9 @@ DCC-EX Model Railroading
     
     .. rst-class:: dcclink
 
-      `Production v4.1.2 <about/press/v412-announce.html>`_
+      :ref:`Production 4.1.5 <download/ex-commandstation:latest ex-commandstation official release>`
 
-      `Developer v4.2.24 <https://github.com/DCC-EX/CommandStation-EX/tree/devel>`_
+      :ref:`Developer 4.2.24 <download/ex-commandstation:latest ex-commandstation unreleased development version>`
 
   .. grid-item-card:: 
     :columns: 12 12 12 7

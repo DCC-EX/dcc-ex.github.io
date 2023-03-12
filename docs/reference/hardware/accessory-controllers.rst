@@ -39,12 +39,7 @@ be inverted (the LED will illuminate when the output is LOW and extinguish when 
    :alt: PCA8574 Port Expander
    :scale: 50%
 
-`LOVIVER PCF8574 IO Expansion Board <https://www.amazon.com/LOVIVER-PCF8574-Expansion-Evaluation-Development/dp/B07K4RN4ZL>`_
-
-or
-
 `DIYMORE PCF8574 IO Expansion Board <https://www.diymore.cc/products/pcf8574-i2c-bus-evaluation-development-module-io-expansion-board-i-o-expander>`_
-
 
 The PCF8574 piggyback boards are designed for fitting to the back of an LCD screen, to allow the screen to be controlled via
 an |I2C| serial connection.  Consequently, there are some features which limit its usefulness for general purpose I/O.  

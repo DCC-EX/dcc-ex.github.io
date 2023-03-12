@@ -15,7 +15,6 @@ Found on eBay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge
 
 |
 
-https://www.ebay.com/c/852876730
 https://www.aliexpress.com/i/32790131503.html
 https://www.aliexpress.com/item/32722458131.html
 https://www.aliexpress.com/item/531569334.html

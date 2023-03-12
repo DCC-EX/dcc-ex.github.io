@@ -88,11 +88,7 @@ For more information on any of these throttles, you can click on their links bel
 
 We will just cover two here. These two are a) free, or have a free version, b) are reasonably easy to get to work, and c) most people will already have a suitable phone to use:
 
-* `Engine Driver <Engine Driver (Android \| WiThrottle \| WiFi)>`_
-* `WiThrottle <WiThrottle (iOS \| WiThrottle \| WiFi)>`_
-
-If you have an Android phone use `Engine Driver <Engine Driver (Android \| WiThrottle \| WiFi)>`_. |br| If you have a Apple (iOS) phone use 
-`WiThrottle Lite <WiThrottle (iOS \| WiThrottle \| WiFi)>`_.
+If you have an Android phone use :doc:`/throttles/software/engine-driver`. |br| If you have an Apple (iOS) phone use :doc:`/throttles/software/withrottle`.
 
 Engine Driver (Android \| WiThrottle \| WiFi)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

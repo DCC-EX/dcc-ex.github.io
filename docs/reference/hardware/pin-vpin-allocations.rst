@@ -361,7 +361,7 @@ The DCC-EX rotary encoder is configured with a default |I2C| address of 0x80, ho
 
 The device driver name is "IO_RotaryEncoder.h" and will need to be included in "myHal.cpp".
 
-Refer to :ref:`ex-turntable/test-and-tune:controlling ex-turntable with a rotary encoder` and the `project page <https://petegsx-projects.github.io/rotary-encoder/index.html>`_ for further information.
+Refer to :ref:`ex-turntable/test-and-tune:controlling ex-turntable with a rotary encoder` and the `project page <https://petegsx-projects.github.io/rotary-encoder/overview.html>`_ for further information.
 
 .. list-table:: Adding DCC-EX rotary encoder
 

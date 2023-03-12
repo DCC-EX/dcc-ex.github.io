@@ -355,7 +355,7 @@ In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to th
 
   The rotary encoder software is not official DCC-EX software and is maintained separately, although the device driver and EX-RAIL commands will be included with a future release of |EX-CS|.
 
-  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/index.html>`_.
+  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__.
 
 Required software
 -----------------
@@ -375,7 +375,7 @@ Enabling the device driver
 
 The default |I2C| address for the rotary encoder is 0x70, and you will need to create the device in "myHal.cpp" on your |EX-CS|.
 
-Note you can create the device using 1 or 2 Vpins, and if you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/index.html>`_ documentation for more information on this feature.
+Note you can create the device using 1 or 2 Vpins, and if you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ documentation for more information on this feature.
 
 .. code-block:: cpp
 

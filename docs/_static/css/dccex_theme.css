@@ -465,15 +465,23 @@ section#dcc-ex-model-railroading aside p.sidebar-title {
 /* news */
 p.ablog-post-title {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-size: 100% !important;
-  line-height: 150% !important;
+  font-size: 90% !important;
+  line-height: 140% !important;
   margin-bottom: 0px !important;
 }
 
-p.ablog-post-excerpt {
+p.ablog-post-excerpt, p.ablog-post-expand {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  line-height: 150% !important;
+  font-size: 80% !important;
+  line-height: 130% !important;
   margin-bottom: 0px !important;
+}
+
+img.sd-card-img-top {
+  max-width: 30% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* *************************************** */

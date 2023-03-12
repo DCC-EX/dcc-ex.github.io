@@ -86,14 +86,28 @@ Cab (Loco) Commands
 
   * - Command
     - Description / Response 
-  * - ``<t reg cab speed dir>``  
-    - **Set the speed and direction of a Cab (Loco)** |BR| |_| |BR|
-      Response: ``<l cab reg speedByte functMap>`` |BR|
+  * - ``<t reg cab speed dir>``
+    - **Deprecated** |BR| 
+      **Set the speed and direction of a Cab (Loco)** |BR|
       **speed** - 0-127 |BR| 
-      **dir** - 1=forward 0=reverse |BR| 
+      **dir** - 1=forward 0=reverse |BR| |_| |BR|
+      Response: ``<l cab reg speedByte functMap>`` |BR|
+      **reg** - redundant. Not used. |BR|
+      **speedbye** - 1-127 for reverse, 0 stop 128-255 for forward |BR|
+      The speedbye value will be one higher (+1) than the 'speed' that you sent |BR| |_| |BR|
       Note: this starts a reminder process for any external updates to the cab's (loco's) status. |BR| |_| |BR|
       Legacy response: **Deprecated** |BR|
       ``<T reg speed dir>`` - do not rely on this response
+  * - ``<t cab speed dir>``  
+    - **Set the speed and direction of a Cab (Loco)** |BR|
+      **speed** - 0-127 |BR| 
+      **dir** - 1=forward 0=reverse |BR| |_| |BR|
+      Response: ``<l cab reg speedByte functMap>`` |BR|
+      **reg** - redundant. Not used. |BR|
+      **speedbye** - 1-127 for reverse, 0 stop 128-255 for forward |BR|
+      The speedbye value will be one higher than the 'speed' that you sent |BR| |_| |BR|
+      Note: this starts a reminder process for any external updates to the cab's (loco's) status. |BR| |_| |BR|
+      Legacy response: **Deprecated** |BR|
   * - ``<t cab>``
     - Requests a deliberate update on the cab speed/functions in the same format as the cab (loco) broadcast. |BR| |_| |BR|
       Response: ``<l cab reg speedByte functMap>`` |BR|

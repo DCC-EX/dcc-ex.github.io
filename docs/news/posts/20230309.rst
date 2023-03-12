@@ -8,6 +8,8 @@
 :tags: dcc-ex, news
 :excerpt: 1
 
+|EX-NEWS-LOGO|
+
 Extra, extra, read all about it! Introducing DCC-EX News!
 =========================================================
 

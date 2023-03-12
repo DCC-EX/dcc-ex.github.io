@@ -8,6 +8,8 @@
 :tags: ex-toolbox
 :excerpt: 1
 
+|EX-NEWS-LOGO|
+
 EX-Toolbox released on the Play Store
 =====================================
 

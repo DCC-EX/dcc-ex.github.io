@@ -15,8 +15,8 @@ This page contains lists of compatible Throttles (Controllers) that currently su
     :local:
 
 
-* `By Client Technology <Throttles - By Client Technology>`_  (e.g. Android, iOS, Web Browser, PC)
-* `By Communication technology <Throttles - By Communication technology>`_ (e.g. Native DCC++ commands, wiThrottle Protocol)
+* :ref:`By Client Technology <throttles/index:throttles - by client technology>`  (e.g. Android, iOS, Web Browser, PC)
+* :ref:`By Communication Technology <throttles/index:throttles - by communication technology>` (e.g. Native DCC++ commands, wiThrottle Protocol)
 
 |conductor|
 

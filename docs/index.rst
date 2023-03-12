@@ -34,7 +34,7 @@ DCC-EX Model Railroading
     :columns: 12 12 12 7
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
-    If you are just starting with |DCC-EX| then the sections below are intended to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users:
+    If you are just starting with |DCC-EX| then the sections below are intended to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users: 
 
     - :ref:`begin/what-to-know:what is dcc and dcc-ex?`
     - :ref:`I'm interested in DCC but have a limited budget <begin/what-to-know:i'm interested in dcc but have a very small budget>`

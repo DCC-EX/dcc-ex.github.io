@@ -44,12 +44,12 @@ DCC-EX Model Railroading
     - :ref:`begin/what-to-know:i want some extra automated/animated realism`
     - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
 
-    If these haven't helped, or you've read them and you are still unsure, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. Details of this and other contact methods on our :doc:`/support/contact-us` page.
+    If these haven't helped, or you've read them and you are still unsure, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. Details of this and other contact methods on our :doc:`/support/contact-us` page. 
 
   .. grid-item-card:: 
     :columns: 12 12 12 5
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
-    :img-top: /_static/images/logos/product-logo-news.png 
+    :img-top: /_static/images/logos/product-logo-news-cropped.png 
     
     .. postlist:: 3
       :format: {date} - {title}

@@ -7,8 +7,12 @@
 :category: News
 :tags: ex-toolbox
 :excerpt: 1
+:image: 0
 
-|EX-NEWS-LOGO|
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
 
 EX-Toolbox released on the Play Store
 =====================================

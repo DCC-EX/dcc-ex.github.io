@@ -7,8 +7,12 @@
 :category: News
 :tags: dcc-ex, news
 :excerpt: 1
+:image: 0
 
-|EX-NEWS-LOGO|
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
 
 Extra, extra, read all about it! Introducing DCC-EX News!
 =========================================================

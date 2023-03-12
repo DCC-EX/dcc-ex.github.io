@@ -8,6 +8,8 @@
 :tags: <Refer to the doco for tags to use (comma separated list)>
 :excerpt: 1
 
+|EX-NEWS-LOGO|
+
 Post title
 ==========
 

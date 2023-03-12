@@ -130,7 +130,7 @@ CV Programming (Operation Mode)
 -------------------------------
 
 .. image:: /_static/images/ex-toolbox/cv_programmer_ops_mode.png
-   :alt: Connecting
+   :alt: CV Programming (Operation Mode) 
    :scale: 50%
    :align: right
 
@@ -181,7 +181,7 @@ Track Manager
 (Only available when connected to EX-CommandStation version 4.2.7 and above.)
 
 .. image:: /_static/images/ex-toolbox/track_manager.png
-   :alt: Connecting
+   :alt: Track Manager
    :scale: 50%
    :align: right
 
@@ -216,7 +216,7 @@ Servo motor testing and adjustment
 ==================================
 
 .. image:: /_static/images/ex-toolbox/servos.png
-   :alt: Connecting
+   :alt: Servos Screen
    :scale: 50%
    :align: right
 
@@ -243,11 +243,11 @@ Sensor testing
 ==============
 
 .. image:: /_static/images/ex-toolbox/servos.png
-   :alt: Connecting
+   :alt: Sensors Screen
    :scale: 50%
    :align: right
 
-The servo motor test screen will allow you to test any sensors configured in your |EX-CS|.
+The Sensor test screen will allow you to test any sensors configured in your |EX-CS|.
 
 To access the Sensor Testing configuration screen either:
 
@@ -267,7 +267,7 @@ Current Meter
 (Only available when connected to EX-CommandStation version 4.2.20 and above.)
 
 .. image:: /_static/images/ex-toolbox/currents.png
-   :alt: Connecting
+   :alt: Current Meter Screen
    :scale: 50%
    :align: right
 
@@ -300,13 +300,13 @@ Power
 -----
 
 .. image:: /_static/images/ex-toolbox/power.png
-   :alt: Connecting
+   :alt: Power Screen
    :scale: 50%
    :align: right
 
 
 .. image:: /_static/images/ex-toolbox/power_menu.png
-   :alt: Connecting
+   :alt: Power menu
    :scale: 50%
    :align: right
 

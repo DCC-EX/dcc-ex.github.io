@@ -676,30 +676,45 @@ Response: <em>n/a</em></p></td>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">reg</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code></p></td>
-<td><p><strong>Set the speed and direction of a Cab (Loco)</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br />
+<td><p><strong>Deprecated</strong> <br />
+<strong>Set the speed and direction of a Cab (Loco)</strong> <br />
 <strong>speed</strong> - 0-127 <br />
-<strong>dir</strong> - 1=forward 0=reverse <br />
+<strong>dir</strong> - 1=forward 0=reverse <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br />
+<strong>reg</strong> - redundant. Not used. <br />
+<strong>speedbye</strong> - 1-127 for reverse, 0 stop 128-255 for forward <br />
+The speedbye value will be one higher (+1) than the ‘speed’ that you sent <br /> <br />
 Note: this starts a reminder process for any external updates to the cab’s (loco’s) status. <br /> <br />
 Legacy response: <strong>Deprecated</strong> <br />
 <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">reg</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - do not rely on this response</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code></p></td>
+<td><p><strong>Set the speed and direction of a Cab (Loco)</strong> <br />
+<strong>speed</strong> - 0-127 <br />
+<strong>dir</strong> - 1=forward 0=reverse <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br />
+<strong>reg</strong> - redundant. Not used. <br />
+<strong>speedbye</strong> - 1-127 for reverse, 0 stop 128-255 for forward <br />
+The speedbye value will be one higher than the ‘speed’ that you sent <br /> <br />
+Note: this starts a reminder process for any external updates to the cab’s (loco’s) status. <br /> <br />
+Legacy response: <strong>Deprecated</strong> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab&gt;</span></code></p></td>
 <td><p>Requests a deliberate update on the cab speed/functions in the same format as the cab (loco) broadcast. <br /> <br />
 Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br />
 Note: <br />
 If the cab (loco) is not in the reminders table. The Command Station will not return a valid response until a speed is applied to the cab. In this case <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">-1&gt;</span></code> will be returned.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[cab]&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[cab]&gt;</span></code></p></td>
 <td><p><strong>Remove one or all locos from reminders</strong> <br />
 <strong>cab</strong> - &lt;blank&gt;= all locos  No.= Cab (loco) to forget <br /> <br />
 Response: <em>n/a</em></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code></p></td>
 <td><p><strong>Emergency Stop</strong> <br /> <br />
 Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> (For each loco in the reminders list.)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">1|0&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">1|0&gt;</span></code></p></td>
 <td><p><strong>Turns loco decoder functions ON and OFF</strong> <br />
 <strong>funct</strong> - 0-28 (F29-F68 (Support for the RCN-212 Functions) <br />
 NOTES: <br />
@@ -708,49 +723,49 @@ NOTES: <br />
 - All functions within a group get set all at once per NMRA DCC standards. <br /> <br />
 Response <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code></p></td>
 <td><p><strong>Request the list defined Roster Entry IDs</strong> <br /> <br />
 Response (roster exists): <code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code> <br />
 Response (no roster exists): <code class="docutils literal notranslate"><span class="pre">&lt;jR&gt;</span></code> <br />
 Returns the list of defined roster entry IDs</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR</span> <span class="pre">id&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Request details of a specific Roster Entry</strong> <br /> <br />
 Response (id is in Roster): <code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id</span> <span class="pre">&quot;desc&quot;</span> <span class="pre">&quot;funct1/funct2/funct3/...&quot;&gt;</span></code> <br />
 Response (id is not in Roster): <code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id</span> <span class="pre">&quot;&quot;</span> <span class="pre">&quot;&quot;&gt;</span></code> <br />
 Returns the ID, description, and function map of the specified roster entry ID</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code></p></td>
 <td><p><strong>Request the list of Turnout/Point IDs</strong> <br /> <br />
 Response (has defined Turnouts/Points): <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code> <br />
 Response (no defined Turnouts/Points): <code class="docutils literal notranslate"><span class="pre">&lt;jT&gt;</span></code> <br />
 Returns the list of defined turnout/Point IDs</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT</span> <span class="pre">id&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Request details of a specific Turnout/Point</strong> <br /> <br />
 Response (id is defined): <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">state</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br />
 Response (id not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code> <br />
 Returns the ID, state, and description of the specified Turnout/Point ID</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code></p></td>
 <td><p><strong>Request the list of Automation and Route IDs</strong> <br /> <br />
 Response (has defined Automation/Routes): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code> <br />
 Response (no defined Automation/Routes): <code class="docutils literal notranslate"><span class="pre">&lt;jA&gt;</span></code> <br />
 Returns the defined automation and route IDs</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA</span> <span class="pre">id&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Request details of a specific Automation or Route</strong> <br /> <br />
 Response  (id is defined): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br />
 Response  (id not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code> <br />
 Returns the ID, type, and description of the specified automation/route ID <br />
 <strong>type</strong>: ‘A’=automation ‘R’=route</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code></p></td>
 <td><p><strong>Request a deliberate update of cab</strong> <br /> <br />
 Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br />
 Returns an update of cab speed, directions and functions in the same format as the cab broadcast</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code></p></td>
 <td><p>legacy function. <br />
 <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
 </tr>

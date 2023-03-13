@@ -334,7 +334,7 @@ Below is a link to the IBT_2 schematic. Click to enlarge.
 
 Below is the Handson Technology datasheet, recommended reading for Tinkerers and Engineers
 
-`Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver <../../_static/documents/bts7960-motor-driver.pdf>`_
+`Handson Technology BTS7960 High Current 43A H-Bridge Motor Driver <../../../_static/documents/bts7960-motor-driver.pdf>`_
 
 .. TODO: this has to go somewhere:
    There are two ways to monitor motor board current, one is at the input of the board and the other is at the output. We will cover both of these methods in the :ref:`advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)` section.

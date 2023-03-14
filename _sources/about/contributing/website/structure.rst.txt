@@ -243,7 +243,7 @@ Page content can include:
 * `Text`_
 * :ref:`about/contributing/website/basic-rst:Links / Hyperlinks`
 * :ref:`about/contributing/website/basic-rst:Tables`
-* `Including Images / Drawings <Images>`_
+* :ref:`about/contributing/website/basic-rst:images`
 
 After the heading, the page should start with an explanation of the purpose of the page.
 

@@ -60,7 +60,7 @@ DCC-EX Model Railroading
 
     Read the full DCC-EX News feed `here <news.html>`_.
 
-    Subscribe to the DCC-EX News Atom feed using "https://dcc-ex.com/news/atom.xml".
+    Subscribe to the DCC-EX News RSS/Atom feed using "https://dcc-ex.com/news/atom.xml".
 
   .. grid-item-card:: 
     :columns: 12

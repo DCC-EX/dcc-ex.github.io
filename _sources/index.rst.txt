@@ -60,6 +60,8 @@ DCC-EX Model Railroading
 
     Read the full DCC-EX News feed `here <news.html>`_.
 
+    Subscribe to the DCC-EX News Atom feed using "https://dcc-ex.com/news/atom.xml".
+
   .. grid-item-card:: 
     :columns: 12
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto

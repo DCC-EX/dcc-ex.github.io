@@ -126,4 +126,49 @@ Using a Capacitive Discharge Unit (CDU) - single solenoid/coil turnouts
 Using a Capacitive Discharge Unit (CDU) - dual solenoid/coil turnouts
 ---------------------------------------------------------------------
 
-.. todo:: MEDIUM - Add CDU info
+The infomation here is based on this combined driver and CDU:
+
+https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver
+
+This board has a MCP23017 which is connected to the DCC-EX CS via i2c, this is then accessed as any other MCP23017.  This MCP23017 controllers two ULN2803 darlington arrays to switch power to the solenoids.
+
+The connections will depend on the driver and CDU.
+
+On the turnout solenoids0 there will be three wires as in the motor driver circuit it will be a common wire, one wire to close the turnout and one wire to throw the turnout.
+
+With the above driver board the common is positive and the control wires are connected to ground by the darlington drivers.
+
+The macro below creates a turnout that drives the turnout via the MCP23017 vpins on the board.
+
+The macro requires two vpins to control a dual solenoid turnout.
+
+The DUAL_SOLENOID_TURNOUT definition is:
+id - turnout id
+pc - pin for CLOSE command
+pt - pin for THROW command
+desc - description
+ali - alias that can be used for the turnout in EX-RAIL
+shadow - id for a shadow turnout
+
+
+.. code-block:: 
+
+  #define PULSE 10 //10 mSec
+  #define DUAL_SOLENOID_TURNOUT(id,pc,pt,desc,ali,shadow)\
+  PIN_TURNOUT(id,0,desc)\
+  ALIAS(ali,id)\
+  PIN_TURNOUT(shadow,0,HIDDEN)\
+  DONE\
+  ONCLOSE(id)\
+  SET(pc)\
+  DELAY(PULSE)\
+  RESET(pc)\
+  CLOSE(shadow)\
+  DONE\
+  ONTHROW(id)\
+  SET(pt)\
+  DELAY(PULSE)\
+  RESET(pt)\
+  THROW(shadow)\
+  DONE
+

@@ -12,8 +12,8 @@ jobs:
       - uses: ScholliYT/Broken-Links-Crawler-Action@v3
         with:
           website_url: 'https://dcc-ex.com/'
-          exclude_url_prefix: 'mailto:'
-          verbose: true
+          exclude_url_prefix: 'mailto:,https://marketplace.visualstudio.com,https://script.google.com,https://www.iascaled.com/store/,https://www.digikey.com'
+          verbose: 'error'
           max_retry_time: 30
           max_retries: 5
           max_depth: 5

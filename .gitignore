@@ -1,6 +1,9 @@
 # sphinx build folder
 _build
 
+# python venv for sphinx
+venv
+
 # IDE files #
 .idea
 *.xml

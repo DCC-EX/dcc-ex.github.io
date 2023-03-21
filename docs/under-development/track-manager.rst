@@ -56,7 +56,7 @@ You will be using DC {Pulse Width Modulation PWM} to drive the DC engines, Not D
 
 .. code-block:: 
 
-       **Insert the DCCpwm DCCpwm AC DC  Image here**
+ **Insert the DCCpwm DCCpwm AC DC  Image here**
 
 .. note:: 
 
@@ -76,12 +76,12 @@ A simplified representation of what the Dual {PWM} signals might look like throu
 
 .. code-block:: 
 
-   **Insert Image DCC{PWM} Track**                                                                  **Insert image DC{PWM} Track**
+ **Insert Image DCC{PWM} Track**                                  **Insert image DC{PWM} Track**
 
 
-   DCC{PWM} signal                                            Dual Insulated                                         DC{PWM} signal
-	                                                         Joiners
-                                represents the block or track segment and not the particular locomotive.
+   DCC{PWM} signal                      Dual Insulated                 DC{PWM} signal
+	                                   Joiners
+                     represents the block or track segment and not the particular locomotive.
 
 .. note:: 
 
@@ -231,26 +231,26 @@ In a EXRAIL Automation script we could assign a track mode to DC and wait for a 
 
 .. code-block:: 
 
-  AUTOMATION(500, "Districts A MAIN _ B PROG Default")// Reset Default back to DCC Main & PROG
-   SET_TRACK(A,MAIN) PRINT("Default Districts Tracks MAIN A & PROG B")
-   SET_TRACK(B,PROG)
-   DONE
-  AUTOMATION(501, "District A MAIN")   // Alternate DCC Main track A
-   SET_TRACK(A,MAIN) PRINT("District A MAIN")
-   DONE
-  AUTOMATION(502, "District A PROG")   // Alternate DCC PROG track A
-   SET_TRACK(A,PROG) PRINT("District A PROG")
-   DONE
-  AUTOMATION(503, "District A DC")     // Alternate DC track A
-   SET_TRACK(A,DC) PRINT("District A DC")
-   DONE
-  AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity 
-   SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
-   DONE
-  AUTOMATION(505, "District A OFF")    // A Track OFF
-   SET_TRACK(A, OFF) PRINT ("District A OFF")
-   DONE
-  Copy and repeat AUTOMATION(506-510, District B  mode)
+ AUTOMATION(500, "Districts A MAIN _ B PROG Default")// Reset Default back to DCC Main & PROG
+  SET_TRACK(A,MAIN) PRINT("Default Districts Tracks MAIN A & PROG B")
+  SET_TRACK(B,PROG)
+  DONE
+ AUTOMATION(501, "District A MAIN")   // Alternate DCC Main track A
+  SET_TRACK(A,MAIN) PRINT("District A MAIN")
+  DONE
+ AUTOMATION(502, "District A PROG")   // Alternate DCC PROG track A
+  SET_TRACK(A,PROG) PRINT("District A PROG")
+  DONE
+ AUTOMATION(503, "District A DC")     // Alternate DC track A
+  SET_TRACK(A,DC) PRINT("District A DC")
+  DONE
+ AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity 
+  SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
+  DONE
+ AUTOMATION(505, "District A OFF")    // A Track OFF
+  SET_TRACK(A, OFF) PRINT ("District A OFF")
+  DONE
+ Copy and repeat AUTOMATION(506-510, District B  mode)
 
 .. note:: 
 

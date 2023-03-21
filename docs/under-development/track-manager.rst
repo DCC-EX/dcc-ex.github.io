@@ -54,7 +54,7 @@ You will instead be using Regulated DC {Laptop} 12-18 Vdc 3-5Amp power supply to
 
 You will be using DC {Pulse Width Modulation PWM} to drive the DC engines, Not DC Direct Current {-0 +16v}.
   
-       *Insert the DCCpwm DCCpwm AC DC  Image here
+       **Insert the DCCpwm DCCpwm AC DC  Image here**
 
 These modes, {PWM} vs Analog DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out motor shield and or USB connector. 
 
@@ -71,11 +71,11 @@ TrackManagerTM DCC(PWM} & DC{PWM} wave forms
 A simplified representation of what the Dual {PWM} signals might look like through the track.    
 
 
-    *Insert Image DCC{PWM} TRack                                                                          *Insert image DC{PWM} Track
+   **Insert Image DCC{PWM} Track**                                                                  **Insert image DC{PWM} Track**
 
 
-   DCC{PWM} signal                                         Dual Insulated                                           DC{PWM} signal
-	                                                                Joiners
+   DCC{PWM} signal                                            Dual Insulated                                         DC{PWM} signal
+	                                                         Joiners
                                 represents the block or track segment and not the particular locomotive.
 
 
@@ -107,7 +107,7 @@ and no we’re not hiding another Expensive DCC decoder under the table on each 
 **It's All done through a single DCC-EX  EX-CommandStation.**
 
 **Note:**
-When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address.
+ When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address.
 
 Hardware Requirements and Technical Notes:
 ==========================================
@@ -133,8 +133,8 @@ Using our new embedded TrackManagerTM feature with simple easy commands from a t
 This allows a throttle on Track B set to DCX to operate in Forward and Reverse correctly for west bound engines.
 
 So, you can take a standard DC motor only engines CAB number on the side of the engine and assign it to one or more of up to 8 tracks/districts/blocks labeled A thru H then enter that same number into a Throttle and control that Loco Cab # on each and every one of the assigned tracks.
-  + Valid Cab addresses are 1 to 10239.
-  - Invalid Cab address is 0 zero.
+ * Valid Cab addresses are 1 to 10239.
+ * Invalid Cab address is 0 zero.
 
 We Do Not support 0 zero stretch address function, found on Digitrax and Lenz command Stations on purpose.   The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time.
 
@@ -202,7 +202,7 @@ New command ``<= trackletter mode [address]>`` has been added for DC and DCX tra
 
 .. note:: 
 
- You would then enter your Engine address on the throttle of 1234 and 4321 and drive them on the layout.
+You would then enter your Engine address on the throttle of 1234 and 4321 and drive them on the layout.
 
 Create EXRAIL Scripts to Change Track modes
 -------------------------------------------
@@ -305,6 +305,7 @@ Track A and Track B with sidings;
 You can set each district separately as mode
  * DCC for MAIN, PROG or OFF
  * Analog for DC, DCX or OFF
+
 DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.
 
 Using the New TrackManagerTM Function commands you can run the whole layout as
@@ -350,42 +351,50 @@ Come chat with us in the DCC-EX Discord channel about TrackManagerTM aka DCdistr
 
 
 
-
-
-
-
 **Example of User defined EXRAIL Scripts running on Engine Driver Throttle App {Android}**
 **DCC-EX  EX-CommandStation Beta 4.2.30+**
 
+.. code-block::
 
-**Engine Driver controlling Two Locos**
- DCC PE 1225 on track A address 1225 with a Sound Decoder
- DC NH  667 on Track B address 667 with IPLS Virtual Sound Decoder
-   *Image ED 1
+  **Engine Driver controlling Two Locos**
+    DCC PE 1225 on track A address 1225 with a Sound Decoder
+    DC NH  667 on Track B address 667 with IPLS Virtual Sound Decoder
+      **ED Image 1**
 
+.. note:: 
 
-**DCC-EX  Commands,  scroll-able**
-   *Image ED 2
+.. code-block::
 
+  **DCC-EX  Commands,  scroll-able**
+      **ED Image 2**
 
-**DCC-EX TrackManager District {Handoff} & {Set} buttons**
- scroll through & select track modes
- Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track
-   *Image ED 3
+.. note:: 
 
+.. code-block::
 
-**Engine Driver DCC-EX Native mode**
- Track/District Manager  MAIN & PROG                   TrackManager Track A  DCC 1225 
- with DCC-EX Cmd Line & Serial monitor                            & Track B   DC  667
-   *Image Ed 4                                                  *Image Ed 5
+  **DCC-EX TrackManager District {Handoff} & {Set} buttons**
+    scroll through & select track modes
+   Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track
+      **ED Image 3**
 
+.. note:: 
 
+.. code-block::
+
+  **Engine Driver DCC-EX Native mode**
+    Track/District Manager  MAIN & PROG                   TrackManager Track A  DCC 1225 
+    with DCC-EX Cmd Line & Serial monitor                            & Track B   DC  667
+      ** ED Image 4                                                   ED Image 5**
+
+.. note:: 
+
+.. code-block::
 
   **Engine Driver EXRAIL Automation {Handoff}**            FX Special Effects {Set} continued
-  &  FX Special Effects {Set} buttons                       & RouteTurnouts {Set} buttons
-   *Image Ed 6                                                    *Image Ed 7     
+                & FX Special Effects {Set} buttons            & RouteTurnouts {Set} buttons
+       **ED Image 6                                                   ED Image 7**
 
-
+.. note:: 
 
 .. warning:: 
 

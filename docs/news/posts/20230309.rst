@@ -7,6 +7,12 @@
 :category: News
 :tags: dcc-ex, news
 :excerpt: 1
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
 
 Extra, extra, read all about it! Introducing DCC-EX News!
 =========================================================
@@ -31,6 +37,6 @@ Here's what's happening at the moment:
 
 If you wish to follow "DCC-EX News", we will have the latest few posts published on the front page of our website, along with the `complete list here <https://dcc-ex.com/news.html>`_.
 
-If you use an RSS/Atom feed reader, you can add "DCC-EX News" by adding our website "https://dcc-ex.com".
+If you use an RSS/Atom feed reader, you can add "DCC-EX News" by the URL "https://dcc-ex.com/news/atom.xml".
 
 We look forward to sharing more news and information with you all!

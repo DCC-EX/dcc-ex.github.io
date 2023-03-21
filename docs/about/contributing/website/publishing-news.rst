@@ -1,5 +1,5 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l2.rst
+.. include:: /include/include-l3.rst
 |EX-CONTRIBUTING-LOGO|
 
 ****************************
@@ -50,6 +50,12 @@ The content of the file should start like this:
   :category: <Refer to the doco for the category>
   :tags: <Refer to the doco for tags to use (comma separated list)>
   :excerpt: 1
+  :image: 0
+
+  .. image:: /_static/images/logos/product-logo-news.png
+    :alt: DCC-EX News
+    :scale: 40%
+    :class: image-product-logo-float-right
 
   Post title
   ==========
@@ -74,7 +80,7 @@ The `:date:`, `:author:`, `:category:`, and `:tags:` metadata fields must be upd
 
   Give careful consideration to the date of the post compared to your timezone. If you publish the website with a new post dated today, and today for the timezone you are in is ahead of GMT (eg. GMT+10 for Brisbane, Australia where this author is located), the post will not be displayed as it is considered in the future.
   
-  All other metadata/RST directives must remain intact as provided in the template, including the ".. include" lines, `:blogpost:`, and `:excerpt:`.
+  All other metadata/RST directives must remain intact as provided in the template, including the ".. include" lines, `:blogpost:`, `:excerpt:`, `:image:`, and the logo image directive.
 
 Valid categories and tags
 ^^^^^^^^^^^^^^^^^^^^^^^^^

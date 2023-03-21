@@ -28,7 +28,7 @@ DCC-EX Model Railroading
 
       :ref:`Production 4.1.5 <download/ex-commandstation:latest ex-commandstation official release>`
 
-      :ref:`Developer 4.2.24 <download/ex-commandstation:latest ex-commandstation unreleased development version>`
+      :ref:`Developer 4.2.26 <download/ex-commandstation:latest ex-commandstation unreleased development version>`
 
   .. grid-item-card:: 
     :columns: 12 12 12 7
@@ -59,6 +59,8 @@ DCC-EX Model Railroading
       :expand: Continue reading...
 
     Read the full DCC-EX News feed `here <news.html>`_.
+
+    Subscribe to the DCC-EX News RSS/Atom feed using "https://dcc-ex.com/news/atom.xml".
 
   .. grid-item-card:: 
     :columns: 12

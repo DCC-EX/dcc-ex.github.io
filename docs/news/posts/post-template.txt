@@ -6,7 +6,12 @@
 :author: <Your name, either Discord/GitHub username or real name>
 :category: <Refer to the doco for the category>
 :tags: <Refer to the doco for tags to use (comma separated list)>
-:excerpt: 1
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
 
 Post title
 ==========

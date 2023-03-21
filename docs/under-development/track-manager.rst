@@ -306,7 +306,7 @@ Modular Layouts
 ---------------
 DCC-EX TrackManagerTM 4.2.30+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
 Track A and Track B with sidings;
- * Track A {east bound} wired rails L+  R+
+ * Track A {east bound} wired rails L-  R+
  * Track B {westbound} which also have all the siding and spurs, wired rails L+  R-
 
 You can set each district separately as mode

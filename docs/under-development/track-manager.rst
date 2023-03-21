@@ -53,8 +53,12 @@ One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/
 You will instead be using Regulated DC {Laptop} 12-18 Vdc 3-5Amp power supply to your Motor Shield and or Motor Board {booster} to run all your DCC Locos and Analog DC Cabs on All your individual tracks/districts/blocks.
 
 You will be using DC {Pulse Width Modulation PWM} to drive the DC engines, Not DC Direct Current {-0 +16v}.
-  
+
+.. code-block:: 
+
        **Insert the DCCpwm DCCpwm AC DC  Image here**
+
+.. note:: 
 
 These modes, {PWM} vs Analog DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out motor shield and or USB connector. 
 
@@ -70,6 +74,7 @@ TrackManagerTM DCC(PWM} & DC{PWM} wave forms
 =============================================
 A simplified representation of what the Dual {PWM} signals might look like through the track.    
 
+.. code-block:: 
 
    **Insert Image DCC{PWM} Track**                                                                  **Insert image DC{PWM} Track**
 
@@ -77,6 +82,8 @@ A simplified representation of what the Dual {PWM} signals might look like throu
    DCC{PWM} signal                                            Dual Insulated                                         DC{PWM} signal
 	                                                         Joiners
                                 represents the block or track segment and not the particular locomotive.
+
+.. note:: 
 
 
 Note on PWM frequency
@@ -356,7 +363,7 @@ Come chat with us in the DCC-EX Discord channel about TrackManagerTM aka DCdistr
 
 .. code-block::
 
-  **Engine Driver controlling Two Locos**
+ **Engine Driver controlling Two Locos**
     DCC PE 1225 on track A address 1225 with a Sound Decoder
     DC NH  667 on Track B address 667 with IPLS Virtual Sound Decoder
       **ED Image 1**
@@ -365,14 +372,14 @@ Come chat with us in the DCC-EX Discord channel about TrackManagerTM aka DCdistr
 
 .. code-block::
 
-  **DCC-EX  Commands,  scroll-able**
+ **DCC-EX  Commands,  scroll-able**
       **ED Image 2**
 
 .. note:: 
 
 .. code-block::
 
-  **DCC-EX TrackManager District {Handoff} & {Set} buttons**
+ **DCC-EX TrackManager District {Handoff} & {Set} buttons**
     scroll through & select track modes
    Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track
       **ED Image 3**
@@ -381,7 +388,7 @@ Come chat with us in the DCC-EX Discord channel about TrackManagerTM aka DCdistr
 
 .. code-block::
 
-  **Engine Driver DCC-EX Native mode**
+ **Engine Driver DCC-EX Native mode**
     Track/District Manager  MAIN & PROG                   TrackManager Track A  DCC 1225 
     with DCC-EX Cmd Line & Serial monitor                            & Track B   DC  667
       ** ED Image 4                                                   ED Image 5**
@@ -390,7 +397,7 @@ Come chat with us in the DCC-EX Discord channel about TrackManagerTM aka DCdistr
 
 .. code-block::
 
-  **Engine Driver EXRAIL Automation {Handoff}**            FX Special Effects {Set} continued
+ **Engine Driver EXRAIL Automation {Handoff}**            FX Special Effects {Set} continued
                 & FX Special Effects {Set} buttons            & RouteTurnouts {Set} buttons
        **ED Image 6                                                   ED Image 7**
 

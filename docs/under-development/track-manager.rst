@@ -106,8 +106,8 @@ and no we’re not hiding another Expensive DCC decoder under the table on each 
 
 **It's All done through a single DCC-EX  EX-CommandStation.**
 
-**Note:**
- When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address.
+**Note**
+When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address.
 
 Hardware Requirements and Technical Notes:
 ==========================================
@@ -217,7 +217,7 @@ my.Automation.h file
     SET_TRACK(C, DC)
 
 .. note:: 
-
+ 
 Create EXRAIL list of TrackManager Functions for Engine Driver Automatically Assign {Handoff} buttons
 -----------------------------------------------------------------------------------------------------
 In a EXRAIL Automation script we could assign a track mode to DC and wait for a Engine Driver throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.

@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Under Development: Track Manager &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Under Development: DCC-EX TrackManagerTM Feature &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -340,7 +340,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Features under development</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"><em>Under Development:</em> Track Manager</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><em>Under Development:</em> DCC-EX TrackManagerTM Feature</a></li>
 <li class="toctree-l2"><a class="reference internal" href="duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
@@ -517,7 +517,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Features under development</a></li>
-      <li class="breadcrumb-item active"><em>Under Development:</em> Track Manager</li>
+      <li class="breadcrumb-item active"><em>Under Development:</em> DCC-EX TrackManagerTM Feature</li>
   
     
       <li class="wy-breadcrumbs-aside">
@@ -531,65 +531,374 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-<section id="under-development-track-manager">
-<h1><em>Under Development:</em> Track Manager<a class="headerlink" href="#under-development-track-manager" title="Permalink to this heading"></a></h1>
+<section id="under-development-dcc-ex-trackmanagertm-feature">
+<h1><em>Under Development:</em> DCC-EX TrackManagerTM Feature<a class="headerlink" href="#under-development-dcc-ex-trackmanagertm-feature" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="https://github.com/DCC-EX/CommandStation-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#hardware-requirements" id="id1">Hardware requirements</a></p></li>
-<li><p><a class="reference internal" href="#track-manager-commands" id="id2">Track Manager commands</a></p></li>
-<li><p><a class="reference internal" href="#note-on-pwm-frequency" id="id3">Note on PWM frequency</a></p></li>
+<li><p><a class="reference internal" href="#welcome-to-dcc-ex-new-trackmanagertm-feature-review" id="id1">Welcome to DCC-EX new TrackManagerTM Feature review …</a></p></li>
+<li><p><a class="reference internal" href="#trackmanagertm-dcc-pwm-dc-pwm-wave-forms" id="id2">TrackManagerTM DCC(PWM} &amp; DC{PWM} wave forms</a></p></li>
+<li><p><a class="reference internal" href="#replacing-or-integrating-into-your-current-layout" id="id3">Replacing or Integrating Into Your Current Layout</a></p></li>
+<li><p><a class="reference internal" href="#hardware-requirements-and-technical-notes" id="id4">Hardware Requirements and Technical Notes:</a></p></li>
+<li><p><a class="reference internal" href="#how-do-you-run-a-ex-commandstation-in-dc-pwm-mode" id="id5">‘How do you run a EX-CommandStation in DC{PWM} mode’?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#controlling-managing-dcc-ex-trackmanager-modes" id="id6"><strong>Controlling &amp; Managing DCC-EX TrackManager modes</strong></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#trackmanager-commands" id="id7">TrackManager Commands</a></p>
+<ul>
+<li><p><a class="reference internal" href="#create-exrail-scripts-to-change-track-modes" id="id8">Create EXRAIL Scripts to Change Track modes</a></p></li>
+<li><p><a class="reference internal" href="#create-exrail-list-of-trackmanager-functions-for-engine-driver-automatically-assign-handoff-buttons" id="id9">Create EXRAIL list of TrackManager Functions for Engine Driver Automatically Assign {Handoff} buttons</a></p></li>
+<li><p><a class="reference internal" href="#create-exrail-trackmanager-functions-for-engine-driver-throttle-automation-handoff-buttons" id="id10">Create EXRAIL TrackManager Functions for Engine Driver Throttle Automation {Handoff} buttons</a></p></li>
+<li><p><a class="reference internal" href="#create-exrail-trackmanager-functions-for-engine-driver-throttle-route-set-buttons" id="id11">Create EXRAIL TrackManager Functions for Engine Driver Throttle Route {Set} buttons</a></p></li>
+<li><p><a class="reference internal" href="#dcc-ex-command-station-with-exrail-trackmanagertm-synergy" id="id12">DCC-EX Command Station with EXRAIL &amp; TrackManagerTM Synergy</a></p></li>
+<li><p><a class="reference internal" href="#modular-layouts" id="id13">Modular Layouts</a></p></li>
+<li><p><a class="reference internal" href="#using-the-new-trackmanagertm-function-commands-you-can-run-the-whole-layout-as" id="id14">Using the New TrackManagerTM Function commands you can run the whole layout as</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-do-i-get-on-board-with-dcc-ex-trackmanagertm" id="id15">How Do I Get On Board with DCC-EX TrackManagerTM ?</a></p></li>
 </ul>
 </nav>
 </aside>
-<p>Formerly referred to as “DC Districts”, Track Manager is a new feature under active development to allow an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> with the correct hardware and software to control up to 8 separate tracks in different modes including DCC main, DCC programming, and DC.</p>
-<p>One key item to note with DC vs. DCC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.</p>
+<section id="welcome-to-dcc-ex-new-trackmanagertm-feature-review">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Welcome to DCC-EX new TrackManagerTM Feature review …</a><a class="headerlink" href="#welcome-to-dcc-ex-new-trackmanagertm-feature-review" title="Permalink to this heading"></a></h2>
+<p>A first for the DCC &amp; DC Model Railroading world.  A Dual Digital Command &amp; Control Station.</p>
+<p>With just a Single DCC-EX <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and a WiFi Throttle (Engine Driver) you can simultaneously run both your DCC Locos and analog DC Locos or ‘Cabs’ using the engine number printed on its side as throttle addresses from 1 to 10239 to control and drive them on multiple separate insulated tracks/districts.</p>
+<dl class="simple">
+<dt>Throttle Compatibility</dt><dd><ul class="simple">
+<li><p>WiFi Throttles</p></li>
+<li><p>The DCC-EX  browser based EX-WebThrottle</p></li>
+<li><p>Other wired throttles to operate your DCC layout and your DC layout, either separately or a simultaneous combination of the two modes.</p></li>
+</ul>
+</dd>
+<dt>DCC-EX  EX-CommandStation with TrackManagerTM includes the following features:</dt><dd><ul class="simple">
+<li><p>DCCdistrict modes of MAIN, PROG &amp; OFF</p></li>
+<li><p>DCdistrict modes of DC, DCX (DC Reversed Polarity) &amp; OFF</p></li>
+</ul>
+</dd>
+</dl>
+<p>CommandStation-EX current software development version v.4.2.30+ supports both DCC{PWM} and DC{PWM} Pulse Width Modulation modes as an ‘embedded standard feature’.
+TrackManagerTM allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC {PWM} and or DC {PWM} as tracks A - H.</p>
+<dl class="simple">
+<dt>An Arduino Mega + WiFi and Standard L298P Motor Shield Command Station has two ready to run Tracks (A &amp; B) which can be configured as:</dt><dd><ul class="simple">
+<li><p>DCC {PWM} modes MAIN for Mainline Tracks and PROG for a Programming Track (singular)</p></li>
+<li><p>DC {PWM} modes DC or DCX {opposite polarity}</p></li>
+<li><p>and track/district can also be OFF</p></li>
+</ul>
+</dd>
+</dl>
+<p>No additional external DCC decoders are required for DC{PWM} Track assignments, a single DCC-EX EX-CommandStation is the only hardware needed for full functionality.</p>
+<p>One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.</p>
+<p><strong>This is not your Father’s DC railway which used DC transformers for Cab control.</strong></p>
+<p><strong>Before you begin…</strong> Turn off, unplug AC power cord and disconnect your current DC transformer(s) / power supply(s) from the DC layout track and place it in a box for safe keeping.</p>
+<p>You will instead be using Regulated DC {Laptop} 12-18 Vdc 3-5Amp power supply to your Motor Shield and or Motor Board {booster} to run all your DCC Locos and Analog DC Cabs on All your individual tracks/districts/blocks.</p>
+<p>You will be using DC {Pulse Width Modulation PWM} to drive the DC engines, Not DC Direct Current {-0 +16v}.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**Insert the DCCpwm DCCpwm AC DC  Image here**
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>These modes, (PWM) vs Analog DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out motor shield and or USB connector.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>DCC(PWM) is detected on a multimeter as an AC signal but in a square wave form, not as a sine wave</p></li>
+<li><p>DC(PWM) is detected on a multimeter as a DC signal in a square wave form, not as a direct current wave</p></li>
+</ul>
+</div>
+<p>The DC(PWM) track is Power supply dependent and needs a varying amount of 0 zero to maximum Vdc passed to the track of 12 or 16 or 18vdc, depending on whether they’re N, HO or G scale engines.</p>
+<p>Note; The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the Motor Shield DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.</p>
+</section>
+<section id="trackmanagertm-dcc-pwm-dc-pwm-wave-forms">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">TrackManagerTM DCC(PWM} &amp; DC{PWM} wave forms</a><a class="headerlink" href="#trackmanagertm-dcc-pwm-dc-pwm-wave-forms" title="Permalink to this heading"></a></h2>
+<p>A simplified representation of what the Dual {PWM} signals might look like through the track.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**Insert Image DCC{PWM} Track**                                  **Insert image DC{PWM} Track**
+
+
+  DCC{PWM} signal                      Dual Insulated                 DC{PWM} signal
+                                          Joiners
+                    represents the block or track segment and not the particular locomotive.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note on PWM frequency</p>
+<p>Different microcontrollers utilise different PWM frequencies, and at present, these default frequencies are in use rather than using software to define them.</p>
+<p>The side effect of these differing frequencies is that you may notice humming or sometimes squealing noises from older DC motors.</p>
+<dl class="simple">
+<dt>The known PWM frequencies are:</dt><dd><ul class="simple">
+<li><p>Mega2560 - 122.55Hz</p></li>
+<li><p>ESP32      - variable</p></li>
+<li><p>STM32 Nucleo - typically 1000Hz</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</section>
+<section id="replacing-or-integrating-into-your-current-layout">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Replacing or Integrating Into Your Current Layout</a><a class="headerlink" href="#replacing-or-integrating-into-your-current-layout" title="Permalink to this heading"></a></h2>
+<p>Existing Analog DC layouts which have standard DC Transformers on two or more separate DC tracks/districts/blocks and or also have a second separate Proprietary DCC command station, would have in place  a) 18 inch section of dead rail, b) an electric relay, or c) a DPDT Center off switch between the two types of controller powered stations. Which should Not be using a common ground rail, and only use dual insulated tracks.</p>
+<p>You will be Replacing this kind of legacy analog DC and proprietary DCC installations described above with a Single EX-CommandStation.
+Which will have a software switching implementation with both soft touch GUI buttons on throttles, and serial commands via serial monitor.
+Allowing you to easily and quickly swap between the two DCC{PWM} and DC{PWM} modes on any of the A thru H dual insulated Track/Districts in Real Time.
+Thereby replacing the physical hardware DPDT switch that’s mounted on a hard surface.</p>
+<p>And if you’re adventurous even from a larger Tablet or Touch screen monitor with the layouts image and just by touching the point/switch to change between DCC{PWM} and DC{PWM} districts and back again.</p>
+<p>All with the magic of using the same Engines Loco# or Cab# address for Dual Digital modes ……
+and no we’re not hiding another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.</p>
+<p><strong>It’s All done through a single DCC-EX  EX-CommandStation.</strong></p>
+<p><strong>Note</strong>
+When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address.</p>
+</section>
+<section id="hardware-requirements-and-technical-notes">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Hardware Requirements and Technical Notes:</a><a class="headerlink" href="#hardware-requirements-and-technical-notes" title="Permalink to this heading"></a></h2>
+<p>The requirements are only for operating DC locomotives.  There is nothing to do in a pure DCC environment where no DC or analog locomotives are run, and only multiple DCC main or programming tracks exist.
+In order for TrackManagerTM to operate in DC mode, the motor shield must have a brake pin, and defined in your “config.h” motor shield definition.
+Non-standard motor shields must be validated for compatibility and require a fourth Brake pin to be configured to run in DC{PWM} mode. A list of current Supported Motor Drivers can be found in the Advanced Options page.</p>
+<p>Do not attempt to connect two nylon insulated A &amp; B tracks together and drive a DCC engine back and forth until someone bolder than you tries it first.
+Depending on how you Operate your Layouts with Insulated BlocksPower districts you will require a relay switch to handle the connections when passing into or between any two divers waveform blocks like DCC to an outside contemporary power source track i.e., transformer. Never pass from DCC-EX to any other DCC or DC System.</p>
+<p>Some suggested precautions are to add 4 fuses on wires { -b +b, -a +a} to the Command Station connections.
+Use 2A fuses for the Std L298P Motor Shield and or 5A fuses for the larger Motor board.</p>
+</section>
+<section id="how-do-you-run-a-ex-commandstation-in-dc-pwm-mode">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">‘How do you run a EX-CommandStation in DC{PWM} mode’?</a><a class="headerlink" href="#how-do-you-run-a-ex-commandstation-in-dc-pwm-mode" title="Permalink to this heading"></a></h2>
+<p>Using our new embedded TrackManagerTM feature with simple easy commands from a throttle or from a serial monitor we can change any insulated track A- H from DCC{PWM} to DC{PWM} and back in real time.</p>
+<ul class="simple">
+<li><p>valid DCC modes are MAIN &amp; PROG and OFF</p></li>
+<li><p>valid DC modes are DC &amp; DCX and OFF</p></li>
+<li><p>DCX is for Opposite Polarity of a track like NMRA Modular layout track B which are wired Left rail +red and Right rail -neg.</p></li>
+</ul>
+<p>This allows a throttle on Track B set to DCX to operate in Forward and Reverse correctly for west bound engines.</p>
+<dl class="simple">
+<dt>So, you can take a standard DC motor only engines CAB number on the side of the engine and assign it to one or more of up to 8 tracks/districts/blocks labeled A thru H then enter that same number into a Throttle and control that Loco Cab # on each and every one of the assigned tracks.</dt><dd><ul class="simple">
+<li><p>Valid Cab addresses are 1 to 10239.</p></li>
+<li><p>Invalid Cab address is 0 zero.</p></li>
+</ul>
+</dd>
+</dl>
+<p>We Do Not support 0 zero stretch address function, found on Digitrax and Lenz command Stations on purpose.   The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time.</p>
+<p>Unlike Digitrax and Lenz 0 Zero stretch DCC {PWM} signal which leaves the engine lite up and Humming loudly with the throttle and engine at 0 speed, because it receiving a Dual DCC{PWM} aka AC signal, while the DCC-EX Command Station DCdictrict is dead quiet and at rest at 0 speed.</p>
+<p>Place any analog DC Cab on our EX-CommandStation with a TrackManager DC assigned track and it sits there dead quiet with lights off Until the throttle speed is increased in either direction and then lights up and begins to move.
+DCC Loco with DC enabled CV decoder also sits quietly and when the throttle increases the Sound will turn on first then as you throttle up more it will begin moving.  You can throttle back until it stops but leave a little throttle speed on say 5% and the Sound will continue to play while it is stopped.</p>
+<p>Throttle speed response for DC Cabs.
+Because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal, CAB’s operating on a DCdistrict with either WiFi Throttles and EXRAIL Automation scripts with Engine Driver [Handoff] run different DC motors at different speeds.</p>
+<p>So a script for FWD(50) speed will run at completely different speeds for two different DC motors depending on their resistance and efficiency.  One crawls at 50 while the other one runs like a bat out of hell.</p>
+<p>You can also run a DCC Locos with DC Conversion CV enabled On and run on the DCdistrict, without having to change the decoder DCC address.
+They will all run on that section of track.</p>
+<p>DCC Sound Decoder locos with DC conversion enabled may be silent until the track reaches between 2v to 6Vdc then the Sound will start up, and between 3v to 8Vdc the motor will begin to respond and move depending on the Mfg’s decoder.</p>
+<section id="controlling-managing-dcc-ex-trackmanager-modes">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink"><strong>Controlling &amp; Managing DCC-EX TrackManager modes</strong></a><a class="headerlink" href="#controlling-managing-dcc-ex-trackmanager-modes" title="Permalink to this heading"></a></h3>
+<p><strong>You can Assign Tracks/Districts to DCC and DC mode in four ways</strong></p>
+<ul class="simple">
+<li><p>1 Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.</p></li>
+<li><p>2 Create a EXRAIL myAutomation.h file Scripts for TrackManager assigned commands and have them automatically appear in Engine Driver as GUI Automation {Handoff} and Route {Set} buttons</p></li>
+<li><p>3 Enhanced ‘Engine Driver’ WiFi Throttle Android app v2.34.163 features;</p>
+<ul>
+<li><p>Track/District Manager set mode screen by touching a track mode entering an address</p></li>
+<li><p>Command Cmd Line Serial Monitor and enter them like in example (1) above but via WiFi Native mode</p></li>
+</ul>
+</li>
+<li><p>4 New ‘EX-Toolbox’ WiFi Android app features;</p>
+<ul>
+<li><p>Track/District Manager set mode screen by touching a track mode, entering an address</p></li>
+<li><p>Command Cmd Line Serial Monitor and enter them like in example (1) above but via WiFi Native mode</p></li>
+</ul>
+</li>
+</ul>
+<dl class="simple">
+<dt>New Engine Driver DCC-EX Native mode features now available today via Google Play Store</dt><dd><ul class="simple">
+<li><p>&lt;<a class="reference external" href="https://play.google.com/store/apps/details?id=jmri.enginedriver">https://play.google.com/store/apps/details?id=jmri.enginedriver</a>&gt;</p></li>
+<li><p>&lt;<a class="reference external" href="https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox">https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox</a>&gt;</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="trackmanager-commands">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">TrackManager Commands</a><a class="headerlink" href="#trackmanager-commands" title="Permalink to this heading"></a></h2>
+<p><strong>Sending Command from a IDE Serial Monitor or JMRI Send Command Line</strong></p>
+<p>To display the current TrackManagerTM configuration, use the command <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">=</span> <span class="pre">&gt;</span></code> an equal sign looks like a track.</p>
+<p>To change or configure the current District/Track modes use the following TrackManagerTM  commands.
+New command <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">mode</span> <span class="pre">[address]&gt;</span></code> has been added for DC and DCX tracks, where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">trackletter</span></code> is A through H</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> is one of MAIN, PROG, DC, DCX, or OFF (DCX is DC with opposite polarity)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> is the cab ID is only required when specifying DC or DCX</p></li>
+</ul>
+<p>&lt;=id mode [address]&gt; // sample of Send Commands [address] is only required for DC &amp; DCX</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;=A MAIN&gt;     // Set track A to MAIN DCC mode
+&lt;=B PROG&gt;     // Set track B to PROG DCC mode
+&lt;=A DC 1234&gt;  // Set track A to DC mode with address 1234
+&lt;=B DCX 4321&gt; // Set track B to DC mode Opposite Polarity address 4321
+              // or any number you assign from 1 to 10239
+&lt;=B OFF&gt;      // Set track B OFF, like a staging yard when it gets too noisy.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You would then enter your Engine address on the throttle of 1234 and 4321 and drive them on the layout.</p>
+</div>
+<section id="create-exrail-scripts-to-change-track-modes">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Create EXRAIL Scripts to Change Track modes</a><a class="headerlink" href="#create-exrail-scripts-to-change-track-modes" title="Permalink to this heading"></a></h3>
+<p>Using EXRAIL functions inside myAutomation.h file to run Automation scripts to change track modes from DCC to DC and back.
+my.Automation.h file</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>//SET_TRACK(id,mode)
+  SET_TRACK(A, MAIN)
+  SET_TRACK(B, DCX)
+  SET_TRACK(C, DC)
+</pre></div>
+</div>
+</section>
+<section id="create-exrail-list-of-trackmanager-functions-for-engine-driver-automatically-assign-handoff-buttons">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Create EXRAIL list of TrackManager Functions for Engine Driver Automatically Assign {Handoff} buttons</a><a class="headerlink" href="#create-exrail-list-of-trackmanager-functions-for-engine-driver-automatically-assign-handoff-buttons" title="Permalink to this heading"></a></h3>
+<p>In a EXRAIL Automation script we could assign a track mode to DC and wait for a Engine Driver throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AUTOMATION(500, &quot;Districts A MAIN _ B PROG Default&quot;)// Reset Default back to DCC Main &amp; PROG
+ SET_TRACK(A,MAIN) PRINT(&quot;Default Districts Tracks MAIN A &amp; PROG B&quot;)
+ SET_TRACK(B,PROG)
+ DONE
+AUTOMATION(501, &quot;District A MAIN&quot;)   // Alternate DCC Main track A
+ SET_TRACK(A,MAIN) PRINT(&quot;District A MAIN&quot;)
+ DONE
+AUTOMATION(502, &quot;District A PROG&quot;)   // Alternate DCC PROG track A
+ SET_TRACK(A,PROG) PRINT(&quot;District A PROG&quot;)
+ DONE
+AUTOMATION(503, &quot;District A DC&quot;)     // Alternate DC track A
+ SET_TRACK(A,DC) PRINT(&quot;District A DC&quot;)
+ DONE
+AUTOMATION(504, &quot;District A DCX&quot;)    // Alternate DCX track A Changed to Opposite Polarity
+ SET_TRACK(A,DCX) PRINT(&quot;District A DCX Opposite Polarity&quot;) // Track A Opposite Polarity DC
+ DONE
+AUTOMATION(505, &quot;District A OFF&quot;)    // A Track OFF
+ SET_TRACK(A, OFF) PRINT (&quot;District A OFF&quot;)
+ DONE
+Copy and repeat AUTOMATION(506-510, District B  mode)
+</pre></div>
+</div>
+</section>
+<section id="create-exrail-trackmanager-functions-for-engine-driver-throttle-automation-handoff-buttons">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Create EXRAIL TrackManager Functions for Engine Driver Throttle Automation {Handoff} buttons</a><a class="headerlink" href="#create-exrail-trackmanager-functions-for-engine-driver-throttle-automation-handoff-buttons" title="Permalink to this heading"></a></h3>
+<p>In a EXRAIL Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AUTOMATION(1225,&quot;Roundhouse to Turntable Back &amp; Forth&quot;)
+  SETLOCO(1225)
+  SET_TRACK(B,DC)
+  Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse
+  DELAYRANDOM(msec, msec) // randomize the run time between runs
+  DONE
+</pre></div>
+</div>
+</section>
+<section id="create-exrail-trackmanager-functions-for-engine-driver-throttle-route-set-buttons">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Create EXRAIL TrackManager Functions for Engine Driver Throttle Route {Set} buttons</a><a class="headerlink" href="#create-exrail-trackmanager-functions-for-engine-driver-throttle-route-set-buttons" title="Permalink to this heading"></a></h3>
+<p>In a EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROUTE(1225,&quot;Set track B to DC 1225&quot;)
+  SETLOCO(1225)    // Assign Loco 1225
+  SET_TRACK(B,DC)  // Set Track B to DC with address 1225
+  CLOSE(1)         // Close Turnout 1
+  THROW(2)         // Throw Turnout 2
+  DONE
+</pre></div>
+</div>
+<p>Then manually drive the Cab# around the layout</p>
+<p>All done through DCC-EX TrackManagerTM with a simple push of a GUI button of Either or Both  Engine Driver {Handoff} to Acquire the last Throttle Engine# used and run it on the mode of the track  [i.e. DC engine 1225], Or Engine Driver {Set} button to set a block to a specific mode.</p>
+<p>TrackMagic uses the Cab number of a DC Engine in a throttle to run it on a assigned track/district/block, mimicking the look of DCC Engines.
+No DPDT Switches are required, all waveform mode switching is done by TrackManagerTM Software instructions.</p>
+</section>
+<section id="dcc-ex-command-station-with-exrail-trackmanagertm-synergy">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">DCC-EX Command Station with EXRAIL &amp; TrackManagerTM Synergy</a><a class="headerlink" href="#dcc-ex-command-station-with-exrail-trackmanagertm-synergy" title="Permalink to this heading"></a></h3>
+<p>Cool thing is the new DCC-EX EXRAIL the Automation(n) &amp; Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, and with the Sensors, Servos /Turnouts, Signals &amp; MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) &amp; REV (n) Speeds.</p>
+<p>With the new DCC-EX direct WiFi Discovered Server you can connect Engine Driver &amp; other WiThrottle app based throttles directly and have EXRAIL {Handoff} &amp; {Set} buttons to run EXRAIL scripts from the throttles.</p>
+<p>These are DCC-EX Major feature/benefit because with other systems you’ll have to use a PC computer or Pi processor &amp; JMRI for a WiThrottle Server throttle access and you have to write two different JMRI Jython.py Scripts for DCC and for DC automation &amp; routes.</p>
+</section>
+<section id="modular-layouts">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Modular Layouts</a><a class="headerlink" href="#modular-layouts" title="Permalink to this heading"></a></h3>
+<p>DCC-EX TrackManagerTM 4.2.30+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
+Track A and Track B with sidings;</p>
+<ul class="simple">
+<li><p>Track A {east bound} wired rails L-  R+</p></li>
+<li><p>Track B {westbound} which also have all the siding and spurs, wired rails L+  R-</p></li>
+</ul>
+<p>You can set each district separately as mode</p>
+<ul class="simple">
+<li><p>DCC for MAIN, PROG or OFF</p></li>
+<li><p>Analog for DC, DCX or OFF</p></li>
+</ul>
+<p>DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.</p>
+</section>
+<section id="using-the-new-trackmanagertm-function-commands-you-can-run-the-whole-layout-as">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Using the New TrackManagerTM Function commands you can run the whole layout as</a><a class="headerlink" href="#using-the-new-trackmanagertm-function-commands-you-can-run-the-whole-layout-as" title="Permalink to this heading"></a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Track A &amp; Track B
+  MAIN &amp; PROG
+  MAIN &amp; MAIN
+  PROG &amp; MAIN
+  MAIN &amp; DC
+  PROG &amp; DC
+    DC &amp; MAIN
+    DC &amp; PROG
+    DC &amp; DC
+    DC &amp; DCX
+  MAIN &amp; DCX
+  PROG &amp; DCX  {Use JOIN on A Programming track to make a MagicTrack}
+or any combination with up to 8 separate dual insulated tracts/disteicts from A - H.
+</pre></div>
+</div>
+<p>All done through the free DC-EX TrackManagerTM commands.</p>
+</section>
+</section>
+<section id="how-do-i-get-on-board-with-dcc-ex-trackmanagertm">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">How Do I Get On Board with DCC-EX TrackManagerTM ?</a><a class="headerlink" href="#how-do-i-get-on-board-with-dcc-ex-trackmanagertm" title="Permalink to this heading"></a></h2>
+<p>Currently in final Beta testing in the Development sub-branch under ‘devel’ v 4.2.30+
+New features/enhancements inside this release above and beyond TrackManagerTM and we’re in the process of deciding which of these other main features/enhancement to release with it at the same time, and what to hold back for further enhancement and development testing.</p>
+<p>Planned release within the coming months as DCC-EX EX-CommandStation version 5.0.</p>
+<dl class="simple">
+<dt>You can download this ‘devel’ 4.2.30+ release or all future Development Releases from  DCC-EX.com</dt><dd><dl class="simple">
+<dt>Downloads&gt;</dt><dd><dl class="simple">
+<dt>Command Station Latest EX-CommandStation Unreleased Development Version,</dt><dd><p>just click on [Development Version] button</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>&lt;<a class="reference external" href="https://dcc-ex.com/download/ex-commandstation.html#latest-ex-commandstation-unreleased-development-version">https://dcc-ex.com/download/ex-commandstation.html#latest-ex-commandstation-unreleased-development-version</a>&gt;</p>
+<p>Thank you for your interest in DCC-EX and TrackManagerTM.</p>
+<p>Come chat with us in the DCC-EX Discord channel about TrackManagerTM aka DCdistrict which is planned to be released to the general public as version 5.0.</p>
+<p><strong>Example of User defined EXRAIL Scripts running on Engine Driver Throttle App {Android}</strong>
+<strong>DCC-EX  EX-CommandStation Beta 4.2.30+</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**Engine Driver controlling Two Locos**
+   DCC PE 1225 on track A address 1225 with a Sound Decoder
+   DC NH  667 on Track B address 667 with IPLS Virtual Sound Decoder
+     **ED Image 1**
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**DCC-EX  Commands,  scroll-able**
+     **ED Image 2**
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**DCC-EX TrackManager District {Handoff} &amp; {Set} buttons**
+   scroll through &amp; select track modes
+  Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track
+     **ED Image 3**
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**Engine Driver DCC-EX Native mode**
+   Track/District Manager  MAIN &amp; PROG                   TrackManager Track A  DCC 1225
+   with DCC-EX Cmd Line &amp; Serial monitor                            &amp; Track B   DC  667
+     ** ED Image 4                                                   ED Image 5**
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>**Engine Driver EXRAIL Automation {Handoff}**            FX Special Effects {Set} continued
+               &amp; FX Special Effects {Set} buttons            &amp; RouteTurnouts {Set} buttons
+      **ED Image 6                                                   ED Image 7**
+</pre></div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This feature is under active development, meaning commands, features, and behaviour may change without notice. While we endeavour to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.</p>
 <p>If using our development release and, especially, the Track Manager feature, we highly recommend keeping in touch with conversations and developments via our <a class="reference external" href="https://discord.gg/PuPnNMp8Qf">Discord server</a>.</p>
 <p>You can also use our new GitHub issue templates to report a bug: <a href="https://github.com/DCC-EX/CommandStation-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
 </div>
-<section id="hardware-requirements">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Hardware requirements</a><a class="headerlink" href="#hardware-requirements" title="Permalink to this heading"></a></h2>
-<p>In order to utilise Track Manager’s DC mode, your motor shield must have a brake pin, and this must be defined in your “config.h” motor shield definition.</p>
-<p>If you are using a non-standard motor shield, you will need to validate if it is capable of this configuration. We will populate the list of compatible motor shields over time.</p>
-<p>If your intention is only to have multiple DCC main or programming tracks, this is not required.</p>
-</section>
-<section id="track-manager-commands">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Track Manager commands</a><a class="headerlink" href="#track-manager-commands" title="Permalink to this heading"></a></h2>
-<p>To configure Track Manager, a new command <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">mode</span> <span class="pre">[id]&gt;</span></code> has been added, where:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">trackletter</span></code> is A through H</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> is one of MAIN, PROG, DC, DCX, or OFF (DCX is DC with reversed polarity)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> is the cab ID required when specifying DC or DCX</p></li>
-</ul>
-<p>To display the current Track Manager configuration use the command <code class="docutils literal notranslate"><span class="pre">&lt;=&gt;</span></code>.</p>
-<p>For example, to configure a DCC main track, a DCC programming track, a DC track (using cab ID 100), and a reversed polarity DC track (using cab ID 101), these commands are required:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;= A MAIN&gt;
-&lt;= B PROG&gt;
-&lt;= C DC 100&gt;
-&lt;= D DCX 101&gt;
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When specifying a DC or DCX cab ID, be sure not to use one of your existing DCC locomotive IDs, otherwise and command sent to control a loco on that DC or DCX track will also operate your DCC loco with the same address.</p>
-</div>
-</section>
-<section id="note-on-pwm-frequency">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Note on PWM frequency</a><a class="headerlink" href="#note-on-pwm-frequency" title="Permalink to this heading"></a></h2>
-<p>Different microcontrollers utilise different PWM frequencies, and at present, these default frequencies are in use rather than using software to define them.</p>
-<p>The side effect of these differing frequencies is that you may notice humming or sometimes squealing noises from older DC motors.</p>
-<p>The known PWM frequencies are:</p>
-<ul class="simple">
-<li><p>Mega2560 - 122.55Hz</p></li>
-<li><p>ESP32 - variable</p></li>
-<li><p>Others (eg. STM32 Nucleo) - typically 1000Hz</p></li>
-</ul>
 </section>
 </section>
 

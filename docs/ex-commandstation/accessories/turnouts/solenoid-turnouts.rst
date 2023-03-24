@@ -135,6 +135,10 @@ The infomation here is based on the combined driver and CDU as outlined in this 
 
   `DCC Solenoid Turnout Driver <https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver>`_
 
+.. image:: /_static/images/turnouts/block_diagram_switch_final.png
+  :alt: Block Diagram
+  :scale: 60%
+
 This board has an MCP23017 which is connected to your |EX-CS| via |I2C|, which is then controlled like any other MCP23017.  This MCP23017 controls two ULN2803 darlington arrays to switch power to the turnout/point solenoids.
 
 The connections will depend on the driver and CDU.

@@ -9,7 +9,7 @@ Solenoid or coil turnouts/points
 .. sidebar:: 
 
   .. contents:: On this page
-    :depth: 2
+    :depth: 3
     :local:
 
 Important considerations for solenoid/coil turnouts/points
@@ -126,49 +126,50 @@ Using a Capacitive Discharge Unit (CDU) - single solenoid/coil turnouts
 Using a Capacitive Discharge Unit (CDU) - dual solenoid/coil turnouts
 ---------------------------------------------------------------------
 
-The infomation here is based on this combined driver and CDU:
+Option 1 - DIY CDU by "Rosscoe" (DCC-EX user on Discord)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver
+The infomation here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from `PCBWay <https://www.pcbway.com/>`_
 
-This board has a MCP23017 which is connected to the DCC-EX CS via i2c, this is then accessed as any other MCP23017.  This MCP23017 controllers two ULN2803 darlington arrays to switch power to the solenoids.
+.. rst-class:: dcclink
+
+  `DCC Solenoid Turnout Driver <https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver>`_
+
+This board has an MCP23017 which is connected to your |EX-CS| via |I2C|, which is then controlled like any other MCP23017.  This MCP23017 controls two ULN2803 darlington arrays to switch power to the turnout/point solenoids.
 
 The connections will depend on the driver and CDU.
 
-On the turnout solenoids0 there will be three wires as in the motor driver circuit it will be a common wire, one wire to close the turnout and one wire to throw the turnout.
+On the turnout/point solenoids, there will be three wires: a common wire, a wire to close the turnout, and a wire to throw the turnout.
 
-With the above driver board the common is positive and the control wires are connected to ground by the darlington drivers.
+With the above driver board, the common is positive and the control wires are connected to ground by the darlington drivers.
 
-The macro below creates a turnout that drives the turnout via the MCP23017 vpins on the board.
-
-The macro requires two vpins to control a dual solenoid turnout.
+The EX-RAIL macro below creates a turnout object that closes/throws the turnout/point via the MCP23017 vpins on the board.
 
 The DUAL_SOLENOID_TURNOUT definition is:
-id - turnout id
-pc - pin for CLOSE command
-pt - pin for THROW command
-desc - description
-ali - alias that can be used for the turnout in EX-RAIL
-shadow - id for a shadow turnout
 
+- id - turnout id
+- pc - pin for CLOSE command
+- pt - pin for THROW command
+- desc - description
+- ali - alias that can be used for the turnout in EX-RAIL
 
 .. code-block:: 
 
   #define PULSE 10 //10 mSec
-  #define DUAL_SOLENOID_TURNOUT(id,pc,pt,desc,ali,shadow)\
-  PIN_TURNOUT(id,0,desc)\
+  #define DUAL_SOLENOID_TURNOUT(id,pc,pt,desc,ali)\
+  VIRTUAL_TURNOUT(id,desc)\
   ALIAS(ali,id)\
-  PIN_TURNOUT(shadow,0,HIDDEN)\
   DONE\
   ONCLOSE(id)\
   SET(pc)\
   DELAY(PULSE)\
   RESET(pc)\
-  CLOSE(shadow)\
   DONE\
   ONTHROW(id)\
   SET(pt)\
   DELAY(PULSE)\
   RESET(pt)\
-  THROW(shadow)\
   DONE
 
+  // Example use of this macro using first two pins on the first MCP23017 I/O expander
+  DUAL_SOLENOID_TURNOUT(1,164,165,"Example CDU turnout",EXAMPLE_TURNOUT)

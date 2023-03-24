@@ -650,6 +650,7 @@ DUAL_COIL_TURNOUT(102, 23, 25, 27, &quot;Turnout 102&quot;)
 <h4><a class="toc-backref" href="#id9" role="doc-backlink">Option 1 - DIY CDU by “Rosscoe” (DCC-EX user on Discord)</a><a class="headerlink" href="#option-1-diy-cdu-by-rosscoe-dcc-ex-user-on-discord" title="Permalink to this heading"></a></h4>
 <p>The infomation here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from <a class="reference external" href="https://www.pcbway.com/">PCBWay</a></p>
 <p class="dcclink"><a class="reference external" href="https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver">DCC Solenoid Turnout Driver</a></p>
+<a class="reference internal image-reference" href="../../../_images/block_diagram_switch_final.png"><img alt="Block Diagram" src="../../../_images/block_diagram_switch_final.png" style="width: 483.59999999999997px; height: 392.4px;" /></a>
 <p>This board has an MCP23017 which is connected to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via I<sup>2</sup>C, which is then controlled like any other MCP23017.  This MCP23017 controls two ULN2803 darlington arrays to switch power to the turnout/point solenoids.</p>
 <p>The connections will depend on the driver and CDU.</p>
 <p>On the turnout/point solenoids, there will be three wires: a common wire, a wire to close the turnout, and a wire to throw the turnout.</p>

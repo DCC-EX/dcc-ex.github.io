@@ -122,29 +122,29 @@ Consider the turntable starting in alignment with the entry and exit tracks, wit
 
 If we do not invert or reverse the phase, when it rotates 180 degrees, there will be an obvious issue!
 
-.. image:: /_static/images/turntable-ex/0degree-phase.png
+.. image:: /_static/images/ex-turntable/0degree-phase.png
   :alt: No rotation
   :scale: 45%
 
-.. image:: /_static/images/turntable-ex/90degree-no-phase-change.png
+.. image:: /_static/images/ex-turntable/90degree-no-phase-change.png
   :alt: 90 degrees
   :scale: 45%
 
-.. image:: /_static/images/turntable-ex/180degree-no-phase-change.png
+.. image:: /_static/images/ex-turntable/180degree-no-phase-change.png
   :alt: 180 degrees
   :scale: 45%
 
 Now consider inverting or reversing the phase when performing that 180 degree turn, and the result is just like the starting point, with all tracks in DCC phase alignment.
 
-.. image:: /_static/images/turntable-ex/0degree-phase.png
+.. image:: /_static/images/ex-turntable/0degree-phase.png
   :alt: No rotation
   :scale: 45%
 
-.. image:: /_static/images/turntable-ex/90degree-phase-change.png
+.. image:: /_static/images/ex-turntable/90degree-phase-change.png
   :alt: 90 degrees
   :scale: 45%
 
-.. image:: /_static/images/turntable-ex/180degree-phase-change.png
+.. image:: /_static/images/ex-turntable/180degree-phase-change.png
   :alt: 180 degrees
   :scale: 45%
 
@@ -163,7 +163,7 @@ The surrounding layout tracks have been wired so that each opposing track is wir
 
 To start, the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.
 
-.. image:: /_static/images/turntable-ex/auto-phase-switch-start.png
+.. image:: /_static/images/ex-turntable/auto-phase-switch-start.png
   :alt: Aligned with first track
   :scale: 100%
 
@@ -171,19 +171,19 @@ Next, we've sent a command for the turntable to rotate 180 degrees, which requir
 
 As this will trigger the turntable to rotate beyond our 45 degree trigger point, the phase will automatically be inverted.
 
-.. image:: /_static/images/turntable-ex/auto-phase-switch-trigger.png
+.. image:: /_static/images/ex-turntable/auto-phase-switch-trigger.png
   :alt: Rotate beyond 45 degrees
   :scale: 100%
 
 Once the turntable reaches the correct position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.
 
-.. image:: /_static/images/turntable-ex/auto-phase-switch-end.png
+.. image:: /_static/images/ex-turntable/auto-phase-switch-end.png
   :alt: Rotated 180 degrees
   :scale: 100%
 
 If the turntable continues to rotate beyond the 225 degree point, the phase will revert again.
 
-.. image:: /_static/images/turntable-ex/auto-phase-switch-revert.png
+.. image:: /_static/images/ex-turntable/auto-phase-switch-revert.png
   :alt: Rotated 180 degrees
   :scale: 100%
 

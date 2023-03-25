@@ -358,6 +358,7 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 
  - DCC PE 1225 on District A DCC address 1225 Sound Decoder
  -  DC NH  667 on District B DC address  667 with IPLS Virtual Sound Decoder
+
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_1.png
   :alt: Track Manager ED 1
   :scale: 50%
@@ -407,6 +408,7 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
   
 
  **FX Special Effects [Set] continued and route [Set] buttons**
+
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_7.png
   :alt: Track Manager handoff/set
   :scale: 50%

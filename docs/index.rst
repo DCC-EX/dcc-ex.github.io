@@ -26,7 +26,7 @@ DCC-EX Model Railroading
     
     .. rst-class:: dcclink
 
-      :ref:`Production 4.1.5 <download/ex-commandstation:latest ex-commandstation official release>`
+      :ref:`Production 4.1.2 <download/ex-commandstation:latest ex-commandstation official release>`
 
       :ref:`Developer 4.2.26 <download/ex-commandstation:latest ex-commandstation unreleased development version>`
 

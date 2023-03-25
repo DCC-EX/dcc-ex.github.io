@@ -292,13 +292,13 @@ In a EXRAIL Automation script we could Set a Loco Address to a specific track in
 
 Then manually drive the Cab# around the layout
 
-All done through DCC-EX TrackManager with a simple push of a GUI button of Either or Both  Engine Driver (Handoff) to Acquire the last Throttle Engine# used and run it on the mode of the track  [i.e. DC engine 1225], Or Engine Driver (Set) button to set a block to a specific mode.
+All done through DCC-EX TrackManager with a simple push of a GUI button of Either or Both Engine Driver Handoff to Acquire the last Throttle Engine# used and run it on the mode of the track  [i.e. DC engine 1225], Or Engine Driver (Set) button to set a block to a specific mode.
 
 TrackMagic uses the road number ID of a DC Engine in a throttle to run it on a assigned track/district/block, mimicking the look of DCC Engines.
 No DPDT Switches are required, all waveform mode switching is done by Track Manager Software instructions.
 
 
-DCC-EX Command Station with EX-RAIL & Track Manager
+DCC-EX Command Station with EX-RAIL & TrackManager
 ---------------------------------------------------
 
 Cool thing is the new EXRAIL the Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, and with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.

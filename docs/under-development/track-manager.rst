@@ -156,8 +156,7 @@ Place any analogue DC engine on our EX-CommandStation with a TrackManager DC ass
 
 DCC Loco with DC enabled CV decoder also sits quietly and when the throttle increases the Sound will turn on first then as you throttle up more it will begin moving.  You can throttle back until it stops but leave a little throttle speed on say 5% and the Sound will continue to play while it is stopped.
 
-Throttle speed response for DC Cabs.
-Because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal, CAB's operating on a DCdistrict with either WiFi Throttles and |EX-R| Automation scripts with |Engine Driver| Handoff run different DC motors at different speeds.
+Throttle speed response for DC Cabs vary because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. CAB's operating on a DCdistrict with either WiFi Throttles and EXRAIL Automation scripts with |Engine Driver| Handoff run different DC motors at different speeds.
 
 So a script for FWD(50) speed will run at completely different speeds for two different DC motors depending on their resistance and efficiency.  One crawls at 50 while the other one runs like a bat out of hell.
 
@@ -172,7 +171,9 @@ Controlling & Managing DCC-EX TrackManager modes
 You can Assign Tracks/Districts to DCC and DC mode in four ways
 
   1. Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.
-  2. Create a |EX-R| myAutomation.h file Scripts for Track Manager assigned commands and have them automatically appear in Engine Driver as GUI Automation [Handoff] and Route [Set] buttons
+
+  2. Create a EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in Engine Driver as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons
+
   3. Enhanced |Engine Driver| WiFi Throttle Android app v2.34.163+ features;
 
     * Track/District Manager set mode screen by touching a track mode entering an address
@@ -196,8 +197,9 @@ Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line.
 To display the current TrackManager configuration, use the command ``< = >`` an equal sign looks like a track.
 
 The Serial Monitor will show current status, example; Track A as Main and Track B as DC
-<= A MAIN >
-<= B DC >
+
+  * = A MAIN 
+  * = B DC 
 
 To change or configure the current track modes use the new command ``<= trackletter mode [address]>`` which has been added for Track Manager, where:
 
@@ -212,7 +214,7 @@ To change or configure the current track modes use the new command ``<= tracklet
   <= B PROG>     // Set track B to PROG DCC mode
   <= A DC 1234>  // Set track A to DC mode with address 1234
   <= B DCX 4321> // Set track B to DC mode Opposite Polarity address 4321
-                // or any number you assign from 1 to 10239
+                 // or any number you assign from 1 to 10239
   <= B OFF>      // Set track B OFF, like a staging yard when it gets too noisy.
 
 .. note:: 
@@ -277,7 +279,7 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
 Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route (Set) buttons
 -------------------------------------------------------------------------------------
 
-In a |EX-R| Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.
+In a EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.
 
 .. code-block:: 
 
@@ -299,16 +301,16 @@ No DPDT Switches are required, all waveform mode switching is done by Track Mana
 DCC-EX Command Station with EX-RAIL & Track Manager
 ---------------------------------------------------
 
-Cool thing is the new |EX-R| the Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, and with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.
+Cool thing is the new EXRAIL the Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, and with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.
 
-With the new DCC-EX direct WiFi Discovered Server you can connect Engine Driver & other WiThrottle app based throttles directly and have |EX-R| [Handoff] & [Set] buttons to run |EX-R| scripts from the throttles.
+With the new DCC-EX direct WiFi Discovered Server you can connect Engine Driver & other WiThrottle app based throttles directly and have EXRAIL [Handoff] & [Set] buttons to run EXRAIL scripts from the throttles.
 
-These are DCC-EX Major feature/benefit because with other systems you’ll have to use a PC computer or Pi processor & JMRI for WiThrottle Server throttle access and you have to write two different JMRI Jython.py scripts for DCC and for DC automation & routes.
+These are DCC-EX Major feature/benefits because with other systems you’ll have to use a PC computer or Pi processor & JMRI for WiThrottle Server throttle access and you have to write two different JMRI Jython.py scripts for and then Setup Routes for DCC and for DC automation & routes.
 
 Modular Layouts
 ---------------
 
-DCC-EX Track Manager 4.2.30+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
+DCC-EX TrackManager 4.2.30+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
 Track A and Track B with sidings;
 
 * Track A (east bound) wired rails L-  R+
@@ -338,7 +340,7 @@ Using the New TrackManager Function commands you can run the whole layout as
      DC & DCX
    MAIN & DCX
    PROG & DCX  (Use JOIN on A Programming track to make a MagicTrack) 
- or any combination with up to 8 separate dual insulated tracts/disteicts from A - H.
+ or any combination with up to 8 separate dual insulated tracks/districts from A - H.
 
 All done through the free |DCC-EX| TrackManager commands.
 
@@ -349,66 +351,62 @@ To use TrackManger, you will need the current development version of |EX-CS| whi
 
 We highly encourage you to join our Discord server to keep up to date on developments. Refer to :ref:`support/contact-us:contact us` for details on how to join.
 
-Example of User defined |EX-R| Scripts running on Engine Driver Throttle App (Android):
+Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):
 ---------------------------------------------------------------------------------------
 
-  |Engine Driver| controlling Two Locos:
+ **|Engine Driver| Throttle Controlling Two Locos:**
 
-  - DCC PE 1225 on track A address 1225 with a Sound Decoder
-  -  DC NH  667 on Track B address  667 with IPLS Virtual Sound Decoder
-
+ - DCC PE 1225 on District A DCC address 1225 Sound Decoder
+ -  DC NH  667 on District B DC address  667 with IPLS Virtual Sound Decoder
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_1.png
   :alt: Track Manager ED 1
   :scale: 50%
   
 
-  DCC-EX Commands, scroll-able
+ **DCC-EX Commands, scroll-able**
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_2.png
   :alt: Track Manager
   :scale: 50%
- 
+  
 
-  DCC-EX TrackManager "Handoff" & "Set" buttons
+ **DCC-EX TrackManager "Handoff" & "Set" buttons**
 
-  - Scroll through & select track modes
-  - Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track
+ - Scroll through & select track modes
+ - Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_3.png
   :alt: Track Manager handoff
   :scale: 50%
- 
+   
 
-  Engine Driver DCC-EX Native mode
+ **Engine Driver DCC-EX Native mode**
 
-  - TrackManager MAIN & PROG
-  - With DCC-EX Cmd Line & Serial monitor
+ - TrackManager MAIN & PROG
+ - With DCC-EX Cmd Line & Serial monitor
   
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_4.png
   :alt: Track Manager DCC-EX native mode
   :scale: 50%
+  
 
+ **Engine Driver DCC-EX Native mode**
 
-
-  Engine Driver DCC-EX Native mode
-
-  - TrackManager Track A  DCC 1225
-  - Track B   DC  667
+ - TrackManager District A DCC MAIN
+ - TrackManager District B  DC  667
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_5.png
   :alt: Track Manager A/B
-  :scale: 50%
+  
 
-
-  Engine Driver |EX-R| Automation [Handoff] and FX special effects buttons
+ **Engine Driver |EX-R| Automation [Handoff] and FX special effects buttons**
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_6.png
   :alt: Track Manager handoff
   :scale: 50%
+  
 
-
-  FX Special Effects [Set] continued and route [Set] buttons
-
+ **FX Special Effects [Set] continued and route [Set] buttons**
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_7.png
   :alt: Track Manager handoff/set
   :scale: 50%
@@ -416,7 +414,7 @@ Example of User defined |EX-R| Scripts running on Engine Driver Throttle App (An
 
 .. warning:: 
 
-  This feature is under active development, meaning commands, features, and behaviour may change without notice. While we endeavour to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.
+  This feature is under active development, meaning commands, features, and behavior may change without notice. While we endeavor to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.
 
   If using our development release and, especially, the TrackManager feature, we highly recommend keeping in touch with conversations and developments via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
 

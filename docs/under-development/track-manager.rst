@@ -32,7 +32,6 @@ Throttle Compatibility
 
 |EX-CS| with TrackManager includes the following features: 
 
-
   * DCC track modes of MAIN, PROG, and OFF
   * DC track modes of DC, DCX (DC Reversed Polarity), and OFF
 
@@ -48,6 +47,14 @@ An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| h
 No additional external DCC decoders are required for DC (PWM) track assignments, and a single |EX-CS| is the only hardware needed for full functionality.
 
 One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
+
+.. warning:: 
+
+  This feature is under active development, meaning commands, features, and behavior may change without notice. While we endeavor to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.
+
+  If using our development release and, especially, the TrackManager feature, we highly recommend keeping in touch with conversations and developments via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
+
+  You can also use our new GitHub issue templates to report a bug: |githublink-ex-commandstation-button2|
 
 Before you begin
 ----------------
@@ -172,7 +179,7 @@ Controlling & Managing DCC-EX TrackManager modes
 You can Assign Tracks/Districts to DCC and DC mode in four ways
 
   1. Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.
-  2. Create a EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in Engine Driver as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons
+  2. Create an EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in Engine Driver as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons
   3. Enhanced |Engine Driver| WiFi Throttle Android app v2.34.163+ features;
 
     * Track/District Manager set mode screen by touching a track mode entering an address
@@ -193,12 +200,12 @@ TrackManager Commands
 
 Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line.
 
-To display the current TrackManager configuration, use the command ``< = >`` an equal sign looks like a track.
+To display the current TrackManager configuration, use the command ``<=>`` an equal sign looks like a track.
 
 The Serial Monitor will show current status, example; Track A as Main and Track B as DC
 
-  * = A MAIN 
-  * = B DC 
+  * <= A MAIN>
+  * <= B DC>
 
 To change or configure the current track modes use the new command ``<= trackletter mode [address]>`` which has been added for Track Manager, where:
 
@@ -278,7 +285,7 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
 Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route (Set) buttons
 -------------------------------------------------------------------------------------
 
-In a EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.
+In an EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.
 
 .. code-block:: 
 
@@ -353,70 +360,56 @@ We highly encourage you to join our Discord server to keep up to date on develop
 Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):
 ---------------------------------------------------------------------------------------
 
- **|Engine Driver| Throttle Controlling Two Locos:**
+**Engine Driver Throttle Controlling Two Locos:**
 
  - DCC PE 1225 on District A DCC address 1225 Sound Decoder
  -  DC NH  667 on District B DC address  667 with IPLS Virtual Sound Decoder
 
-.. figure:: /_static/images/track_manager/trackmanager_engine_driver_1.png
+.. image:: /_static/images/track_manager/trackmanager_engine_driver_1.png
   :alt: Track Manager ED 1
   :scale: 50%
 
+**DCC-EX Commands, scroll-able**
 
- **DCC-EX Commands, scroll-able**
-
-.. figure:: /_static/images/track_manager/trackmanager_engine_driver_2.png
+.. figure:: /_static/images/track_manager/trackmanager_engine_driver_1.png
   :alt: Track Manager
   :scale: 50%
 
-
- **DCC-EX TrackManager "Handoff" & "Set" buttons**
+**DCC-EX TrackManager "Handoff" & "Set" buttons**
 
  - Scroll through & select track modes
  - Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track
 
-.. figure:: /_static/images/track_manager/trackmanager_engine_driver_3.png
+.. image:: /_static/images/track_manager/trackmanager_engine_driver_3.png
   :alt: Track Manager handoff
   :scale: 50%
 
-
- **Engine Driver DCC-EX Native mode**
+**Engine Driver DCC-EX Native mode**
 
  - TrackManager MAIN & PROG
  - With DCC-EX Cmd Line & Serial monitor
   
-.. figure:: /_static/images/track_manager/trackmanager_engine_driver_4.png
+.. image:: /_static/images/track_manager/trackmanager_engine_driver_4.png
   :alt: Track Manager DCC-EX native mode
   :scale: 50%
   
- **Engine Driver DCC-EX Native mode**
+**Engine Driver DCC-EX Native mode**
 
  - TrackManager District A DCC MAIN
  - TrackManager District B  DC  667
 
-.. figure:: /_static/images/track_manager/trackmanager_engine_driver_5.png
+.. image:: /_static/images/track_manager/trackmanager_engine_driver_5.png
   :alt: Track Manager A/B
+  :scale: 50%
 
+**Engine Driver EXRAIL Automation [Handoff] and FX special effects buttons**
 
- **Engine Driver |EX-R| Automation [Handoff] and FX special effects buttons**
-
-.. figure:: /_static/images/track_manager/trackmanager_engine_driver_6.png
+.. image:: /_static/images/track_manager/trackmanager_engine_driver_6.png
   :alt: Track Manager handoff
   :scale: 50%
 
+**FX Special Effects [Set] continued and Route [Set] buttons**
 
- **FX Special Effects [Set] continued and Route [Set] buttons**
-
-.. figure:: /_static/images/track_manager/trackmanager_engine_driver_7.png
+.. image:: /_static/images/track_manager/trackmanager_engine_driver_7.png
   :alt: Track Manager handoff/set
   :scale: 50%
-  
-
-.. warning:: 
-
-  This feature is under active development, meaning commands, features, and behavior may change without notice. While we endeavor to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.
-
-  If using our development release and, especially, the TrackManager feature, we highly recommend keeping in touch with conversations and developments via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
-
-  You can also use our new GitHub issue templates to report a bug: |githublink-ex-commandstation-button2|
- 

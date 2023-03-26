@@ -1,0 +1,31 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+
+:blogpost: true
+:date: 27 March, 2023
+:author: peteGSX
+:category: News
+:tags: news
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Version 5 progress and a breaking change in the development branch
+==================================================================
+
+We are full steam ahead to a v5.0 release, making sure what's in there is well tested to the limits of our resources, and has documentation available as we go. This has resulted in one potentially breaking change for users of |EX-R|'s capability to run sequences/routes on startup.
+
+Breaking change: was the removal of the implicit AUTOSTART at the beginning of the myAutomation.h file for EX-RAIL as we find it confuses a great many first time users of EX-RAIL.
+
+Updated the DFPlayer code to cope with a new variant of the popular sound board seen in the wild, and mods to the HCRS04 ultrasonic driver so it uses less CPU loop time.
+
+SAMD21 had a bug in EX-RAIL due to memory alignment, this likely improves 32-bit support for various microcontrollers.
+
+Static IP address now configurable for Ethernet shields.
+
+New <JG> and <JI> commands for multi-track current sensing
+
+Correction ... we didn't remove AUTOSTART ... we removed the implicit AUTOSTART at the beginning of the myAutomation.h file.

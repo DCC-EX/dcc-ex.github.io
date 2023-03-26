@@ -363,14 +363,12 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
   :alt: Track Manager ED 1
   :scale: 50%
   
-
  **DCC-EX Commands, scroll-able**
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_2.png
   :alt: Track Manager
   :scale: 50%
   
-
  **DCC-EX TrackManager "Handoff" & "Set" buttons**
 
  - Scroll through & select track modes
@@ -380,7 +378,6 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
   :alt: Track Manager handoff
   :scale: 50%
    
-
  **Engine Driver DCC-EX Native mode**
 
  - TrackManager MAIN & PROG
@@ -390,7 +387,6 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
   :alt: Track Manager DCC-EX native mode
   :scale: 50%
   
-
  **Engine Driver DCC-EX Native mode**
 
  - TrackManager District A DCC MAIN
@@ -399,21 +395,18 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_5.png
   :alt: Track Manager A/B
   
-
  **Engine Driver |EX-R| Automation [Handoff] and FX special effects buttons**
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_6.png
   :alt: Track Manager handoff
   :scale: 50%
   
-
- **FX Special Effects [Set] continued and route [Set] buttons**
+ **FX Special Effects [Set] continued and Route [Set] buttons**
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_7.png
   :alt: Track Manager handoff/set
   :scale: 50%
   
-
 .. warning:: 
 
   This feature is under active development, meaning commands, features, and behavior may change without notice. While we endeavor to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.

@@ -278,7 +278,7 @@ To do this, navigate to "File" -> "Preferences" and install the "esp32" package.
 WeMos D1 R32 board
 -------------------
 
-WeMos D1 R32 (sometime also referred as ESPDUINO-32) is a board sharing the Arduino UNO factor, but with a `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ chip on board. Its comes with the following features:
+WeMos D1 R32 (sometime also referred as ESPDUINO-32) is a board sharing the Arduino UNO form factor, but with a `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ chip on board. Its comes with the following features:
 
 * Standard UNO size and headers
 * Xtensa® 32-bit LX6 Dua-core processor, up to 600 DMIPS

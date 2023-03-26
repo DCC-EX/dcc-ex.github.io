@@ -147,6 +147,6 @@ It is possible to easily add a rotary dial (knob) to |Engine Driver|.  see :doc:
 
 Footnotes
 ---------
-.. [#] the Web server is required if you want to show the Loco images in Engine Deiver.
+.. [#] the Web server is required if you want to show the Loco images in Engine Driver.
 
-* The |WiThrottle Protocol| is the proprietary protocol developed by Matt Hoffman at https://www.WiThrottle.com
+* The |WiThrottle Protocol| is the proprietary protocol developed by Brett Hoffman at https://www.WiThrottle.com

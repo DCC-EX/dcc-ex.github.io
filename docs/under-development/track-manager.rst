@@ -172,9 +172,7 @@ Controlling & Managing DCC-EX TrackManager modes
 You can Assign Tracks/Districts to DCC and DC mode in four ways
 
   1. Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.
-
   2. Create a EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in Engine Driver as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons
-
   3. Enhanced |Engine Driver| WiFi Throttle Android app v2.34.163+ features;
 
     * Track/District Manager set mode screen by touching a track mode entering an address
@@ -363,13 +361,15 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_1.png
   :alt: Track Manager ED 1
   :scale: 50%
-  
+
+
  **DCC-EX Commands, scroll-able**
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_2.png
   :alt: Track Manager
   :scale: 50%
-  
+
+
  **DCC-EX TrackManager "Handoff" & "Set" buttons**
 
  - Scroll through & select track modes
@@ -378,7 +378,8 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_3.png
   :alt: Track Manager handoff
   :scale: 50%
-   
+
+
  **Engine Driver DCC-EX Native mode**
 
  - TrackManager MAIN & PROG
@@ -395,19 +396,22 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_5.png
   :alt: Track Manager A/B
-  
+
+
  **Engine Driver |EX-R| Automation [Handoff] and FX special effects buttons**
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_6.png
   :alt: Track Manager handoff
   :scale: 50%
-  
+
+
  **FX Special Effects [Set] continued and Route [Set] buttons**
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_7.png
   :alt: Track Manager handoff/set
   :scale: 50%
   
+
 .. warning:: 
 
   This feature is under active development, meaning commands, features, and behavior may change without notice. While we endeavor to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.

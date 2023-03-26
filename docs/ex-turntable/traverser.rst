@@ -22,7 +22,7 @@ Overview
 
 The primary difference from the standard full rotation turntable mode is the addition of a limit sensor to indicate when the traverser or limited rotation turntable reaches the end of its range of movement.
 
-.. figure:: /_static/images/turntable-ex/heljan-traverser.jpg
+.. figure:: /_static/images/ex-turntable/heljan-traverser.jpg
   :alt: Heljan Traverser
   :scale: 50%
   :align: right
@@ -46,7 +46,7 @@ The same components outlined in :ref:`ex-turntable/purchasing:what you need for 
 
 1. Home and limit sensors: Given the need for positive stops at each end's limit of travel, be it vertical, horizontal, or restricting rotation within an arc for limited rotation turntables, micro switches are likely a better choice for these.
 
-  .. image:: /_static/images/turntable-ex/micro-switch.png
+  .. image:: /_static/images/ex-turntable/micro-switch.png
     :alt: Micro switch
     :scale: 20%
 
@@ -91,7 +91,7 @@ Traverser mode connection summary
 
 Summary table of all connections required during assembly:
 
-.. image:: /_static/images/turntable-ex/traverser-assembly.png
+.. image:: /_static/images/ex-turntable/traverser-assembly.png
   :alt: Traverser Assembly Fritzing
   :scale: 30%
   :align: right

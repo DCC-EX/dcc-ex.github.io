@@ -189,7 +189,7 @@ Therefore, to determine the number of steps required to turn a certain number of
 
 In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.
 
-.. image:: /_static/images/turntable-ex/six-pos-example-degrees.png
+.. image:: /_static/images/ex-turntable/six-pos-example-degrees.png
   :alt: Six Postion Example
   :scale: 70%
 

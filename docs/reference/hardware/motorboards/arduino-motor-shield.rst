@@ -12,4 +12,6 @@ Easy to use, widely available and is rated 2A load per channel. In reality, with
    :alt: Arduino Motor Shield R3
    :scale: 100%
 
+Schematics are available on the `Arduino website <https://docs.arduino.cc/static/8a72fae47a56558ca26308105253350e/schematics.pdf>`_.
+
 :doc:`Install the Arduino Motor Shield </ex-commandstation/get-started/assembly>`

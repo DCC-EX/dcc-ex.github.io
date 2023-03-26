@@ -34,6 +34,9 @@ When considering new microcontrollers to test and experiment with as potential c
 - Price - is it available at a price point that would encourage users to adopt it readily?
 - Quality - is it available with a sufficient build quality to make it reliable?
 
+
+.. _3v3-vs-5V:
+
 Notes on 3v3 vs. 5V microcontrollers
 ------------------------------------
 
@@ -254,4 +257,39 @@ You will need to connect the Rx pin on your NUCLEO to the Tx pin of your WiFi de
 
 .. image:: /_static/images/nucleo/nucleo-f411re-f446re-wifi-serial1.png
   :alt: NUCLEO F411RE/F446RE Serial1 Rx/Tx Connections
+  :scale: 50%
+
+
+Espressif ESP32 based boards
+============================
+
+Adding ESP32 support to the Arduino IDE
+----------------------------------------
+
+In order to compile for the Espressif ESP32 platforms, you will need to add the boards to the Arduino IDE.
+
+To do this, navigate to "File" -> "Preferences" and install the "esp32" package. Version 2.0.0 or greater is required.
+
+
+WeMos D1 R32 board
+-------------------
+
+WeMos D1 R32 (sometime also referred as ESPDUINO-32) is a boards sharing the Arduino UNO factor with a `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>` chip on board.
+
+Sharing the same form factor as the Arduino Uno it can be easily used in combination with the :doc:`Arduino Motor Shield R3 </reference/hardware/motorboards/arduino-motor-shield>` or the :doc:`Deek-Robot Motor Shield </reference/hardware/motorboards/deek-robot-motor-shield>`, however some hardware changes are required to be able to use such combination.
+
+
+Hardware setup notes for a WeMos D1 R32 |EX-CS|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To be able to use the WeMos D1 R32 board with a Motor Shield on top of it the following changes are required to the Motor Shield:
+
+* The `IOREF` pin must be bended or cut out from it. The WeMos board is supplying 5V to the `IOREF` pin, however ESP32 works with
+  3.3V analog inputs (see also :ref:`3v3-vs-5V`)
+* It is recommend to bend or cut `A0` and `A1` pins as well. They would be connected to `GPIO2` and `GPIO4` on the ESP32 which are wired in a way so that they are not useable at the same time as WiFi
+* Connect with a jumper wire `IOREF` to `3V3` to provide the proper IOREF voltage to the Shield
+* On the Motor Shield connect `A0` to `A2` and `A1` to `A3` for current sensing
+
+.. image:: /_static/images/esp32/motorshield-esp32.png
+  :alt: MotorShield configuration for ESP32
   :scale: 50%

@@ -289,12 +289,12 @@ WeMos D1 R32 (sometime also referred as ESPDUINO-32) is a board sharing the Ardu
 * 802.11 b/g/n/e/i wireless support
 * Bluetooth v4.2 BR/EDR and BLE specification
 
-Having the same form factor as the Arduino Uno it can be easily used in combination with the :doc:`Arduino Motor Shield R3 </reference/hardware/motorboards/arduino-motor-shield>` or the :doc:`Deek-Robot Motor Shield </reference/hardware/motorboards/deek-robot-motor-shield>`, however some hardware changes are required to be able to use such combination.
+Having the same form factor as the Arduino UNO it can be easily used in combination with the :doc:`Arduino Motor Shield R3 </reference/hardware/motorboards/arduino-motor-shield>` or the :doc:`Deek-Robot Motor Shield </reference/hardware/motorboards/deek-robot-motor-shield>`, however some hardware changes are required to be able to use such combination.
 
 Install the CH340 drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When using the WeMos D1 R32 board, you will need to install the CH340 USB drivers in order to be able to upload software to them and use the serial monitor in either PlatformIO or the Arduino IDE.
+When using the WeMos D1 R32 board, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the serial monitor in either PlatformIO or the Arduino IDE.
 
 .. rst-class:: dcclink
 

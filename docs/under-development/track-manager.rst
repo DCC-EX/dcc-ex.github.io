@@ -30,7 +30,8 @@ Throttle Compatibility
   * The DCC-EX  browser based EX-WebThrottle
   * Other wired throttles to operate your DCC layout and your DC layout, either separately or a simultaneous combination of the two modes
 
-|EX-CS| with TrackManager includes the following features:
+|EX-CS| with TrackManager includes the following features: 
+
 
   * DCC track modes of MAIN, PROG, and OFF
   * DC track modes of DC, DCX (DC Reversed Polarity), and OFF

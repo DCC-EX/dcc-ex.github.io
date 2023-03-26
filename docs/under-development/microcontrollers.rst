@@ -263,32 +263,61 @@ You will need to connect the Rx pin on your NUCLEO to the Tx pin of your WiFi de
 Espressif ESP32 based boards
 ============================
 
+Created by `Espressif Systems <https://www.espressif.com/>`_, ESP32 is a low-cost, low-power system on a chip (SoC) series with Wi-Fi & dual-mode Bluetooth capabilities.
+
 Adding ESP32 support to the Arduino IDE
 ----------------------------------------
 
 In order to compile for the Espressif ESP32 platforms, you will need to add the boards to the Arduino IDE.
 
-To do this, navigate to "File" -> "Preferences" and install the "esp32" package. Version 2.0.0 or greater is required.
+To do this, navigate to "File" -> "Preferences" and install the "esp32" package.
 
+.. note::
+    esp32 board package version 2.0.0 or greater is required.
 
 WeMos D1 R32 board
 -------------------
 
-WeMos D1 R32 (sometime also referred as ESPDUINO-32) is a boards sharing the Arduino UNO factor with a `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>` chip on board.
+WeMos D1 R32 (sometime also referred as ESPDUINO-32) is a board sharing the Arduino UNO factor, but with a `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ chip on board. Its comes with the following features:
 
-Sharing the same form factor as the Arduino Uno it can be easily used in combination with the :doc:`Arduino Motor Shield R3 </reference/hardware/motorboards/arduino-motor-shield>` or the :doc:`Deek-Robot Motor Shield </reference/hardware/motorboards/deek-robot-motor-shield>`, however some hardware changes are required to be able to use such combination.
+* Standard UNO size and headers
+* Xtensa® 32-bit LX6 Dua-core processor, up to 600 DMIPS
+* 4 MByte SPI Flash
+* 448 KByte ROM
+* 520 KByte SRAM
+* Supply Voltage: DC 5V to 12V
+* 802.11 b/g/n/e/i wireless support
+* Bluetooth v4.2 BR/EDR and BLE specification
 
+Having the same form factor as the Arduino Uno it can be easily used in combination with the :doc:`Arduino Motor Shield R3 </reference/hardware/motorboards/arduino-motor-shield>` or the :doc:`Deek-Robot Motor Shield </reference/hardware/motorboards/deek-robot-motor-shield>`, however some hardware changes are required to be able to use such combination.
+
+Install the CH340 drivers
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When using the WeMos D1 R32 board, you will need to install the CH340 USB drivers in order to be able to upload software to them and use the serial monitor in either PlatformIO or the Arduino IDE.
+
+.. rst-class:: dcclink
+
+  `CH340 USB drivers for Windows <https://github.com/wemos/ch340_driver/raw/master/CH341SER_WIN_3.5.ZIP>`_
+
+.. note::
+
+  You should install these drivers before plugging your ESP32 device in for the first time.
+
+.. note::
+
+  macOS and Linux come with the required driver already installed.
 
 Hardware setup notes for a WeMos D1 R32 |EX-CS|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To be able to use the WeMos D1 R32 board with a Motor Shield on top of it the following changes are required to the Motor Shield:
 
-* The `IOREF` pin must be bended or cut out from it. The WeMos board is supplying 5V to the `IOREF` pin, however ESP32 works with
+* The `IOREF` pin must be bended or cut, otherwise the WeMos board will supply 5V to the `IOREF` pin. ESP32 works with
   3.3V analog inputs (see also :ref:`3v3-vs-5V`)
+* Connect `IOREF` to `3V3` with a jump wire to provide proper IOREF voltage to the Shield
 * It is recommend to bend or cut `A0` and `A1` pins as well. They would be connected to `GPIO2` and `GPIO4` on the ESP32 which are wired in a way so that they are not useable at the same time as WiFi
-* Connect with a jumper wire `IOREF` to `3V3` to provide the proper IOREF voltage to the Shield
-* On the Motor Shield connect `A0` to `A2` and `A1` to `A3` for current sensing
+* Finally, connect `A0` to `A2` and `A1` to `A3` for current sensing
 
 .. image:: /_static/images/esp32/motorshield-esp32.png
   :alt: MotorShield configuration for ESP32

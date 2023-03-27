@@ -78,7 +78,7 @@ For a more extensive overview of setting up |EX-CS| with JMRI DecoderPro please 
    
 .. rst-class:: dcclink
 
-   `EX-CommandStation 4.1 & JMRI DecoderPro 5.2 Getting Started Guide.pdf version 4.0 </_static/documents/Updated_DCC-EX_4.1_and_JMRI_Decoder_Pro_5.2_-_Getting_Started_Guide.pdf>`_
+   `EX-CommandStation 4.1 & JMRI DecoderPro 5.2 Getting Started Guide.pdf version 4.0 </_static/documents/Updated_DCC-EX_4.1_and_JMRI_DecoderPro_5.2_-_Getting_Started_Guide.pdf>`_
 
 .. rst-class:: clearer
 

@@ -42,8 +42,7 @@ Note that this really is just scratching the surface of the capabilities of Deco
 
 Even if you don't intend to use |JMRi| to control your layout, it still has the best decoder programming functionality by far.
 
-|DCC-EX| & |JMRi|DecoderPro Getting Started Guide
--------------------------------------------------
-To assist you in setting up a DCC-EX & JMRI DecoderPro Programming Station please download and follow the comprehensive |DCC-EX| & |JMRi|DecoderPro Getting Started Guided.pdf in our Reference Documents section.
+DCC-EX & JMRI DecoderPro Getting Started Guide
+----------------------------------------------
 
-*  `DCC-EX & JMRI Documents <https://dcc-ex.com/reference/downloads/index.html>`_.
+To assist you in setting up a DCC-EX & JMRI DecoderPro Programming Station please download and follow the :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.

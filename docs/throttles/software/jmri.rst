@@ -72,9 +72,7 @@ Here we show a loco at address 3 selected, with track power turned on, and runni
 EX-CommandStation & JMRI DecoderPro Programming Station
 =======================================================
 
-If you would like to utilise the combined power of EX-CommandStation & JMRI DecoderPro Programming Station, please download and review a very detailed overview of JMRI DecoderPro - Getting Started Guide covering installation and set up in the Reference & Documents section;
-https://dcc-ex.com/reference/downloads/documents.html 
-
+If you would like to utilise the combined power of EX-CommandStation & JMRI DecoderPro Programming Station, please download and review the :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.
 
 Further reading
 ===============

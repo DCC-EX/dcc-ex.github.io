@@ -338,6 +338,44 @@ If you don't have the magnet installed at this point, or if it is too far from t
 
 If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :doc:`/support/ex-tt-troubleshooting` for further assistance if required.
 
+Configuration for two wire stepper drivers (eg. A4988/DRV8825)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If using a two wire stepper driver such as the A4988 or DRV8825 with a bipolar stepper motor such as a NEMA17 or similar, you will need to update "config.h" to reflect this.
+
+While the provided "config.example.h" file includes instructions, they are repeated here for clarity, as well as being outlined on the :doc:`/ex-turntable/configure` page.
+
+Locate this section in "config.h", comment out the line defining the use of "ULN2003_HALF_CW" by adding ``//``, and uncomment the line defining the use of "A4988" by removing ``//``:
+
+.. code-block:: cpp
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  //  Define the stepper controller in use according to those available below, refer to the
+  //  documentation for further details on which to select for your application.
+  // 
+  //  ULN2003_HALF_CW     : ULN2003 in half step mode, clockwise homing/calibration
+  //  ULN2003_HALF_CCW    : ULN2003 in half step mode, counter clockwise homing/calibration
+  //  ULN2003_FULL_CW     : ULN2003 in full step mode, clockwise homing/calibration
+  //  ULN2003_FULL_CCW    : ULN2003 in full step mode, counter clockwise homing/calibration
+  //  A4988               : Two wire drivers (eg. A4988, DRV8825)
+  //  A4988_INV           : Two wire drivers (eg. A4988, DRV8825), with enable pin inverted
+  // 
+  //  NOTE: If you are using a different controller than those already defined, refer to
+  //  the documentation to define the appropriate configuration variables. Note there are
+  //  some controllers that are pin-compatible with an existing defined controller, and
+  //  in those instances, no custom configuration would be required.
+  // 
+  // #define STEPPER_DRIVER ULN2003_HALF_CW
+  // #define STEPPER_DRIVER ULN2003_HALF_CCW
+  // #define STEPPER_DRIVER ULN2003_FULL_CW
+  // #define STEPPER_DRIVER ULN2003_FULL_CCW
+  #define STEPPER_DRIVER A4988
+  // #define STEPPER_DRIVER A4988_INV
+
+.. note:: 
+
+  If operating EX-Turntable does not disable the stepper driver after movements complete, you will likely hear a buzzing or humming from the driver. In this instance, you may find you need to have the "Enable" pin inverted, so you will need to use the "A4988_INV" option instead (``#define STEPPER_DRIVER A4988_INV``).
+
 First start and automatic calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

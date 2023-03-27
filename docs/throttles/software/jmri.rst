@@ -68,6 +68,12 @@ Here we show a loco at address 3 selected, with track power turned on, and runni
   :alt: JMRI Throttle Loco 3
   :scale: 50%
 
+
+EX-CommandStation & JMRI DecoderPro Programming Station
+=======================================================
+
+If you would like to utilise the combined power of EX-CommandStation & JMRI DecoderPro Programming Station, please download and review the :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.
+
 Further reading
 ===============
 
